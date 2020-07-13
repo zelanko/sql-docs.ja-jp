@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbc7c5cdadfa381cb493c08d4b50500f12f5db92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830151"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438139"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
@@ -69,17 +68,15 @@ ms.locfileid: "62830151"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [データベース転送タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[データベース転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[データベース転送タスクエディター] &#40;[データベース] ページ&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [データベース転送タスク エディター ([データベース] ページ)](../transfer-database-task-editor-databases-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   

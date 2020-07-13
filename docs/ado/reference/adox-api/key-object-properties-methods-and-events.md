@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eab25808c08196286353206c51caacefbc75c709
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965853"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746620"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Key オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,7 +36,7 @@ ms.locfileid: "67965853"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997734"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300882"
 ---
 # <a name="set-deleted-command"></a>SET DELETED コマンド
 削除用にマークされたレコードを処理するかどうか、および他のコマンドで使用できるかどうかを指定します。  
@@ -36,7 +36,7 @@ SET DELETED ON | OFF
  OFF  
  スコープを使用してレコード (関連テーブル内のレコードを含む) を操作するコマンドから、削除対象としてマークされたレコードにアクセスできることを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Deleted () を使用してレコードの状態をテストするクエリは、削除された () に対してテーブルのインデックスが作成されている場合、Visual FoxPro Rushmore テクノロジを使用して最適化できます。  
   
 > [!IMPORTANT]  

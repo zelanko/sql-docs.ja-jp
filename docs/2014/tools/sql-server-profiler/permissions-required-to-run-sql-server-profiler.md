@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6155f01b055f123277222a8c3a9359f907ca18cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: e73ffe2e127299db9a9e37e48f089aab2cccca52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78171841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054354"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server Profiler の実行に必要な権限
   既定では、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] の実行には、トレースの作成に使用した Transact-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)」を参照してください。

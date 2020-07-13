@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931283"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756756"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 バッチ更新やその他の一括操作に関して、レコードの[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|操作が取り消されたため、レコードが保存されなかったことを示します。|  
 |**adRecCantRelease**|0x400|既存のレコードがロックされていたため、新しいレコードが保存されなかったことを示します。|  
@@ -36,22 +36,22 @@ ms.locfileid: "67931283"
 |**adRecInvalid**|0x10|ブックマークが無効であるため、レコードが保存されなかったことを示します。|  
 |**adRecMaxChangesExceeded**|0x2000|保留中の変更が多すぎたため、レコードが保存されなかったことを示します。|  
 |**adRecModified**|0x2|レコードが変更されたことを示します。|  
-|**Adrec乗数のすべてのもの**|0x40|複数のレコードが影響を受ける可能性があるため、レコードが保存されなかったことを示します。|  
+|**adRecMultipleChanges**|0x40|複数のレコードが影響を受ける可能性があるため、レコードが保存されなかったことを示します。|  
 |**adRecNew**|0x1|レコードが新規であることを示します。|  
 |**adRecObjectOpen**|0x4000|開いているストレージオブジェクトと競合するため、レコードが保存されなかったことを示します。|  
 |**adRecOK**|0|レコードが正常に更新されたことを示します。|  
 |**adRecOutOfMemory**|0x8000|コンピューターのメモリが不足しているため、レコードが保存されなかったことを示します。|  
 |**adRecPendingChanges**|0x80|保留中の挿入を参照しているため、レコードが保存されなかったことを示します。|  
 |**adRecPermissionDenied**|0x10000|ユーザーに十分な権限がないため、レコードが保存されなかったことを示します。|  
-|**adrecschemaviol**|0x20000|基になるデータベースの構造に違反するため、レコードが保存されなかったことを示します。|  
-|**adRecUnmodified 変更**|0x8|レコードが変更されていないことを示します。|  
+|**adRecSchemaViolation**|0x20000|基になるデータベースの構造に違反するため、レコードが保存されなかったことを示します。|  
+|**adRecUnmodified**|0x8|レコードが変更されていないことを示します。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  AdoEnums。  
   
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  

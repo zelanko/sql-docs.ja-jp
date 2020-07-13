@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728442"
 ---
 # <a name="master-database"></a>master データベース
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master**データベースが使用できないと、** を開始できません。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 **master** データベースが使用できないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始できません。  
 
 > [!IMPORTANT]
 > Azure SQL Database 単一データベースおよびエラスティック プールでは、master データベースと tempdb データベースのみが適用されます。 詳しくは、「[Azure SQL Database サーバーとは](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)」をご覧ください。 Azure SQL Database のコンテキストでの tempdb の詳細については、「[SQL Database の Tempdb データベース](tempdb-database.md#tempdb-database-in-sql-database)」を参照してください。 Azure SQL Database Managed Instance の場合、すべてのシステム データベースが適用されます。 Azure SQL Database の Managed Instance について詳しくは、「[マネージド インスタンスとは?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」をご覧ください。

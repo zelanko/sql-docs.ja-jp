@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: edffd9454b51ea80a18311f735d29407f97f6eb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62874998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957022"
 ---
 # <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="restore-database-files-as"></a>[次のデータベース ファイルに復元]  
  復元されたファイルに新しいファイル パスを割り当て、管理できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62874998"
  **[すべてのファイルをフォルダーに移動]**  
  復元されたファイルを再配置します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**データ ファイル フォルダー**|復元されたデータ ファイルが移されるデータ ファイルのフォルダー名を入力または検索します。|  
 |**ログ ファイル フォルダー**|復元されたログ ファイルが移されるログ ファイル フォルダーを入力または検索します。|  

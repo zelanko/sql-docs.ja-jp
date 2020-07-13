@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0250875bfaa9d23d483b4e95e0d8949e2a907a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963615"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758538"
 ---
 # <a name="rds-properties"></a>RDS プロパティ
 > [!IMPORTANT]

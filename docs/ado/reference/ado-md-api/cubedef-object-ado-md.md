@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764353"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef オブジェクト (ADO MD)
 多次元スキーマから、関連するディメンションのセットを含むキューブを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CubeDef**オブジェクトのコレクションとプロパティを使用して、次の操作を行うことができます。  
   
 -   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
@@ -38,7 +38,7 @@ ms.locfileid: "67949795"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |Event.manualintervention.createdon|キューブ作成の日付と時刻。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67949795"
 |CubeName|キューブの名前。|  
 |CubeType|キューブの種類。|  
 |DataUpdatedBy|前回のデータ更新を行っているユーザーのユーザー ID。|  
-|[説明]|キューブについてのわかりやすい説明。|  
+|説明|キューブについてのわかりやすい説明。|  
 |LastSchemaUpdate|スキーマの最終更新日時。|  
 |SchemaName|このキューブが所属するスキーマの名前です。|  
 |SchemaUpdatedBy|前回のスキーマ更新を行っているユーザーのユーザー ID。|  

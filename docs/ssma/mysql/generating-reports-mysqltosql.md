@@ -12,10 +12,10 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103010"
 ---
 # <a name="generating-reports-mysqltosql"></a>レポートの生成 (MySQLToSQL)
@@ -29,8 +29,8 @@ ms.locfileid: "68103010"
   
     ||||  
     |-|-|-|  
-    |**Sl. いいえ。**|**command**|**レポート タイトル**|  
-    |1 で保護されたプロセスとして起動されました|生成-評価-レポート|AssessmentReport&lt;n&gt;XML|  
+    |**Sl. いいえ。**|**コマンド**|**レポート タイトル**|  
+    |1|生成-評価-レポート|AssessmentReport&lt;n&gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport&lt;n&gt;XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;XML|  
     |4|convert-sql ステートメント|ConvertSQLReport&lt;n&gt;。XML|  
@@ -47,7 +47,7 @@ ms.locfileid: "68103010"
     ||||  
     |-|-|-|  
     |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1 で保護されたプロセスとして起動されました|verbose = "false"|アクティビティの概要レポートを生成します。|  
+    |1|verbose = "false"|アクティビティの概要レポートを生成します。|  
     |2|verbose = "true"|各活動の概要と詳細な状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "68103010"
     ||||  
     |-|-|-|  
     |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1 で保護されたプロセスとして起動されました|レポート-エラー = "false"|エラー/警告/情報メッセージについての詳細はありません。|  
+    |1|レポート-エラー = "false"|エラー/警告/情報メッセージについての詳細はありません。|  
     |2|レポート-エラー = "true"|詳細なエラー/警告/情報メッセージ。|  
   
     > [!NOTE]  

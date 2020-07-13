@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: efea2f63d92e85afc8f77fde1d1226280714481c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901608"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307163"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft Open Database Connectivity (ODBC) インターフェイスは、アプリケーションがさまざまなデータベース管理システム (Dbms) のデータにアクセスできるようにする C プログラミング言語のインターフェイスです。 ODBC は、リレーショナルデータストア専用に設計された低レベルの高パフォーマンスのインターフェイスです。  

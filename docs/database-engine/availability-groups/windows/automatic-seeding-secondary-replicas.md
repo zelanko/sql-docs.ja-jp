@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288546"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900908"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
 
@@ -103,7 +103,7 @@ WITH (
  GO
 ```
 
-`SEEDING_MODE` ステートメントの実行中にプライマリ レプリカで `CREATE AVAILABILITY GROUP` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
+`CREATE AVAILABILITY GROUP` ステートメントの実行中にプライマリ レプリカで `SEEDING_MODE` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
 
 セカンダリ レプリカになるインスタンスの場合、インスタンスが結合されると、SQL Server ログに次のようなメッセージが追加されます。
 

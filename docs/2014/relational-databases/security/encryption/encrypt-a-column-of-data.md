@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 00f8b06296b3407ac070cd40378f3ff1039a0b93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74957209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997313"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で対称暗号化を使用してデータ列を暗号化する方法について説明します。  
@@ -27,15 +26,15 @@ ms.locfileid: "74957209"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   [Transact-sql を使用してデータ列を暗号化するには](#TsqlProcedure)  
+-   [Transact-SQL を使用してデータ列を暗号化するには](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  次の手順を実行するには、次の権限が必要です。  
   
 -   データベースに対する CONTROL 権限。  
@@ -46,7 +45,7 @@ ms.locfileid: "74957209"
   
 -   キーに対する権限。VIEW DEFINITION 権限が拒否されていないことが必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   

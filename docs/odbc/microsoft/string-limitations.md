@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7faab41bd52397ac0d352e04a9ec153571e93f1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61f81ff3da882095a0a6c41bb5061addd497a5d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948760"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306063"
 ---
 # <a name="string-limitations"></a>文字列の制限事項
 SQL ステートメント文字列の最大長は65000文字です。  

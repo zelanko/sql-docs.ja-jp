@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105303"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,16 +27,16 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>引数  
- *着手*  
+ *start*  
  Optional各検索の開始位置を設定する数値式。 この値を省略した場合、検索は最初の文字位置から開始されます。 start が null の場合、関数の戻り値は未定義となります。  
   
  *searched_string*  
- 検索する文字列式。  
+ 検索範囲となる文字列式。  
   
  *search_string*  
  検索対象の文字列式。  
   
- *対照*  
+ *比較*  
  (省略可) 整数値です。 この引数は常に無視されます。 他の言語での他の**Instr**関数との互換性のために定義されています。  
   
 ## <a name="return-value"></a>戻り値  
@@ -53,7 +53,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 が見つからない|ゼロ (0)|  
 |start が Len (String2) を超えています。|ゼロ (0)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]  
 >  **Instr**は、常に大文字と小文字を区別しない比較を実行します。  
@@ -97,12 +97,12 @@ from [Adventure Works]
   
 |||  
 |-|-|  
-||[結果]|  
+||結果|  
 |小文字の文字列で小文字が見つかりました|16|  
 |小文字の文字列で大文字が見つかりました|16|  
 |検索した文字列が空|0|  
 |検索された文字列が null です|未定義|  
-|検索文字列が空です|1 で保護されたプロセスとして起動されました|  
+|検索文字列が空です|1|  
 |検索する文字列が開始位置 10 から空|10|  
 |検索する文字列が NULL|未定義|  
 |開始位置 10 から検索|16|  

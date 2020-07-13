@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d0a7de676f5863187c2c137e056392a605af474f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546674"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
   通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの基になるデータ ソースへのアクセスを必要とすることはほとんどありません。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 句または [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
@@ -36,16 +35,14 @@ ms.locfileid: "66074999"
 ## <a name="set-read-permissions-to-a-data-source"></a>データ ソースに対する読み取り権限の設定  
  データベース ロールには、データ ソース オブジェクトへのアクセス権をまったく与えないか、または読み取り権限を与えることができます。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
   
-2.  
-  **[データ ソース アクセス]** ペインで、 **[データ ソース]** ボックスの一覧からデータ ソース オブジェクトを探し、データ ソースの **[アクセス]** ボックスの一覧で **[読み取り]** を選択します。 このオプションを使用できない場合は、 **[全般]** ペインでフル コントロールが選択されているかどうかを確認してください。 フル コントロールによって権限が既に提供されているため、データ ソースに対する権限をオーバーライドすることはできません。  
+2.  **[データ ソース アクセス]** ペインで、 **[データ ソース]** ボックスの一覧からデータ ソース オブジェクトを探し、データ ソースの **[アクセス]** ボックスの一覧で **[読み取り]** を選択します。 このオプションを使用できない場合は、 **[全般]** ペインでフル コントロールが選択されているかどうかを確認してください。 フル コントロールによって権限が既に提供されているため、データ ソースに対する権限をオーバーライドすることはできません。  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>データ ソース オブジェクトが使用する接続文字列の操作  
  データ ソース オブジェクトには、基になるデータ ソースに接続するための接続文字列が含まれています。 この接続文字列を使用すると、次のいずれかを指定できます。  
   
--   **ユーザー名とパスワードを指定してください**  
+-   **ユーザー名とパスワードを指定する**  
   
      データ ソース オブジェクトで使用される接続文字列によってユーザー名とパスワードを指定すると、それぞれ異なるユーザー アカウントが設定された複数のデータ ソース オブジェクトを作成できます。 複数のデータ ソース オブジェクトを作成すると、ユーザーが特定のデータ ソース オブジェクトにだけアクセスし、その他のデータ ソース オブジェクトにアクセスできないようにすることができます。 このようなその他のデータ ソース オブジェクトは、キューブやマイニング モデルなどのオブジェクトを処理するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自体によって使用されます。  
   
@@ -61,6 +58,6 @@ ms.locfileid: "66074999"
  [Analysis Services によってサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [ディメンションデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [キューブまたはモデルの権限を &#40;Analysis Services に付与する&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [セルデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

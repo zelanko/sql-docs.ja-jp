@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934533"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>クエリ エディターを使用した拡張イベント セッションの作成
   拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクトエクスプローラーでは、拡張イベントに2つのユーザーインターフェイスが用意されています。このウィザードでは、イベントセッションの作成プロセスを案内するウィザードと、より高度な構成オプションを提供する新しいセッション UI を作成、変更、および表示するために使用できます。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "66065028"
   
  新規セッション ウィザードを使用して拡張イベント セッションを作成する方法については、「[ウィザードを使用した拡張イベント セッションの作成 &#40;オブジェクト エクスプローラー&#41;](../ssms/object/object-explorer.md)」を参照してください。 [新しいセッション] UI を使用して拡張イベント セッションを作成する方法については、「[[新しいセッション] ダイアログを使用した拡張イベント セッションの作成](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  拡張イベント セッションを作成するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>クエリ エディターを使用した拡張イベント セッションの作成  
@@ -219,8 +218,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Transact-sql&#41;&#40;のイベントセッションの作成](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [拡張イベントターゲットの SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 拡張イベント パッケージ](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

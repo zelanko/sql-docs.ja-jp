@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926663"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760478"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft Indexing Service の概要
 Microsoft OLE DB Provider for Microsoft Indexing Service は、Microsoft Indexing Service によってインデックス付けされたファイルシステムおよび Web データへのプログラムによる読み取り専用アクセスを提供します。 ADO アプリケーションは、SQL クエリを発行してコンテンツとファイルのプロパティ情報を取得できます。
@@ -44,11 +44,11 @@ MSIDXS
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|Microsoft インデックスサービスの OLE DB プロバイダーを指定します。 通常、これは接続文字列で指定されている唯一のキーワードです。|
-|**Data Source**|インデックスサービスのカタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステムカタログが使用されます。|
-|**ロケール識別子**|ユーザーの言語に関連する設定を指定する32ビットの一意の数値 (1033 など) を指定します。 このキーワードが指定されていない場合は、既定のシステムロケール識別子が使用されます。|
+|**データ ソース**|インデックスサービスのカタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステムカタログが使用されます。|
+|**[Locale Identifier]**|ユーザーの言語に関連する設定を指定する32ビットの一意の数値 (1033 など) を指定します。 このキーワードが指定されていない場合は、既定のシステムロケール識別子が使用されます。|
 
 ## <a name="command-text"></a>コマンド テキスト
  インデックス作成サービスの SQL クエリ構文は、SQL-92 **SELECT**ステートメントの拡張機能と、その**FROM**句および**WHERE**句によって構成されています。 クエリの結果は OLE DB 行セットを介して返されます。これは、ADO によって使用され、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして操作できます。
@@ -66,7 +66,7 @@ MSIDXS
 
  **標準の ADO レコードセットプロパティの可用性:**
 
-|プロパティ|可用性|
+|プロパティ|使用できるかどうか|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|読み取り/書き込み|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|
@@ -80,7 +80,7 @@ MSIDXS
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用できません|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|利用不可|
 |[数](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り専用|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|
@@ -93,24 +93,24 @@ MSIDXS
 
  **標準の ADO レコードセットメソッドの可用性:**
 
-|方法|ご?|
+|メソッド|利用可能か|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|はい|
-|[Ok](../../../ado/reference/ado-api/close-method-ado.md)|はい|
-|[デリート](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|
-|[[詳細ビュー]](../../../ado/reference/ado-api/move-method-ado.md)|はい|
+|[移動](../../../ado/reference/ado-api/move-method-ado.md)|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|
-|[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
+|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|
-|[[再同期]](../../../ado/reference/ado-api/resync-method.md)|はい|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|
+|[アップデート](../../../ado/reference/ado-api/update-method.md)|いいえ|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|
 
  Microsoft OLE DB Provider for Microsoft Indexing Service に関する具体的な実装の詳細と機能については、『 [OLE DB プログラマーズガイド』](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)を参照するか、Windows NT Server web サイトの web サービスに関するページを参照してください。

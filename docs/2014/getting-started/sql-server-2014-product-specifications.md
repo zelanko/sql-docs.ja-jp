@@ -12,15 +12,14 @@ helpviewer_keywords:
 - product specifications [SQL Server]
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: da1243ffeb06f7c4868bc847ece550adf2589f39
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62772291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926633"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 製品仕様
   次の表に挙げる各トピックで、このリリースの製品仕様の詳細について説明します。  
@@ -42,16 +41,14 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [SQLServer のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションでサポートされるプロセッサの最大数  
+ [SQL Server のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションでサポートされるプロセッサの最大数  
   
  [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)  
  インストールするコンポーネントと機能の選択  
   
  [SQL Server 2014 の各エディションがサポートする機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能  
   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  さまざまな [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトに対する最大容量  

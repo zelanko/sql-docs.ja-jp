@@ -16,15 +16,15 @@ helpviewer_keywords:
 - FIRST_VALUE function
 - analytic functions, FIRST_VALUE
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1eba52b9bd30a64ec6955501f4df7cf1e59cc56e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631579"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68071381"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 FIRST_VALUE ( [scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
   

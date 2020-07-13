@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa54e59af5187bf9b4daaa898bbaabfa614a4286
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964363"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752648"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この例では、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストするには、通常の HTML ドキュメント\<で body> \<と body> タグの間でこのコードを切り取って貼り付け、 **DataFactoryVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ この例では、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **DataFactoryVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  

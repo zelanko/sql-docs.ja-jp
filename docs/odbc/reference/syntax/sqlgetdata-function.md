@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetData function [ODBC]
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911361"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285508"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **互換性**  
@@ -95,7 +95,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>診断  
  **SQLGetData**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLGetData**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|指定された列*Col_or_Param_Num*の一部のデータは、関数の1回の呼び出しで取得できませんでした。 **SQLGetData**の現在の呼び出しの前に、指定した列に残っているデータの SQL_NO_TOTAL または\*長さが*StrLen_or_IndPtr*に返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> 1つの列に対して複数の**SQLGetData**呼び出しを使用する方法の詳細については、「コメント」を参照してください。|  
@@ -146,9 +146,9 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND。 このオプションが返された場合は、バインドされた列および非バインド列に対して**SQLGetData**を呼び出すことができます。  
   
- これらの制限には、2つの例外があり、それらを緩和するためのドライバーの機能があります。 まず、行セットのサイズが1より大きい場合は、順方向専用カーソルに対して**SQLGetData**を呼び出さないでください。 2つ目の方法として、ドライバーがブックマークをサポートしている場合は、最後にバインドされた列の前にアプリケーションが**SQLGetData**を呼び出すことができない場合でも、列0に対して**SQLGetData**を呼び出すことを常にサポートする必要があります。 (アプリケーションが ODBC*2.x ドライバーを*使用して作業している場合、 **sqlfetch の**呼び出しの**後に** **SQLGetData**が0に等しい*Col_or_Param_Num*を呼び出したときにブックマークが正常に返されます *。* これは、 **sqlfetch**が SQL_FETCH_NEXT の*fetchorientation*によってマップされ、0*の Col_or_Param_Num*を持つ**SQLGetData**が odbc 3 *. x*ドライバーマネージャーによって**SQLGetStmtOption**SQL_GET_BOOKMARK の*foption*を使用します)。  
+ これらの制限には、2つの例外があり、それらを緩和するためのドライバーの機能があります。 まず、行セットのサイズが1より大きい場合は、順方向専用カーソルに対して**SQLGetData**を呼び出さないでください。 2つ目の方法として、ドライバーがブックマークをサポートしている場合は、最後にバインドされた列の前にアプリケーションが**SQLGetData**を呼び出すことができない場合でも、列0に対して**SQLGetData**を呼び出すことを常にサポートする必要があります。 (アプリケーションが ODBC 2 を使用している*場合。 x*ドライバーは、 **sqlfetch**の呼び出しの**後に、** **SQLGetData**が0に等しい*Col_or_Param_Num*で呼び出された場合にブックマークを返し*ます。これ*は、 **sqlfetch**が SQL_FETCH_NEXT の*fetchorientation*によってマップされ、0の*Col_or_Param_Num*を持つ**SQLGetData**が*odbc 3. x ドライバー*マネージャーによって、 *foption* for SQL_GET_BOOKMARK で**SQLGetStmtOption**にマップされるためです。  
   
- カーソルが行に配置されていないため、SQLGetData オプションを指定 SQL_ADD して**Sqlbulkoperations**を呼び出すことによって挿入された行のブックマークを取得するために**** を使用することはできません。 アプリケーションでは、列0をバインドすることによって、そのような行のブックマークを取得できます。この場合、SQL_ADD で**Sqlbulkoperations**が呼び出されます。この場合、 **sqlbulkoperations**はバインドされたバッファー内のブックマークを返します。 その後、SQL_FETCH_BOOKMARK を指定して**Sqlfetchscroll**を呼び出して、その行のカーソルを再配置できます。  
+ カーソルが行に配置されていないため、SQLGetData オプションを指定 SQL_ADD して**Sqlbulkoperations**を呼び出すことによって挿入された行のブックマークを取得するために**SQLGetData**を使用することはできません。 アプリケーションでは、列0をバインドすることによって、そのような行のブックマークを取得できます。この場合、SQL_ADD で**Sqlbulkoperations**が呼び出されます。この場合、 **sqlbulkoperations**はバインドされたバッファー内のブックマークを返します。 その後、SQL_FETCH_BOOKMARK を指定して**Sqlfetchscroll**を呼び出して、その行のカーソルを再配置できます。  
   
  *TargetType*引数が interval データ型の場合、既定の間隔の有効桁数 (2) と既定の間隔の秒の有効桁数 (6) が、それぞれのの SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION の各フィールドに設定されています。 *TargetType*引数が SQL_C_NUMERIC データ型である場合は、既定の有効桁数 (ドライバー定義) と既定の小数点以下桁数 (0) が使用されます。この値は、通常のの SQL_DESC_PRECISION と SQL_DESC_SCALE のフィールドで設定されます。 既定の有効桁数または小数点以下桁数が適切でない場合、アプリケーションは、 **SQLSetDescField**または**SQLSetDescRec**の呼び出しによって適切な記述子フィールドを明示的に設定する必要があります。 SQL_DESC_CONCISE_TYPE フィールドを SQL_C_NUMERIC に設定し、 *TargetType*引数を SQL_ARD_TYPE として**SQLGetData**を呼び出すことができます。これにより、記述子フィールドの有効桁数と小数点以下桁数の値が使用されます。  
   
@@ -258,7 +258,7 @@ if (retcode == SQL_SUCCESS) {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セットの列にストレージを割り当てる|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ブロックカーソル位置に関係のない一括操作の実行|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  

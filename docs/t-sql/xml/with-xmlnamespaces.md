@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd1179c6951860dcb168e847ed748f3a69d82aff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902222"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つまたは複数の XML 名前空間を宣言します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76909792"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -48,12 +48,12 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  

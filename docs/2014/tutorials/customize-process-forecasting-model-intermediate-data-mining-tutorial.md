@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249402"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>予測モデルのカスタマイズと処理 (中級者向けデータ マイニング チュートリアル)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、モデルの作成方法と時間データの分析方法に影響するいくつかのパラメーターがあります。 これらのプロパティを変更すると、マイニング モデルでの予測の作成方法に大きく影響する場合があります。  
   
  このチュートリアルでは、次の作業を行ってモデルを変更します。  
@@ -58,7 +57,7 @@ ms.locfileid: "63249402"
   
 3.  行で、[**値**] テキストボックスが空白であるか、に`MIXED`設定されていることを確認します。 `FORECAST_METHOD` 別の値が入力されている`MIXED`場合は、「」と入力してパラメーターを既定値に戻します。  
   
-4.  **PREDICTION_SMOOTHING**の行で、[**値**] テキストボックスが空白であるか、または0.5 に設定されていることを確認します。 別の値を入力した場合は**** 、[値`0.5` ] をクリックして、パラメーターを既定値に戻します。  
+4.  **PREDICTION_SMOOTHING**の行で、[**値**] テキストボックスが空白であるか、または0.5 に設定されていることを確認します。 別の値を入力した場合は**Value** 、[値`0.5` ] をクリックして、パラメーターを既定値に戻します。  
   
     > [!NOTE]  
     >  PREDICTION_SMOOTHING パラメーターは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition でのみ使用できます。 したがって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition では PREDICTION_SMOOTHING パラメーターの値を表示または変更できません。 ただし、既定の動作では両方のアルゴリズムが使用され、同等の重み付けが行われます。  
@@ -107,6 +106,6 @@ ms.locfileid: "63249402"
 ## <a name="see-also"></a>参照  
  [Microsoft タイムシリーズアルゴリズムテクニカルリファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft タイムシリーズアルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

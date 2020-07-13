@@ -1,21 +1,21 @@
 ---
-title: '[モデル&lt;&gt;から] を選択します。コンテンツ (DMX) |Microsoft Docs'
+title: '[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68892831"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669591"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>[モデル&lt;&gt;から] を選択します。コンテンツ (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたデータマイニングモデルのマイニングモデルスキーマ行セットを返します。  
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  コンテンツスキーマ行セットから派生した列のコンマ区切りのリスト。  
@@ -40,20 +40,20 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  モデル識別子。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
- **SELECT FROM** _ \<model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから\<選択]> を使用できます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
+## <a name="remarks"></a>Remarks  
+ **SELECT FROM** _ \< model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから選択]> を使用でき \< ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
   
 > [!NOTE]  
 >  アルゴリズムでは、コンテンツを正しく表現するために、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
   
-|コンテンツ行セット列|[説明]|  
+|コンテンツ行セット列|説明|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|カタログ名です。 プロバイダーがカタログをサポートしない場合は NULL です。|  
 |MODEL_SCHEMA|非修飾スキーマ名。 プロバイダーがスキーマをサポートしない場合は NULL です。|  
@@ -120,9 +120,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION。ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION。確率|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1 で保護されたプロセスとして起動されました|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1 で保護されたプロセスとして起動されました|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
  次の例は、下位選択ステートメントを使用して、入れ子になったテーブルから一部の列のみを返す方法を示しています。 表示を簡略化するには、入れ子になったテーブルのテーブル名を別名で示します。  
   
@@ -140,11 +140,11 @@ WHERE NODE_TYPE = 26
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1 で保護されたプロセスとして起動されました|6383|  
+|TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063491"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -56,7 +55,7 @@ ms.locfileid: "75244800"
   
 -   照合の開始タグと終了タグ。  
   
--   不等号 "\<" と ">" のすべてのペア。  
+-   "" 山かっこの任意のペア \<" and "> 。  
   
 -   コメントの開始と終了。  
   

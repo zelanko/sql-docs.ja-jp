@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を取り消す  
- 次の例では、可用性グループ `VIEW DEFINITION` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  
+ 次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  
   
 ```  
 USE master;  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. CASCADE を指定して TAKE OWNERSHIP 権限を取り消す  
- 次の例では、可用性グループ `TAKE OWNERSHIP` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` から取り消し、`PKomosinski` が MyAg での TAKE OWNERSHIP 権限を許可したすべてのプリンシパルから取り消します。  
+ 次の例では、可用性グループ `MyAg` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` から取り消し、`PKomosinski` が MyAg での TAKE OWNERSHIP 権限を許可したすべてのプリンシパルから取り消します。  
   
 ```  
 USE master;  

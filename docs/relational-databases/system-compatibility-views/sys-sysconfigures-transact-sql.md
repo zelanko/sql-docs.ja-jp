@@ -1,5 +1,5 @@
 ---
-title: sys. sysconfigures (Transact-sql) |Microsoft Docs
+title: sys.sysの構成 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,30 +20,30 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 213c4ec07b733b355de8cd7cdb0ae0b14f165584
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68089204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900524"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ユーザーによって設定された構成オプションごとに1行の値を格納します。 **sysconfigures**には、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最後の起動前に定義されている構成オプションに加え、その後に設定された動的な構成オプションが含まれます。  
+  ユーザーによって設定された構成オプションごとに1行の値を格納します。 **sysconfigures**には、の最後の起動前に定義されている構成オプションに加え、その後に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動的な構成オプションが含まれます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**数値**|**int**|ユーザーが変更可能な変数の値。 再構成が実行さ[!INCLUDE[ssDE](../../includes/ssde-md.md)]れている場合にのみ、によって使用されます。|  
-|**.config**|**int**|構成変数番号。|  
-|**関する**|**nvarchar(255)**|構成オプションの説明。|  
-|**オンライン**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。 設定は、サーバーの再起動時に有効になります。<br /><br /> 3 = 動的および詳細。|  
+|**value**|**int**|ユーザーが変更可能な変数の値。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]再構成が実行されている場合にのみ、によって使用されます。|  
+|**config**|**int**|構成変数番号。|  
+|**comment**|**nvarchar(255)**|構成オプションの説明。|  
+|**status**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。 設定は、サーバーの再起動時に有効になります。<br /><br /> 3 = 動的および詳細。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

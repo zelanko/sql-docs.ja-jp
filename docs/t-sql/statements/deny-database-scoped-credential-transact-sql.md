@@ -19,15 +19,15 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e282ac74db4509c49bb6ec7155a75e987708df7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766722"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   データベース スコープの資格情報に対する権限を拒否します。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "68114861"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON DATABASE SCOPED CREDENTIAL :: credential_name   

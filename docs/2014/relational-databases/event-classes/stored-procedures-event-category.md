@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: df2e0d9a4c077ff16eba09bc5ebb6447d5d27595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63061015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051426"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures イベント カテゴリ
   **Stored Procedures** イベント カテゴリには、一般的なストアド プロシージャ イベントが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[RPC:Completed イベント クラス](rpc-completed-event-class.md)|リモート プロシージャ コール (RPC) が完了したことを示します。|  
 |[PreConnect:Completed イベント クラス](preconnect-completed-event-class.md)|リソース ガバナー分類子関数の実行が終了したことを示します。|  

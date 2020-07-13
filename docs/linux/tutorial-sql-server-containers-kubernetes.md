@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50c10c976cd30db4c8fcdcd1404f4618e77356c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216672"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902316"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes Services (AKS) を使用して Kubernetes に SQL Server コンテナーを配置する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 高可用性 (HA) のための永続ストレージを使用して、Azure Kubernetes Service (AKS) の Kubernetes で SQL Server インスタンスを構成する方法について説明します。 このソリューションでは回復性が提供されます。 SQL Server インスタンスで障害が発生した場合、Kubernetes によって新しいポッドに自動的に再作成されます。 Kubernetes では、ノード障害に対する回復性も提供されます。
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 以降では、[ストレージ クラス](https://kubernetes.io/
 * **Kubernetes クラスター**
    - このチュートリアルでは、Kubernetes クラスターが必要です。 この手順では、[kubectl](https://kubernetes.io/docs/user-guide/kubectl/) を使用してクラスターを管理します。 
 
-   - `kubectl` を使って AKS に Kubernetes クラスターを作成して接続する方法については、[Azure Container Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
+   - `kubectl` を使って AKS に単一ノード Kubernetes クラスターを作成して接続する方法については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
 
    >[!NOTE]
    >ノード障害から保護するため、Kubernetes クラスターには複数のノードが必要です。
@@ -160,12 +160,15 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 1. 配置を記述するマニフェスト (YAML ファイル) を作成します。 次の例では、SQL Server コンテナー イメージに基づくコンテナーを含む配置が記述されています。
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

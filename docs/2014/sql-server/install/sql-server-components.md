@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036280"
 ---
 # <a name="sql-server-components"></a>SQL Server のコンポーネント
-  アップグレードアドバイザー分析[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ウィザードは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、またはがインストールされているローカルコンピューターまた[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]はリモートコンピューターに対して実行できます。 アップグレード前の分析における最初の手順は、分析対象のコンピューターとコンポーネントを特定することです。  
+  アップグレードアドバイザー分析ウィザードは、、、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 、またはがインストールされているローカルコンピューターまたはリモートコンピューターに対して実行でき [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ます。 アップグレード前の分析における最初の手順は、分析対象のコンピューターとコンポーネントを特定することです。  
   
 ## <a name="options"></a>オプション  
  **コンピューター名**  
@@ -44,29 +43,24 @@ ms.locfileid: "68811090"
 -   クラスターのノードにインストールされている非クラスター化コンポーネントをスキャンするには、フェールオーバークラスターノードのコンピューター名を入力します。  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名は含めないでください。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名は含めないでください。  
   
  コンピューター名を指定する代わりに、IP アドレスを指定できます。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスキャンする場合、ローカル サーバーの名前を指定する必要があります。 アップグレード アドバイザーでは、ローカル レポート サーバーだけがスキャンされます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスキャンする場合、ローカル サーバーの名前を指定する必要があります。 アップグレード アドバイザーでは、ローカル レポート サーバーだけがスキャンされます。  
   
  **Detect**  
  [**検出**] ボタンは、指定されたコンピューターにアクセスし、分析するコンポーネントを検出します。  
   
 -   リモート コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを分析する場合は、リモート コンピューター上でリモート レジストリ サービスを有効にする必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のインスタンスがコンピューターのレジストリで見つかった場合に検出されます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のインスタンスがコンピューターのレジストリで見つかった場合に検出されます。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがコンピューターのレジストリで見つかった場合に検出されます。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがコンピューターのレジストリで見つかった場合に検出されます。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がコンピューターのレジストリで見つかった場合に検出されます。 ただし、アップグレード アドバイザーでは、ローカル レポート サーバーだけがスキャンされます。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がコンピューターのレジストリで見つかった場合に検出されます。 ただし、アップグレード アドバイザーでは、ローカル レポート サーバーだけがスキャンされます。  
   
- **Components**  
+ **コンポーネント**  
  分析するコンポーネントを選択します。 [**検出**] ボタンをクリックすると、コンピューターにインストールされているすべてのコンポーネントを選択できます。 このコンピューターにインストールされていることが検出されたコンポーネントの横に、チェック マークが表示されます。 各コンポーネントの横にあるチェック ボックスをオンまたはオフにして、分析するコンポーネントを手動で選択することもできます。  
   
 ## <a name="see-also"></a>参照  

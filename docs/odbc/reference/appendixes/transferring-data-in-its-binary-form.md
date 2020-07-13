@@ -12,14 +12,14 @@ helpviewer_keywords:
 - transferring data in binary form [ODBC]
 - binary data transfers [ODBC]
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2897f882dc9dcd78ee8b919de01126d6be510c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 53531ff4a3b2e1441fabf22ec7a3ce12b15540eb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070025"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301414"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>バイナリ形式でのデータ転送
 アプリケーションは、同じ DBMS とハードウェアプラットフォームを使用する2つのデータソース間で、(指定された DBMS によって使用される内部形式の) データを安全に転送できます。 データの種類によっては、ソースとターゲットのデータソースで SQL データ型が同じである必要があります。 C データ型は SQL_C_BINARY です。  

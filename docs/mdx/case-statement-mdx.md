@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016835"
 ---
 # <a name="case-statement-mdx"></a>CASE ステートメント (MDX)
@@ -59,7 +59,7 @@ END
  *Boolean_expression*  
  スカラー値に評価される MDX 式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ELSE 句がなく、すべての WHEN 句が false と評価された場合、結果は空のセルになります。  
   
 ## <a name="simple-case-expression"></a>単純 Case 式  
@@ -106,6 +106,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

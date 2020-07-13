@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cfc9107b47db312778502191560ce7920c96a37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63163953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000843"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>検索条件の指定 (Visual Database Tools)
   検索条件を指定することによって、クエリで表示されるデータ行を指定できます。 たとえば、 `employee` テーブルに対してクエリを実行する場合、特定の地域で勤務している従業員だけを検索するようにクエリで指定できます。  

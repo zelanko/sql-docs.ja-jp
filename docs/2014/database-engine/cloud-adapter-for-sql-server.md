@@ -12,25 +12,22 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936023"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
-  クラウドアダプターサービスは、Azure VM での[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロビジョニングの一部として作成されます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 また、クラウド アダプターでは、既定のポート 11435 での着信 TCP 接続を許可する Windows ファイアウォール ルールも作成されます。  
+  クラウドアダプターサービスは、Azure VM でのプロビジョニングの一部として作成され [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 また、クラウド アダプターでは、既定のポート 11435 での着信 TCP 接続を許可する Windows ファイアウォール ルールも作成されます。  
   
  クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の内部設置型インスタンスからメッセージを受信するステートレスな同期サービスです。 クラウド アダプター サービスが停止すると、リモート アクセス クラウド アダプターが停止され、SSL 証明書のバインドが解除され、Windows ファイアウォールのルールが無効になります。  
   
 ## <a name="cloud-adapter-requirements"></a>クラウド アダプターの要件  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対してクラウド アダプターをインストールして有効にし、実行するには、次の要件が必要です。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対してクラウド アダプターをインストールして有効にし、実行するには、次の要件が必要です。  
   
--   クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 以降でサポートされます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 に対応する SQL 管理オブジェクトを必要とします。  
+-   クラウド アダプターは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 以降でサポートされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラウド アダプターは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 に対応する SQL 管理オブジェクトを必要とします。  
   
 -   クラウド アダプター Web サービスは **ローカル システム** アカウントとして実行され、タスクを実行する前にクライアントの資格情報を確認します。 クライアントによって指定された資格情報は、リモートコンピューターのローカル**管理者**グループのメンバーである使用アカウントに属している必要があります。  
   
@@ -49,23 +46,23 @@ ms.locfileid: "70176019"
   
 -   **構成ファイルのパラメーター** -  
   
-    -   \<構成>  
+    -   \<configuration>  
   
         -   \<appSettings>  
   
-            -   \<add key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
-    -   \</構成>  
+    -   \</configuration>  
   
 -   **証明書の詳細**-証明書の値は次のとおりです。  
   
-    -   Subject-"CN = CloudAdapter\<VMName>, dc = SQL SERVER, Dc = Microsoft"  
+    -   Subject-"CN = CloudAdapter \<VMName> , dc = SQL Server, dc = Microsoft"  
   
     -   証明書ではサーバー認証 EKU のみを有効にします。  
   
@@ -73,30 +70,29 @@ ms.locfileid: "70176019"
   
  **構成ファイルの値**:  
   
-|設定|値|Default|説明|  
+|設定|値|Default|コメント|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|指定しない場合、11435 が使用されます。|  
 |WebServiceCertificate|Thumbprint|Empty|空の場合、新しい自己署名証明書が生成されます。|  
-|ExposeExceptionDetails|True または False|False||  
+|ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>クラウド アダプターのトラブルシューティング  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクラウド アダプターのトラブルシューティングを行うには、次の情報を使用します。  
   
 -   **エラー処理とログ記録**-エラーと状態メッセージがアプリケーションイベントログに書き込まれます。  
   
 -   **トレース、イベント**: すべてのイベントがアプリケーションイベントログに書き込まれます。  
   
--   **コントロール、構成**: C:\Program の SQL server にある構成ファイルを使用し\\ます。  
+-   **コントロール、構成**: C:\Program の SQL server にある構成ファイルを使用し \\ ます。  
   
-|エラー|エラー ID|原因|解決方法|  
+|エラー|エラー ID|原因|解決策|  
 |-----------|--------------|-----------|----------------|  
 |証明書ストアに証明書を追加中に例外が発生しました。 {例外テキスト}。|45560|コンピューター証明書ストアのアクセス許可|クラウドアダプターサービスに、コンピューター証明書ストアに証明書を追加するためのアクセス許可があることを確認します。|  
 |ポート {ポート番号} と証明書 {サムプリント} の SSL バインドを構成しようとして例外が発生しました。 {例外}。|45561|他のアプリケーションが既にポートを使用しているか、証明書をバインドされています。|既存のバインドを削除するか、または構成ファイルのクラウド アダプターのポートを変更します。|  
 |証明書ストアで SSL 証明書 [{サムプリント}] が見つかりませんでした。|45564|証明書のサムプリントが構成ファイルにありますが、そのサービスのための個人証明書ストアに証明書が含まれていません。<br /><br /> 権限が不足しています。|サービスの個人証明書ストアに証明書を置きます。<br /><br /> サービスに、ストアへの適切な権限があることを確認します。|  
 |Web サービスを開始できませんでした。 {例外テキスト}。|45570|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
 |証明書 [{サムプリント}] の有効期限が切れています。|45565|構成ファイルから参照される期限切れの証明書。|有効な証明書を追加し、サムプリントを使用して構成ファイルを更新します。|  
-|Web サービスエラー: {0}。|45571|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
+|Web サービスエラー: {0} 。|45571|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Azure Virtual Machine の SQL Server データベースの配置](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

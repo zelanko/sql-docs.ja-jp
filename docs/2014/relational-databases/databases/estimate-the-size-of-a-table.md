@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4a16d439d3b2bc59479866b7bb36295ec4fc8950
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62916876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965958"
 ---
 # <a name="estimate-the-size-of-a-table"></a>テーブル サイズの見積もり
   次の手順を実行して、テーブルにデータを格納するために必要な領域を見積もることができます。  

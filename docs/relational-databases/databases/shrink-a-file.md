@@ -132,7 +132,7 @@ ms.locfileid: "71961930"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) を使用して、 `DataFile1` データベースに存在する `UserDB` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) を使用して、 `UserDB` データベースに存在する `DataFile1` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

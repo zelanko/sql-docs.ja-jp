@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934087"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
   物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
@@ -98,7 +97,7 @@ ms.locfileid: "70874503"
   
  **タイムアウト値を変更するには (高い安全性モードのみ)**  
   
--   [ALTER DATABASE \<データベース> SET PARTNER TIMEOUT \<整数値>](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用します。  
+-   [ALTER database \<database> SET PARTNER TIMEOUT \<integer> ](/sql/t-sql/statements/alter-database-transact-sql)ステートメントを使用します。  
   
  **現在のタイムアウト値を表示するには**  
   

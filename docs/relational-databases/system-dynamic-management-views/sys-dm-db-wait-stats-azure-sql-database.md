@@ -16,32 +16,32 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677583"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL データベース)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   操作中に実行されたスレッドにより検出されたすべての待機に関する情報を返します。 この集計ビューを使って、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。  
   
  クエリ実行中に発生している待機時間の種類によって、クエリにボトルネックや機能停止ポイントがあるかどうかを判断できます。 また、サーバー全体の待機時間や待機カウントが高い値を示している場合は、サーバー インスタンス内の対話型クエリの対話にボトルネックまたはホット スポットが存在していることを表しています。 たとえば、ロック待機の場合はクエリによるデータ競合、ページ I/O ラッチ待機の場合は遅い I/O 反応時間、ページ ラッチ更新待機の場合は不正なファイル レイアウトが存在していると判断できます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|待機の種類の名前。 詳細については、このトピックの「[待機の種類](#WaitTypes)」を参照してください。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、このトピックの「[待機の種類](#WaitTypes)」を参照してください。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   この動的管理ビューには、現在のデータベースのデータのみが表示されます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68090873"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
-##  <a name="WaitTypes"></a>待機の種類  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>待機の種類  
  リソース待機  
  リソース待機は、ワーカーがリソースへのアクセスを要求したときに、そのリソースが他のワーカーによって使用されているか、まだ準備ができておらず、使用できない場合に発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロック待機およびラッチ待機は、同期オブジェクトで発生する待機です。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68090873"
   
  スレッドは、待機中でなくなってもすぐに実行を開始する必要はありません。 このようなスレッドは、最初に実行可能なワーカーのキューに配置された後、スケジューラに従って実行するために、クォンタムの間待機する必要があります。  
   
- で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、待機時間カウンターは**bigint**値であるため、以前のバージョンのの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同等のカウンターとしてカウンターロールオーバーが発生する可能性は低くなります。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、待機時間カウンターは**bigint**値であるため、以前のバージョンのの同等のカウンターとしてカウンターロールオーバーが発生する可能性は低く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。  
   
  次の表は、タスクで発生する待機の種類の一覧です。  
   
-|待機の種類|[説明]|  
+|待機の種類|説明|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|アセンブリ読み込みへの排他アクセス時に発生します。|  
@@ -96,23 +96,17 @@ ms.locfileid: "68090873"
 |BACKUPTHREAD|タスクがバックアップ タスクの終了を待機しているときに発生します。 待機時間の長さは、数分から数時間に及ぶ場合があります。 待機中のタスクが I/O 処理中である場合は、この待機が発生しても問題はありません。|  
 |BAD_PAGE_PROCESS|問題があると考えられるバックグラウンドのページ ロガーが、5 秒間隔より頻繁な実行を回避しようとする場合に発生します。 問題があると考えられるページが多くある場合、ロガーは頻繁に実行されます。|  
 |BROKER_CONNECTION_RECEIVE_TASK|接続エンドポイントでメッセージを受信するためアクセスを待機しているときに発生します。 エンドポイントへの受信アクセスはシリアル化されます。|  
-|BROKER_ENDPOINT_STATE_MUTEX|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 接続エンドポイントの状態へのアクセスが競合しているときに発生します。 変更の状態へのアクセスはシリアル化されます。|  
+|BROKER_ENDPOINT_STATE_MUTEX|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 接続エンドポイントの状態へのアクセスが競合しているときに発生します。 変更の状態へのアクセスはシリアル化されます。|  
 |BROKER_EVENTHANDLER|タスクが [!INCLUDE[ssSB](../../includes/sssb-md.md)] のプライマリ イベント ハンドラーを待機しているときに発生します。 この待機は、非常に短い時間の待機です。|  
 |BROKER_INIT|各アクティブ データベースで [!INCLUDE[ssSB](../../includes/sssb-md.md)] を初期化するときに発生します。 この待機は、発生頻度の低い待機です。|  
 |BROKER_MASTERSTART|タスクが [!INCLUDE[ssSB](../../includes/sssb-md.md)] のプライマリ イベント ハンドラーの起動を待機しているときに発生します。 この待機は、非常に短い時間の待機です。|  
 |BROKER_RECEIVE_WAITFOR|RECEIVE WAITFOR が待機しているときに発生します。 これは、メッセージの受信準備ができていない場合によく起こります。|  
-|BROKER_REGISTERALLENDPOINTS|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] の接続エンドポイントの初期化中に発生します。 この待機は、非常に短い時間の待機です。|  
+|BROKER_REGISTERALLENDPOINTS|[!INCLUDE[ssSB](../../includes/sssb-md.md)] の接続エンドポイントの初期化中に発生します。 この待機は、非常に短い時間の待機です。|  
 |BROKER_SERVICE|発信先サービスに関連付けられている [!INCLUDE[ssSB](../../includes/sssb-md.md)] 宛先一覧が更新されるか優先順位が設定し直されると発生します。|  
-|BROKER_SHUTDOWN|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のシャットダウンが予定されている場合に発生します。 この待機は、非常に短い時間の待機です。|  
-|BROKER_TASK_STOP|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューのタスク ハンドラーがタスクをシャットダウンしようとした場合に発生します。 ステート チェックがシリアル化されます。ステート チェックは事前に実行状態になっている必要があります。|  
-|BROKER_TO_FLUSH|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] レイジー フラッシャが、メモリ内転送オブジェクトを作業テーブルにフラッシュした場合に発生します。|  
-|BROKER_TRANSMITTER|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 送信機能が作業を待機しているときに発生します。|  
+|BROKER_SHUTDOWN|[!INCLUDE[ssSB](../../includes/sssb-md.md)] のシャットダウンが予定されている場合に発生します。 この待機は、非常に短い時間の待機です。|  
+|BROKER_TASK_STOP|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キューのタスク ハンドラーがタスクをシャットダウンしようとした場合に発生します。 ステート チェックがシリアル化されます。ステート チェックは事前に実行状態になっている必要があります。|  
+|BROKER_TO_FLUSH|[!INCLUDE[ssSB](../../includes/sssb-md.md)] レイジー フラッシャが、メモリ内転送オブジェクトを作業テーブルにフラッシュした場合に発生します。|  
+|BROKER_TRANSMITTER|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 送信機能が作業を待機しているときに発生します。|  
 |BUILTIN_HASHKEY_MUTEX|この待機はインスタンスの起動後、内部データ構造の初期化中に発生することがあります。 データ構造がいったん初期化されると、それ以降に再発生することはありません。|  
 |CHECK_PRINT_RECORD|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |CHECKPOINT_QUEUE|チェックポイント タスクが、次のチェックポイント要求を待機しているときに発生します。|  
@@ -139,11 +133,9 @@ ms.locfileid: "68090873"
 |DBMIRROR_SEND |タスクが、ネットワーク層の通信バックログが消去されメッセージ送信できるようになるのを待機しているときに発生します。 通信層が過負荷になり、データベース ミラーリング データのスループットに影響が生じ始めていることを表します。|  
 |DBMIRROR_WORKER_QUEUE|データベース ミラーリング ワーカー タスクが、次の作業の実行を待機していることを表します。|  
 |DBMIRRORING_CMD |タスクが、ログ レコードのディスクへのフラッシュを待機しているときに発生します。 この待機状態は、長時間続くことが予想されます。|  
-|DEADLOCK_ENUM_MUTEX|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で同時に複数のデッドロック検索が実行されていないかどうかを、デッドロック モニターと sys.dm_os_waiting_tasks が確認しようとするときに発生します。|  
+|DEADLOCK_ENUM_MUTEX|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で同時に複数のデッドロック検索が実行されていないかどうかを、デッドロック モニターと sys.dm_os_waiting_tasks が確認しようとするときに発生します。|  
 |DEADLOCK_TASK_SEARCH |このリソースでの待機時間が長い場合は、サーバーが sys.dm_os_waiting_tasks 上で複数のクエリを実行したことにより、デッドロック モニターでデッドロック検索を実行できなくなっていることを表します。 この待機の種類は、デッドロック モニターにのみ使用されます。 sys.dm_os_waiting_tasks の上部のクエリは、DEADLOCK_ENUM_MUTEX を使用します。|  
-|DEBUG|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR が内部同期のためデバッグしているときに発生します。|  
+|DEBUG|[!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR が内部同期のためデバッグしているときに発生します。|  
 |DISABLE_VERSIONING|一番最初のアクティブなトランザクションのタイムスタンプが、状態が変化し始めたときのタイムスタンプより後かどうかを確認するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がバージョン トランザクション マネージャーをポーリングしたときに発生します。 最初のトランザクションのタイムスタンプが状態変化のタイムスタンプより後の場合、ALTER DATABASE ステートメントの実行前に開始されたスナップショット トランザクションはすべて終了しています。 この待機状態は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ALTER DATABASE ステートメントを使用してバージョン管理を無効にするときに使用されます。|  
 |DISKIO_SUSPEND|外部バックアップがアクティブで、タスクがファイルへのアクセスを待機しているときに発生します。 これは、ユーザー プロセスの待機が発生するたびに報告されます。 1 つのユーザー プロセスの待機が 5 回を超えた場合は、外部バックアップの完了に時間がかかりすぎている可能性があります。|  
 |DISPATCHER_QUEUE_SEMAPHORE|ディスパッチャー プールのスレッドが、まだ多くの作業の処理を待機しているときに発生します。 ディスパッチャーがアイドル状態の場合、この待機の種類の待機時間は長くなると予想されます。|  
@@ -182,13 +174,11 @@ ms.locfileid: "68090873"
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |HTTP_ENUMERATION|起動時に発生し、HTTP を開始するため HTTP エンドポイントを列挙します。|  
 |HTTP_START|接続が HTTP の初期化完了を待機しているときに発生します。|  
-|IMPPROV_IOWAIT|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、一括読み込み I/O の終了を待機しているときに発生します。|  
+|IMPPROV_IOWAIT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、一括読み込み I/O の終了を待機しているときに発生します。|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|トレース イベント バッファーの同期中に発生します。|  
 |IO_COMPLETION|I/O 操作の完了を待機しているときに発生します。 この待機の種類は通常、データ ページ以外の I/O を表します。 データ ページ I/O の完了の待機は、PAGEIOLATCH_* の待機として表示されます。|  
-|IO_QUEUE_LIMIT|
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の非同期 IO のキューに多数の保留中の IO がある場合に発生します。 別の IO を発行しようとしているタスクは、この待機の種類でブロックされます。これにより、保留中の IOs がしきい値を下回っています。 しきい値は、データベースに割り当てられている DTU に比例します。|  
+|IO_QUEUE_LIMIT|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の非同期 IO のキューに多数の保留中の IO がある場合に発生します。 別の IO を発行しようとしているタスクは、この待機の種類でブロックされます。これにより、保留中の IOs がしきい値を下回っています。 しきい値は、データベースに割り当てられている DTU に比例します。|  
 |IO_RETRY|I/O 操作 (ディスクの読み取り/書き込みなど) に失敗すると発生します。原因はリソース不足による再試行です。|  
 |IOAFF_RANGE_QUEUE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KSOURCE_WAKEUP|サービス コントロール タスクによって、サービス コントロール マネージャーからの要求を待機しているときに使用されます。 待機は長時間になることが予想されますが、問題はありません。|  
@@ -234,12 +224,10 @@ ms.locfileid: "68090873"
 |MSQL_DQ|タスクが分散クエリ操作の終了を待機しているときに発生します。 これは、複数のアクティブな結果セット (MARS) アプリケーションにデッドロックの可能性があるかどうかを検出するために使用されます。 分散クエリ呼び出しが終了すると、待機は終了します。|  
 |MSQL_XACT_MGR_MUTEX|タスクが、セッション レベル トランザクション操作を実行するために、セッション トランザクション マネージャーの所有権の取得を待機しているときに発生します。|  
 |MSQL_XACT_MUTEX|トランザクション使用の同期中に発生します。 要求でトランザクションを使用するには、まずミューテックスを取得する必要があります。|  
-|MSQL_XP |タスクが、拡張ストアド プロシージャの終了を待機しているときに発生します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この待機状態を使用して、MARS アプリケーションにデッドロックの可能性があるかどうかを検出します。 拡張ストアド プロシージャの呼び出しが終了すると、待機は終了します。|  
+|MSQL_XP |タスクが、拡張ストアド プロシージャの終了を待機しているときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この待機状態を使用して、MARS アプリケーションにデッドロックの可能性があるかどうかを検出します。 拡張ストアド プロシージャの呼び出しが終了すると、待機は終了します。|  
 |MSSEARCH|フルテキスト検索の呼び出し中に発生します。 フルテキスト操作が完了すると、待機は終了します。 この待機はフルテキスト操作の競合ではなく、操作時間を表します。|  
 |NET_WAITFOR_PACKET|ネットワークの読み取り中に、接続がネットワーク パケットを待機しているときに発生します。|  
-|OLEDB|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出すときに発生します。 この種類の待機は、同期では使用されません。 代わりに、OLE DB プロバイダー呼び出しの持続時間を示します。|  
+|OLEDB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出すときに発生します。 この種類の待機は、同期では使用されません。 代わりに、OLE DB プロバイダー呼び出しの持続時間を示します。|  
 |ONDEMAND_TASK_QUEUE|バックグラウンド タスクが、優先度の高いシステム タスクの要求を待機しているときに発生します。 待機時間が長い場合は処理優先度が高い要求がないことを示します。問題があるわけではありません。|  
 |PAGEIOLATCH_DT |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
 |PAGEIOLATCH_EX |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
@@ -255,8 +243,7 @@ ms.locfileid: "68090873"
 |PAGELATCH_UP |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。|  
 |PARALLEL_BACKUP_QUEUE|RESTORE HEADERONLY、RESTORE FILELISTONLY、または RESTORE LABELONLY によって生成された出力をシリアル化しているときに発生します。|  
 |PREEMPTIVE_ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム (SQLOS) スケジューラが、監査イベントを Windows イベント ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。|  
+|PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム (SQLOS) スケジューラが、監査イベントを Windows イベント ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。|  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG|SQLOS スケジューラが、監査イベントを Windows セキュリティ ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。|  
 |PREEMPTIVE_CLOSEBACKUPMEDIA|SQLOS スケジューラが、バックアップ メディアを閉じるためにプリエンプティブ モードに切り替えたときに発生します。|  
 |PREEMPTIVE_CLOSEBACKUPTAPE|SQLOS スケジューラが、テープ バックアップ デバイスを閉じるためにプリエンプティブ モードに切り替えたときに発生します。|  
@@ -268,7 +255,7 @@ ms.locfileid: "68090873"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS |ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|PRINT_ROLLBACK_PROGRESS |ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を (ポーリング経由で) 受信するバックグラウンド タスクの終了を待機しているときに発生します。  内部使用のみです。|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|追加、置換、削除のいずれかの操作が、Always On 内部リスト (ネットワーク、ネットワークアドレス、または可用性グループリスナーの一覧など) での書き込みロックの取得を待機しています。  内部使用のみです。|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On drop availability group 操作は、Windows Server フェールオーバークラスタリングオブジェクトを破棄する前に、対象の可用性グループがオフラインになるのを待機しています。|  
@@ -312,8 +299,7 @@ ms.locfileid: "68090873"
 |SEC_DROP_TEMP_KEY|一時セキュリティ キーを削除しようとして失敗した後、再試行するまでの間に発生します。|  
 |SECURITY_MUTEX|ミューテックスを待機しているときに発生します。このミューテックスは、拡張キー管理 (EKM) 暗号化サービス プロバイダーのグローバル リストへのアクセス、および EKM セッションのセッション スコープ リストへのアクセスを制御します。|  
 |SEQUENTIAL_GUID|新しいシーケンシャル GUID を取得中に発生します。|  
-|SERVER_IDLE_CHECK|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアイドル状態を同期している間に、リソース モニターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをアイドルとして宣言しようとするとき、または起動しようとするときに発生します。|  
+|SERVER_IDLE_CHECK|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアイドル状態を同期している間に、リソース モニターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをアイドルとして宣言しようとするとき、または起動しようとするときに発生します。|  
 |SHUTDOWN|シャットダウン ステートメントが、アクティブな接続の終了を待機しているときに発生します。|  
 |SLEEP_BPOOL_FLUSH|ディスク サブシステムが飽和状態にならないよう、チェックポイントで新しい I/O の実行をスロットル中に発生します。|  
 |SLEEP_DBSTARTUP|すべてのデータベースが復旧するのを待機している間、データベースの起動中に発生します。|  
@@ -322,28 +308,23 @@ ms.locfileid: "68090873"
 |SLEEP_SYSTEMTASK|バックグラウンドタスクの開始中に発生し、tempdb が起動を完了するのを待機しています。|  
 |SLEEP_TASK|ジェネリック イベントの発生を待機している間、タスクがスリープ状態のときに発生します。|  
 |SLEEP_TEMPDBSTARTUP|タスクが tempdb の起動完了を待機しているときに発生します。|  
-|SNI_CRITICAL_SECTION|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク コンポーネント内での内部同期中に発生します。|  
-|SNI_HTTP_WAITFOR_0_DISCON|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウン中、未完了の HTTP 接続が終了するのを待機している間に発生します。|  
+|SNI_CRITICAL_SECTION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク コンポーネント内での内部同期中に発生します。|  
+|SNI_HTTP_WAITFOR_0_DISCON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウン中、未完了の HTTP 接続が終了するのを待機している間に発生します。|  
 |SNI_LISTENER_ACCESS|NUMA (non-uniform memory access) ノードが状態の変化を更新するのを待機している間に発生します。 状態の変化へのアクセスはシリアル化されます。|  
 |SNI_TASK_COMPLETION|NUMA ノード状態の変化中にすべてのタスクが終了するのを待機しているときに発生します。|  
 |SOAP_READ|HTTP ネットワークの読み取り完了を待機しているときに発生します。|  
 |SOAP_WRITE|HTTP ネットワークの書き込み完了を待機しているときに発生します。|  
 |SOS_CALLBACK_REMOVAL|コールバックを削除するために、コールバックの一覧で同期を実行しているときに発生します。 サーバーの初期化が完了した後、通常この待機カウンターが変更されることはありません。|  
 |SOS_DISPATCHER_MUTEX|ディスパッチャー プールの内部初期化中に発生します。 これには、プールの調整中も含まれます。|  
-|SOS_LOCALALLOCATORLIST|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。|  
+|SOS_LOCALALLOCATORLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。|  
 |SOS_MEMORY_USAGE_ADJUSTMENT|プール間でメモリ使用量が調整されている場合に発生します。|  
 |SOS_OBJECT_STORE_DESTROY_MUTEX|メモリ プールからオブジェクトを破棄するときに、メモリ プール内での内部同期中に発生します。|  
 |SOS_PROCESS_AFFINITY_MUTEX|関係設定を処理するためのアクセスの同期中に発生します。|  
-|SOS_RESERVEDMEMBLOCKLIST|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。|  
+|SOS_RESERVEDMEMBLOCKLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ マネージャー内での内部同期中に発生します。|  
 |SOS_SCHEDULER_YIELD|タスクが、他のタスクの実行にスケジューラを自主的に解放したときに発生します。 この待機中、タスクはクォンタムの更新を待機しています。|  
 |SOS_SMALL_PAGE_ALLOC|メモリの割り当てと開放中に発生します。このメモリはいくつかのメモリ オブジェクトによって管理されます。|  
 |SOS_STACKSTORE_INIT_MUTEX|内部ストアの初期化の同期中に発生します。|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|タスクが同期して開始したときに発生します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのタスクは非同期で開始し、タスクの要求が作業キューに挿入されるとすぐ制御が最初に戻ります。|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|タスクが同期して開始したときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのタスクは非同期で開始し、タスクの要求が作業キューに挿入されるとすぐ制御が最初に戻ります。|  
 |SOS_VIRTUALMEMORY_LOW|メモリ割り当てが、リソース マネージャーによる仮想メモリの解放を待機しているときに発生します。|  
 |SOSHOST_EVENT|CLR などのホストされるコンポーネントが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベント同期オブジェクト上で待機しているときに発生します。|  
 |SOSHOST_INTERNAL|CLR などのホストされるコンポーネントで使用される、メモリ マネージャーのコールバックの同期中に発生します。|  

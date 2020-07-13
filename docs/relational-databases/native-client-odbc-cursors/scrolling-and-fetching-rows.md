@@ -18,18 +18,17 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a8c0c0783ff51548143fa7fd670de2502482673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d5c7e2612094b9067c4902481937a2f93505bcc1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784054"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998964"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スクロール可能なカーソルを使用するには、ODBC アプリケーションでは次の操作を行う必要があります。  
   

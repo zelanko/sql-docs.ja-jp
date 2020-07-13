@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 850709dd8b4370360f5c06105266fb2c2510916c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932832"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757128"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete イベント (ADO)
 **Fetchcomplete**イベントは、長い非同期操作内のすべてのレコードが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に取得された後に呼び出されます。  
@@ -45,7 +45,7 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  **レコードセット**オブジェクトです。 レコードを取得したオブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Microsoft Visual Basic で**Fetchcomplete**を使用するには Visual Basic 6.0 以降が必要です。  
   
 ## <a name="see-also"></a>参照  

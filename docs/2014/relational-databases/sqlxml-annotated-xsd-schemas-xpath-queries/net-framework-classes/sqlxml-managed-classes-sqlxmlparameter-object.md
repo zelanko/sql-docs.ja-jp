@@ -13,23 +13,22 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cfd262e03666618ed7afd03e86d5d75bd08c8a8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015150"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter オブジェクト (SQLXML マネージド クラス)
   SqlXmlParameter オブジェクトは、次のプロパティをサポートしています。  
   
- Name  
+ 名前  
  パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、parameter オブジェクトが作成されます。  
   
- Value  
+ 値  
  パラメーターの値。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

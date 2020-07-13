@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e0459679a9be1d124a7c9dfacaebe7f1a2e02d34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63195052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001200"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーを開く (Visual Database Tools)
   ビューの定義を開いたり、クエリまたはビューの結果を表示したり、クエリを作成したり開いたりすると、クエリおよびビュー デザイナーが開きます。 クエリおよびビュー デザイナーは、4 つの個別のペインで構成されています。  
@@ -41,9 +40,7 @@ ms.locfileid: "63195052"
   
 1.  オブジェクト エクスプローラーで、開くビューを右クリックし、 **[デザイン]** または **[ビューを開く]** をクリックします。  
   
-     
-  **[デザイン]** を選択すると、 **[オプション]** ダイアログ ボックスで選択したオプションに従い、クエリおよびビュー デザイナーのペインが開きます。 
-  **[ビューを開く]** を選択すると、既定で結果ペインのみが開きます。  
+     **[デザイン]** を選択すると、 **[オプション]** ダイアログ ボックスで選択したオプションに従い、クエリおよびビュー デザイナーのペインが開きます。 **[ビューを開く]** を選択すると、既定で結果ペインのみが開きます。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>クエリおよびビュー デザイナーで既存のクエリを開くには  
   

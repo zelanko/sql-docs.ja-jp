@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78b8d2b687654583722456cb428d0bcea7aa845b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62892298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424819"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services の旧バージョンとの互換性
   ここでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のバージョン間の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能を含む既存のアプリケーションが使用できなくなったり動作が変わったりするような、製品の変更についても説明します。  

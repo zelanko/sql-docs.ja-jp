@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965236"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763313"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner メソッド
 [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)内のオブジェクトの所有者を指定します。  
@@ -44,7 +44,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  オブジェクトを所有する[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)または[グループ](../../../ado/reference/adox-api/group-object-adox.md)の[名前](../../../ado/reference/adox-api/name-property-adox.md)を指定する**文字列**値。  
   
  *ObjectTypeId*  
- 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
 ## <a name="remarks"></a>解説  
  プロバイダーがオブジェクトの所有者の指定をサポートしていない場合、エラーが発生します。  

@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de485c134c918a1f6f85b7b38bffc872003ddd7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086226"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894616"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>dm_cryptographic_provider_keys (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拡張キー管理 (EKM: Extensible Key Management) プロバイダーによって提供されるキーに関する情報を返します。  
 
@@ -45,14 +45,14 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|プロバイダーのキーの識別番号。|  
 |**key_name**|**nvarchar(512)**|プロバイダーのキーの名前。|  
-|**key_thumbprint**|**varbinary (32)**|キーのプロバイダーからの拇印。|  
+|**key_thumbprint**|**varbinary(32)**|キーのプロバイダーからの拇印。|  
 |**algorithm_id**|**int**|プロバイダーのアルゴリズムの識別番号。|  
 |**algorithm_tag**|**int**|プロバイダーのアルゴリズムのタグ|  
-|**key_type**|**nchar (256)**|プロバイダーのキーの型。|  
+|**key_type**|**nchar(256)**|プロバイダーのキーの型。|  
 |**key_length**|**int**|プロバイダーのキーの長さ|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -60,15 +60,15 @@ dm_cryptographic_provider_keys ( provider_id )
   
  ユーザーが EKM プロバイダーで認証できない場合、キー情報は返されません。  
   
-## <a name="examples"></a>例  
- 次の例は、の`1234567`識別番号を持つプロバイダーのキープロパティを示しています。  
+## <a name="examples"></a>使用例  
+ 次の例は、の識別番号を持つプロバイダーのキープロパティを示して `1234567` います。  
   
 ```  
 SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

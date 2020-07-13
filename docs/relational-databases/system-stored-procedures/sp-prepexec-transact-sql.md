@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68794716"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891533"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  パラメーター化[!INCLUDE[tsql](../../includes/tsql-md.md)]されたステートメントを準備して実行します。 sp_prepexec sp_prepare と sp_execute の機能を組み合わせたものです。 このアクションは、ID = 13 によって表形式のデータストリーム (TDS) パケットで呼び出されます。  
+  パラメーター化されたステートメントを準備して実行 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 sp_prepexec sp_prepare と sp_execute の機能を組み合わせたものです。 このアクションは、ID = 13 によって表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_prepexec handle OUTPUT, params , stmt
  *bound_param*  
  追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単純なステートメントを準備して実行します。  
   
 ```  
@@ -66,8 +66,8 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_execute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

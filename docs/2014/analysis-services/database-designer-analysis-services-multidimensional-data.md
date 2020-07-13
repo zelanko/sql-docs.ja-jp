@@ -9,30 +9,27 @@ ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3173e382cfc2dbbba8eabf5b84db9bd95725c4bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082408"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528948"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>データベース デザイナー (Analysis Services - 多次元データ)
-  のデータベースデザイナーを使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]すると、のプロパティを変更し、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースによって生成される警告を確認できます。  
+  のデータベースデザイナーを使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] すると、のプロパティを変更し、データベースによって生成される警告を確認でき [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 ## <a name="tabs"></a>タブ  
  データベース デザイナーのタブは次のとおりです。  
   
  [全般](general-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **[全般]** タブを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
+ **[全般]** タブを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
   
  [警告](warnings-database-designer-analysis-services-multidimensional-data.md)  
- 
-  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。  
+ **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。  
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [SSAS&#41;&#40;多次元モデルデータベース](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401147"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>分析プラットフォームシステムのハードウェアコンポーネント
@@ -21,13 +21,13 @@ ms.locfileid: "74401147"
 Analytics Platform System (APS) は、ビジネス要件に応じて適切な量の処理とストレージを購入できるように、スケーラブルなコンポーネントを使用します。 APS を注文する場合は、これらのコアハードウェアコンポーネントの組み合わせが必要になります。 ハードウェアベンダーによっては、名前付け規則が異なる場合や、追加のコンポーネントを使用する場合があります。  
  
   
-## <a name="rackandnetwork"></a>ラックとネットワーク 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>ラックとネットワーク 
  
 APS コンポーネントはすべて、データセンターに収められている1つ以上のラックに格納されます。 各ラックには、配電ユニット (Pdu)、2つの InfiniBand スイッチ、2つのイーサネットスイッチが付属しています。  
   
 ![ラックとネットワーク](media/rack-and-network.png "APS ラックとネットワーク")  
   
-## <a name="datascaleunit"></a>データスケールユニット
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>データスケールユニット
  
 データスケールユニットには、ユーザーデータを処理および格納するためのデータホストと直接接続ストレージ (DAS) が含まれています。 容量を追加するには、ハードウェアベンダーによってサポートされている構成に従って、データスケールユニットを追加します。 データスケールユニットの数が増えるにつれて、より多くの電力、ネットワーク、およびラックのインフラストラクチャを提供するために、必要に応じてラック & ネットワークコンポーネントを追加する必要があります。  
   
@@ -65,7 +65,7 @@ APS コンポーネントはすべて、データセンターに収められて�
   
 **ディスクサイズの**場合、直接接続された記憶域は、1、2、または 3 tb のディスクドライブを持つことができます。 すべてのデータスケールユニットには、同じサイズのディスクが必要です。  
   
-## <a name="basescaleunit"></a>基本スケールユニット 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>基本スケールユニット 
  
 基本スケールユニットには、アプライアンスに必要な、ブレイン電源ホスト、データホスト、および直接接続ストレージの最小数が含まれています。 これには、次のコンポーネントが含まれます。 
   

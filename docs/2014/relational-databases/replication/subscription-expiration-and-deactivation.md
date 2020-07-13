@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6d81e8b5c02fcfe5399be9e63c8160036a999547
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62630376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997940"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>サブスクリプションの有効期限と非アクティブ化
   サブスクリプションは、指定した *保有期間*内に同期されなかった場合、非アクティブ化されるか、期限切れにされる可能性があります。 行われる処理は、レプリケーションの種類と保有期間が過ぎているかどうかによって異なります。  
@@ -33,7 +32,7 @@ ms.locfileid: "62630376"
  保有期間を設定する場合は、「[サブスクリプションの有効期限の設定](publish/set-the-expiration-period-for-subscriptions.md)」、「[トランザクション パブリケーションのディストリビューションの保有期間の設定 &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md)」および「[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)」を参照してください。  
   
 ## <a name="transactional-replication"></a>トランザクション レプリケーション  
- トランザクションレプリケーションでは、ディストリビューションの最大保有期間**@max_distretention** ( [sp_adddistributiondb &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) とパブリケーションの保有期間 ( **@retention** [sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)のパラメーター) を使用します。  
+ トランザクションレプリケーションでは、ディストリビューションの最大保有期間 ( **@max_distretention** [Sp_adddistributiondb &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) とパブリケーションの保有期間 ( **@retention** [sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)のパラメーター) を使用します。  
   
 -   ディストリビューションの最大保有期間 (既定値は 72 時間) 内にサブスクリプションが同期されず、ディストリビューション データベース内にサブスクライバーに配信されていない変更がある場合、そのサブスクリプションは、ディストリビューターで実行される **ディストリビューションのクリーンアップ** ジョブによって非アクティブ化にマークされます。 サブスクリプションを再初期化する必要があります。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62630376"
      プッシュ サブスクリプションの期限が切れた場合は完全に削除されますが、プル サブスクリプションの場合は削除されません。 プル サブスクリプションは、サブスクライバーでクリーンアップする必要があります。 詳細については、「 [Delete a Pull Subscription](delete-a-pull-subscription.md)」を参照してください。  
   
 ## <a name="merge-replication"></a>マージ レプリケーション  
- マージレプリケーションでは、パブリケーションの保有期間**@retention** ( **@retention_period_unit** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターとパラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 次に例を示します。  
+ マージレプリケーションでは、パブリケーションの保有期間 **@retention** ( **@retention_period_unit** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターとパラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 次に例を示します。  
   
 -   パブリケーションの保有期間が 14 日間である場合、サブスクリプションは 14 日以内に同期されなかった場合に期限切れになる可能性があります。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62630376"
   
     -   保有期間が終了するまで、パブリケーションおよびサブスクリプション データベースでメタデータをクリーンアップすることはできません。 レプリケーション パフォーマンスを低下させる可能性があるため、保有期間に大きな値を指定する際は注意してください。 すべてのサブスクライバーが保有期間内で定期的に同期されることを確実に予測できる場合は、小さい値を使用することをお勧めします。  
   
-    -   サブスクリプションが期限切れにならないように指定することができます**@retention**(の値は 0)。ただし、メタデータをクリーンアップできないため、この値は使用しないことを強くお勧めします。  
+    -   サブスクリプションが期限切れにならないように指定することができます (の値は 0 **@retention** )。ただし、メタデータをクリーンアップできないため、この値は使用しないことを強くお勧めします。  
   
 -   リパブリッシャーの保有期間は、元のパブリッシャーで設定されている保有期間以下の値に設定する必要があります。 また、すべてのパブリッシャーとその代替同期パートナーに対するパブリケーションの保有期間の値は、同じにする必要があります。 異なる値を使用すると、集約されなくなる可能性があります。 パブリケーションの保有期間の値を変更する必要がある場合は、サブスクライバーを再初期化して、データの未集約が発生しないようにします。  
   

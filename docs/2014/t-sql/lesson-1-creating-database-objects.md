@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: ea211927bd9325bbbd39415fcb30e191570bf469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011693"
 ---
 # <a name="lesson-1-creating-database-objects"></a>レッスン 1: データベース オブジェクトの作成
   このレッスンでは、データベースを作成する方法、データベースにテーブルを作成する方法、およびテーブル内のデータにアクセスして変更する方法を説明します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  
@@ -34,17 +33,17 @@ ms.locfileid: "78280916"
   
  このレッスンの内容は次のとおりです。  
   
--   [チュートリアル&#41;&#40;データベースの作成](lesson-1-1-creating-a-database.md)  
+-   [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
   
--   [テーブル &#40;チュートリアルの作成&#41;](lesson-1-2-creating-a-table.md)  
+-   [テーブルの作成 (チュートリアル)](lesson-1-2-creating-a-table.md)  
   
--   [テーブル内のデータの挿入と更新 &#40;チュートリアル&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [テーブルのデータの挿入と更新 (チュートリアル)](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [テーブル内のデータの読み取り &#40;チュートリアル&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [テーブルのデータの読み取り (チュートリアル)](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [要約 : データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [チュートリアル&#41;&#40;データベースの作成](lesson-1-1-creating-a-database.md)  
+ [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
   
   

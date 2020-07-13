@@ -1,5 +1,6 @@
 ---
 title: ミラー化バックアップ メディア セット (SQL Server) | Microsoft Docs
+description: SQL Server では、メディア セットのミラー化をサポートします。これにより、バックアップ デバイスの誤動作の影響が小さくなるため、バックアップの信頼性が向上します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef4dbb94285abf6e88f663e1dc2cc609bd6718a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670671"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>ミラー化バックアップ メディア セット (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  ミラー化バックアップ メディア セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Enterprise Edition のみでサポートされています。  

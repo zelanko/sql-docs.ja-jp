@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6d71f1158ef73b84e5b04dcc9a1970bfd7dce35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 20a5d709cf570aad6e5805d5bf57428a9f7e7ae6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72783101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960192"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>SQL Server Management Studio から Windows PowerShell を実行する方法
-  Windows PowerShell セッションは、 **の** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から起動できます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Windows PowerShell を起動し、 `sqlps`モジュールを読み込み、**オブジェクトエクスプローラー**ツリー内の関連付けられているノードにパスコンテキストを設定します。  
+  Windows PowerShell セッションは、 **の** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から起動できます。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Windows PowerShell を起動し、モジュールを読み込み、 `sqlps` **オブジェクトエクスプローラー**ツリー内の関連付けられているノードにパスコンテキストを設定します。  
   
 ## <a name="before-you-begin"></a>はじめに  
- **オブジェクト エクスプローラー**でオブジェクトに対して PowerShell の実行を指定すると、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] PowerShell スナップインの読み込みと登録が完了した Windows PowerShell セッションが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によって開始されます。 セッションのパスは、オブジェクト エクスプローラーで右クリックしたオブジェクトの場所にあらかじめ設定されています。 たとえば、オブジェクト エクスプローラーで [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース オブジェクトを右クリックして **[PowerShell の起動]** を選択した場合、Windows PowerShell パスは次のように設定されます。  
+ **オブジェクトエクスプローラー**のオブジェクトに対して powershell の実行を指定すると、は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] powershell スナップインが読み込まれて登録された Windows powershell セッションを開始します。 セッションのパスは、オブジェクト エクスプローラーで右クリックしたオブジェクトの場所にあらかじめ設定されています。 たとえば、オブジェクト エクスプローラーで [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベース オブジェクトを右クリックして **[PowerShell の起動]** を選択した場合、Windows PowerShell パスは次のように設定されます。  
   
 ```
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
@@ -29,7 +28,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 ## <a name="to-run-powershell-from-sql-server-management-studio"></a>SQL Server Management Studio から PowerShell を実行するには 
   
-1.  **オブジェクト エクスプローラー**を開きます。  
+1.  **オブジェクトエクスプローラー**を開きます。  
   
 2.  作業対象オブジェクトのノードに移動します。  
   

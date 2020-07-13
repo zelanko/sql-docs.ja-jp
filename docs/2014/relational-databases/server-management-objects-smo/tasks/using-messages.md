@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f1c37ab95ee6d76592df39624595ed29b87e1ce1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72781799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003412"
 ---
 # <a name="using-messages"></a>メッセージの使用
-  SMO では、システム メッセージは、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> オブジェクトに属する `Server` オブジェクトで表現します。 システム メッセージは変更することができないため、`SystemMessage` オブジェクト プロパティは読み込み専用となります。  
+  SMO では、システム メッセージは、`Server` オブジェクトに属する <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> オブジェクトで表現します。 システム メッセージは変更することができないため、`SystemMessage` オブジェクト プロパティは読み込み専用となります。  
   
  SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいユーザー定義メッセージは、新しい `UserDefinedMessage` オブジェクトをインスタンス化し、適切なプロパティの設定を行うことによって作成することができます。  
   

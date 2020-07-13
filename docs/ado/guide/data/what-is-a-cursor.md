@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2761a716981a5d22fd7f7347f7b757013cccc5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923455"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763003"
 ---
 # <a name="what-is-a-cursor"></a>カーソルとは
 リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 アプリケーション (特に対話型でオンラインになっているアプリケーション) は、結果セット全体を1つの単位として効率的に処理することはできません。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  
@@ -67,7 +67,7 @@ ms.locfileid: "67923455"
   
  他のアプリケーションでは、同時実行は重要ではありません。 このような場合、データを常に最新の状態に保つために必要な費用を正当化することはできません。  
   
-## <a name="position"></a>[位置]  
+## <a name="position"></a>位置  
  カーソルは、結果セット内の現在位置を追跡することもできます。 カーソル位置は、現在のレコードへのポインターと考えることができます。これは、配列インデックスが配列内の特定の位置にある値を指す方法と似ています。  
   
 ## <a name="scrollability"></a>スクロール可能  

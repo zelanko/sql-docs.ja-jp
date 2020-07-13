@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b44014527f702969d264e4e5b5bb4f925345464
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fddaf9b23f5a67548a47ffc8cccc30baa7df5478
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068457"
 ---
 # <a name="toggle-a-breakpoint"></a>ブレークポイントの切り替え
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント上でブレークポイントを設定することを、ブレークポイントの切り替えと呼びます。  

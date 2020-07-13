@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの設定 (OLE DB) |Microsoft Docs
+title: 大きなデータの設定 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 777aeb6dea50a3c49f8e68ee17907295f8d886fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63218663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049645"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -27,13 +26,13 @@ ms.locfileid: "63218663"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ## <a name="procedures"></a>手順  
   
 #### <a name="to-set-blob-data"></a>BLOB データを設定するには  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の**Dwflag**要素を STGM_READ に設定し、iid 要素を ( `IID_ISequentialStream`公開するインターフェイス) に設定します。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の**Dwflag**要素を STGM_READ に設定し、iid 要素を `IID_ISequentialStream` (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
@@ -41,17 +40,14 @@ ms.locfileid: "63218663"
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  
-  `GetNextRows` を呼び出して、次の行を行セットにフェッチします。 
-  `GetData` を呼び出して、その行セットからデータを読み取ります。  
+5.  `GetNextRows` を呼び出して、次の行を行セットにフェッチします。 `GetData` を呼び出して、その行セットからデータを読み取ります。  
   
 6.  データを設定するには、データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して `IRowsetChange::SetData` (または `IRowsetChange::InsertRow`) を呼び出します。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+### <a name="description"></a>説明  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ### <a name="code"></a>コード  
   

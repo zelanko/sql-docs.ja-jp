@@ -18,34 +18,29 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34a91283d735730bcc5f011377b1f1e729e7e753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883352"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
-  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ユーザーまたはグループが属している各データベース ロールに関連付けられている権限を組み合わせて、特定の Windows ユーザーまたはグループに有効な権限を判断します。 その結果、1 つのデータベース ロールでディメンション、メジャー、または属性を表示するためのユーザーまたはグループ権限を付与していなくても、別のデータベース ロールでそのユーザーまたはグループ権限を付与している場合、そのユーザーまたはグループにはオブジェクトを表示する権限が与えられます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ユーザーまたはグループが属している各データベース ロールに関連付けられている権限を組み合わせて、特定の Windows ユーザーまたはグループに有効な権限を判断します。 その結果、1 つのデータベース ロールでディメンション、メジャー、または属性を表示するためのユーザーまたはグループ権限を付与していなくても、別のデータベース ロールでそのユーザーまたはグループ権限を付与している場合、そのユーザーまたはグループにはオブジェクトを表示する権限が与えられます。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー管理者ロールのメンバーと、フル コントロール (管理者) 権限を持つデータベース ロールのメンバーは、データベースのデータとメタデータすべてにアクセスでき、特定のオブジェクトを表示するのにその他の権限を必要としません。 さらに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーに対してデータベースのオブジェクトへのアクセスを拒否することはできず、データベース内でフル コントロール (管理者) 権限を持つ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールのメンバーに対してそのデータベース内のオブジェクトへのアクセスを拒否することもできません。 処理などの特殊な管理操作は、より権限の少ない別のロールを通じて承認されます。 詳細については、「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー管理者ロールのメンバーと、フル コントロール (管理者) 権限を持つデータベース ロールのメンバーは、データベースのデータとメタデータすべてにアクセスでき、特定のオブジェクトを表示するのにその他の権限を必要としません。 さらに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーに対してデータベースのオブジェクトへのアクセスを拒否することはできず、データベース内でフル コントロール (管理者) 権限を持つ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールのメンバーに対してそのデータベース内のオブジェクトへのアクセスを拒否することもできません。 処理などの特殊な管理操作は、より権限の少ない別のロールを通じて承認されます。 詳細については、「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
   
 ## <a name="list-roles-defined-for-your-database"></a>データベースに対して定義されたロールの一覧表示  
  管理者は、SQL Server Management Studio から簡単な DMV クエリを実行することにより、サーバー上で定義されたすべてのロールの一覧を取得できます。  
   
-1.  SSMS で、データベースを右クリックし、[**新しいクエリ** | ] [**MDX**] を選択します。  
+1.  SSMS で、データベースを右クリックし、[**新しいクエリ**] [MDX] を選択し  |  **MDX**ます。  
   
 2.  次のクエリを入力し、F5 キーを押して実行します。  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   
@@ -62,7 +57,7 @@ ms.locfileid: "66077020"
   
  次に、テーブルまたは多次元ソリューションが作成されたら、データベースとしてサーバーに配置されます。 サーバー管理者は、問題のあるデータベースに対してフル コントロール権限を持つロールを定義することにより、データベース管理タスクを委任できます。 このロールのメンバーは、データベース内のオブジェクトを処理または照会したり、キューブ、ディメンション、およびデータベース自体にある他のオブジェクトにアクセスするために追加のロールを作成したりできます。 詳細については、「[データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)」を参照してください。  
   
- **手順 3: クエリと処理のワークロードに対してキューブまたはモデルのアクセスを有効にする**  
+ **手順 3: クエリと処理のワークロードへのキューブ アクセスまたはモデル アクセスの有効化**  
   
  既定では、キューブまたはテーブル モデルにアクセスできるのは、サーバー管理者とデータベース管理者だけです。 組織内の他のユーザーがこれらのデータ構造を使用できるようにするには、`Read` 特権を指定する権限と共に、Windows ユーザーおよびグループ アカウントを、キューブまたはモデルにマップするための追加のロール割り当てが必要です。 詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
@@ -71,10 +66,9 @@ ms.locfileid: "66077020"
 > [!NOTE]  
 >  ユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ読み込み元である、基になるリレーショナル データベースのリレーショナル テーブルへの権限は必要とせず、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行しているコンピューターでのファイル レベルの権限も必要としません。  
   
- **手順 4 (省略可能): 内部キューブオブジェクトへのアクセスを許可または拒否する**  
+ **手順 4 (省略可): 内部キューブ オブジェクトへのアクセスの許可または拒否**  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データ モデル内のディメンション メンバーおよびセルを含む、個別のオブジェクトの設定権限のセキュリティ設定を提供します。 詳細については、「[ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)」および「[セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データ モデル内のディメンション メンバーおよびセルを含む、個別のオブジェクトの設定権限のセキュリティ設定を提供します。 詳細については、「[ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)」および「[セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)」を参照してください。  
   
  権限は、ユーザー ID によって異なります。 これは動的なセキュリティと呼ばれ、[UserName &#40;MDX&#41;](/sql/mdx/username-mdx) 関数を使用して実装されます。  
   
@@ -95,9 +89,9 @@ ms.locfileid: "66077020"
   
  このような方法を使用すると、モデル内のロールの定義とメンバーシップへの動きを最小限にし、ロールの割り当てに可視性が加わるため、キューブ権限の実装および保持が簡単になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー管理者のアクセス許可を付与 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [ロールとアクセス許可 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Analysis Services によってサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

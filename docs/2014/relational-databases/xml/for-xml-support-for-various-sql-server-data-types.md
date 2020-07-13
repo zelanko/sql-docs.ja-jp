@@ -10,22 +10,21 @@ helpviewer_keywords:
 - FOR XML clause, data type support
 - data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 51c4ccf47f19eaf5b24ae83fc3791ace7648413c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63205068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013310"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各種 SQL Server データ型の FOR XML サポート
   このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型の FOR XML のサポートについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[XML データ型に対する FOR XML サポート](for-xml-support-for-the-xml-data-type.md)|FOR XML が **xml** データ型でどのように機能するのかを説明します。|  
 |[文字列データ型の FOR XML のサポート](for-xml-support-for-string-data-types.md)|FOR XML が文字列データ型 ( **varchar** や **nvarchar**など) でどのように機能するのかを説明します。|  

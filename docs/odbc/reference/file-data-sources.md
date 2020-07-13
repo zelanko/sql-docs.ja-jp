@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068646"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306653"
 ---
 # <a name="file-data-sources"></a>[ファイル データ ソース]
 *ファイルデータソース*はファイルに格納され、接続情報が1人のユーザーによって繰り返し使用されるか、複数のユーザー間で共有されます。 ファイルデータソースを使用すると、ドライバーマネージャーは、dsn ファイルの情報を使用してデータソースへの接続を行います。 このファイルは、他のファイルと同様に操作できます。 ファイルデータソースには、マシンデータソースと同じようにデータソース名がなく、1つのユーザーまたはコンピューターに登録されていません。  

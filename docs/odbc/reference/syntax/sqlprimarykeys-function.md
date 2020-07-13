@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLPrimaryKeys function [ODBC]
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 022d19a291b4fab93925fd103620c4bc16839872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24407670ab9f1489a14bec19d910060b49d4bda0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68005749"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306867"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 関数
 **互換性**  
@@ -67,7 +67,7 @@ SQLRETURN SQLPrimaryKeys(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名。 この引数を null ポインターにすることはできません。 *TableName*に文字列検索パターンを含めることはできません。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *TableName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *TableName*は通常の引数です。これは文字どおりに処理され、大文字と小文字は区別されません。  
@@ -81,7 +81,7 @@ SQLRETURN SQLPrimaryKeys(
 ## <a name="diagnostics"></a>診断  
  **Sqlprimarykeys**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlprimarykeys**によって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -120,9 +120,9 @@ SQLRETURN SQLPrimaryKeys(
   
  次の表に、結果セット内の列の一覧を示します。 列 6 (PK_NAME) を超える追加の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Varchar|主キーテーブルカタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|主キーテーブルカタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|主キーテーブルのスキーマ名です。データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|主キーテーブルの名前。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|主キー列の名前。 ドライバーは、名前のない列に対して空の文字列を返します。|  
@@ -134,7 +134,7 @@ SQLRETURN SQLPrimaryKeys(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

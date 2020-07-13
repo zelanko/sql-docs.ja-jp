@@ -21,12 +21,12 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbedcb09ba05ff427fbae722a9223d902f2c438d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271959"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550148"
 ---
 # <a name="database-identifiers"></a>データベース識別子
 
@@ -37,7 +37,7 @@ ms.locfileid: "71271959"
 
 ```sql
 CREATE TABLE TableX
-(KeyCol INT PRIMARY KEY, Description nvarchar(80))
+(KeyCol INT PRIMARY KEY, Description nvarchar(80));
 ```
 
  このテーブルには名前のない制約も含まれます。 `PRIMARY KEY` 制約には識別子がありません。
@@ -48,34 +48,55 @@ CREATE TABLE TableX
 > 変数名、関数およびストアド プロシージャのパラメーター名は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子の規則に従っている必要があります。
 
 ## <a name="classes-of-identifiers"></a>識別子のクラス
+識別子のクラスには、次の 2 種類があります。
 
- 識別子のクラスには、次の 2 種類があります。
+-  標準識別子    
+   識別子の形式に関する規則に従います。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用するときは、標準識別子を区切る必要はありません。
 
- 標準識別子は、識別子の形式に関する規則に準拠しています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用するときは、標準識別子を区切る必要はありません。
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM HumanResources.Employee
+   WHERE NationalIDNumber = 153479919
+   ```
+
+-  区切られた識別子    
+   二重引用符 (") または角かっこ ([ ]) で囲まれています。 識別子の形式に関する規則に従っている識別子は、区切らなくてもかまいません。 次に例を示します。
+
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM [HumanResources].[Employee] --Delimiter is optional.
+   WHERE [NationalIDNumber] = 153479919 --Delimiter is optional.
+   ```
+
+識別子の規則に従わない識別子を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用する場合は、必ず区切らなければなりません。 次に例を示します。
 
 ```sql
+USE AdventureWorks
+GO
+CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
+(
+    [Order] [int] NOT NULL,
+    [SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
+    [OrderQty] [smallint] NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [UnitPriceDiscount] [money] NOT NULL,
+    [ModifiedDate] [datetime] NOT NULL,
+  CONSTRAINT [PK_SalesOrderDetail_Order_SalesOrderDetailID] PRIMARY KEY CLUSTERED 
+  ([Order] ASC, [SalesOrderDetailID] ASC)
+);
+GO
+
 SELECT *
-FROM TableX
-WHERE KeyCol = 124
+FROM [SalesOrderDetail Table]  --Identifier contains a space and uses a reserved keyword.
+WHERE [Order] = 10;            --Identifier is a reserved keyword.
 ```
 
- 区切られた識別子は、二重引用符 (") または角かっこ ([ ]) で囲まれています。 識別子の形式に関する規則に従っている識別子は、区切らなくてもかまいません。 次に例を示します。
-
-```sql
-SELECT *
-FROM [TableX]         --Delimiter is optional.
-WHERE [KeyCol] = 124  --Delimiter is optional.
-```
-
- 識別子の規則に従わない識別子を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用する場合は、必ず区切らなければなりません。 次に例を示します。
-
-```sql
-SELECT *
-FROM [My Table]      --Identifier contains a space and uses a reserved keyword.
-WHERE [order] = 10   --Identifier is a reserved keyword.
-```
-
- 標準識別子および区切られた識別子は、文字、記号 (_ @ #)、および数字を含む 1 ～ 128 個の文字で構成されます。 ローカル一時テーブルの場合、識別子は 116 文字以下でなければなりません。
+標準識別子および区切られた識別子は、文字、記号 (_ @ #)、および数字を含む 1 ～ 128 個の文字で構成されます。 ローカル一時テーブルの場合、識別子は 116 文字以下でなければなりません。
 
 ## <a name="rules-for-regular-identifiers"></a>標準識別子に関する規則
  変数、関数、およびストアド プロシージャの名前は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子の規則に従っている必要があります。
@@ -84,11 +105,11 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
     -   Unicode 規格 3.2 で定義されている文字。 Unicode の文字定義には、各国言語の文字の他に、ラテン文字 a ～ z と A ～ Z も含まれます。
 
-    -   アンダースコア (_)、アット マーク (@)、または番号記号 (#)。
+    -   アンダースコア (\_)、アット マーク (@)、または番号記号 (#)。
 
-         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、識別子の先頭にある一定の記号には特別な意味があります。 アット マークで始まる標準識別子は、常にローカル変数またはローカル パラメーターを表し、他の種類のオブジェクトの名前としては使用できません。 番号記号で始まる識別子は一時テーブルまたは一時プロシージャを表します。 2 つの番号記号 (##) で始まる識別子は、グローバルな一時オブジェクトを表します。 1 つまたは 2 つの番号記号で始まる名前を、他の種類のオブジェクトの名前として使用することもできますが、このような番号記号の使用はお勧めしません。
+        [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、識別子の先頭にある一定の記号には特別な意味があります。 アット マークで始まる標準識別子は、常にローカル変数またはローカル パラメーターを表し、他の種類のオブジェクトの名前としては使用できません。 番号記号で始まる識別子は一時テーブルまたは一時プロシージャを表します。 2 つの番号記号 (##) で始まる識別子は、グローバルな一時オブジェクトを表します。 1 つまたは 2 つの番号記号で始まる名前を、他の種類のオブジェクトの名前として使用することもできますが、このような番号記号の使用はお勧めしません。
 
-         一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の名前は、2 つのアット マーク (@@) から始まります。 これらの関数との混同を避けるために、@@ から始まる名前は使用しないでください。
+        一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の名前は、2 つのアット マーク (@@) から始まります。 これらの関数との混同を避けるために、@@ から始まる名前は使用しないでください。
 
 2.  名前の先頭以外では、次の文字を使用できます。
 
@@ -102,7 +123,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
 4.  埋め込み型スペースおよび特殊文字は使用できません。
 
-5.  補助文字は使用できません。
+5.  [補助文字](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)は使用できません。
 
  これらの規則に従っていない識別子を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用する場合は、二重引用符または角かっこで区切る必要があります。
 
@@ -110,18 +131,17 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > 標準識別子の形式に関する規則は、データベースの互換性レベルに応じて異なります。 互換性レベルは、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用して設定できます。
 
 ## <a name="see-also"></a>参照
-
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
-- [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
-- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
-- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
-- [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
-- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-- [予約キーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
+[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
+[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68123940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881588"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キューで保留中の更新があるサブスクライバーの行を取得します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -51,14 +51,14 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>結果セット  
  サブスクライブされたテーブルに対して1つ以上のキューに登録されたトランザクションを現在保持しているすべての行を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**アクション**|**nvarchar (10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
+|**操作**|**nvarchar (10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
 |**Tranid**|**nvarchar (70)**|コマンドが実行されたトランザクション ID。|  
 |**table column1...n**||*Tablename*で指定されたテーブルの各列の値。|  
-|**msrepl_tran_version**|**UNIQUEIDENTIFIER**|この列は、レプリケートされたデータへの変更を追跡し、パブリッシャーで競合検出を実行するために使用されます。 この列は、自動的にテーブルに追加されます。|  
+|**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータへの変更を追跡し、パブリッシャーで競合検出を実行するために使用されます。 この列は、自動的にテーブルに追加されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_getqueuedrows**は、キュー更新に参加しているサブスクライバーで使用されます。  
   
  **sp_getqueuedrows**は、キュー更新に参加しているサブスクリプションデータベース上の特定のテーブルの行を検索しますが、現在はキューリーダーエージェントによって解決されていません。  
@@ -66,9 +66,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="permissions"></a>アクセス許可  
  **sp_getqueuedrows**には、 *tablename*で指定されたテーブルに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [キュー更新の競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

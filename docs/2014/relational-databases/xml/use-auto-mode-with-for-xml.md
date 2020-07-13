@@ -12,15 +12,14 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63193265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059410"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
   「 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、 [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md) や [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md) により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- このクエリでは、\<Cust> 要素の作成時に CustomerID の値が行ごとに比較されます。これは、CustomerID がテーブルの主キーであるためです。 CustomerID がテーブルの主キーとして識別されない場合、列のすべての値 (このクエリでは CustomerID、CustomerType) が行ごとに比較されます。 値が異なる場合は、新しい \<Cust> 要素が XML に追加されます。  
+ このクエリでは、customerid \<Cust> がテーブルの主キーであるため、customerid 値は、要素の作成時に1行から次の行に比較されます。 CustomerID がテーブルの主キーとして識別されない場合、列のすべての値 (このクエリでは CustomerID、CustomerType) が行ごとに比較されます。 値が異なる場合は、新しい \<Cust> 要素が XML に追加されます。  
   
  これらの列の値を比較するとき、比較するいずれかの列が **text**型、 **ntext**型、 **image**型、または **xml**型の場合は、FOR XML では値が同じ場合でも値が異なると想定され比較されません。 これは、ラージ オブジェクトの比較がサポートされていないためです。 選択した行ごとに、要素が結果に追加されます。 **(n)varchar(max)** 型および **varbinary(max)** 型の列は比較されることに注意してください。  
   

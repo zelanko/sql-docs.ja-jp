@@ -10,15 +10,14 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a74080352beeda4f92ad6afa7b8266a8ebee5a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63137050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027634"
 ---
 # <a name="extended-events-tools"></a>拡張イベントのツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションの作成と管理には、次のツールを使用できます。  
@@ -31,14 +30,14 @@ ms.locfileid: "63137050"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダー。 拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 詳細については、「 [拡張イベントへの PowerShell プロバイダーの使用](use-the-powershell-provider-for-extended-events.md)」を参照してください。  
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 拡張イベントのトピックに用意されているコード サンプルを作成し、実行することができます。 詳細については、「 [オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)」を参照してください。  
   
- 自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
+ 自分が作成したセッション以外にも、サーバーには、既定のシステム正常性セッションが存在します。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [System_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
   
 ## <a name="ddl-statements"></a>DDL ステートメント  
  拡張イベント セッションを作成、変更、および削除するには、次の DDL ステートメントを使用します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|イベントのソース、イベント セッション ターゲット、およびイベント セッション パラメーターを識別する拡張イベント セッション オブジェクトを作成します。|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|イベント セッションの開始および停止、またはイベント セッションの構成変更を行います。|  
@@ -47,7 +46,7 @@ ms.locfileid: "63137050"
 ## <a name="catalog-views"></a>カタログ ビュー  
  イベント セッションの作成時に作成されたメタデータを取得するには、次のカタログ ビューを使用します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|すべてのイベント セッションの定義を一覧表示します。|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|イベント セッションの各イベントのアクションごとに 1 行のデータを返します。|  
@@ -61,7 +60,7 @@ ms.locfileid: "63137050"
 > [!NOTE]  
 >  これらのビューには、セッションが開始されるまでセッション データは格納されません。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|セッション ディスパッチャー プールに関する情報を返します。|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|イベント パッケージによって公開されるオブジェクトごとに 1 行のデータを返します。|  
@@ -77,16 +76,16 @@ ms.locfileid: "63137050"
 ## <a name="system-tables"></a>システム テーブル  
  次のシステム テーブルを使用して、SQL トレース イベントのクラスおよび列と等価な拡張イベントの情報を取得します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。|  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../views/views.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [SQL Server 拡張イベント テーブル &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
- [system_health セッションの使用](use-the-ssms-xe-profiler.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](../views/views.md)   
+ [Transact-sql&#41;&#40;カタログビュー](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
+ [SQL Server 拡張イベントテーブル &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
+ [System_health セッションを使用する](use-the-ssms-xe-profiler.md)   
  [拡張イベントへの PowerShell プロバイダーの使用](use-the-powershell-provider-for-extended-events.md)  
   
   

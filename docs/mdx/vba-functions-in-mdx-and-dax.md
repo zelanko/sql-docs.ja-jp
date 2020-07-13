@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135020"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
@@ -25,7 +25,7 @@ ms.locfileid: "68135020"
 |関数名|サポートされています|メモ|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
-|Array|サポートされていません||  
+|配列|サポートされていません||  
 |Asc|MDX のみ||  
 |AscW|MDX のみ||  
 |Atn|MDX のみ||  
@@ -42,7 +42,7 @@ ms.locfileid: "68135020"
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|command|サポートされていません||  
+|コマンド|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -50,7 +50,7 @@ ms.locfileid: "68135020"
 |CurDir|サポートされていません||  
 |CVar|MDX のみ||  
 |CVErr|サポートされていません||  
-|Date|MDX のみ|**警告**DAX は、同じ名前の別の関数を実装しています。指定された引数から日付型の値を生成するために使用される日付 (年、月、日) 関数|  
+|日付|MDX のみ|**警告**DAX は、同じ名前の別の関数を実装しています。指定された引数から日付型の値を生成するために使用される日付 (年、月、日) 関数|  
 |DateAdd|MDX のみ|**警告**DAX は、同じ名前の別の関数を実装しています。指定され\<た日付を一定の間隔で\<シフトするために使用される DATEADD (dates>、<number_of_intervals>、interval>) 関数|  
 |DateDiff|MDX のみ||  
 |DatePart|MDX のみ||  
@@ -62,13 +62,13 @@ ms.locfileid: "68135020"
 |DoEvents|サポートされていません||  
 |Environ|サポートされていません||  
 |EOF|サポートされていません||  
-|エラー|サポートされていません||  
+|Error|サポートされていません||  
 |Exp|DAX、MDX||  
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
 |FileLen|サポートされていません||  
 |Assert|サポートされていません|**警告**MDX では、同じ名前の別の関数が実装されています。FILTER (Set_Expression, Logical_Expression) 関数は、指定された引数の検索条件に基づいて、指定されたセットをフィルター処理した結果セットを返します。<br /><br /> **警告**DAX は、同じ名前の別の関数を実装しています。FILTER (\<table>,\<filter>) 関数は、指定された引数から別のテーブルまたは式のサブセットを表すテーブルを返します。|  
-|解決策|MDX のみ||  
+|Fix|MDX のみ||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|サポートされていません||  
 |FormatDateTime|サポートされていません||  
@@ -99,7 +99,7 @@ ms.locfileid: "68135020"
 |IsNull|MDX のみ||  
 |IsNumeric|MDX のみ||  
 |IsObject|サポートされていません||  
-|結合|サポートされていません||  
+|Join|サポートされていません||  
 |仮定|サポートされていません||  
 |LCase|MDX のみ||  
 |Left|DAX、MDX||  
@@ -133,23 +133,23 @@ ms.locfileid: "68135020"
 |Round|DAX、MDX||  
 |RTrim|MDX のみ||  
 |秒|DAX、MDX||  
-|弁護士|サポートされていません||  
+|Seek|サポートされていません||  
 |Sgn|DAX、MDX||  
-|シェル|サポートされていません||  
+|Shell|サポートされていません||  
 |Sin|MDX のみ||  
 |SLN|MDX のみ||  
-|スペース|MDX のみ||  
+|Space|MDX のみ||  
 |Spc|サポートされていません||  
-|分割|サポートされていません||  
+|Split|サポートされていません||  
 |R-sqr|MDX のみ||  
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
 |String|MDX のみ||  
 |StrReverse|サポートされていません||  
-|スイッチ|MDX のみ||  
+|Switch|MDX のみ||  
 |SYD|MDX のみ||  
-|Tab|サポートされていません||  
+|タブ|サポートされていません||  
 |Tan|MDX のみ||  
 |Time|サポートされていません||  
 |Timer|MDX のみ||  
@@ -163,6 +163,6 @@ ms.locfileid: "68135020"
 |VarType|サポートされていません||  
 |平日|DAX、MDX||  
 |WeekdayName|サポートされていません||  
-|年|DAX、MDX||  
+|Year|DAX、MDX||  
   
   

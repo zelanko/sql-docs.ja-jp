@@ -14,21 +14,21 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - connecting to driver [ODBC], connection attributes
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b29277d74383abff1510ca7394aecad036fc7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c295ce88eedf1d4cddc4173f5dea39c44b01f83d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036439"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299043"
 ---
 # <a name="connection-attributes"></a>接続属性
 接続属性は接続の特性です。 たとえば、トランザクションは接続レベルで行われるので、トランザクション分離レベルは 1 つの接続属性になります。 同様に、ログインタイムアウト、または接続を試行してからタイムアウトするまでの待機時間 (秒数) は接続属性です。  
   
  **SQLSetConnectAttr**を使用して接続属性を設定し、 **Sqlgetconnectattr**を使用してその現在の設定を取得します。 ドライバーが読み込まれる前に**SQLSetConnectAttr**が呼び出された場合、ドライバーマネージャーはその属性を接続構造に格納し、接続プロセスの一部としてドライバーに設定します。 アプリケーションで接続属性を設定する必要はありません。すべての接続属性には既定値があり、その一部はドライバー固有です。  
   
- 接続属性は、接続の前または後に設定することも、属性とドライバーに応じて設定することもできます。 ログインタイムアウト (SQL_ATTR_LOGIN_TIMEOUT) は接続プロセスに適用され、接続前に設定されている場合にのみ有効です。 Odbc カーソルライブラリはドライバーマネージャーとドライバーの間に存在するため、ODBC カーソルライブラリ (SQL_ATTR_ODBC_CURSORS) とネットワークパケットサイズ (SQL_ATTR_PACKET_SIZE) を使用するかどうかを指定する属性は、接続する前に設定する必要があります。そのため、ドライバーの前に読み込む必要があります。  
+ 接続属性は、接続の前または後に設定することも、属性とドライバーに応じて設定することもできます。 ログインタイムアウト (SQL_ATTR_LOGIN_TIMEOUT) は接続プロセスに適用され、接続前に設定されている場合にのみ有効です。 Odbc カーソルライブラリはドライバーマネージャーとドライバーの間に存在するため、odbc カーソルライブラリを使用するかどうかを指定する属性 (SQL_ATTR_ODBC_CURSORS) とネットワークパケットサイズ (SQL_ATTR_PACKET_SIZE) は、接続前に設定する必要があります。これは、ODBC カーソルライブラリがドライバーマネージャーとドライバーの間に存在するため、ドライバーの前に読み込む必要があるためです。  
   
  データソースが読み取り専用または読み取り/書き込み可能 (SQL_ATTR_ACCESS_MODE) かどうかを指定する属性と、接続の前または後に現在のカタログ (SQL_ATTR_CURRENT_CATALOG) を設定できるかどうかを指定する属性。ドライバーによって異なります。 ただし、接続後のドライバーによっては、接続後の変更がサポートされないため、相互運用可能なアプリケーションは接続前にこれらを設定します。  
   

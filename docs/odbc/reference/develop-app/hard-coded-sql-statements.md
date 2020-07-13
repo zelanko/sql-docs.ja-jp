@@ -12,14 +12,14 @@ helpviewer_keywords:
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139153"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300202"
 ---
 # <a name="hard-coded-sql-statements"></a>ハードコーディングされた SQL ステートメント
 通常、固定タスクを実行するアプリケーションには、ハードコーディングされた SQL ステートメントが含まれます。 たとえば、注文入力システムでは、次の呼び出しを使用して open sales orders を一覧表示できます。  

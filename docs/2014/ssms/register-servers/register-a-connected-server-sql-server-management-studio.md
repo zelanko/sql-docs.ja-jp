@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93fcd53b0abbbae6855d32cd215327ebfafe9889
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994771"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>接続済みのサーバーの登録 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  
   
  **このトピックの内容**  
   
--   **サーバーを登録するために使用するもの:**  
+-   **サーバーを登録する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-register-a-connected-server"></a>接続済みのサーバーを登録するには  
   
 1.  オブジェクト エクスプローラーで、接続済みのサーバーを右クリックし、 **[登録]** をクリックします。  
   
      **サーバー名**  
-     登録するサーバーに使用する名前を入力します。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してローカル サーバーまたはリモート サーバーを登録することにより、以降の接続で使用するサーバー接続情報を格納できます。 このフィールドの既定値は、サーバーに接続したときに入力したサーバー名です。 このサーバー名を維持するか、別の使いやすい名前を入力します。  
+     登録するサーバーに使用する名前を入力します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してローカル サーバーまたはリモート サーバーを登録することにより、以降の接続で使用するサーバー接続情報を格納できます。 このフィールドの既定値は、サーバーに接続したときに入力したサーバー名です。 このサーバー名を維持するか、別の使いやすい名前を入力します。  
   
      **[サーバーの説明]**  
      サーバーの説明をオプションで入力します。 最大 250 文字以内で指定します。  

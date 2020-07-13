@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257586"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484591"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell エディターによる Azure Data Studio のサポート
 
@@ -26,7 +26,7 @@ Azure Data Studio が提供する、優れた IDE に似たインターフェイ
 ![PowerShell の拡張機能](media/powershell-extension/powershell-extension.png)
 
 
-## <a name="features"></a>[機能]
+## <a name="features"></a>特徴
 
 - 構文の強調表示
 - コード スニペット
@@ -252,7 +252,7 @@ PowerShell 拡張機能に関する問題が発生した場合は、問題の診
 ## <a name="maintainers"></a>保守担当者
 
 - [Keith Hill](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
-- [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
+- Tyler Leonhardt - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
 ## <a name="license"></a>ライセンス

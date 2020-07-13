@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4858e4c35263ab3dd1d9fdcf55a2b136dd8eeaf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63071787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050180"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
   この例では、インメモリ OLTP を使用した場合のパフォーマンスの向上を取り上げます。メモリ最適化テーブルと従来のディスク ベースのテーブルとに対してまったく同じ Transact-SQL クエリを実行したときの応答時間の違いを比較します。 応答時間は一般に、ネイティブ コンパイル ストアド プロシージャでメモリ最適化テーブルを照会したときに最短となります。そこで、ネイティブにコンパイルされたストアド プロシージャも (同じクエリに基づいて) 作成、実行して、その点を実証することにします。 このサンプルを通じて証明されるのは、メモリ最適化テーブルのデータにアクセスしたときに得られるパフォーマンス向上の一面 (挿入操作時のデータ アクセス効率) だけです。 このサンプルはシングル スレッドで、インメモリ OLTP のコンカレンシーの利点を利用していません。 コンカレンシーを使用するワークロードでは、さらにパフォーマンスが向上します。  
@@ -187,8 +186,8 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [メモリ最適化テーブル](memory-optimized-tables.md)   
  [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)   
  [メモリ最適化テーブルを使用するための要件](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Transact-sql&#41;&#40;の ALTER DATABASE の File および Filegroup オプション](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [プロシージャおよびメモリ最適化テーブルの作成](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

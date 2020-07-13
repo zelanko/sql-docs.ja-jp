@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 082af2f3bd069bf8266af395c5d4c6382e191eb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934303"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
   このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
@@ -65,7 +64,7 @@ ms.locfileid: "62754827"
  **HISTORY**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**[記録された日時]**|履歴行のタイムスタンプです。|  
 |**ロール**|このデータベースに対するサーバー インスタンスの現在のミラーリング ロールです。[プリンシパル] または [ミラー] のいずれかになります。|  

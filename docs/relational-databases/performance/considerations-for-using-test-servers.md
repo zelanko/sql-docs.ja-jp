@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef09bd17effe13d415a30a1175e9279744813eca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655632"
 ---
 # <a name="considerations-for-using-test-servers"></a>テスト サーバーの使用に関する注意点
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   実稼働サーバー上のデータベースのチューニングにテスト サーバーを使用することは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの大きな利点です。 この機能を使用して、実際のデータを実稼働サーバーからテスト サーバーにコピーすることなく、チューニングにかかるオーバーヘッドをテスト サーバーに移行できます。  
   
 > [!NOTE]  

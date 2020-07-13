@@ -16,27 +16,23 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5d0283837d9344eaf529cf9818e6629cdc68065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060168"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata を使用した、CDATA セクションの作成 (SQLXML 4.0)
   XML では、文字がマークアップ文字として処理されないよう、文字を含むテキスト ブロックをエスケープするときに CDATA セクションを使用します。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースには、XML パーサーによってマークアップ文字として扱われる文字が含まれている場合があります。たとえば、山かっこ (\<と >)、不等号 (<=)、およびアンパサンド (&) は、マークアップ文字として扱われますが、 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
+ Microsoft のデータベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML パーサーによってマークアップ文字として扱われる文字が含まれる場合があります。たとえば、山かっこ ( \< and > )、小なり記号 (<=)、アンパサンド (&) は、マークアップ文字として扱われます。 この種類の特殊文字は、CDATA セクションで囲むことでマークアップ文字として扱われないようにできます。 CDATA セクション内の文字は、XML パーサーでプレーン テキストとして扱われます。  
   
- 
-  `sql:use-cdata` で返されるデータを CDATA セクションで囲むには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注釈を使用します。この注釈では、`sql:field` で指定される列の値を CDATA セクションで囲むかどうかを指定できます。 
-  `sql:use-cdata` 注釈は、データベース列にマップされる要素だけに指定できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で返されるデータを CDATA セクションで囲むには、`sql:use-cdata` 注釈を使用します。この注釈では、`sql:field` で指定される列の値を CDATA セクションで囲むかどうかを指定できます。 `sql:use-cdata` 注釈は、データベース列にマップされる要素だけに指定できます。  
   
- 
-  `sql:use-cdata` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
+ `sql:use-cdata` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
  この注釈は、`sql:url-encode` と共に使用したり、ID、IDREF、IDREFS、NMTOKEN、NMTOKENS 属性型に使用することはできません。  
   
@@ -44,7 +40,7 @@ ms.locfileid: "66014008"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 要素に対して sql:use-cdata を指定する  
- 次のスキーマでは`sql:use-cdata` 、 ** \<Address>** 要素内の** \<AddressLine1>** に対してが 1 (True) に設定されています。 この結果、データは CDATA セクション内に返されます。  
+ 次のスキーマで `sql:use-cdata` は、が要素内のに対して 1 (True) に設定されてい **\<AddressLine1>** **\<Address>** ます。 この結果、データは CDATA セクション内に返されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -11,24 +11,21 @@ f1_keywords:
 ms.assetid: 28cc2539-a983-4e29-9017-62e3ebea450f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d37aff1ec4e7311e195b55f69e78e93538ef15ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3d1d3ca1c2f9b2718774d93332098e054f28136d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080771"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544324"
 ---
 # <a name="go-to-dialog-box-ssas"></a>[ジャンプ] ダイアログ ボックス (SSAS)
-  
   **[ジャンプ]** ダイアログ ボックスを使用すると、テーブル内の特定の列に移動できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
   
 |||  
 |-|-|  
 |期間|定義|  
-|**行きます**|
-  **[ジャンプ]** ボックスの一覧から列を選択して、 **[OK]** をクリックします。|  
+|**行きます**|**[ジャンプ]** ボックスの一覧から列を選択して、 **[OK]** をクリックします。|  
   
   

@@ -11,24 +11,22 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e6384d856cb84d095bcea8ce5b8209f4e815138
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440259"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
-  
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
  参照変換の詳細については、「 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
  ドラッグ アンド ドロップ操作により、使用できる入力列を参照列にマップします。  
@@ -47,13 +45,13 @@ ms.locfileid: "66057894"
  **参照列**  
  選択した参照列を表示します。 選択内容は、 **[使用できる参照列]** テーブルのチェック ボックスの状態に反映されます。  
   
- **参照操作**  
+ **[参照操作]**  
  一覧から、参照列で実行する参照操作を選択します。  
   
  **出力のエイリアス**  
  各参照列の出力の別名を入力します。 既定では参照列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[参照変換エディター] &#40;接続ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

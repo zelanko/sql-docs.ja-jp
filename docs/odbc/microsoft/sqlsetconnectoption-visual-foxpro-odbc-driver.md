@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48a4c8666ab7aa7e210289564210d99c947e5631
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2af208663f1e91250faad0ca9538b76bcec43b06
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071711"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301503"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -31,7 +31,7 @@ ms.locfileid: "68071711"
   
  次の表では、 **SQLSetConnectOption**の VISUAL FoxPro ODBC ドライバーの実装に固有の動作を持つ引数のみについて説明します。  
   
-|*fOption*|解説|  
+|*fOption*|Remarks|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは[Sqltransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。Visual FoxPro ODBC ドライバーは、完了時に不可能ステートメントを自動的にコミットしません。 ステートメントが不可能の場合、ドライバーはトランザクションを開始します。|  
 |SQL_CURRENT_QUALIFIER|には、完全修飾[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)名または0個以上の[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)を含むディレクトリへの完全修飾パスを指定できます。|  

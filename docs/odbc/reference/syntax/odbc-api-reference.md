@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085463"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298936"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
 このセクションのトピックでは、各 ODBC 関数についてアルファベット順に説明します。 各関数は、C プログラミング言語の関数として定義されています。 説明には次のものがあります。  

@@ -47,7 +47,7 @@ ms.locfileid: "71297276"
  どちらのプロジェクトも、アセンブリに署名するよう構成します。アセンブリは、厳密な名前のキー ファイルを使用して、ビルド時に生成されます。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>DtsConnection 属性の適用  
- 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性を適用して、そのクラスが接続マネージャーとして識別されるようにします。 この属性には、接続マネージャーの名前、説明、および接続の種類など、デザイン時の情報を指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> プロパティと **Description** プロパティは、 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスに表示される **[種類]** 列と **[説明]** 列に対応します。このダイアログ ボックスは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージの接続を構成するときに表示されます。  
+ 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性を適用して、そのクラスが接続マネージャーとして識別されるようにします。 この属性には、接続マネージャーの名前、説明、および接続の種類など、デザイン時の情報を指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> プロパティと **Description** プロパティは、**[SSIS 接続マネージャーの追加]** ダイアログ ボックスに表示される **[種類]** 列と **[説明]** 列に対応します。このダイアログ ボックスは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージの接続を構成するときに表示されます。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> プロパティを使用して、接続マネージャーをそのカスタム ユーザー インターフェイスにリンクします。 このプロパティに必要な公開キー トークンを取得するには、**sn.exe -t** を使用して、ユーザー インターフェイス アセンブリへの署名に使用するキー ペア (.snk) ファイルから公開キー トークンを表示します。  
   

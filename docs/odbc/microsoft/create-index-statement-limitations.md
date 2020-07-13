@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 053287d5087b377429221c31dd4e6b20f24248e5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081929"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280883"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX ステートメントの制限事項
 Microsoft Excel またはテキストドライバーでは、CREATE INDEX ステートメントはサポートされていません。  

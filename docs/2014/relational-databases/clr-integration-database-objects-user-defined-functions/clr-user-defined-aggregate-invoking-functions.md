@@ -17,16 +17,14 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62919602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954692"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR ユーザー定義集計関数の呼び出し
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
   
  さらに、次の規則も適用されます。  
@@ -35,9 +33,9 @@ ms.locfileid: "62919602"
   
 -   ユーザー定義集計は、2つの部分で構成される名前を使用して、 *schema_name udagg_name*の形式で呼び出す必要があります。  
   
--   ユーザー定義集計の引数の型は、 `CREATE AGGREGATE`ステートメントで定義されているように、一致しているか、集計の*input_type*に暗黙的に変換可能である必要があります。  
+-   ユーザー定義集計の引数の型は、ステートメントで定義されているように、一致しているか、集計の*input_type*に暗黙的に変換可能である必要があり `CREATE AGGREGATE` ます。  
   
--   ユーザー定義集計の戻り値の型は、 `CREATE AGGREGATE`ステートメントの*return_type*と一致している必要があります。  
+-   ユーザー定義集計の戻り値の型は、ステートメントの*return_type*と一致している必要があり `CREATE AGGREGATE` ます。  
   
 ## <a name="example-1"></a>例 1  
  次の例は、テーブルの列から取得した一連の文字列値を連結するユーザー定義集計関数を示します。  
@@ -197,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- コードを**Myagg .dll**にコンパイルしたら、次のようにの集計を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に登録できます。  
+ コードをコンパイルして**MyAgg.dll**にすると、次のようにの集計をに登録でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -237,7 +235,7 @@ GROUP BY BookID;
   
 |BookID|AuthorName|  
 |------------|------------------|  
-|1 で保護されたプロセスとして起動されました|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

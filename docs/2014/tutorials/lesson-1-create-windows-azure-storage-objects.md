@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9f580b1b7c6cb1127ac9feecf5e767c467e710bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039965"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>レッスン 1: Azure ストレージ オブジェクトの作成
+# <a name="lesson-1-create-azure-storage-objects"></a>レッスン 1:Azure Storage オブジェクトの作成
   クラウド記憶域に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バックアップを作成する前に、まず、ストレージ アカウントを作成してから BLOB コンテナーを作成する必要があります。 レッスン1では、Azure 管理ポータルにログインし、ストレージアカウントと blob コンテナーを作成する手順について説明します。  
   
 ## <a name="create-a-storage-account"></a>ストレージ アカウントを作成する  
@@ -29,8 +28,7 @@ ms.locfileid: "70176111"
   
 2.  ストレージアカウントを作成する詳細な手順については、[こちら](https://go.microsoft.com/fwlink/?LinkId=271926)を参照してください。  
   
-3.  前の手順で作成したストレージ アカウントを参照します。 Web ページの下部中央にある [キーの**管理**] をクリックします。 アカウント情報が表示されます。 ストレージ アカウント名とアクセス キーをコピーします。 この情報は、SQL の保存された資格情報を作成するために必要です。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、この情報を使用し、ストレージ アカウントにアクセスしてバックアップを作成します。  
+3.  前の手順で作成したストレージ アカウントを参照します。 Web ページの下部中央にある [キーの**管理**] をクリックします。 アカウント情報が表示されます。 ストレージ アカウント名とアクセス キーをコピーします。 この情報は、SQL の保存された資格情報を作成するために必要です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、この情報を使用し、ストレージ アカウントにアクセスしてバックアップを作成します。  
   
      ![Azure Storage アカウントキーのスクリーンショット](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Azure Storage アカウントキーのスクリーンショット")  
   
@@ -38,7 +36,7 @@ ms.locfileid: "70176111"
     >  ストレージ アカウントは、REST API を使用してプログラムで作成することもできます。 詳細については、「[ストレージアカウントの作成](https://go.microsoft.com/fwlink/?LinkId=271928)」を参照してください。  
   
 ### <a name="create-a-blob-container"></a>BLOB コンテナーの作成  
- コンテナーは、BLOB のセットをグループ化します。 すべての BLOB はコンテナーに格納されている必要があります。 アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 また、1 つのコンテナーに保存できる BLOB の数も無制限です。  
+ コンテナーには、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。  
   
  コンテナーを作成するには、次の手順を実行します。  
   

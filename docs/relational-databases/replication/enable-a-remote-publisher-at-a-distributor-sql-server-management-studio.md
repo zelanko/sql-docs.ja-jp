@@ -42,7 +42,7 @@ ms.locfileid: "76288079"
 
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>[ディストリビューターのプロパティ] ダイアログ ボックスでパブリッシャーを有効にするには  
   
-1.  **[ディストリビューターのプロパティ -** Distributor>] **ダイアログ ボックスの \<[パブリッシャー]** ページで、 **[追加]** をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、**[追加]** をクリックします。  
   
 2.  **[SQL Server パブリッシャーの追加]** をクリックします。 Oracle パブリッシャーを有効にしてディストリビューターを使用する方法については、「 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)」を参照してください。  
   

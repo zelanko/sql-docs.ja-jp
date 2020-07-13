@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3124e5d844e3b0e1adc2053b0d62bdb000591f9d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900473"
 ---
 # <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインに対するクロス ドメイン ルールを作成する方法について説明します。 クロス ドメイン ルールとは、複合ドメインに含まれる単一ドメインの値の間の関係をテストするルールです。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、クロス ドメイン ルールが複合ドメイン全体に当てはまる必要があります。 クロス ドメイン ルールは、ドメイン値の検証、修正、および標準化のために使用されます。  
   
@@ -33,34 +33,30 @@ ms.locfileid: "75245468"
   
  クロス ドメイン ルールは、単一ドメインのみに影響するすべての単純なルールの後に考慮されます。 値が単一ドメインのルールに適合する場合しか、クロス ドメイン ルールは適用されません。 ルールの対象となる複合ドメインと単一ドメインはすべて、ルールを実行する前に定義されている必要があります。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  クロス ドメイン ルールを作成するには、複合ドメインを作成して開いておく必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  クロス ドメイン ルールを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Create"></a>クロスドメインルールの作成  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a>クロスドメインルールの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
-2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
   
-3.  
-  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成する複合ドメインを選択するか、新しい複合ドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)」を参照してください。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、ドメイン ルールを作成する複合ドメインを選択するか、新しい複合ドメインを作成します。 新しいドメインを作成する必要がある場合は、「 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)」を参照してください。  
   
-4.  
-  **[CD のルール]** タブをクリックします。  
+4.  **[CD のルール]** タブをクリックします。  
   
-5.  
-  **[新しいドメイン ルールの追加]** をクリックし、ルールの名前と説明を入力します。  
+5.  **[新しいドメイン ルールの追加]** をクリックし、ルールの名前と説明を入力します。  
   
 6.  ルールが実行されるようにする場合は、 **[アクティブ]** を選択します (既定値)。実行されないようにする場合は選択を解除します。  
   
@@ -82,19 +78,17 @@ ms.locfileid: "75245468"
   
 9. 以下のテストの手順に進みます。  
   
-##  <a name="Test"></a>クロスドメインルールのテスト  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a>クロスドメインルールのテスト  
   
 1.  次の手順に従ってクロス ドメイン ルールをテストします。  
   
     1.  複合ドメインのペインの右上隅にある **[テスト データについて選択したドメイン ルールを実行します]** アイコンをクリックします。  
   
-    2.  
-  **[ドメイン ルールのテスト]** ダイアログ ボックスで、 **[ドメイン ルールの新しいテスト用語を追加]** アイコンをクリックします。  
+    2.  **[ドメイン ルールのテスト]** ダイアログ ボックスで、 **[ドメイン ルールの新しいテスト用語を追加]** アイコンをクリックします。  
   
     3.  If 句に関連付けられている単一ドメインと Then 句に関連付けられている単一ドメインのそれぞれについて、テスト値を入力します。 If 句に入力したテスト値は、その句の条件を満たす必要があります。条件を満たさない場合、 **[有効性]** 列に疑問符が表示され、クロス ドメイン ルールがテスト データに適用されません。  
   
-    4.  
-  **[ドメイン ルールの新しいテスト用語を追加]** アイコンをもう一度クリックして、別の一連のテスト値を追加します。  
+    4.  **[ドメイン ルールの新しいテスト用語を追加]** アイコンをもう一度クリックして、別の一連のテスト値を追加します。  
   
     5.  [**すべての用語でドメインルールをテスト**する] アイコンをクリックします。 一連のテスト値が有効な場合は、その行の **[有効性]** 列にチェック マークが表示されます。 一連のテスト値が有効でない場合は、その行の [有効性] 列に感嘆符付きの三角形が表示されます。  
   
@@ -102,7 +96,7 @@ ms.locfileid: "75245468"
   
 2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a>補足情報: クロスドメインルールを作成した後  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a>補足情報: クロスドメインルールを作成した後  
  クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

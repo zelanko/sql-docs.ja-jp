@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLExecDirect function [ODBC]
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0fa34020478308c1e0d5c5fe112bbeb04920f07e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5739e397467deb684a4cd6c7b13a507f30b53fa7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003123"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286112"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 関数
 **互換性**  
@@ -59,7 +59,7 @@ SQLRETURN SQLExecDirect(
 ## <a name="diagnostics"></a>診断  
  **SQLExecDirect**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLExecDirect**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01001|カーソル操作の競合|\**StatementText*には、位置指定の update または delete ステートメントが含まれており、行または複数の行が更新または削除されていません。 (複数の行の更新の詳細については、 **SQLSetStmtAttr**の SQL_ATTR_SIMULATE_CURSOR*属性*の説明を参照してください)。<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -84,8 +84,8 @@ SQLRETURN SQLExecDirect(
 |22012|0による除算|**StatementText*に、0による除算の原因となった算術式を含む SQL ステートメントが含まれていました。<br /><br /> 入力/出力パラメーターまたは出力パラメーターに対して計算された算術式により、0除算が発生しました。|  
 |22015|間隔フィールドオーバーフロー|StatementText には、数値または間隔のパラメーターが含まれています。このパラメーターは、interval SQL データ型に変換されると、有効桁数が失われる原因となります。 * \**<br /><br /> StatementText には、複数のフィールドを持つ interval パラメーターが含まれており、列の数値データ型に変換されるとき、数値データ型には表現がありませんでした。 * \**<br /><br /> StatementText には、interval sql 型に割り当てられたパラメーターデータが含まれていましたが、interval sql 型では C 型の値が表現されていませんでした。 * \**<br /><br /> 数値または期間が完全な SQL 型である入力/出力パラメーターまたは出力パラメーターを範囲 C 型に代入すると、有効桁数が失われます。<br /><br /> 入力/出力パラメーターまたは出力パラメーターが期間 C 構造体に割り当てられている場合、interval データ構造体にデータは表示されませんでした。|  
 |22018|キャストの指定に無効な文字値があります|StatementText に含まれている C 型は、真数または概数、datetime、または interval データ型です。 * \** 列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> 入力/出力パラメーターまたは出力パラメーターが返された場合、SQL 型は正確な数値、概数値、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。列の値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
-|22019|エスケープ文字が無効です|\**StatementText*には、 **WHERE**句で**エスケープ**を含む**LIKE**述語を含む SQL ステートメントが含まれており、エスケープ後のエスケープ文字の長さが 1**ではあり**ませんでした。|  
-|22025|無効なエスケープシーケンスです|\**StatementText*に、 **WHERE**句に "**LIKE** _pattern VALUE_ **ESCAPE** _escape character_" を含む SQL ステートメントが含まれており、pattern 値のエスケープ文字の後にある文字が "%" または "_" のいずれでもありませんでした。|  
+|22019|エスケープ文字が無効です|\**StatementText*を含む SQL ステートメントに含まれている、**LIKE**の述語では、**エスケープ**で、**WHERE**句とエスケープの長さ次の文字**エスケープ**が 1 と等しくありません。|  
+|22025|無効なエスケープシーケンスです|\**StatementText*を含む SQL ステートメントに含まれる"**LIKE** _パターン値_ **エスケープ** _エスケープ文字_"で、**WHERE**句、およびパターンの値のエスケープ文字の後の文字が「%」または「_」のいずれか。|  
 |23000|整合性制約違反|**StatementText*には、パラメーターまたはリテラルを含む SQL ステートメントが含まれていました。 関連付けられているテーブル列に NOT NULL として定義されている列に対して、パラメーター値が NULL でした。一意の値のみが含まれるように制約された列に重複した値が指定されたか、他の整合性制約に違反しています。|  
 |24000|カーソル状態が無効|カーソルは、 **sqlfetch**または**sqlfetchscroll**によって*StatementHandle*に配置されました。 このエラーは、 **Sqlfetch**または**sqlfetchscroll**が SQL_NO_DATA 返されなかった場合にドライバーマネージャーによって返されます。また、 **Sqlfetch**または**sqlfetchscroll**が SQL_NO_DATA を返した場合は、ドライバーによって返されます。<br /><br /> カーソルが開いていましたが、 *StatementHandle*に配置されていません。<br /><br /> **StatementText*には、位置指定の update または delete ステートメントが含まれており、カーソルが結果セットの先頭の前、または結果セットの末尾の後に配置されました。|  
 |34000|カーソル名が無効|**StatementText*には、位置指定の update または delete ステートメントが含まれており、実行されているステートメントによって参照されているカーソルが開かれていませんでした。|  
@@ -145,7 +145,7 @@ SQLRETURN SQLExecDirect(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

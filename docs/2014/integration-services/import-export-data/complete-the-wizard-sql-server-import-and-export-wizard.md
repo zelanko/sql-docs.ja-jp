@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe5409fd131c7a5b532ecfb462c530c88d0faacd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62893073"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436779"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)
   [**ウィザードの完了**] ページを使用すると、データをコピーする前に、ウィザードで選択した内容を確認できます。  

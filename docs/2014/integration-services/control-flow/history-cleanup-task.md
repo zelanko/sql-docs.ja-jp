@@ -12,15 +12,14 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a7664fb91c6e60789cd59aeef1d25c33409477a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84bc697b7fb18269fc581cea51e111aebc82c15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62831469"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432931"
 ---
 # <a name="history-cleanup-task"></a>履歴クリーンアップ タスク
   履歴クリーンアップ タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの、次の履歴テーブル内のエントリを削除します。  

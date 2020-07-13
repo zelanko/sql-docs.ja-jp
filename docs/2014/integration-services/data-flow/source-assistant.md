@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sourceassistant.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5954782efeebcb3bc4007988b8033adf47f969b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900801"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437649"
 ---
 # <a name="source-assistant"></a>ソース アシスタント
   変換元アシスタント コンポーネントを使用すると、変換元コンポーネントおよび接続マネージャーを作成できます。 このコンポーネントは、SSIS ツールボックスの **[お気に入り]** セクションにあります。  

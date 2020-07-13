@@ -11,46 +11,43 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058964"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437359"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>[SQL 実行タスク エディター] ([結果セット] ページ)
-  
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]** に設定されている場合は無効です。  
   
  このタスクの詳細については、「 [SQL 実行タスク](control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **結果名**  
- 
-  **[追加]** をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
+ **[結果名]**  
+ **[追加]** をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
   
  結果セットの種類が " **単一行**" の場合、クエリによって返される列の名前か、クエリによって返される列の列リスト内で列の位置を示す数値を使用できます。  
   
  結果セットの種類が " **完全な結果セット** " または " **XML**" の場合、結果セット名には 0 を使用する必要があります。  
   
- **関連トピック**: [SQL 実行タスクの結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **関連項目**: [SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **変数名**  
- 変数を選択して変数に結果セットをマップするか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ 変数を選択して結果セットを変数にマップするか \<**New variable...**> 、[**変数の追加**] ダイアログボックスを使用して新しい変数を追加します。  
   
- **追加**  
+ **[追加]**  
  結果セットのマッピングを追加します。  
   
- **Remove**  
+ **[削除]**  
  一覧で結果セットのマッピングを選択して、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[SQL 実行タスクエディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[SQL 実行タスクエディター] &#40;[パラメーターマッピング] ページ&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Transact-sql リファレンス &#40;データベースエンジン&#41;](/sql/t-sql/language-reference)  
+ [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](/sql/t-sql/language-reference)  
   
   

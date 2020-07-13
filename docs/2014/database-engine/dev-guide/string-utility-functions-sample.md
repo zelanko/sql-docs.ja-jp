@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74054845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933273"
 ---
 # <a name="string-utility-functions-sample"></a>文字列ユーティリティ関数サンプル
   String Utilities サンプルには、Visual C# と Visual Basic で記述されたストリーミング テーブル値関数が含まれています。この関数は、コンマ区切りの文字列を 1 列のテーブルに分割します。 また、文字列の列をコンマ区切りの文字列に変換する集計関数も含まれています。  さらに、正規表現置換機能と正規表現検索機能を提供するスカラー関数およびテーブル値関数も実装されています。  
@@ -25,12 +24,9 @@ ms.locfileid: "74054845"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -53,7 +49,7 @@ ms.locfileid: "74054845"
      `GO`  
   
     > [!NOTE]  
-    >  CLR 統合を有効にするには`ALTER SETTINGS` 、サーバーレベルのアクセス許可が必要です。この権限`sysadmin`は`serveradmin` 、固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR 統合を有効にするには、 `ALTER SETTINGS` サーバーレベルのアクセス許可が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -75,8 +71,7 @@ ms.locfileid: "74054845"
   
     -   `Csc/reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /target:library StringUtils.cs`  
   
-5.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
+5.  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
   
 6.  サンプルが `C:\MySample\`以外のディレクトリにインストールされている場合は、その場所を示すように、ファイル `Install.sql` を編集します。  
   
@@ -84,14 +79,13 @@ ms.locfileid: "74054845"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-9. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
+9. [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
   
 10. 次のコマンドを使用してこのスクリプトを実行します。  
   
@@ -950,6 +944,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

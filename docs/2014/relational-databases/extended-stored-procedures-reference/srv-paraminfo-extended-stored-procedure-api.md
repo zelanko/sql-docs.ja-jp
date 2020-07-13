@@ -19,21 +19,19 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f3c89eb2e6f810902e28e01c7e5ffbcdcc0375c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f0777758a8ce42fb5c213e9b1272bd59df7837e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63127186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050713"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
- パラメーターに関する情報を返します。 この関数は、[srv_paramtype](srv-paramtype-extended-stored-procedure-api.md)、[srv_paramlen](srv-paramlen-extended-stored-procedure-api.md)、[srv_parammaxlen](srv-parammaxlen-extended-stored-procedure-api.md)、および [srv_paramdata](srv-paramdata-extended-stored-procedure-api.md) に代わる関数です。 **srv_paraminfo**では[、データ型と長さ](data-types-extended-stored-procedure-api.md)0 のデータのデータ型がサポートされます。  
+ パラメーターに関する情報を返します。 この関数は、[srv_paramtype](srv-paramtype-extended-stored-procedure-api.md)、[srv_paramlen](srv-paramlen-extended-stored-procedure-api.md)、[srv_parammaxlen](srv-parammaxlen-extended-stored-procedure-api.md)、および [srv_paramdata](srv-paramdata-extended-stored-procedure-api.md) に代わる関数です。 **srv_paraminfo** では、「[データ型 (拡張ストアド プロシージャ API)](data-types-extended-stored-procedure-api.md)」に記載されているデータ型、および長さがゼロのデータをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -78,22 +76,19 @@ pfNull
  パラメーターの最大長へのポインターです。  
   
  *pcbActualLen*  
- パラメーターの実際の長さへのポインターです。 
-  \*pfNull* が FALSE に設定されている場合、値 0 (**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
+ パラメーターの実際の長さへのポインターです。 *pfNull* が FALSE に設定されている場合、値 0 (\**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
   
  *pbData*  
- パラメーター データのバッファーへのポインターです。 
-  *pbData* が NULL でない場合、拡張ストアド プロシージャ API により \**pbData* に \**pcbActualLen* バイトのデータが書き込まれます。 
-  *pbData* が NULL の場合、\**pbData* にデータは書き込まれませんが、関数により \**pbType*、\**pcbMaxLen*、\**pcbActualLen*、**pfNull* が返されます。 このバッファーのメモリは、アプリケーションで管理する必要があります。  
+ パラメーター データのバッファーへのポインターです。 *pbData* が NULL でない場合、拡張ストアド プロシージャ API により \**pbData* に \**pcbActualLen* バイトのデータが書き込まれます。 *pbData* が NULL の場合、\**pbData* にデータは書き込まれませんが、関数により \**pbType*、\**pcbMaxLen*、\**pcbActualLen*、**pfNull* が返されます。 このバッファーのメモリは、アプリケーションで管理する必要があります。  
   
  *pfNull*  
- NULL フラグへのポインターです。 *パラメーターの値が NULL の場合、 *Pfnull*は TRUE に設定されます。  
+ NULL フラグへのポインターです。このパラメーターの値が NULL である場合、 **pfNull* は TRUE に設定されます。  
   
 ## <a name="returns"></a>戻り値  
  パラメーター情報が正常に取得された場合は SUCCEED を返し、それ以外の場合は FAIL を返します。 FAIL が返されるのは、現在のリモート ストアド プロシージャがない場合、および *n* 番目のリモート ストアド プロシージャ パラメーターがない場合です。  
   
-## <a name="remarks"></a>解説  
- **セキュリティ**に関する注意拡張ストアドプロシージャのソースコードを十分に確認し、コンパイル済みの Dll を実稼働サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+## <a name="remarks"></a>Remarks  
+ **セキュリティに関する注意** 拡張ストアド プロシージャのソース コードを十分に確認し、コンパイルした DLL をテストしたうえで実稼働サーバーにインストールしてください。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [拡張ストアド プロシージャのプログラマーズ リファレンス](database-engine-extended-stored-procedures-reference.md)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705887"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633425"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -58,7 +58,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ WITH
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `sqlserver` 場所プレフィックスを使用して、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] を別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、または Azure Synapse Analytics に接続することができます。
 - `Driver={<Name of Driver>}` 経由で接続する際に `ODBC` を指定します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
+- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS/SSL 接続を使用してデータが送信されるため、推奨されます。
 - Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -405,7 +405,7 @@ WITH
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -622,7 +622,7 @@ PolyBase 用の外部データ ソースを作成します。 外部データ �
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ WITH
 
 場所を設定する場合の追加の注意事項とガイダンス:
 
-- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない SSL 接続にも使用できます。
+- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された TLS/SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない TLS 接続にも使用できます。
 - Azure Synapse では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
+- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -872,7 +872,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ WITH
 
 - PDW エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
+- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
 - Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLParamData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0055013e27f56dd76565ece3fa90f7a331208672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fa7e91fe32ae1d8068a2115144cab89ebd0312d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002214"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301582"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

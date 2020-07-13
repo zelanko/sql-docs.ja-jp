@@ -16,24 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8924d703085b3f93fe2ae36084025e945ff3fda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67900218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820871"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>dm_os_buffer_pool_extension_configuration (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファープール拡張に関する構成情報を返します。 バッファープール拡張ファイルごとに1行の値を返します。  
+  のバッファープール拡張に関する構成情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 バッファープール拡張ファイルごとに1行の値を返します。  
   
 
   
-| 列名 | データ型 | [説明] |
+| 列名 | データ型 | 説明 |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 NULL 値は許可されます。|  
 |file_id|**int**|バッファー プール拡張ファイルの ID。 NULL 値は許可されません。|  
@@ -67,6 +67,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>参照  
  [バッファープール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [dm_os_buffer_descriptors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

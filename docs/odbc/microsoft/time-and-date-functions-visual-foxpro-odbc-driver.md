@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912403"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303063"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
 次の表は、Visual FoxPro ODBC ドライバーでサポートされている ODBC 時刻と日付の関数を示しています。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、Visual FoxPro と同等のものが表示されます。  
@@ -79,5 +79,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  エスケープシーケンスの詳細については、 *Odbc プログラマーズリファレンス*の「 [Odbc でのシーケンスのエスケープ](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を参照してください。

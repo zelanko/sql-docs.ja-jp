@@ -11,15 +11,14 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 65f57b330a2b007f8f02df4404597d91fb143fcd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 144c5c5bc19afe46215f85279e5586c02f27d4c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176455"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430919"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。

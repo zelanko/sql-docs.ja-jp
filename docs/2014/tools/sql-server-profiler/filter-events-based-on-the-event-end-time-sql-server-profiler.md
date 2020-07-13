@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b7ccb13828235b690bad83e3791b945d8584d5e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63184297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054391"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>イベントの終了時刻に基づいたフィルターでのイベントの選択 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、イベントの終了時刻に基づいてフィルターでトレース イベントを選択する方法について説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "63184297"
   
 5.  **[イベントの選択]** タブで、 **[EndTime]** データ列をクリックして **[フィルターの編集]** ダイアログ ボックスを表示します。 このダイアログ ボックスは、列見出しを右クリックして **[列フィルターの編集]** をクリックしても表示することができます。  
   
-6.  [より**大きい**] または [**より小さい**] `datetime`を展開し、比較演算子の下に表示されるフィールドに値を入力します。  
+6.  [より**大きい**] または [**より小さい**] を展開し、 `datetime` 比較演算子の下に表示されるフィールドに値を入力します。  
   
 ## <a name="see-also"></a>参照  
  [[SQL Server Profiler]](sql-server-profiler.md)   

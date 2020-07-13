@@ -13,27 +13,25 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: b2b269a2f23cc81478309d8ccfa7f89f6b60f742
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095518"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001310"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) 階層では、インデックスは <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトで表現します。 インデックス付き列は、<xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> プロパティによって表される <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> オブジェクトのコレクションで表現します。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
   
 ## <a name="examples"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>化インデックスのプロパティを**False**に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>非クラスター化インデックスのプロパティを**False**に設定します。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -90,7 +88,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C# での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>化インデックスのプロパティを**False**に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>非クラスター化インデックスのプロパティを**False**に設定します。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -148,7 +146,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell での非クラスター化複合インデックスの作成  
- このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>化インデックスのプロパティを**False**に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>非クラスター化インデックスのプロパティを**False**に設定します。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

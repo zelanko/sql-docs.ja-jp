@@ -1,5 +1,6 @@
 ---
 title: メニューコマンドおよびその他のショートカットキー (Oracle から SQL) |Microsoft Docs
+description: SSMA for Oracle アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68264564"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293929"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>メニュー コマンドやその他のショートカット キー (OracleToSQL)
 以下のセクションでは、SSMA for Oracle アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102906"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services の機能とタスク (SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66102906"
   
  [レポート データ (SSRS)](report-data/report-data-ssrs.md)  
   
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)  
   
  [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66102906"
   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
+ [Reporting Services のデータ警告](../ssms/agent/alerts.md)  
   
  [Reporting Services のセキュリティと保護](security/reporting-services-security-and-protection.md)  
   
- [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)  
+ [URL アクセス (SSRS)](url-access-ssrs.md)  
   
  [拡張機能 (SSRS)](extensions-ssrs.md)  
   

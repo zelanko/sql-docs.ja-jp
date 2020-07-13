@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 710112cfd4ab902c4c92a87602f6e362f3078d93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62664087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030530"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が破損したメッセージを受信すると、 **Broker:Corrupted Message** イベントが作成されます。  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|このメッセージのシーケンス番号。|52|いいえ|  
@@ -46,14 +45,13 @@ ms.locfileid: "62664087"
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|メッセージ交換の相手側のサービス名、およびこのデータベースに接続するためにリモート データベースで使用される接続文字列。|34|いいえ|  
 |**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **イニシエーター**:<br />                  受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **ターゲット**:<br />                  受信エンドポイントはメッセージ交換の対象となる側です。|38|いいえ|  
-|**Server**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
-|**重大度**|**int**|エラーが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でメッセージが削除される場合の、エラーの重要度。|29|いいえ|  
-|**調べる**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**StartTime**|**DATETIME**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**State**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
-|**TextData**|**ntext**|検出された破損についての説明。|1 で保護されたプロセスとして起動されました|はい|  
-|**トランザクション ID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
+|**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
+|**Severity**|**int**|エラーが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でメッセージが削除される場合の、エラーの重要度。|29|いいえ|  
+|**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
+|**TextData**|**ntext**|検出された破損についての説明。|1|はい|  
+|**Transaction ID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  このイベントの **TextData** 列には、メッセージとその問題点を説明するメッセージが含まれています。  
   

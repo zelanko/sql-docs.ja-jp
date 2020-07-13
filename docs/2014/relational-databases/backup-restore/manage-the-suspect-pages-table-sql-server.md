@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62921958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957942"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) テーブルは、 [msdb データベース](../databases/msdb-database.md)にあります。  
@@ -50,7 +49,7 @@ ms.locfileid: "62921958"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   
@@ -58,9 +57,9 @@ ms.locfileid: "62921958"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   **suspect_pages テーブルに記録されるエラー**  
   
@@ -115,12 +114,12 @@ ms.locfileid: "62921958"
   
      データベース管理者は、レコードの挿入や更新も行うことができます。 たとえば、問題のあるページが実際には一貫性の取れている状態であることが確かであっても、しばらくレコードを残しておきたい場合に、行を更新できると便利です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **msdb** に対するアクセスを持つユーザー は、 **suspect_pages** テーブルのデータを読み取ることができます。 suspect_pages テーブルに対する UPDATE 権限を持つすべてのユーザーは、そのレコードを更新できます。 **msdb** の **db_owner** 固定データベース ロールのメンバーまたは **sysadmin** 固定サーバー ロールのメンバーは、レコードの挿入、更新、および削除を行うことができます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
@@ -132,7 +131,7 @@ ms.locfileid: "62921958"
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   

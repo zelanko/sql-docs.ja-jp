@@ -1,5 +1,5 @@
 ---
-title: 'IRow:: GetColumns (OLE DB) を使用して列をフェッチします。Microsoft Docs'
+title: IRow::GetColumns を使用した列のフェッチ (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,29 +9,26 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62468498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039221"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
-  
   `IRow` インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、`IRow` では、1 つの行の結果セットから効率的に列を取得できます。  
   
- 
-  `IRow` を使用して単一行をフェッチする方法を示したコード サンプルがあります。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
+ `IRow` を使用して単一行をフェッチする方法を示したコード サンプルがあります。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
   
 -   列のグループを (順番に) フェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 Dbcolumnaccess 構造体では、 **pData**が NULL で**cbmaxlen**が0の場合、を`IRow` - `>GetColumns()`呼び出すと、実際の列の長さのみが返されます。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 Dbcolumnaccess 構造体では、 **pData**が NULL で**cbmaxlen**が0の場合、を呼び出すと、 `IRow` - `>GetColumns()` 実際の列の長さのみが返されます。 この場合、`IRow->GetColumns()` を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>IRow::GetColumns を使用して列をフェッチするには  
   
@@ -56,8 +53,7 @@ ms.locfileid: "62468498"
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   

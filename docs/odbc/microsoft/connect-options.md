@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], connection options
 - custom connection options [ODBC]
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25cfe2a897b0c312f91cd0c1e41ad6fa11725ab8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023375"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281312"
 ---
 # <a name="connect-options"></a>接続のオプション
 > [!IMPORTANT]  

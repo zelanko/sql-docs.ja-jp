@@ -18,15 +18,14 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4fd131050930cda981ebbd0e82daea46776dfa07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039603"
 ---
 # <a name="assigning-storage"></a>ストレージの割り当て
   アプリケーションでは、SQL ステートメントの実行前後に、結果用のストレージを割り当てることができます。 アプリケーションで最初に SQL ステートメントを準備または実行すると、結果のストレージを割り当てる前に、結果セットに関する情報を取得できます。 たとえば、結果セットが不明であれば、アプリケーションでは、列にストレージを割り当てる前に、列数を取得する必要があります。  

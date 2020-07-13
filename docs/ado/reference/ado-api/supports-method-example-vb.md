@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911705"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765383"
 ---
 # <a name="supports-method-example-vb"></a>Supports メソッドの例 (VB)
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この手順を実行するには、DisplaySupport プロシージャが必要です。  

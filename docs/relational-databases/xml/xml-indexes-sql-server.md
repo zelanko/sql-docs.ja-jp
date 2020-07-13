@@ -104,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
- たとえば、次のクエリからは `CatalogDescription`**テーブルの** xml `ProductModel` 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Summary`> の説明も含まれている製品モデルに限り <`Features`> 情報が返されます。  
+ たとえば、次のクエリからは `CatalogDescription`**テーブルの** xml `ProductModel` 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -167,7 +167,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]`: <`LastName`> 要素の値はわかっていますが、親である <`author`> はどこにでも存在し得ます。  
   
--   `/book[@* = "someValue"]`: `book` という値の属性を持つ <`"someValue"`> 要素を検索します。  
+-   `/book[@* = "someValue"]`: `"someValue"` という値の属性を持つ <`book`> 要素を検索します。  
   
  次のクエリは、 `ContactID` テーブルから `Contact` を返します。 `WHERE` 句では、 `AdditionalContactInfo`**xml** 型列の値を検索するフィルターを指定しています。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
   

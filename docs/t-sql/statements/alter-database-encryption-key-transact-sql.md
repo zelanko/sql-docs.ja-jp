@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cda016d7f8d1c671cf47faa930a89bce0944e4ba
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065872"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091826"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-pdw](../../includes/applies-to-version/sql-pdw.md)]
 
   データベースを透過的に暗号化するために使用する暗号化キーおよび証明書を変更します。 透過的データベース暗号化について詳しくは、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68065872"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -47,7 +47,7 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  

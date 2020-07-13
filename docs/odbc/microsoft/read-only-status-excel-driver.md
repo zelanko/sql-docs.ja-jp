@@ -11,14 +11,14 @@ helpviewer_keywords:
 - read-only status for Excel driver [ODBC]
 - Excel driver [ODBC], read-only status
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 39f9d2e7ba40ba067659a86f45d2006c83594f3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988042"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304023"
 ---
 # <a name="read-only-status-excel-driver"></a>読み取り専用の状態 (Excel ドライバー)
 Microsoft Excel ドライバーを使用すると、データソーステーブルは既定では読み取り専用として開かれ、一度に1人のユーザーのみが開くことができます。 ただし、テーブルに読み取り専用の状態がある場合でも、アプリケーションは Microsoft Excel テーブルの挿入と更新を実行できます。  

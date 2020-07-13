@@ -1,5 +1,6 @@
 ---
 title: CLR 統合を使用したはじめに |Microsoft Docs
+description: この記事では、.NET Framework CLR との Microsoft SQL Server 統合を使用してデータベースオブジェクトをコンパイルするために必要な名前空間とライブラリについて説明します。
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -24,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71af732f9d4097904c38b6fff019dc86f02a6f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76761936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885921"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、.NET Framework 共通言語ランタイム (CLR) との[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]統合を使用してデータベースオブジェクトをコンパイルするために必要な名前空間とライブラリの概要について説明します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
+このトピックでは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) との統合を使用してデータベースオブジェクトをコンパイルするために必要な名前空間とライブラリの概要について説明します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
   
 ## <a name="required-namespaces"></a>必要な名前空間  
 
-基本的な CLR データベースオブジェクトの開発に必要なコンポーネントは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、と共にインストールされます。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
+基本的な CLR データベースオブジェクトの開発に必要なコンポーネントは、と共にインストールされ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
   
 system.data.dll アセンブリには、CLR データベース オブジェクトのコンパイルに必要な次の名前空間が含まれています。  
   
@@ -91,12 +92,11 @@ End Class
   
 この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドでは、 **[Sqlcontext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と**[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** という2つの新しいクラスを使用して、単純なテキストメッセージを出力するマネージデータベースオブジェクトを作成します。 また、このメソッドは文字列 "Hello world!" を out パラメーターの値として指定します。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
   
-このプログラムをライブラリとしてコンパイルし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に読み込んで、ストアドプロシージャとして実行します。  
+このプログラムをライブラリとしてコンパイルし、に読み込んで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、ストアドプロシージャとして実行します。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>"Hello World" ストアドプロシージャをコンパイルします。  
 
-
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルが既定でインストールされます。 インストールされるファイルには、Visual C# プログラムと Visual Basic プログラム用のコマンド ライン コンパイラである csc.exe と vbc.exe が含まれています。 サンプルをコンパイルする前に、csc.exe または vbc.exe が格納されたディレクトリを指すようにパス変数を変更する必要があります。 .NET Framework の既定のインストール パスは、次のとおりです。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルが既定でインストールされます。 インストールされるファイルには、Visual C# プログラムと Visual Basic プログラム用のコマンド ライン コンパイラである csc.exe と vbc.exe が含まれています。 サンプルをコンパイルする前に、csc.exe または vbc.exe が格納されたディレクトリを指すようにパス変数を変更する必要があります。 .NET Framework の既定のインストール パスは、次のとおりです。  
   
 `C:\Windows\Microsoft.NET\Framework\(version)`  
   
@@ -120,8 +120,7 @@ Visual C# ソース ファイルの場合は、次のコマンドを実行しま
 
 サンプル プロシージャを正常にコンパイルしたら、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でそのプロシージャをテストできます。 プロシージャをテストするには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を起動し、適切なテスト データベース (AdventureWorks サンプル データベースなど) に接続して新しいクエリを作成します。  
   
-
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR コードを有効にするには、 **sp_configure**システムストアドプロシージャを使用します。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
   
 ストアド プロシージャにアクセスするには、アセンブリを作成する必要があります。 この例では、C:\ ディレクトリに helloworld.dll アセンブリが作成されているものとします。 クエリに次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを追加します。  
   
@@ -172,7 +171,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL Server での CLR 統合の詳細については、次の記事を参照してください。
 

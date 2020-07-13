@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 183b5cdd-962e-41ca-8064-ea44f622c77d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9374783a1e542076436b38e9a5858773e8901e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8da894d9c450dc4a23b15f8466e915898a858e52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035917"
 ---
 # <a name="sql-server-setup-user-interface-reference"></a>SQL Server セットアップのユーザー インターフェイス リファレンス
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードのインストール オプションについて説明します。  

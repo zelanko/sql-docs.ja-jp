@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003522"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX データ操作ステートメント (MDX)
@@ -22,7 +22,7 @@ ms.locfileid: "68003522"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CALL ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|現在のスコープまたは必要に応じて指定したキューブで void を返すストアドプロシージャを実行します。|  
 |[MDX&#41;&#40;の計算ステートメントのクリア](../mdx/mdx-data-manipulation-clear-calculations.md)|キューブからすべての計算を削除し、計算パス0にキューブを返します。|  
@@ -33,6 +33,6 @@ ms.locfileid: "68003522"
 ## <a name="see-also"></a>参照  
  [Mdx ステートメントリファレンス &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)   
- [Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

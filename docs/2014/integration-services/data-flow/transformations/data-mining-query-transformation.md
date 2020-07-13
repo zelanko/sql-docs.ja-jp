@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278fdc3b1abd38b63f01e967e28d11983a09e682
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430779"
 ---
 # <a name="data-mining-query-transformation"></a>データ マイニング クエリ変換
   データ マイニング クエリ変換は、データ マイニング モデルに対して予測クエリを実行します。 この変換には、データ マイニング拡張機能 (DMX) クエリを作成するためのクエリ ビルダーが含まれています。 このクエリ ビルダーを使用すると、DMX 言語を使用して、既存のマイニング モデルに対して変換入力データを評価する、カスタム ステートメントを作成できます。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)」を参照してください。  
@@ -34,21 +33,18 @@ ms.locfileid: "68890524"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[データ マイニング クエリ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[データ マイニング クエリ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [データマイニングクエリ変換エディター &#40;[マイニングモデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [[データ マイニング クエリ変換エディター] &#40;[マイニング モデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [データマイニングクエリ変換エディター &#40;[マイニングモデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [[データ マイニング クエリ変換エディター] &#40;[マイニング モデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

@@ -23,7 +23,7 @@ ms.locfileid: "69026123"
 
 結果セットに格納されている列の情報をクエリするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) クラスが実装されています。 このクラスには、単一値の形式で情報を返すメソッドが多数存在します。
 
-SQLServerResultSetMetaData オブジェクトを作成するには、[SQLServerResultSet](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) クラスの [getMetaData](../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを使用します。
+SQLServerResultSetMetaData オブジェクトを作成するには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md) メソッドを使用します。
 
 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、SQLServerResultSet クラスの getMetaData メソッドを使用して SQLServerResultSetMetaData オブジェクトを取得し、SQLServerResultSetMetaData オブジェクトのさまざまなメソッドを使用して、結果セットに含まれている列の名前およびデータ型の情報を出力します。
 

@@ -11,18 +11,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 3ab77f9839c7780b88b6cbccaa58f0dabad8bc60
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787415"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006639"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Sqlcolumns**は、 *CatalogName*、 *TableName*、または*ColumnName*パラメーターの値が存在するかどうかを SQL_SUCCESS 返します。 これらのパラメーターで無効な値が使用されている場合、 **Sqlfetch**は SQL_NO_DATA を返します。  
   
@@ -31,13 +30,13 @@ ms.locfileid: "73787415"
   
  **Sqlcolumns**は、静的サーバーカーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセットカーソル) で**Sqlcolumns**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
  ODBC 2 の場合。*x*アプリケーションでは、 *tablename*でワイルドカードを使用していません。 **sqlcolumns**は、名前が*tablename*に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。 現在のユーザーが*tablename*パラメーターと一致する名前を持つテーブルを所有していない場合、 **sqlcolumns**は、テーブル名が*tablename*パラメーターと一致する他のユーザーが所有しているテーブルに関する情報を返します。 ODBC 2 の場合。*x*アプリケーションワイルドカードを使用する**sqlcolumns**は、名前が*TableName*に一致するすべてのテーブルを返します。 ODBC 3 の場合。*x* Applications **sqlcolumns**は、所有者に関係なく名前が*TableName*に一致するすべてのテーブル、またはワイルドカードを使用するかどうかを返します。  
   
  次の表は、結果セットによって返される列の一覧です。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |DATA_TYPE|**VARCHAR (max)** データ型の SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します。|  
 |TYPE_NAME|**Varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型の "varchar"、"varbinary"、または "nvarchar" を返します。|  
@@ -56,7 +55,7 @@ ms.locfileid: "73787415"
   
  サーバーからパラメーターの UDT に関する追加のメタデータ プロパティを返したり、サーバーでこのメタデータ プロパティの情報が必要となる場合は、上記に定義したドライバー固有の新しい記述子を使用して、UDT のメタデータ プロパティの取得や設定を行えます。  
   
- クライアントがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続して sqlcolumns を呼び出す場合、カタログ入力パラメーターに NULL またはワイルドカード値を使用しても、他のカタログからの情報は返されません。 代わりに、現在のカタログに関する情報だけが返されます。 クライアントはまず SQLTables を呼び出して、目的のテーブルがあるカタログを特定できます。 その後、クライアントは、そのカタログ値を SQLColumns の呼び出しでカタログ入力パラメーターに使用して、そのテーブル内の列に関する情報を取得できます。  
+ クライアントがに接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] して SQLColumns を呼び出す場合、カタログ入力パラメーターに NULL またはワイルドカード値を使用しても、他のカタログからの情報は返されません。 代わりに、現在のカタログに関する情報だけが返されます。 クライアントはまず SQLTables を呼び出して、目的のテーブルがあるカタログを特定できます。 その後、クライアントは、そのカタログ値を SQLColumns の呼び出しでカタログ入力パラメーターに使用して、そのテーブル内の列に関する情報を取得できます。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns とテーブル値パラメーター  
  SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定によって異なります。 詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。 テーブル値パラメーター用に次の列が追加されました。  
@@ -77,14 +76,14 @@ ms.locfileid: "73787415"
  **Sqlcolumns**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns によるスパース列のサポート  
- SQLColumns の結果セットには、次の2つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定の列が追加されています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sqlcolumns の結果セットには、次の2つの特定の列が追加されています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|列がスパース列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
 |SS_IS_COLUMN_SET|**Smallint**|列が**column_set**列の場合、これは SQL_TRUE です。それ以外の場合は、SQL_FALSE ます。|  
   
- ODBC 仕様に準拠して、SS_IS_SPARSE と SS_IS_COLUMN_SET は、より[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンに追加されたドライバー固有のすべての列の前、および odbc 自体によって指定されたすべての列の前に表示されます。  
+ ODBC 仕様に準拠して、SS_IS_SPARSE と SS_IS_COLUMN_SET は、より前のバージョンに追加されたドライバー固有のすべての列の前、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および odbc 自体によって指定されたすべての列の前に表示されます。  
   
  SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定によって異なります。 詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。  
   

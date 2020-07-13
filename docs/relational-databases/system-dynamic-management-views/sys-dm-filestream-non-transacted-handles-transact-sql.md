@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67950988"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898884"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>dm_filestream_non_transacted_handles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable データに関連付けられている、現在開いている非トランザクションファイルハンドルを表示します。  
   

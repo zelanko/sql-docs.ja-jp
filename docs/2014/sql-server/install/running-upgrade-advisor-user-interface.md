@@ -16,22 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 653e3d0565d0b32c67ccf77772a9b89f611dd082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058952"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>アップグレード アドバイザーの実行 (ユーザー インターフェイス)
   アップグレード アドバイザーを実行すると、アップグレードの計画時にローカルまたはリモートのコンポーネントを分析できます。 アップグレードアドバイザーによって、分析されるコンポーネントとインスタンスごとにレポートが作成されます。  
   
 > [!IMPORTANT]  
->  アップグレード アドバイザーは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のリモート インスタンスを分析しません。 
-  [!INCLUDE[ssRS](../../includes/ssrs.md)] のインスタンスを分析するには、[!INCLUDE[ssRS](../../includes/ssrs.md)] がインストールされているコンピューターにアップグレード アドバイザーをインストールしておく必要があります。  
+>  アップグレード アドバイザーは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のリモート インスタンスを分析しません。 [!INCLUDE[ssRS](../../includes/ssrs.md)] のインスタンスを分析するには、[!INCLUDE[ssRS](../../includes/ssrs.md)] がインストールされているコンピューターにアップグレード アドバイザーをインストールしておく必要があります。  
 >   
->  Integration Services を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分析するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、がインストールさ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]れ、同じコンピューターにインストールされている必要があります。  
+>  Integration Services を分析するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インストールされ、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同じコンピューターにインストールされている必要があります。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>アップグレードアドバイザー分析ウィザードの実行  
  アップグレード アドバイザー分析ウィザードの実行には、次の 6 つの手順があります。  

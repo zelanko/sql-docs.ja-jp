@@ -15,15 +15,14 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63193331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059393"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  
@@ -290,7 +289,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`型のサポートにより、 [type ディレクティブ](type-directive-in-for-xml-queries.md)を指定することにより、FOR XML `xml`クエリの結果を、string 型または image 型のデータではなく、データ型として返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` データ型のサポートにより、type ディレクティブを指定することにより、FOR XML クエリの結果を `xml` 、string 型または image 型のデータでは[TYPE directive](type-directive-in-for-xml-queries.md)なく、データ型として返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
 ## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

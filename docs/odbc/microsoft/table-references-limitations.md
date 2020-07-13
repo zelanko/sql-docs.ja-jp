@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, table reference limitations
 - table reference limitations [ODBC]
 ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 838c80fada6dbbff67ea01c38192db4c78d3c45f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 590be0bfccdda9963ca1ec9840da0f8691bd784f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939723"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303103"
 ---
 # <a name="table-references-limitations"></a>テーブル参照の制限事項
 クエリステートメントには、最大で16個のテーブル参照を含めることができます。

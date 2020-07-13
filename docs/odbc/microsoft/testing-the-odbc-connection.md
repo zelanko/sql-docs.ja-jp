@@ -11,14 +11,14 @@ helpviewer_keywords:
 - testing connections [ODBC]
 - ODBC driver for Oracle [ODBC], testing connections
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02509ddb6a986ebb7796d80aca10c6f18cde6e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8de19af2b50a58eef22ec074a308f86717278a48
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939704"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303113"
 ---
 # <a name="testing-the-odbc-connection"></a>ODBC の接続のテスト
 > [!IMPORTANT]  

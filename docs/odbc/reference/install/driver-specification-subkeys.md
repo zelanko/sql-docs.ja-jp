@@ -13,24 +13,24 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47aa75f647e5fd8a88168611a3b21284962c70a4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094173"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280582"
 ---
 # <a name="driver-specification-subkeys"></a>ドライバーの仕様のサブキー
 ODBC ドライバーのサブキーに記載されている各ドライバーには、独自のサブキーがあります。 このサブキーには、ODBC ドライバーのサブキーの下にある対応する値と同じ名前が付けられています。 このサブキーの下の値には、ドライバーとドライバーのセットアップ Dll の完全なパス、 **Sqldrivers**によって返されるドライバーのキーワードの値、および使用状況の数が一覧表示されます。 値の形式を次の表に示します。  
   
-|Name|データ型|データ|  
+|名前|データの種類|データ|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124;**n**} {**y**&#124;**n**} {**y**&#124;**n**}|  
 |CreateDSN|REG_SZ|*ドライバー-説明*|  
-|Driver|REG_SZ|*ドライバー-DLL パス*|  
+|ドライバー|REG_SZ|*ドライバー-DLL パス*|  
 |DriverODBCVer|REG_SZ|*nn. nn*|  
 |FileExtns|REG_SZ|**\*.** *extension1*[**,\*。** *ファイル-extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
@@ -40,7 +40,7 @@ ODBC ドライバーのサブキーに記載されている各ドライバーに
   
  次の表は、各キーワードの使用方法を示しています。  
   
-|Keyword|使用法|  
+|キーワード|使用方法|  
 |-------------|-----------|  
 |**APILevel**|ドライバーでサポートされている ODBC インターフェイスの準拠レベルを示す数値:<br /><br /> 0 = なし<br /><br /> 1 = レベル1がサポートされています<br /><br /> 2 = サポートされているレベル2<br /><br /> これは、 **SQLGetInfo**の SQL_ODBC_INTERFACE_CONFORMANCE オプションに対して返される値と同じである必要があります。|  
 |**CreateDSN**|ドライバーのインストール時に作成される1つまたは複数のデータソースの名前。 システム情報には、 **Createdsn**キーワードを使用して一覧表示されたデータソースごとに1つのデータソース仕様セクションが含まれている必要があります。 これらのセクションには driver**キーワードを**含めないでください。ドライバーの仕様セクションで指定されていますが、ダイアログボックスを表示せずにデータソースの仕様を作成するには、ドライバーセットアップ DLL の**configdsn**関数に十分な情報を含める必要があります。 データソース仕様セクションの形式については、「[データソースの指定サブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)」を参照してください。|  

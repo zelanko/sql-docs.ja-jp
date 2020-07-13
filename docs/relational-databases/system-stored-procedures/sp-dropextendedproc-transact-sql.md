@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 032bca0112d1fb109ad96305426a55202d5349b9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859964"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拡張ストアドプロシージャを削除します。  
   
@@ -60,8 +60,8 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- 次の例では`xp_hello` 、拡張ストアドプロシージャを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、 `xp_hello` 拡張ストアドプロシージャを削除します。  
   
 > [!NOTE]  
 >  この拡張ストアドプロシージャは既に存在している必要があります。このような場合、この例ではエラーメッセージが返されます。  
@@ -72,9 +72,9 @@ GO
 EXEC sp_dropextendedproc 'xp_hello';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

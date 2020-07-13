@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a293d5dfc6bfbdf66afb680f0604117e2cc02b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68210708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010529"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   パラメーター化された行フィルターを使用すると、複数のパブリケーションを作成しなくても、パーティションの異なるデータを各サブスクライバーに送信できます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、パラメーター化されたフィルターは動的フィルターと呼ばれていました)。 パーティションとは、テーブル内の行のサブセットのことです。パラメーター化された行フィルターの作成時に選択した設定に基づき、パブリッシュされたテーブルの各行は、1 つのパーティションのみに属するか (重複しないパーティションが作成されます)、2 つ以上のパーティションに属します (重複するパーティションが作成されます)。  
@@ -47,7 +46,7 @@ ms.locfileid: "68210708"
   
      サブスクライバーまたはディストリビューターの名前以外の値で、この関数をオーバーライドすることも可能です。 通常、アプリケーションでは、販売員の名前や ID など、より具体的な意味のある値でこの関数をオーバーライドします。 詳細については、このトピックの「HOST_NAME() 値のオーバーライド」を参照してください。  
   
- システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動された場合、その行はサブスクライバーで削除されます (この動作は**@allow_partition_realignment** 、 [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターを使用して制御されます)。  
+ システム関数によって返された値は、フィルター選択しているテーブルで指定した列と比較され、適切なデータがサブスクライバーにダウンロードされます。 この比較は、サブスクリプションが初期化されたときに実行され (これにより初期スナップショットには適切なデータのみが含まれます)、またサブスクリプションが同期されるたびに実行されます。 既定では、パブリッシャーでの変更によってパーティションから行が移動された場合、その行はサブスクライバーで削除されます (この動作は、 **@allow_partition_realignment** [Sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターを使用して制御されます)。  
   
 > [!NOTE]  
 >  パラメーター化されたフィルターの比較が実行されるときは、常にデータベース照合順序が使用されます。 たとえば、データベース照合順序で大文字と小文字が区別されず、テーブルまたは列の照合順序で大文字と小文字が区別される場合、比較では大文字と小文字は区別されません。  
@@ -94,7 +93,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  たとえば、従業員の Pamela Ansman-Wolfe には、280 という従業員 ID が割り当てられています。 この従業員のサブスクリプションの作成時に、従業員 ID の値 (この場合は 280) を HOST_NAME() 値に指定します。 マージ エージェントはパブリッシャーに接続すると、HOST_NAME() によって返された値をこのテーブル内の値と比較し、 **EmployeeID** 列に 280 という値が格納された行のみをダウンロードします。  
   
 > [!IMPORTANT]
->  HOST_NAME() 関数は `nchar` 型の値を返します。したがって、上記の例のようにフィルター句の列が数値データ型の場合は、CONVERT を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句は**@subset_filterclause** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)のパラメーターに使用できますが、通常はパブリケーションの新規作成ウィザードでは使用できません (このウィザードでは、フィルター句を実行して検証します。これは`int`、コンピューター名をに変換できないために失敗します)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
+>  HOST_NAME() 関数は `nchar` 型の値を返します。したがって、上記の例のようにフィルター句の列が数値データ型の場合は、CONVERT を使用する必要があります。 `CONVERT(nchar,EmployeeID) = HOST_NAME()`のように、パラメーター化された行フィルターの句で列名に関数を適用するとパフォーマンスが低下するため、使用しないことをお勧めします。 代わりに、この例で示されている `EmployeeID = CONVERT(int,HOST_NAME())`という句を使用することをお勧めします。 この句は sp_addmergearticle のパラメーターに使用できます **@subset_filterclause** が、通常はパブリケーションの新規作成ウィザードでは使用できません (このウィザードでは、フィルター句を実行して検証します。これは、コンピューター名をに変換できないために失敗し[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) `int` ます)。 パブリケーションの新規作成ウィザードを使用する場合は、このウィザードで `CONVERT(nchar,EmployeeID) = HOST_NAME()` を指定し、次に [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を使用して句を `EmployeeID = CONVERT(int,HOST_NAME())` に変更してから、パブリケーションのスナップショットを作成することをお勧めします。  
   
  **HOST_NAME() 値をオーバーライドするには**  
   
@@ -102,7 +101,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: サブスクリプションの新規作成ウィザードの **HOST\_NAME\(\) 値** ページで値を指定します。 サブスクリプションの作成については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」を参照してください。  
   
--   レプリケーション[!INCLUDE[tsql](../../../includes/tsql-md.md)]プログラミング: [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) ( **@hostname**プッシュサブスクリプションの場合) または[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (プルサブスクリプションの場合) のパラメーターの値を指定します。  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: **@hostname** [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) (プッシュサブスクリプションの場合) または[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) (プルサブスクリプションの場合) のパラメーターの値を指定します。  
   
 -   マージ エージェント: コマンド ラインまたはエージェント プロファイルで **-Hostname** パラメーターの値を指定します。 マージ エージェントの詳細については、「 [Replication Merge Agent](../agents/replication-merge-agent.md)」を参照してください。 エージェント プロファイルの詳細については、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」を参照してください。  
   
@@ -119,12 +118,12 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  フィルター選択オプションを設定するには、「 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)」を参照してください。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>"パーティション グループを使用" および "パーティションの変更を保持" の設定  
- **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で `true` に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 アーティクルが事前計算済みパーティションを使用するための要件を満たしていない場合は、[パーティションの変更`true`を**保持**する] オプションをに設定します。  
+ **パーティション グループを使用** オプションと **パーティションの変更を保持** オプションでは、いずれもパブリケーション データベースに追加のメタデータを格納することにより、フィルター選択されたアーティクルを持つパブリケーションの同期パフォーマンスを向上します。 **パーティション グループを使用** オプションでは、事前計算済みパーティション機能を使用することにより、パフォーマンスを向上させることができます。 このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で `true` に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 アーティクルが事前計算済みパーティションを使用するための要件を満たしていない場合は、[**パーティションの変更を保持**する] オプションをに設定し `true` ます。  
   
 ### <a name="setting-partition-options"></a>[パーティションのオプション] の設定  
  **[パーティションのオプション]** プロパティの値は、アーティクルを作成するときに、フィルター選択されたテーブルのデータをサブスクライバーが共有する方法に応じて設定します。 このプロパティは、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、および **[アーティクルのプロパティ]** ダイアログ ボックスを使用して、4 つの値のいずれかに設定できます。 このプロパティは、 **[フィルターの追加]** ダイアログ ボックスまたは **[フィルターの編集]** ダイアログ ボックスを使用して、2 つの値のいずれかに設定できます。これらのダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから使用できます。 次の表は、利用可能な値をまとめたものです。  
   
-|[説明]|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
+|説明|[フィルターの追加] および [フィルターの編集] の値|[アーティクルのプロパティ] の値|ストアド プロシージャ内の値|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できます。|**[このテーブルの 1 行を複数のサブスクリプションに移動する]**|**[重複する]**|**0**|  
 |パーティション内のデータは重複しています。サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。|N/A<sup>1</sup>|**[重複する (パーティション外のデータ変更を禁止)]**|**1**|  

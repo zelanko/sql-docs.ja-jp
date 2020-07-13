@@ -13,17 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Error collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f71246fa641f74579f181f93da46333e2ffe3f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 373cd6d8ba4a58ecc8631195156d65847e5ef633
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765523"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (Visual C++ 構文用の ADO)
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_Description(BSTR *pbstr)  

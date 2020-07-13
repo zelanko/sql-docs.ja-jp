@@ -12,17 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72278113"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052723"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   スケールアウト計算用に PolyBase グループにコンピューティングノードとして SQL Server インスタンスを追加します。  
   
@@ -40,14 +39,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>引数  
- head_node_address = N '*head_node_address*' * \@*  
- PolyBase スケールアウトグループの SQL Server ヘッドノードをホストするコンピューターの名前。 head_node_address は nvarchar (255) です。 * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ PolyBase スケールアウトグループの SQL Server ヘッドノードをホストするコンピューターの名前。 * \@ head_node_address*は nvarchar (255) です。  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- ヘッドノード PolyBase Data Movement サービスのコントロールチャネルが実行されているポート。 dms_control_channel_port は、署名されていない __int16 です。 * \@* 既定値は**16450**です。  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ ヘッドノード PolyBase Data Movement サービスのコントロールチャネルが実行されているポート。 * \@ dms_control_channel_port*は、署名されていない __int16 です。 既定値は**16450**です。  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- PolyBase スケールアウトグループのヘッドノード SQL Server インスタンスの名前。 head_node_sql_server_instance_name は nvarchar (16) です。 * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ PolyBase スケールアウトグループのヘッドノード SQL Server インスタンスの名前。 * \@ head_node_sql_server_instance_name*は nvarchar (16) です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,7 +54,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ストアドプロシージャを実行した後、PolyBase エンジンをシャットダウンし、マシン上の PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>例  
@@ -67,6 +66,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
   
 ## <a name="see-also"></a>参照  
  [PolyBase を使ってみる](../../relational-databases/polybase/get-started-with-polybase.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

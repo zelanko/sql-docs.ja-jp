@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68893850"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666796"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,12 +28,12 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- スカラー列参照またはクラスター列参照。 [!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーションアルゴリズムを除くすべてのアルゴリズムの種類で使用できます。  
+ スカラー列参照またはクラスター列参照。 アソシエーションアルゴリズムを除くすべてのアルゴリズムの種類で使用でき [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。  
   
 ## <a name="return-type"></a>戻り値の型  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ヒストグラムでは、統計列が生成されます。 返されるヒストグラムの列構造は、 **PredictHistogram**関数で使用される列参照の型によって異なります。  
   
 ## <a name="scalar-columns"></a>スカラー列  
@@ -47,18 +47,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニングアルゴリズムでは、 **$ProbabilityVariance**はサポートされていません。 アルゴリズムの場合、この列[!INCLUDE[msCoName](../includes/msconame-md.md)]には常に0が格納されます。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニングアルゴリズムでは、 **$ProbabilityVariance**はサポートされていません。 アルゴリズムの場合、この列には常に0が格納され [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニングアルゴリズムでは、 **$ProbabilityStdev**はサポートされていません。 アルゴリズムの場合、この列[!INCLUDE[msCoName](../includes/msconame-md.md)]には常に0が格納されます。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]データマイニングアルゴリズムでは、 **$ProbabilityStdev**はサポートされていません。 アルゴリズムの場合、この列には常に0が格納され [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。  
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability**列は、データ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニング仕様の[!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB の拡張機能です。  
+     **$AdjustedProbability**列は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] データマイニング仕様の OLE DB の拡張機能です。  
   
 ## <a name="cluster-columns"></a>クラスター列  
- クラスター列参照> に対して PredictHistogram 関数が返すヒストグラムは、次の列で構成されます。 **** \<  
+ クラスター列参照> に対して**PredictHistogram**関数が返すヒストグラムは、 \< 次の列で構成されます。  
   
 -   **$Cluster** (クラスター名を表します)  
   

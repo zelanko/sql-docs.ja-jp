@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081907"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280972"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX ステートメント
 CREATE INDEX ステートメントの構文は次のとおりです。  

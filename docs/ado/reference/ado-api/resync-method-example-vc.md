@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f777d3b7af34fe29e9794bb470ba90e71b8b9dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931234"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756345"
 ---
 # <a name="resync-method-example-vc"></a>Resync メソッドの例 (VC++)
 この例では、再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドを使用して、静的レコードセット内のデータを更新する方法を示します。  

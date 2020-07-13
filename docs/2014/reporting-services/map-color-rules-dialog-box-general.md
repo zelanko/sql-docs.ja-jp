@@ -14,29 +14,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108320"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
-  
   **[マップの色のルールのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、このレイヤー上のマップ要素の色オプションを定義できます。 マップ要素には、多角形、線、およびポイントがあります。 データセット フィールドまたは空間データ ソース フィールドからの空間データと分析データに基づいてマップ要素間のリレーションシップを作成している場合に、色ルールを適用できます。  
   
  基本の色と 2 番目の色に異なる色を使用する装飾用のグラデーションを指定して、レイヤー上のすべてのマップ要素を表示するには、[マップの多角形のプロパティ] ダイアログ ボックスの **[塗りつぶし]** ページを使用します。 色ルールはレイヤーの表示プロパティよりも優先されます。 詳細については、「[マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **テンプレートスタイルの適用**  
+ **[テンプレート スタイルを適用する]**  
  ウィザードで選択したテーマか、多角形、線、またはポイント レイヤーのプロパティで設定したテーマに基づく色を使用します。 テーマを適用すると、マップの色、フォント、および罫線に対して既定のオプションが設定されます。 このオプションを選択した場合、各マップ要素に色を割り当てるルールは適用されません。  
   
- **色パレットを使用してデータを表示する**  
+ **[色パレットを使用してデータを表示する]**  
  特定のカラー パレットの色を使用して、分析データを視覚化します。  
   
- **色の範囲を使用してデータを表示する**  
+ **[色の範囲を使用してデータを表示する]**  
  各マップ要素の色の範囲を使用して、分析データを視覚化します。 たとえば、赤を開始色、黄を中間の色、緑を終了色として指定した場合、範囲の下限の値は赤、範囲の中間の値は黄、範囲の上限の値は緑になります。  
   
- **カスタム色を使用してデータを表示する**  
+ **[作成した色を使用してデータを表示する]**  
  独自の色のリストを指定して、分析データを視覚化します。  
   
  **[データ フィールド]**  
@@ -61,6 +60,6 @@ ms.locfileid: "66108320"
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

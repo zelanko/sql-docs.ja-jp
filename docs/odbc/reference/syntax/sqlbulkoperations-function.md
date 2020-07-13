@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60bcb6851adeba08105dabd6fb0800d2e969a04e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343175"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301332"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **互換性**  
@@ -47,7 +47,7 @@ SQLRETURN SQLBulkOperations(
  *StatementHandle*  
  代入ステートメントハンドル。  
   
- *Operation*  
+ *操作*  
  代入実行する操作:  
   
  SQL_ADD SQL_UPDATE_BY_BOOKMARK SQL_DELETE_BY_BOOKMARK SQL_FETCH_BY_BOOKMARK  
@@ -60,9 +60,9 @@ SQLRETURN SQLBulkOperations(
 ## <a name="diagnostics"></a>診断  
  **Sqlbulkoperations**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlbulkoperations**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
- SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、エラーが発生した場合は SQL_ERROR が返されます。単一行演算。  
+ SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、単一行操作でエラーが発生した場合は SQL_ERROR が返されます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データの右側の切り捨て|*操作*引数が SQL_FETCH_BY_BOOKMARK、データ型が SQL_C_CHAR または SQL_C_BINARY の列に対して返された文字列またはバイナリデータが、空白以外の文字または NULL 以外のバイナリデータの切り捨てになりました。|  
@@ -146,7 +146,7 @@ SQLRETURN SQLBulkOperations(
   
  SQLBulkOperations および Sqlbulkoperations の呼び出しを使用して、SQLBulkOperations によって部分的に長いデータを追加できます。 詳細については、この関数リファレンスで後ほど説明する「一括挿入と更新に長いデータを提供する」を参照してください。  
   
- Sqlbulkoperations を呼び出す前に、アプリケーションが**Sqlfetch**または**sqlfetchscroll**を**** 呼び出す必要はありません (ODBC 2 に対して実行する場合を除く)。*x*ドライバー;「[下位互換性と標準への準拠」を](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)参照してください)。  
+ Sqlbulkoperations を呼び出す前に、アプリケーションが**Sqlfetch**または**sqlfetchscroll**を**SQLBulkOperations**呼び出す必要はありません (ODBC 2 に対して実行する場合を除く)。*x*ドライバー;「[下位互換性と標準への準拠」を](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)参照してください)。  
   
  *操作*引数が SQL_ADD の**sqlbulkoperations**が、重複する列を含むカーソルで呼び出される場合、この動作はドライバーによって定義されます。 ドライバーが定義した SQLSTATE を返したり、結果セットに表示される最初の列にデータを追加したり、ドライバー定義のその他の動作を実行したりすることができます。  
   
@@ -449,7 +449,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

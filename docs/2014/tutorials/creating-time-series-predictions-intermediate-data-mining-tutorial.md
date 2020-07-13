@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313887"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>時系列予測の作成 (中級者向けデータ マイニング チュートリアル)
@@ -137,8 +137,7 @@ ms.locfileid: "63313887"
   
      ビューが切り替わり、DMX クエリ テキストを手動で編集できるようになります。  
   
-2.  
-  `FLATTENED` キーワードの後に、`SELECT` キーワードを入力します。 最終的なクエリ テキストは次のようになります。  
+2.  `FLATTENED` キーワードの後に、`SELECT` キーワードを入力します。 最終的なクエリ テキストは次のようになります。  
   
     ```  
     SELECT FLATTENED  
@@ -173,7 +172,7 @@ ms.locfileid: "63313887"
   
 3.  [**テーブル名**] 列に、「**テスト予測**」など、新しい一時テーブル名を入力します。  
   
-4.  **[保存]** をクリックします。  
+4.  **[Save]** (保存) をクリックします。  
   
     > [!NOTE]  
     >  作成したテーブルを表示するには、データを保存したインスタンスのデータベース エンジンに対する接続を作成し、クエリを作成します。  
@@ -187,6 +186,6 @@ ms.locfileid: "63313887"
  [高度な時系列予測 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+ [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

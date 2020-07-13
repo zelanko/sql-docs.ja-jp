@@ -31,7 +31,7 @@ ms.locfileid: "76971381"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web ポータル、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を起動できます。 詳細については、「 [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータル、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を起動できます。 詳細については、「 [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)」を参照してください。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -65,7 +65,7 @@ ms.locfileid: "76971381"
 4.  **[既定のターゲット サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 また、**の**[オプション][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ダイアログ ボックスからも実行できます。  
+    >  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をレポート サーバーに接続して使用する場合は、ここでサーバーの URL を指定すると便利です。 また、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の **[オプション]** ダイアログ ボックスからも実行できます。  
   
 5.  **[インストール]** をクリックして [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のインストールを完了します。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "76971381"
   
 -   **[レポート ビルダー]** をクリックします。  
   
-     既存のサーバーのリストにレポート サーバーが表示されない場合は、 **[レポートを開く]** ダイアログ ボックスを閉じ、**の下部の**[接続][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をクリックしてサーバーに接続します。  
+     既存のサーバーのリストにレポート サーバーが表示されない場合は、**[レポートを開く]** ダイアログ ボックスを閉じ、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の下部の **[接続]** をクリックしてサーバーに接続します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)   

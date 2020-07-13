@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62918815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970512"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
   このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)」を参照してください。  
@@ -36,18 +35,15 @@ ms.locfileid: "62918815"
 > [!NOTE]  
 >  システム サービス アカウント (ローカル システム、ネットワーク サービス、またはローカル サービス) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行するように構成している場合に、管理データ ウェアハウスをデータ コレクターとは別のインスタンス上に作成するときは、プロキシを使用して管理データ ウェアハウスにデータをアップロードするようにコレクション セットを構成する必要があります。  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>の 1 つまたは複数のインスタンスの管理データ ウェアハウスの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>の 1 つまたは複数のインスタンスの管理データ ウェアハウスの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   
 2.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
-3.  
-  **[データ コレクション]** を右クリックし、 **[タスク]** を展開して **[管理データ ウェアハウスの構成]** をクリックします。  
+3.  **[データ コレクション]** を右クリックし、 **[タスク]** を展開して **[管理データ ウェアハウスの構成]** をクリックします。  
   
-4.  
-  [管理データ ウェアハウス構成ウィザード](#Wizard) で、管理データ ウェアハウスを作成し、ログインを構成します。次に、データ コレクションを有効化し、 **システム データ コレクション セット**を開始します。  
+4.  [管理データ ウェアハウス構成ウィザード](#Wizard) で、管理データ ウェアハウスを作成し、ログインを構成します。次に、データ コレクションを有効化し、 **システム データ コレクション セット**を開始します。  
   
      複数のインスタンスを構成するには、手順 5 に進みます。  
   
@@ -58,21 +54,19 @@ ms.locfileid: "62918815"
   
     -   管理データ ウェアハウス構成ウィザードを使用して、既存の管理データ ウェアハウス用にデータ コレクションを構成します。  
   
-    -   
-  **[データ コレクション]** を右クリックし、 **[プロパティ]** をクリックします。 
-  **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
+    -   **[データ コレクション]** を右クリックし、 **[プロパティ]** をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
   
 6.  データ コレクターを使用するすべてのデータベース インスタンスが共有管理データ ウェアハウスにデータをアップロードするように構成されるまで、手順 5. を繰り返します。  
   
-####  <a name="Wizard"></a>管理データウェアハウス構成ウィザード  
- **ウェルカム ページ**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> 管理データ ウェアハウス構成ウィザード  
+ **[ようこそ] ページ**  
   
  ようこそページは、データ コレクション構成ウィザードの開始ページです。 このページを表示するかどうかは任意です。  
   
- **次回からこの開始ページを表示しない**  
+ **[次回からこの開始ページを表示しない]**  
  データ コレクション構成ウィザードを次回起動したときにこのページを表示しない場合にオンにします。  
   
- **[管理データウェアハウスストレージの構成] ページ**  
+ **[管理データ ウェアハウス ストレージの構成] ページ**  
   
  このページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーと管理データ ウェアハウスを選択します。 管理データ ウェアハウスは、収集したデータを格納するリレーショナル データベースです。  
   
@@ -87,8 +81,7 @@ ms.locfileid: "62918815"
  **データベース名**  
  収集したデータを格納するリレーショナル データベースを指定します。 一覧を使用して既存のデータベースを選択するか、 **[新規作成]** をクリックし、 **[新しいデータベース]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
- 
-  **[新規作成]** オプションはデータ コレクション セットを構成する場合にのみ使用できます。  
+ **[新規作成]** オプションはデータ コレクション セットを構成する場合にのみ使用できます。  
   
  **[ログインとユーザーのマップ] ページ**  
   
@@ -99,7 +92,7 @@ ms.locfileid: "62918815"
   
  ログインの **[マップ]** チェック ボックスをオンにしてログインを指定します。  
   
- **データベースロールのメンバーシップ:**  *\<データウェアハウス名>*  
+ **データベースロールのメンバーシップ:**  *\<data warehouse name>*  
  次のオプションの 1 つ以上についてチェック ボックスをオンにし、ログインがマップされる管理データ ウェアハウス ロールを選択します。  
   
 -   **mdw_admin**  
@@ -108,22 +101,21 @@ ms.locfileid: "62918815"
   
 -   **mdw_writer**  
   
- **新しいログイン**  
- 
-  **[ログイン - 新規作成]** ダイアログ ボックスを開いて、管理データ ウェアハウスの新しいログインを作成します。  
+ **[新しいログイン]**  
+ **[ログイン - 新規作成]** ダイアログ ボックスを開いて、管理データ ウェアハウスの新しいログインを作成します。  
   
  **[ウィザードの完了] ページ**  
   
  このページを使用すると、データ コレクションの構成を確認して完了できます。 表示ウィンドウに表示されるツリーは、適用される構成と、 **[完了]** をクリックしたときに実行されるアクションを示します。  
   
- **[データコレクション構成ウィザードの進行状況] ページ**  
+ **[データ コレクション構成ウィザードの進行状況] ページ**  
   
  このページを使用すると、各構成手順の結果を表示できます。  
   
  **詳細**  
  各構成手順を **[詳細]** グリッド内の行として表示します。 各行には、手順について説明する **[アクション]** 列と、手順の成功または失敗を示す **[状態]** 列があります。 エラーが発生した場合は、 **[メッセージ]** 列にメッセージが表示されます。  
   
- **停止**  
+ **Stop**  
  ウィザードの処理を停止します。  
   
  **Report**  
@@ -137,13 +129,13 @@ ms.locfileid: "62918815"
   
 -   [レポートを電子メールとして送信]  
   
- **Ok**  
+ **[閉じる]**  
  ウィザードを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [sp_syscollector_enable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
- [データコレクション](data-collection.md)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [[データ コレクション]](data-collection.md)   
  [データ コレクションの管理](manage-data-collection.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: ROW_NUMBER 関数の Transact-SQL リファレンス。 この関数では、結果セットの出力に番号を設定します。
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed067b55bf96a50f612370ce2d3caa56f9be728b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095381"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003694"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 結果セットの出力に番号を設定します。 具体的には、結果セットのパーティション内の行について、各パーティションの最初の行を 1 とした連続する数値を返します。 
   
@@ -43,7 +43,7 @@ ms.locfileid: "68095381"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
@@ -111,7 +111,7 @@ WHERE database_id < 5;
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-`PARTITION BY` 列に `recovery_model_desc` 句を追加すると、`recovery_model_desc` 値が変更されたときに番号付けが再開されます。 
+`recovery_model_desc` 列に `PARTITION BY` 句を追加すると、`recovery_model_desc` 値が変更されたときに番号付けが再開されます。 
  
 ```sql
 SELECT 

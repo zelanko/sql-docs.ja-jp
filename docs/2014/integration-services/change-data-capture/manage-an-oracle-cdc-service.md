@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f65f59a115fbfb1cebb1f92620d9085672835fd4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835635"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438619"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   CDC Service 構成コンソールを使用すると、特定の CDC Service を管理できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62835635"
   
      操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
+##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
  CDC サービスの操作時には、以下のアクションを実行できます。  
   
 ### <a name="delete-the-service"></a>サービスの削除  

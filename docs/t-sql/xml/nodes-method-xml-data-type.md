@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731055"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Nodes()** メソッドは、細分化する場合に便利な **xml** データ型のインスタンスをリレーショナル データにします。 新しい行にマップされるノードを特定できます。  
   
@@ -71,7 +71,7 @@ T (ProductModelID int, Instructions xml)
 </root>  
 ```  
   
-クエリ式 `nodes()` を指定して `/root/Location` メソッドを呼び出すと、次のように 3 つの行を持つ行セットが返されます。各行には元の XML ドキュメントの論理コピーが格納されており、いずれかの `<Location>` ノードがコンテキスト アイテムに設定されます。  
+クエリ式 `/root/Location` を指定して `nodes()` メソッドを呼び出すと、次のように 3 つの行を持つ行セットが返されます。各行には元の XML ドキュメントの論理コピーが格納されており、いずれかの `<Location>` ノードがコンテキスト アイテムに設定されます。  
   
 ```sql
 Product  
@@ -106,7 +106,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()** 、**value()** 、**exist()** 、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
+返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()**、**value()**、**exist()**、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
   
 また、行セットのコンテキスト ノードは具体化できません。 つまり、このコンテキスト ノードは SELECT ステートメントでは使用できません。 ただし、IS NULL と COUNT(*) では使用できます。  
   
@@ -201,9 +201,9 @@ go
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>xml 型の列に対する nodes() メソッドの指定  
 この例では、**ProductModel** テーブルの **xml** 型の Instructions 列に格納されている、自転車の製造手順を使用します。  
   
-次の例では、`nodes()` テーブルの `Instructions`xml**型の** 列に対して `ProductModel` メソッドを指定します。  
+次の例では、`ProductModel` テーブルの **xml** 型の `Instructions` 列に対して `nodes()` メソッドを指定します。  
   
-`nodes()` パスを指定することで、`Location` メソッドでは <`/MI:root/MI:Location`> 要素がコンテキスト ノードに設定されます。 結果の行セットには、ドキュメントの各 <`Location`> ノードに 1 つずつ元のドキュメントの論理コピーが含まれます。また、その <`Location`> 要素がコンテキスト ノードに設定されます。 結果として、`nodes()` 関数から返されるのは、<`Location`> コンテキスト ノードのセットです。  
+`/MI:root/MI:Location` パスを指定することで、`nodes()` メソッドでは <`Location`> 要素がコンテキスト ノードに設定されます。 結果の行セットには、ドキュメントの各 <`Location`> ノードに 1 つずつ元のドキュメントの論理コピーが含まれます。また、その <`Location`> 要素がコンテキスト ノードに設定されます。 結果として、`nodes()` 関数から返されるのは、<`Location`> コンテキスト ノードのセットです。  
   
 この行セットに対する `query()` メソッドでは `self::node` が要求されるため、各行の `<Location>` 要素が返されます。  
   
@@ -211,7 +211,7 @@ go
   
 - 各 <`Location`> の場所 ID  
   
-- 各 <`step``Location` の製造手順 (<>> 子要素)  
+- 各 <`Location`> の製造手順 (<`step`> 子要素)  
   
 このクエリでは、`'.'` メソッドで `self::node()` に対する省略構文 `query()` を指定して、コンテキスト アイテムを返しています。  
   
@@ -219,7 +219,7 @@ go
   
 - `nodes()` メソッドは Instructions 列に適用され、行セット `T (C)` を返します。 この行セットには、`/root/Location` をコンテキスト アイテムとして、元の製造手順ドキュメントの論理コピーが格納されています。  
   
-- CROSS APPLY により、`nodes()` テーブルの各行に `Instructions` が適用され、結果セットを生成する行のみが返されます。  
+- CROSS APPLY により、`Instructions` テーブルの各行に `nodes()` が適用され、結果セットを生成する行のみが返されます。  
   
     ```sql  
     SELECT C.query('.') as result  

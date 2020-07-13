@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetservergroup
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ae852d453d809979bc31d90868860b81020c5962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2d6f00cf5fcc0cad2c5b6874b7302d00655e7a76
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862370"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したターゲット サーバー グループを削除します。  
   
@@ -48,11 +48,10 @@ sp_delete_targetservergroup [ @name = ] 'name'
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、対象サーバー `Servers Processing Customer Orders`グループを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、対象サーバーグループを削除し `Servers Processing Customer Orders` ます。  
   
 ```  
 USE msdb ;  
@@ -63,7 +62,7 @@ EXEC sp_delete_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_help_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  

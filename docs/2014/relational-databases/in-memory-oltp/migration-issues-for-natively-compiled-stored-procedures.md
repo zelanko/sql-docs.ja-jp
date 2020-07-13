@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc220bcdb899d18b8f439e6e0e1e4b6bdd56903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63015284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026049"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの移行に関する問題
   このセクションでは、ネイティブ コンパイル ストアド プロシージャの作成に関するいくつかの事項について説明します。  

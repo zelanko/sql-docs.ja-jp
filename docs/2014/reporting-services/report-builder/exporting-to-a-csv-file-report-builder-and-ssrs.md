@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107924"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107924"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV の表示  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV の表示  
  既定の設定を使用して表示された場合、CSV 形式のレポートは次のような特徴のレポートになります。  
   
 -   既定のフィールド区切り記号は、コンマ (,) です。  
@@ -65,7 +65,7 @@ ms.locfileid: "66107924"
   
  次の表では、表示した際のレポート アイテムの外観について説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |テキスト ボックス|テキスト ボックスの内容を表示します。 既定のモードでは、アイテムは、そのアイテムの書式設定プロパティに基づいて書式が設定されます。 準拠モードでは、デバイス情報設定によって書式を変更できます。 CSV 表示モードの詳細については、以下の説明を参照してください。|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
@@ -96,7 +96,7 @@ ms.locfileid: "66107924"
   
  
   
-##  <a name="RenderingModes"></a> 表示モード  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 表示モード  
  CSV 表示拡張機能は 2 つのモードで操作できます。1 つは Excel に最適なモード、もう 1 つは、RFC 4180 の CSV 仕様に厳密に準拠することが要求されるサードパーティのアプリケーションに最適なモードです。 使用するモードによって、ピア データ領域の処理は異なります。  
   
 ### <a name="default-mode"></a>既定モード  
@@ -120,7 +120,7 @@ ms.locfileid: "66107924"
 #### <a name="formatting"></a>書式設定  
  値の書式は設定されていません。  
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>双  
  このレンダラーによって生成されたどちらの CSV 形式でも、対話性はサポートされていません。 次の対話型要素は表示されません。  
   
 -   ハイパーリンク  
@@ -139,16 +139,16 @@ ms.locfileid: "66107924"
   
 
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  このレンダラーでは、デバイス情報設定を変更することで既定の設定の一部を変更できます。たとえば、表示モード、区切り記号として使用する文字、テキスト修飾子の既定の文字として使用する文字などを変更できます。 詳細については、「 [CSV Device Information Settings](../csv-device-information-settings.md)」を参照してください。  
   
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

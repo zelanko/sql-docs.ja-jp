@@ -11,17 +11,15 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4d582db9f9e6604841ca77d948f54608a13abfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63130645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055220"
 ---
 # <a name="smo-object-model-diagram"></a>SMO オブジェクト モデル ダイアグラム
-  このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  
+  このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  
   
  ![階層リレーションシップ](../../../2014/database-engine/dev-guide/media/object-diagram.gif "階層リレーションシップ")  
   

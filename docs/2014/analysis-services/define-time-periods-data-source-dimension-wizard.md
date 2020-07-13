@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7501cf316773ffc2aa8cc13cadb27cf16b50df90
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082009"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528748"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>[時間間隔の定義] (データ ソース) (ディメンション ウィザード)
-  
   **[時間間隔の定義]** ページを使用すると、 **[ディメンションの種類の選択]** ページで指定されたテーブル内の列を使用して、時間ディメンション内の期間を表す属性を指定できます。  
   
 > [!NOTE]  
@@ -31,8 +29,7 @@ ms.locfileid: "66082009"
  時間ディメンション内の時間間隔を示すために使用される属性の種類を表示します。 属性の種類の詳細については、[「Type 要素 (DimensionAttribute) (ASSL)」](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl) を参照してください。  
   
 > [!NOTE]  
->  
-  `Date` 属性の種類は、DateTime データ型を持つ列に対してのみ使用してください。  
+>  `Date` 属性の種類は、DateTime データ型を持つ列に対してのみ使用してください。  
   
  **[Time テーブル列]**  
  対応する属性の種類の基準となる列を一覧表示します。  

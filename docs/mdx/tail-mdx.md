@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036660"
 ---
 # <a name="tail-mdx"></a>末尾 (MDX)
@@ -31,10 +31,10 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Tail**関数は、指定されたセットの末尾から、指定された数の組を返します。 要素の順序は保持されます。 既定*値は1です。* 指定された組数が1未満の場合、関数は空のセットを返します。 指定された組数がセット内の組数を超える場合は、元のセットを返します。  
   
 ## <a name="example"></a>例  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68770991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758799"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリケーションに対して許可されているすべてのログインの一覧を返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -42,9 +42,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`アクセスするパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @return_granted = ] 'return_granted'`ログイン ID を示します。 *return_granted*は**ビット**,、既定値は1です。 **0**を指定し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用する場合、パブリッシャーで表示され、ディストリビューターでは使用できないログインが返されます。 **0**を指定し、Windows 認証を使用する場合、パブリッシャーまたはディストリビューターでのアクセスが明示的に拒否されていないログインが返されます。  
+`[ @return_granted = ] 'return_granted'`ログイン ID を示します。 *return_granted*は**ビット**,、既定値は1です。 **0**を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、パブリッシャーで表示され、ディストリビューターでは使用できないログインが返されます。 **0**を指定し、Windows 認証を使用する場合、パブリッシャーまたはディストリビューターでのアクセスが明示的に拒否されていないログインが返されます。  
   
-`[ @login = ] 'login'`標準的なセキュリティログイン ID を示します。 *login*は**sysname**,、既定値は**%** です。  
+`[ @login = ] 'login'`標準的なセキュリティログイン ID を示します。 *login*は**sysname**,、既定値は **%** です。  
   
 `[ @initial_list = ] initial_list`パブリケーションアクセス権を持つすべてのメンバーを返すか、または新しいメンバーがリストに追加される前にアクセスしたメンバーのみを返すかを指定します。 *initial_list*はビット,、既定値は**0**です。  
   
@@ -54,7 +54,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ログイン**|**nvarchar(256)**|実際のログイン名。|  
 |**Isntname**|**int**|**0** = ログインは Windows ユーザーではありません。<br /><br /> **1** = ログインは Windows ユーザーです。|  
@@ -63,17 +63,17 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_publication_access**は、すべての種類のレプリケーションで使用されます。  
   
- 結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインであると見なされます。  
+ 結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインがログインであると見なされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_grant_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

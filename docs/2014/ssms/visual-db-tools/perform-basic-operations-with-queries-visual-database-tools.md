@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c70160c1c95a0051aa9aa4ef97f5378cec26d302
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63280580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001133"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>クエリに関する基本操作の実行 (Visual Database Tools)
   次の基本操作は、大部分のクエリに該当します。  

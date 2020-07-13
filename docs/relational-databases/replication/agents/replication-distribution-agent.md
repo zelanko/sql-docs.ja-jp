@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68770747"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151890"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -135,16 +136,16 @@ distrib [-?]
  ディストリビューターのセキュリティ モードを指定します。 値 0 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モードを指定し、値 1 は Windows 認証モード (既定値) を指定します。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 接続確立時にディストリビューション エージェントが使用する SSL (Secure Sockets Layer) の暗号化レベルです。  
+ 接続確立時にディストリビューション エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|SSL は使用されません。|  
-|**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
-|**2**|SSL が使用され、証明書の確認が行われます。|  
+|**0**|TLS を使用しないことを指定します。|  
+|**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
  
  > [!NOTE]  
- >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
 
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
@@ -205,6 +206,8 @@ distrib [-?]
 -   最後の履歴イベントをログに記録した後、 **MessageInterval** の値が経過した場合  
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
+
+**-MultiSubnetFailover** MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover=true に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
@@ -299,6 +302,7 @@ distrib [-?]
 |変更内容|  
 |---------------------|  
 |**-ExtendedEventConfigFile** パラメーターを追加しました。|  
+|**-MultiSubnetFailover** パラメーターを追加しました。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

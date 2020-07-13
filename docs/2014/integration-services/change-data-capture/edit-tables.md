@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91424dc726616952a7c4d3f230f845b8ed97f457
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771338"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438719"
 ---
 # <a name="edit-tables"></a>テーブルの編集
   Oracle ソース データベースから選択したテーブルおよび列を変更するには、 **[テーブル]** タブを使用します。 このタブには次の要素があります。  

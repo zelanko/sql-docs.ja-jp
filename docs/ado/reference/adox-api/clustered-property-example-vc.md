@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76925493"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759388"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered プロパティの例 (VC++)
 この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)されたプロパティを示します。 Microsoft Jet データベースではクラスター化インデックスがサポートされていないため、この例では*Northwind*データベースのすべてのインデックスの**クラスター化**されたプロパティに対して**False**が返されます。  

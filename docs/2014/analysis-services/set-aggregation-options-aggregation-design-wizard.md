@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: faca5e882a89d14fc18e29e3d4c87cc757d6512e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068809"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940553"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>[集計オプションの設定] (集計のデザイン ウィザード)
-  
   **[集計オプションの設定]** ページを使用すると、集計のデザイン プロセスを開始したり、生成する集計のストレージ制限やパフォーマンス制限を指定したりできます。  
   
 ## <a name="options"></a>オプション  
@@ -36,13 +34,13 @@ ms.locfileid: "66068809"
  **[集計をデザインしない (0%)]**  
  集計のデザインに集計が含まれないように指定します。 このオプションを使用すると、パーティション、メジャー グループ、またはキューブに対する既存の集計デザインが消去されます。  
   
- **[開始]**  
+ **Start**  
  集計のデザイン プロセスを開始します。  
   
- **停止**  
+ **Stop**  
  集計のデザイン プロセスを終了します。  
   
- **解除**  
+ **リセット**  
  このページにある集計のオプションをすべて既定値にリセットします。  
   
 ## <a name="see-also"></a>参照  

@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073766"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546134"
 ---
-# <a name="tuples"></a>組
+# <a name="tuples"></a>タプル
   組はキューブからデータのスライスを一意に識別します。 組は、同じ階層に属するメンバーが複数存在しない限り、ディメンション メンバーを組み合わせて作成されます。  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>組の暗黙的または既定の属性メンバー  
@@ -66,6 +65,6 @@ FROM [Adventure Works]
  [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
  [Autoexists](autoexists.md)   
- [MDX&#41;&#40;メンバー、組、およびセットの操作](working-with-members-tuples-and-sets-mdx.md)  
+ [メンバー、組、およびセットの操作 (MDX)](working-with-members-tuples-and-sets-mdx.md)  
   
   

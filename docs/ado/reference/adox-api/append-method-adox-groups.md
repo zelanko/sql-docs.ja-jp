@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3896de6c921f85d4b3e5a2194b1baa2fe511f22b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967318"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764053"
 ---
 # <a name="append-method-adox-groups"></a>Append メソッド (ADOX Groups)
 [グループ](../../../ado/reference/adox-api/groups-collection-adox.md)コレクションに新しい[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトを追加します。  
@@ -37,7 +37,7 @@ Groups.Append Group
  *グループ*  
  追加する**グループ**オブジェクト、または作成して追加するグループの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Groups**コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
  プロバイダーがグループの作成をサポートしていない場合、エラーが発生します。  

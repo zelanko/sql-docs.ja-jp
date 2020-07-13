@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a2b43873acb67cb4ca9aae80ab267f3d01522114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63306527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040792"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>テーブルの別名の作成 (Visual Database Tools)
   別名を使用すると、テーブル名を使った操作が容易になります。 別名は、次の場合に使用すると便利です。  

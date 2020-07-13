@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963874"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751968"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout プロパティ (RDS)
 要求がタイムアウトするまでのミリ秒単位の待機時間を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "67963874"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  要求がタイムアウトするまでのミリ秒数を表す**Long 型**の値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、HTTP または HTTPS プロトコルを使用して送信された要求にのみ適用されます。  
   
  3層環境での要求の実行には数分かかる場合があります。 このプロパティを使用して、長時間実行される要求に追加の時間を指定します。  

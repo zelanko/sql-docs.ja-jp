@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81b07c1eb33176533cedbf0d02a71a264419b11e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63044224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052554"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit イベント カテゴリ (SQL Server Profiler)
-  **Security audit**イベントカテゴリには、セキュリティ監査イベントが含まれています。  
+  **Security Audit** イベント カテゴリには、セキュリティ監査イベントが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Audit Add DB User イベント クラス](audit-add-db-user-event-class.md)|データベース ユーザーとしてデータベースにログインが追加または削除されたことを示します。|  
 |[Audit Add Login to Server Role イベント クラス](audit-add-login-to-server-role-event-class.md)|固定サーバー ロールにログインが追加または削除されたことを示します。|  
@@ -50,21 +49,18 @@ ms.locfileid: "63044224"
 |[Audit Database Operation イベント クラス](audit-database-operation-event-class.md)|チェックポイント処理やクエリ通知のサブスクライブなど、さまざまな操作が行われたことを示します。|  
 |[Audit Database Principal Impersonation イベント クラス](audit-database-principal-impersonation-event-class.md)|データベース スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Database Principal Management イベント クラス](audit-database-principal-management-event-class.md)|データベースのプリンシパルが作成、変更、または削除されたことを示します。|  
-|[Audit Database Scope GDR イベント クラス](audit-database-scope-gdr-event-class.md)|の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーによって、ステートメント権限に対して GRANT、REVOKE、または DENY が実行されたことを示します。|  
+|[Audit Database Scope GDR イベント クラス](audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit DBCC イベント クラス](audit-dbcc-event-class.md)|DBCC コマンドが発行されたことを示します。|  
 |[Audit Fulltext イベント クラス](audit-fulltext-event-class.md)|フルテキスト イベントが発生したことを示します。|  
 |[Audit Login Change Password イベント クラス](audit-login-change-password-event-class.md)|ユーザーが自身の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードを変更したことを示します。|  
-|[Audit Login Change Property イベント クラス](audit-login-change-property-event-class.md)|
-  **sp_defaultdb**、 **sp_defaultlanguage**、または ALTER LOGIN を使用してログインのプロパティが変更されたことを示します。|  
+|[Audit Login Change Property イベント クラス](audit-login-change-property-event-class.md)|**sp_defaultdb**、 **sp_defaultlanguage**、または ALTER LOGIN を使用してログインのプロパティが変更されたことを示します。|  
 |[Audit Login イベント クラス](audit-login-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に正常にログインしたことを示します。|  
 |[Audit Login Failed イベント クラス](audit-login-failed-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインを試みて失敗したことを示します。|  
-|[Audit Login GDR イベント クラス](audit-login-gdr-event-class.md)|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインの権利が追加または削除されたことを示します。|  
+|[Audit Login GDR イベント クラス](audit-login-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインの権利が追加または削除されたことを示します。|  
 |[Audit Logout イベント クラス](audit-logout-event-class.md)|ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からログアウトしたことを示します。|  
 |[Audit Object Derived Permission イベント クラス](audit-object-derived-permission-event-class.md)|オブジェクトに対して CREATE、ALTER、または DROP が発行されたことを示します。|  
 |[Audit Schema Object Access イベント クラス](audit-schema-object-access-event-class.md)|オブジェクトの権限 (SELECT など) が使用されたことを示します。|  
-|[Audit Schema Object GDR イベント クラス](audit-schema-object-gdr-event-class.md)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがスキーマ オブジェクト権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Schema Object GDR イベント クラス](audit-schema-object-gdr-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがスキーマ オブジェクト権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit Schema Object Management イベント クラス](audit-schema-object-management-event-class.md)|サーバー オブジェクトが作成、変更、または削除されたことを示します。|  
 |[Audit Schema Object Take Ownership イベント クラス](audit-schema-object-take-ownership-event-class.md)|スキーマ オブジェクトの所有者を変更する権限がチェックされたことを示します。|  
 |[Audit Server Alter Trace イベント クラス](audit-server-alter-trace-event-class.md)|ALTER TRACE 権限がチェックされたことを示します。|  
@@ -75,8 +71,7 @@ ms.locfileid: "63044224"
 |[Audit Server Principal Impersonation イベント クラス](audit-server-principal-impersonation-event-class.md)|サーバー スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Server Principal Management イベント クラス](audit-server-principal-management-event-class.md)|サーバー プリンシパルに対して CREATE、ALTER、または DROP のいずれかが行われたことを示します。|  
 |[Audit Server Scope GDR イベント クラス](audit-server-scope-gdr-event-class.md)|サーバー権限の GDR イベントが発生したことを示します。|  
-|[Audit Server Starts and Stops イベント クラス](audit-server-starts-and-stops-event-class.md)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの状態が変更されたことを示します。|  
+|[Audit Server Starts and Stops イベント クラス](audit-server-starts-and-stops-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの状態が変更されたことを示します。|  
 |[Audit Statement Permission イベント クラス](audit-statement-permission-event-class.md)|ステートメント権限が使用されたことを示します。|  
   
 ## <a name="related-content"></a>関連コンテンツ  

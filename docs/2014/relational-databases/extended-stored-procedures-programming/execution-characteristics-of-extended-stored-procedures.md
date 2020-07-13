@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62512220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050898"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>拡張ストアド プロシージャの実行における特性
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
  拡張ストアド プロシージャの実行には次の 3 つの特性があります。  
   
--   拡張ストアドプロシージャ関数は、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セキュリティコンテキストで実行されます。  
+-   拡張ストアドプロシージャ関数は、のセキュリティコンテキストで実行され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   拡張ストアド プロシージャ関数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の処理領域で実行されます。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512220"
   
 -  
   
- 拡張ストアドプロシージャ DLL が読み込まれると、が停止するか、管理者が DBCC *DLL_name* ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FREE) を使用して dll を明示的にアンロードするまで、dll はサーバーのアドレス空間に読み込まれたままになります。  
+ 拡張ストアドプロシージャ DLL が読み込まれると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が停止するか、管理者が DBCC *DLL_name* (FREE) を使用して dll を明示的にアンロードするまで、dll はサーバーのアドレス空間に読み込まれたままになります。  
   
  EXECUTE ステートメントを使用すると、拡張ストアド プロシージャをストアド プロシージャとして [!INCLUDE[tsql](../../includes/tsql-md.md)] から実行できます。  
   
@@ -47,7 +46,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- \@*retval*  
+ \@ *retval*  
  戻り値です。  
   
  \@*param1*  

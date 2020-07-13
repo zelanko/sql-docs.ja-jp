@@ -11,14 +11,14 @@ helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076821"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305973"
 ---
 # <a name="deferred-fields"></a>遅延フィールド
 *遅延フィールド*の値は、設定されているときは使用されませんが、遅延効果のために変数のアドレスが保存されます。 アプリケーションパラメーター記述子の場合、ドライバーは、 **SQLExecDirect**または**sqlexecute**の呼び出し時に変数の内容を使用します。 アプリケーションの行記述子の場合、ドライバーは、フェッチ時に変数の内容を使用します。  

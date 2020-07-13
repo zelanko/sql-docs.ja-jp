@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876437"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログインを固定サーバー ロールのメンバーとして追加します。  
   
@@ -44,12 +44,12 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>引数  
  [ @loginame **=** ] **'**_ログイン_**'**  
- 固定サーバーロールに追加するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログインに*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
+ 固定サーバーロールに追加するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログインに*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
  [ @rolename **=** ] **'**_role_**'**  
  ログインを追加する固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
   
--   sysadmin  
+-   [sysadmin]  
   
 -   securityadmin  
   
@@ -80,21 +80,21 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>アクセス許可  
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、Windows `Corporate\HelenS`ログインを`sysadmin`固定サーバーロールに追加します。  
+## <a name="examples"></a>使用例  
+ 次の例では、Windows ログイン `Corporate\HelenS` を `sysadmin` 固定サーバーロールに追加します。  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Transact-sql&#41;&#40;サーバーの役割を作成する](../../t-sql/statements/create-server-role-transact-sql.md)   
- [Transact-sql&#41;&#40;サーバーロールを削除する](../../t-sql/statements/drop-server-role-transact-sql.md)  
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 30eba3ea03b4c798a74a8cb928014b582846607b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023394"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282489"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック コンカレンシー
 *オプティミスティック同時実行制御*は、トランザクション間の競合が発生することはほとんどないというオプティミスティックな前提から名前を取得します。競合は、別のトランザクションによってデータ行が更新または削除されるときに、現在のトランザクションによって読み取られた時点と更新または削除された時間の間に発生したと言われます。 これは、アプリケーション開発者がこのような衝突が一般的であると考えている*ペシミスティック同時実行制御*(ロック) とは逆です。  

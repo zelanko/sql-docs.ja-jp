@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seo-lt-2019
-ms.date: 09/05/2018
+ms.date: 03/26/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a877bf2edd04e937cfafaece19c6acd9ecd09c07
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271418"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742248"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)
 
@@ -54,7 +54,7 @@ SSDT には後方互換性があるため、[最新の SSDT](download-sql-server
 <br>
 
 
-\* SSDT は、Visual Studio の 2 つの最新バージョンをサポートしています。 Visual Studio 2017 のリリースにより、SSDT for VS2013 は今後更新されません。 詳細については、*この SSDT チームのブログ投稿*で [FAQ](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/) のセクションをご覧ください。
+\* SSDT は、Visual Studio の 2 つの最新バージョンをサポートしています。 Visual Studio 2019 のリリースにより、SSDT for VS2015 は今後更新されません。 詳細については、[この SSDT チームのブログ投稿](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)で *FAQ* のセクションをご覧ください。
 
   
 ## <a name="links-to-download-pages"></a>ダウンロード ページへのリンク 

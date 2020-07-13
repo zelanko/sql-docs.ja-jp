@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257509"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087498"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,9 +142,9 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
   
 サービス アカウントを SPN として使用できます。 サービス アカウントは、Kerberos 認証の接続属性を使用して次の形式で指定します。  
   
--   **username@domain** または **domain\username** (ドメイン ユーザー アカウントの場合)  
+-   **username\@domain** または **domain\username** (ドメイン ユーザー アカウントの場合)  
   
--   **machine$@domain** または **host\FQDN** (ローカル システムや NETWORK SERVICES などのコンピューター ドメイン アカウントの場合)  
+-   **machine$\@domain** または **host\FQDN** (ローカル システムや NETWORK SERVICES などのコンピューター ドメイン アカウントの場合)。  
   
 接続の認証方法を確認するには、次のクエリを実行します。  
   

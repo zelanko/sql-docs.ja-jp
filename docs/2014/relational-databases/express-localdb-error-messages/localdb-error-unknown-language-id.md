@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bfad881fb77bd17bbf91bfbcb34ec6ee3cea46aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e71f7b443a1999a5edbb17dc11ee4d578834faf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63126066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051057"
 ---
 # <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
     

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892812"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクション アイテムのプロパティまたは名前の変更に使用されます。  
   
@@ -46,29 +46,28 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  コレクションアイテムを識別する一意の識別子を指定します。 *collection_item_id*は**int**で、既定値は NULL です。 *名前*が NULL の場合、 *collection_item_id*には値が必要です。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  コレクションアイテムの名前を指定します。 *名前*は**sysname**で、既定値は NULL です。 *collection_item_id*が NULL の場合、*名前*には値を指定する必要があります。  
   
- [ @new_name = ]'*new_name*'  
+ [ @new_name =] '*new_name*'  
  コレクション アイテムの新しい名前を指定します。 *new_name*は**sysname**であり、使用する場合、空の文字列にすることはできません。  
   
  *new_name*は一意である必要があります。 現在のコレクション アイテムの名前の一覧については、syscollector_collection_items システム ビューにクエリを実行します。  
   
- [ @frequency = ]*頻度*  
+ [ @frequency =]*頻度*  
  このコレクション アイテムによってデータを収集する頻度を秒単位で指定します。 *frequency*は**int**,、既定値は 5,、最小値を指定できます。  
   
- [ @parameters = ]'*parameters*'  
+ [ @parameters =] '*parameters*'  
  コレクション アイテムの入力パラメーターを指定します。 *パラメーター*は**xml**で、既定値は NULL です。 *パラメーター*スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 
-  `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
+## <a name="remarks"></a>注釈  
+ コレクション セットが非キャッシュ モードに設定されている場合、このモードではコレクション セットに指定されたスケジュールでデータ収集とアップロードが行われるため、頻度を変更しても無視されます。 コレクションセットの状態を表示するには、次のクエリを実行します。 `<collection_item_id>` は、更新するコレクション アイテムの ID に置き換えてください。  
   
 ```  
 USE msdb;  
@@ -92,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>例  
  次の例は、「 [sp_syscollector_create_collection_item &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)」で定義されている例で作成したコレクションアイテムに基づいています。  
   
-### <a name="a-changing-the-collection-frequency"></a>A. 収集頻度を変更する  
+### <a name="a-changing-the-collection-frequency"></a>A: 収集頻度を変更する  
  次の例では、指定したコレクション アイテムの収集頻度を変更します。  
   
 ```  
@@ -104,7 +103,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>B. コレクションアイテムの名前の変更  
+### <a name="b-renaming-a-collection-item"></a>B: コレクションアイテムの名前の変更  
  次の例では、コレクション アイテムの名前を変更します。  
   
 ```  
@@ -116,9 +115,8 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="c-changing-the-parameters-of-a-collection-item"></a>C. コレクション アイテムのパラメーターを変更する  
- 次の例では、コレクションアイテムに関連付けられているパラメーターを変更します。 
-  `<Value>` 属性内で定義されているステートメントを変更し、`UseSystemDatabases` 属性を false に設定します。 このアイテムの現在のパラメーターを表示するには、syscollector_collection_items システム ビューの parameters 列にクエリを実行します。 の`@collection_item_id`値を変更することが必要になる場合があります。  
+### <a name="c-changing-the-parameters-of-a-collection-item"></a>C: コレクション アイテムのパラメーターを変更する  
+ 次の例では、コレクションアイテムに関連付けられているパラメーターを変更します。 `<Value>` 属性内で定義されているステートメントを変更し、`UseSystemDatabases` 属性を false に設定します。 このアイテムの現在のパラメーターを表示するには、syscollector_collection_items システム ビューの parameters 列にクエリを実行します。 の値を変更することが必要になる場合があり `@collection_item_id` ます。  
   
 ```  
 USE msdb;  
@@ -139,10 +137,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

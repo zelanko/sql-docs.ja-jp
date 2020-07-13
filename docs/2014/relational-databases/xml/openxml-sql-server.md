@@ -20,31 +20,30 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065545"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。
 
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。
 
- OPENXML を使用して XML ドキュメントに対するクエリを作成するには`sp_xml_preparedocument`、まずを呼び出す必要があります。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。
+ OPENXML を使用して XML ドキュメントに対するクエリを作成するには、まずを呼び出す必要があり `sp_xml_preparedocument` ます。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。
 
 > [!NOTE]
->  `sp_xml_preparedocument`では、SQL 更新バージョンの MSXML parser Msxmlsql.dll が使用されます。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。
+>  `sp_xml_preparedocument`では、SQL によって更新されたバージョンの MSXML パーサーである Msxmlsql.dll を使用します。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。
 
  XML ドキュメントの内部表現は、 **sp_xml_removedocument** システム ストアド プロシージャを呼び出してメモリを解放することによって、メモリから削除する必要があります。
 
  次の図は、この処理を示しています。
 
- ![OPENXML で XML を解析する](../../database-engine/media/xmlsp.gif "OPENXML で解析された XML")
+ ![OPENXML で XML を解析する](../../database-engine/media/xmlsp.gif "OPENXML で XML を解析する")
 
  OPENXML を理解するには、XPath クエリと XML を詳しく理解している必要があります。 SQL Server での XPath のサポートの詳細については、「 [SQLXML 4.0 での XPath クエリの使用](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)」を参照してください。
 
@@ -110,7 +109,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   行セット列と XML ノード間のマッピング
 
 ### <a name="xml-document-handle-idoc"></a>XML ドキュメント ハンドル (idoc)
- ドキュメントハンドルは、 `sp_xml_preparedocument`ストアドプロシージャによって返されます。
+ ドキュメントハンドルは、ストアドプロシージャによって返され `sp_xml_preparedocument` ます。
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>処理するノードを特定するための XPath 式 (rowpattern)
  *rowpattern* として指定する XPath 式で、XML ドキュメントに含まれる一連のノードを特定します。 *rowpattern* によって特定される各ノードが、OPENXML で生成される行セット内の 1 行に相当します。

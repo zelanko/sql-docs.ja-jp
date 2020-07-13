@@ -9,33 +9,30 @@ ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9bb78df367f59889f4665d9940880bf0ce49c462
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535244"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI セマンティック モデル接続 (.bism)
   BI セマンティック モデル接続 (.bism) は、Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデル データベースまたは多次元モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
   
- BI セマンティック モデル接続は、SharePoint 経由で作成およびアクセスされます。 BI セマンティック モデル接続を作成すると、ライブラリの BI セマンティック モデル接続でサイド リンク バー コマンドが有効になります。 サイド リンク バー コマンドは、新しい Excel ブックまたは接続ファイルを編集するためのオプションを開きます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを作成するコマンドも表示されます。  
+ BI セマンティック モデル接続は、SharePoint 経由で作成およびアクセスされます。 BI セマンティック モデル接続を作成すると、ライブラリの BI セマンティック モデル接続でサイド リンク バー コマンドが有効になります。 サイド リンク バー コマンドは、新しい Excel ブックまたは接続ファイルを編集するためのオプションを開きます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされている場合は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを作成するコマンドも表示されます。  
   
  ![BISM サイド リンク バー コマンドのスクリーンショット](../media/ssas-bism-quicklaunch.gif "BISM サイド リンク バー コマンドのスクリーンショット")  
   
-##  <a name="bkmk_prereq"></a>サポートされるデータベース  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>サポートされるデータベース  
  BI セマンティック モデル接続は、テーブル モデル データを参照します。 このデータには、次の 3 つのソースがあります。  
   
 -   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
 -   SharePoint に保存された PowerPivot ブック。 Excel ブックに埋め込まれた PowerPivot データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行される表形式モデル データベースに相当します。 既に PowerPivot for Excel と PowerPivot for SharePoint を使用している場合は、SharePoint ライブラリ内の PowerPivot ブックを参照する BI セマンティック モデル接続を定義し、既存の PowerPivot データを使用して [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを作成できます。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの PowerPivot for Excel で作成されたブックを使用できます。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上の多次元データ モデル。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上の多次元データ モデル。  
   
- データソースの比較については、コミュニティコンテンツ「 [SQL Server 2012 BI セマンティックモデル (BISM) につい](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)て」を参照してください。  
+ データ ソースの比較については、コミュニティ コンテンツ「 [SQL Server 2012 BI セマンティック モデル (BISM) について)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)」を参照してください。  
   
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI セマンティック接続の接続シーケンスについて  
  このセクションでは、さまざまなクライアント アプリケーション (Excel デスクトップ アプリケーション、SharePoint の Power View レポート クライアントなど) と SharePoint ファーム内または外のテーブル モデル データベースとの接続動作について説明します。  
@@ -70,7 +67,7 @@ ms.locfileid: "66071382"
   
  このシナリオでは、すべての接続が同じファーム内で行われるため、Kerberos または制約付き委任は必要とされません。  
   
-##  <a name="bkmk_rel"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> 関連タスク  
  [BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint に追加&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [PowerPivot ブックへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  

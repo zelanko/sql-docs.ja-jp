@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-function"></a>A. 関数を削除する  
- 次の例では、`fn_SalesByStore` サンプル データベースの `Sales` スキーマから、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー定義関数を削除します。 この関数を作成する方法については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の例 B をご覧ください。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `Sales` スキーマから、`fn_SalesByStore` ユーザー定義関数を削除します。 この関数を作成する方法については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の例 B をご覧ください。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

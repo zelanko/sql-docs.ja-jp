@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d53d912941079865328ab97fae0f0f814a76114
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898818"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298532"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo で Paradox に返される値
 次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  

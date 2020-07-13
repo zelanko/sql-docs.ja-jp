@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629249"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 述語の **CONTAINS** および **FREETEXT** と、行セット値関数の **CONTAINSTABLE** と **FREETEXTTABLE** を **SELECT** ステートメントと使用し、フルテキスト クエリを記述します。 この記事では、各述語と関数の例と、使用に最適なものを選択する方法を説明します。
 
 -   単語や語句と一致させるには、**CONTAINS** と **CONTAINSTABLE** を使用します。
@@ -33,7 +33,7 @@ ms.locfileid: "68053576"
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 各述語と関数の例
 
-次の例では、AdventureWorks サンプル データベースを使用します。 AdventureWorks の最終リリースについては、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。 サンプル クエリを実行するには、フルテキスト検索も設定する必要があります。 詳細については、「[Query with Full-Text Search](get-started-with-full-text-search.md)」 (フルテキスト検索でのクエリ) を参照してください。 
+次の例では、AdventureWorks サンプル データベースを使用します。 AdventureWorks の最終リリースについては、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。 サンプル クエリを実行するには、フルテキスト検索も設定する必要があります。 詳細については、「[Query with Full-Text Search](get-started-with-full-text-search.md)」 (フルテキスト検索でのクエリ) を参照してください。 
 
 ### <a name="example---contains"></a>例: CONTAINS  
 次の例では、`$80.99` という単語を含み、価格が `"Mountain"` であるすべての製品を検索します。

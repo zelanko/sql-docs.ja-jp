@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109939"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の動作変更
@@ -41,11 +41,10 @@ ms.locfileid: "66109939"
   
 -   [SQL Server 2008 R2 Reporting Services における動作変更](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 動作の変更  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]の動作に変更はありません。  
+##  <a name="sssql14-reporting-services-behavior-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 動作の変更  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]の動作に変更はありません。  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 動作の変更  
+##  <a name="sssql11-reporting-services-behavior-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 動作の変更  
  ここでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでの動作変更について説明します。  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>"アイテムの表示" 権限によって共有データセットがダウンロードされない (SharePoint モード)  
@@ -68,16 +67,15 @@ ms.locfileid: "66109939"
 ### <a name="report-server-configuration-and-management-tools"></a>レポート サーバーの構成と管理のツール  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>SharePoint モードで構成マネージャーが使用されない  
- **新しい動作:** Configuration Manager [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、SharePoint モードのレポートサーバーがサポートされなくなりました。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードの構成は、SharePoint サーバーの全体管理を使用して完了できるようになったため、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーでは SharePoint モードはサポートされなくなりました。 構成マネージャーは今後、ネイティブ モードのレポート サーバーに対してのみ使用されます。  
+ **新しい動作:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーでは、SharePoint モードのレポート サーバーはサポートされなくなりました。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードの構成は、SharePoint サーバーの全体管理を使用して完了できるようになったため、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーでは SharePoint モードはサポートされなくなりました。 構成マネージャーは今後、ネイティブ モードのレポート サーバーに対してのみ使用されます。  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>サーバーを別のモードに変更できない  
- **新しい動作:** サーバーモードを変更することはできません。 レポート サーバーをネイティブ モードとしてインストールした場合、それを変更または再構成して SharePoint モードにすることはできません。 SharePoint モードでインストールした場合は、レポート サーバーをネイティブ モードに変更できます。  
+ **新しい動作:** サーバー モードを変更することはできません。 レポート サーバーをネイティブ モードとしてインストールした場合、それを変更または再構成して SharePoint モードにすることはできません。 SharePoint モードでインストールした場合は、レポート サーバーをネイティブ モードに変更できます。  
   
- **以前の動作:** 顧客は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートサーバーを SharePoint モードでインストールします。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
+ **以前の動作:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーを SharePoint モードでインストールします。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 動作の変更  
- ここでは、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の動作変更について説明します。  
+##  <a name="sql-server-2008-r2-reporting-services-behavior-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 動作の変更  
+ ここでは、での[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]動作の変更について説明します。  
   
 > [!NOTE]  
 >  SQL Server 2008 R2 は SQL Server 2008 のマイナー バージョン アップグレードなので、SQL Server 2008 のセクションのコンテンツも確認することをお勧めします。  
@@ -85,8 +83,7 @@ ms.locfileid: "66109939"
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI プロバイダー ライブラリの SecureConnectionLevel プロパティ  
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の WMI プロバイダーライブラリでは、 **secureconnectionlevel**プロパティによっ`0`て`1``2``3` `0` 、、、、、のいずれかの web サービスメソッドで ssl (Secure Socket Layer) が不要であることが`3`示されています。これは、すべての web サービス`1`メソッド`2`に ssl が必要であることを示し、ssl を必要とする web サービスメソッドのサブセットを示します。 で[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]は、これらの値は次の2つの意味を持つことができます。  
   
--   
-  `0` は、いずれの Web サービス メソッドでも SSL が不要であることを示します。  
+-   `0` は、いずれの Web サービス メソッドでも SSL が不要であることを示します。  
   
 -   正の整数は、すべての Web サービス メソッドで SSL が必要であることを示します。  
   
@@ -96,6 +93,6 @@ ms.locfileid: "66109939"
  [新機能 &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [SQL Server 2014 の SQL Server Reporting Services の非推奨の機能](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
  [SQL Server 2014 で SQL Server Reporting Services が廃止された機能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
- [SQL Server 2014 における SQL Server Reporting Services の重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
+ [SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
   
   

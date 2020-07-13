@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 03ede58be73ed422c4049eaabb789d09465129fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63194986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001187"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>パラメーター クエリ (Visual Database Tools)
   値を変えるだけで、繰り返し利用できるクエリを作成することが必要になる場合があります。 たとえば、ある著者によって書かれたすべての `title_ids` を検索するクエリを頻繁に実行するような場合です。 著者の ID または名前を変更するだけで、要求のたびに同じクエリを実行できます。  

@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b75762a1cb2cebc3834852f258c4b23b88435fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63035321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008356"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
-  ソフトウェア[!INCLUDE[msCoName](../../includes/msconame-md.md)]ライセンス条項は、のインストール時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にローカルコンピューターにコピーされます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルは、%ProgramFiles%\Microsoft SQL server のライセンス条項 \ または% ProgramFiles (x86)% \ Microsoft SQL server \ 110\ ライセンス条項\\に書き込まれます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェアライセンス条項は、のインストール時にローカルコンピューターにコピーされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルは、%ProgramFiles%\Microsoft SQL server のライセンス条項 \ または% ProgramFiles (x86)% \ Microsoft SQL server \ 110\ ライセンス条項に書き込まれます \\ 。  
   
  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションと言語のインスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63035321"
 -   RUS - ロシア語  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server ライセンス オプション  
- 価格とライセンスのオプションの詳細については、Microsoft SQL Server Web サイトを参照してください。 [](https://go.microsoft.com/fwlink/?LinkId=190955) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 価格とライセンスのオプションの詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web サイトを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

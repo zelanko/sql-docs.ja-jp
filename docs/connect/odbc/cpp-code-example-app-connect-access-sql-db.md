@@ -1,5 +1,6 @@
 ---
 title: SQL データベースにアクセスする C++ ODBC アプリ
+description: 次の C++ のサンプル アプリケーションでは、ODBC API を使用して SQL データベースに接続し、アクセスする方法を示します。
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907698"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528926"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ODBC サンプル アプリケーションが SQL データベースにアクセスする
 
@@ -943,6 +944,6 @@ EndGlobal
 </Project>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

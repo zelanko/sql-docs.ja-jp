@@ -1,5 +1,5 @@
 ---
-title: systargetservers (Transact-sql) |Microsoft Docs
+title: dbo.systargetservers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - systargetservers system table
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: acd388c54d67e690972b53f2adbdf046cf241549
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095839"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890377"
 ---
-# <a name="dbosystargetservers-transact-sql"></a>systargetservers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マルチサーバー操作ドメインに現在参加しているターゲット サーバーを記録します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|サーバー ID。|  
 |**server_name**|**sysname**|サーバー名。|  
-|**設置**|**nvarchar(200)**|指定したターゲット サーバーの場所。|  
+|**location**|**nvarchar(200)**|指定したターゲット サーバーの場所。|  
 |**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) との時差 (時間数単位)。|  
-|**enlist_date**|**DATETIME**|指定したターゲット サーバーが参加した日付と時刻。|  
-|**last_poll_date**|**DATETIME**|ジョブを実行するために、指定された対象サーバーがマルチサーバーの**sysdownloadlist**システムテーブルを最後に呼び出した日時。|  
-|**オンライン**|**int**|対象サーバーの状態:<br /><br /> **1** = 通常<br /><br /> **2** = 再同期の保留中<br /><br /> **4** = オフラインの疑いあり|  
-|**local_time_at_last_poll**|**DATETIME**|対象サーバーがジョブ操作のために最後にポーリングされた日付と時刻。|  
+|**enlist_date**|**datetime**|指定したターゲット サーバーが参加した日付と時刻。|  
+|**last_poll_date**|**datetime**|ジョブを実行するために、指定された対象サーバーがマルチサーバーの**sysdownloadlist**システムテーブルを最後に呼び出した日時。|  
+|**status**|**int**|対象サーバーの状態:<br /><br /> **1** = 通常<br /><br /> **2** = 再同期の保留中<br /><br /> **4** = オフラインの疑いあり|  
+|**local_time_at_last_poll**|**datetime**|対象サーバーがジョブ操作のために最後にポーリングされた日付と時刻。|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|対象サーバーで**sp_msx_enlist**を実行しているユーザーのユーザー名。|  
 |**poll_internal**|**int**|対象サーバーがマスターサーバーをポーリングして新しいダウンロード命令を行うまでの秒数。|  
   

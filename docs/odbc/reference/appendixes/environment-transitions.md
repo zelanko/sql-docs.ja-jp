@@ -12,19 +12,19 @@ helpviewer_keywords:
 - transitioning states [ODBC], environment
 - state transitions [ODBC], environment
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebfb5475d24d5fc70c4cb46a666b2573066565a1
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67910433"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283302"
 ---
 # <a name="environment-transitions"></a>環境の遷移
 ODBC 環境には、次の3つの状態があります。  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |E0|未割り当ての環境|  
 |E1|割り当て済みの環境、未割り当ての接続|  
@@ -34,7 +34,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |E1 [1]|--[4]|--[4]|  
 |(IH)3|E2 [5]<br />HY0104/6|--[4]|  
@@ -54,7 +54,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources ソースと Sqldatasources  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />HY0103|--[1]<br />HY0103|  
   
@@ -64,7 +64,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)1|--[3]<br />HY0104/4|--[3]<br />HY0104/4|  
 |(IH)3|(IH)|--|  
@@ -79,7 +79,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)1|E0|HY010|  
 |(IH)3|(IH)|--[4]<br />E1 [5]|  
@@ -97,7 +97,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField と SQLGetDiagRec  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)1|--|--|  
 |(IH)3|(IH)|--|  
@@ -108,7 +108,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />HY0103|--|  
   
@@ -118,7 +118,7 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />HY0103|HY011|  
   
@@ -128,6 +128,6 @@ ODBC 環境には、次の3つの状態があります。
   
 ## <a name="all-other-odbc-functions"></a>その他すべての ODBC 関数  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|(IH)|--|

@@ -12,25 +12,23 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9444eff3f471074c08a62c5aafa36a919f81c5ca
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813990"
 ---
 # <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   
-
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 では、[エンティティの依存性] という新しいエクスプローラー ページが追加されました。ここでは、最初に派生階層を定義することなく、ドメイン ベースの属性 (DBA) 値で指定したとおりに、モデル内のエンティティ メンバー間のリレーションシップを視覚化する別の方法を提供します。   
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 では、[エンティティの依存性] という新しいエクスプローラー ページが追加されました。ここでは、最初に派生階層を定義することなく、ドメイン ベースの属性 (DBA) 値で指定したとおりに、モデル内のエンティティ メンバー間のリレーションシップを視覚化する別の方法を提供します。   
   
 これは、"自分のエンティティを誰が、どのように使用しているか" という質問に回答するために役立ちます。 このビューは、[派生階層] エクスプローラー ページと同様ですが、さらに包括的です。 ここでは、特定の階層の一部として定義された内容だけでなく、すべての DBA リレーションシップが表示されます。 表示されている階層構造は既存の DBS から単純に推定されるため、階層の定義は必要ありません。  
   
-[エクスプローラー] ページで、[エンティティの依存関係] メニュー項目には、少なくとも 1 つのエンティティが依存する (つまり、少なくとも 1 つのエンティティに一覧されたエンティティを参照する DBA がある) モデルにあるすべてのエンティティが一覧表示されます。 依存関係 (直接と間接の両方) の数は、エンティティ名の横に表示されます。リストはこの数値によって並べ替えられ、最も頻繁に参照されるエンティティが上部に表示されます。 
-  [サンプル データ](https://msdn.microsoft.com/library/master-data-services-sample.aspx)のカスタマー モデルから取得された次のスクリーンショットでは、7 つのエンティティによって (直接または間接的に) 参照される BigArea エンティティを示します。  
+[エクスプローラー] ページで、[エンティティの依存関係] メニュー項目には、少なくとも 1 つのエンティティが依存する (つまり、少なくとも 1 つのエンティティに一覧されたエンティティを参照する DBA がある) モデルにあるすべてのエンティティが一覧表示されます。 依存関係 (直接と間接の両方) の数は、エンティティ名の横に表示されます。リストはこの数値によって並べ替えられ、最も頻繁に参照されるエンティティが上部に表示されます。 [サンプル データ](https://msdn.microsoft.com/library/master-data-services-sample.aspx)のカスタマー モデルから取得された次のスクリーンショットでは、7 つのエンティティによって (直接または間接的に) 参照される BigArea エンティティを示します。  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     

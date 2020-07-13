@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749226"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
 データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
@@ -70,13 +70,13 @@ ms.locfileid: "67921083"
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|  
-|Password|DBPROP_AUTH_PASSWORD|  
+|パスワード|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|  
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|  
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|  
 |プロシージャ用語|DBPROP_PROCEDURETERM|  
-|ダイアログを表示する|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|  
 |プロバイダー名|DBPROP_PROVIDERFILENAME|  
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|  
@@ -90,8 +90,8 @@ ms.locfileid: "67921083"
 |テーブル用語|DBPROP_TABLETERM|  
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|  
 |User ID|DBPROP_AUTH_USERID|  
-|ユーザー名|DBPROP_USERNAME|  
-|ウィンドウハンドル|DBPROP_INIT_HWND|  
+|[ユーザー名]|DBPROP_USERNAME|  
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ  
  **レコードセットオブジェクトの****動的プロパティ**は、**レコードセット**が閉じられたときにスコープ外になることに注意してください。  

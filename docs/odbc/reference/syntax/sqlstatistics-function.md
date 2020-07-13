@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2a5ef0b0e54e17a2dc091a98efc972fa608ef15
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039548"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302946"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **互換性**  
@@ -69,7 +69,7 @@ SQLRETURN SQLStatistics(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名。 この引数を null ポインターにすることはできません。 *SchemaName*に文字列検索パターンを含めることはできません。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *TableName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *TableName*は通常の引数です。これは文字どおりに処理され、大文字と小文字が区別されます。  
@@ -80,7 +80,7 @@ SQLRETURN SQLStatistics(
  *固有*  
  代入インデックスの種類: SQL_INDEX_UNIQUE または SQL_INDEX_ALL。  
   
- *確保*  
+ *予約済み*  
  代入結果セットのカーディナリティ列とページ列の重要度を示します。 次のオプションは、カーディナリティ列とページ列の戻り値にのみ影響します。カーディナリティとページが返されない場合でも、インデックス情報が返されます。  
   
  SQL_ENSURE は、ドライバーが無条件に統計を取得することを要求します。 (Open Group standard にのみ準拠しており、ODBC 拡張機能をサポートしていないドライバーは、SQL_ENSURE をサポートできません)。  
@@ -93,7 +93,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>診断  
  **Sqlstatistics**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlstatistics**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -136,9 +136,9 @@ SQLRETURN SQLStatistics(
   
  次の表に、結果セット内の列の一覧を示します。 このドライバーでは、列 13 (FILTER_CONDITION) を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Varchar|統計またはインデックスが適用されるテーブルのカタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|統計またはインデックスが適用されるテーブルのカタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|統計またはインデックスが適用されるテーブルのスキーマ名。データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|統計またはインデックスが適用されるテーブルのテーブル名。|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|インデックスで重複する値が許可されていないかどうかを示します。<br /><br /> インデックス値が一意でない可能性がある場合は SQL_TRUE します。<br /><br /> インデックス値が一意である必要がある場合は SQL_FALSE します。<br /><br /> TYPE が SQL_TABLE_STAT の場合、NULL が返されます。|  
@@ -148,8 +148,8 @@ SQLRETURN SQLStatistics(
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|インデックス内の列のシーケンス番号 (1 から始まります)。TYPE が SQL_TABLE_STAT の場合、NULL が返されます。|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|列名。 列が SALARY + 特典などの式に基づいている場合、式が返されます。式を特定できない場合は、空の文字列が返されます。 TYPE が SQL_TABLE_STAT の場合、NULL が返されます。|  
 |ASC_OR_DESC (ODBC 1.0)|10|Char(1)|列の並べ替え順序: "A" (昇順)降順の場合は "D"。列の並べ替え順序がデータソースでサポートされていない場合、または型が SQL_TABLE_STAT 場合、NULL が返されます。|  
-|カーディナリティ (ODBC 1.0)|11|整数|テーブルまたはインデックスのカーディナリティ型が SQL_TABLE_STAT の場合は、テーブル内の行の数型が SQL_TABLE_STAT でない場合は、インデックス内の一意の値の数。値がデータソースから使用できない場合、NULL が返されます。|  
-|ページ (ODBC 1.0)|12|整数|インデックスまたはテーブルを格納するために使用されるページ数。型が SQL_TABLE_STAT の場合、テーブルのページ数型が SQL_TABLE_STAT でない場合は、インデックスのページ数値がデータソースから使用できない場合、またはデータソースに適用できない場合は NULL が返されます。|  
+|カーディナリティ (ODBC 1.0)|11|Integer|テーブルまたはインデックスのカーディナリティ型が SQL_TABLE_STAT の場合は、テーブル内の行の数型が SQL_TABLE_STAT でない場合は、インデックス内の一意の値の数。値がデータソースから使用できない場合、NULL が返されます。|  
+|ページ (ODBC 1.0)|12|Integer|インデックスまたはテーブルを格納するために使用されるページ数。型が SQL_TABLE_STAT の場合、テーブルのページ数型が SQL_TABLE_STAT でない場合は、インデックスのページ数値がデータソースから使用できない場合、またはデータソースに適用できない場合は NULL が返されます。|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|インデックスがフィルター選択されたインデックスの場合は、給与 > 3万; のようなフィルター条件になります。フィルター条件を特定できない場合、これは空の文字列になります。<br /><br /> NULL インデックスがフィルター選択されたインデックスでない場合は、インデックスがフィルター選択されたインデックスであるか、型が SQL_TABLE_STAT かどうかを判断できません。|  
   
  結果セットの行がテーブルに対応している場合、ドライバーは TYPE を SQL_TABLE_STAT に設定し、NON_UNIQUE、INDEX_QUALIFIER、INDEX_NAME、ORDINAL_POSITION、COLUMN_NAME、および ASC_OR_DESC を NULL に設定します。 カーディナリティまたはページがデータソースから使用できない場合、ドライバーはそれらを NULL に設定します。  
@@ -159,7 +159,7 @@ SQLRETURN SQLStatistics(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

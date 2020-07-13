@@ -1,5 +1,6 @@
 ---
 title: Azure SQL DB に接続しています (接続先) |Microsoft Docs
+description: Azure SQL Database のターゲットインスタンスに接続して Access データベースを移行する方法について説明します。 SSMA は Azure SQL Database のデータベースに関するメタデータを取得します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68006660"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293129"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB への接続 (Sql server への接続)
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Azure インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA には、接続している SQL Azure のインスタンスに関する情報が格納されますが、パスワードは保存されません。  
@@ -35,7 +36,7 @@ SQL Azure のインスタンスに関するメタデータは、自動的には�
 ## <a name="required-sql-azure-permissions"></a>必要な SQL Azure アクセス許可  
 SQL Azure に接続するために使用するアカウントには、アカウントが実行するアクションに応じて、異なるアクセス許可が必要です。  
   
--   Access オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、SQL Azure からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Azure のインスタンスにログオンする権限が必要です。  
+-   Access オブジェクトを構文に変換し [!INCLUDE[tsql](../../includes/tsql-md.md)] たり、SQL Azure からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Azure のインスタンスにログオンする権限が必要です。  
   
 -   データベースオブジェクトを SQL Azure に読み込むには、ターゲットデータベースの**db_owner**データベースロールのメンバーシップである最低限の権限が必要です。  
   
@@ -63,8 +64,7 @@ Access データベースオブジェクトを SQL Azure 構文に変換する�
   
 6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Access は、SQL Azure の**master**データベースへの接続をサポートしていません。  
@@ -96,7 +96,7 @@ SQL Azure への接続は、プロジェクトを閉じるまでアクティブ�
   
 SQL Azure に再接続する手順は、接続を確立する手順と同じです。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   Access スキーマと SQL Azure データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SQL Server スキーマへの Access データベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  

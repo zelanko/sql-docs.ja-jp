@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881783"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル サーバーに対してリモート ストアド プロシージャを実行する場合に使用される、ローカル ログインにマップされているリモート ログインを削除します。  
   
 > [!IMPORTANT]  
@@ -47,7 +46,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>引数  
 `[ @remoteserver = ] 'remoteserver'`削除するリモートログインにマップされるリモートサーバーの名前を指定します。 *remoteserver*は**sysname**,、既定値はありません。 *remoteserver*は既に存在している必要があります。  
   
-`[ @loginame = ] 'login'`リモートサーバーに関連付けられているローカルサーバー上のログイン名を指定します (省略可能)。 *login*は**sysname**,、既定値は NULL です。 指定した場合、*ログイン*は既に存在している必要があります。  
+`[ @loginame = ] 'login'`リモートサーバーに関連付けられているローカルサーバー上のログイン名を指定します (省略可能)。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン*は既に存在している必要があります。  
   
 `[ @remotename = ] 'remote_name'`リモートサーバーからログインするときに*ログイン*にマップされるリモートログインの名前を指定します (省略可能)。 *remote_name*は**sysname**,、既定値は NULL です。  
   
@@ -59,8 +58,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  ローカルサーバーユーザーを追加するには、 **sp_addlogin**を使用します。 ローカルサーバーユーザーを削除するには、 **sp_droplogin**を使用します。  
   
- リモート ログインは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用する場合にのみ必要です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 以降では、代わりにリンク サーバー ログインを使用します。 **Sp_addlinkedsrvlogin**と**sp_droplinkedsrvlogin**を使用して、リンクサーバーのログインを追加および削除します。  
+ リモート ログインは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用する場合にのみ必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 以降では、代わりにリンク サーバー ログインを使用します。 **Sp_addlinkedsrvlogin**と**sp_droplinkedsrvlogin**を使用して、リンクサーバーのログインを追加および削除します。  
   
  **sp_dropremotelogin**は、ユーザー定義のトランザクション内では実行できません。  
   
@@ -70,27 +68,27 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. リモートサーバーのすべてのリモートログインを削除する  
- 次の例では、リモートサーバー `ACCOUNTS`のエントリを削除します。したがって、ローカルサーバー上のログインとリモートサーバー上のリモートログインの間のすべてのマッピングが削除されます。  
+ 次の例では、リモートサーバーのエントリを削除 `ACCOUNTS` します。したがって、ローカルサーバー上のログインとリモートサーバー上のリモートログインの間のすべてのマッピングが削除されます。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. ログインマッピングを削除する  
+### <a name="b-dropping-a-login-mapping"></a>B: ログインマッピングを削除する  
  次の例では、リモート サーバー `ACCOUNTS` からのリモート ログインとローカル ログイン `Albert` をマップしているエントリを削除します。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
-### <a name="c-dropping-a-remote-user"></a>C. リモートユーザーを削除する  
- 次の例では、ローカルログイン`Chris` `ACCOUNTS` `salesmgr`にマップされているリモートサーバー上のリモートログインのログインを削除します。  
+### <a name="c-dropping-a-remote-user"></a>C: リモートユーザーを削除する  
+ 次の例では、 `Chris` `ACCOUNTS` ローカルログインにマップされているリモートサーバー上のリモートログインのログインを削除し `salesmgr` ます。  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
@@ -99,6 +97,6 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

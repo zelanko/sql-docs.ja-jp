@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68126389"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901319"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   動的な更新ストアド プロシージャを作成する CREATE PROCEDURE ステートメントを生成します。 カスタムストアドプロシージャ内の UPDATE ステートメントは、変更する列を示す MCALL 構文に基づいて動的に作成されます。 このストアドプロシージャは、サブスクライブしているテーブルのインデックスの数が増加しており、変更される列の数が少ない場合に使用します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
@@ -42,7 +42,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>結果セット  
  1つの**nvarchar (4000)** 列で構成される結果セットを返します。 結果セットは、カスタムストアドプロシージャの作成に使用される CREATE PROCEDURE ステートメント全体を形成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_scriptdynamicupdproc**は、トランザクションレプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていない場合は、列がそれ自体に戻されます。この場合、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的なアプローチには、変更された列のみが含まれます。これにより、最適な更新文字列が提供されます。 ただし、動的更新ステートメントがビルドされると、実行時に余分な処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -122,7 +122,7 @@ if @@rowcount = 0
   
  このストアド プロシージャを実行した後、結果のスクリプトを使用して、サブスクライバー側で手動でストアド プロシージャを作成できます。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

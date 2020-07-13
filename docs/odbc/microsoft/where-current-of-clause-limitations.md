@@ -11,14 +11,14 @@ helpviewer_keywords:
 - WHERE CURRENT OF clause limitations [ODBC]
 - ODBC SQL grammar, WHERE CURRENT OF clause limitations
 ms.assetid: 12404fd7-ae11-4017-85cd-792ce20931f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1c1a625e3dd21ef8217bbac95d8317ca1113f1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52705b15cfbec38a0c7f5f45bb27386a567db554
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911391"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307553"
 ---
 # <a name="where-current-of-clause-limitations"></a>WHERE CURRENT OF 句の制限事項
 サポートされていません。

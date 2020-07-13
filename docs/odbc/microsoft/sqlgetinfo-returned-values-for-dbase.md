@@ -14,14 +14,14 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea3a937fe7e877eaf70c405678d82111a691dd3b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68794686"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298552"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo で dBASE に返される値
 次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  

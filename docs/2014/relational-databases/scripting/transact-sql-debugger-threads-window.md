@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d84c0ba15b036dfff8e6e2a69bb7702c771df1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f3460c892c182996a753c2a16076418a6b2008f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063328"
 ---
 # <a name="threads-window"></a>[スレッド] ウィンドウ
   **[スレッド]** ウィンドウには、デバッグ中の [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター セッションで使用されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] スレッドに関する情報が表示されます。 スレッドの情報を表示するには、デバッグ モードである必要があります。  
@@ -33,7 +32,7 @@ ms.locfileid: "75243026"
   
  簡易プーリング モードで実行していない場合は、os_thread_id の値が **[ID]** 列の値に一致する行を選択します。 簡易プーリング モードで実行している場合は、fiber_context_address の値が **[ID]** 列の値に一致する行を選択します。  
   
- **名前**  
+ **Name**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] セッションの情報を **ComputerName/InstanceName [SPID]** の形式で表示します。  
   
  **[ComputerName]**  

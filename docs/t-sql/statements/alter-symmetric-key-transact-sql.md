@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a730a27af13836cb2eb01aab12cc4d8b718ec277
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761001"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キーのプロパティを変更します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68070249"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   

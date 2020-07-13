@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a6e043d5887fdd0f0bfa51eea1f9244320f8fe62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62876049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958432"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
   このダイアログ ボックスは、バックアップ情報の表示に使用します。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62876049"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **メディア**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
@@ -56,8 +55,8 @@ ms.locfileid: "62876049"
 |ヘッダー|値|  
 |------------|------------|  
 |**名前**|バックアップ セットの名前です。|  
-|**Type**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
-|**コンポーネント**|バックアップされるコンポーネント。[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
+|**Type**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
+|**コンポーネント**|バックアップされるコンポーネント。 [データベース]、[ファイル]、または *\<blank>* (トランザクションログ用) のいずれかを使用します。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**Position**|ボリューム内でのバックアップ セットの位置。|  

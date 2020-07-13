@@ -1,20 +1,19 @@
 ---
 title: SQL Server 2014 のドキュメントは移動しています |Microsoft Docs
 description: SQL Server 2014 に関する Microsoft のドキュメントは、MSDN からドキュメントで、2018年7月より前に移動します。
-author: mightypen
-manager: craigg
+author: rothja
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.date: 04/26/2018
-ms.author: genemi
+ms.author: jroth
 ms.reviewer: sudeepk
-ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d70386181c913b477286cb9351841e575f9c68c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62473640"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524350"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014 のドキュメントが Docs に移動する
 
@@ -27,7 +26,7 @@ ms.locfileid: "62473640"
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *SQL Server 2014 のオンラインブック*
+- *SQL Server 2014 オンライン ブック*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
 MSDN は、 *Microsoft Developer Network*の initialism です。

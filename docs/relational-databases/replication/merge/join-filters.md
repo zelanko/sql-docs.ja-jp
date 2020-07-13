@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882472"
 ---
 # <a name="join-filters"></a>結合フィルター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   結合フィルターを使用すると、パブリケーションにおける関連するテーブルのフィルター方法に基づいて、テーブルにフィルターを適用できます。 通常、親テーブルにはパラメーター化されたフィルターが使用されます。そのため、テーブル間の結合を定義する場合とほぼ同じ方法で 1 つ以上の結合フィルターを定義できます。 結合フィルターは、結合フィルター句に一致した場合のみ関連テーブルのデータがレプリケートされるように、パラメーター化されたフィルターを拡張します。  
   
  通常、結合フィルターは適用先のテーブルに定義されている主キー/外部キーのリレーションシップに従いますが、これに厳密に限定されてはいません。 結合フィルターには、2 つのテーブルの関連データを比較するためのあらゆるロジックを使用できます。  

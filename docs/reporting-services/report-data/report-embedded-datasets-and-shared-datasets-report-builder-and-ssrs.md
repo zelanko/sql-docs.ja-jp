@@ -149,7 +149,7 @@ ms.locfileid: "77081804"
 |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
 |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションのオーバーライド|  
   
- データセットの作成の詳細については、[Reporting Services ドキュメント](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)の「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/tools/reporting-services-tools.md)」と「[Reporting Services ツール](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
+ データセットの作成の詳細については、[Reporting Services ドキュメント](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)の「[共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」と「[Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
 ##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> データセット内のデータのフィルター処理、並べ替え、グループ化  
  データセット内のデータは、外部データ ソースに対してクエリ コマンドを実行することによって取得されたものです。 データ拡張機能のクエリ コマンド構文によって、データを並べ替えできるか、グループ化できるかどうかが決まります。 並べ替えとグループ化は、レポートのデータが取得される前にクエリで実行されます。 フィルター処理は、レポートのデータを取得した後に実行されます。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059099"
 ---
 # <a name="rename-user-sys"></a>ユーザー sys の名前変更が必要
   アップグレードアドバイザーによって、データベースにユーザー名**sys**が検出されました。 この名前は予約されています。 このユーザー名を変更した後、アップグレードしてください。 ユーザー名が変更されていないと、データベースはアップグレード処理後に問題ありの状態となり、データベースをオンラインにするまで使用できません。  
@@ -25,7 +24,7 @@ ms.locfileid: "66092858"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  ユーザー **sys**は予約されています。  
   
 ## <a name="corrective-action"></a>修正措置  

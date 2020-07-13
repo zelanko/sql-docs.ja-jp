@@ -13,10 +13,10 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908990"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
@@ -76,9 +76,9 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
     1.  [型マッピング] ペインで、削除するデータ型マッピングが含まれている [型マッピング] ボックスの一覧で行を選択します。  
   
-    2.  **[削除]** をクリックします。  
+    2.  **[除去]** をクリックします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[評価レポートを作成](assessing-mysql-databases-for-conversion-mysqltosql.md)するか、 [MySQL データベースオブジェクトを SQL Server または SQL Azure 構文に変換](converting-mysql-databases-mysqltosql.md)します。 レポートを作成する場合、MySQL オブジェクトは評価中に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  

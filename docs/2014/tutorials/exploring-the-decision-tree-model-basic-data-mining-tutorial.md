@@ -11,19 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224595"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>デシジョン ツリー モデルの検証 (基本的なデータ マイニング チュートリアル)
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、自転車の購入に影響する列をトレーニング セットのその他の列に基づいて予測します。  
   
 
   
-##  <a name="Decision_Tree_Tab"></a>[デシジョンツリー] タブ  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>[デシジョンツリー] タブ  
  [**デシジョンツリー** ] タブでは、データセット内の予測可能な属性ごとにデシジョンツリーを表示できます。  
   
  この場合、モデルでは自転車購入者が1つだけ予測されるため、表示できるツリーは1つだけです。 複数のツリーがある場合は、[**ツリー** ] ボックスを使用して別のツリーを選択できます。  
@@ -77,7 +76,7 @@ ms.locfileid: "63224595"
      同じスプレッドシートの末尾に構造列が追加されて表示されます。  
   
   
-###  <a name="Dependency_Network_Tab"></a>[依存関係ネットワーク] タブ  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>[依存関係ネットワーク] タブ  
  [**依存関係ネットワーク**] タブには、マイニングモデルの予測機能に寄与する属性間のリレーションシップが表示されます。 依存関係ネットワーク ビューアーを使用すると、自転車の購入の予測において Age と Region が重要な要素になるという先ほどの調査結果が補強されます。  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>[依存関係ネットワーク] タブでモデルを調査するには  

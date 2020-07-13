@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6b6fafaf6464431d68f8cfdf9dc9d8fa844a42a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72782869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936600"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>可用性グループからのプライマリ データベースの削除 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
@@ -31,9 +30,9 @@ ms.locfileid: "72782869"
   
      [前提条件と制限](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   **次のものを使用して可用性データベースを削除するには:**  
+-   **可用性データベースを削除する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,47 +40,44 @@ ms.locfileid: "72782869"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:** 可用性[グループから可用性データベースを削除した後](#FollowUp)    
+-   **補足情報**  [可用性グループから可用性データベースを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>前提条件と制限  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>前提条件と制限  
   
 -   このタスクは、プライマリ レプリカ上でのみサポートされます。 プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性データベースを削除するには**  
   
 1.  オブジェクト エクスプローラーで、削除するデータベースのプライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  
-  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  可用性グループを選択し、 **[可用性データベース]** ノードを展開します。  
   
 4.  削除するデータベースが複数であるか 1 つのみであるかによって、次のように実行する手順が異なります。  
   
-    -   複数のデータベースを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して削除するデータベースを表示し、すべてを選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)」を参照してください。  
+    -   複数のデータベースを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して削除するデータベースを表示し、すべてを選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
   
     -   1 つのデータベースを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインでそれを選択します。  
   
 5.  選択したデータベースを右クリックし、コマンド メニューの **[可用性グループからデータベースを削除]** を選択します。  
   
-6.  
-  **[可用性グループからデータベースを削除]** ダイアログ ボックスで、表示されたすべてのデータベースを削除するには、 **[OK]** をクリックします。 すべて削除しない場合は、 **[キャンセル]** をクリックします。  
+6.  **[可用性グループからデータベースを削除]** ダイアログ ボックスで、表示されたすべてのデータベースを削除するには、 **[OK]** をクリックします。 すべて削除しない場合は、 **[キャンセル]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性データベースを削除するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
   
-2.  
-  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) ステートメントを使用します。次にその例を示します。  
+2.  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) ステートメントを使用します。次にその例を示します。  
   
      ALTER AVAILABILITY GROUP *group_name* REMOVE DATABASE *availability_database_name*  
   
@@ -93,7 +89,7 @@ ms.locfileid: "72782869"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a>PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性データベースを削除するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
@@ -107,13 +103,13 @@ ms.locfileid: "72782869"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>補足情報: 可用性グループから可用性データベースを削除した後  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  
@@ -128,4 +124,4 @@ ms.locfileid: "72782869"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性グループからセカンダリデータベースを削除する &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+ [可用性グループからのセカンダリ データベースの削除 &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  

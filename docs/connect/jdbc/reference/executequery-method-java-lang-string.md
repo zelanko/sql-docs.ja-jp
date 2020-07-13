@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: edb099aaa88887f96a3a05369373035588f25b74
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922036"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67954818"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,11 +48,11 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>解説  
  この executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドで規定されています。  
   
- このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) クラスで見つかる [executeQuery](../../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドをオーバーライドします。  
+ このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスで見つかる [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドをオーバーライドします。  
   
  SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。  
   
- 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md) がスローされます。  
+ 渡された SQL ステートメントによって 1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクト以外のものが生成された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [executeQuery メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Table | を削除するMicrosoft Docs
+title: SQL Server テーブルの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,19 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7af3d096d9e58b1cb75e2d7cab15988183578fdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d7bea98a3afcd0022f66117b6bde2d968a866b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63046467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017993"
 ---
 # <a name="dropping-a-sql-server-table"></a>SQL Server テーブルの削除
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **itabledefinition::D roptable**関数を公開します。 これにより、コンシューマーは[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースからテーブルを削除できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **Itabledefinition::D roptable**関数を公開します。 これにより、コンシューマーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからテーブルを削除できます。  
   
- コンシューマーは、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列としてテーブル名を指定します。 
-  *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーは、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列としてテーブル名を指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [テーブルとインデックス](tables-and-indexes.md)  

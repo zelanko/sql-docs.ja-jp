@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266580"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>プロジェクトの設定 (型のマッピング) (OracleToSQL)
@@ -62,8 +62,8 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|INT|  
-|BLOB|varbinary(max)|  
+|binary_integer|int|  
+|blob (blob)|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -75,8 +75,8 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |decimal|float [53]|  
 |double precision|float [53]|  
 |float|float [53]|  
-|INT|INT|  
-|整数 (integer)|INT|  
+|int|INT|  
+|整数|INT|  
 |long|varchar(max)|  
 |長生|varbinary(max)|  
 |long raw [\*..8000]<sup>*</sup>|varbinary [*]|  
@@ -91,7 +91,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
@@ -118,7 +118,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|BLOB|varbinary(max)|  
+|blob (blob)|varbinary(max)|  
 |char|char|  
 |char varying [*..\*]|varchar [*]|  
 |char [*..\*]|char [*]|  
@@ -137,8 +137,8 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|INT|INT|  
-|整数 (integer)|INT|  
+|int|INT|  
+|整数|INT|  
 |long|varchar(max)|  
 |長生|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
@@ -186,15 +186,15 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|INT|  
+|binary_interger|int|  
 |BLOB|varbinary(max)|  
-|Boolean|bit|  
+|ブール型|bit|  
 |Char|char|  
 |char varying [*..8000]|varchar [*]|  
 |文字の変化 [8001.. *]|varchar(max)|  
 |char [*..8000]|char [*]|  
 |char [8001.. *]|varchar(max)|  
-|Character|char|  
+|文字|char|  
 |文字の変化 [*..8000]|varchar [*]|  
 |文字の変化 [8001.. *]|varchar(max)|  
 |文字 [*..8000]|char [*]|  
@@ -211,8 +211,8 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|INT|  
-|整数|INT|  
+|int|int|  
+|Integer|int|  
 |integer [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
 |長生|varbinary(max)|  
@@ -234,7 +234,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |nchar 可変 [*..4000]|nvarchar [*]|  
 |nchar の変化 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|番号|float [53]|  
+|数値|float [53]|  
 |数値 [*..\*]|数値 [*]|  
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |数値|数値 [38] [0]|  
@@ -242,7 +242,7 @@ SSMA for Oracle では、引数、列、ローカル変数、戻り値に対し�
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
 |nvarchar2 [4001.. *]|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |生の [*..8000]|varbinary [*]|  
 |raw [8001.. *]|varbinary(max)|  
 |Real|float [53]|  

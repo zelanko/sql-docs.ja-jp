@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb2601bb5fd85313fd66f58cdd0ab616bc8c13c4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898290"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893377"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースからメッセージ交換の優先度を削除します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67898290"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  

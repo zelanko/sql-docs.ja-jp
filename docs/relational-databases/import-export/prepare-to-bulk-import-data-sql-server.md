@@ -1,5 +1,6 @@
 ---
 title: データの一括インポートの準備 (SQL Server) | Microsoft Docs
+description: データ ファイルのみからデータを一括インポートするには、bcp コマンド、BULK INSERT ステートメント、または OPENROWSET(BULK) 関数を使用します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 997033c334543e26b5f769d31b1816df707a84bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772302"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>データの一括インポートの準備 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データ ファイルのみからデータを一括インポートするには、 **bcp** コマンド、BULK INSERT ステートメント、または OPENROWSET(BULK) 関数を使用します。  
   

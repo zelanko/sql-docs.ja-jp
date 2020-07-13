@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b72a5c8fc99e8e2baccc01a17bb110b1aaa973
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 238b9d82c3d71fde58a967b9d73d6a410f3883a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76917825"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764875"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions および SetPermissions メソッドの例 (VC++)
 この例では、 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)メソッドと[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドを示します。 次のコードは、Orders テーブルへのフルアクセスを管理ユーザーに提供します。  

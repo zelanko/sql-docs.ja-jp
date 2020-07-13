@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923388"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748320"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
 ADO は、永続化する XML ストリームに UTF-8 エンコードを使用します。  
   
  ADO XML 形式は、スキーマセクションと data セクションの2つのセクションに分かれています。 Northwind データベースの仕入先テーブルの XML ファイルの例を次に示します。 この例では、XML のさまざまな部分について説明します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,7 +68,7 @@ xmlns:z="#RowsetSchema">
   
  スキーマ定義は[W3C XML データ仕様](http://www.w3.org/TR/1998/NOTE-XML-data/)に準拠しており、完全に検証できます (ただし、検証は Internet Explorer 5 では実行されません)。 現在、XML データは、レコードセットの永続化に対してサポートされている唯一のスキーマ形式です。  
   
- データセクションには、運送会社に関する情報を含む3つの行があります。 空の行セットの場合、data セクションは空になること\<がありますが、rs: data> タグが存在している必要があります。 データがない場合は、単\<に rs: data/> としてタグの短縮形を記述できます。 "Rs" で始まるすべてのタグは、urn: schema-microsoft-com: rowset によって定義された名前空間にあることを示します。  
+ データセクションには、運送会社に関する情報を含む3つの行があります。 空の行セットの場合、data セクションは空になることがありますが、 \< rs: data> タグが存在している必要があります。 データがない場合は、単に \< rs: data/> としてタグの短縮形を記述できます。 "Rs" で始まるすべてのタグは、urn: schema-microsoft-com: rowset によって定義された名前空間にあることを示します。  
   
 ## <a name="see-also"></a>参照  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

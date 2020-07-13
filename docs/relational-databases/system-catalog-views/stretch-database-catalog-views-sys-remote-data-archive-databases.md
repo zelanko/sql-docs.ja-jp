@@ -18,19 +18,18 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a4d7717a6e89b156cd66ea96a44383d28cbecfb3
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018200"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053634"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database カタログビュー-sys. remote_data_archive_databases
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Stretch が有効なローカルデータベースのデータを格納するリモートデータベースごとに1行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|リモートデータベースの自動生成されたローカル識別子。|  
 |**remote_database_name**|**sysname**|リモートデータベースの名前。|  

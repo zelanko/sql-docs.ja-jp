@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLTables
 - SQLTables function [ODBC], Excel Driver
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89157178aa9c134bdb1b9518343007adb1e1e05f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c436a1f52a862cda753d8c043515f5584607d98c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132423"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299302"
 ---
 # <a name="sqltables-excel-driver"></a>SQLTables (Excel ドライバー)
 > [!NOTE]  

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76971222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895297"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>SQL Server の言語拡張を Linux にインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 言語拡張は、データベース エンジンに対するアドオンです。 [データベース エンジンと言語拡張を同時にインストールする](#install-all)ことは可能ですが、コンポーネントを追加する前に問題を解決できるように、まずは SQL Server データベースエンジンをインストールして構成することをお勧めします。 
 
@@ -30,7 +30,7 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 
 また、言語拡張は Linux コンテナー上でもサポートされます。 言語拡張には、ビルド済みのコンテナーは付属していませんが、[GitHub 上で入手できるサンプル テンプレート](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)を使用して、SQL Server コンテナーから作成できます。
 
-言語拡張と [Machine Learning Services](../advanced-analytics/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
+言語拡張と [Machine Learning Services](../machine-learning/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
 ## <a name="uninstall-preview-version"></a>プレビュー バージョンをアンインストールする
 
@@ -54,9 +54,9 @@ ls /opt/microsoft/mssql/bin
 
 | プラットフォーム  | パッケージの削除コマンド | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
+| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
 
 ### <a name="3-install-sql-server-2019"></a>3.SQL Server 2019 をインストールする
 
@@ -200,9 +200,13 @@ sudo zypper install mssql-server-extensibility-java
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Java 拡張の場合、環境変数 "JRE_HOME" を使用して、JVM を検索および初期化するパスが決定されます。
+
+CREATE EXTERNAL LANGUAGE ddl には、拡張機能をホストするプロセス専用の環境変数を設定するためのパラメーター (ENVIRONMENT_VARIABLES) が用意されています。 これは、外部言語拡張に必要な環境変数を設定するために推奨される、最も効果的な方法です。
 
 詳しくは、「[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)」をご覧ください。
 

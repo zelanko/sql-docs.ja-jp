@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927125"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67970562"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "80927125"
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の Ref オブジェクトとして取得されます。|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|現在の行番号を取得します。|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **short** として取得されます。|  
-|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを生成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを取得します。|  
+|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを取得します。|  
 |[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **String** として取得されます。|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、**SQLXML** オブジェクトとして取得されます。|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の java.sql.Time オブジェクトとして取得されます。|  

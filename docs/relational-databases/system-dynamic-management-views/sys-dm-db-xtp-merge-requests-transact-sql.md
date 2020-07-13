@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0abb6be6bc64ba0e55c3f7528d5b7996185f0f2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68026805"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830792"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>dm_db_xtp_merge_requests (Transact-sql)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68026805"
 
 ## <a name="columns-in-the-report"></a>レポート内の列
 
-| 列名 | データ型 | [説明] |
+| 列名 | データ型 | 説明 |
 | :-- | :-- | :-- |
 | request_state | tinyint | マージ要求の状態。<br/>0 = 要求<br/>1 = 保留中<br/>2 = インストール済み<br/>3 = 破棄済み |
 | request_state_desc | nvarchar(60) | 要求の現在の状態の意味:<br/><br/>要求-マージ要求が存在します。<br/>保留中-マージを処理しています。<br/>Installed-マージが完了しました。<br/>破棄-ストレージが不足しているため、マージを完了できませんでした。 |
@@ -43,6 +43,6 @@ ms.locfileid: "68026805"
 
 現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [メモリ最適化テーブルの動的管理ビュー (Transact-sql)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)

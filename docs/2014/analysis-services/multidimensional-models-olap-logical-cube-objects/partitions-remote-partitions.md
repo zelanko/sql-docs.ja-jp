@@ -14,24 +14,22 @@ helpviewer_keywords:
 - backing up remote partitions [Analysis Services]
 - partitions [Analysis Services], storage
 - storing data [Analysis Services], partitions
-- MasterDataSourceID property
 - remote partitions [Analysis Services]
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 32fdf05d061d4e1c1da6ec0ef9179ecd12bda172
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62727354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880313"
 ---
 # <a name="remote-partitions"></a>リモート パーティション
-  リモートパーティションのデータは、パーティションとその親キューブの定義 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]メタデータ) が格納されているインスタンスとは異なる Microsoft のインスタンスに格納されます。 リモート パーティションは、パーティションとその親キューブが定義されているインスタンスと同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで管理されます。  
+  リモートパーティションのデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] パーティションとその親キューブの定義 (メタデータ) が格納されているインスタンスとは異なる Microsoft のインスタンスに格納されます。 リモート パーティションは、パーティションとその親キューブが定義されているインスタンスと同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで管理されます。  
   
 > [!NOTE]  
->  リモートパーティションを格納するには、コンピューターにの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスがインストールされており、パーティションが定義されているインスタンスと同じ Service Pack レベルが実行されている必要があります。 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上でのリモート パーティションはサポートされていません。  
+>  リモートパーティションを格納するには、コンピューターにのインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールされており、パーティションが定義されているインスタンスと同じ Service Pack レベルが実行されている必要があります。 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上でのリモート パーティションはサポートされていません。  
   
  リモート パーティションがメジャー グループに含まれている場合、キューブのメモリおよび CPU 使用率は、メジャー グループ内のすべてのパーティション間で分散されます。 たとえば、リモート パーティションが単独で、または親キューブの処理の一部として処理される場合、そのパーティションのメモリおよび CPU 使用率の大部分は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスで発生します。  
   
@@ -43,13 +41,12 @@ ms.locfileid: "62727354"
   
 |||  
 |-|-|  
-|ストレージの種類|データ|  
+|ストレージ型|Data|  
 |[MOLAP]|パーティションの集計と、パーティションのソース データのコピー|  
 |HOLAP|パーティションの集計|  
 |[ROLAP]|パーティション データなし|  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納された複数の MOLAP パーティションまたは HOLAP パーティションがメジャー グループに含まれる場合、キューブでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のそれらのインスタンス間でメジャー グループのデータを分散します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納された複数の MOLAP パーティションまたは HOLAP パーティションがメジャー グループに含まれる場合、キューブでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のそれらのインスタンス間でメジャー グループのデータを分散します。  
   
 ## <a name="merging-remote-partitions"></a>リモート パーティションのマージ  
  リモート パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の同一のリモート インスタンスに格納されている他のリモート パーティションとのみマージできます。 パーティションのマージの詳細については、「 [Analysis Services &#40;SSAS-多次元&#41;でのパーティションのマージ](../multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)」を参照してください。  

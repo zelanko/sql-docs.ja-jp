@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 451aed8a69562578cfaa68f18c692613995a6e0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932856"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760148"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute、Requery、および Clear メソッドの例 (VC + +)
 この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 この例を実行するには、ExecuteCommand 関数と PrintOutput 関数が必要です。  

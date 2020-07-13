@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c440247433404c520559d6609bd4690b425ddd43
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68092673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899344"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在開いているトランザクションを、指定されたサブスクライバーのサブスクリプションレベルの検証トランザクションとしてマークします。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -46,20 +46,20 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**であり、既定値はありません。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーに属するパブリケーションには、*パブリッシャー*を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用しないでください。  
+>  パブリッシャーに属するパブリケーションには、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_marksubscriptionvalidation**は、トランザクションレプリケーションで使用します。  
   
- **sp_marksubscriptionvalidation**は、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートしていません。  
+ **sp_marksubscriptionvalidation**は、以外のサブスクライバーをサポートしていません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、明示的なトランザクション内から**sp_marksubscriptionvalidation**を実行することはできません。 これは、パブリッシャーへのアクセスに使用されるリンクサーバー接続では、明示的なトランザクションがサポートされていないためです。  
+ 以外のパブリッシャーの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、明示的なトランザクション内から**sp_marksubscriptionvalidation**を実行することはできません。 これは、パブリッシャーへのアクセスに使用されるリンクサーバー接続では、明示的なトランザクションがサポートされていないためです。  
   
  **sp_marksubscriptionvalidation**は[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)と一緒に使用する必要があります。この場合、 *subscription_level*に**1**を指定し、 **sp_marksubscriptionvalidation**の他の呼び出しと共に使用して、他のサブスクライバーの現在開いているトランザクションをマークできます。  
   
@@ -99,7 +99,7 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

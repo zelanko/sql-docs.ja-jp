@@ -15,21 +15,20 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d3b785785e9f3481b8dfb5f661b4b78f1923629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3328970373e30551a090cd5cf4fbd67cb9bb67aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62836341"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439239"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの接続
   データ フロー タスクにコンポーネントを追加したら、コンポーネントを接続して、変換元から変換を経由して変換先に至るデータ フローを表す実行ツリーを作成します。 データ フロー内のコンポーネントを接続するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを使用します。  
   
 ## <a name="creating-a-path"></a>パスの作成  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> プロパティの New メソッドを呼び出して、新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> プロパティの New メソッドを呼び出して、新しいパスを作成し、データ フロー タスク内のパスのコレクションに追加します。 このメソッドは、新しく作成され、切断されている <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを返します。これを使用して 2 つのコンポーネントを接続します。  
   
  パスを接続し、パスに含まれているコンポーネントが接続されたことを通知するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> メソッドを呼び出します。 このメソッドは、上流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> および下流コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> をパラメーターとして受け取ります。 既定では、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> メソッドを呼び出すと、入力を持つコンポーネントに 1 つの入力、および出力を持つコンポーネントに 1 つの出力が作成されます。 次の例では、この既定の変換元の出力および変換先の入力を使用します。  
   
@@ -120,9 +119,9 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラムによる入力列の選択](../building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   

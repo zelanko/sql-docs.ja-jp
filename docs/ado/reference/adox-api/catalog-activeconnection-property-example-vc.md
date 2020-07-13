@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76925615"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763953"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection プロパティの例 (VC++)
 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを有効な開いている接続に設定すると、カタログが開きます。 開いているカタログから、そのカタログ内に含まれているスキーマオブジェクトにアクセスできます。  

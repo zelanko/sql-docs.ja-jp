@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087912"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527488"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>クラスター ダイアグラムのチュートリアル (データ マイニング アドイン)
   クラスターモデルを作成した後は、**クラスター**図形を使用して Visio にインポートして、レイアウトのカスタマイズと拡張を続けることができます。 **Visio 用のデータマイニング図形**には、データマイニングダイアグラムを操作するための次のカスタムコントロールが含まれています。  
@@ -43,13 +42,13 @@ ms.locfileid: "66087912"
   
 1.  [**図形**] ボックスの一覧に [ **Microsoft データマイニング図形**] が表示されない場合は、[**その他の図形**] をクリックし、[**ステンシルを開く**] を選択して、既定のインストール場所からテンプレートを開きます。  
   
-     \<ドライブ>: SQL Server 2012 DM アドイン  
+     \<drive>: SQL Server 2012 DM アドイン  
   
 2.  **クラスター**図形をページにドラッグします。  
   
 3.  **Visio クラスター図形ウィザード**の [ようこそ] ページで、[**次へ**] をクリックします。  
   
-4.  **クラスターウィザード**の [**データソースの選択**] ページで、視覚化するデータマイニング[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]モデルが含まれているサーバーへの接続を選択します。  
+4.  **クラスターウィザード**の [**データソースの選択**] ページで、視覚化する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データマイニングモデルが含まれているサーバーへの接続を選択します。  
   
 5.  適切なマイニングモデルを選択し、[**次へ**] をクリックします。  
   

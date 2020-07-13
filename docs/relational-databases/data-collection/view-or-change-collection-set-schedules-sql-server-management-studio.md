@@ -1,7 +1,6 @@
 ---
 title: コレクション セットのスケジュールの表示または変更
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733813"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>コレクション セットのスケジュールの表示または変更 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   コレクション セットのスケジュールは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して表示または変更できます。  
   
  コレクション モードをキャッシュと非キャッシュのどちらにするかで、スケジュールをどのように変更できるかが決まります。 キャッシュ モードでは、コレクションとアップロードに別々のスケジュールが使用されます。 非キャッシュ モードでは、コレクションとアップロードに同じスケジュールが使用されます。 それぞれのシステム データ コレクション セットで使用されるコレクション モードの種類は次のとおりです。  
@@ -110,10 +110,11 @@ ms.locfileid: "74055330"
  **[データの収集およびアップロード]**  
  データを収集して管理データ ウェアハウスにアップロードする方法を指定します。 以下のいずれかのオプションを選択します。  
   
-|||  
-|-|-|  
+| オプション | 説明 |
+| :----- | :---------- |
 |**キャッシュしない - データを同じスケジュールで収集およびアップロードします。**|選択した場合、次のいずれかを指定します。<br /><br /> **[スケジュール]** : データはスケジュールに従って収集およびアップロードされます。 **[選択]** をクリックしてスケジュールを定義済み一覧から選択するか、 **[新規作成]** をクリックして新しいスケジュールを作成します。<br /><br /> **[要求時]** : データは要求時に収集およびアップロードされます。|  
 |**キャッシュする - 一定の収集頻度でデータを収集およびキャッシュして、別途設定されたスケジュールでキャッシュされたデータをアップロードします。**|指定された収集頻度でデータを収集およびキャッシュします。 収集したデータを、別途設定されたスケジュールでアップロードします。|  
+|||
   
  **[収集頻度 (秒)]**  
  コレクション セット内のコレクション アイテムを表示します。 コレクション アイテムごとに次の情報が提供されます。  
@@ -133,11 +134,12 @@ ms.locfileid: "74055330"
  **[収集したデータを管理データ ウェアハウスに保持する期間を設定します。]**  
  収集したデータを保持する期間を指定します。 以下のいずれかのオプションを選択します。  
   
-|||  
-|-|-|  
+| オプション | 説明 |
+| :----- | :---------- |
 |**[データ保持日数]**|このオプションは既定で選択されます。既定の保持期間は 14 日間です。|  
 |**[データを無期限に保持]**|データを保持する期間に制限はありません。|  
-  
+|||
+
  **[アップロード] ページ**  
   
  このページを使用すると、このコレクション セットによって収集されるデータのアップロード スケジュールを構成できます。  
@@ -145,7 +147,7 @@ ms.locfileid: "74055330"
 > [!NOTE]  
 >  このタブは、 **[キャッシュする]** オプションが **[データの収集およびアップロード]** に対して構成されている場合にのみ使用できます。  
   
- **[サーバー]**  
+ **サーバー**  
  管理データ ウェアハウスをホストするサーバーの名前を表示します。 詳細については、「[管理データ ウェアハウスの構成 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)」を参照してください。  
   
  **[管理データ ウェアハウス]**  

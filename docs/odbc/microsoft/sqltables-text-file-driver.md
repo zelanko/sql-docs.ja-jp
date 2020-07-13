@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLTables
 - SQLTables function [ODBC], Text File Driver
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fcdf9cc41a55d1e529001ae7183ef9fa833363b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 938ceba5da25d176628d5c1d9875383d977e3aec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949011"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299332"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables (テキスト ファイル ドライバー)
 > [!NOTE]  

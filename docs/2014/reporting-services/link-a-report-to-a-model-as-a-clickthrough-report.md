@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108368"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>レポートをクリックスルー レポートとしてモデルにリンクする
@@ -29,8 +29,7 @@ ms.locfileid: "66108368"
   
 ### <a name="to-start-report-manager-from-a-browser"></a>ブラウザーからレポート マネージャーを起動するには  
   
-1.  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 以降を開きます。  
+1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 以降を開きます。  
   
 2.  Web ブラウザーのアドレス バーに、レポート マネージャーの URL を入力します。 既定では、URL は http://\<*ComputerName*>/レポートです。  
   
@@ -40,8 +39,7 @@ ms.locfileid: "66108368"
   
 2.  レポート モデルをダブルクリックします。  
   
-3.  
-  **[クリックスルー]** をクリックします。  
+3.  **[クリックスルー]** をクリックします。  
   
 4.  カスタマイズされたクリックスルー レポートをアタッチするエンティティを選択します。  
   
@@ -50,13 +48,13 @@ ms.locfileid: "66108368"
   
 5.  選択したエンティティの単一のインスタンスがクリックされたときに、カスタマイズされたレポートを表示するには、単一インスタンス レポートの **[参照]** ボタンをクリックします。  
   
-     または  
+     \- または -  
   
      選択したエンティティの複数のインスタンスがクリックされたときに、カスタマイズされたレポートを表示するには、複数インスタンス レポートの **[参照]** ボタンをクリックします。  
   
 6.  レポートを選択し、 **[OK]** をクリックします。  
   
-7.  **[Apply]** をクリックします。  
+7.  **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [クリックスルーレポート &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  

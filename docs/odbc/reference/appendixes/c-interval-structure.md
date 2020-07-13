@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037785"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292154"
 ---
 # <a name="c-interval-structure"></a>C Interval 構造体
 「 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)」セクションに記載されている各 c interval データ型は、同じ構造を使用して間隔データを格納します。 **Sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**が呼び出されると、ドライバーはデータを SQL_INTERVAL_STRUCT 構造に返し、c データ型に対してアプリケーションによって指定された値 ( **SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**の呼び出し) を使用して SQL_INTERVAL_STRUCT の内容を解釈し、構造体の*interval_type*フィールドに c 型に対応する*列挙*値を設定します。 ドライバーは、間隔の種類を決定するために*interval_type*フィールドを読み取っていないことに注意してください。SQL_DESC_CONCISE_TYPE 記述子フィールドの値を取得します。 パラメーターデータに構造体が使用されている場合、ドライバーは、アプリケーションが*interval_type*フィールドの値を別の値に設定した場合でも、APD の SQL_DESC_CONCISE_TYPE フィールドにあるアプリケーションで指定された値を使用して SQL_INTERVAL_STRUCT の内容を解釈します。  

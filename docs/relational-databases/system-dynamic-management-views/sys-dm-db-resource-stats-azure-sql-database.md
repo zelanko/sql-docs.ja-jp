@@ -19,19 +19,19 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738716"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベースの CPU、i/o、およびメモリの消費量を返します。 データベースにアクティビティがない場合でも、15 秒ごとに 1 つの行が存在します。 履歴データは約1時間保持されます。  
+  データベースの CPU、i/o、およびメモリの消費量を返し [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ます。 データベースにアクティビティがない場合でも、15 秒ごとに 1 つの行が存在します。 履歴データは約1時間保持されます。  
   
-|[列]|データ型|[説明]|  
+|[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時刻は、現在のレポート間隔の終了を示します。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
@@ -55,7 +55,7 @@ ms.locfileid: "78175157"
 ## <a name="permissions"></a>アクセス許可
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
  **Dm_db_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。
  
  過去60分以内にデータベースが別のサーバーにフェールオーバーされた場合、ビューはそのフェールオーバー以降の時間についてのみデータを返します。  
@@ -100,5 +100,5 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

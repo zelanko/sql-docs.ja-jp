@@ -12,15 +12,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16fefbbf886818989131710876564fc9e147a56a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057410"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440139"
 ---
 # <a name="multiple-precedence-constraints"></a>複数の優先順位制約
   優先順位制約は、2 つのタスク、2 つのコンテナー、1 つのタスクと 1 つのコンテナーなど、2 つの実行可能ファイルを連結します。 これらは優先順位付き実行可能ファイル、および制約付き実行可能ファイルと呼ばれています。 制約付き実行可能ファイルには、複数の優先順位制約を含めることができます。 詳細については、「 [優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  
@@ -32,7 +31,7 @@ ms.locfileid: "66057410"
 ## <a name="logicaland-property"></a>LogicalAnd プロパティ  
  タスクまたはコンテナーに複数の制約がある場合、`LogicalAnd` プロパティにより、優先順位制約を単独で評価するか、別の制約と組み合わせて評価するかを指定します。  
   
- プロパティを`LogicalAnd`設定するには、デザイナーの[!INCLUDE[ssIS](../includes/ssis-md.md)] [**優先順位制約エディター** ] を使用する[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]か、に用意されているプロパティウィンドウを使用します。  
+ プロパティを設定するには、 `LogicalAnd` デザイナーの [**優先順位制約エディター** ] を使用するか、に用意されているプロパティウィンドウを使用し [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [優先順位制約のプロパティを設定する](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

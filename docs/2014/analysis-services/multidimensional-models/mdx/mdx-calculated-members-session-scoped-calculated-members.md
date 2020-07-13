@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8fe7a9f137d8b74eaa5bad104dbfdb471dd14588
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074549"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546464"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>セッション スコープの計算されるメンバーの作成 (MDX)
   多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
@@ -40,8 +39,7 @@ CREATE [SESSION] MEMBER [<cube-name>.]<fully-qualified-member-name> AS <expressi
 <property-identifier> ::= VISIBLE | SOLVEORDER | SOLVE_ORDER | FORMAT_STRING | NON_EMPTY_BEHAVIOR <ole db member properties>  
 ```  
   
- CREATE MEMBER ステートメントの構文で使用する `fully-qualified-member-name` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 
-  `expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。  
+ CREATE MEMBER ステートメントの構文で使用する `fully-qualified-member-name` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 `expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。  
   
 ## <a name="create-member-example"></a>CREATE MEMBER の例  
  以下の例では、CREATE MEMBER ステートメントを使用して、計算されるメンバー `LastFourStores` を作成しています。 この計算されるメンバーは、販売した単位の合計を最後の 4 つのストアに関して返します。このメンバーは、このキューブのセッション全体で使用できます。  
@@ -53,6 +51,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;クエリスコープの計算されるメンバーの作成](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [クエリ スコープの計算されるメンバーの作成 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

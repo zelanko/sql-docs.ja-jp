@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- **using** (**では**Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) ディレクティブをレポート サーバー Web サービス参照に追加することもできます。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
+ **using** ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] では **Import**) ディレクティブをレポート サーバー Web サービス参照に追加することもできます。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。 このためには、次のコードをファイルに追加します。  
   
 ```vb  
 Import myNamespace.myReferenceName  

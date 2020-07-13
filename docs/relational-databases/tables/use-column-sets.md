@@ -28,7 +28,7 @@ ms.locfileid: "71326137"
   
  テーブルに多数の列があり、その個別操作が煩雑である場合は、列セットの使用を検討してください。 多数の列を含むテーブルで列セットを使用してデータの選択や挿入を行うと、アプリケーションのパフォーマンスがある程度向上する場合があります。 ただし、テーブル内の列に多数のインデックスが定義されている場合は、列セットのパフォーマンスが低下することがあります。 これは、実行プランに必要なメモリ容量が増えるためです。  
   
- 列セットを定義するには、*CREATE TABLE* または [ALTER TABLE](../../t-sql/statements/create-table-transact-sql.md) ステートメントで [<column_set_name>](../../t-sql/statements/alter-table-transact-sql.md) FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
+ 列セットを定義するには、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) または [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ステートメントで *<column_set_name>* FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
   
 ## <a name="guidelines-for-using-column-sets"></a>列セットの使用に関するガイドライン  
  列セットを使用する場合は、次のガイドラインを考慮してください。  

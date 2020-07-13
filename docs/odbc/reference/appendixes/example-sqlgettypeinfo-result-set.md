@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], examples
 - data types [ODBC], SQL data types
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8264f1dfad8bff5d676cd4de8c8b9d7763b39b52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a5cf62f8a95f4c91095c21a6d603317fe1f73500
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948745"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307013"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 結果セットの例
 アプリケーションは、 **SQLGetTypeInfo**を呼び出して、データソースによってサポートされているデータ型と、それらのデータ型の特性を判断します。 次の表に、SQL_CHAR、SQL_LONGVARCHAR、SQL_DECIMAL、SQL_REAL、SQL_DATETIME、SQL_INTERVAL_YEAR、および SQL_INTERVAL_DAY_TO_SECOND をサポートするデータソースの**SQLGetTypeInfo**によって返される結果セットの例を示します。  

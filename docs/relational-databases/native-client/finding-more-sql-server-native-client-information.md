@@ -1,5 +1,5 @@
 ---
-title: その他の SQL Server Native Client 情報の検索 |Microsoft Docs
+title: 詳細情報
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +10,18 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 415e4817a7ed9b4fa8d3d9f8c24e9b6944cba8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 15ee24d21a770476d956b7265b3a204ad1c04717
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761176"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009805"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client に関する詳細情報
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client とその他のデータ アクセス プログラミングの詳細については、次のオンライン リソースを参照してください。  
   
  [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink?linkid=4173)  

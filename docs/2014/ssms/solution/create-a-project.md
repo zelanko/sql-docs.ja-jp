@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11af4a71ae5c0eb45395b71f8eac83ef27daf4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67197594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062035"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
   既存のソリューション内に、1 つ以上のプロジェクトを作成できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "67197594"
      **テンプレート**  
      **[テンプレート]** ボックスで、テンプレートを選択します。 **[テンプレート]** ボックスの下に、選択したプロジェクト テンプレートの簡単な説明が表示されます。  
   
-     **名前**  
+     **Name**  
      作成するスクリプト プロジェクトの名前を入力します。 **[場所]** フィールドに表示された場所に、プロジェクトと同じ名前のフォルダーも作成されます。 プロジェクトによっては、ソース ファイルなどのサポート ファイルが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって作成され、新しいプロジェクト フォルダーに追加されます。  
   
     > [!NOTE]  

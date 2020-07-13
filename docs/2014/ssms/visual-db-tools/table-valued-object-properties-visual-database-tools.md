@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7db48f0ee7241bedcd7536133450a2a41cd8f9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048545"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>テーブル値オブジェクトのプロパティ (Visual Database Tools)
   これらのプロパティは、 **クエリおよびビュー デザイナー**でテーブル値オブジェクトを選択したときに、[プロパティ] ウィンドウに表示されます。 テーブル値オブジェクトは、ビュー、シノニム、派生テーブル、またはテーブル値関数です。 特に指定しない限り、 **[プロパティ]** ウィンドウのこれらのプロパティは読み取り専用です。  
@@ -31,7 +30,7 @@ ms.locfileid: "63204565"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[オブジェクト名]** プロパティと **[TVO 型]** プロパティが表示されます。  
   
- **名前**  
+ **Name**  
  選択されたテーブル値オブジェクトの名前を表示します。  
   
  **[TVO 型]**  

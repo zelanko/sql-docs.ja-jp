@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLTables function [ODBC]
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae52e6431679ed0f260e6885090ac38363b4ef3d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039530"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287132"
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **互換性**  
@@ -69,7 +69,7 @@ SQLRETURN SQLTables(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名の文字列検索パターン。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *TableName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *TableName*はパターン値の引数です。これは文字どおりに処理され、大文字と小文字が区別されます。  
@@ -91,7 +91,7 @@ SQLRETURN SQLTables(
 ## <a name="diagnostics"></a>診断  
  **Sqltables**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*を SQL_HANDLE_STMT、 *StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqltables**によって通常返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -150,9 +150,9 @@ SQLRETURN SQLTables(
   
  次の表に、結果セット内の列の一覧を示します。 列 5 (解説) 以外の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Varchar|カタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名;データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|テーブル名。|  
 |TABLE_TYPE (ODBC 1.0)|4|Varchar|テーブル型の名前。"テーブル"、"表示"、"システムテーブル"、"グローバル一時"、"ローカル一時"、"エイリアス"、"シノニム"、またはデータソース固有の型名のいずれかです。<br /><br /> "ALIAS" と "シノニム" の意味は、ドライバーによって異なります。|  
@@ -235,7 +235,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105787"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
@@ -41,17 +41,16 @@ ms.locfileid: "66105787"
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  テキストの書式設定方法と、テキスト ボックス内の異なるテキスト ブロックの書式設定オプションのカスタマイズ方法について説明します。  
   
- [レポートへの HTML のインポート &#40;レポートビルダーと SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [レポートへの HTML のインポート &#40;レポート ビルダーおよび SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  レポートに HTML を挿入して使用する方法について説明します。  
   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
   
  [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)  
  レポート アイテムとデータ領域内の線、グリッド線、色、および画像の書式設定方法について説明します。  
   
- [レポートまたはテキストボックスのロケールを &#40;Reporting Services に設定&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [レポートまたはテキスト ボックスのロケールの設定 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  日付、通貨、数値など、言語や地域ごとに異なるデータの表示形式の設定を変更する方法について説明します。  
   
 ## <a name="see-also"></a>参照  

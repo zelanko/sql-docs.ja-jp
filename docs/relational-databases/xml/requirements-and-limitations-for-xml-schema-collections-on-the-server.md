@@ -38,7 +38,7 @@ ms.locfileid: "75257619"
 |アイテム|制限事項|  
 |----------|----------------|  
 |**minOccurs** と **maxOccurs**|**minOccurs** 属性と **maxOccurs** 属性の値は、4 バイトの整数に収める必要があります。 これに違反するスキーマはサーバーで拒否されます。|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**minOccurs\< 属性値に 0 を指定してパーティクルを定義していない限り、子のない** **xsd:choice>** パーティクルを持つスキーマは拒否します。|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**minOccurs** 属性値に 0 を指定してパーティクルを定義していない限り、子のない **\<xsd:choice>** パーティクルを持つスキーマは拒否します。|  
 |**\<xsd:include>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 この要素を含む XML スキーマはサーバーによって拒否されます。<br /><br /> 解決方法として、 **\<xsd:include>** ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにすることで、サーバーにアップロードできます。 詳細については、「 [含まれているスキーマをマージするためのスキーマの前処理](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)」を参照してください。|  
 |**\<xsd:key>** 、 **\<xsd:keyref>** 、および **\<xsd:unique>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一意性の強制や、キーおよびキー参照の確立を行うための、これらの XSD ベースの制約はサポートしません。 これらの要素を含む XML スキーマは登録できません。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 スキーマを更新するための別の方法については、「 [&#60;xsd:redefine&#62; 要素](../../relational-databases/xml/the-xsd-redefine-element.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
@@ -49,7 +49,7 @@ ms.locfileid: "75257619"
 |正規の形式とパターン制限|値の正規表現は、その値の型のパターン制限に従う必要があります。 詳細については、「 [Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)」を参照してください。|  
 |列挙ファセット|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファセットに違反するパターン ファセットや列挙を含む型を使用した XML スキーマはサポートしません。|  
 |ファセット長|**length**ファセット、 **minLength**ファセット、および **maxLength** ファセットは **long** 型で格納されます。 この型は 32 ビット型です。 したがって、これらの値の許容範囲は 2^31 です。|  
-|ID 属性|XML スキーマ コンポーネントは、それぞれ ID 属性を 1 つ含むことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**ID\< 型の** **xsd:attribute>** 宣言に一意性を適用しますが、これらの値を格納しません。 一意性のスコープは、CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで適用します。|  
+|ID 属性|XML スキーマ コンポーネントは、それぞれ ID 属性を 1 つ含むことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**ID** 型の **\<xsd:attribute>** 宣言に一意性を適用しますが、これらの値を格納しません。 一意性のスコープは、CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで適用します。|  
 |ID 型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **xs:ID**型、 **xs:IDREF**型、または **xs:IDREFS**型の要素はサポートしません。 スキーマでは、この型の要素や、この型の制限または拡張によって派生した要素を宣言できません。|  
 |ローカル名前空間|**\<xsd:any>** 要素では、ローカル名前空間を明示的に指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、名前空間属性の値に空文字列 ("") を使用するスキーマを拒否します。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では "##local" を明示的に使用して、修飾されない要素や属性をワイルドカード文字によるインスタンスとして示す必要があります。|  
 |混合型と単純コンテンツ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、混合型を単純コンテンツに制限することはできません。 詳細については、「 [Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)」を参照してください。|  

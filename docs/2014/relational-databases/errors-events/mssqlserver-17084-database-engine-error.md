@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eca8c8758eb8ac1ee42696ec5059bb3f805a2d63
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62915463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967938"
 ---
 # <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
     
@@ -36,8 +35,7 @@ ms.locfileid: "62915463"
  BEGIN ATOMIC ステートメントの WITH 句で、オプションの値が指定されませんでした。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 
-  `ATOMIC` ブロックでは、`WITH` オプションの `TRANSACTION ISOLATION LEVEL` および `LANGUAGE` に値が必要です。 次に例を示します。  
+ `ATOMIC` ブロックでは、`WITH` オプションの `TRANSACTION ISOLATION LEVEL` および `LANGUAGE` に値が必要です。 次に例を示します。  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

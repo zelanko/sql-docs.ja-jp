@@ -24,15 +24,15 @@ ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0852c01f37e8dbf324e18d140bd30a510fd14c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dccf50490a8304507d621fc1e7fcdb06fb33a13
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999360"
 ---
 # <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 式の丸め処理で精度が低下するときに作成されるエラー レポートのレベルを指定します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68008969"
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```

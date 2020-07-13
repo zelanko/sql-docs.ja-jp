@@ -9,33 +9,32 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b00bbdf6063bc0451244792ee423825b4f74cc40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72782779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543864"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例
   このトピックでは、最小限の特権を使用する PowerPivot for SharePoint 2013 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
   
 ## <a name="summary-of-accounts"></a>アカウントの概要  
- PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービスアカウントの詳細については、「 [Windows サービスアカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(https://msdn.microsoft.com/library/ms143504.aspx)」を参照してください。  
+ PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービスアカウントの詳細については、「 [Windows サービスアカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(」を参照してください https://msdn.microsoft.com/library/ms143504.aspx) 。  
   
  次の表は、最小限の特権の構成の例で使用する 3 種類のアカウントをまとめたものです。  
   
-|スコープ|Name|  
+|Scope|名前|  
 |-----------|----------|  
 |SharePoint 管理者アカウント|**SPAdmin**|  
 |SharePoint ファーム アカウント|**SPFarm**|  
 |Analysis Services サービス アカウント|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理者アカウント (SpAdmin)  
- **Spadmin**は、ファームのインストールと構成に使用するドメインアカウントです。 このアカウントは、SharePoint 構成ウィザードと SharePoint 2013 用 PowerPivot 構成ツールの実行に使用されます。 **Spadmin**アカウントは、ローカル管理者権限を必要とする唯一のアカウントです。 PowerPivot 構成ツールを実行する前に、SharePoint によってコンテンツデータベースと構成データベースが作成される SQL Server データベースインスタンスに、 **Spadmin**アカウントの特権を付与します。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
+ **SPAdmin** は、ファームのインストールと構成に使用するドメイン アカウントです。 このアカウントは、SharePoint 構成ウィザードと SharePoint 2013 用 PowerPivot 構成ツールの実行に使用されます。 **Spadmin**アカウントは、ローカル管理者権限を必要とする唯一のアカウントです。 PowerPivot 構成ツールを実行する前に、SharePoint によってコンテンツデータベースと構成データベースが作成される SQL Server データベースインスタンスに、 **Spadmin**アカウントの特権を付与します。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
   
 ### <a name="the-farm-account-spfarm"></a>ファーム アカウント (SPFarm)  
- **SPFarm**は、sharepoint Timer Service とサーバーの全体管理の web アプリケーションが sharepoint コンテンツデータベースにアクセスするために使用するドメインアカウントです。 このアカウントは、ローカル管理者である必要はありません。 SharePoint 構成ウィザードでは、バックエンドの SQL Server データベースで必要最小限の特権を付与します。SQL Server の特権の最小限の構成は **securityadmin** ロールと **dbcreator**ロールのメンバーシップです。  
+ **SPFarm** は、SharePoint Timer Service と全体管理用 Web アプリケーションが SharePoint コンテンツ データベースにアクセスするために使用するドメイン アカウントです。 このアカウントは、ローカル管理者である必要はありません。 SharePoint 構成ウィザードでは、バックエンドの SQL Server データベースで必要最小限の特権を付与します。SQL Server の特権の最小限の構成は **securityadmin** ロールと **dbcreator**ロールのメンバーシップです。  
   
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>PowerPivot サービスのサービス アカウント (SPsvc)  
  PowerPivot 構成ツールを実行する前に新しい SharePoint ファームが構成されていない場合、PowerPivot 構成ツールでは既定で以下のものを作成します。  
@@ -48,7 +47,7 @@ ms.locfileid: "72782779"
   
  PowerPivot 構成ツールは、既定のアプリケーション プールのサービス アプリケーション 3 つすべてを構成します。 このアプリケーション プールは通常、サービス アカウントが不要な多くのリソースにアクセスできる SPFarm アカウントとして実行されるように構成されます。最小限の特権環境にするには、適切なアプリケーション プールおよび Web アプリケーションで使用する新しいドメイン アカウントを構成します。  
   
- **SharePoint サービスアカウントとして使用する新しいドメインアカウント SPsvc を作成するには、次のようにします。**  
+ **SharePoint Service アカウントとして使用する新しいドメイン アカウント SPsvc を作成するには**  
   
 1.  SharePoint サーバーの全体管理で、[**セキュリティ**] をクリックします。  
   
@@ -56,10 +55,9 @@ ms.locfileid: "72782779"
   
 3.  [**新しい管理アカウントの登録**] をクリックします。  
   
- 
-  **SPSvc** アカウントにはローカル管理者権限はなく、SharePoint データベースに関する権限もありません。 SPsvc に必要な唯一の特権は、Analysis Services の PowerPivot インスタンスの管理権限です。  
+ **SPSvc** アカウントにはローカル管理者権限はなく、SharePoint データベースに関する権限もありません。 SPsvc に必要な唯一の特権は、Analysis Services の PowerPivot インスタンスの管理権限です。  
   
- **SPsvc アカウントを使用するように適切なアプリケーションプールを構成するには、次のようにします。**  
+ **SPsvc アカウントを使用する適切なアプリケーション プールを構成するには**  
   
 1.  SharePoint サーバーの全体管理で、[**セキュリティ**] をクリックします。  
   
@@ -67,7 +65,7 @@ ms.locfileid: "72782779"
   
 3.  PowerPivot サービス アプリケーションで使用するサービス アプリケーション プールを選択します。 次に、SPSvc アカウントを選択します。  
   
- **PowerShell を使用して web アプリケーションへのアクセスを許可するには、次のようにします。**  
+ **PowerShell で Web アプリケーションへのアクセス権を付与するには**  
   
 1.  管理者特権を使用して、SharePoint 2013 管理シェルを実行します。  
   

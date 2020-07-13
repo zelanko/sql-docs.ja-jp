@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9888ddabcd18fde861e3e68cfc685e6716262125
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176557"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439269"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
   パッケージを動的に作成する必要がある場合、または開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 この場合、次に示すような一連の方法があります。
@@ -63,7 +62,7 @@ ms.locfileid: "78176557"
  [プログラムによるパッケージの保存](../building-packages-programmatically/saving-a-package-programmatically.md)プログラムによってパッケージを保存する方法について説明します。
 
 ## <a name="reference"></a>リファレンス
- [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済み[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のエラーコードとそのシンボル名と説明を一覧表示します。
+ [Integration Services のエラーとメッセージの参照](../integration-services-error-and-message-reference.md)定義済みの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラーコードとそのシンボル名と説明を一覧表示します。
 
 ## <a name="related-sections"></a>関連項目
  [スクリプトを使用したパッケージの拡張](../extending-packages-scripting/extending-packages-with-scripting.md)スクリプトタスクを使用して制御フローを拡張する方法と、スクリプトコンポーネントを使用してデータフローを拡張する方法について説明します。
@@ -78,9 +77,9 @@ ms.locfileid: "78176557"
 
 -   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](https://go.microsoft.com/fwlink/?LinkId=238831)」
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [SQL Server Integration Services](../sql-server-integration-services.md)
 
 

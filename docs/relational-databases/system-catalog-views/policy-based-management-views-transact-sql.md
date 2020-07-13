@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aed4c953f7f9c14b899f034d58f74d2ceb22862a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720412"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>ポリシーベースの管理ビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ポリシー ベースの管理には、ポリシー ベースの管理のポリシー、条件、式、グループ、およびフィルターに関する情報を表示するための次のビューがあります。 これらのビューは msdb データベースにあり、dbo スキーマが所有しています。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68018443"
 |[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)|[syspolicy_system_health_state](../../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md)|  
 |[syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

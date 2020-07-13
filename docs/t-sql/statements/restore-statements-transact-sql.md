@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530929"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922171"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -86,7 +86,7 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -596,7 +596,7 @@ RESTORE LOG AdventureWorks2012
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
-    STOPATMARK = 'UPDATE Product list prices';
+    STOPATMARK = ListPriceUpdate;
 ```
 
 [&#91;例の先頭に戻る&#93;](#examples)
@@ -751,7 +751,7 @@ RESTORE DATABASE Sales
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -770,7 +770,7 @@ FROM URL
 復元操作で使用される、URL に配置された 1 つ以上のバックアップ デバイスを指定します。 この URL の形式は、Microsoft Azure Storage サービスからバックアップを復元する場合に使用されます。
 
 > [!IMPORTANT]
-> URL からの復元時に複数のデバイスから復元するには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
+> URL からの復元時に複数のデバイスから復元するには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
 
 *n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
 
@@ -883,7 +883,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 データベースの完全バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` ディレクトリに格納されている完全バックアップから復元されます。 この復元が正常に完了すると、差分バックアップが SalesInvoices2013 データベースに復元されます。 差分バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` ディレクトリに格納されます。
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 次の例では、データベース バックアップ `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` のヘッダー情報が復元されます。 コマンドを実行すると、Invoices2013Full バックアップに関する情報を含む行が 1 つ生成されます。
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

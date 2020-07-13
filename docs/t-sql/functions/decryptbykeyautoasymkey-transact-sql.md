@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 14668b9fac1ba05d458bdedc038faaf2883dc9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b416b915c011ecd4222dc9a3d708786f58852fe9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314568"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901648"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数によって、暗号化データが復号されます。 これを行うために、最初に別個の非対称キーで対称キーが復号され、次に最初の "手順" で抽出された対称キーで暗号化データが復号されます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71314568"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  

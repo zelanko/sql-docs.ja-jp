@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeConnect function [ODBC]
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37ecdbee0795734e0f046a78f6c262e9b3fe660b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f73de19565b8c9c264736d74818c6234d610ef4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002960"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285852"
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect 関数
 **互換性**  

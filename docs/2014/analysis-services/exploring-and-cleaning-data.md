@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528338"
 ---
 # <a name="exploring-and-cleaning-data"></a>データの探索とクリーニング
   データの準備は、データのクレンジングよりはるかに大きな概念です。 データの準備方法によって、最終的な結果の解釈も影響を受けることを忘れないでください。 データの準備には、次のようなタスクがあります。  
@@ -46,11 +45,10 @@ ms.locfileid: "66081266"
   
 -   分析に役立つ列を特定し、データ モデリング フェーズを計画します。  
   
- データ[&#40;SQL Server データマイニングアドイン&#41;を探索](explore-data-sql-server-data-mining-add-ins.md)します。  
+ [データの探索 &#40;SQL Server データ マイニング アドイン&#41;](explore-data-sql-server-data-mining-add-ins.md)。  
   
 ### <a name="detect-and-handle-outliers"></a>外れ値の検出と処理  
- 
-  **外れ値**ウィザードを使用して、データ内の値の分布をグラフ化し、極端な値を削除できます。 次のデータ準備タスクを行うには、**外れ値**ツールを使用します。  
+ **外れ値**ウィザードを使用して、データ内の値の分布をグラフ化し、極端な値を削除できます。 次のデータ準備タスクを行うには、**外れ値**ツールを使用します。  
   
 -   データで検出されたパターンに基づいて、個々の値が信頼できるかどうかを判断します。  
   
@@ -58,11 +56,10 @@ ms.locfileid: "66081266"
   
 -   モデルを特定の値の範囲にスコープします。 たとえば、特定の店舗に外れ値があることが判明している場合は、その値を除去することで、より正確に他の店舗の値を予測するモデルを取得することができます。  
   
- [データマイニングアドイン&#41;SQL Server の外れ値 &#40;](outliers-sql-server-data-mining-add-ins.md)ます。  
+ [外れ値 &#40;SQL Server データ マイニング アドイン&#41;](outliers-sql-server-data-mining-add-ins.md)。  
   
 ### <a name="relabel-and-bin-data"></a>データのラベル変更とビン分割  
- 
-  **ラベルの変更**ウィザードでは、データのラベルを変更できるように、データが値でグループ化されます。 次のデータ準備タスクを行うには、ラベルの変更ツールを使用します。  
+ **ラベルの変更**ウィザードでは、データのラベルを変更できるように、データが値でグループ化されます。 次のデータ準備タスクを行うには、ラベルの変更ツールを使用します。  
   
 -   調査結果で使用されている数値コードを、そのコードの意味を示すテキストに変更します。  
   
@@ -98,7 +95,7 @@ ms.locfileid: "66081266"
   
 -   **[オーバーサンプリング]。** 対象となる結果に対してデータが不足しており、そのデータにより重みを付ける必要がある場合にこのオプションを使用します。 たとえば、詐欺行為は比較的まれにしか発生しませんが、詐欺行為に関連するケースをオーバーサンプリングして、モデリングするための最適化データを取得できます。  
   
- [データマイニングアドイン&#41;SQL Server サンプルデータ &#40;](sample-data-sql-server-data-mining-add-ins.md)ます。  
+ [サンプル データ &#40;SQL Server データ マイニング アドイン&#41;](sample-data-sql-server-data-mining-add-ins.md)。  
   
 ## <a name="see-also"></a>参照  
  [データマイニングモデルの作成](creating-a-data-mining-model.md)   

@@ -11,28 +11,25 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 228034102b460b7149d51d3dfe798949a9527689
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062100"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439739"
 ---
 # <a name="add-an-annotation-to-a-package"></a>パッケージに注釈を追加する
   この手順では、パッケージに注釈を追加する方法について説明します。  
   
 ### <a name="to-add-an-annotation-to-a-package"></a>パッケージに注釈を追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、注釈を追加するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、注釈を追加するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブのデザイン画面上の任意の場所を右クリックし、 **[注釈の追加]** をクリックします。 タブのデザイン画面に、テキスト ブロックが表示されます。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブのデザイン画面上の任意の場所を右クリックし、 **[注釈の追加]** をクリックします。 タブのデザイン画面に、テキスト ブロックが表示されます。  
   
 4.  テキストを追加します。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "66062100"
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージで注釈を使用する](use-annotations-in-packages.md)  
   
   

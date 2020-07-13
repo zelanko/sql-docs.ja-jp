@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77074448"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003434"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果のカーディナリティや行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
   
@@ -55,7 +55,7 @@ DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデー�
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -64,7 +64,7 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
@@ -167,8 +167,9 @@ SELECT 権限でコマンドを実行するときは、次の要件に注意し�
 -   統計オブジェクト内のいずれかの列が動的データ マスク ルールでマスクされている場合、ユーザーは SELECT 権限に加えて、UNMASK 権限を持っている必要があります。
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 よりも前のバージョンでは、ユーザーはテーブルを所有しているか、固定サーバー ロール `sysadmin`、固定データベース ロール `db_owner`、または固定データベース ロール `db_ddladmin` のメンバーである必要があります。
-[!NOTE]
-動作を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 より前の動作に戻すには、トレースフラグ 9485 を使用します。
+
+ > [!NOTE]
+ > 動作を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 より前の動作に戻すには、トレースフラグ 9485 を使用します。
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のアクセス許可  
 DBCC SHOW_STATISTICS では、次のいずれかのメンバーシップまたはテーブルに対する SELECT 権限が必要です。

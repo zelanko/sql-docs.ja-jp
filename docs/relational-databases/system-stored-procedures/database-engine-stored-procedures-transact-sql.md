@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c14ceb0dc7862acd80102f911dcfcc6683b2d69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790421"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>データベースエンジンストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの一般的なメンテナンスに使用される次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、のインスタンスの一般的なメンテナンスに使用される次のシステムストアドプロシージャをサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |||  
 |-|-|  
@@ -80,7 +80,7 @@ ms.locfileid: "67942412"
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

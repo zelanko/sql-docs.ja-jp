@@ -14,16 +14,16 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095316"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889169"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
   
 ## <a name="capture-job"></a><a name="Capture"></a> キャプチャ ジョブ
@@ -79,7 +79,7 @@ ms.locfileid: "74095316"
 
 変更データ キャプチャでは、保有期間に基づくクリーンアップ戦略を使用して変更テーブルのサイズを管理します。 クリーンアップ メカニズムは、最初のデータベース テーブルが有効になったときに作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブで構成されます。 単一のクリーンアップ ジョブがすべてのデータベース変更テーブルのクリーンアップを処理し、定義されたすべてのキャプチャ インスタンスに同じ保有期間値を適用します。
   
-クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_cleanup_job` を実行することによって開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために `msdb.dbo.cdc_jobs` から抽出することによって開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 `tran_end_time` テーブルの `cdc.lsn_time_mapping` の最大値から指定の分数を差し引き、datetime 値として表す新しい低水位マークを取得します。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する `lsn` 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の `lsn` を持つエントリに対応する `lsn` が新しい低水位マークとして選択されます。 この `lsn` 値は `sp_cdc_cleanup_change_tables` に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
+クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_cleanup_job` を実行することによって開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために `msdb.dbo.cdc_jobs` から抽出することによって開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 `cdc.lsn_time_mapping` テーブルの `tran_end_time` の最大値から指定の分数を差し引き、datetime 値として表す新しい低水位マークを取得します。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する `lsn` 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の `lsn` を持つエントリに対応する `lsn` が新しい低水位マークとして選択されます。 この `lsn` 値は `sp_cdc_cleanup_change_tables` に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
   
 > [!NOTE]  
 > 最新のトランザクションのコミット時刻を、新しい低水位マークの計算のベースとして使用する利点は、変更を特定の時刻の変更テーブルに残せることです。 これは、キャプチャ プロセスが背後で実行されている場合でも同様です。 実際の低水位マークの共有コミット時刻を持つ最小の `lsn` を選択することにより、現在の低水位マークと同じコミット時刻を持つすべてのエントリは、変更テーブル内に引き続き表示されます。  

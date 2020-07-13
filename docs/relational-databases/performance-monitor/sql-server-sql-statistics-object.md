@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758946"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **の**SQLServer:SQL Statistics[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
   
  コンパイルは、クエリのターンアラウンド時間の大半を占めます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、コンパイルのコストを節約するために、コンパイル済みのクエリ プランがクエリ キャッシュに保存されます。 キャッシュを使用して、コンパイル済みのクエリを再使用のために保存すると、後から実行するときに再コンパイルの必要がなくなるので、コンパイルを減らすことができます。 ただし、一意のクエリはすべて、少なくとも 1 回コンパイルする必要があります。 クエリの再コンパイルは、次の要因によって生じることがあります。  
   

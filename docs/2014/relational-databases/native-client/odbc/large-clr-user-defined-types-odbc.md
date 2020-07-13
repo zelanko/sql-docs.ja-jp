@@ -10,15 +10,14 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 62acbe2e9acbf6ba39f982ad43de7a55453f7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055840"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "63144310"
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|SQL データ型|Value|  
+|SQL Server のデータ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63144310"
   
 |SQL データ型|メモリ レイアウト|C データ型|値 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>パラメーターの記述子フィールド  
  IPD フィールドに返される情報は次のとおりです。  
@@ -210,7 +209,7 @@ ms.locfileid: "63144310"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT に対して返される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|種類|SubType|長さ|有効桁数|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +229,7 @@ ms.locfileid: "63144310"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT に対して許可される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|種類|SubType|長さ|有効桁数|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

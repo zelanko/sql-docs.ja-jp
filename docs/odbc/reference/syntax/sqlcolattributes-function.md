@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColAttributes function [ODBC]
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef2dc0b9007542d5bf71f06a742cc58c0ae5f4ff
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039771"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301282"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes 関数
 **互換性**  

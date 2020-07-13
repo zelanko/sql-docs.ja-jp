@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a73ce5a538756a740afd2db72d585fa54f03cae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525931"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>データ マイニング アルゴリズム (SQL Server データ マイニング アドイン)
   Office 用データ マイニング アドインは、次のデータ マイニング アルゴリズムを使用して分析モデルの作成をサポートします。 すべてのアルゴリズムは、よく知られている機械学習メソッドに基づいており、Microsoft Research によって実装されたものです。  

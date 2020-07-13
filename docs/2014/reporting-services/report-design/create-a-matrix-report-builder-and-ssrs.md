@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7561d448253a7d87d87c7f5cdd02668e15ffaa4a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172773"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>マトリックス (レポート ビルダーおよび SSRS)
@@ -22,15 +22,14 @@ ms.locfileid: "78172773"
 
  初期デザインが完了したら、ユーザーにとっての表示機能を向上させるためのマトリックスの作成に進むことができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。
 
- マトリックスをすぐに使用するには、「[チュートリアル:マトリックス レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-matrix-report-report-builder.md)」を参照してください。
+ マトリックスの利用をすぐに開始するには、「[チュートリアル: マトリックス レポートの作成 (レポート ビルダー)](../tutorial-creating-a-matrix-report-report-builder.md)」を参照してください。
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、マトリックスを使用したレポートが多数含まれています。 マトリックスに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、マトリックスを使用したレポートが多数含まれています。 マトリックスに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingMatrix"></a> レポートへのマトリックスの追加
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a>レポートへのマトリックスの追加
  リボンの [挿入] タブからデザイン画面にマトリックスを追加します。 マトリックスを追加するには、テーブル ウィザードまたはマトリックス ウィザードを使用して、データ ソース接続とデータセットを作成し、そのマトリックスを構成するか、マトリックス テンプレートに基づいてマトリックスを追加します。
 
 > [!NOTE]
@@ -54,7 +53,7 @@ ms.locfileid: "78172773"
 
  作業を開始したマトリックスは、Tablix データ領域に基づいたテンプレートです。 入れ子になった行グループや列グループ、隣接した行グループや列グループを追加したり、詳細行を追加したりすることによって、マトリックスの開発を継続することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。
 
-##  <a name="AddingParentGroupChild"></a> 親グループまたは子グループのマトリックスへの追加
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> 親グループまたは子グループのマトリックスへの追加
  単一のデータセット フィールドに基づくグループを追加するには、そのフィールドをレポート データ ペインからグループ化ペインの適切な [行グループ] 領域または [列グループ] 領域にドラッグします。 フィールドをグループ階層にドロップして、既存のグループに対するリレーションシップを設定します。 親グループを作成する場合は、既存のグループの上にドロップし、子グループを作成する場合は、既存のグループの下にドロップします。
 
  フィールドを **グループ化** ペインにドロップすると、次の結果が得られます。
@@ -81,8 +80,8 @@ ms.locfileid: "78172773"
 
  詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。
 
-##  <a name="AddingAdjacentGroup"></a> 隣接するグループのマトリックスへの追加
- 単一のデータセット フィールドに基づく隣接したグループを追加するには、グループ化ペインのショートカット メニューを使用します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 次の図に、地理データに基づくグループと、それに隣接し、年データに基づくグループを示します。
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a>隣接するグループのマトリックスへの追加
+ 単一のデータセット フィールドに基づく隣接したグループを追加するには、グループ化ペインのショートカット メニューを使用します。 詳細については、「 [&#40;レポートビルダーと SSRS&#41;」の「データ領域でのグループの追加または削除](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 次の図に、地理データに基づくグループと、それに隣接し、年データに基づくグループを示します。
 
  ![Geography と Year の隣接列グループ](../media/rs-basicmatrixadjacentgroupsdesign.gif "Geography と Year の隣接列グループ")
 

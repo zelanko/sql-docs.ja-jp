@@ -13,18 +13,17 @@ helpviewer_keywords:
 - batches [ODBC]
 - ODBC CALL escape sequence
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b50350006abba5085b11010f26aa88a89b07393f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0df58ce59853ee15b863cbc7bce34041c37fee4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68205495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039510"
 ---
 # <a name="batching-stored-procedure-calls"></a>ストアド プロシージャ呼び出しのバッチ化
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、必要に応じてストアドプロシージャの呼び出しがサーバーに自動的にバッチ処理されます。 これが行われるのは、ODBC CALL エスケープ シーケンスが使用されている場合のみです。[!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE ステートメントでは、この処理は行われません。 ストアド プロシージャ呼び出しをバッチにまとめると、サーバーとのやり取りの回数を削減できるので、パフォーマンスが大幅に向上します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、必要に応じてストアドプロシージャの呼び出しがサーバーに自動的にバッチ処理されます。 これが行われるのは、ODBC CALL エスケープ シーケンスが使用されている場合のみです。[!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE ステートメントでは、この処理は行われません。 ストアド プロシージャ呼び出しをバッチにまとめると、サーバーとのやり取りの回数を削減できるので、パフォーマンスが大幅に向上します。  
   
  複数の ODBC CALL エスケープ シーケンスを含むバッチを実行すると、ドライバーによりサーバーへのプロシージャ呼び出しがバッチにまとめられます。 また、ODBC CALL エスケープ シーケンスでバインドされたパラメーター配列を使用するときも、プロシージャ呼び出しがバッチにまとめられます。 たとえば、行方向または列方向のいずれかのパラメーターバインドを使用して、5つの要素を持つ配列を ODBC CALL SQL ステートメントのパラメーターにバインドする場合、 **Sqlexecute**または**SQLExecDirect**が呼び出されると、ドライバーは5つのプロシージャ呼び出しを含む単一のバッチをサーバーに送信します。  
   

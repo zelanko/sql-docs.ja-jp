@@ -1,5 +1,6 @@
 ---
 title: XQuery | の型キャスト規則Microsoft Docs
+description: XQuery で、あるデータ型から別のデータ型への明示的または暗黙的なキャストを行うときに適用される規則について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7de4ccd0a7bba950767d9d9028e4635a10ee25d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759464"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   次の W3C XQuery 1.0 and XPath 2.0 Functions and Operators 仕様の図は、組み込みのデータ型を示しています。 これには、組み込みのプリミティブ型と組み込みの派生型が含まれます。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "67946216"
   
  このトピックでは、次のいずれかの方法を使用して、ある型から別の型にキャストするときに適用される型キャストの規則について説明します。  
   
--   **Cast をとしてキャスト**するか、型コンストラクター関数 (など`xs:integer("5")`) を使用して明示的にキャストします。  
+-   **Cast をとしてキャスト**するか、型コンストラクター関数 (など) を使用して明示的にキャストし `xs:integer("5")` ます。  
   
 -   型の上位変換中に行われる暗黙のキャスト  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 次のクエリでは、ドキュメントインスタンス内の最上位レベルの <`root`> 要素の数がわからないため、静的なエラーが返されます。  
+ 次のクエリでは、ドキュメントインスタンス内の最上位レベルの <> 要素の数がわからないため、静的なエラーが返され `root` ます。  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 式にシングルトン <`root`> 要素を指定すると、クエリは成功します。 このクエリは、xs: string として型指定された単純型の値のシーケンスを返します。  
+ 式にシングルトン <> 要素を指定すると、 `root` クエリは成功します。 このクエリは、xs: string として型指定された単純型の値のシーケンスを返します。  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +116,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 次の例では、xml 型の変数に、XML スキーマコレクションを指定する document キーワードが含まれています。 これは、XML インスタンスが1つのトップレベル要素を持つドキュメントである必要があることを示します。 XML インスタンスに2つ`root`の <> 要素を作成すると、エラーが返されます。  
+ 次の例では、xml 型の変数に、XML スキーマコレクションを指定する document キーワードが含まれています。 これは、XML インスタンスが1つのトップレベル要素を持つドキュメントである必要があることを示します。 XML インスタンスに2つの <> 要素を作成すると `root` 、エラーが返されます。  
   
 ```  
 declare @x xml(document myCollection)  
@@ -167,18 +168,18 @@ min(xs:integer("1"), xs:double("1.1"))
  文字列型または untypedAtomic 型から xs: base64Binary や xs: hexBinary などのバイナリ型にキャストする場合、入力値はそれぞれ base64 または16進エンコードである必要があります。  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>文字列型または untypedAtomic 型への値のキャスト  
- String 型または untypedAtomic 型にキャストすると、値は XQuery 正規構文表現に変換されます。 これは、入力時に特定のパターンや他の制約に従っていた値が、制約どおりに表記されない可能性があることを意味します。  これについてユーザーに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通知するために、型の制約がスキーマコレクションに読み込まれたときに警告を提供することによって、型の制約が問題になる可能性のあるフラグ型です。  
+ String 型または untypedAtomic 型にキャストすると、値は XQuery 正規構文表現に変換されます。 これは、入力時に特定のパターンや他の制約に従っていた値が、制約どおりに表記されない可能性があることを意味します。  これについてユーザーに通知するために、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 型の制約がスキーマコレクションに読み込まれたときに警告を提供することによって、型の制約が問題になる可能性のあるフラグ型です。  
   
  xs:float 型、xs:double 型、またはこれらのサブタイプの値を string 型または untypedAtomic 型にキャストする場合、値は科学的表記法で表現されます。 これは、値の絶対値が 1.0E-6 未満であるか、1.0E6 以上である場合にのみ行われます。 つまり、0 は科学的表記法で 0.0E0 にシリアル化されます。  
   
- たとえば、 `xs:string(1.11e1)`は文字列値`"11.1"`を返し、 `xs:string(-0.00000000002e0)`は文字列値を`"-2.0E-11"`返します。  
+ たとえば、 `xs:string(1.11e1)` は文字列値を返し、 `"11.1"` `xs:string(-0.00000000002e0)` は文字列値を返し `"-2.0E-11"` ます。  
   
  xs:base64Binary や xs:hexBinary などバイナリ型から string 型または untypedAtomic 型にキャストする場合、バイナリ値はそれぞれ base64 または hex エンコード形式で表現されます。  
   
 ##### <a name="casting-a-value-to-a-numeric-type"></a>数値型への値のキャスト  
  ある数値型の値を別の数値型の値にキャストすると、文字列のシリアル化を行わずに値が1つの値空間から別の値にマップされます。 値が対象の型の制約を満たしていない場合は、次の規則が適用されます。  
   
--   ソース値が既に数値で、対象の型が xs: float または-INF または INF 値を許可するサブタイプである場合、値が正の値または-INF (値がの場合) の場合は、値が INF にマップされます。 低下. 対象の型で INF または-INF が許可されておらず、オーバーフローが発生した場合、キャストは失敗し、このリリースの SQL Server の結果は空のシーケンスになります。  
+-   ソース値が既に数値で、対象の型が xs: float または-INF または INF 値を許可するサブタイプである場合、値が正の値または-INF (値が負の場合) の場合、値は INF にマップされます。 対象の型で INF または-INF が許可されておらず、オーバーフローが発生した場合、キャストは失敗し、このリリースの SQL Server の結果は空のシーケンスになります。  
   
 -   元の値が既に数値型で、キャスト先の型が 0、-0e0、または 0e0 を許容する数値型の場合に、元の数値がキャスト後オーバーフローするようなときは、値が次のようにマップされます。  
   
@@ -199,7 +200,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   Castable 値は、ターゲット型の実装制限によって制限されます。 たとえば、負の年の日付文字列を**xs: date**にキャストすることはできません。 実行時に値が指定された場合、このようなキャストでは、(実行時エラーになるのではなく) 空のシーケンスが返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データのシリアル化の定義](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
   
   

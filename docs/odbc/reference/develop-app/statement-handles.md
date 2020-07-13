@@ -11,14 +11,14 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1be90fe10d10a0b087d1c9724fed249805eb4dba
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107257"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299678"
 ---
 # <a name="statement-handles"></a>ステートメント ハンドル
 *ステートメント*は、"**従業員から選択\* **" などの SQL ステートメントとして最も簡単に考えることができます。 ただし、ステートメントは SQL ステートメントだけではなく、ステートメントの実行時に使用されるステートメントやパラメーターによって作成された結果セットなど、その SQL ステートメントに関連付けられているすべての情報で構成されます。 ステートメントには、アプリケーション定義の SQL ステートメントも必要ありません。 たとえば、ステートメントで**Sqltables**などのカタログ関数が実行されると、テーブル名のリストを返す定義済みの SQL ステートメントが実行されます。  

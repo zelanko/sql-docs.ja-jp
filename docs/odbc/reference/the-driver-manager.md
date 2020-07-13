@@ -13,14 +13,14 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 659678451c368df0b6a213e54cf7edaedfc29bd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 686a2b9673fb392f969a42f4cc86dd95a95668a6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039328"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286796"
 ---
 # <a name="the-driver-manager"></a>ドライバー マネージャー
 *ドライバーマネージャー*は、アプリケーションとドライバー間の通信を管理するライブラリです。 たとえば、Microsoft® Windows®プラットフォームでは、ドライバーマネージャーは、Microsoft によって作成されたダイナミックリンクライブラリ (DLL) であり、再配布可能な MDAC 2.8 SP1 SDK のユーザーが再配布できます。  

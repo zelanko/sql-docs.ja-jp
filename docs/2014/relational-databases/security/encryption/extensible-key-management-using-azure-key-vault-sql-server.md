@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068378"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
-  Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]コネクタを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用すると、暗号化キーを保護するための[拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)プロバイダーとして Azure Key Vault サービスを利用できます。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Azure Key Vault 用のコネクタを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] すると、暗号化キーを保護するための[拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)プロバイダーとして Azure Key Vault サービスを利用できます。
 
  このトピックの内容:
 
@@ -42,7 +41,7 @@ ms.locfileid: "79289450"
 
 -   [例 C:Key Vault からの非対称キーを使用した列レベルの暗号化](#ExampleC)
 
-##  <a name="Uses"></a>EKM の使用
+##  <a name="uses-of-ekm"></a><a name="Uses"></a>EKM の使用
  組織では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化を使用して秘密データを保護できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]暗号化には、 [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)、[列レベルの暗号化](/sql/t-sql/functions/cryptographic-functions-transact-sql)(CLE)、および[バックアップの暗号化](../../backup-restore/backup-encryption.md)が含まれます。 これらのすべてのケースでは、対称なデータ暗号化キーを使用してデータが暗号化されます。 対称なデータ暗号化キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されたキーの階層で暗号化することにより、さらに保護されます。 それに対して、EKM プロバイダーのアーキテクチャでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外側にある外部暗号化サービス プロバイダーに格納された非対称キーを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でデータの暗号化キーを保護できるようにします。 EKM プロバイダーのアーキテクチャを使用すると、さらにセキュリティ層を追加し、組織の中でキーとデータの管理を分離できます。
 
  Azure Key Vault 用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は暗号化キーを保護する EKM プロバイダーとして拡張性、パフォーマンス、および可用性の高い Key Vault サービスを利用できます。 Key Vault サービスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Virtual Machines 上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール環境で使用したり、オンプレミス サーバー用に使用したりすることが可能です。 また、資格情報コンテナー サービスでは、厳密な管理および監視下にあるハードウェア セキュリティ モジュール (HSM) を使用し、非対称暗号化キーをより高いレベルで保護するオプションも提供します。 資格情報コンテナーの詳細については、「 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)」を参照してください。
@@ -51,53 +50,44 @@ ms.locfileid: "79289450"
 
  ![Azure Key Vault を使用した SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "Azure Key Vault を使用した SQL Server EKM")
 
-##  <a name="Step1"></a>手順 1: SQL Server で使用する Key Vault を設定する
+##  <a name="step-1-set-up-the-key-vault-for-use-by-sql-server"></a><a name="Step1"></a>手順 1: SQL Server で使用する Key Vault を設定する
  次の手順では、暗号化キーを保護するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] で使用する資格情報コンテナーを設定する方法について説明します。 コンテナーは、組織内で既に使用中になっていることもあります。 資格情報コンテナーが存在しない場合は、暗号化キーを管理するように指名された組織内の Azure 管理者がコンテナーを作成し、コンテナー内に非対称キーを生成し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によるキー使用を許可します。 Key Vault サービスについて習熟するため、「 [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)」と、PowerShell の「 [Azure Key Vault のコマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 」をご確認ください。
 
 > [!IMPORTANT]
 >  複数の Azure サブスクリプションがある場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を含むサブスクリプションを使用する必要があります。
 
-1.  **コンテナーを作成します。**「 [Azure Key Vault の概要](https://go.microsoft.com/fwlink/?LinkId=521402)」の「 **Key vault を作成する**」セクションの手順に従って、コンテナーを作成します。 コンテナーの名前を記録しておきます。 このトピックでは、" **ContosoKeyVault** " という資格情報コンテナー名を使用します。
+1.  **コンテナーを作成する:** 「 **Azure Key Vault の使用を開始する** 」の「 [Key Vault の作成](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションにある指示に従って資格情報コンテナーを作成します。 コンテナーの名前を記録しておきます。 このトピックでは、" **ContosoKeyVault** " という資格情報コンテナー名を使用します。
 
-2.  **次のように、資格情報コンテナーに非対称キーを生成します。** キーコンテナー内の非対称キーは、暗号化キーを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault に委任され、資格情報コンテナーのセキュリティで保護されます。
+2.  **コンテナー内に非対称キーを生成する:** 資格情報コンテナー内の非対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault に委任され、資格情報コンテナーのセキュリティで保護されます。
 
      非対称キーを生成して資格情報コンテナーに格納する方法がいくつかあります。 外部からキーを生成し、キーを .pfx ファイルとして資格情報コンテナーにインポートします。 または、Key Vault の API を使用してキーを直接資格情報コンテナーに作成します。
 
-     
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは、非対称キーを 2048 ビット RSA にする必要があり、キー名に使用できるのは文字 "a ～ z"、"A ～ Z"、"0 ～ 9"、および "-" です。 このドキュメントでは、非対称キーの名前を **ContosoMasterKey**とします。 これは、キーに実際に使用する一意の名前で置き換えてください。
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタでは、非対称キーを 2048 ビット RSA にする必要があり、キー名に使用できるのは文字 "a ～ z"、"A ～ Z"、"0 ～ 9"、および "-" です。 このドキュメントでは、非対称キーの名前を **ContosoMasterKey**とします。 これは、キーに実際に使用する一意の名前で置き換えてください。
 
     > [!IMPORTANT]
     >  実稼働のシナリオでは、非対称キーをインポートする方法を強くお勧めします。管理者は、キーをキー エスクロー システムに預託できるからです。 資格情報コンテナー内で非対称キーを作成する方法の場合、秘密キーは資格情報コンテナーの外に出ることがないため、エスクローに預託することができません。 重要なデータの保護に使用するキーはエスクローに預託してください。 非対称キーを紛失すると、データが永久的に復元不能になります。
 
     > [!IMPORTANT]
-    >  資格情報コンテナーでは、同じ名前を付けたキーの複数のバージョンがサポートされます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーは、バージョン管理したりロールしたりするべきではありません。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。
+    >  資格情報コンテナーでは、同じ名前を付けたキーの複数のバージョンがサポートされます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーは、バージョン管理したりロールしたりするべきではありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。
 
      資格情報コンテナーにキーをインポートする方法、および資格情報コンテナー内でキーを作成する方法 (実稼働環境では推奨されません) の詳細については、「 **Azure Key Vault の使用を開始する**[」の「キーまたは秘密キーを資格情報コンテナーに追加する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。
 
-3.  **SQL Server に使用する Azure Active Directory サービスプリンシパルを取得します。** 組織が Microsoft クラウドサービスにサインアップすると、Azure Active Directory が取得されます。 
-  **が資格情報コンテナーにアクセスする時に (Azure Active Directory に対して自身を認証するために) 使用する** サービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を Azure Active Directory 内に作成します。
+3.  **SQL Server で使用する Azure Active Directory のサービス プリンシパルを取得する:** Microsoft クラウド サービスにサインアップする時点で、組織は Azure Active Directory を取得します。 **が資格情報コンテナーにアクセスする時に (Azure Active Directory に対して自身を認証するために) 使用する** サービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を Azure Active Directory 内に作成します。
 
-    -   
-  **
-  ** で暗号化を使用するよう構成するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。
+    -   **** で暗号化を使用するよう構成するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。
 
-    -   
-  **
-  ** の暗号化で使用するラップ解除キーを取得するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。
+    -   **** の暗号化で使用するラップ解除キーを取得するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。
 
-     アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 `CREATE CREDENTIAL`ステートメントで使用する場合は、**クライアント ID**からハイフンを削除する必要があります。 以下のスクリプトで使用するために、これらの情報を記録しておきます。
+     アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 ステートメントで使用する場合は、 `CREATE CREDENTIAL` **クライアント ID**からハイフンを削除する必要があります。 以下のスクリプトで使用するために、これらの情報を記録しておきます。
 
-    -   **Sysadmin**ログインの**サービスプリンシパル**: **CLIENTID_sysadmin_login**および**SECRET_sysadmin_login**
+    -   **sysadmin** のログイン用の **サービス プリンシパル** : **CLIENTID_sysadmin_login** および **SECRET_sysadmin_login**
 
-    -   の**サービスプリンシパル** [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine**および**SECRET_DBEngine**。
+    -   **用の** サービス プリンシパル [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** および **SECRET_DBEngine**。
 
-4.  **サービスプリンシパルが Key Vault にアクセスするためのアクセス許可を付与します。****CLIENTID_sysadmin_login**と**CLIENTID_DBEngineService**の両方のプリンシパルには、key vault での**get**、 **list**、 **wrapKey**、および**unwrapKey**権限が必要です。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を通してキーを作成する予定の場合は、資格情報コンテナーでの **create** 権限も付与する必要があります。
+4.  **Key Vault にアクセスする権限をサービス プリンシパルに付与する:** と **と** の両方の **の両方のサービス プリンシパル** は、資格情報コンテナーでの **get**, **list**, **wrapKey**, の両方の **unwrapKey** 権限を必要とします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を通してキーを作成する予定の場合は、資格情報コンテナーでの **create** 権限も付与する必要があります。
 
     > [!IMPORTANT]
-    >  ユーザーは、この資格情報コンテナーに対しては、少なくとも **wrapKey** および **unwrapKey** 操作が必要です。
+    >   ユーザーは、この資格情報コンテナーに対しては、少なくとも **wrapKey** および **unwrapKey** 操作が必要です。
 
      資格情報コンテナーに権限を付与する操作の詳細については、「 **Azure Key Vault の使用を開始する**[」の「キーまたはシークレットを使用できるようにアプリケーションを承認する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションご覧ください。
 
@@ -109,25 +99,22 @@ ms.locfileid: "79289450"
 
     -   PowerShell の [Azure Key Vault コマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault) のリファレンス
 
-##  <a name="Step2"></a>手順 2: SQL Server コネクタをインストールする
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのダウンロードとインストールは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行います。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)からダウンロードして入手できます。  " **SQL Server Connector for Microsoft Azure Key Vault**" を検索して、詳細やシステム要件、インストール方法を確認し、コネクタのダウンロードを選択し、 **[実行]** を使用してインストールを開始します。 ライセンスを確認し、ライセンスに同意して続行します。
+##  <a name="step-2-install-the-sql-server-connector"></a><a name="Step2"></a>手順 2: SQL Server コネクタをインストールする
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのダウンロードとインストールは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行います。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)からダウンロードして入手できます。  " **SQL Server Connector for Microsoft Azure Key Vault**" を検索して、詳細やシステム要件、インストール方法を確認し、コネクタのダウンロードを選択し、 **[実行]** を使用してインストールを開始します。 ライセンスを確認し、ライセンスに同意して続行します。
 
  既定では、コネクタは **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**にインストールされています。 この場所は、セットアップ中に変更することができます。 (変更した場合は、以下のスクリプトを調整してください。)
 
  インストールを完了すると、以下のものがコンピューターにインストールされています。
 
--   **Microsoft.azurekeyvaultservice.ekm.dll**: これは、CREATE cryptographic provider ステートメントを使用してに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登録する必要のある暗号化 EKM プロバイダー dll です。
+-   **Microsoft.AzureKeyVaultService.EKM.dll**:これは、CREATE CRYPTOGRAPHIC PROVIDER ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録する必要のある暗号化 EKM プロバイダー DLL です。
 
--   **Azure Key Vault SQL Server コネクタ**: これは、暗号化 EKM プロバイダーが Key Vault と通信できるようにする Windows サービスです。
+-   **Azure Key Vault SQL Server コネクタ**:これは、暗号化 EKM プロバイダーが資格情報コンテナーと通信できるようにする Windows サービスです。
 
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのインストールでは、必要に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化で使用するサンプル スクリプトをダウンロードすることもできます。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのインストールでは、必要に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化で使用するサンプル スクリプトをダウンロードすることもできます。
 
-##  <a name="Step3"></a>手順 3: Key Vault に EKM プロバイダーを使用するように SQL Server を構成する
+##  <a name="step-3-configure-sql-server-to-use-an-ekm-provider-for-the-key-vault"></a><a name="Step3"></a>手順 3: Key Vault に EKM プロバイダーを使用するように SQL Server を構成する
 
-###  <a name="Permissions"></a> Permissions
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions
  このプロセス全体を完了するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 特定のアクションで必要な権限は次のとおりです。
 
 -   暗号化サービス プロバイダーを作成するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
@@ -140,7 +127,7 @@ ms.locfileid: "79289450"
 
 -   非対称キーを作成するには、CREATE ASYMMETRIC KEY 権限が必要です。
 
-###  <a name="TsqlProcedure"></a>暗号化サービスプロバイダーを使用するように SQL Server を構成するには
+###  <a name="to-configure-sql-server-to-use-a-cryptographic-provider"></a><a name="TsqlProcedure"></a>暗号化サービスプロバイダーを使用するように SQL Server を構成するには
 
 1.  EKM を使用するように [!INCLUDE[ssDE](../../../includes/ssde-md.md)] を構成し、暗号化サービス プロバイダーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に登録 (作成) します。
 
@@ -168,13 +155,12 @@ ms.locfileid: "79289450"
     GO
     ```
 
-2.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者ログインのための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資格情報をセットアップします。これは、資格情報コンテナーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化のシナリオをセットアップして管理するために使用します。
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者ログインのための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資格情報をセットアップします。これは、資格情報コンテナーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化のシナリオをセットアップして管理するために使用します。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`の**IDENTITY**引数には、key vault 名が必要です。 `CREATE CREDENTIAL`の**secret**引数では、 * \<クライアント ID>* (ハイフンなし) と* \<シークレット>* をスペースなしで一緒に渡す必要があります。
+    >  の**IDENTITY**引数には `CREATE CREDENTIAL` 、key vault 名が必要です。 の**SECRET**引数で `CREATE CREDENTIAL` は、 *\<Client ID>* (ハイフンなし) と *\<Secret>* を一緒に使用する必要があります。
 
-     次の例では、**クライアント ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) はハイフンを削除し、文字列`EF5C8E094D2A4A769998D93440D8115D`として入力し、**シークレット**は*SECRET_sysadmin_login*文字列で表されます。
+     次の例では、**クライアント ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) はハイフンを削除し、文字列として入力 `EF5C8E094D2A4A769998D93440D8115D` し、**シークレット**は*SECRET_sysadmin_login*文字列で表されます。
 
     ```sql
     USE master;
@@ -188,7 +174,7 @@ ms.locfileid: "79289450"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     `CREATE CREDENTIAL`引数に変数を使用し、プログラムでクライアント ID からハイフンを削除する例については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)」を参照してください。
+     引数に変数を使用 `CREATE CREDENTIAL` し、プログラムでクライアント ID からハイフンを削除する例については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)」を参照してください。
 
 3.  以前に手順 1 のセクション 3 で説明したように非対称キーをインポートした場合は、次の例のようにキー名を提供して、キーを開きます。
 
@@ -227,7 +213,7 @@ ms.locfileid: "79289450"
 
 ## <a name="examples"></a>例
 
-###  <a name="ExampleA"></a>例 A: Key Vault からの非対称キーを使用して Transparent Data Encryption する
+###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>例 A: Key Vault からの非対称キーを使用して Transparent Data Encryption する
  上記の手順を完了した後、資格情報とログインを作成し、資格情報コンテナー内の非対称キーで保護されたデータベース暗号化キーを作成します。 データベース暗号化キーは、データベースを TDE で暗号化するために使用します。
 
  データベースを暗号化するには、データベースに対する CONTROL 権限が必要です。
@@ -237,9 +223,9 @@ ms.locfileid: "79289450"
 1.  データベースの読み込み中に資格情報コンテナー EKM にアクセスするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が使用する [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 資格情報を作成します。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`の**IDENTITY**引数には、key vault 名が必要です。 `CREATE CREDENTIAL`の**secret**引数では、 * \<クライアント ID>* (ハイフンなし) と* \<シークレット>* をスペースなしで一緒に渡す必要があります。
+    >  の**IDENTITY**引数には `CREATE CREDENTIAL` 、key vault 名が必要です。 の**SECRET**引数で `CREATE CREDENTIAL` は、 *\<Client ID>* (ハイフンなし) と *\<Secret>* を一緒に使用する必要があります。
 
-     次の例では、**クライアント ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) はハイフンを削除し、文字列`EF5C8E094D2A4A769998D93440D8115D`として入力し、**シークレット**は*SECRET_DBEngine*文字列で表されます。
+     次の例では、**クライアント ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) はハイフンを削除し、文字列として入力 `EF5C8E094D2A4A769998D93440D8115D` し、**シークレット**は*SECRET_DBEngine*文字列で表されます。
 
     ```sql
     USE master;
@@ -249,8 +235,7 @@ ms.locfileid: "79289450"
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;
     ```
 
-2.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が TDE のために使用する [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ログイン名を作成し、それに資格情報を追加します。 この例では、 [手順 3 のセクション 3](#Step3) の説明に従って以前にマスター データベースにインポートまたは作成した、資格情報コンテナーに格納されている CONTOSO_KEY 非対称キーを使用します。
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が TDE のために使用する [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ログイン名を作成し、それに資格情報を追加します。 この例では、 [手順 3 のセクション 3](#Step3) の説明に従って以前にマスター データベースにインポートまたは作成した、資格情報コンテナーに格納されている CONTOSO_KEY 非対称キーを使用します。
 
     ```sql
     USE master;
@@ -293,9 +278,8 @@ ms.locfileid: "79289450"
 
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)
 
-###  <a name="ExampleB"></a>例 B: Key Vault からの非対称キーを使用してバックアップを暗号化する
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]以降では、バックアップの暗号化がサポートされています。 次の例では、資格情報コンテナー内の非対称キーで保護したデータ暗号化キーによって暗号化したバックアップを作成し、復元します。
+###  <a name="example-b-encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleB"></a>例 B: Key Vault からの非対称キーを使用してバックアップを暗号化する
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]以降では、バックアップの暗号化がサポートされています。 次の例では、資格情報コンテナー内の非対称キーで保護したデータ暗号化キーによって暗号化したバックアップを作成し、復元します。
 
 ```sql
 USE master;
@@ -316,7 +300,7 @@ GO
 
  バックアップオプションの詳細については、「 [backup &#40;transact-sql&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。
 
-###  <a name="ExampleC"></a>例 C: Key Vault からの非対称キーを使用した列レベルの暗号化
+###  <a name="example-c-column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleC"></a>例 C: Key Vault からの非対称キーを使用した列レベルの暗号化
  次の例では、資格情報コンテナー内の非対称キーによって保護された対称キーを作成します。 その後、その対称キーを使用してデータベース内のデータを暗号化します。
 
  この例では、 [手順 3 のセクション 3](#Step3) の説明に従って以前にインポートまたは作成した、資格情報コンテナーに格納されている CONTOSO_KEY 非対称キーを使用します。 この非対称キーを `ContosoDatabase` データベースで使用するには、CREATE ASYMMETRIC KEY ステートメントをもう一度実行して、 `ContosoDatabase` データベースにキーへの参照を提供する必要があります。

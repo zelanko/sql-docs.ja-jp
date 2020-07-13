@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6bb4d4fc19471ce2bacc8b84f60a7e7082ad1ace
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064096"
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
-  **プロファイラー**ユーティリティによって[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]ツールが起動されます。 このトピックの後半で説明する省略可能な引数を使用して、アプリケーションの起動を制御できます。  
+  **profiler** ユーティリティにより [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ツールが起動されます。 このトピックの後半で説明する省略可能な引数を使用して、アプリケーションの起動を制御できます。  
   
 > [!NOTE]  
->  
-  **profiler** ユーティリティは、トレースのスクリプティングを目的とするものではありません。 詳細については、「 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)」を参照してください。  
+>  **profiler** ユーティリティは、トレースのスクリプティングを目的とするものではありません。 詳細については、「 [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,48 +53,40 @@ ms.locfileid: "68211096"
   
 ## <a name="arguments"></a>引数  
  **/?**  
- 
-  **profiler** の引数に関する構文の概要を表示します。  
+ **profiler** の引数に関する構文の概要を表示します。  
   
  **/U** *login_id*  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に使用するユーザー ログイン ID を指定します。 ログイン ID では大文字と小文字は区別されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に使用するユーザー ログイン ID を指定します。 ログイン ID では大文字と小文字は区別されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *パスワード*  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で必要なユーザーのパスワードを指定します。  
+ **/P** *password*  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で必要なユーザーのパスワードを指定します。  
   
  **/E**  
  現在のユーザーの資格情報に基づいて、Windows 認証による接続を行います。  
   
  **/S**  *sql_server_name*  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 
-  **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、 **/S** *sql_server_name*\\*instance_name*を使用します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、 **/S** *sql_server_name*\\*instance_name* を使用します。  
   
  **/A**  *analysis_services_server_name*  
- Analysis Services のインスタンスを指定します。 
-  **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、 **/A** *analysis_services_server_name\instance_name*を使用します。  
+ Analysis Services のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、 **/A** *analysis_services_server_name\instance_name* を使用します。  
   
- **/D** *データベース*  
+ **/D** *database*  
  接続に使用するデータベースの名前を指定します。 データベースを指定しないと、指定したユーザーに対して既定のデータベースが選択されます。  
   
  **/B "** *trace_table_name* **"**  
  Profiler を起動するときに読み込むトレース テーブルを指定します。 データベース、ユーザーやスキーマ、およびテーブルを指定する必要があります。  
   
- **/T "** *template_name* **"**  
+ **/T"** *template_name* **"**  
  トレースを構成するために読み込まれるテンプレートを指定します。 テンプレート名は引用符で囲む必要があります。 テンプレートは、システム テンプレート ディレクトリまたはユーザー テンプレート ディレクトリに格納されている必要があります。 同じ名前のテンプレートが両方のディレクトリにある場合は、システム ディレクトリのテンプレートが読み込まれます。 指定した名前のテンプレートが存在しない場合は、標準テンプレートが読み込まれます。 テンプレートのファイル拡張子 (.tdf) は、 *template_name*の一部として指定しないでください。 次に例を示します。  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *filename* **"**  
+ **/F"** *filename* **"**  
  Profiler を起動するときに読み込むトレース ファイルのパスとファイル名を指定します。 パスとファイル名はすべて引用符で囲む必要があります。 このオプションを **/O**と同時に使用することはできません。  
   
  **/O "** *filename*  **"**  
@@ -105,7 +95,7 @@ ms.locfileid: "68211096"
  **/L** *locale_ID*  
  使用できません。  
   
- **/M "** *mm-DD-YY hh: MM: ss* **"**  
+ **/M "** *MM-DD-YY hh:mm:ss* **"**  
  トレースが停止する日と時刻を指定します。 停止時刻は引用符で囲む必要があります。 次の表に示すパラメーターに従って停止時刻を指定します。  
   
 |パラメーター|定義|  
@@ -120,7 +110,7 @@ ms.locfileid: "68211096"
 > [!NOTE]  
 >  "MM-DD-YY hh:mm:ss" 形式は、 **で** [日時の値の表示に地域別設定を使用する] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]オプションが有効になっている場合にのみ使用できます。 このオプションが無効になっている場合は、"YYYY-MM-DD hh:mm:ss" の日付/時刻形式を使用する必要があります。  
   
- **R**  
+ **/R**  
  トレース ファイルのロールオーバーを可能にします。  
   
  **/Z**  *file_size*  
@@ -134,6 +124,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>参照  
- [コマンドプロンプトユーティリティリファレンス &#40;データベースエンジン&#41;](command-prompt-utility-reference-database-engine.md)  
+ [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

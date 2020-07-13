@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893554"
 ---
 # <a name="unary-operators"></a>単項演算子
@@ -22,10 +22,10 @@ ms.locfileid: "68893554"
   
  MDX では、以下の表に示す単項演算子がサポートされます。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
-|[-(負)](../mdx/negative-mdx.md)|数値式の負の値を返します。|  
-|[+ (正符号)](../mdx/positive-mdx.md)|数値式の正の値を返します。|  
+|[- (負号)](../mdx/negative-mdx.md)|数値式の負の値を返します。|  
+|[+ (正号)](../mdx/positive-mdx.md)|数値式の正の値を返します。|  
   
  次の例は、単項演算子を使用してメジャーの負の値を返す方法を示しています。  
   

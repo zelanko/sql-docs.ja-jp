@@ -10,15 +10,14 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a834ce32959e81293a29d45613f941903e37f7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769329"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428809"
 ---
 # <a name="divide-ssis-expression"></a>除算 (SSIS 式)
   最初の数値式を 2 番目の数値式で除算します。  

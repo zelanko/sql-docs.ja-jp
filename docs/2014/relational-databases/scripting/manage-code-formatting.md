@@ -23,15 +23,14 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009698"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
   エディターでは、コードに関して、インデント設定、テキストの非表示、URL などの書式設定を行えます。 スマート インジケーターを使用して、入力と同時にコードを自動的に書式設定することも可能です。  

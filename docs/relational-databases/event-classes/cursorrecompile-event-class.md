@@ -12,15 +12,15 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719868"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorRecompile** イベント クラスは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生するカーソルの再コンパイル イベントの詳細を示します。 カーソルの再コンパイル イベントは、スキーマの変更により Transact-SQL カーソルが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって再コンパイルされたときに発生します。  
   
  **CursorRecompile** イベント クラスは、カーソルのパフォーマンスを記録しているトレースに含めます。 **CursorRecompile** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルを使用する頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  

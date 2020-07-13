@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fdd95c6ec096fdbbe564651f27f4ad2724312b4f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827970"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432309"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
   SAP Netweaver BW システムで新しいインフォパッケージを作成するには、 **[インフォパッケージの作成]** ダイアログ ボックスを使用します。  

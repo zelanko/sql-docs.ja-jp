@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a29d99ebbb0ce0d12096ee92f833278ebda15e7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62916960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970132"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "62916960"
  **[最終データベース ログ バックアップ]**  
  データベース トランザクション ログが最後にバックアップされた日付を表示します。  
   
- **名前**  
+ **Name**  
  データベースの名前が表示されます。  
   
  **状態**  
@@ -55,6 +54,6 @@ ms.locfileid: "62916960"
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

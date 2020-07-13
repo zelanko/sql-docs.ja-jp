@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892148"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ操作 - CREATE GLOBAL CUBE
@@ -113,7 +113,7 @@ FROM source_cube_name (<param list>)
  \<レベルの種類>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ローカルキューブは、メジャーとそれを定義する定義の definedin 用語です。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  

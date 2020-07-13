@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108619"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869872"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リムーバブル メディア データベースを作成します。 3 つ以上のファイル (システム カタログ テーブルとトランザクション ログに 1 つずつ、データ テーブルに 1 つ以上) を作成し、それらのファイルにデータベースを格納します。  
   
@@ -96,15 +96,15 @@ sp_create_removable
   
 |データベースに対する操作|ファイルに対して設定される権限|  
 |---------------------------|------------------------------|  
-|変更して新しいファイルを追加|作成済み|  
+|変更して新しいファイルを追加|Created|  
 |バックアップ|アタッチ|  
 |復元|デタッチ|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データ ファイルとログ ファイルの権限は設定されません。  
   
-## <a name="examples"></a>例  
- 次の例では、 `inventory`データベースをリムーバブルデータベースとして作成します。  
+## <a name="examples"></a>使用例  
+ 次の例では、データベースを `inventory` リムーバブルデータベースとして作成します。  
   
 ```  
 EXEC sp_create_removable 'inventory',   
@@ -118,14 +118,14 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_certify_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

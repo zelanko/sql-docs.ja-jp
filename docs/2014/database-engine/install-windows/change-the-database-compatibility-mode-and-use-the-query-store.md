@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932763"
 ---
 # <a name="migrate-query-plans"></a>クエリ プランの移行
   データベースを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、ほとんどの場合、クエリのパフォーマンスが向上します。 ただし、慎重にパフォーマンス チューニングされたミッションクリティカルなクエリがある場合は、アップグレードする前に、各クエリのプラン ガイドを作成してこれらのクエリのクエリ プランを保存しておくことをお勧めします。 アップグレード後に、効率性の劣るクエリ プランが 1 つ以上のクエリに対してクエリ オプティマイザーで選択される場合は、プラン ガイドを有効にし、強制的にアップグレード前のプランが使用されるように設定できます。  
@@ -44,13 +43,13 @@ ms.locfileid: "62779114"
 ### <a name="step-1-collect-the-plan"></a>手順 1: プランを収集する  
  プラン ガイドに記録するクエリ プランは XML 形式にする必要があります。 XML 形式のクエリ プランは、次の方法で生成できます。  
   
--   [SHOWPLAN_XML の設定](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
+-   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
 -   動的管理関数[dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)の query_plan 列を照会しています。  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、 [showplan xml Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)、および[showplan xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)イベントクラス。  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、 [showplan xml Statistics PROFILE](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)、および[showplan xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)イベントクラス。  
   
  次の例では、動的管理ビューに対してクエリを実行することにより、`SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` ステートメントのクエリ プランを収集します。  
   
@@ -92,8 +91,8 @@ GO
  クエリを再実行し、生成されたクエリ プランを調べます。 このプランがプラン ガイドで指定したプランに一致していることを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Transact-sql&#41;&#40;クエリヒント](/sql/t-sql/queries/hints-transact-sql-query)   
- [プランガイド](../../relational-databases/performance/plan-guides.md)  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [プラン ガイド](../../relational-databases/performance/plan-guides.md)  
   
   

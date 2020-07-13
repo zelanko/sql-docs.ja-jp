@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 355a18d172939113eb71e58655811a44e89aa7c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964777"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752991"
 ---
 # <a name="views-collection-adox"></a>Views コレクション (ADOX)
 カタログのすべての[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Views**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-views.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   新しいビューをコレクションに追加するには、 **Append**メソッドを使用します。  

@@ -39,7 +39,7 @@ ms.locfileid: "74412703"
     > [!IMPORTANT]  
     >  データベース システムのパフォーマンスはさまざまな要因に左右されますが、そのすべてをトランザクション パフォーマンス コレクターで観察および測定できるわけではありません。 したがって、トランザクション パフォーマンス分析レポートは、作成した予測が実際のパフォーマンスの向上と一致することを保証するものではありません。  
   
- **のインストール時に**[管理ツール - 基本]**または**[管理ツール - 詳細][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時に **[管理ツール - 基本]** または **[管理ツール - 詳細]** を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
   
 ## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
  **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]** 、 **[標準レポート]** 、 **[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  

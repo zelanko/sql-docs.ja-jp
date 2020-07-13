@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0d6c372a9b1f9af9e5948732e3bfb9384362f545
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774254"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930942"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
@@ -29,7 +28,7 @@ ms.locfileid: "62774254"
   
  現在のサーバー インスタンスによって実行される役割ごとに、次の情報を表示できます。  
   
-|役割|表示される情報|  
+|ロール|表示される情報|  
 |----------|---------------------------|  
 |モニター|このサーバー インスタンスを監視サーバーとして使用するすべてのプライマリ サーバーとセカンダリ サーバーの名前と状態。|  
 |プライマリ|プライマリ データベースごとの、現在のサーバー インスタンスの (プライマリ サーバーとしての) 状態と名前、およびプライマリ データベース名。 このレポートには、(プライマリ サーバーのローカルに格納された) バックアップ ジョブの状態が表示されます。<br /><br /> また、このレポートには、対応するセカンダリ サーバーごとに 1 行のデータが含まれます。 構成に監視サーバーを使用していて、ストアド プロシージャからそのモニターに接続できる場合は、これらの行に最新のログ バックアップのコピー状態と復元状態が表示されます。|  
@@ -45,10 +44,9 @@ ms.locfileid: "62774254"
   
 2.  オブジェクト エクスプローラーで、サーバー インスタンスを右クリックして **[レポート]** をポイントし、 **[標準レポート]** をクリックします。  
   
-3.  
-  **[トランザクション ログの配布の状態]** をクリックします。  
+3.  **[トランザクション ログの配布の状態]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;ログ配布の監視](monitor-log-shipping-transact-sql.md)  
+ [ログ配布の監視 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
   

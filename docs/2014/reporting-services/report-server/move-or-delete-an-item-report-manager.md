@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103732"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
@@ -30,11 +30,11 @@ ms.locfileid: "66103732"
   
 |アイコン|移動可能なアイテム|  
 |----------|-------------------|  
-|![レポートアイコン](../media/hlp-16doc.gif "レポート アイコン")|レポート|  
+|![Report icon](../media/hlp-16doc.gif "レポート アイコン")|レポート|  
 |![リンク レポート アイコン](../media/hlp-16linked.gif "リンク レポート アイコン")|リンク レポート|  
 |![フォルダー アイコン](../media/hlp-16folder.gif "フォルダー アイコン")|Folder|  
-|![汎用リソースアイコン](../media/hlp-16file.gif "汎用リソース アイコン")|汎用リソース|  
-|![共有データソースのアイコン](../media/hlp-16datasource.png "Shared data source icon")|[共有データ ソース]|  
+|![汎用リソース アイコン](../media/hlp-16file.gif "汎用リソース アイコン")|汎用リソース|  
+|![Shared data source icon](../media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
 ||共有データセット|  
   
  作業に使用するすべてのアイテムを移動できるわけではありません。 サブスクリプションまたはレポート履歴など、レポートに関連付けられたアイテムを移動することはできません。 これらのアイテムは、関連するレポートと共に移動します。 同様に、フォルダー階層の外部にある、共有スケジュールなどのアイテムは移動できません。 操作を行うための権限がない場合は、アイテムを移動できません。 アイテムを移動するための権限は、当該アイテムのロールの割り当てで "レポートの管理"、"モデルの管理"、"フォルダーの管理、および "データ ソースの管理" のタスクを選択した場合に許可されます。  
@@ -51,8 +51,7 @@ ms.locfileid: "66103732"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  
-  **[場所]** については、アイテムの移動先のフォルダーを指定します。 フォルダーの完全修飾名を入力するか、またはツリー コントロールを使用して目的のフォルダーに移動します。  
+6.  **[場所]** については、アイテムの移動先のフォルダーを指定します。 フォルダーの完全修飾名を入力するか、またはツリー コントロールを使用して目的のフォルダーに移動します。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

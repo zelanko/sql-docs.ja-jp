@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f4d70abd6c58b3eb0fa4a53e2806ab1b3fbe9245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62960771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064620"
 ---
 # <a name="replication-tutorials"></a>レプリケーションのチュートリアル
   レプリケーションには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でレプリケーション トポロジをセットアップし、それを実行する方法を学習できるチュートリアルが用意されています。  
@@ -30,13 +29,13 @@ ms.locfileid: "62960771"
 >  このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、「[開発者ガイド &#40;レプリケーションの&#41;](concepts/replication-developer-documentation.md)」を参照してください。  
   
 ## <a name="replication-tutorials"></a>レプリケーションのチュートリアル  
- [レプリケーション用にサーバーを準備しています](tutorial-preparing-the-server-for-replication.md)  
+ [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)  
  最小の権限でレプリケーションを実行できるようサーバーを準備する方法を学習します。 このチュートリアルは、レプリケーション関連のチュートリアルの中で最初に実行する必要があります。  
   
  [常時接続サーバー間でのデータのレプリケーション](tutorial-replicating-data-between-continuously-connected-servers.md)  
  トランザクション レプリケーションを使用して、常時接続のサーバー間でデータをレプリケートする方法を学習します。  
   
- [モバイルクライアントを使用したデータのレプリケーション](tutorial-replicating-data-with-mobile-clients.md)  
+ [モバイル クライアントとの間のデータのレプリケーション](tutorial-replicating-data-with-mobile-clients.md)  
  マージ レプリケーションを使用して、サーバーと、常時接続でない 1 つ以上のクライアントの間でデータを交換する方法を学習します。  
   
 ## <a name="see-also"></a>参照  

@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3250a36b01cf633b9fc915cbef5d904f66b56874
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211374"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895504"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   あるサービスから別のサービスに対してダイアログを開始します。 ダイアログとは、2 つのサービスの間で順序どおりにメッセージを 1 回だけ交換する (exactly-once-in-order) メッセージ交換のことです。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70211374"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  

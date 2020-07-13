@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Text File Driver
 - text file driver [ODBC], SQLDriverConnect
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9343361e7ad6fbfdf68b82218a39a56fa8d928e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2768669b7dbb2066de0acedd5711911be0eac8fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053912"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307103"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (テキスト ファイル ドライバー)
 > [!NOTE]  
@@ -33,6 +33,6 @@ ms.locfileid: "68053912"
 > [!NOTE]  
 >  テキストドライバーに DBQ または DefaultDir が指定されていない場合、ドライバーは現在のディレクトリに接続します。  
   
-|Driver|キーワードが必要です|例|  
+|ドライバー|キーワードが必要です|使用例|  
 |------------|-----------------------|--------------|  
-|Text|Driver|Driver = {Microsoft Text Driver (* .txt;\*.csv)};DefaultDir = c:\temp|
+|テキスト|ドライバー|Driver = {Microsoft Text Driver (* .txt;\*.csv)};DefaultDir = c:\temp|

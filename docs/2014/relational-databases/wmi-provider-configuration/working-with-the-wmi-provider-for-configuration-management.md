@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b4a4c956f1bf60f6d874ee2bda3b261dd954836d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68195772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048857"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management の操作
   WMI Provider for Computer Management を使用したプログラミングを行う前に、次の点について考慮してください。  
@@ -32,20 +31,18 @@ ms.locfileid: "68195772"
 ## <a name="binding"></a>バインド  
   WMI Provider for Configuration Management は、COM オブジェクト モデルであり、事前バインドも遅延バインドもサポートしています。 遅延バインドを行う場合、VBScript などのスクリプト言語を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名をプログラムで操作することができます。  
   
- スクリプト言語を使用した[!INCLUDE[msCoName](../../includes/msconame-md.md)] WMI プロバイダー実装のプログラミングの詳細については、MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)を参照してください。  
+ スクリプト言語を使用した WMI プロバイダー実装のプログラミングの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)を参照してください。  
   
 ## <a name="specifying-a-connection-string"></a>接続文字列の指定  
- アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL にマップし、これをメモリに読み込みます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。 名前空間の既定値は次のとおりです。  
+ アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL にマップし、これをメモリに読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。 名前空間の既定値は次のとおりです。  
   
 ```  
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- 
-  `instance_name` の既定値は、`MSSQLSERVER` の既定のインストール内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] になります。  
+ `instance_name` の既定値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインストール内の `MSSQLSERVER` になります。  
   
- **注:** Windows ファイアウォールを介して接続している場合は、コンピューターが適切に構成されていることを確認する必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)の Windows Management Instrumentation のドキュメントで、Windows ファイアウォール経由の接続に関する記事を参照してください。  
+ **注:** Windows ファイアウォールを介して接続している場合は、コンピューターが適切に構成されていることを確認する必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)の Windows Management Instrumentation のドキュメントで、Windows ファイアウォール経由の接続に関する記事を参照してください。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Configuration Management にアクセスするには、クライアント WMI 管理スクリプトが、ターゲット コンピューター上の管理者のコンテキストで実行されている必要があります。 アクセスするユーザーは、管理するコンピューターのローカル Windows 管理者グループのメンバーである必要があります。  

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 89e63d07d362e6d810db746fa5828ad07aa5870c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062850"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに軸を指定する方法を示します。  
@@ -33,16 +32,15 @@ ms.locfileid: "66010717"
 ## <a name="examples"></a>例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. コンテキスト ノードの子要素を取得する  
- 次の XPath クエリでは、コンテキストノードのすべての** \<Contact>** 子要素を選択します。  
+ 次の XPath クエリでは、 **\<Contact>** コンテキストノードのすべての子要素を選択します。  
   
 ```  
 /child::Contact  
 ```  
   
- このクエリでは`child` 、は軸で`Contact` 、はノードテストです (が`Contact` ** \<要素>** ノードの場合は TRUE \<、要素> は`child`軸に関連付けられているプライマリノード型であるため)。  
+ このクエリでは、は軸で、は `child` `Contact` ノードテストです (がノードの場合は TRUE `Contact` **\<element>** \<element> 。は軸に関連付けられているプライマリノード型であるためです `child` )。  
   
- 
-  `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
   
 ```  
 /Contact  
@@ -85,16 +83,15 @@ ms.locfileid: "66010717"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. コンテキスト ノードの孫を取得する  
- 次の XPath クエリでは、 ** \<Customer>** 要素の子要素である、コンテキストノードの子要素を** \<>** すべて選択します。  
+ 次の XPath クエリでは、 **\<Order>** コンテキストノードの子要素のすべての子要素を選択し **\<Customer>** ます。  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- このクエリでは`child` 、は軸`Customer` `Order`で、はノードテストです (これらのノードテストは、Customer と Order が** \<要素>** ノードである場合に TRUE になります。これは、 `child` ** \<要素>** ノードが軸のプライマリノードであるためです)。 ** \<顧客>** に一致するノードごとに、 ** \<Orders>** に一致するノードが結果に追加されます。 結果セットに返されるのは、 ** \<Order>** だけです。  
+ このクエリで `child` は、は軸で、は `Customer` `Order` ノードテストです ( **\<element>** ノードが軸のプライマリノードであるため、Customer と Order がノードである場合、これらのノードテストは TRUE に **\<element>** `child` なります)。 一致するノードごとに **\<Customer>** 、一致 **\<Orders>** するノードが結果に追加されます。 **\<Order>** 結果セットにのみが返されます。  
   
- 
-  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer/Order  
@@ -161,10 +158,10 @@ ms.locfileid: "66010717"
 </ROOT>  
 ```  
   
- XPath クエリがとして指定`Customer/Order/OrderDetail`されている場合、 ** \<Customer>** 一致する各ノードから、クエリは** \<Order>** 要素に移動します。 また、 ** \<順序>** に一致するノードごとに、クエリによってノード** \<orderdetail>** が結果に追加されます。 結果セットに返されるのは** \<orderdetail>** だけです。  
+ XPath クエリがとして指定されている場合 `Customer/Order/OrderDetail` 、クエリは一致する各ノードから **\<Customer>** その要素に移動し **\<Order>** ます。 また、一致するノードごとに **\<Order>** 、クエリによってノードが結果に追加され **\<OrderDetail>** ます。 **\<OrderDetail>** 結果セットにのみが返されます。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
- 次のクエリでは、 **CustomerID**属性値が1である親** \<Customer>** 要素を持つすべての** \<注文>** 要素を取得します。 このクエリでは`child` 、述語の軸を使用して、 ** \<Order>** 要素の親を検索します。  
+ 次のクエリでは、 **\<Order>** **\<Customer>** **CustomerID**属性値が1である親要素を持つすべての要素を取得します。 このクエリでは、述語の軸を使用して、 `child` 要素の親を検索し **\<Order>** ます。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -183,7 +180,7 @@ ms.locfileid: "66010717"
 ```  
   
 > [!NOTE]  
->  ** \<Order>** の`/Order[../@CustomerID="1"]`親が存在しないため、XPath クエリからエラーが返されます。 ** \<順序>** を含む要素がマッピングスキーマに存在する場合がありますが、XPath はそのいずれかで開始されていません。したがって、 ** \<注文>** は、ドキュメント内の最上位の要素の種類と見なされます。  
+>  `/Order[../@CustomerID="1"]`の親が存在しないため、XPath クエリからエラーが返され **\<Order>** ます。 が含まれるマッピングスキーマには要素が存在する場合があり **\<Order>** ますが、XPath はいずれの要素からも開始されませんでした。したがって、 **\<Order>** はドキュメントの最上位要素型と見なされます。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
@@ -248,16 +245,15 @@ ms.locfileid: "66010717"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. attribute 軸を指定する  
- 次の XPath クエリでは、 **CustomerID**属性値が1の、コンテキストノードのすべての** \<顧客>** 子要素を選択します。  
+ 次の XPath クエリでは、 **\<Customer>** **CustomerID**属性値が1のコンテキストノードのすべての子要素を選択します。  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- `attribute::CustomerID`述語では、 `attribute`は軸`CustomerID`で、はノードテストです (が`CustomerID`属性の場合、ノードテストは TRUE になります。これは、 ** \<属性>** ノードが`attribute`軸のプライマリノードであるためです)。  
+ 述語で `attribute::CustomerID` は、 `attribute` は軸で、は `CustomerID` ノードテストです (が属性の場合、ノードは `CustomerID` 軸のプライマリノードであるため、ノードテストは TRUE になり **\<attribute>** `attribute` ます)。  
   
- 
-  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
+ `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]  

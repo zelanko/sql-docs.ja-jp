@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920809"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747175"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB **ROW**オブジェクトから ADO**レコード**オブジェクトを構築するために使用されます。  
   
  このインターフェイスは、次のプロパティをサポートしています。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
@@ -37,11 +37,11 @@ ms.locfileid: "67920809"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="remarks"></a>解説  
- OLE DB **Row**オブジェクト (`pRow`) を指定した場合、ADO**レコード**オブジェクト (`adoR`) の構造は、次の3つの基本的な操作になります。  
+ OLE DB **Row**オブジェクト () を指定した場合、 `pRow` ADO**レコード**オブジェクト () の構造は `adoR` 、次の3つの基本的な操作になります。  
   
 1.  ADO**レコード**オブジェクトを作成します。  
   

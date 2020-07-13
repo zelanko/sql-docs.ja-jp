@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97597e15bc5cd8ee8d3008c97f3a4e8b07b2d43d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964323"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752615"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory オブジェクト (RDSServer)
 > [!IMPORTANT]

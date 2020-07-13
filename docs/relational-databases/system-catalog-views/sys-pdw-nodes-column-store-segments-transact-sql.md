@@ -13,26 +13,26 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401672"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197193"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>pdw_nodes_column_store_segments (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 列ストアインデックスの列ごとに1行の値を格納します。
 
-| 列名                 | データ型  | [説明]                                                  |
+| 列名                 | データ型  | 説明                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | パーティション ID を示します。 データベース内で一意です。     |
 | **hobt_id**                 | **bigint** | この列ストアインデックスを持つテーブルのヒープまたは B ツリーインデックス (hobt) の ID。 |
 | **column_id**               | **int**    | 列ストア列の ID。                                |
 | **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンとの互換性を維持するために、列名は行グループ ID でも segment_id 呼び出されます。 セグメントを一意に識別するには、<hobt_id、partition_id、column_id>、<segment_id> を使用します。 |
-| **バージョン**                 | **int**    | 列セグメント形式のバージョン。                        |
+| **version**                 | **int**    | 列セグメント形式のバージョン。                        |
 | **encoding_type**           | **int**    | そのセグメントに使用されるエンコードの種類:<br /><br /> 1 = VALUE_BASED-辞書のない文字列/バイナリ (内部のバリエーションがある場合は4に似ています)<br /><br /> 2 = VALUE_HASH_BASED-ディクショナリに共通の値を持つ非文字列/バイナリ列<br /><br /> 3 = ディクショナリに共通の値を持つ STRING_HASH_BASED 文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED-辞書のない文字列/バイナリ<br /><br /> 5 = ディクショナリのない STRING_STORE_BY_VALUE_BASED 文字列/バイナリ<br /><br /> すべてのエンコーディングは、可能であれば、ビットパックと実行時間のエンコーディングを利用します。 |
 | **row_count**               | **int**    | 行グループ内の行の数。                             |
 | **has_nulls**               | **int**    | 列セグメントに null 値が含まれている場合は1。                     |
@@ -44,10 +44,10 @@ ms.locfileid: "74401672"
 | **max_data_id**             | **bigint** | 列セグメントの最大データ ID。                       |
 | **null_value**              | **bigint** | NULL を表すために使用される値。                               |
 | **on_disk_size**            | **bigint** | セグメントのサイズ (バイト単位)。                                    |
-| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。 |
+| **pdw_node_id**             | **int**    | ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 論理テーブルあたりの列ストアセグメントの数を決定するには、他のシステムテーブルと共に sys. pdw_nodes_column_store_segments を結合します。
 
@@ -82,12 +82,11 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>アクセス許可
 
+**VIEW SERVER STATE** アクセス許可が必要です。
 
-  **VIEW SERVER STATE** アクセス許可が必要です。
+## <a name="see-also"></a>関連項目
 
-## <a name="see-also"></a>参照
-
-[SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[Transact-sql&#41;&#40;列ストアインデックスの作成](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
 [pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
 [pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

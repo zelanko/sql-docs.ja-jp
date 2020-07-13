@@ -116,7 +116,7 @@ ms.locfileid: "76287839"
   
 -   **CompanyDomain\SqlUser1** は **SQLUsers** のメンバーであり、したがって **Sales** データベースへのアクセスが暗黙的に許可されている。  
   
- この場合、**CompanyDomain\SqlUser1** は **SQLUsers** グループのメンバーシップを介してデータベースにアクセスできますが、`EXECUTE AS USER = 'CompanyDomain\SqlUser1'` がプリンシパルとしてデータベースに存在しないので、ステートメント `CompanyDomain\SqlUser1` は失敗します。  
+ この場合、**CompanyDomain\SqlUser1** は **SQLUsers** グループのメンバーシップを介してデータベースにアクセスできますが、`CompanyDomain\SqlUser1` がプリンシパルとしてデータベースに存在しないので、ステートメント `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` は失敗します。  
   
 ユーザーが孤立した (関連付けられたログインが存在しない) 状態になり、かつユーザーが **WITHOUT LOGIN** で作成されなかった場合、そのユーザーに対する **EXECUTE AS** は失敗します。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "76287839"
  このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 *\@varbinary_variable* に渡される値を認識できるのは EXECUTE AS ステートメントの呼び出し元のみであるため、呼び出し元が確立した実行コンテキストは、他のアカウントによって変更されることはありません。  
   
 ## <a name="determining-the-original-login"></a>元のログインの特定  
- [ のインスタンスに接続したログインの名前に戻すには、](../../t-sql/functions/original-login-transact-sql.md)ORIGINAL_LOGIN[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続したログインの名前に戻すには、[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ログインで **EXECUTE AS** を指定するには、呼び出し元に、指定のログイン名に対する **IMPERSONATE** 権限が与えられている必要があり、また **IMPERSONATE ANY LOGIN** 権限が拒否されていないことも条件となります。 データベース ユーザーに **EXECUTE AS** を指定するには、呼び出し元に、指定のユーザー名に対する **IMPERSONATE** 権限が与えられている必要があります。 **EXECUTE AS CALLER** を指定した場合、**IMPERSONATE** 権限は必要ありません。  
@@ -186,7 +186,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`@cookie` ステートメントの `EXECUTE AS` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

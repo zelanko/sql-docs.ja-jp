@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088372"
 ---
 # <a name="--negative-mdx"></a>- (負号) (MDX)
@@ -34,7 +34,7 @@ ms.locfileid: "68088372"
 ## <a name="return-value"></a>戻り値  
  指定されているパラメーターのデータ型を持つ負の値です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

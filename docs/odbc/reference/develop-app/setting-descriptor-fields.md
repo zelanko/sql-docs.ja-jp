@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04f9520e2ef462df481bb104e389aeb57b5dd457
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094256"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304153"
 ---
 # <a name="setting-descriptor-fields"></a>記述子フィールドの設定
 記述子のフィールドを変更するには、アプリケーションで**SQLSetDescField**を呼び出すことができます。 一部のフィールドは読み取り専用であり、設定することはできません。 ( [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明を参照してください)。  

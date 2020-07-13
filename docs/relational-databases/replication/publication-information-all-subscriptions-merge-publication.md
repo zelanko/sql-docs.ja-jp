@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 619406c884ec5067f569178094f9a3a0c05634e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 939a1a18c0be61c63a1d176d4294c289ec827531
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720970"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>パブリケーション情報、[すべてのサブスクリプション] (マージ パブリケーション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[すべてのサブスクリプション]** タブには、選択したマージ パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
   
 ## <a name="options"></a>オプション  
@@ -71,7 +71,7 @@ ms.locfileid: "75321422"
  各サブスクリプションの名前です。*SubscriberName: SubscriptionDatabaseName*という形式になります。  
   
  **表示名**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、`@description`sp_addmergesubscription[ または ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription[ の ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションの説明です。 この説明は、**[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、[sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) の `@description` パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パフォーマンス**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価です。これはレプリケーション モニターにより取得された、最新の配信率の計測結果に基づいています。 パフォーマンス評価は、接続の種類が同じ (ダイヤルアップまたは LAN) パブリケーションに対するサブスクリプションの履歴の平均パフォーマンスと、個々のサブスクリプションのパフォーマンスを比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  

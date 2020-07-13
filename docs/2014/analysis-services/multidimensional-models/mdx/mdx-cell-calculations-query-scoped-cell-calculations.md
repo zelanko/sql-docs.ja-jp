@@ -12,42 +12,35 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074423"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546446"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>クエリ スコープのセル計算の作成 (MDX)
-  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 
-  `WITH` キーワードの構文は、以下のとおりです。  
+  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 `WITH` キーワードの構文は、以下のとおりです。  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
 ```  
   
- 
-  `CellCalc_Identifier` の値は、計算されるセルの名前です。 
-  `String_Expression` の値には、直交する 1 次元の MDX セット式の一覧を指定します。 それぞれの式は次の表に示されているカテゴリのいずれかに解決する必要があります。  
+ `CellCalc_Identifier` の値は、計算されるセルの名前です。 `String_Expression` の値には、直交する 1 次元の MDX セット式の一覧を指定します。 それぞれの式は次の表に示されているカテゴリのいずれかに解決する必要があります。  
   
-|カテゴリ|[説明]|  
+|カテゴリ|説明|  
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
 |レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 このようなセット式の例としては、 *Level_Expression*があります。`Members` MDX 関数です。 計算されるメンバーを含めるには、 *Level_Expression*を使用します。`AllMembers` MDX 関数です。 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
-|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 このようなセット式の例とし`Descendants`ては、(*Member_Expression*、 *Level_Expresion*、 *Desc_Flag*) MDX 関数があります。 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
+|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 このようなセット式の例としては、 `Descendants` (*Member_Expression*、 *Level_Expresion*、 *Desc_Flag*) MDX 関数があります。 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
- 
-  `String_Expression` 引数でディメンションが記述されていない場合、MDX は計算サブキューブの構築のためにすべてのメンバーが含まれていると想定します。 したがって、 `String_Expression` 引数が NULL の場合、計算されるセルの定義はキューブ全体に適用されます。  
+ `String_Expression` 引数でディメンションが記述されていない場合、MDX は計算サブキューブの構築のためにすべてのメンバーが含まれていると想定します。 したがって、 `String_Expression` 引数が NULL の場合、計算されるセルの定義はキューブ全体に適用されます。  
   
- 
-  `MDX_Expression` 引数には、 `String_Expression` 引数で定義したすべてのセルのセル値に評価される MDX 式を指定します。  
+ `MDX_Expression` 引数には、 `String_Expression` 引数で定義したすべてのセルのセル値に評価される MDX 式を指定します。  
   
-## <a name="additional-considerations"></a>追加の考慮事項  
- 
-  `CONDITION` プロパティによって指定された計算条件は、MDX によって一度だけ処理されます。 このように一度だけの処理を行うことにより、複数の計算されるセルの定義を評価する場合、特に計算されるセルがキューブ パス間で重複している場合のパフォーマンスが向上します。  
+## <a name="additional-considerations"></a>その他の考慮事項  
+ `CONDITION` プロパティによって指定された計算条件は、MDX によって一度だけ処理されます。 このように一度だけの処理を行うことにより、複数の計算されるセルの定義を評価する場合、特に計算されるセルがキューブ パス間で重複している場合のパフォーマンスが向上します。  
   
  この一度だけの処理がいつ行われるかは、計算されるセルの定義の作成スコープによって異なります。  
   
@@ -60,6 +53,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  一方、計算式は、計算されるセルの定義に含まれるセルを伴うキューブに対して MDX クエリが実行されるたびに MDX によって処理されます。 この処理は、作成スコープに関係なく行われます。  
   
 ## <a name="see-also"></a>参照  
- [CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

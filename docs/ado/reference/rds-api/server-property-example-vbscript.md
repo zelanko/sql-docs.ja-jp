@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f7fee3011edc0db739518e5e3244fb6cbedc1f0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963487"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750994"
 ---
 # <a name="server-property-example-vbscript"></a>Server プロパティの例 (VBScript)
 > [!IMPORTANT]

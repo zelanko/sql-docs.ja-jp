@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765603"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete メソッド (ADO Recordset)
 現在のレコードまたはレコードのグループを削除します。  
@@ -34,13 +34,13 @@ recordset.Delete AffectRecords
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *影響のあるレコード*  
+ *AffectRecords*  
  **Delete**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は [ **adて、現在**の値です。  
   
 > [!NOTE]
 >  **adAffectAll**と**AdAffectAllChapters**は、**削除**する有効な引数ではありません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Delete**メソッドを使用すると、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の現在のレコードまたはレコードのグループが削除対象としてマークされます。 レコード**セット**オブジェクトでレコードの削除が許可されていない場合、エラーが発生します。 即時更新モードの場合、削除はすぐにデータベースで発生します。 たとえば、データベースの整合性違反が原因でレコードを正常に削除できない場合、レコードは[更新](../../../ado/reference/ado-api/update-method.md)の呼び出し後も編集モードのままになります。 つまり、現在のレコードから移動する前に、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)で更新プログラムをキャンセルする必要があります (たとえば、 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)など)。  
   
  バッチ更新モードの場合、レコードはキャッシュから削除対象としてマークされ、実際の削除は、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを呼び出したときに行われます。 削除されたレコードを表示するには、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用します。  

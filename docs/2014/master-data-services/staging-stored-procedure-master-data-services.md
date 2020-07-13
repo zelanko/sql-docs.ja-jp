@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8647a1a4529f7c7d4a8258eac5b726da203c7df9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9259352350a099db5d9b18411ad4da06dfb19819
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971072"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>ステージング ストアド プロシージャ (マスター データ サービス)
-  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]からステージング処理を開始する場合、次の 3 つのストアド プロシージャのいずれかを使用します。  
   
 -   stg.udp_name_Leaf  
@@ -32,11 +30,10 @@ ms.locfileid: "65482723"
 ## <a name="staging-process-stored-procedure-parameters"></a>ステージング処理ストアド プロシージャのパラメーター  
  次の表では、これらのストアド プロシージャのパラメーターの一覧を示します。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> 必須|バージョンの名前。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コレクションの設定に応じて、このパラメーターは大文字と小文字が区別される場合とされない場合があります。|  
-|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 設定可能な値は、次のとおりです。<br /><br /> **0**: トランザクションをログに記録しません。<br />**1**: トランザクションをログに記録します。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](transactions-master-data-services.md)」を参照してください。|  
+|**VersionName**<br /><br /> 必須|バージョンの名前。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コレクションの設定に応じて、このパラメーターは大文字と小文字が区別される場合とされない場合があります。|  
+|**LogFlag**<br /><br /> 必須|ステージング処理中にトランザクションをログに記録するかどうかを決定します。 次のいずれかの値になります。<br /><br /> **0**: トランザクションをログに記録しない。<br />**1**: トランザクションをログに記録する。<br /><br /> <br /><br /> 詳細については、「[トランザクション (マスター データ サービス)](transactions-master-data-services.md)」を参照してください。|  
 |**BatchTag**<br /><br /> Web サービス以外は必須|ステージング テーブルに指定した **BatchTag** の値。|  
 |**Batch_ID**<br /><br /> Web サービスでのみ必須|ステージング テーブルに指定した **Batch_ID** の値。|  
   

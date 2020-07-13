@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057316"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424429"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](data-flow/odata-source.md)」を参照してください。  
@@ -32,12 +31,12 @@ ms.locfileid: "66057316"
  **コレクションまたはリソースのパスを使用します。**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |コレクション|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  
   
- **クエリ オプション**  
+ **クエリオプション**  
  クエリのオプションを指定します。  例: $top=5  
   
  **フィード URL**  
@@ -53,10 +52,10 @@ ms.locfileid: "66057316"
  ドロップダウン リストからコレクションを選択します。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
- **Resource path**  
- リソースのパスを入力します。 次に例を示します。Employees  
+ **リソースパス**  
+ リソースのパスを入力します。 例: Employees  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OData ソースエディター &#40;列のページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData ソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966575"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759218"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated プロパティ (ADOX)
 オブジェクトが作成された日付を示します。  

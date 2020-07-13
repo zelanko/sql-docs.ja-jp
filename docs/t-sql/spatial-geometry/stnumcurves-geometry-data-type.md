@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f64b10f4ce73c886ce229c9c859bd6de9693cc80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68088997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762286"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 このメソッドは、**geometry** インスタンスが 1 次元の空間データ型の場合に、そこに含まれる曲線の数を返します。 1 次元の空間データ型には、**LineString**、**CircularString**、**CompoundCurve** があります。 `STNumCurves`() は単純型に対してのみ機能し、**MultiLineString** のような **geometry** コレクションでは機能しません。
   

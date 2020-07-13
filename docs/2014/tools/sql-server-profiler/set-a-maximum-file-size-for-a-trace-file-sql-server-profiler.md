@@ -12,21 +12,19 @@ helpviewer_keywords:
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fd437dec39566ae01e03df5414e29cac0c28a5d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63267322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048296"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler)
   トレース ファイルの最大ファイル サイズを設定するには、次の手順を実行します。  
   
 ### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>トレース ファイルの最大ファイル サイズを設定するには  
   
-1.  
-  **[ファイル]** メニューの **[新しいトレース]** をクリックし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
+1.  **[ファイル]** メニューの **[新しいトレース]** をクリックし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
@@ -37,12 +35,9 @@ ms.locfileid: "63267322"
   
 3.  **[テンプレート名]** ボックスの一覧で、トレース テンプレートを選択します。  
   
-4.  
-  **[ファイルに保存]** チェック ボックスをオンにし、トレース情報を格納するファイルを指定します。  
+4.  **[ファイルに保存]** チェック ボックスをオンにし、トレース情報を格納するファイルを指定します。  
   
-5.  
-  **[最大ファイル サイズの設定 (MB)]** ボックスで、トレースの最大ファイル サイズを指定します。 ファイル サイズが指定した最大値に達すると、このファイルにはトレース イベントが記録されなくなります。 
-  **[ファイル ロールオーバーを有効にする]** チェック ボックスをオンにした場合 (既定でオンになっています)、次の動作が行われます。  
+5.  **[最大ファイル サイズの設定 (MB)]** ボックスで、トレースの最大ファイル サイズを指定します。 ファイル サイズが指定した最大値に達すると、このファイルにはトレース イベントが記録されなくなります。 **[ファイル ロールオーバーを有効にする]** チェック ボックスをオンにした場合 (既定でオンになっています)、次の動作が行われます。  
   
      ファイルのロールオーバー オプションを使用すると、最大ファイル サイズに達したときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって現在のファイルが閉じられ、新しいファイルが作成されます。 新しいファイルの名前は古いファイルと同一ですが、順序を表す整数がファイル名に付加されます。たとえば、元のトレース ファイルの名前を filename_1.trc とすると、次のトレース ファイルは filename_2.trc となり、以降同様に続きます。 新しいロールオーバー ファイルに割り当てられた名前が既存のファイルで既に使用されている場合、その既存のファイルは、読み取り専用でない限り上書きされます。 トレース データをファイルに保存する場合、ファイルのロールオーバー オプションが既定で有効になります。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933047"
 ---
 # <a name="event-pairing-target"></a>イベント ペアリング ターゲット
   イベント ペアリング ターゲットは、各イベントに存在する単一列または複数列のデータを使って 2 つのイベントを照合します。 ロックの取得とロックの解放など、対で発生するイベントが数多く存在します。 イベント シーケンスが対で発生した後は、両方のイベントが破棄されます。 一対のイベントを破棄することによって、取得されたまま解放されていないロックを容易に検出できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66064846"
   
  次の表では、イベント ペアリングの構成に使用できるオプションについて説明します。  
   
-|オプション|使用できる値|[説明]|  
+|オプション|使用できる値|説明|  
 |------------|--------------------|-----------------|  
 |begin_event|現在のセッションに存在する任意のイベント名。|対で発生するイベントのうち最初に発生するイベントの名前です。|  
 |end_event|現在のセッションに存在する任意のイベント名。|対で発生するイベントのうち最後に発生するイベントの名前です。|  
@@ -38,12 +37,12 @@ ms.locfileid: "66064846"
 |end_matching_columns|コンマ区切りで順に指定された列名。|照合に使用する列です。|  
 |begin_matching_actions|コンマ区切りで順に指定されたアクション。|照合に使用するアクションです。|  
 |end_matching_actions|コンマ区切りで順に指定されたアクション。|照合に使用するアクションです。|  
-|respond_to_memory_pressure|次のいずれかの値:<br /><br /> 0 = 応答しません。<br /><br /> 1 = メモリが不足している場合、対になっていないイベントを新たに追加することはしません。|ターゲットは、メモリ イベントに応答します。 1 に設定した場合、サーバーのメモリが不足すると、それまで保持されていた、対になっていない情報は削除されます。|  
+|respond_to_memory_pressure|次のいずれかの値です。<br /><br /> 0 = 応答しません。<br /><br /> 1 = メモリが不足している場合、対になっていないイベントを新たに追加することはしません。|ターゲットは、メモリ イベントに応答します。 1 に設定した場合、サーバーのメモリが不足すると、それまで保持されていた、対になっていない情報は削除されます。|  
 |max_orphans||ターゲットで収集される、対になっていないイベントの合計数を指定します。 制限に達すると、対になっていないイベントは先入れ先出し (FIFO) 順で削除されます。 既定値は 10,000 です。|  
   
  イベントに関連付けられているすべてのデータはキャプチャされて、その後のペアリングに備えて保存されます。 また、アクションによって追加されたデータも収集されます。 収集されたイベント データはメモリに格納されるため、格納できるサイズには上限があります。 この制限は、システムの容量とアクティビティに依存します。 使用メモリ量は利用可能なシステム リソースに基づくため、使用可能な最大メモリ量をパラメーターとして指定することはありません。 システム リソースが不足した場合、それまで保持されていた、対になっていないイベントは破棄されます。 イベントが対になっておらず破棄された場合、照合イベントは、対になっていないイベントとして発生します。  
   
- 対になっていないイベントは、ペアリング ターゲットによって XML 形式にシリアル化されます。 この形式は、いずれのスキーマにも準拠しません。 この形式に含まれる要素は 2 種類だけです。 対になっていない>要素はルートで、その後に1が続きます。 ** \<** 現在追跡されている対になっていない各イベントのイベント>要素。 ** \<** ** \<イベント>** 要素には、対になっていないイベントの名前を含む1つの属性が含まれています。  
+ 対になっていないイベントは、ペアリング ターゲットによって XML 形式にシリアル化されます。 この形式は、いずれのスキーマにも準拠しません。 この形式に含まれる要素は 2 種類だけです。 **\<unpaired>** 要素はルートで、その後に1が続きます。 **\<event>** 現在追跡されている対になっていない各イベントの要素。 要素には、対になってい **\<event>** ないイベントの名前を含む属性が1つ含まれています。  
   
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ペア照合ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  
@@ -90,9 +89,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [拡張イベントターゲットの SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [dm_xe_session_targets &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの作成](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

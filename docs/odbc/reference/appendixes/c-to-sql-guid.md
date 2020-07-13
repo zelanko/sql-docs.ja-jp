@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b3b559499273e885e23da10d9093a0ce9ff92393
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019325"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306623"
 ---
 # <a name="c-to-sql-guid"></a>C から SQL へ: GUID
 GUID ODBC C データ型の識別子は次のとおりです。  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC]
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b45dd8444d5ca2511672952e0637cc3cc500c5d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036233"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298752"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt 関数
 **互換性**  

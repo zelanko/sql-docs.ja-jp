@@ -1,7 +1,7 @@
 ---
 title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448178"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816482"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
@@ -34,9 +34,9 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] におけるクエリ スト
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> クエリのストアを有効にする
 
- 既定では、クエリのストアは新しいデータベースに対してアクティブではありません。
+ クエリ ストアは、新しい SQL Server と Azure Synapse Analytics (SQL DW) データベースでは既定で有効ではなく、新しい Azure SQL Database データベースでは既定で有効です。
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う
 
 1. オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。
 
@@ -47,7 +47,7 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] におけるクエリ スト
 
 3. **[操作モード (要求)]** ボックスで、 **[読み取り、書き込み]** を選択します。
 
-## <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する
+### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する
 
 **ALTER DATABASE** ステートメントを使用して、特定のデータベースのクエリ ストアを有効にします。 次に例を示します。
 
@@ -526,12 +526,12 @@ hist AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
      FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
-    WHERE  (rs.first_execution_time >= @history_start_time
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
+    WHERE (rs.first_execution_time >= @history_start_time
                AND rs.last_execution_time < @history_end_time)
         OR (rs.first_execution_time <= @history_start_time
                AND rs.last_execution_time > @history_start_time)
@@ -543,11 +543,11 @@ recent AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
     FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
     WHERE  (rs.first_execution_time >= @recent_start_time
                AND rs.last_execution_time < @recent_end_time)
         OR (rs.first_execution_time <= @recent_start_time
@@ -557,25 +557,25 @@ recent AS
     GROUP BY p.query_id
 )
 SELECT
-    results.query_id query_id,
-    results.query_text query_text,
-    results.additional_duration_workload additional_duration_workload,
-    results.total_duration_recent total_duration_recent,
-    results.total_duration_hist total_duration_hist,
-    ISNULL(results.count_executions_recent, 0) count_executions_recent,
-    ISNULL(results.count_executions_hist, 0) count_executions_hist
+    results.query_id AS query_id,
+    results.query_text AS query_text,
+    results.additional_duration_workload AS additional_duration_workload,
+    results.total_duration_recent AS total_duration_recent,
+    results.total_duration_hist AS total_duration_hist,
+    ISNULL(results.count_executions_recent, 0) AS count_executions_recent,
+    ISNULL(results.count_executions_hist, 0) AS count_executions_hist
 FROM
 (
     SELECT
-        hist.query_id query_id,
-        qt.query_sql_text query_text,
+        hist.query_id AS query_id,
+        qt.query_sql_text AS query_text,
         ROUND(CONVERT(float, recent.total_duration/
                    recent.count_executions-hist.total_duration/hist.count_executions)
                *(recent.count_executions), 2) AS additional_duration_workload,
-        ROUND(recent.total_duration, 2) total_duration_recent,
-        ROUND(hist.total_duration, 2) total_duration_hist,
-        recent.count_executions count_executions_recent,
-        hist.count_executions count_executions_hist
+        ROUND(recent.total_duration, 2) AS total_duration_recent,
+        ROUND(hist.total_duration, 2) AS total_duration_hist,
+        recent.count_executions AS count_executions_recent,
+        hist.count_executions AS count_executions_hist
     FROM hist
         JOIN recent
             ON hist.query_id = recent.query_id

@@ -21,15 +21,14 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7acd460d4dfe3a33da26170847509ae9b418a726
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62772227"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439379"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、外部データ ソースへの物理接続を表します。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、ランタイムから接続の実装詳細を分離します。 これにより、ランタイムは、一貫した予測可能な方法でそれぞれの接続マネージャーとやり取りを行うことができます。 接続マネージャーには、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> など、すべての接続に共通のストック プロパティのセットが含まれています。 ただし、接続マネージャーを構成するために必要なプロパティは、通常 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> プロパティのみです。 接続クラスが `Open` や `Connect` などのメソッドを公開して物理的にデータ ソースへの接続を確立する他のプログラミング パラダイムと異なり、ランタイム エンジンは、パッケージの実行中に、そのパッケージのすべての接続を管理します。  
@@ -41,7 +40,7 @@ ms.locfileid: "62772227"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合、`QueryInterface` オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
+ これは、マネージド接続マネージャー オブジェクトを、その基になる接続オブジェクトにキャストします。 C++ を使用している場合、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトの `QueryInterface` メソッドが呼び出され、基になる接続オブジェクトのインターフェイスが要求されます。  
   
  次の表は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が備えている接続マネージャーと `package.Connections.Add("xxx")` ステートメントで使用される文字列を示しています。 すべての接続マネージャーのリストについては、「[Integration Services &#40;SSIS&#41; の接続](../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
@@ -209,9 +208,9 @@ End Class
 ## <a name="external-resources"></a>外部リソース  
  carlprothman.net の [接続文字列](https://go.microsoft.com/fwlink/?LinkId=220743)に関する技術記事  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 接続の Integration Services &#40;](../connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーを作成する](../create-connection-managers.md)  
   

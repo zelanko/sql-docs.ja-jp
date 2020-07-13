@@ -15,14 +15,14 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091622"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283200"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の更新
 ブックマークによって行を更新すると、 **Sqlbulkoperations**によってデータソースがテーブルの1つ以上の行を更新します。 行は、バインドされたブックマーク列のブックマークによって識別されます。 行は、バインドされた各列のアプリケーションバッファーのデータを使用して更新されます (ただし、列の長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE の場合を除きます)。 非バインド列は更新されません。  

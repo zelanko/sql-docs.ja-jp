@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplan_databases system table
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6bd1622e898d6554d5eb9fbc66fae729f5a8e973
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e08f311a43ee5e84012f33e4d26de7e1b4feb97
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130478"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889305"
 ---
 # <a name="sysdbmaintplan_databases-transact-sql"></a>sysdbmaintplan_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このテーブルは、以前のバージョンの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードされたインスタンスの既存の情報を保持するために含まれています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、このテーブルの内容は変更されません。 このテーブルは、 **msdb**データベースに格納されます。  
+  このテーブルは、以前のバージョンのからアップグレードされたインスタンスの既存の情報を保持するために含まれてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、このテーブルの内容は変更されません。 このテーブルは、 **msdb**データベースに格納されます。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**一意**|メンテナンスプラン ID。|  
 |**database_name**|**sysname**|データベースメンテナンスプランに関連付けられているデータベースの名前。|  

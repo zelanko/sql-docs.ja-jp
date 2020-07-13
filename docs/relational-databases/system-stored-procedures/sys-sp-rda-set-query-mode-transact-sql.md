@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72278326"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053027"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sp_rda_set_query_mode (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   現在の Stretch が有効なデータベースとそのテーブルに対するクエリがローカルデータとリモートデータの両方を返すかどうかを指定します (既定)。またはローカルデータのみを返します。  
   
@@ -39,7 +38,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @mode = ]* \@モード*  
+ [ @mode =] * \@ モード*  
  次のいずれかの値を指定します。  
   
 -   **無効**Stretch が有効なテーブルに対するすべてのクエリが失敗します。  
@@ -48,7 +47,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE**Stretch が有効なテーブルに対するクエリでは、ローカルデータとリモートデータの両方が返されます。 これは既定の動作です。  
   
- [ @force = ] * \@強制*  
+ [ @force =] * \@ force*  
  検証せずにクエリモードを変更する場合は、1に設定できるビット値を指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -57,7 +56,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の拡張ストアドプロシージャは、Stretch 対応データベースのクエリモードも設定します。  
   
 -   **sp_rda_deauthorize_db**  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Text File Driver
 - text file driver [ODBC], SQLSetConnectOption
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32c4a0219b049ee66a38d6c7c10295245dd48ebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6442134086ea6fe15b393b87d6c80019a076be2a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905484"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306137"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (テキスト ファイル ドライバー)
 > [!NOTE]  
 >  このトピックでは、テキストファイルドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|fOption|解説|  
+|fOption|コメント|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption は、SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定できます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を妨げることはありません。|  
 |SQL_AUTOCOMMIT|テキストドライバーは、トランザクションをサポートしていないので、[オン] (既定の状態) に設定されている SQL_AUTOCOMMIT のみサポートします。|  

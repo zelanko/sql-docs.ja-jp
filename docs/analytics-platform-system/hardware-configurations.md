@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401132"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>ハードウェア構成-分析プラットフォームシステム
@@ -26,7 +26,7 @@ Analytics Platform System (APS) ハードウェアは、ビジネス要件に応
 -   [マルチラック構成](#section2)  
 
   
-## <a name="section1"></a>1つのラック構成  
+## <a name="one-rack-configurations"></a><a name="section1"></a>1つのラック構成  
 アプライアンスの最初のラックには、PDW を実行するために必要なコンポーネントが含まれています。 最小アプライアンス構成は、ラックとネットワークに基本スケールユニットを加えたものです。 これらの図は、アプライアンスの最初のラックを構成できる方法を示しています。 ハードウェアベンダーによっては、最初のラックに 2 ~ 9 個のコンピューティングノードを含めることができます。  
   
 ### <a name="first-rack-configurations---dell"></a>最初のラック構成-DELL  
@@ -39,7 +39,7 @@ HPE アプライアンスの最小構成には、2つのコンピューティン
   
 ![Hpe の HPE の最初のラック構成](media/first-rack-configurations-hpe.png "HPE の最初のラック構成")  
   
-## <a name="section2"></a>マルチラック構成  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>マルチラック構成  
 PDW に容量を追加するには、必要に応じて追加のラック & ネットワークコンポーネントと共にデータスケールユニットを追加して、適切な電源、ネットワーク、およびラックのインフラストラクチャを提供できます。 各追加のラック & には、パッシブホストが必要です。  
   
 各ハードウェアベンダーは、アプライアンスの容量を指定して、追加できるデータスケールユニットの数を指定します。 少なくとも20% のパフォーマンスへのアップグレードを確認するには、十分なデータスケールユニットを追加することをお勧めします。 たとえば、既に20個のデータスケールユニットを持つアプライアンスに1つのデータスケールユニットを追加すると、パフォーマンスが低下する可能性があります。 純利益は、コストと労力に価値がありません。  

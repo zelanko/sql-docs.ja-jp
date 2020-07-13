@@ -17,21 +17,18 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6f5d58acb2ceaf113da5701915e644d33fd5311b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660887"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888347"
 ---
 # <a name="sqlservice-class"></a>SqlService クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのインスタンスを表します。  
   
- 
-  [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 
-  [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
+ [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
   
 -   サービスに接続します。  
   
@@ -41,7 +38,7 @@ ms.locfileid: "73660887"
   
 -   サービスのプロパティのチェック  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

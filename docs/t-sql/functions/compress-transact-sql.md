@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f9493d8002ef8dac72cf4a2b94fba7f84c64e798
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732610"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

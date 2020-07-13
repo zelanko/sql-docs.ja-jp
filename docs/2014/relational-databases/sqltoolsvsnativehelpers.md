@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 992f8288018fb248b14db13b2ed1104aeecab04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 84f8a3a3408b68cb8c389b05b417f391a1f86c93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63285568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060160"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
   Visual Studio の SQL Server 機能をサポートするライブラリです。  

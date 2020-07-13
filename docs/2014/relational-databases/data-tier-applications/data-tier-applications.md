@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62873103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970302"
 ---
 # <a name="data-tier-applications"></a>データ層アプリケーション
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
@@ -47,8 +46,7 @@ ms.locfileid: "62873103"
   
     -   DAC 操作は、SQLServer 2008 R2 で導入されました。 SQL Server 2008 R2 データベースに加えて、ツールでは SQL Server 2008、SQL Server 2005、および SQL Server 2000 データベースからの DACPAC ファイルの生成がサポートされます。  
   
-    -   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] データベースに加えて、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に付属のツールでは、SQL Server 2008 R2 または SQL Server 2012 に付属の DAC ツールで生成された DACPAC ファイルを読み取ることができます。 これには、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および SQL Server 2005 のデータベースが含まれますが、SQL Server 2000 のデータベースは含まれません。  
+    -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] データベースに加えて、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に付属のツールでは、SQL Server 2008 R2 または SQL Server 2012 に付属の DAC ツールで生成された DACPAC ファイルを読み取ることができます。 これには、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および SQL Server 2005 のデータベースが含まれますが、SQL Server 2000 のデータベースは含まれません。  
   
     -   SQL Server 2008 R2 の DAC ツールでは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のツールによって生成された DACPAC ファイルを読み取ることはできません。  
   
@@ -105,9 +103,9 @@ ms.locfileid: "62873103"
   
  BACPAC では次の 2 つの主要操作がサポートされます。  
   
--   **エクスポート**-ユーザーは、スキーマとデータベースのデータを BACPAC にエクスポートできます。  
+-   **EXPORT**: ユーザーは、BACPAC にスキーマとデータベースのデータをエクスポートできます。  
   
--   **インポート**-ユーザーは、スキーマとデータをホストサーバーの新しいデータベースにインポートできます。  
+-   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
  この両方の機能が、データベース管理ツール (Server Management Studio、Management Portal for SQL Azure、および DACFx API) でサポートされます。  
   

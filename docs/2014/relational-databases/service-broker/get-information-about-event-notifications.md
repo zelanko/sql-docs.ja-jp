@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c8d8271b6279910321058d01c7b2f96b1df62bd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63015314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003349"
 ---
 # <a name="get-information-about-event-notifications"></a>イベント通知に関する情報の取得
   次のカタログ ビューは、イベント通知に関するメタデータのクエリに使用できます。  

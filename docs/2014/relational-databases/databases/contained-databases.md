@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62917571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952185"
 ---
 # <a name="contained-databases"></a>包含データベース
-  
   *包含データベース* は、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離されたデータベースです。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ユーザーは 4 つの方法でインスタンスからデータベースを分離できます。  
   
 -   データベースを表すメタデータの多くはデータベースに保持されます (master データベースのメタデータを保持する代わりに、またはそれに加えて保持されます)。  
@@ -40,7 +38,7 @@ ms.locfileid: "62917571"
   
 -   [部分的包含データベースの概念](#Concepts)  
   
--   [包含](#containment)  
+-   [Containment](#containment)  
   
 -   [部分的包含データベースを使用する利点](#benefits)  
   
@@ -48,7 +46,7 @@ ms.locfileid: "62917571"
   
 -   [データベースの包含の識別](#Identifying)  
   
-##  <a name="Concepts"></a>部分的包含データベースの概念  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a>部分的包含データベースの概念  
  完全包含データベースには、すべての設定と、データベースを定義するために必要なメタデータが含まれており、データベースがインストールされている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに対する構成上の依存関係がありません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから分離するのには時間がかかる場合があり、データベースと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間の関係に関する詳細な知識が必要でした。 部分的包含データベースを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと他のデータベースからデータベースを簡単に分離できるようになります。  
   
  包含データベースでは、機能を包含という観点から考えます。 データベース内の機能だけに依存しているすべてのユーザー定義エンティティは、完全に包含されていると見なされます。 データベースの外部の機能に依存しているすべてのユーザー定義エンティティは、包含されていないと見なされます (詳細については、後の「 [包含](#containment) 」を参照してください)。  
@@ -65,12 +63,10 @@ ms.locfileid: "62917571"
  データベース境界を越える要素。  
   
  非包含データベース  
- 包含が **NONE**に設定されているデータベース。 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのすべてのデータベースは、非包含です。 既定では、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のすべてのデータベースの包含は **NONE**に設定されています。  
+ 包含が **NONE**に設定されているデータベース。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのすべてのデータベースは、非包含です。 既定では、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のすべてのデータベースの包含は **NONE**に設定されています。  
   
  部分的包含データベース  
- 部分的包含データベースは、データベース境界を越えることが許可される包含データベースです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、包含の境界をいつ超えるかを判断する機能が含まれています。  
+ 部分的包含データベースは、データベース境界を越えることが許可される包含データベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、包含の境界をいつ超えるかを判断する機能が含まれています。  
   
  包含ユーザー  
  包含データベースには、2 種類のユーザーがあります。  
@@ -83,8 +79,7 @@ ms.locfileid: "62917571"
   
      承認済みの Windows ユーザーと、承認済みの Windows グループのメンバーは、データベースに直接接続でき、 **master** データベース内のログインを必要としません。 データベースは、Windows による認証を信頼します。  
   
- 
-  **master** データベースへのログインに基づくユーザーには、包含データベースに対するアクセス許可を付与できますが、それによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの依存関係が生成されます。 したがって、ログインに基づくユーザーの作成では、部分的包含データベースのコメントを参照します。  
+ **master** データベースへのログインに基づくユーザーには、包含データベースに対するアクセス許可を付与できますが、それによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの依存関係が生成されます。 したがって、ログインに基づくユーザーの作成では、部分的包含データベースのコメントを参照します。  
   
 > [!IMPORTANT]  
 >  部分的包含データベースを有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのアクセス制御がデータベースの所有者にデリゲートされます。 詳細については、「 [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md)」を参照してください。  
@@ -96,7 +91,7 @@ ms.locfileid: "62917571"
   
  データベース境界の外側は " *管理モデル*" で、ここではインスタンスレベルの機能と管理が扱われます。 データベース境界の外にあるエンティティの例としては、 **sys.endpoints**のようなシステム テーブル、ログインにマップされているユーザー、3 部構成の名前で参照されている他のデータベース内のユーザー テーブルなどがあります。  
   
-##  <a name="containment"></a>封じ込める  
+##  <a name="containment"></a><a name="containment"></a>封じ込める  
  全体がデータベース内に存在しているユーザー エンティティは、 *包含*であると見なされます。 データベースの外部に存在していたり、データベースの外部の機能とのやり取りに依存しているすべてのエンティティは、 *非包含*と見なされます。  
   
  一般に、ユーザー エンティティは、以下の包含のカテゴリのいずれかに分類されます。  
@@ -105,17 +100,17 @@ ms.locfileid: "62917571"
   
 -   非包含ユーザー エンティティ (データベース境界を越えるもの)。たとえば、sys.server_principals やサーバー プリンシパル (ログイン) 自体。 これらのエンティティを使用するコードや、これらのエンティティを参照する機能は包含ではありません。  
   
-###  <a name="partial"></a>部分的包含データベース  
+###  <a name="partially-contained-database"></a><a name="partial"></a>部分的包含データベース  
  包含データベースの機能は、現在、部分的包含状態のみで利用可能です。 部分的包含データベースは、非包含機能の使用が許される包含データベースです。  
   
  非包含オブジェクトまたは機能に関する情報を取得するには、[sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) ビューおよび [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) ビューを使用します。 データベースの要素の包含状態を確認することにより、包含を昇格させるためにどのオブジェクトまたは機能を置き換えたり変更したりする必要があるかを判断できます。  
   
 > [!IMPORTANT]  
->  一部のオブジェクトでは、既定の包含設定が **NONE**であるため、このビューは偽陽性の結果を返す場合があります。  
+>   一部のオブジェクトでは、既定の包含設定が **NONE**であるため、このビューは偽陽性の結果を返す場合があります。  
   
  部分的包含データベースの動作と非包含データベースの動作の違いが最も明らかなのが、照合順序の場合です。 照合順序の問題の詳細については、「 [Contained Database Collations](contained-database-collations.md)」をご覧ください。  
   
-##  <a name="benefits"></a>部分的包含データベースを使用する利点  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a>部分的包含データベースを使用する利点  
  非包含データベースに関連している問題や複雑さの一部は、部分的包含データベースを使用することで解決できます。  
   
 ### <a name="database-movement"></a>データベースの移動  
@@ -127,8 +122,7 @@ ms.locfileid: "62917571"
 >  部分包含データベースでは、インスタンスから分離できないデータベースで使用される機能を記述するドキュメントを提供できます。 これには、他の相互関連データベースの一覧や、データベースに必要だが含めることのできないシステム設定などが含まれます。  
   
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>AlwaysOn の包含データベース ユーザーの利点  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの結び付きを低減することで、部分的包含データベースは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を使用する場合のフェールオーバー時に役立つことがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの結び付きを低減することで、部分的包含データベースは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を使用する場合のフェールオーバー時に役立つことがあります。  
   
  包含ユーザーを作成すると、そのユーザーは包含データベースに直接接続できます。 これは、AlwaysOn ソリューションなどの高可用性およびディザスター リカバリーのシナリオにおいて非常に重要な機能です。 ユーザーが包含ユーザーである場合は、フェールオーバーが発生したときに、セカンダリ データベースをホストするインスタンスのログインを作成せずに、セカンダリ データベースに接続できます。 これは直接的な利益をもたらします。 詳細については、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」と「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
@@ -138,7 +132,7 @@ ms.locfileid: "62917571"
 ### <a name="database-administration"></a>データベースの管理  
  データベース設定を master データベースではなくデータベースに保持すると、データベース所有者に **sysadmin** 権限を付与しなくても、各データベース所有者は自身のデータベースをより高度に管理できます。  
   
-##  <a name="Limitations"></a>事項  
+##  <a name="limitations"></a><a name="Limitations"></a> 制限事項  
  部分的包含データベースでは、以下の機能は許可されません。  
   
 -   部分的包含データベースは、レプリケーション、変更データ キャプチャ、または変更の追跡を使用できません。  
@@ -154,9 +148,8 @@ ms.locfileid: "62917571"
 > [!WARNING]  
 >  一時ストアド プロシージャは、現在許可されています。 一時ストアド プロシージャは包含関係に違反するので、将来のバージョンの包含データベースではサポートされない予定です。  
   
-##  <a name="Identifying"></a>データベースの包含の識別  
- データベースの包含状態を識別するのに役立つ 2 つのツールがあります。 
-  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) は、データベース内には含まれていない可能性があるすべてのエンティティを示すビューです。 実行時に、実際に含まれていないエンティティが識別されると、database_uncontained_usage イベントが発生します。  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> データベースの包含状態の識別  
+ データベースの包含状態を識別するのに役立つ 2 つのツールがあります。 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) は、データベース内には含まれていない可能性があるすべてのエンティティを示すビューです。 実行時に、実際に含まれていないエンティティが識別されると、database_uncontained_usage イベントが発生します。  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  このビューには、データベース内には含まれていない可能性があるエンティティ (データベース境界を越えるエンティティなど) が表示されます。 こうしたエンティティには、データベース モデル外部のオブジェクトを使用するユーザー エンティティが含まれます。 ただし、一部のエンティティ (たとえば、動的 SQL を使用するエンティティ) の包含は実行時まで識別できないため、このビューでは、実際に含まれていないエンティティ以外のエンティティが表示される場合があります。 詳細については、「[sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)」を参照してください。  

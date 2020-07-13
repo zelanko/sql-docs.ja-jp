@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915543"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294539"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
 **互換性**  
@@ -26,7 +26,7 @@ ms.locfileid: "67915543"
  **まとめ**  
  ドライバーが SQL_STILL_EXECUTING を返した後、現在の非同期操作の進行状況が発生したときに、ドライバーがドライバーマネージャーにコールバックできるようにするには、 **Sqlasyncnotificationcallback**を使用します。 **Sqlasyncnotificationcallback**は、ドライバーによってのみ呼び出すことができます。  
   
- ドライバーは、 **sqlasyncnotificationcallback 関数名を**指定して**sqlasyncnotificationcallback**を呼び出しません。 代わりに、ドライバーマネージャーは、対応する接続ハンドルまたはステートメントハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値として関数ポインターをドライバーに渡します。4.3. 異なるハンドルに異なる関数ポインターの値を割り当てることができます。 関数ポインターの型は SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
+ ドライバーは、 **sqlasyncnotificationcallback 関数名を**指定して**sqlasyncnotificationcallback**を呼び出しません。 代わりに、ドライバーマネージャーは、対応する接続ハンドルまたはステートメントハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値として、関数ポインターをドライバーに渡します。 異なるハンドルに異なる関数ポインターの値を割り当てることができます。 関数ポインターの型は SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
   
  **Sqlasyncnotificationcallback**はスレッドセーフです。 ドライバーでは、複数のスレッドを使用して、異なるハンドルで同時に**Sqlasyncnotificationcallback**を呼び出すことができます。  
   
@@ -53,7 +53,7 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>診断  
  **Sqlasyncnotificationcallback**は、次の2つの状況で SQL_ERROR を返すことができます (これらは、ドライバーまたはドライバーマネージャーの実装の問題を示します)。  
   
-|エラー|[説明]|  
+|エラー|説明|  
 |-----------|-----------------|  
 |接続またはステートメントが通知を要求しませんでした。||  
 |無効な*ハンドル*|ドライバーが無効なハンドルで渡されました。このハンドルは、内部ドライバーマネージャーの検証テストに失敗しました。|  

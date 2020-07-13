@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], mapping
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08abd0128a6fa2a478af0e9dc9c292ff973ace79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5c2c8386d6771141eaa0145a5d5964d70d6084d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064487"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305418"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes のマッピング
 アプリケーションが ODBC *3. x*ドライバーを使用して**sqlcolattributes**を呼び出すと、 **sqlcolattributes**への呼び出しは次のように**sqlcolattributes**にマップされます。  

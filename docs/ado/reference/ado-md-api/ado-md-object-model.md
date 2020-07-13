@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68a4b4a11c8662cfdd3df19aa99cdc2e749f1de9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930593"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765273"
 ---
 # <a name="ado-md-object-model"></a>ADO MD オブジェクト モデル
 このトピックでは、ADO MD でオブジェクトがどのように表され、関連付けられるかについて説明します。  

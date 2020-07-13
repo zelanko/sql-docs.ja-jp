@@ -11,14 +11,14 @@ helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be99bc884a8baa66f3d632ee4731985f0cc85732
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107649"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306393"
 ---
 # <a name="binding-parameter-markers"></a>バインディング パラメーター マーカー
 アプリケーションは、 **SQLBindParameter**を呼び出すことによってパラメーターをバインドします。 **SQLBindParameter**は、一度に1つのパラメーターをバインドします。 このアプリケーションでは、次のように指定します。  

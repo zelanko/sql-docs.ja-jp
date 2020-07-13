@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62636426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061924"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続
   このチュートリアルでは、登録済みサーバーとオブジェクト エクスプローラーの使用方法について説明します。  
@@ -29,30 +28,23 @@ ms.locfileid: "62636426"
   
 1.  [登録済みサーバー] ツール バーの **[データベース エンジン]** をクリックします。 (通常は既に選択されています)。  
   
-2.  
-  **[データベース エンジン]** を展開します。  
+2.  **[データベース エンジン]** を展開します。  
   
-3.  
-  **[ローカル サーバー グループ]** を右クリックし、 **[新規サーバーの登録]** をクリックします。  
+3.  **[ローカル サーバー グループ]** を右クリックし、 **[新規サーバーの登録]** をクリックします。  
   
-4.  
-  **[新規サーバーの登録]** ダイアログ ボックスの **[サーバー名]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前を入力します。  
+4.  **[新規サーバーの登録]** ダイアログ ボックスの **[サーバー名]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前を入力します。  
   
-5.  
-  **[登録済みサーバーの名前]** ボックスに「 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]」と入力します。  
+5.  **[登録済みサーバーの名前]** ボックスに「 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]」と入力します。  
   
-6.  [**接続プロパティ**] タブの [**データベースへの接続**] ボックスの一覧で、[サーバーの参照] を選択** \<し >** します。  
+6.  [**接続プロパティ**] タブの [**データベースへの接続**] ボックスの一覧で、を選択し **\<Browse server...>** ます。  
   
-7.  
-  **[データベースの参照]** ダイアログ ボックスで、 **[はい]** をクリックします。  
+7.  **[データベースの参照]** ダイアログ ボックスで、 **[はい]** をクリックします。  
   
-8.  
-  **[サーバーでデータベースを参照]** ダイアログ ボックスで、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]を選択して **[OK]** をクリックします。  
+8.  **[サーバーでデータベースを参照]** ダイアログ ボックスで、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]を選択して **[OK]** をクリックします。  
   
 9. サーバーが正しく登録されていることを確認するには、 **[テスト]** をクリックします。  
   
-10. 
-  **[新規サーバーの登録]** ダイアログ ボックスで、 **[保存]** をクリックします。  
+10. **[新規サーバーの登録]** ダイアログ ボックスで、 **[保存]** をクリックします。  
   
 ## <a name="connecting-with-object-explorer"></a>オブジェクト エクスプローラーを使用した接続  
  [登録済みサーバー] と同様に、オブジェクト エクスプローラーから [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に接続できます。  
@@ -61,11 +53,9 @@ ms.locfileid: "62636426"
   
 1.  オブジェクト エクスプローラーのツール バーで **[接続]** をクリックし、選択可能な接続の種類の一覧から **[データベース エンジン]** を選択します。  
   
-2.  
-  **[サーバーへの接続]** ダイアログ ボックスの **[サーバー名]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前を入力します。  
+2.  **[サーバーへの接続]** ダイアログ ボックスの **[サーバー名]** ボックスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前を入力します。  
   
-3.  
-  **[オプション]** をクリックし、選択内容を確認します。  
+3.  **[オプション]** をクリックし、選択内容を確認します。  
   
 4.  サーバーに接続するため、 **[接続]** をクリックします。 サーバーに既に接続している場合はオブジェクト エクスプローラーが表示され、そのサーバーが強調表示されます。  
   
@@ -73,8 +63,7 @@ ms.locfileid: "62636426"
   
 5.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開し、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]を選択します。  
   
-     
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、システム データベースが別のフォルダーに表示される点に注意してください。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、システム データベースが別のフォルダーに表示される点に注意してください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [環境レイアウトの変更](lesson-1-3-change-the-environment-layout.md)  

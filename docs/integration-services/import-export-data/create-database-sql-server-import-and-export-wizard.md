@@ -28,7 +28,7 @@ ms.locfileid: "71296286"
 ウィザードの **[データベースの作成]** ダイアログ ボックスでは、新しい SQL Server データベースを作成するために使用できる基本的なオプションのみが提供されます。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのすべてのオプションを表示および構成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するか、ウィザードでデータベースを作成してから構成します。 
 
 > [!NOTE]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] インポートおよびエクスポート ウィザードの **[データベースの作成]** ダイアログ ボックスではなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CREATE DATABASE ステートメントに関する情報をお探しの場合は、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの **[データベースの作成]** ダイアログ ボックスではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CREATE DATABASE ステートメントに関する情報をお探しの場合は、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>[データベースの作成] ページのスクリーン ショット  
 以下のスクリーンショットでは、ウィザードの **[データベースの作成]** ダイアログ ボックスを示します。  

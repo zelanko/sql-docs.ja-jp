@@ -20,47 +20,41 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545735"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
   
 ## <a name="memory-and-processor-requirements"></a>メモリおよびプロセッサの要件  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次のような場合、より大きなメモリおよびプロセッサ リソースが必要です。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次のような場合、より大きなメモリおよびプロセッサ リソースが必要です。  
   
 -   大規模または複雑なキューブを処理する場合。 このようなキューブには、小規模または単純なキューブよりも大きなメモリおよびプロセッサ リソースが必要です。  
   
 -   1 つのデータベース内のキューブ数が増加した場合。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の 1 つのインスタンス内のデータベース数が増加した場合。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の 1 つのインスタンス内のデータベース数が増加した場合。  
   
 -   1 つのコンピューター上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス数が増加した場合。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] リソースに同時にアクセスするユーザー数が増加した場合。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] リソースに同時にアクセスするユーザー数が増加した場合。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用可能なメモリおよびプロセッサ リソースの量は、SQL Server のエディション、オペレーティング システム、ハードウェアの機能、および仮想プロセッサまたは物理プロセッサのどちらを使用しているかによって異なります。 詳細については、次のリンクをご覧ください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用可能なメモリおよびプロセッサ リソースの量は、SQL Server のエディション、オペレーティング システム、ハードウェアの機能、および仮想プロセッサまたは物理プロセッサのどちらを使用しているかによって異なります。 詳細については、次のリンクをご覧ください。  
   
  [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [SQLServer のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [SQL Server のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [Analysis Services&#41;&#40;最大容量仕様](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [最大容量仕様 &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>必要なディスク領域  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールのさまざまな側面とオブジェクト処理に関連するタスクによって、必要なディスクの空き容量が異なります。 次の一覧では、このような要件について説明します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールのさまざまな側面とオブジェクト処理に関連するタスクによって、必要なディスクの空き容量が異なります。 次の一覧では、このような要件について説明します。  
   
  キューブ  
  大きなファクト テーブルを持つキューブでは、小さなファクト テーブルを持つキューブよりも大きなディスク空き容量が必要です。 同様に、小さなエクステントでも、多くの大きなディメンションを持つキューブでは、ディメンション メンバーが少ないキューブよりも大きなディスク空き容量が必要です。 通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースでは、基になるリレーショナル データベースに保存されている同じデータに必要な空き容量の約 20% が必要です。  
@@ -72,12 +66,10 @@ ms.locfileid: "66073171"
  既定では、マイニング構造によって、トレーニングされるデータセットがディスクにキャッシュされます。 このキャッシュされたデータをディスクから削除するには、マイニング構造オブジェクトで **[構造消去の処理]** の処理オプションを使用できます。 詳細については、「[処理の要件および注意事項 (データ マイニング)](../data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
  オブジェクト処理  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、処理が終了するまで、処理トランザクションで処理中のオブジェクトのコピーがディスクに保存されます。 処理が終了すると、オブジェクトの処理済みのコピーによって元のオブジェクトが置き換えられます。 このため、処理する各オブジェクトの 2 番目のコピー用に十分な空き容量を確保する必要があります。 たとえば、1 つのトランザクションでキューブ全体を処理する場合、キューブ全体の 2 番目のコピーを保存するために十分なハード ディスク容量が必要です。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、処理が終了するまで、処理トランザクションで処理中のオブジェクトのコピーがディスクに保存されます。 処理が終了すると、オブジェクトの処理済みのコピーによって元のオブジェクトが置き換えられます。 このため、処理する各オブジェクトの 2 番目のコピー用に十分な空き容量を確保する必要があります。 たとえば、1 つのトランザクションでキューブ全体を処理する場合、キューブ全体の 2 番目のコピーを保存するために十分なハード ディスク容量が必要です。  
   
-##  <a name="BKMK_Availability"></a>可用性に関する考慮事項  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 環境では、ハードウェアまたはソフトウェアの障害によって、キューブまたはマイニング モデルをクエリに使用できない場合があります。 また、キューブも処理する必要があるので使用できない場合があります。  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>可用性に関する考慮事項  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 環境では、ハードウェアまたはソフトウェアの障害によって、キューブまたはマイニング モデルをクエリに使用できない場合があります。 また、キューブも処理する必要があるので使用できない場合があります。  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>ハードウェアまたはソフトウェアの障害時における可用性の提供  
  ハードウェアやソフトウェアでは、さまざまな理由により障害が発生します。 ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールの可用性を維持すると、そのような障害の原因をトラブルシューティングできるだけでなく、障害が発生した場合にユーザーがシステムの使用を続行できるように代替のリソースを提供することもできます。 サーバーのクラスター化と負荷分散は、通常、ハードウェアまたはソフトウェアの障害が発生した場合に可用性の維持に必要な代替のリソースを提供するために使用されます。  
@@ -89,13 +81,12 @@ ms.locfileid: "66073171"
 ### <a name="providing-availability-while-processing-structural-changes"></a>構造的変更の処理時における可用性の提供  
  キューブに特定の変更を行うと、キューブが処理されるまで使用できなくなることがあります。 たとえば、キューブ内のディメンションに構造的変更を行うと、ディメンションを再処理した場合でも、変更したディメンションを使用する各キューブも処理する必要があります。 このようなキューブを処理しない限り、そのキューブをクエリできません。また、変更したディメンションが含まれているキューブに基づいたマイニング モデルもクエリできません。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの 1 つまたは複数のキューブに影響を与える可能性がある構造的変更を処理しているときに可用性を確保するには、ステージング サーバーを組み込むか、データベースの同期ウィザードを使用することを検討してください。 この機能を使用すると、ステージング サーバー上でデータとメタデータを更新し、実稼働サーバーとステージング サーバーの同期をオンラインで実行できます。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの 1 つまたは複数のキューブに影響を与える可能性がある構造的変更を処理しているときに可用性を確保するには、ステージング サーバーを組み込むか、データベースの同期ウィザードを使用することを検討してください。 この機能を使用すると、ステージング サーバー上でデータとメタデータを更新し、実稼働サーバーとステージング サーバーの同期をオンラインで実行できます。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。  
   
  ソース データの増分更新を簡単に処理するには、プロアクティブ キャッシュを有効にします。 プロアクティブ キャッシュでは、新しいソース データを使用してキューブが更新されます。手動での処理は必要なく、キューブの可用性に影響を与えることもありません。 詳細については、「[プロアクティブ キャッシュ (パーティション)](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
   
-##  <a name="BKMK_Scalability"></a>スケーラビリティに関する考慮事項  
- との複数[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスが同じコンピューター上にあると、パフォーマンスの問題が発生する可能性があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>スケーラビリティに関する考慮事項  
+ との複数のインスタンス [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が同じコンピューター上にあると、パフォーマンスの問題が発生する可能性があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>複数のコンピューターにおける Analysis Services のスケーリング  
  複数のコンピューターで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインストールをスケーリングするには、いくつかの方法があります。 これらのオプションについては、次の一覧をご覧ください。  

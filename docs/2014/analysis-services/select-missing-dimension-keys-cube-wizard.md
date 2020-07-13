@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ee6e9e60fc15bfddd0f3f99a8036f933ac1c09af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940933"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>[欠落したディメンション キーの選択] (キューブ ウィザード)
-  
   **[欠落したディメンション キーの選択]** ページを使用すると、新しいディメンションで主テーブルに対してキーが定義されていない場合に使用するキー列を選択できます。  
   
 ## <a name="options"></a>オプション  

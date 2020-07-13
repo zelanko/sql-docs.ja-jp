@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63137524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001999"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server エージェントのセキュリティの実装
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントを使用すると、データベース管理者は、そのジョブステップの実行に必要な権限のみを持つセキュリティコンテキストで各ジョブステップを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行できます。これは、エージェントプロキシによって決定されます。 特定のジョブ ステップに対応する権限を設定するには、必要な権限のあるプロキシを作成し、そのプロキシをジョブ ステップに割り当てます。 プロキシは、複数のジョブ ステップに対して指定できます。 同じ権限を必要とするジョブ ステップに対しては、同じプロキシを使用します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、データベース管理者は、各ジョブ ステップをそのジョブ ステップの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。適切なセキュリティ コンテキストは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシによって決まります。 特定のジョブ ステップに対応する権限を設定するには、必要な権限のあるプロキシを作成し、そのプロキシをジョブ ステップに割り当てます。 プロキシは、複数のジョブ ステップに対して指定できます。 同じ権限を必要とするジョブ ステップに対しては、同じプロキシを使用します。  
   
  次のセクションでは、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してジョブを作成または実行するために、許可する必要のあるデータベース ロールについて説明します。  
   
@@ -36,25 +35,20 @@ ms.locfileid: "63137524"
   
 -   **SQLAgentOperatorRole**  
   
- 上記のロールは、 **msdb** データベースに格納されています。 既定では、これらのデータベース ロールのメンバーであるユーザーはいません。 これらのロールのメンバーシップは、明示的に許可する必要があります。 
-  **sysadmin** 固定サーバー ロールのメンバーであるユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのフル アクセスが許可されているので、上記の固定データベース ロールのメンバーでなくても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できます。 上記のいずれかのデータベース ロールまたは **sysadmin** ロールのメンバーでないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する際に、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェント ノードを使用できません。  
+ 上記のロールは、 **msdb** データベースに格納されています。 既定では、これらのデータベース ロールのメンバーであるユーザーはいません。 これらのロールのメンバーシップは、明示的に許可する必要があります。 **sysadmin** 固定サーバー ロールのメンバーであるユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのフル アクセスが許可されているので、上記の固定データベース ロールのメンバーでなくても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できます。 上記のいずれかのデータベース ロールまたは **sysadmin** ロールのメンバーでないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する際に、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェント ノードを使用できません。  
   
  これらのデータベース ロールのメンバーは、自身が所有するジョブの表示および実行に加えて、既存のプロキシ アカウントとして実行するジョブ ステップの作成を行えます。 これらの各ロールに関連付けられている特定の権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- 
-  **sysadmin** 固定サーバー ロールのメンバーには、プロキシ アカウントを作成、変更、および削除する権限があります。 
-  **sysadmin** ロールのメンバーには、プロキシを指定せずに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行するジョブ ステップを作成する権限があります。このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動に使用されるアカウントです。  
+ **sysadmin** 固定サーバー ロールのメンバーには、プロキシ アカウントを作成、変更、および削除する権限があります。 **sysadmin** ロールのメンバーには、プロキシを指定せずに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行するジョブ ステップを作成する権限があります。このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動に使用されるアカウントです。  
   
 ## <a name="guidelines"></a>ガイドライン  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのセキュリティを向上するには、次のガイドラインに従ってください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのセキュリティを向上するには、次のガイドラインに従ってください。  
   
 -   プロキシ専用のユーザー アカウントを作成し、ジョブ ステップの実行にはこれらのプロキシ ユーザー アカウントのみを使用します。  
   
 -   プロキシ ユーザー アカウントに対し、必要な権限のみを許可します。 特定のプロキシ アカウントに割り当てられたジョブ ステップの実行に実際に求められる権限だけを許可してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、Windows **Administrators** グループのメンバーである Microsoft Windows アカウントで実行しないでください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、Windows **Administrators** グループのメンバーである Microsoft Windows アカウントで実行しないでください。  
   
 -   プロキシの安全性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報ストアと同程度です。  
   
@@ -62,8 +56,7 @@ ms.locfileid: "63137524"
   
 -   NT Admin アカントを、サービス アカウントまたはプロキシ アカウントとして指定しないでください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、他方の資産にアクセスできます。 この 2 つのサービスは単一の処理領域を共有し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの sysadmin になります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、他方の資産にアクセスできます。 この 2 つのサービスは単一の処理領域を共有し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの sysadmin になります。  
   
 -   TSX が MSX で参加する場合、MSX の sysadmin が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の TSX インスタンスを完全に制御します。  
   
@@ -71,13 +64,13 @@ ms.locfileid: "63137524"
   
 -   ACE は、SSDP によって所有される次の構成 DLL に依存します。理由は、これらの DLL の API は ACE によって呼び出されるためです。  
   
-    -   **Sco** -仮想アカウントの新しい SCO 検証を含む、Microsoft. SqlServer. Configuration. .dll  
+    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll。仮想アカウント用の新しい SCO 検証が含まれます。  
   
-    -   **クラスター** -Microsoft. SqlServer. Configuration. cluster.exe  
+    -   **Cluster**: Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** -Microsoft. SqlServer. Configuration. .dll  
+    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **拡張機能**-Microsoft. SqlServer. Configuration. config. .dll  
+    -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>参照  
  [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   

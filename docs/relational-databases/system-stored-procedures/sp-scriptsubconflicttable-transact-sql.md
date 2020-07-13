@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 806209b4f881576c680c14b0bc17ec4fd04a086c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 93656ff6bec2acc3c3f6f7ee189b1c45db75a7d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68126368"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899193"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するためのスクリプトを生成します。 生成されたスクリプトは、サブスクライバー側でサブスクリプション データベースについて実行されます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -46,18 +46,18 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**cmdtext**|**nvarchar(4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクリプションデータベースのサブスクライバーで実行されます。|  
+|**cmdtext**|**nvarchar (4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクリプションデータベースのサブスクライバーで実行されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_scriptsubconflicttable**は、初期スナップショットが手動で適用されるサブスクリプションを持つサブスクライバーに対して使用します。 競合テーブルは、サブスクライバー側のオプションのテーブルです。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_scriptsubconflicttable**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キュー更新の競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

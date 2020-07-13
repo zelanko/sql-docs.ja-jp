@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90d3e60a77df15d1b2db302df8a3c1d4a39de245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9d8c0a478fd21c924752e6ebccc72767f8050f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964615"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746410"
 ---
 # <a name="cancel-method-rds"></a>Cancel メソッド (RDS)
 保留中の非同期メソッド呼び出しの実行を取り消します。  
@@ -33,7 +33,7 @@ ms.locfileid: "67964615"
 RDS.DataControl.Cancel  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Cancel**を呼び出すと、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)が自動的に**Adcreadystateloaded**に設定され、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)は空になります。  
   
 ## <a name="applies-to"></a>適用対象  

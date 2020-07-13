@@ -12,15 +12,14 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a66d054f3952c1491b88df77f8999e87af65447
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 074641e6f3ab9900e3842787e56746ad66a33fbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009551"
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
   クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  

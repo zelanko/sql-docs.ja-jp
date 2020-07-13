@@ -15,35 +15,29 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3a32868cbba92e623f0b8ec55039bdb27761d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62892414"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424669"
 ---
 # <a name="developer39s-guide-integration-services"></a>Developer&#39;s ガイド (Integration Services)
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の開発者として、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラミングでは、次の 2 つの基本的な方法を採用できます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の開発者として、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラミングでは、次の 2 つの基本的な方法を採用できます。  
   
--   
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナー内で使用可能になるコンポーネントを記述してパッケージを拡張し、パッケージにカスタム機能を提供できます。  
+-   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナー内で使用可能になるコンポーネントを記述してパッケージを拡張し、パッケージにカスタム機能を提供できます。  
   
 -   開発者独自のアプリケーションから、プログラムでパッケージを作成、構成、および実行することができます。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で組み込みコンポーネントが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の機能を拡張できます。 この方法をとる場合、以下のように 2 つの選択肢があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で組み込みコンポーネントが要件を満たしていない場合は、独自の拡張機能をコーディングすることによって [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の機能を拡張できます。 この方法をとる場合、以下のように 2 つの選択肢があります。  
   
 -   単一のパッケージで臨時に使用する場合は、スクリプト タスクでコードを記述してカスタム タスクを作成するか、またはスクリプト コンポーネントでコードを記述してカスタム データ フロー コンポーネントを作成し、変換元、変換、あるいは変換先として設定することができます。 これらの強力なラッパーによってインフラストラクチャ コードが自動的に記述されるため、開発者はカスタム機能の開発に集中できます。ただし、他の場所で簡単に再利用することはできません。  
   
--   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のマネージド オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
+-   複数のパッケージで使用する場合は、接続マネージャー、タスク、列挙子、ログ プロバイダー、およびデータ フロー コンポーネントなどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のカスタム拡張機能を作成できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のマネージド オブジェクト モデルには、基になる基本クラスが含まれており、従来よりもカスタム拡張機能の開発が簡単になっています。  
   
  パッケージを動的に作成する場合、または開発環境以外で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理および実行する場合は、プログラムでパッケージを操作できます。 既存のパッケージを読み込み、変更し、実行できます。または、まったく新しいパッケージをプログラムで作成および実行することもできます。 この場合、次に示すような一連の方法があります。  
   
@@ -57,10 +51,9 @@ ms.locfileid: "62892414"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Integration Services プログラミングの概要](integration-services-programming-overview.md)  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開発での制御フローおよびデータ フローの役割について説明します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開発での制御フローおよびデータ フローの役割について説明します。  
   
- [同期および非同期変換について](understanding-synchronous-and-asynchronous-transformations.md)  
+ [同期変換と非同期変換について](understanding-synchronous-and-asynchronous-transformations.md)  
  同期出力と非同期出力の重要な相違点、およびデータ フローでこれらの出力を使用するコンポーネントについて説明します。  
   
  [プログラムによる接続マネージャーの操作](working-with-connection-managers-programmatically.md)  
@@ -73,15 +66,13 @@ ms.locfileid: "62892414"
  複数のパッケージで使用するプログラム カスタム タスク、データ フロー コンポーネント、およびその他のパッケージ オブジェクトを作成する方法について説明します。  
   
  [プログラムによるパッケージの作成](building-packages-programmatically/building-packages-programmatically.md)  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、および保存する方法について説明します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、および保存する方法について説明します。  
   
  [プログラムによるパッケージの実行と管理](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで列挙、実行、および管理する方法について説明します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで列挙、実行、および管理する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーおよびメッセージのリファレンス](integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーとメッセージのリファレンス](integration-services-error-and-message-reference.md)  
  定義済みの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -90,7 +81,7 @@ ms.locfileid: "62892414"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
+-   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Integration Services](sql-server-integration-services.md)  

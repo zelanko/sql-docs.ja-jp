@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68cf4eb253505f6ade040eb0bf0f877f4fb91d94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15c825a5cd07017929dfaa37a52d78be11cfbf57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63032394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052814"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information イベント クラス
   **OLEDB Provider Information** イベント クラスは、分散クエリを実行するときに発生し、プロバイダー接続に関する情報を収集します。  
@@ -42,7 +41,7 @@ ms.locfileid: "63032394"
   
 ## <a name="oledb-provider-information-event-class-data-columns"></a>OLEDB Provider Information イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

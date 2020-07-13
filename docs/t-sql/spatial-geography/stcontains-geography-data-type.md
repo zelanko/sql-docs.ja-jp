@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa83e1bfc466f9eaf92faf1bb32868d1781f283a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705070"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれるかどうかを示します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68042465"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- **を呼び出したインスタンスと比較される、別の**geography`STContains()` インスタンスです。  
+ `STContains()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  

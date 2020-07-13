@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1a0442d46023e6b80f0b8dc5dac3ad2fe6bf6af5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538454"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>[データ ソースの選択] (データ ソース ビュー ウィザード) (Analysis Services)
-  
   **[データ ソースの選択]** ページを使用すると、データ ソース ビューのデータ ソースを選択できます。  
   
 ## <a name="options"></a>オプション  

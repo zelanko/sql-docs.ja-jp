@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7108db5b16b47b8e53b8bddb7f16ad132dcc98fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758318"
 ---
 # <a name="data-shaping"></a>データ シェイプ
 このセクションでは、次のトピックを扱います。  

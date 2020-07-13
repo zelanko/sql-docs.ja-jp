@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931054"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759888"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの最大サイズをバイト数または文字数で示します。  

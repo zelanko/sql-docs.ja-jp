@@ -1,5 +1,6 @@
 ---
 title: XPath クエリのサンプル (SQLXML)
+description: 軸、述語、演算子、関数、変数などを指定する方法を示す、SQLXML 4.0 の XPath クエリの例を示します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a741c0b2bfe3cc64efd850c4d9a6201e9f9ff501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76cdf55452ff2545063d8bc15c8347281fc46e57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649268"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath クエリの例 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、SQLXML 4.0 の XPath クエリの例を挙げます。 わかりやすくするため、サンプルの XPath クエリはテンプレート内に指定しています。このテンプレートは ADO を使用して実行します。 これには、マッピング スキーマ ファイルを使用する必要がありますが、このファイルもここで SampleSchema1.xml として提供します。 このファイルは、テンプレートと同じディレクトリに保存してください。  
   
 > [!NOTE]  

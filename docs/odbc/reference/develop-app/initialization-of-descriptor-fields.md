@@ -12,14 +12,14 @@ helpviewer_keywords:
 - initializing descriptor fields [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138938"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300122"
 ---
 # <a name="initialization-of-descriptor-fields"></a>記述子フィールドの初期化
 アプリケーションの行記述子が割り当てられると、そのフィールドには[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)に示されている初期値が与えられます。 SQL_DESC_TYPE フィールドの初期値は SQL_DEFAULT です。 これにより、アプリケーションに表示するためのデータベースデータの標準的な処理が提供されます。 アプリケーションでは、記述子レコードのフィールドを設定することによって、異なるデータ処理を指定できます。  

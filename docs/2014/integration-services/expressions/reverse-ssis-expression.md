@@ -10,15 +10,14 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 173f77891698c5be34ec1eff16c83b9c35742899
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897339"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437129"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
   文字式を逆に並べ替えたものを返します。  

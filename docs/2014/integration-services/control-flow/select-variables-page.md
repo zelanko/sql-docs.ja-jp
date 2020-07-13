@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49c5b559d675ec29ab85a68b9ac31a619e2538ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6346300de6ae5f225c43f0d8722e1f4c821be5e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830285"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432729"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62830285"
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
- **名前**  
+ **Name**  
  変数の名前を指定します。  
   
  **Type**  

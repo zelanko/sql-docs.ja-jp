@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054910"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893662"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  自動化された活動を実行するため[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にによって使用されるジョブのスケジュールに関する情報を返します。  
+  自動化された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 活動を実行するためにによって使用されるジョブのスケジュールに関する情報を返します。  
  
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -61,7 +61,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|スケジュールの識別子番号。|  
 |**schedule_name**|**sysname**|スケジュールの名前。|  
@@ -76,21 +76,20 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_end_date**|**int**|スケジュールの終了日。|  
 |**active_start_time**|**int**|スケジュールの開始時刻。|  
 |**active_end_time**|**int**|スケジュールを終了する時刻。|  
-|**date_created**|**DATETIME**|スケジュールが作成された日付。|  
-|**schedule_description**|**nvarchar(4000)**|**Msdb スケジュール**の値から取得された、スケジュールの英語の説明。 *Include_description*が**0**の場合、この列には説明が要求されていないことを示すテキストが含まれます。|  
+|**date_created**|**datetime**|スケジュールが作成された日付。|  
+|**schedule_description**|**nvarchar (4000)**|**msdb.dbo.sysスケジュール**の値から派生したスケジュールの英語の説明。 *Include_description*が**0**の場合、この列には説明が要求されていないことを示すテキストが含まれます。|  
 |**next_run_date**|**int**|スケジュールによってジョブが次に実行される日付。|  
 |**next_run_time**|**int**|スケジュールによってジョブが次に実行される時刻。|  
-|**schedule_uid**|**UNIQUEIDENTIFIER**|スケジュールの識別子。|  
+|**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**job_count**|**int**|返されたジョブの数。|  
   
-> **注: sp_help_jobschedule**では、 **msdb**内の**dbo. sysjobschedules**と**dbo. sysスケジュール**システムテーブルから値が返されます。 **sysjobschedules** 20 分ごとに更新をスケジュールします。 これは、このストアドプロシージャによって返される値に影響を与える可能性があります。  
+> **注: sp_help_jobschedule**は**dbo.sysjobschedules**から値を返し、 **msdb**のシステムテーブルを**dbo.sys**します。 **sysjobschedules** 20 分ごとに更新をスケジュールします。 これは、このストアドプロシージャによって返される値に影響を与える可能性があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sp_help_jobschedule**のパラメーターは、特定の組み合わせでのみ使用できます。 *Schedule_id*が指定されている場合、 *job_id*も*job_name*も指定できません。 それ以外の場合は、 *job_id*パラメーターまたは*job_name*パラメーターを*schedule_name*と共に使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -105,7 +104,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 特定のジョブのジョブ スケジュールを返す  
- 次の例では、という名前`BackupDatabase`のジョブのスケジュール情報が返されます。  
+ 次の例では、という名前のジョブのスケジュール情報が返され `BackupDatabase` ます。  
   
 ```  
 USE msdb ;  
@@ -116,7 +115,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. 特定のスケジュールのジョブスケジュールを返す  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B: 特定のスケジュールのジョブスケジュールを返す  
  次の例では、`NightlyJobs` という名前のスケジュールと、`RunReports` という名前のジョブの情報を返します。  
   
 ```  
@@ -129,7 +128,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="c-returning-the-job-schedule-and-schedule-description-for-a-specific-schedule"></a>C. 特定のスケジュールのジョブスケジュールとスケジュールの説明を返す  
+### <a name="c-returning-the-job-schedule-and-schedule-description-for-a-specific-schedule"></a>C: 特定のスケジュールのジョブスケジュールとスケジュールの説明を返す  
  次の例では、`NightlyJobs` という名前のスケジュールと、`RunReports` という名前のジョブの情報を返します。 返される結果セットには、スケジュールの説明が含まれます。  
   
 ```  
@@ -143,8 +142,8 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

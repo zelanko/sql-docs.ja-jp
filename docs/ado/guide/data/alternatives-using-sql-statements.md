@@ -12,16 +12,16 @@ helpviewer_keywords:
 - editing data [ADO], sql statements
 - ADO, SQL statements
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1e80dd692b234b88d2b63ed0a43d956152e2e2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925997"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761268"
 ---
-# <a name="alternatives-using-sql-statements"></a>他の方法: SQL ステートメントを使用する
+# <a name="alternatives-using-sql-statements"></a>代替: SQL ステートメントの使用
 ADO では、データを編集するための組み込みプロパティやメソッドの代わりにコマンドを使用することもできます。 プロバイダーによっては、このセクションに記載されているすべての操作を、データソースにコマンドを渡すことによって実現することもできます。 たとえば、SQL UPDATE ステートメントを使用して、**フィールド**の**Value**プロパティを使用せずにデータを変更できます。 SQL INSERT ステートメントは、ADO メソッド**AddNew**ではなく、データソースに新しいレコードを追加するために使用できます。 プロバイダーの SQL またはデータ操作言語の詳細については、データソースのドキュメントを参照してください。  
   
  たとえば、次のコードに示すように、DELETE ステートメントを含む SQL 文字列をデータベースに渡すことができます。  

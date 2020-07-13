@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74200508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703751"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   任意の **geography** インスタンスの地点と別の **geography** インスタンスの地点との最短距離を返します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74200508"
   
 ## <a name="remarks"></a>解説  
  この結果は、空間データの [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) によって定義された測定単位で表されます。
-*geography* インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に **null** を返します。  
+**geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に *null* を返します。  
   
 > [!NOTE]  
 >  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。 SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  

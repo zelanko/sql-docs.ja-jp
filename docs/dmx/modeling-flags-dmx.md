@@ -4,30 +4,28 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68893931"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667945"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]
-   のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次のモデリングフラグがサポートされています。  
   
  **NULL 以外**  
  属性列の値に null 値を含めることはできません。 モデルの学習プロセス中に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がこの属性列に NULL 値を検出した場合、エラーが発生します。 このフラグは、マイニング構造列に対して定義されています。  
   
- **REGRESSOR**  
+ **リグレッサー**  
  アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。 このフラグは、[!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression および [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees アルゴリズムによってサポートされており、マイニング モデル列で定義されます。  
   
  **MODEL_EXISTENCE_ONLY**  
@@ -46,7 +44,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL、REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>マイニングモデルでのモデリングフラグの指定  
- マイニング構造列にフラグを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]指定するためにがサポートする構文の例については、「 [DMX&#41;&#40;マイニング構造を作成](../dmx/create-mining-structure-dmx.md)する」を参照してください。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニング構造列にフラグを指定するためにがサポートする構文の例については、「 [DMX&#41;&#40;マイニング構造を作成](../dmx/create-mining-structure-dmx.md)する」を参照してください。  
   
  マイニングモデル列でのモデリングフラグを指定する構文の例については、「 [ALTER マイニング STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)」を参照してください。  
   

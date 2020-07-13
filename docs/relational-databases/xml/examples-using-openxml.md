@@ -94,7 +94,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- `Customer`flags*を要素中心のマッピングを示す*2 **に設定して同じ SELECT ステートメントを実行すると、<** > 要素にはサブ要素がないので、両方の顧客の **CustomerID** と **ContactName** の値が NULL として返されます。  
+ *flags* を要素中心のマッピングを示す **2** に設定して同じ SELECT ステートメントを実行すると、<`Customer`> 要素にはサブ要素がないので、両方の顧客の **CustomerID** と **ContactName** の値が NULL として返されます。  
   
  また、\@xmlDocument を **xml** 型や **(n)varchar(max)** 型にすることもできます。  
   
@@ -156,7 +156,7 @@ LILAS      Carlos Gonzlez
   
  WITH 句の *SchemaDeclaration*では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
   
--   行セットの **OrderID** 列、**CustomerID** 列、および **OrderDate** 列は *rowpattern* によって識別されたノードの親の属性にマップされ、*rowpattern* によって <`OrderDetail`> ノードが識別されます。 したがって、**CustomerID** 列と **OrderDate** 列は < **> 要素の** CustomerID**属性と**OrderDate`Order` 属性にマップされます。  
+-   行セットの **OrderID** 列、**CustomerID** 列、および **OrderDate** 列は *rowpattern* によって識別されたノードの親の属性にマップされ、*rowpattern* によって <`OrderDetail`> ノードが識別されます。 したがって、**CustomerID** 列と **OrderDate** 列は <`Order`> 要素の **CustomerID** 属性と **OrderDate** 属性にマップされます。  
   
 -   行セットの **ProdID** 列と **Qty** 列は、 **rowpattern** で識別されたノードの **ProductID** 属性と *Quantity*属性にマップされます。  
   
@@ -282,10 +282,10 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- **CustomerID**に属性中心のマッピングが適用されます。 < **> 要素には** ConzｘtactName`Customer` 属性がありません。 そのため、要素中心のマッピングが適用されます。  
+ **CustomerID**に属性中心のマッピングが適用されます。 <`Customer`> 要素には **ConzｘtactName** 属性がありません。 そのため、要素中心のマッピングが適用されます。  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. ColPattern としての text() XPath 関数の指定  
- この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントにより、< **> 要素の** oid`Order` 属性、*rowpattern* で識別されるノードの親の ID、および要素のコンテンツのリーフ値の文字列で構成される行セットが取得されます。  
+ この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントにより、<`Order`> 要素の **oid** 属性、*rowpattern* で識別されるノードの親の ID、および要素のコンテンツのリーフ値の文字列で構成される行セットが取得されます。  
   
  最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
@@ -475,11 +475,11 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
--   行セット内の**ProdID**列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、< **> 要素の** ProductID`OrderDetail` 属性となります。  
+-   行セット内の**ProdID**列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
--   行セット内の *Qty* 列に指定された **ColPattern\@ である** ../**Quantity** により、コンテキスト ノード **ProductID> の親ノードである <** > の `OrderDetail`Quantity\< 属性が識別されます。  
+-   行セット内の **Qty** 列に指定された *ColPattern* である **../\@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
   
--   同様に、行セット内の *OID* 列に指定された **ColPattern\@ である** ../../**OrderID** により、コンテキスト ノードの親ノードの親である < **> の** OrderID`Order` 属性が識別されます。 親ノードは <`OrderDetail`> で、コンテキスト ノードは <`ProductID`> です。  
+-   同様に、行セット内の **OID** 列に指定された *ColPattern* である **../../\@OrderID** により、コンテキスト ノードの親ノードの親である <`Order`> の **OrderID** 属性が識別されます。 親ノードは <`OrderDetail`> で、コンテキスト ノードは <`ProductID`> です。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -605,7 +605,7 @@ id  lname   xmlname                   OverFlow
 -   WITH 句の列が型指定された XML 列で、XML インスタンスがスキーマに準拠しない場合、エラーが返されます。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 複数の値の属性から個別の値の取得  
- XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、 **IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、**Student> 要素の** attends\< 属性と **Class> 要素の** attendedBy\< 属性に複数の値を指定できます。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
+ XML ドキュメントには、複数の値を指定できる属性を含めることができます。 たとえば、 **IDREFS** 属性には複数の値を指定できます。 XML ドキュメントでは、複数の値の属性値を、各値をスペースで区切った文字列として指定します。 次の XML ドキュメントでは、\<Student> 要素の **attends** 属性と \<Class> 要素の **attendedBy** 属性に複数の値を指定できます。 複数の値を指定できる XML 属性から値を個別に取得し、各値をデータベース内の別々の行に格納するには、新たな作業が必要です。 この例ではその処理を示します。  
   
  このサンプル XML ドキュメントは、次の要素で構成されます。  
   
@@ -617,7 +617,7 @@ id  lname   xmlname                   OverFlow
   
      **id** (クラス ID) 属性、 **name**属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
   
- **Student> の** attends\< 属性と **Class> の** attendedBy\< 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
+ \<Student> の **attends** 属性と \<Class> の **attendedBy** 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
   
  次に示すように、このドキュメントを細分化し、データベースに保存するとします。  
   

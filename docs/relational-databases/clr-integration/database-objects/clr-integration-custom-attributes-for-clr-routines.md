@@ -1,5 +1,6 @@
 ---
 title: CLR ルーチンのカスタム属性 |Microsoft Docs
+description: カスタム属性は、CLR ルーチン、ユーザー定義型、および Microsoft SQL Server に登録されているユーザー定義集計に適用できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a754825eb1da09dcfb7fa37401024b89cf70c1d2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70212381"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160180"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR ルーチン用の CLR 統合のカスタム属性
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  ここに示されている属性は、に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登録されている共通言語ランタイム (CLR) ルーチン、ユーザー定義型、およびユーザー定義集計に適用できます。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 一覧表示される属性は、 **Microsoft の SqlServer**名前空間で定義されています。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  ここに示されている属性は、に登録されている共通言語ランタイム (CLR) ルーチン、ユーザー定義型、およびユーザー定義集計に適用でき [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 一覧表示される属性は、 **Microsoft の SqlServer**名前空間で定義されています。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  **Sqluserdefinedaggregate**属性は、メソッドをユーザー定義集計として登録する必要があることを示します。 すべてのユーザー定義集計にこのカスタム属性で注釈を付ける必要があります。  
@@ -58,8 +59,7 @@ ms.locfileid: "70212381"
  詳細については、「 [Sqltriggercontext](https://go.microsoft.com/fwlink/?LinkId=128022) 」と「 [sqltriggercontext](https://go.microsoft.com/fwlink/?LinkId=203898)」を参照してください。  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
- SqlUserDefinedTypeAttribute をアセンブリのクラス定義に適用できます。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、これにより、このカスタム属性を持つクラス定義にバインドされたユーザー定義型が作成されます。  
+ SqlUserDefinedTypeAttribute をアセンブリのクラス定義に適用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、これにより、このカスタム属性を持つクラス定義にバインドされたユーザー定義型が作成されます。  
   
  詳細については、「 [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)」を参照してください。  
   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785077"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2: 名前付け基準ポリシーの作成と適用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 ポリシー ベースの管理の一部の種類のポリシーでは、ポリシーへの今後の準拠を適用するためのトリガーを作成することができます。 このレッスンでは、テーブルの名前付け基準を適用するポリシーを作成します。 その後に、ポリシーに違反するテーブルを作成してポリシーをテストします。  
 
 

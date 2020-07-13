@@ -9,16 +9,14 @@ ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9432d9ae69ff9802d41e376c06d86ebbd2d594b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fe4a3e1c9a49737f06425c6e8bd651e5e973e77b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63184457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055298"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO の旧バージョンとの互換性
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを使用して記述されている SMO アプリケーションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SMO を使用して再コンパイルできます。  
   
 ## <a name="migrating-smo-applications"></a>SMO アプリケーションの移行  
@@ -57,6 +55,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  コードで Transfer オブジェクトを直接使用している場合は、Microsoft.SqlServer.Management.SmoExtended 名前空間へのリンクが必要になります。  
   
- コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、オンラインブックの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 「 [SQL Server 2014 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)」を参照してください。  
+ コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、オンラインブックの「 [SQL Server 2014 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)」を参照してください [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
   

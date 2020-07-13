@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036715"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
@@ -31,14 +31,14 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  直接的または間接的に組を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Strtotuple**関数は、指定されたセットを返します。 **Strtotuple**関数は、通常、外部関数から MDX ステートメントに組の指定を返すために、ユーザー定義関数と共に使用されます。  
   
 -   CONSTRAINED フラグを使用するときは、組指定に修飾されているメンバー名または修飾されていないメンバー名を含める必要があります。 このフラグは、指定された文字列を使用してインジェクション攻撃のリスクを軽減するために使用されます。 修飾されたメンバー名または修飾されていないメンバー名に直接解決できない文字列が指定されると、"STRTOTUPLE 関数の制約付きフラグによって設定された制限に違反しました。" というエラーが表示されます。  
   
 -   CONSTRAINED フラグを使用しない場合、組を返す有効な MDX 式に解決される組を指定できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、2004年の Bayern メンバーの再販業者 Sales Amount メジャーを返します。 組の指定には、有効な MDX 組式が含まれています。  
   
 ```  
@@ -75,6 +75,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

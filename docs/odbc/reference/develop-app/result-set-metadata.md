@@ -11,14 +11,14 @@ helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d8da8c15c861fff4767aa598e1b989d8f699c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b78cdeb4c8b3522f4677c0277401cd9395a36a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020590"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300082"
 ---
 # <a name="result-set-metadata"></a>結果セットのメタデータ
 *メタ*データは、他のデータを記述するデータです。 たとえば、結果セットのメタデータには、結果セット内の列数、列のデータ型、名前、有効桁数、null 値の許容属性などの結果セットが記述されます。  

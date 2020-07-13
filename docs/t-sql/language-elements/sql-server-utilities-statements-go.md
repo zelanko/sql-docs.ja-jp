@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Microsoft Docs
+title: SQL Server のユーティリティのステートメント - GO | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd28aae90386501e49513551def97e3fea8f5574
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072305"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892108"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントではありませんが、**sqlcmd** ユーティリティ、**osql** ユーティリティ、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコード エディターで認識されるコマンドがあります。 これらのコマンドを使用すると、バッチおよびスクリプトの読み取りと実行が容易になります。  
   

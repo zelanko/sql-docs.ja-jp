@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0819dbe8c2b4f76e638c09861d83ddb37e76da31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019939"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899234"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   セキュリティ プリンシパルが持つプロキシへのアクセスを取り消します。  
   
@@ -42,7 +42,7 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`アクセスを削除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、サーバーロール、または**msdb**データベースロールの名前を指定します。 *名前*は**nvarchar (256)** 既定値はありません。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスを削除するログイン、サーバーロール、または**msdb**データベースロールの名前を指定します。 *名前*は**nvarchar (256)** 既定値はありません。  
   
 `[ @proxy_id = ] id`アクセスを削除するプロキシの id。 *Id*と*proxy_name*のどちらかを指定する必要がありますが、両方を指定することはできません。 *Id*は**int**,、既定値は NULL です。  
   
@@ -51,13 +51,13 @@ sp_revoke_login_from_proxy
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ログインによって所有されるジョブがこのプロキシを参照する場合、そのジョブは実行できなくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、ログイン `terrid` に対して、プロキシ `Catalog application proxy` へのアクセスを禁止します。  
   
 ```  
@@ -70,7 +70,7 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  

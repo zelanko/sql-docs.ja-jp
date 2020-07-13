@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 96a259ed9436bb7c8b79a8eb9da1c3c899e6d994
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077808"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545484"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)
-  
   **Microsoft 汎用コンテンツ ツリー ビューアー** には、データ マイニング モデルのコンテンツに関する詳細情報が、標準化された HTML テーブル形式で表示されます。 このビューを使用すると、モデルの基になる構造に加え、係数や値の分布などの詳細を確認できます。  
   
  テーブルに実際に表示される内容は使用されたアルゴリズムによって異なり、列、ルール、プロパティ、属性、ノード、および数式が含まれる場合があります。 モデル コンテンツ、および各モデルの種類の情報を解釈する方法の詳細については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -33,7 +31,7 @@ ms.locfileid: "66077808"
   
  ノードをクリックすることで、そのノードに関する詳細を **[ノードの詳細]** ペインに表示できます。  
   
- **[ノードの詳細]**  
+ **ノードの詳細**  
  選択したノードのコンテンツに関する詳細情報が表示されます。 各ノードの情報は標準化された形式で格納されますが、テーブルの各行の内容と意味は、表示中のモデルの種類またはノードの型によって異なります。 たとえば、関連モデルのルールを表すノードに保存される情報は、デシジョン ツリー モデルのツリーを表すノードとは別の情報を格納します。  
   
  特定のモデルの種類のノード情報を解釈する方法については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -41,6 +39,6 @@ ms.locfileid: "66077808"
 ## <a name="see-also"></a>参照  
  [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [データ マイニング クエリ](data-mining/data-mining-queries.md)  
+ [データマイニングクエリ](data-mining/data-mining-queries.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76934638"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764921"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VC++)
 この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)メソッドと[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ[とユーザー Append、ChangePassword メソッドの例 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)を参照して、システムにこのグループを追加する方法を確認してください)。 Categories テーブルの所有者は、Accounting に設定されています。  

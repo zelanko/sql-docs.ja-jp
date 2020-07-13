@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3836d577ab9230e425f42a52b53ed82d3354d72a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925807"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761179"
 ---
 # <a name="comments-on-hellodata"></a>HelloData に関するコメント
 HelloData アプリケーションでは、一般的な ADO アプリケーションの基本的な操作 (データの取得、調査、編集、更新) を実行します。 アプリケーションを起動するときに、最初のボタン [**データの取得**] をクリックします。 これにより、 **GetData**サブルーチンが実行されます。  
@@ -27,9 +27,9 @@ HelloData アプリケーションでは、一般的な ADO アプリケーシ�
   
  Visual Basic **OnError**ステートメントを使用してエラーハンドラーを割り当てます。 ADO でのエラー処理の詳細については、「[エラー処理](../../../ado/guide/data/error-handling.md)」を参照してください。 新しい**接続**オブジェクトが作成され、**カーソル位置**プロパティが**adUseClient**に設定されます。これは、HelloData の例では、切断された*レコードセット*が作成されるためです。 これは、データがデータソースからフェッチされるとすぐに、データソースとの物理的な接続が切断されることを意味しますが、**レコードセット**オブジェクトにローカルにキャッシュされているデータを操作できます。  
   
- 接続が開かれたら、SQL 文字列を変数 (sSQL) に割り当てます。 次に、新しい**レコードセット**オブジェクトのインスタンスを`m_oRecordset1`作成します。 次のコード行で、既存の**接続**を介して**レコードセット**を開き、 `sSQL` **レコードセット**のソースとしてを渡します。 ADO は、**レコードセット**のソースとして渡された SQL 文字列が、最後の引数に**Adcmdtext**を**レコードセットの Open**メソッドに渡すことによって、コマンドのテキスト定義であることを判断するのに役立ちます。 また、この行では、**レコードセット**に関連付けられている**LockType**と**CursorType**も設定します。  
+ 接続が開かれたら、SQL 文字列を変数 (sSQL) に割り当てます。 次に、新しい**レコードセット**オブジェクトのインスタンスを作成し `m_oRecordset1` ます。 次のコード行で、既存の**接続**を介して**レコードセット**を開き、 `sSQL` **レコードセット**のソースとしてを渡します。 ADO は、**レコードセット**のソースとして渡された SQL 文字列が、最後の引数に**Adcmdtext**を**レコードセットの Open**メソッドに渡すことによって、コマンドのテキスト定義であることを判断するのに役立ちます。 また、この行では、**レコードセット**に関連付けられている**LockType**と**CursorType**も設定します。  
   
- 次のコード行では、 **Marshaloptions**プロパティを**adMarshalModifiedOnly**に設定しています。 **Marshaloptions**は、中間層 (または Web サーバー) にマーシャリングするレコードを示します。 マーシャリングの詳細については、COM のドキュメントを参照してください。 **AdMarshalModifiedOnly**をクライアント側のカーソル ([cursor location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**) と共に使用すると、クライアントで変更されたレコードだけが中間層に書き戻されます。 **Marshaloptions**を**adMarshalModifiedOnly**に設定すると、マーシャリングされる行が減るため、パフォーマンスが向上します。  
+ 次のコード行では、 **Marshaloptions**プロパティを**adMarshalModifiedOnly**に設定しています。 **Marshaloptions**は、中間層 (または Web サーバー) にマーシャリングするレコードを示します。 マーシャリングの詳細については、COM のドキュメントを参照してください。 **AdMarshalModifiedOnly**をクライアント側のカーソル ([cursor location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)adUseClient) と共に使用すると  =  **adUseClient**、クライアントで変更されたレコードだけが中間層に書き戻されます。 **Marshaloptions**を**adMarshalModifiedOnly**に設定すると、マーシャリングされる行が減るため、パフォーマンスが向上します。  
   
  次に、[ **ActiveConnection** ] プロパティを [**なし**] に設定して、**レコードセット**を切断します。 詳細については、「[データの更新と永続](../../../ado/guide/data/updating-and-persisting-data.md)化」の「レコードセットの切断と再接続」を参照してください。  
   
@@ -58,7 +58,7 @@ HelloData アプリケーションでは、一般的な ADO アプリケーシ�
  4番目のボタン [**データの更新**] をクリックするまで、データソースに対する変更は行われません。 これにより、 **UpdateData**サブルーチンが実行されます。  
   
 ## <a name="updatedata"></a>UpdateData  
- UpdateData 最初に、**レコードセット**に適用されているフィルターを削除します。 このコードは、フィルター `m_oRecordset1`処理されていない**レコードセット**がグリッドに表示されるように、フォームの Microsoft バインド DataGrid の**DataSource**として削除およびリセットします。  
+ UpdateData 最初に、**レコードセット**に適用されているフィルターを削除します。 このコードは、 `m_oRecordset1` フィルター処理されていない**レコードセット**がグリッドに表示されるように、フォームの Microsoft バインド DataGrid の**DataSource**として削除およびリセットします。  
   
  次に、**サポート**メソッドを**adMovePrevious**引数と共に使用して、**レコードセット**内を後方に移動できるかどうかを確認します。  
   
@@ -66,7 +66,7 @@ HelloData アプリケーションでは、一般的な ADO アプリケーシ�
   
  次に、新しい**接続**オブジェクトが作成され、データソースへの接続を再確立するために使用されます。 レコード**セットをデータソースに再**接続するには、新しい**接続**を**レコードセット**の**ActiveConnection**として設定します。 更新をサーバーに送信するために、コードは**レコードセット**で**UpdateBatch**を呼び出します。  
   
- バッチ更新が成功すると、モジュールレベルのフラグ変数`m_flgPriceUpdated`が True に設定されます。 これにより、後でデータベースに加えられたすべての変更をクリーンアップするように通知されます。  
+ バッチ更新が成功すると、モジュールレベルのフラグ変数 `m_flgPriceUpdated` が True に設定されます。 これにより、後でデータベースに加えられたすべての変更をクリーンアップするように通知されます。  
   
  最後に、コードは**レコードセット**内の最初のレコードに戻り、元の値と現在の値が表示されます。 値は、 **UpdateBatch**を呼び出した後に同じです。  
   

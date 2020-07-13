@@ -1,5 +1,6 @@
 ---
 title: Python Driver for SQL Server | Microsoft Docs
+description: Windows、Linux、または macOS では、Python を使用して SQL Database に接続できます。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926756"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487870"
 ---
 # <a name="python-sql-driver"></a>Python SQL ドライバー
 
 ![ダウンロード - 丸で囲んだ下矢印](../../ssms/media/download-icon.png)[Python 用の SQL ドライバーをインストールする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Windows、Linux、または Mac では、Python を使用して SQL Database に接続できます。   
+Windows、Linux、または macOS では、Python を使用して SQL Database に接続できます。  
   
 ## <a name="getting-started"></a>作業の開始  
 Python 用の SQL ドライバーはいくつかあります。 ただし、Microsoft がテストを行い **pyodbc** ドライバーを推奨しています。 ドライバーを選択し、それに従ってご自分の開発環境を構成します。

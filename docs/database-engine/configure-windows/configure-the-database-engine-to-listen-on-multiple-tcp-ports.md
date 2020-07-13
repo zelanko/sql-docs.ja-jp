@@ -75,9 +75,9 @@ ms.locfileid: "68012722"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>追加の TCP ポートでリッスンするように SQL Server データベース エンジンを構成するには  
   
-1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、 **[<instance_name>** _のプロトコル_] をクリックします。  
+1.  SQL Server 構成マネージャーで **[SQL Server ネットワークの構成]** を展開し、 _[<instance_name>_ **のプロトコル**] をクリックします。  
   
-2.  **[** <instance_name> _のプロトコル]_ を展開し、 **[TCP/IP]** をクリックします。  
+2.  **[ _<instance_name>_ のプロトコル]** を展開し、 **[TCP/IP]** をクリックします。  
   
 3.  右ペインで、無効になっている IP アドレスのうち、有効にする IP アドレスをそれぞれ右クリックし、 **[有効化]** をクリックします。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68012722"
   
 6.  左ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-7.  右ペインで、 **[SQL Server**<instance_name> _]_ を右クリックし、 **[再起動]** をクリックします。  
+7.  右ペインで、 **[SQL Server _<instance_name>_ ]** を右クリックし、 **[再起動]** をクリックします。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]が再起動すると、エラー ログには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンしているポートが記録されています。  
   

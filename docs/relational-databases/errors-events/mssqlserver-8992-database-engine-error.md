@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f5f015d4a0689a17a900bc711a6ccc9c6d7f4aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636891"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+|Item|値|
+|:---|:---|
 |製品名|SQL Server|  
 |イベント ID|8992|  
 |イベント ソース|MSSQLSERVER|  
@@ -43,9 +43,9 @@ DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェ
 このエラーは、SQL Server 2000 から SQL Server 2005 以降にアップグレードされたデータベースに対して DBCC CHECKDB を実行しているときに発生することがあります。 SQL Server 2000 では、DBCC CHECKDB に DBCC CHECKCATALOG 機能がありませんでした。そのため、SQL Server 2000 のデータベースに対して DBCC CHECKCATALOG を指定して実行しない限り、アップグレード前にこのエラーはキャッチされません。  
   
 エラー 8992 と共に、次のいずれかのエラーが表示される場合があります。  
-|||
-|-|-| 
+
 |メッセージ ID|メッセージ テキスト|
+|:---|:---|
 |3851|システム テーブル sys.%ls%ls に無効な行 (%ls) が見つかりました。|
 |3852|sys.%ls%ls の行 (%ls) と一致する行 (%ls) が sys.%ls%ls にありません。|
 |3853|sys.%ls%ls の行 (%ls) の属性 (%ls) には、sys.%ls%ls に一致する行 (%ls) がありません。|

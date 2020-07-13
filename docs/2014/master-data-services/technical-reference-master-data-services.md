@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3594c866e2b55d4ae6a7fb8b014b15a5378b531f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a4a59eef6530bcb84b942794dcedcd863e1265f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971009"
 ---
 # <a name="technical-reference-master-data-services"></a>テクニカル リファレンス (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] コンポーネントに関するテクニカル リファレンス情報を参照してください。  
   
 -   [マスター データ サービスのデータベースと Web サイトの設定](set-up-the-database-and-website-for-master-data-services.md)  

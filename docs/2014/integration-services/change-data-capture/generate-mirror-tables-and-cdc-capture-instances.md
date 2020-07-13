@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 848de74437835311c8585001f5906169aa1dbb7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78daea310112cf7e9e78e489097fe9a76e69996b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771358"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438649"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>ミラー テーブルおよび CDC キャプチャ インスタンスの生成
   [ミラー テーブルの生成] ページを使用すると、CDC インスタンスに含めたテーブルのミラー テーブルを生成できます。  

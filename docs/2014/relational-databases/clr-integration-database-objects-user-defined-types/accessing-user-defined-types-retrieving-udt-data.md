@@ -21,21 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62874643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970744"
 ---
 # <a name="retrieving-udt-data"></a>UDT データの取得
   クライアント側で UDT (ユーザー定義型) を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに UDT として登録されたアセンブリをクライアント アプリケーションで使用できるようにしておく必要があります。 この UDT アセンブリは、アプリケーションと同じディレクトリまたは GAC (グローバル アセンブリ キャッシュ) に配置できます。 また、プロジェクト内で、このアセンブリへの参照を設定することもできます。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>ADO.NET で UDT を使用するための要件  
- クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 
-  `Native` シリアル化形式で定義した UDT の場合は、アセンブリの構造に互換性が必要です。 
-  `UserDefined` 形式で定義したアセンブリの場合は、そのアセンブリをクライアント側で使用できる必要があります。  
+ クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 `Native` シリアル化形式で定義した UDT の場合は、アセンブリの構造に互換性が必要です。 `UserDefined` 形式で定義したアセンブリの場合は、そのアセンブリをクライアント側で使用できる必要があります。  
   
  テーブルの UDT 列からデータをそのまま取得するために、クライアントに UDT アセンブリをコピーする必要はありません。  
   
@@ -159,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>バイト型としての UDT のバインド  
- 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 の**GetBytes**メソッドを使用して、生バイトをバイト配列に読み取ること`SqlDataReader`ができます。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 別の方法として、 **Getsqlbytes**メソッドまたは**getsqlbytes**メソッドのいずれかを使用して、すべての内容を1回の操作で読み取ることもできます。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
+ 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 の**GetBytes**メソッドを使用して、生バイトをバイト配列に読み取ることができ `SqlDataReader` ます。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 別の方法として、 **Getsqlbytes**メソッドまたは**getsqlbytes**メソッドのいずれかを使用して、すべての内容を1回の操作で読み取ることもできます。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
   
 ### <a name="example"></a>例  
- この例では、 `SqlDataReader`を使用して、 **Point**データを生バイトとしてバイト配列に取得する方法を示します。 このコードでは、`System.Text.StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
+ この例では、を使用して、 **Point**データを生バイトとしてバイト配列に取得する方法を示し `SqlDataReader` ます。 このコードでは、`System.Text.StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
   
 ```vb  
 Option Explicit On  
@@ -376,8 +373,7 @@ class GetRawBytes
  ADO.NET コードでは、UDT は入力パラメーターと出力パラメーターのどちらとしても使用することができます。  
   
 ## <a name="using-udts-in-query-parameters"></a>クエリ パラメーターでの UDT の使用  
- UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 
-  `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `SqlCommand`オブジェクト`UdtTypeName`のプロパティは、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
+ UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `UdtTypeName`オブジェクトのプロパティは `SqlCommand` 、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
   
 > [!NOTE]  
 >  クライアント プロジェクトが、UDT アセンブリのローカル コピーを使用できることが前提です。  

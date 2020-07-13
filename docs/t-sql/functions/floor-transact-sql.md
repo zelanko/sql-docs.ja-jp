@@ -17,18 +17,18 @@ helpviewer_keywords:
 - largest integers
 - FLOOR function [Transact-SQL]
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e366876c5b71f410f05b7ed4483347b1f754686
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe97e52c540ba58252b4cdfaec66c2eae8bd35cf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249797"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010778"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定された数値式以下の最大の整数を返します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74249797"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 FLOOR ( numeric_expression )  
 ```  
   

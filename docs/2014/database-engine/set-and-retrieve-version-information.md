@@ -18,17 +18,15 @@ helpviewer_keywords:
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8dd7119d66dbd2e904e83d434f1319867b7aa7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62843483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929203"
 ---
 # <a name="set-and-retrieve-version-information"></a>バージョン情報の設定と取得
-  バージョン情報には、ソース管理の対象であるファイルの履歴と現在のステータスが記録されています。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe では、ソース管理の対象であるすべてのファイルについて包括的な履歴が保持されるため、1 つ以上のファイルの変化を論理的に追跡できます。 この情報を使用して、ファイルのあらゆるバージョンのローカル コピーを取得したり、任意の 2 つのファイル バージョンを比較したりすることができます。  
+  バージョン情報には、ソース管理の対象であるファイルの履歴と現在のステータスが記録されています。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe では、ソース管理の対象であるすべてのファイルについて包括的な履歴が保持されるため、1 つ以上のファイルの変化を論理的に追跡できます。 この情報を使用して、ファイルのあらゆるバージョンのローカル コピーを取得したり、任意の 2 つのファイル バージョンを比較したりすることができます。  
   
  ファイル履歴には、次の情報が含まれています。  
   
@@ -66,7 +64,7 @@ ms.locfileid: "62843483"
   
 -   [ファイルの比較](../../2014/database-engine/compare-files.md)  
   
--   [ファイル共有](../../2014/database-engine/share-files.md)  
+-   [ファイルを共有する](../../2014/database-engine/share-files.md)  
   
 -   [履歴レポートおよびステータス レポートの作成](../../2014/database-engine/create-history-and-status-reports.md)  
   

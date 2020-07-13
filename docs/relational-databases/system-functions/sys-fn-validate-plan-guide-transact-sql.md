@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68059188"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898275"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたプランガイドの有効性を確認します。 sys.fn_validate_plan_guide 関数では、クエリにプラン ガイドを適用した場合に最初に発生するエラーのメッセージが返されます。 プラン ガイドが有効な場合は空の行セットが返されます。 プランガイドは、データベースの物理デザインに変更が加えられた後に無効になることがあります。 たとえば、プランガイドで特定のインデックスが指定されている場合、そのインデックスが削除されると、クエリはそのプランガイドを使用できなくなります。  
   
@@ -48,12 +48,12 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|エラーメッセージの ID。|  
 |severity|**tinyint**|メッセージの重大度レベル (1 ~ 25)。|  
 |state|**smallint**|エラーが発生したコード内の場所を示すエラーの状態番号です。|  
-|message|**nvarchar (2048)**|エラーのメッセージテキスト。|  
+|message|**nvarchar(2048)**|エラーのメッセージテキスト。|  
   
 ## <a name="permissions"></a>アクセス許可  
  スコープが OBJECT のプラン ガイドでは、参照先オブジェクトに対する VIEW DEFINITION 権限または ALTER 権限と、プラン ガイドに含まれるクエリやバッチをコンパイルするための権限が必要です。 たとえば、バッチに SELECT ステートメントが含まれている場合は、参照先オブジェクトに対する SELECT 権限が必要です。  
@@ -74,8 +74,8 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. データベースに変更を実装する前のプランガイド検証のテスト  
- 次の例では、明示的なトランザクションを使用してインデックスを削除します。 関数`sys.fn_validate_plan_guide`は、このアクションによってデータベース内のプランガイドが無効になるかどうかを判断するために実行されます。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B: データベースに変更を実装する前のプランガイド検証のテスト  
+ 次の例では、明示的なトランザクションを使用してインデックスを削除します。 関数は、 `sys.fn_validate_plan_guide` このアクションによってデータベース内のプランガイドが無効になるかどうかを判断するために実行されます。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プランガイド](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

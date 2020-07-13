@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c73c8d05ddf40a4baacc6f29d055bbd7af84cb87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63046709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021876"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  で始まるデータベースエンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]により、SQLNumParams で、予期される結果についてより正確な説明を取得できるようになりました。 これらのより正確な結果は、以前のバージョンのの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLNumParams によって返される値とは異なる場合があります。  
+  で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLNumParams で、予期される結果についてより正確な説明を取得できるようになりました。 これらのより正確な結果は、以前のバージョンのの SQLNumParams によって返される値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   

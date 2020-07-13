@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68097837"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882040"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   各種データベースで開いているカーソルに関する情報を返します。  
   
@@ -45,21 +45,21 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|このカーソルを保持するセッションの ID。|  
 |**cursor_id**|**int**|カーソルオブジェクトの ID。|  
 |**name**|**nvarchar(256)**|ユーザーによって定義されたカーソルの名前。|  
-|**属性**|**nvarchar(256)**|カーソルのプロパティ。 次のプロパティの値が連結され、この列の値が形成されます。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子レベル<br /><br /> たとえば、この列で返される値は、"TSQL &#124; Dynamic &#124; オプティミスティック &#124; Global (0)" のようになります。|  
-|**sql_handle**|**varbinary (64)**|カーソルを宣言したバッチのテキストを処理します。|  
+|**properties**|**nvarchar(256)**|カーソルのプロパティ。 次のプロパティの値が連結され、この列の値が形成されます。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子レベル<br /><br /> たとえば、この列で返される値は、"TSQL &#124; Dynamic &#124; オプティミスティック &#124; Global (0)" のようになります。|  
+|**sql_handle**|**varbinary(64)**|カーソルを宣言したバッチのテキストを処理します。|  
 |**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 **Sql_handle**、 **statement_end_offset**、および[dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャ内で現在実行中のステートメントが終了するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**plan_generation_num**|**bigint**|再コンパイル後にプランのインスタンスを区別するために使用できるシーケンス番号。|  
-|**creation_time**|**DATETIME**|カーソルが作成されたタイムスタンプ。|  
+|**creation_time**|**datetime**|カーソルが作成されたタイムスタンプ。|  
 |**is_open**|**bit**|カーソルが開いているかどうかを示します。|  
 |**is_async_population**|**bit**|バックグラウンドスレッドがキーセットまたは静的カーソルに非同期的に設定するかどうかを指定します。|  
 |**is_close_on_commit**|**bit**|カーソルが CURSOR_CLOSE_ON_COMMIT を使用して宣言されたかどうかを指定します。<br /><br /> 1 = カーソルはトランザクションが終了したときに閉じられます。|  
-|**fetch_status**|**int**|カーソルの最後のフェッチの状態を返します。 これは、最後に返さ@FETCH_STATUSれた @ value です。|  
+|**fetch_status**|**int**|カーソルの最後のフェッチの状態を返します。 これは、最後に返された @ @FETCH_STATUS value です。|  
 |**fetch_buffer_size**|**int**|フェッチ バッファーのサイズに関する情報。<br /><br /> 1 = Transact-SQL カーソル。 これは、API カーソルに対してより高い値に設定できます。|  
 |**fetch_buffer_start**|**int**|カーソルが開いていない場合、またはカーソルが最初の行の前に配置されている場合は、FAST_FORWARD および動的カーソルの場合は0を返します。 それ以外のときは -1 が返されます。<br /><br /> 静的カーソルとキーセットカーソルの場合は、カーソルが開いていない場合は0、カーソルが最後の行の次の位置にある場合は-1 を返します。<br /><br /> それ以外の場合は、配置されている行番号を返します。|  
 |**ansi_position**|**int**|フェッチバッファー内のカーソル位置。|  
@@ -71,7 +71,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表では、cursor 宣言インターフェイスについて説明し、properties 列に使用できる値を示します。  
   
 |プロパティ|[説明]|  
@@ -90,15 +90,15 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルのコンカレンシーに関する説明と、プロパティ列に返される値です。  
   
-|コンカレンシー|[説明]|  
+|コンカレンシー|説明|  
 |-----------------|-----------------|  
-|読み取り専用|カーソルは読み取り専用として宣言されました。|  
+|[読み取り専用]|カーソルは読み取り専用として宣言されました。|  
 |Scroll Locks|カーソルはスクロールロックを使用します。|  
 |Optimistic|カーソルはオプティミスティック同時実行制御を使用します。|  
   
  次の表に、カーソルのスコープについて説明し、[プロパティ] 列に使用できる値を示します。  
   
-|スコープ|[説明]|  
+|Scope|説明|  
 |-----------|-----------------|  
 |ローカル|カーソルのスコープは、カーソルが作成されたバッチ、ストアド プロシージャ、またはトリガーに対してローカルです。|  
 |グローバル|カーソルのスコープは、接続に対してグローバルです。|  
@@ -116,10 +116,10 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   
 

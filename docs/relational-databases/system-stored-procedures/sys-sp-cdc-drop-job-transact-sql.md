@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0318322442aae5a72b25b2eb011e03a82fe84525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 274bd9e692b489bb7be16fe3bb8c8e6b83efecc0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68066771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891145"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sp_cdc_drop_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Msdb から、現在のデータベースに対する変更データキャプチャのクリーンアップジョブまたはキャプチャジョブを削除します。  
   
@@ -50,13 +50,13 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>結果セット  
  Nones  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_cdc_drop_job は、 [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)によって内部的に呼び出されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを削除します。  
   
 ```  
@@ -65,9 +65,9 @@ GO
 EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
- [sp_cdc_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: データベースの復元 - 単純復旧モデル (Transact-SQL)
+description: この記事では、Transact-SQL を使用して、単純復旧モデルで SQL Server データベースの完全バックアップを復元する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2bcd64bae91ee4f6b217c75a946e57523cc2accf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669318"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>単純復旧モデルでのデータベース バックアップの復元 (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、データベースの完全バックアップを復元する方法について説明します。  
   

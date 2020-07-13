@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 503f7a3eeeeeee36893231c48b330a099a5adc61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3e5d9c9175847935e163005ebe986c9ef5f92e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63240496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999876"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>トレース ファイルの再生 (SQL Server Profiler)
   再生は、保存したトレースを開いて再実行する機能です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、ユーザー接続と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証をシミュレートできるマルチスレッド再生エンジンが備わっています。 再生は、アプリケーションまたはプロセスに関する問題のトラブルシューティングを行う際に役立ちます。 問題を特定して修正を実装したら、修正されたアプリケーションまたはプロセスに対して、発生する可能性のある問題を検出したトレースを実行します。 その後、元のトレースを再生し、結果を比較します。  
@@ -41,7 +40,7 @@ ms.locfileid: "63240496"
   
 5.  **[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]** または **[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]** のいずれかを選択します。 次の表では、これらの設定の違いについて説明します。  
   
-    |オプション|[説明]|  
+    |オプション|説明|  
     |------------|-----------------|  
     |**[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]**|記録された順番にイベントを再生します。 このオプションにより、デバッグが有効になります。|  
     |**[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]**|このオプションでは、複数のスレッドを使用して、順序に関係なく各イベントを再生します。 このオプションにより、パフォーマンスが最適化されます。|  

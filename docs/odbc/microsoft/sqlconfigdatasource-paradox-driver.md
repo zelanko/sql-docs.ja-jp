@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68e60d7ca9c37865c1b265297d24591638a44965
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054073"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283932"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox ドライバー)
 > [!NOTE]  
@@ -26,12 +26,12 @@ ms.locfileid: "68054073"
   
  データソースを動的に追加、変更、または削除するために使用される**Sqlconfigdatasource**関数は、次のキーワードを動的に使用します。  
   
-|Keyword|[説明]|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |組み合わせの順序|フィールドの並べ替え順序。<br /><br /> Paradox ドライバーを使用する場合、シーケンスは ASCII (既定)、国際対応、スウェーデン語 (フィンランド)、またはノルウェー語 (デンマーク) にすることができます。<br /><br /> これにより、[セットアップ] ダイアログボックスの**照合順序**と同じオプションが設定されます。|  
 |DBQ|データベースファイルの名前です。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**データベース**] と同じオプションが設定されます。|  
 |DEFAULTDIR|ディレクトリへのパス指定。|  
-|説明|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
+|Description|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
 |DRIVER|ドライバー DLL へのパス指定。|  
 |DRIVERID|ドライバーの整数 ID。<br /><br /> 26 (Paradox 3 .x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
 |外税|データベースを排他モードで開くか (一度に1人のユーザーのみがアクセスする)、共有モードにするかを決定します (複数のユーザーが同時にアクセスします)。 True (排他モード) または false (共有モード) を指定できます。<br /><br /> これにより、[セットアップ] ダイアログボックスで [**排他**] と同じオプションが設定されます。|  

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - log shipping [SQL Server], system tables
 - system tables [SQL Server], log shipping
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a6e34caa87f529edcac10ea77bf3346d3f276fc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095736"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890094"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>ログ配布テーブル (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   次のトピックでは、ログ配布操作で使用される情報を格納するシステムテーブルについて説明します。  
   

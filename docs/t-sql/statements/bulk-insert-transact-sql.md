@@ -1,6 +1,6 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: BULK INSERT ステートメントの Transact-SQL リファレンス。
 ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e333a2e489f178ff1301001822f80ec24354184c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767251"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、ユーザーが指定した形式で、データベース テーブルまたはビューにデータ ファイルをインポートします。
 
@@ -43,7 +43,7 @@ ms.locfileid: "79448400"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 BULK INSERT
    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'

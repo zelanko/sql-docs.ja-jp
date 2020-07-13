@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ccc8cb8b4f9390d7453287c584e1f30dfdb15683
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899333"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージパブリケーションを垂直方向にパーティション分割します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`パブリケーション内のアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
-`[ @column = ] 'column'`列分割を作成する列を指定します。 *列*は**sysname**,、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *操作*が**drop**に設定されている場合、*列*を NULL にすることはできません。 アーティクルから列を除外するには、 **sp_mergearticlecolumn**を実行し、指定された*アーティクル*から削除される各列に対して*列*および`@operation = N'drop'`を指定します。  
+`[ @column = ] 'column'`列分割を作成する列を指定します。 *列*は**sysname**,、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *操作*が**drop**に設定されている場合、*列*を NULL にすることはできません。 アーティクルから列を除外するには、 **sp_mergearticlecolumn**を実行し、 *column* `@operation = N'drop'` 指定された*アーティクル*から削除される各列に対して列およびを指定します。  
   
 `[ @operation = ] 'operation'`レプリケーションの状態を示します。 *操作*は**nvarchar (4)**,、既定値は ADD です。 **add**は、レプリケーションの列にマークを付けます。 **drop**列をクリアします。  
   
@@ -71,7 +71,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_mergearticlecolumn**は、マージレプリケーションで使用します。  
   
  自動 ID 範囲管理が使用されている場合、アーティクルから ID 列を削除することはできません。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
@@ -86,10 +86,10 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_mergearticlecolumn**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージアーティクル間の結合フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [マージアーティクルのパラメーター化された行フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

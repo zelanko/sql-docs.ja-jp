@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f0d47428eab3bfe0f18901d24de33fd7b25acb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965009"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762723"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule プロパティ (ADOX)
 主[キー](../../../ado/reference/adox-api/key-object-adox.md)が更新されたときに実行されるアクションを示します。  

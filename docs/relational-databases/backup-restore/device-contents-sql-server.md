@@ -1,5 +1,6 @@
 ---
 title: デバイス コンテンツ (SQL Server) | Microsoft Docs
+description: SQL Server で、デバイス、メディア、メディア セット、バックアップ セットを説明するバックアップ情報を表示するには、[デバイス コンテンツ] ダイアログ ボックスを使用します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068492"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179189"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68068492"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **メディア**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68068492"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **Name**  
+ **名前**  
  メディア セットの名前を表示します。  
   
  **説明**  
@@ -56,9 +57,9 @@ ms.locfileid: "68068492"
   
 |ヘッダー|値|  
 |------------|------------|  
-|**Name**|バックアップ セットの名前です。|  
-|**Type**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
-|**コンポーネント**|バックアップされるコンポーネント。[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
+|**名前**|バックアップ セットの名前です。|  
+|**Type**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
+|**コンポーネント**|バックアップされるコンポーネント:[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**Position**|ボリューム内でのバックアップ セットの位置。|  

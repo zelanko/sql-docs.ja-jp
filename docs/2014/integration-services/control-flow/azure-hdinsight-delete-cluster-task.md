@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpdelcltask.f1
 - sql11.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 839350610bdcc55d185fa06c122e71b50c5ca753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db0a15aaea37c6d18c1d3c2136e0fd0c94eb7506
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62832671"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433899"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight クラスターの削除タスク
 **Azure HDInsight クラスターの削除タスク**を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで削除できます。
@@ -26,8 +25,7 @@ ms.locfileid: "62832671"
 > [!NOTE]
 > HDInsight クラスターの削除には 10 分から 20 分かかる場合があります。  
   
-
-  **Azure HDInsight クラスターの削除タスク**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure HDInsight クラスターの削除タスク エディター]** ダイアログ ボックスが表示されます。  
+**Azure HDInsight クラスターの削除タスク**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックすると、次の **[Azure HDInsight クラスターの削除タスク エディター]** ダイアログ ボックスが表示されます。  
   
 次の表で、ダイアログ ボックスの各フィールドについて説明します。  
   

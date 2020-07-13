@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ecb198e9c2bcc7e23d1b4b66e8109ecf7c8fb5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786580"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、および長さ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、precision は 5 で、scale は 2 になります。
   
@@ -65,7 +65,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
 加算と減算では、decimal の整数部を格納するのに `max(p1 - s1, p2 - s2)` 桁必要です。 それらを格納できる十分な領域がない (つまり `max(p1 - s1, p2 - s2) < min(38, precision) - scale`) の場合は、整数部の領域を提供するために、scale が減らされます。 結果の scale は `MIN(precision, 38) - max(p1 - s1, p2 - s2)` になるため、この桁数に収まるように小数部が丸められます。
 
 乗算と除算では、結果の整数部を格納するのに `precision - scale` 桁必要です。 次のルールを使用して、scale が減らされることがあります。
-1.  整数部が 32 桁よりも少ない場合、結果の scale は `min(scale, 38 - (precision-scale))` を超えることはできないため、`38 - (precision-scale)` に減らされます。 これに該当する場合、結果は丸められる可能性があります。
+1.  整数部が 32 桁よりも少ない場合、結果の scale は `38 - (precision-scale)` を超えることはできないため、`min(scale, 38 - (precision-scale))` に減らされます。 これに該当する場合、結果は丸められる可能性があります。
 1. scale が 6 桁未満であり、整数部が 32 を超える場合、scale が変更されることはありません。 これに該当する場合、decimal(38, scale) に収まらなければ、オーバーフロー エラーが発生することがあります 
 1. scale が 6 桁以上であり、整数部が 32 を超える場合、scale は 6 に設定されます。 これに該当する場合、整数部の桁数と scale の両方が減らされ、結果の型は decimal(38,6) になります。 結果は、小数点以下の桁数が 6 桁に丸められるか、整数部を 32 桁に収めることができない場合はオーバーフロー エラーがスローされます。
 
@@ -77,7 +77,7 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 ここでは、precision は 61 であり、scale は 40 です。
 整数部 (precision-scale = 21) が 32 未満であり、乗算ルールの (1) に該当するため、scale は `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17` で計算されます。 結果のデータ型は `decimal(38,17)` です。
 
-次の式は、`0.000001` に収めた結果 `decimal(38,6)` を返します。
+次の式は、`decimal(38,6)` に収めた結果 `0.000001` を返します。
 ```sql
 select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
 ```

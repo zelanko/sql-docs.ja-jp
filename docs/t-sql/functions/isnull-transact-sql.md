@@ -19,18 +19,18 @@ helpviewer_keywords:
 - null values [SQL Server], replacement values
 - ISNULL function
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb356779514e175a56644a8c020746bd110e3893
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843644"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999799"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 NULL 値を、指定された値に置き換えます。  
   
@@ -38,7 +38,7 @@ NULL 値を、指定された値に置き換えます。
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ISNULL ( check_expression , replacement_value )  
 ```  
   

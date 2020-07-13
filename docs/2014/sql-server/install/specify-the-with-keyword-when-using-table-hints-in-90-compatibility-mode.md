@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ecd13475395cef4257d97eb7480f32420932e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036299"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>互換性モード 90 ではテーブル ヒントを使用するときに WITH キーワードを指定する
   例外がいくつかありますが、テーブル ヒントは WITH キーワードを使用して指定された場合のみクエリの FROM 句でサポートされます。 詳細については、[!INCLUDE[tsql](../../includes/tsql-md.md)] オンライン ブックの「FROM ([!INCLUDE[tsql](../../includes/tsql-md.md)])」および「テーブル ヒント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])」を参照してください。  

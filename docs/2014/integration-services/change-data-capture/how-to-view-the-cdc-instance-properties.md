@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa99a4f25d0bf6581ac434ea64c10acd723740de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438629"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを表示する方法
   この手順では、インスタンスの操作を管理するために作成するインスタンスの情報を、CDC デザイナー コンソールを使用して表示する方法について説明します。  

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0cfbc8653507e56c630b62a1fdbce616e0b2bd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769048"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437269"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (より小さい) (SSIS 式)
   最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  

@@ -16,31 +16,31 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ff8490824c6a0ccb45b383535e830cabff83407
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716616"
 ---
 # <a name="sequences-transact-sql"></a>シーケンス (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 現在のデータベースの現在のユーザーがアクセスできるシーケンスごとに1行のデータを返します。
 
 これらのビューから情報を取得するには、 **INFORMATION_SCHEMA**の完全修飾名を指定し_ます。 view_name_。
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
-|**SEQUENCE_CATALOG**|**nvarchar(128**|シーケンスの修飾子|
+|**SEQUENCE_CATALOG**|**nvarchar(128)**|シーケンスの修飾子|
 |**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|シーケンスを含むスキーマの名前|
-|**SEQUENCE_NAME**|**nvarchar(128**|[シーケンス名]|
+|**SEQUENCE_NAME**|**nvarchar(128)**|[シーケンス名]|
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Sequence データ型|
 |**NUMERIC_PRECISION**|**tinyint**|シーケンスの有効桁数|
-|**NUMERIC_PRECISION_RADIX**|**smallint**|概数データ、真数データ、整数データ、または通貨データの有効桁数の基数。 それ以外の場合は、NULL が返されます。|
-|**NUMERIC_SCALE**|**int**|概数型データ、真数データ、整数データ、または通貨データの小数点以下桁数。 それ以外の場合は、NULL が返されます。|
+|**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|
+|**NUMERIC_SCALE**|**int**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|
 |**START_VALUE**|**int**|シーケンス オブジェクトによって返される最初の値です。|
 |**MINIMUM_VALUE**|**int**|シーケンスオブジェクトの境界。 新しいシーケンス オブジェクトの既定の最小値は、シーケンス オブジェクトのデータ型の最小値です。 これは、0 を tinyint データ型およびその他のすべてのデータ型の負の数。|
 |**MAXIMUM_VALUE**|**int**|シーケンスオブジェクトの境界。 新しいシーケンス オブジェクトの既定の最大値は、シーケンス オブジェクトのデータ型の最大値です。|
@@ -56,7 +56,7 @@ ms.locfileid: "77479350"
 SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [SQL&#41;&#40;Transact-sql のシーケンス](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)
+- [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

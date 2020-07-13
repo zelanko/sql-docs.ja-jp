@@ -13,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084797"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522736"
 ---
 # <a name="data-types-data-mining"></a>データ型 (データ マイニング)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]マイニングモデルまたはマイニング構造を作成する場合は、マイニング構造の各列のデータ型を定義する必要があります。 データ マイニング エンジンは、データ型に基づいて、データ ソース内のデータが数値とテキストのどちらであるか、およびデータをどのように処理するかを判断します。 たとえば、ソース データに数値データが含まれる場合、数値を整数として扱うかまたは小数点を使用して扱うかを指定できます。  
+  でマイニングモデルまたはマイニング構造を作成する場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング構造の各列のデータ型を定義する必要があります。 データ マイニング エンジンは、データ型に基づいて、データ ソース内のデータが数値とテキストのどちらであるか、およびデータをどのように処理するかを判断します。 たとえば、ソース データに数値データが含まれる場合、数値を整数として扱うかまたは小数点を使用して扱うかを指定できます。  
   
  各データ型では、1 つまたは複数のコンテンツの種類がサポートされます。 コンテンツの種類を設定することで、マイニング モデルで列のデータをどのように処理または計算するかをカスタマイズできます。  
   
  たとえば、列に数値データが含まれる場合、数値データ型またはテキスト データ型のどちらとしてそのデータを処理するかを選択できます。 数値データ型を選択した場合は、いくつかの異なるコンテンツの種類を設定できます。数値を分離することも、連続値として処理することもできます。 すべてのコンテンツの種類の一覧については、「 [コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」を参照してください。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、では、マイニング構造列に対して次のデータ型がサポートされています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、では、マイニング構造列に対して次のデータ型がサポートされています。  
   
 |データ型|サポートされているコンテンツの種類|  
 |---------------|-----------------------------|  

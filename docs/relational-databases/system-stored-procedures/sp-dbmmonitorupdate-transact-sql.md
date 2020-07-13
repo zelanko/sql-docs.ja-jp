@@ -16,23 +16,22 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865606"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング監視の状態テーブルにミラー化されたデータベースごとの新しい行を挿入し、現在の保有期間より古い行を切り捨てます。 既定の保有期間は7日 (168 時間) です。 テーブルを更新すると、 **sp_dbmmonitorupdate**によってパフォーマンスメトリックが評価されます。  
   
 > [!NOTE]  
->  
-  **sp_dbmmonitorupdate** 初回実行時には、 msdb データベース内に **データベース ミラーリングの状態** テーブルと固定データベース ロール **dbm_monitor** が作成されます。  
+>  **sp_dbmmonitorupdate** 初回実行時には、 msdb データベース内に **データベース ミラーリングの状態** テーブルと固定データベース ロール **dbm_monitor** が作成されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  ミラーリングの状態を更新するデータベースの名前を指定します。 *Database_name*が指定されていない場合、プロシージャは、サーバーインスタンス上のミラー化されたすべてのデータベースの状態テーブルを更新します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -63,10 +62,9 @@ sp_dbmmonitorupdate [ database_name ]
  データベースのミラーリング状態を更新すると、 **sp_dbmmonitorupdate**は、警告しきい値が指定されているミラーリングパフォーマンスメトリックの最新の値を検査します。 値がしきい値を超えている場合は情報イベントをイベント ログに追加します。 すべてのレートは、前回の更新以降の平均値です。 詳細については、「 [ミラーリング パフォーマンス基準の警告しきい値および警告の使用 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対してのみ、ミラーリングの状態を更新します。  
   
 ```  
@@ -74,13 +72,13 @@ USE msdb;
 EXEC sp_dbmmonitorupdate AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
  [sp_dbmmonitorhelpalert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

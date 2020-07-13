@@ -11,19 +11,18 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8615bee01595b827e7238d0dc7c0df8c4434090a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894995"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [filestream &#40;ODBC&#41;を使用した増分データの送受信](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
   
  2 GB を超える**varbinary (max)** 値を送受信するには、アプリケーションで SQLBindParameter を使用してパラメーターをバインドし、 *columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定して、SQLExecDirect または sqlexecute の前に*StrLen_or_IndPtr*の内容を**SQL_DATA_AT_EXEC**に設定する必要があります。  
@@ -46,7 +45,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Read  
+### <a name="read"></a>読み取り  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -267,7 +266,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

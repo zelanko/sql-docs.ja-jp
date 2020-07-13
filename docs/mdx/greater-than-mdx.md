@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906037"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt;(より大きい)MDX
@@ -40,7 +40,7 @@ MDX_Expression > MDX_Expression
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリの例では、この演算子の使用方法を示します。  
   
 ```  

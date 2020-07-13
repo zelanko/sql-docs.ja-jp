@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c736dc38949945a6e62e5121c4edf4b98dfbc7fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919197"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763453"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 構文)
 すべてのクライアントアプリケーション要求 (*progid*) と通信プロトコルとサーバー (*接続*) を処理するビジネスオブジェクトを指定する場合は、このよう**に、このクラスの** **createObject**メソッドを指定します。 **createObject**は、サーバーを表す[objectproxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)オブジェクトを返します。  
@@ -38,7 +38,7 @@ public static ObjectProxy DataSpace.createObject(String
     progid, String connection)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public static int getInternetTimeout()  

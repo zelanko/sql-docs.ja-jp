@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5022b689129be776f6b15352850e4b466196063a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085456"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298923"
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
 次の表に、タスクの種類ごとにグループ化された ODBC 関数の一覧を示します。また、各関数の目的について、準拠の指定と簡単な説明が含まれています。 準拠の表記の詳細については、「 [ODBC と標準 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)」を参照してください。 各関数の構文とセマンティクスの詳細については、「 [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)」を参照してください。  

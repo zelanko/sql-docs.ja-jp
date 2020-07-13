@@ -12,14 +12,14 @@ helpviewer_keywords:
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022165"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294632"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
 アプリケーションは、 **SQLBindCol**を呼び出して列をバインドします。 この関数は、一度に1つの列をバインドします。 このアプリケーションでは、次のように指定します。  

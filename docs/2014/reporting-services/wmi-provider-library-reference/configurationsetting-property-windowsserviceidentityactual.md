@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65a440a189971f1515354c9c39215c27cc203d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097404"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserver_configurationsetting"></a>WindowsServiceIdentityActual プロパティ (WMI MSReportServer_ConfigurationSetting)
@@ -45,7 +45,7 @@ public string WindowsServiceIdentityActual;
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

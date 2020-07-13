@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallTranslatorEx function [ODBC]
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5cf52c26bf9e4a26f13a27a0e763fbaa30bd18ec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018997"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302093"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **互換性**  
@@ -87,7 +87,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>診断  
  **SQLInstallTranslatorEx**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszpathout*引数は、出力パスを格納するのに十分な大きさではありませんでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *Cbpathoutmax*引数が0で、 *frequest*引数が ODBC_INSTALL_COMPLETE でした。|  
@@ -114,7 +114,7 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |既定の翻訳オプションを返す|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |翻訳者の選択|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  

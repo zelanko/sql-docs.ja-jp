@@ -11,14 +11,14 @@ helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f0cb262ba9461fe9b10a1223315bcd1360112c0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039357"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286820"
 ---
 # <a name="translation-dll-function-summary"></a>トランスレーター DLL 関数の概要
 次の表では、変換 DLL 関数について説明します。 各関数の構文とセマンティクスの詳細については、「 [TRANSLATION DLL 関数リファレンス](../../../odbc/reference/syntax/translation-dll-api-reference.md)」を参照してください。  

@@ -1,6 +1,6 @@
 ---
 title: 空間データ型の概要 | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7bc2464e8304a46fcbeada30453e2295e4fd2015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758827"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
 空間データには 2 つの型があります。 **geometry** データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 **geometry** データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではそのほかに、 **geography** データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。
@@ -70,7 +70,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 ### <a name="orientation-of-spatial-data"></a>空間データの方向  
 平面座標系では、ポリゴンのリングの方向は重要ではありません。 たとえば、((0, 0), (10, 0), (0, 20), (0, 0)) によって表されるポリゴンは、((0, 0), (0, 20), (10, 0), (0, 0)) によって表されるポリゴンと同じです。 OGC Simple Features for SQL Specification では、リングの順序は定められていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でもリングの順序は強制されません。  
 
-楕円体座標系では、ポリゴンは方向がないと意味がなくなります (あいまいになります)。 たとえば、赤道の周りのリングが北半球を表すのか南半球を表すのかがわからなくなります。 **geography** データ型を使用して空間インスタンスを格納する場合は、リングの方向を指定し、インスタンスの位置を正確に示す必要があります。 楕円体座標系の多角形の内部は、左辺ルールによって定義されます。  
+楕円体座標系では、ポリゴンは方向がないと意味がなくなります (あいまいになります)。 たとえば、赤道の周りのリングが北半球を表すのか南半球を表すのかがわからなくなります。 **geography** データ型を使用して空間インスタンスを格納する場合は、リングの方向を指定し、インスタンスの位置を正確に示す必要があります。 楕円体座標系でのポリゴンの内部は、"左手の法則" によって定義されています。geography のポリゴンのリングに沿って歩いていると想像する場合、点が一覧表示されている順序に従って、左側の領域がポリゴンの内部として扱われ、右側の領域がポリゴンの外部として扱われます。
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で互換性レベルが 100 以下である場合、 **geography** データ型には次の制約があります。  
 -   各 **geography** インスタンスが 1 つの半球に収まる必要があります。 半球よりも大きい空間オブジェクトを格納することはできません。  

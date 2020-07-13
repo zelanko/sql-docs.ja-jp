@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6e740159d06a18d1ae2ef4fa9788246a4ca60e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 321f857f22f8551056dfec78485e5c372bbdc9e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63250864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000158"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>トレースでのサーバー プロセス ID (SPID) のフィルター選択 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレースでサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。  
@@ -35,17 +34,13 @@ ms.locfileid: "63250864"
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
-3.  
-  **[使用するテンプレート]** ボックスの一覧で、トレース テンプレートを選択します。  
+3.  **[使用するテンプレート]** ボックスの一覧で、トレース テンプレートを選択します。  
   
 4.  必要に応じて、トレース結果の保存先ファイルまたは保存先テーブルを指定します。  
   
-5.  
-  **[イベントの選択]** タブで、 **[SPID]** 列見出しをクリックして **[フィルターの編集]** ダイアログ ボックスを表示します。 このダイアログ ボックスは、列見出しを右クリックして **[列フィルターの編集]** をクリックしても表示することができます。 
-  **[SPID]** 列が表示されていない場合は、 **[すべての列を表示する]** チェック ボックスをオンにします。  
+5.  **[イベントの選択]** タブで、 **[SPID]** 列見出しをクリックして **[フィルターの編集]** ダイアログ ボックスを表示します。 このダイアログ ボックスは、列見出しを右クリックして **[列フィルターの編集]** をクリックしても表示することができます。 **[SPID]** 列が表示されていない場合は、 **[すべての列を表示する]** チェック ボックスをオンにします。  
   
-6.  
-  **[フィルターの編集]** ダイアログ ボックスで適切な比較演算子を展開し、比較の値として SPID を入力します。  
+6.  **[フィルターの編集]** ダイアログ ボックスで適切な比較演算子を展開し、比較の値として SPID を入力します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  

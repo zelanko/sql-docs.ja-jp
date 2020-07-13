@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087776"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304873"
 ---
 # <a name="types-of-drivers"></a>ドライバーの種類
 ODBC ドライバーは、次のように分類できます。  

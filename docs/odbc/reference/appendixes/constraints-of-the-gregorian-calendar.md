@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f88842c7426e17af1fdc0533b8b97e2c559de237
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019178"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284762"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>グレゴリオ暦カレンダーの制限
 日付と時刻のデータ型、および interval データ型の末尾のフィールドは、グレゴリオ暦の制約に準拠している必要があります。 これらの制約は次のとおりです。  

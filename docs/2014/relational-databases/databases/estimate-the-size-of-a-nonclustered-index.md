@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965969"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
@@ -181,7 +180,7 @@ ms.locfileid: "66054120"
   
 5.  次の式でインデックス行のサイズを計算します。  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダーオーバーヘッド) + 6 (子ページ ID のポインター)  
+     ***Leaf_Row_Size***   = ***Fixed_Leaf_Size***  + ***Variable_Leaf_Size***  + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダーオーバーヘッド) + 6 (子ページ ID のポインター)  
   
 6.  次の式で、1 ページあたりのインデックス行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054120"
   
 1.  次の式で、インデックス内の非レベル数を計算します。  
   
-     ***非リーフレベル***= 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***非リーフレベル***= 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      この値を最も近い整数に切り上げます。 この値には、非クラスター化インデックスのリーフ レベルは含まれません。  
   

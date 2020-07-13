@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535790"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>ユーザー定義階層の追加または削除
   ディメンションでのユーザー定義階層の追加と削除は、 **のディメンション デザイナーにある** [ディメンション構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで実行します。  
@@ -30,8 +29,7 @@ ms.locfileid: "66072588"
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>ディメンションにユーザー定義階層を追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、適切な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを開き、作業するディメンションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、適切な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを開き、作業するディメンションを開きます。  
   
      ディメンションは、ディメンション デザイナーの **[ディメンション構造]** タブに表示されます。  
   
@@ -52,15 +50,13 @@ ms.locfileid: "66072588"
   
 ### <a name="to-remove-a-user-defined-hierarchy-from-a-dimension"></a>ディメンションからユーザー定義階層を削除するには  
   
--   
-  **[ディメンション構造]** タブの **[階層]** ペインで、削除するユーザー定義階層をクリックします。 ツール バーの **[削除]** をクリックします。  
+-   **[ディメンション構造]** タブの **[階層]** ペインで、削除するユーザー定義階層をクリックします。 ツール バーの **[削除]** をクリックします。  
   
-     - - または -  
+     - または  
   
--   
-  **[階層]** ペインで、削除するユーザー定義階層を右クリックし、 **[削除]** をクリックします。  
+-   **[階層]** ペインで、削除するユーザー定義階層を右クリックし、 **[削除]** をクリックします。  
   
-     - - または -  
+     - または  
   
 -   ユーザー定義階層をデザイン画面外にドラッグします。  
   

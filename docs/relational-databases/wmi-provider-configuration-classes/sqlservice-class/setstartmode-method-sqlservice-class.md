@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: edd3b4a5fa4d787292f1978da80c5f7803242010
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660911"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888354"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode メソッド (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サービス インスタンスの開始モードを変更します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,12 +35,12 @@ ms.locfileid: "73660911"
 object.SetStartMode(StartMode)  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
- *開始モード*  
+ *StartMode*  
  サービスインスタンスの開始モードを指定する**uint32**値。  
   
  有効な値は次のとおりです。  
@@ -58,9 +58,9 @@ object.SetStartMode(StartMode)
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Uint32**値。サービスが正常に変更された場合は0、要求がサポートされていない場合は1になります。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

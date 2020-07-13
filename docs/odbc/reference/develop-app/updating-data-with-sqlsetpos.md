@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating data
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 16476a1e1007905f34ec2e70ce6032eb8d81fe7a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091647"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286162"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos によるデータの更新
 アプリケーションは、 **SQLSetPos**を使用して行セット内の任意の行を更新または削除できます。 **SQLSetPos**の呼び出しは、SQL ステートメントの構築と実行に代わる便利な方法です。 データソースで位置指定 SQL ステートメントがサポートされていない場合でも、ODBC ドライバーで位置指定更新をサポートできます。 これは、関数呼び出しを使用してデータベースへの完全アクセスを実現するパラダイムの一部です。  

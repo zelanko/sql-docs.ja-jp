@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8d2f5e7cc6453c67a8a11eb558a678924ed4cef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176141"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440559"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>手順 3 : 配置したパッケージのテスト
+# <a name="step-3-testing-the-deployed-packages"></a>手順 3:配置したパッケージのテスト
   このタスクでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに配置したパッケージをテストします。
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の他のチュートリアルでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][デバッグ] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]メニューの **[デバッグ開始]** オプションを使用して、 **の配置環境である** でパッケージを実行しました。 今度は別の方法でパッケージを実行します。
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テスト環境と運用環境でパッケージを実行するときに使用できるコマンド プロンプト ユーティリティ `dtexec` やパッケージ実行ユーティリティなどのツールが付属しています。 パッケージ実行ユーティリティは、`dtexec` を基に構築されたグラフィカル ツールです。 この 2 つのツールはパッケージを即座に実行します。 さらに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、SQL Server エージェントのジョブの一工程としてパッケージの実行をスケジュールするように設計された SQL Server エージェントのサブシステムがあります。
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、テスト環境と運用環境でパッケージを実行するときに使用できるコマンド プロンプト ユーティリティ `dtexec` やパッケージ実行ユーティリティなどのツールが付属しています。 パッケージ実行ユーティリティは、`dtexec` を基に構築されたグラフィカル ツールです。 この 2 つのツールはパッケージを即座に実行します。 さらに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、SQL Server エージェントのジョブの一工程としてパッケージの実行をスケジュールするように設計された SQL Server エージェントのサブシステムがあります。
 
  パッケージ実行ユーティリティは、配置したパッケージを実行するために使用します。 パッケージはそのままの状態で使用されるため、ダイアログ ボックスのページで情報を更新する必要はありません。 パッケージ実行ユーティリティで最初に表示される [全般] ページからパッケージを実行します。 必要に応じて、他のページもクリックして、各パッケージに関する情報を表示できます。
 
@@ -104,9 +102,9 @@ ms.locfileid: "78176141"
 
      このクエリによって 21 行のデータが返されます。 返された結果は、XML データ ファイル orders.xml の行で構成されています。 各行は国/地域別の要約であり、国名/地域名、国/地域ごとの注文数、および最新と最古の注文日が示されます。
 
-![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [dtexec ユーティリティ](packages/dtexec-utility.md)
 
 

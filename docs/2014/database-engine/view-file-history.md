@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62773298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927553"
 ---
 # <a name="view-file-history"></a>ファイル履歴の表示
   [**履歴**] コマンドを使用して、ソース管理されたファイルのバージョン履歴を表示できます。 この履歴には、ソース管理にファイルが追加またはチェックインされた日付と時刻が含まれています。  

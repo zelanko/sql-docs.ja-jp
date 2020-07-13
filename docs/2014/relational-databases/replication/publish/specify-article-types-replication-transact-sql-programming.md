@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7864825891203530bf30015471ca22a1daccf9b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73882115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060343"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)
   レプリケーションにおける既定の種類のアーティクルはテーブル アーティクルですが、ビュー、ストアド プロシージャ、ユーザー定義関数、ストアド プロシージャ実行など、他のデータベース オブジェクトもパブリッシュできます。 レプリケーション ストアド プロシージャを使用することで、アーティクルの定義時にプログラムでアーティクルの種類を指定できます。 使用するストアド プロシージャは、レプリケーションの種類とアーティクルの種類に応じて異なります。  
@@ -32,86 +31,82 @@ ms.locfileid: "73882115"
   
 ### <a name="to-publish-a-table-article-in-a-transactional-or-snapshot-publication"></a>トランザクション パブリケーションまたはスナップショット パブリケーションでテーブル アーティクルをパブリッシュするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@ 型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
   
-    -   **logbased** -トランザクションレプリケーションとスナップショットレプリケーションの既定のログベーステーブルアーティクル。 レプリケーションでは、行方向のフィルター選択に使用されるストアド プロシージャと、列方向にフィルター選択されるアーティクルを定義するビューが自動的に生成されます。  
+    -   **logbased** - ログベース テーブル アーティクル。トランザクション レプリケーションとスナップショット レプリケーションの既定の設定です。 レプリケーションでは、行方向のフィルター選択に使用されるストアド プロシージャと、列方向にフィルター選択されるアーティクルを定義するビューが自動的に生成されます。  
   
-    -   **logbased manualfilter** -ログベースの、行方向にフィルター選択されるアーティクル。行方向のフィルター選択に使用するストアドプロシージャは、ユーザーが手動で作成して定義し、 ** \@フィルター**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
+    -   **logbased manualfilter** -ログベースの、行方向にフィルター選択されるアーティクル。行方向のフィルター選択に使用するストアドプロシージャは、ユーザーが手動で作成して定義し、 ** \@ フィルター**に指定します。 詳しくは、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-    -   **logbased manualview** -ログベースの、列方向にフィルター選択されるアーティクル。列方向にフィルター選択されるアーティクルを定義するビューは、ユーザーが作成して定義し、 ** \@sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+    -   **logbased manualview** -ログベースの、列方向にフィルター選択されるアーティクル。列方向にフィルター選択されるアーティクルを定義するビューは、ユーザーが作成して定義し、 ** \@ sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
   
-    -   **logbased manualboth** -ログベースの、行方向と列方向にフィルター選択されるアーティクル。行方向のフィルター選択に使用されるストアドプロシージャと、列方向にフィルター選択されるアーティクルを定義するビューは、どちらもユーザーが作成して定義し、それぞれ** \@filter**と** \@sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+    -   **logbased manualboth** -ログベースの、行方向と列方向にフィルター選択されるアーティクル。行方向のフィルター選択に使用されるストアドプロシージャと、列方向にフィルター選択されるアーティクルを定義するビューは、どちらもユーザーが作成して定義し、それぞれ** \@ filter**と** \@ sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
   
      これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-2.  
-  **logbased manualboth** および **logbased manualfilter** のアーティクルの場合、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行して、行方向にフィルター選択されるアーティクル用のフィルター選択ストアド プロシージャを生成します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
+2.  **logbased manualboth** および **logbased manualfilter** のアーティクルの場合、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行して、行方向にフィルター選択されるアーティクル用のフィルター選択ストアド プロシージャを生成します。 詳しくは、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-3.  
-  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳細については、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+3.  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>トランザクション パブリケーションまたはスナップショット パブリケーションでビュー アーティクルまたはインデックス付きビュー アーティクルをパブリッシュするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@ 型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
   
-    -   **indexed view logbased** -ログベースのインデックス付きビューアーティクル。 レプリケーションでは、行方向のフィルター選択に使用されるストアド プロシージャと、列方向にフィルター選択されるアーティクルを定義するビューが自動的に生成されます。  
+    -   **indexed view logbased** - ログベースのインデックス付きビュー アーティクル。 レプリケーションでは、行方向のフィルター選択に使用されるストアド プロシージャと、列方向にフィルター選択されるアーティクルを定義するビューが自動的に生成されます。  
   
-    -   **view schema only** -スキーマのみのビューアーティクル。 ベース テーブルもレプリケートする必要があります。  
+    -   **view schema only** - スキーマのみのビュー アーティクル。 ベース テーブルもレプリケートする必要があります。  
   
-    -   **インデックス付きビュースキーマのみ**-スキーマのみのインデックス付きビューアーティクル。 ベース テーブルもレプリケートする必要があります。  
+    -   **indexed view schema only** - スキーマのみのインデックス付きビュー アーティクル。 ベース テーブルもレプリケートする必要があります。  
   
-    -   **indexed view logbased manualfilter** -ログベースの、行方向にフィルター選択されるインデックス付きビューアーティクル。行方向のフィルター選択に使用されるストアドプロシージャは、ユーザーが手動で作成して定義し、 ** \@フィルター**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
+    -   **indexed view logbased manualfilter** -ログベースの、行方向にフィルター選択されるインデックス付きビューアーティクル。行方向のフィルター選択に使用されるストアドプロシージャは、ユーザーが手動で作成して定義し、 ** \@ フィルター**に指定します。 詳しくは、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-    -   **indexed view logbased manualview** -ログベースのフィルター選択されたインデックス付きビューアーティクル。列方向にフィルター選択されるアーティクルを定義するビューは、ユーザーが作成して定義し、 ** \@sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+    -   **indexed view logbased manualview** -ログベースのフィルター選択されたインデックス付きビューアーティクル。列方向にフィルター選択されるアーティクルを定義するビューは、ユーザーが作成して定義し、 ** \@ sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
   
-    -   **indexed view logbased manualboth** -ログベースの、フィルター選択されたインデックス付きビューアーティクル。行方向のフィルター選択に使用されるストアドプロシージャと、列方向にフィルター選択されるアーティクルを定義するビューは、どちらもユーザーが作成して定義し、それぞれ** \@filter**と** \@sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+    -   **indexed view logbased manualboth** -ログベースの、フィルター選択されたインデックス付きビューアーティクル。行方向のフィルター選択に使用されるストアドプロシージャと、列方向にフィルター選択されるアーティクルを定義するビューは、どちらもユーザーが作成して定義し、それぞれ** \@ filter**と** \@ sync_object**に指定します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 」および「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
   
      これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-2.  
-  **logbased manualboth** および **logbased manualfilter** のアーティクルの場合、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行して、行方向にフィルター選択されるアーティクル用のフィルター選択ストアド プロシージャを生成します。 詳細については、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
+2.  **logbased manualboth** および **logbased manualfilter** のアーティクルの場合、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を実行して、行方向にフィルター選択されるアーティクル用のフィルター選択ストアド プロシージャを生成します。 詳しくは、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
-3.  
-  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳細については、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」を参照してください。  
+3.  **logbased manualboth**、 **logbased manualview**、および **logbased manualfilter** のアーティクルの場合、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) を実行して、列方向にフィルター選択されるアーティクルを定義するビューを生成します。 詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>トランザクション パブリケーションまたはスナップショット パブリケーションでストアド プロシージャ、ストアド プロシージャ実行、またはユーザー定義関数のアーティクルをパブリッシュするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@ 型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
   
-    -   **proc schema only** -スキーマのみのストアドプロシージャアーティクル。  
+    -   **proc schema only** - スキーマのみのストアド プロシージャ アーティクル。  
   
-    -   **proc exec** -アーティクルのすべてのサブスクライバーにストアドプロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
+    -   **proc exec** - アーティクルのすべてのサブスクライバーにストアド プロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
-    -   **serializable proc exec** -シリアル化可能なトランザクションのコンテキスト内で実行される場合にのみ、ストアドプロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
+    -   **serializable proc exec** - シリアル化可能なトランザクションのコンテキスト内で実行される場合にのみ、ストアド プロシージャの実行をレプリケートします。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
-    -   **func schema only** -スキーマのみのユーザー定義関数に関する記事。  
+    -   **func schema only** - スキーマのみのユーザー定義関数アーティクル。  
   
      これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>マージ パブリケーションでテーブル アーティクルまたはビュー アーティクルをパブリッシュするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@ 型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
   
-    -   **table** -テーブルアーティクル。  
+    -   **table** - テーブル アーティクル。  
   
-    -   **インデックス付きビュースキーマのみ**-スキーマのみのインデックス付きビューアーティクル。  
+    -   **indexed view schema only** - スキーマのみのインデックス付きビュー アーティクル。  
   
-    -   **view schema only** -スキーマのみのビューアーティクル。  
+    -   **view schema only** - スキーマのみのビュー アーティクル。  
   
      これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>マージ パブリケーションにストアド プロシージャまたはユーザー定義関数のアーティクルをパブリッシュするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@ 型**に対して次のいずれかの値を指定して、アーティクルの種類を定義します。  
   
-    -   **func schema only** -スキーマのみのユーザー定義関数に関する記事。  
+    -   **func schema only** - スキーマのみのユーザー定義関数アーティクル。  
   
-    -   **proc schema only** -スキーマのみのストアドプロシージャアーティクル。  
+    -   **proc schema only** - スキーマのみのストアド プロシージャ アーティクル。  
   
      これにより、パブリケーションに新しいアーティクルが定義されます。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションシステムストアドプロシージャの概念](../concepts/replication-system-stored-procedures-concepts.md)   
- [データとデータベースオブジェクトのパブリッシュ](publish-data-and-database-objects.md)  
+ [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)  
   
   

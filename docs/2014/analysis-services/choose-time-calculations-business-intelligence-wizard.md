@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 829a4092e8a55e3b2581a09e4afcc8c826152179
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088074"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527528"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>[対象となる階層と計算の選択] (ビジネス インテリジェンス ウィザード)
-  
   **[対象となる階層と計算の選択]** ページを使用すると、既存の時間階層に対して作成された新しい時間計算の解決方法を定義できます。  
   
 ## <a name="options"></a>オプション  

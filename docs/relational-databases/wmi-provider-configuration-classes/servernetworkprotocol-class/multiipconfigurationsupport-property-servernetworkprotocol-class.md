@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ff19a1a89c301b018a9231ca8c98277d6a55e43
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888734"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされるかどうかを指定するブール型のプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "73660383"
 object.MultiIpConfigurationSupport [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  複数の IP アドレスがサーバーネットワークプロトコルによってサポートされているかどうかを指定するブール値。サーバーネットワークプロトコルによって複数の ip アドレスがサポートされている場合は**true** 、複数の ip アドレスがサーバーネットワークプロトコルでサポートされていない場合は**false**になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

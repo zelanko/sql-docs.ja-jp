@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62736242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047220"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
   シノニムは、次の目的で機能するデータベース オブジェクトです。  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  スキーマ バインド関数の詳細については、「[ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。  
   
 ## <a name="getting-information-about-synonyms"></a>シノニムに関する情報の取得  
- sys.synonyms カタログ ビューには、特定のデータベースの各シノニムを表すエントリが含まれています。 シノニム名やベース オブジェクト名など、シノニムのメタデータがこのカタログ ビューに表示されます。 カタログビューの`sys.synonyms`詳細については、「 [sys &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)」を参照してください。  
+ sys.synonyms カタログ ビューには、特定のデータベースの各シノニムを表すエントリが含まれています。 シノニム名やベース オブジェクト名など、シノニムのメタデータがこのカタログ ビューに表示されます。 カタログビューの詳細につい `sys.synonyms` ては、「 [Sys &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)」を参照してください。  
   
  拡張プロパティを使用すれば、説明用テキスト、指示テキスト、定型入力、および表記規則をシノニムのプロパティとして追加できます。 プロパティはデータベースに格納されるので、プロパティを読み取るアプリケーションはすべて、同じ方法でオブジェクトを評価できます。 詳細については、「[sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)」を参照してください。  
   
@@ -145,7 +144,7 @@ GO
 ## <a name="related-content"></a>関連コンテンツ  
  [シノニムの作成](create-synonyms.md)  
   
- [Transact-sql&#41;&#40;シノニムを作成する](/sql/t-sql/statements/create-synonym-transact-sql)  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   
  [DROP SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-synonym-transact-sql)  
   

@@ -11,27 +11,23 @@ f1_keywords:
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 478dea9095fe22a437aecf138c22374b5a70885b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d359084d1db778029046f925c630b001bb820f6b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971092"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>マスター データ サービスのデータベースと Web サイトの設定
-  
   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータベースと Web サイトを設定する (MDS)  
   
  データベースと Web サイトを設定するには、次のタスクを実行してください。  
   
-1.  
-  **の** [データベース構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、データベースを作成します。  
+1.  **の** [データベース構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、データベースを作成します。  
   
      詳細については、「データベースの構成」ページを参照して[&#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)と[データベースの作成ウィザード &#40;マスターデータサービス構成マネージャー ](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md)&#41;を参照してください。  
   
-2.  
-  **の** [Web 構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、新しい Web サイトを作成するか、既定の Web サイトを選ぶか、別の既存の Web サイトを選びます。 その後、MDS データベースを、選んだ Web アプリケーションや作成した Web アプリケーションに関連付けます。  
+2.  **の** [Web 構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、新しい Web サイトを作成するか、既定の Web サイトを選ぶか、別の既存の Web サイトを選びます。 その後、MDS データベースを、選んだ Web アプリケーションや作成した Web アプリケーションに関連付けます。  
   
      詳細については、「 [Web 構成ページ &#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) 」と「web[サイトの作成] ダイアログボックス &#40;マスターデータサービス構成マネージャー ](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)&#41;」を参照してください。  
   

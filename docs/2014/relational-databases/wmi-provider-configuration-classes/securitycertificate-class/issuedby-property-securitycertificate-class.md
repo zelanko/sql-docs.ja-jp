@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0f5bd1e1e6ce8b35d81ee5c17333543dfe5d8ab8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 78efb03924c07452b623b427021a3f89f6e2fc7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62511283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060020"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy プロパティ (SecurityCertificate クラス)
   セキュリティ証明書を発行したオブジェクトを取得します。  
@@ -36,14 +35,14 @@ object
 .IssuedBy [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書を発行したオブジェクトを指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

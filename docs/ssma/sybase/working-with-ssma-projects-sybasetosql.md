@@ -10,10 +10,10 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072476"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA プロジェクトでの作業 (SybaseToSQL)
@@ -54,11 +54,9 @@ ASE データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../
   
 **プロジェクトを作成するには**  
   
-1.  
-  **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。  
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。  
   
-    
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
@@ -66,15 +64,15 @@ ASE データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../
   
 4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -98,7 +96,7 @@ ASE データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../
   
         メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  [**保存**] ボタンをクリックします。  
+    2.  **[保存]** ボタンをクリックします。  
   
         SSMA は Sybase ASE スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -117,7 +115,7 @@ ASE データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../
   
 3.  再[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続または SQL Azure するには、[**ファイル**] メニューの [再接続] を選択して**SQL Azure に再接続** **SQL Server** / ます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順は、 [SYBASE ASE に接続](connecting-to-sybase-ase-sybasetosql.md)することです。  
   
 ## <a name="see-also"></a>参照  

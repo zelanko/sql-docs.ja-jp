@@ -42,15 +42,15 @@ ms.locfileid: "71286040"
 ### <a name="scriptlanguage-property"></a>ScriptLanguage プロパティ  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# のプログラミング言語がサポートされます。 スクリプト タスクにスクリプトを作成した後で、 **[ScriptLanguage]** プロパティの値を変更することはできません。  
   
- スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
+ スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
 ### <a name="entrypoint-property"></a>EntryPoint プロパティ  
- **EntryPoint** プロパティは、スクリプト タスク コードのエントリ ポイントとして **ランタイムが呼び出す、VSTA プロジェクトの**ScriptMain[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] クラスのメソッドを指定します。 **ScriptMain** クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
+ **EntryPoint** プロパティは、スクリプト タスク コードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムが呼び出す、VSTA プロジェクトの **ScriptMain** クラスのメソッドを指定します。 **ScriptMain** クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
   
  VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
   
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables プロパティおよび ReadWriteVariables プロパティ  
- 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト タスクのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 どちらの種類の変数にも、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**オブジェクトの** プロパティを介して、コード内でアクセスします。 詳細については、「 [スクリプト タスクでの変数の使用](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
+ 既存の変数をコンマ区切りリストとして、これらのプロパティの値に入力すると、スクリプト タスクのコード内で、その変数に読み取り専用アクセスまたは読み取り/書き込みアクセスできるようになります。 どちらの種類の変数にも、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、コード内でアクセスします。 詳細については、「 [スクリプト タスクでの変数の使用](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
   
 > [!NOTE]  
 >  変数名の大文字と小文字は区別されます。  

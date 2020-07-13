@@ -1,5 +1,6 @@
 ---
 title: アプリケーションでの XML データの使用 | Microsoft Docs
+description: アプリケーションで xml データ型を操作するときに使用できるオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b137b58daa6936328e5f8f37dc31277e0d5b6ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762549"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、アプリケーションで **xml** データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
   
 -   ADO および **Native Client を使用した、** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型の列に含まれている XML の操作  

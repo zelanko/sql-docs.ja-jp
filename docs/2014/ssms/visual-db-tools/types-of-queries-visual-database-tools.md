@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ebcdace31407c1b5ca8568595bb4b10e245b4da0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064278"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>クエリの種類 (Visual Database Tools)
   クエリおよびビュー デザイナーは、選択、結果の挿入、値の挿入、更新、削除、テーブルの作成など、いくつかのクエリに対応した組み込み機能を用意しています。また、UNION、フルテキスト検索、CASE 式によるクエリもサポートしています。  

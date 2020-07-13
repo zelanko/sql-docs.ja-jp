@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a62bad0e69a8bf8b5365575f97e4791cbbf270d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4ae4169dc3f2a491663f4a86c564cfee5c2f4d6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057110"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305101"
 ---
 # <a name="row-status"></a>行の状態
 > [!IMPORTANT]  

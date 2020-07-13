@@ -10,33 +10,33 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401081"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>SCOM 管理パックのインポート-Analytics Platform System
 Analytics Platform System (APS) 用の System Center Operations Manager (SCOM) 管理パックをインポートするには、次の手順に従います。 SCOM から並列データウェアハウスを監視するには、管理パックが必要です。 
   
-## <a name="BeforeBegin"></a>はじめに  
-**前提条件**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始する前に  
+**必要条件**  
   
 System Center Operations Manager 2007 R2 がインストールされ、実行されている必要があります。  
   
 管理パックをインストールする必要があります。 「 [Analytics Platform System&#41;&#40;SCOM 管理パックをインストールする](install-the-scom-management-packs.md)」を参照してください。  
   
-## <a name="Step1"></a>手順 1: SQL Server アプライアンスベースの管理パックをインポートする  
+## <a name="step-1-import-the-sql-server-appliance-base-management-pack"></a><a name="Step1"></a>手順 1: SQL Server アプライアンスベースの管理パックをインポートする  
   
 1.  Operations Manager 2007 管理グループの Operations Manager Administrators ロールのメンバーであるアカウントで、コンピューターにログオンします。  
   
-2.  オペレーション コンソールで、[管理]**** をクリックします。  
+2.  オペレーション コンソールで、 **[管理]** をクリックします。  
   
-3.  [**管理パック**] ノードを右クリックし、[**管理パックのインポート**] をクリックします。  
+3.  [ **管理パック** ] ノードを右クリックし、[ **管理パックのインポート**] をクリックします。  
   
     ![[管理パックのインポート] をクリック](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  管理パックの一覧で、インポートする管理パックを選択し、[**選択**] をクリックして、[**追加**] をクリックします。  
+4.  管理パックの一覧で、インポートする管理パックを選択し、**[選択]** をクリックしてから、**[追加]** をクリックします。  
   
     ![管理パックの一覧](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -48,8 +48,7 @@ System Center Operations Manager 2007 R2 がインストールされ、実行さ
   
     ![両方の管理パックを選択](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
-7.  
-  **[インストール]** をクリックします。  
+7.  **[インストール]** をクリックします。  
   
     ![[インストール] をクリックします。](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
@@ -57,9 +56,9 @@ System Center Operations Manager 2007 R2 がインストールされ、実行さ
   
     ![完了後、[閉じる] をクリック](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>Microsoft SQL Server 2008 R2 並列データウェアハウスアプライアンス用監視パックをインポートする  
+## <a name="import-the-monitoring-pack-for-microsoft-sql-server-2008-r2-parallel-data-warehouse-appliance"></a><a name="Step2"></a>Microsoft SQL Server 2008 R2 並列データウェアハウスアプライアンス用監視パックをインポートする  
   
-1.  [**管理パック**] ノードを右クリックし、[**管理パックのインポート**] をクリックします。  
+1.  [ **管理パック** ] ノードを右クリックし、[ **管理パックのインポート**] をクリックします。  
   
 2.  [**ディスクから追加**...] を選択します。  
   
@@ -69,8 +68,7 @@ System Center Operations Manager 2007 R2 がインストールされ、実行さ
   
     ![管理パックの選択](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
-4.  
-  **[インストール]** をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![[インストール] をクリックします。](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
@@ -78,7 +76,7 @@ System Center Operations Manager 2007 R2 がインストールされ、実行さ
   
     ![[閉じる] をクリック](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 管理パックをインポートしたので、次の手順「 [Analytics Platform system &#40;Analytics Platform system&#41;を監視するように SCOM を構成](configure-scom-to-monitor-analytics-platform-system.md)する」に進みます。  
   
 <!-- MISSING LINKS ## See Also  

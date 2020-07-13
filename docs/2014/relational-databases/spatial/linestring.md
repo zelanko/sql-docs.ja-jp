@@ -11,16 +11,14 @@ helpviewer_keywords:
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 5a0f77959cfe4492eca6c38951ba2868452d41ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996334"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString` は、一連の点と、それらを結ぶ線分を表す 1 次元のオブジェクトです。
 
 ## <a name="linestring-instances"></a>LineString インスタンス
@@ -39,8 +37,7 @@ ms.locfileid: "78176672"
 -   図 4 は、閉じている単純でない `LineString` インスタンスです。したがって、このインスタンスはリングではありません。
 
 ### <a name="accepted-instances"></a>許容されるインスタンス
- 許容される `LineString` インスタンスはジオメトリ変数に入力できますが、これらが有効な `LineString` インスタンスであるとは限りません。 
-  `LineString` インスタンスが許容されるには、次の条件を満たす必要があります。 インスタンスは、2 つ以上の異なる点から構成されているか、または空である必要があります。 次に示す LineString instances インスタンスは許容されます。
+ 許容される `LineString` インスタンスはジオメトリ変数に入力できますが、これらが有効な `LineString` インスタンスであるとは限りません。 `LineString` インスタンスが許容されるには、次の条件を満たす必要があります。 インスタンスは、2 つ以上の異なる点から構成されているか、または空である必要があります。 次に示す LineString instances インスタンスは許容されます。
 
 ```
 DECLARE @g1 geometry = 'LINESTRING EMPTY';
@@ -48,8 +45,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3` の場合、`LineString` インスタンスは許容されますが、有効ではありません。
+ `@g3` の場合、`LineString` インスタンスは許容されますが、有効ではありません。
 
  次に示す `LineString` インスタンスは許容されません。 `System.FormatException`がスローされます。
 
@@ -58,17 +54,13 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```
 
 ### <a name="valid-instances"></a>有効なインスタンス
- 
-  `LineString` インスタンスを有効にするためには、次の条件を満たす必要があります。
+ `LineString` インスタンスを有効にするためには、次の条件を満たす必要があります。
 
-1.  
-  `LineString` インスタンスが許容されていること。
+1.  `LineString` インスタンスが許容されていること。
 
-2.  
-  `LineString` インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。
+2.  `LineString` インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。
 
-3.  
-  `LineString` インスタンスは、それ自体を 2 つ以上の連続する点の区間に重ねることはできない。
+3.  `LineString` インスタンスは、それ自体を 2 つ以上の連続する点の区間に重ねることはできない。
 
  次に示す `LineString` インスタンスは有効です。
 
@@ -90,8 +82,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ```
 
 > [!WARNING]
->  
-  `LineString` の重複の検出は浮動小数点計算に基づいて行われますが、この計算は正確ではありません。
+>  `LineString` の重複の検出は浮動小数点計算に基づいて行われますが、この計算は正確ではありません。
 
 ## <a name="examples"></a>例
  次の例は、3 つの点を持つ `geometry``LineString` インスタンスを作成する方法を示しています。このインスタンスの SRID は 0 です。
@@ -101,16 +92,14 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);
 ```
 
- 
-  `LineString` インスタンスのそれぞれの点には、Z (昇格) 値と M (メジャー) 値を含めることができます。 次の例では、上の例で作成した `LineString` インスタンスに M 値を追加します。 M および Z は NULL 値にすることができます。
+ `LineString` インスタンスのそれぞれの点には、Z (昇格) 値と M (メジャー) 値を含めることができます。 次の例では、上の例で作成した `LineString` インスタンスに M 値を追加します。 M および Z は NULL 値にすることができます。
 
 ```
 DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);
 ```
 
- 次の例は、同じ 2 つの点を持つ `geometry LineString` インスタンスを作成する方法を示しています。 
-  `IsValid` 呼び出しは、`LineString` インスタンスが無効であることを示します。`MakeValid` 呼び出しは、`LineString` インスタンスを `Point` に変換します。
+ 次の例は、同じ 2 つの点を持つ `geometry LineString` インスタンスを作成する方法を示しています。 `IsValid` 呼び出しは、`LineString` インスタンスが無効であることを示します。`MakeValid` 呼び出しは、`LineString` インスタンスを `Point` に変換します。
 
 ```sql
 DECLARE @g geometry
@@ -136,6 +125,6 @@ POINT(1 3) is a valid Point.
 ```
 
 ## <a name="see-also"></a>参照
- [Stlength &#40;Geometry データ型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [stlength &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [stpointn &#40;geometry](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)データ型&#41;[stnumpoints](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) &#40;geometry データ型&#41;stisring [](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [&#40;geometry データ](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)型&#41;[stpointonsurface](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) &#40;geometry データ型&#41;[空間データ &#40;](../spatial/spatial-data-sql-server.md)&#41;に &#40;
+ [Stlength &#40;Geometry データ型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [stlength &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [stpointn &#40;geometry](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)データ型&#41;[stnumpoints](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) &#40;geometry データ型&#41;stisring [STIsRing &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [&#40;geometry データ](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)型&#41;[stpointonsurface](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) &#40;geometry データ型&#41;[空間データ &#40;](../spatial/spatial-data-sql-server.md)&#41;に &#40;
 
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b9df008c37a6efb645df4ceed46d30e6da452eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4e34da4d3a33feb885d9bda0eea54e6a8f25489f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647144"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>ストアド プロシージャ カタログ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ODBC データ辞書関数を実装し、基になるシステムテーブルへの変更から ODBC アプリケーションを分離する、次のシステムストアドプロシージャをサポートしています。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68078339"
 |[sp_pkeys](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)|[sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)|  
 |[sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)|[sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

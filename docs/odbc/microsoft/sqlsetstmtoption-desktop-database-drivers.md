@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC], Desktop Database Drivers
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 20043c96771bf888defa2c8fbeb028aaa18f5abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69b386aee3f95fd047f72510dce7658130ac7aa5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905342"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299412"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (デスクトップ データベース ドライバー)
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094232"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299832"
 ---
 # <a name="setting-parameter-values"></a>パラメーターの値の設定
 パラメーターの値を設定するために、アプリケーションは単にパラメーターにバインドされた変数の値を設定します。 この値が設定されている場合は、ステートメントが実行される前に設定されている必要があります。 アプリケーションでは、変数をバインドする前または後に値を設定できます。また、値は必要に応じて何度でも変更できます。 ステートメントが実行されると、ドライバーは単に変数の現在の値を取得します。 これは、準備されたステートメントを複数回実行する場合に特に便利です。アプリケーションでは、ステートメントが実行されるたびに、一部またはすべての変数の新しい値が設定されます。 この例については、このセクションの前半の「[準備実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "68094232"
   
  次の表は、バインドされた変数の値と、アプリケーションがさまざまなパラメーター値に対して設定する長さ/インジケーターバッファーを示しています。  
   
-|パラメーター<br /><br /> value|パラメーター<br /><br /> SERVER<br /><br /> データ型|変数 (C)<br /><br /> データ型|の値<br /><br /> バインディング<br /><br /> 可変|の値<br /><br /> 長さ/インジケーター<br /><br /> バッファー [d]|  
+|パラメーター<br /><br /> value|パラメーター<br /><br /> SERVER<br /><br /> データ型 (data type)|変数 (C)<br /><br /> データ型 (data type)| の値<br /><br /> バインディング<br /><br /> 可変| の値<br /><br /> 長さ/インジケーター<br /><br /> バッファー [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS または3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  

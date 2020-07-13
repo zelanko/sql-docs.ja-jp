@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 073546ef578a8efebff33fef96ae4682dd6f53fe
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086056"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306448"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC のトランザクション (ODBC)
 ODBC でのトランザクションは、接続レベルで完了します。つまり、アプリケーションがトランザクションを完了すると、その接続のすべてのステートメントハンドルを通じて実行されたすべての処理がコミットまたはロールバックされます。  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: d05200ff0c634ea327e58e5288ff8e99c0ec9418
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922560"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028295"
 ---
 # <a name="working-with-data-types-jdbc"></a>データ型の処理 (JDBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "80922560"
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] および JDBC ドライバーのデータ型について、その相違点や Java 言語のデータ型への変換方法など、詳細については、「[JDBC ドライバーのデータ型について](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)」を参照してください。  
   
-SQL Server のデータ型を処理するために、JDBC ドライバーには、\<SQLServerPreparedStatement\< クラスおよび [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスに get[Type> メソッドおよび set](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> メソッドがあり、\<SQLServerResultSet\< クラスに get[Type> メソッドおよび update](../../../connect/jdbc/reference/sqlserverresultset-class.md)Type> メソッドがあります。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
+SQL Server のデータ型を処理するために、JDBC ドライバーには、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスおよび [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスに get\<Type> メソッドおよび set\<Type> メソッドがあり、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスに get\<Type> メソッドおよび update\<Type> メソッドがあります。 使用するメソッドは、処理するデータの型と、結果セットまたはクエリを使用するかどうかによって決まります。  
   
 このセクションのトピックでは、JDBC ドライバーのデータ型を使用して Java アプリケーションの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データにアクセスする方法について説明します。  
   

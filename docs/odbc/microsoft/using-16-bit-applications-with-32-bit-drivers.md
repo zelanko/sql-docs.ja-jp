@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c919ed8c3f3791720d67ebdcbf5cfbdbea2a0455
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088195"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307633"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 16 ビット アプリケーションを使用
 > [!IMPORTANT]  
@@ -43,10 +43,10 @@ ms.locfileid: "68088195"
   
  Windows on Windows (16 ビットから32ビットのサンキング) では、Ds32gt という名前の追加のサンキング DLL によって、32ビットのセットアップ DLL を通じて16ビットの引数値が16ビットに変換されます。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>コンポーネント  
  MDAC 2.8 SP1 SDK の ODBC コンポーネントには、32ビットドライバーで16ビットアプリケーションを実行するための次のファイルが含まれています。 これらのコンポーネントは、\ Redist ディレクトリにあります。  
   
-|ファイル名|[説明]|  
+|ファイル名|説明|  
 |---------------|-----------------|  
 |Odbc16gt|16ビット ODBC 汎用サンク DLL|  
 |Odbc32gt|32ビット ODBC 汎用サンク DLL|  
@@ -58,7 +58,7 @@ ms.locfileid: "68088195"
   
  また、ODBC 3.51 に含まれていない16ビット ODBC 2.10 ドライバーマネージャーと共に次のファイルが必要です。これは、16ビットアプリケーションと共にインストールする必要があります。  
   
-|ファイル名|[説明]|  
+|ファイル名|説明|  
 |---------------|-----------------|  
 |Odbc .dll|16ビットドライバーマネージャー|  
 |Odbcinst .dll|16ビットインストーラー DLL|  

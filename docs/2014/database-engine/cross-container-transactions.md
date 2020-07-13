@@ -9,25 +9,22 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62807426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934483"
 ---
 # <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
   複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャの呼び出しまたはメモリ最適化テーブルでの操作を含む、暗黙的または明示的なユーザー トランザクションです。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャの呼び出しでトランザクションが開始されることはありません。 ネイティブ コンパイル プロシージャの (ユーザー トランザクションのコンテキストではなく) 自動コミット モードでの実行は、複数コンテナーにまたがるトランザクションとは見なされません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャの呼び出しでトランザクションが開始されることはありません。 ネイティブ コンパイル プロシージャの (ユーザー トランザクションのコンテキストではなく) 自動コミット モードでの実行は、複数コンテナーにまたがるトランザクションとは見なされません。  
   
  メモリ最適化テーブルを参照する解釈されたクエリは、明示的または暗黙的なトランザクションから実行された場合も、自動コミット モードで実行された場合も、複数コンテナーにまたがるトランザクションの一部と見なされます。  
   
-##  <a name="isolation"></a>個々の操作の分離  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各トランザクションには分離レベルがあります。 既定の分離レベルは READ COMMITTED です。 別の分離レベルを使用するには、 [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)を使用して分離レベルを設定できます。  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>個々の操作の分離  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各トランザクションには分離レベルがあります。 既定の分離レベルは READ COMMITTED です。 別の分離レベルを使用するには、 [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)を使用して分離レベルを設定できます。  
   
  多くの場合、ディスク ベース テーブルでの操作とは異なる分離レベルで、メモリ最適化テーブルでの操作を実行することが必要になります。 トランザクションでは、ステートメントのコレクションまたは個別の読み取り操作に対して別の分離レベルを設定することができます。  
   
@@ -67,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>個別の操作の分離セマンティクス  
  シリアル化可能なトランザクション T は完全に分離して実行されます。 他のすべてのトランザクションは、T の開始前にコミット済みであるか、T のコミット後に開始されるかのように見えます。 トランザクション内の別の操作に別の分離レベルがある場合は、さらに複雑になります。  
   
- で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のトランザクション分離レベルの一般的なセマンティクスについては、「 [SET transaction 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」で説明されています。  
+ でのトランザクション分離レベルの一般的なセマンティクスについては、「 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」で説明されています。  
   
  異なる操作に異なる分離レベルがある複数コンテナーにまたがるトランザクションの場合は、個別の読み取り操作の分離のセマンティクスを理解しておく必要があります。 書き込み操作は常に分離されます。 それぞれ異なるトランザクションでの書き込みが互いに影響し合うことはできません。  
   
@@ -101,7 +98,7 @@ commit
  読み取られるデータは、コミットされること、およびトランザクションの論理的終了時刻まで安定状態であることが保証されます。  
   
  SERIALIZABLE  
- T-sql によって実行されるすべてのシリアル化可能な読み取り操作に関して、反復可能な読み取りとファントムの回避、およびトランザクションの一貫性が保証されます。ファントムの回避とは、スキャン操作によって書き込まれた追加の行のみを返すことができることを意味します。他のトランザクションによって書き込まれた行。  
+ すべてのシリアル化可能な読み取りとファントムの回避、およびで実行されるすべてのシリアル化可能な読み取り操作に関して、トランザクションの一貫性が保証されます。ファントムの回避とは、他のトランザクションによって書き込まれた行を返さない、T によって書き込まれた追加の行のみを返すことを意味します。  
   
  次のようなトランザクションがあるとします。  
   
@@ -137,7 +134,7 @@ commit
   
  特定のトランザクション T のディスク ベース側は、次の条件のいずれかに一致する場合、特定の分離レベル X に達します。  
   
--   X で開始します。つまり、セッションの既定値は X で、実行`SET TRANSACTION ISOLATION LEVEL`したか、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]既定値です。  
+-   X で開始します。つまり、セッションの既定値は X で、実行したか、 `SET TRANSACTION ISOLATION LEVEL` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 既定値です。  
   
 -   トランザクションの実行中に、`SET TRANSACTION ISOLATION LEVEL` を使用して、既定の分離レベルが X に変更されます。  
   
@@ -174,15 +171,14 @@ commit
   
  メモリ最適化テーブルは、SNAPSHOT、REPEATABLE READ、および SERIALIZABLE の各分離レベルをサポートします。 自動コミット トランザクションの場合、メモリ最適化テーブルは READ COMMITTED 分離レベルをサポートします。  
   
- 次のシナリオがサポートされています。  
+ 次のシナリオがサポートされます。  
   
 -   READ UNCOMMITTED、READ COMMITTED、および READ_COMMITTED_SNAPSHOT の複数コンテナーにまたがるトランザクションは、SNAPSHOT、REPEATABLE READ、および SERIALIZABLE の各分離でメモリ最適化テーブルにアクセスできます。 READ COMMITTED の保証はトランザクションに対して保持されます。トランザクションで読み取られたすべての行がデータベースにコミットされています。  
   
 -   REPEATABLE READ および SERIALIZABLE のトランザクションは、SNAPSHOT 分離でメモリ最適化テーブルにアクセスできます。  
   
 ## <a name="read-only-cross-container-transactions"></a>読み取り専用の複数コンテナーにまたがるトランザクション  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のほとんどの読み取り専用トランザクションは、コミット時にロールバックされます。 データベースにコミットされる変更がないため、システムはトランザクションによって使用されるリソースを単純に解放します。 読み取り専用のディスク ベース トランザクションの場合、トランザクションによって使用されるロックはこの時点ですべて解放されます。 ネイティブ コンパイル プロシージャの 1 回の実行全体での読み取り専用のメモリ最適化トランザクションの場合、検証は実行されません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のほとんどの読み取り専用トランザクションは、コミット時にロールバックされます。 データベースにコミットされる変更がないため、システムはトランザクションによって使用されるリソースを単純に解放します。 読み取り専用のディスク ベース トランザクションの場合、トランザクションによって使用されるロックはこの時点ですべて解放されます。 ネイティブ コンパイル プロシージャの 1 回の実行全体での読み取り専用のメモリ最適化トランザクションの場合、検証は実行されません。  
   
  自動コミット モードの複数コンテナーにまたがる読み取り専用トランザクションは、トランザクションの終了時に単純にロールバックされます。 検証が実行されません。  
   

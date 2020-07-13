@@ -9,18 +9,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53661c456ca8cf72508e32a534dfaa8d711ea146
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057127"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424249"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>[ODBC ソース エディター] ([エラー出力] ページ)
-  
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
   
  ODBC 入力元について詳しくは、「 [CDC ソース](data-flow/cdc-source.md)」をご覧ください。  
@@ -28,14 +26,11 @@ ms.locfileid: "66057127"
 ## <a name="task-list"></a>タスク一覧  
  **[ODBC 入力元エディター] の [エラー出力] ページを開くには**  
   
--   
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、ODBC 入力元を含む [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] パッケージを開きます。  
+-   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、ODBC 入力元を含む [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
--   
-  **[データ フロー]** タブで、ODBC 入力元をダブルクリックします。  
+-   **[データ フロー]** タブで、ODBC 入力元をダブルクリックします。  
   
--   
-  **[ODBC 入力元エディター]** で、 **[エラー出力]** をクリックします。  
+-   **[ODBC 入力元エディター]** で、 **[エラー出力]** をクリックします。  
   
 ## <a name="options"></a>オプション  
   
@@ -43,7 +38,7 @@ ms.locfileid: "66057127"
  データ ソースの名前を表示します。  
   
 ### <a name="column"></a>列  
- 使用されません。  
+ 使用されていません。  
   
 ### <a name="error"></a>エラー  
  ODBC 入力元でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
@@ -51,8 +46,8 @@ ms.locfileid: "66057127"
 ### <a name="truncation"></a>切り捨て  
  ODBC 入力元でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-### <a name="description"></a>[説明]  
- 使用されません。  
+### <a name="description"></a>説明  
+ 使用されていません。  
   
 ### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力元でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
@@ -72,8 +67,8 @@ ms.locfileid: "66057127"
 ### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力元のエラー出力に送られる原因となった行。 詳しくは、「 [ODBC 入力元](data-flow/odbc-source.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC ソースエディター &#40;接続マネージャーのページ&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [ODBC ソースエディターの [列の &#40;] ページ&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [[ODBC ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

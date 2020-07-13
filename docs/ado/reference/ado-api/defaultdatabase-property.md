@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919160"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757448"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase プロパティ
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの既定のデータベースを示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67919160"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  プロバイダーから使用可能なデータベースの名前に評価される**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Defaultdatabase**プロパティを使用して、特定の**接続**オブジェクトの既定のデータベースの名前を設定または取得します。  
   
  既定のデータベースが存在する場合、SQL 文字列では、そのデータベース内のオブジェクトにアクセスするために非修飾構文を使用できます。 **Defaultdatabase**プロパティで指定されていないデータベース内のオブジェクトにアクセスするには、目的のデータベース名を使用してオブジェクト名を修飾する必要があります。 接続時に、プロバイダーは既定のデータベース情報を**defaultdatabase**プロパティに書き込みます。 プロバイダーによっては、接続ごとに1つのデータベースしか使用できない場合があります。この場合、 **Defaultdatabase**プロパティを変更することはできません。  

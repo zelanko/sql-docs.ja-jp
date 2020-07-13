@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 702cb2ca1d437dff03cee09c98d72082500709d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66095189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012445"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>互換性モード 90 以上では FOR XML AUTO クエリが派生テーブルの参照を返す
   データベースの互換性レベルが 90 以上に設定されている場合、AUTO モードで実行する FOR XML クエリは派生テーブルの別名への参照を返します。 互換性レベルが 80 に設定されている場合、FOR XML AUTO クエリは派生テーブルを定義するベース テーブルへの参照を返します。  
@@ -25,7 +24,7 @@ ms.locfileid: "66095189"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  たとえば、次のテーブルについて考えてみます。  
   
 ```  

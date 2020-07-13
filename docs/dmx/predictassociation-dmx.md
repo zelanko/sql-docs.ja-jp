@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76939504"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668763"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,12 +30,12 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- 関連付けや分類アルゴリズムなど、予測可能な入れ子になったテーブルを含むアルゴリズム。 入れ子になったテーブルをサポートする[!INCLUDE[msCoName](../includes/msconame-md.md)]分類アルゴリズムに[!INCLUDE[msCoName](../includes/msconame-md.md)]は、デシジョンツリー [!INCLUDE[msCoName](../includes/msconame-md.md)] 、Naive Bayes、ニューラルネットワークアルゴリズムが含まれます。  
+ 関連付けや分類アルゴリズムなど、予測可能な入れ子になったテーブルを含むアルゴリズム。 入れ子になったテーブルをサポートする分類アルゴリズムには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョンツリー、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラルネットワークアルゴリズムが含まれます。  
   
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式の>  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **PredictAssociation**関数のオプションには、EXCLUDE_NULL、INCLUDE_NULL、包含、排他 (既定)、INPUT_ONLY、INCLUDE_STATISTICS、および INCLUDE_NODE_ID があります。  
   
 > [!NOTE]  

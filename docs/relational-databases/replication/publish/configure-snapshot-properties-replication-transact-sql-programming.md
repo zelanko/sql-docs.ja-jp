@@ -29,10 +29,10 @@ ms.locfileid: "76286527"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを作成するときにスナップショットのプロパティを構成するには  
   
-1.  パブリッシャーで [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)を実行します。 `@publication` にパブリケーション名を、**に**snapshot**と**continuous`@repl_freq` のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
+1.  パブリッシャーで [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)を実行します。 `@publication` にパブリケーション名を、`@repl_freq` に **snapshot** と **continuous** のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
   
     -   `@alt_snapshot_folder` - このパブリケーションのスナップショットが、既定のスナップショット フォルダー以外の場所、または既定のスナップショット フォルダーに追加された場所からアクセスされる場合のパスを指定します。    
-    -   `@compress_snapshot` - 代替スナップショット フォルダー内のスナップショット ファイルを **CAB ファイル形式で圧縮する場合は、値に**true[!INCLUDE[msCoName](../../../includes/msconame-md.md)] を指定します。    
+    -   `@compress_snapshot` - 代替スナップショット フォルダー内のスナップショット ファイルを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB ファイル形式で圧縮する場合は、値に **true** を指定します。    
     -   `@pre_snapshot_script` - 初期化時、初期スナップショットが適用される前にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスを指定します。    
     -   `@post_snapshot_script` - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスを指定します。    
     -   `@snapshot_in_defaultfolder` - スナップショットが既定以外の場所でのみ使用できる場合は、値に **false** を指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "76286527"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>マージ パブリケーションを作成するときにスナップショットのプロパティを構成するには  
   
-1.  パブリッシャーで [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 `@publication` にパブリケーション名を、**に**snapshot**と**continuous`@repl_freq` のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
+1.  パブリッシャーで [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 `@publication` にパブリケーション名を、`@repl_freq` に **snapshot** と **continuous** のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
   
     -   **alt_snapshot_folder** - このパブリケーションのスナップショットが、既定のスナップショット フォルダー以外の場所、または既定のスナップショット フォルダーに追加された場所からアクセスされる場合のパスを指定します。    
     -   `@compress_snapshot` - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮する場合は **true** を指定します。   
@@ -53,12 +53,12 @@ ms.locfileid: "76286527"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>既存のスナップショット パブリケーションまたはトランザクション パブリケーションに対してスナップショットのプロパティを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。 **の値に**1`@force_invalidate_snapshot` および `@property` に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。 `@force_invalidate_snapshot` の値に **1** および `@property` に次のいずれかの値を指定します。  
   
     -   **alt_snapshot_folder** - `@value` に代替スナップショットへの新しいパスも指定します。    
-    -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかどうかを示すには、**に**true**または**false`@value` も指定します。    
-    -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバーで実行される `@value`.sql**ファイルのファイル名と完全パスも** に指定します。    
-    -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される `@value`.sql**ファイルのファイル名と完全パスも** に指定します。    
+    -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかどうかを示すには、`@value` に **true** または **false** も指定します。    
+    -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスも `@value` に指定します。    
+    -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスも `@value` に指定します。    
     -   **snapshot_in_defaultfolder** - スナップショットを既定の場所に格納するかどうかを **true** または **false** で指定します。  
   
 2.  (省略可) パブリッシャーのパブリケーション データベースで [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)を実行します。 `@publication` を指定し、変更の対象となる、スケジュールまたはセキュリティ資格情報関連のパラメーターを少なくとも 1 つ指定します。  
@@ -70,12 +70,12 @@ ms.locfileid: "76286527"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>既存のマージ パブリケーションに対してスナップショットのプロパティを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 **の値に**1`@force_invalidate_snapshot` および `@property**` に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `@force_invalidate_snapshot` の値に **1** および `@property**` に次のいずれかの値を指定します。  
   
     -   **alt_snapshot_folder** - `@value` に代替スナップショットへの新しいパスも指定します。    
-    -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかどうかを示すには、**に**true**または**false`@value` も指定します。    
-    -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバーで実行される `@value`.sql**ファイルのファイル名と完全パスも** に指定します。    
-    -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される `@value`.sql**ファイルのファイル名と完全パスも** に指定します。    
+    -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかどうかを示すには、`@value` に **true** または **false** も指定します。    
+    -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスも `@value` に指定します。    
+    -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される後にサブスクライバーで実行される **.sql** ファイルのファイル名と完全パスも `@value` に指定します。    
     -   **snapshot_in_defaultfolder** - スナップショットを既定の場所に格納するかどうかを **true** または **false** で指定します。  
   
 2.  コマンド プロンプトから [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) を実行するか、スナップショット エージェント ジョブを起動して新しいスナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  

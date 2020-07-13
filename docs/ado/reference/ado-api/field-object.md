@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918684"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758768"
 ---
 # <a name="field-object"></a>Field オブジェクト
 共通のデータ型のデータ列を表します。  

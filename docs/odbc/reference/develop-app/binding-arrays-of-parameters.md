@@ -12,14 +12,14 @@ helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73cfcde89e89edb87a4955cf0854c66a01d81e6f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103824"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283422"
 ---
 # <a name="binding-arrays-of-parameters"></a>パラメーターのバインディング配列
 パラメーターの配列を使用するアプリケーションは、SQL ステートメントのパラメーターに配列をバインドします。 バインドスタイルには次の2つがあります。  

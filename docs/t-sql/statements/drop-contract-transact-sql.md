@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e9a21b5993271ff7be4eeb4afe81caa78438a263
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898263"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882442"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のコントラクトをデータベースから削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67898263"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP CONTRACT contract_name   
 [ ; ]  

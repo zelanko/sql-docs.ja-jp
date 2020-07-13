@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72381910"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879976"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   SQL エージェントサービスによって実行される新しいジョブを追加します。  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_name = ] 'job_name'`ジョブの名前。 名前は一意である必要があり、パーセント (**%**) 文字を含めることはできません。 *job_name*は**nvarchar (128)**,、既定値はありません。  
+`[ @job_name = ] 'job_name'`ジョブの名前。 名前は一意である必要があり、パーセント () 文字を含めることはできません **%** 。 *job_name*は**nvarchar (128)**,、既定値はありません。  
   
 `[ @enabled = ] enabled`追加されたジョブの状態を示します。 *有効*になっているは**tinyint**,、既定値は 1 (有効) です。 **0**の場合、ジョブは無効になり、スケジュールに従って実行されません。ただし、手動で実行することもできます。  
   
@@ -69,16 +69,16 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`ジョブカテゴリを指定するための言語に依存しないメカニズム。 *category_id*は**int**,、既定値は NULL です。  
   
-`[ @owner_login_name = ] 'login'`ジョブを所有するログインの名前です。 *login*は**sysname**で、既定値は NULL です。これは現在のログイン名として解釈されます。 ** \@Owner_login_name**の値を設定または変更できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。 **Sysadmin**ロールのメンバーでないユーザーが** \@owner_login_name**の値を設定または変更した場合、このストアドプロシージャの実行は失敗し、エラーが返されます。  
+`[ @owner_login_name = ] 'login'`ジョブを所有するログインの名前です。 *login*は**sysname**で、既定値は NULL です。これは現在のログイン名として解釈されます。 ** \@ Owner_login_name**の値を設定または変更できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。 **Sysadmin**ロールのメンバーでないユーザーが** \@ owner_login_name**の値を設定または変更した場合、このストアドプロシージャの実行は失敗し、エラーが返されます。  
   
 `[ @notify_level_eventlog = ] eventlog_level`このジョブの Microsoft Windows アプリケーションログにエントリを配置するタイミングを示す値。 *eventlog_level*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|行わない|  
 |**1**|成功時|  
 |**2** (既定値)|失敗時|  
-|**番**|Always (常に)|  
+|**3**|常に表示する|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを示す値。 *email_level*は**int**,、既定値は**0**,、しないことを示します。 *email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -106,17 +106,16 @@ sp_add_job [ @job_name = ] 'job_name'
  なし  
   
 ## <a name="remarks"></a>解説  
- originating_server は sp_add_job に存在しますが **、** [引数] の下には表示されません。 ** \@** originating_server は、内部使用のために予約されています。 ** \@**  
+ ** \@ originating_server**は sp_add_job に存在しますが **、** [引数] の下には表示されません。 ** \@ originating_server**は、内部使用のために予約されています。  
   
- **Sp_add_job**を実行してジョブを追加した後、 **sp_add_jobstep**を使用して、ジョブのアクティビティを実行するステップを追加できます。 **sp_add_jobschedule**を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスがジョブを実行するために使用するスケジュールを作成できます。 **Sp_add_jobserver**を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ジョブを実行するインスタンスを設定し、 **sp_delete_jobserver**して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスからジョブを削除します。  
+ **Sp_add_job**を実行してジョブを追加した後、 **sp_add_jobstep**を使用して、ジョブのアクティビティを実行するステップを追加できます。 **sp_add_jobschedule**を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントサービスがジョブを実行するために使用するスケジュールを作成できます。 **Sp_add_jobserver**を使用して、ジョブを実行するインスタンスを設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、 **sp_delete_jobserver**してインスタンスからジョブを削除し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  マルチサーバー環境の1つ以上の対象サーバーでジョブを実行する場合は、 **sp_apply_job_to_targets**を使用して、ジョブの対象サーバーまたは対象サーバーグループを設定します。 対象サーバーまたは対象サーバーグループからジョブを削除するには、 **sp_remove_job_from_targets**を使用します。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーであるか、 **msdb**データベースに格納され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている次のいずれかのエージェント固定データベースロールが与えられている必要があります。  
+ このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーであるか、msdb データベースに格納されている次のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定**msdb**データベースロールが与えられている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -126,12 +125,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
  これらの固定データベースロールに関連付けられている特定の権限の詳細については、「 [SQL Server エージェント固定データベースロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- ** \@Owner_login_name**の値を設定または変更できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。 **Sysadmin**ロールのメンバーでないユーザーが** \@owner_login_name**の値を設定または変更した場合、このストアドプロシージャの実行は失敗し、エラーが返されます。  
+ ** \@ Owner_login_name**の値を設定または変更できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。 **Sysadmin**ロールのメンバーでないユーザーが** \@ owner_login_name**の値を設定または変更した場合、このストアドプロシージャの実行は失敗し、エラーが返されます。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-job"></a>A. ジョブの追加  
- この例では、という`NightlyBackups`名前の新しいジョブを追加します。  
+ この例では、という名前の新しいジョブを追加し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -142,11 +141,11 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. ポケットベル、電子メール、および net send の情報を含むジョブの追加  
- この例では、ジョブ`Ad hoc Sales Data Backup`が失敗`François Ajenstat`した場合に (ポケットベル、電子メール、またはネットワークのポップアップメッセージによって) 通知されるという名前のジョブを作成し、正常に完了したときにジョブを削除します。  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B: ポケットベル、電子メール、および net send の情報を含むジョブの追加  
+ この例では、ジョブが失敗した `Ad hoc Sales Data Backup` `François Ajenstat` 場合に (ポケットベル、電子メール、またはネットワークのポップアップメッセージによって) 通知されるという名前のジョブを作成し、正常に完了したときにジョブを削除します。  
   
 > [!NOTE]  
->  この例では、という`François Ajenstat`名前の演算子と`françoisa` 、という名前のログインが既に存在しています。  
+>  この例では、という名前の演算子 `François Ajenstat` と、という名前のログインが `françoisa` 既に存在しています。  
   
 ```  
 USE msdb ;  
@@ -168,7 +167,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
@@ -179,6 +178,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

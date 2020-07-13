@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084547"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
@@ -232,7 +232,7 @@ SSMA では、次の2つの方法で PL/SQL のサブタイプを変換できま
   
 -   ストアドプロシージャと関数  
   
--   具体化したビュー  
+-   具体化されたビュー  
   
 次の DB2 オブジェクトのシノニムは、オブジェクトへの直接参照で置き換えることができます。  
   
@@ -371,9 +371,9 @@ DB2 の入れ子になった subprogram の種類 (スタンドアロンスト�
 ### <a name="use-isnull-in-replace-function-calls"></a>関数呼び出しの置換で ISNULL を使用する  
 ISNULL ステートメントは、DB2 の動作をエミュレートするために、REPLACE 関数呼び出しで使用されます。 この設定には、次のオプションがあります。  
   
--   はい  
+-   YES  
   
--   いいえ  
+-   NO  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -384,9 +384,9 @@ ISNULL ステートメントは、DB2 の動作をエミュレートするため
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 関数呼び出しで ISNULL を使用する  
 ISNULL ステートメントは、DB2 の動作をエミュレートするために、CONCAT 関数呼び出しで使用されます。 この設定には、次のオプションがあります。  
   
--   はい  
+-   YES  
   
--   いいえ  
+-   NO  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   

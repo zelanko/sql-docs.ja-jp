@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68762760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757873"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パラメーターとして渡されたエージェント タイプについて、既定の構成の ID を取得します。 このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
@@ -42,24 +42,24 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 `[ @agent_type = ] 'agent_type'`エージェントの種類を示します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント。|  
 |**2**|ログ リーダー エージェント。|  
-|**番**|ディストリビューション エージェント。|  
+|**3**|ディストリビューション エージェント。|  
 |**4**|マージ エージェント。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_default**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_agent_default**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

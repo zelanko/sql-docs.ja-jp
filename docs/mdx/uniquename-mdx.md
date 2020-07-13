@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097292"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
@@ -50,7 +50,7 @@ Member_Expression.UniqueName
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **UniqueName**関数は、 [name](../mdx/name-mdx.md)関数によって返される名前ではなく、オブジェクトの一意の名前を返します。 返された名前には、キューブの名前は含まれません。 返される結果は、サーバー側の設定または MDX の一意名の形式の接続文字列プロパティによって異なります。  
   
 ## <a name="example"></a>例  
@@ -75,6 +75,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

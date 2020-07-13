@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: db0e312fabc039de2554f00b7e9f33a7a76ec584
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: c6ab1c55da39c5cb6647aeac9e32d72cafb5af3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961862"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>ドメインベースの属性 (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でのドメイン ベースの属性とは、別のエンティティからのメンバーによって値が設定される属性です。 ドメイン ベースの属性によって、ユーザーが無効な属性値を入力することを防止できることから、ドメイン ベースの属性は制約リストと考えることもできます。 属性値を選択するには、ユーザーは一覧から選択する必要があります。
 
 ## <a name="domain-based-attribute-example"></a>ドメイン ベースの属性の例
@@ -42,15 +40,15 @@ ms.locfileid: "78176061"
 
 |タスクの説明|トピック|
 |----------------------|-----------|
-|既存のエンティティを元にして新しいドメインベースの属性を作成する。|[ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
-|新規エンティティを作成する。|[エンティティ &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|
+|既存のエンティティを元にして新しいドメインベースの属性を作成する。|[ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
+|新規エンティティを作成する。|[エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [派生階層 &#40;マスターデータサービス&#41;](derived-hierarchies-master-data-services.md)
+-   [派生階層 (マスター データ サービス)](derived-hierarchies-master-data-services.md)
 
--   [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)
+-   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)
 
--   [エンティティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/entities-master-data-services.md)
+-   [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)
 
 

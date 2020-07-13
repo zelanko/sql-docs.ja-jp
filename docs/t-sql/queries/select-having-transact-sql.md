@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、`HAVING` 句を使用して、`SalesAmount` テーブルから各 `80000` の `OrderDateKey` を超える合計 `FactInternetSales` を取得します。  
+ 次の例では、`HAVING` 句を使用して、`FactInternetSales` テーブルから各 `OrderDateKey` の `80000` を超える合計 `SalesAmount` を取得します。  
   
 ```sql
 -- Uses AdventureWorks  

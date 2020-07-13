@@ -1,5 +1,6 @@
 ---
-title: SQL エスケープ シーケンスの使用 | Microsoft Docs
+title: JDBC での SQL エスケープ シーケンスの使用
+description: Microsoft JDBC Driver for SQL Server では、JDBC API で定義されているように、SQL エスケープ シーケンスを使用することができます。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b2bacdc6eb65824c34f6bb2e6dec86f5abe9efd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 68b595c1901d010b798ebf1767e270e468fb9163
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924012"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528187"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 
@@ -71,7 +72,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 文字列関数                                                                                                                                                                                                                                                                                                                        | 数値関数                                                                                                                                                                                                                                                                                                                                                                                                   | 日付時刻関数                                                                                                                                                                                                                                                                                                                                             | システム関数                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> [LTRIM]<br /><br /> REPEAT<br /><br /> [REPLACE]<br /><br /> RIGHT<br /><br /> [RTRIM]<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> [SUBSTRING]<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> [ROUND]<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
 
 > [!NOTE]  
 > データベースでサポートされていない関数を使用すると、エラーが発生します。  
@@ -159,6 +160,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 エスケープ構文には 2 つの部分があります。\<*rows*> は必須であり、返される行数を指定します。 OFFSET と \<*row offset*> は省略可能であり、返される行の先頭までスキップする行数を指定します。 JDBC ドライバーでは、このうち必須の部分のみがサポートされ、LIMIT の代わりに TOP を使用するようにクエリを変換して処理されます。 SQL Server は、LIMIT 句をサポートしていません。 **JDBC ドライバーは、省略可能な \<row offset> をサポートしていません。これを使用すると、ドライバーが例外をスローします**。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーでのステートメントの使用](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

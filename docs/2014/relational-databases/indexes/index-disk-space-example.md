@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63161797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025253"
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
   インデックスを作成、再構築、または削除する場合は、古い (基になる) 構造と新しい (対象となる) 構造の両方を格納するディスク領域が、それぞれ適切なファイルとファイル グループで必要になります。 古い構造の割り当ては、インデックス作成トランザクションがコミットされるまで解除されません。 並べ替え操作用に一時ディスク領域が追加で必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
@@ -96,7 +95,7 @@ ms.locfileid: "63161797"
   
 -   一時マッピング インデックスに必要な領域を判断します。  
   
-     この例では、古いブックマークはヒープの行 ID (RID) (8 バイト) で、新しいブックマークはクラスター化キー (を`uniqueifier`含む24バイト) です。 古いブックマークと新しいブックマーク間で重複する列はありません。  
+     この例では、古いブックマークはヒープの行 ID (RID) (8 バイト) で、新しいブックマークはクラスター化キー (を含む24バイト) です `uniqueifier` 。 古いブックマークと新しいブックマーク間で重複する列はありません。  
   
      一時マッピング インデックスのサイズは、100 万行 * (8 バイト + 24 バイト) / 80% ~ 40 MB です。  
   

@@ -1,5 +1,6 @@
 ---
 title: Index の Filegroup 要素 (DTA)
+description: dta ユーティリティでは、Index の Filegroup 要素により、ユーザー指定の構成でインデックスを作成するファイル グループを指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d08931e613cb32b961e6bbd8f848abb42c0de67b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b3c331a11cb01807c6193147ca89f3989d26e0d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307675"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826474"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index の Filegroup 要素 (DTA)
 

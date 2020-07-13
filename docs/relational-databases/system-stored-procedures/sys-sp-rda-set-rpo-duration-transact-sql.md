@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905008"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053479"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sp_rda_set_rpo_duration (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   特定の時点への復元が必要な場合に、リモートの Azure データベースの完全な復元を確実に行うために、ステージングテーブルに保持 SQL Server れる移行データの時間数を設定します。    
     
@@ -41,7 +40,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>引数    
- [ @duration_hrs = ]*duration_hrs*    
+ [ @duration_hrs =] *duration_hrs*    
  現在の Stretch が有効なデータベースについて SQL Server 保持する移行データの時間数 (null 以外の整数値) を指定します。 既定値と最小値は8時間です。    
  
  > [!NOTE]
@@ -50,7 +49,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>アクセス許可    
  Db_owner のアクセス許可が必要です。    
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>注釈    
  [Transact-sql&#41;&#40;sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)を実行して現在の値を取得します。    
     
 ## <a name="see-also"></a>参照    

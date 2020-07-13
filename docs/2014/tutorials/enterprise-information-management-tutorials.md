@@ -9,17 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b8cde162479645ab13a6ae000cc46e42e3c10e41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65485577"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057593"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management のチュートリアル
-  このセクションには、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] に付属の Enterprise Information Management (EIM) テクノロジを使用して、企業で情報を管理する方法のチュートリアルが含まれています。 Enterprise Integration Management (EIM) では、組織がデータの信頼性と一貫性を信頼してビジネス上の重要な意思決定を行うことを可能にするソリューションのポートフォリオが用意されています。 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] には、企業で EIM ソリューションを実装する際に役立つ以下のテクノロジがあります。  
+  このセクションには、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] に付属の Enterprise Information Management (EIM) テクノロジを使用して、企業で情報を管理する方法のチュートリアルが含まれています。 Enterprise Integration Management (EIM) では、組織がデータの信頼性と一貫性を信頼してビジネス上の重要な意思決定を行うことを可能にするソリューションのポートフォリオが用意されています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] には、企業で EIM ソリューションを実装する際に役立つ以下のテクノロジがあります。  
   
 -   SQL Server Integration Services (SSIS)。 SSIS では、ビジネス ワークフロー、データ ウェアハウス、またはマスター データ管理をサポートする包括的な抽出、変換、および読み込み (ETL) のさまざまなソースからデータを統合するための強力な拡張可能プラットフォームを用意しています。  
   

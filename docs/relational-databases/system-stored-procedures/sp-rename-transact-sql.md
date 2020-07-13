@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73983065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751654"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、また[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]は共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
+  現在のデータベース内のユーザーが作成したオブジェクトの名前を変更します。 このオブジェクトには、テーブル、インデックス、列、別名データ型、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) ユーザー定義型を使用できます。  
   
 > [!CAUTION]  
 >  オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 ストアド プロシージャ、トリガー、ユーザー定義関数、またはビューの名前を変更する場合は、このステートメントを使用しないことをお勧めします。代わりに、オブジェクトを削除して新しい名前で再作成してください。  
@@ -47,33 +47,33 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @objname = ]'*object_name*'  
+ [ @objname =] '*object_name*'  
  ユーザーオブジェクトまたはデータ型の現在の修飾名または修飾され名を指定します。 名前を変更するオブジェクトがテーブル内の列である場合は、 *object_name*の形式である必要があります *。 column また*は schema.*テーブル*です。 名前を変更するオブジェクトがインデックスの場合、 *object_name* *テーブル*の形式である必要があります。インデックスまたは*スキーマ。* 名前を変更するオブジェクトが制約の場合、 *object_name*は*schema. 制約*の形式である必要があります。  
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *object_name*は**nvarchar (776)**,、既定値はありません。  
   
- [ @newname = ]'*new_name*'  
+ [ @newname =] '*new_name*'  
  指定したオブジェクトの新しい名前を指定します。 *new_name*は、1部構成の名前である必要があり、識別子の規則に従っている必要があります。 *newname*は**sysname**,、既定値はありません。  
   
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
- [ @objtype = ]'*object_type*'  
+ [ @objtype =] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義データベース。 このオブジェクトの種類は、データベースの名前を変更するときに必要です。|  
 |INDEX|ユーザー定義インデックス。 統計を使用してインデックスの名前を変更すると、統計の名前も自動的に変更されます。|  
 |OBJECT|[Sys. オブジェクト](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)で追跡される型の項目。 たとえば、OBJECT を使用して、制約 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、ユーザー テーブル、ルールなどのオブジェクトの名前を変更できます。|  
-|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降、および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された、またはインデックスを使用して暗黙的に作成された統計。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
+|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された、またはインデックスを使用して暗黙的に作成された統計。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
 |USERDATATYPE|[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)または[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)を実行して追加された[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  現在のデータベースでのみ、オブジェクトまたはデータ型の名前を変更できます。 ほとんどのシステムデータ型とシステムオブジェクトの名前は変更できません。  
   
  sp_rename では、PRIMARY KEY (主キー) または UNIQUE (一意) 制約の名前を変更した場合、関連するインデックスの名前も自動的に変更されます。 名前を変更したインデックスが PRIMARY KEY 制約に関連付けられている場合、PRIMARY KEY 制約も sp_rename によって自動的に名前が変更されます。  
@@ -90,7 +90,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-renaming-a-table"></a>A. テーブル名の変更  
- 次の例では、`SalesTerritory` スキーマの `SalesTerr` テーブルの名前を `Sales` に変更します。  
+ 次の例では、`Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,8 +99,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B. 列の名前を変更する  
- 次の例では`TerritoryID` 、 `SalesTerritory`テーブルの列の`TerrID`名前をに変更します。  
+### <a name="b-renaming-a-column"></a>B: 列の名前を変更する  
+ 次の例では、テーブルの列の名前 `TerritoryID` `SalesTerritory` をに変更 `TerrID` します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,8 +109,8 @@ EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
 GO  
 ```  
   
-### <a name="c-renaming-an-index"></a>C. インデックス名を変更する  
- 次の例では`IX_ProductVendor_VendorID` 、インデックス`IX_VendorID`の名前をに変更します。  
+### <a name="c-renaming-an-index"></a>C: インデックス名を変更する  
+ 次の例では、インデックスの名前 `IX_ProductVendor_VendorID` をに変更 `IX_VendorID` します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -119,8 +119,8 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>D. 別名データ型の名前を変更する  
- 次の例では`Phone` 、別名データ型`Telephone`の名前をに変更します。  
+### <a name="d-renaming-an-alias-data-type"></a>D: 別名データ型の名前を変更する  
+ 次の例では、 `Phone` 別名データ型の名前をに変更し `Telephone` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,9 +203,9 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>参照  
- [sql_expression_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+ [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

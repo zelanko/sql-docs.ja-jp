@@ -133,7 +133,7 @@ GRANT permission [ ,...n ] ON
 ## <a name="examples"></a>例  
   
 ### <a name="granting-permissions-to-a-search-property-list"></a>検索プロパティ リストに対する権限を許可する  
- 次の例では、検索プロパティ リスト `Mary` に対する `VIEW DEFINITION` 権限を `DocumentTablePropertyList` に許可します。  
+ 次の例では、検索プロパティ リスト `DocumentTablePropertyList` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

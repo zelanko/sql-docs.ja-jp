@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 561f6a893803aba1e545356b05de9a5e86088476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706147"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   スカラー値を単一列で構成される値のセットと比較します。 SOME と ANY は等価です。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68072262"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   

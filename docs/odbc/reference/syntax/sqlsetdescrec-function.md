@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b9940d55ca10292d6c90a241f47479a2178eff3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343059"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299532"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLSetDescRec(
 ```  
   
 ## <a name="arguments"></a>引数  
- *記述子ハンドル*  
+ *DescriptorHandle*  
  代入記述子ハンドル。 IRD ハンドルを指定することはできません。  
   
  *RecNumber*  
@@ -64,13 +64,13 @@ SQLRETURN SQLSetDescRec(
  *内部*  
  代入型が SQL_DATETIME または SQL_INTERVAL レコードの場合、SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定する値です。  
   
- *数*  
+ *[データ型]*  
  代入記述子レコードの SQL_DESC_OCTET_LENGTH フィールドを設定する値。  
   
- *精度*  
+ *[精度]*  
  代入記述子レコードの SQL_DESC_PRECISION フィールドを設定する値。  
   
- *段階*  
+ *スケール*  
  代入記述子レコードの SQL_DESC_SCALE フィールドを設定する値。  
   
  *DataPtr*  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>診断  
  **SQLSetDescRec**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_DESC で、*記述子ハンドル*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetDescRec**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07009|無効な記述子のインデックス|*Recnumber*引数は0に設定され、*記述子ハンドル*は IPD ハンドルを参照しています。<br /><br /> *Recnumber*引数が0未満でした。<br /><br /> *Recnumber*引数が、データソースがサポートできる列またはパラメーターの最大数を超えています。また、*記述子ハンドル*引数は APD、IPD、またはでした。<br /><br /> *Recnumber*引数が0で、*記述子ハンドル*引数が暗黙的に割り当てられた APD を参照しています。 (明示的に割り当てられたアプリケーション記述子が APD であるか、または実行時までに適用されるかが不明であるため、明示的に割り当てられたアプリケーション記述子では、このエラーは発生しません)。|  
@@ -136,7 +136,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="consistency-checks"></a>整合性チェック  
  アプリケーションが APD、IPD、またはの SQL_DESC_DATA_PTR フィールドを設定するたびに、ドライバーによって整合性チェックが自動的に実行されます。 いずれかのフィールドが他のフィールドと矛盾している場合、 **SQLSetDescRec**は SQLSTATE HY021 (矛盾した記述子情報) を返します。  
   
- アプリケーションが APD、、または IPD の SQL_DESC_DATA_PTR フィールドを設定するたびに、ドライバーは SQL_DESC_TYPE フィールドの値とその SQL_DESC_TYPE フィールドに適用できる値が有効で一貫性があることを確認します。 このチェックは、SQLBindParameter または**SQLBindCol**が呼び出されたとき、または APD、 **** 、または IPD に対して**SQLSetDescRec**が呼び出されたときに常に実行されます。 この整合性チェックには、記述子フィールドに対する次のチェックが含まれています。  
+ アプリケーションが APD、、または IPD の SQL_DESC_DATA_PTR フィールドを設定するたびに、ドライバーは SQL_DESC_TYPE フィールドの値とその SQL_DESC_TYPE フィールドに適用できる値が有効で一貫性があることを確認します。 このチェックは、SQLBindParameter または**SQLBindCol**が呼び出されたとき、または APD、 **SQLBindParameter** 、または IPD に対して**SQLSetDescRec**が呼び出されたときに常に実行されます。 この整合性チェックには、記述子フィールドに対する次のチェックが含まれています。  
   
 -   SQL_DESC_TYPE フィールドは、有効な ODBC C または SQL 型またはドライバー固有の SQL 型のいずれかである必要があります。 SQL_DESC_CONCISE_TYPE フィールドは、有効な ODBC C または SQL の型、またはドライバー固有の C または SQL の型のいずれかである必要があります。これには、簡潔な datetime 型と interval 型が含まれます。  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLSetDescRec(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |列のバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |パラメーターのバインド|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527258"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)
   使用する資格情報を保存するために、対象アプリケーションを Secure Store Service で作成してあれば、PowerPivot データ更新ジョブは任意の Windows ユーザー アカウントで実行できます。 同様に、PowerPivot for Excel のデータを最初にインポートするときに使用するものとは異なるデータベース ログインを提供する場合は、その資格情報を Secure Store Service の対象アプリケーションにマップし、データ更新スケジュールでその対象アプリケーションを指定できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "66087459"
   
  このトピックでは、SharePoint 2010 ファーム内の PowerPivot データの更新操作に使用するユーザー名とパスワードの設定方法について説明します。 この手順を使用するには、あらかじめ、Secure Store Service を有効にし、マスター キーを生成しておく必要があります。 詳細については、「 [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)」を参照してください。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [データ更新用の Windows アカウントの構成](#configAny)  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66087459"
   
  データ更新の構成または使用に関する問題が発生した場合は、TechNet wiki の「 [PowerPivot データ更新のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=223279)」ページを参照してください。  
   
-##  <a name="configAny"></a>データ更新用の Windows アカウントを構成する  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>データ更新用の Windows アカウントを構成する  
  SharePoint ユーザーがデータ更新スケジュールを定義するときには、データ更新の実行に使用するユーザー ID を指定する必要があります。 オプションとしては、PowerPivot 自動データ更新アカウントを選択する方法、ユーザー自身の Windows ドメイン ユーザー アカウントを入力する方法、またはデータ更新の目的に使用できるその他の Windows ユーザー アカウントを入力する方法があります。 ここでは、最後のオプション (その他の Windows アカウントを指定する方法) の手順を示します。  
   
  この方法は、PowerPivot 自動データ更新アカウント (SharePoint 上のすべての PowerPivot ユーザーが利用可能) の使用またはブック所有者の資格情報の使用に代わる方法が必要な場合に選択できます。 たとえば、組織レベルでのデータ更新操作の追跡および管理が容易になるように、ワークグループに応じて一連のデータ更新アカウントを利用可能にすることが必要になる場合があります。  
@@ -56,7 +55,7 @@ ms.locfileid: "66087459"
   
 ### <a name="step-1-create-a-target-application"></a>手順 1: 対象アプリケーションを作成する  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [ **Secure Store Service**] をクリックします。  
   
@@ -101,15 +100,14 @@ ms.locfileid: "66087459"
   
 17. **[OK]** をクリックします。  
   
-###  <a name="bkmk_grant"></a>手順 2: アカウントに投稿権限を付与する  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>手順 2: アカウントに投稿権限を付与する  
  保存された資格情報を使用する前に、使用するすべての PowerPivot ブックで、このアカウントに投稿権限を割り当てる必要があります。 この権限レベルは、ライブラリからブックを開き、データの更新後に再度ライブラリに保存するために必要です。  
   
  権限の割り当ては、サイト コレクションの管理者が実行する手順です。 SharePoint の権限は、ルート サイト コレクションで割り当てるか、ルート サイト コレクションより下位の任意のレベル (個々のドキュメントやアイテムを含む) で割り当てることができます。 権限の設定方法は、権限をどのくらい細かく設定する必要があるかによって異なります。 次の手順は、権限を付与する方法の一例を示しています。  
   
 1.  SharePoint サイトで、[サイトの操作] の [**サイトの権限**] をクリックします。  
   
-2.  
-  **[アクセス許可の付与]** をクリックします。  
+2.  **[アクセス許可の付与]** をクリックします。  
   
 3.  [ユーザーの選択] に、対象アプリケーションで指定した Windows ドメイン ユーザー アカウントの名前を入力します。  
   
@@ -117,7 +115,7 @@ ms.locfileid: "66087459"
   
 5.  [**投稿**] を選択し、[ **OK**] をクリックします。  
   
-###  <a name="bkmk_dbread"></a>手順 3: データ更新で使用される外部データソースにアクセスするための読み取り権限を付与する  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>手順 3: データ更新で使用される外部データソースにアクセスするための読み取り権限を付与する  
  データを PowerPivot ブックにインポートする場合、通常、外部データへの接続は、信頼関係接続か、(現在のユーザーの ID を使用してデータ ソースに接続する) 権限を借用した接続に基づきます。 これらの種類の接続は、現在のユーザーがインポートする対象のデータに対する読み取り権限を持つ場合にのみ有効です。  
   
  データ更新シナリオでは、データをインポートするために使用された接続文字列が、データを更新するために再利用されます。 接続文字列が現在のユーザーを想定している (たとえば、Integrated_Security=SSPI を含む文字列) 場合、PowerPivot System サービスは、対象アプリケーションで指定したユーザー ID を現在のユーザーとして渡します。 この接続は、外部データ ソースに対する読み取り権限がアカウントに付与されている場合にのみ成功します。  
@@ -126,7 +124,7 @@ ms.locfileid: "66087459"
   
  組織で使用しているデータ ソースの管理者であれば、ログインを作成し、必要な権限を付与することができます。 管理者でない場合は、データの所有者に対してアカウント情報を連絡する必要があります。 対象アプリケーションにマップされる Windows ドメイン ユーザー アカウントを必ず指定してください。 これは、このトピックの「手順 1: ターゲットアプリケーションを作成する」で指定したアカウントです。  
   
-###  <a name="bkmk_verify"></a>手順 4: データ更新構成ページでアカウントの可用性を確認する  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>手順 4: データ更新構成ページでアカウントの可用性を確認する  
   
 1.  PowerPivot データが含まれているパブリッシュ済みのブックのデータ更新構成ページを開きます。 ページを開く方法については、「 [PowerPivot for SharePoint&#41;&#40;データ更新をスケジュールする](schedule-a-data-refresh-powerpivot-for-sharepoint.md)」を参照してください。  
   
@@ -140,14 +138,14 @@ ms.locfileid: "66087459"
   
  トラブルシューティングの詳細については、TechNet Wiki の「 [PowerPivot データ更新のトラブルシューティング](https://go.microsoft.com/fwlink/p/?LinkID=223279)」を参照してください。  
   
-##  <a name="config3rd"></a>外部またはサードパーティのデータソースにアクセスするための定義済みアカウントの構成  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>外部またはサードパーティのデータソースにアクセスするための定義済みアカウントの構成  
  多くの場合、データベース サーバーには独自の認証方法が用意されています。 データ更新時に外部データ ソースへアクセスするためにデータベース資格情報を必要とする PowerPivot ブックがある場合は、資格情報の対象アプリケーション ID を作成し、[データ更新のスケジュール] ページの [データ ソース] セクションで、対象アプリケーションを指定できます。  
   
  この手順は、PowerPivot ブックに既に埋め込まれているデータベース資格情報をオーバーライドするオプションをユーザーに提供する場合にのみ必要です。  
   
  この手順は、接続文字列にユーザー名とパスワードが既に含まれている場合にのみ有効です。 接続文字列に資格情報があることは比較的少ないため、このオプションを利用する機能はある程度制限されています。 データベース認証を使用してデータ ソースに接続する場合は、接続文字列にユーザー ID とパスワードだけを使用するのが一般的です。 接続文字列にユーザー ID とパスワードが含まれているかどうかを確認する方法の詳細については、「 [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)」の「スケジュールを作成し、外部データにアクセスするためのアクセス許可を付与する」を参照してください。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [ **Secure Store Service**] をクリックします。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - sql_error [ODBC]
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051133"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300432"
 ---
 # <a name="errors-and-batches"></a>エラーおよびバッチ
 SQL ステートメントのバッチの実行中にエラーが発生すると、次の4つのいずれかの結果が得られます。 (考えられる各結果はデータソース固有であり、バッチに含まれるステートメントにも依存する可能性があります)。  

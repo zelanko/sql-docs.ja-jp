@@ -12,16 +12,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3102e5043527a1aa9463980c9dd546839cb92f37
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037702"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283752"
 ---
-# <a name="c-to-sql-timestamp"></a>C から SQL へ: タイムスタンプ
+# <a name="c-to-sql-timestamp"></a>C から SQL へ: Timestamp
 タイムスタンプの ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_TYPE_TIMESTAMP  

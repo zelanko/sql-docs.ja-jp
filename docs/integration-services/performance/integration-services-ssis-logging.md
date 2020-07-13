@@ -312,7 +312,7 @@ ms.locfileid: "79287886"
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
  **構成**  
- 既存の接続マネージャーを一覧から選択するか、\<[**新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ 既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
  関連項目:「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」  
   

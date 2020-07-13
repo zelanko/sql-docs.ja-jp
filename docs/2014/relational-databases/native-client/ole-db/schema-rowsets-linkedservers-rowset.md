@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 行セット (OLE DB) |Microsoft Docs
+title: LINKEDSERVERS 行セット (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,21 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80eded31ebae744e272757a53a7fd1f4b56bf358
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62667337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998484"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 行セット (OLE DB)
-  
   **LINKEDSERVERS** 行セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリに参加できる、組織のデータ ソースを列挙します。  
   
- 
-  **LINKEDSERVERS** 行セットは、次の列で構成されます。  
+ **LINKEDSERVERS** 行セットは、次の列で構成されます。  
   
-|列名|型を表すインジケーター|[説明]|  
+|列名|型を表すインジケーター|説明|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  

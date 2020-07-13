@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108679"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
@@ -32,43 +32,36 @@ ms.locfileid: "66108679"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>レポート サーバー データベースを作成または構成する場合  
  ファイルのみのモードでレポート サーバーをインストールした場合は、レポート サーバー データベースを作成および構成する必要があります。  
   
- をネイティブモード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の既定の構成でインストールした場合、レポートサーバーデータベースは、レポートサーバーインスタンスのインストール時に自動的に作成および構成されます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
+ をネイティブモード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の既定の構成でインストールした場合、レポートサーバーデータベースは、レポートサーバーインスタンスのインストール時に自動的に作成および構成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
   
-##  <a name="rsdbrequirements"></a>開始する前に  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 開始前の準備  
  レポート サーバー データベースの作成または構成は、複数の手順から成るプロセスです。 レポート サーバー データベースを作成する前に、次の項目をどのように指定するかを検討してください。  
   
  データベース サーバーの選択  
  サポートされている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンとサポートされているエディションを「[レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)」で確認します。  
   
  TCP/IP 接続の有効化  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の TCP/IP 接続を有効にします。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションの中には、既定で TCP/IP が有効になっていないものもあります。 手順はこのトピックで説明します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の TCP/IP 接続を有効にします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションの中には、既定で TCP/IP が有効になっていないものもあります。 手順はこのトピックで説明します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のポートを開く  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のポートを開く  
  リモート サーバーでファイアウォール ソフトウェアを使用している場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを開く必要があります。  
   
  レポート サーバーの資格情報の決定  
  レポート サーバーがレポート サーバー データベースに接続する方法を決定します。 資格情報の種類には、ドメイン ユーザー アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウント、およびレポート サーバー サービス アカウントがあります。  
   
- これらの資格情報は暗号化され、RSReportServer.config ファイルに格納されます。 レポート サーバーは、これらの資格情報を使用してレポート サーバー データベースに継続的に接続します。 Windows ユーザー アカウントまたはデータベース ユーザー アカウントを使用する場合は、既に存在するアカウントを指定してください。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ログインの作成と必要な権限の設定は実行されますが、アカウントは自動的に作成されません。 詳細については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーデータベース接続の構成](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+ これらの資格情報は暗号化され、RSReportServer.config ファイルに格納されます。 レポート サーバーは、これらの資格情報を使用してレポート サーバー データベースに継続的に接続します。 Windows ユーザー アカウントまたはデータベース ユーザー アカウントを使用する場合は、既に存在するアカウントを指定してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ログインの作成と必要な権限の設定は実行されますが、アカウントは自動的に作成されません。 詳細については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーデータベース接続の構成](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
  レポート サーバーの言語の決定  
  レポート サーバーに対して指定する言語を選択します。 ユーザーが他言語バージョンのブラウザーを使用してサーバーに接続する場合でも、定義済みロールの名前、説明、および個人用レポート フォルダーは他の言語では表示されません。  
   
  データベースを作成および準備するための資格情報の確認  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスでデータベースを作成する権限があるアカウントの資格情報を持っていることを確認します。 この資格情報は、レポート サーバー データベースおよび **RSExecRole**を作成するための一度だけの接続に使用されます。 ログインが存在しない場合は、レポート サーバーがデータベースに接続する際に使用するアカウント用にデータベース ユーザー ログインが作成されます。 ログインに使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントで接続するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを入力することができます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスでデータベースを作成する権限があるアカウントの資格情報を持っていることを確認します。 この資格情報は、レポート サーバー データベースおよび **RSExecRole**を作成するための一度だけの接続に使用されます。 ログインが存在しない場合は、レポート サーバーがデータベースに接続する際に使用するアカウント用にデータベース ユーザー ログインが作成されます。 ログインに使用している [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントで接続するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを入力することができます。  
   
 ### <a name="to-enable-access-to-a-remote-report-server-database"></a>リモートのレポート サーバー データベースにアクセスできるようにするには  
   
 1.  リモートの [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを使用している場合は、データベース サーバーにログオンして、TCP/IP 接続を確認するか有効にします。  
   
-2.  
-  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 3.  **SQL Server ネットワーク構成**を開きます。  
   
@@ -82,8 +75,7 @@ ms.locfileid: "66108679"
   
 ### <a name="to-create-a-local-report-server-database"></a>ローカルのレポート サーバー データベースを作成するには  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [データベース] ページの **[データベースの変更]** をクリックします。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 516e872a9544c2594a039c05fed9451d91a89ede
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63245404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067449"
 ---
 # <a name="arguments-dialog-box"></a>[引数] ダイアログ ボックス
   **[引数]** ダイアログ ボックスでは、ツールの新しい引数または既存の引数を指定します。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスで **[起動時に引数を入力]** オプションをオンにしている外部ツールを起動したときに表示されます。  

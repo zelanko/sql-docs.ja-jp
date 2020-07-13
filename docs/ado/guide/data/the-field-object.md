@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923982"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763093"
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**Field**オブジェクトは、通常、データベーステーブルの列に対応します。 ただし、**フィールド**は、チャプターと呼ばれる別の**レコードセット**へのポインターを表すこともできます。 チャプター列などの例外については、このガイドの後半で説明します。  
@@ -68,9 +68,9 @@ ms.locfileid: "67923982"
 ### <a name="getting-more-field-information"></a>フィールド情報の取得  
  ADO オブジェクトには、組み込みと動的の2種類のプロパティがあります。 この時点で、**フィールド**オブジェクトの組み込みプロパティだけが説明されています。  
   
- 組み込みプロパティは ADO で実装されるプロパティで、 `MyObject.Property`構文を使用して、新しいオブジェクトですぐに使用できます。 これらは、オブジェクトの**プロパティ**コレクション内の**プロパティ**オブジェクトとしては表示されません。  
+ 組み込みプロパティは ADO で実装されるプロパティで、構文を使用して、新しいオブジェクトですぐに使用でき `MyObject.Property` ます。 これらは、オブジェクトの**プロパティ**コレクション内の**プロパティ**オブジェクトとしては表示されません。  
   
- 動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADO オブジェクトの**properties**コレクションに表示されます。 たとえば、プロバイダー固有のプロパティは、**レコードセット**オブジェクトがトランザクションをサポートするか更新するかを示します。 これらの追加のプロパティは、その**レコードセット**オブジェクトの**プロパティ**コレクション内の**プロパティ**オブジェクトとして表示されます。 動的プロパティを参照できるのは、構文`MyObject.Properties(0)`または`MyObject.Properties("Name")`を使用して、コレクションを通じてのみです。  
+ 動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADO オブジェクトの**properties**コレクションに表示されます。 たとえば、プロバイダー固有のプロパティは、**レコードセット**オブジェクトがトランザクションをサポートするか更新するかを示します。 これらの追加のプロパティは、その**レコードセット**オブジェクトの**プロパティ**コレクション内の**プロパティ**オブジェクトとして表示されます。 動的プロパティを参照できるのは、構文またはを使用して、コレクションを通じてのみ `MyObject.Properties(0)` `MyObject.Properties("Name")` です。  
   
  どちらの種類のプロパティも削除できません。  
   

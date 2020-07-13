@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b88af5ea6f20f11fdb3551c82f70e109abedee09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918605"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78895952"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 
@@ -44,7 +44,7 @@ SQL Server 2008 にテーブル値パラメーターが導入されるまでは�
   
 - 複数のデータ値を区切り文字列または XML ドキュメントにバンドルし、それらのテキスト値をプロシージャまたはステートメントに渡します。 これを行うには、そのプロシージャまたはステートメントに、データ構造の検証と値のバンドルの解除に必要なロジックが含まれている必要があります。  
   
-- 複数の行 (`Update` の <xref:Microsoft.Data.SqlClient.SqlDataAdapter> メソッドを呼び出すことによって作成された行など) に影響を及ぼす、データを変更するための一連の個別 SQL ステートメントを作成します。 サーバーへの変更の送信は個別に行うことも、グループにまとめることもできます。 ただし、複数のステートメントをまとめてバッチ送信しても、サーバーで実行されるときはそれぞれ個別に処理されます。  
+- 複数の行 (<xref:Microsoft.Data.SqlClient.SqlDataAdapter> の `Update` メソッドを呼び出すことによって作成された行など) に影響を及ぼす、データを変更するための一連の個別 SQL ステートメントを作成します。 サーバーへの変更の送信は個別に行うことも、グループにまとめることもできます。 ただし、複数のステートメントをまとめてバッチ送信しても、サーバーで実行されるときはそれぞれ個別に処理されます。  
   
 - `bcp` ユーティリティ プログラムまたは <xref:Microsoft.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数のデータ行をテーブルに読み込みます。 この手法は非常に効率的ですが、サーバー側の処理は、データが一時テーブルまたはテーブル変数に読み込まれない限りサポートされません。  
   
@@ -96,7 +96,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - ALTER TABLE ステートメントを使用して、テーブル値パラメーターの設計を変更することはできません。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter 構成の例  
-<xref:Microsoft.Data.SqlClient> では、テーブル値パラメーターのデータを <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>、または <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.Data.SqlClient.Server.SqlDataRecord> オブジェクトから読み込むことができます。 <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:Microsoft.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 次のコード フラグメントは、データを挿入するために <xref:Microsoft.Data.SqlClient.SqlParameter> を構成する方法を示しています。  
+<xref:Microsoft.Data.SqlClient> では、テーブル値パラメーターのデータを <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>、または <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.Data.SqlClient.Server.SqlDataRecord> オブジェクトから読み込むことができます。 <xref:Microsoft.Data.SqlClient.SqlParameter> の <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 次のコード フラグメントは、データを挿入するために <xref:Microsoft.Data.SqlClient.SqlParameter> を構成する方法を示しています。  
  
 次の例では、`addedCategories` 変数に <xref:System.Data.DataTable> が含まれています。 変数がどのように設定されているかを確認するには、次の「[ストアド プロシージャへのテーブル値パラメーターの受け渡し](#passing)」を参照してください。
 
@@ -119,7 +119,7 @@ tvpParam.SqlDbType = SqlDbType.Structured;
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> ストアド プロシージャへのテーブル値パラメーターの受け渡し  
-この例は、テーブル値パラメーターのデータをストアド プロシージャに渡す方法を示しています。 追加された行が、<xref:System.Data.DataTable> メソッドを使って新しい <xref:System.Data.DataTable.GetChanges%2A> に抽出された後、 <xref:Microsoft.Data.SqlClient.SqlCommand> が定義され、<xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> プロパティが <xref:System.Data.CommandType.StoredProcedure> に設定されます。 <xref:Microsoft.Data.SqlClient.SqlParameter> は <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> メソッドを使って設定され、<xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> は `Structured` に設定されます。 その後、<xref:Microsoft.Data.SqlClient.SqlCommand> は、<xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> メソッドを使って実行されます。  
+この例は、テーブル値パラメーターのデータをストアド プロシージャに渡す方法を示しています。 追加された行が、<xref:System.Data.DataTable.GetChanges%2A> メソッドを使って新しい <xref:System.Data.DataTable> に抽出された後、 <xref:Microsoft.Data.SqlClient.SqlCommand> が定義され、<xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> プロパティが <xref:System.Data.CommandType.StoredProcedure> に設定されます。 <xref:Microsoft.Data.SqlClient.SqlParameter> は <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> メソッドを使って設定され、<xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> は `Structured` に設定されます。 その後、<xref:Microsoft.Data.SqlClient.SqlCommand> は、<xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> メソッドを使って実行されます。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -140,7 +140,7 @@ using (connection)
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>テーブル値パラメーターをパラメーター化 SQL ステートメントに渡す  
- 次の例は、データ ソースとしてテーブル値パラメーターが指定されている INSERT ステートメントと SELECT サブクエリを使用して、dbo.Categories テーブルにデータを挿入する方法を示しています。 テーブル値パラメーターをパラメーター化 SQL ステートメントに渡すときは、<xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> の新しい <xref:Microsoft.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 この `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 この例のコードは、`TypeName` プロパティを使用して、dbo.CategoryTableType で定義されている型構造体を参照しています。  
+ 次の例は、データ ソースとしてテーブル値パラメーターが指定されている INSERT ステートメントと SELECT サブクエリを使用して、dbo.Categories テーブルにデータを挿入する方法を示しています。 テーブル値パラメーターをパラメーター化 SQL ステートメントに渡すときは、<xref:Microsoft.Data.SqlClient.SqlParameter> の新しい <xref:Microsoft.Data.SqlClient.SqlParameter.TypeName%2A> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 この `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 この例のコードは、`TypeName` プロパティを使用して、dbo.CategoryTableType で定義されている型構造体を参照しています。  
   
 > [!NOTE]
 >  テーブル値パラメーターの ID 列に値を指定する場合は、そのセッションに対して SET IDENTITY_INSERT ステートメントを発行する必要があります。  
@@ -170,7 +170,7 @@ using (connection)
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>DataReader を使用した行のストリーミング  
-<xref:System.Data.Common.DbDataReader> から派生した任意のオブジェクトを使用して、一連の行データをテーブル値パラメーターに挿入することもできます。 次のコード フラグメントは、<xref:System.Data.OracleClient.OracleCommand> と <xref:System.Data.OracleClient.OracleDataReader> を使用して、Oracle データベースからデータを取得する方法を示しています。 その後、<xref:Microsoft.Data.SqlClient.SqlCommand> を、1 つの入力パラメーターを使用してストアド プロシージャを呼び出すように構成します。 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> の <xref:Microsoft.Data.SqlClient.SqlParameter> プロパティは `Structured` に設定されます。 <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> は、`OracleDataReader` の結果セットを、テーブル値パラメーターとしてストアド プロシージャに渡します。  
+<xref:System.Data.Common.DbDataReader> から派生した任意のオブジェクトを使用して、一連の行データをテーブル値パラメーターに挿入することもできます。 次のコード フラグメントは、<xref:System.Data.OracleClient.OracleCommand> と <xref:System.Data.OracleClient.OracleDataReader> を使用して、Oracle データベースからデータを取得する方法を示しています。 その後、<xref:Microsoft.Data.SqlClient.SqlCommand> を、1 つの入力パラメーターを使用してストアド プロシージャを呼び出すように構成します。 <xref:Microsoft.Data.SqlClient.SqlParameter> の <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> プロパティは `Structured` に設定されます。 <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> は、`OracleDataReader` の結果セットを、テーブル値パラメーターとしてストアド プロシージャに渡します。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

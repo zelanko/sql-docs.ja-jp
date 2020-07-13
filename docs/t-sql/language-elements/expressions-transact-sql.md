@@ -21,15 +21,15 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8928abaed7125e0cc27cfe7bd0a9069727f0f191
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70978596"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007395"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって 1 つのデータ値を取得するために評価される、記号と演算子の組み合わせです。 単純式には、1 つの定数、変数、列、またはスカラー関数を指定できます。 演算子を使用すると、2 つ以上の単純式を結合して、複合式を作成できます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70978596"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 { constant | scalar_function | [ table_name. ] column | variable   
@@ -48,7 +48,7 @@ ms.locfileid: "70978596"
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  

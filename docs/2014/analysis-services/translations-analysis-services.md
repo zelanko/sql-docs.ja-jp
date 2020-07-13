@@ -16,23 +16,19 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938323"
 ---
 # <a name="translations-analysis-services"></a>翻訳 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 多次元のみ  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の多次元データ モデルでは、キャプションに複数の翻訳を埋め込み、LCID に基づいてロケール固有の文字列を提供することができます。 データベース名、キューブ オブジェクト、およびデータベース ディメンション オブジェクトに翻訳を追加できます。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の多次元データ モデルでは、キャプションに複数の翻訳を埋め込み、LCID に基づいてロケール固有の文字列を提供することができます。 データベース名、キューブ オブジェクト、およびデータベース ディメンション オブジェクトに翻訳を追加できます。  
   
- 翻訳を定義するには、メタデータと翻訳されたキャプションをモデル内に作成します。しかし、クライアント アプリケーションでローカライズされた文字列をレンダリングするには、`Language` プロパティをオブジェクトに設定するか、または接続文字列で `Locale Identifier` パラメーターを渡す (たとえば、`LocaleIdentifier=1036` を設定するとフランス語の文字列が返されます) 必要があります。 同じオブジェクトでさまざまな言語の翻訳を同時にサポートする場合は、`Locale Identifier` を使用するように計画してください。 
-  `Language` プロパティを設定する方法でも機能しますが、処理やクエリにも影響が出るため、意図しない結果になる恐れがあります。 
-  `Locale Identifier` は翻訳した文字列を返すためにのみ使用されるため、それを設定する方が適切です。  
+ 翻訳を定義するには、メタデータと翻訳されたキャプションをモデル内に作成します。しかし、クライアント アプリケーションでローカライズされた文字列をレンダリングするには、`Language` プロパティをオブジェクトに設定するか、または接続文字列で `Locale Identifier` パラメーターを渡す (たとえば、`LocaleIdentifier=1036` を設定するとフランス語の文字列が返されます) 必要があります。 同じオブジェクトでさまざまな言語の翻訳を同時にサポートする場合は、`Locale Identifier` を使用するように計画してください。 `Language` プロパティを設定する方法でも機能しますが、処理やクエリにも影響が出るため、意図しない結果になる恐れがあります。 `Locale Identifier` は翻訳した文字列を返すためにのみ使用されるため、それを設定する方が適切です。  
   
  翻訳は、ロケール識別子 (LCID)、オブジェクトの翻訳されたキャプション (たとえば、ディメンションまたは属性の名前)、およびオプションとして対象言語でのデータ値を提供する列へのバインドで構成されます。 複数の翻訳を保持できますが、特定の接続で使用できる翻訳は 1 つのみです。 モデルに埋め込むことができる翻訳の数に理論上の制限はありませんが、翻訳を 1 つ追加するごとにテストの複雑さが増すことと、すべての翻訳で同じ照合順序を共有する必要があることから、ソリューションを設計する際にはこれらの当然の制約に注意してください。  
   
@@ -48,7 +44,7 @@ ms.locfileid: "66065882"
   
 1.  デザイナーで、Adventure Works 多次元モデルを開きます。  
   
-2.  ソリューションエクスプローラーで、[データソースビュー] を開き、[Adventure Works\<DW version> dsv] をダブルクリックします。  
+2.  ソリューションエクスプローラーで、[データソースビュー] を開き、[Adventure Works DW. dsv] をダブルクリックし \<version> ます。  
   
 3.  dimDate、dimProduct、dimProductCategory、または dimProductSubcateogry を検索します。 これらのすべてのディメンションには、月、曜日、製品名、カテゴリ名などの、翻訳されたメンバーの属性が含まれています。  
   
@@ -56,11 +52,10 @@ ms.locfileid: "66065882"
   
  日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと `FormatString` プロパティを使用します。 「[通貨換算 (Analysis Services)](currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)」をご覧ください。  
   
- [レッスン 9:](lesson-9-defining-perspectives-and-translations.md) Analysis Services チュートリアルでのパースペクティブと翻訳の定義」では、翻訳を作成およびテストする手順について説明します。  
+ Analysis Services のチュートリアルの「[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 」では、翻訳を作成してテストする手順について説明しています。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
- 翻訳を定義するには、`Translation` データベース、ディメンション、またはキューブ オブジェクトの子として [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを作成します。 
-  [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] を使用してソリューションを開き、翻訳を定義します。  
+ 翻訳を定義するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、ディメンション、またはキューブ オブジェクトの子として `Translation` オブジェクトを作成します。 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] を使用してソリューションを開き、翻訳を定義します。  
   
 ### <a name="add-translations-to-a-cube"></a>キューブに翻訳を追加する  
  翻訳は、キューブ、メジャー グループ、メジャー、キューブ ディメンション、パースペクティブ、KPI、アクション、名前付きセット、および計算されるメンバーに追加できます。  
@@ -82,8 +77,7 @@ ms.locfileid: "66065882"
   
  翻訳されたキャプションは、キーボードまたはコピー/貼り付けを使用して手動でモデルに追加しますが、ディメンションの属性メンバーについては、翻訳された値を外部データベースから取得できます。 具体的には、属性の `CaptionColumn` プロパティをデータ ソース ビューの列にバインドできます。  
   
- 照合順序の設定は、属性レベルでオーバーライドできます。たとえば、特定の属性について文字幅の区別で調整したり、バイナリ並べ替えを使用したりできます。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、データ バインドが定義されている場所で照合順序が公開されます。 ディメンション属性の翻訳は DSV 内の別のソース列にバインドするので、ソース列で使用する照合順序を指定できるように、照合順序の設定が可能になっています。 リレーショナル データベース内の列の照合順序について詳しくは、「 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 」を参照してください。  
+ 照合順序の設定は、属性レベルでオーバーライドできます。たとえば、特定の属性について文字幅の区別で調整したり、バイナリ並べ替えを使用したりできます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、データ バインドが定義されている場所で照合順序が公開されます。 ディメンション属性の翻訳は DSV 内の別のソース列にバインドするので、ソース列で使用する照合順序を指定できるように、照合順序の設定が可能になっています。 リレーショナル データベース内の列の照合順序について詳しくは、「 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 」を参照してください。  
   
 1.  ソリューション エクスプローラーで、ディメンション名をダブルクリックして、ディメンション デザイナーを開きます。  
   
@@ -124,7 +118,7 @@ ms.locfileid: "66065882"
 ## <a name="see-also"></a>参照  
  [Analysis Services Multiidimensional のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [言語と照合順序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
- [列の照合順序の設定または変更](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [グローバリゼーションのヒントとベストプラクティス &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [列の照合順序を設定または変更する](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)  
   
   

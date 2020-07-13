@@ -1,5 +1,6 @@
 ---
 title: UDT テーブルと列の定義 |Microsoft Docs
+description: UDT 定義を含むアセンブリを登録したら、それを列定義で使用できます。
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -21,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fc857b99772983d925504357f641f89780fdd67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727770"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>ユーザー定義の型の使用 - UDT テーブルと列の定義
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ユーザー定義型 (UDT) 定義を含むアセンブリが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに登録されると、列定義で使用できます。 詳細については、「 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)」を参照してください。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  ユーザー定義型 (UDT) 定義を含むアセンブリがデータベースに登録されると [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、列定義で使用できます。 詳細については、「 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)」を参照してください。  
   
 ## <a name="creating-tables-with-udts"></a>UDT を含むテーブルの作成  
- テーブルに UDT 列を作成するために特別な構文は用意されていません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで**は、point という名前**のテーブルを作成します。この列には、 **id**という名前の列があります。これは、 **int** id 列とテーブルの主キーとして定義されています。 2番目の列は**Pointvalue**という名前で、データ型は**point**です。 この例で使用するスキーマ名は**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
+ テーブルに UDT 列を作成するために特別な構文は用意されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のデータ型であるかのように、列定義に UDT の名前を使用できます。 次の CREATE TABLE ステートメントでは、point [!INCLUDE[tsql](../../includes/tsql-md.md)] という名前のテーブルを作成します。この列には、 **id**という名前の列があります。これは、 **int** id 列とテーブルの主キーとして定義されています。 **Points** 2番目の列は**Pointvalue**という名前で、データ型は**point**です。 この例で使用するスキーマ名は**dbo**です。 この操作には、スキーマ名を指定する権限が必要です。 スキーマ名を省略すると、データベース ユーザーの既定のスキーマが使用されます。  
   
 ```sql  
 CREATE TABLE dbo.Points   
@@ -50,7 +50,7 @@ CREATE TABLE dbo.Points
   
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
  [CREATE TYPE (Transact-sql)](../../t-sql/statements/create-type-transact-sql.md)     
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     

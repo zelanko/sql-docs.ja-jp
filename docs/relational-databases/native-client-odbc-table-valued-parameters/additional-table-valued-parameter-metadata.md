@@ -11,20 +11,19 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), catalog functions to retrieve metadata
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a83df9dde4ada571b0fc39f6ac8e45c49d9ac17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: e1aed8844cffc6ccfb6608e4077f792dcf8651e6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73777898"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004599"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  アプリケーションは、テーブル値パラメーターのメタデータを取得するために SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合、SQLProcedureColumns は単一の行を返します。 テーブル値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パラメーターに関連付けられているテーブル型のスキーマとカタログの情報を提供するために、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME という2つの追加固有の列が追加されました。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のドライバー固有の列の前、および odbc 自体によって必須とされるすべての列の前に表示されます。  
+  アプリケーションは、テーブル値パラメーターのメタデータを取得するために SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合、SQLProcedureColumns は単一の行を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル値パラメーターに関連付けられているテーブル型のスキーマとカタログの情報を提供するために、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME という2つの追加固有の列が追加されました。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべてのドライバー固有の列の前、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および odbc 自体によって必須とされるすべての列の前に表示されます。  
   
  テーブル値パラメーターにとって重要な列を次の表に示します。  
   
@@ -32,16 +31,16 @@ ms.locfileid: "73777898"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターの型名|  
-|COLUMN_SIZE|整数|NULL|  
-|BUFFER_LENGTH|整数|0|  
+|COLUMN_SIZE|Integer|NULL|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint (NULL 以外)|SQL_NULLABLE|  
-|備考|Varchar|NULL|  
+|REMARKS|Varchar|NULL|  
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint (NULL 以外)|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|整数|NULL|  
+|CHAR_OCTET_LENGTH|Integer|NULL|  
 |ORDINAL_POSITION|Integer (NULL 以外)|パラメーターの序数位置。|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) (NULL 以外)|テーブル値パラメーターのテーブル型の型定義が格納されているカタログ。|  

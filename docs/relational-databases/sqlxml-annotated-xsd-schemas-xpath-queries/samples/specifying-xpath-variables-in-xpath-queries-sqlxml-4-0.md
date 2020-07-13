@@ -1,5 +1,6 @@
 ---
 title: XPath クエリでの XPath 変数の指定 (SQLXML)
+description: SQLXML 4.0 XPath クエリで XPath 変数を指定する方法の例を示します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73bb6880fb19f3e49387d9d3d0bb57100ffdf42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 624062a1ef50f4610e3b91d2197901219113fe53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733672"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での XPath 変数の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   次の例では、XPath クエリに XPath 変数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. XPath 変数を使用する  
- サンプル テンプレートは、2 つの XPath クエリで構成されており、 各 XPath クエリは 1 つのパラメーターをとります。 テンプレートでは、これらのパラメーターの既定値も指定しています。 パラメーター値が指定されない場合は、既定値が使用されます。 既定値を持つ2つのパラメーターは、 ** \<sql: header>** で指定されます。  
+ サンプル テンプレートは、2 つの XPath クエリで構成されており、 各 XPath クエリは 1 つのパラメーターをとります。 テンプレートでは、これらのパラメーターの既定値も指定しています。 パラメーター値が指定されない場合は、既定値が使用されます。 では、既定値を持つ2つのパラメーターが指定されてい **\<sql:header>** ます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -1,5 +1,6 @@
 ---
 title: MySQL データベースを SQL Server に移行する-Azure SQL DB |Microsoft Docs
+description: SQL Server Migration Assistant (SSMA) を使用して SQL Server または Azure SQL Database に MySQL データベースを移行するには、この推奨プロセスを使用します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67908796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293591"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>MySQL データベースの SQL Server への移行-Azure SQL DB (MySQLToSql)
 SQL Server Migration Assistant (SSMA) for MySQL は、MySQL データベースを SQL Server または SQL Azure にすばやく移行するのに役立つ包括的な環境です。 SSMA for MySQL を使用すると、データベースオブジェクトとデータの確認、データベースオブジェクトの移行の評価、SQL Server または SQL Azure へのデータベースオブジェクトの移行、SQL Server または SQL Azure へのデータの移行を行うことができます。  
@@ -38,7 +39,7 @@ MySQL データベースから SQL Server または SQL Azure にオブジェク
   
 7.  [MySQL データベース &#40;MySQLToSQL&#41;に変換しています](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [同期](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. これは、次の方法のいずれかで実行できます。  
   

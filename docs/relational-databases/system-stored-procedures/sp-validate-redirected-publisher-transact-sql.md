@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a38d4a197b5e86b41b8a7b791321d8a7ded7ab3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72252052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723026"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パブリッシング データベースの現在のホストがレプリケーションをサポートできることを確認します。 ディストリビューション データベースから実行する必要があります。 このプロシージャは**sp_get_redirected_publisher**によって呼び出されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72252052"
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @original_publisher = ] 'original_publisher'`データベースを最初にパブリッシュし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たのインスタンスの名前。 *original_publisher*は**sysname**であり、既定値はありません。  
+`[ @original_publisher = ] 'original_publisher'`データベースを最初にパブリッシュしたのインスタンスの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher*は**sysname**であり、既定値はありません。  
   
 `[ @publisher_db = ] 'publisher_db'`パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**であり、既定値はありません。  
   
@@ -52,8 +52,8 @@ ms.locfileid: "72252052"
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@redirected_publisher*に null が返されます。 エントリが存在する場合は、成功と失敗の両方のケースで出力パラメーターに返されます。  
+## <a name="remarks"></a>Remarks  
+ パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@ redirected_publisher*に null が返されます。 エントリが存在する場合は、成功と失敗の両方のケースで出力パラメーターに返されます。  
   
  検証が成功した場合、 **sp_validate_redirected_publisher**は成功を示す値を返します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72252052"
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元は、 **sysadmin**固定サーバーロールのメンバーであるか、ディストリビューションデータベースの**db_owner**固定データベースロールのメンバーであるか、パブリッシャーデータベースに関連付けられている定義済みパブリケーションのパブリケーションアクセスリストのメンバーである必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   

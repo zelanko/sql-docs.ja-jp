@@ -11,22 +11,19 @@ f1_keywords:
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6cc05e073bdb57033e4e618eb85a9c04fda76f5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538215"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>[作成方法の選択] (ディメンション ウィザード)
-  
   **[作成方法の選択]** ページを使用すると、ディメンションの作成方法を選択できます。  
   
  **ディメンション ウィザードを開くには**  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の **ソリューション エクスプローラー**で、 **プロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいディメンション]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[既存のテーブルの使用]**  

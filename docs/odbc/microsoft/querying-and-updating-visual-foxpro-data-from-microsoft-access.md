@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2681ecd0fe6f586954236c4fb5fddcf576b206be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f11b49ed099ba29d0e7e013af99a8ad96ca6825c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988061"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292872"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Microsoft Access からクエリを実行して Visual FoxPro データを更新する
 [テーブルのリンク] オプションを使用して、Microsoft Access データベースから Visual FoxPro データベースに格納されているデータのクエリや更新を行うことができます。  

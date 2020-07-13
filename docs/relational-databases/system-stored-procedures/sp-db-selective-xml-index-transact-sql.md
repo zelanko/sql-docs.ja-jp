@@ -15,19 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728211"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対して選択的 XML インデックス機能を有効または無効にします。 パラメーターを指定しないでストアド プロシージャを呼び出すと、選択的 XML インデックスが特定のデータベースで有効になっている場合は 1 が返されます。  
   
 > [!NOTE]  
@@ -77,7 +76,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>B. 選択的 XML インデックス機能を無効にする  
+### <a name="b-disable-selective-xml-index-functionality"></a>B: 選択的 XML インデックス機能を無効にする  
  次の例では、現在のデータベースで選択的 XML インデックスを無効にします。  
   
 ```  
@@ -96,7 +95,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="c-detect-if-selective-xml-index-is-enabled"></a>C. 選択的 XML インデックスが有効かどうかを検出します  
+### <a name="c-detect-if-selective-xml-index-is-enabled"></a>C: 選択的 XML インデックスが有効かどうかを検出します  
  次の例では、選択的 XML インデックスが有効になっているかどうかを検出します。 選択的 XML インデックスが有効になっている場合は1を返します。  
   
 ```  
@@ -104,7 +103,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

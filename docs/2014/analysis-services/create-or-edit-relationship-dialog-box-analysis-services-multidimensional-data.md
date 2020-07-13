@@ -13,27 +13,21 @@ helpviewer_keywords:
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b18a0b6c79a3787af4a55a473e5203daf9c7308f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086777"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526485"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>[リレーションシップの作成] または [リレーションシップの編集] ダイアログ ボックス (Analysis Services - 多次元データ)
+  **の** [リレーションシップの作成]/[リレーションシップの編集] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビューでリレーションシップを定義または変更できます。 **[リレーションシップの作成]/[リレーションシップの編集]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
-  **の** [リレーションシップの作成]/[リレーションシップの編集] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビューでリレーションシップを定義または変更できます。 
-  **[リレーションシップの作成]/[リレーションシップの編集]** ダイアログ ボックスを表示するには、次の手順に従います。  
+-   **データ ソース ビュー デザイナー** の **[ツール バー]** ペインで **[新しいリレーションシップ]** をクリックします。  
   
--   
-  **データ ソース ビュー デザイナー** の **[ツール バー]** ペインで **[新しいリレーションシップ]** をクリックします。  
+-   **データ ソース ビュー デザイナー** の **[テーブル]** ペインまたは **[ダイアグラム]** ペインのどちらかで、テーブルを右クリックして **[新しいリレーションシップ]** をクリックします。  
   
--   
-  **データ ソース ビュー デザイナー** の **[テーブル]** ペインまたは **[ダイアグラム]** ペインのどちらかで、テーブルを右クリックして **[新しいリレーションシップ]** をクリックします。  
-  
--   
-  **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインでリレーションシップを右クリックして **[リレーションシップの編集]** をクリックします。  
+-   **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインでリレーションシップを右クリックして **[リレーションシップの編集]** をクリックします。  
   
 > [!NOTE]  
 >  **データソースビューデザイナー**では、基になるデータソースに存在しないリレーションシップを作成できます。また、**データソースビューデザイナー**によって作成されたリレーションシップを、基になるデータソースの既存の外部キーリレーションシップから削除することもできます。  
@@ -59,6 +53,6 @@ ms.locfileid: "66086777"
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データソースビューデザイナー &#40;Analysis Services-多次元データ&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

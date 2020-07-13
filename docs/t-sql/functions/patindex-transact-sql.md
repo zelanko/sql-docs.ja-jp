@@ -19,18 +19,18 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831836"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003804"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   すべて有効なテキストおよび文字データ型について、指定された式の中で、パターンが最初に現れる先頭位置を返します。パターンが見つからない場合は、0 を返します。  
   
@@ -158,7 +158,7 @@ position
 次の例では、変数を使用して *pattern* パラメーターに値を渡します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
 SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  

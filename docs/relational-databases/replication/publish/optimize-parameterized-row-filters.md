@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: baa8ac4db20eab2ce24ec3bb3963cd847f707fa4
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710867"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219351"
 ---
 # <a name="optimize-parameterized-row-filters"></a>パラメーター化された行フィルターの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ ms.locfileid: "71710867"
  次の設定を使用して、パラメーター化された行フィルターを最適化できます。  
   
  **Partition Options**  
- このオプションは、 **[アーティクルのプロパティ -** Article>] **ダイアログ ボックスの \<[プロパティ]** ページ、または **[フィルターの追加]** ダイアログ ボックスで設定します。 どちらのダイアログ ボックスも、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスからアクセスできます。 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスでは、 **[フィルターの追加]** ダイアログ ボックスでは使用できない、このオプションに対する追加の値も指定できます。  
+ このオプションは、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** ページ、または **[フィルターの追加]** ダイアログ ボックスで設定します。 どちらのダイアログ ボックスも、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスからアクセスできます。 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスでは、 **[フィルターの追加]** ダイアログ ボックスでは使用できない、このオプションに対する追加の値も指定できます。  
   
  **[パーティションの事前計算]**  
- このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で **[True]** に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 このオプションは、 **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで変更します。  
+ このオプションは、パブリケーションのアーティクルが一連の要件を満たしている場合に、既定で **[True]** に設定されています。 これらの要件の詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。 このオプションは、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで変更します。  
   
  **[同期の最適化]**  
- このオプションは、 **[パーティションの事前計算]** が **[False]** に設定されている場合にのみ、 **[True]** に設定されています。 このオプションは、 **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで設定します。  
+ このオプションは、 **[パーティションの事前計算]** が **[False]** に設定されている場合にのみ、 **[True]** に設定されています。 このオプションは、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで設定します。  
   
  パブリケーションの新規作成ウィザードの使用および **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」 (パブリケーションの作成) および「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>[フィルターの追加] または [フィルターの編集] ダイアログ ボックスでパーティションのオプションを設定するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[行のフィルター選択]** ページで、 **[追加]** をクリックし、 **[フィルターの追加]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[追加]** をクリックし、 **[フィルターの追加]** をクリックします。  
   
 2.  パラメーター化されたフィルターを作成します。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71710867"
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ -** Article>]**ダイアログ ボックスの**[プロパティ] **タブの \<[対象オブジェクト]** セクションで、 **[パーティションのオプション]** に対して以下のいずれかの値を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、 **[パーティションのオプション]** に対して以下のいずれかの値を指定します。  
   
     -   **[重複する]**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71710867"
   
 #### <a name="to-set-precompute-partitions"></a>[パーティションの事前計算] を設定するには  
   
-1.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、 **[パーティションの事前計算]** オプションに対する値を選択します。 このプロパティは、以下の場合に読み取り専用になります。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[パーティションの事前計算]** オプションに対する値を選択します。 このプロパティは、以下の場合に読み取り専用になります。  
   
     -   パブリケーションが、事前計算済みパーティションの要件を満たさない場合。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71710867"
   
 #### <a name="to-set-optimize-synchronization"></a>[同期の最適化] を設定するには  
   
-1.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、`True`[同期の最適化]**オプションに対して** の値を選択します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[同期の最適化]** オプションに対して `True` の値を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -147,16 +147,16 @@ ms.locfileid: "71710867"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>既存のパブリケーションに対するマージ フィルターの動作を表示して変更するには  
   
-1.  (省略可能) パブリッシャーのパブリケーション データベースに対して、[ を指定して ](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)sp_helpmergepublication`@publication` を実行します。 結果セットの `keep_partition_changes` と `use_partition_groups` の値を確認します。  
+1.  (省略可能) パブリッシャーのパブリケーション データベースに対して、`@publication` を指定して [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) を実行します。 結果セットの `keep_partition_changes` と `use_partition_groups` の値を確認します。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `use_partition_groups` の値に `@property` を、`true` に `false` または `@value` のいずれかを指定します。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `@property` の値に `use_partition_groups` を、`@value` に `true` または `false` のいずれかを指定します。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `keep_partition_changes` の値に `@property` を、`true` に `false` または `@value` のいずれかを指定します。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `@property` の値に `keep_partition_changes` を、`@value` に `true` または `false` のいずれかを指定します。  
   
     > [!NOTE]  
-    >  `keep_partition_changes` を有効にしている場合、まず `use_partition_groups` を無効にして、`1` の値を `@force_reinit_subscription` に指定する必要があります。  
+    >  `keep_partition_changes` を有効にしている場合、まず `use_partition_groups` を無効にして、`@force_reinit_subscription` の値を `1` に指定する必要があります。  
   
-4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 `partition_options` の値に `@property` を指定し、*@value` に適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 」を参照してください。  
+4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 `@property` の値に `partition_options` を指定し、`@value` に適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 」を参照してください。  
   
 5.  (省略可) 必要に応じてスナップショット エージェントを開始し、スナップショットを再生成してください。 新しいスナップショットの生成が必要な変更の詳細については、「[変更パブリケーションとアーティクルのプロパティ](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62823789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058473"
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
   このウィンドウを使用して、選択した要素のプロパティを表示します。 また、[プロパティ] ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 [プロパティ] ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "62823789"
   
 ## <a name="options"></a>オプション  
   
-|要素|[説明]|  
+|要素|説明|  
 |-------------|-----------------|  
 |**オブジェクト名です。**|現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。|  
 |**項目別**|選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開または折りたたみを行うと、各カテゴリ名の左側に正符号 (+) または負符号 (-) が表示されます。 項目はアルファベット順に表示されます。|  

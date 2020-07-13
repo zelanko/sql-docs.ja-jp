@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53dc804c4182aaf2574b4d37d49371c9293fa90f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749593"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行するための DLL の有効化
 > [!IMPORTANT]
@@ -33,7 +33,7 @@ ms.locfileid: "67922702"
   
 2.  ビジネスオブジェクトをパッケージにインストールします。  
   
-     または  
+     \- または -  
   
      パッケージに[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトをインポートします。  
   

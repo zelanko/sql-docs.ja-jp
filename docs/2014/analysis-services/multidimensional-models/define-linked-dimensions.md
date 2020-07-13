@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66075577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547011"
 ---
 # <a name="define-linked-dimensions"></a>リンク ディメンションの定義
   リンク ディメンションは、バージョンと互換性レベルが同じである別の Analysis Services データベース内で作成および保存されたディメンションに基づいています。 リンク ディメンションを使用すると、1 つのデータベースでディメンションを作成、保存、保守することができ、さらにそのディメンションを複数のデータベースで使用可能にすることができます。 ユーザーに対しては、リンク ディメンションは他のディメンションと同様に表示されます。  
@@ -41,42 +40,36 @@ ms.locfileid: "66075577"
   
 1.  SQL Server Management Studio で Analysis Services サーバーに接続します。 オブジェクト エクスプローラーでサーバー名を右クリックし、 **[ファセット]** をクリックします。  
   
-2.  
-  **LinkedObjectsLinksFromOtherInstancesEnabled** を **True** に設定し、他のインスタンスで実行されるデータベース内に格納されたリンク オブジェクトに対してサーバーで要求を発行できるようにします。  
+2.  **LinkedObjectsLinksFromOtherInstancesEnabled** を **True** に設定し、他のインスタンスで実行されるデータベース内に格納されたリンク オブジェクトに対してサーバーで要求を発行できるようにします。  
   
-3.  
-  **LinkedObjectsLinksToOtherInstances** を **True** に設定し、他のインスタンスで実行されるデータベースのリンク オブジェクトに対してサーバーでデータを要求できるようにします。  
+3.  **LinkedObjectsLinksToOtherInstances** を **True** に設定し、他のインスタンスで実行されるデータベースのリンク オブジェクトに対してサーバーでデータを要求できるようにします。  
   
 ## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでリンク ディメンションを作成するには  
   
-1.  ウィザードを開始します。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **データベースまたはプロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいリンク ディメンション]** をクリックします。  
+1.  ウィザードを開始します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **データベースまたはプロジェクトの** [ディメンション] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] フォルダーを右クリックし、 **[新しいリンク ディメンション]** をクリックします。  
   
 2.  ディメンションを提供する Analysis Services データベースに接続します。 リンク オブジェクト ウィザードの **[データ ソースの選択]** ページで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースを選択するか、新しいデータ ソースを作成します。  
   
 3.  ウィザードの **[オブジェクトの選択]** ページで、リモート データベース内でリンクするディメンションを選択します。  
   
-4.  
-  **[ウィザードの完了]** ページで、リンク オブジェクトをプレビューできます。 既に存在するディメンションと同じ名前のディメンションにリンクした場合は、序数 (最初の重複名の "1" から始まる数) が名前に追加されます。 ウィザードを完了すると、ディメンションが **[ディメンション]** フォルダーに追加されます。  
+4.  **[ウィザードの完了]** ページで、リンク オブジェクトをプレビューできます。 既に存在するディメンションと同じ名前のディメンションにリンクした場合は、序数 (最初の重複名の "1" から始まる数) が名前に追加されます。 ウィザードを完了すると、ディメンションが **[ディメンション]** フォルダーに追加されます。  
   
-##  <a name="bkmk_CreateNew"></a>Analysis Services データベースへの新しいデータソース接続の作成  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a>Analysis Services データベースへの新しいデータソース接続の作成  
  新しいデータ ソース ウィザードを使用して、ディメンションを提供する Analysis Services データベースに関するプロジェクト接続情報を追加します。 リンク オブジェクト ウィザードの [データ ソースの選択] ページにある **[新しいデータ ソース]** をクリックしてウィザードを起動できます。  
   
 1.  データ ソース ウィザードの [接続の定義方法を選択します] ページで **[新規作成]** をクリックします。  
   
 2.  接続マネージャーで、プロバイダーが **[ネイティブ OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0]** に設定されていることを確認します。  
   
-3.  サーバーの名前 (名前付きインスタンスの場合は*servername*\\*instancename*を<sup>使用) を</sup>入力するか、 **localhost**と入力して、同じコンピューター上で実行されている Analysis Services サーバーに接続します。  
+3.  サーバーの名前 ( *servername* \\ 名前付きインスタンスの場合は servername*instancename*を使用)<sup>1</sup>を入力するか、 **localhost**と入力して、同じコンピューター上で実行されている Analysis Services サーバーに接続します。  
   
 4.  接続には Windows 認証を使用します。  
   
-5.  
-  **[初期カタログ]** の下矢印をクリックしてこのサーバーのデータベースを選択します。  
+5.  **[初期カタログ]** の下矢印をクリックしてこのサーバーのデータベースを選択します。  
   
 6.  データ ソース ウィザードで **[次へ]** をクリックして次に進みます。  
   
-7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]** をクリックします。 
-  **[次へ]** をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
+7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]** をクリックします。 **[次へ]** をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
   
 ## <a name="next-steps"></a>次の手順  
  リンク ディメンションの構造は変更できないので、ディメンション デザイナーの **[ディメンション構造]** タブではリンク ディメンションの構造を表示できません。 リンクディメンションを処理すると、[**ブラウザー** ] タブで表示できます。名前を変更したり、名前の翻訳を作成したりすることもできます。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - date formats [ODBC]
 - ODBC driver for Oracle [ODBC], date formats
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9da75702275959b48d4965189c9ef5cd856491ff
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063465"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300742"
 ---
 # <a name="setting-the-date-format-on-connection"></a>接続時の日付形式の設定
 > [!IMPORTANT]  

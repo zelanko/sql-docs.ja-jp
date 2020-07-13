@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) |Microsoft Docs
+title: IDBProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,18 +8,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2e5a4fd8-5164-495a-9986-3477aef8d8a5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a4249033987eb9f808b1f9e837418b3ade82f0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: c6853c47b56989d3b29609b028ee8486b7ffbd4f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789434"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008376"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   OLE DB 標準仕様では、プロバイダーが **DBPROPINFO::vValues**に VT_EMPTY を指定することを認めています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で **IDBProperties::GetPropertyInfo** を呼び出して行セット プロパティを取得すると、 **DBPROPSET_ROWSETALL** Native Client OLE DB は、常に VT_EMPTY を返します。  
   

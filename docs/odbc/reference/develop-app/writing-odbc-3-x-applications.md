@@ -16,14 +16,14 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081454"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288990"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x アプリケーションの作成
 *Odbc 2.x アプリケーションを*odbc 3.x にアップグレードする場合は *、odbc* *2.x と 2.x*の両方*のドライバーで*動作するように記述する必要があります。 ODBC *3. x*機能を最大限に活用するには、アプリケーションに条件付きコードを組み込む必要があります。  

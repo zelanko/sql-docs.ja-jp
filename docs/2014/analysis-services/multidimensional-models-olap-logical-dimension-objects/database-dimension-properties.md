@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 504e190f4c513a8c999c4d7d7ab9eaabb83298c3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62728503"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545192"
 ---
 # <a name="database-dimension-properties"></a>データベース ディメンション プロパティ
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ディメンションの特性は、さまざまなディメンションプロパティの設定およびディメンションに含まれる属性または階層に基づいて、ディメンションのメタデータによって定義されます。 次の表では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション プロパティについて説明します。  
+  で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、ディメンションの特性は、さまざまなディメンションプロパティの設定およびディメンションに含まれる属性または階層に基づいて、ディメンションのメタデータによって定義されます。 次の表では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション プロパティについて説明します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|ディメンションの属性の All メンバーの名前を指定します。|  
 |`Collation`|ディメンションで使用する照合順序を指定します。|  
@@ -39,8 +38,7 @@ ms.locfileid: "62728503"
 |`Name`|ディメンションの名前を指定します。|  
 |`ProactiveCaching`|ディメンションのプロアクティブ キャッシュの設定を定義します。|  
 |`ProcessingGroup`|処理グループを指定します。 有効値は ByAttribute または ByTable です。 既定値は `ByAttribute` です。|  
-|`ProcessingMode`|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によるインデックス化および集計を処理中または処理後のどちらに行うかを示します。|  
+|`ProcessingMode`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によるインデックス化および集計を処理中または処理後のどちらに行うかを示します。|  
 |`ProcessingPriority`|レイジー集計、インデックス作成、クラスター化など、バックグラウンド操作中のディメンション処理の優先度を指定します。|  
 |`Source`|ディメンションのバインド先のデータ ソース ビューを指定します。|  
 |`StorageMode`|ディメンションのストレージ モードを指定します。|  
@@ -56,6 +54,6 @@ ms.locfileid: "62728503"
  [属性と属性階層](attributes-and-attribute-hierarchies.md)   
  [ユーザー階層](user-hierarchies.md)   
  [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [ディメンション &#40;Analysis Services-多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

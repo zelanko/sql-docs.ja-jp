@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63127278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050785"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  データを別のデータ型に変換します。  
   
@@ -66,38 +64,33 @@ destlen
   
 ## <a name="arguments"></a>引数  
  *srvproc*  
- 特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API で使用するすべての制御情報が格納されます。 
-  *srvproc* ハンドルが指定されている場合、エラーが発生すると、拡張ストアド プロシージャ API エラー ハンドラー関数に渡されます。  
+ 特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API で使用するすべての制御情報が格納されます。 *srvproc* ハンドルが指定されている場合、エラーが発生すると、拡張ストアド プロシージャ API エラー ハンドラー関数に渡されます。  
   
- *desttype*  
+ *srctype*  
  変換元データのデータ型を指定します。 このパラメーターには、拡張ストアド プロシージャ API の任意のデータ型を使用できます。  
   
  *src*  
  変換元データへのポインターです。 このパラメーターには、拡張ストアド プロシージャ API の任意のデータ型を使用できます。  
   
  *srclen*  
- 変換元データの長さをバイト数で指定します。 
-  *srclen* が 0 である場合、**srv_convert** は出力先変数に NULL を格納します。 0 以外の場合、固定長のデータ型ではこのパラメーターが無視され、変換元データが NULL であると見なされます。 SRVCHAR データ型のデータの場合、長さが -1 であれば、文字列が NULL 終端であることを示します。  
+ 変換元データの長さをバイト数で指定します。 *srclen* が 0 である場合、**srv_convert** は出力先変数に NULL を格納します。 0 以外の場合、固定長のデータ型ではこのパラメーターが無視され、変換元データが NULL であると見なされます。 SRVCHAR データ型のデータの場合、長さが -1 であれば、文字列が NULL 終端であることを示します。  
   
  *desttype*  
  変換先のデータ型を指定します。 このパラメーターには、拡張ストアド プロシージャ API の任意のデータ型を使用できます。  
   
- *先*  
+ *dest*  
  変換したデータを受け取る出力先変数を指すポインターです。 このポインターが NULL である場合、ユーザーが指定したエラー ハンドラーがあれば **srv_convert** はそのエラー ハンドラーを呼び出し、-1 を返します。  
   
- 
-  *desttype* が SRVDECIMAL または SRVNUMERIC である場合、*dest* パラメーターは DBNUMERIC 構造体または DBDECIMAL 構造体を指すポインターである必要があります。その際、構造体の有効桁数と小数点以下桁数のフィールドには、必要な値を設定しておきます。 既定の有効桁数を指定するには DEFAULTPRECISION を、既定の小数点以下桁数を指定するには DEFAULTSCALE を使用できます。  
+ *desttype* が SRVDECIMAL または SRVNUMERIC である場合、*dest* パラメーターは DBNUMERIC 構造体または DBDECIMAL 構造体を指すポインターである必要があります。その際、構造体の有効桁数と小数点以下桁数のフィールドには、必要な値を設定しておきます。 既定の有効桁数を指定するには DEFAULTPRECISION を、既定の小数点以下桁数を指定するには DEFAULTSCALE を使用できます。  
   
  *destlen*  
  出力先変数の長さをバイト数で指定します。 固定長データ型の場合、このパラメーターは無視されます。 出力先変数が SRVCHAR 型である場合、*destlen* の値を出力先バッファー領域全体の長さにする必要があります。 SRVCHAR 型または SRVBINARY 型の出力先変数の長さが -1 であれば、十分な領域があることを示します。 出力先変数が *srvchar* 型である場合、長さを -1 にすると文字列が NULL 終端になります。  
   
 ## <a name="returns"></a>戻り値  
- データ型の変換が成功した場合は、変換後のデータの長さをバイト数で返します。 
-  **srv_convert** がサポートしていないデータ型への変換要求を受けた場合は、開発者の定義したエラー ハンドラーがあればそれを呼び出し、グローバル エラー番号を設定して -1 を返します。  
+ データ型の変換が成功した場合は、変換後のデータの長さをバイト数で返します。 **srv_convert** がサポートしていないデータ型への変換要求を受けた場合は、開発者の定義したエラー ハンドラーがあればそれを呼び出し、グローバル エラー番号を設定して -1 を返します。  
   
-## <a name="remarks"></a>解説  
- 
-  **srv_willconvert** 関数は、特定の変換が可能かどうかを判断する関数です。  
+## <a name="remarks"></a>Remarks  
+ **srv_willconvert** 関数は、特定の変換が可能かどうかを判断する関数です。  
   
  概数データ型 SRVFLT4 または SRVFLT8 への変換では、有効桁数の一部が失われることがあります。 概数データ型 SRVFLT4 または SRVFLT8 から SRVCHAR または SRVTEXT への変換でも有効桁数の一部が失われることがあります。  
   
@@ -109,8 +102,7 @@ destlen
   
  データ型および拡張ストアド プロシージャ API のデータ型変換について詳しくは、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](data-types-extended-stored-procedure-api.md)」をご覧ください。  
   
- 
-  **srv_convert** 関数は、次の理由で変換に失敗することがあります。  
+ **srv_convert** 関数は、次の理由で変換に失敗することがあります。  
   
 -   要求された変換がサポートされていない。  
   
@@ -123,6 +115,6 @@ destlen
   
 ## <a name="see-also"></a>参照  
  [srv_setutype &#40;拡張ストアドプロシージャ API&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;拡張ストアドプロシージャ API&#41;](srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert &#40;拡張ストアド プロシージャ API&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

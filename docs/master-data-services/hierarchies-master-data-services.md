@@ -1,5 +1,6 @@
 ---
 title: 階層
+description: 階層は、類似したメンバーをグループ化し、マスターデータサービスでレポートと分析のためにメンバーを統合/要約するために使用できるツリー構造です。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5990a9f60700f034c372bf74382908b261a43608
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812731"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の階層とは、次の処理に使用できるツリー構造です。  
   
 -   編成を目的として、類似するメンバーをグループ化する。  
@@ -60,20 +60,20 @@ ms.locfileid: "73729225"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルの非表示または削除 &#40;マスターデータサービス&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルを非表示にするか削除する (マスター データ サービス)](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [再帰型階層 &#40;マスターデータサービス&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [再帰型階層 (マスター データ サービス)](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [明示的なキャップを持つ派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)  
+-   [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
   

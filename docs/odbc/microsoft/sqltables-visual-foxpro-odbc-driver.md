@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLTables function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5467fc8c1717d5ceb548b3950a0894fd2a1b4499
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949006"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299287"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

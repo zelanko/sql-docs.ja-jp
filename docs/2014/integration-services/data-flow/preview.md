@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16e970112cbf55adf68ddf3bb246aa46a04a2f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770968"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431659"
 ---
 # <a name="preview"></a>プレビュー
   SAP BW 変換元が抽出するデータをプレビューするには、 **[プレビュー]** ダイアログ ボックスを使用します。  
@@ -51,8 +50,8 @@ ms.locfileid: "62770968"
   
  このダイアログ ボックスに他のオプションはありません。  
   
-## <a name="see-also"></a>参照  
- [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
+## <a name="see-also"></a>関連項目  
+ [SAP BW ソースエディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

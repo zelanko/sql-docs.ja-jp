@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109078"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
@@ -31,7 +31,7 @@ ms.locfileid: "66109078"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、共有データ ソースの [全般] プロパティ ページが開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  共有データ ソースの名前を指定します。この名前は、レポート サーバーの名前空間内のアイテムの識別に使用されます。  
   
@@ -47,8 +47,7 @@ ms.locfileid: "66109078"
  **データソースの種類**  
  データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 レポート[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サーバーには[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、、、Oracle、XML、SAP、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、ODBC、および OLE DB 用のデータ処理拡張機能が含まれています。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
   
- 
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services を使用している場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースのみ選択することができます。  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services を使用している場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースのみ選択することができます。  
   
  **接続文字列**  
  レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。 次の例は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]データベースへの接続に使用される接続文字列を示しています。  
@@ -73,8 +72,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  資格情報が Windows 認証の資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択します。 データベース認証 (たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証) を使用している場合は、このチェック ボックスをオフにしてください。  
   
- データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
+ データベース認証を使用する場合、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する] (接続に使用する認証)** を選択すると、データベース サーバーが権限借用をサポートする場合に限り、データベース資格情報の委任が可能になります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。  
   
  **Windows 統合セキュリティ**  
  現在のユーザーの Windows 資格情報を使用して、データ ソースにアクセスします。 データ ソースへのアクセスに使用される資格情報が、ネットワーク ドメインへのログオンに使用される資格情報と同じである場合に、このオプションを選択します。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報を別のコンピューターに渡すこともできます。 別のコンピューターの接続が必要な場合に、想定されるデータではなく、エラーが返されます。  
@@ -88,13 +86,13 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  このオプションを使用するには、レポート サーバーの配置用の自動実行アカウントをあらかじめ構成しておく必要があります。 自動実行アカウントは、他に使用できる資格情報のソースがない状況で外部データ ソースに接続するために使用します。 このオプションを指定していてアカウントが構成されていない場合、レポート データ ソースへの接続は失敗し、レポート処理は実行されません。 このアカウントの詳細については、「 [SSRS Configuration Manager&#41;の自動実行アカウント &#40;構成する](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- **[適用]**  
+ 適用****  
  変更を保存する場合にクリックします。  
   
- **デリート**  
+ **削除**  
  共有データ ソースを削除する場合にクリックします。 共有データ ソースを削除すると、その共有データ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションが非アクティブ化されます。 レポートおよびサブスクリプションを再びアクティブにするには、1 つずつ開いて別の共有データ ソースを使用するようにデータ ソース プロパティを更新する必要があります。 レポートおよびサブスクリプションでは、データ ソース接続情報を [データ ソース] プロパティの値として指定できます。  
   
- **[詳細ビュー]**  
+ **合わせ**  
  共有データ ソースをレポート サーバー フォルダーの名前空間の別の場所に移動する場合にクリックします。  
   
  **[モデルの生成]**  

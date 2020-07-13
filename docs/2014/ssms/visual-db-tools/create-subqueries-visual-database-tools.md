@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 121d80cf0230be01cf81c09249d2797bb7ce5ae6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63270619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040802"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>サブクエリの作成 (Visual Database Tools)
   クエリの結果は、他のクエリへの入力内容として使用できます。 IN( ) 関数、EXISTS 演算子、FROM 句などを使用するサブクエリの結果を、ステートメントとして再利用できます。  

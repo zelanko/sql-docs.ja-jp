@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064765"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
   このタスクでは、 **Excel 用 MDS アドイン**を使用して、クレンジングおよび仕入先データを**MDS**に発行します。 **Supplier**という名前のエンティティを作成するには、前のレッスンで作成した**サプライヤー**モデルを使用します。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code 属性と Name 属性は、Excel の [**仕入**先] 列と [ **supplier name** ] 列に対応しています。  
   
-1.  **クレンジングされ、一致した仕入先 .xls**を**Excel**で開きます。  
+1.  クレンジングされ **、一致した Suppliers.xls**を**Excel**で開きます。  
   
 2.  Ctrl キーを押し**ながら A**キーを押してデータ全体を選択します。 スプレッドシートでデータ全体を選択することが**重要**です。  
   
@@ -34,9 +33,9 @@ ms.locfileid: "65484660"
   
     1.  [**新しい接続の作成**] を選択し、[**新規**] ボタンをクリックします。  
   
-    2.  [**新しい接続の追加**] ダイアログボックスで、[**説明**] に「 **http://localhost/MDS**ローカル mds サーバー」と入力し、 **Mds サーバーアドレス**に「**ローカル Mds サーバー** 」と入力して、[ **OK** ] をクリックしてダイアログボックスを閉じます。  
+    2.  [**新しい接続の追加**] ダイアログボックスで、[**説明**] に「**ローカル MDS サーバー** 」と入力し、 **mds サーバーアドレス**には**http: \/ /localhost/MDS**を入力し、[ **OK** ] をクリックしてダイアログボックスを閉じます。  
   
-6.  [**接続の管理**] ダイアログボックスで [**ローカル MDS サーバー** http://localhost/MDS)] を選択し、[**テスト**] をクリックして接続をテストします。 メッセージボックスで [ **OK]** をクリックします。  
+6.  [**接続の管理**] ダイアログボックスで [**ローカル MDS サーバー** ()] を選択し `http://localhost/MDS` 、[**テスト**] をクリックして接続をテストします。 メッセージボックスで [ **OK]** をクリックします。  
   
 7.  [**接続**] をクリックして MDS サーバーに接続します。  
   

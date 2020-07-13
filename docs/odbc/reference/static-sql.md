@@ -15,14 +15,14 @@ helpviewer_keywords:
 - embedded SQL [ODBC]
 - SQL [ODBC], static SQL
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55710d8ea734cba86ae5e4daa725f75e94e65a64
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68016741"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81279904"
 ---
 # <a name="static-sql"></a>静的 SQL
 Embedded sql の[例](../../odbc/reference/embedded-sql-example.md)に示されている embedded sql は、静的 sql と呼ばれています。 これは、プログラム内の SQL ステートメントが静的であるため、静的 SQL と呼ばれます。つまり、プログラムが実行されるたびに変更されることはありません。 前のセクションで説明したように、これらのステートメントは、プログラムの残りの部分がコンパイルされるときにコンパイルされます。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d8eab0f281349dd1602525c8d64976b6a15c37f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736160"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 円弧を含む **geography** インスタンスの多角形近似を返します。  
   
@@ -59,7 +59,7 @@ tolerance <= 0 を設定すると、**ArgumentOutOfRange** 例外がスローさ
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
-次の例では、許容値の設定によって、`LineString` から返される `CircularString` インスタンスが変化するしくみを確認できます。  
+次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  
   
 ```
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
-次の例では、`CurvePolygon` インスタンスを使用し、`CurveToLineWithTolerance()`relative*を true に設定して* を呼び出します。  
+次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して `CurveToLineWithTolerance()` を呼び出します。  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

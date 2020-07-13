@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 931b83f8087d446cfc7b08d9582cbad5b02cf671
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63276796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007010"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してイベント クラスのデータ列のフィルターを表示する方法について説明します。  

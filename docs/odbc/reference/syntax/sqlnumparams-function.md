@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLNumParams function [ODBC]
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 171c40ad53f62abc8541bf449e368fd22419644e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1a968e6c7bc7c502d507072f0d7fd70c12c46901
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343496"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306943"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 関数
 **互換性**  
@@ -56,7 +56,7 @@ SQLRETURN SQLNumParams(
 ## <a name="diagnostics"></a>診断  
  **Sqlnumparams**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値は、 *handletype*が SQL_HANDLE_STMT で、*ハンドル*が*StatementHandle*である**SQLGetDiagRec**を呼び出すことによって取得できます。 次の表に、 **Sqlnumparams**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -82,7 +82,7 @@ SQLRETURN SQLNumParams(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |ステートメント内のパラメーターに関する情報を返す|[SQLDescribeParam 関数](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  

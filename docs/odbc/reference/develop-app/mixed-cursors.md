@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97da67bca185cd86de944e8bccc86d2b4c149b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a91dacf8ea9c0ed0db2c3b64634ddd53b854a534
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086371"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307437"
 ---
 # <a name="mixed-cursors"></a>混合カーソル
 

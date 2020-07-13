@@ -13,19 +13,19 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 107bf85ac92fc91aeed7fb5f4ab445e57605e39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68050885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753023"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性グループのカタログビュー (Transact-sql)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ここでは、に関連するカタログビューと関数[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]について説明します。  
+  ここでは、に関連するカタログビューと関数について説明し [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68050885"
 > [!NOTE]  
 >  参加している可用性データベースの詳細については、「 **replica_id** 」および「 **Group_database_id**列[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys. databases (Transact-sql)](sys-databases-transact-sql.md)   
  [database_mirroring_endpoints (Transact-sql)](sys-database-mirroring-endpoints-transact-sql.md)   
  [可用性グループの Always On (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CursorLocation property [ADO], VC++ example
 - AbsolutePosition property [ADO], VC++ example
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58455116560db74d1e1966752e16595be3b74be8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921706"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758938"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition およびカーソルのプロパティの例 (VC + +)
 この例では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを使用します。  

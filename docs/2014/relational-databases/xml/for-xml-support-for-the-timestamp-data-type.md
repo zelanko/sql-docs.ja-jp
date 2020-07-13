@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa7326dbfb9eddde375050c81250e60c17b67f8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065541"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp データ型に対する FOR XML サポート
   FOR XML 変換では、 **timestamp** 型の値は、 **varbinary(8)** データとして扱われ、常に、Base 64 エンコードされます。 必要に応じて、XSD スキーマまたは XDR スキーマでこの型が反映されます。  

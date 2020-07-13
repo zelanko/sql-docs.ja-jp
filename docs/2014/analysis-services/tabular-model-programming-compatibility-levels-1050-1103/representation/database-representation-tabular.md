@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c327e07685e98e6fa9f992025510e869d909e5ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757807"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940093"
 ---
 # <a name="database-representationtabular"></a>データベース表現 (テーブル)
   テーブル モードでは、データベースは、テーブル モデル内に存在するすべてのオブジェクトを対象にするコンテナーです。  

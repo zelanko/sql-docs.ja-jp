@@ -17,32 +17,30 @@ helpviewer_keywords:
 - sql_variant data type
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd3bada9ea15d1104edb33024c4ab1476843c73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 5c68381c68a70ef72cf10481f05584aa25098773
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779127"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004663"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SQL データ型が odbc sql データ型にマップされます。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sql データ型が odbc sql データ型にマップされます。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Timestamp 列の値は**datetime**値ではなく、行のアクティビティの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスを示す**BINARY (8)** または**VARBINARY (8)** **値である**ため、 **timestamp**データ型は SQL_BINARY または SQL_VARBINARY ODBC データ型にマップされます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
+>  Timestamp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の値は**datetime**値ではなく、行のアクティビティのシーケンスを**timestamp**示す**BINARY (8)** または**VARBINARY (8)** 値であるため、 **timestamp**データ型は SQL_BINARY または SQL_VARBINARY ODBC データ型にマップされます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>ODBC での sql_variant データ型の処理  
- **Sql_variant**データ型の列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、 **text**、 **ntext**、 **image**などのラージオブジェクト (lob) を除く、の任意のデータ型を含めることができます。 たとえば、列には、一部の行に対して**smallint**値、他の行の場合は**float**値、残りの場合は**char/nchar**値を含めることができます。  
+ **Sql_variant**データ型の列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text**、 **ntext**、 **image**などのラージオブジェクト (lob) を除く、の任意のデータ型を含めることができます。 たとえば、列には、一部の行に対して**smallint**値、他の行の場合は**float**値、残りの場合は**char/nchar**値を含めることができます。  
   
  **Sql_variant**のデータ型は、Microsoft Visual Basic®の**variant**データ型に似ています。  
   
 ### <a name="retrieving-data-from-the-server"></a>サーバーからのデータの取得  
- ODBC に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、バリアント型の概念がないため、 **sql_variant**データ型の使用をの odbc ドライバーで制限します。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、バインドを指定する場合、 **sql_variant**のデータ型は、ドキュメント化されているいずれかの ODBC データ型にバインドする必要があります。 **SQL_CA_SS_VARIANT_TYPE**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに固有の新しい属性で、 **sql_variant**列にあるインスタンスのデータ型をユーザーに返します。  
+ ODBC には、バリアント型の概念がないため、 **sql_variant**データ型の使用をの odbc ドライバーで制限し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バインドを指定する場合、 **sql_variant**のデータ型は、ドキュメント化されているいずれかの ODBC データ型にバインドする必要があります。 **SQL_CA_SS_VARIANT_TYPE**は、NATIVE Client ODBC ドライバーに固有の新しい属性で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sql_variant**列にあるインスタンスのデータ型をユーザーに返します。  
   
  バインドが指定されていない場合は、 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)関数を使用して、 **sql_variant**列のインスタンスのデータ型を特定できます。  
   
@@ -90,7 +88,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  ユーザーが[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を使用してバインドを作成すると、ドライバーはメタデータとデータを読み取ります。 次に、そのデータをバインドに指定されている適切な ODBC 型に変換します。  
   
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
- **SQL_SS_VARIANT**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに固有の新しいデータ型で、 **sql_variant**列に送信されるデータに使用されます。 パラメーターを使用してサーバーにデータを送信する場合 (たとえば、INSERT INTO TableName VALUES (?,?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用して、C 型や対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型などのパラメーター情報を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーは、C データ型を適切な**sql_variant**のサブタイプのいずれかに変換します。  
+ **SQL_SS_VARIANT**は、NATIVE Client ODBC ドライバーに固有の新しいデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant**列に送信されるデータに使用されます。 パラメーターを使用してサーバーにデータを送信する場合 (たとえば、INSERT INTO TableName VALUES (?,?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用して、C 型や対応する型などのパラメーター情報を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、C データ型を適切な**sql_variant**のサブタイプのいずれかに変換します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  

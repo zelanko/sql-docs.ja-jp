@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9544d2d2b2c505e3557d9cd0ae348b41bec5e821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5491f3c4dfd47cac4047d0409c78001be80d6f13
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62871701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965834"
 ---
 # <a name="move-database-files"></a>データベース ファイルの移動
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントの FILENAME 句で新しいファイルの場所を指定して、システムおよびユーザー データベースを移動することができます。 データ ファイル、ログ ファイル、およびフルテキスト カタログ ファイルもこの方法で移動できます。 データベース ファイルの移動は、次の状況で便利な場合があります。  
@@ -42,7 +41,7 @@ ms.locfileid: "62871701"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ユーザー データベースの移動](move-user-databases.md)|ユーザー データベース ファイルおよびフルテキスト カタログ ファイルを新しい場所に移動する手順について説明します。|  
 |[システム データベースの移動](system-databases.md)|システム データベース ファイルを新しい場所に移動する手順について説明します。|  

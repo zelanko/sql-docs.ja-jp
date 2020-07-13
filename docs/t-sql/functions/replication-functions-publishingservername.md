@@ -16,17 +16,17 @@ helpviewer_keywords:
 - PUBLISHINGSERVERNAME function
 - Publishers [SQL Server replication], names
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e4ae8127d6365e2fd88b92992ab7dd3308e1460f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 586dd6e2315e5041b8aebda601d8200030717b0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68105017"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899147"
 ---
 # <a name="replication-functions---publishingservername"></a>レプリケーション関数 - PUBLISHINGSERVERNAME
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング セッションに参加しているパブリッシュされたデータベースの元のパブリッシャーの名前を返します。 この関数は、パブリケーション データベース上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパブリッシャー インスタンス側で実行されます。 パブリッシュされたデータベースの元のパブリッシャーを確認するために使用します。  
   

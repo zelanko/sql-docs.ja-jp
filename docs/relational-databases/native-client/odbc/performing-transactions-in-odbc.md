@@ -1,5 +1,6 @@
 ---
 title: ODBC でのトランザクション |Microsoft Docs
+description: ODBC では、接続レベルでトランザクションを管理し、自動コミットモードまたは手動コミットモードで、完了したすべての作業をコミットまたはロールバックします。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,18 +13,17 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bffb00c2e6a4879befb91f002ac581c79251bfdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d3a303bd33d9f4ee0118512d9c346a5eab0ad9a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760492"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009734"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC でのトランザクションの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 トランザクションをコミットまたはロールバックするには、COMMIT または ROLLBACK ステートメントを送信するのではなく、アプリケーションで[SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出す必要があります。  
   

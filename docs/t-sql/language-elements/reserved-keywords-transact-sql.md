@@ -28,7 +28,7 @@ ms.locfileid: "68091773"
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトで、[!INCLUDE[tsql](../../includes/tsql-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
   

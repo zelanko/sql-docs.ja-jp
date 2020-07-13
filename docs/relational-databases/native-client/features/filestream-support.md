@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM のサポート |Microsoft Docs
+title: FILESTREAM のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], SQL Server Native Client
 - SQL Server Native Client [FILESTREAM support]
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26e1d47dea484e818870eb829f6de6318bac1c86
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74308064"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885660"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 拡張された FILESTREAM サポートの詳細については、「 [filestream &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
+  FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
   
- データベース接続を開い** \@ \@** たときに、既定では、値の設定が-1 ("無制限") に設定されます。  
+ データベース接続を開いたときに、既定では、値の設定が-1 ("無制限") に設定** \@ \@ されます**。  
   
  Windows ファイル システムの API を使用して、FILESTREAM 列にアクセスし、更新することもできます。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "74308064"
   
  ODBC の SQLColumns などのカタログ関数では、列が FILESTREAM 列かどうかは報告されません。  
   
- FILESTREAM 列を作成する場合や、既存の FILESTREAM 列を検出する場合は、**sys.columns** カタログ ビューの [is_filestream](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 列を使用できます。  
+ FILESTREAM 列を作成する場合や、既存の FILESTREAM 列を検出する場合は、[sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) カタログ ビューの **is_filestream** 列を使用できます。  
   
- 例を次に示します。  
+ 次に例を示します。  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,13 +58,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
- クライアントが、に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含ま[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]れていたバージョンの Native client を使用してコンパイルされ、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]アプリケーションがに接続している場合、 **varbinary (max)** の動作はと[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]互換性があります。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
+ クライアントが、に含まれていたバージョンの Native Client を使用してコンパイルされ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] アプリケーションがに接続している場合 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 **varbinary (max)** の動作はと互換性があり [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ます。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。  
   
  データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   
- ネイティブクライアントの[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バージョンより前にリリースされた SQLOLEDB またはその他のプロバイダーを使用するクライアントでは、 **varbinary (max)** は image にマップされます。  
+ ネイティブクライアントのバージョンより前にリリースされた SQLOLEDB またはその他のプロバイダーを使用するクライアントでは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 **varbinary (max)** は image にマップされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -9,24 +9,24 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 084296bdca618bdf2810aab9e03c2dae4061fb68
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68141268"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630208"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内のユーザーが作成したテーブルの名前を変更します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 内のユーザーが作成したテーブルまたはデータベースの名前を変更します。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内のユーザーが作成したテーブルの名前を変更します。 ユーザーが作成したテーブル、ユーザーが作成したテーブルの列、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のデータベースの名前を変更します。
 
 > [!NOTE]
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Data Warehouse)](alter-database-transact-sql.md?view=aps-pdw-2016-au7) を使用します。 Azure SQL Database でデータベースの名前を変更するには、[ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) ステートメントを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータベースの名前を変更するには、ストアド プロシージャ [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md) を使用します。
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse
 
 -- Rename a table.
@@ -35,7 +35,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 -- Rename a table
@@ -45,6 +45,9 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
 
 ## <a name="arguments"></a>引数
@@ -69,6 +72,12 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 - DWDiagnostics
 - DWQueue
 
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+テーブルの列名を変更します。 
+
 ## <a name="permissions"></a>アクセス許可
 
 このコマンドを実行するには、次のアクセス許可が必要です。
@@ -85,11 +94,17 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 
 使用中に、テーブルまたはデータベースの名前を変更することはできません。 テーブルの名前を変更するには、テーブルに排他ロックが必要です。 テーブルを使用している場合は、テーブルを使用しているセッションを終了する必要があります。 セッションを終了するには、KILL コマンドを使用することができます。 セッションが終了すると、コミットされていない作業はロールバックされるので、KILL は注意して使用してください。 SQL Data Warehouse 内のセッションには、'SID' が付きます。 KILL コマンドを呼び出すときは、'SID' とセッション番号を含めます。 この例では、アクティブまたはアイドル状態のセッションの一覧を表示し、'SID1234' のセッションを終了します。
 
+### <a name="rename-column-restrictions"></a>列名変更の制限
+
+テーブルの配布に使用される列の名前は変更できません。 外部テーブルや一時テーブルの列の名前も変更できません。 
+
 ### <a name="views-are-not-updated"></a>ビューは更新されません。
 
 データベースの名前を変更すると、以前のデータベース名を使用するすべてのビューは無効になります。 この動作は、データベースの内部と外部の両方のビューに適用されます。 たとえば、Sales データベースの名前を変更する場合、`SELECT * FROM Sales.dbo.table1` を含むビューが無効になります。 この問題を解決するには、ビューでは、3 部構成の名前は使用しないようにするか、新しいデータベース名を参照するようにビューを更新します。
 
 テーブルの名前を変更したときに、新しいテーブルの名前を参照するようにビューは更新されません。 元のテーブル名を参照するとデータベース内部と外部の各ビューは無効になります。 この問題を解決するために、新しいテーブルの名前を参照するように各ビューを更新することができます。
+
+列の名前を変更したときに、新しい列の名前を参照するようにビューは更新されません。 ビューが変更されるまで、ビューには古い列名が引き続き表示されます。 ビューが無効になり、削除や再作成が必要になることもあります。
 
 ## <a name="locking"></a>ロック
 
@@ -150,4 +165,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### <a name="e-rename-a-column"></a>E. 列の名前変更 
+
+**適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+この例では、Customer テーブルの FName 列の名前が FirstName に変更されます。
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

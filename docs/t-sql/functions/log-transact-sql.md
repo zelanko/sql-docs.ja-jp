@@ -17,18 +17,18 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 477007c014a538070a939d22facc475aada34976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0acbc4f5244852f988047e9ec1798201fefc30e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215992"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008828"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定したの自然対数を返します **float** 内の式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "80215992"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
@@ -73,8 +73,8 @@ LOG ( float_expression )
  次の例では、指定された `LOG`float**式の** を計算します。  
   
 ```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   

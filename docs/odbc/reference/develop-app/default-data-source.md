@@ -19,14 +19,14 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 978362b7dfe92d1333f83be684f6326cf25dd69b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076847"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305993"
 ---
 # <a name="default-data-source"></a>既定のデータ ソース
 ドライバーは、既定のデータソースと呼ばれるデータソースを選択することがあります。ただし、アプリケーションで明示的に指定されていない場合があります。  

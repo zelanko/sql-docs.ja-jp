@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50bdac5bdc646c9b152347c161b7dcbdde9ea2f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62720990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009126"
 ---
 # <a name="sinstance-class"></a>SInstance クラス
-  [Sinstance クラス](sinstance-class.md)は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスを表します。  
+  [Sinstance クラス](sinstance-class.md)は、のインスタンスを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [Sinstance クラス](sinstance-class.md)は、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用できます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
+ [Sinstance クラス](sinstance-class.md)は、のインスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

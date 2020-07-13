@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 73353f0d8d00d27e2a03d87f603d2859fc8d38d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62955820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066324"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>クエリに関連付けられた接続の変更
   クエリで使用する接続を変更することにより、クエリを複数の異なるサーバーまたはデータベースに対して実行することができます。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19051fc83466bc40d72c029089cfe6ec45c20a08
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905380"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299422"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

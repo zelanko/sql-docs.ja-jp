@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082599"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520218"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>タイム シリーズ モデルの式の表示 (データ マイニング)
-  タイム[!INCLUDE[msCoName](../../includes/msconame-md.md)]シリーズビューアーの Indata マイニングデザイナーでは、タイムシリーズモデルで使用される回帰式の詳細を最も簡単に表示できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイムシリーズビューアーの inData マイニングデザイナーでは、タイムシリーズモデルで使用される回帰式の詳細を最も簡単に表示できます。  
   
  モデル コンテンツのクエリを実行することで、タイム シリーズ モデルの回帰式を抽出できます。 ただし、ARTXP または ARIMA の完全な式を表示するには、 [Microsoft タイムシリーズビューアー](browse-a-model-using-the-microsoft-time-series-viewer.md)の [**マイニング凡例**] を使用することをお勧めします。これにより、すべての定数が読み取り可能な形式で表示されます。  
   
@@ -35,16 +34,13 @@ ms.locfileid: "66082599"
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARTXP 回帰式を表示するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
   
      -- または --  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、タイム シリーズ モデルを選択して、 **[マイニング モデル ビューアー]** タブをクリックします。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、タイム シリーズ モデルを選択して、 **[マイニング モデル ビューアー]** タブをクリックします。  
   
-2.  
-  **[Model (モデル)]** タブをクリックします。  
+2.  **[Model (モデル)]** タブをクリックします。  
   
 3.  モデルに複数のツリーが含まれる場合は、 **[ツリー]** ボックスの一覧で 1 つのツリーを選択します。  
   
@@ -53,27 +49,21 @@ ms.locfileid: "66082599"
   
 4.  ツリーの任意のリーフ ノードをクリックします。  
   
-     
-  **[データ系列]** というラベルのノードは常にリーフ ノードであり、式を含むことができます。 
-  **[(すべて)]** ノードに子ノードがない場合も、式を含むことができます。  
+     **[データ系列]** というラベルのノードは常にリーフ ノードであり、式を含むことができます。 **[(すべて)]** ノードに子ノードがない場合も、式を含むことができます。  
   
-5.  
-  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
+5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
   
      ARTXP 式は、 **[マイニング凡例]** の前半に、 **[ツリー ノード式]** として表示されます。  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARIMA 式を表示するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
   
      -- または --  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、タイム シリーズ モデルを選択して、 **[マイニング モデル ビューアー]** タブをクリックします。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、タイム シリーズ モデルを選択して、 **[マイニング モデル ビューアー]** タブをクリックします。  
   
-2.  
-  **[Model (モデル)]** タブをクリックします。  
+2.  **[Model (モデル)]** タブをクリックします。  
   
 3.  モデルに複数のツリーが含まれる場合は、 **[ツリー]** ボックスの一覧で 1 つのツリーを選択します。  
   
@@ -84,8 +74,7 @@ ms.locfileid: "66082599"
   
      ARIMA 式は、 **[マイニング凡例]** の後半に、 **[ARIMA 式]** として表示されます。  
   
-5.  
-  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
+5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [マイニングモデルビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   

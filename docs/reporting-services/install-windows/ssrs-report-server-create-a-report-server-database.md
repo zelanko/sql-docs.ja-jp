@@ -58,7 +58,7 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
 ### <a name="sharepoint-mode"></a>SharePoint モード 
 **[Report Server Installation Options]\(レポート サーバー インストール オプション\)** ページにある SharePoint モード用のオプションは、 **[Install only]\(インストールのみ\)** の 1 つだけです。 このオプションを選択すると、SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのファイルと SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービスがインストールされます。 次に、次のいずれかの方法で SSRS サービス アプリケーションを少なくとも 1 つ作成します。  
   
-- SharePoint Server のサーバーの全体管理に移動して、SSRS サービス アプリケーションを作成します。 詳しくは、「**SharePoint モードでの最初のレポート サーバーのインストール**」の[サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)に関するセクションをご覧ください。  
+- SharePoint Server のサーバーの全体管理に移動して、SSRS サービス アプリケーションを作成します。 詳しくは、「[SharePoint モードでの最初のレポート サーバーのインストール](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」の**サービス アプリケーションの作成**に関するセクションをご覧ください。  
   
 - SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の PowerShell コマンドレットを使用して、サービス アプリケーションとレポート サーバー データベースを作成します。 詳しくは、「[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」トピックでサービス アプリケーション作成のサンプルをご覧ください。  
 
@@ -96,7 +96,7 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
   
 ## <a name="edition-requirements-for-a-database-server"></a>データベース サーバーのエディションの要件 
 
- レポート サーバー データベースを作成するときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳しくは、「[SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)」の「[レポート サーバー データベースのエディションの要件](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」をご覧ください。  
+ レポート サーバー データベースを作成するときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳しくは、「[SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」の「[レポート サーバー データベースのエディションの要件](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)」をご覧ください。  
 
 ## <a name="next-steps"></a>次のステップ
 

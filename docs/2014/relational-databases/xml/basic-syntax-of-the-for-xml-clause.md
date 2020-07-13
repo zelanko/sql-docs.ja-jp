@@ -13,15 +13,14 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059555"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 句の基本構文
   FOR XML モードには、RAW、AUTO、EXPLICIT、または PATH を使用できます。 このモードにより、結果の XML の構造が決まります。  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>引数  
  RAW[('*ElementName*')]  
- クエリの結果を取得し、結果セット内の各行を、要素タグとして汎用識別子 \<row /> を持つ XML 要素に変換します。 このディレクティブを使用するときは、必要に応じて、行要素の名前を指定できます。 結果の XML では、指定した *ElementName* が、行ごとに生成される行要素として使用されます。 詳細については、「 [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)」を参照してください。  
+ クエリの結果を取得し、結果セット内の各行を、 \<row /> 要素タグとして汎用識別子を持つ XML 要素に変換します。 このディレクティブを使用するときは、必要に応じて、行要素の名前を指定できます。 結果の XML では、指定した *ElementName* が、行ごとに生成される行要素として使用されます。 詳細については、「 [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)」を参照してください。  
   
  AUTO  
  クエリの結果を単純な入れ子の XML ツリーで返します。 1 つ以上の列が SELECT 句にリストされている FROM 句の各テーブルは、XML 要素として表されます。 SELECT 句に一覧されている列は、該当する要素属性にマップされます。 詳細については、「 [FOR XML での AUTO モードの使用](use-auto-mode-with-for-xml.md)」を参照してください。  
@@ -71,7 +70,7 @@ XML
  結果として得られる XML ツリーの形状を明示的に定義することを指定します。 このモードを使用する場合は、クエリを特殊な方法で記述することにより、目的の入れ子構造に関して追加情報を明示的に指定する必要があります。 詳細については、「 [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)」を参照してください。  
   
  PATH  
- PATH モードを使用すると、要素と属性を組み合わせた使用が容易になり、入れ子構造を使用することで、複雑なプロパティも容易に表現できるようになります。 FOR XML EXPLICIT モードのクエリを使用してこのような XML を行セットから作成することもできますが、煩雑になりかねない EXPLICIT モードのクエリに比べて PATH モードでは同じことを簡潔に行うことができます。 PATH モードに、入れ子の FOR XML クエリと、 **xml** 型のインスタンスを返す TYPE ディレクティブを組み合わせることで、簡潔なクエリを記述できます。 この方法により、EXPLICIT モードのクエリの大半を書き直すことができます。 既定で、PATH モードは結果セットの行ごとに \<row> 要素ラッパーを生成します。 要素名は、必要に応じて指定できます。 要素名を指定すると、指定した名前が囲み要素名として使用されます。 空の文字列 (FOR XML PATH ('')) を指定すると、囲み要素は生成されません。 詳細については、「 [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md)」を参照してください。  
+ PATH モードを使用すると、要素と属性を組み合わせた使用が容易になり、入れ子構造を使用することで、複雑なプロパティも容易に表現できるようになります。 FOR XML EXPLICIT モードのクエリを使用してこのような XML を行セットから作成することもできますが、煩雑になりかねない EXPLICIT モードのクエリに比べて PATH モードでは同じことを簡潔に行うことができます。 PATH モードに、入れ子の FOR XML クエリと、 **xml** 型のインスタンスを返す TYPE ディレクティブを組み合わせることで、簡潔なクエリを記述できます。 この方法により、EXPLICIT モードのクエリの大半を書き直すことができます。 既定では、PATH モードでは、 \<row> 結果セットの各行に対して要素ラッパーが生成されます。 要素名は、必要に応じて指定できます。 要素名を指定すると、指定した名前が囲み要素名として使用されます。 空の文字列 (FOR XML PATH ('')) を指定すると、囲み要素は生成されません。 詳細については、「 [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md)」を参照してください。  
   
  XMLDATA  
  インライン XDR (XML-Data Reduced) スキーマが返されることを指定します。 このスキーマは、ドキュメントの前にインライン スキーマとして付加されます。 作業用サンプルについては、「 [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)」を参照してください。  
@@ -88,7 +87,7 @@ XML
  TYPE  
  クエリが結果を **xml** 型で返すことを指定します。 詳細については、「 [FOR XML クエリの TYPE ディレクティブ](type-directive-in-for-xml-queries.md)」を参照してください。  
   
- ルート [('*RootName*')]  
+ ROOT [('*RootName*')]  
  結果の XML に、1 つの最上位要素が追加されることを指定します。 必要に応じて、生成するルート要素名を指定することもできます。 既定値は "root" です。  
   
 ## <a name="see-also"></a>参照  

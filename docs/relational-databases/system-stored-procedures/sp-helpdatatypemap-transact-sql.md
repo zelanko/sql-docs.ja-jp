@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786866"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  と非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース管理システム (DBMS) の間の定義済みデータ型マッピングに関する情報を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース管理システム (DBMS) の間の定義済みデータ型マッピングに関する情報を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 |値|[説明]|  
 |-----------|-----------------|  
-|**MS**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
+|**MSSQLSERVER**|ソースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。|  
 |**ORACLE11I**|マップ元は Oracle データベース。|  
   
 `[ @source_version = ] 'source_version'`は、ソース DBMS の製品バージョンです。 *source_version*は**varchar (10)** です。指定されていない場合は、すべてのバージョンのソース DBMS のデータ型マッピングが返されます。 値を指定した場合は、マップ元 DBMS のバージョンによって結果セットがフィルター選択されます。  
@@ -58,7 +58,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 |値|[説明]|  
 |-----------|-----------------|  
-|**MS**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
+|**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE11I**|変換先は、Oracle データベースです。|  
 |**DB2**|マップ先は IBM DB2 データベース。|  
 |**SYBASE**|コピー先は Sybase データベースです。|  
@@ -71,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**mapping_id**|データ型マッピングを識別します。|  
 |**source_dbms**|ソース DBMS の名前とバージョン番号を指定します。|  
@@ -83,15 +83,15 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_helpdatatypemap**は、SQL Server 以外のパブリッシャーおよびパブリッシャーから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーへのデータ型マッピングを定義します。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpdatatypemap**は、SQL Server 以外のパブリッシャーおよびパブリッシャーから以外のサブスクライバーへのデータ型マッピングを定義し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  指定した変換元と変換先の DBMS の組み合わせがサポートされていない場合、 **sp_helpdatatypemap**は空の結果セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpdatatypemap**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_getdefaultdatatypemapping &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   

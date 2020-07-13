@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083306"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299112"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>トランザクションのコミットとロールバック
 手動コミットモードでトランザクションをコミットまたはロールバックするには、アプリケーションが**SQLEndTran**を呼び出します。 トランザクションをサポートする Dbms のドライバーは、通常、 **COMMIT**または**ROLLBACK**ステートメントを実行してこの関数を実装します。 接続が自動コミットモードの場合、ドライバーマネージャーは**SQLEndTran**を呼び出しません。アプリケーションがトランザクションをロールバックしようとした場合でも、単に SQL_SUCCESS を返します。 トランザクションをサポートしていない Dbms のドライバーは常に自動コミットモードであるため、 **SQLEndTran**を実装して、何も実行したり、まったく実装したりせずに SQL_SUCCESS を返すことができます。  

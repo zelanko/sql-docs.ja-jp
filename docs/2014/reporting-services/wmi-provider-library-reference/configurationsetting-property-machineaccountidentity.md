@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3e9e871ab8bceebe2aa6507883fcac19c610db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097597"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity プロパティ (WMI)
@@ -36,7 +36,7 @@ public string MachineAccountIdentity;
  レポート サーバーがインストールされているコンピューターのコンピューター アカウント ID を含む `String` 値。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting プロパティ](msreportserver-configurationsetting-properties.md)  

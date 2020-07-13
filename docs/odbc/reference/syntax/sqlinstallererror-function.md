@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e749237cf87c5054b8273f38531d9336d316e040
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138027"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302103"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 関数
 **互換性**  

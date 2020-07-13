@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108496"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
@@ -22,25 +22,25 @@ ms.locfileid: "66108496"
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>DataSet を追加してデータ接続とデータ テーブルを定義するには (親レポート用)  
   
-1.  **[Web サイト]** メニューの **[新しい項目の追加]** を選択します。  
+1.  [ **Web サイト** ] メニューの [ **新しい項目の追加**] を選択します。  
   
 2.  [**新しい項目の追加**] ダイアログボックスで、[**データセット**] を選択し、[**追加**] をクリックします。 メッセージが表示されたら、 **[はい]** をクリックして**App_Code**フォルダーに項目を追加する必要があります。  
   
      これにより、 **DataSet1.xsd** という新しい XSD ファイルがプロジェクトに追加され、データセット デザイナーが開きます。  
   
-3.  [ツールボックス] ウィンドウから **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** コントロールをデザイン画面にドラッグします。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
+3.  [ツールボックス] ウィンドウから**[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** コントロールをデザイン画面にドラッグします。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
   
 4.  [**データ接続の選択**] ページで、[**新しい接続**] をクリックします。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータソースを作成する場合は、 **[データソースの選択**] ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
-6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
+6.  [ **接続の追加** ] ダイアログ ボックスで、次の手順を実行します。  
   
     1.  [**サーバー名**] ボックスに、 **AdventureWorks2008**データベースが配置されているサーバーを入力します。  
   
          既定の SQL Server Express インスタンスは **(local)\sqlexpress**です。  
   
-    2.  **[サーバーへのログオン]** セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
+    2.  [ **サーバーへのログオン** ] セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
   
     3.  [**データベース名の選択または入力**] ドロップダウンリストで、[ **AdventureWorks2008**] をクリックします。  
   

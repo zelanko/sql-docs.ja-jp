@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Policy-Based Management, stored procedures
 - stored procedures [Policy-Based Management]
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e6c8382737adcf94daf9df9c92f58b46ffc95ade
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67941944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728224"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>ポリシー ベースの管理ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ポリシーベースの管理に使用される次のシステムストアドプロシージャがサポートされています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67941944"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

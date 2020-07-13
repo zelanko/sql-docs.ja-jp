@@ -7,21 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 987b2726802888e4f69f801f72591bbb76d52ac5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901433"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431969"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) by Attunity を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) by Attunity を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
   
  ODBC コネクタは、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のコンテキストで、ODBC でサポートされているデータベースへのデータの読み込みやデータのアンロードを実行するときに、最適なパフォーマンスを得ることができるように設計されています。  
   
@@ -117,8 +115,7 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|小数点以下桁数が 3 より大きい場合、SQL_TIMESTAMP データ型は DT_DBTIMESTAMP2 にマッピングされます。 それ以外の場合は、DT_DBTIMESTAMP にマッピングされます。|  
 |SQL_CHAR<br /><br />SQLVARCHAR|DT_STR<br /><br />DT_WSTR<br /><br />DT_TEXT<br /><br />DT_NTEXT|列の長さが 8000 以下で、 **ExposeStringsAsUnicode** プロパティが false の場合に DT_STR が使用されます。<br /><br />列の長さが 8000 以下で、 **ExposeStringsAsUnicode** プロパティが true の場合に DT_WSTR が使用されます。<br /><br />列の長さが 8000 より長く、 **ExposeStringsAsUnicode** プロパティが false の場合に DT_TEXT が使用されます。<br /><br />列の長さが 8000 より長く、 **ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
-|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|
-  **ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
+|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|**ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
 |SQL_WCHAR<br /><br />SQL_WVARCHAR|DT_WSTR<br /><br />DT_NTEXT|列の長さが 4000 以下の場合に DT_NTEXT が使用されます。<br /><br />列の長さが 4000 より長い場合に DT_NTEXT が使用されます。|  
 |SQL_WLONGVARCHAR|DT_NTEXT|  
 |SQL_BINARY|DT_BYTE<br /><br />DT_IMAGE|列の長さが 8000 以下の場合に DT_BYTES が使用されます。<br /><br />列の長さが 8000 より長い場合に DT_IMAGE が使用されます。|  
@@ -129,8 +126,8 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 入力元](odbc-source.md)  
+-   [ODBC ソース](odbc-source.md)  
   
--   [ODBC 入力先](odbc-destination.md)  
+-   [ODBC 変換先](odbc-destination.md)  
   
  

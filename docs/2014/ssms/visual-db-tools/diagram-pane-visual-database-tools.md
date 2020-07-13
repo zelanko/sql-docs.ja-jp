@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c76911b19e48785dfc4d06a91708589c87e2acbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63126597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008609"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
   ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
@@ -39,13 +38,13 @@ ms.locfileid: "63126597"
  **テーブル**  
  ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]** をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]** をクリックします。  
   
- **表示モード**  
+ **ビュー**  
  ダイアグラム ペインに追加できるビューが一覧表示されます。 ビューを追加するには、ビューを選択して **[追加]** をクリックします。 複数のビューを一度に追加するには、それらのビューを選択して **[追加]** をクリックします。  
   
  **関数**  
  ダイアグラム ペインに追加できるユーザー定義関数が一覧表示されます。 関数を追加するには、関数を選択して **[追加]** をクリックします。 複数の関数を一度に追加するには、それらの関数を選択して **[追加]** をクリックします。  
   
- **ローカルテーブル**  
+ **[ローカル テーブル]**  
  データベースに属するクエリ以外のクエリで作成されたテーブルが一覧表示されます。  
   
  **シノニム**  
@@ -63,10 +62,9 @@ ms.locfileid: "63126597"
   
  テーブルまたはテーブル値オブジェクトの四角形で使用されるチェック ボックスと記号は、次の表のとおりです。  
   
-|チェック ボックスまたは記号|[説明]|  
+|チェック ボックスまたは記号|説明|  
 |-------------------------|-----------------|  
-|![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 
-  **[すべての列]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br /> チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
+|![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi7.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi8.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbi9.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbia.gif "Visual Database Tools のアイコン")|データ列をクエリの結果セットに表示するかどうか (選択クエリ)、または更新クエリ、結果の挿入クエリ、テーブルの作成クエリ、値の挿入クエリで使用するかどうかを指定します。 結果に列を追加するには、その列のチェック ボックスをオンにします。 **[すべての列]** を選択すると、すべてのデータ列が出力に表示されます。<br /><br /> チェック ボックスに表示されるアイコンは、作成するクエリの種類によって変わります。 削除クエリを作成するときは、列を個別に選択することはできません。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbib.gif "Visual Database Tools のアイコン")<br /><br /> ![Visual Database Tools のアイコン](../../database-engine/media//dv3wbic.gif "Visual Database Tools のアイコン")|クエリ結果の並べ替えに使用される (ORDER BY 句の一部である) データ列を示します。 並べ替え順序が昇順の場合はアイコンに A-Z と表示されます。降順の場合は Z-A と表示されます。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbid.gif "Visual Database Tools のアイコン")|集計クエリで結果セットをグループ化するために使用される (GROUP BY 句の一部である) データ列を示します。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbie.gif "Visual Database Tools のアイコン")|クエリの検索条件に含まれる (WHERE 句または HAVING 句の一部である) データ列を示します。|  
@@ -80,7 +78,7 @@ ms.locfileid: "63126597"
   
  結合線の中央に表示されるアイコンの形は、テーブルまたはテーブル構造オブジェクトの結合方法を示しています。 等号 (=) 以外の演算子が結合句で使われている場合は、その演算子が結合線のアイコンに表示されます。 結合線に表示されるアイコンは、次の表のとおりです。  
   
-|結合線のアイコン|[説明]|  
+|結合線のアイコン|説明|  
 |--------------------|-----------------|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbih.gif "Visual Database Tools のアイコン")|内部結合 (等号を使って作成)。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbii.gif "Visual Database Tools のアイコン")|"大なり" 演算子 (>) による内部結合 (結合線アイコンの内部には、結合で使われる演算子が表示されます)。|  
@@ -90,7 +88,7 @@ ms.locfileid: "63126597"
   
  結合線の端に表示されるアイコンは、結合の種類を示しています。 結合の種類と結合線の端に表示されるアイコンは、次の表のとおりです。  
   
-|結合線の端のアイコン|[説明]|  
+|結合線の端のアイコン|説明|  
 |-------------------------------|-----------------|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbim.gif "Visual Database Tools のアイコン")|一対一結合|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbin.gif "Visual Database Tools のアイコン")|一対多結合|  

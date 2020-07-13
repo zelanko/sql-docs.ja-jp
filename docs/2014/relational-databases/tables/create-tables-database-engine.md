@@ -11,16 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a8d84a4da6a10fbcbae311fe1bf738c03b85a4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056830"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して新しいテーブルを作成して名前を付け、それを既存のデータベースに追加できます。
 
 > [!NOTE]
@@ -30,7 +28,7 @@ ms.locfileid: "78176820"
 
 -   **作業を開始する準備:**
 
-     [セキュリティ](#Security)
+     [Security](#Security)
 
 -   **テーブルを作成する方法:**
 
@@ -38,26 +36,24 @@ ms.locfileid: "78176820"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> はじめに
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
-###  <a name="Security"></a> セキュリティ
+###  <a name="security"></a><a name="Security"></a> セキュリティ
 
-####  <a name="Permissions"></a> Permissions
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions
  データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。
 
  CREATE TABLE ステートメント内の列を CLR ユーザー定義型として定義する場合は、その型の所有権か、その型に対する REFERENCES 権限が必要です。
 
  CREATE TABLE ステートメント内の列に XML スキーマ コレクションが関連付けられている場合は、その XML スキーマ コレクションの所有権か、そのスキーマ コレクションに対する REFERENCES 権限が必要です。
 
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
 #### <a name="to-create-a-table-with-table-designer"></a>テーブル デザイナーでテーブルを作成するには
 
-1.  
-  **オブジェクト エクスプローラー**で、変更するデータベースを含む [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。
+1.  **オブジェクト エクスプローラー**で、変更するデータベースを含む [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。
 
-2.  
-  **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開し、新しいテーブルを格納するデータベースを展開します。
+2.  **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開し、新しいテーブルを格納するデータベースを展開します。
 
 3.  オブジェクト エクスプローラーで、データベースの **[テーブル]** ノードを右クリックし、 **[新しいテーブル]** をクリックします。
 
@@ -75,21 +71,19 @@ ms.locfileid: "78176820"
 
      これらのオブジェクトの詳細については、「 [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md)」、「 [Create Check Constraints](../tables/create-check-constraints.md) 」、および「 [Indexes](../indexes/indexes.md)」を参照してください。
 
-8.  既定では、テーブルは **dbo** スキーマに含まれています。 テーブルに対して別のスキーマを指定するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、 **[プロパティ]** を選択します。 
-  **[スキーマ]** ボックスの一覧で、適切なスキーマを選択します。
+8.  既定では、テーブルは **dbo** スキーマに含まれています。 テーブルに対して別のスキーマを指定するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、 **[プロパティ]** を選択します。 **[スキーマ]** ボックスの一覧で、適切なスキーマを選択します。
 
      ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")
 
      スキーマの詳細については、「 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)」を参照してください。
 
-9. [**ファイル**] メニューの [ **** *テーブル名*の保存] をクリックします。
+9. [**ファイル**] メニューの [ **Save** *テーブル名*の保存] をクリックします。
 
-10. 
-  **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。
+10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。
 
 11. 新しいテーブルを表示するには、 **オブジェクト エクスプローラー**で、 **[テーブル]** ノードを展開し、 **F5** キーを押してオブジェクトの一覧を更新します。 新しいテーブルがテーブルの一覧に表示されます。
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>クエリ エディターでテーブルを作成するには
 

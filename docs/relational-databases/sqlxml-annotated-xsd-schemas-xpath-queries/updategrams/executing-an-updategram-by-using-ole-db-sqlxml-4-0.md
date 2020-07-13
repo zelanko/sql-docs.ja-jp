@@ -1,5 +1,6 @@
 ---
 title: OLE DB を使用したアップデートグラムの実行 (SQLXML)
+description: SQLXML 4.0 の OLE DB を使用してアップデートグラムを実行する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f96578432e6806651e335cfbdb3570e2e65f8cb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790720"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、Ole DB を使用してアップデートグラムを実行する実際のサンプルについて説明します。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream を使用した XML コマンドの設定  
@@ -60,7 +61,7 @@ ms.locfileid: "75241278"
 </Schema>  
 ```  
   
- このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \<person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
+ このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 **\<Person.Contact>** 要素は AdventureWorks データベースの Person. Contact テーブルにマップされます。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML をコマンドとして設定し、結果を XML ドキュメントとして取得するには  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター (@Title) の値が必要です。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
+ このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター () の値が必要です @Title 。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
   
  テンプレートにパラメーター値を渡すときには、パラメーターの名前と値の両方を指定する必要があります。  
   

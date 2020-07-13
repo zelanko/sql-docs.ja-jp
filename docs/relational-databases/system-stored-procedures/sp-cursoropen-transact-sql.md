@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108482"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868868"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  カーソルを開きます。 sp_cursoropen は、カーソルオプションおよびカーソルオプションに関連付けられた SQL ステートメントを定義し、カーソルを設定します。 sp_cursoropen は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント DECLARE_CURSOR とを組み合わせたものと同じです。 このプロシージャは、ID = 2 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
+  カーソルを開きます。 sp_cursoropen は、カーソルオプションおよびカーソルオプションに関連付けられた SQL ステートメントを定義し、カーソルを設定します。 sp_cursoropen は、ステートメント DECLARE_CURSOR とを組み合わせたものと同じです [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 このプロシージャは、ID = 2 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ```  
   
 ## <a name="arguments"></a>引数  
- *g*  
+ *cursor*  
  SQL Server で生成されたカーソル識別子。 *cursor*は、カーソルに関連する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要がある*ハンドル*値です。 *cursor*は、 **int**戻り値を持つ必須パラメーターです。  
   
  *カーソル*を使用すると、1つのデータベース接続で複数のカーソルをアクティブにすることができます。  
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  スクロール オプションです。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- *Scrollopt*と同様に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、は要求された*ccopt*値をオーバーライドできます。  
+ *Scrollopt*と同様に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は要求された*ccopt*値をオーバーライドできます。  
   
  *行*  
  AUTO_FETCH で使用するフェッチバッファー行の数。 既定値は20行です。 *rowcount*の動作は、入力値と戻り値として割り当てられた場合に異なります。  
@@ -118,7 +118,7 @@ sp_cursoropen cursor OUTPUT, stmt
  フェッチ操作が進行中です。  
   
  A  
- このカーソルはによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]割り当て解除されており、使用できません。  
+ このカーソルはによって割り当て解除されて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、使用できません。  
   
  エラーが発生した場合、戻り値は不整合になる可能性があり、精度は保証できません。  
   
@@ -135,7 +135,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0  
  プロシージャが正常に実行されました。  
   
- 1 で保護されたプロセスとして起動されました  
+ 1  
  プロシージャが失敗しました。  
   
  2  
@@ -145,18 +145,18 @@ sp_cursoropen cursor OUTPUT, stmt
  高速順方向カーソルが自動的に閉じられました。  
   
 > [!NOTE]  
->  Sp_cursoropen プロシージャが正常に実行された場合、RPC の戻りパラメーターと TDS 列形式の情報 (0xa0 & 0xa1 messages) を含む結果セットが送信されます。 失敗した場合は、1つまたは複数の TDS エラーメッセージが送信されます。 どちらの場合も、行データは返されず、 *done*メッセージカウントはゼロになります。 7.0 より前の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンを使用している場合、0xa0、0XA1 (SELECT ステートメントの標準) は、0xa5 および0xa5 のトークンストリームと共に返されます。 7.0 を使用し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている場合は、0xa5 および0xa5 のトークンストリームと共に0x81 が返されます (SELECT ステートメントの標準)。  
+>  Sp_cursoropen プロシージャが正常に実行された場合、RPC の戻りパラメーターと TDS 列形式の情報 (0xa0 & 0xa1 messages) を含む結果セットが送信されます。 失敗した場合は、1つまたは複数の TDS エラーメッセージが送信されます。 どちらの場合も、行データは返されず、 *done*メッセージカウントはゼロになります。 7.0 より前のバージョンを使用している場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa0、0xa1 (SELECT ステートメントの標準) は、0xa5 および0xa5 のトークンストリームと共に返されます。 7.0 を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa5 および0xa5 のトークンストリームと共に0x81 が返されます (SELECT ステートメントの標準)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="stmt-parameter"></a>stmt パラメーター  
  *Stmt*でストアドプロシージャの実行を指定する場合、入力パラメーターは、 *stmt*文字列の一部として、または*boundparam*引数として指定することによって、定数として定義することができます。 宣言された変数は、この方法でバインドされたパラメーターとして渡すことができます。  
   
  *Stmt*パラメーターの許可される内容は、 *ccopt* ALLOW_DIRECT の戻り値が、またはその他の*ccopt*値にリンクされているかどうかによって異なります。つまり、次のようになります。  
   
--   ALLOW_DIRECT が指定されていない[!INCLUDE[tsql](../../includes/tsql-md.md)]場合、1つの select ステートメントを含むストアドプロシージャに対してを呼び出す select ステートメントまたは EXECUTE ステートメントを使用する必要があります。 さらに、SELECT ステートメントはカーソルとして修飾する必要があります。つまり、キーワード SELECT INTO または FOR BROWSE を含めることはできません。  
+-   ALLOW_DIRECT が指定されていない場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 1 つの select ステートメントを含むストアドプロシージャに対してを呼び出す select ステートメントまたは EXECUTE ステートメントを使用する必要があります。 さらに、SELECT ステートメントはカーソルとして修飾する必要があります。つまり、キーワード SELECT INTO または FOR BROWSE を含めることはできません。  
   
--   ALLOW_DIRECT が指定されている場合、1つ以上[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントが発生する可能性があります。これには、複数のステートメントを使用して他のストアドプロシージャを実行することもできます。 Select 以外のステートメント、またはキーワード SELECT INTO または FOR BROWSE を含む SELECT ステートメントは、単純に実行され、カーソルの作成にはなりません。 複数のステートメントのバッチに含まれている SELECT ステートメントについても同様です。 SELECT ステートメントに、カーソルのみに関連する句が含まれている場合、それらの句は無視されます。 たとえば、 *ccopt*の値が0x2002 の場合、これはの要求です。  
+-   ALLOW_DIRECT が指定されている場合、1つ以上のステートメントが発生する可能性があります。これには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 複数のステートメントを使用して他のストアドプロシージャを実行することもできます。 Select 以外のステートメント、またはキーワード SELECT INTO または FOR BROWSE を含む SELECT ステートメントは、単純に実行され、カーソルの作成にはなりません。 複数のステートメントのバッチに含まれている SELECT ステートメントについても同様です。 SELECT ステートメントに、カーソルのみに関連する句が含まれている場合、それらの句は無視されます。 たとえば、 *ccopt*の値が0x2002 の場合、これはの要求です。  
   
     -   スクロール ロックを使用するカーソル (カーソルの条件を満たしている単一の SELECT ステートメントだけがある場合)。  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH と AUTO_CLOSE は、または FAST_FORWARD にリンクできます。  
   
- CHECK_ACCEPTED_TYPES がオンになっている場合は、最後の** 5 つの scrollopt`,`値 (KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE、または FAST_FORWARD_ACCEPTABLE) の少なくとも1つが on である必要があります。  
+ CHECK_ACCEPTED_TYPES がオンになっている場合は、最後の5つの*scrollopt*値 (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE、FORWARD_ONLY_ACCEPTABLE、STATIC_ACCEPTABLE、または FAST_FORWARD_ACCEPTABLE) の少なくとも1つが on である必要があります。  
   
  静的カーソルは常に READ_ONLY として開かれます。 したがって、このカーソルを使用して基になるテーブルを更新することはできません。  
   
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>RPC に関する考慮事項  
  RPC RETURN_METADATA 入力フラグを0x0001 に設定して、カーソル選択リストのメタデータを TDS ストリームで返すように要求することができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="bound_param-parameter"></a>bound_param パラメーター  
  5番目以降のパラメーターは、入力パラメーターとしてステートメントプランに渡されます。 最初のパラメーターは、次の形式の文字列である必要があります。  
@@ -210,8 +210,8 @@ sp_cursoropen cursor OUTPUT, stmt
   
  後続のパラメーターは、ステートメントで*ローカル変数名*の代わりに使用する値を渡すために使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

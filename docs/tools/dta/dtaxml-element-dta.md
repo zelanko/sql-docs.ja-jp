@@ -1,5 +1,6 @@
 ---
 title: DTAXML 要素 (DTA)
+description: dta ユーティリティでは、DTAXML 要素に、データベース エンジン チューニング アドバイザーによって生成されるチューニング入力と出力を記述するすべての要素が含まれます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aeb5bfc3544d5de783a40fcfe8692a466fee6b40
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fc1f4b52fa73ecc014e4f22139496f471bf46f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307731"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831537"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
 
@@ -41,7 +42,7 @@ ms.locfileid: "75307731"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|-----------------|  
 |**xmlns:xsi**|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必要な値: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|必須。 データベース エンジン チューニング アドバイザーの名前空間を識別します。<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XML エディターを使用してデータベース エンジン チューニング アドバイザーの XML ファイルを編集する場合、F1 ヘルプとダイナミック ヘルプでは、この値を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの参照トピックを検索します。<br /><br /> 必須値 :<br /><br /> [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=43100) の名前空間|  

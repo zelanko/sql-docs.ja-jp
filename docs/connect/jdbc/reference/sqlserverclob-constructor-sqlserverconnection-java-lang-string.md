@@ -13,22 +13,22 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: cb6b459f8193daebb69ad67ffaab5beab526f710
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920389"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67971802"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob (SQLServerConnection, java.lang.String) コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-class.md) オブジェクトとデータの文字列が渡されたときに、[SQLServerClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの新しいインスタンスを初期化します。  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトとデータの文字列が渡されたときに、[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) クラスの新しいインスタンスを初期化します。  
   
 > [!NOTE]  
->  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) クラスの [createClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用してください。  
+>  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a77aa3c2e144859eaead332e71c5c4c8776608c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932435"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758698"
 ---
 # <a name="index-property"></a>Index プロパティ
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに現在適用されているインデックスの名前を示します。  

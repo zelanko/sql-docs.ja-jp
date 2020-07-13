@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], about data sources
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951801"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286553"
 ---
 # <a name="using-data-sources"></a>データ ソースの使用
 通常、データソースは、エンドユーザーまたは*ODBC 管理者*と呼ばれるプログラムがある技術者によって作成されます。 ODBC 管理者は、ドライバーが使用することをユーザーに確認してから、そのドライバーを呼び出すことができます。 ドライバーによって、データソースに接続するために必要な情報を要求するダイアログボックスが表示されます。 ユーザーが情報を入力すると、ドライバーはシステムに情報を格納します。  

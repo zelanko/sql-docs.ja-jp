@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891162"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sp_cdc_disable_table (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内の指定したソーステーブルおよびキャプチャインスタンスの変更データキャプチャを無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -70,8 +70,8 @@ sys.sp_cdc_disable_table
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、 `HumanResources.Employee`テーブルの変更データキャプチャを無効にします。  
+## <a name="examples"></a>使用例  
+ 次の例では、テーブルの変更データキャプチャを無効にし `HumanResources.Employee` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

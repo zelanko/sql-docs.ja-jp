@@ -12,16 +12,16 @@ helpviewer_keywords:
 - time data type [ODBC]
 - converting data from c to SQL types [ODBC], time
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019303"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304764"
 ---
-# <a name="c-to-sql-time"></a>C から SQL へ: 時刻
+# <a name="c-to-sql-time"></a>C から SQL へ: Time
 Time ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_TYPE_TIME  

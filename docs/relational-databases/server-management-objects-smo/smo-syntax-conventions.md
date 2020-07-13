@@ -16,22 +16,20 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 1c7a883ff0a596e6e258ea6fcb9557697bbea986
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70148569"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012264"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)]のリファレンス資料で使用されている表記規則に基づいています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .NET のリファレンス資料で使用されている表記規則に基づいてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 |表記|使用目的|  
 |----------------|--------------|  
-|UPPERCASE|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
 |`monospace`|サンプルのコマンド ラインおよびプログラム コード。|  
 |*斜体*|テキストに記述されている変数、数式、または定義されている用語。 構文では、斜体文字はユーザーが指定する情報のプレースホルダーを示しています。|  
 |**太字**|SMO のオブジェクト、イベント、メソッド、プロパティなど。テキストに記述されているプログラミング用語。|  

@@ -4,32 +4,31 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070849"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669803"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>データマイニング拡張機能 (DMX) 構文要素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、さまざまな構文要素を使用して、データマイニングモデルの構築、管理、および操作に使用できるデータマイニング拡張機能 (DMX) ステートメントを定義できます。 次のセクションでは、これらの構文要素について説明します。  
+  では [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、さまざまな構文要素を使用して、データマイニングモデルの構築、管理、および操作に使用できるデータマイニング拡張機能 (DMX) ステートメントを定義できます。 次のセクションでは、これらの構文要素について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DMX&#41;&#40;識別子](../dmx/identifiers-dmx.md)  
  マイニング モデル、マイニング構造、および列などのオブジェクトの名前を識別します。  
   
- [DMX&#41;&#40;データ型](../dmx/data-types-dmx.md)  
+ [データ型 (DMX)](../dmx/data-types-dmx.md)  
  マイニング モデル列に含まれるデータ型を定義します。  
   
  [DMX&#41;&#40;式](../dmx/expressions-dmx.md)  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
   
  [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
  より複雑な DMX 式を作るために、1 つ以上の簡単な DMX 式と共に使用されます。  
@@ -43,16 +42,16 @@ ms.locfileid: "68070849"
  [DMX&#41;&#40;の予約済みキーワード](../dmx/reserved-keywords-dmx.md)  
  DMX での使用に予約されており、データベース内のオブジェクトの名前付けに使用できない単語です。  
   
- [DMX&#41;&#40;コンテンツの種類](../dmx/content-types-dmx.md)  
+ [コンテンツの種類 (DMX)](../dmx/content-types-dmx.md)  
  マイニング構造列に含まれるコンテンツを定義します。  
   
- [DMX&#41;&#40;ディストリビューション](../dmx/distributions-dmx.md)  
+ [分布 &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  列内でのデータの分布を定義します。  
   
  [DMX&#41;の使用状況 &#40;](../dmx/usage-dmx.md)  
  マイニングモデルに含まれる列をマイニングモデルでどのように使用するかを定義します。  
   
- [DMX&#41;&#40;のモデリングフラグ](../dmx/modeling-flags-dmx.md)  
+ [モデリング フラグ (DMX)](../dmx/modeling-flags-dmx.md)  
  アルゴリズムがマイニングモデルの処理に使用できる追加のヒントを定義します。  
   
 ## <a name="see-also"></a>参照  

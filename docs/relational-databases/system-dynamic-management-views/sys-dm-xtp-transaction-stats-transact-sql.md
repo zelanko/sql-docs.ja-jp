@@ -16,23 +16,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9d238313d97ff3e509803d284efa3cfd9b8d6a9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647977"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   サーバーが起動してから実行されたトランザクションに関する統計を報告します。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|インメモリ OLTP データベースエンジンで実行されたトランザクションの合計数。|  
 |read_only_count|**bigint**|読み取り専用トランザクションの数。|  
@@ -68,7 +68,7 @@ ms.locfileid: "68090071"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

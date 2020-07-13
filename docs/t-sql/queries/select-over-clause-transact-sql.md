@@ -1,6 +1,6 @@
 ---
 title: OVER 句 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: OVER 句の Transact-SQL リファレンス。クエリ結果セット内でユーザー指定の行セットが定義されます。
 ms.date: 08/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981704"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634192"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "73981704"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
   
 OVER (   
@@ -101,7 +101,7 @@ ORDER BY order_by_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  

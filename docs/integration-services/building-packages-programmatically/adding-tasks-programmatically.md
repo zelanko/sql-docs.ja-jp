@@ -47,7 +47,7 @@ ms.locfileid: "71299069"
  パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクの実行可能ファイルをそのコンテナーのコレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドを呼び出します。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
   
 ## <a name="task-names"></a>タスク名  
- 名前または ID でタスクを指定できますが、**メソッドで最もよく使用されるパラメーターは**STOCK<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> モニカーです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
+ 名前または ID でタスクを指定できますが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドで最もよく使用されるパラメーターは **STOCK** モニカーです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  

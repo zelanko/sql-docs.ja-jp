@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3acefcd03af1b39d467625800d8837553ff5253b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62999827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058575"
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
@@ -41,7 +40,7 @@ ms.locfileid: "62999827"
   
 ## <a name="object-explorer-tasks"></a>オブジェクト エクスプローラーのタスク  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |-----------------|-----------|  
 |オブジェクト エクスプローラーを開いて、その動作を定義するオプションを構成する方法について説明します。|[オブジェクト エクスプローラーを開き、構成する](open-and-configure-object-explorer.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスにオブジェクト エクスプローラーを接続する方法について説明します。|[オブジェクト エクスプローラーからインスタンスへの接続](connect-to-an-instance-from-object-explorer.md)|  

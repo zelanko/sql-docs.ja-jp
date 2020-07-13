@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 269e021d3fd4610c2fccda46bcd8ca160982543c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f7f9d19a5a369e9da0efbc0d62f8e556b0597c1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039919"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305843"
 ---
 # <a name="diagnostic-handling-rules"></a>診断の処理規則
 次の規則は、 **SQLGetDiagRec**と**SQLGetDiagField**での診断処理を制御します。  

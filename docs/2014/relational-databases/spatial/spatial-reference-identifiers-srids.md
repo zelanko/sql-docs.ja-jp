@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c1e96d37ae3d140eb2efddd6d3df5c656cc3afd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15db59b43731b9a39ff4bef78e3a6cb6929e9b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068359"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID (Spatial Reference Identifier)
   各空間インスタンスには SRID (spatial reference identifier) があります。 SRID は、平面地球マッピングまたは球体地球マッピングに使用される特定の楕円体に基づく空間参照系に対応します。  
@@ -26,10 +25,9 @@ ms.locfileid: "66014002"
 > [!IMPORTANT]  
 >  新しい SRID を含む、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードして参照してください。  
   
- 空間列には異なる SRID を持つオブジェクトを格納できますが、 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の空間データ メソッドを使用してデータの操作を実行する際に使用できるのは、同じ SRID を持つ空間インスタンスだけです。 2 つの空間データ インスタンスから引き出される空間メソッドの結果は、それらのインスタンスが同じ SRID を持つ (同じ測定単位、データ、および投影を使用してインスタンスの座標が決定されている) 場合にのみ有効になります。 SRID の最も一般的な測定単位はメートルまたは平方メートルです。  
+ 空間列には異なる SRID を持つオブジェクトを格納できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の空間データ メソッドを使用してデータの操作を実行する際に使用できるのは、同じ SRID を持つ空間インスタンスだけです。 2 つの空間データ インスタンスから引き出される空間メソッドの結果は、それらのインスタンスが同じ SRID を持つ (同じ測定単位、データ、および投影を使用してインスタンスの座標が決定されている) 場合にのみ有効になります。 SRID の最も一般的な測定単位はメートルまたは平方メートルです。  
   
- 2 つの空間インスタンスの SRID が同じでない場合に、それらのインスタンスに対して `geometry` データ型や `geography` データ型のメソッドを使用すると、NULL が返されます。 たとえば、次の述語で NULL 以外の結果が返されるためには、`geometry` および `geometry1` の 2 つの `geometry2` インスタンスの SRID が同じである必要があります。  
+ 2 つの空間インスタンスの SRID が同じでない場合に、それらのインスタンスに対して `geometry` データ型や `geography` データ型のメソッドを使用すると、NULL が返されます。 たとえば、次の述語で NULL 以外の結果が返されるためには、`geometry1` および `geometry2` の 2 つの `geometry` インスタンスの SRID が同じである必要があります。  
   
  `geometry1.STIntersects(geometry2) = 1`  
   

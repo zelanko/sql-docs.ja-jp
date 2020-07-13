@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d80d54dc4aeebcc5c32d07a2beebb9ded41bf355
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046779"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300452"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio Analyzer の有効化
 > [!IMPORTANT]  

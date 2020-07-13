@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126828"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153124"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,12 +65,13 @@ ms.locfileid: "68126828"
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|オブジェクトに署名するためのオプションについて説明します。|  
   
 ## <a name="tools"></a>ツール  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、証明書および厳密な名前のキー ファイルを生成するツールとユーティリティを提供しています。 これらのツールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文よりも柔軟にキーを生成できます。 これらのツールを使用することで、より複雑なキー長の RSA キーを作成して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。 次の表では、これらのツールの入手先を示します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、証明書および厳密な名前のキー ファイルを生成するツールとユーティリティを提供しています。 これらのツールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文よりも柔軟にキーを生成できます。 これらのツールを使用することで、より複雑なキー長の RSA キーを作成して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。 これらのツールの入手先を次の表に示します。  
   
 |||  
 |-|-|  
 |ツール|目的|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|自己署名証明書を作成します。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。 **New-SelfSignedCertificate** を優先するために非推奨になりました。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|対称キーの厳密名を作成します。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

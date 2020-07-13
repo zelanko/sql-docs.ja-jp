@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0305d978dc4ecd21892a0be3916fa5072b7be95a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68062683"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303383"
 ---
 # <a name="catalog-position"></a>カタログの位置
 識別子に含まれるカタログ名の位置と、識別子の残りの部分との分離方法は、データソースとデータソースによって異なります。 たとえば、Xbase データソースでは、カタログ名はディレクトリであり、Microsoft® Windows®では、テーブル名 (ファイル名) から円記号 (\\) で区切られます。 次の図は、この条件を示しています。  

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Service Broker, catalog views
 - catalog views [SQL Server], Service Broker
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d589cceb34e446fe983aefe2930443afaea781fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e9e5f16f1d9482d24b9ac6f4712c9d5b1edb106
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896028"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker カタログ ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -31,16 +31,16 @@ ms.locfileid: "68018262"
 |-|-|  
 |[sys.conversation_endpoints](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)|[sys.service_contract_usages](../../relational-databases/system-catalog-views/sys-service-contract-usages-transact-sql.md)|  
 |[sys.conversation_groups](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)|[service_contracts &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)|  
-|[conversation_priorities &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)|[sys.service_message_types](../../relational-databases/system-catalog-views/sys-service-message-types-transact-sql.md)|  
+|[sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)|[sys.service_message_types](../../relational-databases/system-catalog-views/sys-service-message-types-transact-sql.md)|  
 |[message_type_xml_schema_collection_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-message-type-xml-schema-collection-usages-transact-sql.md)|[sys.service_queue_usages](../../relational-databases/system-catalog-views/sys-service-queue-usages-transact-sql.md)|  
-|[sys.remote_service_bindings](../../relational-databases/system-catalog-views/sys-remote-service-bindings-transact-sql.md)|[service_queues &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)|  
+|[sys.remote_service_bindings](../../relational-databases/system-catalog-views/sys-remote-service-bindings-transact-sql.md)|[sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)|  
 |[sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)|[sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)|  
 |[sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)|[sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [service_broker_endpoints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   
- [service_queues &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)  
   
   

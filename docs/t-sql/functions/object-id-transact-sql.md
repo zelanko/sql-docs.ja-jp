@@ -26,15 +26,15 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c926d7ecebea11ea054b2a63ddb1e7b62d9cb84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914862"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010863"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ スコープ オブジェクトのデータベース オブジェクト ID 番号を返します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67914862"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]   
   object_name' [ ,'object_type' ] )  
 ```  

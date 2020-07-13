@@ -12,17 +12,16 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: edb0740ce1bbc0009996849e39bf495c23ba29b0
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67941820"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053718"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  指定されたデータベースからスナップショットバックアップセットを構成するすべてのスナップショットとバックアップファイルを削除します。 このシステムストアドプロシージャは、スナップショットバックアップセットの管理に推奨される唯一の方法です。 詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」をご覧ください。  
+  指定されたデータベースからスナップショットバックアップセットを構成するすべてのスナップショットとバックアップファイルを削除します。 このシステムストアドプロシージャは、スナップショットバックアップセットの管理に推奨される唯一の方法です。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,6 +46,6 @@ sys.sp_delete_backup
   
 ## <a name="see-also"></a>参照  
  [fn_db_backup_file_snapshots &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
- [sp_delete_backup_file_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
+ [sp_delete_backup_file_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

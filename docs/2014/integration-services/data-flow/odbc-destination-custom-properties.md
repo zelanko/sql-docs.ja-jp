@@ -7,20 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8f9d36b6394aa3921a9262a8b4afc544033c7a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3978a6c8c9340e1bd4fb656687228373f262932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901133"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431859"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC 入力先のカスタム プロパティ
   次の表は、ODBC 入力先のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |Connection|ODBC Connection|入力先データベースにアクセスするための ODBC 接続。|  
 |BatchSize|整数|一括読み込みのバッチのサイズ。 これは、バッチとして読み込まれる行数です。 これは、行方向のパラメーターのバインドがサポートされている場合にのみ有効です。 行方向のパラメーターのバインドがサポートされていない場合のバッチ サイズは 1 です。|  

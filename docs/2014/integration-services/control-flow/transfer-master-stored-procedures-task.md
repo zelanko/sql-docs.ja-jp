@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6356c0ba1a1f9423bffdc704ae9f9f1ab2dd1a4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62829483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438089"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  
@@ -62,12 +61,11 @@ ms.locfileid: "62829483"
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Master ストアドプロシージャ転送タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[Master ストアド プロシージャ転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [Master ストアドプロシージャ転送タスクエディター &#40;ストアドプロシージャページ&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -78,12 +76,11 @@ ms.locfileid: "62829483"
 ### <a name="configuring-the-transfer-master-stored-procedures-task-programmatically"></a>プログラムによる Master ストアド プロシージャ転送タスクの構成  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server オブジェクトの転送タスク](transfer-sql-server-objects-task.md)   
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  

@@ -1,5 +1,6 @@
 ---
 title: フォーマット ファイルの作成 (SQL Server) | Microsoft Docs
+description: SQL Server テーブルを一括インポートまたは一括エクスポートする場合、フォーマット ファイルを使用すると、ほとんど他のプログラムからデータ ファイルを編集したり読み取ったりすることなく、データ ファイルを出力できます。
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035819"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009923"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非 XML 形式と XML 形式の 2 種類のフォーマット ファイルがサポートされます。 XML 以外のフォーマットとは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされる従来のフォーマットです。  
@@ -151,7 +152,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
 ```  
   
- "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ..." または "`bcp in -c -C65001 -f format_file``BULK INSERT`/ ... `OPENROWSET` ..." を使用して `FORMATFILE='format_file' CODEPAGE=65001` にデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
+ "`bcp in -c -C65001 -f format_file` ..." または "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ..." を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータをインポートすると、65001 を超える照合順序またはコード ページ情報のオプションが存在するようになります。  
 そのため、フォーマット ファイルを生成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータをインポートし直す前に、生成されたフォーマット ファイルから照合順序の情報を削除する必要があります。  
 次に照合順序情報を含まないフォーマット ファイルの例を示します。  
   

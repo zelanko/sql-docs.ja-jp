@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0360cf7e40536740b934c737da6c8329991611b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63242950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067962"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults メソッド (ClientSettings クラス)
-  既存のデータを上書きするオプションを使用し[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て、クライアントのインスタンスのすべての既定値を設定します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既存のデータを上書きするオプションを使用して、クライアントのインスタンスのすべての既定値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,21 +38,18 @@ OverwriteAll
   
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  `ClientSettings` クライアント インスタンスを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント インスタンスを表す `ClientSettings` オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
-|*OverwriteAll*|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンス上の既存の値を上書きするかどうかを指定するブール値。 既存のデータを上書きするには `true`、既存のデータを上書きしない場合は `false` を指定します。|  
+|*OverwriteAll*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンス上の既存の値を上書きするかどうかを指定するブール値。 既存のデータを上書きするには `true`、既存のデータを上書きしない場合は `false` を指定します。|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68075772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891508"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された非スキーマ バインド ビューのメタデータを更新します。 ビューが依存している基になるオブジェクトが変更されたため、ビューの永続的なメタデータが古くなることがあります。  
   
@@ -44,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数値 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ビューが schemabinding で作成されていない場合は、ビューの定義に影響を与えるビューの基になるオブジェクトに対して変更が行われたときに**sp_refreshview**を実行する必要があります。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -61,7 +61,7 @@ GO
 EXECUTE sp_refreshview N'Sales.vIndividualCustomer';  
 ```  
   
-### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>B. 変更されたオブジェクトに依存関係があるすべてのビューを更新するスクリプトを作成する  
+### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>B: 変更されたオブジェクトに依存関係があるすべてのビューを更新するスクリプトを作成する  
  テーブル `Person.Person` に対して作成された任意のビューの定義に影響を与える形で、このテーブルが変更されたとします。 次の例では、テーブル `Person.Person` に対する依存関係があるすべてのビューについて、メタデータを更新するスクリプトを作成しています。  
   
 ```  
@@ -74,10 +74,10 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sql_expression_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+ [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

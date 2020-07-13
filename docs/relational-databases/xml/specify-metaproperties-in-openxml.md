@@ -165,7 +165,7 @@ EXEC sp_xml_removedocument @idoc
   
  SELECT ステートメントは OPENXML で提供される行セットを返します。  
   
- この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName\@) に対して** **mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
+ この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName**) に対して **\@mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
   
  行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、 **\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
   

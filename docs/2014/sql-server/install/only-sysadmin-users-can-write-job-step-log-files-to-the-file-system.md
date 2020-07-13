@@ -13,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9e2bf5095ac1e6b67f6c6f3f87444879913916e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012181"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>sysadmin ユーザーのみがジョブ ステップのログ ファイルをファイル システムに書き込むことができる
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、オプションで各ジョブ ステップのログが書き込まれます。  
   
 ## <a name="component"></a>コンポーネント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]・  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント  
   
-## <a name="description"></a>[説明]  
- で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、エージェントは、 **sysadmin**固定サーバーロールのメンバーが所有するジョブのログをファイルシステムに書き込むことができます。 ジョブの所有者が**sysadmin**ロールのメンバーではなく、プロキシアカウントが有効になって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いる場合、エージェントはプロキシアカウントの資格情報を使用してファイルシステムにログを書き込むことができます。  
+## <a name="description"></a>説明  
+ では [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 、エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**固定サーバーロールのメンバーが所有するジョブのログをファイルシステムに書き込むことができます。 ジョブの所有者が**sysadmin**ロールのメンバーではなく、プロキシアカウントが有効になっている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはプロキシアカウントの資格情報を使用してファイルシステムにログを書き込むことができます。  
   
  アップグレード後に、 **sysadmin**固定サーバーロールのメンバーではないユーザーが所有するジョブは、ログをファイルシステムに書き込むことができなくなります。 代わりに、これらのユーザーは、 **msdb**データベースのテーブルにログを書き込むオプションを選択できます。 **Sysadmin**ロールのメンバーは、ログファイルをファイルシステムに書き込むことができます。  
   

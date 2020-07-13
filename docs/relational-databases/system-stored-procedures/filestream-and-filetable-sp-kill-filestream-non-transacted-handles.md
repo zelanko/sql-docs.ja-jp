@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdceccb1d11ce8818e9f26e46adf6b698e493cd4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898153"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable データに対する非トランザクション ファイル ハンドルを閉じます。  
   
@@ -67,7 +67,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ### <a name="permissions"></a>アクセス許可  
  **Dm_FILESTREAM_non_transacted_handles**動的管理ビューからファイルハンドルを取得し、 **sp_kill_filestream_non_transacted_handles**を実行するには、 **VIEW DATABASE STATE**権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、 **sp_kill_filestream_non_transacted_handles**を呼び出して、FileTable データの非トランザクションファイルハンドルを閉じる方法を示しています。  
   
 ```sql  

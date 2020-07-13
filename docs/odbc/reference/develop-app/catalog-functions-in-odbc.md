@@ -11,19 +11,19 @@ helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8cd46fbc8f633ef31f00fa60ced885f9455f185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6731018b99f2f3043e48ee7c174a08cb9ef71fc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68062729"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306233"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC のカタログ関数
 ODBC には、次のカタログ関数が含まれています。  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |**SQLTables**|データソース内のカタログ、スキーマ、テーブル、またはテーブルの種類の一覧を返します。|  
 |**SQLColumns**|1つ以上のテーブル内の列の一覧を返します。|  

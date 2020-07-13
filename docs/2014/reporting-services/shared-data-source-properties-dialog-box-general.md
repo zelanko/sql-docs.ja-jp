@@ -13,17 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101318"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>[全般] ([共有データ ソース プロパティ] ダイアログ ボックス)
-  
   **[共有データ ソース プロパティ]** ダイアログ ボックスを使用すると、レポート内の共有データ ソースに関する接続情報を表示および変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  データ ソースの名前を入力します。 データ ソース名はレポート内で一意である必要があります。 既定では、DataSource1 または DataSource2 などの一般的な名前がデータ ソースに割り当てられます。  
   
@@ -31,8 +30,7 @@ ms.locfileid: "66101318"
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **接続文字列**  
- データ ソースの接続文字列を入力します。 
-  **[編集]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 式 (**fx**) ボタンをクリックします。  
+ データ ソースの接続文字列を入力します。 **[編集]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 式 (**[fx]**) ボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-data/report-datasets-ssrs.md)   

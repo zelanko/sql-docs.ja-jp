@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68892877"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669830"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,8 +40,8 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>結果の種類  
  テーブルです。  
   
-## <a name="remarks"></a>解説  
- Bottom **percent**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式> 引数の\<評価値に基づいています。これにより、 \<順位付け式> 値の合計が、 \<パーセント> 引数で指定されている指定の割合以上になります。 下の**パーセント**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>Remarks  
+ Bottom **percent**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式> 引数の評価値に基づいてい \< \< ます。これにより、順位付け式> 値の合計が、パーセント> 引数で指定されている指定の割合以上になり \< ます。 下の**パーセント**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したアソシエーションモデルに対して予測クエリを作成します。  

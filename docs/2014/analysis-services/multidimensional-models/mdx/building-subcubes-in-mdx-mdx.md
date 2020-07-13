@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 653b4d30aa86f52179c7b13619ac4347aa65c339
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074716"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546556"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX でのサブキューブの作成 (MDX)
   サブキューブは、基になるデータにフィルターを適用したビューを表す、キューブのサブセットです。 キューブをサブキューブに限定することによって、クエリのパフォーマンスを向上させることができます。  
@@ -36,9 +35,7 @@ ms.locfileid: "66074716"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE の構文は非常に単純です。 
-  *Subcube_Identifier* パラメーターは、サブキューブの基になるキューブを識別します。 
-  *Subcube_Expression* パラメーターでは、サブキューブにするキューブの部分を選択します。  
+ CREATE SUBCUBE の構文は非常に単純です。 *Subcube_Identifier* パラメーターは、サブキューブの基になるキューブを識別します。 *Subcube_Expression* パラメーターでは、サブキューブにするキューブの部分を選択します。  
   
  サブキューブを作成すると、そのサブキューブは、セッションが閉じるまで、あるいは [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) ステートメントを実行するまですべての MDX クエリのコンテキストになります。  
   

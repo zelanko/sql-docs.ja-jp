@@ -37,15 +37,15 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2f1214064c11537f4752f9ec824123c3d601a1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730737"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 クエリ オプティマイザー関連のパフォーマンス問題を調査する目的で DBCC CLONEDATABASE を使用し、データベースをスキーマのみで複製します。
 
@@ -53,7 +53,7 @@ ms.locfileid: "68262322"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name

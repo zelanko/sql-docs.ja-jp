@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 133ff64f2c15fefac072ecfa28a7f772cea4f465
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922237"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758978"
 ---
 # <a name="running-the-address-book-sql-script"></a>アドレス帳の SQL スクリプトの実行
 > [!IMPORTANT]

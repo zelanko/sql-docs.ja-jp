@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8f26ea8c426f0bffb85f8c0e8a397ad6d7a835c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ec0d01bac3107086a55bf09096d243b5a319b648
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67995826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756885"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

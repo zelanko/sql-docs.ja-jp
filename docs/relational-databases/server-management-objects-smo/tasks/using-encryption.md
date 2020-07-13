@@ -20,34 +20,26 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 9981601da461fb126024863fc0e794d04195c103
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70148313"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008366"
 ---
 # <a name="using-encryption"></a>暗号化の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  SMO では、サービス マスター キーは <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> オブジェクトで表現します。 これは、<xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Server> プロパティによって参照されます。 
-  <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> メソッドを使用して、再生成することができます。  
+  SMO では、サービス マスター キーは <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> オブジェクトで表現します。 これは、<xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Server> プロパティによって参照されます。 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> メソッドを使用して、再生成することができます。  
   
- データベース マスター キーは、<xref:Microsoft.SqlServer.Management.Smo.MasterKey> オブジェクトによって表されます。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> プロパティでは、データベース マスター キーがサービス マスター キーによって暗号化されるのかどうかが示されます。 master データベース内の暗号化されたコピーは、データベース マスター キーが変更されるたびに自動的に更新されます。  
+ データベース マスター キーは、<xref:Microsoft.SqlServer.Management.Smo.MasterKey> オブジェクトによって表されます。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> プロパティでは、データベース マスター キーがサービス マスター キーによって暗号化されるのかどうかが示されます。 master データベース内の暗号化されたコピーは、データベース マスター キーが変更されるたびに自動的に更新されます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> メソッドを使用してサービス キー暗号化を削除し、パスワードを使ってデータベース マスター キーを暗号化することが可能です。 この場合、セキュリティで保護された秘密キーにアクセスする前に、データベース マスター キーを明示的に開く必要があります。  
+ <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> メソッドを使用してサービス キー暗号化を削除し、パスワードを使ってデータベース マスター キーを暗号化することが可能です。 この場合、セキュリティで保護された秘密キーにアクセスする前に、データベース マスター キーを明示的に開く必要があります。  
   
  データベースを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにアタッチする際には、データベース マスター キーのパスワードを指定するか、サービス マスター キーでの暗号化に使用できるデータベース マスター キーの非暗号化コピーを作成するための <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> メソッドを実行する必要があります。 データベース マスター キーを明示的に開く必要性を回避するには、この手順をお勧めします。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> メソッドは、データベース マスター キーを再生成します。 データベース マスター キーが再生成されると、このデータベース マスター キーで暗号化されたすべてのキーの暗号化が解除され、これらのキーが新しいデータベース マスター キーで暗号化されます。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> メソッドは、サービス マスター キーを使用してデータベース マスター キーの暗号化を削除します。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> は、サービス マスター キーを使用してマスター キーのコピーを暗号化し、現在のデータベースおよび master データベースの両方に格納します。  
+ <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> メソッドは、データベース マスター キーを再生成します。 データベース マスター キーが再生成されると、このデータベース マスター キーで暗号化されたすべてのキーの暗号化が解除され、これらのキーが新しいデータベース マスター キーで暗号化されます。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> メソッドは、サービス マスター キーを使用してデータベース マスター キーの暗号化を削除します。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> は、サービス マスター キーを使用してマスター キーのコピーを暗号化し、現在のデータベースおよび master データベースの両方に格納します。  
   
- SMO では、証明書は <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトで表現します。 
-  <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトには、公開キー、サブジェクト名、有効期間、および発行者に関する情報を指定するプロパティがあります。 証明書にアクセスする権限は、 **Grant**メソッド、 **Revoke** メソッド、および **Deny** メソッドを使用して制御されます。  
+ SMO では、証明書は <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトで表現します。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトには、公開キー、サブジェクト名、有効期間、および発行者に関する情報を指定するプロパティがあります。 証明書にアクセスする権限は、 **Grant**メソッド、 **Revoke** メソッド、および **Deny** メソッドを使用して制御されます。  
   
 ## <a name="example"></a>例  
  次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  

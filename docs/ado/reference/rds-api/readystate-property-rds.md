@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963590"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751218"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "67963590"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  次のいずれかの値を設定または返します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl**オブジェクトの**レコードセット**は使用できません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得された行の初期セットは、 **DataControl**オブジェクトの**レコードセット**に格納されており、使用することができます。 残りの行はまだフェッチされています。|  

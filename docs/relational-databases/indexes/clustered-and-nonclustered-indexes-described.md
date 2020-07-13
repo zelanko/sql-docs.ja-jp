@@ -14,16 +14,16 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7987fe81a4c55093dca6875074d752a72789a3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68811129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753157"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インデックスとは、テーブルまたはビューに関連付けられたディスク上の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 これらのキーは 1 つの構造 (B-Tree) 内に格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。
 

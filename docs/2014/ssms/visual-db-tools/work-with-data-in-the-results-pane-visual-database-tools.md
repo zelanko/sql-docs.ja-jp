@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63313773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040478"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
   クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
@@ -115,9 +114,9 @@ ms.locfileid: "63313773"
 ### <a name="what-can-not-be-represented-fully"></a>完全に表現できないもの  
  データベースから結果ペインに返される内容は、使用しているデータ ソースのプロバイダーに大きく影響されます。 結果ペインでは、必ずしもすべてのデータベース管理システムからのデータを解釈できるわけではありません。 結果ペインでデータを解釈できないケースを以下に示します。  
   
--   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 * \<バイナリデータ>* または*Null*で表されます。  
+-   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 このため、binary データ型は *\<Binary data>* または *Null*と表示されます。  
   
--   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 データが有効桁数が大きいデータ型の場合、データが切り捨てられるか、データ* \<>を読み取る*ことができないことがあります。  
+-   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 これを超える有効桁数を持つデータ型のデータは、27 桁に切り捨てられるか、 *\<Unable to read data>* と表示されます。  
   
 ## <a name="see-also"></a>参照  
  [Visual Database Tools &#40;クエリで基本的な操作を実行&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

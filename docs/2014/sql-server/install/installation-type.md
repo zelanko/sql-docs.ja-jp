@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bab1b6c912dce64d1269fd79348a2b0b85f7f670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065324"
 ---
 # <a name="installation-type"></a>インストールの種類
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インストールの種類] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールするか既存のインスタンスに機能を追加するかを指定します。  
   
 ## <a name="options"></a>オプション  
@@ -30,8 +28,8 @@ ms.locfileid: "66094290"
   
      既存のインスタンスに機能を追加するオプションを選択した場合、ドロップダウン リストを使用して、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。  
   
- SysPrep でサポートされている機能[!INCLUDE[ssDE](../../includes/ssde-md.md)]と[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]準備済みイメージにのみ追加できます。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
+ SysPrep でサポートされている機能 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と-は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の準備済みイメージにのみ追加でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
   
- **メモ**フェールオーバークラスターインスタンスをインストールした後に、そのインスタンスに機能を追加することはできません。 既存のフェールオーバー クラスターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を追加するには、新規インストールを実行して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする必要があります。  
+ **注** フェールオーバー クラスター インスタンスがインストールされている場合、そのインスタンスに機能を追加することはできません。 既存のフェールオーバー クラスターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を追加するには、新規インストールを実行して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする必要があります。  
   
   

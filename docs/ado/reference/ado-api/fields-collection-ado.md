@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecf6d672bd82b6ac532306cd1ca6fc2400b215e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918711"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762563"
 ---
 # <a name="fields-collection-ado"></a>Fields コレクション (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトのすべての[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトを格納します。  

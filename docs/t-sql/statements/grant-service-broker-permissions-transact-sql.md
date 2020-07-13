@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb76fda1e2c94486203d3fb4ac23f13e13475b84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050761"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880374"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Service Broker の権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Service Broker コントラクト、メッセージ型、リモート バインド、ルート、またはサービスに対する権限を許可します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68050761"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON  
     {    

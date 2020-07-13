@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e336538cf0694cb2dc7048bf516717860d2123e7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932489"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760008"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows メソッドの例 (VC++)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または、 **getrows**が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
@@ -235,7 +235,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 2 record(s) found.  

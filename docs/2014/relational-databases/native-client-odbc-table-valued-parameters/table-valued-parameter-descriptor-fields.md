@@ -9,22 +9,21 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bb4b520eb8825e1a9d3bd5743700c2073f679c0f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63228963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999101"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>テーブル値パラメーターの記述子フィールド
   テーブル値パラメーターのサポートには、ODBC アプリケーション パラメーター記述子 (APD) および実装パラメーター記述子 (IPD) の新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のフィールドが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-|Name|Location|種類|[説明]|  
+|名前|場所|種類|説明|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|テーブル値パラメーターのサーバーの型名です。<br /><br /> SQLBindParameter の呼び出しでテーブル値パラメーターの型名を指定する場合は、ANSI アプリケーションとしてビルドされたアプリケーションであっても、常に Unicode 値として指定する必要があります。 パラメーター *StrLen_or_IndPtr*に使用される値は、SQL_NTS か、名前の文字列の長さに SIZEOF (WCHAR) を掛けたものである必要があります。<br /><br /> SQLSetDescField を使用してテーブル値パラメーターの型名を指定する場合は、アプリケーションのビルド方法に準拠したリテラルを使用して指定できます。 ODBC ドライバー マネージャーで、必要な Unicode 変換を実行します。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (読み取り専用)|IPD|SQLTCHAR*|型が定義されているカタログです。|  
@@ -34,7 +33,7 @@ ms.locfileid: "63228963"
   
  次のステートメント属性および記述子のヘッダー フィールドは、テーブル値パラメーターにフォーカスが設定されている場合に適用されます。  
   
-|Name|Location|種類|[説明]|  
+|名前|場所|種類|説明|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (APD の SQL_DESC_ARRAY_SIZE に相当)|APD|SQLUINTEGER|テーブル値パラメーターのバッファー配列のサイズです。 これは、バッファーが保持できる最大行数、または行内のバッファーのサイズです。テーブル値パラメーターの値自体には、バッファーで保持できるよりも多い (または少ない) 行が含まれる場合があります。 既定値は 1 です。 **注:** SQL_SOPT_SS_PARAM_FOCUS が既定値の0に設定されている場合、SQL_ATTR_PARAMSET_SIZE はステートメントを参照し、パラメーターセットの数を指定します。 SQL_SOPT_SS_PARAM_FOCUS がテーブル値パラメーターの序数に設定されている場合は、テーブル値パラメーターを参照し、テーブル値パラメーターのパラメーター セットごとの行数を指定します。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|既定値は SQL_PARAM_BIND_BY_COLUMN です。<br /><br /> 行方向のバインドを選択するには、このフィールドに、構造体の長さ、または一連のテーブル値パラメーターの行のバインドされるバッファーのインスタンスの長さが設定されます。 この長さには、バインドされたすべての列の領域と、構造体またはバッファーの埋め込みを含める必要があります。 これにより、バインドされた列のアドレスが指定の長さでインクリメントされると、結果は、次の行の同じ列の先頭を指すようになります。 ANSI C の `sizeof` 演算子を使用すると、この動作が保証されます。|  

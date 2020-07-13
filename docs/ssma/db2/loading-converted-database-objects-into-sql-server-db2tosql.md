@@ -10,10 +10,10 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141033"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>変換されたデータベースオブジェクトを SQL Server に読み込んでいます (DB2ToSQL)
@@ -72,8 +72,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 **スクリプトを変更するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、スクリプトファイルを選択し、[OK] をクリックします。
   
@@ -88,8 +87,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
   
 **スクリプトを実行するには**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  [**開く**] ダイアログボックスで、スクリプトファイルを選択し、[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -104,7 +102,7 @@ SSMA を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]デ
 ## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
 変換されたデータベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むと、それらのオブジェクトに対する権限を許可および拒否できます。 これは、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に行うことをお勧めします。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトをセキュリティで保護する方法の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「データベースおよびデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順は、 [DB2 データを SQL Server に移行](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)することです。  
   
 ## <a name="see-also"></a>参照  

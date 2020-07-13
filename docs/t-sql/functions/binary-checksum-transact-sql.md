@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 11b29a516fb7c8eeaa50bec33b8fce8bfc6dc901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790017"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68040208"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   

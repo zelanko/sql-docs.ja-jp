@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 22f900a0b203e652bbc9cc6e9638711d138756c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007919"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows アプリケーション ログの表示
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Microsoft Windows アプリケーション ログを使用するように構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションでは新しいイベントが書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  
@@ -33,7 +32,7 @@ ms.locfileid: "63150760"
   
  イベント ビューアーでは、次の 3 つのログを表示できます。  
   
-|Windows ログの種類|[説明]|  
+|Windows ログの種類|説明|  
 |----------------------|-----------------|  
 |システム ログ|Windows オペレーティング システムのコンポーネントによってログに記録されるイベントを記録します。 たとえば、起動時にドライバーや他のシステム コンポーネントの読み込みが失敗した場合には、システム ログに記録されます。|  
 |Security log|失敗したログイン試行などのセキュリティ イベントを記録します。 これは、セキュリティ システムへの変更を監視し、セキュリティ侵害のおそれのある箇所を特定するために役立ちます。 たとえば、システムへのログオン試行は、User Manager の監査設定によってセキュリティ ログに記録できます。<br /><br /> **sysadmin** 固定サーバー ロールのメンバーだけが、セキュリティ ログを表示できます。|  

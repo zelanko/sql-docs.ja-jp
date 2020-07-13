@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 60ba31e2a63575a316db5befb397bea59c0ad1e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63151196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066047"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してプラン ガイドを作成できます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドでは、最適化する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、クエリ オプティマイザーにより [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
   
  **このトピックの内容**  
@@ -32,7 +30,7 @@ ms.locfileid: "63151196"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してプラン ガイドを作成するには:**  
   
@@ -40,27 +38,24 @@ ms.locfileid: "63151196"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 
-  `sp_create_plan_guide` のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、`@name =` を指定する場合は、`@stmt =`、`@type =` なども指定する必要があります。 同様に、`@name =` を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
+-   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 `sp_create_plan_guide` のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、`@name =` を指定する場合は、`@stmt =`、`@type =` なども指定する必要があります。 同様に、`@name =` を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
 -   同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
   
--   
-  @module_or_batch 値で参照するストアド プロシージャ、関数、または DML トリガーが、WITH ENCRYPTION 句を指定するものであるか一時的なものである場合、この値に対して OBJECT 型のプラン ガイドは作成できません。  
+-   @module_or_batch 値で参照するストアド プロシージャ、関数、または DML トリガーが、WITH ENCRYPTION 句を指定するものであるか一時的なものである場合、この値に対して OBJECT 型のプラン ガイドは作成できません。  
   
 -   有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。 プラン ガイドで参照され、トリガーが定義されているテーブルを削除しようとする場合もエラーが発生します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  OBJECT 型のプラン ガイドを作成するには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE タイプのプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-plan-guide"></a>プラン ガイドを作成するには  
   
@@ -68,44 +63,31 @@ ms.locfileid: "63151196"
   
 2.  [**プランガイド**] フォルダーを右クリックし、[**新しいプランガイド**] をクリックします。  
   
-3.  
-  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
+3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
   
-4.  
-  **[ステートメント]** ボックスに、プラン ガイドの適用対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。  
+4.  **[ステートメント]** ボックスに、プラン ガイドの適用対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。  
   
-5.  
-  **[スコープの種類]** ボックスの一覧で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが存在するエンティティの種類を選択します。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとプラン ガイドを照合するコンテキストを示します。 選択できる値は、 **OBJECT**、 **SQL**、および **TEMPLATE**です。  
+5.  **[スコープの種類]** ボックスの一覧で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが存在するエンティティの種類を選択します。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとプラン ガイドを照合するコンテキストを示します。 選択できる値は、 **OBJECT**、 **SQL**、および **TEMPLATE**です。  
   
-6.  
-  **[スコープのバッチ]** ボックスに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むバッチ テキストを入力します。 バッチ テキストには、USE``*database* ステートメントを含めることはできません。 
-  **[スコープのバッチ]** ボックスは、スコープの種類として **[SQL]** を選択した場合にのみ利用できます。 スコープの種類が SQL であるとき、[スコープのバッチ] ボックスに何も入力しなかった場合、バッチ テキストの値は、 **[ステートメント]** ボックスと同じ値に設定されます。  
+6.  **[スコープのバッチ]** ボックスに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むバッチ テキストを入力します。 バッチ テキストには、USE``*database* ステートメントを含めることはできません。 **[スコープのバッチ]** ボックスは、スコープの種類として **[SQL]** を選択した場合にのみ利用できます。 スコープの種類が SQL であるとき、[スコープのバッチ] ボックスに何も入力しなかった場合、バッチ テキストの値は、 **[ステートメント]** ボックスと同じ値に設定されます。  
   
-7.  
-  **[スコープのスキーマ名]** ボックスに、対象のオブジェクトを含んでいるスキーマの名前を入力します。 
-  **[スコープのスキーマ名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
+7.  **[スコープのスキーマ名]** ボックスに、対象のオブジェクトを含んでいるスキーマの名前を入力します。 **[スコープのスキーマ名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
   
-8.  
-  **[スコープのオブジェクト名]** ボックスに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前を入力します。 
-  **[スコープのオブジェクト名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
+8.  **[スコープのオブジェクト名]** ボックスに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、ユーザー定義スカラー関数、複数ステートメントのテーブル値関数、または DML トリガーの名前を入力します。 **[スコープのオブジェクト名]** ボックスは、スコープの種類として **[オブジェクト]** を選択した場合にのみ利用できます。  
   
-9. 
-  **ステートメントに埋め込まれているすべてのパラメーターの名前とデータ型を** [パラメーター] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。  
+9. **ステートメントに埋め込まれているすべてのパラメーターの名前とデータ型を** [パラメーター] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。  
   
      パラメーターは、次の条件のいずれかを満たす場合にのみ適用されます。  
   
-    -   スコープの種類が **SQL** または **TEMPLATE**の場合。 
-  **TEMPLATE**の場合、パラメーターを NULL にすることはできません。  
+    -   スコープの種類が **SQL** または **TEMPLATE**の場合。 **TEMPLATE**の場合、パラメーターを NULL にすることはできません。  
   
-    -   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが sp_executesql を使用して送信され、パラメーターの値が指定されている場合、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が内部でステートメントをパラメーター化した後に送信する場合。  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが sp_executesql を使用して送信され、パラメーターの値が指定されている場合、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が内部でステートメントをパラメーター化した後に送信する場合。  
   
-10. 
-  **ステートメントに適用されるクエリ ヒントまたはクエリ プランを** [ヒント] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。 1 つまたは複数のクエリ ヒントを指定するには、有効な OPTION 句を入力します。  
+10. **ステートメントに適用されるクエリ ヒントまたはクエリ プランを** [ヒント] [!INCLUDE[tsql](../../includes/tsql-md.md)] ボックスに入力します。 1 つまたは複数のクエリ ヒントを指定するには、有効な OPTION 句を入力します。  
   
 11. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-plan-guide"></a>プラン ガイドを作成するには  
   

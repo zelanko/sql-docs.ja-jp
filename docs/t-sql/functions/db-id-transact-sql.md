@@ -23,15 +23,15 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56408c607d9e1ecf5b03fc3bd135d0eae706c9e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995738"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007617"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、指定されたデータベースのデータベース識別 (ID) 番号を返します。
   
@@ -54,13 +54,13 @@ DB_ID ( [ 'database_name' ] )
 `DB_ID` は、Azure SQL Database 内の現在のデータベースのデータベース ID を取得するためにのみ使用できます。 指定したデータベース名が現在のデータベースではない場合は、NULL が返されます。
 
 > [!NOTE]
-> Azure SQL Database と共に使用する場合、`DB_ID` では、`database_id`sys.databases**からの** のクエリと同じ結果が返されないことがあります。 `DB_ID` の呼び出し元で結果が他の **sys** ビューと比較されている場合は、代わりに **sys.databases** のクエリを実行する必要があります。
+> Azure SQL Database と共に使用する場合、`DB_ID` では、**sys.databases** からの `database_id` のクエリと同じ結果が返されないことがあります。 `DB_ID` の呼び出し元で結果が他の **sys** ビューと比較されている場合は、代わりに **sys.databases** のクエリを実行する必要があります。
   
 ## <a name="permissions"></a>アクセス許可  
-`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `ALTER ANY DATABASE` 行を確認するために、少なくとも、サーバー レベルの `VIEW ANY DATABASE` または `DB_ID` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
+`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
   
 > [!IMPORTANT]  
->  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `REVOKE` を `VIEW ANY DATABASE` するか、または、個別のログインに対する `DENY` を `VIEW ANY DATABASE` します。  
+>  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `VIEW ANY DATABASE` を `REVOKE` するか、または、個別のログインに対する `VIEW ANY DATABASE` を `DENY` します。  
   
 ## <a name="examples"></a>例  
   

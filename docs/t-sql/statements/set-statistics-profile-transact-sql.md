@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66b4376a41630a45679d2587c7ef8ff920d8f5ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765686"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ステートメントのプロファイル情報を表示します。 STATISTICS PROFILE は、アドホック クエリ、ビュー、ストアド プロシージャに対して機能します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68131928"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET STATISTICS PROFILE { ON | OFF }  
 ```  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264370"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>テスト ケースの初期化 (OracleToSQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68264370"
 **テストケースの説明**  
 テストケースの目的を特定するための追加情報を入力します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [&#40;OracleToSQL&#41;をテストするオブジェクトの選択と構成](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

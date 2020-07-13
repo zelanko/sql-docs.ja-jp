@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135881"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
@@ -31,10 +31,10 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Filter (mdx)](../mdx/filter-mdx.md)関数や[Generate (mdx)](../mdx/generate-mdx.md)関数などを使用してセットを反復処理する場合、 **currentordinal**関数はイテレーション番号を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の簡単な例では、 **Currentordinal**を**Generate**と共に使用して、セット内の各項目の名前とセット内の位置を含む文字列を返す方法を示しています。  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
@@ -82,6 +82,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

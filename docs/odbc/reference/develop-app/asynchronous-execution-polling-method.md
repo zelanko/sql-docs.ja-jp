@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca7b3d5fa16be44bf4c2ef8f8df8953ae081235d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077049"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293402"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
 ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステートメント関数でのみ許可されていました。 詳細については、このトピックの「**ステートメントの実行**」を参照してください。  
@@ -30,7 +30,7 @@ ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステ�
   
  非同期実行は、データソースで主に実行されるほとんどの関数 (接続の確立、SQL ステートメントの準備と実行、メタデータの取得、データのフェッチ、トランザクションのコミットなど) に対してサポートされています。 これは、データソースに対して実行されるタスクの実行に時間がかかる場合 (ログインプロセスや、大規模なデータベースに対する複雑なクエリなど) に最も役立ちます。  
   
- 非同期処理が有効になっているステートメントまたは接続を使用して、アプリケーションが関数を実行すると、ドライバーは最小限の処理 (エラーの引数のチェックなど) を実行し、データソースへの処理を行い、を返します。SQL_STILL_EXECUTING リターンコードを使用してアプリケーションを制御します。 その後、アプリケーションは他のタスクを実行します。 非同期関数が終了したことを確認するために、アプリケーションは、最初に使用したものと同じ引数を使用して関数を呼び出すことによって、ドライバーを一定の間隔でポーリングします。 関数がまだ実行されている場合は、SQL_STILL_EXECUTING を返します。実行が完了すると、SQL_SUCCESS、SQL_ERROR、SQL_NEED_DATA など、同期的に実行されたコードが返されます。  
+ 非同期処理が有効になっているステートメントまたは接続を使用して、アプリケーションが関数を実行すると、ドライバーは最小限の処理 (エラーの引数のチェックなど) を実行し、データソースに処理を行い、SQL_STILL_EXECUTING リターンコードを使用してアプリケーションに制御を返します。 その後、アプリケーションは他のタスクを実行します。 非同期関数が終了したことを確認するために、アプリケーションは、最初に使用したものと同じ引数を使用して関数を呼び出すことによって、ドライバーを一定の間隔でポーリングします。 関数がまだ実行されている場合は、SQL_STILL_EXECUTING を返します。実行が完了すると、SQL_SUCCESS、SQL_ERROR、SQL_NEED_DATA など、同期的に実行されたコードが返されます。  
   
  関数を同期的に実行するか、非同期的に実行するかは、ドライバーによって異なります。 たとえば、結果セットのメタデータがドライバーにキャッシュされているとします。 この場合、 **SQLDescribeCol**の実行にはかなりの時間がかかります。ドライバーは、人為的に遅延実行するのではなく、単に関数を実行する必要があります。 一方、ドライバーがデータソースからメタデータを取得する必要がある場合は、その実行中にアプリケーションに制御を返す必要があります。 したがって、アプリケーションは、最初に関数を非同期的に実行するときに、SQL_STILL_EXECUTING 以外のリターンコードを処理できる必要があります。  
   
@@ -204,14 +204,14 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  Odbc 3.8 ドライバーおよび odbc 3.8 Driver Manager を使用して、odbc 3.x および odbc 2.x アプリケーションで非同期接続操作と**Sqlcancelhandle**を使用することもできます。 古いアプリケーションで、以降のバージョンの ODBC の新機能を使用できるようにする方法については、「[互換性マトリックス](../../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
   
-### <a name="connection-pooling"></a>接続のプール  
+### <a name="connection-pooling"></a>接続プール  
  接続プールが有効になっている場合、非同期操作は、( **SQLConnect**および**SQLDriverConnect**を使用した) 接続を確立し、 **sqldisconnect**を使用して接続を終了するために最小限しかサポートされません。 ただし、アプリケーションでは、 **SQLConnect**、 **SQLDriverConnect**、および**sqldisconnect**からの SQL_STILL_EXECUTING 戻り値を引き続き処理できる必要があります。  
   
  接続プールが有効になっている場合、非同期操作では**SQLEndTran**と**SQLSetConnectAttr**がサポートされます。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  次の例では、 **SQLSetConnectAttr**を使用して、接続関連の関数の非同期実行を有効にする方法を示します。  
   
 ### <a name="code"></a>コード  
@@ -265,7 +265,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  この例では、非同期コミット操作を示します。 このようにしてロールバック操作を行うこともできます。  
   
 ### <a name="code"></a>コード  

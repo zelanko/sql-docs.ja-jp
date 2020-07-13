@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cell object [ADO MD], members
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f76a24c4db4d6a5144188be2ee0fa00ca5679f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60424bed2d6496ce23f7bf9ed28d4c49a222e3f2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761790"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -34,7 +34,7 @@ ms.locfileid: "67947970"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

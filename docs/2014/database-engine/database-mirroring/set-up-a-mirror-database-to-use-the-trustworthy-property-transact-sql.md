@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6cd46a08037bcb6eee178a96d84bdab358e5350d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933963"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 (Transact-SQL)
   データベースをバックアップするときに、TRUSTWORTHY データベース プロパティは OFF に設定されます。 したがって、新しいミラー データベースでは TRUSTWORTHY は常に OFF です。 フェールオーバー後にデータベースを信頼可能にする必要がある場合は、ミラーリングを開始した後で追加の設定が必要です。  
@@ -51,9 +50,9 @@ ms.locfileid: "62754335"
   
      この操作を行うには、SQL Server Management Studio または Transact-SQL を使用します。  
   
-    -   [データベースミラーリングセッションを手動でフェールオーバーする &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Transact-sql&#41;&#40;データベースミラーリングセッションを手動でフェールオーバーする](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 4.  次の ALTER DATABASE コマンドを使用して、TRUSTWORTHY データベース プロパティをオンにします。  
   
@@ -69,16 +68,16 @@ ms.locfileid: "62754335"
   
      Transact-SQL での操作  
   
-    -   [データベースミラーリングセッションでのトランザクションの安全性の変更 Transact-sql&#41;の &#40;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-    -   [データベースミラーリングセッションからミラーリング監視サーバーを削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+    -   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
      SQL Server Management Studio での操作  
   
-    -   [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
+    -   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## <a name="see-also"></a>参照  
- [信頼可能データベースのプロパティ](../../relational-databases/security/trustworthy-database-property.md)   
+ [TRUSTWORTHY データベース プロパティ](../../relational-databases/security/trustworthy-database-property.md)   
  [暗号化されたミラー データベースの設定](set-up-an-encrypted-mirror-database.md)  
   
   

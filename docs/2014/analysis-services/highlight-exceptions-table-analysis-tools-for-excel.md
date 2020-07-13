@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544294"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>例外の強調表示 (Excel 用のテーブル分析ツール)
   ![リボンの [例外の強調表示] ボタン](media/tat-highlightex.gif "リボンの [例外の強調表示] ボタン")  
@@ -39,11 +38,11 @@ ms.locfileid: "66080762"
   
 3.  **[実行]** をクリックします。  
   
-4.  [テーブル名> \<外れ値] という名前のワークシートを開いて、検出された外れ値の概要を表示します。  
+4.  外れ値というタイトルのワークシートを開いて、 \<table name> 検出された外れ値の概要を表示します。  
   
 5.  ハイライトの数を変更するには、[例外の**強調表示] レポート**の [**例外のしきい値**] 行にある上下の矢印をクリックします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  外れ値が含まれていない列でも、その値が他の行の予測に貢献するのであれば、検出対象に含めることができます。 しかし、欠損値をあまりにも多く含む列については、選択を解除する必要があります。  
   
  選択したすべての列が、一般的なパターンの作成に使用されるので、次のような適切でない情報を含む入力列は使用しないようにしてください。  
@@ -63,8 +62,7 @@ ms.locfileid: "66080762"
   
 -   テーブル内の最新のデータに基づいてデータ マイニング構造を作成する。  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使って新しいデータ マイニング モデルを作成する。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使って新しいデータ マイニング モデルを作成する。  
   
 -   パターンに基づく予測クエリを作成し、ワークシートに、あり得ない値が存在するかどうかを調べる。  
   
@@ -77,10 +75,9 @@ ms.locfileid: "66080762"
 ## <a name="related-tools"></a>関連ツール  
  データ マイニングに備えてデータを消去または確認する段階で、Excel 用のデータ マイニング クライアントのデータ探索機能を利用することもできます。 このアドインには、外れ値を検出したり、データのラベルを変更したり、データの分布を確認したりするための、より高度なツールが用意されています。 Excel 用のデータマイニングクライアントのデータ探索ツールの詳細については、「[データの探索とクリーンアップ](exploring-and-cleaning-data.md)」を参照してください。  
   
- **例外の強調表示**ツールで[!INCLUDE[msCoName](../includes/msconame-md.md)]は、クラスタリングアルゴリズムが使用されます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用のデータマイニングクライアントには、グラフと特性プロファイルを使用して、クラスタリングによって作成されたデータマイニングモデルを調べるための [**参照**] ウィンドウが用意されています。 [**例外の強調表示**] ツールによって作成されたクラスターモデルを参照する方法については、「[モデルの参照 (Excel 用データマイニングクライアント)](highlight-exceptions-table-analysis-tools-for-excel.md)」を参照してください。  
+ **例外の強調表示**ツールでは、クラスタリングアルゴリズムが使用され [!INCLUDE[msCoName](../includes/msconame-md.md)] ます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用のデータマイニングクライアントには、グラフと特性プロファイルを使用して、クラスタリングによって作成されたデータマイニングモデルを調べるための [**参照**] ウィンドウが用意されています。 [**例外の強調表示**] ツールによって作成されたクラスターモデルを参照する方法については、「[モデルの参照 (Excel 用データマイニングクライアント)](highlight-exceptions-table-analysis-tools-for-excel.md)」を参照してください。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft クラスタリング アルゴリズム」を参照してください。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft クラスタリング アルゴリズム」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

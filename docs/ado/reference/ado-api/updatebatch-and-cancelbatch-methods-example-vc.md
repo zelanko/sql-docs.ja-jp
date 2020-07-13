@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a487ce96f20f574d5b3996e9e3948e423601cb10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942918"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759468"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch および CancelBatch メソッドの例 (VC++)
 この例では、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドと共に、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを示します。  

@@ -13,15 +13,15 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720866"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[パブリケーション プロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページを使用すると、サブスクリプションに関連付けられたパブリケーション レベルのプロパティを表示したり設定したりできます。 プロパティは次のように分類されます。  
   
 -   すべてのパブリケーションに適用されるプロパティ。  

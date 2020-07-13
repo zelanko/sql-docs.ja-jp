@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e288a2691f99f8d879b9a1df25536087e8e2f81
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771129"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435479"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>挿入、更新、および削除を処理する
   変更データの増分読み込みを実行する Integration Services パッケージのデータ フローにおいて、2 番目のタスクは、挿入、更新、および削除を分割することです。 その後、適切なコマンドを使用してそれらの変更を変換先に適用できるようになります。  

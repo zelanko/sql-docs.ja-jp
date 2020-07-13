@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b8cb69c88d1f8eee98093c8fc8227db8e67ed7fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68891614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997389"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  
@@ -111,38 +110,32 @@ GO
 |データベース ミラーリングでの証明書の使用|[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## <a name="application-security"></a>アプリケーション セキュリティ  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティのベスト プラクティスには、安全なクライアント アプリケーションの作成が含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティのベスト プラクティスには、安全なクライアント アプリケーションの作成が含まれています。  
   
  クライアント アプリケーションをネットワーク レイヤーで保護する方法の詳細については、「 [クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)」を参照してください。  
   
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>SQL Server のセキュリティ ツール、ユーティリティ、ビュー、関数  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セキュリティの構成および管理に使用できるツール、ユーティリティ、ビュー、および関数が提供されています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セキュリティの構成および管理に使用できるツール、ユーティリティ、ビュー、および関数が提供されています。  
   
 ### <a name="sql-server-security-tools-and-utilities"></a>SQL Server のセキュリティ ツールとユーティリティ  
  次の表に、セキュリティの構成と管理に使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールとユーティリティに関する情報を示します。  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |接続、構成、制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio の使用 [SQL Server]](../../database-engine/use-sql-server-management-studio.md)|  
 |コマンド プロンプトでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続とクエリの実行|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |ネットワーク構成および制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 構成マネージャー](../sql-server-configuration-manager.md)|  
 |ポリシー ベースの管理を使用した機能の有効化と無効化|[ポリシー ベースの管理を使用したサーバーの管理](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
-|レポート サーバーのための対称キーの操作|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
+|レポート サーバーのための対称キーの操作|[rskeymgmt ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server セキュリティ カタログ ビューと関数  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パフォーマンスおよび実用性のために最適化されているいくつかのビューおよび関数でセキュリティ情報が公開されます。 次の表に、セキュリティ ビューおよびセキュリティ関数に関する情報を示します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パフォーマンスおよび実用性のために最適化されているいくつかのビューおよび関数でセキュリティ情報が公開されます。 次の表に、セキュリティ ビューおよびセキュリティ関数に関する情報を示します。  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ カタログ ビューには、データベース レベルおよびサーバー レベルの権限、プリンシパル、ロールなどに関する情報が表示されます。 暗号化キーと証明書に関する情報や資格情報を表示するカタログ ビューもあります。|[セキュリティカタログビュー &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ関数。現在のユーザー、権限、およびスキーマに関する情報を返します。|[セキュリティ関数 &#40;Transact-sql&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの動的管理ビュー。|[Transact-sql&#41;&#40;セキュリティ関連の動的管理ビューおよび関数](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ カタログ ビューには、データベース レベルおよびサーバー レベルの権限、プリンシパル、ロールなどに関する情報が表示されます。 暗号化キーと証明書に関する情報や資格情報を表示するカタログ ビューもあります。|[セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ関数。現在のユーザー、権限、およびスキーマに関する情報を返します。|[セキュリティ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティの動的管理ビュー。|[セキュリティ関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

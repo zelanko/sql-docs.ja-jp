@@ -1,6 +1,7 @@
 ---
 title: Linux および macOS での ODBC ドライバーに関する既知の問題
-ms.date: 03/05/2020
+description: Linux および macOS での Microsoft ODBC Driver for SQL Server に関する既知の問題と、接続に関する問題をトラブルシューティングするための手順について説明します。
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0486cea609f0ab6bcc1261d6cad26f47f123476f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912524"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886409"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux および macOS での ODBC ドライバーに関する既知の問題
 
@@ -24,7 +25,7 @@ ms.locfileid: "80912524"
 
 ## <a name="known-issues"></a>既知の問題
 
-その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](https://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
+その他の問題は、[SQL Server ドライバーのブログ](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)に投稿されます。  
 
 - システム ライブラリの制限により、Alpine Linux では、サポートされる文字エンコーディングとロケールが少なくなっています。 たとえば、en_US.UTF-8 は使用できません。 詳細については、[「musl libc」の glibc との機能の違いに関するページ](https://wiki.musl-libc.org/functional-differences-from-glibc.html)を参照してください。
 
@@ -32,9 +33,9 @@ ms.locfileid: "80912524"
 
 - クライアント エンコードが UTF-8 の場合、ドライバー マネージャーは、UTF-8 から UTF-16 へ常に正しく変換するとは限りません。 現時点では、文字列内の 1 つ以上の文字が有効な UTF-8 文字でない場合、データの破損が発生します。 ASCII 文字は正しくマップされます。 SQLCHAR バージョンの ODBC API (たとえば、SQLDriverConnectA) を呼び出すときに、ドライバー マネージャーはこの変換を試行します。 SQLWCHAR バージョンの ODBC API (たとえば、SQLDriverConnectW) を呼び出す際には、ドライバー マネージャーはこの変換を試行しません。  
 
-- *SQLBindParameter* の **ColumnSize** パラメーターは SQL 型の文字数を示し、*BufferLength* はアプリケーションのバッファー内のバイト数を示します。 ただし、SQL データ型が `varchar(n)` または `char(n)` で、アプリケーションがパラメーターを SQL_C_CHAR または SQL_C_VARCHAR としてバインドし、クライアントの文字エン コードが UTF-8 の場合は、*ColumnSize* の値がサーバー上のデータ型のサイズに揃っていても、ドライバーから "文字列データの右側が切り捨てられました" というエラーを受け取る可能性があります。 このエラーは、文字エンコード間の変換によってデータの長さが変更された場合に発生します。 たとえば、正しいアポストロフィ文字 (U+2019) が CP-1252 では半角の 0x92 としてエンコードされたが、UTF-8 では 3 バイトのシーケンス 0xe2 0x80 0x99 としてエンコードされた場合です。
+- **SQLBindParameter** の *ColumnSize* パラメーターは SQL 型の文字数を示し、*BufferLength* はアプリケーションのバッファー内のバイト数を示します。 ただし、SQL データ型が `varchar(n)` または `char(n)` で、アプリケーションがパラメーターを SQL_C_CHAR または SQL_C_VARCHAR としてバインドし、クライアントの文字エン コードが UTF-8 の場合は、*ColumnSize* の値がサーバー上のデータ型のサイズに揃っていても、ドライバーから "文字列データの右側が切り捨てられました" というエラーを受け取る可能性があります。 このエラーは、文字エンコード間の変換によってデータの長さが変更された場合に発生します。 たとえば、正しいアポストロフィ文字 (U+2019) が CP-1252 では半角の 0x92 としてエンコードされたが、UTF-8 では 3 バイトのシーケンス 0xe2 0x80 0x99 としてエンコードされた場合です。
 
-たとえば、エンコードが UTF-8 の場合に、out パラメーターに対して *SQLBindParameter* の *BufferLength* と **ColumnSize** の両方に 1 を指定してから、(CP-1252 を使用して) サーバー上の `char(1)` 列に格納されている前の文字を取得しようとすると、ドライバーはこの文字を 3 バイトの UTF-8 エンコードに変換しようとしますが、結果は 1 バイトのバッファーに収まりません。 逆方向では、クライアントとサーバー上の異なるコード ページ間で変換を行う前に、ドライバーは *ColumnSize* を *SQLBindParameter* の **BufferLength** と比較します。 *ColumnSize* 1 が *BufferLength* (たとえば) 3 より小さいので、ドライバーはエラーを生成します。 このエラーを回避するには、変換後のデータの長さが、指定したバッファーまたは列に適合することを確認します。 *型では、* ColumnSize`varchar(n)` を 8000 よりも大きくすることはできません。
+たとえば、エンコードが UTF-8 の場合に、out パラメーターに対して **SQLBindParameter** の *BufferLength* と *ColumnSize* の両方に 1 を指定してから、(CP-1252 を使用して) サーバー上の `char(1)` 列に格納されている前の文字を取得しようとすると、ドライバーはこの文字を 3 バイトの UTF-8 エンコードに変換しようとしますが、結果は 1 バイトのバッファーに収まりません。 逆方向では、クライアントとサーバー上の異なるコード ページ間で変換を行う前に、ドライバーは *ColumnSize* を **SQLBindParameter** の *BufferLength* と比較します。 *ColumnSize* 1 が *BufferLength* (たとえば) 3 より小さいので、ドライバーはエラーを生成します。 このエラーを回避するには、変換後のデータの長さが、指定したバッファーまたは列に適合することを確認します。 `varchar(n)` 型では、*ColumnSize* を 8000 よりも大きくすることはできません。
 
 ## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a>接続の問題のトラブルシューティング  
 
@@ -81,13 +82,13 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 - [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (接続リング バッファーを使用している SQL Server 2008 の接続のトラブルシューティング)](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>次のステップ
 
 ODBC ドライバーのインストール手順については、次の記事を参照してください。
 
-- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Linux に Microsoft ODBC Driver for SQL Server をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [macOS に Microsoft ODBC Driver for SQL Server をインストールする](install-microsoft-odbc-driver-sql-server-macos.md)
 
 詳細については、「[プログラミング ガイドライン](programming-guidelines.md)」と[リリースノート](release-notes-odbc-sql-server-linux-mac.md)に関するページを参照してください。  

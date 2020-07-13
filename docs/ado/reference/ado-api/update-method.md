@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759498"
 ---
 # <a name="update-method"></a>Update メソッド
 レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在の行、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して行ったすべての変更を保存します。  
@@ -34,11 +34,11 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Fields*  
- 省略可能。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
+ *フィールド*  
+ 任意。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
   
  *値*  
- 省略可能。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
+ 任意。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
   
 ## <a name="remarks"></a>解説  
   

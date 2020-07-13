@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103788"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
@@ -54,8 +54,7 @@ ms.locfileid: "66103788"
  レポート サーバーの要求の受信と応答の送信に使用されるポートを開く方法について説明します。  
   
  [ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 
-  http://localhost を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
+ http://localhost を使用してレポート マネージャーまたはレポート サーバーに接続するために必要な追加手順について説明します。  
   
  [リモート管理用のレポート サーバーの構成](configure-a-report-server-for-remote-administration.md)  
  リモートのレポート サーバー インスタンスに接続したり別のコンピューターから構成したりすることができるようにインスタンスを構成する方法について説明します。  

@@ -1,5 +1,6 @@
 ---
 title: データベースの復元 ([オプション] ページ) | Microsoft Docs
+description: SQL Server でデータベースを復元するときに、[データベースの復元] ダイアログ ボックスの [オプション] ページを使用して、復元操作の動作と結果を変更します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737720"
 ---
 # <a name="restore-database-options-page"></a>データベースの復元 ([オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
   
  **SQL Server Management Studio を使用してデータベース バックアップを復元するには**  
@@ -32,7 +33,7 @@ ms.locfileid: "68041570"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して復元タスクを指定するときに、この復元操作の RESTORE ステートメントを含む、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成できます。 このスクリプトを生成するには、 **[スクリプト]** をクリックし、スクリプトの保存先を選択します。 RESTORE 構文については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="restore-options"></a>復元オプション  
  復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  

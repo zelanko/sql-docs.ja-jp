@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baa16324dc716a8df002776a1533f8fa78c8eefd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900902"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431529"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -24,7 +23,7 @@ ms.locfileid: "62900902"
   
  次の表は、RAW ファイル ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|生データへのアクセスに使用するモード。 有効な値は、`File name` (0) および `File name from variable` (1) です。 既定値は `File name` (0) です。|  
 |FileName|String|ソース ファイルのパスおよびファイル名。|  
@@ -39,7 +38,7 @@ ms.locfileid: "62900902"
   
  次の表は、RAW ファイル変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|FileName プロパティにファイル名を含めるか、またはファイル名が含まれる変数名を含めるかを指定する値。 使用できるオプションは、`File name` (0) および `File name from variable` (1) です。|  
 |FileName|String|RAW ファイル変換先が書き込むファイルの名前。|  

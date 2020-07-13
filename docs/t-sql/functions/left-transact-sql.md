@@ -51,9 +51,9 @@ LEFT ( character_expression , integer_expression )
  *integer_expression* パラメーターは、UTF-16 サロゲート文字を 1 文字としてカウントします。  
   
 ## <a name="return-types"></a>戻り値の型  
- **character_expression** が非 Unicode 文字データ型の場合は、*varchar* を返します。  
+ *character_expression* が非 Unicode 文字データ型の場合は、**varchar** を返します。  
   
- **character_expression** が Unicode 文字データ型の場合は、*nvarchar* を返します。  
+ *character_expression* が Unicode 文字データ型の場合は、**nvarchar** を返します。  
   
 ## <a name="remarks"></a>解説  
  SC 照合順序を使用する場合、*integer_expression* パラメーターは UTF-16 サロゲート ペアを 1 文字としてカウントします。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
@@ -61,7 +61,7 @@ LEFT ( character_expression , integer_expression )
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-left-with-a-column"></a>A. 列を指定した LEFT を使用する  
- 次の例では、`Product` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内の各製品名の左端から 5 文字が返されます。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Product` テーブル内の各製品名の左端から 5 文字が返されます。  
   
 ```  
 SELECT LEFT(Name, 5)   

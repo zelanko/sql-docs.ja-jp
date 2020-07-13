@@ -10,10 +10,10 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938260"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソールのコマンドラインオプション (DB2ToSQL)
@@ -161,7 +161,7 @@ SSMA コンソールオプションの構文の概要が表示されます。
   
 SSMA コンソールのコマンドラインオプションの表形式の表示については、 [「付録-1 &#40;DB2ToSQL](../../ssma/db2/appendix-1-db2tosql.md) 」を参照してください&#41;  
   
-### <a name="next-step"></a>次のステップ  
+### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
 1.  パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)」を参照してください。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLGetTypeInfo
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c212584972f4a7e329d124cc8512be3b1f7a6b9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 693441c088865be85b18106a4c769a9f3f676f13
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898615"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81295102"
 ---
 # <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo (Paradox ドライバー)
 > [!NOTE]  

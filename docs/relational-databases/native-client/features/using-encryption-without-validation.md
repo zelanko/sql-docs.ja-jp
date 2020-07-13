@@ -1,5 +1,6 @@
 ---
-title: 検証を伴わない暗号化の使用 |Microsoft Docs
+title: 検証を伴わない暗号化の使用 | Microsoft Docs
+description: SQL Server Native Client OLE DB プロバイダーと ODBC ドライバーが、検証を行わずに暗号化をサポートする方法と、使用する場合の推奨事項について説明します。
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -13,25 +14,23 @@ helpviewer_keywords:
 - encryption [SQL Server Native Client]
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7805a5bc9d18ab183ba1d741dc4962dd6e6fb196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bf5497fbddb255a9964d97094838dd3a7ece583e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787991"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009855"
 ---
 # <a name="using-encryption-without-validation"></a>検証を伴わない暗号化の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  
+自己署名証明書では、セキュリティは保証されません。 暗号化されたハンドシェイクは、NT LAN Manager (NTLM) に基づいています。 セキュリティで保護された接続には、SQL Server で検証可能な証明書をプロビジョニングすることを強くお勧めします。 トランスポート層セキュリティ (TLS) は、証明書の検証によってのみセキュリティで保護することができます。
 
-自己署名証明書は、セキュリティを保証しません。 暗号化されたハンドシェイクは、NT LAN Manager (NTLM) に基づいています。 セキュリティで保護された接続には、SQL Server で検証可能な証明書をプロビジョニングすることを強くお勧めします。 トランスポートセキュリティ層 (TLS) は、証明書の検証によってのみセキュリティで保護することができます。
-
-アプリケーションでは、接続文字列キーワードまたは接続プロパティを使用して、すべてのネットワーク トラフィックの暗号化を要求することもできます。 キーワードは、 **IDataInitialize**で初期化文字列を使用する場合に、 **IDbInitialize:: Initialize**でプロバイダー文字列を使用する場合は ODBC と OLE DB、OLE DB ADO の場合は "データの暗号化" を使用する場合は "暗号化" を使用します。 これは、[プロトコルの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **暗号化**を設定する] オプションを使用して Configuration Manager、暗号化された接続を要求するようにクライアントを構成することによって構成することもできます。 既定では、接続のネットワーク トラフィックをすべて暗号化するには、証明書をサーバーに提供する必要があります。 クライアントがサーバー上の証明書を信頼するように設定すると、中間者攻撃に対して脆弱になる可能性があります。 検証可能な証明書をサーバーに展開する場合は、証明書の信頼に関するクライアント設定を FALSE に変更してください。
+アプリケーションでは、接続文字列キーワードまたは接続プロパティを使用して、すべてのネットワーク トラフィックの暗号化を要求することもできます。 キーワードは、 **IDataInitialize**で初期化文字列を使用する場合に、 **IDbInitialize:: Initialize**でプロバイダー文字列を使用する場合は ODBC と OLE DB、OLE DB ADO の場合は "データの暗号化" を使用する場合は "暗号化" を使用します。 これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager で **[プロトコルの暗号化を設定する]** オプションを使用して構成することも、暗号化された接続を要求するようにクライアントを構成することによって構成することもできます。 既定では、接続のネットワーク トラフィックをすべて暗号化するには、証明書をサーバーに提供する必要があります。 クライアントがサーバー上の証明書を信頼するように設定すると、中間者攻撃に対して脆弱になる可能性があります。 検証可能な証明書をサーバーに展開する場合は、証明書の信頼に関するクライアント設定を確実に FALSE に変更してください。
 
 接続文字列キーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -51,15 +50,15 @@ ms.locfileid: "73787991"
 ||||||
 
 > [!CAUTION]
-> 上の表では、さまざまな構成でのシステムの動作についてのみ説明しています。 セキュリティで保護された接続を実現するには、クライアントとサーバーの両方で暗号化が必要であることを確認します。 また、サーバーが検証可能な証明書を持っていること、およびクライアントの**Trustservercertificate**設定が FALSE に設定されていることを確認します。
+> 上の表では、さまざまな構成でのシステムの動作についてのみ説明しています。 セキュリティで保護された接続を実現するには、クライアントとサーバーの両方で暗号化が必要であることを確実にします。 また、確実にサーバーに検証可能な証明書があり、クライアントの **TrustServerCertificate** 設定が FALSE に設定されているようにします。
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT プロパティセットに実装されている SSPROP_INIT_TRUST_SERVER_CERTIFICATE データソース初期化プロパティを追加することによって、検証を行わずに暗号化をサポートします。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、yes または no を値として受け取ります。既定値は no です。 サービス コンポーネントを使用しているときは、"TrustServerCertificate" は true または false を値として受け取ります。既定値は false です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、DBPROPSET_SQLSERVERDBINIT プロパティセットに実装されている SSPROP_INIT_TRUST_SERVER_CERTIFICATE データソース初期化プロパティを追加することによって、検証を行わずに暗号化をサポートします。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、yes または no を値として受け取ります。既定値は no です。 サービス コンポーネントを使用しているときは、"TrustServerCertificate" は true または false を値として受け取ります。既定値は false です。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティセットに対する拡張機能の詳細については、「[初期化プロパティと承認プロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ DBPROPSET_SQLSERVERDBINIT プロパティ セットに行われた機能強化の詳細については、「[初期化プロパティと承認プロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数への追加によって、検証なしの暗号化がサポートされています。 SQL_TRUST_SERVER_CERTIFICATE_YES または SQL_TRUST_SERVER_CERTIFICATE_NO を受け取る、SQL_COPT_SS_TRUST_SERVER_CERTIFICATE が追加されました。既定値は SQL_TRUST_SERVER_CERTIFICATE_NO です。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、"yes" または "no" を値として受け取ります。既定値は "no" です。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数への追加によって、検証なしの暗号化がサポートされています。 SQL_TRUST_SERVER_CERTIFICATE_YES または SQL_TRUST_SERVER_CERTIFICATE_NO を受け取る、SQL_COPT_SS_TRUST_SERVER_CERTIFICATE が追加されました。既定値は SQL_TRUST_SERVER_CERTIFICATE_NO です。 また、新しい接続文字列のキーワードとして "TrustServerCertificate" が追加されました。 "TrustServerCertificate" は、"yes" または "no" を値として受け取ります。既定値は "no" です。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

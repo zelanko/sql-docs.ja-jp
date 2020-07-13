@@ -11,26 +11,25 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27b8fe304f26c60697e5d6fb147be20e30c86094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 3c4f27218494c88cef3aedd51267ee693b2f4e65
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786539"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003474"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLGetData**は、列の値をバインドせずに結果セットのデータを取得するために使用します。 **SQLGetData**を同じ列に対して連続して呼び出すと、 **text**、 **ntext**、または**image**データ型の列から大量のデータを取得できます。  
   
  アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**を使用して、Native Client ODBC ドライバーから任意の列のデータを取得できます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
   
 > [!NOTE]  
 >  大きな値型の場合、 *StrLen_or_IndPtr*はデータの切り捨て時に SQL_NO_TOTAL を返します。  

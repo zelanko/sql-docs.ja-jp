@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdddf2e757c549de460f5e22c2ea76ce91a2a969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c740ed78de51684eac38ad0c54ab2224986018d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069970"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301403"
 ---
 # <a name="using-the-odbc-cursor-library"></a>ODBC カーソル ライブラリの使用
 > [!IMPORTANT]  

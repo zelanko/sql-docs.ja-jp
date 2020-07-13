@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 10f23e8a8e8c76160362af2f3efacfd297062254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018922"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>行セットのフェッチおよび更新 (ODBC)
     
@@ -33,8 +32,7 @@ ms.locfileid: "63200441"
   
     -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)を1回以上呼び出して、行セットの最後にバインドされた列の後にバインドされていない列のデータを取得します。 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)の呼び出しは、列番号の昇順にする必要があります。  
   
-    -   
-  [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
+    -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
   
 4.  実行時データ text または image 列をセットアップします。  
   

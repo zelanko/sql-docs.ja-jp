@@ -11,17 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9fc5ca2d3c1d7944342b9902ad0d74ce4bf7a725
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 120b87b0e15ef4fa40ca95277ca0a42150d45c56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66095572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012492"
 ---
 # <a name="detach-database-id-32767"></a>データベース ID 32767 をデタッチする
-  アップグレード アドバイザーによって、データベース ID 32767 を持つデータベースが検出されました。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、このデータベース ID は予約されています。 データベースをデタッチした後でアップグレードします。 アップグレード後にデータベースをアタッチできます。  
+  アップグレード アドバイザーによって、データベース ID 32767 を持つデータベースが検出されました。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、このデータベース ID は予約されています。 データベースをデタッチした後でアップグレードします。 アップグレード後にデータベースをアタッチできます。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

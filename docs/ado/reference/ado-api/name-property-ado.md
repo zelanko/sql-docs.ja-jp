@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918036"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762423"
 ---
 # <a name="name-property-ado"></a>Name プロパティ (ADO)
 オブジェクトの名前を示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "67918036"
   
  [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにまだ追加されていない**パラメーター**オブジェクトの場合、 **Name**プロパティは読み取り/書き込み可能です。 追加された**パラメーター**オブジェクトおよびその他すべてのオブジェクトについては、 **Name**プロパティは読み取り専用です。 名前はコレクション内で一意である必要はありません。  
   
- オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを`rstMain.Properties(20).Name`生成`Updatability`した場合、このプロパティをと`rstMain.Properties("Updatability")`して参照できます。  
+ オブジェクトの**name**プロパティは、序数参照によって取得できます。その後、オブジェクトを名前で直接参照できます。 たとえば、がを生成した場合、 `rstMain.Properties(20).Name` `Updatability` このプロパティをとして参照でき `rstMain.Properties("Updatability")` ます。  
   
 ## <a name="applies-to"></a>適用対象  
   

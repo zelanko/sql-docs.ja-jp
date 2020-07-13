@@ -1,5 +1,6 @@
 ---
 title: SQL ステートメントの構築 (ODBC) |Microsoft Docs
+description: SQL Server Client ODBC ドライバーが SQL ステートメントを処理し、いくつかの Transact-sql ステートメントを解析し、他のデータベースをそのままデータベースに渡す方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,17 @@ helpviewer_keywords:
 - statements [ODBC], constructing
 - ODBC applications, statements
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96e3c04692360bd13010fe40063b0e761d60b2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 0c10271b031c34e8da0c7da2bc3643f8dee95c0c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779982"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001458"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL ステートメントの構築 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC アプリケーションでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することで、ほぼすべてのデータベース アクセスを行います。 これらのステートメントの形式は、アプリケーションの要件によって異なります。 SQL ステートメントは、次の方法で構築できます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73779982"
   
      実行時に構築される SQL ステートメントで、これによりユーザーは SELECT、WHERE、ORDER BY などの一般的な句を使用してステートメントを調整できます。 これには、ユーザーが入力したアドホック クエリも含まれます。  
   
- クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc ドライバーは、によって直接サポートされていない ODBC および ISO [!INCLUDE[ssDE](../../includes/ssde-md.md)]構文に対してのみ SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを解析します。この構文は、ドライバーによってに変換されます。 その他すべての SQL 構文は、変更されずに[!INCLUDE[ssDE](../../includes/ssde-md.md)]に渡されます。ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] かどうかが判断されます。 この方法には、次の 2 つの利点があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント odbc ドライバーは、によって直接サポートされていない odbc および ISO 構文に対してのみ SQL ステートメントを解析します。この構文は、ドライバーによって [!INCLUDE[ssDE](../../includes/ssde-md.md)] に変換され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 その他すべての SQL 構文は、変更されずに[!INCLUDE[ssDE](../../includes/ssde-md.md)]に渡されます。ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] かどうかが判断されます。 この方法には、次の 2 つの利点があります。  
   
 -   オーバーヘッドの削減  
   
@@ -43,8 +43,7 @@ ms.locfileid: "73779982"
   
 -   柔軟性  
   
-     プログラマは、アプリケーションの移植性を調整できます。 複数のデータベースに対する移植性を強化するには、主に ODBC 構文および ISO 構文を使用します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の強力な機能を使用するには、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーは、odbc ベース[!INCLUDE[tsql](../../includes/tsql-md.md)]のアプリケーションがのすべての機能を利用できるように、完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]な構文をサポートしています。  
+     プログラマは、アプリケーションの移植性を調整できます。 複数のデータベースに対する移植性を強化するには、主に ODBC 構文および ISO 構文を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の強力な機能を使用するには、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] odbc ベースのアプリケーションがのすべての機能を利用できるように、完全な構文をサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  SELECT ステートメント内の列リストには、現在のタスクを実行するのに必要な列だけを含める必要があります。 これにより、ネットワーク経由で送信されるデータ量が少なくなるだけでなく、アプリケーションに対するデータベース変更の影響も少なくなります。 アプリケーションでテーブルの列を参照していなければ、アプリケーションは、その列に行われる変更の影響を受けません。  
   

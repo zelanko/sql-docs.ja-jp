@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104393"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>[参照] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
-  
   **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** を選択すると、レポート定義内の式で使用される、カスタム アセンブリまたは他の外部アセンブリ、およびカスタム クラスのインスタンスへの参照を追加または削除できます。 レポート ビルダーのローカル モードでは、カスタム アセンブリはサポートされません。 カスタムアセンブリを使用するレポートを作成するには[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、でレポートデザイナーを使用します。  
   
 ## <a name="options"></a>オプション  
@@ -42,10 +41,10 @@ ms.locfileid: "66104393"
  **Remove**  
  クラスのインスタンスを削除するには、削除するインスタンスを選択し、 **[削除]** ボタンをクリックします。  
   
- **Up**  
+ **上へ**  
  依存関係のあるクラスについては、この参照の表示位置を一覧の上方に移動できます。  
   
- **ダウン**  
+ **[下へ]**  
  依存関係のあるクラスについては、この参照の表示位置を一覧の下方に移動できます。  
   
 ## <a name="see-also"></a>参照  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3abda956ee7682c9ac49270e8bf69fb039641790
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053658"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303953"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 関数
 **互換性**  
@@ -73,7 +73,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>診断  
  **SQLReadFileDSN**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszstring*引数が NULL でした。<br /><br /> *Cbstring*引数が0以下でした。|  
@@ -81,7 +81,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Lpszappname*引数が NULL でしたが、 *lpszappname*引数が有効でした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
 |ODBC_ERROR_OUTPUT_STRING_TRUNCATED|出力文字列が切り捨てられました|Lpszstring の値が* \*pcbstring*の値以下で*あった*ため、 * \*lpszstring*で返された文字列が切り捨てられました。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した要求|キーワードがファイル DSN に存在しませんでした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|キーワードがファイル DSN に存在しませんでした。|  
   
 ## <a name="comments"></a>説明  
  ODBC では、接続情報を格納するセクション名 [ODBC] が予約されています。 このセクションの予約済みキーワードは、 **SQLDriverConnect**の接続文字列用に予約されているキーワードと同じです。 (詳細については、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明を参照してください。)  
@@ -90,6 +90,6 @@ BOOL SQLReadFileDSN(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ファイル DSN への情報の書き込み|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|

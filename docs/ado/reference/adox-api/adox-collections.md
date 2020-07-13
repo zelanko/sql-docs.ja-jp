@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67928604"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764153"
 ---
 # <a name="adox-collections"></a>ADOX のコレクション
 
@@ -30,8 +30,8 @@ ms.locfileid: "67928604"
 |[[キー]](../../../ado/reference/adox-api/keys-collection-adox.md)|テーブルのすべての**キー**オブジェクトを格納します。|  
 |[手順](../../../ado/reference/adox-api/procedures-collection-adox.md)|カタログのすべての**プロシージャ**オブジェクトを格納します。|  
 |[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)|カタログのすべての**テーブル**オブジェクトが含まれます。|  
-|[ユーザ](../../../ado/reference/adox-api/users-collection-adox.md)|カタログまたはグループの格納されているすべての**ユーザー**オブジェクトが含まれます。|  
-|[表示モード](../../../ado/reference/adox-api/views-collection-adox.md)|カタログのすべての**ビュー**オブジェクトが含まれます。|  
+|[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)|カタログまたはグループの格納されているすべての**ユーザー**オブジェクトが含まれます。|  
+|[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)|カタログのすべての**ビュー**オブジェクトが含まれます。|  
   
 ## <a name="see-also"></a>参照  
  [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   

@@ -11,28 +11,27 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a4cd6d60037e83b1ba6c7a83f349a994c9be3f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62704915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061676"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照しているポリシーの一覧を表示できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  現在のファセットを参照している各ポリシーの名前を一覧表示します。  
   
  **有効**  
  チェック マークは、ポリシーが現在有効になっていることを示します。 ポリシーが無効な場合は空白になります。  
   
- **履歴**  
- [**履歴の表示**] ハイパーリンクをクリックして、実行履歴レポートを表示します。  
+ **HISTORY**  
+ [ **履歴の表示** ] ハイパーリンクをクリックして、実行履歴レポートを表示します。  
   
- **作成済み**  
+ **Created**  
  ポリシーが作成された日付。  
   
 ## <a name="see-also"></a>参照  

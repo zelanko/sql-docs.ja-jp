@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010551"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892818"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクションセットのプロパティを変更したり、ユーザー定義のコレクションセットの名前を変更したりするために使用します。  
   
@@ -73,7 +73,7 @@ sp_syscollector_update_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`収集したデータを管理データウェアハウスに保存する日数を指定します。 *days_until_expiration*は**smallint**です。 *days_until_expiration*は、0または正の整数である必要があります。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントの一意の識別子を示します。 *proxy_id*は**int**です。  
+`[ @proxy_id = ] proxy_id`エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id*は**int**です。  
   
 `[ @proxy_name = ] 'proxy_name'`プロキシの名前を指定します。 *proxy_name*は**sysname**で、null 値が許容されます。  
   
@@ -87,7 +87,7 @@ sp_syscollector_update_collection_set
   
 `[ @logging_level = ] logging_level`はログ記録レベルです。 *logging_level*は、次のいずれかの**値を使用**します。  
   
- 0: 実行情報と追跡[!INCLUDE[ssIS](../../includes/ssis-md.md)]するイベントを記録します。  
+ 0: 実行情報と [!INCLUDE[ssIS](../../includes/ssis-md.md)] 追跡するイベントを記録します。  
   
 -   コレクションセットの開始/停止  
   
@@ -103,7 +103,7 @@ sp_syscollector_update_collection_set
   
 -   からの警告イベント[!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2-レベル1のログ記録と、からの[!INCLUDE[ssIS](../../includes/ssis-md.md)]詳細なイベント情報。  
+ 2-レベル1のログ記録と、からの詳細なイベント情報 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 。  
   
  *Logging_level*の既定値は1です。  
   
@@ -112,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  sp_syscollector_update_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
  *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_sets システム ビューにクエリを実行します。  
@@ -148,7 +148,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B. コレクション モードを非キャッシュからキャッシュに変更する  
+### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B: コレクション モードを非キャッシュからキャッシュに変更する  
  次の例では、コレクション モードを非キャッシュ モードからキャッシュ モードに変更します。 この変更を行うには、スケジュール ID またはスケジュール名を指定する必要があります。  
   
 ```  
@@ -163,7 +163,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="c-changing-other-collection-set-parameters"></a>C. その他のコレクションセットのパラメーターの変更  
+### <a name="c-changing-other-collection-set-parameters"></a>C: その他のコレクションセットのパラメーターの変更  
  次の例では、"Simple collection set test 2" という名前のコレクションセットのさまざまなプロパティを更新します。  
   
 ```  
@@ -178,10 +178,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Transact-sql&#41;&#40;の dbo の sysschedules](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysのスケジュール &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

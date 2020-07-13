@@ -9,18 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d9ce9899d53a5831cadfc64f30779c499d5035c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63151530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041130"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>SQL Server Management Studio の既定の構成の復元
-  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使い慣れないうちは、誤ってウィンドウを閉じたり非表示にしたりして、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を元のレイアウトに戻すことが困難になる場合があります。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を既定のレイアウト環境に戻すには、次の手順に従います。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使い慣れないうちは、誤ってウィンドウを閉じたり非表示にしたりして、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を元のレイアウトに戻すことが困難になる場合があります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を既定のレイアウト環境に戻すには、次の手順に従います。  
   
 ## <a name="restoring-components"></a>コンポーネントの復元  
   
@@ -29,7 +26,7 @@ ms.locfileid: "63151530"
 1.  ウィンドウを元の配置に復元するには、 **[ウィンドウ]** メニューの **[ウィンドウ レイアウトのリセット]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : 基本操作](lesson-1-9-summary-basic-navigation.md)  
+ [概要: 基本操作](lesson-1-9-summary-basic-navigation.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Management Studio の使用 [SQL Server]](../sql-server-management-studio-ssms.md)  

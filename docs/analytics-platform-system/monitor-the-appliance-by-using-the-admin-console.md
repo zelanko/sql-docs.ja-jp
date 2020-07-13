@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400944"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>管理コンソールを使用してアプライアンスを監視する-分析プラットフォームシステム
 管理コンソールは、アプライアンスの状態、正常性、およびパフォーマンスの情報を示す SQL Server PDW web アプリケーションです。 ユーザーは、Internet Explorer を使用して管理コンソールに接続します。  
   
-## <a name="About"></a>管理コンソールについて  
+## <a name="about-the-admin-console"></a><a name="About"></a>管理コンソールについて  
 ![アプライアンス コンソールのホーム](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Nas**  
+**アプライアンス**  
 ホーム  
 アプライアンスの状態の概要を簡単に説明します。  
   
@@ -44,7 +44,7 @@ PDW の状態の概要を説明します。
 クエリ  
 実行中のクエリと最近完了したクエリの一覧を表示します。 関連するエラー (存在する場合) が表示されます。 には、クエリ実行プランおよびノード実行情報の詳細を表示する機能も用意されています。  
   
-読み込み  
+負荷  
 ロードプラン、PDW の読み込みの現在の状態、および関連するエラー (存在する場合) を表示します。  
   
 バックアップ/復元  
@@ -55,7 +55,7 @@ Health
   
 ハードウェアおよびソフトウェアのアラートを表示します。  
   
-リソース  
+参照情報  
 PDW リソースロックとその現在の状態の一覧を表示します。  
   
 ストレージ  
@@ -67,7 +67,7 @@ PDW パフォーマンスモニターのグラフを表示します。
 > [!NOTE]  
 > 管理コンソールの画面解像度は1024x768 です。 管理コンソールは、1280 X 1024 以上の画面解像度で最適に表示されます。  
   
-## <a name="Connect"></a>管理コンソールに接続する  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>管理コンソールに接続する  
 管理コンソールに接続するには、次のものが必要です。  
   
 -   Internet Explorer バージョン10以降。  
@@ -78,15 +78,14 @@ PDW パフォーマンスモニターのグラフを表示します。
   
 管理コンソールに接続するには、Internet Explorer と https を使用して、コントロールノードクラスターの IP アドレスを参照します。 たとえば、コントロールノードクラスターの IP アドレスが`10.192.63.102`の場合は、ブラウザーの`https://10.192.63.102`アドレスバーに「」と入力します。 最初の画面では、**ログイン**と**パスワード**が要求されます。 SQL Server 認証ログインとパスワード、または Windows 認証ログインと Windows パスワードのどちらかを指定してください。 Windows 認証ログインを使用している場合、管理コンソールは偽装を使用します。  
   
-## <a name="RelatedTasks"></a>管理コンソールのタスク  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>管理コンソールのタスク  
 管理コンソールには、次のものを監視する機能があります。  
   
 |||  
 |-|-|  
 |**情報の種類**|**管理コンソールでにアクセスする方法**|  
 |アプライアンスの全体的な状態|上部のメニューで [**アプライアンスの状態**] をクリックするか、[**ホーム**] をクリックします。|  
-|警告|
-  **[アラート]** をクリックします。 詳細については、「[管理コンソールのアラートについて &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)」を参照してください。|  
+|警告|**[アラート]** をクリックします。 詳細については、「[管理コンソールのアラートについて &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)」を参照してください。|  
 |アプライアンスコンポーネントとその状態|上部のメニューで [**アプライアンスの状態**] をクリックするか、[**ホーム**] をクリックします。|  
 |要求の監視 (クエリ、読み込み、バックアップ、復元など)|[**セッション**] をクリックすると、現在アクティブなセッションまたは最近のセッションが表示されます。<br /><br />[**クエリ**] をクリックすると、現在アクティブなクエリまたは最近のクエリが表示されます。 クエリに対して表示される情報には、読み込み、バックアップ、復元が含まれます。<br /><br />[**ロック**] をクリックすると、アクティブなロックが表示されます。|  
 |読み込み、バックアップ、復元の追加情報を監視します。|[**読み込み**または**バックアップ/復元**] をクリックします。|  

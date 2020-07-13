@@ -132,7 +132,7 @@ Azure SQL Database マネージド インスタンスにマネージド ID 認�
     
 - **設計時に構成します。** SSIS デザイナーで、ADO.NET 接続マネージャーを右クリックして、 **[プロパティ]** を選択します。 プロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]
-    >  現在、SSIS パッケージを SSIS デザイナーまたは `ConnectUsingManagedIdentity` SQL Server で実行しているときは、接続マネージャーのプロパティ [!INCLUDE[msCoName](../../includes/msconame-md.md)] は有効になりません (マネージド ID 認証が機能しないことを示します)。
+    >  現在、SSIS パッケージを SSIS デザイナーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server で実行しているときは、接続マネージャーのプロパティ `ConnectUsingManagedIdentity` は有効になりません (マネージド ID 認証が機能しないことを示します)。
     
 - **実行時に構成します。** パッケージを [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) または [Azure Data Factory の SSIS パッケージの実行アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)で実行するときは、ADO.NET 接続マネージャーを探します。 そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]

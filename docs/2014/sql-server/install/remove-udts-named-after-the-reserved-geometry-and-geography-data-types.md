@@ -12,22 +12,20 @@ helpviewer_keywords:
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4977d45d53e1114edc8e04ad504963bae0b9eb9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059122"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>予約されている GEOMETRY データ型および GEOGRAPHY データ型に基づいて名前が付けられた UDT の削除
-  アップグレード アドバイザーによって、`geometry` データ型または `geography` データ型に予約されている語句に基づいて名前が付けられたユーザー定義型 (UDT) が検出されました。 
-  `geometry` データ型および `geography` データ型は、空間データ機能の一部です。  
+  アップグレード アドバイザーによって、`geometry` データ型または `geography` データ型に予約されている語句に基づいて名前が付けられたユーザー定義型 (UDT) が検出されました。 `geometry` データ型および `geography` データ型は、空間データ機能の一部です。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  空間データ型に使用される語句を共通言語ランタイム (CLR) またはエイリアス UDT の名前として使用しないでください。  
   
 ## <a name="corrective-action"></a>修正措置  

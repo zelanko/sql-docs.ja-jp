@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70737655"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754041"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -52,7 +52,7 @@ ms.locfileid: "70737655"
   
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924028"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760758"
 ---
 # <a name="streams-and-persistence"></a>ストリームと永続性
 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Save](../../../ado/reference/ado-api/save-method.md)メソッド*では、***レコードセット**がファイルに保存されるか、保存されます。 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドでは、そのファイルから**レコードセット**が復元されます。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65635132c5f98b0565391122877f2e3c0a6714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287672"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro データベースから Microsoft Excel へのデータのインポート
 データソースを定義している場合は、Visual FoxPro データを Microsoft Excel ワークシートにインポートできます。 Visual FoxPro データソースの作成の詳細については、「 [Microsoft Excel からの Visual Foxpro データソースへのアクセス](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)」を参照してください。  

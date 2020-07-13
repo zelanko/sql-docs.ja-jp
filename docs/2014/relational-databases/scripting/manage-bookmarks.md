@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c20b7008ca447e278dd07e9c483a3147117dbf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063398"
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
   コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  

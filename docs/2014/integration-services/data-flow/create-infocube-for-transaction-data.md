@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6dbd26125679c95f20bbeea08fcffbc596b4e990
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827930"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432319"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
   SAP Netweaver BW システムでトランザクション データ用の新しいインフォキューブを作成するには、 **[トランザクション データのインフォキューブの作成]** ダイアログ ボックスを使用します。  
@@ -60,7 +59,7 @@ ms.locfileid: "62827930"
  **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|Units|  

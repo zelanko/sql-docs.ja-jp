@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a32b4b17974dfbd761ee56a16ec7f8f74e7d4b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 110e69aca31df75d4b4d7a732de5c58556bd3e24
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62698504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014483"
 ---
 # <a name="implement-ddl-triggers"></a>DDL トリガーの実装
   ここでは、DDL トリガーの作成、DDL トリガーの変更、および DDL トリガーの無効化または削除に役立つ情報を提供します。  

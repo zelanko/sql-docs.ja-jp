@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d131ebd8d532e0844774fc675165750832f964c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7434afe50772f5696d7799b3c079353ff1e00e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674566"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトを前のバージョンに復元します。  
   
@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  成功した場合は 0 を返します。  
   
 ## <a name="result-sets"></a>結果セット  
- **project_name** が見つかった場合、結果セットの一部として、プロジェクトの詳細が *varbinary(MAX)* として返されます。  
+ *project_name* が見つかった場合、結果セットの一部として、プロジェクトの詳細が **varbinary(MAX)** として返されます。  
   
  指定のフォルダーにプロジェクトを復元できない場合、**NO RESULT SET** が返されます。  
   

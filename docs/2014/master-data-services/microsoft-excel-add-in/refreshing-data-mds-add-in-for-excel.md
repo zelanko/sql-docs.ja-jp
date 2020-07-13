@@ -9,18 +9,15 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 78adfdc6d19844eecd5ce13f6d9cee7367dfcf08
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960952"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>データの更新 (Excel 用 MDS アドイン)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、MDS リポジトリから最新の情報を取得する必要があるときに、新しいワークシートを開くことなくデータを更新できます。 すべてのセルを更新することも、選択したセルだけを更新することもできます。 これは、カスタム式や MDS で管理されないその他のデータを含む列を挿入し、そのデータを保存する必要がある場合に便利です。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、MDS リポジトリから最新の情報を取得する必要があるときに、新しいワークシートを開くことなくデータを更新できます。 すべてのセルを更新することも、選択したセルだけを更新することもできます。 これは、カスタム式や MDS で管理されないその他のデータを含む列を挿入し、そのデータを保存する必要がある場合に便利です。  
   
 ## <a name="when-you-can-refresh-mds-managed-data"></a>MDS によって管理されるデータを更新できる場合  
  アクティブなワークシートに MDS によって管理されるデータが既に含まれている場合、アクティブなワークシート内の MDS によって管理されるデータを更新できます。 属性値を変更した場合や、メンバーをワークシートに追加した場合は、更新する前に変更をパブリッシュする必要があります。  
@@ -29,8 +26,7 @@ ms.locfileid: "65482745"
  すべてのセルを更新するか、選択したセルだけを更新するかを選択できます。 選択するセルは連続している必要があります。 連続した一連のセルが選択されると、そのセット内にある MDS によって管理されるセルは、サーバー上に現在格納されている値を表示するために更新されます。 MDS によって管理されていない未変更の行および列は、まったく影響を受けません。  
   
 ## <a name="what-happens-when-you-refresh-mds-managed-data"></a>MDS によって管理されるデータを更新したときの処理  
- 
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータを更新したときに、シート内の MDS によって管理されるデータがどのように処理されるかは、データを最後に読み込んだ後に MDS リポジトリで行った変更の内容によります。  
+ [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータを更新したときに、シート内の MDS によって管理されるデータがどのように処理されるかは、データを最後に読み込んだ後に MDS リポジトリで行った変更の内容によります。  
   
 -   新しいメンバーをリポジトリに追加した場合は、そのメンバーがワークシートの末尾に追加され、緑色で強調表示されます。  
   
@@ -49,13 +45,12 @@ ms.locfileid: "65482745"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへの接続を作成します。|[MDS リポジトリへの接続 &#40;Excel 用 MDS アドイン&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへの接続を作成します。|[MDS リポジトリへの接続 (Excel 用 MDS アドイン)](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |MDS データを Excel に読み込みます。|[MDS から Excel へのデータの読み込み](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [接続 &#40;Excel 用 MDS アドイン&#41;](connections-mds-add-in-for-excel.md)  
+-   [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
 -   [データ &#40;Excel 用 MDS アドインの読み込み&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

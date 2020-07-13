@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32e9f15dca77a7c99d7d4a9ae314e074876c6274
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68117807"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874925"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1つ以上の対象サーバー、または1つ以上の対象サーバーグループに属している対象サーバーにジョブを適用します。  
   
@@ -58,14 +58,14 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_apply_job_to_targets**を使用すると、複数の対象サーバーからジョブを簡単に適用 (または削除) できます。また、必要な対象サーバーごとに1回**sp_add_jobserver** (または**sp_delete_jobserver**) を呼び出すこともできます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- 次の例では、以前`Backup Customer Information`に作成したジョブを、 `Servers Maintaining Customer Information`グループ内のすべての対象サーバーに適用します。  
+## <a name="examples"></a>使用例  
+ 次の例では、以前に作成した `Backup Customer Information` ジョブを、グループ内のすべての対象サーバーに適用し `Servers Maintaining Customer Information` ます。  
   
 ```  
 USE msdb ;  
@@ -78,10 +78,10 @@ EXEC dbo.sp_apply_job_to_targets
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [sp_remove_job_from_targets &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

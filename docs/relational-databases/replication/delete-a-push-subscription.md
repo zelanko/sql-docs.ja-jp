@@ -67,13 +67,13 @@ ms.locfileid: "72908268"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **\@publication** と **\@subscriber** を指定します。 **\@article** に **all** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **\@publication** と **\@subscriber** を指定します。 **\@article** に **all** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、**\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 2.  サブスクライバーのサブスクリプション データベースで [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) を実行して、サブスクリプション データベース内のレプリケーション メタデータを削除します。  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを削除するには  
   
-1.  パブリッシャーで、 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定して、[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+1.  パブリッシャーで、**\@publication**、**\@subscriber**、**\@subscriber_db** を指定して、[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 (省略可能) ディストリビューターにアクセスできない場合、**\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 2.  サブスクライバー側のサブスクリプション データベースに対して、[sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 これにより、サブスクリプション データベースのマージ メタデータが削除されます。  
   

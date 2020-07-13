@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0cd75780abe01edc6f2e90258cc7d24f5eae016
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966215"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763323"
 ---
 # <a name="group-object-adox"></a>Group オブジェクト (ADOX)
 セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。  

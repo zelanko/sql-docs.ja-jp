@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2a25f62b563a01aa9cafb522d9ea32ab0f32fc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682029"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 証明書の公開キーを使ってデータを暗号化します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71314591"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  

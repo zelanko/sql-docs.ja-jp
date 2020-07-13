@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938093"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Office 用データマイニングアドインに含まれる&#39;
   Office 2013 用データマイニングアドインをインストールし、すべてのインストールオプションを選択すると、次のツールバーとテンプレートが追加されます。  
@@ -56,9 +55,9 @@ ms.locfileid: "66065330"
   
      サンプル ブックの既定の場所は、次のようにインストールしたバージョンによって異なります。  
   
-    -   \<ドライブ>: SQL Server 2014 DM アドイン  
+    -   \<drive>: SQL Server 2014 DM アドイン  
   
-    -   \<ドライブ>: \Microsoft files (x86) SQL Server 2014 DM アドイン  
+    -   \<drive>: \Microsoft files (x86) SQL Server 2014 DM アドイン  
   
 ## <a name="see-also"></a>参照  
  [Excel 用データマイニングアドインを使用したはじめに &#40;&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

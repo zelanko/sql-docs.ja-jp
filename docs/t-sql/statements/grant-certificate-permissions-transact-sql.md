@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 261f2c20c60c138708791d73319da2bb153a23c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735655"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (証明書の権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の証明書に対する権限を許可します。 
   
@@ -33,7 +33,7 @@ ms.locfileid: "68065529"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON CERTIFICATE :: certificate_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef0b7952cd589592f6ad6798e4d6f7720b368619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70873881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633432"
 ---
 # <a name="edge-constraints"></a>エッジ制約
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
 エッジ制約を使用して、データの整合性と特定のセマンティクスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] グラフ データベース内のエッジ テーブルに適用できます。
 
@@ -39,7 +39,7 @@ ms.locfileid: "70873881"
 
 各エッジ制約は、1 つまたは複数のエッジ制約句で構成されます。 1 つのエッジ制約句は、特定のエッジが接続する FROM ノードと TO ノードのペアです。
 
-グラフ内に `Product` ノードと `Customer` ノードがあり、`Bought` エッジを使用してこれらのノードを接続することを考えてください。 エッジ制約句には、FROM ノードと TO ノードのペアとエッジの方向が指定されます。 この場合、エッジ制約句は `Customer` TO `Product` になります。 つまり、`Bought` から `Customer` 方向への `Product` の挿入が許可されます。 `Product` から `Customer` 方向へのエッジを挿入する試みは失敗します。
+グラフ内に `Product` ノードと `Customer` ノードがあり、`Bought` エッジを使用してこれらのノードを接続することを考えてください。 エッジ制約句には、FROM ノードと TO ノードのペアとエッジの方向が指定されます。 この場合、エッジ制約句は `Customer` TO `Product` になります。 つまり、`Customer` から `Product` 方向への `Bought` の挿入が許可されます。 `Product` から `Customer` 方向へのエッジを挿入する試みは失敗します。
 
 - エッジ制約句には、エッジ制約が適用される FROM ノードと TO ノードのペアが含まれます。
 - ユーザーは、エッジ制約ごとに複数のエッジ制約句を指定でき、それらは論理和演算として適用されます。

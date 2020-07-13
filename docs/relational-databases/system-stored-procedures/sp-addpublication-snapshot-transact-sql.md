@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68769110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716534"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたパブリケーションのスナップショット エージェントを作成します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,12 +61,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`スナップショットエージェントを実行する頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回のみ|  
 |**4** (既定値)|毎日|  
 |**8**|業務.|  
-|**まで**|月単位。|  
+|**16**|月単位。|  
 |**32**|月単位に frequency_interval で示される間隔|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの起動時。|  
 |**128**|コンピューターがアイドル状態のときに実行する|  
@@ -78,19 +78,19 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval*は使用されていません。|  
 |**4** (既定値)|*Frequency_interval*毎日、既定値は日単位です。|  
 |**8**|*frequency_interval*は、次の1つまたは複数の[&#124; (ビットごと](../../t-sql/language-elements/bitwise-or-transact-sql.md)の or) 論理演算子と組み合わせて使用します。<br /><br /> **1** = 日曜日 &#124;<br /><br /> **2** = 月曜日 &#124;<br /><br /> **4** = 火曜日 &#124;<br /><br /> **8** = 水曜日 &#124;<br /><br /> **16** = 木曜日 &#124;<br /><br /> **32** = 金曜日 &#124;<br /><br /> **64** = 土曜日|  
-|**まで**|月の*frequency_interval*日。|  
+|**16**|月の*frequency_interval*日。|  
 |**32**|*frequency_interval*は次のいずれかです。<br /><br /> **1** = 日曜日 &#124;<br /><br /> **2** = 月曜日 &#124;<br /><br /> **3** = 火曜日 &#124;<br /><br /> **4** = 水曜日 &#124;<br /><br /> **5** = 木曜日 &#124;<br /><br /> **6** = 金曜日 &#124;<br /><br /> **7** = 土曜日 &#124;<br /><br /> **8** = 日 &#124;<br /><br /> **9** = 平日 &#124;<br /><br /> **10** = 週末|  
 |**64**|*frequency_interval*は使用されていません。|  
 |**128**|*frequency_interval*は使用されていません。|  
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
+|**2**|Second|  
 |**4** (既定値)|分|  
-|**8**|時|  
+|**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は 5 (5 分ごと) を意味します。  
   
@@ -108,7 +108,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`既存のジョブが使用されている場合は、既存のスナップショットエージェントジョブ名の名前を指定します。 *snapshot_agent_name*は**nvarchar (100)** で、既定値は NULL です。 このパラメーターは内部で使用するため、新しいパブリケーションを作成するときには指定しないでください。 *Snapshot_agent_name*が指定されている場合、 *job_login*と*job_password*は NULL である必要があります。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`パブリッシャーに接続するときにエージェントが使用するセキュリティモードを示します。 *publisher_security_mode*は**smallint**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を、 **1**は Windows 認証を指定します。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーには、値**0**を指定する必要があります。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`パブリッシャーに接続するときにエージェントが使用するセキュリティモードを示します。 *publisher_security_mode*は**smallint**,、既定値は1です。 **0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は認証を、 **1**は Windows 認証を指定します。 以外のパブリッシャーには、値**0**を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`パブリッシャーに接続するときに使用するログインを示します。 *publisher_login*は**sysname**,、既定値は NULL です。 *publisher_security_mode*が**0**の場合は*publisher_login*を指定する必要があります。 *Publisher_login*が NULL で*publisher_security_mode*が**1**の場合、 *job_login*で指定されたアカウントは、パブリッシャーに接続するときに使用されます。  
   
@@ -120,22 +120,22 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Database Managed Instance で、SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。 このアカウントは、ディストリビューターへのエージェント接続に常に使用されます。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!NOTE]
->  以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、これは[sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)で指定されたログインと同じである必要があります。  
+>  以外のパブリッシャーの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これは[Sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)で指定されたログインと同じである必要があります。  
   
 `[ @job_password = ] 'job_password'`エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**sysname**であり、既定値はありません。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!IMPORTANT]  
 >  認証情報をスクリプトファイルに保存しないでください。 セキュリティを強化するために、実行時にログイン名とパスワードを指定することをお勧めします。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
+>  パブリッシャーでスナップショットエージェントを作成する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addpublication_snapshot**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -145,11 +145,11 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  **Sp_addpublication_snapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [スナップショットを作成して適用する](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

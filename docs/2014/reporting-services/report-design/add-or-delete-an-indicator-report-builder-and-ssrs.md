@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106574"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "66106574"
   
  インジケーターの値および状態は、更新することができます。 詳細については、次のトピックを参照してください。  
   
--   [インジケーターアイコンとインジケーターセット &#40;レポートビルダーと SSRS に変更&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [レポートビルダーと SSRS の &#40;測定単位の設定と構成&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [測定単位の設定および構成 (レポート ビルダーおよび SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [同期スコープ &#40;レポートビルダーと SSRS&#41;を設定します](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [同期スコープの設定 (レポート ビルダーおよび SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  インジケーターは、ゲージ パネル内に配置されるため、 **[インジケーターのプロパティ]** ダイアログ ボックスまたは **プロパティ** ペインを使用してインジケーターを構成するには、パネルの代わりにインジケーターを選択する必要があります。 次の図は、ゲージ パネルで選択されたインジケーターを示します。  
   
@@ -50,8 +50,7 @@ ms.locfileid: "66106574"
   
 3.  必要に応じて、 **[挿入]** タブで **[四角形]** をクリックし、新しい列のセルをクリックします。  
   
-4.  
-  **[挿入]** タブで、 **[インジケーター]** をクリックし、新しい列のセルをクリックします。  
+4.  **[挿入]** タブで、 **[インジケーター]** をクリックし、新しい列のセルをクリックします。  
   
      セルに四角形を追加した場合は、そのセルをクリックします。  
   
@@ -61,8 +60,7 @@ ms.locfileid: "66106574"
   
 7.  インジケーターをクリックします。 **ゲージ データ** ペインが開きます。  
   
-8.  
-  **[値]** 領域の **[(未指定)]** ドロップダウン リストで、インジケーターとして値を表示するフィールドをクリックします。  
+8.  **[値]** 領域の **[(未指定)]** ドロップダウン リストで、インジケーターとして値を表示するフィールドをクリックします。  
   
      インジケーターは既定値を使用するように構成されています。 既定では、インジケーターは測定単位としてパーセンテージを使用するように構成されており、パーセンテージの範囲は、インジケーターのメンバー間に均等に配分されます。インジケーターが示す値には、最も近いグループのスコープが使用されます。  
   
@@ -73,8 +71,7 @@ ms.locfileid: "66106574"
     > [!NOTE]  
     >  インジケーターは、他のインジケーターまたはゲージを含むゲージ パネル内に配置されている場合があります。 ゲージ パネルに複数の項目が含まれている場合は、ゲージ パネルではなく、削除するインジケーターをクリックするよう注意してください。 ゲージ パネルをクリックして削除すると、ゲージ パネルだけでなく、その中の項目がすべて削除されます。  
   
-2.  
-  **[削除]** をクリックします。  
+2.  **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](indicators-report-builder-and-ssrs.md)  

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f285d4f066cdff5c514504131aba825ba5dca2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 23967912b1f1f96ae1bebfa517399ece6fd2b7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055527"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] エディターのオプションを構成することにより、各エディターの操作をカスタマイズできます。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7e5807e24430d8e837f08c4179fb764d227bae8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62510024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061998"
 ---
 # <a name="save-changes"></a>[変更の保存]
   **[はい]** をクリックするまでは一覧表示された項目への変更が保存されない、という警告が表示されます。  

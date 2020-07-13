@@ -11,14 +11,14 @@ helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 365351724f27205e7d460c757f1268d042cefc76
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987947"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305513"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストドライバーが使用されている場合、テキストファイルの形式はスキーマ情報ファイルを使用して決定されます。 スキーマ情報ファイルは常に schema.ini という名前で、常にテキストデータソースと同じディレクトリに保持されます。 スキーマ情報ファイルでは、ファイルの一般的な形式、列名とデータ型の情報、およびその他のいくつかのデータ特性に関する情報が IISAM に提供されます。 スキーマ .ini ファイルは、固定長のデータにアクセスするために常に必要です。 テキストテーブルに DateTime、Currency、または Decimal データが含まれている場合、またはテーブル内のデータの処理をより細かく制御する必要がある場合は、schema.ini ファイルを使用する必要があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "67987947"
 |----------------------|------------------|---------------------------------|  
 |**タブ区切り**|ファイル内のフィールドはタブで区切られます。|Format = TabDelimited れた|  
 |**CSV 区切り**|ファイル内のフィールドはコンマで区切られます (コンマ区切り値)。|Format = CSVDelimited|  
-|**区切られたカスタム**|ファイル内のフィールドは、ダイアログボックスに入力するために選択した任意の文字で区切られます。 空白を含め、二重引用符 (") 以外のすべてが許可されます。|Format = 区切られた (*カスタム文字*)<br /><br /> または<br /><br /> 区切り記号が指定されていない場合:<br /><br /> Format = 区切られた ()|  
+|**区切られたカスタム**|ファイル内のフィールドは、ダイアログボックスに入力するために選択した任意の文字で区切られます。 空白を含め、二重引用符 (") 以外のすべてが許可されます。|Format = 区切られた (*カスタム文字*)<br /><br /> \- または -<br /><br /> 区切り記号が指定されていない場合:<br /><br /> Format = 区切られた ()|  
 |**固定長**|ファイルのフィールドの長さは固定されています。|Format = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>フィールドの指定  
@@ -93,13 +93,13 @@ Col2=CustomerName Text Width 30
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表では、 **Col**_n_エントリの各部分について説明します。  
   
 |パラメーター|[説明]|  
 |---------------|-----------------|  
-|*ColumnName*|列のテキスト名。 列名にスペースが埋め込まれている場合は、二重引用符で囲む必要があります。|  
-|*type*|データ型は次のとおりです。<br /><br /> **Microsoft Jet データ型**<br /><br /> bit<br /><br /> Byte<br /><br /> ショート<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> DOUBLE<br /><br /> DateTime<br /><br /> Text<br /><br /> メモ<br /><br /> **ODBC データ型**Char (テキストと同じ)<br /><br /> Float (Double と同じ)<br /><br /> 整数 (Short と同じ)<br /><br /> LongChar (Memo と同じ)<br /><br /> 日付の*日付形式*|  
+|*[ColumnName]*|列のテキスト名。 列名にスペースが埋め込まれている場合は、二重引用符で囲む必要があります。|  
+|*type*|データ型は次のとおりです。<br /><br /> **Microsoft Jet データ型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 通貨<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> テキスト<br /><br /> メモ<br /><br /> **ODBC データ型**Char (テキストと同じ)<br /><br /> Float (Double と同じ)<br /><br /> 整数 (Short と同じ)<br /><br /> LongChar (Memo と同じ)<br /><br /> 日付の*日付形式*|  
 |**Width**|リテラル文字列値`Width`。 次の数値が列の幅を指定することを示します (文字区切りファイルの場合は省略可能、固定長ファイルの場合は必須)。|  
 |*#*|列の幅を指定する整数値 (**幅**が指定されている場合は必須)。|  
   
@@ -113,7 +113,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>データ型の形式と変換の指定  
  Schema.ini ファイルには、データの変換方法や表示方法を指定するために使用できるオプションがいくつか含まれています。 次の表に、これらの各オプションの一覧を示します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**DateTimeFormat**|日付と時刻を示す書式文字列を設定できます。 インポート/エクスポートのすべての日付/時刻フィールドが同じ形式で処理される場合は、このエントリを指定する必要があります。 すべての Microsoft Jet 形式 (午前を除く) 午後の時刻の がサポートされます。 書式設定文字列がない場合は、Windows の [コントロールパネル] の [短い日付の画像と時刻] オプションが使用されます。|  
 |**DecimalSymbol**|数値の小数部から整数を区切るために使用される任意の1文字に設定できます。|  
@@ -122,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|テキストファイル内の通貨の値に使用できる通貨記号を示します。 例としては、ドル記号 ($) と Dm などがあります。|  
 |**CurrencyPosFormat**|次のいずれかの値に設定できます。<br /><br /> -区切りなしの通貨記号プレフィックス ($1)<br />-区切りなしの通貨記号のサフィックス ($1)<br />-1 文字の区切り記号を使用した通貨記号のプレフィックス ($1)<br />-1 文字の区切り記号を含む通貨記号のサフィックス ($1)|  
 |**CurrencyDigits**|通貨金額の小数部に使用する桁数を指定します。|  
-|**CurrencyNegFormat**|次のいずれかの値を指定できます。<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> この例ではドル記号を示していますが、実際のプログラムでは、適切な**CurrencySymbol**値に置き換える必要があります。|  
+|**CurrencyNegFormat**|値は、次のいずれかです。<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> この例ではドル記号を示していますが、実際のプログラムでは、適切な**CurrencySymbol**値に置き換える必要があります。|  
 |**CurrencyThousandSymbol**|テキストファイル内の通貨値を千単位で区切るために使用できる1文字の記号を示します。|  
 |**CurrencyDecimalSymbol**|通貨値の小数部分から全体を区切るために使用される任意の1文字に設定できます。|  
   

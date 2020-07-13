@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050411"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
   **bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
@@ -41,7 +40,7 @@ ms.locfileid: "66011756"
 > [!IMPORTANT]  
 >  ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
   
-##  <a name="PrefixLengthsExport"></a> 一括エクスポートのプレフィックス長  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 一括エクスポートのプレフィックス長  
   
 > [!NOTE]  
 >  フィールドをエクスポートするときにプレフィックス長のプロンプトに表示される既定値は、フィールドの最も効率的なプレフィックス長を示します。  
@@ -56,46 +55,44 @@ ms.locfileid: "66011756"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text`<sup>1</sup>|4|4|4|4|  
-|`ntext`<sup>1</sup>|4|4|4|4|  
+|`text` <sup>1</sup>|4|4|4|4|  
+|`ntext` <sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image`<sup>1</sup>|4|4|4|4|  
-|`datetime`|0|1 で保護されたプロセスとして起動されました|0|1 で保護されたプロセスとして起動されました|  
-|`smalldatetime`|0|1 で保護されたプロセスとして起動されました|0|1 で保護されたプロセスとして起動されました|  
-|`decimal`|1|1 で保護されたプロセスとして起動されました|1|1 で保護されたプロセスとして起動されました|  
-|`numeric`|1 で保護されたプロセスとして起動されました|1|1 で保護されたプロセスとして起動されました|1|  
+|`image` <sup>1</sup>|4|4|4|4|  
+|`datetime`|0|1|0|1|  
+|`smalldatetime`|0|1|0|1|  
+|`decimal`|1|1|1|1|  
+|`numeric`|1|1|1|1|  
 |`float`|0|1|0|1|  
-|`real`|0|1 で保護されたプロセスとして起動されました|0|1|  
-|`int`|0|1|0|1 で保護されたプロセスとして起動されました|  
-|`bigint`|0|1 で保護されたプロセスとして起動されました|0|1 で保護されたプロセスとして起動されました|  
+|`real`|0|1|0|1|  
+|`int`|0|1|0|1|  
+|`bigint`|0|1|0|1|  
 |`smallint`|0|1|0|1|  
-|`tinyint`|0|1 で保護されたプロセスとして起動されました|0|1 で保護されたプロセスとして起動されました|  
-|`money`|0|1 で保護されたプロセスとして起動されました|0|1|  
-|`smallmoney`|0|1|0|1 で保護されたプロセスとして起動されました|  
-|`bit`|0|1 で保護されたプロセスとして起動されました|0|1 で保護されたプロセスとして起動されました|  
-|`uniqueidentifier`|1 で保護されたプロセスとして起動されました|1|0|1|  
-|`timestamp`|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|1|1 で保護されたプロセスとして起動されました|  
+|`tinyint`|0|1|0|1|  
+|`money`|0|1|0|1|  
+|`smallmoney`|0|1|0|1|  
+|`bit`|0|1|0|1|  
+|`uniqueidentifier`|1|1|0|1|  
+|`timestamp`|1|1|1|1|  
 |`varchar(max)`|8|8|8|8|  
 |`varbinary(max)`|8|8|8|8|  
 |UDT (ユーザー定義データ型)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> `ntext`、 `text`、および`image`の各データ型は、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
+ <sup>1</sup> `ntext` 、 `text` 、および `image` の各データ型は、の将来のバージョンで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
   
-##  <a name="PrefixLengthsImport"></a>一括インポートのプレフィックス長  
- データが一括インポートされるときは、プレフィックス長はデータ ファイルが作成されたときに指定された値になります。 
-  **bcp** コマンドでデータ ファイルが作成されなかった場合、プレフィックス長文字列が存在しない場合があります。 この場合は、プレフィックス長に 0 を指定します。  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 一括インポートのプレフィックス長  
+ データが一括インポートされるときは、プレフィックス長はデータ ファイルが作成されたときに指定された値になります。 **bcp** コマンドでデータ ファイルが作成されなかった場合、プレフィックス長文字列が存在しない場合があります。 この場合は、プレフィックス長に 0 を指定します。  
   
 > [!NOTE]  
->  
-  **bcp**を使用して、作成されなかったデータ ファイルのプレフィックス長を指定するには、このトピックの「 [一括エクスポートのプレフィックス長](#PrefixLengthsExport)」に記載した長さを使用してください。  
+>  **bcp**を使用して、作成されなかったデータ ファイルのプレフィックス長を指定するには、このトピックの「 [一括エクスポートのプレフィックス長](#PrefixLengthsExport)」に記載した長さを使用してください。  
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [データ型 &#40;Transact-sql&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Bcp &#40;SQL Server を使用したフィールド長の指定&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [SQL Server &#40;のフィールドターミネータと行ターミネータを指定し&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Bcp &#40;SQL Server を使用して File Storage の種類を指定し&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
+ [bcp を使用したフィールド長の指定 &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

@@ -16,15 +16,14 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab694a8ba3a1976207ad1d0c6505cc953f39ff94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785146"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009582"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>テキスト データと画像データの一括コピー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Large **text**、 **ntext**、 **image**の値は、 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)関数を使用して一括コピーされます。 **Text**型、 **ntext**型、または**image**型の列に対して[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)コードを作成し、データが**bcp_moretext**で提供されることを示す*pData*ポインターを NULL に設定します。 各一括コピーされた行の**text**、 **ntext**、または**image**列ごとに指定されるデータの正確な長さを指定することが重要です。 列のデータの長さが[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)で指定された列の長さと異なる場合は、 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を使用して長さを適切な値に設定します。 [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)は、すべての非**テキスト**、非**ntext**、および非**イメージ**データを送信します。次に、 **bcp_moretext**を呼び出して、 **text**、 **ntext**、または**image**型のデータを別々の単位で送信します。 一括コピー関数は、 **bcp_moretext**を通じて送信されるデータの長さの合計が、最新の**bcp_collen**または**bcp_bind**で指定された長さと等しい場合に、現在の**text**、 **ntext**、または**image**列に対してすべてのデータが送信されたことを確認します。  
   

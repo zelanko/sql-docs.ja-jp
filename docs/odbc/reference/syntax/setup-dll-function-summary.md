@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d141cdd88614c1a4881d794b345e7d2ada4ba69
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073793"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298875"
 ---
 # <a name="setup-dll-function-summary"></a>セットアップ DLL 関数の概要
 次の表では、セットアップ DLL 関数について説明します。 各関数の構文とセマンティクスの詳細については、「 [SETUP DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  

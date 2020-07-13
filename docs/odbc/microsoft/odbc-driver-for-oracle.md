@@ -1,5 +1,5 @@
 ---
-title: オラクル用の ODBC ドライバ |マイクロソフトドキュメント
+title: ODBC Driver for Oracle |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,47 +12,47 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5f1aabd23a587e681c33aed4b4119523444219
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402611"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298132"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
->  この機能は、今後のバージョンの Windows で削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに[、Oracle によって提供される ODBC ドライバを](https://www.oracle.com/database/technologies/releasenote-odbc-ic.html)使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- Oracle 用のマイクロソフト® ODBC ドライバーを使用すると、ODBC 準拠のアプリケーションを Oracle データベースに接続できます。 Oracle 用 ODBC ドライバは、ODBC プログラマ リファレンス で説明されているオープン データベース接続 *(ODBC)* 仕様に準拠しています。 PL/SQLパッケージ、XA/DTC統合、およびインターネットインフォメーションサービス(IIS)内からのオラクルアクセスへのアクセスを可能にします。  
+ Microsoft® ODBC Driver for Oracle を使用すると、ODBC 準拠のアプリケーションを Oracle データベースに接続できます。 ODBC Driver for Oracle は、 *Odbc プログラマーズリファレンス*で説明されている OPEN DATABASE CONNECTIVITY (odbc) 仕様に準拠しています。 これにより、インターネットインフォメーションサービス (IIS) 内からの PL/SQL パッケージ、XA/DTC 統合、および Oracle アクセスにアクセスできるようになります。  
   
- Oracle RDBMS は、さまざまなワークステーションおよびミニコンピュータ オペレーティング システムで実行されるマルチユーザー リレーショナル データベース管理システムです。 マイクロソフトの Windows を実行している IBM 互換のコンピュータは、ネットワーク経由で Oracle データベース サーバーと通信できます。 サポートされるネットワークには、マイクロソフト LAN マネージャ、ネットウェア、VINES、DECnet、および TCP/IP をサポートする任意のネットワークが含まれます。  
+ Oracle RDBMS は、さまざまなワークステーションおよび minicomputer オペレーティングシステムで実行されるマルチユーザーリレーショナルデータベース管理システムです。 Microsoft Windows を実行している IBM と互換性のあるコンピューターは、ネットワーク経由で Oracle データベースサーバーと通信できます。 サポートされているネットワークには、Microsoft LAN Manager、NetWare、VINES、DECnet、TCP/IP をサポートする任意のネットワークなどがあります。  
   
- Oracle 用 ODBC ドライバーを使用すると、アプリケーションは ODBC インターフェイスを使用して Oracle データベース内のデータにアクセスできます。 ドライバは、ローカルの Oracle データベースにアクセスすることも、SQL*Net を介してネットワークと通信することもできます。 次の図は、このアプリケーションとドライバーのアーキテクチャの詳細を示しています。  
+ ODBC Driver for Oracle を使用すると、アプリケーションは ODBC インターフェイスを介して Oracle データベースのデータにアクセスできます。 ドライバーは、ローカルの Oracle データベースにアクセスできます。また、SQL * Net を介してネットワークと通信することもできます。 次の図は、このアプリケーションとドライバーのアーキテクチャの詳細を示しています。  
   
- ![Oracle アプリ&#47;ドライバー アーキテクチャ用の ODBC ドライバ](../../odbc/microsoft/media/orcdrvsdkarch.gif "オルクドヴSDKアーチ")  
+ ![ODBC Driver for Oracle app&#47;ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Oracle 用 ODBC ドライバは、API 準拠レベル 1 および SQL 準拠レベル コアに準拠しています。 また、API 準拠レベル 2 の関数と、コアおよび拡張 SQL 準拠レベルの文法の大部分もサポートしています。 ドライバーは ODBC 2.5 準拠で、32 ビット システムをサポートしています。 Oracle 7.3xは完全にサポートされています。Oracle8 のサポートは限られています。 Oracle 用 ODBC ドライバーは、新しい Oracle8 データ型 (Unicode データ型、BLOB、CLOB など) をサポートせず、また Oracle の新しいリレーショナル オブジェクト モデルもサポートしていません。 サポートされるデータ型の詳細については、このガイドの[「サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)」を参照してください。  
+ ODBC Driver for Oracle は、API の準拠レベル1と SQL 適合性レベルのコアに準拠しています。 また、API 準拠レベル2の一部の関数、およびコアと拡張 SQL の準拠レベルの文法のほとんどもサポートしています。 ドライバーは ODBC 2.5 に準拠し、32ビットシステムをサポートしています。 Oracle 7.3 x は完全にサポートされています。Oracle8 のサポートは限られています。 ODBC Driver for Oracle では、新しい Oracle8 データ型 (Unicode データ型、Blob、CLOBs) はサポートされていません。また、Oracle の新しいリレーショナルオブジェクトモデルもサポートしていません。 サポートされているデータ型の詳細については、このガイドの「[サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)」を参照してください。  
   
- Oracleデータにアクセスするには、次のコンポーネントが必要です。  
+ Oracle データにアクセスするには、次のコンポーネントが必要です。  
   
--   オラクル用の ODBC ドライバ  
+-   ODBC Driver for Oracle  
   
--   オラクル RDBMS データベース  
+-   Oracle RDBMS データベース  
   
--   オラクル・クライアント・ソフトウェア  
+-   Oracle クライアントソフトウェア  
   
- さらに、リモート接続の場合:  
+ また、リモート接続の場合は次のようになります。  
   
--   ドライバとデータベースを実行するコンピュータを接続するネットワーク。 ネットワークは SQL*Net 接続をサポートしている必要があります。  
+-   ドライバーとデータベースを実行しているコンピューターを接続するネットワーク。 ネットワークは、SQL * Net 接続をサポートしている必要があります。  
   
 ## <a name="component-documentation"></a>コンポーネントのドキュメント  
- このガイドには、Oracle 用 Microsoft ODBC ドライバーのセットアップと構成、およびプログラムによる機能の追加に関する詳細情報が記載されています。 また、技術参考資料も含まれています。  
+ このガイドでは、Microsoft ODBC Driver for Oracle の設定と構成、およびプログラムによる機能の追加について詳しく説明します。 また、テクニカルリファレンス資料も含まれています。  
   
- 特定のOracle製品の動作については、Oracle製品に付属のマニュアルを参照してください。  
+ 特定の Oracle 製品の動作に関する詳細については、Oracle 製品に付属のドキュメントを参照してください。  
   
- ODBC データ ソース アドミニストレータを使用して Oracle 用 Microsoft ODBC ドライバを設定または構成する方法については[、ODBC データ ソース アドミニストレータ](../../odbc/admin/odbc-data-source-administrator.md)のマニュアルを参照してください。  
+ ODBC データソースアドミニストレーターを使用した Microsoft ODBC Driver for Oracle の設定または構成の詳細については、 [Odbc データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)のドキュメントを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

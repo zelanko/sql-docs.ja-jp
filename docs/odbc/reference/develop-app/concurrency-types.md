@@ -14,14 +14,14 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 642301d09c5aa189276db534e58aca0c5e00e3ce
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083181"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299102"
 ---
 # <a name="concurrency-types"></a>コンカレンシーの種類
 カーソルの同時実行性が低下する問題を解決するために、ODBC では4種類のカーソル同時実行が公開されています。  

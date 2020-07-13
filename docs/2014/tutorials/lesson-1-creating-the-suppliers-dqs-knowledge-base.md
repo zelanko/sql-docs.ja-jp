@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9421f568dae28895eb40b397d5e2589fafe0186
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70154964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054325"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1: Suppliers DQS ナレッジ ベースを作成する
   このレッスンでは、サプライヤーデータに関するナレッジ (メタデータ) を使用して、supplier という**名前の DQS**ナレッジベースを作成します。 ナレッジ ベースを使用して、入力仕入先データのクレンジングおよび照合アクティビティを実行します。 クレンジング アクティビティでは、不正/無効なデータの識別、不正確なデータの修正、修正/提案の提示、データの標準化、および詳細情報を含むデータの拡充が行われます。 照合アクティビティでは、データを比較して、データ上の重複項目を削除するために、データ内で類似したレコード (ただし、若干異なる) を特定します。  
@@ -42,7 +41,7 @@ ms.locfileid: "70154964"
   
 -   ナレッジ ベースをクレンジングおよび照合アクティビティで使用できるように、ナレッジ ベースをパブリッシュします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: ナレッジ ベースとドメインを作成する](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

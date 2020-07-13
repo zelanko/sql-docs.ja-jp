@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af95544a998963ffd81b4ebf9098089cc1a9915f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931458"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759908"
 ---
 # <a name="provider-property-ado"></a>Provider プロパティ (ADO)
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのプロバイダーの名前を示します。  

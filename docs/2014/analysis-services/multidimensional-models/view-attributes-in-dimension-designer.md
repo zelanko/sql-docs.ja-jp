@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da5921f6a1a3b7fa628ca8ee694837978fd987ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072498"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535574"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>ディメンション デザイナーのツリー、一覧、グリッドでの属性の表示
   ここでは、ディメンション デザイナーでの属性の表示方法を変更する手順について説明します。  
@@ -29,13 +28,10 @@ ms.locfileid: "66072498"
   
 1.  ディメンション デザイナーで、操作する属性が含まれているディメンションを開き、[ディメンション構造] タブをクリックします。  
   
-2.  
-  **[属性]** ペイン内をクリックし、 **[属性]** ペインに焦点を合わせます。  
+2.  **[属性]** ペイン内をクリックし、 **[属性]** ペインに焦点を合わせます。  
   
-3.  
-  **[ディメンション]** メニューをクリックするか、 **[属性]** ペインを右クリックします。  
+3.  **[ディメンション]** メニューをクリックするか、 **[属性]** ペインを右クリックします。  
   
-4.  
-  **[属性を表示]** をポイントしてから、 **[ツリー]**、 **[グリッド]**、または **[一覧]** をクリックします。  
+4.  **[属性を表示]** をポイントしてから、 **[ツリー]**、 **[グリッド]**、または **[一覧]** をクリックします。  
   
   

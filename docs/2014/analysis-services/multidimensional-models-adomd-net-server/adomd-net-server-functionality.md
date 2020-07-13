@@ -12,22 +12,20 @@ helpviewer_keywords:
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f00215c6bcc0104c920be29e0837288a469b252e
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62702975"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469077"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET のサーバー機能
   すべての ADOMD.NET サーバー オブジェクトは、サーバー上のデータやメタデータへの読み取り専用アクセスを提供します。 データやメタデータを取得するには、ADOMD.NET サーバー オブジェクト モデルを使用します。スキーマ行セットはサポートされていません。  
   
- ADOMD.NET server オブジェクトを使用すると、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (UDF) またはストアドプロシージャを作成できます。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
+ ADOMD.NET server オブジェクトを使用すると、のユーザー定義関数 (UDF) またはストアドプロシージャを作成でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> オブジェクトでサポートされているのは DMX だけです。  
+>  [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143286(v=sql.120))オブジェクトは、DMX のみをサポートしています。  
   
 ## <a name="what-is-a-udf"></a>UDF とは  
  *UDF*は、次の特性を持つメソッドです。  
@@ -61,7 +59,7 @@ FROM SalesModel
 CALL FinalSalesNumbers()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOMD.NET サーバー プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

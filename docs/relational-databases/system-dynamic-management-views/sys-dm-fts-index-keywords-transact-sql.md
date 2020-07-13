@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67900943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898854"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたテーブルのフルテキスト インデックスのコンテンツに関する情報を返します。  
   
@@ -53,14 +53,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**キーワード**|**nvarchar(4000)**|フルテキストインデックス内に格納されているキーワードの16進数表現。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
-|**display_term**|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、16進数形式から派生します。<br /><br /> 注: 0 Xff の**display_term**値は、"ファイルの終わり" です。|  
+|**keyword**|**nvarchar (4000)**|フルテキストインデックス内に格納されているキーワードの16進数表現。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの末尾を示す特殊文字を表します。|  
+|**display_term**|**nvarchar (4000)**|キーワードの人間が判読できる形式。 この形式は、16進数形式から派生します。<br /><br /> 注: 0 Xff の**display_term**値は、"ファイルの終わり" です。|  
 |**column_id**|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
 |**document_count**|**int**|現在の用語を含むドキュメントまたは行の数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Dm_fts_index_keywords によって返される情報は、特に次の点を確認するのに役立ちます **。**  
   
 -   キーワードがフルテキストインデックスの一部であるかどうか。  
@@ -77,22 +77,21 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  **Dm_fts_index_keywords**によって返される**document_count**は、 **Sys. dm_fts_index_keywords_by_document**または**CONTAINS**クエリによって返されたカウントよりも、特定のドキュメントに対して正確ではない可能性があります。 この潜在的な不正確さは1% 未満であると推定されます。 この不正確さは、インデックスフラグメント内の複数の行にわたって連続している場合や、同じ行に複数回出現する場合に、 **document_id**が2回カウントされる可能性があるために発生する可能性があります。 特定のドキュメントの正確な数を取得するには、 **dm_fts_index_keywords_by_document**または**CONTAINS**クエリを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-displaying-high-level-full-text-index-content"></a>A. 上位レベルのフルテキストインデックスコンテンツの表示  
- 次の例では、 `HumanResources.JobCandidate`テーブル内のフルテキストインデックスの上位レベルのコンテンツに関する情報を表示します。  
+ 次の例では、テーブル内のフルテキストインデックスの上位レベルのコンテンツに関する情報を表示し `HumanResources.JobCandidate` ます。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2012'), object_id('HumanResources.JobCandidate'))  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
- [dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

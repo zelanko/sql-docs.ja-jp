@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 52083ddb-d677-49fc-ad59-285743f4921d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 339758d99a2b0360be1073c39bcac77f43aec629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66096776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045975"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services パラメーター
-  を分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]するには、のインスタンスを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定し、そのインスタンスへの接続方法に関する情報を提供する必要があります。  
+  を分析するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、のインスタンスを指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] し、そのインスタンスへの接続方法に関する情報を提供する必要があります。  
   
 ## <a name="options"></a>オプション  
  **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス名**  

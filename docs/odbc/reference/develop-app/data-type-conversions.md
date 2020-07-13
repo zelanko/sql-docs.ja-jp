@@ -14,17 +14,17 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305214"
 ---
 # <a name="data-type-conversions"></a>データ型変換
-データを1つの型から別の型に変換することができます。1つのアプリケーション変数から別のアプリケーション変数 (C から C) にデータを転送するときに、アプリケーション変数のデータがステートメントパラメーター (C から SQL) に送信されるときに、結果セットの列のデータが返されます。アプリケーション変数 (SQL から C)、およびデータがあるデータソース列から別の列に転送されるとき (SQL から SQL)。  
+データは、次の4回の1つの型から別の型に変換できます。1つのアプリケーション変数から別のアプリケーション変数 (c から C) にデータを転送するときに、アプリケーション変数のデータがステートメントパラメーター (C から SQL) に送信されるとき、結果セットの列のデータがアプリケーション変数 (SQL から C) に返されるとき、およびデータソース列から別のデータソース列にデータが転送されるとき (sql から  
   
  あるアプリケーション変数から別のアプリケーション変数にデータが転送されるときに行われる変換は、このドキュメントの範囲外です。  
   

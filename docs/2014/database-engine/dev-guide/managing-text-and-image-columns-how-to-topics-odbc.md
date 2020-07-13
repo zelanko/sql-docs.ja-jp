@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3ed9eb3e4bd081636a4f4708bbde69a53448ff1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62780987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933493"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>text 列と image 列を管理する方法に関するトピック (ODBC)
   Microsoft® SQL Server™ ODBC ドライバーでは、text パラメーターと image パラメーターの使用、および結果セットの text 列、ntext 列、および image 列からのデータの取得がサポートされています。  

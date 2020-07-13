@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6d1d93518a2b11ed55620aa39448faac9f0bc424
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63254458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044307"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
   データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  

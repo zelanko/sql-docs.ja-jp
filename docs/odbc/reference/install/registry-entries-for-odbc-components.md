@@ -14,14 +14,14 @@ helpviewer_keywords:
 - subkeys [ODBC], for components
 - registry entries for components [ODBC], about registry entries
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70009347"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296182"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC コンポーネントのレジストリ エントリ
 > [!NOTE]  

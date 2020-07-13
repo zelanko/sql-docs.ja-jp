@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63187084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043350"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--   に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]割り当てるメモリの最小容量と最大容量を設定します。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] に割り当てるメモリの最大容量と最小容量を設定します。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -74,16 +73,15 @@ ms.locfileid: "63187084"
   
     -   トランザクション レプリケーションでは、レプリケートされたコマンドの適用に使用されるカスタム ストアド プロシージャにこのようなロジックを含める方がより効率的です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[マージ同期中のビジネス ロジックの実行](../merge/execute-business-logic-during-merge-synchronization.md)」を参照してください。  
+    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[Execute Business Logic During Merge Synchronization](../merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   
      マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、「[Specify Merge Replication properties](../publish/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
-     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 
-  `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
+     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
   
-     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳細については、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」を参照してください。  
+     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   
@@ -97,7 +95,7 @@ ms.locfileid: "63187084"
   
      変更をパーティション分割するには、各サブスクライバーにデータのサブセットをパブリッシュするか、またはアプリケーションを使用して、指定した行の変更を所定のノードに転送します。  
   
-    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
     -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
@@ -111,7 +109,7 @@ ms.locfileid: "63187084"
   
 -   サブスクライバーの数が多い場合はプル サブスクリプションを使用する。  
   
-     ディストリビューション エージェントとマージ エージェントは、プッシュ サブスクリプションの場合はディストリビューター側で、プル サブスクリプションの場合はサブスクライバー側で実行されます。 プル サブスクリプションを使用して、エージェントの処理をディストリビューターからサブスクライバーに移動すると、パフォーマンスを向上させることができます。 詳細については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」を参照してください。  
+     ディストリビューション エージェントとマージ エージェントは、プッシュ サブスクリプションの場合はディストリビューター側で、プル サブスクリプションの場合はサブスクライバー側で実行されます。 プル サブスクリプションを使用して、エージェントの処理をディストリビューターからサブスクライバーに移動すると、パフォーマンスを向上させることができます。 詳細については、「[パブリケーションのサブスクライブ](../subscribe-to-publications.md)」をご覧ください。  
   
 -   サブスクライバーの処理が遅すぎる場合はサブスクリプションを再初期化する。  
   
@@ -147,7 +145,7 @@ ms.locfileid: "63187084"
   
 -   サブスクリプションを手作業で初期化する。  
   
-     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ## <a name="agent-parameters"></a>エージェント パラメーター  
   
@@ -161,10 +159,10 @@ ms.locfileid: "63187084"
   
  エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
--   [レプリケーション エージェント プロファイルを操作する](../agents/work-with-replication-agent-profiles.md)  
+-   [レプリケーション エージェント プロファイルの操作](../agents/work-with-replication-agent-profiles.md)  
   
--   [レプリケーションエージェントコマンドプロンプトパラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [レプリケーションエージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)。  
+-   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)に割り当てるメモリの最大容量と最小容量を設定する。  
   
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057217"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307983"
 ---
 # <a name="pseudo-type-identifiers"></a>疑似型識別子
 アプリケーションプログラミングの便宜上、ODBC では複数の擬似型識別子が定義されています。 これらの識別子は実際のデータ型には対応していませんが、状況によっては、既存のデータ型に解決されます。  

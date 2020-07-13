@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006284"
 ---
 # <a name="comment---mdx-operator-reference"></a>コメント-MDX 演算子リファレンス
@@ -31,14 +31,14 @@ ms.locfileid: "68006284"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  コメントは、別の行に挿入することも、多次元式 (MDX) スクリプト行の末尾で入れ子にすることも、MDX ステートメント内で入れ子にすることもできます。 サーバーはコメントを評価しません。  
   
  この演算子は、単一行または入れ子になったコメントに使用します。 -- によって挿入するコメントは、改行文字で区切ります。  
   
  コメントの長さには制限がありません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

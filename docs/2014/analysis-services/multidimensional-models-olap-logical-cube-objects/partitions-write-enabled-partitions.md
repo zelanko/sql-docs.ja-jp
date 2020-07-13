@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bd4bd012847c3aee231767e94bead86a507ecc53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62727176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545224"
 ---
 # <a name="write-enabled-partitions"></a>書き込み許可パーティション
   キューブ内のデータは通常、読み取り専用です。 ただし、シナリオによっては、パーティションに書き込み許可を設定する必要が生じます。 書き込み許可パーティションを使用すると、ビジネス ユーザーは、セル値を変更し、その変更がキューブ データに与える影響を分析して、シナリオを調べることができます。 パーティションを書き込み許可にすると、クライアント アプリケーションは、パーティションのデータへの変更内容を記録できます。 これらの変更内容は、書き戻しデータとして知られており、個別のテーブルに格納され、メジャー グループの既存のデータは上書きされません。 ただし、キューブ データの一部のように、クエリ結果に組み込まれます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62727176"
  リーフ セルおよび非リーフ セルへの変更の処理は異なります。 リーフ セルは、メジャー グループによって参照されるすべてのディメンションのメジャーとリーフ メンバーの交差部分を表します。 リーフ セルの値は、ファクト テーブルから直接取得されるものであり、ドリル ダウンでそれ以上分割することはできません。 キューブまたはいずれかのパーティションが書き込み可能であれば、リーフ セルに変更を加えることができます。 非リーフ セルに変更を加えることができるのは、その非リーフ セルを構成するリーフ セル間で変更を配布する方法がクライアント アプリケーションに用意されている場合だけです。 このプロセスは、"割り当て" と呼ばれ、多元式 (MDX) の UPDATE CUBE ステートメントを介して管理されます。 ビジネス インテリジェンスの開発者は、UPDATE CUBE ステートメントを使用して、割り当て機能を含めることができます。 詳細については、「 [UPDATE CUBE ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)」を参照してください。  
   
 > [!IMPORTANT]  
->  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> を参照してください。  
+>  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>」を参照してください。  
   
  非リーフ セルに加えられた変更がクライアント アプリケーションによって配布されるかどうかに関係なく、クエリが評価されるときは必ず、書き戻しテーブル内の変更がリーフ セルと非リーフ セルの両方に適用されるため、ビジネス ユーザーは変更がキューブ全体に与える影響を調べることができます。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62727176"
   
 -   破棄して、パーティションを元の状態に戻す。 このアクションはパーティションを読み取り専用にします。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ビジネス ユーザーは、属しているロールにキューブのセルへの読み取り/書き込み権限が割り当てられている場合にのみキューブの書き戻しテーブルに変更内容を記録できます。 ロールごとに、更新できるキューブ セルと更新できないキューブ セルを管理できます。 詳細については、「 [Grant cube or model permissions &#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

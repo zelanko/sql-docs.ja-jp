@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 613841598b153dbe502f0267ed85197973bf706a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3dae864f100e35f37bbcccf01089e8860a83b813
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766499"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された可用性グループとそのすべてのレプリカを削除します。 可用性グループを削除する際、可用性レプリカの 1 つをホストするサーバー インスタンスがオフラインだった場合は、再度オンラインになった時点でローカルの可用性レプリカが削除されます。 可用性グループを削除すると、関連付けられている可用性グループ リスナーも削除されます (存在する場合)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67898294"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP AVAILABILITY GROUP group_name   
 [ ; ]  

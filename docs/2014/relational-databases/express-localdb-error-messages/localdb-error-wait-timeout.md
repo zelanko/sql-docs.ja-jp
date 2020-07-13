@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e663d99b799bdfaeedecfd9324222a6f01f6aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e3668b32fb48a3e12c33dc15224467307c696af4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63127774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051050"
 ---
 # <a name="localdb_error_wait_timeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
     

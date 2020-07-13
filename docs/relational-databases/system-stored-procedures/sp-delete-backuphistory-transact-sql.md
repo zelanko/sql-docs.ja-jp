@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865020"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した日付より古いバックアップセットのエントリを削除することにより、バックアップと復元の履歴テーブルのサイズを小さくします。 バックアップまたは復元の各操作が実行された後、バックアップと復元の履歴テーブルに追加の行が追加されます。そのため、 **sp_delete_backuphistory**を定期的に実行することをお勧めします。  
   
@@ -74,7 +74,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップが必要ですが、他のユーザーに権限を与えることができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、バックアップと復元の履歴テーブルから 2010 年 1 月 14 日の午前 12 時 より前のすべてのエントリを削除します。  
   
 ```  
@@ -83,8 +83,8 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_database_backuphistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
- [SQL Server&#41;&#40;のバックアップ履歴とヘッダー情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+ [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

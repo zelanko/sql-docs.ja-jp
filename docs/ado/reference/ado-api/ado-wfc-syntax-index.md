@@ -12,14 +12,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920815"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764543"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
 ADO 言語リファレンスでは、ADO メソッドとプロパティ構文を説明するために、Microsoft Visual Basic プログラミング言語を使用します。 このインデックスは、ado for Windows Foundation クラス (ADO/WFC) に基づく ADO 言語リファレンストピックへの相互参照です。 構文の違いが発生した場合は、言語リファレンストピックの構文の一覧とは対照的に、このインデックスの関数シグネチャを使用します。  
@@ -42,7 +42,7 @@ ADO 言語リファレンスでは、ADO メソッドとプロパティ構文を
   
 -   [Recordset オブジェクト](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
-## <a name="remote-data-service"></a>リモートデータサービス  
+## <a name="remote-data-service"></a>Remote Data Service  
   
 -   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   

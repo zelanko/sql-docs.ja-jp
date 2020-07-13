@@ -12,10 +12,10 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020922"
 ---
 # <a name="setting-project-options-sybasetosql"></a>プロジェクト オプションの設定 (SybaseToSQL)
@@ -42,7 +42,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 2.  Optimistic  
   
-3.  完全  
+3.  [完全]  
   
 4.  Custom  
   
@@ -77,8 +77,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタム設定を指定するには、単に新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
 また、現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクトファイルに保存されます。  
   
@@ -92,10 +91,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムモードを指定するには、[**モード**] ボックスの一覧で [**カスタム**] を選択し、左ペインでオプションを選択します。次に、右ペインで設定または値をクリックし、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズする場合は、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)する」を参照してください。  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC]
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5158799441fb0cb8d0ab4f0119b1b1ecdb94dc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002949"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285802"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 関数
 **互換性**  

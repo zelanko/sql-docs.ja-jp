@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2bd38adbac216fbfa150c90ccd9a1ef60b9746ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049135"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle パブリッシングの用語
   Oracle パブリッシングの構成および管理を行う場合には、以下に示す Oracle の用語を理解している必要があります。 Oracle の用語の完全な一覧については、Oracle のオンライン マニュアルを参照してください。  
   
  索引構成表 (IOT)  
- ディスク上でインデックス順に物理的に並べ替えられたデータを含むテーブルこれは、クラスター化[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インデックスを持つテーブルに似ています。 IOT はクラスター化インデックス付きテーブルとしてサブスクライバーにレプリケートされます。  
+ データがディスク上でインデックス順に物理的に並べ替えられたテーブルです。[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のクラスター化インデックス付きテーブルに似ています。 IOT はクラスター化インデックス付きテーブルとしてサブスクライバーにレプリケートされます。  
   
  インスタンス  
  Oracle データベースはインスタンスに関連付けられています。 このインスタンスは、メモリ、およびデータベースをサポートするバックグラウンド プロセスから構成されます。 Oracle のインスタンスは常に単一のデータベースにマッピングされます。一方、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスには複数のデータベースを格納できます。 状況によっては、1 つの Oracle データベースに複数のインスタンスを持たせることもできます。  
@@ -38,7 +37,7 @@ ms.locfileid: "63022391"
  一意の数値を生成するためのデータベース オブジェクトです。 レプリケーションではシーケンスを使用して、パブリッシュされたテーブルへの変更を順序付けします。  
   
  SQL\*Plus  
- Oracle データベースへのアクセスおよび照会に使用されるアプリケーションです。 このアプリケーションは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**に似ています。  
+ Oracle データベースへのアクセスおよび照会に使用されるアプリケーションです。 これは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd** に似ています。  
   
  シノニム  
  オブジェクトの別名です。 Oracle パブリッシャーを構成すると、特別なパブリック シノニム **MSSQLSERVERDISTRIBUTOR** が自動的に作成されます。 このシノニムは **HREPL_Distributor** テーブルを参照して、パブリッシャーにサービスを提供する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターへの論理ポインターを示します。  
@@ -55,8 +54,8 @@ ms.locfileid: "63022391"
  ユーザー スキーマは、特定のデータベース オブジェクトのセットを所有するデータベース ユーザーとして考えることができます。 レプリケーションの管理ユーザー スキーマは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション処理により Oracle データベース内で作成されたすべてのオブジェクトを所有します。ただし、パブリック シノニム **MSSQLSERVERDISTRIBUTOR** は除きます。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
- [Oracle パブリッシャーで作成されたオブジェクト](objects-created-on-the-oracle-publisher.md)   
+ [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャー上で作成されたオブジェクト](objects-created-on-the-oracle-publisher.md)   
  [SQL Server 以外のパブリッシャー](non-sql-server-publishers.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507536"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053465"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup。 sp_backup_config_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  の自動またはカスタムスケジュールオプション[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成します。  
+  の自動またはカスタムスケジュールオプションを構成 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @database_name  
  特定のデータベースでマネージバックアップを有効にするためのデータベース名。 NULL または * の場合、このマネージバックアップはサーバー上のすべてのデータベースに適用されます。  
   
@@ -58,19 +57,19 @@ EXEC managed_backup.sp_backup_config_schedule
  マネージバックアップ操作の頻度の種類。 ' Daily ' または ' Weekly ' に設定できます。  
   
  @days_of_week  
- が毎週に設定されている場合@full_backup_freq_typeのバックアップの曜日。 ' Monday ' のような完全な文字列名を指定してください。  複数の曜日名をパイプで区切って指定することもできます。 例: N'Monday |水曜日 |金曜日  
+ が毎週に設定されている場合のバックアップの曜日 @full_backup_freq_type 。 ' Monday ' のような完全な文字列名を指定してください。  複数の曜日名をパイプで区切って指定することもできます。 例: N'Monday |水曜日 |金曜日  
   
  @backup_begin_time  
- バックアップウィンドウの開始時刻。 バックアップは、と@backup_begin_time @backup_durationの組み合わせによって定義される時間枠の外側では開始されません。  
+ バックアップウィンドウの開始時刻。 バックアップは、との組み合わせによって定義される時間枠の外側では開始されません @backup_begin_time @backup_duration 。  
   
  @backup_duration  
- バックアップ時間枠の期間。 と@backup_begin_time @backup_durationで定義された時間枠でバックアップが完了する保証はないことに注意してください。 この時間枠内に開始され、ウィンドウの期間を超えるバックアップ操作は取り消されません。  
+ バックアップ時間枠の期間。 とで定義された時間枠でバックアップが完了する保証はないことに注意 @backup_begin_time @backup_duration してください。 この時間枠内に開始され、ウィンドウの期間を超えるバックアップ操作は取り消されません。  
   
  @log_backup_freq  
- これにより、トランザクションログバックアップの頻度が決まります。 これらのバックアップは、データベースバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freqは数分または数時間`0:00`で指定でき、ログバックアップがないことを示します。 ログバックアップを無効にすることは、単純復旧モデルのデータベースにのみ適しています。  
+ これにより、トランザクションログバックアップの頻度が決まります。 これらのバックアップは、データベースバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freqは数分または数時間で指定でき `0:00` 、ログバックアップがないことを示します。 ログバックアップを無効にすることは、単純復旧モデルのデータベースにのみ適しています。  
   
 > [!NOTE]  
->  復旧モデルが単純から完全に変更された場合は、log_backup_freq をから`0:00` 0 以外の値に再構成する必要があります。  
+>  復旧モデルが単純から完全に変更された場合は、log_backup_freq をから `0:00` 0 以外の値に再構成する必要があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -82,6 +81,6 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ## <a name="see-also"></a>参照  
  [managed_backup。 sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

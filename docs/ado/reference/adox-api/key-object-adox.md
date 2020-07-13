@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3b1c14c19fe624de5a6b634cd1adebe018896011
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965908"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746645"
 ---
 # <a name="key-object-adox"></a>Key オブジェクト (ADOX)
 データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のコードでは、新しい**キー**が作成されます。  
   
 ```  

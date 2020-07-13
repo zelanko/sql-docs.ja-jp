@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a1f50e106ad2e5b326f698089691ee996f058cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62643378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059816"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress クラス
   [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) は、サーバーネットワークプロトコルによってサポートされる IP アドレスを表します。  
   
  [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) では、次のタスクを実行できます。  
   
--   の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの名前を確認します。  
+-   のインスタンスの名前を確認 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
 -   IP アドレス名およびプロトコル名の確認  
   

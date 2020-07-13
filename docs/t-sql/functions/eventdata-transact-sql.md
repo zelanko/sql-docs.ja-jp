@@ -22,17 +22,17 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784578"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、サーバーまたはデータベースのイベントに関する情報を返します。 イベント通知が発生し、指定されたサービス ブローカーが結果を受け取ると、`EVENTDATA` が呼び出されます。 DDL またはログオン トリガーも、`EVENTDATA` の内部使用をサポートしています。  
   

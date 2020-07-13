@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571275"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634574"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting メソッド - RemoveSSLCertificateBinding
-  SSL 証明書のバインドを削除します。  
+  TLS/SSL 証明書のバインドを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  アプリケーションの IP アドレス。  
   
  *[ポート]*  
- バインドに関連付けられた SSL ポート。  
+ バインドに関連付けられた TLS ポート。  
   
  *lcid*  
  返されるエラー メッセージに使用するロケール。  

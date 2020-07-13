@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036553"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299162"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 文法の選択
 SQL ステートメントを構築するときに最初に決定することは、使用する文法です。 Open Group、ANSI、および ISO などのさまざまな標準本文から使用できる文法に加えて、事実上、すべての DBMS ベンダーが独自の文法を定義しています。これらはそれぞれ、標準によって若干異なります。  

@@ -1,5 +1,6 @@
 ---
 title: ssbdiagnose ユーティリティ (Service Broker)
+description: ssbdiagnose ユーティリティからは、Service Broker のメッセージ好感や Service Broker サービスの構成の問題が報告されます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -26,12 +27,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254205"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150556"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 
@@ -169,7 +170,7 @@ WHERE database_id = DB_ID();
  **RUNTIME**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、 **ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
   
- **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す**  イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
+ **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す ** イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
   
  既定では、出力レポートに実行時エラーは含まれず、構成の分析結果のみが含まれます。 レポートに実行時エラーを含めるには、 **-SHOWEVENTS** を使用してください。  
   

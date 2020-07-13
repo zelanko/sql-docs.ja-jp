@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109649"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
@@ -27,7 +27,7 @@ ms.locfileid: "66109649"
   
  Visual Studio 2010 または Visual Studio 2012 と ASP.NET Web サイト テンプレートを使用して、ReportViewer コントロールを含む ASP.NET Web ページを作成します。 このコントロールは、ここで作成するレポートを表示するように構成されています。 このチュートリアルでは、Microsoft Visual C# でアプリケーションを作成します。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  [レッスン 1: 新しい Web サイトを作成する](../reporting-services/lesson-1-create-a-new-web-site.md)   
  [レッスン 2: 親レポートのデータ接続とデータテーブルを定義する](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [レッスン 3: レポートウィザードを使用して親レポートをデザインする](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
@@ -39,7 +39,7 @@ ms.locfileid: "66109649"
  [レッスン 9: アプリケーションをビルドして実行する](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [SSRS&#41;&#40;チュートリアル Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

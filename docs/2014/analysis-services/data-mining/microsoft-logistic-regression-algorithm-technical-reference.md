@@ -18,16 +18,14 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78174514"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521858"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。
 
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズムの実装
@@ -45,7 +43,7 @@ ms.locfileid: "78174514"
  機能の選択は、分析の向上と処理負荷の削減のためにすべての Analysis Services データ マイニング アルゴリズムで自動的に使用されます。 ロジスティック回帰モデルの機能の選択に使用される方法は、属性のデータ型によって異なります。 ロジスティック回帰は、Microsoft ニューラル ネットワーク アルゴリズムに基づいているため、ニューラル ネットワークに適用される機能の選択方法のサブセットを使用します。 詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。
 
 ### <a name="scoring-inputs"></a>入力のスコアリング
- ニューラルネットワークモデルまたはロジスティック回帰モデルのコンテキストにおける*スコアリング*は、データに存在する値を、同じスケールを使用する値のセットに変換するプロセスを意味します。そのため、相互に比較することができます。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスでは、値の違いに関係なく、各入力の重要度を*スコア*付けしたり、比較したりすることができます。
+ ニューラル ネットワーク モデルまたはロジスティック回帰モデルのコンテキストにおける "*スコアリング* " とは、データに存在する値を同じ尺度を使用する値のセットに変換して相互に比較できるようにするプロセスを意味します。 たとえば、Income に対する入力の範囲が 0 ～ 100,000 であるのに対し、[Number of Children] に対する入力の範囲は 0 ～ 5 であるとします。 この変換プロセスでは、値の違いに関係なく、各入力の重要度を*スコア*付けしたり、比較したりすることができます。
 
  トレーニング セットに表示されている状態ごとに、モデルは 1 つの入力を生成します。 不連続な入力または分離された入力の場合、Missing 状態がトレーニング セットに 1 回以上表示されると、Missing 状態を表す追加の入力が作成されます。 連続する入力では、最大 2 つの入力ノードが作成されます。1 つはトレーニング データに存在する場合の Missing 値用の入力ノードで、もう 1 つはすべての既存の値 (Null 以外の値) 用の入力ノードです。 各入力は、z スコア正規化方式 (x μ)/StdDev. を使用して数値形式にスケーリングされます。
 
@@ -85,15 +83,14 @@ WHERE NODE_TYPE = 23
 
  このクエリは、出力値ごとに、係数と、関連の入力ノードを指す ID を返します。 また、出力と切片の値を含む行も返します。 各入力 X には独自の係数 (Ci) がありますが、入れ子になったテーブルには、次の式に従って計算される "free" 係数 (Co) も含まれています。
 
- F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0
+ F (X) = X1 * C1 + X2 \* C2 +... + Xn \* Cn + X0
 
  アクティブ化: exp(F(X)) / (1 + exp(F(X)) )
 
  詳細については、「 [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)」を参照してください。
 
 ## <a name="customizing-the-logistic-regression-algorithm"></a>ロジスティック回帰アルゴリズムのカスタマイズ
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 また、入力として使用する列にモデリング フラグを設定して、モデルの動作を変更することもできます。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。 また、入力として使用する列にモデリング フラグを設定して、モデルの動作を変更することもできます。
 
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定
  次の表は、Microsoft ロジスティック回帰アルゴリズムで使用できるパラメーターを示しています。
@@ -116,7 +113,7 @@ WHERE NODE_TYPE = 23
 
  MAXIMUM_STATES アルゴリズムがサポートする属性の状態の最大数を指定します。 属性の状態の数が状態の最大数よりも大きい場合、アルゴリズムでは属性の最も一般的な状態が使用され、残りの状態は無視されます。
 
- 既定値は 100 です。
+ 既定値は、100 です。
 
  SAMPLE_SIZE は、モデルのトレーニングに使用するケースの数を指定します。 アルゴリズム プロバイダーでは、この数と、HOLDOUT_PERCENTAGE パラメーターで指定された割合に含まれないケースの総数の割合のうち、いずれか小さい方が使用されます。
 
@@ -125,24 +122,23 @@ WHERE NODE_TYPE = 23
  既定値は 10000 です。
 
 ### <a name="modeling-flags"></a>ModelingFlags
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、次のモデリング フラグを使用できます。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、次のモデリング フラグを使用できます。
 
  NOT NULL は、列に null を含めることができないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。
 
  マイニング構造列に適用されます。
 
- MODEL_EXISTENCE_ONLY は、列が`Missing` 、および`Existing`の2つの可能な状態を持つ列として扱われることを意味します。 NULL は Missing 値になります。
+ MODEL_EXISTENCE_ONLY は、列が、およびの2つの可能な状態を持つ列として扱われることを意味し `Missing` `Existing` ます。 NULL は Missing 値になります。
 
  マイニング モデル列に適用されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
  ロジスティック回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。
 
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列
  次の表のように、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムでは、特定の入力列のコンテンツの種類、予測可能列のコンテンツの種類、およびモデリング フラグがサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。
 
-|列|コンテンツの種類|
+|Column|コンテンツの種類|
 |------------|-------------------|
 |入力属性|Continuous、Discrete、Discretized、Key、Table|
 |予測可能な属性|Continuous、Discrete、Discretized|

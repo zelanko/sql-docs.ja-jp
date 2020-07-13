@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3160e5e6a70344d0340b0b14db822c7089b60680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72797943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934574"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>URN から SQL Server プロバイダー パスへの変換
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルでは、オブジェクトに対して URN (Uniform Resource Name) が作成されます。 各 URN によって、SMO オブジェクトが一意に識別されます。また、`Convert-UrnToPath` コマンドレットを使用して、URN を SQL Server PowerShell プロバイダーのパスに変換できます。  
   
 ## <a name="converting-urns-to-paths"></a>パスへの URN の変換  

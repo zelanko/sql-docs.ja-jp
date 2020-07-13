@@ -17,18 +17,17 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d5b43d91de2fd22f0198cdb7550af7fd295e2b2a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62766894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422939"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
-  「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージの実行[」で説明されている方法を使用して、](../packages/run-integration-services-ssis-packages.md) パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
+  「[パッケージの実行](../packages/run-integration-services-ssis-packages.md)」で説明されている方法を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを必要に応じて実行したり、事前に定義した時刻に実行したりすることができます。 また、数行のコードを記述するだけで、Windows フォーム アプリケーション、コンソール アプリケーション、ASP.NET Web フォームや Web サービス、または Windows サービスなどのカスタム アプリケーションから、パッケージを実行することもできます。  
   
  このトピックの内容:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62766894"
   
 -   プログラムによるパッケージの実行  
   
- このトピックでパッケージを読み込み、実行するために使用するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 この参照を新しいプロジェクトに追加した後、<xref:Microsoft.SqlServer.Dts.Runtime> ステートメントまたは `using` ステートメントを使用して `Imports` 名前空間をインポートします。  
+ このトピックでパッケージを読み込み、実行するために使用するすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 この参照を新しいプロジェクトに追加した後、`using` ステートメントまたは `Imports` ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
   
 ## <a name="loading-a-package-programmatically"></a>プログラムによるパッケージの読み込み  
  プログラムによってローカル コンピューターでパッケージを読み込むには、パッケージがローカルまたはリモートのどちらに保存されているかに関係なく、次のいずれかの方法を使用できます。  
@@ -59,12 +58,12 @@ ms.locfileid: "62766894"
   
 2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、**Microsoft.SqlServer.ManagedDTS.dll** への参照を追加します。 **[OK]** をクリックします。  
   
-3.  Visual Basic `Imports`ステートメントまたは C# `using`ステートメントを使用して、**名前空間**をインポートします。  
+3.  Visual Basic `Imports` ステートメントまたは C# ステートメントを使用して、 `using` 名前空間をインポート**Microsoft.SqlServer.Dts.Runtime**します。  
   
 4.  メイン ルーチンに次のコードを追加します。 完成したコンソール アプリケーションは、たとえば次の例のようになります。  
   
     > [!NOTE]  
-    >  このサンプル コードは、<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> メソッドを使用してファイル システムからパッケージを読み込む方法を示していますが、 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> メソッドを呼び出して MSDB データベースからパッケージを読み込んだり、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] メソッドを呼び出して <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> パッケージ ストアからパッケージを読み込むこともできます。  
+    >  このサンプル コードは、<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> メソッドを使用してファイル システムからパッケージを読み込む方法を示していますが、 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> メソッドを呼び出して MSDB データベースからパッケージを読み込んだり、<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> メソッドを呼び出して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ストアからパッケージを読み込むこともできます。  
   
 5.  プロジェクトを実行します。 このサンプル コードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサンプルと共にインストールされている CalculatedColumns サンプル パッケージを実行します。 パッケージの実行結果がコンソール ウィンドウに表示されます。  
   
@@ -223,9 +222,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ローカル実行とリモート実行の違いについて](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [プログラムによるリモートパッケージの読み込みと実行](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [ローカル パッケージの出力の読み込み](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

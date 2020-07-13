@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68762424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771426"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリケーションのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -49,70 +49,70 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
-|**allow_anonymous**|**本来**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync*も**true**である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
+|**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync*も**true**である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
 ||**false**|指定されたパブリケーションに対して匿名サブスクリプションを作成することはできません。 ピアツーピアパブリケーションの場合は変更できません。|  
-|**allow_initialize_from_backup**|**本来**|サブスクライバーでは、初期スナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できます。 このプロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|サブスクライバーは初期スナップショットを使用する必要があります。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**allow_partition_switch**|**本来**|テーブルの変更...パブリッシュされたデータベースに対して SWITCH ステートメントを実行できます。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
+|**allow_initialize_from_backup**|**true**|サブスクライバーでは、初期スナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|サブスクライバーは初期スナップショットを使用する必要があります。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**allow_partition_switch**|**true**|テーブルの変更...パブリッシュされたデータベースに対して SWITCH ステートメントを実行できます。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 ||**false**|テーブルの変更...パブリッシュされたデータベースに対して SWITCH ステートメントを実行することはできません。|  
-|**allow_pull**|**本来**|指定されたパブリケーションでは、プルサブスクリプションが許可されます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|指定したパブリケーションに対してプル サブスクリプションを許可しません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**allow_push**|**本来**|指定したパブリケーションに対してプッシュ サブスクリプションを許可します。|  
+|**allow_pull**|**true**|指定されたパブリケーションでは、プルサブスクリプションが許可されます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|指定したパブリケーションに対してプル サブスクリプションを許可しません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**allow_push**|**true**|指定したパブリケーションに対してプッシュ サブスクリプションを許可します。|  
 ||**false**|指定したパブリケーションに対してプッシュ サブスクリプションを許可しません。|  
-|**allow_subscription_copy**|**本来**|このパブリケーションをサブスクライブするデータベースをコピーする機能を有効にします。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|このパブリケーションにサブスクライブするデータベースをコピーできないようにします。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
+|**allow_subscription_copy**|**true**|このパブリケーションをサブスクライブするデータベースをコピーする機能を有効にします。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|このパブリケーションにサブスクライブするデータベースをコピーできないようにします。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**alt_snapshot_folder**||スナップショットの代替フォルダーの場所。|  
-|**centralized_conflicts**|**本来**|競合レコードはパブリッシャーに格納されます。 アクティブなサブスクリプションがない場合にのみ変更できます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に保存されます。 アクティブなサブスクリプションがない場合にのみ変更できます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**compress_snapshot**|**本来**|代替スナップショット フォルダーにあるスナップショットは .cab ファイル形式に圧縮されます。 既定のスナップショットフォルダー内のスナップショットは圧縮できません。|  
+|**centralized_conflicts**|**true**|競合レコードはパブリッシャーに格納されます。 アクティブなサブスクリプションがない場合にのみ変更できます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に保存されます。 アクティブなサブスクリプションがない場合にのみ変更できます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**compress_snapshot**|**true**|代替スナップショット フォルダーにあるスナップショットは .cab ファイル形式に圧縮されます。 既定のスナップショットフォルダー内のスナップショットは圧縮できません。|  
 ||**false**|スナップショットは圧縮されません。これはレプリケーションの既定の動作です。|  
 |**conflict_policy**|**pub wins**|パブリッシャーが競合で優先される場合に、サブスクライバーの更新で競合を解決する方法です。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**サブ reinit**|サブスクライバーの更新で競合が発生した場合は、サブスクリプションを再初期化する必要があります。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**sub wins**|サブスクライバーが競合で優先される場合に、サブスクライバーの更新で競合を解決する方法です。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 |**conflict_retention**||競合の保有期間を日数で指定する**int**です。 既定の保有期間は14日です。 **0**は、競合のクリーンアップが必要ないことを意味します。 Oracle パブリッシャーではサポートされていません。|  
-|**記述**||パブリケーションを説明する省略可能なエントリです。|  
-|**enabled_for_het_sub**|**本来**|パブリケーションで以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートできるようにします。 パブリケーションへのサブスクリプションが存在する場合、 **enabled_for_het_sub**を変更することはできません。 **Enabled_for_het_sub**を true に設定する前に、次の要件に準拠するために、[レプリケーションストアドプロシージャ (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)の実行が必要になる場合があります。<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> **Enabled_for_het_sub**を**true**に変更すると、既存のパブリケーション設定が変更される可能性があります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|パブリケーションは、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートしていません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**enabled_for_internet**|**本来**|パブリケーションはインターネットに対して有効であり、ファイル転送プロトコル (FTP) を使用して、スナップショットファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address*を NULL にすることはできません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**false**|パブリケーションはインターネットに対応していません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**enabled_for_p2p**|**本来**|パブリケーションは、ピアツーピアレプリケーションをサポートしています。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。<br /> **Enabled_for_p2p**を**true**に設定するには、次の制限が適用されます。<br /> - **allow_anonymous**は**false**である必要があります<br /> - **allow_dts**は**false**である必要があります。<br /> - **allow_initialize_from_backup**は**true**である必要があります<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> - **enabled_for_het_sub**は**false**である必要があります。<br /> - **independent_agent**は**true**である必要があります。<br /> - **repl_freq**が**連続**している必要があります。<br /> - **replicate_ddl**は**1**である必要があります。|  
-||**false**|パブリケーションでピア ツー ピア レプリケーションがサポートされません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**ftp_address**||パブリケーションスナップショットファイルの FTP アクセス可能な場所です。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**ftp_login**||FTP サービスへの接続に使用するユーザー名です。値 ANONYMOUS は許可されます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**ftp_password**||FTP サービスへの接続に使用するユーザー名のパスワード。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**ftp_port**||ディストリビューター用 FTP サービスのポート番号。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**ftp_subdirectory**||パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合にスナップショットファイルを作成する場所を指定します。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-|**immediate_sync**|**本来**|スナップショットエージェントを実行するたびに、パブリケーションの同期ファイルが作成または再作成されます。 サブスクリプションの前にスナップショットエージェントが完了している場合、サブスクライバーはサブスクリプションの直後に同期ファイルを受け取ることができます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent*も**true**である必要があります。 **Immediate_sync**の詳細については、以下の解説を参照してください。|  
+|**description**||パブリケーションを説明する省略可能なエントリです。|  
+|**enabled_for_het_sub**|**true**|パブリケーションで以外のサブスクライバーをサポートできるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 パブリケーションへのサブスクリプションが存在する場合、 **enabled_for_het_sub**を変更することはできません。 **Enabled_for_het_sub**を true に設定する前に、次の要件に準拠するために、[レプリケーションストアドプロシージャ (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)の実行が必要になる場合があります。<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> **Enabled_for_het_sub**を**true**に変更すると、既存のパブリケーション設定が変更される可能性があります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|パブリケーションは、以外のサブスクライバーをサポートしていません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**enabled_for_internet**|**true**|パブリケーションはインターネットに対して有効であり、ファイル転送プロトコル (FTP) を使用して、スナップショットファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address*を NULL にすることはできません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**false**|パブリケーションはインターネットに対応していません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**enabled_for_p2p**|**true**|パブリケーションは、ピアツーピアレプリケーションをサポートしています。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /> **Enabled_for_p2p**を**true**に設定するには、次の制限が適用されます。<br /> - **allow_anonymous**は**false**である必要があります<br /> - **allow_dts**は**false**である必要があります。<br /> - **allow_initialize_from_backup**は**true**である必要があります<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> - **enabled_for_het_sub**は**false**である必要があります。<br /> - **independent_agent**は**true**である必要があります。<br /> - **repl_freq**が**連続**している必要があります。<br /> - **replicate_ddl**は**1**である必要があります。|  
+||**false**|パブリケーションでピア ツー ピア レプリケーションがサポートされません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ftp_address**||パブリケーションスナップショットファイルの FTP アクセス可能な場所です。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ftp_login**||FTP サービスへの接続に使用するユーザー名です。値 ANONYMOUS は許可されます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ftp_password**||FTP サービスへの接続に使用するユーザー名のパスワード。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ftp_port**||ディストリビューター用 FTP サービスのポート番号。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**ftp_subdirectory**||パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合にスナップショットファイルを作成する場所を指定します。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**immediate_sync**|**true**|スナップショットエージェントを実行するたびに、パブリケーションの同期ファイルが作成または再作成されます。 サブスクリプションの前にスナップショットエージェントが完了している場合、サブスクライバーはサブスクリプションの直後に同期ファイルを受け取ることができます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent*も**true**である必要があります。 **Immediate_sync**の詳細については、以下の解説を参照してください。|  
 ||**false**|同期ファイルは、新しいサブスクリプションがある場合にのみ作成されます。 スナップショットエージェントが開始されて完了するまで、サブスクライバーはサブスクリプションの後に同期ファイルを受け取ることができません。|  
-|**independent_agent**|**本来**|パブリケーションに専用のディストリビューション エージェントがあります。|  
+|**independent_agent**|**true**|パブリケーションに専用のディストリビューション エージェントがあります。|  
 ||**false**|パブリケーションでは共有ディストリビューション エージェントが使用されます。パブリケーションおよびサブスクリプション データベースの各ペアには 1 つの共有エージェントがあります。|  
-|**p2p_continue_onconflict**|**本来**|競合が検出された場合、ディストリビューションエージェントは引き続き変更を処理します。<br /> **注意:** の`FALSE`既定値を使用することをお勧めします。 このオプションがに`TRUE`設定されている場合、ディストリビューションエージェントは、発信元 ID が最も大きいノードから競合する行を適用して、トポロジ内のデータを収束しようとします。 この方法では、収束は保証されません。 競合が検出された後、トポロジが一貫していることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|**p2p_continue_onconflict**|**true**|競合が検出された場合、ディストリビューションエージェントは引き続き変更を処理します。<br /> **注意:** の既定値を使用することをお勧め `FALSE` します。 このオプションがに設定されている場合、 `TRUE` ディストリビューションエージェントは、発信元 ID が最も大きいノードから競合する行を適用して、トポロジ内のデータを収束しようとします。 この方法では、収束は保証されません。 競合が検出された後、トポロジが一貫していることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 ||**false**|ディストリビューションエージェントは、競合が検出された場合に、変更の処理を停止します。|  
 |**post_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用された後で行われます。|  
 |**pre_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用される前に行われます。|  
-|**publish_to_ActiveDirectory**|**本来**|このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のためにのみサポートされています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory にパブリケーション情報を追加できなくなりました。|  
+|**publish_to_ActiveDirectory**|**true**|このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のためにのみサポートされています。 Active Directory にパブリケーション情報を追加できなくなりました [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
-|**queue_type**|**sql**|トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を格納するために使用します。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。<br /><br /> 注: メッセージキューの[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用のサポートは廃止されました。 *値*に**msmq**の値を指定すると、エラーが発生します。|  
+|**queue_type**|**server**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納するために使用します。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。<br /><br /> 注: メッセージキューの使用のサポート [!INCLUDE[msCoName](../../includes/msconame-md.md)] は廃止されました。 *値*に**msmq**の値を指定すると、エラーが発生します。|  
 |**repl_freq**|**連続**|ログ ベースのすべてのトランザクションの出力をパブリッシュします。|  
 ||**ショット**|スケジュールされた同期イベントのみをパブリッシュします。|  
-|**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントはレプリケートされます。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。|  
-||**0**|DDL ステートメントはレプリケートされません。 このプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリケーションに対しては変更できません。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
-|**replicate_partition_switch**|**本来**|テーブルの変更...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch*が TRUE に設定されている場合にのみ有効です。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
+|**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントはレプリケートされます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+||**0**|DDL ステートメントはレプリケートされません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
+|**replicate_partition_switch**|**true**|テーブルの変更...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch*が TRUE に設定されている場合にのみ有効です。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 ||**false**|テーブルの変更...SWITCH ステートメントをサブスクライバーにレプリケートすることはできません。|  
 |**保有**||サブスクリプションアクティビティの保有期間を時間単位で表す**int**です。 保有期間内にサブスクリプションがアクティブでない場合は、削除されます。|  
-|**snapshot_in_defaultfolder**|**本来**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。 *Alt_snapshot_folder*も指定されている場合、スナップショットファイルは既定の場所と代替の場所の両方に格納されます。|  
+|**snapshot_in_defaultfolder**|**true**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。 *Alt_snapshot_folder*も指定されている場合、スナップショットファイルは既定の場所と代替の場所の両方に格納されます。|  
 ||**false**|スナップショットファイルは、 *alt_snapshot_folder*によって指定された別の場所に格納されます。|  
-|**オンライン**|**能動的**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーではサポートされていません。|  
-||**稼動**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
-|**sync_method**|**な**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
+|**status**|**active**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーではサポートされていません。|  
+||**inactive**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
+|**sync_method**|**native**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
 ||**記号**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
 ||**同時**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 |**taskid**||このプロパティは非推奨とされており、サポートされなくなりました。|  
-|**allow_drop**|**本来**|トランザクション`DROP TABLE`レプリケーションに含まれるアーティクルの DLL サポートを有効にします。 サポートされて[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]いる最小バージョン: service pack [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 2 以降および service pack 1 以降。 追加の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|トランザクション`DROP TABLE`レプリケーションに含まれるアーティクルの DLL サポートを無効にします。 これは、このプロパティの**既定**値です。|
+|**allow_drop**|**true**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを有効にします。 サポートされている最小バージョン: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 以降および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] service pack 1 以降。 追加の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを無効にします。 これは、このプロパティの**既定**値です。|
 |**NULL** (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は**0**です。  
@@ -120,20 +120,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1**に設定すると、アーティクルへの変更によってスナップショットが無効になることがあります。 新しいスナップショットを必要とする既存のサブスクリプションがある場合、この値によって、既存のスナップショットが古いバージョンとしてマークされ、新しいスナップショットが生成されます。   
 変更時に新しいスナップショットの生成が必要になるプロパティについては、「解説」を参照してください。  
   
-[**@force_reinit_subscription =** ]*force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription*は**ビット**で、既定値は**0**です。  
   - **0**に設定すると、アーティクルへの変更によってサブスクリプションが再初期化されることはありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
   - **1**に設定すると、アーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化が許可されます。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
   > [!NOTE]  
-  >  ** パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+  >  パブリッシャーでアーティクルのプロパティを変更する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changepublication**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  次のいずれかのプロパティを変更した後で、新しいスナップショットを生成する必要があります。また、 *force_invalidate_snapshot*パラメーターに値**1**を指定する必要があります。  
@@ -150,7 +150,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-**Publish_to_active_directory**パラメーターを使用して Active Directory 内のパブリケーションオブジェクトを一覧[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表示するには、Active Directory にオブジェクトが既に作成されている必要があります。  
+**Publish_to_active_directory**パラメーターを使用して Active Directory 内のパブリケーションオブジェクトを一覧表示するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Active Directory にオブジェクトが既に作成されている必要があります。  
   
 ## <a name="impact-of-immediate-sync"></a>即時同期の影響  
  即時同期をオンにすると、サブスクリプションがない場合でも、初期スナップショットが生成された直後にログ内のすべての変更が追跡されます。 ログに記録された変更は、顧客がバックアップを使用して新しいピアノードを追加しているときに使用されます。 バックアップが復元されると、そのピアは、バックアップの作成後に発生した他の変更と同期されます。 コマンドはディストリビューションデータベースで追跡されるため、同期ロジックは最後にバックアップされた LSN を確認し、これを開始点として使用します。これは、バックアップが最大保有期間内に作成された場合にコマンドが使用可能であることを把握するためのものです。 (最小保有期間の既定値は0時間で、最大保有期間は24時間です)。  
@@ -163,12 +163,12 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>関連項目  
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

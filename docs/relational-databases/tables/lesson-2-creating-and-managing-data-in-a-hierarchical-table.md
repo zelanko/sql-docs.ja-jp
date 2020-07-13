@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692494"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>レッスン 2: 階層テーブルでデータを作成して管理する
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 レッスン 1 では、既存のテーブルを変更して **hierarchyid** データ型を使用し、 **hierarchyid** 列に既存のデータ表現でデータを設定しました。 このレッスンでは、まず新しいテーブルを作成し、次に階層的な手法を使用してデータを挿入します。 その後、階層的な手法を使用して、データのクエリおよび操作を実行します。 
 
 ## <a name="prerequisites"></a>前提条件  
@@ -289,7 +289,7 @@ HumanResources.EmployeeOrg テーブルに完全にデータが設定された�
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用して階層テーブルのデータを並べ替える
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
   
 `GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/** セクションを変更して階層を **/2/1/2/3/** にするときは、変更するノード ( **/1/4/** ) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/** です。 2 つの引数には、異なるレベル数を指定することもできます。  

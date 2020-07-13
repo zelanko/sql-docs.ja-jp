@@ -11,15 +11,14 @@ helpviewer_keywords:
 - backward compatibility [SQL Server], Database Engine
 - full-text search [SQL Server], backward compatibility
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 03bc7f1e5742e26ead92a5889f74fd73a0d3c7e8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779262"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932971"
 ---
 # <a name="full-text-search-backward-compatibility"></a>フルテキスト検索における旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の以前のバージョンと [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]におけるフルテキスト検索の動作の違いについて説明します。  

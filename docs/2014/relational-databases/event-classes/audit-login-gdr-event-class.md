@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6788a2bdec8007b317e4f737ece44d8bd87dd3d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6e62b9a0a93688f9f44a1ec86f879da1d072dd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63012159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053209"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR イベント クラス
   **Audit Login GDR** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインの権利が追加または削除されるたびに発生します。 このイベント クラスは、 **sp_grantlogin**、 **sp_revokelogin**、および **sp_denylogin** のストアド プロシージャ用です。  
@@ -28,7 +27,7 @@ ms.locfileid: "63012159"
   
 ## <a name="audit-login-gdr-event-class-data-columns"></a>Audit Login GDR イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

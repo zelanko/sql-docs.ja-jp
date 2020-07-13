@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d279b30f84856e14e704b9d8e68def33bc3d183c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435869"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service を作成および編集する方法
   この手順では、CDC Service 構成コンソールから新しい Oracle CDC Service を作成および編集する方法について説明します。  

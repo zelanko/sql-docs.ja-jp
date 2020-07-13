@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcdd4c8c834d8c250716b6c887c3b08248fac67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a26ef36810a1c3ed188d6457ecb02e7e0411c9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727665"
 ---
 # <a name="assemblies---getting-information"></a>アセンブリ - 情報の取得
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   次のカタログ ビューや関数により、アセンブリに関するメタデータにクエリを行うことができます。  
   
  **個別のアセンブリに関する情報を取得するには**  
@@ -44,17 +44,17 @@ ms.locfileid: "68028027"
   
 -   [assembly_types &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
--   [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+-   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
  **CLR (共通言語ランタイム) ストアド プロシージャ、トリガー、および関数に関するアセンブリ情報を取得するには**  
   
--   [assembly_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
+-   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
  **CLR 以外のオブジェクトに関する情報を取得するには**  
   
--   [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
+-   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)   
  [アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobstep
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85863909"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ジョブからジョブ ステップを削除します。  
   
@@ -77,8 +77,8 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  別のユーザーが所有するジョブステップを削除できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>例  
- 次の例では、 `1`ジョブからジョブ`Weekly Sales Data Backup`ステップを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、ジョブからジョブステップを削除し `1` `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  
@@ -90,11 +90,11 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジョブの表示または変更](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

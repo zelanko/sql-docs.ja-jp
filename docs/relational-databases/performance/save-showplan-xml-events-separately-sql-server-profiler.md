@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 73a95255bcce173fa0ce2141b4f968d7efab7e57
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84799148490179aadb571662f0291aa7a09df9db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758965"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML イベントを個別に保存する方法 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、トレースにキャプチャされた **Showplan XML** イベントを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で個別の .SQLPlan ファイルに保存する方法について説明します。 **Showplan XML** イベント ファイルは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開くことができるので、イベントごとの実行プランをグラフィカルに表示できます。  
   
 ## <a name="save-showplan-xml-events-separately"></a>Showplan XML イベントを個別に保存する  

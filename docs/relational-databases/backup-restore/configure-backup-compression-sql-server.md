@@ -1,5 +1,6 @@
 ---
 title: バックアップの圧縮の構成 (SQL Server) | Microsoft Docs
+description: この記事では、SQL Server で単一のバックアップを作成する場合、または一連の定期的なバックアップをスケジュールする場合に、サーバーレベルの既定値をオーバーライドする方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73f1d6c4d65a9e581611ef439c79c41eb691e4c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9ba9a26022c194316089bf13eb4c1d6811b76c4
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076121"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220467"
 ---
 # <a name="configure-backup-compression-sql-server"></a>バックアップの圧縮の構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

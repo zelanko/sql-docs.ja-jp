@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68185814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057605"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>スケジュールされたポリシーの複数インスタンスへの配置
   登録済みサーバーを使用すると、スケジュールされたポリシーを集中管理された場所からマネージド サーバーに配置できます。 スケジュールされたポリシーは、ローカル サーバー グループまたは中央管理サーバーから配置できます。  
@@ -47,8 +46,7 @@ ms.locfileid: "68185814"
   
 1.  前のタスクでスケジュールされたポリシーを構成したサーバーで、[**管理**]、[**ポリシー管理**] の順に展開し、[**ポリシー**] をクリックします。  
   
-2.  
-  **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックします。  
+2.  **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックします。  
   
 3.  [**オブジェクトエクスプローラーの詳細**] ウィンドウで、登録済みサーバーを使用して他のサーバーに展開する、スケジュールされたすべてのベストプラクティスポリシーを選択します。  
   
@@ -65,8 +63,7 @@ ms.locfileid: "68185814"
   
 ### <a name="to-deploy-the-scheduled-policies-to-servers-that-are-managed-through-registered-servers"></a>登録済みサーバーで管理されているサーバーにスケジュールされたポリシーを配置するには  
   
-1.  
-  **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
+1.  **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
 2.  [**データベースエンジン**] を展開し、[**ローカルサーバーグループ**] または [**中央管理サーバー**] を展開して、ポリシーの展開先のノードを右クリックし、[**ポリシーのインポート**] をクリックします。  
   
@@ -97,7 +94,7 @@ ms.locfileid: "68185814"
 ## <a name="next"></a>次へ  
  このチュートリアルはこれで終了です。 開始に戻るには、「[チュートリアル: ポリシーベースの管理を使用したベストプラクティスの評価](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)」を参照してください。  
   
- チュートリアルの[!INCLUDE[ssDE](../includes/ssde-md.md)]一覧を表示するには、[[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)] をクリックします。  
+ チュートリアルの一覧を表示するには [!INCLUDE[ssDE](../includes/ssde-md.md)] 、[[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

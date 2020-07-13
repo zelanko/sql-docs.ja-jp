@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312091"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>レッスン 4: DMX を使用した時系列予測の作成
@@ -81,7 +81,7 @@ WHERE [<criteria>]
     <select list>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Forecasting_MIXED].[ModelRegion],  
@@ -93,8 +93,7 @@ WHERE [<criteria>]
   
      2 行目と 3 行目では、`PredictTimeSeries` 関数を使用します。 各行で別々の属性 (`[Quantity]` または `[Amount]`) が予測されます。 予測可能な属性の名前の後の数値は、予測する時間ステップの数を示します。  
   
-     
-  `AS` 句は、各予測関数から返される列の名前を指定するために使用します。 別名を指定しない場合は、既定で両方の列が `Expression` というラベルで返されます。  
+     `AS` 句は、各予測関数から返される列の名前を指定するために使用します。 別名を指定しない場合は、既定で両方の列が `Expression` というラベルで返されます。  
   
 4.  次の部分を探します。  
   
@@ -102,7 +101,7 @@ WHERE [<criteria>]
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Forecasting_MIXED]  
@@ -114,7 +113,7 @@ WHERE [<criteria>]
     WHERE [criteria>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  

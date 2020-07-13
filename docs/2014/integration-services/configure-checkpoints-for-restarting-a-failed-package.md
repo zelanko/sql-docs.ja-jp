@@ -11,32 +11,29 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3345ff33c620b1e6fee62b5adba5c2695c47061
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060769"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438579"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>失敗したパッケージを再開するためのチェックポイントを構成する
   パッケージ全体を再実行するのではなく、障害が発生した時点からパッケージを再開するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを構成するには、チェックポイントに適用するプロパティを設定します。  
   
 ### <a name="to-configure-a-package-to-restart"></a>パッケージを再開するように構成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  **ソリューションエクスプローラー**で、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
 4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  SaveCheckpoints プロパティをに`True`設定します。  
+5.  SaveCheckpoints プロパティをに設定し `True` ます。  
   
 6.  CheckpointFileName プロパティにチェックポイント ファイルの名前を入力します。  
   
@@ -53,9 +50,9 @@ ms.locfileid: "66060769"
   
     -   タスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-    -   選択した各タスク`True`およびコンテナーに対して、FailPackageOnFailure プロパティをに設定します。  
+    -   `True`選択した各タスクおよびコンテナーに対して、FailPackageOnFailure プロパティをに設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックポイントを使用してパッケージを再開する](packages/restart-packages-by-using-checkpoints.md)  
   
   

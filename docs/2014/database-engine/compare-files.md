@@ -13,19 +13,17 @@ helpviewer_keywords:
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f29bf7098f0c73d0b672e20b973b1347349b31f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62812596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936003"
 ---
 # <a name="compare-files"></a>ファイルの比較
   ファイルを比較して、ファイルがどのような過程で現在の状態になったのかを確認できます。 たとえば、ソース ファイルのバージョンをチェックインした後に、コード プロジェクトのビルドで不具合を発見した場合、現在のファイル バージョンと以前のファイル バージョンを比較できます。 そうすれば、不具合を引き起こしたコードの位置を正確に検出できます。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、プロジェクトまたはファイルのローカル コピーと、ソース管理に格納されているバージョンを比較できます。2 つのローカル ファイルを比較することもできます。 また、 **History**コマンドを使用すると、ソース管理されている2つのバージョンを比較できます。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、プロジェクトまたはファイルのローカル コピーと、ソース管理に格納されているバージョンを比較できます。2 つのローカル ファイルを比較することもできます。 また、 **History**コマンドを使用すると、ソース管理されている2つのバージョンを比較できます。  
   
 ### <a name="to-compare-files"></a>ファイルを比較するには  
   

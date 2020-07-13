@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106166"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106166"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
  ドキュメント マップは、HTML 表示拡張機能 (プレビュー、レポート ビューアーなど) で使用します。 他の表示拡張機能では、異なる手段でドキュメント マップが表示されます。  
   
 -   PDF では、ドキュメント マップは [しおり] ペインとして表示されます。  
@@ -112,13 +112,13 @@ ms.locfileid: "66106166"
 4.  レポート マネージャーで URL を貼り付け、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
->  サンプルレポートのダウンロードの詳細について[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、「[レポートビルダーおよびレポートデザイナーサンプルレポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+>  サンプル レポートをダウンロードする方法の詳細については、「 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
 >   
 >  詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
   
  
   
 ## <a name="see-also"></a>参照  
- [レポートマネージャー &#40;レポートビルダーおよび SSRS&#41;でのレポートの検索と表示](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [レポート マネージャーを使用したレポートの検索と表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

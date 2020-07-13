@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926636"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761630"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマーにとって理想的な世界は、ADO がデータソースを直接呼び出すことができるように、すべてのデータソースが OLE DB インターフェイスを公開することです。 OLE DB インターフェイスを実装しているデータベースベンダーはますます増えていますが、一部のデータソースはまだこのように公開されていません。 ただし、現在使用されている DBMS システムのほとんどは、ODBC を使用してアクセスできます。
@@ -49,10 +49,10 @@ MSDASQL
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|ODBC の OLE DB プロバイダーを指定します。|
-|**ソース**|データソース名を指定します。|
+|**DSN**|データソース名を指定します。|
 |**UID**|ユーザー名を指定します。|
 |**PWD**|ユーザーのパスワードを指定します。|
 |**URL**|Web フォルダーに発行されたファイルまたはディレクトリの URL を指定します。|
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>プロバイダー固有の接続プロパティ
  ODBC の OLE DB プロバイダーは、 **Connection**オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションにいくつかのプロパティを追加します。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
 
-|プロパティ名|[説明]|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |アクセス可能なプロシージャ (KAGPROP_ACCESSIBLEPROCEDURES)|ユーザーがストアドプロシージャにアクセスできるかどうかを示します。|
 |アクセス可能なテーブル (KAGPROP_ACCESSIBLETABLES)|ユーザーがデータベーステーブルに対して SELECT ステートメントを実行する権限を持っているかどうかを示します。|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコードセットとコマンドのプロパティ
  OLE DB provider for ODBC では、**レコードセット**オブジェクトと**コマンド**オブジェクトの**properties**コレクションにいくつかのプロパティが追加されます。 次の表は、これらのプロパティをかっこで囲んで、対応する OLE DB プロパティ名を示しています。
 
-|プロパティ名|[説明]|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |クエリベースの更新/削除/挿入 (KAGPROP_QUERYBASEDUPDATES)|SQL クエリを使用して、更新、削除、および挿入を実行できるかどうかを示します。|
 |ODBC 同時実行の種類 (KAGPROP_CONCURRENCY)|2人のユーザーがデータソースから同じデータに同時にアクセスしようとした場合に発生する可能性のある問題を軽減するために使用される方法を示します。|
@@ -174,11 +174,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |プロパティ|ForwardOnly|動的|Keyset|静的|
 |--------------|-----------------|-------------|------------|------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|使用できません|使用できません|読み取り/書き込み|読み取り/書き込み|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|使用できません|使用できません|読み取り/書き込み|読み取り/書き込み|
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|利用不可|利用不可|読み取り/書き込み|読み取り/書き込み|
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|利用不可|利用不可|読み取り/書き込み|読み取り/書き込み|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
-|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|使用できません|使用できません|読み取り/書き込み|読み取り/書き込み|
+|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|利用不可|利用不可|読み取り/書き込み|読み取り/書き込み|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
@@ -187,9 +187,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[数](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り/書き込み|使用できません|読み取り専用|読み取り専用|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り/書き込み|利用不可|読み取り専用|読み取り専用|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り/書き込み|使用できません|読み取り専用|読み取り専用|
+|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り/書き込み|利用不可|読み取り専用|読み取り専用|
 |[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
 |[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
@@ -198,27 +198,27 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO**レコードセット**メソッドの可用性:
 
-|方法|ForwardOnly|動的|Keyset|静的|
+|メソッド|ForwardOnly|動的|Keyset|静的|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|はい|はい|はい|
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|はい|はい|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|はい|はい|はい|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|はい|はい|はい|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
-|[Ok](../../../ado/reference/ado-api/close-method-ado.md)|はい|はい|はい|はい|
-|[デリート](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|はい|はい|はい|
+|[複製](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
+|[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|はい|はい|はい|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|はい|はい|はい|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|はい|はい|はい|
-|[[詳細ビュー]](../../../ado/reference/ado-api/move-method-ado.md)|はい|はい|はい|はい|
+|[移動](../../../ado/reference/ado-api/move-method-ado.md)|はい|はい|はい|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|はい|はい|はい|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|はい|はい|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|はい|はい|はい|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|はい|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|はい|はい|はい|
-|[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|はい|はい|はい|
+|[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|はい|はい|はい|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|はい|はい|はい|
-|[[再同期]](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|はい|はい|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|はい|はい|はい|はい|
+|[アップデート](../../../ado/reference/ado-api/update-method.md)|はい|はい|はい|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|はい|はい|はい|
 
  * Microsoft Access データベースではサポートされていません。
@@ -273,14 +273,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |行セットのサポートを開く|DBPROP_OPENROWSETSUPPORT|
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|
 |プロシージャ用語|DBPROP_PROCEDURETERM|
-|ダイアログを表示する|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
@@ -294,8 +294,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |テーブル用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |User ID|DBPROP_AUTH_USERID|
-|ユーザー名|DBPROP_USERNAME|
-|ウィンドウハンドル|DBPROP_INIT_HWND|
+|[ユーザー名]|DBPROP_USERNAME|
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
  **レコードセット**オブジェクトの**properties**コレクションには、次のプロパティが追加されます。

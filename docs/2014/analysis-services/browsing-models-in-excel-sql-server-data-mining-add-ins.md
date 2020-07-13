@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2132f999bb8c613143e7313f46d623f76fdbf4b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527702"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Excel におけるモデルの参照 (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの [モデルの参照] ボタン](media/dmc-browse.gif "[データ マイニング] リボンの [モデルの参照] ボタン")  

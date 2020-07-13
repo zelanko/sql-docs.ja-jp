@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109010"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
@@ -34,8 +34,7 @@ ms.locfileid: "66109010"
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginTop**|レポートに設定する上余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**OutputFormat**|
-  [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。`BMP`、`EMF`、`GIF`、`JPEG`、`PNG`、または `TIFF` です。|  
+|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。`BMP`、`EMF`、`GIF`、`JPEG`、`PNG`、または `TIFF` です。|  
 |**PageHeight**|レポートに設定するページの高さ (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`11in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`8.5in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PrintDpiX**|出力画像の水平方向の解像度。 既定値は `300` です。 拡張メタファイル (`EMF`) の出力形式に適用されます。|  
@@ -44,7 +43,7 @@ ms.locfileid: "66109010"
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能にデバイス情報設定を渡す](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

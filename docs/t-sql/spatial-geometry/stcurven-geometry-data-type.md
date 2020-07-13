@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1816630332b7691d9d85216df7ac242baa65f4bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748699"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **LineString**、**CircularString**、**CompoundCurve**、または **MultiLineString** である **geometry** インスタンスから指定された曲線を返します。
   
@@ -97,7 +97,7 @@ ms.locfileid: "67930130"
  前の 3 つの例の結果が同じであることに注意してください。 同じ曲線シーケンスの入力にどの WKT (Well-known Text) 形式を使用しても、`STCurveN()` インスタンスを使用する場合、`CompoundCurve` によって返される結果は同じです。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. STCurveN() を呼び出す前に、パラメーターを検証する  
- 次の例では、`@n` メソッドを呼び出す前に `STCurveN()` が有効であることを確認する方法を示しています。  
+ 次の例では、`STCurveN()` メソッドを呼び出す前に `@n` が有効であることを確認する方法を示しています。  
   
 ```
  DECLARE @g geometry;  

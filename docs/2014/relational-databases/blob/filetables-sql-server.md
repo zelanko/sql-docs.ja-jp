@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67599d64429666c718c9a59f514d39e3657ced1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955252"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
   FileTable 機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66010088"
   
  FileTable の機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM テクノロジをベースとして構築されています。 FILESTREAM の詳細については、「[FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)」を参照してください。  
   
-##  <a name="Goals"></a> FileTable 機能の利点  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> FileTable 機能の利点  
  FileTable 機能の目的は、次のとおりです。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に格納されたファイル データに対する Windows API の互換性。 Windows API の互換性は、次のとおりです。  
@@ -46,7 +45,7 @@ ms.locfileid: "66010088"
   
  このようにして、FileTable は、現在ファイル サーバーにファイルとして格納されている非構造化データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で保管および管理するうえでの大きな障壁を取り除きます。 企業は、このデータをファイル サーバーから FileTable に移動して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が提供する統合管理およびサービスを活用できます。 それと同時に、ファイル システムでこのデータをファイルとして認識する既存の Windows アプリケーションとの互換性を維持することもできます。  
     
-##  <a name="Description"></a> FileTable とは  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> FileTable とは  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、データベース内のファイルとディレクトリのストレージを必要とするアプリケーションに対して、Windows API の互換性および非トランザクション アクセスによって、特殊な **ファイルのテーブル**( **FileTable**と呼ばれます) を提供します。 FileTable は、FILESTREAM データ、ファイルとディレクトリの階層の情報、およびファイル属性を保存するための定義済みのスキーマを持つ、特殊なユーザー テーブルです。  
   
  FileTable には、次の機能が含まれています。  
@@ -82,27 +81,27 @@ ms.locfileid: "66010088"
 -   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
   
   
-##  <a name="additional"></a>Filetable の使用に関するその他の注意点  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a>Filetable の使用に関するその他の注意点  
   
-###  <a name="DBA"></a>管理上の注意点  
- **FILESTREAM と Filetable について**  
+###  <a name="administrative-considerations"></a><a name="DBA"></a>管理上の注意点  
+ **FILESTREAM と FileTable について**  
   
 -   FileTable は FILESTREAM とは別に構成します。 したがって、非トランザクション アクセスの有効化や FileTable の作成を行うことなく、FILESTREAM 機能を使用し続けることができます。  
   
 -   FileTable を介した場合を除き、FILESTREAM データへの非トランザクション アクセスは存在しません。 そのため、非トランザクション アクセスを有効にしても、既存の FILESTREAM 列およびアプリケーションの動作は影響を受けません。  
   
- **Filetable と非トランザクションアクセスについて**  
+ **FileTable と非トランザクション アクセスについて**  
   
 -   非トランザクション アクセスは、データベース レベルで有効または無効にできます。  
   
 -   非トランザクション アクセスをオフにしたり、読み取り専用または完全な読み取り/書き込みアクセスを有効にしたりすることによって、データベース レベルで非トランザクション アクセスを構成または調整することができます。  
   
   
-###  <a name="memory"></a>Filetable では、メモリマップトファイルはサポートされていません  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a> FileTable ではメモリ マップ ファイルはサポートされていません  
  FileTable ではメモリ マップ ファイルはサポートされていません。 メモ帳とペイントの 2 つは、メモリ マップ ファイルを使用するアプリケーションの一般的な例です。 これらのアプリケーションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じコンピューターで使用して、FileTable に保存されているファイルを開くことはできません。 ただし、これらのアプリケーションをリモート コンピューターで使用すると、メモリ マッピング機能が使用されないため、FileTable に保存されているファイルを開くことができます。  
   
   
-##  <a name="reltasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 関連タスク  
  [FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)  
  FileTable を作成および使用するための前提条件を有効にする方法について説明します。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66010088"
  FileTable を管理するための一般的な管理タスクについて説明します。  
   
   
-##  <a name="relcontent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="relcontent"></a> 関連コンテンツ  
  [FileTable スキーマ](filetable-schema.md)  
  FileTable の定義済みスキーマおよび固定スキーマについて説明します。  
   

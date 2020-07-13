@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100908"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
@@ -27,7 +27,7 @@ ms.locfileid: "66100908"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
  このトピックの内容:  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66100908"
   
 -   [ファイル形式](#bkmk_file_formats)  
   
--   [ファイルのオプション](#bkmk_file_options)  
+-   [ファイル オプション](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a>共有フォルダーに配信されるレポートの特性  
+##  <a name="characteristics-of-a-report-that-is-delivered-to-a-shared-folder"></a><a name="bkmk_Characteristics"></a>共有フォルダーに配信されるレポートの特性  
  レポート サーバーによってホストおよび管理されるレポートとは異なり、共有フォルダーに配信されるレポートは静的なファイルです。 レポート用に定義されている対話機能は、ファイル システムにファイルとして保存されているレポートには使用できません。 対話機能は、静的要素として表現されます。 たとえば、マトリックス形式のレポートを配信する場合は、レポートのトップレベルのビューが表示されます。行および列を拡張して、サポートしているデータを表示することはできません。 レポートにグラフが含まれている場合は、既定の表示方法が使用されます。 レポートが別のレポートへリンクしている場合は、リンクは静的なテキストとして表示されます。 配信したレポートで対話機能を保持するには、代わりに電子メール配信を使用します。 詳細については、「 [Reporting Services の電子メール配信](e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
-##  <a name="bkmk_target_folders"></a>ターゲットフォルダー  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a>ターゲットフォルダー  
  ファイル共有の配信を使用するサブスクリプションを定義する場合には、対象フォルダーとして既存のフォルダーを指定する必要があります。 レポート サーバーでは、ファイル システムにフォルダーを作成しません。 指定するフォルダーは、ネットワーク接続を使用してアクセス可能である必要があります。  
   
  共有フォルダーでレポートを表示するユーザーに読み取り権限があることを確認します。  
@@ -55,12 +55,12 @@ ms.locfileid: "66100908"
   
  フォルダーを作成するときに、必要な接続の上限を検討します。 レポート サーバーに必要な接続数は 2 つですが、共有フォルダーでレポートを開く追加のユーザーに対応できるように、十分な接続数を指定する必要があります。  
   
-##  <a name="bkmk_file_formats"></a>ファイル形式  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> ファイル形式  
  レポートは、HTML や Excel などさまざまなファイル形式で表示されます。 レポートを特定の形式で保存するには、サブスクリプションの作成時に表示形式を選択します。 たとえば **Excel** を選択すると、レポートは [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ファイルとして保存されます。 サポートされている任意の表示形式を選択できますが、一部の形式はファイルの生成で他の形式より優れています。  
   
  ファイル共有配信を使用する場合は、すべての画像および関連するコンテンツが含まれているレポートを、単一のファイルで配信する形式を選択します。 適切な形式は、Web アーカイブ、PDF、TIFF、Excel などです。 HTML4.0 は避けてください。 レポートに画像が含まれている場合、HTML 4.0 形式のファイルにその画像が含まれるようには処理されません。  
   
-##  <a name="bkmk_file_options"></a>ファイルのオプション  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> ファイル オプション  
  サブスクリプションを作成する場合は、ファイル名の作成方法と、更新ごとに新しいバージョンに置き換えるかどうかを指定するオプションを選択できます。 完全修飾ファイル名は、名前、拡張子、およびファイルに付加されるテキストや数値という 3 つの要素で構成されて一意のファイル名が形成されます。 テキストまたは数値をファイル名に追加するかどうかは、上書きオプションによって決まります。  
   
  ファイル名はレポート名に基づいて生成されますが、サブスクリプションでは独自の名前を指定することもできます。 拡張子は省略可能です。拡張子を使用する場合は、表示形式に対応する拡張子がレポート サーバーによって生成されます。  

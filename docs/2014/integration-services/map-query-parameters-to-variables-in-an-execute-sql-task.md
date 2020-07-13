@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2e105e2ccccce912965cbfc0662a380ea1a6264
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057794"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440269"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
 
@@ -32,13 +31,11 @@ ms.locfileid: "66057794"
   
 ### <a name="to-map-a-query-parameter-to-a-variable"></a>クエリ パラメーターを変数にマップするには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、操作する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、操作する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックします。  
+3.  **[制御フロー]** タブをクリックします。  
   
 4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、「[制御フローでのタスクまたはコンテナーの追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   .  
@@ -60,7 +57,7 @@ ms.locfileid: "66057794"
     |接続の種類|パラメーター マーカー|  
     |---------------------|----------------------|  
     |ADO (ADO)|?|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL および OLE DB|?|  
   
@@ -74,31 +71,26 @@ ms.locfileid: "66057794"
   
      ストアド プロシージャでパラメーターを使用する例については、「 [SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。  
   
-7.  
-  **[パラメーター マッピング]** をクリックします。  
+7.  **[パラメーター マッピング]** をクリックします。  
   
 8.  パラメーター マッピングを追加するには、 **[追加]** をクリックします。  
   
-9. 
-  **[パラメーター名]** ボックスに名前を入力します。  
+9. **[パラメーター名]** ボックスに名前を入力します。  
   
      使用するパラメーター名は、SQL 実行タスクが使用する接続の種類によって異なります。  
   
     |接続の種類|パラメーター名|  
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
-10. 
-  **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)」を参照してください。  
+10. **[変数名]** 一覧で、変数を選択します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)」を参照してください。  
   
-11. 
-  **[方向]** 一覧で、パラメーターが入力、出力、または戻り値のいずれであるかを指定します。  
+11. **[方向]** 一覧で、パラメーターが入力、出力、または戻り値のいずれであるかを指定します。  
   
-12. 
-  **[データ型]** 一覧で、パラメーターのデータ型を設定します。  
+12. **[データ型]** 一覧で、パラメーターのデータ型を設定します。  
   
     > [!IMPORTANT]  
     >  パラメーターのデータ型は、変数のデータ型と互換性がある必要があります。  
@@ -113,6 +105,6 @@ ms.locfileid: "66057794"
 ## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [SQL 実行タスクのパラメーターとリターンコード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
   

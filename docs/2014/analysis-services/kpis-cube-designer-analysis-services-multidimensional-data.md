@@ -11,20 +11,18 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079426"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543636"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>[KPI] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブを使用すると、選択したキューブの主要業績評価指標 (KPI) を表示したり編集したりできます。  
   
 ## <a name="form-view-and-browser-view"></a>フォーム ビューとブラウザー ビュー  
- 
-  **[KPI]** タブで KPI の表示や編集をする際には、次の 2 種類のビューがサポートされます。  
+ **[KPI]** タブで KPI の表示や編集をする際には、次の 2 種類のビューがサポートされます。  
   
 -   フォーム ビュー  
   
@@ -36,7 +34,7 @@ ms.locfileid: "66079426"
   
 ## <a name="panes"></a>ペイン  
   
-|ペイン|定義|  
+|ウィンドウ|定義|  
 |----------|----------------|  
 |**ツール バー**|フォームビューとブラウザービューの両方のツールバーを使用して、このタブで一般的な操作を実行します。このペインの詳細については、「[ツールバー &#40;[Kpi] タブ」、「キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
 |**[KPI オーガナイザー]**|フォーム ビューの **[KPI オーガナイザー]** ペインでは、キューブに含まれている KPI が一覧形式で表示されます。 このペインの詳細については、[「KPI Organizer (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)」](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md) (KPI オーガナイザー (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)) を参照してください。|  

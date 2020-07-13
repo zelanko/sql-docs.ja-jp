@@ -17,15 +17,14 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e39e2f41b7dee5af798498bea31b1988141838a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437549"
 ---
 # <a name="row-sampling-transformation"></a>行サンプリング変換
   行サンプリング変換を使用すると、入力データセットからランダムに選択されたサブセットを取得できます。 出力サンプルの正確なサイズを指定したり、乱数ジェネレーターのシード値を指定できます。  
@@ -47,12 +46,9 @@ ms.locfileid: "62770398"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[行サンプリング変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[行サンプリング変換エディター &#40;[サンプリング] ページ&#41;](../../row-sampling-transformation-editor-sampling-page.md)」をご覧ください。  
+ **[行サンプリング変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「[行サンプリング変換エディター &#40;[サンプリング] ページ&#41;](../../row-sampling-transformation-editor-sampling-page.md)」をご覧ください。  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

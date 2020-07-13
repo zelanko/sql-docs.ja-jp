@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 785ab80a529140a52ec18ef96ccaaeafd03698cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62874927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954266"
 ---
 # <a name="designing-assemblies"></a>アセンブリのデザイン
   このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
@@ -57,8 +56,7 @@ ms.locfileid: "62874927"
  また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 UNSAFE アセンブリを作成できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止されているカスタム属性  
  アセンブリには次のカスタム属性で注釈を付けることができません。  
@@ -84,7 +82,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]許可されていない**hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
+ 許可されていない [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] **hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
   
 ```  
 eSelfAffectingProcessMgmt  

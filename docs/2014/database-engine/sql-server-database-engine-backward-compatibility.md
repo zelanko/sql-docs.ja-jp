@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fee4d3370e64906a3705c28c893e9cec6a604978
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62842849"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928947"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server データベース エンジンの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 各バージョンでの動作の相違について説明します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 2014 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2016.md)|このリリースで非推奨とされた [!INCLUDE[ssDE](../includes/ssde-md.md)] 機能。|  
 |[SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md)|このリリースで廃止された [!INCLUDE[ssDE](../includes/ssde-md.md)] 機能|  
-|[SQL Server 2014 におけるデータベース エンジン機能の重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 機能の、場合によってはアプリケーションの修正が必要となる変更。|  
+|[SQL Server 2014 でのデータベースエンジン機能の重大な変更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] 機能の、場合によってはアプリケーションの修正が必要となる変更。|  
 |[SQL Server 2014 におけるデータベース エンジン機能の動作の変更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|このリリースのデータベース機能に対するその他の変更|  
   
   

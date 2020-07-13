@@ -15,14 +15,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077283"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303523"
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
 Unicode は、すべての文字を2バイトの固定幅として扱う、ソフトウェア文字エンコーディングの方法です。 このメソッドは、Windows ANSI 文字エンコーディングの代わりに使用されます。これは、1バイトの文字を表すため、256文字に制限されます。 Unicode は65000文字を超えることができるため、ANSI エンコーディングでは文字が表現されない多くの言語に対応します。  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876736"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに新しいデータベース ロールを作成します。  
   
 > [!IMPORTANT]
->  **sp_addrole**は、以前のバージョンのとの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]互換性のために含まれており、将来のリリースではサポートされない可能性があります。 代わりに[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)を使用してください。  
+>  **sp_addrole**は、以前のバージョンのとの互換性のために含まれて [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。 代わりに[CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- データベースロールの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名前には、1 ~ 128 文字を含めることができます (文字、記号、数字を含む)。 データベースロールの名前には、円記号 (\\)、NULL、または空の文字列 (**' '**) を含めることはできません。  
+ データベースロールの名前には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1 ~ 128 文字を含めることができます (文字、記号、数字を含む)。 データベースロールの名前には、円記号 ( \\ )、NULL、または空の文字列 (**' '**) を含めることはできません。  
   
  データベースロールを追加した後、 [sp_addrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)を使用してプリンシパルをロールに追加します。 GRANT、DENY、または REVOKE ステートメントを使用してデータベースロールに権限を適用すると、データベースロールのメンバーは、権限がそのアカウントに直接適用されているかのように権限を継承します。  
   
@@ -62,16 +62,16 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースに CREATE SCHEMA が必要です。 *Owner*がユーザーまたはグループとして指定されている場合、そのユーザーまたはグループに対して IMPERSONATE が必要です。 *Owner*がロールとして指定されている場合、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 Owner がアプリケーションロールとして指定されている場合は、そのアプリケーションロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`Managers` という新しいロールを現在のデータベースに追加します。  
   
 ```  
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE ROLE &#40;Transact-sql&#41;](../../t-sql/statements/create-role-transact-sql.md)  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - allocating and freeing descriptors [ODBC]
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5eaf5b7d4dcf335636d8f8b3d5e3ac9b4b5f481f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 692c339af26b96aef3ffe4ba20f592c49b05d85e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909934"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288320"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>記述子の割り当てと解放
 記述子は、次のセクションで説明するように、暗黙的または明示的に割り当てられます。  

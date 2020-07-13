@@ -13,18 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34af1cc4319135e7f2e30ed0c287a6567e420f64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478480"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995376"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 文字列式の値を連結し、値の間に区切り記号を挿入します。 文字列の末尾に区切り記号は追加されません。 
  
@@ -32,7 +35,7 @@ ms.locfileid: "77478480"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -50,7 +53,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 <order_clause>   
 必要に応じて、`WITHIN GROUP` 句を使用して連結結果の順序を指定します。
 
-```
+```syntaxsql
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   

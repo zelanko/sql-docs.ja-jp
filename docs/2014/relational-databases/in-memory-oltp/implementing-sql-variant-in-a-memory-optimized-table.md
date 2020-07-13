@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f0e928ad5349538b11f81949a01f5a986f7d296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63157950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050104"
 ---
 # <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
   例として `SQL_VARIANT` 列を含むテーブルを考えてみます。  

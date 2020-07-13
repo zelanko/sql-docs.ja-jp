@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 459a983d72a91e628e8cc33636d3abd81998f1d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62867731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053823"
 ---
 # <a name="mssqlserver_601"></a>MSSQLSERVER_601
     
@@ -44,7 +43,7 @@ ms.locfileid: "62867731"
   
 ## <a name="see-also"></a>参照  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [Transact-sql&#41;&#40;テーブルヒント](/sql/t-sql/queries/hints-transact-sql-table)   
+ [テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   

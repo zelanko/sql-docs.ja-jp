@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba83dbb706b674581a35d5927639208adc061122
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62467876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025650"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ上でサポートされる構造
   このトピックでは、ネイティブ コンパイル ストアド プロシージャでサポートされる構造について説明します。  
@@ -45,6 +44,6 @@ ms.locfileid: "62467876"
 -   テーブルおよびプロシージャに対する GRANT 権限および DENY 権限。  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0978452104eb9a55d49dfa9f851ef7578489db26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65488943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006481"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7: DQS クレンジング変換をデータ フローに追加する
   ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 変換の詳細については、「 **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)**」を参照してください。  
@@ -34,7 +33,7 @@ ms.locfileid: "65488943"
   
 6.  [**テスト接続**] をクリックして DQS サーバーへの接続をテストします。  
   
-7.  [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
+7.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 8.  **データ品質ナレッジベース**の [**仕入先**] を選択します。  
   
@@ -55,12 +54,12 @@ ms.locfileid: "65488943"
     |Address Line|Address Line|  
     |City|City|  
     |State|State|  
-    |Country|Country|  
+    |国|国|  
     |Zip Code|Zip|  
   
 12. [ **OK]** をクリックして [ **DQS クレンジング変換エディター** ] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 8: 条件分割変換を追加してクレンジング出力を分割する](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

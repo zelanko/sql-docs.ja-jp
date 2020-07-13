@@ -16,14 +16,14 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da899e4dc47daff03c31277b3edd4d9c642b87cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002008"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305293"
 ---
 # <a name="cursors"></a>カーソル
 アプリケーションは*カーソル*を使用してデータをフェッチします。 カーソルは、結果セットとは異なります。結果セットは、特定の検索条件に一致する行のセットです。一方、カーソルは、それらの行をアプリケーションに返すソフトウェアです。 データベースに適用される名前*カーソル*。これは、コンピューターターミナルの点滅カーソルから発生することがあります。 カーソルが画面上の現在位置を示し、型指定された単語が次に表示されるのと同様に、結果セットのカーソルは結果セット内の現在の位置と、次に返される行を示します。  

@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed44a434d8c66075c8281bb7ae1f645a189a0da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7e624dfd3c00f97debd9b309b5b534a262b7f7b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641436"
 ---
 # <a name="localdb_error_unknown_instance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

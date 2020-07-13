@@ -11,20 +11,20 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925694"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761128"
 ---
 # <a name="current-record-and-size-of-recordset"></a>レコードセットの現在のレコードとサイズ
 ここでは、JScript コード例のサンプル**レコード**セット内のカーソルの現在位置を検索して、[レコードセットを返す](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)方法について説明します。  
   
 ## <a name="current-record"></a>現在のレコード  
- データセット内の現在のレコードは、**レコードセット**オブジェクトのカーソル位置が指すものに対応します。 レコードセットを呼び出した結果として **、レコードセットオブジェクトが**データソースから返された場合、このカーソルは最初のレコードをポイントするように設定**** されています。この場合、 **Open**、 **Command. execute**、または**connection. execute** **(接続を含む)** を呼び出します。 サンプルデータセットでは、最初の現在のレコードは "あなた Bob's 有機理屈 Pears" 項目です。  
+ データセット内の現在のレコードは、**レコードセット**オブジェクトのカーソル位置が指すものに対応します。 レコードセットを呼び出した結果として **、レコードセットオブジェクトが**データソースから返された場合、このカーソルは最初のレコードをポイントするように設定**Connection.StoredProcedure**されています。この場合、 **Open**、 **Command. execute**、または**connection. execute** **(接続を含む)** を呼び出します。 サンプルデータセットでは、最初の現在のレコードは "あなた Bob's 有機理屈 Pears" 項目です。  
   
 ## <a name="size-of-recordset"></a>レコードセットのサイズ  
  **レコードセット**オブジェクトのサイズを調べるには、**レコードセットの RecordCount**プロパティの値を取得します。 この値は、**レコードセット**内のレコードの数を示す long 整数です。 データセットが Microsoft SQL Server の OLEDB プロバイダーから返された場合、この値によって返される行の数が示されます。 閉じた**レコードセット**の**RecordCount**プロパティを読み取ると、エラーが発生します。  

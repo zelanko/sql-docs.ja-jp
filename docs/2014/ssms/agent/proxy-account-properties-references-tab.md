@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50877c8abf0ba77f55f36297486dfdb3abeb7658
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62714566"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067634"
 ---
-# <a name="proxy-account-properties-references-tab"></a>[プロキシ アカウントのプロパティ] \([参照設定] タブ)
-  この読み取り専用ページには、エージェントプロキシアカウントを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参照するジョブステップが一覧表示されます。  
+# <a name="proxy-account-properties-references-tab"></a>[プロキシ アカウントのプロパティ]  ([参照設定] タブ)
+  この読み取り専用ページには、エージェントプロキシアカウントを参照するジョブステップが一覧表示さ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。  
   
 ## <a name="options"></a>オプション  
  **ジョブ名**  
@@ -29,7 +28,7 @@ ms.locfileid: "62714566"
  **ジョブ ステップ**  
  このプロキシ アカウントを使用する、ジョブ内のジョブ ステップの名前です。  
   
- **Subsystem**  
+ **サブ**  
  このプロキシ アカウントで使用されるサブシステムです。  
   
 ## <a name="see-also"></a>参照  

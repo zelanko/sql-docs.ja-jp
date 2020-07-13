@@ -19,30 +19,30 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68133072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772979"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは 5 分間隔で収集され、集計されます。 15秒ごとに1行のレポートが作成されます。 返されるデータには、CPU 使用率、ストレージサイズ、IO 使用率、およびマネージインスタンス SKU が含まれます。 履歴データは約14日間保持されます。
+Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは、5 分間隔で収集と集計が実行されます。 15 秒ごとの報告につき 1 行作成されます。 返されるデータには、CPU 使用率、ストレージ サイズ、IO 使用率、マネージド インスタンス SKU が含まれます。 履歴データは約 14 日間保持されます。
 
 **Server_resource_stats**ビューには、データベースが関連付けられている Azure SQL マネージインスタンスのバージョンに応じて、さまざまな定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|[列]|データ型|[説明]|  
+|[列]|データ型|説明|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15秒のレポート間隔の開始を示す UTC 時刻|  
-|end_time|**DATETIME**|15秒のレポート間隔の終了を示す UTC 時刻|
-|resource_type|Nvarchar (128)|メトリックが提供されるリソースの種類|
+|end_time|**datetime**|15秒のレポート間隔の終了を示す UTC 時刻|
+|resource_type|Nvarchar(128)|メトリックが提供されるリソースの種類|
 |resource_name|nvarchar(128)|リソースの名前。|
-|sku|nvarchar(128)|インスタンスのサービス階層を Managed Instance します。 使用できる値を次に示します。 <br><ul><li>汎用</li></ul><ul><li>Business Critical</li></ul>|
+|sku|nvarchar(128)|インスタンスのサービス階層を Managed Instance します。 使用できる値を次に示します。 <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|ハードウェア生成識別子: Gen 4 または Gen 5|
 |virtual_core_count|INT|インスタンスあたりの仮想コア数 (パブリックプレビューの場合は8、16、24) を表します。|
 |avg_cpu_percent|decimal (5, 2)|インスタンスによって使用される Managed Instance サービス階層の制限の割合での平均コンピューティング使用率。 この値は、インスタンス内のすべてのデータベースのすべてのリソースプールの CPU 時間の合計として計算され、指定された間隔でその層の使用可能な CPU 時間で除算されます。|
@@ -59,10 +59,10 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 ## <a name="permissions"></a>アクセス許可  
  このビューは、 **master**データベースに接続する権限を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表現されます。  
  
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
   
 ```sql  
@@ -77,5 +77,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Managed Instance サービスレベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

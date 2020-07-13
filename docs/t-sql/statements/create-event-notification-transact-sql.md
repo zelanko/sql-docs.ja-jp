@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f996ed5d086d263499214321c3f73bff39b805cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902814"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902277"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース イベントやサーバー イベントに関する情報を Service Broker サービスに送信するオブジェクトを作成します。 イベント通知は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでのみ作成されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67902814"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   

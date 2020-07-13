@@ -16,17 +16,17 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 21a6a1fb44908e338f3b640747862ecf93c85885
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892160"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の、指定したパーティション関数に対して、パーティション分割列の値のセットがマップされるパーティション番号を返します。  
   

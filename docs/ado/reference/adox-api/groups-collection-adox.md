@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764853"
 ---
 # <a name="groups-collection-adox"></a>Groups コレクション (ADOX)
 カタログまたはユーザーの格納されているすべての[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Groups**コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
  **Groups**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドは、ADOX で一意です。 次のようにすることができます。  

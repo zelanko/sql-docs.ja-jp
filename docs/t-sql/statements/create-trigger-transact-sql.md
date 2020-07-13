@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CREATE TRIGGER ステートメントの Transact-SQL リファレンス。DML、DDL、ログオン トリガーの作成に使用されます。
 ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +27,13 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: mathoma
+ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287686"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635542"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに
   
 ## <a name="sql-server-syntax"></a>SQL Server 構文  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -77,7 +77,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -96,7 +96,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-``` 
+```syntaxsql
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -112,7 +112,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```syntaxsql
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -129,7 +129,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="azure-sql-database-syntax"></a>Azure SQL Database 構文  
   
-``` 
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -145,7 +145,7 @@ ON { table | view }
   
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -162,7 +162,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>引数
 OR ALTER  
-**適用対象**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)。 
+**適用対象**:Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)。 
   
 トリガーが既に存在する場合にのみ、条件付きでビューを変更します。 
   
@@ -231,7 +231,7 @@ WITH APPEND
 発生後に DDL トリガーが起動される [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの名前。 DDL トリガーで使用できるイベントの一覧については、「[DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
   
 *event_group*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの定義済みグループの名前。 DDL トリガーは、[!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*に属する* 言語イベントの発生後に起動します。 DDL トリガーで使用できるイベント グループの一覧については、「[DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)」を参照してください。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの定義済みグループの名前。 DDL トリガーは、*event_group* に属する [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語イベントの発生後に起動します。 DDL トリガーで使用できるイベント グループの一覧については、「[DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)」を参照してください。  
   
 *event_group* は、対応するイベントの種類を sys.trigger_events カタログ ビューに追加した場合、CREATE TRIGGER が終了した後でマクロとしても動作します。  
   
@@ -269,7 +269,7 @@ DDL トリガーおよびログオン トリガーでは、[EVENTDATA &#40;Trans
 CLR トリガーに対して、トリガーにバインドするアセンブリのメソッドを指定します。 このメソッドは引数を受け取らず、void を返す必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 このクラスの名前が名前空間で修飾されており、名前空間の部分がピリオド (.) で分けられている場合は、このクラス名を角かっこ ([ ]) または引用符 (" ") で区切る必要があります。 入れ子になったクラスは使用できません。  
   
 > [!NOTE]  
->  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[ によって ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled オプション[が有効になっていない場合、これらの参照は ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) のインスタンスでは実行されません。  
+>  既定では、CLR コードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能はオフになっています。 マネージド コード モジュールを参照するデータベース オブジェクトを作成、変更、削除することはできますが、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) によって [clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)が有効になっていない場合、これらの参照は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは実行されません。  
   
 ## <a name="remarks-for-dml-triggers"></a>DML トリガーの解説  
 DML トリガーは主に、ビジネス ルールとデータの整合性を設定するために使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ALTER TABLE と CREATE TABLE ステートメントで宣言参照整合性 (DRI) を使用できます。 ただし、DRI ではデータベース間の参照整合性は提供されません。 参照整合性とは、テーブルの主キーと外部キー間の関係についての規則です。 参照整合性を設定するには、ALTER TABLE と CREATE TABLE で、PRIMARY KEY と FOREIGN KEY 制約を使用します。 トリガー テーブルに制約が存在する場合、これらは INSTEAD OF トリガーが実行された後、AFTER トリガーが実行される前にチェックされます。 制約違反の場合は、INSTEAD OF トリガーの動作がロールバックされ、AFTER トリガーは起動されません。  
@@ -414,7 +414,7 @@ DML トリガーを作成するには、トリガーを作成するテーブル�
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. DML トリガーを事前通知と組み合わせて使用する  
-次の DML トリガーは、`Customer` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルでデータの追加または変更が試行されたときに、クライアントに対してメッセージを表示します。  
+次の DML トリガーは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Customer` テーブルでデータの追加または変更が試行されたときに、クライアントに対してメッセージを表示します。  
   
 ```sql  
 CREATE TRIGGER reminder1  
@@ -528,7 +528,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. ログオン トリガーを使用する  
-次のログオン トリガーの例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_test*ログインで既に 3 つのユーザー セッションが実行されている場合に、そのログインのメンバーとして* にログインを試行すると拒否されます。  
+次のログオン トリガーの例では、*login_test* ログインで既に 3 つのユーザー セッションが実行されている場合に、そのログインのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインを試行すると拒否されます。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918074"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762433"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord メソッド (ADO)
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを別の場所に移動します。  
@@ -35,25 +35,25 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 移動する**レコード**を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、この**レコード**によって表されるオブジェクトが移動されます。 たとえば、**レコード**がファイルを表している場合、ファイルの内容は*Destination*によって指定された場所に移動されます。  
+ 任意。 移動する**レコード**を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、この**レコード**によって表されるオブジェクトが移動されます。 たとえば、**レコード**がファイルを表している場合、ファイルの内容は*Destination*によって指定された場所に移動されます。  
   
- *宛先*  
- 省略可能。 *ソース*を移動する場所を指定する URL を含む**文字列**値です。  
+ *Destination (宛先)*  
+ 任意。 *ソース*を移動する場所を指定する URL を含む**文字列**値です。  
   
  *ユーザー名*  
- 省略可能。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
+ 任意。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
  *パスワード*  
- 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**。  
+ 任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**。  
   
- *オプション*  
- 省略可能。 既定値が**Admoveunspecified**である[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
+ *[オプション]*  
+ 任意。 既定値が**Admoveunspecified**である[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
- *Io*  
- 省略可能。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
+ *Async*  
+ 任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- **文字列**値です。 通常、 *Destination*の値が返されます。 ただし、返される正確な値はプロバイダーに依存します。  
+ **文字列**値。 通常、 *Destination*の値が返されます。 ただし、返される正確な値はプロバイダーに依存します。  
   
 ## <a name="remarks"></a>解説  
  *Source*と*Destination*の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくともサーバー、パス、およびリソース名が異なる必要があります。  

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e506e2846de3d106cfc6e4eccd7519d428da4f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68768946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771516"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パラメーター化された行フィルターを使用して、パブリケーションに対するサブスクリプションのスナップショットを生成するエージェントジョブを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -59,13 +59,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`エージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週単位|  
-|**まで**|月単位|  
+|**8**|週次|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -73,41 +73,41 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`エージェントを実行する曜日。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|土曜日|  
 |**2**|月曜日|  
-|**番**|Tuesday|  
+|**3**|Tuesday|  
 |**4**|水曜日|  
-|**5/5**|Thursday|  
+|**5**|Thursday|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
-|**9**|平日の日中|  
-|**種類**|週末|  
+|**8**|日間|  
+|**9**|平日|  
+|"**10**"|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
+|**2**|Second|  
 |**4**|分|  
-|**8**|時|  
+|**8**|時間|  
 |NULL (既定値)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は NULL です。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントが実行される日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**1**|First (先頭へ)|  
-|**2**|秒|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**16**|末尾|  
 |NULL (既定値)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は NULL です。  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`マージエージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**,、既定値は NULL です。  
   
-`[ @job_login = ] 'job_login'`パラメーター化[!INCLUDE[msCoName](../../includes/msconame-md.md)]された行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントを指定します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。  
+`[ @job_login = ] 'job_login'`パラメーター化された [!INCLUDE[msCoName](../../includes/msconame-md.md)] 行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントを指定します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。  
   
 `[ @job_password = ] 'job_password'`パラメーター化された行フィルターを使用してサブスクリプションのスナップショットを生成するときに、スナップショットエージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**nvarchar (257)** で、既定値は NULL です。  
   
@@ -130,7 +130,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changedynamicsnapshot_job**は、パラメーター化された行フィルターを使用したパブリケーションのマージレプリケーションで使用されます。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -138,8 +138,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changedynamicsnapshot_job**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [パラメーター化されたフィルターを使用したマージパブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca89eb84abc1826a91b4ee8ef285246f6c3de719
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882320"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>変更セットと承認 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Excel 用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アドインでは、エンティティに対する保留中の変更を変更セットに保存できます。 既存の変更セットを適用して保留中の変更を表示、変更してから、既存の変更セットをコミットすることができます。  
   
- エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、承認を受ける必要があります。 詳細については、「[承認が必要 &#40;マスターデータサービス](../../master-data-services/approval-required-master-data-services.md)」を参照してください&#41;  
+ エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、承認を受ける必要があります。 詳細については、「[承認が必要 (マスター データ サービス)](../../master-data-services/approval-required-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [変更セット &#40;マスターデータサービス&#41;](../../master-data-services/changesets-master-data-services.md)  
+## <a name="see-also"></a>関連項目  
+ [変更セット (マスター データ サービス)](../../master-data-services/changesets-master-data-services.md)  
   
   

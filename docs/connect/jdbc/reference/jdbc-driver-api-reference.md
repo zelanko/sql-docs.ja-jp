@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 901eb239b09e44b3e1ed6524284ead9b8a38f3b3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923109"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67977003"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API リファレンス
 
@@ -75,7 +75,7 @@ JDBC バージョン 6.0 やそれ以降の一部のバージョンのドキュ�
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement インターフェイス](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。|  
 |[ISQLServerConnection インターフェイス](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの JDBC 接続を表します。|  
-|[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ISQLServerConnection[ オブジェクトを利用した ](../../../connect/jdbc/reference/sqlserverconnection-class.md) データベースへの接続に固有のプロパティの一覧を表します。|  
+|[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを利用した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの接続に固有のプロパティの一覧を表します。|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|JDBC の準備されたステートメント機能の基本的な実装を表します。|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|JDBC 結果セットを表します。|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC ステートメント機能の基本的な実装を表します。|
@@ -94,7 +94,7 @@ JDBC バージョン 6.0 やそれ以降の一部のバージョンのドキュ�
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|ISQLServerConnectopn を実装します。|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|接続プール マネージャーの物理データベース接続を表します。|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|データベースのメタデータを表します。|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLServerConnection[ オブジェクトを利用した ](../../../connect/jdbc/reference/sqlserverconnection-class.md) データベースへの接続に固有のプロパティの一覧を表します。|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを利用した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへの接続に固有のプロパティの一覧を表します。|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|JNDI (Java Naming and Directory Interface) からのデータ ソースを生成するオブジェクト ファクトリを表します。|  
 |[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC ドライバーを表します。 このクラスには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに接続し、JDBC ドライバーに関する情報を取得するためのメソッドが含まれます。|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|SQL ステートメントの実行に失敗したこと、または実行が完了しなかったことを表します。|  

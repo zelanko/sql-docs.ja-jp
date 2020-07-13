@@ -1,5 +1,5 @@
 ---
-title: スクリプト |Microsoft Docs
+title: スクリプト | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,17 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72781927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063065"
 ---
 # <a name="scripting"></a>スクリプトの作成
-  SMO でのスクリプティングは、<xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトおよびその子オブジェクトによって、または個々のオブジェクトの `Script` メソッドによって制御されます。 オブジェクト<xref:Microsoft.SqlServer.Management.Smo.Scripter>は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトに対する依存関係からのマッピングを制御します。  
+  SMO でのスクリプティングは、<xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトおよびその子オブジェクトによって、または個々のオブジェクトの `Script` メソッドによって制御されます。 オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Scripter> のインスタンス上のオブジェクトに対する依存関係からのマッピングを制御し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
+ <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
 1.  探索  
   
@@ -36,8 +34,7 @@ ms.locfileid: "72781927"
   
  リスト生成フェーズでは、このツリーが渡され、結果リストが返されます。 このオブジェクト リストは記述順であり、変更することもできます。  
   
- リスト生成フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> メソッドを使用して <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> を返します。 
-  <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> はこの段階で変更することができます。  
+ リスト生成フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> メソッドを使用して <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> を返します。 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> はこの段階で変更することができます。  
   
  3 番目の最後のフェーズでは、指定されたリストとスクリプティング オプションを使用してスクリプトが生成されます。 結果は <xref:System.Collections.Specialized.StringCollection> システム オブジェクトとして返されます。 このフェーズで、<xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトの Items コレクションおよび <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> や <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> などのプロパティから、依存オブジェクト名が抽出されます。  
   

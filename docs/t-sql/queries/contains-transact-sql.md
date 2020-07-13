@@ -1,6 +1,6 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CONTAINS 言語要素の Transact-SQL リファレンス。 別の式内で単語や語句を検索するために使用されます。
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,18 +34,18 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982832"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635848"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [ SELECT ステートメントの ](../../t-sql/queries/where-transact-sql.md)WHERE 句[!INCLUDE[tsql](../../includes/tsql-md.md)]で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
   
  次に CONTAINS の検索対象を示します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73982832"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   
@@ -165,7 +165,7 @@ CONTAINS (
   
  *language_term* には、言語の LCID に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
- *language_term* を文字列で指定する場合は、**sys.syslanguages &#40;Transact-SQL&#41;** 互換性ビューの [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 列の値と同じ値を指定します。 文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ *language_term* を文字列で指定する場合は、[sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  *column_name* で検索するテキストと、その一致条件を指定します。  
   
-*\<contains_search_condition>* is **nvarchar**. 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`@SearchWord` 述語において、`varchar(30)` として定義されている変数 `CONTAINS` が暗黙に変換されます。
+*\<contains_search_condition>* is **nvarchar**. 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`CONTAINS` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -359,7 +359,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="querying-multiple-columns-full-text-search"></a>複数列のクエリ (フルテキスト検索)  
  検索する列のリストを指定することで、複数の列に対してクエリを実行できます。 クエリを実行する列は同じテーブルに含まれている必要があります。  
   
- たとえば、次の CONTAINS クエリでは、`Red` サンプル データベースの `Name` テーブルの `Color` 列と `Production.Product` 列内で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という語句を検索します。  
+ たとえば、次の CONTAINS クエリでは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `Production.Product` テーブルの `Name` 列と `Color` 列内で、`Red` という語句を検索します。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -372,7 +372,7 @@ WHERE CONTAINS((Name, Color), 'Red');
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS を \<simple_term> と共に使用する  
- 次の例では、 `$80.99` という単語を含み、価格が `Mountain` であるすべての製品を検索します。  
+ 次の例では、 `Mountain` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -521,7 +521,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
- 次のクエリでは、`Title` テーブルの `Document` 列内で、インデックス化されたプロパティ `Production.Document` を検索します。 このクエリは、`Title` または `Maintenance` という文字列が `Repair` プロパティに含まれているドキュメントのみを返します。  
+ 次のクエリでは、`Production.Document` テーブルの `Document` 列内で、インデックス化されたプロパティ `Title` を検索します。 このクエリは、`Title` または `Maintenance` という文字列が `Repair` プロパティに含まれているドキュメントのみを返します。  
   
 > [!NOTE]  
 >  プロパティ検索で行が返されるためには、インデックスの作成中に列を解析するフィルターによって、指定されたプロパティが抽出される必要があります。 また、指定されたテーブルのフルテキスト インデックスが、プロパティを含めるように構成されている必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  

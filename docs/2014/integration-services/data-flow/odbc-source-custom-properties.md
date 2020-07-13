@@ -7,20 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9239c1022cd9dfab1edba675c21e69129efe36c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405f798bd0344ece545ce319a1994e0f2c4f98db
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770978"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431765"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC 入力元のカスタム プロパティ
   次の表は、ODBC 入力元のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |Connection|ODBC Connection|入力元データベースにアクセスするための ODBC 接続。|  
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 有効な値は、テーブル名 (0) およびSQLコマンド (1) です。<br /><br /> 既定値はテーブル名 (0) です。|  

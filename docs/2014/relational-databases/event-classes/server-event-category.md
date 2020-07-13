@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a4a44a38d2475537e639ece0b35829cfed1c596e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63044223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028794"
 ---
 # <a name="server-event-category"></a>Server イベント カテゴリ
-  **Server**イベントカテゴリには、一般的なサーバーイベントが含まれます。  
+  **Server** イベント カテゴリには、一般的なサーバー イベントが含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Mount Tape イベント クラス](mount-tape-event-class.md)|テープ マウント要求を受け取ったことを示します。|  
-|[Server Memory Change イベント クラス](server-memory-change-event-class.md)|メモリ使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]量が変更されたことを示します。|  
+|[Server Memory Change イベント クラス](server-memory-change-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量が変更されたことを示します。|  
 |[Trace File Close イベント クラス](trace-file-close-event-class.md)|トレース ファイルのロールオーバー中にトレース ファイルが閉じられたことを示します。|  
   
   

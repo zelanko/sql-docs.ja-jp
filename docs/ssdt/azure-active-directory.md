@@ -29,7 +29,7 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 
 #### <a name="which-azure-sql-products"></a>対象となる Azure SQL 製品
 
-この記事では、*Azure クラウド*の次の [Azure SQL 製品](https://azure.microsoft.com/)を対象に Azure AD について説明します。
+この記事では、[Azure クラウド](https://azure.microsoft.com/)の次の *Azure SQL 製品*を対象に Azure AD について説明します。
 
 - Azure SQL データベース
 - Azure SQL Data Warehouse

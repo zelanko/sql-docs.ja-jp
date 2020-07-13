@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019121"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304661"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>C から SQL データ型へのデータ変換
 アプリケーションが**Sqlexecute**または**SQLExecDirect**を呼び出すと、ドライバーは、アプリケーションのストレージの場所から**SQLBindParameter**にバインドされているすべてのパラメーターのデータを取得します。 アプリケーションが**SQLSetPos**を呼び出すと、ドライバーは、 **SQLBindCol**にバインドされた列から更新操作または追加操作のデータを取得します。 実行時データパラメーターの場合、アプリケーションは**Sqlputdata**を使用してパラメーターデータを送信します。 必要に応じて、ドライバーは、 **SQLBindParameter**の*ValueType*引数で指定されたデータ型から、 **SQLBindParameter**の*ParameterType*引数で指定されたデータ型にデータを変換し、データをデータソースに送信します。  
@@ -61,17 +61,17 @@ ms.locfileid: "68019121"
   
 -   [C から SQL へ: 数値](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C から SQL へ: ビット](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C から SQL へ: bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C から SQL へ: バイナリ](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C から SQL へ: Binary](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C から SQL へ: 日付](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C から SQL へ: Date](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
 -   [C から SQL へ: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C から SQL へ: 時刻](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C から SQL へ: Time](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C から SQL へ: タイムスタンプ](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C から SQL へ: Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
 -   [C から SQL へ: 年月の間隔](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   

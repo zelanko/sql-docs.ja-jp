@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017085"
 ---
 # <a name="arithmetic-operators"></a>算術演算子
@@ -22,12 +22,12 @@ ms.locfileid: "68017085"
   
  MDX では、以下の表に示す算術演算子がサポートされます。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
-|[+ (追加)](../mdx/add-mdx.md)|2 つの値を加算します。|  
-|[/(除算)](../mdx/divide-mdx-operator-reference.md)|1つの数値を別の数値で除算します。|  
+|[+ (加算)](../mdx/add-mdx.md)|2 つの値を加算します。|  
+|[/ (除算)](../mdx/divide-mdx-operator-reference.md)|1つの数値を別の数値で除算します。|  
 |[* (乗算)](../mdx/multiply-mdx.md)|2 つの値を乗算します。|  
-|[-(減算)](../mdx/subtract-mdx.md)|2 つの値の間で減算をします。|  
+|[- (減算)](../mdx/subtract-mdx.md)|2 つの値の間で減算をします。|  
 |^ (Power)|1つの数値を別の数値で累乗します。|  
   
 > [!NOTE]  

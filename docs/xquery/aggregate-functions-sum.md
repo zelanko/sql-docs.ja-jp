@@ -1,5 +1,6 @@
 ---
 title: sum 関数 (XQuery) |Microsoft Docs
+description: 数値のシーケンスの合計を返す XQuery 関数 sum () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5f329d4e4684997138d3c54e6b2831d70b961a93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765652"
 ---
 # <a name="aggregate-functions---sum"></a>集計関数 - sum
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   一連の数値の合計を返します。  
   
@@ -38,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  合計を計算するアトミック値のシーケンス。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Sum ()** に渡されるアトミック値のすべての型は、同じ基本型のサブタイプである必要があります。 使用できる基本データ型は、3 つの組み込みの数値基本データ型または xdt:untypedAtomic です。 Xdt: untypedAtomic 型の値は、xs: double にキャストされます。 これらの型が混在している場合、または他の型の他の値が渡された場合は、静的エラーが発生します。  
   
  **Sum ()** の結果は、入力が必要に応じて空のシーケンスであっても、Xdt: untypedAtomic の場合、xs: double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、結果は静的な型および動的な型 xs:integer の 0 になります。  
@@ -47,10 +48,10 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
  オーバーフローまたは範囲外の例外が発生したとき、関数は実行時エラーを返します。  
   
-## <a name="examples"></a>例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>使用例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A: sum() XQuery 関数を使用した、製造プロセス内のすべてのワーク センターの場所での合計労働時間の計算  
  次のクエリでは、製造手順が格納されているすべての製品モデルの製造プロセスにおける、すべてのワーク センターの場所での合計労働時間を計算します。  
   
 ```  
@@ -117,7 +118,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Sum ((xs: double ("INF"), xs: double ("-INF"))) では、ドメインエラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

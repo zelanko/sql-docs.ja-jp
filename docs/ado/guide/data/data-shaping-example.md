@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925664"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763633"
 ---
 # <a name="data-shaping-example"></a>データ シェイプの例
 次のデータシェイプコマンドは、Northwind データベースの**Customers**テーブルと**Orders**テーブルから階層**レコードセット**を作成する方法を示しています。  
@@ -32,7 +32,7 @@ RELATE customerID TO customerID)
   
  結果の整形された**レコードセット**の最初の2つのエントリは次のとおりです。  
   
-|CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
+|CustomerID|[ContactName]|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
 |ALFKI|マリア Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  

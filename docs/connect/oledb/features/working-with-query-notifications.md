@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 キューが空の場合、このステートメントでは空の結果セットが直ちに返されます。 それ以外の場合は、すべてのキュー通知が返されます。
 
-`SSPROP_QP_NOTIFICATION_MSGTEXT` と `SSPROP_QP_NOTIFICATION_OPTIONS` が null でも空でもない場合は、上で定義されている 3 つのプロパティが含まれるクエリ通知 TDS ヘッダーがサーバーに送信されます。 これは、コマンドが実行されるたびに行われます。 それらのいずれかが null (または空) の場合、ヘッダーは送信されず、`DB_E_ERRORSOCCURRED` が発生します (または、プロパティが両方ともオプションとしてマークされている場合は、`DB_S_ERRORSOCCURRED` が発生します)。 その後、状態の値は `DBPROPSTATUS_BADVALUE` に設定されます。 実行と準備の時点で検証が行われます。 同様に、クエリ通知プロパティが `DB_S_ERRORSOCCURED` より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に対して設定されている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が発生します。 この場合、状態の値は `DBPROPSTATUS_NOTSUPPORTED` です。
+`SSPROP_QP_NOTIFICATION_MSGTEXT` と `SSPROP_QP_NOTIFICATION_OPTIONS` が null でも空でもない場合は、上で定義されている 3 つのプロパティが含まれるクエリ通知 TDS ヘッダーがサーバーに送信されます。 これは、コマンドが実行されるたびに行われます。 それらのいずれかが null (または空) の場合、ヘッダーは送信されず、`DB_E_ERRORSOCCURRED` が発生します (または、プロパティが両方ともオプションとしてマークされている場合は、`DB_S_ERRORSOCCURRED` が発生します)。 その後、状態の値は `DBPROPSTATUS_BADVALUE` に設定されます。 実行と準備の時点で検証が行われます。 同様に、クエリ通知プロパティが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への接続に対して設定されている場合は、`DB_S_ERRORSOCCURED` が発生します。 この場合、状態の値は `DBPROPSTATUS_NOTSUPPORTED` です。
 
 サブスクリプションが開始されても、後続のメッセージが正常に配信されるかどうかは保証されません。 指定されたサーバー名の妥当性に関するチェックも行われません。
 

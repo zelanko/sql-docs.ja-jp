@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aaad5af180ff1275dc6e95bb1cc5687487a22fb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754519"
 ---
 # <a name="maintenance-plan-servers"></a>[メンテナンス プラン] ([サーバー])
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[サーバー]** ダイアログ ボックスでは、メンテナンス プランを実行するサーバーを選択します。  
   
  1 台のマスター サーバーと 1 台以上のターゲット サーバーで構成されたマルチサーバー環境は、マルチサーバー メンテナンス プランを作成するように構成する必要があります。 マルチサーバー メンテナンス プランでは、ローカル サーバーをマスター サーバーとして構成する必要があります。 マルチサーバー環境では、" **(local)** " マスター サーバーと対応するすべてのターゲット サーバーがこのダイアログ ボックスに表示されます。 ローカル サーバーに対して 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブが作成されます。 このジョブが有効かどうかは、" **(local)** " サーバーを選択するかどうかによって決まります。 ターゲット サーバーを選択すると、マルチサーバー ジョブが作成され、選択した各ターゲット サーバーにダウンロードされます。 ターゲット サーバーを選択しない場合、マルチサーバー ジョブは削除されます。  

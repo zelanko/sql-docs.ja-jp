@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc9a6d3ee38e50120ab22ec48b1a673013eb50da
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073599"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468957"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
   
  データベースの移動方法は多数あります。 このドキュメントでは、次の一般的なシナリオについて説明します。  
@@ -38,7 +36,7 @@ ms.locfileid: "66073599"
 > [!NOTE]  
 >  パスワードを割り当てずにデータベースをデタッチすると、そのデータベースはセキュリティで保護されていない状態のままになります。 データベースにパスワードを割り当てて、機密情報を保護することをお勧めします。 また、対応するアクセス セキュリティをデータベース フォルダー、サブフォルダー、ファイルに適用して、不正アクセスを防ぐ必要があります。  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 #### <a name="moving-a-database-interactively-using-ssms"></a>SSMS を使用したデータベースの対話的移動  
   
@@ -54,10 +52,9 @@ ms.locfileid: "66073599"
   
 6.  [**データベース**] フォルダーを右クリックし、[**アタッチ**] を選択します。  
   
-7.  
-  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
+7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
   
-8.  データベースの`ReadWrite`モードを選択します。  
+8.  `ReadWrite`データベースのモードを選択します。  
   
 9. 手順 3. で使用したパスワードを入力し、 **[OK]** をクリックしてアタッチ コマンドを実行します。  
   
@@ -121,8 +118,7 @@ ms.locfileid: "66073599"
   
  `</Detach>`  
   
-1.  
-  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   
@@ -138,14 +134,13 @@ ms.locfileid: "66073599"
   
  `</Attach>`  
   
-1.  
-  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll * のようになります。](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [データベースのストレージの場所](database-storage-location.md)   
  [データベース ReadWriteModes](database-readwritemodes.md)   

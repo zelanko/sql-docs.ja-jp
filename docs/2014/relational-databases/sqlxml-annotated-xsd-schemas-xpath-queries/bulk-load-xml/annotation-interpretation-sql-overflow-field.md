@@ -12,25 +12,23 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 45f29994242d40bd91a05b68f7afc3dcc2a38384
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068204"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、スキーマ内で `sql:overflow-field` 注釈により指定します。 オーバーフロー列は複数指定することもできます。  
   
- 
-  `sql:overflow-field` 注釈が定義されている XML ノード (要素または属性) がスコープ内に入るとオーバーフロー列がアクティブになり、未使用データがこの列に挿入されます。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
+ `sql:overflow-field` 注釈が定義されている XML ノード (要素または属性) がスコープ内に入るとオーバーフロー列がアクティブになり、未使用データがこの列に挿入されます。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
   
  XML 一括読み込みでは、オーバーフロー列へのデータの格納時に、`sql:overflow-field` が定義されている親要素の開始タグと終了タグも格納されます。  
   
- たとえば、次のスキーマでは、 ** \<顧客の>** と** \<custorder>** 要素について説明しています。 これらの要素それぞれに、オーバーフロー列が指定されています。  
+ たとえば、次のスキーマでは、要素と要素が記述されて **\<Customers>** **\<CustOrder>** います。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -74,9 +72,9 @@ ms.locfileid: "66013470"
 </xsd:schema>  
 ```  
   
- スキーマでは、 ** \<Customer>** 要素は Cust テーブルにマップされ、 ** \<Order>** 要素は custorder テーブルにマップされます。  
+ スキーマでは、 **\<Customer>** 要素は Cust テーブルにマップされ、 **\<Order>** 要素は custorder テーブルにマップされます。  
   
- ** \<Customer>** 要素と** \<Order>** 要素はどちらもオーバーフロー列を識別します。 したがって、XML 一括読み込みでは、Cust テーブルの overflow 列にある** \<Customer>** 要素のすべての未使用の子要素と属性、および custorder テーブルの overflow 列の** \<Order>** 要素のすべての未使用の子要素と属性が保存されます。  
+ 要素と要素は、どちらも **\<Customer>** **\<Order>** オーバーフロー列を識別します。 したがって、XML 一括読み込みでは、すべての未使用の子要素と要素の属性が、 **\<Customer>** Cust テーブルのオーバーフロー列と、 **\<Order>** custorder テーブルのオーバーフロー列にある要素のすべての未使用の子要素と属性に保存されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   

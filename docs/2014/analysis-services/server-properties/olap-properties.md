@@ -94,16 +94,14 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940619"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元サーバーモードのみ  
@@ -197,7 +195,7 @@ ms.locfileid: "66068870"
  `PartitionLatencyAccuracy`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="process"></a>プロセス  
+## <a name="process"></a>Process  
  `AggregationMemoryLimitMax`  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   
@@ -328,7 +326,7 @@ ms.locfileid: "66068870"
   
      これらのキャッシュによって使用されるメモリは縮小不能と見なされ、 **[TotalMemoryLimit]** を計算するときはその中に含まれることに注意してください。  
   
--   サーバー上のすべてのデータベースに影響します。 **Dimensionpropertycachesize**は、サーバー全体のプロパティです。 このプロパティを変更すると、現在のインスタンスで実行されているすべてのデータベースに影響を与えます。  
+-   サーバー上のすべてのデータベースに影響します。 **DimensionPropertyCachesize** は、サーバー全体のプロパティです。 このプロパティを変更すると、現在のインスタンスで実行されているすべてのデータベースに影響を与えます。  
   
  ディメンション キャッシュの要件を推定する方法:  
   
@@ -480,6 +478,6 @@ ms.locfileid: "66068870"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
- [Analysis Services インスタンスのサーバーモードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

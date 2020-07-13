@@ -14,14 +14,14 @@ helpviewer_keywords:
 - modules [ODBC]
 - SQL statements [ODBC], modules
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 351d1c6a34413b385bd76dfebb009b34c4c0f150
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076226"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280428"
 ---
 # <a name="sql-modules"></a>SQL モジュール
 SQL ステートメントを DBMS に送信するための2つ目の方法は、モジュールを使用することです。 簡単に言うと、モジュールは、ホストプログラミング言語から呼び出されるプロシージャのグループで構成されます。 各プロシージャには1つの SQL ステートメントが含まれており、パラメーターを使用してプロシージャとの間でデータが渡されます。  

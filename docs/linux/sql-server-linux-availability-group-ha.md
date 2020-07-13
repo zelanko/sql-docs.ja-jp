@@ -10,16 +10,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892253"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux サーバー上の SQL Server Always On 可用性グループに対してサポートされているデプロイ構成について説明します。 可用性グループでは、高可用性とデータ保護がサポートされています。 フェールオーバー後の自動障害検出、自動フェールオーバー、および透過的再接続により、高可用性が提供されます。 同期されるレプリカにより、データ保護が提供されます。 
 
@@ -136,7 +136,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Pacemaker 用の SQL Server リソース エージェントについて理解する
 
-SQL Server 2017 CTP 1.4 では、`sequence_number` に `sys.availability_groups` が追加されました。これにより、プライマリ レプリカに対するセカンダリ レプリカの最新度を Pacemaker で確認できるようになりました。 `sequence_number` は、ローカルの可用性グループ レプリカの最新度を表す、単調増加 BIGINT です。 Pacemaker により、可用性グループの構成が変更されるたびに `sequence_number` が更新されます。 構成変更の例としては、フェールオーバー、レプリカの追加、削除などがあります。 この数はプライマリ上で更新され、セカンダリ レプリカにレプリケートされます。 そのため、最新の構成を保持しているセカンダリ レプリカでは、シーケンス番号がプライマリと同じになります。 
+SQL Server 2017 CTP 1.4 では、`sys.availability_groups` に `sequence_number` が追加されました。これにより、プライマリ レプリカに対するセカンダリ レプリカの最新度を Pacemaker で確認できるようになりました。 `sequence_number` は、ローカルの可用性グループ レプリカの最新度を表す、単調増加 BIGINT です。 Pacemaker により、可用性グループの構成が変更されるたびに `sequence_number` が更新されます。 構成変更の例としては、フェールオーバー、レプリカの追加、削除などがあります。 この数はプライマリ上で更新され、セカンダリ レプリカにレプリケートされます。 そのため、最新の構成を保持しているセカンダリ レプリカでは、シーケンス番号がプライマリと同じになります。 
 
 レプリカをプライマリに昇格することが Pacemaker により決定されると、まずすべてのレプリカに "*昇格前*" の通知を送られます。 レプリカによりシーケンス番号が返されます。 次に、Pacemaker が実際にレプリカをプライマリに昇格しようとする際、レプリカは、そのシーケンス番号がすべてのシーケンス番号の最大値である場合にのみ自身を昇格させます。 自身のシーケンス番号が最大のシーケンス番号と一致しない場合、レプリカは昇格操作を拒否します。 この方法により、最大のシーケンス番号を持つレプリカだけがプライマリに昇格できるようになるため、データの損失が回避されます。 
 
@@ -155,7 +155,7 @@ SQL Server 2017 CTP 1.4 では、`sequence_number` に `sys.availability_groups`
 
 既定の動作をオーバーライドし、可用性グループ リソースが `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を自動的に設定しないようにすることもできます。
 
-次の例のスクリプトは、`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` という名前の可用性グループで `<**ag1**>` を 0 に設定します。 実行する前に、`<**ag1**>` を実際の可用性グループの名前に置き換えます。
+次の例のスクリプトは、`<**ag1**>` という名前の可用性グループで `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` を 0 に設定します。 実行する前に、`<**ag1**>` を実際の可用性グループの名前に置き換えます。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

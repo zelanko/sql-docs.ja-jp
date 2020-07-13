@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb8100365b064ef5403788ec072595f7b3f8e86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76911096"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763913"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule プロパティの例 (VC++)
 この例では、[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトの[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)プロパティを示します。 コードによって新しい[テーブル](../../../ado/reference/adox-api/table-object-adox.md)が追加され、新しい主キーが定義され、 **DeleteRule**が**adRICascade**に設定されます。  

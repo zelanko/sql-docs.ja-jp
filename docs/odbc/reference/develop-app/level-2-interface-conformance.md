@@ -12,14 +12,14 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50e74eaed2d651158834a241563d10b3b2e90d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915573"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306164"
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスの適合性
 レベル2のインターフェイスの準拠レベルには、レベル1のインターフェイスの準拠レベルの機能に加え、次の機能が含まれています。  

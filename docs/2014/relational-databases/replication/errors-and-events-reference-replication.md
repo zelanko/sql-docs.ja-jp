@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d40f4f16c3ab8997ddee5c565a5ff3131e70a0f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010706"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
   ここでは、レプリケーションに関連するさまざまなエラーの原因と解決方法について説明します。  

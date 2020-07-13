@@ -1,5 +1,6 @@
 ---
 title: 型のサポート、ODBC の日付と時刻
+description: 文字列、リテラル、データ構造のデータ型のマッピングと形式など、SQL Server の日付と時刻のデータ型をサポートする ODBC 型について説明します。
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -11,24 +12,22 @@ helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d2e4c8c8a664f7c8b4816cdb7c3eb8940d1573f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 87f0d54585cafac90a2ab47ec3a7f691c80fe9e5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76910035"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001474"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付/時刻の強化に対するデータ型のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする ODBC 型について説明します。  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>パラメーターと結果セットでのデータ型マッピング  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC では、サーバーの新しい型を公開するために、ODBC データ型 (SQL_TYPE_TIMESTAMP と SQL_TIMESTAMP) に加え、次の新しい 2 つのデータ型が追加されました。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC では、サーバーの新しい型を公開するために、ODBC データ型 (SQL_TYPE_TIMESTAMP と SQL_TIMESTAMP) に加え、次の新しい 2 つのデータ型が追加されました。  
   
 -   SQL_SS_TIME2  
   
@@ -36,7 +35,7 @@ ms.locfileid: "76910035"
   
  次の表は、完全なサーバー型のマッピングを示しています。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
   
-|SQL Server のデータ型|SQL データ型|Value|  
+|SQL Server のデータ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -63,8 +62,7 @@ ms.locfileid: "76910035"
   
 |SQL Server のデータ型|ODBC データ型|クライアントで変換した場合の文字列の形式|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
@@ -97,8 +95,7 @@ ms.locfileid: "76910035"
   
 -   秒の範囲は 0 ～ 61.9(n) です。 この範囲では、恒星時との同期を維持するために最大 2 秒のうるう秒が許可されています。  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はうるう秒を許可しないので、秒の値が 59 を超えるとサーバー エラーが発生することに注意してください。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はうるう秒を許可しないので、秒の値が 59 を超えるとサーバー エラーが発生することに注意してください。  
   
  次の既存の ODBC 構造体の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しい日付と時刻のデータ型をサポートするように変更されました。 ただし、定義は変更されていません。  
   

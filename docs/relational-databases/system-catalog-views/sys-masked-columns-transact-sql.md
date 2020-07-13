@@ -15,32 +15,30 @@ f1_keywords:
 helpviewer_keywords:
 - sys.masked_columns catalog view
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68102375"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004813"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>masked_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  動的データマスク関数が適用されているテーブル列を照会するには、 **masked_columns**ビューを使用します。 このビューが継承、 **sys.columns** ビューです。 
-  **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
+  動的データマスク関数が適用されているテーブル列を照会するには、 **masked_columns**ビューを使用します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|この列が所属するオブジェクトの ID。|  
 |name|**sysname**|列の名前です。 は、オブジェクト内で一意です。|  
 |column_id|**int**|列の ID。 は、オブジェクト内で一意です。<br /><br /> 列 Id が連続していない可能性があります。|  
 |**masked_columns**は、 **sys**から継承された多くの列を返します。|各種|列の定義については、「 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 」を参照してください。|  
 |is_masked|**bit**|列がマスクされているかどうかを示します。 1はマスクされたことを示します。|  
-|masking_function|**nvarchar(4000)**|列のマスク関数。|  
+|masking_function|**nvarchar (4000)**|列のマスク関数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューは、ユーザーがテーブルに対してなんらかの権限を持っている場合、またはユーザーが VIEW ANY DEFINITION 権限を持っている場合に、テーブルに関する情報を返します。  

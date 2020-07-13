@@ -22,23 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013538"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
-  
-  `xml` 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、`xml` 型の変数、パラメーター、または列に関連付けることができます。 この場合、データ型`xml`のインスタンスは*型指定*されています。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
+  `xml` 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、`xml` 型の変数、パラメーター、または列に関連付けることができます。 この場合、 `xml` データ型のインスタンスは*型指定*されています。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>適切な形式の XML と xml データ型  
- 
-  `xml` データ型には、ISO 標準の `xml` データ型が実装されています。 したがって、型指定されていない XML 列には、適切な形式の XML Version 1.0 ドキュメントを保存できるほか、テキスト ノードや任意の数の最上位要素が含まれた、いわゆる XML コンテンツ フラグメントを保存することもできます。 システムにより、データが適切な形式であることが確認されます。このとき XML スキーマに列をバインドする必要はなく、広義の適切な形式でないデータは拒否されます。 このことは、型指定されていない XML の変数やパラメーターにも該当します。  
+ `xml` データ型には、ISO 標準の `xml` データ型が実装されています。 したがって、型指定されていない XML 列には、適切な形式の XML Version 1.0 ドキュメントを保存できるほか、テキスト ノードや任意の数の最上位要素が含まれた、いわゆる XML コンテンツ フラグメントを保存することもできます。 システムにより、データが適切な形式であることが確認されます。このとき XML スキーマに列をバインドする必要はなく、広義の適切な形式でないデータは拒否されます。 このことは、型指定されていない XML の変数やパラメーターにも該当します。  
   
 ## <a name="xml-schemas"></a>XML スキーマ  
  XML スキーマでは、次のものが提供されます。  
@@ -54,7 +51,7 @@ ms.locfileid: "62637620"
   
 -   スキーマはあるが、サーバーでデータを検証しない場合。 サーバーにデータを保存する前にクライアント側で検証を行う場合、スキーマに従っていない無効な XML データを一時的に保存する場合、サーバーでサポートされていないスキーマ コンポーネントを使用する場合などが該当します。  
   
- 次の`xml`状況では、型指定されたデータ型を使用します。  
+ `xml`次の状況では、型指定されたデータ型を使用します。  
   
 -   使用する XML データのスキーマがあり、その XML スキーマに従ってサーバーで XML データを検証する場合。  
   
@@ -65,12 +62,12 @@ ms.locfileid: "62637620"
  型指定された XML の列、パラメーター、および変数には、XML ドキュメントまたは XML コンテンツを保存できます。 ただし、宣言のときに保存の対象がドキュメントなのかコンテンツなのかをフラグで指定する必要があります。 また、XML スキーマのコレクションを指定する必要があります。 各 XML インスタンスの最上位要素が 1 つだけの場合、DOCUMENT を指定します。 それ以外の場合は CONTENT を指定します。 クエリのコンパイルで型を確認するとき、クエリ コンパイラにより DOCUMENT フラグが使用され、シングルトンの最上位要素が推測されます。  
   
 ## <a name="creating-typed-xml"></a>型指定された XML の作成  
- 型指定`xml`された変数、パラメーター、または列を作成するには、まず、 [CREATE xml Schema collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)を使用して xml スキーマコレクションを登録する必要があります。 その後、XML スキーマ コレクションを `xml` データ型の変数、パラメーター、または列に関連付けることができます。  
+ 型指定された `xml` 変数、パラメーター、または列を作成するには、まず、 [CREATE XML schema Collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)を使用して xml スキーマコレクションを登録する必要があります。 その後、XML スキーマ コレクションを `xml` データ型の変数、パラメーター、または列に関連付けることができます。  
   
  次の例では、XML スキーマ コレクション名を指定する際に、2 つの要素で構成された名前付け規則が使用されます。 最初の要素はスキーマ名で、2 番目の要素は XML スキーマ コレクション名です。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例 : スキーマ コレクションと xml 型の変数の関連付け  
- 次の例では`xml` 、型の変数を作成し、それにスキーマコレクションを関連付けます。 例で指定されているスキーマ コレクションは、 **AdventureWorks** のデータベースに既にインポートされています。  
+ 次の例では、型の変数を作成 `xml` し、それにスキーマコレクションを関連付けます。 例で指定されているスキーマ コレクションは、 **AdventureWorks** のデータベースに既にインポートされています。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -131,16 +128,14 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- 
-  `xml` 型 (型指定された xml) を定義する場所ならどこでも、オプションの DOCUMENT/CONTENT ファセットを指定することができます。 たとえば、型指定された `xml` 変数を作成するときに、次に示すように DOCUMENT/CONTENT ファセットを追加できます。  
+ `xml` 型 (型指定された xml) を定義する場所ならどこでも、オプションの DOCUMENT/CONTENT ファセットを指定することができます。 たとえば、型指定された `xml` 変数を作成するときに、次に示すように DOCUMENT/CONTENT ファセットを追加できます。  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
 ```  
   
 ## <a name="document-type-definition-dtd"></a>DTD (文書型定義)  
- 
-  `xml` データ型の列、変数、およびパラメーターは XML スキーマを使用して型指定できますが、DTD では型指定できません。 ただしインライン DTD は型指定された XML にも型指定されていない XML にも使用できるので、それを使用して既定値を指定したり、エンティティ参照を展開した形に置き換えることができます。  
+ `xml` データ型の列、変数、およびパラメーターは XML スキーマを使用して型指定できますが、DTD では型指定できません。 ただしインライン DTD は型指定された XML にも型指定されていない XML にも使用できるので、それを使用して既定値を指定したり、エンティティ参照を展開した形に置き換えることができます。  
   
  サード パーティのツールを使用すると、DTD を XML スキーマ ドキュメントに変換できます。変換した XML スキーマはデータベースに読み込むことができます。  
   

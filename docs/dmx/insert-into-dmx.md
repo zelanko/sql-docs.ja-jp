@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68892720"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670082"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,12 +43,12 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *source data query*  
  プロバイダー定義形式のソースクエリ。  
   
-## <a name="remarks"></a>解説  
- **マイニングモデル**または**マイニング構造**を指定しない場合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、は名前に基づいてオブジェクトの種類を検索し、正しいオブジェクトを処理します。 サーバーに同じ名前のマイニング構造とマイニングモデルが含まれている場合は、エラーが返されます。  
+## <a name="remarks"></a>Remarks  
+ **マイニングモデル**または**マイニング構造**を指定しない場合、は [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 名前に基づいてオブジェクトの種類を検索し、正しいオブジェクトを処理します。 サーバーに同じ名前のマイニング構造とマイニングモデルが含まれている場合は、エラーが返されます。  
   
- 2番目の構文形式を使用して、INSERT INTO*\<object>* します。COLUMN_VALUES、モデルをトレーニングしなくても、モデル列にデータを直接挿入できます。 この方法では、階層または順序付けられた列を含むデータセットを操作する場合に便利な簡潔な順序で列データをモデルに提供します。  
+ 2番目の構文形式を使用して、INSERT INTO* \< object>* します。COLUMN_VALUES、モデルをトレーニングしなくても、モデル列にデータを直接挿入できます。 この方法では、階層または順序付けられた列を含むデータセットを操作する場合に便利な簡潔な順序で列データをモデルに提供します。  
   
- マイニングモデルまたはマイニング構造と共に**INSERT INTO**を使用して、 \<マップされたモデル列> \<とソースデータクエリ> を省略した場合、既に存在するバインドを使用して、ステートメントは**processdefault**のように動作します。 バインドが存在しない場合、ステートメントはエラーを返します。 **Processdefault**の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。 構文の例を次に示します。  
+ マイニングモデルまたはマイニング構造と共に**INSERT INTO**を使用して、マップされた \< モデル列> とソースデータクエリ> を省略した場合 \< 、既に存在するバインドを使用して、ステートメントは**processdefault**のように動作します。 バインドが存在しない場合、ステートメントはエラーを返します。 **Processdefault**の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)」を参照してください。 構文の例を次に示します。  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |ステートメント|オブジェクトの状態|結果|  
 |---------------|----------------------|------------|  
-|マイニングモデル*\<モデル>への挿入*|マイニング構造が処理されます。|マイニング モデルは処理されます。|  
+|マイニングモデル* \< モデル>* への挿入|マイニング構造が処理されます。|マイニング モデルは処理されます。|  
 ||マイニング構造は未処理です。|マイニング モデルとマイニング構造は処理されます。|  
 ||マイニング構造には、追加のマイニングモデルが含まれています。|処理は失敗します。 構造と、関連するマイニングモデルを再処理する必要があります。|  
-|マイニング構造*\<構造>への挿入*|マイニング構造が処理または処理されていません。|マイニング構造と関連するマイニングモデルが処理されます。|  
-|ソースクエリを含む*\<>マイニングモデルモデルモデル*への挿入<br /><br /> or<br /><br /> ソースクエリを含む*\<>* マイニング構造構造を挿入する|構造またはモデルのどちらかが既に内容に含まれます。|処理は失敗します。 この操作を実行する前に、[ [&#40;DMX&#41;の削除](../dmx/delete-dmx.md)] を使用してオブジェクトをクリアする必要があります。|  
+|マイニング構造* \< 構造>* への挿入|マイニング構造が処理または処理されていません。|マイニング構造と関連するマイニングモデルが処理されます。|  
+|ソースクエリを含む>マイニングモデル* \< モデルモデル*への挿入<br /><br /> or<br /><br /> ソースクエリを含む* \<>* マイニング構造構造を挿入する|構造またはモデルのどちらかが既に内容に含まれます。|処理は失敗します。 この操作を実行する前に、[ [&#40;DMX&#41;の削除](../dmx/delete-dmx.md)] を使用してオブジェクトをクリアする必要があります。|  
   
 ## <a name="mapped-model-columns"></a>マップされたモデル列  
- \<マップされたモデル列> 要素を使用して、データソースの列をマイニングモデルの列にマップできます。 マップ\<されたモデル列> 要素には、次の形式があります。  
+ マップされたモデル列> 要素を使用して、 \< データソースの列をマイニングモデルの列にマップできます。 マップされた \< モデル列> 要素には、次の形式があります。  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  SKIP の構文では、対応するマイニング構造列がない入力行セットの個々の列の位置に SKIP を挿入する必要があります。 たとえば、次の入れ子になったテーブルの例では、APPEND 句で OrderNumber を選択して、結合を指定するために関連付け句で使用できるようにする必要があります。ただし、マイニング構造の入れ子になったテーブルに OrderNumber データを挿入する必要はありません。 そのため、この例では、INSERT INTO 引数で OrderNumber ではなく SKIP キーワードを使用しています。  
   
 ## <a name="source-data-query"></a>ソースデータクエリ  
- Source \<data query> 要素には、次のデータソースの種類を含めることができます。  
+ \<Source data query> 要素には、次のデータソースの種類を含めることができます。  
   
 -   **OPENQUERY**  
   
@@ -88,12 +88,12 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **オート**  
   
--   行[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]セットを返すクエリ  
+-   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]行セットを返すクエリ  
   
  データソースの種類の詳細については、「 [&#60;source data query&#62;](../dmx/source-data-query.md)」を参照してください。  
   
 ## <a name="basic-example"></a>基本的な例  
- 次の例では、 **OPENQUERY**を使用して、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース内の対象メーリングデータに基づいて Naive Bayes モデルをトレーニングします。  
+ 次の例では、 **OPENQUERY**を使用して、データベース内の対象メーリングデータに基づいて Naive Bayes モデルをトレーニングし [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] ます。  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  
@@ -122,6 +122,6 @@ AS [Models]
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: ELEMENTS ディレクティブで XSINIL を指定する | Microsoft Docs
+description: ELEMENTS ディレクティブを含む XSINIL を指定して、クエリ結果から要素中心の XML を生成する例を示します。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 98b28f2115634c8dd173adb22e76ec6a92cd8928
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce76de4ec22727a99e2dbd7ad707fc3a861c315e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632309"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例 : ELEMENTS ディレクティブで XSINIL を指定する
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例: ELEMENTS ディレクティブで XSINIL を指定する
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次のクエリでは、 `ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
   
 ## <a name="example"></a>例  

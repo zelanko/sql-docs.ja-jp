@@ -1,5 +1,6 @@
 ---
 title: sqlcmd ユーティリティ
+description: sqlcmd ユーティリティを使用すると、Transact-SQL ステートメント、システム プロシージャ、およびスクリプト ファイルを異なるモードを使用して入力し、ODBC を使用して Transact-SQL バッチを実行できます。
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544935"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151613"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -413,7 +414,7 @@ sqlcmd
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数の _**var**_ = **"** _values_ **"** の値を指定できます。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
+ **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数の _**var**_= **"** _values_ **"** の値を指定できます。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   

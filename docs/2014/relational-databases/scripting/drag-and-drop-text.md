@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5104db8ce520b8a98ffe223fd8832806564d5f12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056808"
 ---
 # <a name="drag-and-drop-text"></a>テキストのドラッグ アンド ドロップ
   テキストを選択して、別の場所にドラッグ アンド ドロップすることができます。 次のような場合にテキストをドラッグ アンド ドロップできます。  

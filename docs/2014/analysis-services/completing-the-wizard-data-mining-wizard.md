@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087708"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527368"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>[ウィザードの完了] (データ マイニング ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、ウィザードの完了時に作成されるマイニング構造を確認できます。 マイニング構造の名前を設定することもできます。  
   
  関連マイニング モデルを作成するよう選択した場合は、関連マイニング モデルの名前を設定することも、ドリルスルーを有効にすることもできます。  
@@ -28,16 +26,14 @@ ms.locfileid: "66087708"
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]** または **[既存のキューブを使用する]** のどちらを選択したかによって異なります。  
   
- **詳細について**は、「データマイニング[ウィザード &#40;Analysis Services&#41;-](data-mining/data-mining-wizard-analysis-services-data-mining.md)データマイニング[デザイナー](data-mining/data-mining-designer.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[データ マイニング デザイナー](data-mining/data-mining-designer.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **[マイニング構造名]**  
- 
-  **データ マイニング ウィザード**によって定義されるマイニング構造の名前を入力します。  
+ **データ マイニング ウィザード**によって定義されるマイニング構造の名前を入力します。  
   
  **[マイニング モデル名]**  
- 
-  **データ マイニング ウィザード**によって定義されるマイニング モデルの名前を入力します。  
+ **データ マイニング ウィザード**によって定義されるマイニング モデルの名前を入力します。  
   
  **[ドリルスルーを許可する]**  
  新しいマイニング モデルを作成した場合、ドリルスルー機能をサポートするように選択します。  
@@ -56,7 +52,7 @@ ms.locfileid: "66087708"
 > [!NOTE]  
 >  このオプションは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ使用できます。  
   
- **マイニングモデルディメンションを使用したキューブの作成**  
+ **[マイニング モデル ディメンションを使用してキューブを作成する]**  
  作成されるマイニング モデルに基づいたキューブの作成を選択します。 このオプションを選択した後で、作成されるキューブの名前を入力します。  
   
 > [!NOTE]  

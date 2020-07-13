@@ -147,7 +147,7 @@ SELECT <select_criteria>
 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースを使用します。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT を使用して行および列を取得する  
- このセクションでは、次の 3 つのコード例を示します。 最初のコード例では、`*` テーブルから、WHERE 句を指定せずにすべての行を返し、また `DimEmployee` を使用してすべての列を返しています。  
+ このセクションでは、次の 3 つのコード例を示します。 最初のコード例では、`DimEmployee` テーブルから、WHERE 句を指定せずにすべての行を返し、また `*` を使用してすべての列を返しています。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- この例では、`FirstName` データベース内の `LastName` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`) を返しています。 3 番目の列見出しは `FirstDay` に名前変更されています。  
+ この例では、`AdventureWorksPDW2012` データベース内の `DimEmployee` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`FirstName`、`LastName`、`StartDate`) を返しています。 3 番目の列見出しは `FirstDay` に名前変更されています。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- この例では、`DimEmployee` が NULL でない、`EndDate` が 'M' (結婚している) の `MaritalStatus` の行のみが返されます。  
+ この例では、`EndDate` が NULL でない、`MaritalStatus` が 'M' (結婚している) の `DimEmployee` の行のみが返されます。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 521ed3f1c817f687bfbddc497f638ee4eed4a834
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7eddb6d15d495edf4b9562e01494ac4b81356cf3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897549"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428389"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 式)
   数値式の自然対数を返します。  

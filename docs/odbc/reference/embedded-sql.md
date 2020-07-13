@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915422"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306675"
 ---
 # <a name="embedded-sql"></a>埋め込み SQL
 SQL ステートメントを DBMS に送信するための最初の方法は、embedded SQL です。 SQL は変数およびフロー制御ステートメントを使用しないため、多くの場合、C や COBOL などの従来のプログラミング言語で記述されたプログラムに追加できるデータベースサブ言語として使用されます。 ここでは、埋め込み SQL: ホストプログラミング言語で記述されたプログラムに SQL ステートメントを配置する方法について説明します。 簡単に言うと、次の方法を使用して、SQL ステートメントをホスト言語で埋め込みます。  

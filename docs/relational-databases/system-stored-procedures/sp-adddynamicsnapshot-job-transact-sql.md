@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760213"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パラメーター化された行フィルターを使用して、パブリケーションのフィルター選択されたデータスナップショットを生成するエージェントジョブを作成します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。 このストアドプロシージャは、サブスクライバー用にフィルター選択されたデータスナップショットジョブを手動で作成するために管理者によって使用されます。  
   
@@ -75,13 +75,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`フィルター選択されたデータスナップショットジョブをスケジュールする頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4** (既定値)|毎日|  
-|**8**|週単位|  
-|**まで**|月単位|  
+|**8**|週次|  
+|**16**|月単位|  
 |**32**|月単位の相対|  
 |**64**|自動開始|  
 |**128**|繰り返し|  
@@ -93,31 +93,31 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|*frequency_interval*は使用されていません。|  
 |**4** (既定値)|*Frequency_interval*毎日、既定値は日単位です。|  
 |**8**|*frequency_interval*は次のうちの1つ以上です ( [&#124; &#40;ビットごとの or&#41; &#40;transact-sql&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)論理演算子)。<br /><br /> **1** = 日曜日 &#124; **2** = 月曜日 &#124; **4** = 火曜日 &#124; **8** = 水曜日 &#124; **16** = 木曜日 &#124; **32** = 金曜日 &#124; **64** = 土曜日|  
-|**まで**|月の*frequency_interval*日。|  
+|**16**|月の*frequency_interval*日。|  
 |**32**|*frequency_interval*は次のいずれかです。<br /><br /> **1** = 日曜日 &#124; **2** = 月曜日 &#124; **3** = 火曜日 &#124; **4** = 水曜日 &#124; **5** = 木曜日 &#124; **6** = 金曜日 &#124; **7** = 土曜日 &#124; **8** = 日 &#124; **9** = 平日 &#124; **10** = 週末|  
 |**64**|*frequency_interval*は使用されていません。|  
 |**128**|*frequency_interval*は使用されていません。|  
   
 `[ @frequency_subday = ] frequency_subday`*Frequency_subday_interval*の単位を指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|秒|  
+|**2**|Second|  
 |**4** (既定値)|分|  
-|**8**|時|  
+|**8**|時間|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`ジョブの各実行間に発生する*frequency_subday*期間の数です。 *frequency_subday_interval*は**int**,、既定値は5です。  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`毎月のフィルター選択されたデータスナップショットジョブの発生を示します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**1** (既定値)|First (先頭へ)|  
-|**2**|秒|  
+|**1** (既定値)|First|  
+|**2**|Second|  
 |**4**|第 3 週|  
 |**8**|4 番目|  
-|**まで**|Last (最後へ)|  
+|**16**|末尾|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は0です。  
   
@@ -131,11 +131,11 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|[Msdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システムテーブル内のフィルター選択されたデータスナップショットジョブを識別します。|  
+|**id**|**int**|[Msdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システムテーブル内のフィルター選択されたデータスナップショットジョブを識別します。|  
 |**dynamic_snapshot_jobname**|**sysname**|フィルター選択されたデータスナップショットジョブの名前。|  
-|**dynamic_snapshot_jobid**|**UNIQUEIDENTIFIER**|ディストリビューター側の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブを一意に識別します。|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューター側のエージェントジョブを一意に識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -149,7 +149,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_adddynamicsnapshot_job**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パラメーター化されたフィルターを使用してマージパブリケーションのスナップショットを作成する](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   

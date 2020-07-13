@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 933a330e2ce1a825f8b486b60aebe1de558155ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62912546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031535"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +29,7 @@ ms.locfileid: "62912546"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC3_CHECK_CATALOG|  
-|メッセージ テキスト|カタログ メッセージ ERROR Level LEVEL の確認、状態 STATE: MESSAGE|  
+|メッセージ テキスト|カタログ メッセージ ERROR Level LEVEL の確認、状態 STATE:MESSAGE|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェクトの不整合がシステム メタデータ テーブルで検出されました。 つまり、記録されたオブジェクト ID とエラー メッセージで指定されたオブジェクトの間に不整合があります。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32b4125d0ecb1f15fab00119a8ef4ed361b6db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94bd5211c878904453624adb2acd0fe435ebc812
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087737"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298948"
 ---
 # <a name="unicode-applications"></a>Unicode アプリケーション
 アプリケーションは、次の2つの方法のいずれかで、Unicode アプリケーションとして再コンパイルできます。  

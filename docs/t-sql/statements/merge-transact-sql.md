@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680835"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181098"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -50,7 +50,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 ソース テーブルとの暗黙の結合を実行するための、対象テーブルの 1 つ以上のインデックスの名前または ID を指定します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
 \<output_clause>  
-*target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って次のいずれかの値をそれぞれの行について返す、**nvarchar(10)** 型の列です:"INSERT"、"UPDATE"、または "DELETE"。その行で実行されるアクションに従います。 この句の引数について詳しくは、「[OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
+*target_table* 内の更新、挿入、または削除される行ごとに 1 行を返します。この場合、特定の順序はありません。 **$action** は、OUTPUT 句に指定することができます。 **$action** は、行に対して実行されたアクションに従って次のいずれかの値をそれぞれの行について返す、**nvarchar(10)** 型の列です:"INSERT"、"UPDATE"、または "DELETE"。その行で実行されるアクションに従います。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 オプティマイザー ヒントを使用して、データベース エンジンがステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  

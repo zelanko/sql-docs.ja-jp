@@ -1,5 +1,6 @@
 ---
 title: ODBC Driver for SQL Server on Windows のリリース ノート
+description: このリリース ノート記事では、Windows 上の SQL Server 用 Microsoft ODBC ドライバーの各リリースにおける変更点について説明します。
 ms.custom: ''
 ms.date: 03/10/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: e9210592e4c4e347662dc0ec534d511be4fa2e95
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80345427"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728462"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows のリリース ノート
 
@@ -255,8 +256,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) および [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) のサポートが追加されています。 | これらの追加されたサポートは、Microsoft SQL Server 2016 以降のバージョンに接続するときに使用できます。 |
-| Always Encrypted および Azure Active Directory のサポートに対応する接続プールのキーワードと属性があります。 | これらのキーワードと属性については、「[ODBC Driver for SQL Server のドライバー対応接続プール](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」で説明されています。 |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) および [Azure Active Directory](../using-azure-active-directory.md) のサポートが追加されています。 | これらの追加されたサポートは、Microsoft SQL Server 2016 以降のバージョンに接続するときに使用できます。 |
+| Always Encrypted および Azure Active Directory のサポートに対応する接続プールのキーワードと属性があります。 | これらのキーワードと属性については、「[ODBC Driver for SQL Server のドライバー対応接続プール](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」で説明されています。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

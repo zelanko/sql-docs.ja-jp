@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11ba6251788bd3317ae853e8fcc5f1f55ee6ec31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63261761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005110"
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
   **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  

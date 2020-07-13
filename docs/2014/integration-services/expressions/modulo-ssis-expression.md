@@ -11,15 +11,14 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a6db5e4c6970eb2888a52b671e62e60352e72b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437219"
 ---
 # <a name="modulo-ssis-expression"></a>(剰余) (SSIS 式)
   最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。  

@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層化を構成する
 titleSuffix: SQL Server big data clusters
-description: この記事では、外部の Azure Data Lake Storage ファイル システムを [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
+description: この記事では、外部の Azure Data Lake Storage ファイル システムを SQL Server 2019 ビッグ データ クラスター上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190402"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606604"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で HDFS の階層化を構成する
 

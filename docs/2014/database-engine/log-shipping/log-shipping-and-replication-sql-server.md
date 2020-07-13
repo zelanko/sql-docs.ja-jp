@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e3b1a0e08c5850b9e31202965909dfcfe1273e47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931273"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
   ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  

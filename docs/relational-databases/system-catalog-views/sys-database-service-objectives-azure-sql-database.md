@@ -1,7 +1,6 @@
 ---
 title: sys.database_service_objectives
 titleSuffix: Azure SQL Database
-ms.custom: seo-dt-2019
 ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
@@ -13,15 +12,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73844457"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627578"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ Azure SQL database または Azure SQL Data Warehouse について、エディ�
   
  Database_service_objectives ビューには、次の列が含まれています。  
   
-|列名|データ型|[説明]|  
+|列名|データの種類|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|INT|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
 |edition|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または**data warehouse**。|  

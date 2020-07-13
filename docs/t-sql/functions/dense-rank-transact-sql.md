@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135921"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005929"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、結果セット パーティション内の各行の順位値をギャップなしで返します。 特定の行の順位は、その行より 1 つ前の順位値に 1 を加算したものになります。  
   
@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>引数  
  \<partition_by_clause>  
-最初に、[FROM](../../t-sql/queries/from-transact-sql.md) 句によって生成された結果セットをパーティションに分割します。その後、`DENSE_RANK` 関数が各パーティションに適用されます。 [ 構文の詳細については、](../../t-sql/queries/select-over-clause-transact-sql.md)OVER 句 &#40;Transact-SQL&#41;`PARTITION BY` に関するページを参照してください。  
+最初に、[FROM](../../t-sql/queries/from-transact-sql.md) 句によって生成された結果セットをパーティションに分割します。その後、`DENSE_RANK` 関数が各パーティションに適用されます。 `PARTITION BY` 構文の詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関するページを参照してください。  
   
  \<order_by_clause>  
 `DENSE_RANK` 関数がパーティション内の行に適用される順序を決定します。  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: パーティション内の行に順位付け  
+### <a name="d-ranking-rows-within-a-partition"></a>D:パーティション内の行に順位を付ける  
 この例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 `DENSE_RANK` は `SalesTerritoryGroup` で行セットをパーティション分割し、`SalesAmountQuota` で結果セットを並べ替えます。  
   
 ```  

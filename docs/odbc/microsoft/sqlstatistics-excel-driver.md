@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Excel Driver
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c36d68f42b9b7f76310c453d704c6815ee6de22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51b7e59fa811dd7b4ac69f1e9c8d39b4d482c437
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132474"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299342"
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics (Excel ドライバー)
 > [!NOTE]  

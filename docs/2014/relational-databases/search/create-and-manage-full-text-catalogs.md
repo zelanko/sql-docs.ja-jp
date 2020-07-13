@@ -12,31 +12,27 @@ helpviewer_keywords:
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18efd79bc34beee94d4edc61e9165a986edba90b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997470"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
   フルテキスト カタログが、ファイル グループに属さない仮想オブジェクトとなりました。これは、フルテキスト インデックスのグループを指す論理的概念です。  
   
-##  <a name="creating"></a>フルテキストカタログの作成  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>フルテキストカタログの作成  
   
 #### <a name="to-create-a-full-text-catalog"></a>フルテキスト カタログを作成するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、フルテキスト カタログを作成する対象のデータベースを展開します。  
   
-2.  
-  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
   
-3.  
-  **[新しいフルテキスト カタログ]** を選択します。  
+3.  **[新しいフルテキスト カタログ]** を選択します。  
   
-4.  
-  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)」を参照してください。  
+4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)」を参照してください。  
   
     > [!NOTE]  
     >  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
@@ -45,12 +41,12 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="props"></a>フルテキストカタログのプロパティの表示  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>フルテキストカタログのプロパティの表示  
  FULLTEXTCATALOGPROPERTY などの [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、フルテキスト インデックスに関連するさまざまなプロパティの値を取得するために使用できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  次の表は、フルテキスト カタログに関連しているプロパティを示しています。  
   
-|プロパティ|[説明]|Function|  
+|プロパティ|説明|機能|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|アクセントの区別の設定。|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|フルテキスト カタログがインポートされているかどうかを示します。|FULLTEXTCATALOGPROPERTY|  
@@ -63,62 +59,53 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="rebuildone"></a>フルテキストカタログの再構築  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>フルテキストカタログの再構築  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>フルテキスト カタログを再構築するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、再構築するフルテキスト カタログが格納されているデータベースを展開します。  
   
-2.  
-  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
   
 3.  再構築するフルテキスト カタログの名前を右クリックし、 **[再構築]** を選択します。  
   
-4.  
-  **"フルテキスト カタログを削除して再構築しますか?"** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
+4.  **"フルテキスト カタログを削除して再構築しますか?"** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
   
-5.  
-  **[フルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
+5.  **[フルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
   
   
-##  <a name="rebuildall"></a>データベースのすべてのフルテキストカタログの再構築  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>データベースのすべてのフルテキストカタログの再構築  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>データベースのフルテキスト カタログを再構築するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、再構築するフルテキスト カタログが格納されているデータベースを展開します。  
   
-2.  
-  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
   
-3.  
-  **[すべて再構築]** を選択します。  
+3.  **[すべて再構築]** を選択します。  
   
-4.  
-  **[すべてのフルテキスト カタログを削除して再構築しますか?]** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
+4.  **[すべてのフルテキスト カタログを削除して再構築しますか?]** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
   
-5.  
-  **[すべてのフルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
+5.  **[すべてのフルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
   
   
-##  <a name="removing"></a>データベースからのフルテキストカタログの削除  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>データベースからのフルテキストカタログの削除  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>データベースからフルテキスト カタログを削除するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、削除するフルテキスト カタログを含むデータベースを展開します。  
   
-2.  
-  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
   
 3.  削除するフルテキスト カタログを右クリックし、 **[削除]** を選択します。  
   
-4.  
-  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
+4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
   
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

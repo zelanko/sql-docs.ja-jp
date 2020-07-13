@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6f96f65d6c223ebf08e30d854aff58dcd1047f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437719"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
   次の手順では、ODBC 入力先を使用してデータを読み込む方法を示します。 ODBC 入力先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの入力元があらかじめ含まれている必要があります。  

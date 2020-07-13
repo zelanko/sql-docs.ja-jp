@@ -13,14 +13,14 @@ helpviewer_keywords:
 - freeing descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069770"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305603"
 ---
 # <a name="freeing-descriptors"></a>記述子の解放
 明示的に割り当てられた記述子は、明示的に解放することができます。これを行うには、SQL_HANDLE_DESC の*Handletype*を使用して**sqlfreehandle**を呼び出すか、接続ハンドルが解放されたときに暗黙的にこの 明示的に割り当てられた記述子が解放されると、解放された記述子が適用されるすべてのステートメントハンドルが、暗黙的に割り当てられた記述子に自動的に戻されます。  

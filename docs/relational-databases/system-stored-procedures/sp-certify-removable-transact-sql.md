@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045930"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873152"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リムーバブル メディア上でデータベースが配布用に正しく構成されているかどうか確認し、問題があればユーザーにレポートします。  
   
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   データ ファイル グループを読み取り専用としてマークし、ファイルを読み取り専用メディアにコピーできるようにする。  
   
- システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているすべてのサーバー上に存在する既知のユーザーであり、データベースが後で配布およびインストールされるときに存在することが予想されます。  
+ システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行しているすべてのサーバー上に存在する既知のユーザーであり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが後で配布およびインストールされるときに存在することが予想されます。  
   
  **Auto**値を指定せずに**sp_certify_removable**を実行すると、次のいずれかの条件に関する情報が返されます。  
   
@@ -73,27 +73,27 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  これらの条件は、次の方法で修正できます。  
   
--   ツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と手順を使用し、 **sp_certify_removable**を再実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順を使用し、 **sp_certify_removable**を再実行します。  
   
 -   **Auto**値を指定して**sp_certify_removable**を実行するだけです。  
   
- このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
+ このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`inventory` データベースを削除できるかどうかを確認します。  
   
 ```  
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

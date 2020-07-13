@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDrivers function [ODBC]
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f54be3d11f4870533513f464c1afdae13e04f367
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2496e7cd5f2abe0831c72484bed374d7aa1513ce
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104663"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302763"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLDrivers(
  *EnvironmentHandle*  
  代入環境ハンドル。  
   
- *横書き*  
+ *方向*  
  代入ドライバーマネージャーが一覧内の次のドライバーの説明をフェッチするか (SQL_FETCH_NEXT)、検索をリストの先頭から開始するか (SQL_FETCH_FIRST) を決定します。  
   
  *DriverDescription*  
@@ -83,7 +83,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>診断  
  **Sqldrivers**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*を SQL_HANDLE_ENV、 *EnvironmentHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqldrivers**によって通常返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) Driver Manager 固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|(DM) バッファー \* *driverdescription*が完全なドライバーの説明を返すのに十分な大きさではありませんでした。 このため、説明は切り捨てられました。 完全なドライバーの説明の長さは、 \* *descriptionlength ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \* *driverattributes*が、属性値のペアの完全な一覧を返すのに十分な大きさではありませんでした。 そのため、リストは切り捨てられました。 属性値のペアの切り捨てられていないリストの長さは、* 属性の長さの*ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -114,7 +114,7 @@ FileUsage=1\0FileExtns=*.dbf\0\0
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースへの接続に必要な値を検出して一覧表示する|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  

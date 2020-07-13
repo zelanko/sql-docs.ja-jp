@@ -11,20 +11,18 @@ f1_keywords:
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 60e1bc5248f2ba85c505beb11ff78e5bbd3ded2b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940983"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>[メジャー グループ テーブルの選択] (キューブ ウィザード)
-  
   **[メジャー グループ テーブルの選択]** ページを使用すると、データ ソース ビューを特定して、キューブに使用するメジャー グループ テーブルを選択できます。  
   
 ## <a name="options"></a>オプション  
- **データ ソース ビュー**  
+ **データソースビュー**  
  キューブに使用するデータ ソース ビューを選択します。  
   
  **[メジャー グループ テーブル]**  

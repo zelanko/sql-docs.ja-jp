@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070893"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>レッスン 4: Bike Buyer マイニング モデルの参照
@@ -79,7 +79,7 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     *  
@@ -93,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Clustering]  
@@ -154,7 +154,7 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     *  
@@ -168,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Decision Tree]  
@@ -221,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Bike Buyer]  
@@ -233,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Decision Tree]  

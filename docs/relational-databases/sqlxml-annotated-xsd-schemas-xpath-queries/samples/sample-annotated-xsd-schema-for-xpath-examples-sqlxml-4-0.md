@@ -1,5 +1,6 @@
 ---
 title: XPath の注釈付き XSD スキーマのサンプル (SQLXML)
+description: SQLXML 4.0 で XPath クエリを示すために、このセクションの例で使用する注釈付き XSD スキーマを表示します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 127e98b36465d196bc20cf6888e56b20a93dad59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3919201b1e65277d9fc248c48ece00d98c69940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725857"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath の例で使用する注釈付き XSD スキーマのサンプル (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここで説明するサンプル XPath クエリは、マッピング スキーマを参照します。 マッピング スキーマは注釈付き XML スキーマ (XSD) ファイルです。 スキーマのマッピングの詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。  
   
  注釈付き XSD スキーマに対して XPath クエリを実行するには、次の作業が必要です。  

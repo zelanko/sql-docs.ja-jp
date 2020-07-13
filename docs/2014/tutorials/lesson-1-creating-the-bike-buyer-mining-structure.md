@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678502"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1: Bike Buyer マイニング構造の作成
@@ -96,8 +96,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  [**サーバーへの接続**] ダイアログボックスの [**サーバーの種類**] で、[ **Analysis Services**] を選択します。 [**サーバー名**] に`LocalHost`、このレッスンで接続するの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスの名前を入力するか、入力します。 
-  **[接続]** をクリックします。  
+2.  [**サーバーへの接続**] ダイアログボックスの [**サーバーの種類**] で、[ **Analysis Services**] を選択します。 [**サーバー名**] に`LocalHost`、このレッスンで接続するの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスの名前を入力するか、入力します。 **[Connect]** をクリックします。  
   
 3.  **オブジェクトエクスプローラー**で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、のインスタンスを右クリックし、[**新しいクエリ**] をポイントします。次に、[ **DMX** ] をクリックして**クエリエディター**を開き、新しい空のクエリをクリックします。  
   
@@ -114,7 +113,7 @@ WITH HOLDOUT (<holdout specifier>)
     [<mining structure>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Bike Buyer]  
@@ -126,7 +125,7 @@ WITH HOLDOUT (<holdout specifier>)
     <key column>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     CustomerKey LONG KEY  
@@ -138,7 +137,7 @@ WITH HOLDOUT (<holdout specifier>)
     <mining structure columns>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Age] LONG DISCRETIZED(Automatic,10),  
@@ -162,7 +161,7 @@ WITH HOLDOUT (<holdout specifier>)
     WITH HOLDOUT (holdout specifier>)  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     WITH HOLDOUT (30 PERCENT or 1000 CASES)  

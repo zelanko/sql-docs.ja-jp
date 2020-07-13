@@ -1,25 +1,24 @@
 ---
 title: SQL Server dacpac の拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server dacpac の拡張機能をインストールして使用する
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2062c32f5af698f635abba684eb1ea1bbe59250b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73532420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758330"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac の拡張機能
 
-**データ層アプリケーション ウィザード** には、dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うための、使いやすいウィザード エクスペリエンスが用意されています。
+**データ層アプリケーション ウィザード**には、dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うための、使いやすいウィザード エクスペリエンスが用意されています。
 
 
 ## <a name="features"></a>特徴

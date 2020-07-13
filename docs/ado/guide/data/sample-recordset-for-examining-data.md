@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924302"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760918"
 ---
 # <a name="sample-recordset-for-examining-data"></a>データを確認するためのサンプルのレコードセット
 まず、Microsoft SQL Server で Northwind サンプルデータベースに対して実行される、次の SQL クエリを使用して返された**レコードセット**オブジェクトを見てみましょう。  

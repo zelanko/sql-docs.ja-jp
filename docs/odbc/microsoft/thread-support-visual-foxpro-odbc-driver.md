@@ -13,14 +13,14 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], thread support
 - multithreaded applications [ODBC]
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72672cfc20b5d363229fd1ba49278d11e6d6793d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912415"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303083"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>スレッド サポート (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーはスレッドセーフです。 環境ハンドル (*h)*) へのアクセス、接続ハンドル (*hdbc*)、およびステートメントハンドル (*hstmt*) が適切なセマフォにラップされ、他のプロセスがにアクセスしたり、ドライバーの内部データ構造を変更したりするのを防ぐことができます。  

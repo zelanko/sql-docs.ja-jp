@@ -19,7 +19,7 @@ ms.locfileid: "75257130"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**の**[表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
 オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  

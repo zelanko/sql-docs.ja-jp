@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fc8b4e5a5d6741dd11faf4c846db7862a7254db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63032335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027610"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 関数
   指定した共有名を使用して、指定した SQL Server Express LocalDB インスタンスをコンピューターの他のユーザーと共有します。  
@@ -80,7 +79,7 @@ HRESULT LocalDBShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  

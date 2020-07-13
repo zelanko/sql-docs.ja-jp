@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 25a89c00466cf4a702202f6a6fb4959f1d845c41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 515ed74a4b92259d53770bf6d970626eba686453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62781340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935126"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout サーバー構成オプション
   PH timeout オプションは、フルテキスト プロトコル ハンドラーが、データベースへの接続をタイムアウトするまで待機する時間を秒単位で指定します。既定値は 60 秒です。 一時的なネットワークの問題により接続試行がタイムアウトする場合は、ph timeout 値を大きくします。  

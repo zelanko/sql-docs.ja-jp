@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColumns (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,16 @@ topic_type:
 helpviewer_keywords:
 - BCPColumns method
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a7108760ebdb5e7e3e6367b801b07d4f8140a62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 262641572cad4c765533e1c44dc882155f329386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63238735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048045"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列にバインドされるフィールド数を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +33,7 @@ HRESULT BCPColumns(
 DBCOUNTITEMnColumns);  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このメソッドは、内部的に [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) を呼び出して、フィールド データの既定値を設定します。 これらの既定値は、[IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) を使用してテーブル名を指定するときに、プロバイダーが内部的に取得する SQL Server の列情報を基に設定されます。  
   
 > [!NOTE]  
@@ -46,7 +44,7 @@ DBCOUNTITEMnColumns);
  独自のファイル形式を完全に定義するために、**BCPColumns** メソッドを呼び出した後、ユーザー ファイル内の列ごとに **BCPColFmt** メソッドを呼び出す必要があります。  
   
 ## <a name="arguments"></a>引数  
- *n 列*[in]  
+ *nColumns*[in]  
  ユーザー ファイル内のフィールドの総数です。 ユーザー ファイルから SQL Server テーブルへのデータの一括コピーを準備していて、ユーザー ファイル内のすべてのフィールドをコピーしない場合でも、*nColumns* 引数にユーザー ファイル内のフィールドの総数を設定する必要があります。 その後、スキップするフィールドを **BCPColFmt** を使って指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

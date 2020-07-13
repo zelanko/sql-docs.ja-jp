@@ -17,15 +17,14 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7468848373a6451428fed9e67a678183ba09581d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437779"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
   データ フロー コンポーネントが変換を列データに適用したり、変換元のデータを抽出したり、変換先にデータを読み込んだりするときに、エラーが発生する場合があります。 エラーが発生する原因の主なものは、予期しないデータ値です。 たとえば、数字ではなく文字列が列に含まれる場合、データ変換は失敗します。また、データは日付データであるが列のデータ型は数値の場合、データベース列への挿入は失敗します。あるいは、列の値が 0 の場合に数学的演算の結果が無効となり、それが原因で式の評価が失敗します。  
@@ -46,8 +45,7 @@ ms.locfileid: "62827149"
   
  ![エラー出力のあるデータ フロー](../media/mw-dts-11.gif "エラー出力のあるデータ フロー")  
   
- データ列の他に、エラー出力には **ErrorCode** 列と **ErrorColumn** 列が含まれています。 
-  **ErrorCode** 列はエラーを識別し、 **ErrorColumn** 列にはエラー列の系列 ID が含まれます。 これらの列のメタデータを表示するには、エラー出力をデータ フロー内の次のコンポーネントに連結するパスをクリックします。 状況によっては、 **ErrorColumn** 列の値が 0 に設定されていることがあります。 これは、エラー状態が 1 列ではなく行全体に影響していることを示します。 たとえば、参照変換で参照に失敗した場合などです。  
+ データ列の他に、エラー出力には **ErrorCode** 列と **ErrorColumn** 列が含まれています。 **ErrorCode** 列はエラーを識別し、 **ErrorColumn** 列にはエラー列の系列 ID が含まれます。 これらの列のメタデータを表示するには、エラー出力をデータ フロー内の次のコンポーネントに連結するパスをクリックします。 状況によっては、 **ErrorColumn** 列の値が 0 に設定されていることがあります。 これは、エラー状態が 1 列ではなく行全体に影響していることを示します。 たとえば、参照変換で参照に失敗した場合などです。  
   
  詳細については、「 [データ フロー](data-flow.md) 」と「 [Integration Services のパス](integration-services-paths.md)」を参照してください。  
   
@@ -60,7 +58,7 @@ ms.locfileid: "62827149"
   
  変換元、変換、および変換先によるエラーと切り捨ての処理方法を構成できます。 次の表では、このオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |エラー コンポーネント|エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 [失敗] は、エラーおよび切り捨ての既定のオプションです。|  
 |エラーを無視する|エラーまたは切り捨ては無視され、データ行は変換または変換元の出力に送られます。|  
@@ -75,11 +73,11 @@ ms.locfileid: "62827149"
   
 -   [データ フロー コンポーネントでエラー出力を構成する](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー](data-flow.md)   
  [変換を使用してデータを変換する](transformations/transform-data-with-transformations.md)   
  [パスを使用してコンポーネントを連結する](../connect-components-with-paths.md)   
  [データフロータスク](../control-flow/data-flow-task.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

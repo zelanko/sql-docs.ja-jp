@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a66d28fea8289719d3efb2351409e0f14379ec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74957266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037815"
 ---
 # <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してデータベース マスター キーをバックアップする方法について説明します。 データベース マスター キーは、データベース内の他のキーや証明書を暗号化する際に使用します。 データベース マスター キーが削除されるか破損すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、暗号化されたキーの暗号化を解除できなくなる場合があります。さらに、そのキーを使用して暗号化されたデータは事実上失われます。 このため、データベース マスター キーはバックアップして、安全な別の場所に保存しておく必要があります。  
@@ -28,24 +27,24 @@ ms.locfileid: "74957266"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   [Transact-sql を使用してデータベースマスターキーをバックアップするには](#Procedure)  
+-   [Transact-SQL を使用してデータベース マスター キーをバックアップするには](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
 -   マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する CONTROL 権限が必要です。  
   
-##  <a name="Procedure"></a>Transact-sql での SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>Transact-sql での SQL Server Management Studio の使用  
   
 #### <a name="to-back-up-the-database-master-key"></a>データベース マスター キーをバックアップするには  
   

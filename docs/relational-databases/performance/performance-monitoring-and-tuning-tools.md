@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73962405"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635445"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の監視およびチューニング用のツールは次のとおりです。  
@@ -44,7 +44,7 @@ ms.locfileid: "73962405"
 |[リソースの利用状況の監視 &#40;システム モニター&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|システム モニターでは、使用中のバッファー マネージャー ページ要求の数などのリソース使用量が主に追跡され、イベントを監視するための定義済みオブジェクトおよびカウンターやユーザー定義カウンターを使用して、サーバーのパフォーマンスおよび利用状況を監視できます。 システム モニター (Microsoft Windows NT 4.0 の場合はパフォーマンス モニター) は、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、ブロックされたロックの数、CPU の利用状況など、イベントの数と比率を収集します。 特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。<br /><br /> システム モニターは Microsoft Windows Server および Windows オペレーティング システムで機能します。 システム モニターでは、Windows NT 4.0 以降で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをリモートまたはローカルで監視できます。<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] とシステム モニターの重要な違いは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ではデータベース エンジンのイベントが監視されるのに対し、システム モニターではサーバー プロセスに関連したリソース使用量が監視されることです。|  
 |[利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の利用状況モニターは、現在のアクティビティのカスタム ビューの場合に便利であり、次の情報をグラフィカルに表示します。<br /><br />- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで実行中のプロセス<br />- ブロックされているプロセス<br />- ロック<br />- ユーザーの利用状況|  
 |[パフォーマンス ダッシュボード](../../relational-databases/performance/performance-dashboard.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内のパフォーマンス ダッシュボードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にパフォーマンスのボトルネックが存在するかどうかを迅速に特定するのに役立ちます。|  
-|[クエリ調整アシスタント (QTA)](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|クエリ調整アシスタント (QTA) 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「*クエリ ストアの使用シナリオ*」の「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」セクションに記載されています。 |  
+|[クエリ調整アシスタント (QTA)](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|クエリ調整アシスタント (QTA) 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 |  
 |[クエリ ストア](../..//relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|クエリ ストア機能を使用すると、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。|
 |[SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャは次のとおりです。<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br />[sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br />[sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br />[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br />[sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。|  

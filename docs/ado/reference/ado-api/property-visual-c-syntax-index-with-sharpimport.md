@@ -13,17 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2175b8b07fcea8dc61ab0c47a4d85fcdb94dd7d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de7aa9f867e723099e7b6a7cc9177bf6d152cce8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931581"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759948"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>Property (Visual C++ 構文インデックス #import)
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 long GetAttributes( );  

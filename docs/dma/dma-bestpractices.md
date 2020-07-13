@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: e0f81a49af551836881ca71b49ff6a15d22a9897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76162623"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886049"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant を実行するためのベスト プラクティス
 この記事では、のインストール、評価、移行に関するベストプラクティスについて説明します。
@@ -38,7 +38,7 @@ Data Migration Assistant を SQL Server ホストコンピューターに直接�
  
     また、移行の失敗を回避するために、共有フォルダーに正しいアクセス許可を与えるようにしてください。 このツールでは、正しいアクセス許可が指定されています。 SQL Server インスタンスがネットワークサービスの資格情報で実行されている場合は、共有フォルダーに対する適切なアクセス許可を SQL Server インスタンスのコンピューターアカウントに付与します。
 
-- ソースサーバーと対象サーバーへの接続時に、暗号化接続を有効にします。 SSL 暗号化を使用すると、Data Migration Assistant と SQL Server インスタンス間のネットワーク経由で転送されるデータのセキュリティが向上します。これは、特に SQL ログインを移行する場合に便利です。 SSL 暗号化を使用せず、攻撃者によってネットワークが侵害された場合、移行される SQL ログインは攻撃者によってすぐに傍受または変更される可能性があります。
+- ソースサーバーと対象サーバーへの接続時に、暗号化接続を有効にします。 TLS 暗号化を使用すると、Data Migration Assistant と SQL Server インスタンス間のネットワーク経由で転送されるデータのセキュリティが向上します。これは、特に SQL ログインを移行する場合に便利です。 TLS 暗号化が使用されず、攻撃者によってネットワークが侵害された場合、移行される SQL ログインが攻撃者によってすぐに傍受または変更される可能性があります。
 
     一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を有効にすると、パケットの暗号化と暗号化解除に必要な追加のオーバーヘッドが発生するため、パフォーマンスが低下します。 詳細については、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?linkid=832513)」を参照してください。
     

@@ -1,5 +1,6 @@
 ---
 title: SQLXMLOLEDB プロバイダーの概要 (SQLXML)
+description: ActiveX データオブジェクト (ADO) を使用して SQLXML 機能を公開する OLE DB プロバイダーである SQLXMLOLEDB プロバイダーについて説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650074"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの概要 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SQLXMLOLEDB プロバイダーは、ActiveX Data Objects (ADO) を介して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。 ただし、このプロバイダーでは、ADO の "出力ストリームへの書き込み" モードでのみコマンドを実行できます。 SQLXMLOLEDB プロバイダーは行セット プロバイダーではありません。 コマンドを実行するときは、adExecuteStream フラグを指定する必要があります。これにより、ADO は、指定した出力ストリームを使用するように指示されます。  
   
  次の例は、adExecuteStream フラグが指定されている Execute コマンドの構文を示しています。  
@@ -39,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB プロバイダー固有のプロパティ  
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有の接続プロパティへのアクセスが提供されます。  
   
-|接続<br /><br /> property|Default<br /><br /> (ある場合)|[説明]|  
+|接続<br /><br /> property|Default<br /><br /> (ある場合)|説明|  
 |-----------------------------|----------------------------|-----------------|  
 |データ プロバイダー||OLE DB プロバイダーの PROGID を提供します。SQLXMLOLEDB ではこれを介してコマンドが実行されます。 SQLXML 4.0 および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、このプロバイダーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 内に含まれているため、このプロパティ値は "SQLNCLI11" に制限されます。 詳細については、「 [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。|  
   
  SQLXMLOLEDB プロバイダーでは、次のプロバイダー固有のコマンド プロパティへのアクセスが提供されます。  
   
-|command<br /><br /> property|Default<br /><br /> (ある場合)|[説明]|  
+|コマンド<br /><br /> property|Default<br /><br /> (ある場合)|説明|  
 |--------------------------|----------------------------|-----------------|  
 |基本パス|""|基本ファイル パスを指定します。 基本ファイル パスは、XML Stylesheet Language (XSL) の場所またはマッピング スキーマ ファイルを指定するときに使用します。 基本ファイルパスは、xsl またはマッピングスキーマのプロパティで指定されている XSL またはマッピングスキーマファイルの相対パスを解決するためにも使用されます。<br /><br /> このプロパティを使用する例については、「 [SQLXMLOLEDB Provider&#41;&#40;XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)」を参照してください。|  
 |ClientSideXML|False|行セットを XML に変換する処理をサーバーではなくクライアントで行う場合は、このプロパティを True に設定します。 これはパフォーマンスの負荷を中間層に移す場合に便利です。<br /><br /> このプロパティを使用する例については、「 [Sql クエリの実行 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) 」または「 [Sql クエリを含むテンプレートの実行」 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)を参照してください。|  
@@ -58,7 +59,7 @@ oTestCommand.Execute , , adExecuteStream
   
  次の表に、ss ストリームフラグのプロパティ値の説明を示します。  
   
-|プロパティ値|[説明]|  
+|プロパティ値|説明|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|マッピング スキーマまたは XSL に URL は指定できません。|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|マッピング スキーマまたは XSL に指定するパスは、テンプレート自身の基本パスに対して相対的である必要があります。|  

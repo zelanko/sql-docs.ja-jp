@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d626c0dcf44bc0907516d78aefd54b3ec0bb608a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47074877bb5d62ffa00e7824818fae9eed25004e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767878"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7987|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|メッセージ テキスト|システム テーブルの事前チェック : オブジェクト ID O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
 DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステム テーブルのデータ ページに対する初期チェックです。 この時点でエラーが検出されても修正できないので、DBCC CHECKDB は直ちに終了します。  

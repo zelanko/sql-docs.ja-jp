@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204813"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Forecasting 構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
@@ -24,8 +24,7 @@ ms.locfileid: "63204813"
   
 1.  のソリューションエクスプローラーで[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、[**マイニング構造**] を右クリックし、[**新しいマイニング構造**] をクリックします。  
   
-2.  
-  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**定義方法の選択**] ページで、[**既存のリレーショナルデータベースまたはデータウェアハウスから**] が選択されていることを確認し、[**次へ**] をクリックします。  
   

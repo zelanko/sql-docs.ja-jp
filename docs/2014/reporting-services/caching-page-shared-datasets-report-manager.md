@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109910"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共有データセットの [キャッシュ] ページ (レポート マネージャー)
@@ -34,8 +34,7 @@ ms.locfileid: "66109910"
   
 3.  ドロップダウン リストの **[管理]** をクリックします。 レポートの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[キャッシュ]** タブをクリックします。  
+4.  **[キャッシュ]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **[共有データセットをキャッシュする]**  
@@ -53,7 +52,7 @@ ms.locfileid: "66109910"
  **共有スケジュール**  
  レポート、サブスクリプション、および他の共有データセットによって共有されるスケジュールを指定します。  
   
- **[適用]**  
+ 適用****  
  変更を保存します。  
   
 ## <a name="see-also"></a>参照  

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2de6ae3fa1d21e7f3d58187e20200f5624a53227
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62836862"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438809"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>削除用の SQLServer への接続
   MSXDBCDC データベースに対する書き込み権限を含むデータベース ロール ( **db_owner** ロールなど) を持たないログインが Oracle CDC インスタンスの削除を試みると、[SQL Server への接続] ダイアログ ボックスが表示されます。  

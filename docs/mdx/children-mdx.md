@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016799"
 ---
 # <a name="children-mdx"></a>Children (MDX)
@@ -31,7 +31,7 @@ Member_Expression.Children
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Children**関数は、指定されたメンバーの子を含む自然な順序付けされたセットを返します。 指定されているメンバーに子メンバーがない場合、この関数は空のセットを返します。  
   
 ## <a name="example"></a>例  
@@ -53,11 +53,11 @@ FROM
   
 ```  
   
-|Release|履歴|  
+|リリース|履歴|  
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**変更内容 :**<br /> -わかりやすくするために、構文と引数を更新しました。<br /><br /> -更新された例を追加しました。|  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

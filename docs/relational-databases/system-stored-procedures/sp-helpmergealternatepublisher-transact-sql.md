@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 408d619ac06403c2d07b4b71b859cf49f6e2a071
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122389"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891650"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージパブリケーションの代替パブリッシャーとして有効なすべてのサーバーの一覧を返します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -45,7 +45,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|代替パブリッシャーの名前です。|  
 |**alternate_publisher_db**|**sysname**|パブリケーションデータベースの名前。|  
@@ -57,7 +57,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergealternatepublisher**は、マージレプリケーションで使用します。  
   
  マージ セッションごとに、システムではパブリッシャーとサブスクライバーの両方に対し、代替パブリッシャーの一覧を求めるクエリが実行されます。 マージ処理では代替パブリッシャーの一覧に対してエントリの追加や削除が行われ、サブスクライバーとパブリッシャーの両方に一致する代替パブリッシャーの一覧が生成されます。  
@@ -65,7 +65,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergealternatepublisher**を実行できるのは、パブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

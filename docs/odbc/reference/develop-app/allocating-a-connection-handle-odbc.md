@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bd3a44fe4f0466dfcf11a72fa0377564c1cf02f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077206"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288522"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>接続ハンドルの割り当て (ODBC)
 アプリケーションでデータソースまたはドライバーに接続するには、次のように接続ハンドルを割り当てる必要があります。  

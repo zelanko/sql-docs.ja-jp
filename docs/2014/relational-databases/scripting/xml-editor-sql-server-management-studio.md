@@ -14,15 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18efec618d3f4afd0c740147ec2612be36442028
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068419"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
   XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
@@ -34,7 +33,7 @@ ms.locfileid: "75242940"
   
  デザイナーで XML ファイル、XML スキーマ、およびデータセットを操作する場合は、次の 3 つのビュー (またはモード) を使用できます。  
   
-|表示|[説明]|サポートされるファイルの種類|  
+|表示|説明|サポートされるファイルの種類|  
 |----------|-----------------|--------------------------|  
 |**[スキーマ]**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
 |**データ**|XML データ ファイルを構造化データ グリッドでビジュアルに変更するために使用します。|.xml|  
@@ -95,7 +94,7 @@ ms.locfileid: "75242940"
 -   XML ドキュメントから XML スキーマを生成する。  
   
 ## <a name="xml-view"></a>XML ビュー  
- XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 「 \< 」と入力してタグを開始すると、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
+ XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 「」と入力して \< タグを開始すると、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションは、ツール バーからは利用できません。 XML エディターを使用しているときにこれらのオプションにアクセスするには、 **[編集]** メニューの **[IntelliSense]** をクリックします。  

@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5c6ed8c51ea7b471f69a462cee06d5ffd0560973
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288111"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151868"
 ---
 # <a name="replication-log-reader-agent"></a>レプリケーション ログ リーダー エージェント
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -95,16 +96,16 @@ logread [-?]
  ディストリビューターのセキュリティ モードを指定します。 **0** の値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、 **1** の値は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認証モードを示します。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- ログ リーダー エージェントが接続を行うときに使用する SSL (Secure Sockets Layer) 暗号化レベルです。  
+ 接続確立時にログ リーダー エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|SSL は使用されません。|  
-|**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
-|**2**|SSL が使用され、証明書の確認が行われます。|  
+|**0**|TLS を使用しないことを指定します。|  
+|**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
 
  > [!NOTE]  
- >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
  
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
@@ -139,6 +140,8 @@ logread [-?]
  履歴をログに記録する間隔です。 最後の履歴イベントがログに記録された後で **MessageInterval** 値に到達すると、次の履歴イベントがログに記録されます。  
   
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
+ 
+ **-MultiSubnetFailover** [**0**|**1**] MultiSubnetFailover プロパティを有効にするかどうかを指定します。 アプリケーションが異なるサブネット上の AlwaysOn 可用性グループ (AG) に接続している場合、MultiSubnetFailover を 1 (true) に設定すると、(現在) アクティブなサーバーの検出と接続が速くなります。
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -201,6 +204,7 @@ logread [-?]
 |変更内容|  
 |---------------------|  
 |**-ExtendedEventConfigFile** パラメーターを追加しました。|  
+|**-MultiSubnetFailover** パラメーターを追加しました。|
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

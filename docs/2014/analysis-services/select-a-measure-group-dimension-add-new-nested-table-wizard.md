@@ -11,22 +11,20 @@ f1_keywords:
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b0f6e71449f9c17c6969f653b2a3ea818dfbd0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069788"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538414"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>[メジャー グループ ディメンションの選択] (入れ子になっている新しいテーブルの追加ウィザード)
-  
   **[メジャー グループ ディメンションの選択]** ページを使用すると、入れ子になったテーブルとして使用するメジャー グループのディメンションを選択できます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
- **メジャーグループ**  
+ **メジャー**  
  入れ子になったテーブルをメジャー グループ ディメンションから選択します。  
   
 ## <a name="see-also"></a>参照  

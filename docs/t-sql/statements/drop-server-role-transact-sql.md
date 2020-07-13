@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. ロールのメンバーシップを表示するには  
- ロールのメンバーシップを表示するには、**の**[サーバー ロール (メンバー)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ページを使用するか、次のクエリを実行します。  
+ ロールのメンバーシップを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバー ロール (メンバー)]** ページを使用するか、次のクエリを実行します。  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aabdd899d78c1141716725d57e343dc002dc96ad
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087869"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284354"
 ---
 # <a name="unicode-drivers"></a>Unicode ドライバー
 ドライバーが Unicode ドライバーであるか ANSI ドライバーであるかは、データソースの性質によって異なります。 データソースで Unicode データがサポートされている場合、ドライバーは Unicode ドライバーである必要があります。 データソースで ANSI データのみがサポートされている場合、ドライバーは ANSI ドライバーのままである必要があります。  

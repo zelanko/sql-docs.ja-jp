@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connecting to driver [ODBC], disconnecting
 - ODBC drivers [ODBC], disconnecting
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039764"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300462"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>データ ソースまたはドライバーからの切断
 アプリケーションでデータソースの使用が完了すると、 **Sqldisconnect**が呼び出されます。 **Sqldisconnect**は、接続に割り当てられているすべてのステートメントを解放し、データソースからドライバーを切断します。 トランザクションが処理中の場合は、エラーが返されます。  

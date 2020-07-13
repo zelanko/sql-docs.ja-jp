@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255911"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531122"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で Spark の機械学習モデルを作成、エクスポート、およびスコア付けする
 
@@ -52,7 +52,7 @@ ms.locfileid: "75255911"
 
    このノートブックには、サンプルのこのセクションに必要なコマンドを含むセルが含まれています。
 
-1. Azure Data Studio でノートブックを開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
+1. Azure Data Studio でノートブックを開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、[SQL Server でノートブックを使用する方法](../azure-data-studio/notebooks-guidance.md)に関するページを参照してください。
 
 データはまず Spark に読み取られ、トレーニング データ セットとテスト データ セットに分割されます。 次に、トレーニング データを使用してパイプライン モデルをトレーニングします。 最後に、モデルを MLeap バンドルにエクスポートします。
 
@@ -61,7 +61,7 @@ ms.locfileid: "75255911"
 
 ## <a name="model-scoring-with-sql-server"></a>SQL Server を使用したモデルのスコアリング
 
-Spark の ML パイプライン モデルが共通のシリアル化 [MLeap バンドル](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)形式になったため、Spark がなくても Java でモデルをスコア付けすることができます。 
+Spark の ML パイプライン モデルが共通のシリアル化 [MLeap バンドル](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)形式になったため、Spark がなくても Java でモデルをスコア付けすることができます。
 
 このサンプルでは、SQL Server の [Java 言語拡張機能](../language-extensions/language-extensions-overview.md)を使用します。 SQL Server でモデルをスコア付けするために、まず、Java にモデルを読み込んでスコアを付けることができる Java アプリケーションをビルドする必要があります。 この Java アプリケーションのサンプル コードは、[mssql-mleap-app フォルダー](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app)にあります。
 

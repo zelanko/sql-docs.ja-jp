@@ -13,37 +13,30 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21c87a2b8697c3c9e83bc82edac79dacd3481b35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176187"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436409"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services (SSIS) プロジェクト
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が用意されています。
 
- データベースまた[!INCLUDE[ssIS](../includes/ssis-md.md)]はパッケージストア[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に[!INCLUDE[msCoName](../includes/msconame-md.md)]パッケージを配置する場合は、サービスを使用してパッケージを管理します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でのみ使用できます。 サービスの詳細については、「[Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)」を参照してください。 パッケージ配置の詳細については、「[パッケージの配置 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)」を参照してください。
+ データベースまたはパッケージストアにパッケージを配置する場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを使用し [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] てパッケージを管理します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でのみ使用できます。 サービスの詳細については、「[Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)」を参照してください。 パッケージ配置の詳細については、「[パッケージの配置 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)」を参照してください。
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置する場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で Transact-SQL のビューおよびストアド プロシージャを使用してプロジェクトを管理します。 プロジェクト配置の詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの詳細については、「[Integration Services (SSIS) Server](catalog/integration-services-ssis-server-and-catalog.md)」を参照してください。
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置する場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で Transact-SQL のビューおよびストアド プロシージャを使用してプロジェクトを管理します。 プロジェクト配置の詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの詳細については、「[Integration Services (SSIS) Server](catalog/integration-services-ssis-server-and-catalog.md)」を参照してください。
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の概要については、「[Integration Services (SSIS) and Studio Environments](integration-services-ssis-development-and-management-tools.md)」(Integration Services (SSIS) と Studio 環境) を参照してください。
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の概要については、「[Integration Services (SSIS) and Studio Environments](integration-services-ssis-development-and-management-tools.md)」(Integration Services (SSIS) と Studio 環境) を参照してください。
 
 ## <a name="understanding-integration-services-projects"></a>Integration Services プロジェクトについて
  プロジェクトとは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開発するコンテナーのことです。
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにはパッケージに関連するファイルが格納され、グループ化されます。 たとえば、プロジェクトには、特定の抽出、変換、および読み込み (ETL) ソリューションの作成に必要なファイルが含まれます。
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにはパッケージに関連するファイルが格納され、グループ化されます。 たとえば、プロジェクトには、特定の抽出、変換、および読み込み (ETL) ソリューションの作成に必要なファイルが含まれます。
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成する前に、この種のプロジェクトの基本的な内容を理解しておく必要があります。 プロジェクトの内容を理解すれば、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの作成および作業を開始することができます。
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成する前に、この種のプロジェクトの基本的な内容を理解しておく必要があります。 プロジェクトの内容を理解すれば、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの作成および作業を開始することができます。
 
 ### <a name="folders-in-integration-services-projects"></a>Integration Services プロジェクトのフォルダー
  次の図は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] での [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクト内のフォルダーを示しています。
@@ -54,7 +47,7 @@ ms.locfileid: "78176187"
 
 |Folder|説明|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]パッケージ|パッケージが含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)」を参照してください。|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ|パッケージが含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md)」を参照してください。|
 |その他|パッケージ ファイル以外のファイルが含まれます。|
 
 ### <a name="files-in-integration-services-projects"></a>Integration Services プロジェクトのファイル
@@ -69,8 +62,7 @@ ms.locfileid: "78176187"
 ## <a name="understanding-solutions"></a>ソリューションについて
  ソリューションとは、エンド ツー エンドのビジネス ソリューションを開発するときに使用するプロジェクトを、グループ化して管理するコンテナーのことです。 ソリューションを使用すると、複数のプロジェクトを 1 単位として処理し、ビジネス ソリューションに役立つ 1 つ以上の関連プロジェクトをまとめることができます。
 
- ソリューションには、さまざまな種類のプロジェクトを含めることができます。 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成する場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているソリューション内の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトで作業します。
+ ソリューションには、さまざまな種類のプロジェクトを含めることができます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成する場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているソリューション内の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトで作業します。
 
  新しいソリューションを作成すると、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のソリューション エクスプローラーにソリューション フォルダーが自動的に追加され、拡張子 .sln および .suo のファイルが作成されます。
 
@@ -81,9 +73,7 @@ ms.locfileid: "78176187"
  新しいプロジェクトを作成すると [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でソリューションが自動的に作成されますが、空白のソリューションを作成して、プロジェクトを後で追加することもできます。
 
 > [!NOTE]
->  既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成すると、そのソリューションは **プロジェクト エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 
-  **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]** を展開し、 **[全般]** をクリックします。 
-  **[全般]** ページで、 **[常にソリューションを表示]** を選択します。
+>  既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成すると、そのソリューションは **プロジェクト エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]** を展開し、 **[全般]** をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]** を選択します。
 
 ## <a name="related-tasks"></a>Related Tasks
  [ソリューション内の Integration Services プロジェクトを追加または削除する](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)

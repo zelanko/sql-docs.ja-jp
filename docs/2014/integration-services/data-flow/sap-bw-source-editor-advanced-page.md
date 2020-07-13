@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 017c26592d7fe5ab5f64f5e726641fc8f7bca002
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901048"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431209"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
   文字列の変換規則とタイムアウト期間を指定し、特定の要求 ID の状態をリセットするには、 **[SAP BW 変換元エディター]** の **[詳細設定]** ページを使用します。  
@@ -44,13 +43,11 @@ ms.locfileid: "62901048"
  **文字列変換**  
  文字列変換に適用するルールを指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、`nvarchar` にすべての文字列を変換します。 それ以外の場合は `varchar` にすべての文字列を変換します。|  
-|**文字列を varchar に変換**|
-  `varchar` にすべての文字列を変換します。|  
-|**文字列を nvarchar に変換**|
-  `nvarchar` にすべての文字列を変換します。|  
+|**文字列を varchar に変換**|`varchar` にすべての文字列を変換します。|  
+|**文字列を nvarchar に変換**|`nvarchar` にすべての文字列を変換します。|  
   
  **タイムアウト (秒)**  
  ソースが待機する最大秒数を指定します。  

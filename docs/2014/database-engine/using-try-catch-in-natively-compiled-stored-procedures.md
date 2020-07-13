@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4146d59be120b850e1e92e5e43ae73b2928c52cf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62842480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927651"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャでの Try..Catch の使用
   ネイティブ コンパイル ストアド プロシージャ内で try..catch ブロックを使用できます。 次の構造がサポートされます。  
@@ -61,6 +60,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

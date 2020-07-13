@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e560ec0fd617d4da46235803da8cbd69ef4f80d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5ec4ef3fc2e0f2c4834ffa7479a00562ae15d07f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058829"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>完全なパスを使用して、拡張ストアド プロシージャ DLL の名前を登録する
   DLL 名の完全なパスを使用せずに登録されていた拡張ストアド プロシージャは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で機能しない可能性があります。  
@@ -28,9 +27,8 @@ ms.locfileid: "66091287"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
- DLL 名の完全なパスを使用せずに登録されていた拡張ストアド プロシージャは、アップグレードした後に機能しない可能性があります。 アップグレード プロセス中に古い BINN ディレクトリが新しいパスに追加されないためです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって拡張ストアド プロシージャを見つけることができなくなる可能性があります。  
+## <a name="description"></a>説明  
+ DLL 名の完全なパスを使用せずに登録されていた拡張ストアド プロシージャは、アップグレードした後に機能しない可能性があります。 アップグレード プロセス中に古い BINN ディレクトリが新しいパスに追加されないためです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって拡張ストアド プロシージャを見つけることができなくなる可能性があります。  
   
 ## <a name="corrective-action"></a>修正措置  
  アップグレードする前に、登録に完全なパス名を使用していない各拡張ストアド プロシージャに対して、次の手順を実行します。  

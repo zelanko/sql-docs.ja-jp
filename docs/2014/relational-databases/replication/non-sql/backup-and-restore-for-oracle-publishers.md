@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0fb07772da3bdcf485ca7668fc9a9e34a8e51c5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060565"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle パブリッシャーのバックアップと復元
   バックアップと復元を実行する場合は、次のガイドラインに従ってください。  

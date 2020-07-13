@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record count [ODBC]
 - descriptors [ODBC], record count
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138083"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281818"
 ---
 # <a name="record-count"></a>レコード カウント
 記述子の SQL_DESC_COUNT header フィールドは、データを格納する最大番号のレコードの1から始まるインデックスです。 このフィールドは、バインドされているすべての列またはパラメーターの数ではありません。 記述子が割り当てられると、SQL_DESC_COUNT の初期値は0になります。  

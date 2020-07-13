@@ -1,5 +1,6 @@
 ---
 title: ストアドプロシージャの実行 |Microsoft Docs
+description: ストアド プロシージャは、データベースに保存される実行可能なオブジェクトです。 SQL Server は、ストアドプロシージャと拡張ストアドプロシージャをサポートしています。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,19 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, stored procedures
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 622b32871c7b21cc8e7c4ad1ee40323059a157a3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73778084"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004625"
 ---
 # <a name="running-stored-procedures"></a>ストアド プロシージャの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ストアド プロシージャは、データベースに保存される実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対応  
+  ストアド プロシージャは、データベースに保存される実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
 -   ストアド プロシージャ:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73778084"
   
  ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内でステートメントを直接実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
--   高パフォーマンス  
+-   パフォーマンスが高い  
   
      SQL ステートメントは、プロシージャが作成される時点で、解析およびコンパイルされます。 プロシージャの実行時には、これらの作業は必要ありません。  
   

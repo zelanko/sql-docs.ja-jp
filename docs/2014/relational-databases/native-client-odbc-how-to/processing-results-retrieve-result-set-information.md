@@ -10,15 +10,14 @@ helpviewer_keywords:
 - result sets [ODBC]
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048206"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>結果セットの情報の取得 (ODBC)
     

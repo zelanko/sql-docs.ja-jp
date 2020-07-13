@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de5f78f55f7242e0762d9b7cffb6dfe41c83d1dd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104797"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282532"
 ---
 # <a name="odbc-in-windows"></a>Windows での ODBC
 次の項目は、Microsoft® Windows NT®/windows 2000 および Microsoft Windows®95/98 オペレーティングシステムで実行されている ODBC にのみ適用されます。  
@@ -24,7 +24,7 @@ ms.locfileid: "68104797"
   
 -   [標準に準拠したアプリケーションとドライバー](../../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)  
   
--   [ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)  
+-   [ヘッダーファイル](../../../odbc/reference/develop-app/header-files.md)  
   
 -   [CString オブジェクトを ODBC 関数に渡す](../../../odbc/reference/develop-app/cstring-class.md)  
   

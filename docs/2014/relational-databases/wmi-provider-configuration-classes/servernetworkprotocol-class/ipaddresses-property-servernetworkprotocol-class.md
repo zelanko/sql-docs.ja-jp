@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7b2adf53bc6ebca14e2d3b4dc2cee248a4b6720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b94c4c11327abc1f02bd1e99c414f806f75bc145
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63190301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059924"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルに関連付けられた IP アドレスを取得します。  
@@ -36,14 +35,14 @@ object
 .IpAddresses [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の`ServerNetworkProtocol` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスによって使用されるネットワークプロトコルを表すオブジェクトです。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ `ServerNetworkProtocol`のインスタンスによって使用されるネットワークプロトコルを表すオブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバーネットワークプロトコルによってサポートされる IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

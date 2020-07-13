@@ -11,14 +11,14 @@ helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d596d688956d7bdbf3d9125184d81c16249781c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68119712"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298962"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 述語の制限事項
 列のデータが255文字を超える場合、LIKE 比較は最初の255文字にのみ基づいて行われます。  

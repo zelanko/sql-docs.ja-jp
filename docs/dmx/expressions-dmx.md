@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8a5c057197e0603c800f2ca5538652ab06609db8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68074838"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670283"
 ---
 # <a name="expressions-dmx"></a>式 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) では、式は、結果を取得するために評価[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]できる識別子、値、および演算子の組み合わせです。  
+  データマイニング拡張機能 (DMX) では、式は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 結果を取得するために評価できる識別子、値、および演算子の組み合わせです。  
   
  DMX 式には、簡単なものも複雑なものもあります。 単純式には、次のいずれかを指定できます。  
   
- 常時  
+ 定数  
  定数は 1 つの特定の値を表す記号です。 定数には、文字列、または数値または日付の値を指定できます。 文字定数および日付定数を区切るには、単一引用符 (') を使用する必要があります。  
   
  スカラー関数  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964007"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751946"
 ---
 # <a name="handler-property-rds"></a>Handler プロパティ (RDS)
 [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)の機能を拡張するサーバー側のカスタマイズプログラム (ハンドラー) の名前と、*ハンドラー*によって使用されるすべてのパラメーターを示します。  
@@ -40,9 +40,9 @@ DataControl.Handler = String
  RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
  *String*  
- ハンドラーの名前とすべてのパラメーターをコンマで区切って指定した**文字列**値 ( `"handlerName,parm1,parm2,...,parm` *N*`"`など)。  
+ ハンドラーの名前とすべてのパラメーターをコンマで区切って指定した**文字列**値 ( `"handlerName,parm1,parm2,...,parm` *N*など `"` )。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティを**adUseClient**に設定する必要がある機能である[カスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)をサポートします。  
   
  ハンドラーの名前とそのパラメーター (存在する場合) は、コンマ (",") で区切られます。 *文字列*内の任意の場所にセミコロン (";") がある場合、予期しない動作が発生します。 **IDataFactoryHandler**インターフェイスがサポートされていれば、独自のハンドラーを作成できます。  

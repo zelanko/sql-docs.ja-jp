@@ -12,14 +12,14 @@ helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d146b2fb9bfc0e7294709e971f1b6752dc99ab3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020573"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300072"
 ---
 # <a name="retrieving-bookmarks"></a>ブックマークの取得
 アプリケーションでブックマークを使用する場合は、ステートメントを準備または実行する前に、SQL_ATTR_USE_BOOKMARKS ステートメントの属性を SQL_UB_VARIABLE に設定する必要があります。 これが必要なのは、ブックマークの作成と維持が負荷の高い操作である可能性があるためです。そのため、ブックマークは、アプリケーションで適切に使用できる場合にのみ有効にする必要があります。  

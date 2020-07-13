@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891438"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>ソリューションとデータ ソースの作成 (中級者向けデータ マイニング チュートリアル)
@@ -30,24 +30,19 @@ ms.locfileid: "68891438"
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  
-  **[インストールされているテンプレート]** ペインの **[Analysis Services 多次元およびデータ マイニング プロジェクト]** をクリックします。  
+3.  **[インストールされているテンプレート]** ペインの **[Analysis Services 多次元およびデータ マイニング プロジェクト]** をクリックします。  
   
-4.  
-  **[名前]** ボックスに、新しいプロジェクトの名前「 **DM Intermediate**」を入力します。  
+4.  **[名前]** ボックスに、新しいプロジェクトの名前「 **DM Intermediate**」を入力します。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored-optional"></a>データ マイニング オブジェクトを格納するインスタンスを変更するには (オプション)  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  
-  **[プロパティ ページ]** ペインの左側で、 **[配置]** をクリックします。  
+2.  **[プロパティ ページ]** ペインの左側で、 **[配置]** をクリックします。  
   
-3.  サーバー名 **** が **localhost**であることを確認します。 別のインスタンスを使用する場合は、インスタンスの名前を入力します。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の名前付きインスタンスを使用する場合は、コンピューター名とインスタンス名を入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  サーバー名 **** が **localhost**であることを確認します。 別のインスタンスを使用する場合は、インスタンスの名前を入力します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の名前付きインスタンスを使用する場合は、コンピューター名とインスタンス名を入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-deployment-properties-for-a-project-optional"></a>プロジェクトの配置プロパティを変更するには (オプション)  
   
@@ -55,14 +50,11 @@ ms.locfileid: "68891438"
   
      -- または --  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  
-  **[プロパティ ページ]** ペインの左側で、 **[配置]** をクリックします。  
+2.  **[プロパティ ページ]** ペインの左側で、 **[配置]** をクリックします。  
   
-     
-  **[オプション]** ペインで **[配置モード]** をクリックし、上書きする場合はオプションを **[すべて配置]** に設定し、オブジェクトを更新するかオブジェクトを追加する場合は **[変更のみを配置]** に設定します。  
+     **[オプション]** ペインで **[配置モード]** をクリックし、上書きする場合はオプションを **[すべて配置]** に設定し、オブジェクトを更新するかオブジェクトを追加する場合は **[変更のみを配置]** に設定します。  
   
 ## <a name="creating-a-data-source"></a>データ ソースの作成  
  「基本的なデータ マイニング チュートリアル」では、 *データベースの接続情報を格納する* データ ソース [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] を作成しました。 このソリューションでは、同じ手順で [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データ ソースを作成します。  
@@ -78,9 +70,9 @@ ms.locfileid: "68891438"
 |シナリオ|データ ソース ビューに含まれているデータ|  
 |--------------|-------------------------------------------|  
 |[レッスン 2: 予測シナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|単一のビューとして収集された、各地域での各自転車モデルの月間の売上レポート。|  
-|[レッスン 3: マーケットバスケットシナリオの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|顧客注文の一覧を含むテーブルと、各顧客の購入記録を示す入れ子になったテーブル。|  
+|[レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|顧客注文の一覧を含むテーブルと、各顧客の購入記録を示す入れ子になったテーブル。|  
 |[レッスン 4: シーケンスクラスターシナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|マーケット バスケット分析に使用したものと同じデータに、品目の購入順序を示す識別子が追加されています。|  
-|[レッスン 5: ニューラルネットワークとロジスティック回帰モデルの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|コール センターのいくつかの事前パフォーマンス追跡データを含む単一のテーブル。|  
+|[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|コール センターのいくつかの事前パフォーマンス追跡データを含む単一のテーブル。|  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 2: 予測シナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1dc2522aef82913bcc2e93f2f8fcde4f2311e958
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030201"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen イベント クラス
   **CursorOpen** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを開くイベントが示されます。 カーソルを開くイベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、カーソルやカーソル オプションに関連する SQL ステートメントを定義し、カーソルを作成した時点で発生します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62663455"
   
 ## <a name="cursoropen-event-class-data-columns"></a>CursorOpen イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121459"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301218"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 関数
 **互換性**  
@@ -51,7 +51,7 @@ SQLRETURN SQLConnect(
  *ConnectionHandle*  
  [入力] 接続ハンドル。  
   
- *Server*  
+ *ServerName*  
  代入データソース名。 データが、プログラムと同じコンピューター、またはネットワーク上の別のコンピューターに配置されている可能性があります。 アプリケーションでデータソースを選択する方法の詳細については、「[データソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」を参照してください。  
   
  *NameLength1*  
@@ -75,7 +75,7 @@ SQLRETURN SQLConnect(
 ## <a name="diagnostics"></a>診断  
  **SQLConnect**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返した場合、関連付けられた SQLSTATE 値を取得するには、 *handletype* SQL_HANDLE_DBC および*connectionhandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLConnect**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S02|オプションの値が変更されました|ドライバーは、 **SQLSetConnectAttr**の*valueptr*引数に指定された値をサポートしておらず、同様の値に置き換えられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -141,7 +141,7 @@ SQLRETURN SQLConnect(
   
  ドライバーが**SQLConnect**をサポートしている場合、ドライバーのシステム情報の driver キーワードセクションには、最初の文字が "Y" に設定された**connectfunctions**キーワードが含まれている必要があります。  
   
-### <a name="connection-pooling"></a>接続のプール  
+### <a name="connection-pooling"></a>接続プール  
  接続プールを使用すると、既に作成されている接続をアプリケーションで再利用できます。 接続プールが有効になっていて、 **SQLConnect**が呼び出されると、ドライバーマネージャーは、接続プール用に指定された環境内の接続のプールの一部である接続を使用して接続を試みます。 この環境は、プール内の接続を使用するすべてのアプリケーションで使用される共有環境です。  
   
  **SQLSetEnvAttr**を呼び出すことによって環境が割り当てられる前に、接続プールが有効になります。これにより SQL_ATTR_CONNECTION_POOLING が SQL_CP_ONE_PER_DRIVER に設定されます (ドライバーごとに最大1つのプールを指定)。または SQL_CP_ONE_PER_HENV (環境あたり最大1つのプールを指定)。 この場合、 **SQLSetEnvAttr**は、 *EnvironmentHandle*を null に設定して呼び出されます。これにより、属性がプロセスレベルの属性になります。 SQL_ATTR_CONNECTION_POOLING が SQL_CP_OFF に設定されている場合、接続プールは無効になります。  
@@ -247,7 +247,7 @@ int main() {
   
 ### <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |データソースへの接続に必要な値の検出と列挙|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  

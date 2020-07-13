@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133267"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893309"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68133267"
   
     1.  スナップショットがパブリケーションに対して生成されたら、パブリケーションのスナップショット フォルダーに移動します。  
   
-    2.  `.sch` など、アーティクルと同じ名前が付いた `MyArticle.sch` ファイルを検索します。  
+    2.  `MyArticle.sch` など、アーティクルと同じ名前が付いた `.sch` ファイルを検索します。  
   
     3.  メモ帳やその他のテキスト エディターを使用して、このファイルを開きます。  
   

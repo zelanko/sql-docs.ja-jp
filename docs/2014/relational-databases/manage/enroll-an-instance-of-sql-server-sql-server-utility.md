@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023554"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
@@ -44,7 +43,7 @@ ms.locfileid: "72798083"
   
  このリリースでは、UCP が次の要件を満たしている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはサポートされているエディションである必要があります。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 -   UCP は SQL Server の大文字と小文字が区別されるインスタンスでホストすることをお勧めします。  
   
@@ -86,17 +85,17 @@ ms.locfileid: "72798083"
   
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
-##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> インスタンスの登録ウィザードの概要  
  このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージド インスタンス]** ノードを右クリックして、 **[マネージド インスタンスの追加]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Instance_name"></a> SQL Server インスタンスの指定  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server インスタンスの指定  
  接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Connection_dialog"></a> 接続ダイアログ  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 接続ダイアログ  
  [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
@@ -104,7 +103,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[接続]** をクリックします。  
   
-##  <a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのオプションを指定する場合は、次のガイドラインに従います。  
@@ -113,13 +112,13 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Validation_rules"></a> SQL Server インスタンスの検証  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server インスタンスの検証  
  このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで、次の条件が満たされている必要があります：  
   
 |条件|修正措置|  
 |---------------|-----------------------|  
 |指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと UCP に対する管理者特権が必要です。|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、および UCP の管理者特権を持つアカウントでログオンします。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションでインスタンスの登録がサポートされている必要があります。|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションでインスタンスの登録がサポートされている必要があります。|の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で TCP/IP が有効になっている必要があります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で TCP/IP を有効にします。|  
 |別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの一部として既に管理されている場合、そのインスタンスを別の UCP に登録することはできません。|  
 |既に UCP である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、接続先の UCP とは別の UCP の場合、インスタンスをこの UCP に登録することはできません。|  
@@ -140,7 +139,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Summary"></a> インスタンス登録の概要  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> インスタンス登録の概要  
  概要ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの情報が表示されます。  
   
  マネージド インスタンスの設定は次のとおりです。  
@@ -151,7 +150,7 @@ ms.locfileid: "72798083"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Enrolling"></a> SQL Server インスタンスの登録  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> SQL Server インスタンスの登録  
  登録ページでは、次のように、処理の進行状況が表示されます。  
   
 -   インスタンスを登録する準備をしています。  
@@ -169,7 +168,7 @@ ms.locfileid: "72798083"
 >   
 >  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  追加情報:Windows NT グループまたはユーザー '\<ドメイン名\アカウント名>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
+>  追加情報: Windows NT グループ/ユーザー ' ' に関する情報を取得できませんでした \<DomainName\AccountName> 。エラーコード0x5。 (Microsoft SQL Server、エラー:15404)  
 >   
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](../../database-engine/troubleshoot-the-sql-server-utility.md)」を参照してください。  
   
@@ -182,7 +181,7 @@ ms.locfileid: "72798083"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
-##  <a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
  次の例を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録します:  
   
 ```powershell

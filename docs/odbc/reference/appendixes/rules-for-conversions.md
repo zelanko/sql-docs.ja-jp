@@ -13,14 +13,14 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c49177d62fffc3b3b5c47a25bf3fb421d7564245
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057092"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305088"
 ---
 # <a name="rules-for-conversions"></a>変換規則
 このセクションの規則は、数値リテラルを含む変換に適用されます。 これらの規則のために、次の用語が定義されています。  

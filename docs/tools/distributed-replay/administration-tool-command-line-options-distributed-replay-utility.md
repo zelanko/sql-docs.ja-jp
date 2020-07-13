@@ -1,5 +1,6 @@
 ---
 title: 管理ツール コマンドラインオプション
+description: SQL Server 分散再生管理ツールである DReplay.exe は、分散再生コントローラーと通信するためのコマンド ライン ツールです。
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/12/2016
-ms.openlocfilehash: 3934cbdd68c89dc519d5855ee255e0ee66b832a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e97bf5c3cc40537919049b7a8c213970ba7dae2c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75308007"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152128"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理ツール コマンド ライン オプション (Distributed Replay Utility)
 
@@ -78,7 +79,7 @@ Usage:
   
  詳細については、「 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901377"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304713"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL コマンド
 プログラムによってテーブルの構造を変更します。  
@@ -180,7 +180,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Visual FoxPro で、テーブルの構造に変更を加えることを許可することを指定します。これらの変更は、テーブル内のデータの整合性に違反している可能性があります。 既定では、ALTER TABLE によってテーブル内のデータの整合性に違反する変更が行われないようにします。 この既定の動作をオーバーライドするには、NOVALIDATE を含めます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE を使用して、データベースに追加されていないテーブルの構造を変更できます。 ただし、free テーブルを変更するときに、既定、外部キー、主キー、参照、または SET 句を含めると、エラーが生成されます。  
   
  ALTER TABLE では、新しいテーブルヘッダーを作成し、テーブルヘッダーにレコードを追加することによって、テーブルを再構築できます。 たとえば、フィールドの型または幅を変更すると、テーブルが再構築される可能性があります。  

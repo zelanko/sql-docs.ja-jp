@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74e72deb65d3f693e309926870174ebe72817c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bb89a55e8e4568af00854fc487c51dcdff0658dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63273328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057709"
 ---
 # <a name="schema-element-for-database-dta"></a>Database の Schema 要素 (DTA)
   チューニングするデータベースのスキーマを指定します。  
@@ -35,7 +34,7 @@ ms.locfileid: "63273328"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

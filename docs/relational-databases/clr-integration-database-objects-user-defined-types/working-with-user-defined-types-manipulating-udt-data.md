@@ -1,5 +1,6 @@
 ---
 title: UDT データの操作 |Microsoft Docs
+description: この記事では、SQL Server データベースの UDT 列にデータを挿入、選択、および更新する方法について説明します。
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -28,21 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5ab38e745c619d119e8e4ca477e9e78f4ac7783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727748"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>ユーザー定義型の使用 - UDT データの操作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 列へのデータの挿入  
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、3行のサンプルデータを**Points**テーブルに挿入します。 **Point**データ型は、UDT のプロパティとして公開される X および Y 整数値で構成されます。 コンマ区切りの X 値と Y 値を**Point**型にキャストするには、cast 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の2つのステートメントでは、CONVERT 関数を使用して文字列値を**Point**型に変換し、3番目のステートメントで CAST 関数を使用します。  
+ 次のステートメントでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 3 行のサンプルデータを**Points**テーブルに挿入します。 **Point**データ型は、UDT のプロパティとして公開される X および Y 整数値で構成されます。 コンマ区切りの X 値と Y 値を**Point**型にキャストするには、cast 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の2つのステートメントでは、CONVERT 関数を使用して文字列値を**Point**型に変換し、3番目のステートメントで CAST 関数を使用します。  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -102,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>変数を使用した作業  
- 変数を使用するには、DECLARE ステートメントを使用して、UDT 型にその変数を割り当てます。 次のステートメントは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SET ステートメントを使用して値を割り当て、変数に対して UDT の**ToString**メソッドを呼び出して結果を表示します。  
+ 変数を使用するには、DECLARE ステートメントを使用して、UDT 型にその変数を割り当てます。 次のステートメントは、SET ステートメントを使用して値を割り当て、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 変数に対して UDT の**ToString**メソッドを呼び出して結果を表示します。  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -158,10 +157,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT メソッドの呼び出し  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **Point**クラスには、 **Distance**、 **DistanceFrom**、および**DistanceFromXY**の3つのメソッドが含まれています。 これら3つのメソッドを定義するコードの一覧については、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **Point**クラスには、 **Distance**、 **DistanceFrom**、および**DistanceFromXY**の3つのメソッドが含まれています。 これら3つのメソッドを定義するコードの一覧については、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」を参照してください。  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、 **Pointvalue. Distance**メソッドを呼び出します。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、 **Pointvalue. Distance**メソッドを呼び出します。  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -225,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- バイト順序が**true**に設定された udt が定義さ[!INCLUDE[tsql](../../includes/tsql-md.md)]れている場合、は WHERE 句で udt 列を評価できます。  
+ バイト順序が**true**に設定された udt が定義されている場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] は WHERE 句で udt 列を評価できます。  
   
 ```sql  
 UPDATE dbo.Points  
@@ -234,8 +232,7 @@ WHERE PointValue = '3,4';
 ```  
   
 ### <a name="updating-limitations"></a>更新の制限事項  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、複数のプロパティを一度に更新することはできません。 たとえば、1 つの UPDATE ステートメントでは同じ列名を 2 回使用することができないため、次のステートメントは失敗します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、複数のプロパティを一度に更新することはできません。 たとえば、1 つの UPDATE ステートメントでは同じ列名を 2 回使用することができないため、次のステートメントは失敗します。  
   
 ```sql  
 UPDATE dbo.Points  
@@ -267,7 +264,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964105"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751991"
 ---
 # <a name="handler-property-example-vb"></a>Handler プロパティの例 (VB)
 > [!IMPORTANT]

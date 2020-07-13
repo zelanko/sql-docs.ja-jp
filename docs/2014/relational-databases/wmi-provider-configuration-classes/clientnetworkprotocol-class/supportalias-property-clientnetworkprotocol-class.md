@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62826758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061404"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias プロパティ (ClientNetworkProtocol クラス)
   [Setordervalue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)によって指定された現在のネットワークプロトコルがエイリアスをサポートするかどうかを指定するブール型プロパティを取得します。  
@@ -36,10 +35,9 @@ object
 .SupportAlias [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク プロトコルが別名をサポートするかどうかを指定するブール値。  
@@ -48,7 +46,7 @@ object
   
  False の場合、クライアント ネットワーク プロトコルは別名をサポートしません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

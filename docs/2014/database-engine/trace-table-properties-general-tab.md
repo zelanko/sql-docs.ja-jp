@@ -13,41 +13,40 @@ helpviewer_keywords:
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d3d931252829058842fe20d20667dff598092f49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928219"
 ---
 # <a name="trace-table-properties-general-tab"></a>[トレース テーブルのプロパティ] ([全般] タブ)
   [**トレーステーブルのプロパティ**] ダイアログボックスの **[全般**] タブを使用すると、トレーステーブルのプロパティを表示できます。  
   
- このウィンドウを表示するに[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]は、を使用してトレーステーブルを開き、[**ファイル**] メニューの [**プロパティ**] をクリックします。  
+ このウィンドウを表示するには、を使用して [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレーステーブルを開き、[**ファイル**] メニューの [**プロパティ**] をクリックします。  
   
 ## <a name="options"></a>オプション  
  **テーブル名**  
  サーバー、データベース、スキーマ、表示しているトレース テーブルの名前を表示します。  
   
- **トレースプロバイダー名**  
+ **[トレース プロバイダー名]**  
  トレースの対象となった SQL Server のインスタンスの名前を表示します。  
   
- **トレースプロバイダーの種類**  
+ **[トレース プロバイダーの種類]**  
  トレースを提供したサーバーの種類を表示。  
   
- **バージョン**  
+ **version**  
  トレースを提供したサーバーのバージョンを表示。  
   
- **[行]**  
+ **削減**  
  トレース テーブルの行数を表示します。  
   
  **[データ サイズ (ページ)]**  
  トレース テーブルのデータ ページ数を表示します。  
   
 ## <a name="see-also"></a>参照  
- [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [トレーステーブル &#40;SQL Server プロファイラーを開き&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server プロファイラー](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

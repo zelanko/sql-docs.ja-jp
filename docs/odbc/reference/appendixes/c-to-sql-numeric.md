@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], numeric
 - converting data from c to SQL types [ODBC], numeric
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbc0a994ef95f2deca29c8a4cbb06f3167b0433f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019313"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304733"
 ---
 # <a name="c-to-sql-numeric"></a>C から SQL へ: 数値
 数値の ODBC C データ型の識別子は次のとおりです。  

@@ -138,7 +138,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  ペイロードの種類を指定します。  
   
- 現時点では、[!INCLUDE[tsql](../../includes/tsql-md.md)] パラメーターに渡す `<language_specific_arguments>` 言語固有の引数はありません。  
+ 現時点では、`<language_specific_arguments>` パラメーターに渡す [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語固有の引数はありません。  
   
  **TCP プロトコル オプション**  
   
@@ -150,7 +150,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーによって任意の有効な IP アドレスでの接続が許可されます。  
   
- 完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP =IP_address` の代わりに `LISTENER_IP=ALL` を指定する必要があります。  
+ 完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP=ALL` の代わりに `LISTENER_IP =IP_address` を指定する必要があります。  
   
  **SERVICE_BROKER オプションと DATABASE_MIRRORING オプション**  
   

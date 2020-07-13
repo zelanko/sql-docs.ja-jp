@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2860e1434611393c941a639280343f736073c709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62662930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029789"
 ---
 # <a name="database-event-category"></a>Database イベント カテゴリ
   **Database** イベント カテゴリには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を監視するためのイベント クラスが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Data File Auto Grow イベント クラス](data-file-auto-grow-event-class.md)|データ ファイルが自動的に拡張されたことを示します。 データ ファイルが ALTER DATABASE により明示的に拡張された場合、このイベントはトリガーされません。|  
 |[Data File Auto Shrink イベント クラス](data-file-auto-shrink-event-class.md)|データ ファイルが圧縮されたことを示します。|  

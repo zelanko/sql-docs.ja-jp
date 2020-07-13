@@ -11,21 +11,21 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924174"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760858"
 ---
 # <a name="shape-commands-in-general"></a>一般的な Shape コマンド
 データシェイプは、整形された**レコードセット**の列、列で表されるエンティティ間のリレーションシップ、および**レコードセット**にデータを設定する方法を定義します。  
   
  形状がある**レコードセット**は、次の種類の列で構成されます。  
   
-|列の型|[説明]|  
+|列の型|説明|  
 |-----------------|-----------------|  
 |data|クエリコマンドによって返された**レコードセット**のフィールドを、データプロバイダー、テーブル、または以前に整形された**レコードセット**に返します。|  
 |チャプター|*チャプター*と呼ばれる別の**レコードセット**への参照。 チャプター列を使用すると、親と*子*のリレーションシップを定義できます。*親*は、チャプター列を含む**レコードセット**であり、*子*はチャプターによって表される**レコードセット**です。|  

@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012582"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、クエリの結果セットとして返される行を、指定した行の数または割合に制限します。 TOP と ORDER BY 句を使用すると、結果セットは並べ替えられた行の先頭の *N* 行に制限されます。 それ以外の場合、TOP では特定の順序になっていない先頭の *N* 行が返されます。 この句を使用して、SELECT ステートメントから返される行の数を指定します。 または、TOP を使用して、INSERT、UPDATE、MERGE、DELETE ステートメントによって影響を受ける行数を指定します。  
   

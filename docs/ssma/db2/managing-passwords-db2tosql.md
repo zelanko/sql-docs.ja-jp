@@ -2,19 +2,18 @@
 title: パスワードの管理 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/05/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: b5be535275742efa87dec804e17a94ef6cc8d092
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68141023"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000166"
 ---
 # <a name="managing-passwords-db2tosql"></a>パスワードの管理 (DB2ToSQL)
 このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。  
@@ -32,13 +31,13 @@ SSMA を使用すると、データベースのパスワードをセキュリテ
   
 1.  **クリアテキスト:**[パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
   
-    クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt;サーバー-&gt; id パスワードはセキュリティで保護されていないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
+    クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt; サーバー-id パスワードはセキュリティで保護されてい &gt; ないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
   
     **暗号化されたパスワード:** この場合、指定されたパスワードは、ProtectedStorage のローカルコンピューター上の暗号化された形式で格納されます。  
   
     -   **パスワードのセキュリティ保護**  
   
-        -   `-securepassword`を`SSMAforDB2Console.exe`使用してを実行し、コマンドラインで [サーバーの定義] セクションの [パスワード] ノードを含むサーバー接続またはスクリプトファイルを渡します。  
+        -   を使用してを実行し、 `SSMAforDB2Console.exe` `-securepassword` コマンドラインで [サーバーの定義] セクションの [パスワード] ノードを含むサーバー接続またはスクリプトファイルを渡します。  
   
         -   プロンプトが表示されたら、データベースのパスワードを入力して確認します。  
   
@@ -67,66 +66,72 @@ SSMA を使用すると、データベースのパスワードをセキュリテ
     
     -   **暗号化されたパスワードの削除**  
   
-        とを`SSMAforDB2Console.exe`使用して`-remove`を実行し、サーバー id を渡してコマンドラインでを実行して、暗号化されたパスワードをローカルコンピューターに存在する保護されたストレージファイルから削除します。`-securepassword`  
+        とを使用してを実行し、 `SSMAforDB2Console.exe` `-securepassword` サーバー id を渡してコマンドラインでを実行して、 `-remove` 暗号化されたパスワードをローカルコンピューターに存在する保護されたストレージファイルから削除します。  
   
         例:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
-  
+
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"
+        ```
+
     -   **パスワードが暗号化されているサーバー Id を一覧表示する**  
   
-        を実行し、コマンド`-list`ラインでを実行して、パスワードが暗号化されているすべてのサーバー id を一覧表示します。 `SSMAforDB2Console.exe` `-securepassword`  
+        を実行し、 `SSMAforDB2Console.exe` `-securepassword` コマンドラインでを実行して、 `-list` パスワードが暗号化されているすべてのサーバー id を一覧表示します。  
   
         例:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
-  
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -list
+        ```
+
     > [!NOTE]  
     > 1.  スクリプトまたはサーバー接続ファイルで説明されているクリアテキストのパスワードは、セキュリティで保護されたファイルの暗号化されたパスワードよりも優先されます。  
     > 2.  サーバー接続ファイルまたはスクリプトファイルの server セクションにパスワードが存在しない場合、またはローカルコンピューター上でセキュリティ保護されていない場合は、コンソールにパスワードの入力を求めるメッセージが表示されます。  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>暗号化されたパスワードのエクスポートまたはインポート  
-SSMA コンソールアプリケーションを使用すると、ローカルコンピューター上のファイルに存在する暗号化されたデータベースパスワードを、セキュリティで保護されたファイルにエクスポートできます。また、その逆も可能です。 暗号化されたパスワードをコンピューターに依存させるのに役立ちます。 エクスポート機能は、ローカルで保護されているストレージからサーバー id とパスワードを読み取り、暗号化されたファイルに情報を保存します。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められます。 入力したパスワードの長さが8文字以上であることを確認します。 このセキュリティで保護されたファイルは、異なるコンピューター間で移植できます。 インポート機能は、サーバー id とパスワードの情報をセキュリティで保護されたファイルから読み取ります。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められ、ローカルで保護されているストレージに情報が追加されます。  
-  
-例:  
+SSMA コンソールアプリケーションを使用すると、ローカルコンピューター上のファイルに存在する暗号化されたデータベースパスワードを、セキュリティで保護されたファイルにエクスポートできます。また、その逆も可能です。 暗号化されたパスワードをコンピューターに依存させるのに役立ちます。
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-例:  
+_エクスポート機能_は、ローカルで保護されているストレージからサーバー id とパスワードを読み取ります。 次に、暗号化されたファイルに id とパスワードを保存します。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められます。 入力したパスワードが8文字以上の長さであることを確認してください。 このセキュリティで保護されたファイルは、異なるコンピューター間で移植できます。
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
+_インポート機能_は、サーバー id とパスワードの情報をセキュリティで保護されたファイルから読み取ります。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められ、ローカルで保護されているストレージに情報が追加されます。  
 
-  
+### <a name="export-example"></a>エクスポートの例
+
+1. パスワードをエクスポートします。
+
+2. エクスポートされたファイルを保護するためのパスワードを入力します。
+
+3. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+
+4. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+5. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+6. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+
+7. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+8. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
+
+### <a name="import-example"></a>インポートの例
+
+1. 暗号化されたパスワードをインポートします。
+
+2. インポートされたファイルを保護するためのパスワードを入力します。
+
+3. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+
+4. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力します: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+5. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+6. を実行します。 &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+
+7. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力します: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+8. パスワードの確認入力: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
 ## <a name="see-also"></a>参照  
 [SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

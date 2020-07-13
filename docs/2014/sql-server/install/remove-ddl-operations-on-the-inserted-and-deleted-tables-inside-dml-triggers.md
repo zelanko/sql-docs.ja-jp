@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f0990fbe65adc97b9e654f6393e25582363596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61f7ab78b5ab6251b7f27401d36423ec27141c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041835"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>DML トリガー内の inserted テーブルと deleted テーブルに対する DDL 操作を削除する
   CREATE INDEX などのデータ定義言語 (DDL) ステートメントを DML トリガー内の inserted テーブルと deleted テーブルに対して実行することはできません。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、inserted テーブルと deleted テーブルで一部の DDL ステートメントが許可されています。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「inserted テーブルと deleted テーブルの使用」を参照してください。  

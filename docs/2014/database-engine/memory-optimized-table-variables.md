@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930845"
 ---
 # <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
   メモリ最適化テーブル (効率的なデータ アクセスのため) とネイティブ コンパイル ストアド プロシージャ (効率的なクエリ処理とビジネス ロジックの実行のため) に加えて、[!INCLUDE[hek_2](../includes/hek-2-md.md)] では、3 つ目のオブジェクトの種類としてメモリ最適化テーブル型が導入されます。 メモリ最適化テーブル型を使用して作成されたテーブル変数は、メモリ最適化テーブル変数です。  
@@ -60,8 +59,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  このサンプルは、メモリ最適化テーブル型の構文がディスク ベース テーブル型に類似していることを示しています。ただし、次の例外を除きます。  
   
--   
-  `MEMORY_OPTIMIZED=ON` は、テーブル型がメモリ最適化であることを示します。  
+-   `MEMORY_OPTIMIZED=ON` は、テーブル型がメモリ最適化であることを示します。  
   
 -   型には少なくとも 1 つのインデックスが必要です。 メモリ最適化テーブルの場合と同様に、ハッシュ インデックスと非クラスター化インデックスを使用できます。  
   

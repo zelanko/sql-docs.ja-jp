@@ -10,15 +10,14 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 569e8c4a01ed1eb9ae26ea9e2f6d471b9aad9fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059578"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>正規の形式とパターン制限
   XSD パターン ファセットを使用すると、単純型の字句空間を制限できます。 複数の字句表現が可能であるような型にパターン制限を適用すると、一部の値が原因で検証時に予想外の動作が発生することがあります。  

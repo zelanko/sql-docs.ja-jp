@@ -11,21 +11,19 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 47b289b4c2c97e91beff4defb509e2707caaaff1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72796961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016124"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>外部キーの作成、変更、および削除
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、外部キーは <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトで表現します。  
   
- SMO に外部キーを作成するには、外部キーが <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトのコンストラクターに定義されているテーブルを指定する必要があります。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 列を <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> オブジェクト プロパティに追加するには、`Columns` メソッドを使用します。  
+ SMO に外部キーを作成するには、外部キーが <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトのコンストラクターに定義されているテーブルを指定する必要があります。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 列を `Columns` オブジェクト プロパティに追加するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> メソッドを使用します。  
   
- 外部キーを表す列は、`Columns` オブジェクトの一覧は <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクト プロパティで表されます。 外部キーが参照している主キーは、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> プロパティで指定されたテーブルにある <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> プロパティで表現します。  
+ 外部キーを表す列は、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトの一覧は `Columns` オブジェクト プロパティで表されます。 外部キーが参照している主キーは、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> プロパティで指定されたテーブルにある <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> プロパティで表現します。  
   
 ## <a name="example"></a>例  
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938143"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio でのデータ マイニング モデルの参照 (データ マイニング アドイン)
   データ マイニング用 Visio 図形は、サーバーに接続して、既存のデータ マイニング モデルを表すダイアグラムを作成します。 ダイアグラムは、Visio のコントロールを使用してカスタマイズできますが、データのドリル ダウン、基になる統計の公開、基になるモデルの操作もすることができます。  

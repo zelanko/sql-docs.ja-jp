@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6e13b648b35cb0a6b6d9272ec9a2b9d560c3c7f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070967"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547744"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>このブックには外部データを更新する 1 つ以上のクエリが含まれています。
   PowerPivot データが含まれる Excel ブックの場合、Excel Services は接続情報が検出されるとこの警告を表示し、このブックのクエリを有効にするか無効にするかを確認するプロンプトを表示します。  
@@ -35,21 +34,17 @@ ms.locfileid: "66070967"
  ブックの PowerPivot データをフィルターおよびスライスする場合は、クエリを有効にする必要があります。 信頼できる PowerPivot ブックのクエリのみを有効にしてください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 
-  **[はい]** をクリックしてクエリを有効にします。  
+ **[はい]** をクリックしてクエリを有効にします。  
   
  また、構成設定を変更して、更新時に警告が表示されないようにすることもできます。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
-2.  
-  **[Excel Services アプリケーション]** をクリックします。  
+2.  **[Excel Services アプリケーション]** をクリックします。  
   
-3.  
-  **[信頼できるファイル保存場所]** をクリックします。  
+3.  **[信頼できるファイル保存場所]** をクリックします。  
   
-4.  
-  **[http://]** または構成する場所をクリックします。  
+4.  **[http://]** または構成する場所をクリックします。  
   
 5.  [外部データ] で、 **[データ更新に関する警告を表示する]** チェック ボックスをオフにします。  
   

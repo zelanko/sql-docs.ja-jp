@@ -1,5 +1,6 @@
 ---
 title: MySQL に接続しています (MySQLToSQL) |Microsoft Docs
+description: ターゲットの iMySQL データベースに接続して MySQL データベースを移行する方法について説明します。 SSMA は Azure SQL Database のデータベースに関するメタデータを取得します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103169"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293659"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 MySQL データベースを SQL Server または SQL Azure に移行するには、移行する MySQL データベースに接続する必要があります。 接続すると、SSMA はすべての MySQL スキーマに関するメタデータを取得し、[MySQL メタデータエクスプローラー] ウィンドウに表示します。 SSMA は、データベースサーバーに関する情報を格納しますが、パスワードは保存しません。  
@@ -110,7 +111,7 @@ MySQL データベースに関するメタデータは自動的に更新され�
   
 5.  **[OK]** をクリックします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次のステップは[SQL Server &#40;MySQLToSQL に接続](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)して&#41;  
   
 ## <a name="see-also"></a>参照  

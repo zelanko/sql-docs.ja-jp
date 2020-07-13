@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083675"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053123"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   リモート Azure テーブルの列を、Stretch が有効な SQL Server テーブルの列に調整します。  
     
@@ -44,7 +43,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = '*\@objname*'  
+ \@objname = '* \@ objname*'  
  Stretch が有効な SQL Server テーブルの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -53,7 +52,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
    
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  

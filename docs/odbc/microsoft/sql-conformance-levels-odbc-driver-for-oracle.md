@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063355"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300682"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "68063355"
     |Ceiling|Log10|second|切捨て|  
     |Cos|Mod|署名||  
     |Exp|Pi|sin||  
-    |床|累乗|sqrt||  
+    |床|Power|sqrt||  
   
 -   日付関数:   
   
@@ -55,7 +55,7 @@ ms.locfileid: "68063355"
     |||||  
     |-|-|-|-|  
     |Ascii|Left|right|ucase|  
-    |Char|Length|rtrim||  
+    |Char|長さ|rtrim||  
     |Concat|Ltrim|soundex||  
     |Lcase|Replace|substring||  
   
@@ -70,4 +70,4 @@ ms.locfileid: "68063355"
     ||  
     |-|  
     |Ifnull|  
-    |User|
+    |ユーザー|

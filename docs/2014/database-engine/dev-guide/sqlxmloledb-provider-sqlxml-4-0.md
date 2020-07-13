@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cd8360049d83619578d3f49d62c8dd80c2c9121
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62780295"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933289"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダー (SQLXML 4.0)
   SQLXMLOLEDB プロバイダーは、ADO を介して [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。  

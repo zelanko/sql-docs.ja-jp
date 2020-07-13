@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68074809"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670391"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  内のすべて[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のオブジェクトには識別子が必要です。 オブジェクトの名前は識別子です。 サーバー、データベース、およびデータベースオブジェクト (データソース、データソースビュー、キューブ、ディメンション、マイニングモデルなど) には識別子があります。  
+  内のすべてのオブジェクトには [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 識別子が必要です。 オブジェクトの名前は識別子です。 サーバー、データベース、およびデータベースオブジェクト (データソース、データソースビュー、キューブ、ディメンション、マイニングモデルなど) には識別子があります。  
   
  データマイニング拡張機能 (DMX) には、次の2つの識別子のクラスがあります。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68074809"
   
  オブジェクト識別子は、オブジェクトを定義するときに作成されます。 次に、識別子を使用してオブジェクトを参照します。 識別子は100文字以下でなければなりません。  
   
-##  <a name="RegularIdentifiers"></a>標準識別子  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>標準識別子  
  DMX の標準識別子は、識別子の形式に関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の規則に準拠しています。 DMX の標準識別子には区切り記号は必要ありません。 次に、通常の非区切られた識別子を使用する DMX ステートメントの例を示します。  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  これらの規則に準拠していない識別子は、DMX ステートメントで使用するときに、角かっこで区切る必要があります。  
   
-##  <a name="DelimitedIdentifiers"></a>区切られた識別子  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>区切られた識別子  
  区切られた識別子は、角かっこ ([]) で囲みます。  これらの規則に準拠した区切られた識別子を使用した DMX ステートメントの例は、次のとおりです。  
   
 ```  
@@ -75,12 +75,11 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   予約語をオブジェクト名やオブジェクト名の一部に使用する場合。  
   
-     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョン[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のからアップグレードしたデータベースには、以前の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]バージョンので予約されていないものの、に[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]予約されている単語を含む識別子が含まれる場合があります。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
+     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレードしたデータベースには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、以前のバージョンので予約されていないものの、に予約されている単語を含む識別子が含まれる場合があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
   
 -   修飾された識別子として示されていない文字を使用する場合。  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、現在のコード ページ内の文字はすべて区切られた識別子に使用することができますが、特殊文字を区別しないでオブジェクト名に使用すると、DMX ステートメントの読み取りおよびメンテナンスが難しくなる場合があります。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、現在のコード ページ内の文字はすべて区切られた識別子に使用することができますが、特殊文字を区別しないでオブジェクト名に使用すると、DMX ステートメントの読み取りおよびメンテナンスが難しくなる場合があります。  
   
 ### <a name="rules-for-delimited-identifiers"></a>区切られた識別子の規則  
  区切られた識別子の形式に関する規則は、次のとおりです。  

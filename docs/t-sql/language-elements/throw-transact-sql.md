@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3508e1585c7a73a42a69549805835c91d778bf83
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072210"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409211"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68072210"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 THROW [ { error_number | @local_variable },  
         { message | @local_variable },  
         { state | @local_variable } ]   
@@ -48,7 +48,7 @@ THROW [ { error_number | @local_variable },
  *message*  
  例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
- *state*  
+ *状態*  
  メッセージに関連付けられる状態を示す、0 から 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
 ## <a name="remarks"></a>解説  
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |*msg_id* が RAISERROR に渡される場合、ID は sys.messages で定義する必要があります。|*error_number* パラメーターを sys.messages で定義する必要はありません。|  
 |*msg_str* パラメーターには **printf** 書式スタイルを含めることができます。|*message* パラメーターでは **printf** 書式スタイルは受け入れられません。|  
-|*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外の重大度は常に 16 に設定されます。|  
+|*severity* パラメーターでは例外の重大度を指定します。|*severity* パラメーターはありません。 例外を開始するために THROW を使用する場合、重大度は常に 16 に設定されます。 ただし、THROW を使用して既存の例外を再スローする場合、重大度はその例外の重大度レベルに設定されます。|  
   
 ## <a name="examples"></a>例  
   
@@ -123,15 +123,14 @@ END CATCH;
 ```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
-,@severity = 16  
-,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
+    ,@severity = 16  
+    ,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
     ,@lang = 'us_english';   
 GO  
   
 DECLARE @msg NVARCHAR(2048) = FORMATMESSAGE(60000, 500, N'First string', N'second string');   
   
 THROW 60000, @msg, 1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

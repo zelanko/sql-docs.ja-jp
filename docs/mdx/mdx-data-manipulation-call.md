@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106299"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX データ操作 - CALL
@@ -41,7 +41,7 @@ CALL SP_Name
  *Cube_Expression*  
  キューブの名前を指定する有効な文字列キューブ式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CALL**ステートメントは、指定された登録済みストアドプロシージャを実行します。オプションで、指定したストアドプロシージャの1つ以上の引数を含めることができます。 **CALL**ステートメントは、値を返さないストアドプロシージャでのみ使用されます。 MDX 式の中でこのステートメントと他の関数や演算子を併用することはできません。 値を返す登録済みのストアド プロシージャについては、MDX 式の中で直接呼び出すことも、MDX の他の関数や演算子と併用することも可能です。  
   
  キューブが指定されていない場合、ステートメントは、現在のキューブに対してストアドプロシージャを実行します。  
@@ -51,6 +51,6 @@ CALL SP_Name
   
 ## <a name="see-also"></a>参照  
  [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX&#41;&#40;のストアドプロシージャの使用](../mdx/using-stored-procedures-mdx.md)  
+ [ストアド プロシージャの使用 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

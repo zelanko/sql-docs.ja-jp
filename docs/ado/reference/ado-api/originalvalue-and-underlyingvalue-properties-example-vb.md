@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762065"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)
 この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 104d9dedafafedce505f63a9b8c17291d631ca54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74684084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540604"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成
   Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 PowerPivot for SharePoint の配置の場合、PowerPivot ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら PowerPivot データ アクセスに対しては最適な設定を適用することを検討してください。  
@@ -27,24 +26,22 @@ ms.locfileid: "74684084"
   
  PowerPivot ギャラリー、またはブックが保存されている他のライブラリが含まれる SharePoint サイトの URL アドレスがわかっていることが必要です。 アドレスを取得するには、ライブラリが含まれているサイトを開き、[ **PowerPivot ギャラリー**] を右クリックします。次に、[**プロパティ**] を選択し、サーバー名とサイトパスを含むアドレス (URL) の最初の部分をコピーします。  
   
-##  <a name="overview"></a>概要  
+##  <a name="overview"></a><a name="overview"></a> 概要  
  Excel Services の最初のインストールでは、'http://' が信頼できる場所として指定されます。このため、ファームのどのサイトからアクセスしたブックもサーバーで開くことができます。 信頼できると見なされる場所の制御を厳しくする必要がある場合は、ファームの特定のサイトにマップする信頼できる場所を新しく作成し、各場所の設定とアクセス許可を変更します。  
   
  PowerPivot ブックをホストするサイト用に新しい信頼できる場所を作成すると、ファームのその他の部分に対する既定値を保持しながら PowerPivot データ アクセスに対しては最適な別の設定を適用する場合に特に便利です。 たとえば、PowerPivot ブック用に最適化された信頼できる場所で最大ブック サイズを 50 MB にし、ファームの残りで既定値の 10 MB を使用するように設定できます。  
   
  PowerPivot ギャラリー ライブラリを使用してパブリッシュ済みのブックをプレビューする場合に、予想したプレビュー イメージの代わりにデータ更新の警告が表示されるときは、信頼できる場所を作成することをお勧めします。 PowerPivot ギャラリーは、ドキュメント内のデータおよび表示情報を使用して、レポートとブックのサムネイル画像を表示します。 信頼できる場所で [データ更新に関する警告を表示する] が有効である場合は、PowerPivot ギャラリーに更新を実行するための十分な権限がなく、その結果、サムネイル画像の代わりにエラーが表示されることがあります。 PowerPivot ギャラリーを新しい信頼できる場所に持つサイトを追加すると、この問題は解消できます。  
   
-##  <a name="create"></a>PowerPivot データアクセス用の信頼できる場所を作成する  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>PowerPivot データアクセス用の信頼できる場所を作成する  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  Excel Services サービス アプリケーションをクリックします。  
   
-3.  
-  **[信頼できるファイル保存場所]** をクリックします。  
+3.  **[信頼できるファイル保存場所]** をクリックします。  
   
-4.  
-  **[信頼できるファイル保存場所の追加]** をクリックします。  
+4.  **[信頼できるファイル保存場所の追加]** をクリックします。  
   
 5.  PowerPivot ギャラリー ライブラリがあるサイトの URL を入力します。  
   

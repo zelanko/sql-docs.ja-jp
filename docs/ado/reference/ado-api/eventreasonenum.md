@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28d923476d8abff4dfa283e58eb6394bdb3b9593
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918872"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755187"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントの発生原因となった理由を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1 で保護されたプロセスとして起動されました|操作によって新しいレコードが追加されました。|  
+|**adRsnAddNew**|1|操作によって新しいレコードが追加されました。|  
 |**adRsnClose**|9|操作が**レコードセット**を閉じました。|  
 |**adRsnDelete**|2|操作によってレコードが削除されました。|  
 |**adRsnFirstChange**|11|レコードに対する最初の変更を行った操作。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67918872"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums. ADDNEW|  
 |AdoEnums を終了します。|  

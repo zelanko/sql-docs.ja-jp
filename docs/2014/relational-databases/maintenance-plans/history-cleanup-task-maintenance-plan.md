@@ -13,13 +13,12 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 03ff35b14fc13d2b4446b15501114489b52c421e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67412704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024523"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] (メンテナンス プラン)
 
@@ -27,8 +26,8 @@ ms.locfileid: "67412704"
   
  このステートメントでは、 **sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
- **[接続]**  
+## <a name="ui-element-list"></a>UI 要素の一覧  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  

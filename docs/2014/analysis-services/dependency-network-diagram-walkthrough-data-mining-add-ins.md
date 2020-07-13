@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081970"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528778"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依存関係ネットワーク ダイアグラムのチュートリアル (データ マイニング アドイン)
   データ マイニング モデルのいくつかの種類では、データのリレーションシップを調査する方法としてネットワーク グラフを使用します。 これらのモデルを Visio に**依存関係ネットワーク**図形を使用してインポートした後、レイアウトのカスタマイズと拡張を続けることができます。 **Visio のデータマイニング図形**には、依存関係ネットワーク図を操作するための次のカスタムコントロールが含まれています。  
@@ -43,13 +42,13 @@ ms.locfileid: "66081970"
   
 1.  [**図形**] ボックスの一覧に [ **Microsoft データマイニング図形**] が表示されない場合は、[**その他の図形**] をクリックし、[**ステンシルを開く**] を選択して、既定のインストール場所からテンプレートを開きます。  
   
-     \<ドライブ>: \Microsoft files (x85) SQL Server 2012 DM アドイン  
+     \<drive>: \Microsoft files (x85) SQL Server 2012 DM アドイン  
   
 2.  ページに [**依存関係ネットワーク**] 図形をドラッグして、ウィザードを開始します。 **[次へ]** をクリックします。  
   
 3.  **Visio 依存関係ネットワーク図形ウィザード**の [ようこそ] ページで、[**次へ**] をクリックします。  
   
-4.  **Visio 依存関係ネットワーク図形ウィザード**の [**データソースの選択**] ページで、視覚化するモデル[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]があるサーバーへの接続を選択します。  
+4.  **Visio 依存関係ネットワーク図形ウィザード**の [**データソースの選択**] ページで、視覚化する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] モデルがあるサーバーへの接続を選択します。  
   
 5.  適切なマイニングモデルを選択し、[**次へ**] をクリックします。  
   

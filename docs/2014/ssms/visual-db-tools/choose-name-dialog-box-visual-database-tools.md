@@ -13,16 +13,15 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 77d6bd0494baeefa7fedf41580a9b488b6197b11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62509964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066233"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>[名前の選択] ダイアログ ボックス (Visual Database Tools)
-  このダイアログボックスが表示されるのは、[TableName> の** \<保存**] を選択した場合、**ダイアグラム名>を保存\<** した場合、または [**ファイル**] メニューから**ViewName>を保存\<** した場合です。  
+  このダイアログボックスは \<TableName**> 、[**ファイル**] メニューの [**保存 \<DiagramName> ]、 **[保存]、または** \<ViewName> [保存]** をクリックすると表示されます。  
   
  **[テーブルの名前を入力してください]、[ダイアグラムの名前を入力してください]、または [ビュー名を入力してください]**  
  テーブル、ダイアグラム、またはビューの名前を入力するためのテキスト ボックスが用意されています。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXML のセキュリティに関する主な注意点
+description: データアクセスに SQLXML を使用する場合の主要なセキュリティガイドラインについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790676"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   次に、データ アクセスに SQLXML を使用するときのセキュリティ ガイドラインを示します。  
   
 -   SQLXMLOLEDB プロバイダーは**streamflags**プロパティを公開します。このプロパティを使用すると、特定のインスタンスごとに有効または無効にする SQLXML 機能を示すフラグを設定できます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、「 [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)」を参照してください。  
@@ -46,11 +47,11 @@ ms.locfileid: "75252518"
   
 -   SQLXML では、ユーザーはデータベースに対して任意の SQL クエリを実行できます。 この場合、ユーザーの設定なしで SQL データベースを公開することになるため、保護または制御されていないソースに対してこの機能は提供しないでください。  
   
--   アップデートグラムを実行すると、SQLXML によって**updg: sync**ブロックが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
+-   アップデートグラムを実行すると、SQLXML によって**updg: sync**ブロックがインスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
   
 -   DiffGrams を実行すると、SQLXML では DiffGram が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの**sql: query**ブロックに含めることができます。  
   
-## <a name="see-also"></a>参照  
- [SQLXML 4.0 のセキュリティに関する注意点](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
+## <a name="see-also"></a>関連項目  
+ [SQLXML 4.0 のセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
   
   

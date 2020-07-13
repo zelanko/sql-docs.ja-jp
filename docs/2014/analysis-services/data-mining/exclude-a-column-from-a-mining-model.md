@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 30affebc143184c6287858f60b5d4f5d089c322a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522497"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>マイニング モデルからの列の除外
   新しいマイニング モデルを作成するとき、基となるマイニング構造に存在するすべての列を使用しないことがあります。 たとえば、ドリルスルーのために顧客名列を追加したものの、モデル化には使用したくない場合があります。 または、列の複数のコピーをそれぞれ異なる分離で作成して、各モデルで 1 つのコピーのみ使用し、残りは無視する場合があります。 複数の異なるモデルで入力列を選択的に追加して、追加した変数が出力列に与える影響を確認することもできます。  
@@ -28,8 +27,7 @@ ms.locfileid: "66084556"
   
 ### <a name="to-exclude-a-column-from-a-mining-model"></a>マイニング モデルから列を除外するには  
   
-1.  
-  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブにある適切なマイニング モデルで、除外する列に対応するセルを選択します。  
+1.  **のデータ マイニング デザイナーの** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブにある適切なマイニング モデルで、除外する列に対応するセルを選択します。  
   
 2.  ドロップダウン リスト ボックスから **[無視]** を選択します。  
   

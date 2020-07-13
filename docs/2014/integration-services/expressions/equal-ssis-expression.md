@@ -10,15 +10,14 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 186f11783cdb89706b0a2a758262943c86aa3db5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769268"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428799"
 ---
 # <a name="-equal-ssis-expression"></a>== (等しい) (SSIS 式)
   2 つの式が等しいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  

@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 51ccf1aeadcf4ab9a662cdd629a812d3ee4b82aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62877269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959762"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>システム データベースのバックアップと復元 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムレベルのデータベースのセットである*システム データベース*が管理されています。これらのデータベースは、サーバー インスタンスの運用に不可欠です。 いくつかのシステム データベースは、重大な更新が行われるたびにバックアップする必要があります。 常にバックアップする必要があるシステム データベースには、 **msdb**、 **master**、および **model**があります。 サーバー インスタンス上のいずれかのデータベースでレプリケーションが使用されている場合は、 **distribution** システム データベースもバックアップする必要があります。 これらのシステム データベースをバックアップすることで、ハード ディスク障害などのシステム障害時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムの復元と復旧を行うことができます。  
   
  次の表に、すべてのシステム データベースの概要を示します。  
   
-|システム データベース|[説明]|バックアップの必要性|復旧モデル|説明|  
+|システム データベース|説明|バックアップの必要性|復旧モデル|説明|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに関するシステム レベルのすべての情報を記録するデータベース。|はい|シンプル|**master** は、ビジネス ニーズを満たすのに十分なデータ保護を行うために必要な頻度でバックアップします。 定期的なバックアップ スケジュールの設定をお勧めします。大量の更新の後で追加のバックアップを行ってこれを補完することもできます。|  
-|[model](../databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上に作成されるすべてのデータベースのテンプレート。|はい|ユーザー構成可能<sup>1</sup>|**model** は、データベース オプションをカスタマイズした直後など、ビジネス ニーズに応じて必要な場合のみバックアップします。<br /><br /> **ベスト プラクティス:** **model**については、必要なときにデータベースの完全バックアップのみを作成することをお勧めします。 **model** はサイズが小さく、変更頻度が低いため、ログのバックアップは必要ありません。|  
+|[model](../databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上に作成されるすべてのデータベースのテンプレート。|Yes|ユーザー構成可能<sup>1</sup>|**model** は、データベース オプションをカスタマイズした直後など、ビジネス ニーズに応じて必要な場合のみバックアップします。<br /><br /> **ベスト プラクティス:** **model** については、必要なときにデータベースの完全バックアップのみを作成することをお勧めします。 **model** はサイズが小さく、変更頻度が低いため、ログのバックアップは必要ありません。|  
 |[msdb](../databases/msdb-database.md)|警告やジョブのスケジュール設定とオペレーターの記録のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるデータベース。 **msdb** には、バックアップと復元の履歴テーブルなどの履歴テーブルも含まれます。|はい|単純 (既定)|**msdb** は更新するたびにバックアップします。|  
-|[Resource](../databases/resource-database.md) (RDB)|に付属するすべてのシステム オブジェクトのコピーを含んだ読み取り専用のデータベース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|いいえ|-|**Resource** データベースにはコードのみが含まれ、mssqlsystemresource.mdf ファイル内に存在します。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **Resource** データベースをバックアップできません。<br /><br /> 注: mssqlsystemresource.mdf ファイルに対してファイル ベースまたはディスク ベースのバックアップを実行するには、このファイルをデータベース ファイルではなくバイナリ (.exe) ファイルとして扱います。 ただし、これらのバックアップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元を使用できません。 mssqlsystemresource.mdf のバックアップ コピーの復元は手動でのみ実行できます。また、現在の **Resource** データベースを古いバージョンや安全でない可能性のあるバージョンで上書きしないように注意する必要があります。|  
+|[Resource](../databases/resource-database.md) (RDB)|に付属するすべてのシステム オブジェクトのコピーを含んだ読み取り専用のデータベース。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|いいえ|-|**Resource** データベースにはコードのみが含まれ、mssqlsystemresource.mdf ファイル内に存在します。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **Resource** データベースをバックアップできません。<br /><br /> 注:mssqlsystemresource.mdf ファイルに対してファイル ベースまたはディスク ベースのバックアップを実行するには、このファイルをデータベース ファイルではなくバイナリ (.exe) ファイルとして扱います。 ただし、これらのバックアップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の復元を使用できません。 mssqlsystemresource.mdf のバックアップ コピーの復元は手動でのみ実行できます。また、現在の **Resource** データベースを古いバージョンや安全でない可能性のあるバージョンで上書きしないように注意する必要があります。|  
 |[tempdb](../databases/tempdb-database.md)|一時的な結果セットや生成途中の結果セットを保存するためのワークスペース。 このデータベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを起動するたびに作成し直されます。 サーバー インスタンスをシャットダウンするとき、 **tempdb** 内のすべてのデータは完全に削除されます。|いいえ|シンプル|**tempdb** システム データベースはバックアップできません。|  
 |[[ディストリビューションの構成]](../replication/configure-distribution.md)|サーバーをレプリケーション ディストリビューターとして構成している場合に限り存在するデータベース。 あらゆる種類のレプリケーションのメタデータや履歴、およびトランザクション レプリケーションのトランザクションが保存されます。|はい|シンプル|**distribution** データベースをバックアップするタイミングの詳細については、「 [レプリケートされたデータベースのバックアップと復元](../replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。|  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62877269"
   
 ## <a name="limitations-on-restoring-system-databases"></a>システム データベースの復元に関する制限  
   
--   システム データベースは、サーバー インスタンスが現在実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンで作成されたバックアップからのみ復元できます。 たとえば、SP1 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]実行されているサーバーインスタンス上のシステムデータベースを復元するには、次のようにします。  
+-   システム データベースは、サーバー インスタンスが現在実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンで作成されたバックアップからのみ復元できます。 たとえば、SP1 で実行されているサーバーインスタンス上のシステムデータベースを復元するには、次のようにし [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ます。  
   
 -   データベースを復元するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを起動するには、 **master** データベースにアクセスでき、かつ少なくとも一部は使用できる必要があります。 **master** が使用できない状態になった場合、このデータベースを次のいずれかの方法で使用できる状態に戻すことができます。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62877269"
   
 -   状況によっては、モデル データベースを復旧する問題は、システム データベースの再構築、あるいはモデル データベースの mdf ファイルや ldf ファイルの置き換えが必要な場合があります。 詳細については、「 [システム データベースの再構築](../databases/system-databases.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   

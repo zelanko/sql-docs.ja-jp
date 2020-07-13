@@ -1,5 +1,6 @@
 ---
-title: SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成 | Microsoft Docs
+title: Drivers for PHP 用の IIS の構成
+description: Drivers for PHP for SQL Server を使用する PHP アプリケーションをホストするように IIS を構成する方法について説明します。 ここに示すリソースは、IIS での FastCGI の使用に固有のものです。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31d46254f153742ff3923aa2484872aedb7cf077
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907348"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728396"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

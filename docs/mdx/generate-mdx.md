@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005908"
 ---
 # <a name="generate-mdx"></a>生成 (MDX)
@@ -41,15 +41,15 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  有効な文字列式です。通常は、指定されたセット内の各組の現在のメンバーの名前 (CurrentMember.Name) です。  
   
- *Delimiter*  
+ *区切り記号*  
  文字列式として表された有効な区切り記号です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  2番目のセットを指定した場合、 **Generate**関数は、2番目のセット内の組を1つ目のセット内の各組に適用して生成されたセットを返し、和集合によって結果セットを結合します。 **ALL**を指定した場合、関数は結果セット内の重複部分を保持します。  
   
  文字列式が指定されている場合、 **Generate**関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結することによって生成される文字列を返します。 必要に応じて、文字列を区切り、結果として連結された文字列内の各結果を区切ることができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="set"></a>オン  
  次の例では、set [Date] に4つのメンバーがあるため、Internet Sales amount メジャーを含むセットが返されます。[Calendar Year]。[Calendar Year]。属する  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  この形式の**Generate**関数は、計算をデバッグするときに便利です。これにより、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 これは、 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md)関数が返すセットの厳密な MDX 表現よりも読みやすくなる可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CURRENT_REQUEST_ID
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24f7edd211a2668809f47af2ed964d94da93c961
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026427"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895129"
 ---
 # <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、現在のセッション内の現在の要求の ID を返します。
   

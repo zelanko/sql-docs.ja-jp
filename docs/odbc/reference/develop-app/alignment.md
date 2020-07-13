@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 205cc3ff95dd60db215150f46ae894fbb99bd9ff
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077272"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288607"
 ---
 # <a name="alignment"></a>Alignment
 ODBC アプリケーションのアラインメントの問題は、通常、他のアプリケーションとは異なります。 つまり、ほとんどの ODBC アプリケーションは、アラインメントに関してほとんどまたはまったく問題がありません。 アドレスを整列しない場合のペナルティは、ハードウェアとオペレーティングシステムによって異なります。また、パフォーマンスがわずかに低下するか、致命的な実行時エラーとして重要な場合があります。 そのため、ODBC アプリケーションや、特にポータブル ODBC アプリケーションは、データを適切に配置するために注意する必要があります。  

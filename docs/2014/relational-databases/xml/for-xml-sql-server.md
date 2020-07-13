@@ -16,15 +16,14 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63288272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059457"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT クエリは、結果を行セットとして返します。 必要に応じて、SQL クエリに FOR XML 句を指定することで、SQL クエリの結果を XML 形式で取得することができます。 FOR XML 句は、最上位レベルのクエリとサブクエリのいずれでも使用できます。 最上位レベルの FOR XML 句は、SELECT ステートメント内でのみ使用できます。 サブ クエリでは、FOR XML 句を INSERT、UPDATE、DELETE ステートメント内で使用できます。 また、代入ステートメントでも使用できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "63288272"
   
 -   PATH  
   
- RAW モードは SELECT ステートメントによって返された行セットの行 1 つにつき 1 つの \<row> 要素を生成します。 入れ子にした FOR XML クエリを作成することで、XML 階層を生成できます。  
+ RAW モードでは、 \<row> SELECT ステートメントによって返される行セット内の行ごとに1つの要素が生成されます。 入れ子にした FOR XML クエリを作成することで、XML 階層を生成できます。  
   
  AUTO モードは、SELECT ステートメントがどのように指定されているかに基づき、帰納的な方法で入れ子になった結果の XML を生成します。 生成される XML の構造については最小限の制御しか行えません。 AUTO モードで帰納的に生成された XML 構造に対して、入れ子になった FOR XML クエリを作成し、XML 階層を生成することができます。  
   
@@ -80,15 +79,13 @@ FROM ServerName.AdventureWorks2012.Person.Person
 FOR XML AUTO  
 ```  
   
- 
-  `ServerName` がローカル サーバーの場合、クエリは次の値を返します。  
+ `ServerName` がローカル サーバーの場合、クエリは次の値を返します。  
   
 ```  
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```  
   
- 
-  `ServerName` がネットワーク サーバーの場合、クエリは次の値を返します。  
+ `ServerName` がネットワーク サーバーの場合、クエリは次の値を返します。  
   
 ```  
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />  

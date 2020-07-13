@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cae06efe6dd11e651e8553fa5c1004c2fa145478
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076865"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302993"
 ---
 # <a name="ddl-statements"></a>DDL ステートメント
 データ定義言語 (DDL) ステートメントは、Dbms によって大きく異なります。 ODBC SQL では、最も一般的なデータ定義操作 (テーブル、インデックス、およびビューの作成と削除) のステートメントを定義します。テーブルの変更権限の付与と取り消しを行います。 その他のすべての DDL ステートメントは、データソース固有です。 そのため、相互運用可能なアプリケーションで一部のデータ定義操作を実行することはできません。 通常、これは問題ではありません。そのような操作は DBMS 固有のものであり、ほとんどの Dbms またはドライバーに付属するセットアッププログラムに付属している専用のデータベース管理ソフトウェアに残されている傾向があるためです。  

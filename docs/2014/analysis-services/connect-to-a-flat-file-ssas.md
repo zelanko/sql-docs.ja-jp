@@ -11,32 +11,29 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087358"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527198"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>[フラット ファイルへの接続] (SSAS)
+  **テーブルのインポート ウィザード** のこのページを使用すると、フラット ファイル (.txt)、タブ区切りファイル (.tab)、またはコンマ区切りファイル (.csv) に接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-  **テーブルのインポート ウィザード** のこのページを使用すると、フラット ファイル (.txt)、タブ区切りファイル (.tab)、またはコンマ区切りファイル (.csv) に接続できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
-  
- フラット ファイルに接続するには、ACE プロバイダーがコンピューターにインストールされている必要があります。 詳細については、「[サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)」を参照してください。  
+ フラット ファイルに接続するには、ACE プロバイダーがコンピューターにインストールされている必要があります。 詳細については、「[サポートされているデータ ソース &#40;SSAS テーブル&#41;](tabular-models/data-sources-supported-ssas-tabular.md)」を参照してください。  
   
 > [!NOTE]  
 >  このページでファイルを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したファイルの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[接続の表示名]**  
  このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   
  **ファイルパス**  
  ファイルの完全なパスを指定します。  
   
- **[参照]**  
+ **参照**  
  使用可能なファイルがある場所に移動します。  
   
  **列区切り記号**  
@@ -63,12 +60,12 @@ ms.locfileid: "66087358"
 > [!NOTE]  
 >  このプレビューには、ファイル内の最初の 50 行のみが表示されます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**列ヘッダーのチェック ボックス**|列をデータ インポートの対象にする場合は、チェック ボックスをオンにします。 列をデータ インポートの対象から除外する場合は、チェック ボックスをオフにします。|  
 |**列ヘッダーの下矢印ボタン**|列内のデータを並べ替えてフィルター処理します。|  
   
- **行フィルターのクリア**  
+ **[行フィルターのクリア]**  
  列のデータに適用されているすべてのフィルターを削除します。  
   
   

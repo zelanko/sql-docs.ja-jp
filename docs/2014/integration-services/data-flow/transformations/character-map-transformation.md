@@ -14,15 +14,14 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c66af1d609e2e1730be8b7647bdc881d129caf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770422"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431019"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62770422"
 ## <a name="mapping-operations"></a>マップ操作  
  次の表では、文字マップ変換がサポートするマップ操作について説明します。  
   
-|操作|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |バイトの反転|バイト順を反転します。|  
 |全角|半角文字を全角文字にマップします。|  
@@ -70,12 +69,9 @@ ms.locfileid: "62770422"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[文字マップ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [文字マップ変換エディター](../../character-map-transformation-editor.md)」をご覧ください。  
+ **[文字マップ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [文字マップ変換エディター](../../character-map-transformation-editor.md)」をご覧ください。  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

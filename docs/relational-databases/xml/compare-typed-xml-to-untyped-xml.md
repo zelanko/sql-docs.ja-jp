@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907197"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664681"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **xml** 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、 **xml** 型の変数、パラメーター、または列に関連付けることができます。 XML スキーマ コレクションを関連付けた場合、この **xml** データ型のインスタンスを *型指定されている*と呼びます。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>適切な形式の XML と xml データ型  

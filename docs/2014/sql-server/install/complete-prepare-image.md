@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766fca7b-6cef-4ce4-97ee-6854f8034717
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23dbdd4449a72737fd0929a4243ed093013ae643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6185d9f989faea5940110cef39b4a714fd7139f8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66096234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037017"
 ---
 # <a name="complete---prepare-image"></a>[完了 - イメージの準備]
   [**完了**] ページを使用して、イメージの準備が完了したことを確認します。  

@@ -22,15 +22,14 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4937c4addfe8006bf09e390e0c204ab0ab64bf98
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430619"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
@@ -69,7 +68,7 @@ ms.locfileid: "62900561"
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
 ## <a name="row-comparison"></a>行の比較  
- あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 [完全] プロパティをに`true`設定すると、変換は入力のすべての行を入力の他のすべての行と比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンスの問題を回避するには、パッケージの開発中に`true`のみ、完全なプロパティをに設定することをお勧めします。  
+ あいまいグループ化変換を構成するときに、変換入力内の行の比較に使用する比較アルゴリズムを指定できます。 [完全] プロパティをに設定すると、 `true` 変換は入力のすべての行を入力の他のすべての行と比較します。 この比較アルゴリズムを使用すると、より正確な結果が生成されますが、入力の行の数が少ない場合を除けば、処理により多くの時間がかかるようになります。 パフォーマンスの問題を回避するには、パッケージの開発中にのみ、完全なプロパティをに設定することをお勧めし `true` ます。  
   
 ## <a name="temporary-tables-and-indexes"></a>一時テーブルおよびインデックス  
  実行時、あいまいグループ化変換は、テーブルやインデックスなどの一時オブジェクトを接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに作成します。この一時オブジェクトのサイズは、かなり大きくなる可能性があります。 テーブルおよびインデックスのサイズは、変換入力内の行の数およびあいまいグループ化変換によって作成されたトークンの数に比例します。  
@@ -81,8 +80,7 @@ ms.locfileid: "62900561"
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[あいまいグループ化変換エディター]** ダイアログ ボックスを使用して設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [[あいまいグループ化変換エディター] &#40;[接続マネージャー] タブ&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
@@ -90,8 +88,7 @@ ms.locfileid: "62900561"
   
 -   [[あいまいグループ化変換エディター] &#40;[詳細設定] タブ&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
@@ -104,7 +101,7 @@ ms.locfileid: "62900561"
   
 -   [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [あいまい参照変換](lookup-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   

@@ -13,15 +13,15 @@ ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cecd059fba314e3ee50221b1a7b62d706ad71375
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 886f3f7c77b0283acbdf6235db05775c697bcc63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721616"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -39,9 +39,9 @@ ms.locfileid: "76288473"
   
 -   [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]からスクリプトを実行する場合。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではセキュリティ モデルが変更されたため、これらのスクリプトは更新する必要があります。  
   
--   **sp_addlogreader_agent &#40;Transact-SQL&#41;** を実行する前に、ストアド プロシージャ [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) が実行される場合。 これはすべてのトランザクション パブリケーションに当てはまります。  
+-   [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行する前に、ストアド プロシージャ **sp_addpublication** が実行される場合。 これはすべてのトランザクション パブリケーションに当てはまります。  
   
--   **sp_addqreader_agent &#40;Transact-SQL&#41;** を実行する前に、ストアド プロシージャ [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) が実行される場合。 これは、キュー更新サブスクリプションに対して有効なトランザクション アプリケーションに当てはまります (`@allow_queued_tran`sp_addpublication**の** パラメーターの値が TRUE)。  
+-   [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) を実行する前に、ストアド プロシージャ **sp_addpublication** が実行される場合。 これは、キュー更新サブスクリプションに対して有効なトランザクション アプリケーションに当てはまります (**sp_addpublication** の `@allow_queued_tran` パラメーターの値が TRUE)。  
   
  ストアド プロシージャ **sp_addlogreader_agent** および **sp_addqreader_agent** は、それぞれエージェント ジョブを作成します。これにより、エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを指定できます。 **sp_addlogreader_agent** および **sp_addqreader_agent** が実行されていない場合は、 **sysadmin** ロールのユーザーに対し、エージェント ジョブが暗黙的に作成されます。エージェントは、ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのコンテキストで実行されます。 **sysadmin** ロールでは、ユーザーは **sp_addlogreader_agent** および **sp_addqreader_agent** を必要としませんが、セキュリティ上、エージェントごとに異なるアカウントを指定することをお勧めします。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   

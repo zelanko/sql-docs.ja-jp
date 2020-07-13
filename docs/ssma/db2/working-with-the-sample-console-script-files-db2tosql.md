@@ -10,10 +10,10 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086172"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソールスクリプトファイルの操作 (DB2ToSQL)
@@ -52,7 +52,7 @@ ms.locfileid: "68086172"
   
     レポートの生成の詳細については、「[レポートの生成 &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)」を参照してください。  
   
-    **注記**  
+    **注:**  
   
     変数値ファイルのコマンドライン引数がコンソールアプリケーションに渡され、変数がユーザーが指定した値で更新されていることを確認します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68086172"
   
 5.  **ConversionAndDataMigrationSample:** このサンプルを使用すると、ユーザーはデータ移行への変換からエンドツーエンドの移行を実行できます。 変更する必要がある必須の属性値の一覧を次に示します。  
   
-    |コマンド名|[説明]|Attribute|  
+    |コマンド名|説明|属性|  
     |----------------|---------------|-------------|  
     |`map-schema`|転送元データベースから送信先スキーマへのスキーママッピング。|`source-schema:`を変換する必要があるソースデータベースを指定します。<br /><br />`sql-server-schema`: 移行先のターゲットデータベースを指定します。|  
     |`convert-schema`|送信元スキーマから送信先スキーマへのスキーマ変換を実行します。<br /><br />ユーザーが複数のオブジェクトまたはデータベースを評価する必要がある`metabase-object`場合は、サンプルの`convert-schema`コンソールスクリプトファイルの例4に示すように、複数のノードを指定できます。|`object-name`: 変換する必要があるソースデータベースまたはオブジェクトの名前を指定します。 に指定され`object-type`ているオブジェクトの型に基づいて、対応するが変更されていることを確認します。`object-name`|  

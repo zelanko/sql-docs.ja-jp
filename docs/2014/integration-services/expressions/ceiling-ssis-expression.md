@@ -10,15 +10,14 @@ helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3ed1cf4d70dc1e04f2419070b3672522833524c6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429019"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
   数値式以上で最小の整数値を返します。  

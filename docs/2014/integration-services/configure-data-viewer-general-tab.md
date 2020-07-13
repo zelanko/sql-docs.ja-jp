@@ -11,23 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c68f01425a94f139096ce85a0d12f2b18e0f9164
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060667"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438539"
 ---
 # <a name="configure-data-viewer-general-tab"></a>[データ ビューアーの構成] ([全般] タブ)
   データ ビューアーは、パッケージ実行中にデータが 2 つのデータ フロー コンポーネントを接続するパスを移動するときに、データを表示します。  
   
- 
-  **[データ ビューアーの構成]** ダイアログ ボックスの **[全般]** タブを使用すると、データ ビューアーの名前を付けて、データを表示するグラフの種類を指定できます。  
+ **[データ ビューアーの構成]** ダイアログ ボックスの **[全般]** タブを使用すると、データ ビューアーの名前を付けて、データを表示するグラフの種類を指定できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  データ ビューアーの一意な名前を指定します。  
   
@@ -37,7 +35,7 @@ ms.locfileid: "66060667"
  **説明**  
  サンプル グラフを表示し、その後ろに説明を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データビューアーの構成] &#40;[縦棒グラフ] タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [データビューアーの構成 &#40;グリッドタブ&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [[データビューアー &#40;ヒストグラム] タブの構成&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11d5ab92a0f974e58b48734fc739ba63660a4e5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65488384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006661"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>タスク 2: ドメイン値を手動で追加する
   このタスクでは、**国**のドメインの値を手動で追加します。 このページのフィールドの詳細については、「[ドメイン値の変更](https://msdn.microsoft.com/library/hh510408.aspx)」を参照してください。  
@@ -32,7 +31,7 @@ ms.locfileid: "65488384"
   
      ![ドメイン値の米国](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "ドメイン値の米国")  
   
-## <a name="next-step"></a>次のステップ  
- [タスク 3:Excel ファイルからドメイン値をインポートする](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+## <a name="next-step"></a>次の手順  
+ [タスク 3: Excel ファイルからドメイン値をインポートする](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

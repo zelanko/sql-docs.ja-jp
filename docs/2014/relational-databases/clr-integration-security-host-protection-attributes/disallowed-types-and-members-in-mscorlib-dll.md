@@ -1,5 +1,5 @@
 ---
-title: Mscorlib.dll | で許可されていない型とメンバーMicrosoft Docs
+title: mscorlib.dll | で許可されていない型とメンバーMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cc4e42a0f900231bdd28417420cdab19b7345e66
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62874354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954322"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>mscorlib.dll の許可されない型およびメンバー
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語`HostProtectionAttribute`統合 (CLR) プログラミングでは、、、、、、 `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`、 **sharedstate**、 `Synchronization`、または`UI`の値を持つ列挙体を指定するを持つ型またはメンバーの使用は禁止されています。 次の表は、ホスト保護属性 (HPA) 値が許可されない mscorlib.dll アセンブリのメンバーおよび型を示しています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語統合 (CLR) プログラミングでは、、、、、、 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` 、 **sharedstate**、 `Synchronization` 、または `UI` の値を持つ列挙体を指定するを持つ型またはメンバーの使用は禁止されています。 次の表は、ホスト保護属性 (HPA) 値が許可されない mscorlib.dll アセンブリのメンバーおよび型を示しています。  
   
 > [!NOTE]  
 >  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、「[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
@@ -30,11 +29,11 @@ ms.locfileid: "62874354"
 |--------------------|--------------------|  
 |SyncStream.BeginRead()|ExternalThreading|  
 |SyncStream.BeginWrite()|ExternalThreading|  
-|System.Collections.ArrayList.Synchronized()|Synchronization|  
-|System.Collections.Hashtable.Synchronized()|Synchronization|  
-|System.Collections.Queue.Synchronized()|Synchronization|  
-|System.Collections.SortedList.Synchronized()|Synchronization|  
-|System.Collections.Stack.Synchronized()|Synchronization|  
+|System.Collections.ArrayList.Synchronized()|同期|  
+|System.Collections.Hashtable.Synchronized()|同期|  
+|System.Collections.Queue.Synchronized()|同期|  
+|System.Collections.SortedList.Synchronized()|同期|  
+|System.Collections.Stack.Synchronized()|同期|  
 |System.Console.Beep()|UI|  
 |System.Console.get_Error()|UI|  
 |System.Console.get_In()|UI|  
@@ -54,9 +53,9 @@ ms.locfileid: "62874354"
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading、Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
-|System.IO.Stream.Synchronized()|Synchronization|  
-|System.IO.TextReader.Synchronized()|Synchronization|  
-|System.IO.TextWriter.Synchronized()|Synchronization|  
+|System.IO.Stream.Synchronized()|同期|  
+|System.IO.TextReader.Synchronized()|同期|  
+|System.IO.TextWriter.Synchronized()|同期|  
 |System.Reflection.Emit.AssemblyBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.ConstructorBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.CustomAttributeBuilder|MayLeakOnAbort|  
@@ -100,9 +99,9 @@ ms.locfileid: "62874354"
   
 ## <a name="see-also"></a>参照  
  [ホスト保護属性と CLR 統合プログラミング](host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft で許可されていない型とメンバー](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [System .dll で許可されていない型とメンバー](disallowed-types-and-members-in-system-dll.md)   
- [System.object で許可されていない型とメンバー](disallowed-types-and-members-in-system-data-dll.md)   
+ [Microsoft.VisualBasic.dllで許可されていない型とメンバー](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [System.dllで許可されていない型とメンバー](disallowed-types-and-members-in-system-dll.md)   
+ [System.Data.dllで許可されていない型とメンバー](disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll の許可されない型およびメンバー](disallowed-types-and-members-in-system-core-dll.md)  
   
   

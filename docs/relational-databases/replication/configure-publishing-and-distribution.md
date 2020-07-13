@@ -67,7 +67,7 @@ ms.locfileid: "76285089"
 
    SQL Database Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
 
-3. パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 `@dbname` にはパブリッシュするデータベースを、`@optname` にはレプリケーションの種類を、`true` には `@value` を指定します。
+3. パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 `@dbname` にはパブリッシュするデータベースを、`@optname` にはレプリケーションの種類を、`@value` には `true` を指定します。
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>リモート ディストリビューターを使用してパブリッシングを構成するには 
 

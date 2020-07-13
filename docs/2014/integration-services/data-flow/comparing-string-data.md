@@ -13,15 +13,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbfb92a70f795cc3098303d666b59ebfc0bebc74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62828149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432349"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
   文字列比較は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]によって実行される多くの変換において重要な部分です。また、文字列比較は、変数内の式やプロパティ式の評価でも使用されます。 たとえば、並べ替え変換はデータセット内の値を比較し、昇順または降順にデータを並べ替えます。  
@@ -67,7 +66,7 @@ ms.locfileid: "62828149"
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   
-|比較オプション|[説明]|  
+|比較オプション|説明|  
 |-----------------------|-----------------|  
 |大文字と小文字を区別しない|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |カタカナを区別しない|日本語の比較で、2 種類のかな文字である、ひらがなとカタカナを区別するかどうかを指定します。 このオプションを設定した場合、文字列比較でひらがなとカタカナは区別されません。|  

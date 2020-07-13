@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079864"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543844"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールの確認
   SharePoint ファームにインストールした PowerPivot for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 PowerPivot のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
   
-##  <a name="verifyinstall"></a>サーバーの全体管理統合の確認  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a>サーバーの全体管理統合の確認  
  PowerPivot のサーバーの全体管理との統合を確認するには、次の操作を行います。  
   
 1.  [スタート] メニューの [**すべてのプログラム**] をクリックし、[Microsoft Sharepoint 2010 製品] を開いて、[ **sharepoint 2010 サーバーの全体管理**] をクリックします。  
@@ -33,28 +32,24 @@ ms.locfileid: "66079864"
   
     2.  [セキュリティ] タブの **[セキュリティ設定を表示または変更するゾーンを選択してください。]** セクションで、[信頼済みサイト] をクリックし、[サイト] をクリックします。  
   
-    3.  
-  **[このゾーンのサイトにはすべてサーバーの確認 (https:) を必要とする]** チェック ボックスをオフにします。  
+    3.  **[このゾーンのサイトにはすべてサーバーの確認 (https:) を必要とする]** チェック ボックスをオフにします。  
   
-    4.  
-  **[次の Web サイトをゾーンに追加する]** に、サイトの URL を入力し、 **[追加]** をクリックします。  
+    4.  **[次の Web サイトをゾーンに追加する]** に、サイトの URL を入力し、 **[追加]** をクリックします。  
   
-    5.  [**閉じる**] をクリックし、[**OK**] をクリックします。  
+    5.  [**閉じる**] をクリックしてから [**OK**] をクリックします。  
   
         > [!NOTE]  
         >  SharePoint のインストールに関するドキュメントには、プロキシ サーバーのエラーを解決する手順や、更新プログラムをダウンロードしてインストールできるように Internet Explorer セキュリティ強化の構成を無効にする手順も示されています。 詳細については、Microsoft Web サイトの「 **SQL Server を使用する単一サーバーを展開する (SharePoint Server 2010)** 」の「 [追加のタスクの実行](https://go.microsoft.com/fwlink/?LinkId=177754) 」を参照してください。  
   
 3.  サーバーの全体管理で、[システム設定] の **[ファーム機能の管理]** をクリックします。  
   
-4.  
-  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
+4.  **[PowerPivot 統合機能]** が **[アクティブ]** になっていることを確認します。  
   
 5.  サーバーの全体管理で、[システム設定] の [**サーバーのサービスの管理**] をクリックします。  
   
-6.  
-  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
+6.  **SQL Server Analysis Services** と **SQL Server PowerPivot System サービス** が開始されていることを確認します。  
   
-7.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+7.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 8.  [**既定の Powerpivot サービスアプリケーション**] をクリックして、このアプリケーションの Powerpivot 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
@@ -63,7 +58,7 @@ ms.locfileid: "66079864"
 ## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL\<アドレスに> コンピューター名を指定できます。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://を指定でき \<your computer name> ます。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -74,7 +69,7 @@ ms.locfileid: "66079864"
 ## <a name="verify-data-access-on-the-server"></a>サーバーでのデータ アクセスの確認  
  サーバーで PowerPivot データ アクセスを確認するには、次の操作を行います。  
   
-1.  Reporting Services チュートリアルに付属しているピクニックデータサンプルを[ダウンロード](https://go.microsoft.com/fwlink/?LinkID=219108)します。 このダウンロードに含まれるサンプル ブックを使用して、PowerPivot データのアクセスを確認します。 ファイルを解凍します。  
+1.  Reporting Services のチュートリアルにある Picnic のデータ サンプルを[ダウンロード](https://go.microsoft.com/fwlink/?LinkID=219108) します。 このダウンロードに含まれるサンプル ブックを使用して、PowerPivot データのアクセスを確認します。 ファイルを解凍します。  
   
 2.  Excel ブック (.xlsx) を Shared Documents にアップロードします。 ブックに埋め込み PowerPivot データが含まれます。  
   
@@ -88,15 +83,14 @@ ms.locfileid: "66079864"
   
 6.  [スタート] メニューの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] プログラム グループから SQL Server Management Studio を起動します。 このツールがサーバーにインストールされていない場合は、以降の手順はスキップし、最後の手順でキャッシュされたファイルがあるかどうかを確認します。  
   
-7.  [サーバーの種類] で **[Analysis Services]** を選択します。  
+7.  [サーバーの種類] で、[ **Analysis Services**] を選択します。  
   
-8.  [サーバー名] に、「 ** \<サーバー名>** を入力します。ここ** \<** で、サーバー名>は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
+8.  [サーバー名] に「 ** \<server-name> \ powerpivot**」と入力します。ここで、 **\<server-name>** は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
-9. 
-  **[接続]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
+9. **[Connect]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
   
 10. オブジェクトエクスプローラーでは、[**データベース**] をクリックして、読み込まれている PowerPivot データファイルの一覧を表示できます。  
   
-11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイルキャッシュを表示するには、ドライブ\<>: 「」を参照してください。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot サービスアプリケーションフォルダー。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
+11. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイルキャッシュを表示するには、「」に進んでください \<drive> 。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot サービスアプリケーションフォルダー。 キャッシュされた各データベースは、名前が一意になるように、GUID ベースの名前付け規則を使用してそれぞれのフォルダーに格納されます。  
   
   

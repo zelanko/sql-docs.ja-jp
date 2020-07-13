@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c63f0b3d2aff8b909e3a7fc841c9038cf95a475e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62869617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969462"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
     
@@ -30,7 +29,7 @@ ms.locfileid: "62869617"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBLKIO_DEVOPENFAILED|  
-|メッセージ テキスト|%ls: ファイル番号 %d のファイル %ls を開けませんでした。  OS エラー: %ls。|  
+|メッセージ テキスト|%ls:ファイル番号 %d のファイル %ls を開けませんでした。  OS エラー: %ls。|  
   
 ## <a name="explanation"></a>説明  
  SQL Server は、指定されたエラーが原因で指定されたファイルを開くことができませんでした。  

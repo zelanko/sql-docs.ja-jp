@@ -11,25 +11,23 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd7544225acd64140d674d7c7c94b6d7c33a023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060728"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438549"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>[データ ビューアーの構成] ([縦棒グラフ] タブ)
-  
   **[データ ビューアーの構成]** ダイアログ ボックスの **[縦棒グラフ]** タブを使用すると、グラフにバーとして表示する列を指定できます。 バーの数は列内にある個別のデータ値の数を示し、バーの高さは各値のインスタンス数を示します。 グラフには、1 つのバッファーの内容のみが反映されます。  
   
 ## <a name="options"></a>オプション  
  **列名**  
  縦棒グラフでグラフィック表示する列を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[全般] タブの [データビューアーの構成] &#40;&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [データビューアーの構成 &#40;グリッドタブ&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [[データビューアー &#40;ヒストグラム] タブの構成&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

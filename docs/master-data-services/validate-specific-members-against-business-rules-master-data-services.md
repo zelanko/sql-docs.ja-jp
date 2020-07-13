@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 885d0c1018c1d30fd4ea5d10276c971dbbf0a114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ae7e5a0419e57d24a2f2d16b6b3407f2fb75bc77
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812858"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールに対してメンバーのサブセットを更新または検証する場合にビジネス ルールを選択的に適用します。  
   
 > [!NOTE]  
@@ -33,29 +32,24 @@ ms.locfileid: "73728851"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
 -   ビジネス ルールを適用するモデル オブジェクトに対して、 **更新** 権限が最低限必要です。  
   
 ### <a name="to-apply-business-rules-selectively"></a>ビジネス ルールを選択的に適用するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ドロップダウン リストからモデルを選択します。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ドロップダウン リストからモデルを選択します。  
   
-2.  
-  **[バージョン]** ドロップダウン リストからバージョンを選択します。  
+2.  **[バージョン]** ドロップダウン リストからバージョンを選択します。  
   
-3.  
-  **[エクスプローラー]** タブをクリックします。  
+3.  **[エクスプローラー]** タブをクリックします。  
   
 4.  メニュー バーの **[エンティティ]** をポイントして、ルールを適用するメンバーを含むエンティティの名前をクリックします。  
   
-5.  
-  **[ルールの適用]** をクリックします。 ビジネス ルールは、グリッドに表示されているメンバーにのみ適用されます。  
+5.  **[ルールの適用]** をクリックします。 ビジネス ルールは、グリッドに表示されているメンバーにのみ適用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -17,22 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a90135c634e45f3fb4e3ff9c780347caaea24f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126269"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Web アプリケーションでの SOAP API の使用
-  Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスであるため、容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションから SOAP API にアクセスするのと同じように、Web アプリケーションからレポート サーバー Web サービスにアクセスします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用すると、レポートサーバー Web サービスのプロパティとメソッドを公開するプロキシクラスを生成できます。また、使い慣れたインフラストラクチャとツールを使用して、テクノロジ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でビジネスアプリケーションを構築することができます。  
+  Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスであるため、容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションから SOAP API にアクセスするのと同じように、Web アプリケーションからレポート サーバー Web サービスにアクセスします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用すると、レポートサーバー Web サービスのプロパティとメソッドを公開するプロキシクラスを生成できます。また、使い慣れたインフラストラクチャとツールを使用して、テクノロジ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でビジネスアプリケーションを構築することができます。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート管理機能は、Windows アプリケーションからと同様に、Web アプリケーションからも簡単にアクセスできます。 Web アプリケーションから、レポート サーバー データベースのアイテムの追加と削除、アイテム セキュリティの設定、レポート サーバー データベースのアイテムの変更、スケジューリングと配信の管理などを行うことができます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート管理機能は、Windows アプリケーションからと同様に、Web アプリケーションからも簡単にアクセスできます。 Web アプリケーションから、レポート サーバー データベースのアイテムの追加と削除、アイテム セキュリティの設定、レポート サーバー データベースのアイテムの変更、スケジューリングと配信の管理などを行うことができます。  
   
 ## <a name="enabling-impersonation"></a>権限借用の有効化  
- Web アプリケーションを構成する最初の手順は、Web サービス クライアントからの権限借用を有効にすることです。 権限借用により、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションは代行するクライアントの ID を使用して実行できます。 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を使用してユーザーを認証し、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションに認証済みトークンを渡すか、ユーザーを認証できない場合は未認証トークンを渡します。 どちらの場合も、権限借用が有効であれば、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションで受け取ったトークンの権限を借用します。 クライアントの権限借用を有効にするには、次のようにクライアント アプリケーションの Web.config ファイルを変更します。  
+ Web アプリケーションを構成する最初の手順は、Web サービス クライアントからの権限借用を有効にすることです。 権限借用により、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションは代行するクライアントの ID を使用して実行できます。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を使用してユーザーを認証し、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションに認証済みトークンを渡すか、ユーザーを認証できない場合は未認証トークンを渡します。 どちらの場合も、権限借用が有効であれば、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションで受け取ったトークンの権限を借用します。 クライアントの権限借用を有効にするには、次のようにクライアント アプリケーションの Web.config ファイルを変更します。  
   
 ```  
 <!-- Web.config file. -->  
@@ -45,8 +42,7 @@ ms.locfileid: "63126269"
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]権限借用の詳細については[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 、SDK のドキュメントを参照してください。  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>SOAP API を使用したレポート サーバーの管理  
- Web アプリケーションを使用してレポート サーバーとその内容を管理することもできます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共に含まれているレポート マネージャーは、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] と Reporting Services SOAP API を使用して完全に構築された Web アプリケーションの一例です。 レポート マネージャーのレポート管理機能はカスタム Web アプリケーションに追加できます。 たとえば、レポートサーバーデータベースで使用可能なレポートの一覧を返し、ユーザーが選択できるように[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox`コントロールに表示することができます。 次のコードでは、レポート サーバー データベースに接続し、レポート サーバー データベースのアイテムの一覧を返します。 利用可能なレポートは Listbox コントロールに追加され、各レポートのパスが表示されます。  
+ Web アプリケーションを使用してレポート サーバーとその内容を管理することもできます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共に含まれているレポート マネージャーは、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] と Reporting Services SOAP API を使用して完全に構築された Web アプリケーションの一例です。 レポート マネージャーのレポート管理機能はカスタム Web アプリケーションに追加できます。 たとえば、レポートサーバーデータベースで使用可能なレポートの一覧を返し、ユーザーが選択できるように[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox`コントロールに表示することができます。 次のコードでは、レポート サーバー データベースに接続し、レポート サーバー データベースのアイテムの一覧を返します。 利用可能なレポートは Listbox コントロールに追加され、各レポートのパスが表示されます。  
   
 ```vb  
 Private Sub Page_Load(sender As Object, e As System.EventArgs)  

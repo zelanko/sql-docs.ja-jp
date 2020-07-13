@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Access driver [ODBC], encryption
 - encryption [ODBC]
 ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e652432d0a1bfacde99998add361a9c8e38500a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d121ec3dd5e50eab3bc00b255da9719f178595bc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68058782"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303393"
 ---
 # <a name="encryption-access-driver"></a>暗号化 (Access ドライバー)
 (このコントロールは、バージョン4の場合にのみ使用できます。*x*形式が選択されています。)  

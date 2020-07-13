@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad を使用した一括データコピー (OLE DB) |Microsoft Docs
+title: IRowsetFastLoad を使用したデータの一括コピー (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,28 +12,26 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50590ebc6635aab6025c1caf6f68e27f8f6da294
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62655687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043359"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
   このサンプルでは、IRowsetFastLoad を使用して、レコードをテーブルに一括コピーする方法を示します。  
   
  コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 この新しいセッションによって、コンシューマーから `IRowsetFastLoad` にアクセスできるようになります。  
   
- 
-  `IRowsetFastLoad` を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
+ `IRowsetFastLoad` を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 データベースにテーブル**Irfltable**を作成する必要があります。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>SQL Server テーブルにデータを一括コピーするには  
   
@@ -41,26 +39,22 @@ ms.locfileid: "62655687"
   
 2.  SQLOLEDB プロバイダー固有のデータ ソース プロパティである SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションを使用して、コンシューマーから `IRowsetFastLoad` にアクセスできるようになります。  
   
-3.  
-  `IOpenRowset` インターフェイスを要求するセッションを作成します。  
+3.  `IOpenRowset` インターフェイスを要求するセッションを作成します。  
   
-4.  
-  `IOpenRowset::OpenRowset` を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
+4.  `IOpenRowset::OpenRowset` を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
   
 5.  必要なバインドを実行し、`IAccessor::CreateAccessor` を使用してアクセサーを作成します。  
   
 6.  テーブルへのデータのコピー元となる、メモリ バッファーを設定します。  
   
-7.  
-  `IRowsetFastLoad::InsertRow` を呼び出して、テーブルにデータを一括コピーします。  
+7.  `IRowsetFastLoad::InsertRow` を呼び出して、テーブルにデータを一括コピーします。  
   
 ## <a name="example"></a>例  
  この例では、テーブル IRFLTable に 10 個のレコードを追加します。 テーブル IRFLTable をデータベース内に作成する必要があります。 このサンプルは IA64 ではサポートされていません。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

@@ -1,5 +1,6 @@
 ---
 title: 中断された復元の再開 (Transact-SQL)
+description: この例では、Transact-SQL を使用して SQL Server で中断された復元操作を再開する方法について示します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49b2cd932ea40e2f45010785edcd033b8530d6bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfe32215d30b6722a621b0ebb3f0f556a34ddf26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669583"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>中断された復元操作の再開 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、中断された復元操作を再開する方法について説明します。  
   
 ### <a name="to-restart-an-interrupted-restore-operation"></a>中断された復元操作を再開するには  

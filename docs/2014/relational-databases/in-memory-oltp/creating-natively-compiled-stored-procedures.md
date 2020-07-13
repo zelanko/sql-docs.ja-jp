@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3e8e8139427c7f2ad92eea856be8da542f65e344
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63071822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050266"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
   ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、「[ネイティブコンパイルストアドプロシージャでサポートされる構造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。  
@@ -24,8 +23,7 @@ ms.locfileid: "63071822"
   
 -   ATOMIC ブロック。 詳細については、「 [Atomic Blocks](atomic-blocks-in-native-procedures.md)」を参照してください。  
   
--   ネイティブ コンパイル ストアド プロシージャのパラメーターおよび変数の `NOT NULL` 制約。 
-  `NULL` として宣言されているパラメーターまたは変数に `NOT NULL` 値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)」を参照してください。  
+-   ネイティブ コンパイル ストアド プロシージャのパラメーターおよび変数の `NOT NULL` 制約。 `NULL` として宣言されているパラメーターまたは変数に `NOT NULL` 値を割り当てることはできません。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)」を参照してください。  
   
 -   ネイティブ コンパイル ストアド プロシージャのスキーマ バインド。  
   
@@ -54,23 +52,21 @@ go
   
  コード サンプルの `NATIVE_COMPILATION` は、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャがネイティブ コンパイル ストアド プロシージャであることを示しています。 以下のオプションは必須です。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
-|`SCHEMABINDING`|ネイティブコンパイルストアドプロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照を削除できないことを意味します。 プロシージャで参照されるテーブルにはスキーマ名が含まれて\*いる必要があり、クエリではワイルドカード () は使用できません。 このバージョンの `SCHEMABINDING` では、ネイティブ コンパイル ストアド プロシージャに対してのみ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートされます。|  
-|`EXECUTE AS`|ネイティブ コンパイル ストアド プロシージャでは、既定の実行コンテキストである `EXECUTE AS CALLER` はサポートされません。 したがって、実行コンテキストの指定は必須です。 オプション`EXECUTE AS OWNER`、 `EXECUTE AS` *user*、および`EXECUTE AS SELF`がサポートされています。|  
+|`SCHEMABINDING`|ネイティブコンパイルストアドプロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照を削除できないことを意味します。 プロシージャで参照されるテーブルにはスキーマ名が含まれている必要があり、 \* クエリではワイルドカード () は使用できません。 このバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対してのみ `SCHEMABINDING` がサポートされます。|  
+|`EXECUTE AS`|ネイティブ コンパイル ストアド プロシージャでは、既定の実行コンテキストである `EXECUTE AS CALLER` はサポートされません。 したがって、実行コンテキストの指定は必須です。 オプション `EXECUTE AS OWNER` 、 `EXECUTE AS` *user*、および `EXECUTE AS SELF` がサポートされています。|  
 |`BEGIN ATOMIC`|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> `TRANSACTION ISOLATION LEVEL`. サポートされる分離レベルについては、「[トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)」を参照してください。<br /><br /> `LANGUAGE`. ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  
   
- 
-  `EXECUTE AS` と Windows ログインについては、`EXECUTE AS` を通じて行われた権限借用によって、エラーが発生する場合があります。 ユーザー アカウントに対して Windows 認証が使用される場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに使用されるサービス アカウントと Windows ログインのドメインとの間に完全信頼が必要です。 完全に信頼されていない場合、ネイティブコンパイルストアドプロシージャの作成時に、メッセージ15404、Windows NT グループ/ユーザー ' username ' に関する情報を取得できませんでした。エラーコード0x5 が返されます。  
+ `EXECUTE AS` と Windows ログインについては、`EXECUTE AS` を通じて行われた権限借用によって、エラーが発生する場合があります。 ユーザー アカウントに対して Windows 認証が使用される場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに使用されるサービス アカウントと Windows ログインのドメインとの間に完全信頼が必要です。 完全に信頼されていない場合、ネイティブコンパイルストアドプロシージャの作成時に、メッセージ15404、Windows NT グループ/ユーザー ' username ' に関する情報を取得できませんでした。エラーコード0x5 が返されます。  
   
  このエラーを解決するには、次のいずれかを使用します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの Windows ユーザーと同じドメインからのアカウントを使用します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの Windows ユーザーと同じドメインからのアカウントを使用します。  
   
--   が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Service や Local System などのコンピューターアカウントを使用している場合、そのコンピューターは Windows ユーザーを含むドメインによって信頼されている必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が Network Service や Local System などのコンピューターアカウントを使用している場合、そのコンピューターは Windows ユーザーを含むドメインによって信頼されている必要があります。  
   
--   認証[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用します。  
+-   認証を使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
  ネイティブ コンパイル ストアド プロシージャを作成するときに、エラー 15517 が発生することもあります。 詳細については、「 [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)」を参照してください。  
   
@@ -113,6 +109,6 @@ go
  この方法の利点は、アプリケーションがオフラインにならないことです。 しかし、参照の保持と、ストアド プロシージャの最新バージョンを常にポイントさせるために、より多くの作業が必要となります。  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

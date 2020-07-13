@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51d68eda2ef201bdd1b829ac932e295400ff0dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1234c45d2b5099530fef5246a777487871c2298f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888491"
 ---
 # <a name="sinstance-class"></a>SInstance クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスを表します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、のインスタンスを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用できます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
+ [Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)は、のインスタンスに関連付けられたプロトコルおよびネットワークライブラリを管理するために使用でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 また、セキュリティ証明書を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対して指定することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

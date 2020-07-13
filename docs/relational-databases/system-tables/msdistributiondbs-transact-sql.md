@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fde8c78cb37b84ae897e2b12bba6049da8ddc4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889953"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>Ms、Db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msディストリビューション db**テーブルには、ローカルディストリビューターで定義されているディストリビューションデータベースごとに1行のデータが格納されます。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|ディストリビューションデータベースの名前。|  
 |**min_distretention**|**int**|トランザクションが削除されるまでの最小保有期間 (時間単位)。|  
 |**max_distretention**|**int**|トランザクションが削除されるまでの最大保有期間 (時間単位)。|  
 |**history_retention**|**int**|履歴を保持する期間 (時間単位)。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

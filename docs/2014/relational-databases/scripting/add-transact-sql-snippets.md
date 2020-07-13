@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2606af57bc4a63b86b1066176cbebd886f7d5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063530"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL スニペットの追加
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、定義済みの Transact-SQL コード スニペット一式が同梱されていますが、それ以外にも、独自のスニペットを追加することができます。  

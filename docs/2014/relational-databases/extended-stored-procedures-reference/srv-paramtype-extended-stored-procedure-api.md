@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc5e8b1636d26349bb3938d4b3bcbdf0fbf43e1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63127105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050635"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターのデータ型を返します。  
   
@@ -57,10 +55,9 @@ n
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
 ## <a name="returns"></a>戻り値  
- パラメーターのデータ型のトークン値を返します。 データ型については、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](data-types-extended-stored-procedure-api.md)」をご覧ください。 
-  *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、- 1 を返します。  
+ パラメーターのデータ型のトークン値を返します。 データ型については、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](data-types-extended-stored-procedure-api.md)」をご覧ください。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、- 1 を返します。  
   
- パラメーターが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]データ型の1つである場合、この関数は次の値を返します。  
+ パラメーターがデータ型の1つである場合、この関数は次の値を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。  
   
 |新しいデータ型|戻り値|  
 |--------------------|------------------|  
@@ -73,7 +70,7 @@ n
 |`NVARCHAR`|VARCHAR|  
 |`NTEXT`|-1|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 SRV_RPC ハンドラーはまだ呼び出されていますが、パラメーターがなかったかのように見え、 **srv_rpcparams** 0 を返します。  
   
 > [!IMPORTANT]  
@@ -81,6 +78,6 @@ n
   
 ## <a name="see-also"></a>参照  
  [srv_paraminfo &#40;拡張ストアドプロシージャ API&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;拡張ストアドプロシージャ API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

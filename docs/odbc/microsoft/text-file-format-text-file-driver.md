@@ -13,14 +13,14 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912441"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303093"
 ---
 # <a name="text-file-format-text-file-driver"></a>テキスト ファイルの形式 (テキスト ファイル ドライバー)
 ODBC テキストドライバーでは、区切り文字と固定幅のテキストファイルの両方がサポートされています。 テキストファイルは、省略可能なヘッダー行と0個以上のテキスト行で構成されます。  
@@ -37,7 +37,7 @@ ODBC テキストドライバーでは、区切り文字と固定幅のテキス
   
  プログラマ向けに記述された次の文法は、ODBC テキストドライバーで読み取ることができるテキストファイルの形式を定義しています。  
   
-|Format|[表記]|  
+|フォーマット|[表記]|  
 |------------|--------------------|  
 |斜体以外|表示されるように入力する必要がある文字|  
 |*付き*|文法の別の場所で定義された引数|  

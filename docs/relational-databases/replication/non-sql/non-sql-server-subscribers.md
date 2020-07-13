@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25073bd212ec8b468c0388d11d7701744998d036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883638"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 以下の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
   

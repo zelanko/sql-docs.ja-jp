@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280432"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>クラスター モデルの検証 (基本的なデータ マイニング チュートリアル)
   クラスタリング[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズムでは、類似した特性を含むクラスターにケースがグループ化されます。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスター ビューアーには、クラスタリング マイニング モデルを調べるための次のタブがあります。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスター ビューアーには、クラスタリング マイニング モデルを調べるための次のタブがあります。  
   
 
   
-##  <a name="ClusterDiagramTab"></a>[クラスターダイアグラム] タブ  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>[クラスターダイアグラム] タブ  
  [クラスター ダイアグラム] タブには、マイニング モデル内のすべてのクラスターが表示されます。 クラスター間を結ぶ線は "緊密度" を表しており、緊密度が高いほど濃い線で表示されます。 各クラスター本体の色は、クラスター内の変数の頻度と状態を表します。  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>[クラスター ダイアグラム] タブでモデルを調査するには  
@@ -54,12 +53,11 @@ ms.locfileid: "63280432"
   
      クラスターを選択すると、そのクラスターと別のクラスターをつなぐ線が強調表示され、このクラスターに対するすべての関係を簡単に確認できます。 クラスターが選択されていないときは、ダイアグラム内にあるすべてのクラスター間の相互関係の度合いを、線の濃さによって確認できます。 網掛けが薄いか存在しない場合は、クラスターがあまり似ていません。  
   
-9. ネットワークの左側にあるスライダーを使用して、緊密度の低いリンクを非表示にし、緊密な関係にあるクラスターだけを表示します。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のマーケティング部門は、絞り込みメール配信に最適な方法を決定する際に、類似するクラスターをまとめることができます。  
+9. ネットワークの左側にあるスライダーを使用して、緊密度の低いリンクを非表示にし、緊密な関係にあるクラスターだけを表示します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のマーケティング部門は、絞り込みメール配信に最適な方法を決定する際に、類似するクラスターをまとめることができます。  
   
 
   
-##  <a name="ClusterProfilesTab"></a>[クラスターのプロファイル] タブ  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>[クラスターのプロファイル] タブ  
  [**クラスターのプロファイル**] タブには、 `TM_Clustering`モデルの全体的なビューが表示されます。 [**クラスターのプロファイル**] タブには、モデル内の各クラスターの列が表示されます。 一番左側の列には、少なくとも 1 つのクラスターに関連付けられているすべての属性が表示されます。 その他の部分には、それぞれのクラスターについて、各属性の状態の分布状況が表示されます。 離散変数の分布は色分けされたバーとして表示され、最大数のバーが [**ヒストグラム] バー**の一覧に表示されます。 連続属性はダイヤモンド グラフで示されます。このグラフでは、各クラスターの平均と標準偏差を確認できます。  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>[クラスターのプロファイル] タブでモデルを調査するには  
@@ -86,7 +84,7 @@ ms.locfileid: "63280432"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>[クラスターの特性] タブ  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>[クラスターの特性] タブ  
  [**クラスターの特性**] タブでは、クラスターを構成する特性の詳細を確認できます。 ([クラスターのプロファイル] タブのように) すべてのクラスターの特性を比較するのではなく、一度に 1 つのクラスターを検証することができます。 たとえば、[**クラスター** ] ボックスの一覧から [**自転車購入**者率高] を選択した場合、このクラスターの顧客の特性を確認できます。 [クラスターのプロファイル] ビューアーとは表示が異なりますが、結果は同じです。  
   
 > [!NOTE]  
@@ -94,7 +92,7 @@ ms.locfileid: "63280432"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>[クラスターの識別] タブ  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>[クラスターの識別] タブ  
  [**クラスターの識別**] タブでは、あるクラスターと別のクラスターを区別する特性を調べることができます。 **クラスター 1**の一覧から2つのクラスターを選択し、クラスター **2**の一覧からクラスターを選択すると、ビューアーによってクラスター間の相違が計算され、クラスターを最もよく区別する属性の一覧が表示されます。  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>[クラスターの識別] タブでモデルを調査するには  

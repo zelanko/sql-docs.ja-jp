@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5e9900def3d9e464888e43f608b939a343c7a955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63245792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058651"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
-  キーボード アクセス キーを使用すると、Alt キーを押しながら *\<1文字>* を押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
+  キーボードアクセスキーを使用すると、ALT キーを押しながらを押すことでメニューコマンドやボタンを選択でき *\<single letter>* ます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
   
  Ctrl キーを使用したストアド プロシージャのキーボード ショートカット キーは、 **[ツール]** メニューから開く **[オプション]** / **[キーボード]** ダイアログ ボックスを使用します。  
   

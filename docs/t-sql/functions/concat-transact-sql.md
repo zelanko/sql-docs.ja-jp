@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 785b1d1cb8dfd2b36da981d0194ed9651eeedfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70122956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732600"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "70122956"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   

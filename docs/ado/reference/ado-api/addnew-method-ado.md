@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921324"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760728"
 ---
 # <a name="addnew-method-ado"></a>AddNew メソッド (ADO)
 更新可能な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの新しいレコードを作成します。  
@@ -38,12 +38,12 @@ recordset.AddNew FieldList, Values
  **レコードセット**オブジェクトです。  
   
  *FieldList*  
- 省略可能。 単一の名前、または新しいレコード内のフィールドの名前または序数の配列。  
+ 任意。 単一の名前、または新しいレコード内のフィールドの名前または序数の配列。  
   
  *値*  
- 省略可能。 単一の値、または新しいレコードのフィールドの値の配列。 *Fieldlist*が配列の場合、*値*も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。  
+ 任意。 単一の値、または新しいレコードのフィールドの値の配列。 *Fieldlist*が配列の場合、*値*も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **AddNew**メソッドを使用して、新しいレコードを作成して初期化します。 現在の**レコードセット**オブジェクトにレコードを追加できるかどうかを確認するには、 **Adaddnew**で[サポート](../../../ado/reference/ado-api/supports-method.md)メソッド ([カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値) を使用します。  
   
  **AddNew**メソッドを呼び出すと、新しいレコードが現在のレコードになり、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後も最新の状態が維持されます。 新しいレコードは**レコードセット**に追加されるため、更新後の**MoveNext**への呼び出しは、**レコードセット**の末尾を越えて移動され、 **EOF**が True になります。 **Recordset**オブジェクトがブックマークをサポートしていない場合、別のレコードに移動すると、新しいレコードにアクセスできなくなることがあります。 カーソルの種類によっては、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを呼び出して、新しいレコードにアクセスできるようにすることが必要になる場合があります。  

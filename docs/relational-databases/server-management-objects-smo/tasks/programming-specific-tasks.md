@@ -19,32 +19,29 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095209"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998313"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SMO でのリンク サーバーの使用](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|SMO が <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> オブジェクトを使用して OLE-DB サーバーをリンクする方法について説明します。|  
 |[SMO での SQL Server の構成](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|SMO で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの構成設定を確認および変更する方法について説明します。|  
 |[テーブルおよびインデックスのパーティション分割の使用](../../../relational-databases/server-management-objects-smo/tasks/using-table-and-index-partitioning.md)|SMO でインデックスおよびテーブル分割を使用する方法について説明します。|  
 |[ファイルとファイル グループを使用したデータの格納](../../../relational-databases/server-management-objects-smo/tasks/using-filegroups-and-files-to-store-data.md)|SMO でファイル グループを使用する方法について説明します。|  
-|[WMI プロバイダーを使用したサービスの管理とネットワーク設定](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|構成管理用の WMI プロバイダーを表す [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクトを使用して、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> のインスタンスを追跡するいくつかの方法について説明します。|  
-|[データベース オブジェクトでの作業](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
+|[WMI プロバイダーを使用したサービスの管理とネットワーク設定](../../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)|構成管理用の WMI プロバイダーを表す <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを追跡するいくつかの方法について説明します。|  
+|[データベース オブジェクトでの作業](../../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
 |[ユーザー、ロール、およびログインの管理](../../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)|SMO でセキュリティ ロールを使用する方法について説明します。|  
 |[権限の許可、取り消し、および拒否](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|SMO を使用して、ユーザーまたはロールのメンバーに対して権限の許可、取り消し、および拒否を行う方法について説明します。|  
 |[暗号化の使用](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|SMO で暗号化を使用してデータを保護する方法について説明します。|  
-|[SQL Server エージェントでの自動管理タスクのスケジュール設定](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用して、SMO のジョブの監視、レポート、およびスケジュール設定を行う方法について説明します。|  
+|[SQL Server エージェントでの自動管理タスクのスケジュール設定](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用して、SMO のジョブの監視、レポート、およびスケジュール設定を行う方法について説明します。|  
 |[データベースおよびトランザクション ログのバックアップと復元](../../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)|SMO でデータベースおよびトランザクション ログのバックアップと復元を行う方法について説明します。|  
 |[スクリプトの作成](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|SMO で、オブジェクトのスクリプト化およびオブジェクト間の依存関係の検出を行う方法について説明します。|  
 |[データの転送](../../../relational-databases/server-management-objects-smo/tasks/transferring-data.md)|SMO でデータを転送する方法について説明します。|  

@@ -3,7 +3,6 @@ title: データベース マスター キーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql-server-2014
-ms.reviewer: carlrab
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,41 +10,41 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.reviewer: carlrab
+ms.openlocfilehash: cb8305d9d5a3c72e6dffafd231f21110a5abdd14
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74957246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055339"
 ---
 # <a name="create-a-database-master-key"></a>データベース マスター キーの作成
 
-このトピックでは、で`master` [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]して、データベースにデータベースマスターキーを作成する方法について説明します。
+このトピックでは、でを使用して、データベースにデータベースマスターキーを作成する方法について説明し `master` [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。
 
 **このトピックの内容**
 
 - **作業を開始する準備:**
 
-  [セキュリティ](#Security)
+  [Security](#Security)
 
-- [Transact-sql を使用してデータベースマスターキーを作成するには](#TsqlProcedure)
+- [Transact-SQL を使用してデータベース マスター キーを作成するには](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
-### <a name="Security"></a> セキュリティ
+### <a name="security"></a><a name="Security"></a> セキュリティ
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 データベースに対する CONTROL 権限が必要です。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 ### <a name="to-create-a-database-master-key"></a>データベース マスター キーを作成するには
 
 1. データベースに格納するマスター キーのコピーを暗号化するためのパスワードを指定します。
 2. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。
-3. **[システム データベース]** を展開し、`master` を右クリックして、 **[新しいクエリ]** をクリックします。
+3. **[システム データベース]** を展開し、`master` を右クリックして、**[新しいクエリ]** をクリックします。
 4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。
 
   ```sql

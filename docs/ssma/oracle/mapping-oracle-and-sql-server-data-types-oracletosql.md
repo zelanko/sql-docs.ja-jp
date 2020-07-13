@@ -1,5 +1,6 @@
 ---
 title: Oracle と SQL Server のデータ型のマッピング (OracleToSQL) |Microsoft Docs
+description: SSMA for Oracle データ型と SQL Server 間のマッピングをカスタマイズする方法、または既定値をそのまま使用する方法について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68262956"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293839"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle と SQL Server データ型のマッピング (OracleToSQL)
-Oracle データベースの種類は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 Oracle データベースオブジェクトをオブジェクトに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換する場合は、データ型を oracle からに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マップする方法を指定する必要があります。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
+Oracle データベースの種類は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 Oracle データベースオブジェクトをオブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型を oracle からにマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
   
 ## <a name="default-mappings"></a>既定のマップ  
 SSMA には、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧については、「[プロジェクトの設定 &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)」を参照してください。  
@@ -59,7 +60,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
         これにより、データマップをカスタマイズして、同じデータ型の小さい値と大きい値を指定できます。  
   
-    4.  [**対象の型**] で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対象のデータ型を選択します。  
+    4.  [**対象の型**] で、対象のデータ型を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
         一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[**置換後の文字列**] ボックスに新しいデータ長を入力します。  
   
@@ -67,7 +68,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
 3.  データ型のマッピングを変更するには、次の手順を実行します。  
   
-    1.  [**編集**] をクリックします。  
+    1.  **[編集]** をクリックします。  
   
     2.  [**ソースの種類**] で、マップする Oracle データ型を選択します。  
   
@@ -75,7 +76,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
         これにより、データマップをカスタマイズして、同じデータ型の小さい値と大きい値を指定できます。  
   
-    4.  [**対象の型**] で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対象のデータ型を選択します。  
+    4.  [**対象の型**] で、対象のデータ型を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
         一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しいデータ長を入力し、[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

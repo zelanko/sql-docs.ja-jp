@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66075776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547084"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -105,19 +104,15 @@ ms.locfileid: "66075776"
   
      ![ディメンションの名前変更を示すウィザード ページ](../media/ssas-m2m-dimsalesorders.PNG "ディメンションの名前変更を示すウィザード ページ")  
   
-7.  
-  **[キューブ]** を右クリックし、 **[新しいキューブ]** をクリックします。  
+7.  **[キューブ]** を右クリックし、 **[新しいキューブ]** をクリックします。  
   
 8.  メジャー グループ テーブルで、 **FactInternetSales** と **FactInternetSalesReason**を選択します。  
   
-     
-  **FactInternetSales** を選択する理由は、キューブで使用するメジャーがこの中に含まれていることです。 
-  **FactInternetSalesReason** を選択する理由は、これが、販売注文を購入動機に関連付けるメンバー アソシエーション データを提供する中間メジャー グループであることです。  
+     **FactInternetSales** を選択する理由は、キューブで使用するメジャーがこの中に含まれていることです。 **FactInternetSalesReason** を選択する理由は、これが、販売注文を購入動機に関連付けるメンバー アソシエーション データを提供する中間メジャー グループであることです。  
   
 9. 各ファクト テーブルに対応するメジャーを選択します。  
   
-     モデルを簡略化するために、すべてのメジャーをクリアしてから、リストの下部にある **Sales Amount** と **Fact Internet Sales Count** のみを選択します。 
-  **FactInternetSalesReason** にはただ 1 つのメジャーがあることから、このメジャーが自動的に選択されます。  
+     モデルを簡略化するために、すべてのメジャーをクリアしてから、リストの下部にある **Sales Amount** と **Fact Internet Sales Count** のみを選択します。 **FactInternetSalesReason** にはただ 1 つのメジャーがあることから、このメジャーが自動的に選択されます。  
   
 10. ディメンション リストで、 **Dim Sales Reason** と **Dim Sales Orders**が表示されます。  
   
@@ -131,8 +126,7 @@ ms.locfileid: "66075776"
   
      ![ディメンション使用法内の多対多アイコン](../media/ssas-m2m-icondimusage.png "ディメンション使用法内の多対多アイコン")  
   
-2.  
-  **Dim Sales Reason** と **Fact Internet Sales**の交差セルをクリックし、ボタンをクリックして [リレーションシップの定義] ダイアログ ボックスを開きます。  
+2.  **Dim Sales Reason** と **Fact Internet Sales**の交差セルをクリックし、ボタンをクリックして [リレーションシップの定義] ダイアログ ボックスを開きます。  
   
      このダイアログ ボックスを使用して、多対多リレーションシップを指定できることがわかります。 代わりに、標準のリレーションシップを持つディメンションを追加する場合は、このダイアログ ボックスを使用して多対多に変更することになります。  
   
@@ -147,15 +141,15 @@ ms.locfileid: "66075776"
   
 1.  プロジェクトを配置し、キューブを参照して、集計が有効であることを確認します。  
   
-2.  Excel で、**Analysis Services**の [**その他のソース** | の**データ** | ] をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
+2.  Excel で、Analysis Services の [ **Data**  |  **その他のソース**のデータ] をクリックし  |  **From Analysis Services**ます。 サーバーの名前を入力し、データベースとキューブを選択します。  
   
 3.  次のものを使用するピボットテーブルを作成します。  
   
-    -   値としての**売上高**  
+    -   値として**Sales Amount**  
   
-    -   列の**Sales Reason Name**  
+    -   列で**Sales Reason Name**  
   
-    -   行の**販売注文番号**  
+    -   行で**Sales Order Number**  
   
 4.  結果を分析します。 サンプル データを使用しているため、最初は、すべての販売注文が同じ値になっているという印象を受けます。 ただし、下へスクロールすると、データに差異があることに気が付きます。  
   
@@ -181,14 +175,14 @@ ms.locfileid: "66075776"
   
 4.  複数の多対多リレーションシップで、リンク メジャー グループを使用することは避けてください。特に、これらのリレーションシップが異なるキューブ内に存在する場合です。 このような方法で使用すると、あいまいな集計になります。 詳細については、「 [多対多リレーションシップを含むキューブでリンク メジャーの値が不適切](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)」を参照してください。  
   
-##  <a name="bkmk_Learn"></a>詳細情報  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>詳細情報  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
   
  [Analysis Services で多対多ディメンションを定義する方法](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [多対多の革命2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多対多の回転 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [チュートリアル: SQL Server Analysis Services の多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [チュートリアル : SQL Server Analysis Services を対象とする多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>参照  
  [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -1,5 +1,6 @@
 ---
 title: エラー処理 (XQuery) |Microsoft Docs
+description: XQuery でのエラー処理について説明し、動的エラーを処理する例を示します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7afd7743a7a158738b7b88cd20d33be3220ece0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68038965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753642"
 ---
 # <a name="error-handling-xquery"></a>エラー処理 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   W3C 仕様では、型エラーが静的または動的に発生し、静的なエラー、動的エラー、および型エラーが定義されています。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68038965"
  正しい型に明示的にキャストすると、ユーザーは静的エラーを回避できます。ただし、実行時のキャストエラーは空のシーケンスに変換されます。  
   
 ## <a name="static-errors"></a>静的エラー  
- エラーメカニズムを使用して、 [!INCLUDE[tsql](../includes/tsql-md.md)]静的エラーが返されます。 で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、XQuery 型エラーが静的に返されます。 詳細については、「 [XQuery と静的](../xquery/xquery-and-static-typing.md)な型指定」を参照してください。  
+ エラーメカニズムを使用して、静的エラーが返され [!INCLUDE[tsql](../includes/tsql-md.md)] ます。 では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、XQuery 型エラーが静的に返されます。 詳細については、「 [XQuery と静的](../xquery/xquery-and-static-typing.md)な型指定」を参照してください。  
   
 ## <a name="dynamic-errors"></a>動的エラー  
  XQuery では、ほとんどの動的エラーが空のシーケンス ("()") にマップされます。 ただし、これらの例外は、XQuery アグリゲーター関数のオーバーフロー状態と XML DML 検証エラーの2つです。 ほとんどの動的エラーは空のシーケンスにマップされることに注意してください。 そうしないと、XML インデックスを利用してクエリを実行すると、予期しないエラーが発生することがあります。 そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予期しないエラーを発生させることなくクエリを効率的に実行するため、動的エラーが () にマップされます。  
@@ -45,7 +46,7 @@ ms.locfileid: "68038965"
  多くの場合、述語内で動的エラーが発生する状況では、() が False にマップされているため、エラーを発生させてもセマンティクスが変更されることはありません。 ただし、動的エラーではなく () を返すと予期しない結果が生じることがあります。 これを説明する例を次に示します。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>例: 文字列で avg () 関数を使用する  
- 次の例では、 [avg 関数](../xquery/aggregate-functions-avg.md)を呼び出して、3つの値の平均を計算します。 これらの値の1つは文字列です。 この場合、XML インスタンスは型指定されていないため、その中のすべてのデータは型指定されていないアトミック型になります。 **Avg ()** 関数は、平均値を計算する前に、最初にこれらの値を**xs: double**にキャストします。 ただし、値を`"Hello"` **xs: double**にキャストして、動的エラーを作成することはできません。 この場合、を`"Hello"` **xs: double**にキャストすると、空のシーケンスが返されます。 **Avg ()** 関数は、この値を無視し、他の2つの値の平均を計算し、150を返します。  
+ 次の例では、 [avg 関数](../xquery/aggregate-functions-avg.md)を呼び出して、3つの値の平均を計算します。 これらの値の1つは文字列です。 この場合、XML インスタンスは型指定されていないため、その中のすべてのデータは型指定されていないアトミック型になります。 **Avg ()** 関数は、平均値を計算する前に、最初にこれらの値を**xs: double**にキャストします。 ただし、値を `"Hello"` **xs: double**にキャストして、動的エラーを作成することはできません。 この場合、を `"Hello"` **xs: double**にキャストすると、空のシーケンスが返されます。 **Avg ()** 関数は、この値を無視し、他の2つの値の平均を計算し、150を返します。  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>例: not 関数の使用  
- たとえば、 `/SomeNode[not(Expression)]`、などの述語で[not 関数](../xquery/functions-on-boolean-values-not-function.md)を使用した場合、式によって動的エラーが発生すると、エラーではなく空のシーケンスが返されます。 空のシーケンスに**not ()** を適用すると、エラーではなく True が返されます。  
+ たとえば、、などの述語で[not 関数](../xquery/functions-on-boolean-values-not-function.md)を使用した場合、式によって動的エラーが発生すると、エラーでは `/SomeNode[not(Expression)]` なく空のシーケンスが返されます。 空のシーケンスに**not ()** を適用すると、エラーではなく True が返されます。  
   
 ### <a name="example-casting-a-string"></a>例: 文字列のキャスト  
  次の例では、リテラル文字列 "NaN" が xs: string にキャストされ、次に xs: double にキャストされます。 その結果、空の行セットが返されます。 文字列 "NaN" は xs:double に正しくキャストすることはできません。ただし、この文字列は最初に xs:string にキャストされているため、このことは実行時まで判断できません。  
@@ -82,7 +83,7 @@ GO
 #### <a name="implementation-limitations"></a>実装の制限事項  
  **Fn: error ()** 関数はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XQuery の基礎](../xquery/xquery-basics.md)  
   

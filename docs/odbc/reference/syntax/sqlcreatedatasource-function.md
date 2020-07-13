@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94dc0d6d6f3b5bc96ae41aecda5b46f119cff85c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121385"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301202"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 関数
 **互換性**  
@@ -55,7 +55,7 @@ BOOL SQLCreateDataSource(
 ## <a name="diagnostics"></a>診断  
  **Sqlcreatedatasource**が FALSE を返す場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*Hwnd*引数が無効または NULL でした。|  
@@ -109,6 +109,6 @@ BOOL SQLCreateDataSource(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データ ソースの管理|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|

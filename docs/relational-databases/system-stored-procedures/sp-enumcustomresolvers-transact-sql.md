@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 361a0d8e47372612eddf40cdf1663df2e70da0a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124630"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891907"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   使用可能なすべてのビジネスロジックハンドラーと、ディストリビューターに登録されているカスタム競合回避モジュールの一覧を返します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。  
   
@@ -41,28 +41,28 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar(255)**|ビジネスロジックハンドラーまたは競合回避モジュールのフレンドリ名。|  
-|**resolver_clsid**|**nvarchar(50)**|COM ベースの競合回避モジュールのクラス ID (CLSID) です。 ビジネスロジックハンドラーの場合、この列には0の CLSID 値が返されます。|  
+|**resolver_clsid**|**nvarchar (50)**|COM ベースの競合回避モジュールのクラス ID (CLSID) です。 ビジネスロジックハンドラーの場合、この列には0の CLSID 値が返されます。|  
 |**is_dotnet_assembly**|**bit**|ビジネス ロジック ハンドラーに対する登録かどうかを示します。<br /><br /> **0** = COM ベースの競合回避モジュール<br /><br /> **1** = ビジネスロジックハンドラー|  
 |**dotnet_assembly_name**|**nvarchar(255)**|ビジネス ロジック ハンドラーを実装している [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリの名前です。|  
-|**dotnet_class_name**|**nvarchar(255)**|は、ビジネスロジックハンドラーを実装する<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ためにをオーバーライドするクラスの名前です。|  
+|**dotnet_class_name**|**nvarchar(255)**|は、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> ビジネスロジックハンドラーを実装するためにをオーバーライドするクラスの名前です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_enumcustomresolvers**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_enumcustomresolvers**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージアーティクルのビジネスロジックハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージアーティクルのカスタム競合回避モジュールの実装](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

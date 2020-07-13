@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 56af8e7de291c81736d2b83abf8a31a972653c8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052790"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed イベント クラス
   PreConnect:Completed イベント クラスは、LOGON トリガーまたはリソース ガバナー分類関数の実行が終了したことを示します。  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>PreConnect:Completed イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|216|27|いいえ|  
 |SPID|`int`|このイベントを発生させるサーバー プロセスの ID。|12|はい|  

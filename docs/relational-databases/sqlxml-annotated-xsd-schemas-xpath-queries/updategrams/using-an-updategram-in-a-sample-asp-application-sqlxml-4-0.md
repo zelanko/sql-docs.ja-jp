@@ -1,5 +1,6 @@
 ---
 title: サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML)
+description: Active Server ページ (ASP) アプリケーションでの SQLXML アップデートグラムの使用例を参照してください。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733636"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この ASP (Active Server Pages) アプリケーションでは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースにある Person.Contact テーブル内の顧客情報を更新できます。 このアプリケーションによって次の処理が行われます。  
   
 -   ユーザーに、連絡先 ID を入力するように指示する。  
@@ -78,8 +79,7 @@ ms.locfileid: "75246093"
 </ROOT>  
 ```  
   
- 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
+ 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
   
 > [!NOTE]  
 >  コードでは、"ServerName" に Microsoft インターネット インフォメーション サービス (IIS) を実行するサーバーの名前を指定する必要があります。  
@@ -161,7 +161,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919218"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763483"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティによって参照される[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得されるデータメンバーの名前を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "67919218"
   
  **DataMember**プロパティは、 **DataSource**プロパティによって指定されたオブジェクトを**レコードセット**オブジェクトとして表現します。 このプロパティを設定する前に、**レコードセット**オブジェクトを閉じる必要があります。 **Datasource**プロパティの前に**datamember**プロパティが設定されていない場合、または**datasource**プロパティで指定されたオブジェクトによって**datamember**名が認識されない場合は、エラーが生成されます。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs as New ADODB.Recordset  

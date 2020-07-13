@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66f944e1be0edec50492f0eb732bdd03575891f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 47634ca0584dce437802977263a3a098ba3e9b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783625"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML ストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、XML テキストの管理に使用される次のシステムストアドプロシージャがサポートされています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、XML テキストの管理に使用される次のシステムストアドプロシージャがサポートされています。  
   
 |||  
 |-|-|  
 |[sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)|[sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

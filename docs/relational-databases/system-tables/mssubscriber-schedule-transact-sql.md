@@ -15,26 +15,26 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c5b4a3ac4c00dcb90d62961554d7bc4d12911f6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139797"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889369"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscriber_schedule**テーブルには、パブリッシャーとサブスクライバーのペアごとに、既定のマージおよびトランザクション同期のスケジュールが含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 > [!NOTE]
->  このシステムテーブルは非推奨とされており、以前のバージョン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のをサポートするために保持されています。  
+>  このシステムテーブルは非推奨とされており、以前のバージョンのをサポートするために保持されてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前です。|  
+|**publisher**|**sysname**|パブリッシャーの名前です。|  
 |**サブスクライバ**|**sysname**|サブスクライバーの名前です。|  
 |**agent_type**|**smallint**|エージェントの種類。<br /><br /> 0 = ディストリビューション エージェント<br /><br /> 1 = マージエージェント。|  
 |**frequency_type**|**int**|ディストリビューションエージェントのスケジュールを設定する頻度。<br /><br /> **1** = 1 回。<br /><br /> **2** = 要求時。<br /><br /> **4** = 毎日。<br /><br /> **8** = 週単位。<br /><br /> **16** = 月単位。<br /><br /> **32** = 毎月の相対。<br /><br /> **64** = 自動開始。<br /><br /> **128** = 定期的。|  
@@ -48,8 +48,8 @@ ms.locfileid: "68139797"
 |**active_start_date**|**int**|ディストリビューション エージェントのスケジュールの開始日。YYYYMMDD の形式で表されます。|  
 |**active_end_date**|**int**|ディストリビューションエージェントのスケジュール設定を停止する日付。形式は YYYYMMDD です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099035"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895723"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **text**、**ntext**、または **image** 列に対応するテキスト ポインターの値を **varbinary** 形式で返します。 取得したテキスト ポインターの値は、READTEXT、WRITETEXT、および UPDATETEXT ステートメントで使用します。  
   

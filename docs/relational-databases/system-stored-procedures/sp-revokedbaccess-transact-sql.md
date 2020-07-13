@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67941715"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901353"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースからデータベースユーザーを削除します。  
   
@@ -58,17 +58,17 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
  データベースに対する ALTER ANY USER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、にマップさ`Edmonds\LolanSo`れているデータベースユーザーを現在のデータベースから削除します。  
+ 次の例では、にマップされているデータベースユーザーを `Edmonds\LolanSo` 現在のデータベースから削除します。  
   
 ```  
 EXEC sp_revokedbaccess 'Edmonds\LolanSo';  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ユーザー &#40;Transact-sql&#41;を削除します。](../../t-sql/statements/drop-user-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

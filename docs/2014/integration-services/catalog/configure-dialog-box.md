@@ -11,15 +11,14 @@ f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: afae7bd794f0d795bcb49ae58aaad908e4644b69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62836114"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439099"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
@@ -32,7 +31,7 @@ ms.locfileid: "62836114"
   
 -   [[参照] ページのオプションの設定](#references)  
   
-##  <a name="open_dialog"></a> [構成] ダイアログ ボックスを開く  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> [構成] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62836114"
   
 5.  パッケージまたはプロジェクトを右クリックし、 **[構成]** をクリックします。  
   
-##  <a name="parameter"></a> [パラメーター] ページのオプションの設定  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> [パラメーター] ページのオプションの設定  
  パラメーターの名前と値を表示したり、値を変更するには、 **[パラメーター]** ページを使用します。  
   
  **[スコープ]** ボックスの一覧から、 **[パラメーター]** タブと **[接続マネージャー]** タブに表示されるパラメーターのスコープを選択します。  
@@ -56,7 +55,7 @@ ms.locfileid: "62836114"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -67,7 +66,7 @@ ms.locfileid: "62836114"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **Name**  
+ **名前**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  
@@ -76,7 +75,7 @@ ms.locfileid: "62836114"
  **Value**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。 **[パラメーター値の設定]** ダイアログ ボックスの値を変更するには、参照ボタンをクリックします。 リテラル値を入力するか、使用する値を含んでいる環境変数をマップするか、パッケージの既定値を使用することができます。  
   
-##  <a name="references"></a> [参照] ページのオプションの設定  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> [参照] ページのオプションの設定  
  環境への参照を追加および削除したり、環境プロパティにアクセスするには、 **[参照]** ページを使用します。  
   
  環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  

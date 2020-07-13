@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b479564984727e47432754d0a660e6aa979244b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072008"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547634"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>サイト コレクションを対象とした PowerPivot 機能の統合をサーバーの全体管理でアクティブ化する方法
   [既存のファーム] インストール オプションを使用して SQL Server PowerPivot for SharePoint をインストールした場合は、サイト コレクションごとに PowerPivot 機能の統合をアクティブ化する必要があります。 [新しいサーバー] インストール オプションを使用して PowerPivot for SharePoint をインストールした場合は、この作業は必要ありません。このオプションでは、SQL Server セットアップで配置を構成するときに、PowerPivot 機能の統合がルート サイト コレクションに対してアクティブ化されます。  
@@ -31,10 +30,9 @@ ms.locfileid: "66072008"
   
 1.  SharePoint サイトで、 **[サイトの操作]** をクリックします。  
   
-     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、SharePoint サイトにアクセスするには\<、http://コンピューター名> を入力して、ルートサイトコレクションを開きます。  
+     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「http://\<computer name>」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。  
   
-2.  
-  **[サイトの設定]** をクリックします。  
+2.  **[サイトの設定]** をクリックします。  
   
 3.  [サイト コレクションの管理] で **[サイト コレクションの機能]** をクリックします。  
   
@@ -42,7 +40,7 @@ ms.locfileid: "66072008"
   
 5.  **[アクティブ化]** をクリックします。  
   
-6.  各サイトを開き、[**サイトの操作**] をクリックして、追加のサイトコレクションに対してを繰り返します。  
+6.  他のサイト コレクションについても、各サイトを開き、 **[サイトの操作]** をクリックして手順を繰り返します。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)   

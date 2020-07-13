@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 245b383146e30c1fb42a6c6e23874a5c18d0b187
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014657"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
   次の表に、DDL トリガーまたはイベント通知の実行に使用できる DDL イベント グループ、およびそれらのグループで処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの一覧を示します。 イベント グループは入れ子になっていることに注意してください。 たとえば、FOR DDL_TABLE_EVENTS (10018) を指定した DDL トリガー、またはイベント通知の対象になるのは、CREATE TABLE ステートメント、ALTER TABLE ステートメント、および DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 FOR DDL_TABLE_VIEW_EVENTS (10017) を指定した DDL トリガーまたはイベント通知の対象になるのは、DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS、および DDL_STATISTICS_EVENTS という型の下のすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
@@ -32,7 +31,7 @@ ms.locfileid: "68211727"
   
 ||||  
 |-|-|-|  
-|parent_type|型|name|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

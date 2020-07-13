@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933221"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757628"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)のデータ型を指定します。 対応する OLE DB 型インジケーターは、次の表の説明列にかっこで囲まれています。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|他のデータ型の配列を示すフラグ値。常に別のデータ型定数と結合されます。 ADOX には適用されません。|  
 |**adBigInt**|20|8バイト符号付き整数 (DBTYPE_I8) を示します。|  
@@ -40,14 +40,14 @@ ms.locfileid: "67933221"
 |**adDBTime**|134|時刻値 (hhmmss) (DBTYPE_DBTIME) を示します。|  
 |**adDBTimeStamp**|135|日付/時刻スタンプ (yyyymmddhhmmss に billionths の分数を加えたもの) (DBTYPE_DBTIMESTAMP) を示します。|  
 |**adDecimal**|14|有効桁数と小数点以下桁数が固定された正確な数値を示します (DBTYPE_DECIMAL)。|  
-|**追加**|5|倍精度浮動小数点値 (DBTYPE_R8) を示します。|  
+|**adDouble**|5|倍精度浮動小数点値 (DBTYPE_R8) を示します。|  
 |**adEmpty**|0|値を指定しません (DBTYPE_EMPTY)。|  
 |**adError**|10|32ビットエラーコード (DBTYPE_ERROR) を示します。|  
 |**adFileTime**|64|1601 (DBTYPE_FILETIME) 以降の100ナノ秒間隔の数を表す64ビットの値を示します。|  
 |**adGUID**|72|グローバル一意識別子 (GUID) (DBTYPE_GUID) を示します。|  
-|**おディスパッチ**|9|COM オブジェクト (DBTYPE_IDISPATCH) の**IDispatch**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
+|**adIDispatch**|9|COM オブジェクト (DBTYPE_IDISPATCH) の**IDispatch**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
 |**adInteger**|3|4バイト符号付き整数 (DBTYPE_I4) を示します。|  
-|**原因不明**|13|COM オブジェクト (DBTYPE_IUNKNOWN) の**IUnknown**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
+|**adIUnknown**|13|COM オブジェクト (DBTYPE_IUNKNOWN) の**IUnknown**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
 |**adLongVarBinary**|205|Long バイナリ値を示します。|  
 |**adLongVarChar**|201|長い文字列値を示します。|  
 |**adLongVarWChar**|203|長い null で終わる Unicode 文字列値を示します。|  
@@ -60,7 +60,7 @@ ms.locfileid: "67933221"
 |**adUnsignedInt**|19|4バイト符号なし整数 (DBTYPE_UI4) を示します。|  
 |**adUnsignedSmallInt**|18|2バイト符号なし整数 (DBTYPE_UI2) を示します。|  
 |**adUnsignedTinyInt**|17|1バイト符号なし整数 (DBTYPE_UI1) を示します。|  
-|**adUserDefined、**|132|ユーザー定義変数 (DBTYPE_UDT) を示します。|  
+|**adUserDefined**|132|ユーザー定義変数 (DBTYPE_UDT) を示します。|  
 |**adVarBinary**|204|バイナリ値を示します。|  
 |**adVarChar**|200|文字列値を示します。|  
 |**adVariant**|12|オートメーション**バリアント**(DBTYPE_VARIANT) を示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
@@ -71,7 +71,7 @@ ms.locfileid: "67933221"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

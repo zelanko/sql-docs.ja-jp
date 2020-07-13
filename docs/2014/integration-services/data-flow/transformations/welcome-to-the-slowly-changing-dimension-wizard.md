@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 856fec1ba2f2c14fc73f93d43cdbd9fc410b51ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62899839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430069"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードへようこそ]
   **緩やかに変化するディメンション ウィザード** を使用すると、さまざまな種類の緩やかに変化するディメンションへのデータの読み込みを設定できます。  

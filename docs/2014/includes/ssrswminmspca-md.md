@@ -1,1 +1,1 @@
-**ルート\\Microsoft\\SqlServer\\ReportServer\\\<** InstanceName\>v12\\Admin\\**
+**ルート\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*InstanceName\>v12\\Admin\\**

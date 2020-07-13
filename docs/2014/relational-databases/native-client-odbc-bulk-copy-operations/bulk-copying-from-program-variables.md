@@ -15,15 +15,14 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021450"
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
   プログラム変数から直接一括コピーできます。 行のデータを保持し、 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して一括コピーを開始する変数を割り当てた後、各列に対して[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を呼び出して、列に関連付けられるプログラム変数の場所と形式を指定します。 各変数にデータを入力し、 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出して、サーバーに1行のデータを送信します。 すべての行がサーバーに送信されるまで、変数の入力と**bcp_sendrow**の呼び出しを繰り返します。次に、 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出して、操作が完了したことを指定します。  
@@ -48,38 +47,38 @@ ms.locfileid: "68206841"
   
  **Bcp_bind**_type_パラメーターは、ODBC データ型識別子ではなく、db-library データ型識別子を使用します。 DB-LIBRARY のデータ型識別子は、ODBC **bcp_bind**関数で使用するために sqlncli で定義されています。  
   
- 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数では ODBC SQL_C_TYPE_TIMESTAMP 構造がサポートされていないため、 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../native-client-odbc-api/sqlgetdata.md)を使用して odbc SQL_TYPE_TIMESTAMP データを SQL_C_CHAR 変数に変換します。 その後**bcp_bind**を sqlcharacter の*型*パラメーターと共に使用して、変数を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列にバインドすると、一括コピー関数は、文字変数内の timestamp エスケープ句を適切な datetime 形式に変換します。  
+ 一括コピー関数では、すべての ODBC C データ型をサポートしているわけではありません。 たとえば、一括コピー関数では ODBC SQL_C_TYPE_TIMESTAMP 構造がサポートされていないため、 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../native-client-odbc-api/sqlgetdata.md)を使用して odbc SQL_TYPE_TIMESTAMP データを SQL_C_CHAR 変数に変換します。 その後**bcp_bind**を sqlcharacter の*型*パラメーターと共に使用して、変数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**列にバインドすると、一括コピー関数は、文字変数内の timestamp エスケープ句を適切な datetime 形式に変換します。  
   
  次の表に、ODBC SQL データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型へのマッピングを行う際に使用が推奨されるデータ型を示します。  
   
 |ODBC SQL データ型|ODBC C データ型|bcp_bind*型*パラメーター|SQL Server のデータ型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**記号**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **文字の変化**<br /><br /> **文字の変化**<br /><br /> **sysname**|  
-|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**本文**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **文字の変化**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
 |SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **alpha**<br /><br /> **money**<br /><br /> **smallmoney**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**番号**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (符号付き)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (符号なし)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (符号付き)|SQL_C_SSHORT|SQLINT2|**smallint**|  
-|SQL_SMALL_INT (符号なし)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **整数 (integer)**|  
-|SQL_INTEGER (符号付き)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **整数 (integer)**|  
+|SQL_SMALL_INT (符号なし)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
+|SQL_INTEGER (符号付き)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (符号なし)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **alpha**|  
 |SQL_BIGINT (符号付きと符号なし)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**本当の**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**[バイナリ]**<br /><br /> **timestamp**|  
 |SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **バイナリの変化**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**絵**|  
-|SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
-|SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
-|SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**DATETIME**<br /><br /> **smalldatetime**|  
-|SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**UNIQUEIDENTIFIER**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
+|SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
+|SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
+|SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
+|SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、符号付きの**tinyint**、unsigned **smallint**、または unsigned **int**データ型がありません。 これらのデータ型を変換するときにデータ値が失われないようにするには、2 番目に大きい整数データ型を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。 ユーザーが元のデータ型で許容されている範囲外の値を後から追加しないようにするには、次のようにルールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に適用し、ソースのデータ型でサポートされる範囲内に許容値を限定します。  
@@ -102,10 +101,9 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、interval データ型を直接サポートしません。 ただしアプリケーションでは、interval 型のエスケープ シーケンスを文字列として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字型列に格納できます。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、interval データ型を直接サポートしません。 ただしアプリケーションでは、interval 型のエスケープ シーケンスを文字列として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字型列に格納できます。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
   
- 一括コピー関数を使用すると、ODBC データ ソースから読み取ったデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にすばやく読み込むことができます。 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)を使用して結果セットの列をプログラム変数にバインドした後、 **bcp_bind**を使用して、同じプログラム変数を一括コピー操作にバインドします。 [Sqlfetchscroll](../native-client-odbc-api/sqlfetchscroll.md)または**sqlfetch**を呼び出すと、ODBC データソースからプログラム変数にデータの行がフェッチされ、 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出すと、プログラム変数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からにデータが一括コピーされます。  
+ 一括コピー関数を使用すると、ODBC データ ソースから読み取ったデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にすばやく読み込むことができます。 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)を使用して結果セットの列をプログラム変数にバインドした後、 **bcp_bind**を使用して、同じプログラム変数を一括コピー操作にバインドします。 [Sqlfetchscroll](../native-client-odbc-api/sqlfetchscroll.md)または**sqlfetch**を呼び出すと、ODBC データソースからプログラム変数にデータの行がフェッチされ、 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を呼び出すと、プログラム変数からにデータが一括コピーされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  アプリケーションでは、 **bcp_bind** _pData_パラメーターに指定されたデータ変数のアドレスを変更する必要があるときに、いつでも[bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)関数を使用できます。 アプリケーションでは、 **bcp_bind**_cbdata_パラメーターでもともと指定されていたデータ長を変更する必要がある場合、いつでも[bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)関数を使用できます。  
   

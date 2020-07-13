@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c66b43d4bad56724817a4d38a810fd150b2b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62990376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050249"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス
   ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、テーブル型およびテーブル変数を使用します。 次に例を示します。  
@@ -43,7 +42,7 @@ AS BEGIN ATOMIC WITH
 ```  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
- [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [ネイティブコンパイルストアドプロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [インメモリ OLTP でサポートされていない transact-sql の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

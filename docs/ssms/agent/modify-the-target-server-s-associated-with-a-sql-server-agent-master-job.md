@@ -26,7 +26,7 @@ ms.locfileid: "75245229"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
+このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
 
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75245229"
   
 4.  ターゲット サーバーを変更するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  **[ジョブのプロパティ - <** ジョブ名 _>]_ ダイアログ ボックスで、 **[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
+5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

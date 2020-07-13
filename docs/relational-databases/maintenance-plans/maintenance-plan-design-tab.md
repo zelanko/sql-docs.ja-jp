@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666978"
 ---
 # <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[メンテナンス プラン]** ([デザイン] タブ) では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
   
 ## <a name="options"></a>オプション  

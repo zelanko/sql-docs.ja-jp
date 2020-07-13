@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5c9da6edef576a6ab25c183cbc87ff95cc056845
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62727758"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545382"
 ---
 # <a name="calling-stored-procedures"></a>ストアド プロシージャを呼び出す
   ストアド プロシージャは、サーバーまたはクライアント アプリケーションから呼び出すことができます。 どちらの場合も、ストアド プロシージャはサーバーまたはデータベースのコンテキストで常にサーバー上で実行します。 ストアド プロシージャを実行するのに特別なアクセス権は不要です。 ストアド プロシージャがアセンブリによってサーバーまたはデータベースのコンテキストに追加されると、ストアド プロシージャが行う処理がユーザーのロールで許可されている限り、どのユーザーでもストアド プロシージャを実行できます。  
@@ -65,16 +64,13 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Call ステートメントを使用したストアド プロシージャの呼び出し  
  ストアド プロシージャは、MDX の `Call` ステートメントを使用して MDX クエリのコンテキスト外で呼び出すことが可能です。  
   
- このメソッドは、保存されているクエリの副作用をインスタンス化する場合や、保存されているクエリの結果をアプリケーションが取得する場合に使用できます。 
-  `Call` ステートメントは一般に、分析管理オブジェクト (AMO) を使用して、結果が返されない管理関数を実行するために使用します。 たとえば、次のコマンドはストアド プロシージャを呼び出します。  
+ このメソッドは、保存されているクエリの副作用をインスタンス化する場合や、保存されているクエリの結果をアプリケーションが取得する場合に使用できます。 `Call` ステートメントは一般に、分析管理オブジェクト (AMO) を使用して、結果が返されない管理関数を実行するために使用します。 たとえば、次のコマンドはストアド プロシージャを呼び出します。  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- 
-  `Call` ステートメントでストアド プロシージャから返される型のうち、サポートされているものは行セットのみです。 行セットのシリアル化は XML forAnaysis で定義されます。 
-  `Call` ステートメントのストアド プロシージャがその他の型を返した場合、それは無視され、XML で呼び出し元アプリケーションには返されません。 XML for Analysis 行セットの詳細については、「XML for Analysis のスキーマ行セット｣を参照してください。  
+ `Call` ステートメントでストアド プロシージャから返される型のうち、サポートされているものは行セットのみです。 行セットのシリアル化は XML forAnaysis で定義されます。 `Call` ステートメントのストアド プロシージャがその他の型を返した場合、それは無視され、XML で呼び出し元アプリケーションには返されません。 XML for Analysis 行セットの詳細については、「XML for Analysis のスキーマ行セット｣を参照してください。  
   
  ストアド プロシージャが .NET の行セットを返した場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はサーバーの結果を XML for Analysis の行セットに変換します。 XML for Analysis の行セットは常に、`Call` 関数のストアド プロシージャによって返されます。 XML for Analysis の行セットで表せない機能がデータセットに含まれている場合は、エラーが返されます。  
   

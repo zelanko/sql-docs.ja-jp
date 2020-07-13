@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01df67471753922e3e7db39c56a9ed50aae900dc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074231"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546344"
 ---
 # <a name="modifying-data-mdx"></a>データの変更 (MDX)
   多次元式 (MDX) は、ディメンションやキューブのデータの取得や操作を行うためだけでなく、ディメンションやキューブのデータの更新、つまり *書き戻し* を行うためにも使用できます。 これらの更新は、推測分析または "what-if" 分析の場合のように一時的なものであることも、データ分析に基づいて変更を加える必要がある場合のように永続的なものになることもあります。  

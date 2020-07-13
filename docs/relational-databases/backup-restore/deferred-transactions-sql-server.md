@@ -1,5 +1,6 @@
 ---
 title: 遅延トランザクション (SQL Server) | Microsoft Docs
+description: ロールバックに必要なデータがオフラインの場合、SQL Server Enterprise の遅延トランザクションが発生します。 遅延状態を解決する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748415"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション* は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
   
 > [!NOTE]  
@@ -40,7 +41,7 @@ ms.locfileid: "68075985"
 |アクション|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
 |------------|-----------------------------------------------------------------------|  
 |サーバーの起動|遅延トランザクション|  
-|[復元]|遅延トランザクション|  
+|復元|遅延トランザクション|  
 |Attach|アタッチの失敗|  
 |Autorestart|遅延トランザクション|  
 |データベースまたはデータベース スナップショットの作成|作成の失敗|  
@@ -85,7 +86,7 @@ ms.locfileid: "68075985"
   
          緊急モードの詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
-    -   次に、 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)、または [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
+    -   次に、下記の DBCC ステートメントのいずれかで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用してデータベースを修復します: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)、または [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          DBCC では、不適切なページが検出されると、そのページの割り当てが解除され、関連するすべてのエラーが修復されます。 この方法を使用すると、物理的に一貫性のある状態でデータベースをオンラインに戻すことができます。 ただし、追加されたデータが失われる場合もあるため、この方法は最後の手段として使用してください。  
   

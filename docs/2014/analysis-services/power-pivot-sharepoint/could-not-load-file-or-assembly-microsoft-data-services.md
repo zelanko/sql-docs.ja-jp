@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9baec97f8d1e779a84f25e7ddbf437e0a40ef4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547494"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Microsoft.analysisservices.sharepoint.integration.dll&#39; &#39;ファイルまたはアセンブリを読み込めませんでした
   PowerPivot for SharePoint がある SharePoint 2010 環境で、PowerPivot のアプリケーション レベルのソリューションが正しく配置されていない場合にこのエラーが発生します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>詳細情報  
   
 |||  
 |-|-|  
@@ -37,11 +36,9 @@ ms.locfileid: "66071665"
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
   
-2.  
-  **[Powerpivotwebapp]** をクリックします。  
+2.  **[Powerpivotwebapp]** をクリックします。  
   
-3.  
-  **[ソリューションの配置]** をクリックします。  
+3.  **[ソリューションの配置]** をクリックします。  
   
 4.  このエラーが発生している Web アプリケーションを選択します。 複数の Web アプリケーションがある場合は、そのすべてについてソリューションを再配置します。  
   

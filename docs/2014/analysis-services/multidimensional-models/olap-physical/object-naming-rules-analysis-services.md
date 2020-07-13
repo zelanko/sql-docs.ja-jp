@@ -11,27 +11,24 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "69530893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545890"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
   
-##  <a name="bkmk_Names"></a>名前付け規則  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>名前付け規則  
  あらゆるオブジェクトは `Name` プロパティと `ID` プロパティを持ち、これらは親コレクションのスコープ内で一意にする必要があります。 たとえば、所属するデータベースが異なっていれば、2 つのディメンションが同じ名前であってもかまいません。  
   
  手動で指定することもできますが、`ID` は一般にオブジェクトの作成時に自動生成されます。 モデルの構築を開始した後は、`ID` を変更しないでください。 モデル内のオブジェクト参照はすべて `ID` に基づいて実行されます。 したがって、`ID` を変更すると簡単にモデルが壊れます。  
   
- 名前付け規則の例外として、`DataSource` オブジェクトと `DataSourceView` オブジェクトに注意してください。 
-  `DataSource` の ID は、現在のデータベースの参照として 1 つのドット (.) に設定でき、これは一意ではありません。 次の例外は、`DataSourceView` で、これは .NET フレームワークの `DataSet` オブジェクト用に定義された名前付け規則に従います。この場合、`Name` が識別子として使用されます。  
+ 名前付け規則の例外として、`DataSource` オブジェクトと `DataSourceView` オブジェクトに注意してください。 `DataSource` の ID は、現在のデータベースの参照として 1 つのドット (.) に設定でき、これは一意ではありません。 次の例外は、`DataSourceView` で、これは .NET フレームワークの `DataSet` オブジェクト用に定義された名前付け規則に従います。この場合、`Name` が識別子として使用されます。  
   
- 
-  `Name` プロパティと `ID` プロパティには、次のルールが適用されます。  
+ `Name` プロパティと `ID` プロパティには、次のルールが適用されます。  
   
 -   名前では大文字と小文字は区別されません。 同じデータベース内に "sales" という名前のキューブと "Sales" という名前のキューブを含めることはできません。  
   
@@ -41,7 +38,7 @@ ms.locfileid: "69530893"
   
 -   識別子の最初の文字に関する特別な要件はありません。 最初の文字には、任意の有効な文字を使用できます。  
   
-##  <a name="bkmk_reserved"></a>予約語と文字  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>予約語と文字  
  予約語は英語で、オブジェクト名に適用されます。キャプションには適用されません。 不注意で予約語をオブジェクト名に使用すると、検証エラーが発生します。 多次元モデルとデータ マイニング モデルでは、どのような場合でも、以下で説明する予約語をオブジェクト名で使用することはできません。  
   
  テーブル モデルでは、データベース互換性が 1103 に設定されている場合、一部のオブジェクトで検証ルールが緩められており、一部のクライアント アプリケーションの拡張文字要件と名前付け規則のためにルールに準拠していません。 これらの条件を満たすデータベースは、厳格でない検証ルールに従います。 この場合、制限された文字がオブジェクト名に使用されていても、検証に合格することがあります。  
@@ -58,7 +55,7 @@ ms.locfileid: "69530893"
   
 -   LPT1 ～ LPT9 (LPT1、LPT2、LPT3 など)  
   
--   NUL (NUL)  
+-   NUL  
   
 -   PRN  
   
@@ -72,8 +69,8 @@ ms.locfileid: "69530893"
 |------------|------------------------|  
 |`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 詳細については、「[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions) 」を参照してください。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level`もしくは`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension`もしくは`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level` または `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` または `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |他のすべてのオブジェクト|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **例外: 予約文字を使用できる場合**  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LockType property [ADO]
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a8d0f94d4482649030561f2ac71ed6de1374e46
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754486"
 ---
 # <a name="locktype-property-ado"></a>LockType プロパティ (ADO)
 編集中にレコードに配置されたロックの種類を示します。  

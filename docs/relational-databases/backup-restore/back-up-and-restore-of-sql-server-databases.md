@@ -1,5 +1,6 @@
 ---
 title: SQL Server データベースのバックアップと復元 | Microsoft Docs
+description: この記事では、SQL Server データベースをバックアップする利点について説明します。また、バックアップと復元の戦略およびセキュリティに関する考慮事項についても説明します。
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -22,22 +23,22 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771723"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップする利点、バックアップと復元に関する基本的な用語、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元の方法を紹介します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元のセキュリティに関する考慮事項についても取り上げます。 
 
 > この記事では SQL Server のバックアップについて説明します。 SQL Server データベースをバックアップする具体的な手順については、「[バックアップの作成](#creating-backups)」を参照してください。
   
  SQL Server のバックアップと復元コンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている大切なデータを保護するうえで不可欠な保護対策を提供します。 致命的なデータ損失のリスクを最小限に抑えるには、データベースを定期的にバックアップして、データの変更を保持する必要があります。 十分に計画されたバックアップおよび復元戦略は、さまざまな障害が原因で発生するデータ損失からデータベースを保護します。 一連のバックアップの復元とデータベースの回復を実行することでご自分の戦略をテストして、災害に効率的に対応するための準備を整えてください。
   
- バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Azure Blob Storage サービスからの復元がサポートされます。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+ バックアップを格納するローカル ストレージに加えて、SQL Server では、バックアップおよび Azure Blob Storage サービスからの復元がサポートされます。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 Microsoft Azure BLOB ストレージ サービスを使用して格納したデータベース ファイルの場合、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、Azure スナップショットを使用してほぼ瞬時にバックアップし、より迅速に復元するためのオプションが提供されます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 Azure では、Azure VM で実行されている SQL Server 向けのエンタープライズ クラスのバックアップ ソリューションも提供されています。 それはフル マネージド バックアップ ソリューションであり、Always On 可用性グループ、長期保有、特定の時点に復旧、一元的な管理と監視がサポートされています。 詳細については、[Azure VM での SQL Server 用の Azure Backup](https://docs.microsoft.com/azure/backup/backup-azure-sql-database) に関する記事をご覧ください。
   
 ##  <a name="why-back-up"></a>バックアップする理由  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップしたり、既存のバックアップの復元テストを実行したりできるほか、離れた安全な場所にバックアップのコピーを保管することによって、致命的な損失からデータを保護することができます。 **バックアップは、データを保護できる唯一の方法です。**
@@ -53,7 +54,7 @@ ms.locfileid: "77256745"
   
 ##  <a name="glossary-of-backup-terms"></a>バックアップの用語集
  **バックアップ (back up)** (動詞)  
- **データベースのデータ レコードまたはそのトランザクション ログのログ レコードをコピーすることによって、** バックアップ (名詞)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を作成するプロセス。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ レコードまたはそのトランザクション ログのログ レコードをコピーすることによって、**バックアップ (名詞)** を作成するプロセス。  
   
  **バックアップ (backup)** (名詞)  
  障害の発生後、データの復元と復旧に使用できるデータのコピー。 データベースのバックアップを使用して、コピー (データベース) を新しい場所に復元することもできます。  
@@ -96,7 +97,7 @@ ms.locfileid: "77256745"
 
  バックアップと復元のストラテジには、バックアップに関する部分と復元に関する部分があります。 ストラテジで扱うバックアップ部分では、バックアップの種類と頻度、バックアップに必要なハードウェアの性質と速度、バックアップのテスト方法、およびバックアップ メディアの保管場所と保管方法 (セキュリティ上の考慮事項も含む) を定義します。 ストラテジで扱う復元部分では、復元の実行責任者、データベースの可用性やデータ損失の最小化という目標を達成するための復元の実行方法、および復元のテスト方法を定義します。 
   
- バックアップと復元について効果的なストラテジをデザインするには、慎重に計画、実装、およびテストする必要があります。 テストは必要です。復元ストラテジに含まれるすべての組み合わせでバックアップを正常に復元し、復元されたデータベースの物理的な一貫性をテストして初めて、バックアップ ストラテジが完成するからです。 さまざまな要因を検討する必要があります。 チェックの内容は次のとおりです  
+ バックアップと復元について効果的なストラテジをデザインするには、慎重に計画、実装、およびテストする必要があります。 テストは必要です。復元ストラテジに含まれるすべての組み合わせでバックアップを正常に復元し、復元されたデータベースの物理的な一貫性をテストして初めて、バックアップ ストラテジが完成するからです。 さまざまな要因を検討する必要があります。 これには以下が含まれます。  
   
 - 運用データベースに関する組織目標。特に、可用性、およびデータの損失または破損からの保護に関する要件。  
   

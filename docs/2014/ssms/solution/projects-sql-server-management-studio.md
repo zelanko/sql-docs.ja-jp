@@ -9,37 +9,33 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc19d059d411f6d07ae48b8a4b8e1d851a17ca67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63035688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067336"
 ---
 # <a name="projects-sql-server-management-studio"></a>プロジェクト (SQL Server Management Studio)
-  
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のプロジェクトは、論理的に関連したスクリプトやファイルの集合体であり、データベースの管理と開発のためにスクリプトやファイルをまとめて保存できるようになっています。  
   
 ## <a name="script-project-overview"></a>スクリプト プロジェクトの概要  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントであるソリューション エクスプローラーに表示されます。 1 つのスクリプト プロジェクトにはゼロ個以上のプロジェクト ファイルを組み込めます。 1 つのソリューションに 1 つのプロジェクトを追加することも、複数のプロジェクトをまとめて組み込むことも可能です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントであるソリューション エクスプローラーに表示されます。 1 つのスクリプト プロジェクトにはゼロ個以上のプロジェクト ファイルを組み込めます。 1 つのソリューションに 1 つのプロジェクトを追加することも、複数のプロジェクトをまとめて組み込むことも可能です。  
   
  プロジェクトには、次のようなものがあります。  
   
 -   **接続**。 プロジェクト内に保存される接続には、ログイン情報、サーバー名、既定のデータベース、優先プロトコル、認証の種類、接続プロパティが含まれています。 接続情報をスクリプトと一緒に格納することも可能です (以下の説明を参照)。  
   
--   **Sqlscripts**。 ユーザーが頻繁に使用する SQL スクリプトです。 プロジェクト内の .sql ファイルをダブルクリックすると、そのスクリプトが SQL エディターに表示されます。  
+-   **SQL スクリプト**。 ユーザーが頻繁に使用する SQL スクリプトです。 プロジェクト内の .sql ファイルをダブルクリックすると、そのスクリプトが SQL エディターに表示されます。  
   
--   **MDX、DMX、および XMLAScripts**。 ユーザーが頻繁に使用する MDX スクリプトです。 プロジェクト内の .mdx ファイルをダブルクリックすると、そのスクリプトが SQL エディターに表示されます。  
+-   **MDX、DMX、および XMLA スクリプト**。 ユーザーが頻繁に使用する MDX スクリプトです。 プロジェクト内の .mdx ファイルをダブルクリックすると、そのスクリプトが SQL エディターに表示されます。  
   
--   その**他**。このフォルダーは、プロジェクトの目的が含まれているテキストファイルなど、他のどの既定のノードタイプにも適していないファイルに対して使用できます。  
+-   **その他**。このフォルダーには、他の既定の種類のノードのどれにも適さないファイル (プロジェクトの目的を記述したテキスト ファイルなど) を込むことができます。  
   
  プロジェクトをソース コード管理システムに統合することもできます。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>スクリプト プロジェクトから SQL Server インスタンスへの接続  
- スクリプト プロジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続を組み込めます。 その接続をクリックすることで、プロジェクト内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 接続できた時点で、その選択した接続に定義されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している SQL スクリプト ウィンドウが開きます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する接続で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または MDX のスクリプトを開いた場合、エディターが開き、スクリプトが読み込まれてから、 **[SQL Server への接続]** ダイアログ ボックスでパスワードを入力するよう求められます。  
+ スクリプト プロジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続を組み込めます。 その接続をクリックすることで、プロジェクト内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 接続できた時点で、その選択した接続に定義されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している SQL スクリプト ウィンドウが開きます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する接続で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または MDX のスクリプトを開いた場合、エディターが開き、スクリプトが読み込まれてから、 **[SQL Server への接続]** ダイアログ ボックスでパスワードを入力するよう求められます。  
   
  ウィンドウを閉じると、それに対応する接続も終了します。  
   

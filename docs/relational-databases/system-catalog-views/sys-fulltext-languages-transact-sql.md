@@ -21,33 +21,33 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764711"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  このカタログビューには、ワードブレーカーがに登録されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いる言語ごとに1つの行が含まれています。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックス[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで指定できます。  
+  このカタログビューには、ワードブレーカーがに登録されている言語ごとに1つの行が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックスステートメントで指定でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
    
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|言語の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケール識別子 (LCID) です。|  
-|**name**|**sysname**|**Lcid**の値に対応する[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)のエイリアスの値か、または数値の lcid の文字列表現です。|  
+|**name**|**sysname**|**Lcid**の値に対応するsys.sysの[言語](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)のエイリアスの値か、または数値の lcid の文字列表現です。|  
   
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
   
-|言語|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |アラビア語|1025|  
 |ベンガル語 (インド)|1093|  
 |英語 (U.K.)|2057|  
 |ブルガリア語|1026|  
-|カタルニア語|1027|  
+|カタロニア語|1027|  
 |中国語 (中華人民共和国香港特別行政区)|3076|  
 |中国語 (中華人民共和国マカオ特別行政区)|5124|  
 |中国語 (シンガポール)|4100|  
@@ -81,7 +81,7 @@ ms.locfileid: "73981777"
 |パンジャーブ語|1094|  
 |ルーマニア語|1048|  
 |ロシア語|1049|  
-|セルビア語 (キリル文字)|3098|  
+|セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
 |簡体中国語|2052|  
 |スロバキア語|1051|  
@@ -91,19 +91,19 @@ ms.locfileid: "73981777"
 |タミル語|1097|  
 |テルグ語|1098|  
 |タイ語|1054|  
-|繁体字中国語|1028|  
+|Traditional Chinese|1028|  
 |**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> トルコ語|1055|  
 |ウクライナ語|1058|  
-|ウルドゥー語|1056|  
+|ウルドゥ語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [検索用のワードブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

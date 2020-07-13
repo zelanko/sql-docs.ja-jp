@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002498"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891523"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リモートの監視テーブルを、指定したログ配布エージェントの特定のプライマリまたはセカンダリ サーバーにある最新の情報に更新します。 プロシージャは、プライマリサーバーまたはセカンダリサーバーで呼び出されます。  
   
@@ -69,7 +69,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor**は、まだ転送されていないセッション情報を使用して、 **log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**、および**log_shipping_monitor_error_detail**のテーブルを更新します。 これにより、モニターがしばらく同期されていない場合に、監視サーバーをプライマリサーバーまたはセカンダリサーバーと同期することができます。 また、必要に応じて、監視サーバーのモニター情報をクリーンアップすることができます。  
   
  **sp_refresh_log_shipping_monitor**は、プライマリサーバーまたはセカンダリサーバーの**master**データベースから実行する必要があります。  
@@ -79,6 +79,6 @@ sp_refresh_log_shipping_monitor
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1957103cf2c817f0ef77816446be5fb2d352c9d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ae3f46d5856aa061bac0dd06fb954052923a4d7d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124459"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827794"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  指定した[!INCLUDE[tsql](../../includes/tsql-md.md)]ハンドルと省略可能なパラメーター値を使用して、準備されたステートメントを実行します。 sp_execute は、ID = 12 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]指定したハンドルと省略可能なパラメーター値を使用して、準備されたステートメントを実行します。 sp_execute は、ID = 12 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

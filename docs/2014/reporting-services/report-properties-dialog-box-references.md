@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104297"
 ---
 # <a name="report-properties-dialog-box-references"></a>[参照] ([レポートのプロパティ] ダイアログ ボックス)
-  
   **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** を選択すると、レポート定義内の式で使用される、カスタム アセンブリまたは他の外部アセンブリ、およびカスタム クラスのインスタンスへの参照を追加または削除できます。  
   
 ## <a name="options"></a>オプション  
@@ -31,7 +30,7 @@ ms.locfileid: "66104297"
  **追加**  
  アセンブリを追加します。 省略記号ボタン ([...]) をクリックして [**開く**] ダイアログボックスを開き、レポートの処理および式の評価を完了するために必要なアセンブリを選択します。  
   
- **デリート**  
+ **削除**  
  アセンブリの参照を一覧から削除するには、削除するアセンブリ名を選択し、 **[削除]** ボタンをクリックします。  
   
  **[クラスの追加または削除]**  
@@ -40,18 +39,18 @@ ms.locfileid: "66104297"
  **追加**  
  クラスの参照を追加します。 省略記号ボタン ([...]) をクリックして [**開く**] ダイアログボックスを開き、レポートの処理および式の評価を完了するために必要なクラスを選択します。  
   
- **デリート**  
+ **削除**  
  クラスのインスタンスを削除するには、削除するインスタンスを選択し、 **[削除]** ボタンをクリックします。  
   
- **Up**  
+ **上へ**  
  依存関係のあるクラスについては、この参照の表示位置を一覧の上方に移動できます。  
   
- **ダウン**  
+ **[下へ]**  
  依存関係のあるクラスについては、この参照の表示位置を一覧の下方に移動できます。  
   
 ## <a name="see-also"></a>参照  
- [レポートデザイナー &#40;SSRS&#41;の式におけるカスタムコードおよびアセンブリ参照](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
+ [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [レポート変数コレクションとグループ変数コレクションは &#40;レポートビルダーと SSRS&#41;を参照します。](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

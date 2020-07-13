@@ -1,7 +1,7 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 04/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109382"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635114"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -37,7 +37,7 @@ JSON_MODIFY ( expression , path , newValue )
  *式 (expression)*  
  式。 通常、変数または JSON テキストを含む列の名前。  
   
- **式**に有効な JSON が含まれていない場合、*JSON_MODIFY* エラーが返されます。  
+ *式*に有効な JSON が含まれていない場合、**JSON_MODIFY** エラーが返されます。  
   
  *path*  
  更新するプロパティを指定する JSON path 式。
@@ -60,10 +60,11 @@ JSON_MODIFY ( expression , path , newValue )
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
-**path** の書式が有効でない場合、*JSON_MODIFY* はエラーを返します。  
+*path* の書式が有効でない場合、**JSON_MODIFY** はエラーを返します。  
   
  *newValue*  
  *path* によって指定されるプロパティの新しい値。  
+ 新しい値は、[n]varchar または text である必要があります。
   
  lax モードでは、新しい値が NULL の場合、JSON_MODIFY は指定されたキーを削除します。  
   
@@ -82,7 +83,7 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
 |既存の値|パスが存在するか|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
 |NULL 以外|はい|既存の値を更新します。|既存の値を更新します。|  
-|NULL 以外|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`theme` または `$.user` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `$.user.settings` を挿入しません。|Error - INVALID_PROPERTY|  
+|NULL 以外|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error - INVALID_PROPERTY|  
 |NULL|はい|既存のプロパティを削除します。|既存の値を null に設定します。|  
 |NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error - INVALID_PROPERTY|  
   
@@ -96,7 +97,7 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
   
  **クエリ**
   
-```sql  
+```syntaxsql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -155,7 +156,7 @@ PRINT @info
   
  **クエリ**
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -249,7 +250,7 @@ PRINT @stats
   
  **クエリ**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -277,7 +278,7 @@ PRINT @info
   
  **クエリ**  
   
-```sql  
+```syntaxsql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info

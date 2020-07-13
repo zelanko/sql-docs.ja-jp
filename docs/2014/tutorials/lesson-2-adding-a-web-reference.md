@@ -9,17 +9,15 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63316007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011408"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>レッスン 2 : Web 参照の追加
-  Web サービスの探索とは、クライアントが Web サービスを検索し、そのサービス記述を取得する処理です。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の Web サービス探索処理では、事前に定義されたアルゴリズムに従って、Web サイトの問い合わせが行われます。 この処理の目的はサービス記述を見つけることです。サービス記述とは、WSDL (Web サービス記述言語) を使用する XML ドキュメントです。  
+  Web サービスの探索とは、クライアントが Web サービスを検索し、そのサービス記述を取得する処理です。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の Web サービス探索処理では、事前に定義されたアルゴリズムに従って、Web サイトの問い合わせが行われます。 この処理の目的はサービス記述を見つけることです。サービス記述とは、WSDL (Web サービス記述言語) を使用する XML ドキュメントです。  
   
  サービス記述には、利用可能なサービスとこれらのサービスとの対話方法が記述されています。 サービス記述がない場合は、プログラムから Web サービスと対話することはできません。  
   
@@ -33,9 +31,9 @@ ms.locfileid: "63316007"
   
 3.  [**サービス参照の設定**] ダイアログボックスで、[ **Web 参照の追加**] をクリックします。  
   
-4.  [ **Web 参照の追加**] ダイアログボックスの [ **url** ] ボックスに、レポートサーバー Web サービスのサービスの説明を取得するための url http://localhost/reportserver/reportservice2010.asmxを入力します (など)。 次に、[実行] ボタンをクリックし**て、Web**サービスに関する情報を取得します。  
+4.  [ **Web 参照の追加**] ダイアログボックスの [ **url** ] ボックスに、レポートサーバー Web サービスのサービスの説明を取得するための url を入力します (など) http://localhost/reportserver/reportservice2010.asmx 。 次に、[実行] ボタンをクリックし**て、Web**サービスに関する情報を取得します。  
   
-     \- - または -  
+     \- または  
   
      レポートサーバー Web サービスがローカルコンピューターに存在する場合は、ブラウザーペインの [**ローカルコンピューター] リンクで web サービス**をクリックします。 次に、表示された一覧から ReportService2010 Web サービスのリンクをクリックします。  
   
@@ -43,8 +41,7 @@ ms.locfileid: "63316007"
   
 6.  [**参照の追加**] をクリックして、ターゲット web サービスの web 参照を追加します。  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] により、サービス記述がダウンロードされ、アプリケーションとレポート サーバー Web サービス間のインターフェイスとなるプロキシ クラスが生成されます。 また、Web 参照が動作するように、<xref:System.Web.Services> 名前空間への参照を追加する必要があります。  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] により、サービス記述がダウンロードされ、アプリケーションとレポート サーバー Web サービス間のインターフェイスとなるプロキシ クラスが生成されます。 また、Web 参照が動作するように、<xref:System.Web.Services> 名前空間への参照を追加する必要があります。  
   
 7.  [プロジェクト] メニューの **[参照の追加]** をクリックします。  
   

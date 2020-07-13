@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprole
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749307"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベース内のロールに関する情報を返します。  
   
@@ -47,17 +47,17 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**役割**|**sysname**|現在のデータベース内のロールの名前。|  
+|**RoleName**|**sysname**|現在のデータベース内のロールの名前。|  
 |**RoleId**|**smallint**|**RoleName**の ID。|  
 |**IsAppRole**|**int**|0 = **RoleName**はアプリケーションロールではありません。<br /><br /> 1 = **RoleName**はアプリケーションロールです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ロールに関連付けられている権限を表示するには、 **sp_helprotect**を使用します。 データベースロールのメンバーを表示するには、 **sp_helprolemember**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次のクエリでは、現在のデータベース内のすべてのロールが返されます。  
@@ -66,7 +66,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)   
@@ -75,6 +75,6 @@ EXEC sp_helprole
  [sp_droprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

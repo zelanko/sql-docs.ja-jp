@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67986306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643720"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって指定されたシーケンスに含まれる項目の数を返します。  
   
@@ -38,13 +38,13 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*が空のシーケンスの場合は0を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A: Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
  次のクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の数をカウントします (ProductModelID = 7)。  
   
 ```  
@@ -64,9 +64,9 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**namespace**キーワードは、名前空間プレフィックスを定義します。 次に、このプレフィックスが XQuery 本体で使用されます。  
   
--   このクエリでは、<`NoOfWorkStations`> 要素を含む XML が構築されます。  
+-   このクエリでは、<> 要素を含む XML が構築され `NoOfWorkStations` ます。  
   
--   XQuery 本文の**count ()** 関数は、<`Location`> 要素の数をカウントします。  
+-   XQuery 本文の**count ()** 関数は、<> 要素の数をカウント `Location` します。  
   
  結果を次に示します。  
   
@@ -117,7 +117,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

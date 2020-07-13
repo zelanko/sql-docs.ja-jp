@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0a3dbaa76fcc54bf35b72d0a81efce479be51974
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63023889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029654"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started イベント クラス
   **FT:Crawl Started** イベント クラスは、フルテキスト クロール (作成) が開始されたことを示します。 このイベント クラスを使用して、クロール要求がワーカー タスクによって実際に取得されたかどうかを確認します。  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>FT:Crawl Started イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|フルテキスト クロールが開始されたデータベースの ID です。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|イベントの種類 = 155。|27|いいえ|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d23852cfc15329182f077c7ce472be95357004de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010969"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>ピア ツー ピア トポロジ構成ウィザード
   ここでは、ピア ツー ピア トポロジ構成ウィザードのすべてのページに関する情報を示します。  

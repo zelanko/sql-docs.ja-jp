@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4cfacb7f7c75875d4f5d0b0b435d282b3f537cc7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936653"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
-  物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
+  物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題により、2 つの可用性レプリカ間のセッションが失敗する場合があります。 可用性レプリカでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、通知されないその他の失敗を検出するために、独自のセッション タイムアウト メカニズムを実装しています。 セッション タイムアウト期間を秒単位で指定します。 このタイムアウト時間は、別のインスタンスからの PING メッセージを受信するために、サーバー インスタンスが待機する最大時間です。この時間を過ぎると、待機していたインスタンスは接続解除されたものと見なされます。 2 つの可用性レプリカ間でセッション タイムアウトが発生すると、可用性レプリカはエラーが発生したと想定し、 *ソフト エラー*を宣言します。  
   
 > [!IMPORTANT]  
 >  プライマリ データベース以外のデータベースで発生した障害は検出されません。 さらに、データ ディスクの障害によりデータベースが再起動した場合を除き、データ ディスクの障害はほとんど検出されません。  
@@ -60,8 +58,7 @@ ms.locfileid: "70874473"
   
 -   ケーブルが接続されていません。  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows に存在します。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows に存在します。  
   
 -   ポートを監視しているアプリケーションで障害が発生しています。  
   
@@ -70,8 +67,7 @@ ms.locfileid: "70874473"
 -   Windows ベースのサーバーが再起動されています。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]は、サーバーにアクセスするクライアントに固有の問題からは保護されません。 たとえば、プライマリ レプリカへのクライアント接続をパブリック ネットワーク アダプターが処理していて、可用性グループのレプリカをホストしているサーバー インスタンス間のトラフィックをプライベート ネットワーク インターフェイス カードが処理している場合を考えます。 この場合、パブリック ネットワーク アダプターに障害が生じると、クライアントはデータベースにアクセスできなくなります。  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]は、サーバーにアクセスするクライアントに固有の問題からは保護されません。 たとえば、プライマリ レプリカへのクライアント接続をパブリック ネットワーク アダプターが処理していて、可用性グループのレプリカをホストしているサーバー インスタンス間のトラフィックをプライベート ネットワーク インターフェイス カードが処理している場合を考えます。 この場合、パブリック ネットワーク アダプターに障害が生じると、クライアントはデータベースにアクセスできなくなります。  
   
 ## <a name="failures-due-to-soft-errors"></a>ソフト エラーによるエラー  
  次のような状況が、セッション タイムアウトの原因になる可能性があります (ただし、これだけではありません)。  
@@ -97,11 +93,11 @@ ms.locfileid: "70874473"
 ## <a name="related-tasks"></a>Related Tasks  
  **タイムアウト値を変更するには (同期コミット可用性モードのみ)**  
   
--   [可用性レプリカのセッションタイムアウト期間を変更する &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [可用性レプリカのセッション タイムアウト期間の変更 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **現在のタイムアウト値を表示するには**  
   
--   「**sys.availability_replicas &#40;Transact-SQL&#41;**」で [session_timeout](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) クエリを実行します。  
+-   「[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)」で **session_timeout** クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  

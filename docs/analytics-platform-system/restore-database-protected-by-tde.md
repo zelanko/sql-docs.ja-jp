@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400447"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Parallel Data Warehouse で TDE によって保護されているデータベースを復元する
@@ -63,6 +63,6 @@ RESTORE DATABASE AdventureWorksPDW2012
 [マスターキー](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)の作成  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
-[証明書の作成](../t-sql/statements/create-certificate-transact-sql.md)  
-[データベースの復元](../t-sql/statements/restore-database-parallel-data-warehouse.md)
+[CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
+[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

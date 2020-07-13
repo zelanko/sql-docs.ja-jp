@@ -1,6 +1,6 @@
 ---
 title: フルテキスト検索の概要 | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767588"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 SQL Server データベースでは、フルテキストが既定で有効になっています。 ただし、フルテキスト クエリを実行するには、事前にフルテキスト カタログを作成し、検索するテーブルまたはインデックス付きビューにフルテキスト インデックスを作成しておく必要があります。
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>フルテキスト検索をセットアップする 2 つの手順
@@ -55,10 +55,17 @@ SQL Server データベースでは、フルテキストが既定で有効にな
 2.  Document テーブルにフルテキスト インデックスを作成する前に、テーブルに一意の単一列で NULL 値にならないインデックスが含まれていることを確認します。 次の [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) ステートメントでは、Document テーブルの DocumentID 列に、一意のインデックス `ui_ukDoc`を作成します。  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  一意のキーを作成したら、次の `Document` CREATE FULLTEXT INDEX [ステートメントを使用して、](../../t-sql/statements/create-fulltext-index-transact-sql.md) テーブルにフルテキスト インデックスを作成できます。  
+3.  次の [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) ステートメントを使用して、`Document` テーブルの既存のフルテキスト インデックスを削除します。 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  一意のキーを作成したら、次の `Document` CREATE FULLTEXT INDEX [ステートメントを使用して、](../../t-sql/statements/create-fulltext-index-transact-sql.md) テーブルにフルテキスト インデックスを作成できます。  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ SQL Server データベースでは、フルテキストが既定で有効にな
     GO  
   
     ```  
+    
+  
   
      この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 この型列には、特定の行のドキュメントのユーザー指定ファイル拡張子 (".doc"、".xls" など) が格納されます。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 フィルターで行のバイナリ データが解析された後は、指定したワード ブレーカーで内容が解析されます (この例では、英語 (英国) のワード ブレーカーが使用されます)。詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。  
 

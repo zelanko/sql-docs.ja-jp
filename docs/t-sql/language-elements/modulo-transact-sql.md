@@ -25,12 +25,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 428e6370a7e4afc1b43be1edb86b8fb032f9dd3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896001"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>引数  
  *dividend*  
- 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または [numeric](../../t-sql/language-elements/expressions-transact-sql.md) データ型の有効な**式**を指定する必要があります。  
+ 除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   
  *divisor*  
  被除数を除算する数値式です。 *divisor* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の任意の有効な式を指定する必要があります。  
@@ -64,8 +64,7 @@ dividend % divisor
  次の例では、38 を 5 で割ります。 この結果は、答えの整数部分である 7 となります。また、剰余演算子を使用して余り 3 を返す方法も示しています。  
   
 ```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. テーブルの列を使用した例  

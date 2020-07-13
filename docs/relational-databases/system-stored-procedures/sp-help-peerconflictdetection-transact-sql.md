@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0bf806900b25b69d98cc1abaab4bd49db444e5e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085291"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891708"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ピアツーピアトランザクションレプリケーショントポロジに関係するパブリケーションの競合検出設定に関する情報を返します。  
   
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication= ]'*publication*'  
+ [ @publication =] '*パブリケーション*'  
  情報を返すパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
- [ @timeout= ]*タイムアウト*  
+ [ @timeout =]*タイムアウト*  
  トポロジ内の各ノードからの応答の待機中にプロシージャがタイムアウトになるまでの時間を秒数で指定します。 トポロジに読み取り専用のサブスクライバーがある場合は、タイムアウト値を指定することはできません。 読み取り専用のサブスクライバーは、このプロシージャからの呼び出しに応答しません。 *タイムアウト*は**int**,、既定値は60です。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -56,15 +56,15 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  sp_help_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
- [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
+## <a name="see-also"></a>関連項目  
+ [ピアツーピアレプリケーションでの競合の検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [ピアツーピアトランザクションレプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

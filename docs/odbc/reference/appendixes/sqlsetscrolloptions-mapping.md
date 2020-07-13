@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091704"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300502"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions のマッピング
 アプリケーションが ODBC *3. x*ドライバーを介して**SQLSetScrollOptions**を呼び出し、ドライバーが**SQLSetScrollOptions**をサポートしていない場合、  

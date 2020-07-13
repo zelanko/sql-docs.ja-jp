@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 894cb2beb52684ececb4d9aadb171e283fad5a55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62811286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935455"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
@@ -85,8 +84,7 @@ ms.locfileid: "62811286"
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  
-  **[SQL Server ネットワークの構成]** を展開し、**[** *\<InstanceName**> のプロトコル]* を右クリックして、**[プロパティ]** をクリックします。  
+2.  [ **SQL Server ネットワーク構成**] を展開し、[**のプロトコル**] を右クリックし *\<*InstanceName*>* て、[**プロパティ**] をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   

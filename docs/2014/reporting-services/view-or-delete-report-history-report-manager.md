@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098704"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>レポート履歴を表示または削除する (レポート マネージャー)
@@ -54,7 +54,7 @@ ms.locfileid: "66098704"
 3.  削除する履歴スナップショットの横にあるチェックボックスをオンにし、[**削除**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポートマネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [[レポート履歴] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

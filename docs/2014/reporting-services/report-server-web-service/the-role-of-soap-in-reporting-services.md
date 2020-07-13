@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519204"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
@@ -29,8 +29,7 @@ ms.locfileid: "62519204"
   
  レポート サーバーは SOAP サーバーとして動作します。SOAP サーバーは、SOAP クライアントから要求を受け取り、適切な応答を作成できる SOAP 対応サービスです。 サーバーは要求を処理し、クライアントにエンコードされた応答を送り返します。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP メッセージは、クライアントで行われた要求の種類によってさまざまな形式を取ります。 次の例は、レポート サーバー データベースからアイテムを削除する簡単な SOAP クライアント要求を表しています。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP メッセージは、クライアントで行われた要求の種類によってさまざまな形式を取ります。 次の例は、レポート サーバー データベースからアイテムを削除する簡単な SOAP クライアント要求を表しています。  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -58,8 +57,7 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- 
-  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドに戻り値はないため、空の応答が返されます。  
+ <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドに戻り値はないため、空の応答が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SOAP API へのアクセス](accessing-the-soap-api.md)   

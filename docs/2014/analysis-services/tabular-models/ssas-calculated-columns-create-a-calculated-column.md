@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a455cdda48fc74027dd22c4915d8384a8b4dae54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66066519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938623"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>計算列の作成 (SSAS テーブル)
   計算列では、モデルに新しいデータを追加することができます。 列に値を貼り付けるかインポートする代わりに、列の行レベル値を定義する DAX 数式を作成します。 計算列の各行の値は、有効な数式を作成して Enter キーを押したときに、計算および代入されます。 計算列は、他のデータ列と同じように、レポートまたは分析のアプリケーションに追加できます。 このトピックでは、モデル デザイナーの DAX 数式バーを使用して新しい計算列を作成する方法について説明します。  
@@ -26,7 +25,7 @@ ms.locfileid: "66066519"
   
 1.  モデル デザイナーのデータ ビューで、計算列を追加するテーブルを選択し、 **[列]** メニューをクリックしてから **[列の追加]** をクリックします。  
   
-     [**列の追加**] が右端の空の列に強調表示され、カーソルが数式バーに移動します。  
+     右端の空白の列に対して **[列の追加]** が強調表示され、カーソルが数式バーに移動します。  
   
      2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]** をクリックします。  
   
@@ -47,6 +46,6 @@ ms.locfileid: "66066519"
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式の計算列 &#40;&#41;](ssas-calculated-columns.md)   
- [SSAS テーブル&#41;&#40;メジャー](measures-ssas-tabular.md)  
+ [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)  
   
   

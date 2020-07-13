@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a564dc4bcabc46689fbf1a521a9ecb1209654594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68210692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010500"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化
     
@@ -35,8 +34,7 @@ ms.locfileid: "68210692"
   
 -   移動営業部門向けのアプリケーションには、通常、 **SalesOrderHeader**、 **SalesOrderDetail** 、および **Product**などのテーブルがあります。 注文は、サブスクライバーで入力され、次にパブリッシャーにレプリケートされます。パブリッシャーは、頻繁にデータを注文確定システムに送ります。 モバイル ワーカーの多くは、記憶域が制限されたハンドヘルド デバイスを使用しています。パブリッシャーで注文を受けると、サブスクライバーではこれを削除できます。 注文がシステム内ではまだアクティブであるため、削除はパブリッシャーに反映されません。  
   
-     このシナリオでは、 **SalesOrderHeader** および **SalesOrderDetail** テーブルに対して、削除は追跡されません。 
-  **Product** テーブルについては、削除を追跡します。これは、パブリッシャーで製品が削除された場合、製品リストを最新に保つために削除をサブスクライバーに送信する必要があるためです。  
+     このシナリオでは、 **SalesOrderHeader** および **SalesOrderDetail** テーブルに対して、削除は追跡されません。 **Product** テーブルについては、削除を追跡します。これは、パブリッシャーで製品が削除された場合、製品リストを最新に保つために削除をサブスクライバーに送信する必要があるためです。  
   
 -   アプリケーションは、 **TransactionHistory**などのテーブルに履歴データを格納できます。テーブルでは、1 年を経過したレコードを定期的に削除します。 サブスクライバーが今月のトランザクションのデータのみを受信するように、テーブルをフィルター選択することもできます。 パブリッシャーで毎月バッチで行われる古いデータの削除は、サブスクライバーとは関係がありませんが、既定では、これらを追跡および列挙します。  
   
@@ -45,7 +43,7 @@ ms.locfileid: "68210692"
 > [!IMPORTANT]  
 >  パブリッシャーで他の処理が継続している場合は、削除の追跡が無効の間に、サブスクライバーへの反映が必要な削除が発生しないようにする必要があります。  
   
- **削除を追跡しないように指定するには**  
+ **削除が追跡されないように指定するには**  
   
 -   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ アーティクルに対して削除を追跡しないように指定する &#40;レプリケーション Transact-SQL プログラミング&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   

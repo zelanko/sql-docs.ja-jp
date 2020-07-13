@@ -14,14 +14,14 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d90414b631a7e81a7868ab7974b64ea84a0ea452
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086362"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302414"
 ---
 # <a name="multiple-results"></a>複数の結果
 *結果*として、ステートメントの実行後にデータソースから返されるものがあります。 ODBC には、結果セットと行カウントという2種類の結果があります。 *行数は、* update、delete、または insert ステートメントの影響を受ける行の数です。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)で説明されているバッチでは、複数の結果が生成される可能性があります。  

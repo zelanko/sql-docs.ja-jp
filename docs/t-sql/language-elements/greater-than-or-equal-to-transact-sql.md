@@ -24,15 +24,15 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c44e0c3ef987120fda177b2c4f36baca778d6e5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075163"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007386"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (以上) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   2 つの式を比較して "以上" であるかどうかを判定します (比較演算子)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68075163"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 expression >= expression  
 ```  
   

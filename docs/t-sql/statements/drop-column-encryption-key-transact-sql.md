@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72b5760614c009836ada1922598e438095615935
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594307"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003175"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>暗号化キーの列 (TRANSACT-SQL) を削除します。
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   列の暗号化キーをデータベースから削除します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73594307"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  

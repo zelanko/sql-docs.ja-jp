@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a1496bee303e94720a354002e63cefcf479df85
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072884"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468917"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
-  多くの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース管理者 (dba) がテーブルまたは多次元データベースの読み取り/書き込みモードを変更する必要があります。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
+  多くの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース管理者 (dba) がテーブルまたは多次元データベースの読み取り/書き込みモードを変更する必要があります。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
   
  データベースモードは、さまざまな方法で切り替えることができます。 このドキュメントでは、次の一般的なシナリオについて説明します。  
   
@@ -32,12 +31,11 @@ ms.locfileid: "66072884"
   
 -   XMLA を使用したスクリプト  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Management Studio を使用してデータベースの読み取り/書き込みモードを対話的に切り替えるには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
 2.  データベースを右クリックし、[**プロパティ**] を選択します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
@@ -48,12 +46,11 @@ ms.locfileid: "66072884"
   
 4.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
-5.  の[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]左側または右側のペインで、[**データベース**] フォルダーを探します。  
+5.  の左側または右側のペインで、[**データベース**] フォルダーを探し [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ます。  
   
 6.  [**データベース**] フォルダーを右クリックし、[**アタッチ**] を選択します。  
   
-7.  
-  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
+7.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 または、参照ボタン ([.**..**]) を使用してデータベースフォルダーを検索することもできます。  
   
 8.  データベースの読み取り/書き込みモードを選択します。  
   
@@ -127,16 +124,14 @@ ms.locfileid: "66072884"
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>XMLA を使用したスクリプトでデータベースの読み取り/書き込みモードを切り替えるには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の左側または右側のペインで切り替えるデータベースを指定します。  
   
 2.  データベースを右クリックし、[**プロパティ**] を選択します。 データベース フォルダーを検索し、場所を確認します。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
     > [!IMPORTANT]  
     >  データベースがデタッチされるとすぐに、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データベースの位置を取得できなくなります。  
   
-3.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、新しい XMLA タブを開きます。  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、新しい XMLA タブを開きます。  
   
 4.  次の XMLA 用のスクリプト テンプレートをコピーします。  
   
@@ -152,8 +147,7 @@ ms.locfileid: "66072884"
   
  `</Detach>`  
   
-1.  
-  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbName%` をデータベースの名前に置き換え、 `%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   
@@ -167,14 +161,13 @@ ms.locfileid: "66072884"
   
  `</Attach>`  
   
-1.  
-  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
+1.  `%dbFolder%` をデータベース フォルダーの完全な UNC パスに置き換え、`%ReadOnlyMode%` を対応する値 `ReadOnly` または `ReadWrite` に置き換え、`%password%` をパスワードに置き換えます。 テンプレートに含まれている文字 % は削除する必要があります。  
   
 2.  XMLA コマンドを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll * のようになります。](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services データベースのアタッチとデタッチ](attach-and-detach-analysis-services-databases.md)   
  [データベースのストレージの場所](database-storage-location.md)   
  [データベース ReadWriteModes](database-readwritemodes.md)   

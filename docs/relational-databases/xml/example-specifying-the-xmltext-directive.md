@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  結果の XML ドキュメントは次のようになります。  
   
--   *列には*AttributeName`Overflow` が指定されていませんが、`xmltext` ディレクティブが指定されているので、<`overflow`> 要素の属性は、囲み要素である <`Parent`> の属性リストに追加されます。  
+-   `Overflow` 列には *AttributeName* が指定されていませんが、`xmltext` ディレクティブが指定されているので、<`overflow`> 要素の属性は、囲み要素である <`Parent`> の属性リストに追加されます。  
   
--   <`PersonID`> 要素の `xmltext` 属性は、同じ要素レベルで取得される `PersonID` 属性と競合するので、<`xmltext`> 要素の属性は無視されます。これは、`PersonID` 属性の値が NULL であっても同じです。 一般的に、属性はオーバーフローに含まれる同じ名前の属性をオーバーライドします。  
+-   <`xmltext`> 要素の `PersonID` 属性は、同じ要素レベルで取得される `PersonID` 属性と競合するので、<`xmltext`> 要素の属性は無視されます。これは、`PersonID` 属性の値が NULL であっても同じです。 一般的に、属性はオーバーフローに含まれる同じ名前の属性をオーバーライドします。  
   
  結果を次に示します。  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- このクエリでは、*属性に*element`PersonName` ディレクティブを指定します。 これにより、`PersonName` 属性は、囲み要素である <`Parent`> 要素のサブ要素として追加されます。 <`xmltext`> の属性も、依然として、囲み要素 <`Parent`> に追加されます。 <`overflow`> 要素の内容 (サブ要素) は、囲み要素である <`Parent`> 要素の他のサブ要素の前に追加されます。  
+ このクエリでは、`PersonName` 属性に *element* ディレクティブを指定します。 これにより、`PersonName` 属性は、囲み要素である <`Parent`> 要素のサブ要素として追加されます。 <`xmltext`> の属性も、依然として、囲み要素 <`Parent`> に追加されます。 <`overflow`> 要素の内容 (サブ要素) は、囲み要素である <`Parent`> 要素の他のサブ要素の前に追加されます。  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

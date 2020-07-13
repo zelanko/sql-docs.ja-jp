@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546434"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>セッション スコープの計算されるセルの作成
     
@@ -73,17 +72,16 @@ FOR String_Expression AS 'MDX_Expression'
    ( CellProperty_Identifier = Scalar_Expression )  
 ```  
   
- 
-  `String_Expression` 値には、直交する 1 次元の MDX セット式のリストを指定します。それぞれの式は、次の表のいずれかのセット カテゴリに解決される必要があります。  
+ `String_Expression` 値には、直交する 1 次元の MDX セット式のリストを指定します。それぞれの式は、次の表のいずれかのセット カテゴリに解決される必要があります。  
   
-|カテゴリ|[説明]|  
+|カテゴリ|説明|  
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
 |レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 この例としては、 *Level_Expression*があります。`Members` MDX 関数です。 計算されるメンバーを含めるには、 *Level_Expression*を使用します。`AllMembers` MDX 関数です。<br /><br /> 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
-|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例`Descendants`として、(*Member_Expression*、 *Level_Expression*、 *Desc_Flag*) MDX 関数があります。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
+|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例として、 `Descendants` (*Member_Expression*、 *Level_Expression*、 *Desc_Flag*) MDX 関数があります。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [Mdx &#40;MDX でのセル計算の作成&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [MDX でのセル計算の作成 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

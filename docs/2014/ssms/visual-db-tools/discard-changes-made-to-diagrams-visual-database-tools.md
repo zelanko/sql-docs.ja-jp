@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 674801708b0ee4669523e5bbb7e8f8b359bc16d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63125965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011740"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>ダイアグラムに加えた変更の破棄 (Visual Database Tools)
   データベース ダイアグラムで加えた変更のうち、データベースに保存しない変更は破棄できます。  

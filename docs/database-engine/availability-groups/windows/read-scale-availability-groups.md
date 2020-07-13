@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882567"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 可用性グループは、SQL Server で高可用性機能を実現するだけではなく、統合されたスケーリング ソリューションも提供する、包括的なソリューションです。 一般的なデータベース アプリケーションでは、複数のクライアントがさまざまな種類のワークロードを実行します。 リソースの制約のために、ボトルネックが発生することもあります。 
 

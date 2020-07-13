@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761208"
 ---
 # <a name="command-streams"></a>コマンド ストリーム
 ADO では、常に**CommandText**プロパティによって指定された文字列形式のコマンド入力がサポートされていました。 また、ADO 2.7 以降では、コマンド入力に情報ストリームを使用することもできます。これを行うには、ストリームを**commandstream**プロパティに割り当てます。 ADO**ストリーム**オブジェクト、または COM **IStream**インターフェイスをサポートする任意のオブジェクトを割り当てることができます。  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  クエリストリームの内容は、XML テンプレートクエリになります。  
   
- このテンプレートクエリには、 \<sql: query> タグの sql: prefix によって識別される XML 名前空間への参照が必要です。 SQL SELECT ステートメントは XML テンプレートの内容として含まれており、次のように文字列変数に割り当てられます。  
+ このテンプレートクエリには、 \< sql: query> タグの sql: prefix によって識別される XML 名前空間への参照が必要です。 SQL SELECT ステートメントは XML テンプレートの内容として含まれており、次のように文字列変数に割り当てられます。  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

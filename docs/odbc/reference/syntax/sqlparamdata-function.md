@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamData function [ODBC]
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ed149e125e3231d670c6ddbd4569ff5ccee5c15
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018944"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306923"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 関数
 **互換性**  
@@ -55,7 +55,7 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>診断  
  **Sqlparamdata**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlparamdata**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|バインドされたパラメーターの**SQLBindParameter**の*ValueType*引数によって識別されるデータ値を、 **SQLBindParameter**の*ParameterType*引数で識別されるデータ型に変換できませんでした。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT としてバインドされたパラメーターに対して返されたデータ値を、 **SQLBindParameter**の*ValueType*引数で識別されるデータ型に変換できませんでした。<br /><br /> (1 つ以上の行のデータ値を変換できなかったが、1つ以上の行が正常に返された場合、この関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -85,7 +85,7 @@ SQLRETURN SQLParamData(
   
  ここでは、変数が次の表に示すように定義されています。  
   
-|変数|[説明]|  
+|変数|説明|  
 |--------------|-----------------|  
 |*バインドされたアドレス*|**SQLBindCol**の*targetvalueptr*引数で指定されたアドレス。|  
 |*バインドオフセット*|SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性で指定したアドレスに格納されている値。|  
@@ -107,7 +107,7 @@ SQLRETURN SQLParamData(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

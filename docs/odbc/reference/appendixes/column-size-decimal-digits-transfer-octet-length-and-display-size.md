@@ -19,14 +19,14 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8d7f1b8ec5647a34b09f0636fc8fcc2ad070f72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019239"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306573"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列サイズ、10進数、転送オクテット長、および表示サイズ-ODBC
 データ型は、列 (またはパラメーター) のサイズ、10進数、長さ、および表示サイズによって特徴付けられます。 次の ODBC 関数は、SQL ステートメントのパラメーターまたはデータソースの SQL データ型に対してこれらの属性を返します。 各 ODBC 関数は、次のように、これらの属性の異なるセットを返します。  

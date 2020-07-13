@@ -19,29 +19,27 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68889184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932073"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 SharePoint モードでのアップグレード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の詳細については、「 [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)」を参照してください。 既存の SQL Server インスタンスのアップグレードの詳細については、[インストールウィザードを使用した SQL Server 2014 へのアップグレード &#40;のセットアップ&#41;を](upgrade-sql-server-using-the-installation-wizard-setup.md)参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 SharePoint モードでのアップグレードの詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)」を参照してください。 既存の SQL Server インスタンスのアップグレードの詳細については、[インストールウィザードを使用した SQL Server 2014 へのアップグレード &#40;のセットアップ&#41;を](upgrade-sql-server-using-the-installation-wizard-setup.md)参照してください。  
   
 ## <a name="known-upgrade-issues"></a>アップグレードに関する既知の問題  
- に[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]アップグレードする前に、次の内容を確認してください。  
+ にアップグレードする前に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、次の内容を確認してください。  
   
 -   [SQL Server 2014 リリースノート](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
--   廃止、非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]推奨、または変更された機能の詳細については、「 [Analysis Services 旧バージョン](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility)との互換性」を参照してください。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]廃止、非推奨、または変更された機能の詳細については、「 [Analysis Services 旧バージョン](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility)との互換性」を参照してください。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
  アップグレードの前に、次の情報を確認してください。  
   
--   [サポートされるバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)  
+-   [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)  
   
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -56,14 +54,14 @@ ms.locfileid: "68889184"
 ## <a name="upgrading-analysis-services"></a>Analysis Services のアップグレード  
  サーバーおよびデータをアップグレードするには、複数の方法から選択できます。  
   
--   **インプレースアップグレードで**は、既存のプログラムファイルがプログラム[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ファイルに置き換えられます。 データベースは、同じ場所に残ります。 プログラム フォルダーは、新しい名前を反映して更新されます。  
+-   **インプレースアップグレードで**は、既存のプログラムファイルがプログラムファイルに置き換えられ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。 データベースは、同じ場所に残ります。 プログラム フォルダーは、新しい名前を反映して更新されます。  
   
--   **サイドバイサイドアップグレード**は、既存の Analysis Services インスタンスがある[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同じコンピューター上のの新規インストールです。 以前のバージョンを今後使用しない場合は、データベースを同じコンピューター上の新しいインスタンスへ移動し、以前のバージョンをアンインストールできます。  
+-   **サイドバイサイドアップグレード**は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 既存の Analysis Services インスタンスがある同じコンピューター上のの新規インストールです。 以前のバージョンを今後使用しない場合は、データベースを同じコンピューター上の新しいインスタンスへ移動し、以前のバージョンをアンインストールできます。  
   
 -   Analysis Services を新しいハードウェア上にインストールし、既存のデータベースをそのサーバーへ移行することもできます。  
   
 ## <a name="in-place-upgrade"></a>インプレース アップグレード  
- の既存の[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスをに[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]アップグレードすることができます。また、アップグレードプロセスの一環として、既存のデータベースが古いインスタンスから新しいインスタンスに自動的に移行されます。 メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
+ の既存のインスタンスをにアップグレードすることができます [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。また、アップグレードプロセスの一環として、既存のデータベースが古いインスタンスから新しいインスタンスに自動的に移行されます。 メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
   
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
   

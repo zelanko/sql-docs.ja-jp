@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902104"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719418"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 FREETEXT を使用すると、フルテキスト クエリ エンジンによって、*freetext_string* を基に次の内部操作が実行され、各語に重みが割り当てられた後、一致するものが検索されます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67902104"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  

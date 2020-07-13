@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLAllocConnect function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocConnect
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68065025"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305523"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect のマッピング
 アプリケーションが ODBC 3 を介して**Sqlallocconnect**を呼び出すとき。*x*ドライバー: **sqlallocconnect**(*henv*, *phdbc*) の呼び出しは、次のように**SQLAllocHandle**にマップされます。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922670"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219441"
 ---
 # <a name="application-security"></a>アプリケーションのセキュリティ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,11 +59,11 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  コード "file:/install_dir/lib/-" は、JDBC ドライバーのインストール ディレクトリを指します。  
   
 ## <a name="protecting-server-communication"></a>サーバーとの通信の保護  
- JDBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する場合、インターネット プロトコル セキュリティ (IPSec) または SSL (Secure Sockets Layer) を使用して、通信チャネルをセキュリティで保護できます。また、IPSec と SSL の両方を使用することも可能です。  
+ JDBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する場合、インターネット プロトコル セキュリティ (IPSec) または TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) を使用して、通信チャネルをセキュリティで保護できます。また、IPSec と SSL の両方を使用することも可能です。  
   
- SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、「[SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」を参照してください。  
+ TLS のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 TLS の使用方法の詳細については、[暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

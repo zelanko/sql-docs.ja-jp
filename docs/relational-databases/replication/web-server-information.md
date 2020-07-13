@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a267600824313e55f49a175aee89891d7aad3dc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50a480d13dca5053dd565323d96348476a4b33bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720561"
 ---
 # <a name="web-server-information"></a>Web サーバー情報
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Web サーバー情報は、マージ レプリケーションの Web 同期オプションを使用する場合に必要です。 Web 同期の構成の詳細については、「[Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[Web サーバー アドレス]**  
  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[FTP スナップショットとインターネット]** ページで Web サーバー アドレスを指定している場合は、そのアドレスがこのテキスト ボックスに既定として表示されます。 既定値を受け入れるか、このサブスクリプションを同期する [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) の完全修飾 Web サーバー アドレスを入力します。  
   
  **[各サブスクライバーが Web サーバーに接続する方法を指定します。]**  
- Web サーバーへの接続に使用される認証の種類を指定します。 IIS サーバーへの接続用の [基本認証] を SSL (Secure Sockets Layer) と組み合わせて使用することをお勧めします。 [基本認証] を選択した場合は、サブスクライバーから IIS サーバーへの接続に使用されるログインとパスワードを入力してください。  
+ Web サーバーへの接続に使用される認証の種類を指定します。 IIS サーバーへの接続用の [基本認証] をトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) と組み合わせて使用することをお勧めします。 [基本認証] を選択した場合は、サブスクライバーから IIS サーバーへの接続に使用されるログインとパスワードを入力してください。  
   
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   

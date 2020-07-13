@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0a37881bd22c73ea86316f3883382e3319e36b66
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73727927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811446"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>メンバー リビジョン履歴のロールバック (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   メンバー リビジョン履歴は、メンバーが変更されるたびに記録されます。 メンバー リビジョン履歴は前のバージョンにロールバックすることができます。  
   
@@ -29,19 +29,18 @@ ms.locfileid: "73727927"
   
 -   リビジョン履歴は、エンティティのトランザクション ログの種類がメンバーである場合にのみ使用できます。  
   
- **メンバーリビジョン履歴をロールバックするには**  
+ **メンバー リビジョン履歴をロールバックするには**  
   
 1.  マスター データ マネージャーで、[エクスプローラー] をクリックします。  
   
 2.  ロールバックするエンティティとメンバーを選択します。  
   
-3.  
-  **[履歴の表示]** をクリックします。  
+3.  **[履歴の表示]** をクリックします。  
   
 4.  ロールバックするリビジョンを選択し、 **[ロールバック]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンバーリビジョン履歴 &#40;マスターデータサービス&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [エンティティのトランザクションログの種類 &#40;マスターデータサービスに変更&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [エンティティのトランザクション ログの種類の変更 (マスター データ サービス)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

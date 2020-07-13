@@ -18,10 +18,10 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006615"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
@@ -59,11 +59,9 @@ SSMA は、既定のプロジェクトを読み込まずに起動します。 Ac
   
 **新しいプロジェクトを作成するには**  
   
-1.  
-  **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。  
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** を選択します。  
   
-    
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+    **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
@@ -91,7 +89,7 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
   
         メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  **[保存]** をクリックします。  
+    2.  **[Save]** (保存) をクリックします。  
   
         SSMA は、アクセススキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -110,7 +108,7 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
   
 3.  SQL Azure に再接続するには、[**ファイル**] メニューの [ **SQL Azure に再接続**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [Access データベースを1つ以上追加](adding-and-removing-access-database-files-accesstosql.md)します。  
   
 ## <a name="see-also"></a>参照  

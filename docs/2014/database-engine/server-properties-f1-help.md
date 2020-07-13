@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 344cb09fe30997a9261e03e67bf8d2ab548e8be9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929160"
 ---
 # <a name="server-properties-f1-help"></a>[サーバーのプロパティ] の F1 ヘルプ
   ここでは、SQL Server Management Studio の **[サーバーのプロパティ]** ページの F1 ヘルプ トピックについて紹介します。  

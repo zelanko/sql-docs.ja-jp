@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 490a69a022c2098de1dc4ade67af484b6e50131a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917173"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756506"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name プロパティ - 動的 (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの名前を指定します。  

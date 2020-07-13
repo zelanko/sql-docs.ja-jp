@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925106"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762743"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
 ADO を使用すると、階層的なレコードセットオブジェクトを XML に永続化できます。 階層的なレコードセットオブジェクトを使用すると、親レコードセット内のフィールドの値は別のレコードセットになります。 このようなフィールドは、属性ではなく XML ストリームの子要素として表されます。  

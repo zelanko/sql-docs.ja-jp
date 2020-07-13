@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - UniqueName property [ADO MD]
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5192713ead82cc486fbbdba643cf426c0849ddad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913949"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764963"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName プロパティ (ADO MD)
 現在のオブジェクトの明確な名前を示します。  

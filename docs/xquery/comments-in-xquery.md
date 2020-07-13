@@ -1,5 +1,6 @@
 ---
 title: XQuery のコメント |Microsoft Docs
+description: XQuery にコメントを追加するための構文と区切り記号について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67f2ad02eb9486508840f0b731b1d6e705d94f7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726755"
 ---
 # <a name="comments-in-xquery"></a>XQuery のコメント
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery にコメントを追加できます。 コメント文字列は、"`(:`" および "`:)`" 区切り記号を使用して追加されます。 次に例を示します。  
+  XQuery にコメントを追加できます。 コメント文字列は、" `(:` " および "" 区切り記号を使用して追加され `:)` ます。 次に例を示します。  
   
 ```  
 declare @x xml  

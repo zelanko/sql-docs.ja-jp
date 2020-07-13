@@ -12,14 +12,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 660b7c123d0ddd0a3f1b972fa3b1dc153b15ed50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071932"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303503"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>デスクトップ データベース ドライバー パフォーマンスの問題
 既存の ANSI アプリケーションとの互換性を確保するために、SQL_WCHAR、SQL_WVARCHAR、および SQL_WLONGVARCHAR のデータ型は、Microsoft Access 4.0 以降のデータソースの SQL_CHAR、SQL_VARCHAR、および SQL_LONGVARCHAR として公開されています。 データソースはワイド文字データ型を返しませんが、データはワイド Char 形式で Jet に送信される必要があります。 SQL_C_CHAR パラメーターまたは結果列が ANSI アプリケーションの SQL_CHAR データ型にバインドされている場合は、変換が行われることを理解しておくことが重要です。  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetConfigMode function [ODBC]
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cc11bec24ede3352dd43f3645fb8c720b77fdabe
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285692"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 関数
 **互換性**  
@@ -57,7 +57,7 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>診断  
  **Sqlgetconfigmode**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
@@ -68,6 +68,6 @@ BOOL SQLGetConfigMode(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |構成モードの設定|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|

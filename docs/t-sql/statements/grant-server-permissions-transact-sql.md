@@ -145,7 +145,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. ログインに権限を許可する  
- 次の例では、`CONTROL SERVER` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に `TerryEminhizer` 権限を許可します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `TerryEminhizer` に `CONTROL SERVER` 権限を許可します。  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. GRANT 権限に関する権限を許可する  
- 次の例では、`ALTER ANY EVENT NOTIFICATION` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に、`JanethEsteves` 権限を許可し、この権限を他のログインに許可する権利を与えます。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `JanethEsteves` に、`ALTER ANY EVENT NOTIFICATION` 権限を許可し、この権限を他のログインに許可する権利を与えます。  
   
 ```  
 USE master;  

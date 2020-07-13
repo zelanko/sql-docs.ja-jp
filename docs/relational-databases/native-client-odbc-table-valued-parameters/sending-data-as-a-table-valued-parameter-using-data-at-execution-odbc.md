@@ -10,18 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 0ce5d61838ac40d350cda5a7d436fac6979f513f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246372"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998398"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   これは、「[すべてのメモリ内」](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)の手順に似ていますが、テーブル値パラメーターの実行時データを使用します。  
   
@@ -186,8 +185,8 @@ from @Items
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
- このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP で、SQLPutData の呼び出しごとに1行の行ストリーミングを使用できることを示します。  
+### <a name="description"></a>説明  
+ このサンプルでは、BCP.exe を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP で、SQLPutData の呼び出しごとに1行の行ストリーミングを使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   
@@ -374,8 +373,8 @@ EXIT:
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
- このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP を使用して、SQLPutData の呼び出しごとに複数の行を使用できることを示します。  
+### <a name="description"></a>説明  
+ このサンプルでは、BCP.exe を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP を使用して、SQLPutData の呼び出しごとに複数の行を使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   

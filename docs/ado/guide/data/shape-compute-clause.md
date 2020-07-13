@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924145"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760848"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 句
 Shape COMPUTE 句は、子**レコード**セットへの参照で構成される親**レコードセット**を生成します。チャプター、新しい、または計算列、または子**レコード**セットまたは以前にデザインされた**レコードセット**に対して集計関数を実行した結果の内容を含む、省略可能な列。また、オプションの BY 句に示されている子**レコードセット**のすべての列が表示されます。  
@@ -32,13 +32,13 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  この句の部分は次のとおりです。  
   
  *child-command*  
  は、次のいずれかで構成されます。  
   
--   子**レコードセット**オブジェクトを返す中かっこ{}("") 内のクエリコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
+-   {}子**レコードセット**オブジェクトを返す中かっこ ("") 内のクエリコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
 -   既存の形状が指定された**レコードセット**の名前。  
   
@@ -76,12 +76,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  たとえば、"人口統計" という名前のテーブルがあるとします。これは、州、市区町村、および人口の各フィールドで構成されます。 (テーブル内の母集団の数値は例としてのみ提供されています)。  
   
-|State|City|[母集団]|  
+|州|City|[母集団]|  
 |-----------|----------|----------------|  
-|WA|シアトル|70万|  
+|WA|Seattle|70万|  
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  
-|CA|ロサンゼルス|80万|  
+|CA|Los Angeles|80万|  
 |CA|San Diego|60万|  
 |WA|Tacoma|500,000|  
 |OR|Corvallis|300,000|  
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- このコマンドは、2つのレベルを持つ、形状がある**レコードセット**を開きます。 親レベル`SUM(rs.population)`は、集計列 ()、子**レコードセット**を参照する列 (`rs`)、および子**レコードセット**`state`をグループ化するための列 () を使用して生成された**レコードセット**です。 子レベルは、クエリコマンドによって返される**レコードセット**です (`select * from demographics`)。  
+ このコマンドは、2つのレベルを持つ、形状がある**レコードセット**を開きます。 親レベルは、集計列**Recordset** ( `SUM(rs.population)` )、子**レコードセット**を参照する列 ( `rs` )、および子**レコードセット**をグループ化するための列 () を使用して生成されたレコードセットです `state` 。 子レベルは、クエリコマンドによって返される**レコードセット**です ( `select * from demographics` )。  
   
  子**レコードセット**の詳細行は状態ごとにグループ化されますが、それ以外の場合は特定の順序でグループ化されません。 つまり、グループはアルファベット順または数字順にはなりません。 **親レコードセットを**並べ替える場合は、**レコードセットの並べ替え**方法を使用して、親**レコードセット**を並べ替えることができます。  
   
@@ -104,7 +104,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs.作成|rs|State|  
+|SUM (rs.作成|rs|州|  
 |---------------------------|--------|-----------|  
 |130万|Child1 への参照|CA|  
 |120万|Child2 への参照|WA|  
@@ -112,21 +112,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|State|City|[母集団]|  
+|州|City|[母集団]|  
 |-----------|----------|----------------|  
-|CA|ロサンゼルス|80万|  
+|CA|Los Angeles|80万|  
 |CA|San Diego|60万|  
   
-## <a name="child2"></a>Child2 までのすべてのデータをマージします  
+## <a name="child2"></a>Child2  
   
-|State|City|[母集団]|  
+|州|City|[母集団]|  
 |-----------|----------|----------------|  
-|WA|シアトル|70万|  
+|WA|Seattle|70万|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|[母集団]|  
+|州|City|[母集団]|  
 |-----------|----------|----------------|  
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  

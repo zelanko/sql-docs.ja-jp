@@ -11,34 +11,29 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66265151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026892"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非 XML 形式と XML 形式の 2 種類のフォーマット ファイルがサポートされます。 XML 以外のフォーマットとは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされる従来のフォーマットです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非 XML 形式と XML 形式の 2 種類のフォーマット ファイルがサポートされます。 XML 以外のフォーマットとは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされる従来のフォーマットです。  
   
  通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。  
   
 > [!NOTE]  
->  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** によって生成されるバージョン 11.0 のフォーマット ファイルを読み取ることができません。  
+>  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、bcp で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**は、bcp によって生成されるバージョン10.0 のフォーマットファイルを読み取ることができますが、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**では、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**によって生成されるバージョン11.0 のフォーマットファイルを読み取ることができません [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**。  
   
- このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション (**-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
+ このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
- 
-  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 
-  **format** オプションには、次に示す **-f** オプションが必要です。  
+ **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
   
- **bcp** _table_or_view_ **形式**nul **-f**_format_file_name_  
+ **bcp** _table_or_view_ **format** nul **-f** _format_file_name_  
   
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
@@ -56,22 +51,18 @@ ms.locfileid: "66265151"
   
 -   D. Unicode 文字データ用の XML 以外のフォーマット ファイルの作成  
   
- この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 
-  `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
+ この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
   
 #### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. ネイティブ データ用の XML 以外のフォーマット ファイルの作成  
  次の例では、 `Department-n.xml`テーブルに対して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` という名前の XML フォーマット ファイルを作成します。 このフォーマット ファイルでは、ネイティブ データ型が使用されます。 生成されたフォーマット ファイルの内容をコマンドの後に示します。  
   
- 
-  **bcp** コマンドには、次の修飾子が含まれます。  
+ **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 
-  **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
@@ -95,16 +86,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
 #### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. 文字データ用の XML 以外のフォーマット ファイルの作成  
  次の例では、 `Department.fmt`テーブルに対して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` という名前の XML フォーマット ファイルを作成します。 このフォーマット ファイルでは、文字データ形式と、既定と異なるフィールド ターミネータ (`,`) が使用されます。 生成されたフォーマット ファイルの内容をコマンドの後に示します。  
   
- 
-  **bcp** コマンドには、次の修飾子が含まれます。  
+ **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 
-  **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
@@ -126,8 +114,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
  詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Unicode ネイティブ データ用の XML 以外のフォーマット ファイルの作成  
- 
-  `HumanResources.Department` テーブルの、Unicode ネイティブ データ用の XML 以外のフォーマット ファイルを作成するには、次のコマンドを使用します。  
+ `HumanResources.Department` テーブルの、Unicode ネイティブ データ用の XML 以外のフォーマット ファイルを作成するには、次のコマンドを使用します。  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
@@ -145,11 +132,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Unicode 文字データの使用方法の詳細については、「[Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)」を参照してください。  
   
 ## <a name="creating-an-xml-format-file"></a>XML フォーマット ファイルの作成  
- 
-  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 
-  **format** オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、次に示すように **-x** オプションも指定する必要があります。  
+ **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには常に **-f** オプションが必要です。XML フォーマット ファイルを作成するには、次に示すように **-x** オプションも指定する必要があります。  
   
- **bcp** _table_or_view_ **形式 nul-f** _format_file_name_ **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 >  XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
@@ -163,8 +148,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   B. ネイティブ データ用の XML フォーマット ファイルの作成  
   
- この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 
-  `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
+ この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBdesc](../../includes/sssampledbdesc-md.md)]  
@@ -172,17 +156,14 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 #### <a name="a-creating-an-xml-format-file-for-character-data"></a>A. 文字データ用の XML フォーマット ファイルの作成  
  次の例では、 `Department.xml`テーブルに対して [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` という名前の XML フォーマット ファイルを作成します。 このフォーマット ファイルでは、文字データ形式と、既定と異なるフィールド ターミネータ (`,`) が使用されます。 生成されたフォーマット ファイルの内容をコマンドの後に示します。  
   
- 
-  **bcp** コマンドには、次の修飾子が含まれます。  
+ **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-t**`,`|コンマ (**,**) をフィールドターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、 **-t** スイッチは不要です。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 
-  **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
+|**-t** `,`|コンマ ( **,** ) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、 **-t** スイッチは不要です。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
@@ -215,16 +196,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
 #### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. ネイティブ データ用の XML フォーマット ファイルの作成  
  次の例では、 `Department-n.xml`テーブルに対して `HumanResources.Department` という名前の XML フォーマット ファイルを作成します。 このフォーマット ファイルでは、ネイティブ データ型が使用されます。 生成されたフォーマット ファイルの内容をコマンドの後に示します。  
   
- 
-  **bcp** コマンドには、次の修飾子が含まれます。  
+ **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
-|**-T**|
-  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 
-  **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
+|**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
@@ -255,21 +233,20 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  このフォーマット ファイルの構文については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。 ネイティブ データの使用方法については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)」を参照してください。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>データ フィールドからテーブル列へのマッピング  
- 
-  **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次のトピックを参照してください。  
+ **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次のトピックを参照してください。  
   
--   [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [XML 以外のフォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
- [XML フォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
+ [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
+ [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
+ [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

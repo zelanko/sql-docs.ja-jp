@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8be012ea2bc9499a99ca7763446c6f26cf219a18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012224"
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
   サーバーは、一度に複数のネットワーク プロトコルでリッスンまたは監視することができます。 ただし、これには各プロトコルを構成する必要があります。 特定のプロトコルが構成されていない場合、サーバーはそのプロトコルでリッスンできません。 インストール後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、プロトコルの構成を変更できます。  
@@ -81,8 +80,7 @@ ms.locfileid: "63067699"
   
  エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql)」を参照してください。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク構成の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの次のトピックを参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク構成の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの次のトピックを参照してください。  
   
 -   [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)  
   

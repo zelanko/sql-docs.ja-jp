@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4db8d9be4bb797bffd4fc3b033dfc7e5693c1f88
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924950"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757818"
 ---
 # <a name="intervening-shape-compute-clauses"></a>介在する Shape COMPUTE 句
 次の例に示すように、パラメーター化された shape コマンドで親と子の間に1つ以上の COMPUTE 句を埋め込むことが有効です。  

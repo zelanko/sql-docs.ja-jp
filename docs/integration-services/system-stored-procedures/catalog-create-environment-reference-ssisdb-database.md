@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e66d14c0a80317738296cd16a5bbbca44b79c8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c097f6f898345b3aac1492408b1ee6948039c958
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749697"
 ---
 # <a name="catalogcreate_environment_reference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトに環境参照を作成します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71281052"
 catalog.create_environment_reference [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @environment_name = ] environment_name  
-     , [ @reference_location = ] reference_location  
+     , [ @reference_type = ] reference_type  
   [  , [ @environment_folder_name = ] environment_folder_name ]  
   [  , [ @reference_id = ] reference_id OUTPUT ]  
 ```  
@@ -47,8 +47,8 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  [ @environment_name = ] *environment_name*  
  参照されている環境の名前。 *Environment_name* は **nvarchar(128)** です。  
   
- [ @reference_location = ] *reference_location*  
- 環境をプロジェクトと同じフォルダーに配置できるか (相対参照)、または別のフォルダーに配置できるか (絶対参照) を示します。 相対参照を指定するには、値 `R` を使用します。 絶対参照を指定するには、値 `A` を使用します。 *reference_location* は **char(1)** です。  
+ [ @reference_type = ] *reference_type*  
+ 環境をプロジェクトと同じフォルダーに配置できるか (相対参照)、または別のフォルダーに配置できるか (絶対参照) を示します。 相対参照を指定するには、値 `R` を使用します。 絶対参照を指定するには、値 `A` を使用します。 *reference_type* は **char(1)** です。  
   
  [ @environment_folder_name = ] *environment_folder_name*  
  参照先の環境があるフォルダーの名前。 この値は絶対参照にする必要があります。 *environment_folder_name* は **nvarchar(128)** です。  
@@ -80,7 +80,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
--   `A`reference_location*パラメーターの* 文字を使用して絶対参照が指定されているが、フォルダー名は *environment_folder_name* パラメーターで指定されなかった。  
+-   *reference_location* パラメーターの `A` 文字を使用して絶対参照が指定されているが、フォルダー名は *environment_folder_name* パラメーターで指定されなかった。  
   
 ## <a name="remarks"></a>解説  
  プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照は、名前によって環境を参照し、プロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。 プロジェクトでは複数の環境を参照できます。  

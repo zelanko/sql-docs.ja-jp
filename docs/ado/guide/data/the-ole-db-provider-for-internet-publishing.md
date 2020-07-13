@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923902"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759058"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)および[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトは、Microsoft OLE DB Provider For Internet Publishing (internet publishing provider) と共に使用して、microsoft FrontPage によって提供される Web フォルダーやファイルなどのリソースにアクセスしたり操作したりすることができます。 ADO では、**レコード**、**ストリーム**、または[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のソースを URL に指定できます。 その後、リソースのアップロード、ダウンロード、移動、コピー、削除、またはリソースプロパティの直接操作を行うことができます。  

@@ -19,28 +19,28 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717575"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Azure SQL Database の CPU 使用率とストレージ データを返します。 データは 5 分間隔で収集され、集計されます。 各ユーザーデータベースには、5分間のレポートウィンドウごとに1行のデータがあり、リソースの消費量が変化します。 返されるデータには、CPU 使用率、ストレージサイズの変更、およびデータベース SKU の変更が含まれます。 変更のないアイドル状態のデータベースは、5分間隔で行を保持できません。 履歴データは約14日間保持されます。  
+  Azure SQL Database の CPU 使用率とストレージ データを返します。 データは、5 分間隔で収集と集計が実行されます。 各ユーザーデータベースには、5分間のレポートウィンドウごとに1行のデータがあり、リソースの消費量が変化します。 返されるデータには、CPU 使用率、ストレージサイズの変更、およびデータベース SKU の変更が含まれます。 変更のないアイドル状態のデータベースは、5分間隔で行を保持できません。 履歴データは約 14 日間保持されます。  
   
  **Resource_stats**ビューには、データベースが関連付けられている Azure SQL Database サーバーのバージョンによって異なる定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|[列]|データ型|[説明]|  
+|[列]|データ型|説明|  
 |----------------------------|---------------|-----------------|  
-|start_time|**DATETIME**|5分間のレポート間隔の開始を示す UTC 時刻。|  
-|end_time|**DATETIME**|5分間のレポート間隔の終了を示す UTC 時刻。|  
-|database_name|**nvarchar(128**|ユーザーデータベースの名前。|  
-|sku|**nvarchar(128**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />汎用<br /><br />Business Critical|  
+|start_time|**datetime**|5分間のレポート間隔の開始を示す UTC 時刻。|  
+|end_time|**datetime**|5分間のレポート間隔の終了を示す UTC 時刻。|  
+|database_name|**nvarchar(128)**|ユーザーデータベースの名前。|  
+|sku|**nvarchar(128)**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|データベースデータ、インデックス、ストアドプロシージャ、およびメタデータを含む、期間の最大ストレージサイズ (mb)。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
 |avg_data_io_percent|**decimal (5, 2)**|サービス層の制限に基づく平均 i/o 使用率 (%)。 Hyperscale データベースについては、「[リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
@@ -61,14 +61,14 @@ ms.locfileid: "75246911"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、仮想**master**データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。  
   
  データベースがエラスティックプールのメンバーである場合、パーセント値として表示されるリソース統計は、エラスティックプール構成で設定されたデータベースの上限に対する比率として表されます。  
   
  このデータをより詳細に表示するには、ユーザーデータベースの**dm_db_resource_stats**動的管理ビューを使用します。 このビューでは、15秒ごとにデータをキャプチャし、1時間の履歴データを保持します。  詳細については、「 [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)」を参照してください。  
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
   
 ```sql  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

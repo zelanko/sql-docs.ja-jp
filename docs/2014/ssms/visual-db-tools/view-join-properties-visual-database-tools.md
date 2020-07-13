@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 899bb71f6af9555925328042bcb6fc73a5251532
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63227007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064239"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>結合のプロパティの表示 (Visual Database Tools)
   結合に関する一連のプロパティを [プロパティ] ウィンドウで表示できます。  

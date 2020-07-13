@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrderEnum enumeration [ADOX]
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9fafb92dffa01e94a31a2301ac27bb055e98ef45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762763"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 インデックス付き列の並べ替え順序を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1 で保護されたプロセスとして起動されました|既定。 列の並べ替え順序は昇順です。|  
+|**adSortAscending**|1|既定値。 列の並べ替え順序は昇順です。|  
 |**adSortDescending**|2|列の並べ替え順序は降順です。|  
   
 ## <a name="applies-to"></a>適用対象  

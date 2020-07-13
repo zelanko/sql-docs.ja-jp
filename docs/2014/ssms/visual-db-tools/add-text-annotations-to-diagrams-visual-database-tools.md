@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2ee898a1913c9072d1371caf928c6731da771662
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63298286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066285"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>テキストによる注釈をダイアグラムに追加する方法 (Visual Database Tools)
   ダイアグラムに関するメモやコメントを記載するには、テキストによる注釈を追加します。  

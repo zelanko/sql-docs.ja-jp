@@ -31,7 +31,7 @@ ms.locfileid: "68095102"
   
 -   オブジェクト アクセスの監査の設定は、イベントをキャプチャするように構成する必要があります。 監査ポリシー ツール (`auditpol.exe`) は、" **オブジェクト アクセスの監査** " カテゴリでさまざまなサブポリシー設定を公開しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がオブジェクト アクセスを監査できるようにするには、 **application generated** 設定を構成します。  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行しているアカウントは、Windows セキュリティ ログに書き込むための " **セキュリティ監査の生成** " 権限を持っている必要があります。 既定では、LOCAL SERVICE アカウントおよび NETWORK SERVICE アカウントにこの権限があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がこれらのアカウントのいずれかで実行されている場合、この手順は必要ありません。  
--   レジストリ ハイブ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security` サービス アカウントに完全なアクセス許可を提供します。  
+-   レジストリ ハイブ `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security` への [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに完全なアクセス許可を提供します。  
 
   > [!IMPORTANT]  
   > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   

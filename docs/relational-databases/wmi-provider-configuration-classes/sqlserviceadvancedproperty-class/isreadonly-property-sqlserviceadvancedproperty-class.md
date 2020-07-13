@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1324d352ca113a441dc388a235d44b5274e441be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 031ffc6a0efc9a339ca40a83aee14e73d0c91d8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73658979"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880540"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   詳細プロパティが読み取り専用かどうかを指定するブール型のプロパティを取得または設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "73658979"
 object.IsReadOnly [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティが読み取り専用かどうかを指定するブール値。詳細プロパティが読み取り専用の場合は **true** 、詳細プロパティが変更可能な場合は **false** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

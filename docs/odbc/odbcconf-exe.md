@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - odbcconf.exe
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d771f01d292312f8a0f0060c16e3c348bf2e009e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74491964"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307533"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.EXCEL.EXE
 ODBCCONF は、ODBC ドライバーとデータソース名を構成できるコマンドラインツールです。  
@@ -35,17 +35,17 @@ ODBCCONF [switches] action
  *オプション*  
  0個以上のスイッチオプション。 使用できるスイッチの一覧については、このトピックで後述する「解説」を参照してください。  
   
- *処置*  
+ *action*  
  実行する1つのアクション。 使用可能なオプションの一覧については、「解説」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のスイッチを使用できます。  
   
-|スイッチ|[説明]|  
+|Switch|説明|  
 |------------|-----------------|  
 |/A {*action*}|アクションを指定してください。<br /><br /> 1つのアクションのみが指定されている場合、/a は省略可能です。|  
 |/?|ODBCCONF の使用状況を表示します。EXCEL.EXE.|  
-|スイッチ|アクションが失敗した場合、処理は続行されます。|  
+|/C|アクションが失敗した場合、処理は続行されます。|  
 |/E|処理が完了したら、/F で指定された応答ファイルを消去します。|  
 |/F|などの応答ファイルを使用し`odbcconf /F my.rsp`ます。<br /><br /> .rsp は次のようになります。`REGSVR c:\my.dll`<br /><br /> /A は、応答ファイルでは使用されません。|  
 |/H|使用状況 (ヘルプ) を表示します。 このスイッチは/? と同じです。|  
@@ -53,9 +53,9 @@ ODBCCONF [switches] action
 |/R|操作は再起動後に実行されます。|  
 |/S|サイレント モード。 エラーメッセージを表示しません。|  
   
- 次の操作を実行できます。  
+ 次のオプションがあります｡  
   
-|アクション|[説明]|  
+|アクション|説明|  
 |------------|-----------------|  
 |CONFIGDRIVER *driver_name * * ドライバー固有の構成パラメーター*|適切なドライバーセットアップ DLL を読み込み、 **configdriver**関数を呼び出します。<br /><br /> [Sqlconfigdriver 関数](../odbc/reference/syntax/sqlconfigdriver-function.md)と同じです。<br /><br /> 次に例を示します。<br /><br /> /A {CONFIGDRIVER "ドライバー名" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "ドライバー名" "DriverODBCVer = 03.80"}|  
 |CONFIGDSN *driver_name* DSN =*name* &#124;*属性*|システムデータソースを追加または変更します。<br /><br /> [Sqlconfigdatasource 関数](../odbc/reference/syntax/sqlconfigdatasource-function.md)と同じです。<br /><br /> 次に例を示します。<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = name &#124; Server = srv"}|  

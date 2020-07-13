@@ -11,19 +11,17 @@ f1_keywords:
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c58fc8d77bccb072d0999d2e6e0c4f545712f522
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940903"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>[入れ子になったテーブル キーの選択] (入れ子になっている新しいテーブルの追加ウィザード)
-  
   **[入れ子になったテーブル キーの選択]** ページを使用すると、入れ子になったテーブルのキーとなる属性を選択できます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **属性**  

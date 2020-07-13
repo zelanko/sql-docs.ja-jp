@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879836"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログ配布用のセカンダリデータベースを設定します。  
   
@@ -55,7 +55,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="arguments"></a>引数  
 `[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
   
-`[ @primary_server = ] 'primary_server'`ログ配布構成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]におけるのプライマリインスタンスの名前。 *primary_server*は**sysname**であり、NULL にすることはできません。  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server*は**sysname**であり、NULL にすることはできません。  
   
 `[ @primary_database = ] 'primary_database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
   
@@ -77,7 +77,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`バックアップまたは復元操作によって使用されるバッファーの合計数。 *buffer_count*は**int**で、既定値は-1 です。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位)。 *max_transfersize*は**int**であり、NULL を指定できます。  
+`[ @max_transfer_size = ] 'max_transfer_size'`によってバックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*は**int**であり、NULL を指定できます。  
   
 `[ @restore_threshold = ] 'restore_threshold'`復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。 *restore_threshold*は**int**であり、NULL にすることはできません。  
   
@@ -107,8 +107,8 @@ sp_add_log_shipping_secondary_database
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- この例では、 **sp_add_log_shipping_secondary_database**ストアドプロシージャを使用**して、** プライマリサーバー triLogShipAdventureWorks に存在するプライマリデータベース[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]と共に、ログ配布構成のセカンダリデータベースとしてデータベースを追加します。  
+## <a name="examples"></a>使用例  
+ この例では、 **sp_add_log_shipping_secondary_database**ストアドプロシージャを使用**して、** プライマリサーバー triLogShipAdventureWorks に存在するプライマリデータベースと共に、ログ配布構成のセカンダリデータベースとしてデータベースを追加し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -126,6 +126,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

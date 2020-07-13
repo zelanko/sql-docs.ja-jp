@@ -9,31 +9,30 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938613"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>計算列 (SSAS テーブル)
   テーブル モデルの計算列では、モデルに新しいデータを追加することができます。 列に値を貼り付けるかインポートする代わりに、列の行レベル値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
   
 > [!NOTE]  
->  計算列は、DirectQuery モードでのテーブル モデルではサポートされません。 詳細については、「[DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)」を参照してください。  
+>  計算列は、DirectQuery モードでのテーブル モデルではサポートされません。 詳しくは、「[DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)」をご覧ください。  
   
  このトピックのセクション:  
   
--   [効果](#bkmk_understanding)  
+-   [メリット](#bkmk_understanding)  
   
 -   [計算列の名前付け](#bkmk_naming)  
   
 -   [計算列のパフォーマンス](#bkmk_perf)  
   
--   [Related Tasks](#bkmk_rel_tasks)  
+-   [関連タスク](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a>効果  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 利点  
  計算列の数式は、Excel での数式と非常によく似ています。 ただし、Excel とは異なり、テーブル内の異なる行に異なる数式を作成することはできません。代わりに列全体に自動的に DAX 数式が適用されます。  
   
  列に数式が含まれている場合は、各行について値が計算されます。 有効な数式を入力すると、その列に対する結果が計算されます。 基になるデータが更新された場合など、列の値は必要に応じて再計算されます。  
@@ -51,7 +50,7 @@ ms.locfileid: "67284889"
   
  この数式では、StartDate 列から月を抽出します。 そして、テーブルの各行について月の最終日を計算します。 2 番目のパラメーターは、StartDate の月より前または後の月数を指定します。この場合、0 は同じ月であることを表します。 たとえば、StartDate 列の値が 6/1/2001 の場合、計算列の値は 6/30/2001 になります。  
   
-##  <a name="bkmk_naming"></a>計算列の名前付け  
+##  <a name="naming-a-calculated-column"></a><a name="bkmk_naming"></a>計算列の名前付け  
  既定では、新しい計算列はテーブル内のその他の列の右側に追加され、 **CalculatedColumn1**、 **CalculatedColumn2**などの既定の名前が自動的に割り当てられます。 列を右クリックしてから [列の挿入] をクリックして、2 つの既存列の間に新しい列を作成することもできます。 クリックしてドラッグすることで、同じテーブル内の列を並べ替えることができます。また、列の作成後に名前を変更することもできます。ただし、計算列の変更に対する次の制限事項に注意してください。  
   
 -   それぞれの列名は、1 つのテーブル内で一意である必要があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "67284889"
   
 -   列名に使用できない文字がいくつかあります。 詳細については、「[PowerPivot の DAX 構文の仕様](/dax/dax-syntax-reference)」の「名前付けに関する要件」を参照してください。  
   
-##  <a name="bkmk_perf"></a>計算列のパフォーマンス  
+##  <a name="performance-of-calculated-columns"></a><a name="bkmk_perf"></a>計算列のパフォーマンス  
  計算列で使用される数式は、メジャーで使用される数式よりリソースを大量に消費する可能性があります。 その理由の 1 つとして、計算列の結果が常にテーブルのすべての行を対象に計算されるのに対し、メジャーはレポート、ピボットテーブル、またはピボットグラフに使用されているフィルターで定義されたセルのみを対象として計算されることが挙げられます。 たとえば、テーブルに 100 万行含まれている場合、計算列には必ず 100 万個の結果が含まれるため、それだけパフォーマンスにも影響します。 ただし、ピボットテーブルでは、通常、行見出しおよび列見出しを適用してデータをフィルター処理します。したがって、メジャーは、ピボットテーブルの各セルに含まれているデータのサブセットのみを対象として計算されます。  
   
  数式は、値を評価する他の列や式など、数式で参照されるオブジェクトに依存しています。 たとえば、別の列に基づいている計算列、つまり列参照を使用する式を含む計算は、その別の列が評価されるまで評価することができません。 既定では、ブックで自動更新が有効になっています。したがって、値の更新時や数式の更新時にこうした依存関係すべてがパフォーマンスに影響する可能性があります。  
@@ -77,15 +76,15 @@ ms.locfileid: "67284889"
   
 -   循環依存や自己参照依存を含む数式を作成した場合、エラーが発生します。  
   
-##  <a name="bkmk_rel_tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 関連タスク  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[SSAS 表形式&#41;&#40;計算列を作成する](ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
+|[計算列の作成 &#40;SSAS テーブル&#41;](ssas-calculated-columns-create-a-calculated-column.md)|このトピックのタスクでは、テーブルに新しい計算列を追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のテーブルと列 &#40;&#41;](tables-and-columns-ssas-tabular.md)   
  [SSAS テーブル&#41;&#40;メジャー](measures-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;計算](calculations-ssas-tabular.md)  
+ [計算 (SSAS テーブル)](calculations-ssas-tabular.md)  
   
   

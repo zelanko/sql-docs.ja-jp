@@ -1,6 +1,7 @@
 ---
 title: コントローラー サービスとクライアント サービスのアカウントを変更する
 titleSuffix: SQL Server Distributed Replay
+description: 分散再生コントローラーおよびクライアントのサービス アカウントを変更し、アクセス制御リストを再度適用する方法について学習します。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75238922"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000460"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>コントローラー サービスとクライアント サービスのアカウントを変更する
 
@@ -37,7 +38,7 @@ ms.locfileid: "75238922"
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]** を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]** をクリックします。  
   
-     **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+     **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
     -   ドメイン ユーザー アカウント  
   

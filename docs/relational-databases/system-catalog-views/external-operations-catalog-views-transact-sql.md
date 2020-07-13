@@ -10,24 +10,24 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10a934dc922b21bec8f0df12d4970ce6ddc81576
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cacca0d6558670f48ba0d8458c28d0213e57373f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68016634"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882980"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>外部の操作のカタログビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データソース、ファイル形式、テーブルなどの外部データオブジェクトのカタログビューを次に示します。 これらのビューを使用して、PolyBase 操作で使用される Hadoop テーブルなどの項目の状態を照会します。  
   
- [external_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)  
+ [sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)  
   
- [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+ [sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
- [external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  
+ [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765772"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   各クエリをコンパイルしますが、実行はしません。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68034942"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
@@ -56,7 +56,7 @@ SET NOEXEC { ON | OFF }
 ## <a name="examples"></a>例  
  次の例では、有効なクエリ、有効でないオブジェクト名を持つクエリ、および無効な構文を持つクエリを使用して、`NOEXEC` を実行します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

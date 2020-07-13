@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 019c4ea2744ec27aa7dc24d5065c176551e8cbeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068388"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940393"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>[ディメンションのキーおよび種類を指定] (ディメンション ウィザード)
-  
   **[ディメンションのキーおよび種類を指定]** ページを使用すると、ディメンションのキー属性を定義でき、ディメンションが SCD (緩やかに変化するディメンション) であるかどうかを示すことができます。  
   
 > [!NOTE]  

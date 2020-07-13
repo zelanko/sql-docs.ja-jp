@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 632b36d763cf2498e4d583abfcfdccae9090040e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931940"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 管理ツールのアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降からのアップグレードがサポートされています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、データベース メール、メンテナンス プラン、XPStar、XPWeb などの管理コンポーネントのアップグレードのサポートおよび動作について説明します。  

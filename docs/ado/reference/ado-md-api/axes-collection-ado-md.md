@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Axes collection [ADO MD]
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 36c6a55b5ba59fab0fab3f873225f67b18d2d384
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947404"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765213"
 ---
 # <a name="axes-collection-ado-md"></a>Axes コレクション (ADO MD)
 セルセットを定義する[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトには、 **Axes**コレクションが含まれています。 **セルセット**を開くと、このコレクションには少なくとも1つの**軸**が含まれます。 **軸**オブジェクトの使用方法の詳細については、 [axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)オブジェクトに関する説明を参照してください。  
   
 > [!NOTE]

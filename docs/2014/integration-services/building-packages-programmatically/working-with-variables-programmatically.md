@@ -19,15 +19,14 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cb2cd5b00ddb8f6d334ace778305b5814c915b62
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176543"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439249"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
   変数を使用すると、値を動的に設定し、パッケージ、コンテナー、タスク、およびイベント ハンドラーの処理を制御できます。 また、優先順位制約で変数を使用して、別のタスクへのデータ フローの方向を制御することもできます。 変数には、以下のようにさまざまな使用方法があります。
@@ -46,7 +45,7 @@ ms.locfileid: "78176543"
 
 -   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>スコープ
  各コンテナーには、独自の <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションが含まれています。 新しい変数が作成されると、その親コンテナーのスコープ内に格納されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 また、子コンテナーは、<xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションを介して、親コンテナーの変数コレクションにアクセスできます。アクセスするには、コレクション内の変数名または変数のインデックスのどちらかを使用します。
 
  変数は上から順にスコープされるため、パッケージ レベルで宣言された変数は、パッケージ内のすべてのコンテナーで使用できます。 したがって、コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションには、コンテナー独自の変数だけでなく、その親コンテナーに属するすべての変数が含まれます。
@@ -158,11 +157,11 @@ End Module
  **System** 名前空間で有効なすべての変数は、パッケージで使用できます。 詳細については、「 [システム変数](../system-variables.md)」を参照してください。
 
 ## <a name="namespaces"></a>名前空間
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、変数が存在する2つの既定の名前空間を[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供します。**ユーザー**と**システム**の名前空間。 既定では、開発者が作成したカスタム変数は、**User** 名前空間に追加されます。 システム変数は、**System** 名前空間に属します。 **User** 名前空間以外の名前空間を追加作成してカスタム変数を保持したり、**User** 名前空間の名前を変更することはできますが、**System** 名前空間の変数を追加したり、変更することはできません。また、システム変数を別の名前空間に割り当てることもできません。
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) では、**User** および **System** 名前空間という 2 つの既定の名前空間が提供され、変数はこれらの名前空間に属します。 既定では、開発者が作成したカスタム変数は、**User** 名前空間に追加されます。 システム変数は、**System** 名前空間に属します。 **User** 名前空間以外の名前空間を追加作成してカスタム変数を保持したり、**User** 名前空間の名前を変更することはできますが、**System** 名前空間の変数を追加したり、変更することはできません。また、システム変数を別の名前空間に割り当てることもできません。
 
  使用できるシステム変数は、コンテナーの種類によって異なります。 パッケージ、コンテナー、タスク、およびイベント ハンドラーで使用できるシステム変数の一覧については、「[システム変数](../system-variables.md)」を参照してください。
 
-## <a name="value"></a>Value
+## <a name="value"></a>値
  カスタム変数の値には、リテラルまたは式を設定できます。
 
 -   変数にリテラル値を格納する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティの値を設定します。
@@ -228,9 +227,9 @@ End Module
 ## <a name="configuration-files"></a>構成ファイル
  構成ファイルにカスタム変数を含めると、実行時に変数を更新できます。 つまり、パッケージを実行すると、パッケージにあらかじめ含まれていた変数の値は、構成ファイルの新しい値で置き換えられます。 この置き換え方法を使用すると、異なる変数値が必要な複数のサーバーにパッケージを配置するときに便利です。 たとえば、変数を使用して、**Foreach ループ** コンテナーがそのワークフローを繰り返す回数を指定したり、エラーが発生したときにイベント ハンドラーが送信する電子メールの受信者を一覧表示したり、パッケージが失敗するまでのエラーの発生回数を変更できます。 これらの変数は、各環境の構成ファイルで動的に指定できます。 したがって、構成ファイルでは読み取り/書き込み用の変数のみを使用できます。 詳細については、「 [パッケージ構成を作成する](../create-package-configurations.md)」を参照してください。
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md) [パッケージでの変数の使用](../use-variables-in-packages.md)
 
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 21d0f6f006328d8843bbbe12ee066a8564fb722a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064286"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>データベース ダイアグラムの所有権について (Visual Database Tools)
   データベース ダイアグラム デザイナーを使用するには、db_owner ロール ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのロール) のメンバーが、ダイアグラムへのアクセスを制御するようにあらかじめ設定しておく必要があります。 各ダイアグラムの所有者は 1 人だけで、ダイアグラムを作成したユーザーが所有者になります。 ダイアグラムの設定の詳細については、「[データベースダイアグラムデザイナー &#40;Visual Database Tools&#41;のセットアップ](visual-database-tools.md)」を参照してください。  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85780c6b265334ba16dd00e4a09dff732ab03228
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833641"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434149"
 ---
 # <a name="multiple-files-connection-manager"></a>複数ファイル接続マネージャー
   複数ファイル接続マネージャーを使用すると、パッケージで既存のファイルやフォルダーを参照したり、実行時にファイルやフォルダーを作成したりできます。  
@@ -35,7 +34,7 @@ ms.locfileid: "62833641"
   
  次の表に、`FileUsageType` の値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|複数ファイル接続マネージャーは、既存のファイルを使用します。|  
 |**1**|複数ファイル接続マネージャーは、ファイルを作成します。|  
@@ -57,9 +56,9 @@ ms.locfileid: "62833641"
   
  複数ファイル接続マネージャーが複数のファイルとフォルダーを参照する場合、そのファイルとフォルダーのパスは、パイプ (|) 文字で区切ります。 この接続マネージャーの `ConnectionString` プロパティの形式は、次のとおりです。  
   
- \<*パス*>|\<*パス*>  
+ \<*path*>|\<*path*>  
   
- 複数のファイルまたはフォルダーを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ上のすべてのテキストファイルを参照するには、 `ConnectionString`プロパティの値を c:\\* .txt に設定します。  
+ 複数のファイルまたはフォルダーを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ上のすべてのテキストファイルを参照するには、プロパティの値を `ConnectionString` c: * .txt に設定します \\ 。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   

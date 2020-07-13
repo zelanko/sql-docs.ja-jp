@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d377fe18423ba24252afcfa1634713798f815dd3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900020"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430159"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩やかに変化するディメンション ウィザードの F1 ヘルプ
   **緩やかに変化するディメンション ウィザード** を使用すると、さまざまな種類の緩やかに変化するディメンションへのデータの読み込みを設定できます。 ここでは、 **緩やかに変化するディメンション ウィザード**のページの F1 ヘルプについて紹介します。 このトピックでは、次の内容について紹介します。  

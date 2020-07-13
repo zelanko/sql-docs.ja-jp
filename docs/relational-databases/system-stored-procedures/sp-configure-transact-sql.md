@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73536214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828426"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,11 +60,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name*は**varchar (35)**,、既定値は NULL です。 は[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
+`[ @configname = ] 'option_name'`構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 構成名の一部である一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
  使用可能な構成オプションとその設定の詳細については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-`[ @configvalue = ] 'value'`新しい構成設定を示します。 *値*は**int**,、既定値は NULL です。 最大値はオプションごとに異なります。  
+`[ @configvalue = ] 'value'`新しい構成設定を示します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
   
  各オプションの最大値を確認するには、[**構成**] カタログビューの [**最大**] 列を参照してください。  
   
@@ -76,15 +76,15 @@ RECONFIGURE
   
  **Config_value**と**run_value**の値は、自動的には等価ではありません。 **Sp_configure**を使用して構成設定を更新した後、システム管理者は、上書きを使用して再構成または再構成のいずれかを使用して、実行中の構成値を更新する必要があります。 詳細については、「解説」を参照してください。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (35)**|構成オプションの名前。|  
+|**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**以降**|**int**|構成オプションの最小値。|  
 |**個**|**int**|構成オプションの最大値。|  
 |**config_value**|**int**|**Sp_configure**を使用して構成オプションが設定された値 ( **sys. 構成**の値)。 これらのオプションの詳細については、次を参照してください。[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)および[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)です。|  
 |**run_value**|**int**|構成オプションの現在実行中の値 ( **value_in_use**)。<br /><br /> 詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」を参照してください。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバーレベルの設定を表示または変更するには、 **sp_configure**を使用します。 データベースレベルの設定を変更するには、ALTER DATABASE を使用します。 現在のユーザー セッションのみに影響する設定を変更するには、SET ステートメントを使用します。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > オプション値が適切でない場合、サーバー インスタンスの構成に悪影響を及ぼす可能性があります。 上書きを伴う再構成を慎重に使用してください。  
   
- 一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 たとえば、 **min server memory**および**max server memory** server memory オプションは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で動的に更新されます。そのため、サーバーを再起動しなくても変更できます。 これに対して、 **FILL FACTOR**オプションの実行中の値を再[!INCLUDE[ssDE](../../includes/ssde-md.md)]構成するには、を再起動する必要があります。  
+ 一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 たとえば、 **min server memory**および**max server memory** server memory オプションは、で動的に更新されます [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。したがって、サーバーを再起動しなくても、これらを変更できます。 これに対して、 **FILL FACTOR**オプションの実行中の値を再構成するには、を再起動する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
  構成オプションで再構成を実行した後、 **sp_configure '***option_name***'** を実行することで、オプションが動的に更新されたかどうかを確認できます。 動的に更新されるオプションでは、 **run_value**列と**config_value**列の値が一致する必要があります。 また、[**構成**] カタログビューの [ **is_dynamic** ] 列を参照して、動的なオプションを確認することもできます。  
  
  変更は、SQL Server のエラーログにも書き込まれます。
   
 > [!NOTE]  
->  指定された値がオプションに対して大きすぎる場合、 **run_value**列には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が有効ではない設定を使用するのではなく、動的メモリに既定*値*が設定されているという事実が反映されます。  
+>  指定された*値*がオプションに対して大きすぎる場合、 **run_value**列には、が [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有効ではない設定を使用するのではなく、動的メモリに既定値が設定されているという事実が反映されます。  
   
  詳細については、「 [transact-sql&#41;の再構成 &#40;](../../t-sql/language-elements/reconfigure-transact-sql.md)」を参照してください。  
   
@@ -121,7 +121,7 @@ RECONFIGURE
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-the-advanced-configuration-options"></a>A. 詳細構成オプションの一覧表示  
- 次の例は、すべての構成オプションを設定および一覧表示する方法を示しています。 詳細な構成オプションは、最初の`show advanced option`設定`1`でに表示されます。 このオプションを変更した後、 `sp_configure`パラメーターを指定せずにを実行すると、すべての構成オプションが表示されます。  
+ 次の例は、すべての構成オプションを設定および一覧表示する方法を示しています。 詳細な構成オプションは、最初の設定でに表示され `show advanced option` `1` ます。 このオプションを変更した後、 `sp_configure` パラメーターを指定せずにを実行すると、すべての構成オプションが表示されます。  
   
 ```sql  
 USE master;  
@@ -131,8 +131,7 @@ EXEC sp_configure 'show advanced option', '1';
   
  "構成オプション ' show advanced options ' が0から1に変更されました。 再構成ステートメントを実行してインストールします。 "  
   
- 
-  `RECONFIGURE` を実行し、すべての構成オプションを表示します。  
+ `RECONFIGURE` を実行し、すべての構成オプションを表示します。  
   
 ```sql  
 RECONFIGURE;  
@@ -149,7 +148,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. すべての使用可能な構成設定を一覧表示する  
  次の例では、すべての構成オプションを一覧表示する方法を示します。  
@@ -158,8 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再構成が[!INCLUDE[ssDW](../../includes/ssdw-md.md)]完了したときにが使用する値です。 
-  **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
+ 結果は、オプションの最小値と最大値が続くオプション名を返します。 **Config_value**は、再 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 構成が完了したときにが使用する値です。 **run_value** は、現在使用されている値です。 値が変更中のプロセスではない限り、 **config_value** と **run_value** は、通常は同じ値です。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 1 つの構成名の構成設定を一覧表示する  
   
@@ -172,9 +170,9 @@ EXEC sp_configure @configname='hadoop connectivity';
   
 ## <a name="see-also"></a>参照  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [SET ステートメント &#40;Transact-sql&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [構成 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [ALTER DATABASE スコープ構成 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   

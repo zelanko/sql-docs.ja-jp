@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c1abadb962e3a1ee9327bbb8d84e52d180b4a7e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996219"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292462"
 ---
 # <a name="appendix-d-data-types"></a>付録 D: データ型
 ODBC では、SQL データ型と C データ型の2つのデータ型セットが定義されています。 SQL データ型は、データソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションバッファーに格納されているデータのデータ型を示します。  

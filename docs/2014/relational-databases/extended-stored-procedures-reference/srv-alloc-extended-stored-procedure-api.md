@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 729675f7df3a4e394bb28f4074644289489ef248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63138909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050796"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  メモリを動的に割り当てます。  
   
@@ -46,16 +44,14 @@ size
 ```  
   
 ## <a name="arguments"></a>引数  
- *幅*  
+ *size*  
  割り当てるバイト数を指定します。  
   
 ## <a name="returns"></a>戻り値  
- 新しく割り当てた領域を指すポインターを返します。 
-  *size* で指定したバイト数を割り当てられない場合は、NULL ポインターを返します。  
+ 新しく割り当てた領域を指すポインターを返します。 *size* で指定したバイト数を割り当てられない場合は、NULL ポインターを返します。  
   
-## <a name="remarks"></a>解説  
- 
-  **srv_alloc** 関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API の **GlobalAlloc** 関数に相当します。 拡張ストアド プロシージャ API アプリケーションでは、通常の Windows API C ランタイムのメモリ管理関数を使用できます。  
+## <a name="remarks"></a>Remarks  
+ **srv_alloc** 関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API の **GlobalAlloc** 関数に相当します。 拡張ストアド プロシージャ API アプリケーションでは、通常の Windows API C ランタイムのメモリ管理関数を使用できます。  
   
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  

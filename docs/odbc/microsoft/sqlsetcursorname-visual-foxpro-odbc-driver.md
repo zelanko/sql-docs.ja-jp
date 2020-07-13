@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab3e9a0ee13cca4950ec7797b2cebed3a0437f55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b89bc77d12a4966762fa3aa2cf8b702ca6b47ac6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905477"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306127"
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

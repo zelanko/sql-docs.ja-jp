@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], installing
 - installing ODBC driver for Oracle [ODBC]
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f3be4f2ce9a3388d53a4d8474e5c1ca172842b5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9bddfd9947017cc94214e57948e495b06cccc1cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085510"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299982"
 ---
 # <a name="installing-the-software-odbc"></a>インストール (ODBC)
 > [!IMPORTANT]  

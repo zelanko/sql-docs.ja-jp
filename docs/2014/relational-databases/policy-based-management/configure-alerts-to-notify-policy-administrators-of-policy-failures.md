@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 89313c31c47dcd69b08ef6e7ca38d3af7e2a0f2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63126911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068912"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>ポリシー管理者にポリシー エラーを通知する警告の構成
   ポリシー ベースの管理ポリシーが 3 つの自動評価モードのいずれかで実行された場合にポリシー違反が発生すると、メッセージがイベント ログに書き込まれます。 このメッセージがイベント ログに書き込まれたときに通知を受けるには、メッセージを検出してアクションを実行する警告を作成します。 警告は、次の表に示すようにメッセージを検出します。  
@@ -45,8 +44,7 @@ ms.locfileid: "63126911"
 ## <a name="additional-considerations-about-alerts"></a>警告に関するその他の注意点  
  警告に関するその他の注意点を次に示します。  
   
--   警告は、有効になっているポリシーに対してのみ発生します。 
-  **[要求時]** ポリシーは有効にできないので、要求時に実行されるポリシーに対して警告は発生しません。  
+-   警告は、有効になっているポリシーに対してのみ発生します。 **[要求時]** ポリシーは有効にできないので、要求時に実行されるポリシーに対して警告は発生しません。  
   
 -   実行するアクションに電子メール メッセージの送信が含まれる場合は、メール アカウントを構成する必要があります。 データベース メールを使用することをお勧めします。 データベース メールをセットアップする方法の詳細については、「 [データベース メール アカウントの作成](../database-mail/create-a-database-mail-account.md)」を参照してください。  
   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47140db35618143522ad217f5eda2aa3d4b7507b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3f2597c456a3b71318b068f6ac4ffa8a4f46b894
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62898415"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428819"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 式)
   ある日付の、日の日付要素を表す整数値を返します。  

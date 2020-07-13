@@ -10,22 +10,21 @@ f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8273ad5edc65dd7351533209e9fa670c49f75f7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929983"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>[オプション] ([クエリ結果] - [SQL Server] - [マルチサーバー])
   複数のサーバーに対して同時にクエリを実行する場合、このページで結果セットの表示オプションを指定します。 結果をマージすると、すべてのサーバーからの結果セットが 1 つの結果セットに結合されます。 結果をマージする場合は、最初に応答したサーバーによって結果セットのスキーマが設定されます。 結果セットをマージするには、クエリから返される列の数とその列名が、各サーバーで同じであることが必要です。 結果をマージする際には、最初に結果を返したサーバーから返されたスキーマ (列数と列名) と一致しないサーバーごとにメッセージが表示されます。  
   
  結果をマージしない場合は、各サーバーからの結果セットが、それぞれのスキーマを使用した固有のグリッドに表示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[結果のマージ]**  
  複数のサーバーからの結果セットを同じグリッドに結合する場合は、このチェック ボックスをオンにします。  
   

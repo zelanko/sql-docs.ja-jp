@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107994"
 ---
 # <a name="query-builder-report-wizard"></a>クエリ ビルダー (レポート ウィザード)
@@ -34,12 +34,11 @@ ms.locfileid: "66107994"
  別のレポートからクエリをインポートすることもできます。  
   
 ## <a name="query-builder-options"></a>クエリ ビルダーのオプション  
- **テキストとして編集**  
+ **[テキストとして編集]**  
  テキスト ベースのクエリ デザイナーとグラフィカル クエリ デザイナーを切り替えます (両方のデザイナーが使用できる場合)。  
   
- **[インポート]**  
- 
-  **[クエリのインポート]** ダイアログ ボックスを開き、利用可能なレポートの .rdl ファイルおよび .sql ファイルを表示します。 インポートされたクエリはそのまま使用することもできますが、クエリ ビルダーで修正することもできます。  
+ [**インポート**]  
+ **[クエリのインポート]** ダイアログ ボックスを開き、利用可能なレポートの .rdl ファイルおよび .sql ファイルを表示します。 インポートされたクエリはそのまま使用することもできますが、クエリ ビルダーで修正することもできます。  
   
  **[!] (実行)**  
  クエリを実行し、クエリが有効であれば結果セットを返します。 クエリが式の場合、そのクエリは実行できません。 式に基づくクエリかどうかを確認するには、レポートをプレビューする必要があります。  
@@ -54,7 +53,7 @@ ms.locfileid: "66107994"
  クエリから返された結果セットが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  
   
   

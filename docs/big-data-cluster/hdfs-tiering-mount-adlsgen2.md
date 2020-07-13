@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層制御の ADLS Gen2 のマウント
 titleSuffix: How to mount ADLS Gen2
-description: この記事では、外部の Azure Data Lake Storage ファイル システムを [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
+description: この記事では、外部の Azure Data Lake Storage ファイル システムを SQL Server 2019 ビッグ データ クラスター上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215382"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606524"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 

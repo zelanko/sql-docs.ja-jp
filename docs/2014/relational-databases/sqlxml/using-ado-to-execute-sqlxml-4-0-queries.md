@@ -13,15 +13,14 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50fea140fec2b59e1869d8aaf15e37220ac28bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065651"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
   以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
@@ -93,7 +92,7 @@ ms.locfileid: "75251417"
   
     -   "`@@FILE_NAME@@`" をテンプレート ファイルの名前に置き換えます。  
   
-    -   "`@@SERVER_NAME@@`" を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前 (`(local)` をローカルで実行している場合は "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" など) に置き換えます。  
+    -   "`@@SERVER_NAME@@`" を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をローカルで実行している場合は "`(local)`" など) に置き換えます。  
   
     -   "`@@DATABASE_NAME@@`" をデータベースの名前 ("`AdventureWorks2012`" や "`tempdb`" など) に置き換えます。  
   
@@ -119,9 +118,9 @@ ms.locfileid: "75251417"
     3.  現在インストールされているプログラムの一覧で、[ **Microsoft SQL Server Native Client** ] が一覧に表示されていることを確認します。  
   
         > [!NOTE]  
-        >  Native Client をインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する必要がある場合は、「SQL Server Native Client の[インストール](../native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
+        >  Native Client をインストールする必要がある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server Native Client のインストール](../native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイト[https://www.microsoft.com/](https://www.microsoft.com/)から無料でダウンロードできます。 詳細については、Microsoft Web サイトの「MDAC Component Checker」を検索してください。  
+2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから無料でダウンロードでき [https://www.microsoft.com/](https://www.microsoft.com/) ます。 詳細については、Microsoft Web サイトの「MDAC Component Checker」を検索してください。  
   
 3.  スクリプトを実行します。  
   

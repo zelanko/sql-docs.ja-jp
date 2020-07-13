@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a50b7ce1db0aa390d4fee9fa4e5752c1444dfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11f3c05128a0bf0b460137e94c94529631042e67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62864563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027814"
 ---
 # <a name="user-configurable-event-category"></a>ユーザー構成可能イベント カテゴリ
   **ユーザー構成可能** イベント カテゴリには、 **ユーザーが構成可能** なイベント クラスが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ユーザー構成可能イベント クラス](user-configurable-event-class.md)|他のイベント カテゴリにあるシステム提供のイベントでは監視できないユーザー定義イベントを監視するために使用します。|  
   

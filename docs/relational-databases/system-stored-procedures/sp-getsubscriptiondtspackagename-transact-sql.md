@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f8b8f0a91715a2af0cb794965e2de6ad520cabd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b52cc85ed5576ab40599141b551382a288c537f7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68123927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881599"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サブスクライバーに送信される前にデータを変換するために使用されるデータ変換サービス (DTS) パッケージの名前を返します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。  
   
@@ -47,11 +47,11 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS パッケージの名前です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_getsubscriptiondtspackagename**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

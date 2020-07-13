@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e1e2d9cf44435ad61d81ae1f63e4e616c5e673c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177205"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -36,7 +36,7 @@ ms.locfileid: "78177205"
 
 -   [トレース ログの場所](#bkmk_trace)
 
-##  <a name="bkmk_general"></a> ULS ログの一般的な推奨事項
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> ULS ログの一般的な推奨事項
  次の表は、イベントのカテゴリの一覧です。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境を監視する場合の推奨されるレベルも記載されています。 イベントをログに記録した場合、各エントリには、イベントが記録された時刻、プロセス名、およびスレッド ID が記録されます。
 
 |カテゴリ|Level|説明|
@@ -47,7 +47,7 @@ ms.locfileid: "78177205"
 |トポロジ|"詳細"|現在のユーザー情報が記録されます。|
 |Web パーツ|"詳細"|レポート ビューアー Web パーツへのアクセスを伴うイベントが記録されます。|
 
-##  <a name="bkmk_turnon"></a> Reporting Services カテゴリ内の Reporting Services イベントのオン/オフを切り替えるには
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> Reporting Services カテゴリ内の Reporting Services イベントのオン/オフを切り替えるには
 
 1.  SharePoint サーバーの全体管理で、以下の操作を行います。
 
@@ -66,7 +66,7 @@ ms.locfileid: "78177205"
 > [!NOTE]
 >  **[イベント ログの記録対象となる重要度の最も低いイベント]** オプションは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ではサポートされません。 オプションは無視されます。
 
-##  <a name="bkmk_recommended"></a> 推奨構成
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> 推奨構成
  次のログ オプションが標準構成として推奨されます。
 
 -   **HTTP リダイレクター**
@@ -81,7 +81,7 @@ ms.locfileid: "78177205"
 Get-SPDiagnosticConfig
 ```
 
-##  <a name="bkmk_readentries"></a> ログ エントリの読み取り
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> ログ エントリの読み取り
  ログ内の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] エントリは、次の方法で書式設定されます。
 
 1.  **Product:SQL Server Reporting Services**
@@ -90,7 +90,7 @@ Get-SPDiagnosticConfig
 
 3.  **カテゴリ:** Web フロントエンド コンポーネントに関連するイベントや、Web フロントエンド コンポーネントから伝えられたイベントには、"Report Server" は付けられません。 例: "Service Application Proxy" "Report Server Alerting Runtime"。 WFE エントリには CorrelationID が含まれますが、サーバー エントリには含まれません。
 
-##  <a name="bkmk_list"></a> SQL Server Reporting Services イベントの一覧
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> SQL Server Reporting Services イベントの一覧
  次の表に示すのは、SQL Server Reporting Services カテゴリに含まれるイベントの一覧です。
 
 |領域の名前|説明またはサンプルのエントリ|
@@ -125,7 +125,7 @@ Get-SPDiagnosticConfig
 |レポート サーバー プロバイダー||
 |レポート サーバー レンダリング||
 |レポート サーバー レポート プレビュー||
-|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU:評価<br /><br /> MediumEvaluation copy コピー:180 日間残っています|
+|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation コピー: 180 日間残っています|
 |レポート サーバー実行中ジョブ||
 |レポート サーバー実行中要求||
 |レポート サーバー スケジュール||
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |サービス アプリケーション プロキシ||
 |共有サービス|サンプルのエントリ:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> コンテンツ データベースへの MediumGranting アクセス。<br /><br /> ReportingWebServiceApplication の MediumProvisioning インスタンス<br /><br /> ReportingWebServiceApplication の MediumProcessing サービス アカウントの変更<br /><br /> MediumSetting データベース権限。|
 
-##  <a name="bkmk_powershell"></a> PowerShell でのログ ファイルの表示
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> PowerShell でのログ ファイルの表示
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のフィルターされたリストが返されます。
 
 ```powershell
@@ -149,6 +149,6 @@ Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
 
  PowerShell を使用してログ データを表示する方法の詳細については、「 [診断ログを表示する (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)」を参照してください。
 
-##  <a name="bkmk_trace"></a>トレースログの場所
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a>トレースログの場所
  トレース ログ ファイルは通常、 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** フォルダーにありますが、SharePoint サーバーの全体管理の **[診断ログ]** ページから、パスを確認または変更することもできます。
 

@@ -1,21 +1,20 @@
 ---
 title: スキーマ比較の拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用のスキーマ比較の拡張機能をインストールして使用します
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73532541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758400"
 ---
 # <a name="schema-compare-extension"></a>スキーマ比較の拡張機能
 スキーマ比較の拡張機能では、2 つのデータベース定義を比較して、ソースとターゲットの相違を適用するための使いやすいエクスペリエンスが提供されます。

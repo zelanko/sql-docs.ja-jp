@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097298"
 ---
 # <a name="union--mdx"></a>Union (MDX)
@@ -41,10 +41,10 @@ Alternate syntax 2
  *式2の設定*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、2つ以上の指定されたセットの和集合を返します。 標準構文を使用し、別の構文1を使用すると、既定では重複が除去されます。 標準構文では、 **ALL**フラグを使用すると、結合されたセット内の重複部分が保持されます。 重複は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、各構文を使用した**Union**関数の動作を示します。  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>標準構文、重複部分の除去  
@@ -96,6 +96,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

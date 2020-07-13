@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2026bcae8e0923159f6fb1044ab379d439993400
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965216"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762793"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder プロパティ (ADOX)
 列の並べ替え順序を示します (インデックス列のみ)。  

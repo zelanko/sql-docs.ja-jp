@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829326"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>dm_os_volume_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
-  指定されたデータベースおよびファイルが格納されているオペレーティングシステムボリューム (ディレクトリ) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関する情報を返します。 この動的管理関数は、物理ディスク ドライブの属性を確認する場合や、ディレクトリの使用可能な空き容量に関する情報を取得する場合に使用します。  
+  指定されたデータベースおよびファイルが格納されているオペレーティングシステムボリューム (ディレクトリ) に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この動的管理関数は、物理ディスク ドライブの属性を確認する場合や、ディレクトリの使用可能な空き容量に関する情報を取得する場合に使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,18 +38,18 @@ ms.locfileid: "67899719"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  *database_id*  
- データベースの ID です。 *database_id*は**int**,、既定値はありません。 NULL にすることはできません。  
+ データベースの ID です。 *database_id* は** int**, 、既定値はありません。 Nll は指定できません。  
   
  *file_id*  
- ファイルの ID。 *file_id*は**int**,、既定値はありません。 NULL にすることはできません。  
+ ファイルの ID。 *file_id*は**int**,、既定値はありません。 Nll は指定できません。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 ||||  
 |-|-|-|  
-|**列**|**データ型**|**説明**|  
+|**列**|**データの種類**|**説明**|  
 |**database_id**|**int**|データベースの ID です。 null にすることはできません。|  
 |**file_id**|**int**|ファイルの ID。 null にすることはできません。|  
 |**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 は空の文字列を返すことができます。|  
@@ -67,8 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 
-  `VIEW SERVER STATE` 権限が必要です。  
+ `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -92,6 +91,6 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
   
 ## <a name="see-also"></a>参照  
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

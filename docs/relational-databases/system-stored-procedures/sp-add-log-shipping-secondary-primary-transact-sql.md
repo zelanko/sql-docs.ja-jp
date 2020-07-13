@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1768b25ccb4f0e4ad2e75f3d667123d082dd4237
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72909684"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879777"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したプライマリ データベースのセカンダリ サーバーに対して、プライマリ情報の設定、ローカルおよびリモート監視リンクの追加、コピー ジョブと復元ジョブの作成を行います。  
   
@@ -53,7 +53,7 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @primary_server = ] 'primary_server'`ログ配布構成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]におけるのプライマリインスタンスの名前。 *primary_server*は**sysname**であり、NULL にすることはできません。  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server*は**sysname**であり、NULL にすることはできません。  
   
 `[ @primary_database = ] 'primary_database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
   
@@ -61,11 +61,11 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`バックアップファイルのコピー先となるセカンダリサーバー上のディレクトリ。 *backup_destination_directory*は**nvarchar (500)** であり、NULL にすることはできません。  
   
-`[ @copy_job_name = ] 'copy_job_name'`トランザクションログバックアップをセカンダリサーバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にコピーするために作成されるエージェントジョブに使用する名前。 *copy_job_name*は**sysname**であり、NULL にすることはできません。  
+`[ @copy_job_name = ] 'copy_job_name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションログバックアップをセカンダリサーバーにコピーするために作成されるエージェントジョブに使用する名前。 *copy_job_name*は**sysname**であり、NULL にすることはできません。  
   
-`[ @restore_job_name = ] 'restore_job_name'`セカンダリデータベースにバックアップを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]復元するセカンダリサーバー上のエージェントジョブの名前を指定します。 *restore_job_name*は**sysname**であり、NULL にすることはできません。  
+`[ @restore_job_name = ] 'restore_job_name'`セカンダリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにバックアップを復元するセカンダリサーバー上のエージェントジョブの名前を指定します。 *restore_job_name*は**sysname**であり、NULL にすることはできません。  
   
-`[ @file_retention_period = ] 'file_retention_period'`@backup_destination_directoryパラメーターで指定されたパスでバックアップファイルがセカンダリサーバーに保持される時間 (分単位)。この時間を経過すると、削除されます。 *history_retention_period*は**int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
+`[ @file_retention_period = ] 'file_retention_period'`パラメーターで指定されたパスでバックアップファイルがセカンダリサーバーに保持される時間 (分単位)。この時間を経過すると、 @backup_destination_directory 削除されます。 *history_retention_period*は**int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
 `[ @monitor_server = ] 'monitor_server'`監視サーバーの名前を指定します。 *Monitor_server*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
@@ -73,7 +73,7 @@ sp_add_log_shipping_secondary_primary
   
  1 = Windows 認証。  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。  
   
  *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
   
@@ -113,8 +113,8 @@ sp_add_log_shipping_secondary_primary
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- この例では、 **sp_add_log_shipping_secondary_primary**ストアドプロシージャを使用して、セカンダリサーバー上[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のプライマリデータベースの情報を設定する方法を示します。  
+## <a name="examples"></a>使用例  
+ この例では、 **sp_add_log_shipping_secondary_primary**ストアドプロシージャを使用して、セカンダリサーバー上のプライマリデータベースの情報を設定する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -135,6 +135,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

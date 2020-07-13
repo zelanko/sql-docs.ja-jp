@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3471c54ae18269c281104c3572235099bcf4e61b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ea8098d3dd6a1512f83022fe7ab7e733bd42ae5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571294"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636390"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting メソッド - RemoveURL
   レポート サーバー用に予約されている URL を削除します。 削除の対象となる URL が複数ある場合は、この API を 1 つずつ呼び出して URL を削除する必要があります。  
@@ -57,7 +57,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
  [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) メソッドを呼び出す前に、 *Application* パラメーターの VirtualDirectory 構成プロパティの値を指定する必要があります。 [SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) メソッドを利用し、VirtualDirectory プロパティを設定します。  
   
- SSL 証明書が [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で準備されていて、他の URL でその証明書を使用する必要がない場合、その SSL 証明書は削除されます。  
+ TLS/SSL 証明書が、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってプロビジョニングされていて他の URL で不要である場合は、削除されます。  
   
  このメソッドにより、すべての非構成アプリケーション ドメインで強制力の高いリサイクル処理が実行され、その処理中にそれらのドメインは停止します。アプリケーション ドメインは、この処理の完了後に再起動します。  
   

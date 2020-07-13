@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DBase indexes [ODBC]
 - DBase driver [ODBC], indexes
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9a0a57c3dce920c6d5fbc2510932066cb5a2659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9300a38a0e36da771a238f73b77d3dda527334ae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096357"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307673"
 ---
 # <a name="dbase-indexes"></a>dBASE インデックス
 ODBC dBASE ドライバーが自動的に開き、dBASE IV インデックスファイルが更新されます。 DBASE III. ndx ファイルを dBASE ファイルに関連付けるには、ODBC データソースアドミニストレーターで表示される **[インデックスの選択**] ダイアログボックスを使用する必要があります。  

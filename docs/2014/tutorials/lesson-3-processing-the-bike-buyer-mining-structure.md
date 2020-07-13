@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62655799"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>レッスン 3: Bike Buyer マイニング構造の処理
@@ -86,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Bike Buyer  
@@ -98,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Customer Key],  
@@ -123,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     OPENQUERY([Adventure Works DW],  

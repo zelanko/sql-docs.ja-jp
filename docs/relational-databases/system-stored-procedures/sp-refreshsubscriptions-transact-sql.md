@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a2a0c662d74e99a9d8151026dd514a39dd0e7c70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719239"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   すべての既存のサブスクライバーに対するサブスクリプションを、即時更新パブリケーションに追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -53,8 +53,8 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_refreshsubscriptions**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

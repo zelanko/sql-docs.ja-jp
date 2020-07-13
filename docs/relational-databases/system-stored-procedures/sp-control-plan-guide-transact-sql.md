@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870141"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   プランガイドを削除するか、有効または無効にします。  
   
@@ -71,12 +71,12 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  現在のデータベース内のすべてのプランガイドを有効にします。 ENABLE ALL が指定されている場合、 **N '**_plan_guide_name_**'** を指定することはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
   
  無効なプラン ガイドを無効にする場合や、有効なプラン ガイドを有効にする場合は影響は生じず、エラーなしで実行できます。  
   
- プランガイドは、のすべての[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、の任意の**** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションの [すべて削除] または [すべて削除] オプションを使用して sp_control_plan_guide を実行できます。  
+ プランガイドは、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、の任意のエディションの [すべて削除] または [すべて削除] オプションを使用して**sp_control_plan_guide**を実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
  オブジェクト型 ( ** @type = '** OBJECT **'** を指定して作成) のプランガイドで**sp_control_plan_guide**を実行するには、プランガイドによって参照されるオブジェクトに対する ALTER 権限が必要です。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
@@ -124,7 +124,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. 現在のデータベース内のすべてのプランガイドを無効にする  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B: 現在のデータベース内のすべてのプランガイドを無効にする  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのすべてのプラン ガイドを無効にします。  
   
 ```  
@@ -133,11 +133,11 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [プランガイド](../../relational-databases/performance/plan-guides.md)  
+ [プラン ガイド](../../relational-databases/performance/plan-guides.md)  
   
   

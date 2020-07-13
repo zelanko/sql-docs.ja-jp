@@ -27,15 +27,15 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f9dfe52c4a55d260b32879a803d771271ac2034
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246160"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003634"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ユーザー、データベース ロール、またはアプリケーション ロールに対する権限を許可します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75246160"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -170,7 +170,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーに許可する  
- 次の例では、`CONTROL` のユーザー `AdventureWorks2012` に対する `Wanida` 権限を、ユーザー `RolandX` に許可します。  
+ 次の例では、`AdventureWorks2012` のユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` に許可します。  
   
 ```  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -178,7 +178,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、GRANT OPTION を指定してユーザーに許可する  
- 次の例では、`VIEW DEFINITION` のロール `AdventureWorks2012` に対する `SammamishParking` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
+ 次の例では、`AdventureWorks2012` のロール `SammamishParking` に対する `VIEW DEFINITION` 権限を、`GRANT OPTION` を指定して、データベース ユーザー `JinghaoLiu` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -187,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールに許可する  
- 次の例では、ユーザー `IMPERSONATE` に対する `HamithaL` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
+ 次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   

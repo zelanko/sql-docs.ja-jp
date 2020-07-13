@@ -17,44 +17,42 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547216"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多次元モデル内のデータ ソース ビュー
   データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでは 1 つまたは複数のデータ ソースに関する複数のデータ ソース ビューを構築して、各ソリューションの要件を各ビューが満たすようにすることができます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでは 1 つまたは複数のデータ ソースに関する複数のデータ ソース ビューを構築して、各ソリューションの要件を各ビューが満たすようにすることができます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データソースビュー &#40;Analysis Services の定義&#41;](defining-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューの定義 (Analysis Services)](defining-a-data-source-view-analysis-services.md)  
   
- [データソースビューでのテーブルまたはビューの追加または削除 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューでの論理リレーションシップの定義 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューでの論理主キーの定義 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの論理主キーの定義 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューで名前付き計算を定義する &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューでの名前付きクエリの定義 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューのテーブルまたは名前付きクエリの置換 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [データソースビューデザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [データソースビューでのデータの探索 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでのデータの検索 (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [データソースビュー &#40;Analysis Services の削除&#41;](delete-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューの削除 (Analysis Services)](delete-a-data-source-view-analysis-services.md)  
   
- [データソースビューのスキーマを更新する &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでのスキーマの更新 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
  [スキーマ生成ウィザード &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   

@@ -11,18 +11,17 @@ topic_type:
 helpviewer_keywords:
 - SQLCloseCursor function
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770a67432868516e5023d1cf0ff819501b4c130e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022880"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SqlcloSQLFreeStmt**は、 [](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
+  **SqlcloSQLFreeStmt**は、 [SQLFreeStmt](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 Native Client ODBC ドライバーでは、 **Sqlcloの**受信時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762954"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorExecute** イベント クラスは、API (アプリケーション プログラミング インターフェイス) のカーソルで発生する、カーソル実行イベントを記述しています。 カーソル実行イベントは、カーソル準備イベントで作成された実行プランから、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってカーソルの作成およびデータ設定が行われたときに発生します。  
   
  **CursorExecute** イベント クラスは、カーソルのパフォーマンスを記録しているトレース内で使用します。 **CursorExecute** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルを使用する頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  

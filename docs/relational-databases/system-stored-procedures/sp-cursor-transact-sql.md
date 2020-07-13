@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869686"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   位置指定更新を要求します。 このプロシージャは、カーソルのフェッチ バッファー内にある 1 つ以上の行に対して操作を実行します。 sp_cursor は、ID = 1 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
 ||  
 |-|  
-|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,18 +44,18 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>引数  
- *g*  
+ *cursor*  
  カーソル ハンドルです。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 *cursor*は SQL Server によって生成され、sp_cursoropen プロシージャによって返される*ハンドル*値です。  
   
  *optype*  
  カーソルが実行する操作を指定する必須のパラメーターです。 *optype*には、次のいずれかの**int**入力値が必要です。  
   
-|Value|Name|[説明]|  
+|値|名前|説明|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
 |0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
 |0X0004|INSERT|SQL の**insert**ステートメントを作成せずにデータを挿入します。|  
-|0X0008|[最新の情報に更新]|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
+|0X0008|REFRESH|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
 |0X10|LOCK|指定された行を含むページで SQL Server U ロックを取得します。 このロックは、S ロックと互換性がありますが、X ロックやその他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
 |0X20|SETPOSITION|は、プログラムが後続の SQL Server 位置指定 DELETE または UPDATE ステートメントを実行する場合にのみ使用されます。|  
 |0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注: フェッチされていないキーセット内の行に対して ABSOLUTE が指定されている場合、この操作は同時実行チェックに失敗し、返される結果を保証できません。|  
@@ -68,7 +68,7 @@ sp_cursor  cursor, optype, rownum, table
   
  *rownum*は、 **int**入力値を必要とする必須パラメーターです。  
   
- 1 で保護されたプロセスとして起動されました  
+ 1  
  フェッチバッファーの最初の行を示します。  
   
  2  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  は、UPDATE、DELETE、REFRESH、または LOCK *optype*値と共に使用する場合にのみ有効です。  
   
- *一覧*  
+ *テーブル*  
  *Optype*が適用されるテーブルを識別するテーブル名。カーソル定義が結合またはあいまいな列名を含む場合、*値*パラメーターによって返されます。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *table*は、文字列入力値を必要とする省略可能なパラメーターです。 文字列は任意の文字または UNICODE データ型として指定できます。 *テーブル*には、マルチパートテーブル名を指定できます。  
   
- *数値*  
+ *value*  
  値を挿入または更新する場合に使用します。 *値*の文字列パラメーターは、UPDATE および INSERT の*optype*値でのみ使用されます。 文字列は任意の文字または UNICODE データ型として指定できます。  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>リターン コードの値  
  RPC を使用する場合、位置指定の DELETE または UPDATE 操作にバッファー番号0を指定すると、フェッチバッファー内のすべての行について、*行数*が 0 (失敗) または 1 (成功) の完了メッセージが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="optype-parameter"></a>optype パラメーター  
  SETPOSITION と UPDATE、DELETE、REFRESH、または LOCK の組み合わせを除きます。または、UPDATE または DELETE のいずれかを使用する場合、 *optype*値は相互に排他的です。  
@@ -125,11 +125,11 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>値パラメーター  
  「引数」セクションで前述したように、*値*を使用するための規則には、次の2つの方法があります。  
   
-1.  任意の名前付きの*値*パラメーターに\@対して、選択リスト内の列の名前に ' ' という名前を付けることができます。 この方法には、データ変換が不要になる可能性があるという利点があります。  
+1.  任意の名前 \@ 付きの*値*パラメーターに対して、選択リスト内の列の名前に ' ' という名前を付けることができます。 この方法には、データ変換が不要になる可能性があるという利点があります。  
   
 2.  パラメーターを使用して、完全な UPDATE または INSERT ステートメントを送信するか、複数のパラメーターを使用して UPDATE ステートメントまたは INSERT ステートメントの一部を送信します。このとき、SQL Server が完全なステートメントに組み込まれます。 この例については、このトピックで後述する「例」のセクションを参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
 ### <a name="alternative-value-parameter-uses"></a>代替値パラメーターの使用  
  更新プログラム:  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  UPDATE \<table name> が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  UPDATE \<table name> を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- この場合、構築さ\<れた update ステートメント内の> テーブル名は、指定されているか、*テーブル*パラメーターによって既定値になります。  
+ この場合、 \<table name> 構築された update ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
  挿入の場合:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  INSERT * \<table name>* が指定されている場合、 *table*パラメーターに指定された値はすべて無視されます。  
+>  INSERT *\<table name>* を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
  複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
@@ -168,14 +168,14 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 値が指定されている場合を除き、最後の式の後に ")" が続く必要があります。 この場合、構築された UPDATE ステートメント内の* \<>テーブル名*は、指定されているか、*テーブル*パラメーターによって既定値になります。  
+ 値が指定されている場合を除き、最後の式の後に ")" が続く必要があります。 この場合、 *\<table name>* 構築された UPDATE ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
 > [!NOTE]  
 >  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 この場合は、他の名前付きパラメーターは使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

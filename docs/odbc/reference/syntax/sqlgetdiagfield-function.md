@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103774"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285432"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
 
@@ -64,7 +64,7 @@ SQLRETURN SQLGetDiagField(
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバーマネージャーとドライバーによってのみ使用されます。 アプリケーションでは、このハンドルの種類を使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、「 [ODBC ドライバーでの接続プールの認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)」を参照してください。  
   
- *扱え*  
+ *Handle*  
  代入*Handletype*によって示される型の診断データ構造体のハンドル。 *Handletype*が SQL_HANDLE_ENV の場合、*ハンドル*は共有環境ハンドルまたは非共有環境ハンドルのどちらかになります。  
   
  *RecNumber*  
@@ -160,7 +160,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>ヘッダーフィールド  
  *DiagIdentifier*引数には、次の表に示すヘッダーフィールドを含めることができます。  
   
-|DiagIdentifier|戻り値の型|戻り値|  
+|DiagIdentifier|の戻り値の型 :|戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|このフィールドには、カーソル内の行の数が含まれます。 このセマンティクスは、SQL_DYNAMIC_CURSOR_ATTRIBUTES2、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、SQL_KEYSET_CURSOR_ATTRIBUTES2、および SQL_STATIC_CURSOR_ATTRIBUTES2 の**SQLGetInfo**情報の種類によって異なります。これは、各カーソルの種類 (SQL_CA2_CRC_EXACT と SQL_CA2_CRC_APPROXIMATE ビット) で使用できる行数を示します。<br /><br /> このフィールドの内容は、ステートメントハンドルに対してのみ定義され、 **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**が呼び出された後にのみ定義されます。 ステートメントハンドル以外の SQL_DIAG_CURSOR_ROW_COUNT の*DiagIdentifier*を使用して**SQLGetDiagField**を呼び出すと、SQL_ERROR が返されます。|  
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|これは、基になる関数が実行した SQL ステートメントを記述する文字列です。 (特定の値については、このセクションで後述する「動的関数フィールドの値」を参照してください)。このフィールドの内容は、ステートメントハンドルだけでは、 **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**の呼び出しの後にのみ定義されます。 ステートメントハンドル以外の SQL_DIAG_DYNAMIC_FUNCTION の*DiagIdentifier*を使用して**SQLGetDiagField**を呼び出すと、SQL_ERROR が返されます。 このフィールドの値は、 **Sqlexecute**または**SQLExecDirect**の呼び出しの前に定義されていません。|  
@@ -172,7 +172,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="record-fields"></a>レコードフィールド  
  次の表に示すレコードフィールドは、 *DiagIdentifier*引数に含めることができます。  
   
-|DiagIdentifier|戻り値の型|戻り値|  
+|DiagIdentifier|の戻り値の型 :|戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR|このレコードの SQLSTATE 値のクラス部分を定義するドキュメントを示す文字列。 Open Group と ISO 呼び出しレベルのインターフェイスで定義されているすべての SQLSTATEs の値は "ISO 9075" です。 ODBC 固有の SQLSTATEs (SQLSTATE クラスが "IM" であるすべてのもの) の場合、その値は "ODBC 3.0" です。|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|SQL_DIAG_ROW_NUMBER フィールドが行セット内の有効な行番号または一連のパラメーターである場合、このフィールドには、結果セットの列番号を表す値、またはパラメーターのセットのパラメーター番号が格納されます。 結果セットの列番号は常に1から始まります。この状態レコードがブックマーク列に関連している場合は、フィールドを0にすることができます。 パラメーター番号は1から始まります。 状態レコードが列番号またはパラメーター番号に関連付けられていない場合は、SQL_NO_COLUMN_NUMBER 値が使用されます。 このレコードが関連付けられている列番号またはパラメーター番号をドライバーが特定できない場合、このフィールドには SQL_COLUMN_NUMBER_UNKNOWN 値が割り当てられます。<br /><br /> このフィールドの内容は、ステートメントハンドルに対してのみ定義されます。|  
@@ -182,7 +182,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_ROW_NUMBER|SQLLEN|このフィールドには、行セット内の行番号、または状態レコードが関連付けられているパラメーターのセットのパラメーター番号が格納されます。 行番号とパラメーター番号は1から始まります。 この状態レコードが行番号またはパラメーター番号に関連付けられていない場合、このフィールドには SQL_NO_ROW_NUMBER 値が含まれます。 このレコードが関連付けられている行番号またはパラメーター番号をドライバーが特定できない場合、このフィールドには SQL_ROW_NUMBER_UNKNOWN 値が割り当てられます。<br /><br /> このフィールドの内容は、ステートメントハンドルに対してのみ定義されます。|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR|診断レコードが関連付けられているサーバー名を示す文字列。 これは、SQL_DATA_SOURCE_NAME オプションを指定して**SQLGetInfo**を呼び出す場合に返される値と同じです。 環境ハンドルに関連付けられている診断データ構造と、どのサーバーにも関係のない診断の場合、このフィールドは長さが0の文字列になります。|  
 |SQL_DIAG_SQLSTATE|SQLCHAR|5文字の SQLSTATE 診断コード。 詳細については、「 [Sqlstates](../../../odbc/reference/develop-app/sqlstates.md)」を参照してください。|  
-|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|SQLSTATE コードのサブクラス部分の定義部分を識別する、SQL_DIAG_CLASS_ORIGIN と同じ形式および有効な値を持つ文字列。 "ODBC 3.0" が返される ODBC 固有の SQLSTATES には、次のようなものがあります。<br /><br /> 01S00、01S01、01S02、01S06、01S07、07S01、08S01、21S01、21S02、25S01、25S02、25S03、42 S01、42 S02、42 S11、42 S12、42 S21、42 S22、HY095、HY097、HY098、HY099、HY100、HY101、HY105、HY107、HY109、HY110、HY111、HYT00、HYT01、IM001、IM002、IM003、IM004、IM005、IM006、IM007, IM008, IM010, IM011, IM012.|  
+|SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|SQLSTATE コードのサブクラス部分の定義部分を識別する、SQL_DIAG_CLASS_ORIGIN と同じ形式および有効な値を持つ文字列。 "ODBC 3.0" が返される ODBC 固有の SQLSTATES には、次のようなものがあります。<br /><br /> 01S00、01S01、01S02、01S06、01S07、07S01、08S01、21S01、21S02、25S01、25S02、25S03、42 S01、42 S02、42 S11、42 S12、42 S21、42 S22、HY095、HY097、HY098、HY099、HY100、HY101、HY105、HY107、HY109、HY110、HY111、HYT00、HYT01、IM001、IM002、IM003、IM004、IM005、IM006、IM007、IM008、IM010、IM011、IM012。|  
   
 ## <a name="values-of-the-dynamic-function-fields"></a>動的関数のフィールドの値  
  次の表では、 **Sqlexecute**または**SQLExecDirect**の呼び出しによって実行される SQL ステートメントの各種類に適用される SQL_DIAG_DYNAMIC_FUNCTION および SQL_DIAG_DYNAMIC_FUNCTION_CODE の値について説明します。 ドライバーでは、ドライバーによって定義された値を一覧に追加できます。  
@@ -276,7 +276,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |診断データ構造の複数のフィールドの取得|[SQLGetDiagRec 関数](sqlgetdiagrec-function.md)|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c2a0a3447c8fd52b2266c363405b55200e2610
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72797040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996870"
 ---
 # <a name="creating-altering-and-removing-databases"></a>データベースの作成、変更、および削除
   SMO では、データベースは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトで表現されます。  

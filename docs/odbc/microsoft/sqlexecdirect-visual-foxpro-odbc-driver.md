@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecDirect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e701340217a885fbf1e3372c33ed1a8cfdb21457
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40c0a3404a3e7a9a67b6f71d197343eddb417955
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053850"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298672"
 ---
 # <a name="sqlexecdirect-visual-foxpro-odbc-driver"></a>SQLExecDirect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

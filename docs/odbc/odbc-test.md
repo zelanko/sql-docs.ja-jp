@@ -16,14 +16,14 @@ helpviewer_keywords:
 - odbcte32.exe [ODBC]
 - testing ODBC drivers [ODBC]
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a95e1798758aa044df5196f621c6afa14958c5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b50c691b5ef989b934041e211bcb0e158aff2cb4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996285"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307543"
 ---
 # <a name="odbc-test"></a>ODBC のテスト
 Microsoft® ODBC Test は odbc 対応のアプリケーションであり、odbc ドライバーおよび ODBC ドライバーマネージャーのテストに使用できます。 ODBC 3.51 には、ANSI と Unicode 対応の両方のバージョンの ODBC テストが含まれています。 対応するファイルは次のとおりです。  

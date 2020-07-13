@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082278"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528868"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>デシジョンツリーダイアグラムのチュートリアル (データマイニングアドイン)
   デシジョン ツリー モデルを作成した場合、デシジョン ツリー図形または依存関係ネットワーク図形を使用して、カスタマイズしたダイアグラムを Visio で作成できます。 このトピックでは、**デシジョンツリー**図形とこれらのコントロールを使用して実行できるカスタマイズについて説明します。  
@@ -40,13 +39,13 @@ ms.locfileid: "66082278"
   
 1.  [**図形**] ボックスの一覧に [ **Microsoft データマイニング図形**] が表示されない場合は、[**その他の図形**] をクリックし、[**ステンシルを開く**] を選択して、既定のインストール場所からテンプレートを開きます。  
   
-     \<ドライブ>: \Microsoft files (x85) SQL Server 2012 DM アドイン  
+     \<drive>: \Microsoft files (x85) SQL Server 2012 DM アドイン  
   
 2.  [**デシジョンツリー** ] 図形をページにドラッグします。  
   
 3.  **Visio デシジョンツリー図形ウィザード**の [ようこそ] ページで、[**次へ**] をクリックします。  
   
-4.  **クラスターウィザード**の [**データソースの選択**] ページで、視覚化するモデルが[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]あるサーバーへの接続を選択します。  
+4.  **クラスターウィザード**の [**データソースの選択**] ページで、視覚化する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] モデルがあるサーバーへの接続を選択します。  
   
 5.  適切なマイニングモデルを選択し、[**次へ**] をクリックします。  
   

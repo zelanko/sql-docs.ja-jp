@@ -1,7 +1,8 @@
 ---
-title: ODBC ドライバーでの Azure Active Directory の使用 | SQL Server に関する Microsoft Docs
+title: ODBC ドライバーでの Azure Active Directory の使用
+description: Microsoft ODBC Driver for SQL Server を使用すると、ODBC アプリケーションで、Azure Active Directory を使用して Azure SQL Database のインスタンスに接続できるようになります。
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b829cb837eafb1a47283d50ede3ee789471e5f7f
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928334"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886309"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>目的
 
-バージョン 13.1 以降の Microsoft ODBC Driver for SQL Server では、ODBC アプリケーションは、Azure Active Directory のフェデレーション ID を使用して、ユーザー名/パスワード、Azure Active Directory アクセス トークン、Azure Active Directory マネージド サービス ID、または Windows 統合認証 (_Windows ドライバーのみ_) によって SQL Azure のインスタンスに接続できます。 ODBC ドライバー バージョン 13.1 の場合、Azure Active Directory アクセス トークン認証は _Windows のみ_です。 ODBC ドライバー バージョン 17 以降では、すべてのプラットフォーム (Windows、Linux、macOS) でこの認証がサポートされます。 ログイン ID を使用した新しい Azure Active Directory 対話型認証は、Windows で ODBC ドライバー バージョン 17.1 に導入されています。 新しい Azure Active Directory マネージド サービス ID 認証方法は、ODBC ドライバー バージョン 17.3.1.1 で、システム割り当てとユーザー割り当ての両方の ID に対して追加されました。 これらはすべて、新しい DSN と接続文字列のキーワード、および接続属性を使用することによって実現します。
+バージョン 13.1 以降の Microsoft ODBC Driver for SQL Server を使用すると、ODBC アプリケーションで、Azure Active Directory のフェデレーション ID を使用して、ユーザー名/パスワード、Azure Active Directory アクセス トークン、Azure Active Directory マネージド サービス ID、または Windows 統合認証 ("_Windows ドライバーのみ_") によって Azure SQL Database のインスタンスに接続できるようになります。 ODBC ドライバー バージョン 13.1 の場合、Azure Active Directory アクセス トークン認証は _Windows のみ_です。 ODBC ドライバー バージョン 17 以降では、すべてのプラットフォーム (Windows、Linux、macOS) でこの認証がサポートされます。 ログイン ID を使用した新しい Azure Active Directory 対話型認証は、Windows で ODBC ドライバー バージョン 17.1 に導入されています。 新しい Azure Active Directory マネージド サービス ID 認証方法は、ODBC ドライバー バージョン 17.3.1.1 で、システム割り当てとユーザー割り当ての両方の ID に対して追加されました。 これらはすべて、新しい DSN と接続文字列のキーワード、および接続属性を使用することによって実現します。
 
 > [!NOTE]
 > Linux および macOS の ODBC ドライバーでは、Azure Active Directory に対する直接の Azure Active Directory 認証のみがサポートされます。 Linux または macOS クライアントから Azure Active Directory のユーザー名とパスワード認証を使用しており、Active Directory 構成によって、クライアントに Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
@@ -177,5 +178,5 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};U
 ~~~
 
 ## <a name="see-also"></a>参照
-[Azure AD 認証を使用した Azure SQL DB のトークンベース認証のサポート](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
+[Azure AD 認証を使用した Azure SQL DB のトークンベース認証のサポート](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

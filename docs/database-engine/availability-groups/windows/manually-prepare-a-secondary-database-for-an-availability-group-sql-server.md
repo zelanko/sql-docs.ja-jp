@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e17ac9823d0c8c0425f7a5c7dbdb550431374c78
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023711"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896073"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 可用性グループに対するセカンダリ データベースの準備
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で AlwaysOn 可用性グループのデータベースを準備する方法について説明します。 データベースの準備には、2 つの手順が必要です。 
 
 1. RESTORE WITH NORECOVERY を使用して、セカンダリ レプリカをホストする各サーバー インスタンスに、プライマリ データベースの最新のデータベース バックアップと以降のログ バックアップを復元します。

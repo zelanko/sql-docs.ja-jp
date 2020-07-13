@@ -13,20 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538444"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>[列の選択] ダイアログ ボックス ([マイニング構造] ビュー)
-  
   **[列の選択]** ダイアログ ボックスを使用すると、列をマイニング構造に追加できます。 このダイアログに含まれているオプションは、OLAP マイニング モデルを使用するか、リレーショナル マイニング モデルを使用するかによって異なります。  
   
 ## <a name="options"></a>オプション  
- **基になるテーブル**  
+ **ソース テーブル**  
  マイニング モデルの基になるテーブルです。  
   
  このオプションは、リレーショナル マイニング モデルにのみ使用されます。  
@@ -41,7 +39,7 @@ ms.locfileid: "66069914"
   
  このオプションは、リレーショナル マイニング モデルにのみ使用されます。  
   
- **[関連する属性およびメジャー]**  
+ **関連する属性とメジャー**  
  マイニング構造に追加できるすべての使用可能なメジャーおよび属性の一覧です。  
   
  このオプションは、OLAP マイニング モデルにのみ使用されます。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d906e0b1eb275e8d6013a14d9a1485a9dd7a9f1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f36e1beffa864edefc8dd156375deddd74718fe4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880548"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   参照されたサービスに属する詳細プロパティの配列内で、詳細プロパティの位置を指定するプロパティ インデックスを取得または設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "73660070"
 object.PropertyIndex [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されるサービスに属する詳細プロパティ配列の詳細プロパティの位置を指定する**uint32**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f21a2b1c7c8573d06f92654f85b4ecaacc1484a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76a5be30378e1bf4101e72de621d803c084e6c66
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063281"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300652"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

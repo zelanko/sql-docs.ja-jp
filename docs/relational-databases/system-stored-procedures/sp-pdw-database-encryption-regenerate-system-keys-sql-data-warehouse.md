@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 06ce871e8f67a9cf4fa57b81eb84f47161e8fd28
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67463476"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197329"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   アプライアンスで TDE が有効になっているときに暗号化される内部データベースの証明書とデータベース暗号化キーをローテーションするには、 **sp_pdw_database_encryption_regenerate_system_keys**を使用します。 ここには、`tempdb` が含まれています。 これは、TDE が有効になっている場合にのみ成功します。  
   
@@ -51,7 +51,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

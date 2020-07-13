@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1a507ba84708a1444c52f49421eda1009ede9adb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059285"
 ---
 # <a name="how-to-filter-reports"></a>レポートに表示する問題を選択する方法
   このトピックでは、アップグレードアドバイザーレポートビューアーを使用して、レポートにフィルターを適用する方法について説明します。  
@@ -31,14 +30,11 @@ ms.locfileid: "66094884"
   
     -   **すべての問題**。 解決済みとしてマークされていないすべての問題を表示します。  
   
-    -   **すべてのアップグレードの問題**。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードに関連するすべての問題を表示します。  
+    -   **すべてのアップグレードの問題**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードに関連するすべての問題を表示します。  
   
-    -   **アップグレード前の問題**。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード前に解決する必要があるすべての問題を表示します。  
+    -   **アップグレード前の問題**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード前に解決する必要があるすべての問題を表示します。  
   
-    -   **移行に関するすべての問題**。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのデータまたはアプリケーションの移行に関連するすべての問題を表示します。  
+    -   **移行に関するすべての問題**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのデータまたはアプリケーションの移行に関連するすべての問題を表示します。  
   
     -   **解決済みの問題**。 解決済みとしてマークされているすべての問題を表示します。  
   

@@ -9,20 +9,20 @@ manager: cgronlun
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d626b478a94f796155a895e134eb171c18fcc28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a38a6f46ca742dc280135590c2a4cece40ff13f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882489"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-この記事では、Linux に [SQL Server Machine Learning Services](../advanced-analytics/index.yml) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
+この記事では、Linux に [SQL Server Machine Learning Services](../machine-learning/index.yml) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
 
 > [!NOTE]
 > Machine Learning Services は、既定で SQL Server ビッグ データ クラスターにインストールされます。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください
@@ -251,9 +251,8 @@ Python と R のインストール オプション:
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.7* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.7*
-sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
+sudo zypper install mssql-mlservices-mlm-py
+sudo zypper install mssql-mlservices-mlm-r
 ```
 
 ### <a name="minimum-installation"></a>最小インストール 
@@ -269,9 +268,8 @@ sudo zypper install mssql-mlservices-mlm-r-9.4.7*
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python extensions
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.7*
-sudo zypper install mssql-mlservices-packages-r-9.4.7*
+sudo zypper install mssql-mlservices-packages-py
+sudo zypper install mssql-mlservices-packages-r
 ```
 
 ## <a name="post-install-config-required"></a>インストール後の構成 (必須)
@@ -435,10 +433,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [Python のチュートリアル:SQL Server Machine Learning Services での線形回帰を使用したスキー レンタルの予測](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [チュートリアル:SQL Server Machine Learning Services と K-Means クラスタリングを使用して顧客を分類する](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Python のチュートリアル:SQL Server Machine Learning Services での線形回帰を使用したスキー レンタルの予測](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python のチュートリアル:SQL Server Machine Learning Services と K-Means クラスタリングを使用して顧客を分類する](../machine-learning/tutorials/python-clustering-model.md)
 
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル:T-SQL での R の実行](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [クイック スタート: T-SQL での R の実行](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

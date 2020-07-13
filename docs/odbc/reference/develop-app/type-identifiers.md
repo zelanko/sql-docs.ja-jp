@@ -13,14 +13,14 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a274a19eaa0a2fdf98bcaa9ef42406ee8a6b6461
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093020"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306433"
 ---
 # <a name="type-identifiers"></a>型識別子
 ODBC では、SQL データ型と C データ型を記述するために、2つの*型識別子*のセットを定義しています。 型識別子は、SQL 列または C バッファーの型を記述します。 これは **#define**の値であり、通常は関数の引数として渡されるか、またはメタデータに返されます。  

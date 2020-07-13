@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLTables
 - SQLTables function [ODBC], dBASE Driver
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 599dbebd8701913b71a482045be121298e39e8c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 242be06eafc7657f37f55ce266af471cbc72597f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132448"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306073"
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables (dBASE ドライバー)
 > [!NOTE]  

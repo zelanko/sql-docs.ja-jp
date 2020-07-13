@@ -1,5 +1,6 @@
 ---
 title: ユーザーを追加する
+description: マスターデータマネージャーのユーザー一覧にユーザーを追加する方法について説明します。 Web アプリケーションにアクセス許可を割り当てるプロセスを開始するには、ユーザーを追加する必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,34 +14,31 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812837"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
 ### <a name="to-add-a-user"></a>メンバーを追加するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
+2.  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
   
-3.  *ドメイン*\\*user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
+3.  *ドメイン* \\ *user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
   
 4.  必要に応じて、 **[名前の確認]** をクリックします。  
   
@@ -48,9 +46,9 @@ ms.locfileid: "73729821"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域のアクセス許可を割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスターデータサービス&#41;](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>関連項目  
+ [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

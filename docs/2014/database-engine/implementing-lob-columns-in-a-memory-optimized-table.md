@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62778923"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885997"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの LOB 列の実装
   メモリ最適化テーブルには、行外またはラージオブジェクト (LOB) ストレージがありません (この制限は SQL Server 2016 以降では削除されています。「[インメモリ OLTP でサポートされるデータ型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照)、行サイズの上限は8060バイトです。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  
@@ -26,7 +25,7 @@ ms.locfileid: "62778923"
   
  次の例では、バイナリ LOB 値が複数の行に分割され、メモリ最適化テーブルにそれらの行を挿入しています。  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -76,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  また、LOB 列のディスク ベース テーブルを定義できます。 メモリ最適化テーブルの各行に、その行のすべての LOB 値を持つディスク ベース テーブルの対応する行が格納されています。 次の例では、従業員に関するデータがメモリ最適化テーブルに格納され、各従業員の写真がディスク ベース テーブルに格納されます。  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

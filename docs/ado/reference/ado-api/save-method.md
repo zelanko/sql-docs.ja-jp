@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755870"
 ---
 # <a name="save-method"></a>Save メソッド
 ファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を保存します。  
@@ -34,11 +34,11 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *宛先*  
- 省略可能。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
+ *Destination (宛先)*  
+ 任意。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
   
  *PersistFormat*  
- 省略可能。 **レコードセット**を保存する形式を指定する[persistformatenum](../../../ado/reference/ado-api/persistformatenum.md)値 (XML または ADTG)。 既定値は**adPersistADTG**です。  
+ 任意。 **レコードセット**を保存する形式を指定する[persistformatenum](../../../ado/reference/ado-api/persistformatenum.md)値 (XML または ADTG)。 既定値は**adPersistADTG**です。  
   
 ## <a name="remarks"></a>解説  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)メソッドは、開いている**レコードセット**でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用して、後で*変換先*から**レコードセット**を復元します。  

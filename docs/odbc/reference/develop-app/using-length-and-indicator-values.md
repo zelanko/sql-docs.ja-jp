@@ -13,14 +13,14 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0c878c9038b26aa996ed206c6b8adfe8d6c21e5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67902469"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306763"
 ---
 # <a name="using-length-and-indicator-values"></a>長さとインジケーターの値の使用
 長さ/インジケーターバッファーは、データバッファー内のデータのバイト長、またはデータが NULL であることを示す SQL_NULL_DATA などの特別なインジケーターを渡すために使用されます。 使用される関数に応じて、長さ/インジケーターバッファーは SQLINTEGER または SQLSMALLINT として定義されます。 したがって、これを記述するには1つの引数が必要です。 データバッファーが遅延なしの入力バッファーである場合、この引数にはデータ自体のバイト長またはインジケーター値が含まれます。 多くの場合、 *StrLen_or_Ind*または類似した名前として名前が付けられます。 たとえば、次のコードでは、 **Sqlputdata**を呼び出して、データがいっぱいになったバッファーを渡します。バイト長 (*Valuelen*) は、データバッファー (*valueptr*) が入力バッファーであるため、直接渡されます。  

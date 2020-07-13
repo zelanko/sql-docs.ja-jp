@@ -113,7 +113,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 5. キーボードで Ctrl キーを押しながら F キーを押して **[検索]** ダイアログ ボックスを開きます。 ↓キーを押して **[置換]** オプションを開きます。 上部の **[検索]** 行に「AdventureWorks2016」と入力し、下部の **[置換]** 行に「AdventureWorks2016a」と入力します。
 
-6. **AdventureWorks2016** のインスタンスをすべて *AdventureWorks2016a* に置き換えるには、 *[すべて置換]* を選択します。 
+6. *AdventureWorks2016* のインスタンスをすべて *AdventureWorks2016a* に置き換えるには、 **[すべて置換]** を選択します。 
 
     ![検索と置換](media/scripting-ssms/findandreplace.png)
 
@@ -146,7 +146,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
    ![オブジェクトをスクリプト化する](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > *[スクリプトを作成するデータの種類]* オプションに **[スキーマとデータ]** を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
+   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
 
 6. **[OK]** を選択し、 **[次へ]** を選択します。
 
@@ -154,7 +154,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 8. キーボードで **[検索]** ダイアログ ボックスを開きます (Ctrl + F キー)。 ↓キーを押して **[置換]** オプションを開きます。 上の **[検索]** 行に「*AdventureWorks2016*」と入力します。 下の **[置換]** 行に「*AdventureWorks2016b*」と入力します。
 
-9. **AdventureWorks2016** のインスタンスをすべて *AdventureWorks2016b* に置き換えるには、 *[すべて置換]* を選択します。
+9. *AdventureWorks2016* のインスタンスをすべて *AdventureWorks2016b* に置き換えるには、 **[すべて置換]** を選択します。
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
 

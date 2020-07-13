@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], dBASE Driver
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18c6721b4f34772e8c3cd8e4f515233f80566fb3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054099"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283972"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE ドライバー)
 > [!NOTE]  
@@ -26,12 +26,12 @@ ms.locfileid: "68054099"
   
  データソースを動的に追加、変更、または削除するために使用される**Sqlconfigdatasource**関数は、次のキーワードを動的に使用します。  
   
-|Keyword|[説明]|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |組み合わせの順序|フィールドの並べ替え順序。<br /><br /> このシーケンスには、ASCII (既定値) と国際対応のいずれかを指定できます。<br /><br /> これにより、[セットアップ] ダイアログボックスの**照合順序**と同じオプションが設定されます。|  
 |DEFAULTDIR|ディレクトリへのパス指定。|  
 |DELETED|DBASE ドライバーの場合は、削除済みとしてマークされている行を取得または配置できるかどうかを指定します。 1に設定すると、削除された行は表示されません。0に設定すると、削除された行は削除されていない行と同じように扱われます。<br /><br /> これにより、[セットアップ] ダイアログボックスに [**削除された行を表示する**] と同じオプションが設定されます。|  
-|説明|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
+|Description|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
 |DRIVER|ドライバー DLL へのパス指定。|  
 |DRIVERID|ドライバーの整数 ID。<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  
 |FIL|ファイルの種類 dBase III、dBase IV、または dBase 5|  

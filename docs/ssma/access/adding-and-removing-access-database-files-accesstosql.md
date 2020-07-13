@@ -1,5 +1,6 @@
 ---
 title: Access データベースファイルの追加と削除 (アクセス権限のある Sql) |Microsoft Docs
+description: SSMA プロジェクトとの間でアクセスデータベースを追加または削除して SQL Server または Azure SQL Database にアクセスデータを移行する方法について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,24 +29,24 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104213"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293689"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access データベースファイルの追加と削除 (アクセス許可 Sql)
-アクセスデータをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行するには、ssma プロジェクトに1つ以上の access データベースを追加する必要があります。 これらのデータベースは、97以降のバージョンにアクセスする必要があります。 以前のバージョンの Access のデータベースがある場合は、データベースを新しいバージョンに変換する必要があります。 これを行うには、データベースを SSMA に追加する前に Access 97 以降のバージョンで開いて保存します。  
+アクセスデータをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、SSMA プロジェクトに1つ以上の access データベースを追加する必要があります。 これらのデータベースは、97以降のバージョンにアクセスする必要があります。 以前のバージョンの Access のデータベースがある場合は、データベースを新しいバージョンに変換する必要があります。 これを行うには、データベースを SSMA に追加する前に Access 97 以降のバージョンで開いて保存します。  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Access データベースファイルを追加するとどうなりますか。  
-SSMA プロジェクトに Access データベースを追加すると、SSMA はデータベースメタデータを読み取り、このメタデータをプロジェクトファイルに追加します。 このメタデータは、データベースとそのオブジェクトを記述します。 SSMA では、オブジェクトをまたは SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文に変換するときや、データをまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure に移行するときに、メタデータを使用します。 このメタデータは、Access メタデータエクスプローラーで参照し、個々のデータベースオブジェクトのプロパティを確認できます。  
+SSMA プロジェクトに Access データベースを追加すると、SSMA はデータベースメタデータを読み取り、このメタデータをプロジェクトファイルに追加します。 このメタデータは、データベースとそのオブジェクトを記述します。 SSMA では、オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure 構文に変換するときや、データをまたは SQL Azure に移行するときに、メタデータを使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このメタデータは、Access メタデータエクスプローラーで参照し、個々のデータベースオブジェクトのプロパティを確認できます。  
   
 > [!NOTE]  
-> Access データベースは、複数のファイルに分割できます。テーブルを格納するバックエンドデータベースと、クエリ、フォーム、レポート、マクロ、モジュール、およびショートカットを含むフロントエンドデータベースです。 分割されたデータベースをまたは SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行する場合は、フロントエンドデータベースを ssma に追加します。  
+> Access データベースは、複数のファイルに分割できます。テーブルを格納するバックエンドデータベースと、クエリ、フォーム、レポート、マクロ、モジュール、およびショートカットを含むフロントエンドデータベースです。 分割されたデータベースをまたは SQL Azure に移行する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フロントエンドデータベースを SSMA に追加します。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA に必要なアクセス許可  
-Access データベースをまたは SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行するには、Users グループと管理者ユーザーが管理アクセス許可を持っている必要があります。 ワークグループ保護を使用してデータベースを移行する方法については、「 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)」を参照してください。  
+Access データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Users グループと管理者ユーザーが管理アクセス許可を持っている必要があります。 ワークグループ保護を使用してデータベースを移行する方法については、「 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)」を参照してください。  
   
 ## <a name="selecting-databases-to-add"></a>追加するデータベースの選択  
 SSMA プロジェクトに1つ以上のデータベースを追加する場合に、ファイルがすべて既知の場所にある場合は、次の手順を使用してファイルを追加できます。  
@@ -76,7 +77,7 @@ SSMA プロジェクトに1つ以上のデータベースを追加する場合�
     > [!IMPORTANT]  
     > [**ファイル名] テキストボックスの全体または一部**がワイルドカード文字をサポートしていません。  
   
-5.  [**スキャン**] をクリックします。  
+5.  **[スキャン]** をクリックします。  
   
     スキャンページが表示されます。 これにより、検出されたデータベースと検索の進行状況が表示されます。 検索を停止するには、[**停止**] をクリックします。  
   
@@ -127,10 +128,10 @@ Access データベースをプロジェクトに追加すると、Access メタ
   
 2.  データベースを右クリックし、[データベースの**削除**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、 [SQL Server に接続](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)します。  
   
 ## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[プロジェクトの作成および管理](creating-and-managing-projects-accesstosql.md)  
+[プロジェクトの作成と管理](creating-and-managing-projects-accesstosql.md)  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 32cc973f4dab5bde7bcedade0365d233987dda72
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061483"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303319"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 関数
 **互換性**  
@@ -48,7 +48,7 @@ SQLRETURN  SQLGetPoolID (
 ## <a name="diagnostics"></a>診断  
  **SQLGetPoolID**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返すと、ドライバーマネージャーは SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**および*Hdbcinfotoken*の**ハンドル**を使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **SQLGetPoolID**は、接続情報のセット ( **SQLSetConnectAttrForDbcInfo**、 **SQLSetDriverConnectInfo**、および**SQLSETCONNECTINFO**) を指定してプール ID を取得するために使用されます。 このプール ID は、相互に使用できる接続のセットを識別するために使用されます (追加のリセットが必要になる場合があります)。 プール ID は、その接続グループの接続プールを識別するために使用されます。  
   
  ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  

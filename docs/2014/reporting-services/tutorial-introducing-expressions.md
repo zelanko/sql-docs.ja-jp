@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098846"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
@@ -26,7 +26,7 @@ ms.locfileid: "66098846"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>学習内容  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>学習内容  
  このチュートリアルでは、次の方法を学習します。  
   
 1.  [テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する](#Setup)  
@@ -55,10 +55,10 @@ ms.locfileid: "66098846"
   
  このチュートリアルの推定所要時間: 30 分。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/report-builder-tutorials.md) を参照してください。  
   
-##  <a name="Setup"></a>1. テーブルまたはマトリックスウィザードからテーブルレポートとデータセットを作成する  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. テーブルまたはマトリックスウィザードからテーブルレポートとデータセットを作成する  
  表レポート、データ ソース、およびデータセットを作成します。 テーブルのレイアウト時には、少数のフィールドのみを含めておきます。 ウィザードの完了後に、列を手動で追加します。 ウィザードを使用すると、容易にテーブルをレイアウトし、スタイルを適用できます。  
   
 > [!NOTE]  
@@ -83,8 +83,7 @@ ms.locfileid: "66098846"
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-4.  
-  **[データセットの選択]** ページで、 **[データセットを作成する]** をクリックします。  
+4.  **[データセットの選択]** ページで、 **[データセットを作成する]** をクリックします。  
   
 5.  **[次へ]** をクリックします。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66098846"
   
      クエリには、生年月日、名前、姓、州または郡、国または地域の識別子、性別、年度累計購入額などを示す列の名前が指定されています。  
   
-10. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 結果セットには FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase の各列が含まれ、20 行のデータが表示されます。  
+10. クエリデザイナーのツールバーで、[**実行**] (**!**) をクリックします。 結果セットには FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase、および LastPurchase の各列が含まれ、20 行のデータが表示されます。  
   
 11. **[次へ]** をクリックします。  
   
@@ -153,12 +152,11 @@ ms.locfileid: "66098846"
   
 15. **[次へ]** をクリックします。  
   
-16. 
-  **[レイアウトの選択]** ページで、**[次へ]** をクリックします。  
+16. **[レイアウトの選択]** ページで、**[次へ]** をクリックします。  
   
 17. [**スタイルの選択**] ページで [**スレート**] をクリックし、[**完了**] をクリックします。  
   
-##  <a name="UpdateNames"></a>2. データソースおよびデータセットの既定の名前を更新する  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. データソースおよびデータセットの既定の名前を更新する  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>データ ソースの既定名を更新するには  
   
@@ -180,7 +178,7 @@ ms.locfileid: "66098846"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. 名、イニシャル、姓を表示する  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. 名、イニシャル、姓を表示する  
  姓およびイニシャルを含む名前に評価される式に、**Left** 関数および**連結** (**&**) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。  
   
 #### <a name="to-add-the-name-column"></a>Name 列を追加するには  
@@ -203,11 +201,11 @@ ms.locfileid: "66098846"
   
 7.  **[値]** ボックスの一覧の **[FirstName]** をダブルクリックします。  
   
-8.  「 **, 1)** 」と入力します。  
+8.  「 **, 1)**」と入力します。  
   
      この式により、 **FirstName** 値の左から数えて 1 文字が抽出されます。  
   
-9. 「 **&」** と入力し &  
+9. 「**&" "&**」と入力します。  
   
 10. **[値]** ボックスの一覧の **[LastName]** をダブルクリックします。  
   
@@ -217,7 +215,7 @@ ms.locfileid: "66098846"
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Gender"></a>4. 画像を使用して性別を表示する  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. 画像を使用して性別を表示する  
  画像を使用して個人の性別を示し、3 つ目の画像を使用して不明な性別値を識別します。 レポートに、非表示の画像を 3 つと、画像を表示するための新しい列を追加し、Gender フィールドの値に基づいて、この列に表示する画像を決定します。  
   
  レポートを縞状レポートにする際に、画像を格納するテーブル セルに色を適用するには、四角形を追加して、この四角形に画像を追加します。 四角形を使用するのは、背景色を画像には適用せず、四角形に適用できるようにするためです。  
@@ -230,11 +228,9 @@ ms.locfileid: "66098846"
   
 2.  リボンの **[挿入]** タブで **[画像]** をクリックして、レポート本文内のテーブルより下をクリックします。  
   
-     
-  **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
+     **[画像のプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  
-  **[インポート]** をクリックし、C:\Users\Public\Public Pictures\Sample Pictures に移動します。  
+3.  **[インポート]** をクリックし、C:\Users\Public\Public Pictures\Sample Pictures に移動します。  
   
 4.  Penguins.JPG をクリックし、**[開く]** をクリックします。  
   
@@ -300,17 +296,16 @@ ms.locfileid: "66098846"
   
 14. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Lookup"></a>5. 国名を検索する  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. 国名を検索する  
  国/地域の識別子の代わりに国/地域の名前を表示するには、国データセットを作成し、 **Lookup**関数を使用します。  
   
 #### <a name="to-create-the-countryregion-dataset"></a>CountryRegion データセットを作成するには  
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  レポート データ ペインで、 **[新規作成]** をクリックし、 **[データセット]** をクリックします。  
+2.  レポートデータペインで、[**新規作成**] をクリックし、[**データセット**] をクリックします。  
   
-3.  
-  **[レポートに埋め込まれたデータセットを使用します]** をクリックします。  
+3.  **[レポートに埋め込まれたデータセットを使用します]** をクリックします。  
   
 4.  **[データ ソース]** ボックスの一覧の [ExpressionsDataSource] をクリックします。  
   
@@ -337,7 +332,7 @@ ms.locfileid: "66098846"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. **[実行]** ( **!** ) をクリックしてクエリを実行します。  
+9. [**実行**] (**!**) をクリックしてクエリを実行します。  
   
      クエリ結果は国/地域の識別子と名前です。  
   
@@ -375,7 +370,7 @@ ms.locfileid: "66098846"
   
 11. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="Count"></a>6. 前回の購入からの日数をカウントする  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. 前回の購入からの日数をカウントする  
  列を追加し、 **Now**関数または`ExecutionTime`組み込みグローバル変数を使用して、ユーザーが前回購入した日から今日までの日数を計算します。  
   
 #### <a name="to-add-the-days-ago-column"></a>Days Ago 列を追加するには  
@@ -390,7 +385,7 @@ ms.locfileid: "66098846"
   
 4.  **[Days Ago]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
-5.  **[式]** ダイアログ ボックスで、 **[共通の関数]** を展開し、 **[日付と時刻]** をクリックします。  
+5.  **[式]** ダイアログ ボックスで、**[共通の関数]** を展開し、**[日付と時刻]** をクリックします。  
   
 6.  **[アイテム]** ボックスの一覧の **[DateDiff]** をダブルクリックします。  
   
@@ -421,12 +416,12 @@ ms.locfileid: "66098846"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. インジケーターを使用して売上比較を表示する  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. インジケーターを使用して売上比較を表示する  
  新しい列を追加し、インジケーターを使用して、ユーザーの年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回っているかを示します。 **Round** 関数では、値から小数が除去されます。  
   
  インジケーターとその状態を構成するには、多数の手順が必要です。 必要に応じて、「インジケーターを構成するには」の手順に進んで、このチュートリアルの完成した式をコピーして [**式**] ダイアログボックスに貼り付けます。  
   
-#### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 列を追加するには  
+#### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 列を追加するには  
   
 1.  **[YTD Purchase]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[右]** をクリックします。  
   
@@ -526,7 +521,7 @@ ms.locfileid: "66098846"
   
 38. **[実行]** をクリックして、レポートをプレビューします。  
   
-##  <a name="GreenBar"></a>8. レポートに "緑色のバー" レポートを作成する  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. レポートに "緑色のバー" レポートを作成する  
  パラメーターを使用して、レポート内で 1 行おきに適用する色を指定し、レポートを縞状にします。  
   
 #### <a name="to-add-a-parameter"></a>パラメーターを追加するには  
@@ -643,7 +638,7 @@ ms.locfileid: "66098846"
   
      選択した背景色が 1 行おきに適用された状態でレポートが表示されます。  
   
-##  <a name="DateFormat"></a>optional日付列の書式を設定する  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>optional日付列の書式を設定する  
  日付を含む、**最後に購入**した列の書式を設定します。  
   
 #### <a name="to-format-date-column"></a>日付列の書式を設定するには  
@@ -656,7 +651,7 @@ ms.locfileid: "66098846"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>optionalレポートタイトルを追加する  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>optionalレポートタイトルを追加する  
  レポートにタイトルを追加します。  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -667,11 +662,9 @@ ms.locfileid: "66098846"
   
 3.  **売上比較の概要**が含まれているテキストボックスを右クリックし、[**テキストボックスのプロパティ**] をクリックします。  
   
-4.  
-  **[テキスト ボックスのプロパティ]** ダイアログ ボックスで、 **[フォント]** をクリックします。  
+4.  **[テキスト ボックスのプロパティ]** ダイアログ ボックスで、 **[フォント]** をクリックします。  
   
-5.  
-  **[サイズ]** ボックスの一覧の **[18pt]** を選択します。  
+5.  **[サイズ]** ボックスの一覧の **[18pt]** を選択します。  
   
 6.  [**色**] ボックスの一覧の [**灰色**] をクリックします。  
   
@@ -679,14 +672,14 @@ ms.locfileid: "66098846"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>optionalレポートを保存する  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>optionalレポートを保存する  
  レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。 詳細については、「[レポートの保存 &#40;レポート ビルダー&#41;](report-builder/saving-reports-report-builder.md)」を参照してください。  
   
  このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>レポート サーバーにレポートを保存するには  
   
-1.  [**レポートビルダー** ] ボタンの [**名前を付けて保存**] をクリックします。  
+1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
 2.  **[最近使ったサイトとサーバー]** をクリックします。  
   
@@ -696,27 +689,26 @@ ms.locfileid: "66098846"
   
 4.  [**名前**] で、既定の名前を「 **Sales Comparison Summary**」に置き換えます。  
   
-5.  **[保存]** をクリックします。  
+5.  **[Save]** (保存) をクリックします。  
   
  レポートがレポート サーバーに保存されます。 接続しているレポート サーバーの名前がウィンドウ下部のステータス バーに表示されます。  
   
 #### <a name="to-save-the-report-to-your-computer"></a>自分のコンピューターにレポートを保存するには  
   
-1.  [**レポートビルダー** ] ボタンの [**名前を付けて保存**] をクリックします。  
+1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  
-  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  [**名前**] で、既定の名前を「 **Sales Comparison Summary**」に置き換えます。  
   
-4.  **[保存]** をクリックします。  
+4.  **[Save]** (保存) をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [インジケーター &#40;レポートビルダーと SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
- [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
+ [画像、テキストボックス、四角形、および行 &#40;レポートビルダーと SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポートビルダーと SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-data/report-datasets-ssrs.md)  
   
   

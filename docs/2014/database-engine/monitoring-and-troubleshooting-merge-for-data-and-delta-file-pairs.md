@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5dc57d08f3db1792a9359b3aa79aaceecd03a025
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75228177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930593"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>データ ファイルとデルタ ファイルのペアのマージに関する監視とトラブルシューティング
   インメモリ OLTP は、マージ ポリシーを使用して、データ ファイルとデルタ ファイルの隣接するペアを自動的にマージします。 マージ操作を無効にすることはできません。  
@@ -47,7 +46,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  15,836 の行が含まれるデータ ファイルと 5,279 の削除行が含まれるデルタ ファイルのペアが 3 組あったとします。 マージ後、新しいデータ ファイルの行数は 31,872、削除行は 0 になります。 新しいデータ ファイルのサイズが、最初に割り当てられたサイズである 128 MB を大きく上回る場合があります。 これは、手動マージによってマージ ポリシーがオーバーライドされ、要求されたファイルのマージが強制されるためです。  
   
- [メモリ最適化テーブルを持つデータベースのチェックポイントファイルのブログ状態の移行で](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx)は、データファイルとデルタファイルのペアの開始からガベージコレクションへの状態遷移について説明します。  
+ [メモリ最適化テーブルを持つデータベースのチェックポイントファイルのブログ状態の移行で](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/)は、データファイルとデルタファイルのペアの開始からガベージコレクションへの状態遷移について説明します。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

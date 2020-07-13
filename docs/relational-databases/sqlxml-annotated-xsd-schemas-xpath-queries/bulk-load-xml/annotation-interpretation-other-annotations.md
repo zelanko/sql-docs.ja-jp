@@ -1,5 +1,6 @@
 ---
 title: その他の注釈 (SQLXML)
+description: SQLXML 注釈の一覧を、XML 一括読み込みによってどのように解釈されるかについての説明と共に表示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,15 +23,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6780a99b5bca826a9e92890ebe317f32c93300fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724730"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>注釈の解釈 - 他の注釈
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  
   
  **sql:id-prefix**  
@@ -51,7 +52,7 @@ ms.locfileid: "75246832"
  **sql:key-fields**  
  XML 一括読み込みでは、この注釈は常に無視されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLXML 4.0 &#40;の注釈の解釈&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

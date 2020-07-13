@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917957"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762321"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 構文)
 **Objectproxy**オブジェクトは、サーバーを表し、[そのオブジェクトの](../../../ado/reference/rds-api/dataspace-object-rds.md) **createObject**メソッドによって返されます。 ObjectProxy クラスには、1つのメソッドがあります。これ**は、サーバー**でメソッドを呼び出し、その呼び出しによって生成されたオブジェクトを返すことができます。  
@@ -38,15 +38,15 @@ public Object ObjectProxy.( String method, Object[] args)
 ```  
   
 #### <a name="returns"></a>戻り値  
- Object  
+ オブジェクト  
  メソッドを呼び出した結果のオブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
  *ObjectProxy*  
  サーバーを表す**Objectproxy**オブジェクト。  
   
- *b*  
+ *method*  
  サーバーで呼び出すメソッドの名前を格納している文字列。  
   
- *value*  
- 省略可能。 サーバー上のメソッドの引数であるオブジェクトの配列。 Java のデータ型は、サーバーでの使用に適したデータ型に自動的に変換されます。
+ *args*  
+ 任意。 サーバー上のメソッドの引数であるオブジェクトの配列。 Java のデータ型は、サーバーでの使用に適したデータ型に自動的に変換されます。

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 86b5037b1aa581dd99385c9be13ea58ee8a571dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010622"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892849"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   管理データウェアハウスへの接続に使用する接続文字列で定義されているデータベース名を指定します。  
   
@@ -40,13 +40,13 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @database_name = ]'*database_name*'  
+ [ @database_name =] '*database_name*'  
  管理データウェアハウスの名前を指定します。 *database_name*は**sysname**で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  データコレクター全体の構成を変更する前に、データコレクターを無効にする必要があります。 データコレクターが有効になっている場合、このプロシージャは失敗します。  
   
  現在のデータベース名を表示するには、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システムビューに対してクエリを実行します。  
@@ -54,8 +54,8 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、管理データウェアハウスの名前を`RemoteMDW`に設定します。  
+## <a name="examples"></a>使用例  
+ 次の例では、管理データウェアハウスの名前をに設定 `RemoteMDW` します。  
   
 ```  
 USE msdb;  
@@ -64,7 +64,7 @@ EXEC sp_syscollector_set_warehouse_database_name N'RemoteMDW';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

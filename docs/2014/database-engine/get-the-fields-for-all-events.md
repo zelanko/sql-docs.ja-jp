@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01d98e827121a0c47111dd601c6e1772f796849d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932904"
 ---
 # <a name="get-the-fields-for-all-events"></a>すべてのイベントのフィールドを取得する
   この作業には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターを使用した次の手順の実行も含まれます。  
@@ -38,8 +37,7 @@ ms.locfileid: "66064789"
  バケット ターゲットを使用するイベント セッションを設定する場合は、上記の情報を使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
 ## <a name="before-you-begin"></a>開始する前に  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>クエリ エディターを使用してすべてのイベントのフィールドを取得するには  
   

@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909712"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新しい GUI 機能 (DB2ToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "76909712"
 ## <a name="bookmarks"></a>ブックマーク  
 この機能を使用すると、ソースコードまたはターゲットコードで1つ以上のブックマークを設定し、ショートカットを使用してブックマークをすばやく検出し、わかりやすいダイアログでブックマークを管理できます。  
   
-### <a name="toggle-bookmark"></a>ブックマークの切り替え  
+### <a name="toggle-bookmark"></a>[ブックマークの設定解除]  
 ブックマークの設定/削除は、次の方法で行うことができます。  
   
 -   ソースまたはターゲットの SQL ウィンドウの上にボタンのトグルブックマークを使用する  

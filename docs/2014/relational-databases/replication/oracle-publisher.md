@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f98bc050a45f831d9b1d4dacb773363e4aa9a7fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065778"
 ---
 # <a name="oracle-publisher"></a>Oracle パブリッシャー
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、スナップショットレプリケーションとトランザクションレプリケーションを使用して Oracle データベースからデータをパブリッシュできます。 詳細については、「[Oracle パブリッシングの概要](non-sql/oracle-publishing-overview.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、スナップショット レプリケーションおよびトランザクション レプリケーションを使用して、Oracle データベースからデータをパブリッシュすることができます。 詳細については、「[Oracle パブリッシングの概要](non-sql/oracle-publishing-overview.md)」を参照してください。  
   
  Oracle パブリッシャーでは、リモート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターを使用する必要があります。そのため、このウィザードは、必要な Oracle ネットワーク ソフトウェアのインストールとテストが行われた後のサーバーで実行する必要があります。 詳細については、「[Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
   
@@ -31,16 +30,14 @@ ms.locfileid: "63022039"
  **Oracle パブリッシャー**  
  一覧から Oracle パブリッシャーを選択します。 この一覧には、ウィザードがディストリビューターとして実行されているサーバーを使用するように、以前に構成されたことのある Oracle パブリッシャーが表示されます。 この一覧が空の場合や使用する Oracle パブリッシャーが一覧にない場合は、 **[Oracle パブリッシャーの追加]** をクリックします。  
   
- **Oracle パブリッシャーの追加**  
- 
-  **[ディストリビューターのプロパティ]** ダイアログ ボックスが表示されます。 このダイアログ ボックスで、 **[追加]** をクリックして、 **[Oracle パブリッシャーの追加]** をクリックします。 
-  **[サーバーへの接続]** ダイアログ ボックスで、Oracle サーバー名およびレプリケーション管理ユーザー スキーマのログインとパスワードを指定します。 詳細については、「[[サーバーへの接続] &#40;Oracle&#41;、[ログイン]](connect-to-server-oracle-login.md)」を参照してください。  
+ **[Oracle パブリッシャーの追加]**  
+ **[ディストリビューターのプロパティ]** ダイアログ ボックスが表示されます。 このダイアログ ボックスで、 **[追加]** をクリックして、 **[Oracle パブリッシャーの追加]** をクリックします。 **[サーバーへの接続]** ダイアログ ボックスで、Oracle サーバー名およびレプリケーション管理ユーザー スキーマのログインとパスワードを指定します。 詳細については、「[[サーバーへの接続] &#40;Oracle&#41;、[ログイン]](connect-to-server-oracle-login.md)」を参照してください。  
   
 > [!NOTE]  
 >  このウィザードが実行されているサーバーがディストリビューターとしてまだ構成されていない場合、ディストリビューターを構成するように要求されます。  
   
 ## <a name="see-also"></a>参照  
- [Oracle Database からのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
+ [Oracle データベースからのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
 
   
   

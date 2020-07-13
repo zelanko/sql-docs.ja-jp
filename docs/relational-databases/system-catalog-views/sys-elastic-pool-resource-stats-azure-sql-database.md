@@ -14,19 +14,19 @@ helpviewer_keywords:
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73843869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648900"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   SQL Database サーバー内のすべてのエラスティック プールのリソース使用状況の統計を返します。 各エラスティック プールのレポート間隔は、15 秒に 1 行 (1 分あたり 4 行) です。 これには、プール内のすべてのデータベースごとの CPU、I/O、ログ、ストレージ消費、および同時実行要求/セッション使用率が含まれます。 このデータは14日間保持されます。 
   
@@ -34,11 +34,11 @@ ms.locfileid: "73843869"
 |-|  
 |**に適用さ**れます: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|15秒のレポート間隔の開始を示す UTC 時刻。|  
 |**end_time**|**datetime2**|15秒のレポート間隔の終了を示す UTC 時刻。|  
-|**elastic_pool_name**|**nvarchar(128**|エラスティックデータベースプールの名前。|  
+|**elastic_pool_name**|**nvarchar(128)**|エラスティックデータベースプールの名前。|  
 |**avg_cpu_percent**|**decimal (5, 2)**|プールの限度に対する割合で表した平均コンピューティング使用率。|  
 |**avg_data_io_percent**|**decimal (5, 2)**|プールの限度に対する割合で表した平均 I/O 使用率。|  
 |**avg_log_write_percent**|**decimal (5, 2)**|プールの限度に対する割合で表した平均書き込みリソース使用率。|  
@@ -49,7 +49,7 @@ ms.locfileid: "73843869"
 |**elastic_pool_storage_limit_mb**|**bigint**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール ストレージ制限 (メガバイト単位)。|
 |**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については、「 [SQL DB でのファイル領域の管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
  このビューは、SQL Database サーバーの master データベースに存在します。 **Elastic_pool_resource_stats**を照会するには、master データベースに接続している必要があります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73843869"
 
  **Dbmanager**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
  次の例では、現在の SQL Database サーバーのすべてのエラスティックデータベースプールについて、最新の時刻によって並べ替えられたリソース使用率データを返します。  
   
@@ -77,7 +77,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [エラスティックデータベースによる爆発的な成長の緩和](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [SQL Database エラスティックデータベースプールの作成と管理 (プレビュー)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   

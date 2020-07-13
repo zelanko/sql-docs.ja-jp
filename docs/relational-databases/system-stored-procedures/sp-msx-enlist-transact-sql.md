@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893474"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マスターサーバー上の使用可能なサーバーの一覧に現在のサーバーを追加します。  
   
@@ -56,8 +56,8 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
- 次の例では、現在のサーバーを `AdventureWorks1` マスター サーバーに追加します。 現在のサーバーの場所は`Building 21, Room 309, Rack 5`です。  
+## <a name="examples"></a>使用例  
+ 次の例では、現在のサーバーを `AdventureWorks1` マスター サーバーに追加します。 現在のサーバーの場所は `Building 21, Room 309, Rack 5` です。  
   
 ```  
 USE msdb ;  
@@ -68,7 +68,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_msx_defect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [xp_cmdshell &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallTranslator function [ODBC]
 ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b973332c2fe0fa541635d326a3a5adecf6ae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b094aa730fff6db80b9addb63a92bee0f5f85b2a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076111"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300322"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator 関数
 **互換性**  

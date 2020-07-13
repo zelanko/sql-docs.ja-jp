@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967055"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763943"
 ---
 # <a name="catalog-object-adox"></a>Catalog オブジェクト (ADOX)
 データソースのスキーマカタログを記述するコレクション ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) が格納されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **カタログ**オブジェクトを変更するには、オブジェクトを追加または削除するか、既存のオブジェクトを変更します。 一部のプロバイダーでは、すべての**カタログ**オブジェクトがサポートされていない場合や、スキーマ情報の表示のみがサポートされている場合があります。  
   
  **Catalog**オブジェクトのプロパティとメソッドを使用すると、次のことができます。  

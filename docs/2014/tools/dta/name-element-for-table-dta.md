@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cdaf7cc0e4e96f7e58c80a074df636f603d89a6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62657247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040379"
 ---
 # <a name="name-element-for-table-dta"></a>Table の Name 要素 (DTA)
   チューニングのためのテーブル名を指定します。  
@@ -35,12 +34,11 @@ ms.locfileid: "62657247"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `string`、1 ～ 255 文字。|  
+|**データ型と長さ**|`string`、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  
-|**個数**|必須。 各`Table`要素につき1回。|  
+|**個数**|必須。 各要素につき1回 `Table` 。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

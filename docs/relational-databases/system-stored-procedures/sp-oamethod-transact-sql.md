@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72252196"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899314"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのメソッドを呼び出します。  
   
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  出力パラメーターの戻り値を取得するには、*パラメーター*を適切なデータ型のローカル変数にする必要があり、**出力**を指定する必要があります。 定数パラメーターが指定されている場合、または**output**が指定されていない場合、出力パラメーターからの戻り値は無視されます。  
   
- 指定する場合、 *parametername*は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーターの名前である必要があります。 _Parametername_is ローカル**@** 変数では[!INCLUDE[tsql](../../includes/tsql-md.md)]ないことに注意してください。 アットマーク (**@**) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
+ 指定する場合、 *parametername*は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@**_Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
   
  *n*  
  複数のパラメーターを指定できることを示すプレースホルダーです。  
   
 > [!NOTE]
->  parametername は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 * \@* このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
+>  * \@ parametername*は、指定されたメソッドの一部であり、オブジェクトに渡されるため、名前付きパラメーターにすることができます。 このストアドプロシージャの他のパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
@@ -97,11 +97,11 @@ sp_OAMethod objecttoken , methodname
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>例  
   
 ### <a name="a-calling-a-method"></a>A. メソッドを呼び出す  
- 次の例では`Connect` 、以前に作成した**SQLServer**オブジェクトのメソッドを呼び出します。  
+ 次の例では、 `Connect` 以前に作成した**SQLServer**オブジェクトのメソッドを呼び出します。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,8 +122,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. プロパティを取得する  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
+### <a name="b-getting-a-property"></a>B: プロパティを取得する  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,7 +136,7 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

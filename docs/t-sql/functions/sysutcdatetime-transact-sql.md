@@ -21,18 +21,18 @@ helpviewer_keywords:
 - SYSUTCDATETIME function [SQL Server]
 - time [SQL Server], system
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fda203cc50956c5aad76d998a663cfb61710871e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27c2ab86d376e9fd2753c4c9fca3c51d5886ec8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117483"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993434"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返します、 **datetime2** いるコンピューターの日時を表す値のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されています。 日付と時刻が UTC 時刻 (世界協定時刻) として返されます。 秒の小数部の有効桁数は 1 ～ 7 桁の範囲で指定できます。 既定の有効桁数は 7 桁です。  
   

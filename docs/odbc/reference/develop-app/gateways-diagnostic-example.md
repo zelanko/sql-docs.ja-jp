@@ -12,14 +12,14 @@ helpviewer_keywords:
 - gateway diagnostic [ODBC]
 - error messages [ODBC], diagnostic messages
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50476cb92d477bb9a72ac8d4311d24572b0368e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b18fd78be7be2eb79316339cbdf3d315deb194fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069682"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305573"
 ---
 # <a name="gateways-diagnostic-example"></a>ゲートウェイ診断の例
 ゲートウェイアーキテクチャでは、ドライバーは ODBC をサポートするゲートウェイに要求を送信します。 ゲートウェイは、要求を DBMS に送信します。 ドライバーマネージャーとのインターフェイスを持つコンポーネントであるため、ドライバーは**SQLGetDiagRec**の引数を書式設定して返します。  

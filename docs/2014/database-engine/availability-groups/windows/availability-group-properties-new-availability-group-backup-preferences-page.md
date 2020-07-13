@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7914d4b1d7af06bcaf4f3fd05a260138e3edf5fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62790221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937113"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
   このダイアログ ボックスを使用して、選択した可用性グループのバックアップのユーザー設定を表示および変更します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62790221"
   
 -   [可用性グループのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>バックアップを実行する場所  
  **[セカンダリを優先]**  

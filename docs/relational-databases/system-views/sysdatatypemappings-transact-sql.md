@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ae1637f0019979d4f915ddb084c6e90fa4e8274e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67910146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889128"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msdb.dbo.sysdatatypemappings**ビューは、SQL Server データベース管理システム (DBMS) の SQL Server データ型とデータ型の間のマッピングを示すために使用されます。 このビューは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|データ型マッピングの ID。|  
 |**source_dbms**|**sysname**|データ型のマップ元となる DBMS の名前を示します。次のいずれかの値を指定できます。<br /><br /> **MSSQLSERVER** = ソースは SQL Server データベースです。<br /><br /> **Oracle** = ソースは oracle データベースです。|  
@@ -54,7 +54,7 @@ ms.locfileid: "67910146"
 |**データ損失**|**bit**|ソース DBMS とマップ先 DBMS でデータ型をマッピングするときに、データの損失が発生するかどうかを示します。|  
 |**is_default**|**bit**|データ型マッピングが既定で使用されるかどうかを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

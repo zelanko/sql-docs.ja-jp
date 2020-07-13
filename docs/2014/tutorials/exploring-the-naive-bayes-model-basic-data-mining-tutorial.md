@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472886"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Naive Bayes モデルの検証 (基本的なデータ マイニング チュートリアル)
@@ -24,7 +24,7 @@ ms.locfileid: "62472886"
   
  
   
-##  <a name="DependencyNetwork"></a>依存関係ネットワーク  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>依存関係ネットワーク  
  [**依存関係ネットワーク**] タブは、 [!INCLUDE[msCoName](../includes/msconame-md.md)]ツリービューアーの [**依存関係ネットワーク**] タブと同じように動作します。 ビューアーの各ノードは属性を表し、ノード間を結ぶ線は関係を表します。 このビューアーでは、予測可能属性 Bike Buyer の状態に影響を与えるすべての属性を確認できます。  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>[依存関係ネットワーク] タブでモデルを調査するには  
@@ -42,7 +42,7 @@ ms.locfileid: "62472886"
      スライダーを下方向に動かすと、[Bike Buyer] 列に最も大きな影響を与える属性のみが表示されます。 スライダーを調整することにより、所有する車の台数、通勤距離、子供の数などが影響の大きい属性であることがわかります。  
  
   
-##  <a name="AttributeProfiles"></a>属性のプロファイル  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a> 属性のプロファイル  
  [**属性のプロファイル**] タブでは、入力属性のさまざまな状態が予測可能な属性の結果にどのように影響するかを説明します。  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>[属性のプロファイル] タブでモデルを調査するには  
@@ -64,7 +64,7 @@ ms.locfileid: "62472886"
      [**マイニング凡例**] には、より詳細なビューが表示されます。  
   
   
-##  <a name="AttributeCharacteristics"></a>属性の特性  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a>属性の特性  
  [**属性の特性**] タブでは、属性と値を選択して、選択した値のケースで他の属性の値がどの程度の頻度で表示されるかを確認できます。  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>[属性の特性] タブでモデルを調査するには  
@@ -76,7 +76,7 @@ ms.locfileid: "62472886"
      このビューアーで見ると、自転車を購入する可能性が高いのは、北米地域に在住し、子供と同居しておらず、通勤距離が短い顧客であることがわかります。  
   
   
-##  <a name="AttributeDiscrimination"></a>属性の識別  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a>属性の識別  
  [**属性の識別**] タブでは、自転車の購入とその他の属性値の2つの不連続値の関係を調べることができます。 `TM_NaiveBayes`モデルには1と0の2つの状態しかないため、ビューアーを変更する必要はありません。  
   
  このビューアーでは、車を所有していない人が自転車を購入する傾向にあり、車を 2 台所有している人は自転車を購入しない傾向にあることがわかります。  

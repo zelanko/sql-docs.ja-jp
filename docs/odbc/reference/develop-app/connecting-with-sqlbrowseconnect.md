@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], connecting
 - connecting to data source [ODBC], SQLBrowseConnect
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04df089b97bf385925c87a98b3f89cdac3ef21e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4d738d394bb3c507f6aa08f736016b51ac4fefb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083131"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294662"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect による接続
 **SQLBrowseConnect**は、 **SQLDriverConnect**のように、接続文字列を使用します。 ただし、 **SQLBrowseConnect**を使用すると、アプリケーションは実行時に完全な接続文字列を作成できます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  

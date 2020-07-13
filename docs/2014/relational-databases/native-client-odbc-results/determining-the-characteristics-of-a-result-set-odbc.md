@@ -15,20 +15,19 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5957092cdddfbcbce904d9a6483914672565d337
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999112"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>結果セットの特性の決定 (ODBC)
   メタデータは、他のデータを説明するデータです。 たとえば、結果セットのメタデータは、結果セットに含まれる列数、これらの列のデータ型、名前、有効桁数、NULL 値の許容属性など、結果セットの特性を説明します。  
   
- ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーでは、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログプロシージャへの呼び出しとして、多くの odbc API カタログ関数が実装されています。  
+ ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、対応するカタログプロシージャへの呼び出しとして、多くの ODBC API カタログ関数が実装されて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。  
   
  アプリケーションは、ほとんどの結果セット操作にメタデータを必要とします。 たとえば、列のデータ型を使用して、列にバインドされている変数の種類を判断します。 または、文字型の列のバイト長を使用して、その列のデータの表示に必要な領域サイズを判断します。 アプリケーションが列のメタデータを判断する方法は、アプリケーションの種類によって異なります。  
   

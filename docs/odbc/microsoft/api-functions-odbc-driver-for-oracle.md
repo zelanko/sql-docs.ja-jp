@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2314aadfad1934e56f2d7caa67939818e133665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22caca270e9023057e9a4e146482a57bf4bad754
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68006253"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299912"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

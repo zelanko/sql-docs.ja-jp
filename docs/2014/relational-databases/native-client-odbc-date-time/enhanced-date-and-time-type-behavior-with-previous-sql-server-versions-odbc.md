@@ -9,58 +9,49 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ffbcbf5a294973f26aa01b9dfc503e027663bb19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63140632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020289"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
   このトピックでは、強化された日付や時刻の機能を使用するクライアント アプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] と通信する場合、および Microsoft Data Access Components、Windows Data Access Components、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用しているクライアント アプリケーションから、機能強化された日付や時刻をサポートするサーバーへコマンドを送信する場合に想定される動作について説明します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 列の内容は、「データ形式: 文字列とリテラル」で説明されているリテラル表現です。 [ODBC の日付と時刻の機能強化に関するデータ型のサポートに関する](data-type-support-for-odbc-date-and-time-improvements.md)セクションで説明しています。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client を使用してコンパイルされたクライアント アプリケーションでは、新しい日付型と時刻型が nvarchar 列と見なされます。 列の内容は、「データ形式: 文字列とリテラル」で説明されているリテラル表現です。 [ODBC の日付と時刻の機能強化に関するデータ型のサポートに関する](data-type-support-for-odbc-date-and-time-improvements.md)セクションで説明しています。 列のサイズは、列に指定された秒の小数部の有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (nvarchar など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
- SQLDescribeCol、SQLDescribeParam、SQGetDescField、SQLColAttribute によって返されるステートメントメタデータは、型名を含め、すべての点でダウンレベルの型と一貫性のあるメタデータを返します。 
-  `nvarchar` は、このような下位型の一例です。  
+ SQLDescribeCol、SQLDescribeParam、SQGetDescField、SQLColAttribute によって返されるステートメントメタデータは、型名を含め、すべての点でダウンレベルの型と一貫性のあるメタデータを返します。 `nvarchar` は、このような下位型の一例です。  
   
- 日付型または時刻型へのスキーマ変更[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]日付型または時刻型へのスキーマ変更が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
   
 |SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
 |Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が0以外の場合に失敗します。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が0以外の場合に失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(7)|SQL_C_TIME|失敗しました-時刻リテラルが無効です。|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失敗しました-時刻リテラルが無効です。|OK (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
-|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
-|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
+|||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
-|1 で保護されたプロセスとして起動されました|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でも引き続き機能します。|  
-|2|
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能したアプリケーションが、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では機能しない可能性があります。|  
+|1|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でも引き続き機能します。|  
+|2|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能したアプリケーションが、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では機能しない可能性があります。|  
   
  一般的なスキーマ変更のみが考慮されていることに注意してください。 一般的な変更は次のとおりです。  
   
@@ -114,8 +105,7 @@ ms.locfileid: "63140632"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="down-level-server-behavior"></a>下位サーバーの動作  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンのサーバー インスタンスに接続している場合、新しいサーバーの型または関連するメタデータ コードおよび記述子フィールドを使用しようとすると、SQL_ERROR が返されます。 "接続しているサーバーのバージョンに対して、SQL データ型が無効です" というメッセージで SQLSTATE HY004 の診断レコード、または、"データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンのサーバー インスタンスに接続している場合、新しいサーバーの型または関連するメタデータ コードおよび記述子フィールドを使用しようとすると、SQL_ERROR が返されます。 "接続しているサーバーのバージョンに対して、SQL データ型が無効です" というメッセージで SQLSTATE HY004 の診断レコード、または、"データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の日付と時刻の改善](date-and-time-improvements-odbc.md)  

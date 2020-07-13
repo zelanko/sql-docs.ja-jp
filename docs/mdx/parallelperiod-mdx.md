@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020701"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
@@ -37,7 +37,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [いとこ](../mdx/cousin-mdx.md)関数と同様に、 **parallelperiod**関数は時系列に密接に関連しています。 **Parallelperiod**関数は、指定されたレベルで指定されたメンバーの先祖を受け取り、指定されたラグを持つ先祖の兄弟を検索し、最後に、指定されたメンバーの、兄弟の子孫間での並列期間を返します。  
   
  **Parallelperiod**関数には、次の既定値があります。  
@@ -76,6 +76,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117465"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486731"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server の間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 + SQL 型システムに関する記事の**その他**のセクションに示されているデータ型: **カーソル**、**タイムスタンプ**、**hierarchyid**、**一意識別子**、**sql_variant**、**xml**、**テーブル**
 + すべての空間型
-+ **画像**
++ **image**
 
 ## <a name="data-types-that-might-convert-poorly"></a>適切に変換できない可能性があるデータ型
 
@@ -83,7 +83,7 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 とそれより前のバージョンの間でのデータ型の変更
 
-Microsoft SQL Server 2016 と Microsoft Azure SQL Database には、データ型変換とその他のいくつかの操作の改善が含まれています。 これらの改善のほとんどでは、浮動小数点型を処理する場合の精度が向上し、従来の**日時**型に対する操作が若干変更されています。
+Microsoft SQL Server 2016 以降では、データ型変換とその他のいくつかの操作の改善が行われています。 これらの改善のほとんどでは、浮動小数点型を処理する場合の精度が向上し、従来の**日時**型に対する操作が若干変更されています。
 
 これらの改善は、データベース互換性レベル 130 またはそれ以降を使用する場合に既定ですべて使用可能になります。 ただし、別の互換性レベルを使用しているか、以前のバージョンを使用してデータベースに接続する場合は、数値またはその他の結果の精度が異なる可能性があります。 
 
@@ -106,7 +106,7 @@ R コードで使用するためのデータをデータベースから取得す
 
 ## <a name="examples"></a>例
 
-### <a name="example-1-implicit-conversion"></a>例 1: 暗黙の変換
+### <a name="example-1-implicit-conversion"></a>例 1:暗黙的な変換
 
 次の例では、SQL Server と R の間を往復するときにデータを変換する方法を示しています。
 
@@ -168,7 +168,7 @@ R で `str` 関数を使用すると、出力データのスキーマが取得�
 -   **列 C4**。 この列には、元のデータには存在しない、R スクリプトで生成された値が含まれます。
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>例2: R を使用した動的な列の選択
+## <a name="example-2-dynamic-column-selection-using-r"></a>例 2:R を使用した動的な列の選択
 
 次の例では、R コードを使用して無効な列の型をチェックする方法を示します。 指定されたテーブルのスキーマを SQL Server システム ビューを使用して取得し、指定された無効な型を持つ列をすべて削除します。
 
@@ -180,5 +180,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 

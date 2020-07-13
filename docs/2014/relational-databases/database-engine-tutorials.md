@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eb5c7603d15a5245b0c76a6dc79374bc8e28f865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70154612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953041"
 ---
 # <a name="database-engine-tutorials"></a>データベース エンジンのチュートリアル
   このセクションには [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]のチュートリアルが含まれます。  
@@ -44,13 +43,13 @@ ms.locfileid: "70154612"
  [チュートリアル:ポリシー ベースの管理を使用したサーバーの管理](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  このチュートリアルでは、サイト管理の基準を適用するポリシーを作成する方法を説明します。  
   
- [チュートリアル : ポリシー ベースの管理を使用したベスト プラクティスの評価](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [チュートリアル:ポリシー ベースの管理を使用したベスト プラクティスの評価](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  このチュートリアルでは、既知の問題について [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスを分析するために使用できるポリシーを作成する方法を説明します。  
   
- [チュートリアル: Azure Blob Storage サービスへの SQL Server のバックアップと復元](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  このチュートリアルでは、Azure Blob Storage サービスへの SQL Server のバックアップと復元を実行する方法について説明します。  
   
- [チュートリアル: Azure Storage サービス内の SQL Server データ ファイル](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [チュートリアル:Azure Storage サービス内の SQL Server データ ファイル](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  このチュートリアルを読むと、Azure Blob Storage サービスに SQL Server データ ファイルを直接格納する方法がわかります。  
   
 ## <a name="see-also"></a>参照  

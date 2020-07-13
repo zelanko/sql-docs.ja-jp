@@ -13,14 +13,14 @@ helpviewer_keywords:
 - system requirements [ODBC], desktop database drivers
 - requirements [ODBC], desktop database drivers
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe69775e379e9a9d661b4ddf81e577b738fcf34d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952442"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295242"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>ハードウェアとソフトウェアの要件 (ODBC)
 このトピックでは、ODBC デスクトップデータベースドライバーを使用するための要件を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "67952442"
   
 -   16 MB 以上のランダムアクセスメモリ (RAM)。  
   
-## <a name="software-requirements"></a>ソフトウェアの要件  
+## <a name="software-requirements"></a>ソフトウェア要件  
  ODBC ドライバーを使用してデータにアクセスするには、次のものが必要です。  
   
 -   ODBC ドライバー。  

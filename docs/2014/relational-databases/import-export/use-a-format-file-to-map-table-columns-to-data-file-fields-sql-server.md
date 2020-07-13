@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79d187f3223f845f00d9eabb8744758755005db9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026405"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)
   データ ファイルに含めるフィールドは、対応するテーブル内の列とは異なる順序に並べ替えることができます。 このトピックでは、テーブル列とは異なる順序にフィールドを並べ替えたデータ ファイルを格納できるように変更した XML フォーマット ファイルと XML 以外のフォーマット ファイルについて説明します。 変更したフォーマット ファイルのデータ フィールドは、対応するテーブル列にマッピングされます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66011739"
  このトピックで例として変更するフォーマット ファイルは、次のテーブルとデータ ファイルに基づいています。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
- このトピックの例を実行するには、`myTestOrder` スキーマに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のテーブルを `dbo` サンプル データベース内に作成する必要があります。 このテーブルを作成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ このトピックの例を実行するには、`dbo` スキーマに基づいて、`myTestOrder` という名前のテーブルを [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベース内に作成する必要があります。 このテーブルを作成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -56,8 +55,7 @@ DataField3,DataField2,1,DataField4
   
 ```  
   
- 
-  `myTestSkipCol2-c.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで 1 番目のデータ フィールドを `Col3`、2 番目のデータ フィールドを `Col2`、3 番目のデータ フィールドを `Col1`、4 番目のデータ フィールドを `Col4` にそれぞれマップする必要があります。  
+ `myTestSkipCol2-c.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで 1 番目のデータ フィールドを `Col3`、2 番目のデータ フィールドを `Col2`、3 番目のデータ フィールドを `Col1`、4 番目のデータ フィールドを `Col4` にそれぞれマップする必要があります。  
   
 ## <a name="using-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの使用  
  列の順序を表す値を、対応するデータ フィールドの位置を指すように変更することにより、列マッピングの順序を変更できます。  
@@ -82,8 +80,7 @@ DataField3,DataField2,1,DataField4
 ### <a name="example"></a>例  
  次の例では `BULK INSERT` ステートメントを実行し、XML 以外のフォーマット ファイル `myTestOrder-c.txt` を使用して `myTestOrder` データ ファイルから `myTestOrder.fmt` サンプル テーブルにデータを一括インポートします。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のように実行します。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のように実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,8 +95,7 @@ GO
 ## <a name="using-an-xml-format-file"></a>XML フォーマット ファイルの使用  
  次の XML 以外のフォーマット ファイルのサンプルは、`myTestOrder.xml` のフィールドを `myTestOrder-c.txt` テーブルの列にマップするフォーマット ファイル `myTestOrder` を示しています。データ ファイルとテーブルの作成方法の詳細については、このトピックの「サンプル テーブルとデータ ファイル」を参照してください。  
   
- 
-  `myTestOrder.xml` フォーマット ファイルには、次の情報が含まれています。  
+ `myTestOrder.xml` フォーマット ファイルには、次の情報が含まれています。  
   
 ```  
 <?xml version="1.0"?>  
@@ -125,11 +121,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  XML スキーマの構文と XML フォーマット ファイルのその他のサンプルに関する詳細については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="example"></a>例  
- 次の例では `OPENROWSET` 一括行セット プロバイダーを実行し、XML フォーマット ファイル `myTestOrder-c.txt` を使用して `myTestOrder` データ ファイルから `myTestOrder.xml` サンプル テーブルにデータをインポートします。 
-  `INSERT... SELECT` ステートメントの選択リストには、列リストを指定します。  
+ 次の例では `OPENROWSET` 一括行セット プロバイダーを実行し、XML フォーマット ファイル `myTestOrder-c.txt` を使用して `myTestOrder` データ ファイルから `myTestOrder.xml` サンプル テーブルにデータをインポートします。 `INSERT... SELECT` ステートメントの選択リストには、列リストを指定します。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -144,7 +138,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+ [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

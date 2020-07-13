@@ -17,7 +17,7 @@ ms.locfileid: "68265644"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-**構成マネージャーの**[Power BI 統合][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの **[Power BI 統合]** ページを使用して、レポート サーバーを目的の Azure Active Directory (AD) 管理対象テナントに登録すると、レポート サーバーのユーザーはサポートされるレポート アイテムを [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードにピン留めできるようになります。 ピン留めできるサポートされているアイテムの一覧については、「 [Power BI ダッシュボードへの Reporting Services のアイテムのピン留め](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)」を参照してください。
 
 ## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Power BI 統合の要件
 

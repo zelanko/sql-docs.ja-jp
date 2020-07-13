@@ -10,20 +10,19 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9363fca515ba712e8968da57bf046bf2690e3ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 42602ab107b32fe144d2e3b65d17982e2e1688e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787286"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003451"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  このトピックでは、Native Client に固有の SQLGetDescRec 機能に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ついて説明します。  
+  このトピックでは、Native Client に固有の SQLGetDescRec 機能について説明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec とテーブル値パラメーター  
  SQLGetDescRec を使用すると、テーブル値パラメーターおよびテーブル値パラメーター列の属性の値を取得できます。 SQLGetDescRec の*Recnumber*パラメーターは、SQLBindParameter の*parameternumber*パラメーターに対応します。  
@@ -40,7 +39,7 @@ ms.locfileid: "73787286"
 |*Length Ptr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|1 で保護されたプロセスとして起動されました|SQL_DESC_NULLABLE|  
+|*NullablePtr*|1|SQL_DESC_NULLABLE|  
   
  テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046330"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898365"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された時間について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**start_lsn**列のログシーケンス番号 (LSN) 値を返します。 この関数を使用すると、変更データキャプチャの列挙関数[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)および[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)によって必要とされる LSN 範囲を体系的にマップし、その範囲内のデータ変更を返すことができます。  
   
@@ -58,9 +58,9 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  照合する datetime 値を指定します。 *tracking_time*は**datetime**です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **binary (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **Fn_cdc_map_time_lsn**を使用して datetime 範囲を lsn 範囲にマップする方法を理解するには、次のシナリオを検討してください。 変更データを毎日抽出するとします。 つまり、特定の日の午前 0 時までに発生した変更を取得する必要があります。 時間範囲の下限は、前の日の深夜を含めずに最大になります。 上限は、指定された日の深夜を含む最大までの範囲です。 次の例では、 **fn_cdc_map_time_to_lsn**関数を使用して、この時間ベースの範囲を変更データキャプチャの列挙関数で必要な lsn ベースの範囲に体系的にマップし、その範囲内のすべての変更を返す方法を示しています。  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- 関係演算子 '`smallest greater than`' は、前日の午前0時より後に発生した変更を制限するために使用されます。 LSN 値が異なる複数のエントリが、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の下限として識別された**tran_end_time**値を共有する場合、関数は、すべてのエントリが含まれていることを確認する最小の lsn を返します。 上限を設定するために、関係演算子`largest less than or equal to`' ' を使用して、午前0時を含むすべてのエントリを**tran_end_time**値として範囲に含めます。 LSN 値が異なる複数のエントリが上限として識別された**tran_end_time**値を共有している場合、関数は、すべてのエントリが含まれていることを保証する最大の lsn を返します。  
+ 関係演算子 ' `smallest greater than` ' は、前日の午前0時より後に発生した変更を制限するために使用されます。 LSN 値が異なる複数のエントリが、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の下限として識別された**tran_end_time**値を共有する場合、関数は、すべてのエントリが含まれていることを確認する最小の lsn を返します。 上限を設定するために、関係演算子 ' ' を使用して、 `largest less than or equal to` 午前0時を含むすべてのエントリを**tran_end_time**値として範囲に含めます。 LSN 値が異なる複数のエントリが上限として識別された**tran_end_time**値を共有している場合、関数は、すべてのエントリが含まれていることを保証する最大の lsn を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では`sys.fn_cdc_map_time_lsn` 、関数を使用して、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブルに、 **tran_end_time**値が午前0時以上の行があるかどうかを確認します。 このクエリを使用すると、たとえば、その日の午前0時にコミットされた変更がキャプチャプロセスによって既に処理されているかどうかを判断し、その日の変更データの抽出を続行できます。  
+ 次の例では、関数を使用して、 `sys.fn_cdc_map_time_lsn` [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブルに、 **tran_end_time**値が午前0時以上の行があるかどうかを確認します。 このクエリを使用すると、たとえば、その日の午前0時にコミットされた変更がキャプチャプロセスによって既に処理されているかどうかを判断し、その日の変更データの抽出を続行できます。  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  
@@ -93,7 +93,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [fn_cdc_map_lsn_to_time &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

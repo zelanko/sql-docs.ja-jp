@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe24362f1a49577a7fb494f768947080d0ab6e9e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125224"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292312"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>ブロック カーソル、スクロール可能なカーソル、および下位互換性
 **Sqlfetchscroll**と**SQLExtendedFetch**の両方が存在する場合は、アプリケーションプログラミングインターフェイス (API) と、アプリケーションが呼び出す一連の関数、およびドライバーが実装する関数のセットである SERVICE Provider Interface (SPI) との間の、ODBC での最初の clear split を表します。 この分割は、ODBC 3.x で**Sqlfetchscroll**を使用し、標準に準拠していて、 **SQLExtendedFetch***を使用**する odbc 2.x*と互換性があるようにするために必要です。  

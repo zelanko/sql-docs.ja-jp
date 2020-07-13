@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6246ed25909a2e366d8bbafcd912a4fd923cc84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401103"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Analytics Platform System の高可用性
@@ -34,7 +34,7 @@ Analytics Platform System (APS) が高可用性を実現するためにどのよ
   
 記憶域プールがオンラインのままになるように、データスケールユニット内の各ホストには、フェールオーバーされない ISCSI 仮想マシンがあります。 ホストで障害が発生した場合でも、データスケールユニット内の他のホストからデータにアクセスできるので、このアーキテクチャは重要です。  
   
-## <a name="hosts"></a>ホスト  
+## <a name="hosts"></a>Hosts  
 ホストの可用性を確保するために、すべてのホストが Windows フェールオーバークラスターに構成されています。 すべてのラックにパッシブホストがあります。 必要に応じて、並列データウェアハウス (PDW) とアプライアンスファブリックを制御する最初のラックは、2つ目のパッシブホストを持つことができ SQL Server ます。 ホストで障害が発生した場合、フェールオーバー用に構成されているバーチャルマシンは、使用可能なパッシブホストにフェールオーバーします。  
   
 ## <a name="pdw-nodes-and-appliance-fabric"></a>PDW ノードとアプライアンスファブリック  

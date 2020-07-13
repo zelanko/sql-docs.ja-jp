@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a2ccf9973cf545168f6778576ff27eae5e630d5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835691"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438709"
 ---
 # <a name="edit-the-advanced-properties"></a>詳細プロパティの編集
   **[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXML のサンプル実行のための必要条件
+description: SQLXML 4.0 のプログラミング概念に関するセクションの例を使用して、実際のサンプルを作成するための要件について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c3c04eccdae6f9c5bb1bd2da0272f8878f9d2d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666166"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML のサンプル実行のための必要条件
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [SQLXML 4.0 のプログラミング](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)セクションでは、多くの例を示します。 ここでは、これらの例の実際のサンプルを作成するための必要条件についてまとめます。  
   
  SQLXML 4.0 の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  

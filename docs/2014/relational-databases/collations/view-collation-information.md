@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 995e559cfd7ca871f5abd90751f2f79167bdf76f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62918729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970556"
 ---
 # <a name="view-collation-information"></a>照合順序情報の表示
     
-##  <a name="Top"></a> サーバー、データベース、または列の照合順序は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。  
+##  <a name="you-can-view-the-collation-of-a-server-database-or-column-in-ssmanstudiofull-using-object-explorer-menu-options-or-by-using-tsql"></a><a name="Top"></a> サーバー、データベース、または列の照合順序は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。  
   
-##  <a name="Procedures"></a> 照合順序の設定を表示する方法  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> 照合順序の設定を表示する方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **サーバー (SQL Server のインスタンス) の照合順序設定をオブジェクト エクスプローラーで表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
@@ -53,7 +52,7 @@ ms.locfileid: "62918729"
   
 4.  列を右クリックし、 **[プロパティ]** をクリックします。 照合順序プロパティが空の場合、列が文字データ型ではありません。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **サーバーの照合順序設定を表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]** をクリックします。  
@@ -108,10 +107,10 @@ ms.locfileid: "62918729"
   
 ## <a name="see-also"></a>参照  
  [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
- [fn_helpcollations &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [&#40;Transact-sql&#41;の列](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
- [照合順序の優先順位 &#40;Transact-sql&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [sp_helpsort &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [照合順序の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

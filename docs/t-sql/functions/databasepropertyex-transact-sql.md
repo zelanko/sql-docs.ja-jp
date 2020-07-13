@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0bae370acd535f331d287cea38de04375891db0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823911"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、電源障害やその他のシステムの停止によって発生した不完全な I/O 操作を検出します。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **int**| 
 |IsVerifiedClone|データベースは、DBCC CLONEDATABASE の WITH VERIFY_CLONEDB オプションで作成されたユーザー データベースをスキーマと統計のみで複製したものです。 詳細については、[Microsoft サポート技術情報](https://support.microsoft.com/help/3177838)をご覧ください。|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 で始まる。<br /><br /> <br /><br /> 1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **int**| 
 |IsXTPSupported|インメモリ OLTP、つまり、メモリ最適化テーブルとネイティブ コンパイル モジュールをデータベースで作成し、使用できるかどうかを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有:<br /><br /> IsXTPSupported は、インメモリ OLTP オブジェクトを作成するために必要な MEMORY_OPTIMIZED_DATA ファイル グループの存在に依存しません。|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **int**|  
-|LastGoodCheckDbTime|指定されたデータベース上で実行され、最後に成功した DBCC CHECKDB の日時。<sup>1</sup> DBCC CHECKDB がデータベース上で実行されていない場合は、1900-01-01 00:00:00.000 が返されます。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (SP2 以降)。</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] (CU9 以降)。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降。</br>Azure SQL Database。<br/><br/>datetime 値<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **datetime**| 
+|LastGoodCheckDbTime|指定されたデータベース上で実行され、最後に成功した DBCC CHECKDB の日時。<sup>1</sup> DBCC CHECKDB がデータベース上で実行されていない場合は、1900-01-01 00:00:00.000 が返されます。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (SP2 以降)。</br>CU9 から始まる [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降。</br>Azure SQL Database。<br/><br/>datetime 値<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **datetime**| 
 |LCID|照合順序の Windows ロケール識別子 (LCID)。|LCID 値 (10 進数形式)。<br /><br /> 基本データ型: **int**|  
 |MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **bigint** 型|  
 |Recovery|データベース復旧モデル|FULL: 完全復旧モデル<br /><br /> BULK_LOGGED: 一括ログ モデル<br /><br /> SIMPLE: 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  

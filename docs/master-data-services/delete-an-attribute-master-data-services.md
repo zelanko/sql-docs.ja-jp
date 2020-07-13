@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f33b7b5b0f68eb5dd45bf62188efd38d9bc996d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814000"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>属性を削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
   
 ## <a name="prerequisites"></a>前提条件  
@@ -32,23 +31,19 @@ ms.locfileid: "73728334"
   
 -   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-attribute"></a>属性を削除するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
 2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
   
-3.  
-  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
+3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   
-4.  
-  **[属性]** をクリックします。  
+4.  **[属性]** をクリックします。  
   
-5.  
-  **[属性の管理]** ページで、次のいずれかの操作を行います。  
+5.  **[属性の管理]** ページで、次のいずれかの操作を行います。  
   
     -   属性の対象がリーフ メンバーの場合、 **[メンバーの種類]** ボックスの一覧から **[リーフ]** を選択します。  
   
@@ -61,15 +56,14 @@ ms.locfileid: "73728334"
     > [!NOTE]  
     >  Name 属性または Code 属性を削除することはできません。  
   
-7.  
-  **[削除]** をクリックします。  
+7.  **[削除]** をクリックします。  
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)   
  [ドメインベースの属性 &#40;マスターデータサービス&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [テキスト属性 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

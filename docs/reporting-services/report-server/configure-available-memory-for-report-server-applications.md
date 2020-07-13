@@ -86,7 +86,7 @@ ms.locfileid: "67564024"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET のメモリの構成設定について  
- 2016 以降のレポート サーバー Web サービスと Web ポータルは HTML5 アプリケーションで、以前のアプリケーションは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、いずれのアプリケーションも、IIS 5.0 互換モードで実行される **アプリケーションの machine.config の**processModel[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] に指定するメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
+ 2016 以降のレポート サーバー Web サービスと Web ポータルは HTML5 アプリケーションで、以前のアプリケーションは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、いずれのアプリケーションも、IIS 5.0 互換モードで実行される [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションの machine.config の **processModel** に指定するメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
   
 ## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

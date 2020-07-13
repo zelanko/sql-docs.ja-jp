@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046404"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898408"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>fn_cdc_get_min_lsn (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [Change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)システムテーブルから、指定されたキャプチャインスタンスの start_lsn 列の値を返します。 この値は、キャプチャ インスタンスの有効期間の下端を表します。  
   
@@ -46,9 +46,9 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  キャプチャ インスタンスの名前を指定します。 *capture_instance_name*は**sysname**です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **binary (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キャプチャ インスタンスが存在しない場合、または、キャプチャ インスタンスに関連付けられた変更データにアクセスするための権限が呼び出し元にない場合は、0x00000000000000000000 が返されます。  
   
  通常、この関数は、キャプチャインスタンスに関連付けられた変更データキャプチャタイムラインの下端を識別するために使用されます。 また、この関数を使用すると、変更データを要求する前に、クエリ範囲のエンドポイントがキャプチャインスタンスのタイムライン内に収まることを検証することもできます。 変更テーブルでクリーンアップが実行されると、キャプチャ インスタンスの下端が変わるため、こうしたチェックを実行することは重要です。 変更データの要求間の時間が重要である場合、前の変更データ要求の最上位エンドポイントに設定されている低いエンドポイントでも、現在のタイムラインの外部にある可能性があります。  
@@ -59,7 +59,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 指定したキャプチャ インスタンスの最小 LSN 値を取得する  
- 次の例では、 `HumanResources_Employee` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース内のキャプチャインスタンスの最小 LSN 値を返します。  
+ 次の例では、データベース内のキャプチャインスタンスの最小 LSN 値を返し `HumanResources_Employee` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ます。  
   
 ```  
 USE AdventureWorks2-12;  
@@ -68,8 +68,8 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B. クエリ範囲の下端を検証する  
- 次の例では、変更データ クエリの下端候補が、キャプチャ インスタンス `sys.fn_cdc_get_min_lsn` の現在のタイムラインに対して有効かどうかを、`HumanResources_Employee` によって返された最小 LSN 値を使って検証します。 この例では、キャプチャインスタンスの前の高エンドポイント LSN が保存されていて`@save_to_lsn` 、変数を設定できることを前提としています。 この例では、 `@save_to_lsn`を0x000000000000000000 に設定して、エラー処理セクションを強制的に実行します。  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B: クエリ範囲の下端を検証する  
+ 次の例では、変更データ クエリの下端候補が、キャプチャ インスタンス `sys.fn_cdc_get_min_lsn` の現在のタイムラインに対して有効かどうかを、`HumanResources_Employee` によって返された最小 LSN 値を使って検証します。 この例では、キャプチャインスタンスの前の高エンドポイント LSN が保存されていて、変数を設定できることを前提としてい `@save_to_lsn` ます。 この例では、を `@save_to_lsn` 0x000000000000000000 に設定して、エラー処理セクションを強制的に実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
- [トランザクションログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
+ [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

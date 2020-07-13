@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107549"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Excel の行制限を回避する
@@ -24,8 +24,7 @@ ms.locfileid: "66107549"
   
 ### <a name="to-create-an-explicit-page-break"></a>明示的な改ページを作成するには  
   
-1.  
-  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] またはレポート マネージャーでレポートを開きます。  
+1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] またはレポート マネージャーでレポートを開きます。  
   
 2.  テーブル内のデータ行を右クリックし、[**グループ** > の**親グループ**の追加] をクリックして、外側のテーブルグループを追加します。  
   
@@ -43,18 +42,15 @@ ms.locfileid: "66107549"
   
      ![グループ列の削除](../media/groupcolumn-delete-updated.png "グループ列の削除")  
   
-5.  
-  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]** をクリックします。  
+5.  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]** をクリックします。  
   
      ![グループのプロパティの表示](../media/groupproperties-updated.png "グループのプロパティの表示")  
   
-6.  
-  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]** をクリックします。  
+6.  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]** をクリックします。  
   
      ![既定の並べ替えの削除](../media/groupproperties-sorting-updated.png "既定の並べ替えの削除")  
   
-7.  
-  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]** をクリックします。  
+7.  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]** をクリックします。  
   
      ![改ページの設定](../media/groupproperties-pagebreaks-updated.png "改ページの設定")  
   

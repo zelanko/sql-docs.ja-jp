@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57d476216b34053f6bb61deef719d082240ca0c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934153"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>[ミラーリング監視サーバーを含める] (データベース ミラーリング セキュリティ構成ウィザード)
   このページを使用すると、データベース ミラーリング用に、このセキュリティ構成にミラーリング監視サーバーを含めるかどうかを指定できます。  
   
- **SQL Server Management Studio を使用してデータベースミラーリングを構成するには**  
+ **SQL Server Management Studio を使用してデータベース ミラーリングを構成するには**  
   
--   [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [データベースミラーリングセキュリティ構成ウィザード &#40;SQL Server Management Studio を開始し&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+-   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>オプション  
  **はい**  

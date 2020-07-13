@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc1d5af0a64225aca4ff54570ad6504d25d62812
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771438"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438799"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -76,7 +75,7 @@ ms.locfileid: "62771438"
 > [!NOTE]  
 >  このストアド プロシージャの構文とそのパラメーターの詳細については、「[sys.sp_cdc_generate_wrapper_function (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql)」をご覧ください。  
   
- ストアド プロシージャでは、常に、各キャプチャ インスタンスからすべての変更を返すラッパー関数が生成されます。 キャプチャインスタンス*@supports_net_changes*の作成時にパラメーターが設定された場合、ストアドプロシージャは、該当する各キャプチャインスタンスから差分変更を返すラッパー関数も生成します。  
+ ストアド プロシージャでは、常に、各キャプチャ インスタンスからすべての変更を返すラッパー関数が生成されます。 *@supports_net_changes*キャプチャインスタンスの作成時にパラメーターが設定された場合、ストアドプロシージャは、該当する各キャプチャインスタンスから差分変更を返すラッパー関数も生成します。  
   
  このストアド プロシージャによって返される結果セットには、次の 2 つの列が含まれています。  
   
@@ -108,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>ストアド プロシージャによって作成される関数の概要と使用方法  
- キャプチャした変更データのタイムラインを体系的に進めるために、生成さ*@end_time*れるラッパー関数は、1つ*@start_time*の間隔のパラメーターが後続の期間のパラメーターになることを想定しています。 この規則に従うと、生成されたラッパー関数では次のタスクを実行できます。  
+ キャプチャした変更データのタイムラインを体系的に進めるために、生成されるラッパー関数は、 *@end_time* 1 つの間隔のパラメーターが後続の期間のパラメーターになることを想定して *@start_time* います。 この規則に従うと、生成されたラッパー関数では次のタスクを実行できます。  
   
 -   内部で使用される LSN 値に日付/時刻値をマップします。  
   
@@ -126,7 +125,7 @@ deallocate #hfunctions
   
 -   期間の開始日時の値と終了日時の値。 ラッパー関数では、クエリ範囲のエンドポイントとして日付/時刻値が使用されますが、変更データ キャプチャ関数では、エンドポイントとして 2 つの LSN 値が使用されます。  
   
--   行フィルター。 ラッパー関数と変更データキャプチャ関数の両方について、 *@row_filter_option*パラメーターは同じです。 詳細については、「[cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql)」および「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)」をご覧ください。  
+-   行フィルター。 ラッパー関数と変更データキャプチャ関数の両方について、 *@row_filter_option* パラメーターは同じです。 詳細については、「[cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql)」および「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)」をご覧ください。  
   
  ラッパー関数から返される結果セットには、次のデータが含まれます。  
   
@@ -134,7 +133,7 @@ deallocate #hfunctions
   
 -   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、'UN' (新しい値の更新) です。  
   
--   更新フラグを要求した場合は、操作コードの後にビット列として表示され、 *@update_flag_list*パラメーターに指定された順序で表示されます。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
+-   更新フラグを要求した場合は、操作コードの後にビット列として表示され、パラメーターに指定された順序で表示され *@update_flag_list* ます。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
   
  パッケージで、すべての変更に対してクエリを実行するラッパー関数を呼び出すと、そのラッパー関数は __CDC_STARTLSN 列と \__CDC_SEQVAL 列も返します。 この 2 つの列はそれぞれ、結果セットの 1 番目の列と 2 番目の列になります。 また、ラッパー関数は、この 2 つの列に基づいて結果セットを並べ替えます。  
   
@@ -209,16 +208,16 @@ go
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|変更のコミット トランザクションに関連付けられた LSN。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルの更新操作によって 2 つの異なる行が変更された場合、変更テーブルには、すべて同じ **__$start_lsn** 値を持った 4 つの行 (古い値を含む 2 行と新しい値を含む 2 行) が格納されます。|  
-|**__ $ seqval**|`binary(10)`|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
-|**__ $ 操作**|`int`|変更に関連付けられているデータ操作言語 (DML) 操作。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
+|**__$seqval**|`binary(10)`|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
+|**__ $ 操作**|`int`|変更に関連付けられているデータ操作言語 (DML) 操作。 次のいずれかの値を指定します。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
 |**__ $ update_mask**|`varbinary(128)`|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。 変更された列を特定する必要がある場合にこの値を調べることができます。|  
-|**\<キャプチャされたソーステーブルの列>**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
+|**\<captured source table columns>**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
  詳細については、「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)」を参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  変更データをクエリで取得するテーブル値関数を作成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:** [変更データの取得と理解](retrieve-and-understand-the-change-data.md)  
+ **次のトピック:** [変更データを取得および理解する](retrieve-and-understand-the-change-data.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19751bb6d0556b117d0a73967d4db00c408733ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081969"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281022"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>コア レベルの API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

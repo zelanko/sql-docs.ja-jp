@@ -16,16 +16,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15b5e8eb6eb7c63ab771030f0c31e8c9ff92724
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135683"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306553"
 ---
-# <a name="applications"></a>[アプリケーション]
+# <a name="applications"></a>アプリケーション
 *アプリケーション*は、データにアクセスするために ODBC API を呼び出すプログラムです。 多くの種類のアプリケーションが可能ですが、ほとんどは、このガイド全体の例として使用される3つのカテゴリに分類されています。  
   
 -   **汎用アプリケーション**これらは、"圧縮ラップされたアプリケーション" または "既製のアプリケーション" とも呼ばれます。 汎用アプリケーションは、さまざまな Dbms で動作するように設計されています。 たとえば、詳細な分析のために ODBC を使用してデータをインポートするスプレッドシートや統計パッケージや、ODBC を使用してデータベースからメーリングリストを取得するワードプロセッサなどがあります。  

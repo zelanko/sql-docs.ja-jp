@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757078"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -34,7 +34,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getActualSize()  

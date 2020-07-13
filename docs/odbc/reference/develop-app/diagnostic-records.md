@@ -14,14 +14,14 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039879"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305183"
 ---
 # <a name="diagnostic-records"></a>診断レコード
 各環境、接続、ステートメント、記述子ハンドルに関連付けられている*診断レコード*です。 これらのレコードには、特定のハンドルを使用した、最後に呼び出された関数に関する診断情報が含まれています。 レコードは、そのハンドルを使用して別の関数が呼び出された場合にのみ置換されます。 一度に保存できる診断レコードの数に制限はありません。  

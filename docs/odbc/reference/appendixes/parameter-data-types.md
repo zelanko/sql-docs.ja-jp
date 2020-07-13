@@ -11,15 +11,15 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: 5140c69184332b1760859421b7e802a5163a0f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100603"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303583"
 ---
 # <a name="parameter-data-types"></a>パラメーターのデータ型
 **SQLBindParameter**で指定された各パラメーターが sql データ型を使用して定義されている場合でも、sql ステートメントのパラメーターには組み込みデータ型がありません。 そのため、ステートメント内の別のオペランドからデータ型を推論できる場合にのみ、パラメーターマーカーを SQL ステートメントに含めることができます。 たとえば、のような算術式では、 + COLUMN1,、パラメーターのデータ型は、COLUMN1 で表される名前付きの列のデータ型から推論できます。 データ型を特定できない場合、アプリケーションでパラメーターマーカーを使用することはできません。  

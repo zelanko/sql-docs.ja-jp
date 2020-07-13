@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 68c8b655dbec3380ddad64199735d1c5b052c30f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63316109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066161"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>[テーブルの削除] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、レコードを削除するテーブルを指定できます。 クエリのタイプを DELETE クエリに変更するときに、ダイアグラム ペインに複数のテーブルが表示される場合、このダイアログ ボックスが表示されます。  

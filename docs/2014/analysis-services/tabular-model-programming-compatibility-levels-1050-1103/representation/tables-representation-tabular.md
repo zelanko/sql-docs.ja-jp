@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 46ede058446778ad7e0d1a980bdd93bf5d72b966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939993"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
   テーブル モデルでは、テーブルがデータの基本表現です。  
@@ -27,7 +26,7 @@ ms.locfileid: "62757702"
   
  実際の操作手順では、他のオブジェクトを定義する前にデータ ソース ビューを作成する必要があります。 データ ソース ビュー オブジェクトには、データ ソース内のすべての該当オブジェクトのマッピングが含まれます。 リレーショナル モデルのマッピングは、.NET DataSet オブジェクトとしてデータ ソース ビューに埋め込まれ、DSV の Schema プロパティに格納されます。  
   
- 次のコードスニペットは、SQL クライアント接続文字列、表形式モデルで表現するリレーショナルモデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリ、およびデータの名前を持つ変数 newDataSourceViewName を使用していることを前提としています。ソースビュー (通常はリレーショナルデータベースの名前)。  
+ 次のコードスニペットは、SQL クライアント接続文字列、テーブルモデルで表現するリレーショナルモデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリ、およびデータソースビューの名前 (通常はリレーショナルデータベースの名前) を持つ変数 newDataSourceViewName を持っていることを前提としています。  
   
 ```  
   

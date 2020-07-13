@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Text File Driver
 - text file driver [ODBC], SQLGetTypeInfo
 ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2659b3251cf77882f3762ce5699c36441e6c8ebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b70b58e4760959db102450b5f8b7beed042df95
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898648"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81295002"
 ---
 # <a name="sqlgettypeinfo-text-file-driver"></a>SQLGetTypeInfo (テキスト ファイル ドライバー)
 > [!NOTE]  

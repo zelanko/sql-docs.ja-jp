@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 027e32084e61de8f9f03444dde11401adf32ec2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028919"
 ---
 # <a name="progress-report-event-category"></a>Progress Report イベント カテゴリ
   **Progress Report** イベント カテゴリには、 **Progress Report: Online Index Operation** イベント クラスが含まれています。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation イベント クラス](progress-report-online-index-operation-event-class.md)|オンライン インデックスの構築操作の進行状況を示します。|  
   

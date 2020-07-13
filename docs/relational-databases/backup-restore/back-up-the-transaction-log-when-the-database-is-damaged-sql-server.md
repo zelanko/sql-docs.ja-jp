@@ -1,5 +1,6 @@
 ---
 title: データベースが破損したときのトランザクション ログのバックアップ (SQL Server) | Microsoft Docs
+description: このトピックでは、SQL Server でデータベースが破損した場合に、SQL Server Management Studio または Transact-SQL を使用して、トランザクション ログをバックアップする方法について説明します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e94899f3c10f6f603d07af8a8512755d9d04c9b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670798"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>データベースが破損したときのトランザクション ログのバックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースが損傷しているときにトランザクション ログをバックアップする方法について説明します。  
   
  **このトピックの内容**  
@@ -33,7 +34,7 @@ ms.locfileid: "72909191"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースが損傷したときのトランザクション ログのバックアップ方法:**  
   

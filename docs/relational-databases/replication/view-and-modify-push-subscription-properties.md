@@ -35,7 +35,7 @@ ms.locfileid: "71174233"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  プッシュ サブスクリプション プロパティを表示および変更するには、以下の方法があります。  
   
--   **[サブスクリプションのプロパティ - \<Publisher>:\<PublicationDatabase>]** ダイアログ ボックスで表示できます。これは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から使用できます。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックス。  
   
 -   レプリケーション モニターの **[すべてのサブスクリプション]** タブ。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71174233"
   
 1.  パブリッシャーのパブリケーション データベースで [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 **\@publication** と **\@subscriber** を指定し、 **\@article** に **all** を指定します。  
   
-2.  パブリッシャーのパブリケーション データベースで、 **\@subscriber** を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。  
+2.  パブリッシャーのパブリケーション データベースで、**\@subscriber** を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71174233"
   
 1.  パブリッシャーのパブリケーション データベースで [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)を実行します。 **\@publication** と **\@subscriber** を指定します。  
   
-2.  パブリッシャーで、 **\@subscriber** を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。  
+2.  パブリッシャーで、**\@subscriber** を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   

@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c00b08d40bc8c17013e6af19b5d11b0b7ad78c4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058992"
 ---
 # <a name="resolving-upgrade-issues"></a>アップグレードに関する問題とその対処方法
   このセクションのトピックでは、アップグレードに関連する検出可能な問題と、検出できずアップグレードまたはアップグレード後の動作に影響することが考えられる問題について説明します。 これらの問題は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントごとにまとめられています。  
@@ -55,7 +54,7 @@ ms.locfileid: "66092500"
 -   [SQL Server エージェントのアップグレードに関する問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>アップグレードを妨げる問題  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構成または設定が原因で、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできなくなる場合があります。 のインストール[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時にセットアップでこれらの問題が検出された場合、セットアップによってアップグレードプロセスが停止され、アップグレードアドバイザーを実行して、ブロックの問題を修正するように要求されます。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構成または設定が原因で、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできなくなる場合があります。 のインストール時にセットアップでこれらの問題が検出された場合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、セットアップによってアップグレードプロセスが停止され、アップグレードアドバイザーを実行して、ブロックの問題を修正するように要求されます。  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  以下のタスクが[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード レポートに表示された場合は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする前に必要な操作を実行する必要があります。  

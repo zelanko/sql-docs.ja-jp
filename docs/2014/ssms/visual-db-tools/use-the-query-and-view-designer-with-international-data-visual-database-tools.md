@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 905e4c6909c792b019c11ef95662a7ec1a113bb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054583"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
-  [クエリおよびビューデザイナー](visual-database-tools.md)は、あらゆる言語のデータ、および Windows オペレーティングシステムの任意のバージョンで使用できます。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
+  [クエリおよびビュー デザイナー](visual-database-tools.md) は、あらゆる言語のデータ、および Windows オペレーティング システムのすべてのバージョンのデータに対応しています。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>抽出条件ペインおよび SQL ペインのローカライズされた情報  
  抽出条件ペインを使用してクエリを作成する場合は、使用しているコンピューターの Windows 地域設定に対応する形式で情報を入力できます。 たとえば、データを検索する場合は、使い慣れている形式でデータを [抽出条件] 列に入力できます。ただし、次に示す場合を除きます。  

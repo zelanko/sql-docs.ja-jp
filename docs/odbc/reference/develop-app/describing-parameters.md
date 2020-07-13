@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68040021"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305943"
 ---
 # <a name="describing-parameters"></a>パラメーターの記述
 **SQLBindParameter**には、パラメーター (SQL の型、有効桁数、および小数点以下桁数) を記述する引数があります。 ドライバーは、この情報 (または*メタデータ)* を使用して、パラメーター値をデータソースに必要な型に変換します。 一見すると、ドライバーがアプリケーションよりもパラメーターメタデータを認識しやすい位置にあるように見えるかもしれません。結局のところ、ドライバーは結果セット列のメタデータを簡単に検出できます。 結局のところ、そうではありません。 まず、ほとんどのデータソースでは、ドライバーがパラメーターのメタデータを検出する方法が提供されていません。 次に、ほとんどのアプリケーションは既にメタデータを認識しています。  

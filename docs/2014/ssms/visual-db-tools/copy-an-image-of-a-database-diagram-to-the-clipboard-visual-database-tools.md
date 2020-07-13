@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e011d1dc3f4690f78821a2bd47aced8e06b8e768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cb1feb9212a69106961d27702778dedb7965b40d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63225848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061856"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>クリップボードへのデータベース ダイアグラムのイメージのコピー (Visual Database Tools)
   データベース ダイアグラムは、イメージを作成して、別のアプリケーションにコピーできます。  

@@ -12,39 +12,38 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 32c64ad5faab1ef262cd754201cac40e4a076619
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305228"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197359"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>pdw_nodes_partitions (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  すべてのテーブルのパーティションごとに1行の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データを格納し、データベース内のほとんどの種類のインデックスを格納します。 すべてのテーブルとインデックスには、明示的にパーティション分割されているかどうかにかかわらず、少なくとも1つのパーティションが含まれます。  
+  すべてのテーブルのパーティションごとに1行のデータを格納し、データベース内のほとんどの種類のインデックスを格納 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 すべてのテーブルとインデックスには、明示的にパーティション分割されているかどうかにかかわらず、少なくとも1つのパーティションが含まれます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|パーティションの id。 データベース内で一意です。|  
 |object_id|**int**|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは、少なくとも1つのパーティションで構成されます。|  
 |index_id|**int**|このパーティションが所属するオブジェクト内のインデックスの id。|  
-|partition_number|**int**|所有しているインデックスまたはヒープ内の1から始まるパーティション番号。 の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]場合、この列の値は1です。|  
+|partition_number|**int**|所有しているインデックスまたはヒープ内の1から始まるパーティション番号。 の場合 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、この列の値は1です。|  
 |hobt_id|**bigint**|このパーティションの行を含むデータヒープまたは B ツリー (HoBT) の ID。|  
 |rows|**bigint**|このパーティション内の行の概数です。 |  
 |data_compression|**int**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE<br /><br /> 1 = 行<br /><br /> 2 = ページ<br /><br /> 3 = 列ストア|  
-|data_compression_desc|**nvarchar (60)**|各パーティションの圧縮の状態を示します。 指定できる値は、[なし]、[行]、および [ページ] です。|  
-|pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。|  
+|data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態を示します。 指定できる値は、[なし]、[行]、および [ページ] です。|  
+|pdw_node_id|**int**|ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  `CONTROL SERVER` 権限が必要です。  
+ `CONTROL SERVER` 権限が必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>例 A: 各ディストリビューション内の各パーティションに行を表示する 
 
-**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 各ディストリビューション内の各パーティションの行数を表示するには、 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md)を使用します。
 
@@ -52,7 +51,7 @@ ms.locfileid: "72305228"
 
 **適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-このクエリは、テーブル`myTable`の各ディストリビューションの各パーティションの行数を返します。  
+このクエリは、テーブルの各ディストリビューションの各パーティションの行数を返し `myTable` ます。  
  
 ```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
@@ -70,8 +69,8 @@ WHERE o.name = 'myTable'
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
   
-## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>関連項目  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

@@ -1,26 +1,35 @@
 ---
 title: クイック スタート:R でモデルをトレーニングする
-description: このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、SQL Server Machine Learning Services を使って新しいデータから値を予測します。
+titleSuffix: SQL machine learning
+description: このクイックスタートでは、T を使用して予測モデルを作成してトレーニングします。そのモデルをテーブルに保存してから、そのモデルを使用して、SQL 機械学習を使って新しいデータから値を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116145"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606175"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して R で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使って新しいデータから値を予測します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、T を使用して予測モデルを作成してトレーニングします。そのモデルを SQL Server インスタンスのテーブルに保存してから、そのモデルを使用して、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使って新しいデータから値を予測します。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使って新しいデータから値を予測します。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+このクイックスタートでは、T を使用して予測モデルを作成してトレーニングします。そのモデルを SQL Server インスタンスのテーブルに保存してから、そのモデルを使用して、[SQL Server R Services](../r/sql-server-r-services.md) を使って新しいデータから値を予測します。
+::: moniker-end
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初のプロシージャでは、R に含まれる **mtcars** データセットを使用して、車両にマニュアル トランスミッションが搭載されている確率を予測する単純な汎用線形モデル (GLM) を生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに R コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
@@ -36,19 +45,27 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-  あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。
+::: moniker-end
 
-- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
 ## <a name="create-the-model"></a>モデルを作成する
 
-モデルを作成するには、トレーニング用のソース データを作成し、そのデータを使用してモデルの作成およびトレーニングを行います。次に、モデルを SQL データベースに格納します。ここで、このモデルを使用して、新しいデータで予測を生成できます。
+モデルを作成するには、トレーニング用のソース データを作成し、そのデータを使用してモデルの作成およびトレーニングを行います。次に、モデルをデータベースに格納します。ここで、それを使用して、新しいデータで予測を生成できます。
 
 ### <a name="create-the-source-data"></a>ソース データを作成する
 
-1. SSMS を開き、SQL Server インスタンスに接続し、新しいクエリ ウィンドウを開きます。
+1. Azure Data Studio を開き、インスタンスに接続し、新しいクエリ ウィンドウを開きます。
 
 1. トレーニング データを保存するテーブルを作成します。
 
@@ -108,9 +125,9 @@ GO
 - `glm` への最初の引数は *formula* パラメーターで、これは、`am` を `hp + wt` に依存するものとして定義します。
 - 入力データは `MTCarsData` 変数に格納されます。この変数は、SQL クエリによって入力されます。 入力データに具体的な名前を割り当てなかった場合、既定の変数名は _InputDataSet_ になります。
 
-### <a name="store-the-model-in-the-sql-database"></a>SQL データベースにモデルを格納する
+### <a name="store-the-model-in-the-database"></a>データベースにモデルを格納する
 
-次に、モデル を SQL データベースに格納して、それを使用して予測や再トレーニングを行えるようにします。 
+次に、モデルをデータベースに格納して、それを使用して予測や再トレーニングを行えるようにします。 
 
 1. モデルを格納するテーブルを作成する。
 
@@ -220,6 +237,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server Machine Learning Services の詳細については、次を参照してください。
+SQL 機械学習を使用した R のチュートリアルの詳細については、以下を参照してください。
 
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+- [R のチュートリアル](r-tutorials.md)

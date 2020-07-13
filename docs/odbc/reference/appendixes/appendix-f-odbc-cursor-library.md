@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090831"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292432"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>付録 F: ODBC カーソル ライブラリ
 > [!IMPORTANT]  

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68075699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901407"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージ エージェントの次回実行時に再初期化するように、マージ サブスクリプションにマークを付けます。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
@@ -51,7 +51,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_reinitmergesubscription**は、マージレプリケーションで使用します。  
   
  **sp_reinitmergesubscription**は、マージサブスクリプションを再初期化するためにパブリッシャーから呼び出すことができます。 スナップショットエージェントも再実行することをお勧めします。  
@@ -67,8 +67,8 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_reinitmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

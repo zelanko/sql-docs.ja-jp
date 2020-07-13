@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215481"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619675"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="april-2020-hotfix"></a>2020 年 4 月 (修正プログラム)
+
+2020 年 4 月 30 日 &nbsp; / &nbsp; バージョン:1.17.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| MFA 経由で接続できないバグ #10197 の修正 | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>2020 年 4 月
+
+2020 年 4 月 27 日 &nbsp; / &nbsp; バージョン:1.17.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| ウェルカム ページの改善 | 一般的なアクションや拡張機能の強調表示を見やすくするため、ウェルカム ページの UI が更新されました。 |
+| ノートブックの新機能 | &bull; &nbsp; Markdown での記述を支援するため、テキスト セルを編集するときに Markdown ツールバーが追加されました <br/> &bull; &nbsp; Jupyter Books viewlet が刷新され、Jupyter Books とノートブックを一緒に管理できる Notebooks viewlet になりました <br/>&bull; &nbsp; ノートブックを保存するときのグラフの保持に関するサポートが追加されました <br/> &bull; &nbsp; Python ノートブックでの KQL マジックのサポートが追加されました|
+| ダッシュボードの強化 | Azure Data Studio 全体のダッシュボードが、アクション ツールバーなどの最新の設計パターンで更新されました。 これは、多くの拡張機能にも適用されます。 |
+| Azure ビューに Cloud Shell 統合の追加 | |
+| Always Encrypted とセキュリティで保護されたエンクレーブが設定された Always Encrypted のサポート | |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)を参照してください。 |
+| &nbsp; | &nbsp; |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -50,7 +79,7 @@ ms.locfileid: "80215481"
 
 ## <a name="february-2020"></a>2020 年 2 月
 
-2020 年 2 月 13 日 &nbsp; / &nbsp; バージョン:1.15.0 
+2020 年 2 月 13 日 &nbsp; / &nbsp; バージョン:1.15.0
 
 &nbsp;
 
@@ -87,7 +116,7 @@ ms.locfileid: "80215481"
 | Change | 詳細 |
 | :----- | :------ |
 | 現在アクティブな接続のみを一覧表示するように Notebooks の [attach to connection]\(接続にアタッチ\) ドロップダウンを変更しました | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| BDC に接続するとき、SSL 検証エラーを無視することを許可する目的で bigdatacluster.ignoreSslVerification 設定を追加しました | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| BDC に接続するとき、TLS/SSL 検証エラーを無視することを許可する目的で bigdatacluster.ignoreSslVerification 設定を追加しました | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | オフライン クエリ エディターの既定の言語フレーバーを変更することを許可 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | ビッグ データ クラスター/SQL 2019 機能の GA ステータス | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)を参照してください。 |
@@ -247,7 +276,7 @@ ms.locfileid: "80215481"
 - ノートブック
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) ユーザーがノートブック用にシステム Python を使用できるようにする
 - スキーマ比較
-    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) スキーマ比較タスクで、既定のキャンセル コンテキスト メニューが表示されるが、何も実行されない
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare タスクで、既定のキャンセル コンテキスト メニューが表示されるが、何も実行されない
 
 ## <a name="may-2019"></a>2019 年 5 月
 
@@ -495,7 +524,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 - 修正: [問題 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): .sql ファイルが SQL Operations Studio に関連付けられない。
 - 修正: [問題 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850):N'' と入力すると、オートコンプリートで N''' になる。
 - 修正: [問題 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985):クエリ結果グリッドからのコピーが 1 列ずれる。
-- 修正: [問題 #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998):[バージョン情報] ダイアログに VS Code のバージョンを追加する。
+- 修正: [問題 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998):[バージョン情報] ダイアログに VS Code のバージョンを追加する。
 - 修正: [問題 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042):エージェント:[有効] ボタンを使用して、sql ファイルからクエリをインポートする。
 - 修正: [問題 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091):Ctrl + C キーを使用して、結果ペインから結果をコピーすることができない。
 - 修正: [問題 #2099](https://github.com/Microsoft/azuredatastudio/pull/2099):SaveAsCsv オプションが追加された。
@@ -613,7 +642,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | :----- | :------ |
 | SQL エージェント プレビュー拡張機能の機能強化: | &nbsp; |
 | &nbsp; &nbsp; &nbsp; ファイルのサポートが強化されました。 | &bull; &nbsp; サイズの大きなファイル。<br/>&bull; &nbsp; 保護されたファイル (管理者権限で保護されたファイルの保存用)。<br/>&bull; &nbsp; SQL Operations Studio 内での、\> 256 MB のファイルの格納。 |
-| &nbsp; &nbsp; &nbsp; 統合型のターミナル分割。 | 複数の開いている端末を同時に操作できます。 |
+| &nbsp; &nbsp; &nbsp; 統合型のターミナル分割。 | 複数の開いているターミナルを同時に操作できます。 |
 | &nbsp; &nbsp; &nbsp; インストールと起動にかかる時間の短縮。 | ディスク上のファイル数について、インストールのフットプリントが削減されました。 |
 | &nbsp; | &nbsp; |
 
@@ -645,7 +674,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | Change | 詳細 |
 | :----- | :------ |
 | [新しい通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui)。 | SQL Operations Studio の通知を簡単に管理して確認できます。 |
-| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いている端末を同時に操作できます。 |
+| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いているターミナルを同時に操作できます。 |
 | [大きなファイルと保護されたファイルの保存](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)。 | 管理者権限で保護された \>256M のファイルを SQL Operations Studio 内に保存できます。 |
 | [大きなファイルのサポートの改善](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)。 | 大きなファイルのテキスト バッファーが最適化されました。 |
 | [設定検索の改善](https://code.visualstudio.com/updates/v1_20#_settings-search)。 | 自然言語検索で適切な設定を簡単に見つけることができます。 |

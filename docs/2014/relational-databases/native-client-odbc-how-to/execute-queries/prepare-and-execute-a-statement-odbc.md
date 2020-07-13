@@ -10,15 +10,14 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a9323b6729f04653cc3c6f6e62f4f402b643d21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018759"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>ステートメントの準備と実行 (ODBC)
     

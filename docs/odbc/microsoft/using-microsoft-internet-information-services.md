@@ -12,14 +12,14 @@ helpviewer_keywords:
 - internet information services [ODBC]
 - IIS [ODBC]
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e531149af21facd80e9e6ddab19a76c3bdc0fa6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c71babf933c2615e6c2464696c1023ccaf53dd7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088141"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282469"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Microsoft インターネット インフォメーション サービスの使用
 > [!IMPORTANT]  

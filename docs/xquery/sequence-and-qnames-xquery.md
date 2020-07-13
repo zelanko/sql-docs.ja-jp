@@ -1,5 +1,6 @@
 ---
-title: シーケンス名と Q 名 (XQuery) |マイクロソフトドキュメント
+title: Sequence と QNames (XQuery) |Microsoft Docs
+description: XQuery におけるシーケンスと QNames の基本的な概念について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80380783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765598"
 ---
 # <a name="sequence-and-qnames-xquery"></a>シーケンスと QName (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、XQuery の次の基本的な概念について説明します。  
   
--   Sequence  
+-   シーケンス  
   
 -   QName と事前に定義された名前空間  
   
-## <a name="sequence"></a>Sequence  
- XQuery では、式の結果は、XML ノードのリストと XSD アトミック型のインスタンスで構成されるシーケンスです。 シーケンス内の個々のエントリは、項目と呼ばれます。 シーケンス内のアイテムは、次のいずれかになります。  
+## <a name="sequence"></a>シーケンス  
+ XQuery では、式の結果は、XML ノードのリストと XSD アトミック型のインスタンスで構成されるシーケンスになります。 シーケンス内の個々のエントリは、項目と呼ばれます。 シーケンス内のアイテムは、次のいずれかになります。  
   
 -   要素、属性、テキスト、処理命令、コメント、ドキュメントなどのノード  
   
@@ -59,9 +60,9 @@ WHERE ProductModelID=7;
 <step2> Step 2 description goes here </step2>   
 ```  
   
- 前のクエリでは、`,``<step1>`構築の最後にあるコンマ ( ) がシーケンス コンストラクターであり、必須です。 結果の空白は説明用にのみ追加され、このドキュメントのすべての例の結果に含まれています。  
+ 前のクエリでは、 `,` 構築の最後にあるコンマ () `<step1>` はシーケンスコンストラクターであり、必須です。 結果の空白は、説明のためだけに追加されており、このドキュメントのすべての例の結果に含まれています。  
   
- シーケンスについて知っておくべき追加情報を次に示します。  
+ シーケンスについて理解しておく必要がある追加情報を次に示します。  
   
 -   クエリの結果が他のシーケンスを含むシーケンスになる場合、含まれているシーケンスは外側のシーケンスにフラット化されます。 たとえば、シーケンス ((1,2, (3,4,5)),6) はデータ モデル内で (1, 2, 3, 4, 5, 6) にフラット化されます。  
   
@@ -71,11 +72,11 @@ WHERE ProductModelID=7;
     SELECT @x.query('(1,2, (3,4,5)),6');  
     ```  
   
--   空のシーケンスとは、アイテムが含まれていないシーケンスです。 これは「()」として表されます。  
+-   空のシーケンスとは、アイテムが含まれていないシーケンスです。 これは "()" として表されます。  
   
--   1 つの項目のみを持つシーケンスは、アトミック値として扱うことができます。 すなわち、(1)=1である。  
+-   1つの項目のみを含むシーケンスはアトミック値として処理できます。また、その逆も可能です。 つまり、(1) = 1 です。  
   
- この実装では、シーケンスは同種でなければなりません。 つまり、アトミック値のシーケンスまたはノードのシーケンスのいずれかです。 たとえば、次の有効なシーケンスを示します。  
+ この実装では、シーケンスは同種である必要があります。 つまり、一連のアトミック値またはノードのシーケンスがあるとします。 たとえば、有効なシーケンスは次のとおりです。  
   
 ```  
 DECLARE @x xml;  
@@ -92,14 +93,14 @@ SELECT @x.query('data(1)');
 SELECT @x.query('<x> {1+2} </x>');  
 ```  
   
- 次のクエリは、異種シーケンスがサポートされていないため、エラーを返します。  
+ 異種シーケンスはサポートされていないため、次のクエリではエラーが返されます。  
   
 ```  
 SELECT @x.query('<x>11</x>, 22');  
 ```  
   
 ## <a name="qname"></a>QName  
- XQuery の識別子は QName です。 QName は、名前空間プレフィックスとローカル名で構成されます。 この実装では、XQuery の変数名は QNames であり、接頭辞を持つことはできません。  
+ XQuery の識別子は QName です。 QName は、名前空間プレフィックスとローカル名で構成されます。 この実装では、XQuery の変数名は Qname であり、プレフィックスを持つことはできません。  
   
  型指定されていない**xml**変数に対してクエリを指定する次の例を考えてみます。  
   
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  式 (`/Root/a`) では、`Root` と `a` が QName です。  
   
- 次の例では、型指定された**xml**列に対してクエリを指定します。 このクエリは、最初の\<ワークセンター位置にあるすべてのステップ>要素を反復処理します。  
+ 次の例では、型指定された**xml**列に対してクエリが指定されています。 クエリは、 \<step> 最初のワークセンターの場所にあるすべての要素を反復処理します。  
   
 ```  
 SELECT Instructions.query('  
@@ -126,11 +127,11 @@ WHERE ProductModelID=7;
   
  クエリ式では、次の点に注意してください。  
   
--   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI`は、プレフィックス、 `root`、 `Location`、 `Step` 、およびすべてのローカル名です。  
+-   `AWMI root`、`AWMI:Location`、`AWMI:step`、`$Step` は、すべて QName です。 `AWMI`はプレフィックスであり、 `root` 、 `Location` 、および `Step` はすべてローカル名です。  
   
--   変数`$step`は QName であり、接頭部はありません。  
+-   `$step`変数は QName であり、プレフィックスを持っていません。  
   
- 次の名前空間は、XQuery サポートで使用するために事前定義[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]されています。  
+ 次の名前空間は、の XQuery サポートで使用するために事前に定義されてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
 |Prefix|URI|  
 |------------|---------|  
@@ -139,14 +140,14 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(プレフィックスなし)|`urn:schemas-microsoft-com:xml-sql`|  
-|sql の種類|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
+|sqltypes|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(プレフィックスなし)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 作成するすべてのデータベースには **、sys** XML スキーマ コレクションがあります。 これらのスキーマは、ユーザーが作成した任意の XML スキーマ コレクションからアクセスできるように予約されます。  
+ 作成するすべてのデータベースには、 **sys** XML スキーマコレクションがあります。 これらのスキーマは、ユーザーが作成した XML スキーマコレクションからアクセスできるように予約されています。  
   
 > [!NOTE]  
->  この実装では、 の`local`XQuery 仕様で説明されているプレフィックスhttp://www.w3.org/2004/07/xquery-local-functionsはサポートされていません。  
+>  この実装では、 `local` の XQuery 仕様で説明されているように、プレフィックスはサポートされません http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)  

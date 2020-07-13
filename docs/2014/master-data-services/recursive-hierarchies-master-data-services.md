@@ -12,21 +12,18 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c28242daebfdaf01a457432027e68be59ae26f29
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 2b4b03c3e9e7e22655782646afcc31f680f13998
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971122"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>再帰型階層 (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の再帰型階層は、再帰リレーションシップを含む派生階層です。 再帰リレーションシップは、エンティティ自体に基づくドメインベースの属性がエンティティにある場合に存在します。
 
 ## <a name="recursive-hierarchy-example"></a>再帰型階層の例
- 再帰型階層の典型的な例は、組織構造です。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、Manager というドメイン ベースの属性を持つ Employee エンティティを作成します。 Manager 属性は、従業員 (employee) のリストから設定されます。 このサンプル組織では、すべての従業員がマネージャーである可能性があります。
+ 再帰型階層の典型的な例は、組織構造です。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、Manager というドメイン ベースの属性を持つ Employee エンティティを作成します。 Manager 属性は、従業員 (employee) のリストから設定されます。 このサンプル組織では、すべての従業員がマネージャーである可能性があります。
 
  ![mds_conc_recursive_table_w_data](../../2014/master-data-services/media/mds-conc-recursive-table-w-data.gif "mds_conc_recursive_table_w_data")
 
@@ -56,14 +53,14 @@ ms.locfileid: "78175958"
 
 |タスクの説明|トピック|
 |----------------------|-----------|
-|派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|既存の派生階層の名前を変更する。|[派生階層名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
-|既存の派生階層を削除する。|[派生階層 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
+|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](create-a-derived-hierarchy-master-data-services.md)|
+|既存の派生階層の名前を変更する。|[派生階層名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
+|既存の派生階層を削除する。|[派生階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [ドメインベースの属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
+-   [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)
 
--   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
 

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761820"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog オブジェクト (ADO MD)
 多次元データプロバイダー (.MDP) に固有の多次元スキーマ情報 (つまり、キューブおよび基になるディメンション、階層、レベル、およびメンバー) が含まれています。  

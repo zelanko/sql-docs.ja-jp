@@ -1,5 +1,6 @@
 ---
 title: sqlps ユーティリティ
+description: sqlps ユーティリティでは、Windows PowerShell セッションが起動され、SQL Server PowerShell プロバイダーおよびコマンドレットの読み込みと登録が行われます。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f81fa9d3a08b648c146a98d2d7c29a66faaacbb
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304823"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150540"
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

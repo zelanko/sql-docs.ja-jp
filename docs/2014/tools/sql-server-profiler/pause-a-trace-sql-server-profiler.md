@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4961b68d46f8e4f1627c28c05ab2efb609d9f90d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cdc9dbbd01099b1d33787a72b0bd59b65cea722e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63240473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054339"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>トレースの一時停止 (SQL Server Profiler)
   トレースを一時停止すると、トレースを再開するまで、それ以上のイベント データはキャプチャされません。  

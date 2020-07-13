@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 254c0ba5b0195e54513258ed28b391015bb4beb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62808873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934823"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options サーバー構成オプション
   **show advanced options** オプションを使用すると、 **sp_configure** システム ストアド プロシージャの拡張オプションを表示できます。 **show advanced options** を 1 に設定した場合、 **sp_configure**を使用して拡張オプションを表示できます。 既定値は 0 です。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997745"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300892"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成および並べ替え操作での文字フィールドの照合順序を指定します。  
@@ -68,7 +68,7 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  COLLATE を設定すると、サポートされている言語のいずれかで、アクセントが付いた文字を含むテーブルを並べ替えることができます。 [部単位で印刷] の設定を変更しても、以前に開いたインデックスの照合順序には影響しません。 Visual FoxPro では、既存のインデックスが自動的に保持されるため、同じフィールドであっても、さまざまな種類のインデックスを柔軟に作成できます。  
   
  たとえば、[COLLATE] を [全般] に設定してインデックスを作成し、[COLLATE の設定] 設定を後でスペイン語に変更した場合、インデックスには一般的な照合順序が保持されます。  

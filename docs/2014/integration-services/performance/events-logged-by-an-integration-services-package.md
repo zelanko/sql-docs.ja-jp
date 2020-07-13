@@ -10,23 +10,21 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c0180cbe0753d53cd1d42acde35fc549e48856e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62889841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423359"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、各種のイベント メッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、パッケージの起動時、パッケージの停止時、および特定の問題の発生時にログに記録されます。  
   
  このトピックでは、アプリケーション イベント ログに記録される一般的なイベント メッセージについて説明します。 既定では、パッケージのログ記録が有効になっていない場合でも、一部のメッセージはログに記録されます。 それ以外のメッセージは、パッケージのログ記録が有効になっている場合にのみログに記録されます。 既定でログに記録されたか、ログ記録を有効にしたことによってログに記録されたかに関係なく、これらのメッセージのイベント ソースは SQLISPackage になります。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行方法に関する一般的な情報については、「[プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)」をご覧ください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行方法に関する一般的な情報については、「[プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)」をご覧ください。  
   
  パッケージの実行に関するトラブルシューティング方法については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」をご覧ください。  
   
@@ -79,7 +77,7 @@ ms.locfileid: "62889841"
 ## <a name="related-tasks"></a>Related Tasks  
  リアルタイムでログ エントリを表示する方法については、「 [[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスによってログに記録されるイベント](../service/events-logged-by-the-integration-services-service.md)  
   
   

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db3e9ce939da2bace6d6e8e1c87669c9987dd0f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900945"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431159"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
   集計変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -54,7 +53,7 @@ ms.locfileid: "62900945"
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  
   
-12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計に`Group By`操作が含まれている場合は、[キー**スケール**] 列でグループ化キー値の概数を選択するか、[**キー** ] 列でグループ化キー値の正確な数を指定できます。  
+12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計に操作が含まれている場合は、[キー `Group By` **スケール**] 列でグループ化キー値の概数を選択するか、[**キー** ] 列でグループ化キー値の正確な数を指定できます。  
   
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  

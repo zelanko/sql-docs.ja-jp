@@ -12,15 +12,15 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef18eed87b0a01c16ad71285ff8adf1386383172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753323"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Performance Statistics イベント クラスは、実行中のクエリ、ストアド プロシージャ、およびトリガーのパフォーマンスを監視するために使用できます。 6 個のイベント サブクラスがあり、それぞれがシステム内のクエリ、ストアド プロシージャ、およびトリガーの有効期間内のイベントを示します。 これらのイベント サブクラスを、関連する sys.dm_exec_query_stats、sys.dm_exec_procedure_stats、および sys.dm_exec_trigger_stats 動的管理ビューと組み合わせて使用することで、クエリ、ストアド プロシージャ、トリガーのパフォーマンス履歴を再構成できます。  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics イベント クラスのデータ列  

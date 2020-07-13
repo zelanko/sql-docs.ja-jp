@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923342"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748210"
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
 生成された XML に XSLT を適用して、別の形式に変換することができます。 ADO で XML 形式を理解することは、よりわかりやすい形式に変換できる XSLT テンプレートの開発に役立ちます。  
   
  たとえば、レコードセットの各行は、rs: data 要素内の z: row 要素として保存されていることがわかります。 同様に、レコードセットの各フィールドは、この要素の属性と値のペアとして保存されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の XSLT スクリプトは、前のセクションで示した XML に適用して、ブラウザーに表示される HTML テーブルに変換できます。  
   
 ```  

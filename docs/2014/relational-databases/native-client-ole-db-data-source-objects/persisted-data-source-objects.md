@@ -1,5 +1,5 @@
 ---
-title: 永続化されたデータソースオブジェクト |Microsoft Docs
+title: 保存されるデータ ソース オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 584032b958494e6b33b729a8d0657a4ee544a86e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63231450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056358"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
 ## <a name="examples"></a>例  
  **A. データ ソースの初期化の保存 :**  
@@ -225,11 +224,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 
-  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 
-  **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
+ **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
 ## <a name="see-also"></a>参照  
- [データソースオブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

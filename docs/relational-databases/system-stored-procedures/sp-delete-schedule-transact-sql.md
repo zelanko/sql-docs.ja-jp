@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862800"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   スケジュールを削除します。  
  
@@ -77,7 +77,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="examples"></a>例  
   
 ### <a name="a-deleting-a-schedule"></a>A. スケジュールを削除する  
- 次の例では、 `NightlyJobs`スケジュールを削除します。 スケジュールがジョブにアタッチされている場合、この例ではスケジュールは削除されません。  
+ 次の例では、スケジュールを削除し `NightlyJobs` ます。 スケジュールがジョブにアタッチされている場合、この例ではスケジュールは削除されません。  
   
 ```  
 USE msdb ;  
@@ -88,7 +88,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. ジョブに関連付けられているスケジュールを削除する  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B: ジョブに関連付けられているスケジュールを削除する  
  次の例では、スケジュールがジョブに関連付けられているかどうかに関係なく、スケジュール `RunOnce` を削除します。  
   
 ```  
@@ -101,8 +101,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジョブの実装](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

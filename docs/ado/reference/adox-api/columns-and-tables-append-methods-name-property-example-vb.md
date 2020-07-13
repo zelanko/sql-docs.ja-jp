@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d25582b8059f59e20ffd3c96a86049bd692a4303
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966865"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759358"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns および Tables Append メソッド、Name プロパティの例 (VB)
 次のコードは、新しいテーブルを作成する方法を示しています。  

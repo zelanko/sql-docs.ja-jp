@@ -22,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c4d1c2c09c764e1e5102e520ccb2f6152e57ce7c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286579"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529236"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server レプリケーションの 'パブリケーションのプロパティ' ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ ms.locfileid: "76286579"
  このオプションを選択すると、サブスクライバーは FTP を使用してスナップショット ファイルを取得できますが、この設定は必須ではありません。 このオプションを選択した場合、サブスクリプションの新規作成ウィザードでは、サブスクライバーがスナップショット ファイルを FTP 経由で取得する設定が既定で有効になります。 設定を変更するには、 **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用します。 サブスクライバーが FTP 経由でスナップショットにアクセスするように設定する場合は、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページで、スナップショット ファイルの場所として FTP フォルダーを指定します。 これにより、スナップショット エージェントは、新しいスナップショットが生成されたときに FTP フォルダー内のファイルを自動的に更新します。 場所を FTP フォルダーに設定していない場合は、新しいスナップショットが生成されたときにファイルを手動で更新する必要があります。 詳細については、「[FTP でのスナップショットの配信](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
  **[Web 同期]**  
- マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]** を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーは、SSL (Secure Sockets Layer) を使用する必要があります。また、Web アドレスは `https://server.domain.com/synchronize` のように完全修飾である必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
+ マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]** を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーでは、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用する必要があります。また、Web アドレスは `https://server.domain.com/synchronize` のように完全修飾である必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
 
 
 ## <a name="agent-security"></a>エージェント セキュリティ

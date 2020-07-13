@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46cfbb4e2e6b60f620cd7e38272bf9308ece91bc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068683"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306243"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos の呼び出し
 *ODBC 2.x では、行*状態配列へのポインターは**SQLExtendedFetch**の引数でした。 行の状態の配列は、 **SQLSetPos**の呼び出しによって後で更新されました。 一部のドライバーでは、 **SQLExtendedFetch**と**SQLSetPos**の間でこの配列が変更されないという事実に依存しています。 *ODBC 3.x では、状態*配列へのポインターは記述子フィールドであるため、アプリケーションは簡単に別の配列を指すように変更できます。 ODBC *2.x アプリケーションが*odbc *2.x ドライバーを*使用しているときに、 **SQLSetStmtAttr**を呼び出して配列の状態ポインターを設定し、データをフェッチするために**sqlfetchscroll**を呼び出している場合に、この問題が発生することがあります。 ドライバーマネージャーは、 **SQLExtendedFetch**への一連の呼び出しとしてそれをマップします。 次のコードでは、通常、ODBC 2.x ドライバーを操作するときに Driver Manager が2番目の**SQLSetStmtAttr**呼び出しをマップすると、エラーが発生*します。*  

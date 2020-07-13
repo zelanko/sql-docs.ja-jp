@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 740c45266a1512b14954286d9926b6ee837678af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65480518"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937623"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
-  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
   
 -   ソース データを DQS_STAGING_DATA データベース内のテーブル/ビューにコピーし、その後、それを DQS 操作に使用する。 処理後のデータを、DQS_STAGING_DATA データベース内の新しいテーブルにエクスポートすることもできます。 これを行うには、Windows ユーザー アカウントに DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権を与える必要があります。  
@@ -39,19 +37,17 @@ ms.locfileid: "65480518"
   
 3.  SQL ログインを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  
-  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
+4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
 5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
   
-    -   **db_datareader**: テーブル/ビューからデータを読み取ります。  
+    -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
   
-    -   **db_datawriter**: テーブル内のデータを追加、削除、または変更します。  
+    -   **db_datawriter**: テーブル内のデータの追加、削除、または変更。  
   
-    -   **db_ddladmin**: テーブル/ビューを作成、変更、または削除します。  
+    -   **db_ddladmin**: テーブル/ビューの作成、変更、または削除。  
   
-6.  
-  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
+6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   
 ## <a name="next-steps"></a>次の手順  
  DQS 操作のデータ ソースとしてデータベースにアクセスする DQS 操作を実行してから、処理後のデータをデータベースにエクスポートしてください。  

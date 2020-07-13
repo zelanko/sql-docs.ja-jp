@@ -13,23 +13,19 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4c2b2ec2be82cbc71987fb675d8599dbb790dcf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058897"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437319"
 ---
 # <a name="expression-builder-integration-services"></a>式ビルダー (Integration Services)
+  **[式ビルダー]** ダイアログ ボックスでは、プロパティの式が使用する式を構築するグラフィカル ユーザー インターフェイスが提供されます。 **[式ビルダー]** ダイアログ ボックスには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのカスタム タスクのダイアログ ボックス、または **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ウィンドウからアクセスできます。  
   
-  **[式ビルダー]** ダイアログ ボックスでは、プロパティの式が使用する式を構築するグラフィカル ユーザー インターフェイスが提供されます。 
-  **[式ビルダー]** ダイアログ ボックスには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのカスタム タスクのダイアログ ボックス、または **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ウィンドウからアクセスできます。  
-  
- 
-  **[式ビルダー]** ダイアログ ボックスでは、次のタスクを実行できます。  
+ **[式ビルダー]** ダイアログ ボックスでは、次のタスクを実行できます。  
   
 -   式の構築  
   

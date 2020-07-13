@@ -8,20 +8,19 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18049841ef686c0a415b13a27993b4b99e37d662
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781169"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007902"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC の使用法に関するトピック
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Odbc ドライバーを使用するには、odbc データソースを作成し、サーバーに正しいバージョンのカタログストアドプロシージャがあることを確認できる必要があります。 SQL Server を使用する ODBC アプリケーションをコーディングするには、ODBC ハンドルの割り当て方法、属性の設定方法、SQL Server インスタンスへの接続方法、クエリの実行方法、および結果の処理方法を理解しておく必要があります。  
+  Odbc ドライバーを使用するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、odbc データソースを作成し、サーバーに正しいバージョンのカタログストアドプロシージャがあることを確認できる必要があります。 SQL Server を使用する ODBC アプリケーションをコーディングするには、ODBC ハンドルの割り当て方法、属性の設定方法、SQL Server インスタンスへの接続方法、クエリの実行方法、および結果の処理方法を理解しておく必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

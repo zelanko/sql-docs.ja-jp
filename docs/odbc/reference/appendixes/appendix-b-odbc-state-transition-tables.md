@@ -12,17 +12,17 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db20c492ababbe6bf8f065fce88067c643f2694d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996244"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302886"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 B: ODBC の状態遷移テーブル
-この付録の表は、ODBC 関数が環境、接続、ステートメント、および記述子の状態の遷移をどのように引き起こしているかを示しています。 環境、接続、ステートメント、または記述子の状態は、通常、対応する種類のハンドル (環境、接続、ステートメント、または記述子) を使用する関数を呼び出すことができる場合に指定されます。 次の図に示すように、環境、接続、ステートメント、および記述子の状態は、ほぼ重複しています。 たとえば、接続状態 C5 と C6 およびステートメントの状態 S1 から S12 の正確な重複は、データソースによって異なります。これは、トランザクションが異なるデータソースで異なるタイミングで開始し、記述子の状態 D1i (暗黙的に割り当てられた記述子) が依存しているためです。記述子が関連付けられているステートメントの状態では、state D1e (明示的に割り当てられた記述子) は、どのステートメントの状態にも依存しません。 各状態の説明については、この付録の「[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、[記述子遷移](../../../odbc/reference/appendixes/descriptor-transitions.md)」を参照してください。  
+この付録の表は、ODBC 関数が環境、接続、ステートメント、および記述子の状態の遷移をどのように引き起こしているかを示しています。 環境、接続、ステートメント、または記述子の状態は、通常、対応する種類のハンドル (環境、接続、ステートメント、または記述子) を使用する関数を呼び出すことができる場合に指定されます。 次の図に示すように、環境、接続、ステートメント、および記述子の状態は、ほぼ重複しています。 たとえば、接続状態 C5 と C6 およびステートメントの状態 S1 から S12 の正確な重複は、データソースに依存します。これは、トランザクションが異なるデータソース上で開始され、記述子状態 D1i (暗黙的に割り当てられた記述子) は、記述子が関連付けられているステートメントの状態に依存し、状態 D1e (明示的に割り当てられた記述子 各状態の説明については、この付録の「[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、[記述子遷移](../../../odbc/reference/appendixes/descriptor-transitions.md)」を参照してください。  
   
  環境と接続の状態は、次のように重複しています。  
   
@@ -59,27 +59,27 @@ ms.locfileid: "67996244"
   
  環境、接続、ステートメント、または記述子を複数の状態に移行できる場合、考えられる各状態が表示され、1つまたは複数の脚注によって各遷移が行われる条件が示されます。 次の脚注は、どのテーブルにも表示されます。  
   
-|脚注|意味|  
+|脚注|説明|  
 |--------------|-------------|  
 |b|の前または後。 カーソルは、結果セットの先頭の前、または結果セットの末尾の後に配置されました。|  
 |c|現在の関数。 現在の関数は非同期的に実行されていました。|  
 |d|データが必要です。 関数は SQL_NEED_DATA を返しました。|  
 |e|エラーが発生します。 関数は SQL_ERROR を返しました。|  
 |i|行が無効です。 カーソルが結果セットの行に配置され、行が削除されたか、または行の操作でエラーが発生しました。 行の状態の配列が存在する場合は、行の行の状態の配列の値が SQL_ROW_DELETED または SQL_ROW_ERROR になりました。 (行の状態の配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によって示されます)。|  
-|ユーティリティー|見つかりません。 関数は SQL_NO_DATA を返しました。 これは、検索された update ステートメントまたは delete ステートメントの実行後に、 **SQLExecDirect**、 **sqlexecute**、または**sqlparamdata**によって SQL_NO_DATA が返される場合には適用されません。|  
+|nf|見つかりません。 関数は SQL_NO_DATA を返しました。 これは、検索された update ステートメントまたは delete ステートメントの実行後に、 **SQLExecDirect**、 **sqlexecute**、または**sqlparamdata**によって SQL_NO_DATA が返される場合には適用されません。|  
 |np|準備されていません。 ステートメントが準備されていません。|  
 |nr|結果がありません。 ステートメントでは、結果セットは作成されません。|  
 |o|その他の関数。 別の関数が非同期的に実行されました。|  
 |p|準備. ステートメントが準備されました。|  
 |r|生じ. ステートメントによって、(空の可能性がある) 結果セットが作成されます。|  
-|s|成功。 関数は SQL_SUCCESS_WITH_INFO または SQL_SUCCESS を返しました。|  
+|s|正常終了しました。 関数は SQL_SUCCESS_WITH_INFO または SQL_SUCCESS を返しました。|  
 |v|有効な行です。 カーソルが結果セットの行に配置され、行が正常に挿入されたか、正常に更新されたか、または行に対する別の操作が正常に完了しました。 行の状態の配列が存在する場合、行の行の状態の配列の値は、SQL_ROW_ADDED、SQL_ROW_SUCCESS、または SQL_ROW_UPDATED でした。 (行の状態の配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によって示されます)。|  
 |x|実行. 関数は SQL_STILL_EXECUTING を返しました。|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  この例では、 *Handletype*が SQL_HANDLE_ENV の場合の**sqlfreehandle**の環境状態遷移テーブルの行は次のようになります。  
   
-|E0<br /><br /> 未割り当て|E1<br /><br /> 済み|E2<br /><br /> 接続|  
+|E0<br /><br /> 未割り当て|E1<br /><br /> Allocated|E2<br /><br /> Connection|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|E0|HY010|  
   

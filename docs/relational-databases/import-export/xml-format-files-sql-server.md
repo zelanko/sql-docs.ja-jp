@@ -1,5 +1,6 @@
 ---
 title: XML フォーマット ファイル (SQL Server) | Microsoft Docs
+description: SQL Server 2019 には、SQL Server のテーブルにデータを一括インポートする目的で使用する XML フォーマット ファイルを記述するための構文を定義した XML スキーマが用意されています。
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -15,18 +16,18 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091434"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980377"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 *のテーブルにデータを一括インポートする目的で使用する* XML フォーマット ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
   
- XML フォーマット ファイルは、 **bcp** コマンド、BULK INSERT ステートメント、または INSERT ...SELECT \* FROM OPENROWSET(BULK...) ステートメントのいずれかを使用して実行します。 **bcp** コマンドを使用して、あるテーブルに対する XML フォーマット ファイルを自動的に生成できます。詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
+ XML フォーマット ファイルは、**bcp** コマンド、BULK INSERT ステートメント、または INSERT ...SELECT \* FROM OPENROWSET(BULK...) ステートメントのいずれかを使用して実行します。 **bcp** コマンドを使用して、あるテーブルに対する XML フォーマット ファイルを自動的に生成できます。詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
   
 > [!NOTE]  
 >  一括エクスポートおよび一括インポート用に 2 種類のフォーマット ファイルがサポートされています。 *XML 以外のフォーマット ファイル* と *XML フォーマット ファイル*です。 XML フォーマット ファイルは XML 以外のフォーマット ファイルに比べ、柔軟かつ強力です。 XML 以外のフォーマット ファイルの詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
@@ -204,7 +205,7 @@ ms.locfileid: "68091434"
 |ID **="** _fieldID_ **"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> は \<COLUMN SOURCE **="** _fieldID_ **"** /> にマップします|必須|  
 |xsi:type **="** _fieldType_ **"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
-|PREFIX_LENGTH **="** _p_ **"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
+|PREFIX_LENGTH **="** _p_ **"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p* は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |MAX_LENGTH **="** _m_ **"**|指定したフィールドに格納できる最大バイト数を定義します。 対象のテーブルがない場合、列の最大長を決めることはできません。 MAX_LENGTH 属性では、出力先の文字列型の列の最大長を制限し、列の値に割り当てる領域を制限しています。 この属性は、SELECT FROM 句で OPENROWSET 関数の BULK オプションを使用している場合に特に有益です。<br /><br /> *m* の値は、正の整数にする必要があります。 既定では、 **char** 列の最大長は 8,000 文字で、 **nchar** 列の最大長は 4,000 文字です。|省略可能|  
 |COLLATION **="** _collationName_ **"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。|省略可能|  
 |TERMINATOR **= "** _terminator_ **"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
@@ -256,7 +257,7 @@ ms.locfileid: "68091434"
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> maps to \<FIELD ID **="** _fieldID_ **"** />|必須|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
-|xsi **:** type **="** _ColumnType_ **"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「\<[COLUMN&lt; 要素の xsi:type 値&gt;」セクションの ](#XsiTypeValuesOfCOLUMN)COLUMN> 要素の表に示します。|省略可能|  
+|xsi **:** type **="** _ColumnType_ **"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注:*ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可能|  
 |LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="** _n_ **"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |SCALE **="** _int_ **"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
@@ -277,7 +278,7 @@ ms.locfileid: "68091434"
 |文字列|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**、および **SQLNVARCHAR**|[なし] :|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
->  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には、SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます) のいずれかを使用します。  
+>  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   

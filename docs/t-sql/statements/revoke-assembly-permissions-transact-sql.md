@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34a96fda9eea349abef5b53701556148ae56225a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897075"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE (アセンブリの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   アセンブリに対する権限を取り消します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68082383"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ASSEMBLY :: assembly_name   

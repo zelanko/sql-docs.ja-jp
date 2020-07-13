@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865669"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング監視履歴が格納されている状態テーブルから、監視対象データベースの状態行を返します。事前に、このプロシージャで最新の状態を取得するかどうかを選択できます。  
   
@@ -76,15 +76,15 @@ sp_dbmmonitorresults database_name
  1 = 結果を計算する前に**sp_dbmmonitorupdate**を呼び出すことによって、データベースの状態を更新します。 ただし、状態テーブルが過去15秒以内に更新された場合、またはユーザーが**sysadmin**固定サーバーロールのメンバーでない場合、 **sp_dbmmonitorresults**は状態を更新せずに実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  指定されたデータベースについて、要求された履歴の状態の行数を返します。 各行には、次の情報が含まれています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|ミラー化されたデータベースの名前。|  
-|**果たす**|**int**|サーバーインスタンスの現在のミラーリングロール:<br /><br /> 1 = プリンシパル<br /><br /> 2 = ミラー|  
+|**role**|**int**|サーバーインスタンスの現在のミラーリングロール:<br /><br /> 1 = プリンシパル<br /><br /> 2 = ミラー|  
 |**mirroring_state**|**int**|データベースの状態。<br /><br /> 0 = 中断<br /><br /> 1 = 切断<br /><br /> 2 = 同期中<br /><br /> 3 = フェールオーバー保留中<br /><br /> 4 = 同期済み|  
 |**witness_status**|**int**|データベースのデータベースミラーリングセッションにおけるミラーリング監視サーバーの接続状態は次のようになります。<br /><br /> 0 = 不明<br /><br /> 1 = 接続済み<br /><br /> 2 = 切断|  
 |**log_generation_rate**|**int**|このデータベースのミラーリング状態の前回の更新以降に生成されたログの量 (kb/秒単位)。|  
@@ -95,11 +95,11 @@ sp_dbmmonitorresults database_name
 |**transaction_delay**|**int**|すべてのトランザクションの合計遅延時間 (ミリ秒単位)。|  
 |**transactions_per_sec**|**int**|プリンシパルサーバーインスタンスで1秒間に発生しているトランザクションの数。|  
 |**average_delay**|**int**|データベースミラーリングが原因で、各トランザクションのプリンシパルサーバーインスタンスの平均遅延時間。 高パフォーマンスモード (安全性プロパティが OFF に設定されている場合) では、通常、この値は0です。|  
-|**time_recorded**|**DATETIME**|データベース ミラーリング監視で行が記録された時間。 これは、プリンシパルのシステムクロック時間です。|  
-|**time_behind**|**DATETIME**|ミラーデータベースが現在キャッチされているプリンシパルのおおよそのシステムクロック時間。 この値はプリンシパル サーバー インスタンスでのみ意味を持ちます。|  
-|**local_time**|**DATETIME**|この行が更新されたときのローカル サーバー インスタンスのシステム クロック時間。|  
+|**time_recorded**|**datetime**|データベース ミラーリング監視で行が記録された時間。 これは、プリンシパルのシステムクロック時間です。|  
+|**time_behind**|**datetime**|ミラーデータベースが現在キャッチされているプリンシパルのおおよそのシステムクロック時間。 この値はプリンシパル サーバー インスタンスでのみ意味を持ちます。|  
+|**local_time**|**datetime**|この行が更新されたときのローカル サーバー インスタンスのシステム クロック時間。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dbmmonitorresults**は、 **msdb**データベースのコンテキストでのみ実行できます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -108,7 +108,7 @@ sp_dbmmonitorresults database_name
 > [!NOTE]  
 >  **Sp_dbmmonitorupdate**を初めて実行すると、 **dbm_monitor**の固定データベースロールが**msdb**データベースに作成されます。 **Sysadmin**固定サーバーロールのメンバーは、任意のユーザーを**dbm_monitor**固定データベースロールに追加できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データベースの状態を更新せずに、前の2時間に記録された行を返します。  
   
 ```  
@@ -116,12 +116,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorupdate &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
+ [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

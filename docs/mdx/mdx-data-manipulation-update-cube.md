@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003531"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
@@ -52,7 +52,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  0 ～ 1 の範囲の 10 進値を返す有効な多次元式 (MDX) 数値式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 組式で指定されるセルは、多次元空間内の任意の有効なセルにすることができます (つまり、セルはリーフセルである必要はありません)。 ただし、セルは[Sum](../mdx/sum-mdx.md)集計関数を使用して集計する必要があり、セルの識別に使用される組には計算されるメンバーを含めないでください。  
   
  **UPDATE CUBE**ステートメントは、指定された合計にロールアップされるリーフセルと非リーフセルに対して、一連の個別のセルの書き戻し操作を自動的に生成するサブルーチンと考えると役に立つ場合があります。  

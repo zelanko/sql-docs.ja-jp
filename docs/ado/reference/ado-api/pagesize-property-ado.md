@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - PageSize property [ADO]
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97902985dcd2110b165498be5324393ad5588bac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931765"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761971"
 ---
 # <a name="pagesize-property-ado"></a>PageSize プロパティ (ADO)
 レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)内の1つのページを構成するレコードの数を示します。  

@@ -1,5 +1,6 @@
 ---
 title: SQLXMLOLEDB プロバイダーの使用 (SQLXML)
+description: ADO アプリケーションでの SQLXMLOLEDB プロバイダー固有のプロパティの使用に関する情報を表示します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a2a24cd7ced3430f3ba59da6489e557f32bf7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7de27ec74af3b3fd4b0127745416e1f81902f905
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650022"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの使用 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、SQLXMLOLEDB プロバイダー固有のプロパティの使用法を示す ADO サンプル アプリケーションを紹介します。  
   
 ## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>SQLXMLOLEDB 4.0 プロバイダーのアプリケーション要件  
@@ -60,7 +61,7 @@ ms.locfileid: "75246638"
  [SQLXMLOLEDB Provider&#41;&#40;の XSL 変換の適用](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  XSL 変換の適用時に ClientSideXML プロパティと xsl プロパティを使用する方法を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
   
   

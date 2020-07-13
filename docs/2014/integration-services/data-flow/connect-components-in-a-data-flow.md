@@ -10,31 +10,27 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb04140fc5a065b93f8a08533b24ca786fc9202c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827923"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432339"
 ---
 # <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
   この手順は、データ フロー内のコンポーネントの出力を、同じデータ フロー内にある別のコンポーネントに連結する方法について説明します。  
   
 ### <a name="to-connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  **[制御フロー]** タブをクリックし、コンポーネントを連結するデータ フローが含まれているデータ フロー タスクをダブルクリックします。  
+3.  **[制御フロー]** タブをクリックし、コンポーネントを連結するデータ フローが含まれているデータ フロー タスクをダブルクリックします。  
   
-4.  
-  **[データ フロー]** タブのデザイン画面で、連結する変換または変換元を選択します。  
+4.  **[データ フロー]** タブのデザイン画面で、連結する変換または変換元を選択します。  
   
 5.  変換または変換元の出力を表す緑の矢印を、変換または変換先にドラッグします。 一部のデータ フロー コンポーネントはエラー出力をとり、同様の方法で連結できます。  
   
@@ -43,9 +39,9 @@ ms.locfileid: "62827923"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー内のコンポーネントを追加または削除する](data-flow.md)   
  [データフローコンポーネントでのエラー出力の構成](../configure-an-error-output-in-a-data-flow-component.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

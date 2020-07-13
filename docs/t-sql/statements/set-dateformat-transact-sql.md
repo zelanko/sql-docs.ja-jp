@@ -27,15 +27,15 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbaa56a5e2c40523e925fa46a4e92e4fde283461
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929067"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032505"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   日付の各文字列を解釈するために、日付要素 (月、日、年) の順序を設定します。 これらの文字列の型は、**date**、**smalldatetime**、**datetime**、**datetime2**、**datetimeoffset** です。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67929067"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SET DATEFORMAT { format | @format_var }   
 ```  
   
@@ -70,17 +70,17 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="examples"></a>例  
  同じ `DATEFORMAT` 設定が適用された各セッションの中で、異なる日付文字列を入力に使用した例を次に示します。  
   
-```  
+```sql
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '31/12/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '31/12/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: 2008-12-31 09:01:01.123  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '12/31/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '12/31/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  

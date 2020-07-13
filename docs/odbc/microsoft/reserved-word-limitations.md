@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf536e06556e6b2e7b27f220d09a51f91b44d23c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67988026"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304010"
 ---
 # <a name="reserved-keyword-limitations"></a>予約済みキーワードの制限事項
 

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab2cda06971e56a8c15e2fb7382977a36fe7a34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881800"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージ プル サブスクリプションを削除します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -51,7 +51,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergepullsubscription**は、マージレプリケーションで使用します。  
   
  このマージプルサブスクリプションのマージエージェントは**sp_dropmergepullsubscription**によって削除されますが、 **sp_addmergepullsubscription**にマージエージェントは作成されません。  
@@ -62,7 +62,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropmergepullsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、またはマージプルサブスクリプションを作成したユーザーだけです。 **Db_owner**固定データベースロールは、マージプルサブスクリプションを作成したユーザーがこのロールに属している場合にのみ**sp_dropmergepullsubscription**を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

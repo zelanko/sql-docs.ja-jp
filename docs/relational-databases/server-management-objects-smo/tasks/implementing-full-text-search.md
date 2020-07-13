@@ -13,18 +13,16 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94605728f89483048ad35b3ec3247810bff70c57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 5660303c542bc77691d0d0f370d8614450a983dc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095183"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008973"
 ---
 # <a name="implementing-full-text-search"></a>フルテキスト検索の実装
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに使用することができ、SMO では <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> オブジェクトで表現されます。 オブジェクト<xref:Microsoft.SqlServer.Management.Smo.FullTextService>は**サーバー**オブジェクトの下に存在します。 このオブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] フルテキスト検索サービスの構成オプションを管理するために使用します。 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに属し、データベースに対して定義されるフルテキスト カタログを表す <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> オブジェクトのコレクションです。 通常のインデックスとは異なり、フルテキスト インデックスは各テーブルに対して 1 つのみ定義されます。 これは、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクト内の <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトで表現されます。  
+  フルテキスト検索は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに使用することができ、SMO では <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> オブジェクトで表現されます。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>オブジェクトは**サーバー**オブジェクトの下に存在します。 このオブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] フルテキスト検索サービスの構成オプションを管理するために使用します。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに属し、データベースに対して定義されるフルテキスト カタログを表す <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> オブジェクトのコレクションです。 通常のインデックスとは異なり、フルテキスト インデックスは各テーブルに対して 1 つのみ定義されます。 これは、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクト内の <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトで表現されます。  
   
  フルテキスト検索サービスを作成するには、データベースにフルテキスト カタログが定義されており、データベース内のいずれかのテーブルにフルテキスト検索インデックスが定義されている必要があります。  
   
@@ -34,7 +32,7 @@ ms.locfileid: "74095183"
  提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Visual Basic でのフルテキスト検索サービスの作成  
- このコード例では、`ProductCategory` サンプル データベースの [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
+ このコード例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベースの `ProductCategory` テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
   
 ```  
 ' compile with:   
@@ -94,7 +92,7 @@ End Class
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>Visual C# でのフルテキスト検索サービスの作成  
- このコード例では、`ProductCategory` サンプル データベースの [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
+ このコード例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベースの `ProductCategory` テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
   
 ```  
 // compile with:   
@@ -154,7 +152,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>PowerShell でのフルテキスト検索サービスの作成  
- このコード例では、`ProductCategory` サンプル データベースの [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
+ このコード例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベースの `ProductCategory` テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  
   
 ```  
 # Example of implementing a full text search on the default instance.  

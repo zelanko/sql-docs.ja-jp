@@ -12,18 +12,17 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 430643e8a6c9bd3dd00b2763990645c6a162ee40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047491"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL の取り扱い (SQLXML 4.0)
-  XML 構文では、NULL は "存在しない" ことを表します。 (たとえば、属性または要素の値が NULL の場合、その属性または要素は XML ドキュメントに存在しません)。SQLXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)]では、 `updg:nullvalue`属性を使用して、要素または属性値に NULL を指定できます。  
+  XML 構文では、NULL は "存在しない" ことを表します。 (たとえば、属性または要素の値が NULL の場合、その属性または要素は XML ドキュメントに存在しません)。SQLXML では、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] `updg:nullvalue` 属性を使用して、要素または属性値に NULL を指定できます。  
   
  たとえば、次のアップデートグラムでは、 **ContactID**が64である連絡先の**TITLE**値が NULL であることを確認し、 **title**値を "Mr" に更新します。 をお問い合わせください。  
   

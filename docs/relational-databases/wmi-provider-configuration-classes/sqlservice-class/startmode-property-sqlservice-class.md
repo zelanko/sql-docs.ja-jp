@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660865"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888323"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サービスの開始モードを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +35,8 @@ ms.locfileid: "73660865"
 object.StartMode [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -53,15 +53,15 @@ object.StartMode [= value]
  自動  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
- マニュアル  
+ 手動  
  値 = 3。 プロセスが**Startservice**メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
   
  無効  
  値 = 4。 サービスを開始できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

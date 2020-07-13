@@ -1,5 +1,6 @@
 ---
-title: 接続性のトラブルシューティング | Microsoft Docs
+title: 接続性のトラブルシューティング
+description: JDBC の接続について、および Microsoft JDBC Driver for SQL Server の使用時に発生する可能性のある接続の問題のトラブルシューティング方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12abdfd169aaea9f2108d2b4776eb99cc4bd2ce7
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928117"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728391"
 ---
 # <a name="troubleshooting-connectivity"></a>接続性のトラブルシューティング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,13 +27,13 @@ ms.locfileid: "80928117"
   
 -   TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で有効になっていません、または指定されたサーバーやポート番号が間違っています。 指定されたサーバーとポート上の TCP/IP で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が待機していることを確認します。 このようなエラーは、次のような例外で報告されることがあります。"ログインに失敗しました。 ホストに TCP/IP 接続できませんでした。" これは、次のいずれかの原因を示します。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 構成マネージャーを使用して、インストールされていません。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、インストールされていません。  
   
     -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 URL の詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
   
     -   JDBC 接続 URL で指定されたコンピューターのアドレスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールおよび起動されたサーバーを参照していません。  
   
-    -   クライアントと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間で、TCP/IP のネットワークが動作していません。 telnet を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への TCP/IP 接続を確認できます。 たとえば、コマンド プロンプトに「`telnet 192.168.0.0 1433`」と入力します。192.168.0.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのアドレス、1433 はリッスンしているポートを示します。 "Telnet が接続できません" というメッセージを受け取る場合、TCP/IP はそのポートで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続をリッスンしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 で TCP/IP を使用するように構成されていることを確認します。  
+    -   クライアントと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間で、TCP/IP のネットワークが動作していません。 telnet を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への TCP/IP 接続を確認できます。 たとえば、コマンド プロンプトに「`telnet 192.168.0.0 1433`」と入力します。192.168.0.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターのアドレス、1433 はリッスンしているポートを示します。 "Telnet が接続できません" というメッセージを受け取る場合、TCP/IP はそのポートで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続をリッスンしていません。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 で TCP/IP を使用するように構成されていることを確認します。  
   
     -   サーバーで使用されるポートがファイアウォールで開かれていない。 これには、サーバーが使用するポート、またはオプションで、サーバーの名前付きインスタンスに関連付けられたポートが含まれます。  
   
@@ -42,8 +43,8 @@ ms.locfileid: "80928117"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、JDBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定ではない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールまたは構成するときに、このオプションが選択されていることを確認します。  
   
-## <a name="see-also"></a>参照  
- [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>関連項目  
+ [JDBC ドライバーに関する問題の診断](diagnosing-problems-with-the-jdbc-driver.md)   
+ [JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

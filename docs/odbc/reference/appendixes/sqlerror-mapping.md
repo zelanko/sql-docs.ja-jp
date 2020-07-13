@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLError
 - SQLError function [ODBC], mapping
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1aa3b66b29af755099cb273f3a19ca4e8230cd0b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064475"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302079"
 ---
 # <a name="sqlerror-mapping"></a>SQLError のマッピング
 アプリケーション*が ODBC 3.x*ドライバーを使用して**SQLError**を呼び出す場合、  

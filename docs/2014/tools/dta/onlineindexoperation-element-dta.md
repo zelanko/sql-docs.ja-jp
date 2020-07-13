@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0911811eb95e1d3dd03e8a4d8e33cd7740277e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62657217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040391"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 要素 (DTA)
   データベース エンジン チューニング アドバイザーによって推奨されるインデックス、インデックス付きビュー、またはパーティションがオンラインで作成可能かどうかを指定します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62657217"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`。最大長はありません。|  
 |**指定できる値**|**OFF**<br /> 推奨される物理デザイン構造をオンラインで作成しません。<br /><br /> **ON**<br /> 推奨される物理デザイン構造をすべてオンラインで作成します。<br /><br /> **混合**<br /> データベース エンジン チューニング アドバイザーは、可能な場合にオンラインで作成できる物理デザイン構造を推奨します。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。 インデックスがオンラインで作成される場合は、オブジェクト定義に **ONLINE = ON** が追加されます。|  

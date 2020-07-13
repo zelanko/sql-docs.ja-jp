@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf187379aaa664e536710859e08bf084b14657d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896900"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 アプリケーションによっては、**IClientVirtualDevice2::GetCommand** によって返されるバッファーを操作するために、複数のプロセスが必要になる場合があります。 その場合、コマンドを受け取るプロセスでは、**GetBufferHandle** を使用して、バッファーを識別するプロセス独立ハンドルを取得することができます。 その後、このハンドルによって、同じ仮想デバイス セットを開いている他のプロセスと通信することができます。 そのプロセスでは、IClientVirtualDeviceSet2::MapBufferHandle を使用して、バッファーのアドレスが取得されます。 このアドレスは、パートナーとは異なるアドレスになる可能性があります。なぜなら、各プロセスが異なるアドレスでバッファーをマッピングしている可能性があるからです。
 

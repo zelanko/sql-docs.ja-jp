@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109392"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>[パラメーター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
@@ -28,22 +28,21 @@ ms.locfileid: "66109392"
   
  詳細については、「[埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **追加**  
  一覧に新しいパラメーターを追加します。  
   
- **デリート**  
+ **削除**  
  選択したパラメーターを一覧から削除します。  
   
  **上矢印**  
  選択したパラメーターを一覧内で上に移動します。  
   
- **下方向キー**  
+ **下矢印**  
  選択したパラメーターを一覧内で下に移動します。  
   
  **パラメーター名**  
- 
-  **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** タブでデータセットに追加したクエリ パラメーターの名前を入力します。  
+ **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** タブでデータセットに追加したクエリ パラメーターの名前を入力します。  
   
  **パラメーター値**  
  埋め込みデータセットにのみ適用されます。  
@@ -66,7 +65,7 @@ ms.locfileid: "66109392"
   
  共有データセット定義でこのパラメーターを読み取り専用に指定する場合は、このオプションを選択します。 共有データセットがレポートに追加されると、パラメーターはプロパティに表示されなくなります。 レポート サーバー上で共有データセットがキャッシュされると、値は変更できなくなります。  
   
- **Nullable**  
+ **NULL 値の使用**  
  共有データセットにのみ適用されます。  
   
  NULL 値を許容する場合は、このオプションを選択します。  
@@ -80,11 +79,11 @@ ms.locfileid: "66109392"
  [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [[クエリ &#40;レポートビルダー] ([データセットのプロパティ] ダイアログボックス)&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-design/report-parameters-report-builder-and-report-designer.md)   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポートビルダー&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [クエリデザイナー &#40;レポートビルダー&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [レポートビルダーおよび SSRS を &#40;共有データセットまたは埋め込みデータセットを作成&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

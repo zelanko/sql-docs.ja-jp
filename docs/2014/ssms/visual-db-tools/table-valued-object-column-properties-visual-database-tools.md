@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d56f2fd8e72e0cb00555f18288180f674645056e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044146"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
   クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "63204530"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[名前]** プロパティが表示されます。  
   
- **名前**  
+ **Name**  
  選択した列の名前が表示されます。  
   
  **クエリ デザイナー カテゴリ**  

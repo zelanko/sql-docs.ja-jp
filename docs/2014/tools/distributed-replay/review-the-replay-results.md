@@ -9,21 +9,19 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63149702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011587"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
-  分散再生機能[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が分散再生を完了したら、各クライアントの再生アクティビティをキャプチャし、各クライアントの結果トレースファイルに保存できます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能による分散再生の完了後、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
  結果トレース ファイルの保存場所は、各クライアントにあるクライアント構成ファイル `<ResultDirectory>` 内の `DReplayClient.xml`XML 要素で指定されます。 クライアント結果ディレクトリ内のトレース ファイルは、再生を実行するたびに上書きされます。  
   
- 結果トレース ファイルにキャプチャする必要がある出力の種類を指定するには、再生構成ファイル `DReplay.exe.replay.config`を変更します。 
-  `<OutputOptions>` XML 要素を使用して、行数または結果セットの内容を記録するかどうかを指定できます。  
+ 結果トレース ファイルにキャプチャする必要がある出力の種類を指定するには、再生構成ファイル `DReplay.exe.replay.config`を変更します。 `<OutputOptions>` XML 要素を使用して、行数または結果セットの内容を記録するかどうかを指定できます。  
   
  これらの構成設定の詳細については、「 [Distributed Replay の構成](configure-distributed-replay.md)」を参照してください。  
   
@@ -52,38 +50,35 @@ ms.locfileid: "63149702"
 ## <a name="event-class-column-mapping"></a>イベント クラス列マッピング  
  次の図は、再生中にキャプチャされるイベント クラスのそれぞれの種類に対して使用できる結果トレースの列を示しています。  
   
- ![イベントクラス列マッピング](../../database-engine/media/eventclassmappings.gif "イベントクラス列マッピング")  
+ ![イベント クラス列マッピング](../../database-engine/media/eventclassmappings.gif "イベント クラス列マッピング")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
   
-|データ列名|データ型|[説明]|列 ID|  
+|データ列名|データ型|説明|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|`nvarchar`|イベント クラスの名前。|1 で保護されたプロセスとして起動されました|  
+|EventClass|`nvarchar`|イベント クラスの名前。|1|  
 |EventSequence|`bigint`|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応するキャプチャ イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは元のトレース データ内のイベント シーケンスです。|2|  
 |ReplaySequence|`bigint`|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応する再生イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは再生中に割り当てられるイベント シーケンスです。|3|  
 |TextData|`ntext`|TextData の内容は、EventClass に依存します。<br /><br /> Audit Login および ExistingConnection では、これは接続の設定オプションです。<br /><br /> SQL:BatchStarting では、これはバッチ要求の本文です。<br /><br /> RPC:Starting では、これは呼び出されたストアド プロシージャです。<br /><br /> Replay Settings Event では、この列には再生構成ファイルで定義された設定が含まれます。<br /><br /> Replay Statistics Event では、これは次の情報を含みます。<br />再生対象 SQL サーバー<br />再生可能なイベントの総数<br />プロバイダー エラーの数<br />内部エラーの数<br />内部の警告<br />エラーの総数<br />全体のパス レート<br />再生時間 (HH:MM:SS: MMM)<br /><br /> Replay Result Set Event では、これは返される結果の列ヘッダーのリストを示します。<br /><br /> Replay Result Row Event では、その行のすべての列の戻り値を示します。<br /><br /> Replay Internal Warning および Replay Provider Error では、この列はプロバイダー警告またはエラーを含みます。|4|  
 |Attention|`bigint`|イベントのアテンション期間 (マイクロ秒)。 これは、キャプチャ トレースのアテンション イベントから計算されます。 イベントにクエリ タイムアウトが指定されていない場合は、この列は設定されません (null)。|5|  
 |SubmitTime|`datetime`|イベントが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に送信された時刻。|6|  
 |IsSuccessful|`int`|特定のイベントが正常に実行されたかどうか、および結果セットがクライアント側に返されたかどうかを示すブール型のフラグ。<br /><br /> 警告を生成するイベント (アテンションまたはユーザー定義のタイムアウトにより、イベントが取り消された場合など) は成功と見なされます。<br /><br /> IsSuccessful の値は、次のいずれかです。<br /><br /> 1 = 成功<br /><br /> 0 = 失敗|7|  
-|Duration [microsec]|`bigint`|イベントの応答時間の期間 (マイクロ秒)。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]にログオン/ログオフ/RPC/言語イベントが送信されたときに測定が開始されます。<br /><br /> イベントが成功した場合は、完全な結果セットが使用されたときに測定が終了します。<br /><br /> イベントが成功しなかった場合は、イベントの失敗時またはキャンセル時に測定が終了します。|8|  
-|RowCount|`bigint`|再生構成ファイルの `<RecordRowCount>` の値によって設定されます。<br /><br /> 
-  `<RecordRowCount>` が Yes と等しい場合、このセルには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で返される結果セット内の行数が含まれます。<br /><br /> 
-  `<RecordRowCount>` が No と等しい場合、このセルは設定されません (null)。|9|  
+|Duration [microsec]|`bigint`|イベントの応答時間の期間 (マイクロ秒)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]にログオン/ログオフ/RPC/言語イベントが送信されたときに測定が開始されます。<br /><br /> イベントが成功した場合は、完全な結果セットが使用されたときに測定が終了します。<br /><br /> イベントが成功しなかった場合は、イベントの失敗時またはキャンセル時に測定が終了します。|8|  
+|RowCount|`bigint`|再生構成ファイルの `<RecordRowCount>` の値によって設定されます。<br /><br /> `<RecordRowCount>` が Yes と等しい場合、このセルには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で返される結果セット内の行数が含まれます。<br /><br /> `<RecordRowCount>` が No と等しい場合、このセルは設定されません (null)。|9|  
 |CaptureSPID|`int`|イベントのキャプチャ セッションの ID。|10|  
 |ConnectionID|`int`|イベントのキャプチャ接続の ID。|11|  
 |ReplaySPID|`int`|イベントの再生セッションの ID。|12|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|13|  
-|LoginName|`nvarchar`|ユーザーのログイン名。 *Domain_name* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\*user_name*の形式で、セキュリティログインまたは Microsoft Windows ログイン資格情報のいずれかを指定できます。|14|  
+|LoginName|`nvarchar`|ユーザーのログイン名。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *domain_name*\\*user_name*の形式で表された Microsoft Windows ログイン資格情報です。|14|  
 |CaptureHostName|`nvarchar`|キャプチャ中にクライアント サービスが実行されているコンピューターの名前。|15|  
 |ReplayHostName|`nvarchar`|再生中にクライアントが実行されているコンピューターの名前。|16|  
 |ApplicationName|`nvarchar`|キャプチャ中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続を作成したクライアント アプリケーションの名前。|17|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
- [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [分散再生の構成](configure-distributed-replay.md)  
   
   

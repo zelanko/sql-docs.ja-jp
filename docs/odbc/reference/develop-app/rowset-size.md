@@ -14,14 +14,14 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67943767"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304243"
 ---
 # <a name="rowset-size"></a>行セット サイズ
 使用する行セットのサイズは、アプリケーションによって異なります。 通常、画面ベースのアプリケーションは、次の2つの方法のいずれかに従います。 1つ目は、行セットのサイズを画面に表示される行数に設定することです。ユーザーが画面のサイズを変更した場合、アプリケーションはそれに応じて行セットのサイズを変更します。 2つ目の方法では、行セットのサイズを100などのより大きな数値に設定して、データソースへの呼び出しの回数を減らします。 アプリケーションは、可能な場合は、行セット内でローカルにスクロールし、行セットの外にスクロールしたときにのみ新しい行をフェッチします。  

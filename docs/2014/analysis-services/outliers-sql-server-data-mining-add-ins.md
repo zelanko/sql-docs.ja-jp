@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547279"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>外れ値 (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの外れ値ウィザード](media/dmc-outliers.gif "[データ マイニング] リボンの外れ値ウィザード")  
@@ -88,7 +87,7 @@ ms.locfileid: "66072137"
 ### <a name="related-options"></a>関連オプション  
  ウィザードには次のオプションがあります。  
   
-|**オプション**|**解説**|  
+|**[オプション]**|**解説**|  
 |-----------------|-----------------|  
 |**列の選択**|一度に 1 つの列のみを操作できます。|  
 |**しきい値の処理方法の指定**|**最小**値を使用してしきい値を設定し、しきい値よりも少ない行数で検出された値を除外します。<br /><br /> 初期状態では、**最小**値は行が最も少ない値と等しく、最小値をその値より小さくすることはできません。|  

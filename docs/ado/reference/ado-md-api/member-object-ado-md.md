@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949494"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753209"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  メンバーのプロパティは、**メンバー**が使用されているコンテキストによって異なります。 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティがあります。 [位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
   
  **Position**の**メンバー**には、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)および[parentsameasprev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 **レベル**の**メンバー**でこれらのプロパティにアクセスすると、エラーが発生します。  
@@ -68,19 +68,19 @@ ms.locfileid: "67949494"
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |ChildrenCardinality|メンバーが持つ子の数。|  
 |CubeName|キューブの名前。|  
-|[説明]|メンバーのわかりやすい説明。|  
+|説明|メンバーのわかりやすい説明。|  
 |DimensionUniqueName|[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)の明確な名前です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
 |LevelNumber|階層のレベルとルートとの間の距離。|  
 |LevelUniqueName|レベルの明確な名前。|  
 |MemberCaption|メンバーに関連付けられたラベルまたはキャプション。|  
 |MemberGUID|メンバーの GUID。|  
-|MemberName|メンバーの名前。|  
+|メンバー名|メンバーの名前。|  
 |MemberOrdinal|メンバーの序数。|  
 |MemberType|メンバーの種類。|  
 |MemberUniqueName|メンバーの明確な名前。|  

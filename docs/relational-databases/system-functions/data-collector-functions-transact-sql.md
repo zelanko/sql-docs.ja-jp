@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6098b0a94947ddca1c35f91ed02469c7d23d3be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c28c06896deb30c290973663e53a2e5215cb4fd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68042895"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898489"
 ---
 # <a name="data-collector-functions--transact-sql"></a>データコレクター関数 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データ コレクターには、データ コレクションやデータ コレクターの統計情報を取得したり、データを取得したりするための関数が使用されています。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "68042895"
   
 |||  
 |-|-|  
-|[fn_syscollector_get_execution_details &#40;Transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|[fn_syscollector_get_execution_stats &#40;Transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|  
-|[スナップショット。 fn_trace_getdata &#40;Transact-sql&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)||  
+|[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|  
+|[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [管理データウェアハウスのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
+ [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
   
   

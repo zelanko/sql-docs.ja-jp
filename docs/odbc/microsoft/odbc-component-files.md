@@ -12,14 +12,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], component files
 - ODBC desktop database drivers [ODBC], component files
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: abe6a9bf7f2f336ffe612057dd6db05f74b4adea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33268b2973c6fd307a6f8730336c0ffa3603af2b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044971"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298152"
 ---
 # <a name="odbc-component-files"></a>ODBC コンポーネント ファイル
 Odbc ドライバーファイルは、ODBC デスクトップデータベースドライバー4.0 の各コンポーネントに必要です。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 02e1acb528a32ef242e160e0ce5dd0267237c876
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061542"
 ---
 # <a name="rename-a-stored-procedure"></a>ストアド プロシージャの名前の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャの名前を変更する方法について説明します。  
@@ -37,9 +36,9 @@ ms.locfileid: "62721014"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   プロシージャ名は、 [識別子](../databases/database-identifiers.md)のルールに従っている必要があります。  
   
@@ -47,34 +46,32 @@ ms.locfileid: "62721014"
   
 -   プロシージャの名前または定義を変更すると、依存オブジェクトを更新してプロシージャに加えられた変更を反映しなければ、その依存オブジェクトが失敗する可能性があります。 詳細については、「[ストアドプロシージャの依存関係の表示](view-the-dependencies-of-a-stored-procedure.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CREATE PROCEDURE  
  データベースの CREATE PROCEDURE 権限およびプロシージャの作成先となるスキーマの ALTER 権限、または、**db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
  ALTER PROCEDURE  
  プロシージャの ALTER 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-a-stored-procedure"></a>ストアド プロシージャの名前を変更するには  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、そのインスタンスを展開します。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  [ストアドプロシージャの依存関係を確認](view-the-dependencies-of-a-stored-procedure.md)します。  
+3.  [ストアド プロシージャの依存関係を確認します](view-the-dependencies-of-a-stored-procedure.md)。  
   
-4.  
-  **[ストアド プロシージャ]** を展開し、名前を変更するプロシージャを右クリックして、 **[名前の変更]** をクリックします。  
+4.  **[ストアド プロシージャ]** を展開し、名前を変更するプロシージャを右クリックして、 **[名前の変更]** をクリックします。  
   
 5.  プロシージャ名を変更します。  
   
 6.  依存オブジェクトまたはスクリプトで参照しているプロシージャ名を変更します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-rename-a-stored-procedure"></a>ストアド プロシージャの名前を変更するには  
   
@@ -114,7 +111,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [ストアドプロシージャの作成](../stored-procedures/create-a-stored-procedure.md)   
  [ストアドプロシージャの変更](../stored-procedures/modify-a-stored-procedure.md)   
  [ストアドプロシージャの削除](../stored-procedures/delete-a-stored-procedure.md)   

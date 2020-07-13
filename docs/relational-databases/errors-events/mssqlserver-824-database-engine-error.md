@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3fa77a50b32541a4ed9b8742bebe04e4e735b45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33df8f287cc60c34035ee22b8a03be65440f6ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767846"
 ---
 # <a name="mssqlserver_824"></a>MSSQLSERVER_824
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|824|  
 |イベント ソース|MSSQLSERVER|  
@@ -62,7 +62,7 @@ SQL Server では Windows API (たとえば、ReadFile、WriteFile、ReadFileSca
  
 824 エラー メッセージは、通常、基になるストレージ システムやハードウェア、または I/O 要求のパスにあるドライバーに問題があることを示しています。 ファイル システムに不整合がある場合、またはデータベース ファイルが破損している場合に、このエラーが発生することがあります。
 
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決方法  
 
 エラー 824 が発生した場合は、次の解決策を試すことができます。 
 

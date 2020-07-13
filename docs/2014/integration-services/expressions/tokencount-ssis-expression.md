@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6675c9c6ca2a5e0549a1e5c20f9108cac439ac1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62896699"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437089"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
   指定された区切り記号で区切られたトークンを含んでいる文字列内のトークン数を返します。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7c8610fd3ac9ee92d6e08084c48f14298cb3203f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66067973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940193"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel 用テーブル分析ツール
   [**分析**] ツールバーのデータマイニングツールは、データマイニングを開始する最も簡単な方法です。 これらのツールは、自動的にデータの分布と型を分析し、有効な結果を取得できるようパラメーターを設定します。 アルゴリズムを選択したり、複雑なパラメーターを構成したりする必要はありません。  

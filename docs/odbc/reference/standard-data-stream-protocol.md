@@ -15,14 +15,14 @@ helpviewer_keywords:
 - standardizing database access [ODBC], data stream protocol
 - standard data stream protocol [ODBC]
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 996121d437ac3ad93f05b758bd44f30d3dac6151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e959170ea5df50786451acb6a574ea2765298af
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081849"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280211"
 ---
 # <a name="standard-data-stream-protocol"></a>標準のデータ ストリーム プロトコル
 標準データストリームプロトコルは、異種 Dbms のデータにアクセスするための1つの方法です。 実際、標準のデータストリームプロトコルは既に存在しています。

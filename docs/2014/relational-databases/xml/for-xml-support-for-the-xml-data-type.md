@@ -10,21 +10,19 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63205006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061237"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
-  FOR XML クエリによって SELECT 句で `xml` 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 
-  `xml` 型の列内の XML 宣言はシリアル化されません。  
+  FOR XML クエリによって SELECT 句で `xml` 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  
   
- たとえば、次のクエリでは`BusinessEntityID`、、 `FirstName`、および`LastName`の各列、および型の`AdditionalContactInfo` `xml`列からの電話番号など、顧客の連絡先情報を取得します。  
+ たとえば、次のクエリでは、 `BusinessEntityID` 、、およびの各列、および `FirstName` `LastName` 型の列からの電話番号など、顧客の連絡先情報を取得し `AdditionalContactInfo` `xml` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,8 +145,7 @@ for xml auto;
   
 -   1 つの `xml` 型の列を持つテーブル  
   
--   
-  `xml` 型のインスタンス  
+-   `xml` 型のインスタンス  
   
  たとえば、次のユーザー定義関数は、`xm` 型の 1 つの列を持つテーブルを返します。  
   

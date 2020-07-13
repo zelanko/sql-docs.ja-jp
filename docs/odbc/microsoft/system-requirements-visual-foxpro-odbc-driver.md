@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939805"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301443"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>システム要件 (Visual FoxPro ODBC ドライバー)
 インストールのシステム要件により、ドライバーを正常にインストールするために必要な最小限のオペレーティングシステムとディスク領域が提供されます。 ドライバーをインストールした後、Visual FoxPro データへのアクセスに使用する特定のアプリケーションソフトウェアを選択できます。  

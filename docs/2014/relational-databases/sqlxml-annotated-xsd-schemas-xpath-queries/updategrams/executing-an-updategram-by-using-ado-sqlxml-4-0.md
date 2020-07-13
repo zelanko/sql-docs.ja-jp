@@ -11,22 +11,21 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fb903ddd3d8639b3e33d04d9d8853585f83fc894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009435"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、アップデートグラムを実行します。 このアップデートグラムでは、特定の従業員の名前が更新されます。 この例では、AdventureWorks サンプル データベースを使用します。  
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中のインスタンスへの接続を確立します。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行中のインスタンスへの接続を確立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
 -   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66014837"
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
- 以下は、そのサンプル コードです。  
+ 次にサンプル コードを示します。  
   
 ```vb  
 Private Sub Form_Load()  

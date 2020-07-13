@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0a3d30a00c08dd90cf98e565eff46cfa58928c72
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933817"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881770"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースからデータベース ロールを削除します。  
   
 > [!IMPORTANT]  
->  で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、 **sp_droprole**は DROP ROLE ステートメントに置き換えられました。 **sp_droprole**は、以前のバージョンのとの互換性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のためだけに含まれており、将来のリリースではサポートされない可能性があります。  
+>  では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 **SP_DROPROLE**は DROP ROLE ステートメントに置き換えられました。 **sp_droprole**は、以前のバージョンのとの互換性のためだけに含まれて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] おり、将来のリリースではサポートされない可能性があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="permissions"></a>アクセス許可  
  ロールに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、アプリケーション ロール `Sales` を削除します。  
   
 ```  
@@ -69,12 +69,12 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-sql&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-sql&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_dropapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931194"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755926"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドと[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを一緒に使用する方法を示しています。  

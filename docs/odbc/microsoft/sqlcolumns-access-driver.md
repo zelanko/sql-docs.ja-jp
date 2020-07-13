@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLColumns function [ODBC], Access Driver
 - Access driver [ODBC], SQLColumns
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2916532b9dd79e25adce791b2201d77eb2cdff84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7031e9eebbb1ffae045598863d22399147503c88
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985253"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307903"
 ---
 # <a name="sqlcolumns-access-driver"></a>SQLColumns (Access ドライバー)
 > [!NOTE]  

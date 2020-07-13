@@ -1,5 +1,6 @@
 ---
 title: SqlLocalDB ユーティリティ
+description: ユーザーと開発者は、SqlLocalDB ユーティリティ コマンド ライン ツールを使用して、SQL Server Express LocalDB のインスタンスを作成して管理できます。
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b171f587e54948b2a8d70c804d47362e97b61bb9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306677"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151601"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

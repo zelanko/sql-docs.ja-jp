@@ -9,19 +9,17 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 47bb74bf5fd35696481a88c4ccc30a8733f257a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006701"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  
   
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、効果的な Enterprise Information Management (EIM) ソリューションに必要なすべてのコンポーネントが 1 つの製品で提供しています。 EIM ソリューションの構築に役立つ主なコンポーネントは次のとおりです。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、効果的な Enterprise Information Management (EIM) ソリューションに必要なすべてのコンポーネントが 1 つの製品で提供しています。 EIM ソリューションの構築に役立つ主なコンポーネントは次のとおりです。  
   
 -   SQL Server Integration Services  
   
@@ -55,7 +53,7 @@ ms.locfileid: "70153563"
   
 2.  [マスター データ サービス構成マネージャーを使用した MDS の設定](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     マスター データ サービス データベースの作成と構成には、構成マネージャーを使用します。 MDS データベースを作成した後、web サイトに MDS 用の web アプリケーションを作成し (例[http://localhost/MDS](http://localhost/MDS):)、mds データベースを mds web アプリケーションに関連付けます。 MDS Web アプリケーションを作成するには、コンピューターに IIS がインストールされている必要があります。 MDS データベースと web アプリケーションを構成するための前提条件の詳細については、「 [Web アプリケーションの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633744.aspx)および「[データベースの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633767.aspx)を参照してください。  
+     マスター データ サービス データベースの作成と構成には、構成マネージャーを使用します。 MDS データベースを作成した後、web サイトに MDS 用の web アプリケーションを作成し (例:)、mds `http://localhost/MDS` データベースを mds web アプリケーションに関連付けます。 MDS Web アプリケーションを作成するには、コンピューターに IIS がインストールされている必要があります。 MDS データベースと web アプリケーションを構成するための前提条件の詳細については、「 [Web アプリケーションの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633744.aspx)および「[データベースの要件」 (マスターデータサービス)](https://msdn.microsoft.com/library/ee633767.aspx)を参照してください。  
   
 3.  [Data Quality Server インストーラーを使用して DQS をインストールして構成](https://msdn.microsoft.com/library/hh231682.aspx)します。 [**スタート**]、 **[すべてのプログラム**]、[ **Microsoft SQL Server 2014**]、[ **Data Quality Services**]、[ **data quality Server Installer**] の順にクリックします。  
   
@@ -65,11 +63,11 @@ ms.locfileid: "70153563"
   
 6.  Optional[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)でアカウントを作成します。 このチュートリアルのタスクの1つでは、 **Azure Marketplace** (もともとは**データマーケット**) アカウントが必要です。 次のタスクに進む場合は、このタスクをスキップできます。  
   
-7.  [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=50426)から、仕入先 .xls ファイルをダウンロードします。  
+7.  [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=50426)から Suppliers.xls ファイルをダウンロードします。  
   
 8.  **64 ビットバージョンの excel**を使用している場合、DQS では、クレンジングまたは照合結果を excel ファイルにエクスポートすることはできません。 これは既知の問題です。 この問題を回避するには、次の手順を実行します。  
   
-    1.  **Dqlinstaller-upgrade**を実行します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
+    1.  **DQLInstaller.exe のアップグレードを**実行します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
   
     2.  **マスターデータサービス構成マネージャー**で、[**データベースの選択**] をクリックし、[既存の**MDS**データベース] を選択して、[**アップグレード**] をクリックします。  
   

@@ -252,12 +252,12 @@ ms.locfileid: "75257029"
   
 6. 次のように、4 つのリソース文字列を定義します。  
   
-    |Name|値|  
+    |名前|値|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY ステートメントは {0} にありました。|  
     |AvoidWaitForDelay_RuleName|ストアド プロシージャ、関数、およびトリガーで WaitFor Delay ステートメントの使用を回避します。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|{0} から {1} の ResourceManager は作成できません。|  
+    |CannotCreateResourceManager|{1} から {0} の ResourceManager は作成できません。|  
   
 7. **[ファイル]** メニューで、 **[RuleResources.resx の保存]** をクリックします。  
   
@@ -544,7 +544,7 @@ Visual Studio 2012 の場合、通常、<Visual Studio Install Dir> は C:\Progr
   
 3. **[コード分析]** をクリックします。 RuleSamples.CategorySamples という新しいカテゴリが表示されます。  
   
-4. RuleSamples .CategorySamples を展開します。 "SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" と表示されます。  
+4. RuleSamples .CategorySamples を展開します。 "SR1004:Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" (SR1004: ストアド プロシージャ、関数、トリガーで WaitFor Delay ステートメントを使用しないでください) と表示されます。  
   
 ## <a name="see-also"></a>参照
 

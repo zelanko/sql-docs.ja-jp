@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932634"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760118"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
 この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドを使用して、名前が G で始まる***Northwind***データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  

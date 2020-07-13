@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b706834c80fa0ff126d35beffbfdc84ef92cefe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097500"
 ---
 # <a name="smtpserver-property-wmi-msreportserver_configurationsetting"></a>SMTPServer プロパティ (WMI MSReportServer_ConfigurationSetting)
@@ -45,7 +45,7 @@ public string SMTPServer;
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

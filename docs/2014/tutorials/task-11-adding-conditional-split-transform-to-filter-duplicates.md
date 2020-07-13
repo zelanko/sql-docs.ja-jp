@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ad925c543cefaf7aed5a0ef355029312b3de7140
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65476752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064800"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>タスク 11: 条件分割変換を追加して重複をフィルターする
   ここでは、データ フローに条件分割変換を追加します。 この変換は、受信するレコード セットから重複をフィルターする際に役立ちます。 あいまいグループ化変換では、一致として検出したレコードがグループ化され、ピボット レコードとしてレコードのいずれかが選択されます。 グループ内のすべてのレコードは、同じ _key_out 値を持ちます。 グループ内のピボット レコードは _key_out 値と同じ _key_in 値を持ちます。 グループ内のその他のレコードでは、_key_in と _key_out の値が異なります。 そのため、条件の _key_in==_key_out を使用してフィルターすると、グループ内のピボット行のみが取得されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "65476752"
   
 9. [ **OK** ] をクリックして [**条件分割変換エディター** ] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 12: 派生列変換を追加して MDS で必要な列を追加する](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
   
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70175456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049807"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: Azure Storage にデータ ファイルを移動する
   このレッスンでは、(SQL Server インスタンスではなく) Azure Storage にデータファイルを移動する方法を学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
- データファイルを Azure Storage に移動するには、 `ALTER DATABASE`ステートメントを使用します。これは、データファイルの場所を変更するのに役立ちます。  
+ データファイルを Azure Storage に移動するには、ステートメントを使用し `ALTER DATABASE` ます。これは、データファイルの場所を変更するのに役立ちます。  
   
  このレッスンでは、次の手順を既に完了していることを前提としています。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "70175456"
   
     ```  
   
-5.  次に、 [Azcopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツールのいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。  
+5.  次に、 [Azcopy ツール](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツールのいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。  
   
      **重要:** この新しい機能強化を使用する場合は、必ずブロック blob ではなくページ blob を作成してください。  
   

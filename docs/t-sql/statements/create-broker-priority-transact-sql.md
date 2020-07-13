@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064679"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895488"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   優先順位と、その優先順位を割り当てる [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換を判断するための一連の条件を定義します。 優先順位は、メッセージ交換の優先度で指定されているものと同じコントラクトとサービスの組み合わせを使用するすべてのメッセージ交換のエンドポイントに割り当てられます。 優先度は、1 (低) から 10 (高) までの範囲の値です。 既定値は 5 です。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73064679"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], component services
 - component services [ODBC]
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91d6dcf0ca7f87d6ed510d582f7a7ba0f80e8c74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fb5763058fa198cbad7464434e31942ef8d6cd7d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088147"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307583"
 ---
 # <a name="using-microsoft-component-services"></a>Microsoft コンポーネント サービスの使用
 > [!IMPORTANT]  

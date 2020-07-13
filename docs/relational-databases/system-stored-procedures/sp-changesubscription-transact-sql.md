@@ -15,22 +15,22 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68770673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771391"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   キュー更新トランザクションレプリケーションに関係するスナップショットまたはトランザクションプッシュサブスクリプションまたはプルサブスクリプションのプロパティを変更します。 他のすべての種類のプルサブスクリプションのプロパティを変更するには、 [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)を使用します。 パブリッシャー側のパブリケーションデータベースに対して**sp_changesubscription**が実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,33 +60,33 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'`指定した*プロパティ*の新しい値を指定します。 *値*は**nvarchar (4000)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**subscriber_catalog**||OLE DB プロバイダーに接続するときに使用するカタログ。 このプロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です。|  
-|**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティは、* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です *。*|  
-|**subscriber_location**||OLE DB プロバイダーによって認識されるデータベースの場所です。 *このプロパティは、* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です *。*|  
+|**subscriber_catalog**||OLE DB プロバイダーに接続するときに使用するカタログ。 このプロパティは、以外のサブスクライバーに対してのみ有効です [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティは、以外の場合にのみ有効です* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー。*|  
+|**subscriber_location**||OLE DB プロバイダーによって認識されるデータベースの場所です。 *このプロパティは、以外の場合にのみ有効です* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー。*|  
 |**subscriber_login**||サブスクライバーでのログイン名。|  
 |**subscriber_password**||指定されたログインの強力なパスワード。|  
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
-||**0**|サブスクライバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続時に認証を使用します。|  
-|**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソース以外の OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID)。 *このプロパティは、* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です *。*|  
-|**subscriber_providerstring**||データソースを識別する OLE DB プロバイダー固有の接続文字列。 *このプロパティは、* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のサブスクライバーに対してのみ有効です *。*|  
-|**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューションエージェントごとに許可される接続の数を指定します。 パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 **1** ~ **64**の範囲の値がサポートされています。 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー、Oracle パブリッシャー、またはピアツーピアサブスクリプションの場合、このプロパティは**0**にする必要があります。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーへの接続時に認証を使用します。|  
+|**subscriber_provider**||データソース以外の OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *このプロパティは、以外の場合にのみ有効です* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー。*|  
+|**subscriber_providerstring**||データソースを識別する OLE DB プロバイダー固有の接続文字列。 *このプロパティは、以外の場合にのみ有効です* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー。*|  
+|**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューションエージェントごとに許可される接続の数を指定します。 パブリッシャーでは、 **1** ~ **64**の範囲の値がサポートされてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 以外の**0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー、Oracle パブリッシャー、またはピアツーピアサブスクリプションの場合、このプロパティは0にする必要があります。|  
 |**subscriber_type**|**1**|ODBC データソースサーバー|  
-||**番**|OLE DB プロバイダー|  
+||**3**|OLE DB プロバイダー|  
 |**memory_optimized**|**bit**|サブスクリプションがメモリ最適化テーブルをサポートしていることを示します。 *memory_optimized*は**ビット**です。1は true (サブスクリプションはメモリ最適化テーブルをサポートします) です。|  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーに対して*パブリッシャー*を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定することはできません。  
+>  パブリッシャーに対して*パブリッシャー*を指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_changesubscription**は、キュー更新トランザクションレプリケーションに関係するプッシュサブスクリプションまたはプルサブスクリプションのプロパティを変更する場合にのみ使用できます。 他のすべての種類のプルサブスクリプションのプロパティを変更するには、 [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)を使用します。  
@@ -96,7 +96,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   

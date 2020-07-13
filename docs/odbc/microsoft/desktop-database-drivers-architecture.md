@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae6fb72bb3ed0a9bca1571eb572bbfbd20fe9995
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071907"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288742"
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
 これらのドライバーは、Microsoft Windows 95 以降、または Windows NT 4.0 と Windows 2000 で使用するように設計されています。 Windows 95 以降では、32ビットアプリケーションのみがサポートされています。16ビットおよび32ビットのアプリケーションは、Windows NT 4.0 と Windows 2000 でサポートされています。  

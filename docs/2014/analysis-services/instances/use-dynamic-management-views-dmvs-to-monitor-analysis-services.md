@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79217116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543717"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -36,31 +35,27 @@ SELECT * FROM $System.<schemaRowset>
   
  [クエリ構文](#bkmk_syn)  
   
- [ツールとアクセス許可](#bkmk_tools)  
+ [ツールと権限](#bkmk_tools)  
   
  [DMV リファレンス](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a>DMV クエリを使用する利点  
+##  <a name="benefits-of-using-dmv-queries"></a><a name="bkmk_ben"></a>DMV クエリを使用する利点  
  DMV クエリは、他の手段では取得できない操作とリソース消費に関する情報を返します。  
   
  DMV クエリは、XML/A Discover コマンドの実行の代わりとなる手段です。 クエリの構文は SQL に基づいているため、多くの管理者にとって DMV クエリを記述するのはより簡単です。 また、結果セットは、読み取りやコピーが容易な表形式で返されます。  
   
-##  <a name="bkmk_ex"></a>例とシナリオ  
+##  <a name="examples-and-scenarios"></a><a name="bkmk_ex"></a>例とシナリオ  
  DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
   
- 
-  `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
+ `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
   
- 
-  `Select * from $System.discover_object_memory_usage` /** このクエリは、オブジェクトによるメモリ消費についてレポートします。  
+ `Select * from $System.discover_object_memory_usage` /** このクエリは、オブジェクトによるメモリ消費についてレポートします。  
   
- 
-  `Select * from $System.discover_sessions` /** このクエリは、セッションのユーザーや期間など、アクティブ セッションについてレポートします。  
+ `Select * from $System.discover_sessions` /** このクエリは、セッションのユーザーや期間など、アクティブ セッションについてレポートします。  
   
- 
-  `Select * from $System.discover_locks` /** このクエリは、特定の時点で使用されるロックのスナップショットを返します。  
+ `Select * from $System.discover_locks` /** このクエリは、特定の時点で使用されるロックのスナップショットを返します。  
   
-##  <a name="bkmk_syn"></a>クエリ構文  
+##  <a name="query-syntax"></a><a name="bkmk_syn"></a>クエリ構文  
  DMV のクエリ エンジンは、データ マイニング パーサーです。 DMV クエリ構文は、[SELECT (DMX)](/sql/dmx/select-dmx) ステートメントに基づきます。  
   
  DMV クエリ構文は SQL SELECT ステートメントに基づいていますが、SELECT ステートメントの完全な構文をサポートしていません。 特に、JOIN、GROUP BY、LIKE、CAST、CONVERT はサポートされていません。  
@@ -85,14 +80,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>ツールとアクセス許可  
+##  <a name="tools-and-permissions"></a><a name="bkmk_tools"></a>ツールとアクセス許可  
  DMV のクエリを行うには、Analysis Services インスタンスに対するシステム管理者権限が必要です。  
   
  SQL Server Management Studio、Reporting Services レポート、または PerformancePoint ダッシュボードなど、MDX または DMX クエリをサポートするクライアント アプリケーションを使用できます。  
   
  Management Studio から DMV クエリを実行するには、クエリを行うインスタンスに接続し、 **[新しいクエリ]** をクリックします。 MDX または DMX クエリ ウィンドウからクエリを実行することができます。  
   
-##  <a name="bkmk_ref"></a>DMV リファレンス  
+##  <a name="dmv-reference"></a><a name="bkmk_ref"></a>DMV リファレンス  
  すべてのスキーマ行セットに DMV インターフェイスがあるわけではありません。 DMV を使用してクエリを行うことができる、すべてのスキーマ行セットの一覧を返すには、次のクエリを実行します。  
   
 ```  
@@ -102,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーで認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
+>  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーによって認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|説明|  
 |------------|-----------------|  
@@ -120,7 +115,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|特定のデータ ソースについてサポートされている列挙子に関するメタデータを返します。|  
 |[DISCOVER_INSTANCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|指定したインスタンスに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
 |[DISCOVER_JOBS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|現在のジョブに関する情報を返します。|  
-|[XMLA&#41;&#40;DISCOVER_KEYWORDS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|予約されているキーワードの一覧を返します。|  
+|[DISCOVER_KEYWORDS 行セット (XMLA)](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|予約されているキーワードの一覧を返します。|  
 |[DISCOVER_LITERALS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|XMLA によってサポートされているデータ型や値など、リテラルの一覧を返します。|  
 |[DISCOVER_LOCKS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|特定の時点で使用されているロックのスナップショットを返します。|  
 |[DISCOVER_MEMORYGRANT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|スタートアップ時に Analysis Services によって割り当てられたメモリに関する情報を返します。|  
@@ -169,6 +164,6 @@ ORDER BY TABLE_NAME ASC
 ## <a name="see-also"></a>参照  
  [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [新しいシステム. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [制限された行セットと Dmv の新しい SYSTEMRESTRICTEDSCHEMA 関数](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

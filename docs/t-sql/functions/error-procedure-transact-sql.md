@@ -57,7 +57,7 @@ CATCH ブロックで呼び出された場合、`ERROR_PROCEDURE` はエラー�
 ## <a name="remarks"></a>解説  
 `ERROR_PROCEDURE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
-実行された回数、または `ERROR_PROCEDURE` ブロックのスコープ内で実行される場所に関係なく、`CATCH` は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
+実行された回数、または `CATCH` ブロックのスコープ内で実行される場所に関係なく、`ERROR_PROCEDURE` は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
    
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   

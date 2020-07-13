@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922473"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747744"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標は、IIS などの中継局を介してデータソースにアクセスし、更新することです。 プログラミングモデルは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクトモデルは、メソッドとプロパティがプログラミングモデルに影響を与えるオブジェクトを指定します。  

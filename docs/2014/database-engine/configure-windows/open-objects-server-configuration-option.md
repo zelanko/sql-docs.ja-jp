@@ -11,17 +11,15 @@ helpviewer_keywords:
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6d22a3d6dd358afe9cf921376664c2d25705a6a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62781795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935183"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects サーバー構成オプション
-  このオプションは引き続き **sp_configure**のオプションとして存在しますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ではその機能は無効になっています (設定しても効果はありません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、開いているデータベース オブジェクトの数が動的に管理され、使用できるメモリ量によってのみ制限されます。 
-  **open objects** オプションは、既存スクリプトとの互換性のために **sp_configure** で使用できます。  
+  このオプションは引き続き **sp_configure** に存在しますが、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではその機能は無効になっています。 (設定しても効果はありません)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、開いているデータベース オブジェクトの数が動的に管理され、使用できるメモリ量によってのみ制限されます。 **open objects** オプションは、既存スクリプトとの互換性のために **sp_configure** で使用できます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

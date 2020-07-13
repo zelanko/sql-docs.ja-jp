@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923606"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763053"
 ---
 # <a name="using-bookmarks"></a>ブックマークを使用する
 場合によっては、レコード**セット**内を移動した後に特定のレコードに直接戻ると、すべてのレコードをスクロールして値を比較する必要がなくなります。 たとえば、 **Find**メソッドを使用してレコードを検索しようとしても、レコードが返されない場合は、レコード**セット**の両端に自動的に配置されます。 プロバイダーでサポートされている場合は、**検索**メソッドを使用する前にブックマークを使用して、場所に戻ることができます。 ブックマークは、レコード**セット**オブジェクト内のレコードを一意に識別する**バリアント**型の値です。  

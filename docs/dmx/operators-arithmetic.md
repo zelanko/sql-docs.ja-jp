@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 149cd67594cac64fc8ad315b2fca9bb1cda373d5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008214"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669316"
 ---
 # <a name="operators---arithmetic"></a>演算子 - 算術
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) では[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、加算、減算、乗算、除算などの算術計算に算術演算子を使用できます。  
+  データマイニング拡張機能 (DMX) では [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、加算、減算、乗算、除算などの算術計算に算術演算子を使用できます。  
   
  次の表は、DMX がサポートする算術演算子を示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[+ &#40;&#41; &#40;DMX&#41;を追加する](../dmx/add-dmx.md)|2 つの数値を加算します。|  
 |[-&#40;&#41; &#40;DMX&#41;を減算する](../dmx/subtract-dmx.md)|ある数値から別の数値を減算します。|  

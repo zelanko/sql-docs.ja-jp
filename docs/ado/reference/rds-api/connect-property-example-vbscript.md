@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746269"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964587"
   
  次の例は、実行時に VBScript コードで**Connect**プロパティを設定する方法を示しています。  
   
- この例をテストするには、通常の HTML ドキュメント\<で body> \<本文と body> タグの間にあるコードを切り取って貼り付け、「 **connectvbs .asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ この例をテストするには、 \< 通常の HTML ドキュメントで body> 本文と body> タグの間にあるコードを切り取って貼り付け、「 \< **connectvbs .asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginConnectVBS -->  

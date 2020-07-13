@@ -12,42 +12,33 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80856721092becb85d6ff6fb2652013e975c6157
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33a8f420f985c9e62c7d7f275e7de370a6988e8d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68887970"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469057"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET サーバー オブジェクト アーキテクチャ
-  ADOMD.NET サーバーオブジェクトは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (udf) またはストアドプロシージャを作成するために使用できるヘルパーオブジェクトです。  
+  ADOMD.NET サーバーオブジェクトは、でユーザー定義関数 (Udf) またはストアドプロシージャを作成するために使用できるヘルパーオブジェクトです [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 > [!NOTE]  
->  
-  `Microsoft.AnalysisServices.AdomdServer` 名前空間 (およびこれらのオブジェクト) を使用するには、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
+>  `Microsoft.AnalysisServices.AdomdServer` 名前空間 (およびこれらのオブジェクト) を使用するには、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
   
- ![ADOMD.NET サーバーにおけるオブジェクトの関係](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET サーバーにおけるオブジェクトの関係")  
+ ![ADOMD.NET サーバーにおけるオブジェクトの関係](../../analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET サーバーにおけるオブジェクトの関係")  
 ADOMD.NET オブジェクト モデル  
   
  ADOMD.NET オブジェクト階層との対話は、通常、次の表で説明するように、最上位層の 1 つまたは複数のオブジェクトで開始されます。  
   
-|To|使用するオブジェクト|  
+|終了|使用するオブジェクト|  
 |--------|---------------------|  
-|多次元式 (MDX) を評価する|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Expression> オブジェクトを使用すると、MDX 式を実行して、その式を特定の組で評価できます。|  
-|完全な MDX ステートメントを作成せずに MDX 関数を実行できるようにする|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> 
-  <xref:Microsoft.AnalysisServices.AdomdServer.MDX> オブジェクトは、あらかじめ定義された MDX 関数を <xref:Microsoft.AnalysisServices.AdomdServer.Expression> オブジェクトを使用せずに呼び出す場合に便利です。 
-  <xref:Microsoft.AnalysisServices.AdomdServer.MDX> オブジェクトのその他の機能は今後のリリースで使用できるようになります。|  
-|UDF の現在の実行コンテキストを表す|<xref:Microsoft.AnalysisServices.AdomdServer.Context><br /> 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context> オブジェクトは、現在のキューブまたはマイニング モデルやさまざまなメタデータ コレクションなどの情報を公開します。 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context> オブジェクトの主な使用例の 1 つが、<xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy.CurrentMember%2A> オブジェクトの <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy> プロパティです。 これにより、UDF やストアド プロシージャの作成者は、クエリが特定のディメンションのどのメンバーを処理しているかに基づいて決定を行うことができます。|  
-|セットや組を作成する|<xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder>, <xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder><br /> 
-  <xref:Microsoft.AnalysisServices.AdomdServer.SetBuilder> を使用すると、変更不可のセットを作成できます。<xref:Microsoft.AnalysisServices.AdomdServer.TupleBuilder> を使用すると、変更不可の組を作成できます。|  
-|MDX 言語の 6 つの基本的な型の間で暗黙の変換とキャストをサポートする|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> 
-  <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> オブジェクトでは、次の型の間で暗黙の変換とキャストが行われます。<br /><br /> -   <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Level><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Member><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br />-   <xref:Microsoft.AnalysisServices.AdomdServer.Set><br />-スカラー、値型|  
+|多次元式 (MDX) を評価する|[Microsoft.analysisservices.sharepoint.integration.dll を指定します。](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))オブジェクトを使用すると、MDX 式を実行し、指定した組でその式を評価することができます。|  
+|完全な MDX ステートメントを作成せずに MDX 関数を実行できるようにする|[Microsoft.analysisservices.sharepoint.integration.dll (MDX)](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))オブジェクトは、 [microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143609(v=sql.120))オブジェクトを使用せずに、定義済みの mdx 関数を呼び出す場合に便利です。 Microsoft.analysisservices.sharepoint.integration.dll オブジェクトの追加関数は、今後のリリースで使用できるようになります[。](/previous-versions/sql/sql-server-2014/ms143616(v=sql.120))|  
+|UDF の現在の実行コンテキストを表す|[Microsoft.analysisservices.sharepoint.integration.dll (Microsoft. コンテキスト)](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))オブジェクトは、現在のキューブまたはマイニングモデルやさまざまなメタデータコレクションなどの情報を公開します。 Microsoft.analysisservices.sharepoint.integration.dll オブジェクトの1つの主な使用方法は、Microsoft.analysisservices.sharepoint.integration.dll オブジェクトの[microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms137044(v=sql.120))のプロパティであるということです。この[コンテキスト](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))オブジェクトは、 [Microsoft.AnalysisServices.AdomdServer.Hierarchy](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120))のプロパティです。 これにより、UDF やストアド プロシージャの作成者は、クエリが特定のディメンションのどのメンバーを処理しているかに基づいて決定を行うことができます。|  
+|セットや組を作成する|[Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120))、 [microsoft.analysisservices.sharepoint.integration.dll、TupleBuilder](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120))のようになっています。<br /> Microsoft.analysisservices.sharepoint.integration.dll は、変更[でき](/previous-versions/sql/sql-server-2014/ms144510(v=sql.120))ないセットを作成する方法を提供します。 [microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms145407(v=sql.120))は、変更できない組を作成する方法を提供します。|  
+|MDX 言語の 6 つの基本的な型の間で暗黙の変換とキャストをサポートする|[Microsoft.analysisservices.sharepoint.integration.dll です。 MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))<br /> [Microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))オブジェクトは、次の型の間で暗黙的な変換とキャストを提供します。<br /><br /> -   [Microsoft.analysisservices.sharepoint.integration.dll (Microsoft. 階層)](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll (レベル)](/previous-versions/sql/sql-server-2014/ms143581(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll (Microsoft. メンバー)](/previous-versions/sql/sql-server-2014/ms143820(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll (. タプル)](/previous-versions/sql/sql-server-2014/ms145330(v=sql.120))<br />-   [Microsoft.analysisservices.sharepoint.integration.dll を設定します。](/previous-versions/sql/sql-server-2014/ms144530(v=sql.120))<br />-スカラー、値型|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOMD.NET サーバー プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

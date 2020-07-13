@@ -18,21 +18,19 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a19a173fdd6f70b19e9a63c214616909708eec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 65ee29f4bab4994f3d96bd4cacdbab65c46ab305
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784731"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000645"
 ---
 # <a name="cursor-behaviors"></a>カーソル動作
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)の呼び出しで SQL_ATTR_CURSOR_SCROLLABLE オプションと SQL_ATTR_CURSOR_SENSITIVITY オプションを設定することによって指定します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
+  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)の呼び出しで SQL_ATTR_CURSOR_SCROLLABLE オプションと SQL_ATTR_CURSOR_SENSITIVITY オプションを設定することによって指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
   
 |カーソル動作の設定|要求されるサーバー カーソルの特性|  
 |------------------------------|---------------------------------------------|  

@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100075"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643364"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68100075"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -54,7 +54,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  切り捨てるまたはすべての行を削除するテーブルの名前を指定します。 *table_name* はリテラルで指定する必要があります。 *table_name* することはできません、 **OBJECT_ID()** 関数または変数です。  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
- 切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合に **WITH PARTITIONS** 引数を使用すると、エラーが発生します。 **WITH PARTITIONS** 句が指定されていない場合、テーブル全体が切り捨てられます。  
+ 切り捨てるパーティション、またはすべての行を削除するパーティションを指定します。 テーブルがパーティション分割されていない場合に `WITH PARTITIONS` 引数を使用すると、エラーが発生します。 `WITH PARTITIONS` 句が指定されていない場合、テーブル全体が切り捨てられます。  
   
  *\<partition_number_expression>* は以下の方法で指定できます。 
   
@@ -89,32 +89,39 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  パーティション テーブルの切り捨てを行うには、テーブルとインデックスが連携している (同じパーティション関数でパーティション分割されている) 必要があります。  
   
 ## <a name="remarks"></a>解説  
- DELETE ステートメントと比較して、TRUNCATE TABLE には次の利点があります。  
+ DELETE ステートメントと比較して、`TRUNCATE TABLE` には次の利点があります。  
   
 -   トランザクション ログが使用する領域が削減されます。  
   
-     DELETE ステートメントは、一度に 1 行ずつ削除し、削除した各行のエントリをトランザクション ログに記録します。 TRUNCATE TABLE は、テーブル データを格納するのに使用するデータ ページの割り当てを解除することによってデータを削除し、ページの割り当ての解除だけをトランザクション ログに記録します。  
+     DELETE ステートメントは、一度に 1 行ずつ削除し、削除した各行のエントリをトランザクション ログに記録します。 `TRUNCATE TABLE` は、テーブル データを格納するのに使用するデータ ページの割り当てを解除することによってデータを削除し、ページの割り当ての解除だけをトランザクション ログに記録します。  
   
 -   通常、使用されるロックの数が削減されます。  
   
-     DELETE ステートメントが行ロックを使用して実行される場合、テーブル内の各行は削除対象としてロックされます。 TRUNCATE TABLE は、(スキーマ (SCH-M) ロックを含め) 常にテーブルとページをロックしますが、行はロックしません。  
+     DELETE ステートメントが行ロックを使用して実行される場合、テーブル内の各行は削除対象としてロックされます。 `TRUNCATE TABLE` では、(スキーマ (SCH-M) ロックを含め) 常にテーブルとページがロックされますが、各行はロックされません。  
   
 -   テーブル内にページは一切残されません。  
   
      DELETE ステートメントが実行された後には、テーブルに空のページが残る場合があります。 たとえば、少なくとも 1 つの排他 (LCK_M_X) テーブル ロックを使用しない限り、ヒープ内の空のページの割り当てを解除できません。 削除操作がテーブル ロックを使用しない場合は、テーブル (ヒープ) には多数の空のページが含まれます。 インデックスの場合、削除操作によって空のページが残る場合がありますが、これらのページの割り当てはバックグラウンドのクリーンアップ プロセスによってすばやく解除されます。  
   
- TRUNCATE TABLE はテーブルからすべての行を削除しますが、テーブル構造と、テーブルの列、制約、インデックスなどは残ります。 テーブルのデータとテーブル定義を削除する場合は、DROP TABLE ステートメントを使用します。  
+ `TRUNCATE TABLE` はテーブルからすべての行を削除しますが、テーブル構造と、テーブルの列、制約、インデックスなどは残ります。 テーブルのデータとテーブル定義を削除する場合は、`DROP TABLE` ステートメントを使用します。  
   
  テーブルに ID 列が含まれている場合は、その列に対するカウンターは、その列に対して定義されたシード値にリセットされます。 シードが定義されていなかった場合は、既定値である 1 が使用されます。 ID カウンターを保持するには、代わりに DELETE を使用します。  
+ 
+ > [!NOTE]
+ > `TRUNCATE TABLE` 操作はロールバックできます。
   
 ## <a name="restrictions"></a>制限  
- 次のテーブルには TRUNCATE TABLE を使用できません。  
+ 次のようなテーブルでは、`TRUNCATE TABLE` は使用できません。  
   
--   FOREIGN KEY 制約で参照されるテーブル (それ自体を参照する外部キーを持つテーブルを切り捨てることができます。)  
+-   FOREIGN KEY 制約で参照されるテーブル それ自体を参照する外部キーを持つテーブルは切り捨てることができます。 
   
 -   インデックス付きビューで使用されているテーブル。  
   
 -   トランザクション レプリケーションとマージ レプリケーションを使用してパブリッシュされているテーブル。  
+
+-   システムのバージョン情報のテンポラル テーブル。
+
+-   エッジ制約によって参照されるテーブル。  
   
  これらの特性を 1 つ以上持つテーブルには、代わりに DELETE ステートメントを使用します。  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] と [!INCLUDE[sspdw](../../includes/sspdw-md.md)] では:
 
-- EXPLAIN ステートメントでは TRUNCATE TABLE を使用できません。
+- EXPLAIN ステートメントでは `TRUNCATE TABLE` を使用できません。
 
-- TRUNCATE TABLE は、トランザクション内で実行できません。
+- `TRUNCATE TABLE` は、トランザクション内で実行できません。
   
 ## <a name="truncating-large-tables"></a>大きなテーブルの切り捨て  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、削除に必要なすべてのエクステントに対する同時ロックを保持することなく、128 を超えるエクステントを持つテーブルの削除または切り捨てを行う機能を備えています。  
   
 ## <a name="permissions"></a>アクセス許可  
- 最小限の権限として *table_name* に対する ALTER 権限が必要です。です。 TRUNCATE TABLE 権限は、特に指定のない限り、テーブル所有者、固定サーバー ロール sysadmin、および固定データベース ロール db_owner および db_ddladmin のメンバーに与えられ、譲渡できません。 ただし、TRUNCATE TABLE ステートメントをストアド プロシージャなどのモジュール内に組み込み、EXECUTE AS 句を使用してそのモジュールに適切な権限を与えることはできます。  
+ *table_name* で必要な最小限の権限は `ALTER` です。 `TRUNCATE TABLE` 権限は、特に指定のない限り、テーブル所有者、`sysadmin` 固定サーバー ロール、`db_owner` 固定データベース ロール、および `db_ddladmin` 固定データベース ロールのメンバーに与えられ、譲渡できません。 ただし、`TRUNCATE TABLE` ステートメントをストアド プロシージャなどのモジュール内に組み込み、`EXECUTE AS` 句を使用してそのモジュールに適切な権限を与えることはできます。  
   
 ## <a name="examples"></a>例  
   

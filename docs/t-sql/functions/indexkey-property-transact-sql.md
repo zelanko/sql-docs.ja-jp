@@ -19,17 +19,17 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17b73a3a6cbbec9ed904ca6d0ca6b41d6d24eb85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894290"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   インデックス キーについての情報を返します。 XML インデックスに対して NULL を返します。  
   

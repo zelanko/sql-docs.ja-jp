@@ -12,18 +12,17 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3ea2db629f1a1621e23257a35be52a2f58a6ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: e3ed3e4397f5a8713865849a0100ac0800a760ba
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784224"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006522"
 ---
 # <a name="cursor-concurrency-odbc"></a>カーソル コンカレンシー (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   カーソル操作は、カーソルの種類と同様に、アプリケーションで設定されるコンカレンシー オプションの影響を受けます。 同時実行オプションは、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)の SQL_ATTR_CONCURRENCY オプションを使用して設定します。 コンカレンシーの種類は次のとおりです。  
   

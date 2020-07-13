@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a3fcac7c16de9acf851c623cf7eb1c582e78025c
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72251262"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053026"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Stretch が有効なローカルデータベースとリモートデータベースとの間の認証された接続を復元します。  
   
@@ -38,17 +37,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>引数  
- @credential= * \@資格情報*  
+ @credential= * \@ 資格情報*  
  ローカル Stretch 対応データベースに関連付けられたデータベーススコープ資格情報を指定します。  
   
- @with_copy= * \@with_copy*  
- リモートデータのコピーを作成してコピーに接続するかどうかを指定します (推奨)。 with_copy はビットです。 * \@*  
+ @with_copy= * \@ with_copy*  
+ リモートデータのコピーを作成してコピーに接続するかどうかを指定します (推奨)。 * \@ with_copy*はビットです。  
   
- @azure_servername= * \@azure_servername*  
- リモートデータを含む Azure サーバーの名前を指定します。 azure_servername は sysname です。 * \@*  
+ @azure_servername= * \@ azure_servername*  
+ リモートデータを含む Azure サーバーの名前を指定します。 * \@ azure_servername*は sysname です。  
   
- @azure_databasename= * \@azure_databasename*  
- リモートデータが格納されている Azure データベースの名前を指定します。 azure_databasename は sysname です。 * \@*  
+ @azure_databasename= * \@ azure_databasename*  
+ リモートデータが格納されている Azure データベースの名前を指定します。 * \@ azure_databasename*は sysname です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
@@ -56,7 +55,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [Sp_rda_reauthorize_db (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行してリモートの Azure データベースに再接続すると、この操作によってクエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  

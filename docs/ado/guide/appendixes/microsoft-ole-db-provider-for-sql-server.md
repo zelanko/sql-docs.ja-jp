@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926612"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761620"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server (SQLOLEDB) を使用すると、ADO は Microsoft SQL Server にアクセスできます。
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**データソース**または**サーバー**|サーバーの名前を指定します。|
@@ -180,13 +180,13 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|パスワード|DBPROP_AUTH_PASSWORD|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|
 |コミット動作の準備|DBPROP_PREPARECOMMITBEHAVIOR|
 |プロシージャ用語|DBPROP_PROCEDURETERM|
-|ダイアログを表示する|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|
 |プロバイダー名|DBPROP_PROVIDERFILENAME|
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|
@@ -200,8 +200,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |テーブル用語|DBPROP_TABLETERM|
 |トランザクション DDL|DBPROP_SUPPORTEDTXNDDL|
 |User ID|DBPROP_AUTH_USERID|
-|ユーザー名|DBPROP_USERNAME|
-|ウィンドウハンドル|DBPROP_INIT_HWND|
+|[ユーザー名]|DBPROP_USERNAME|
+|ウィンドウ ハンドル|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ
  次のプロパティが、**レコードセット**オブジェクトの**properties**コレクションに追加されます。
@@ -288,7 +288,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |挿入された行の変更|DBPROP_CHANGEINSERTEDROWS|
 |列の特権|DBPROP_COLUMNRESTRICT|
 |列セットの通知|DBPROP_NOTIFYCOLUMNSET|
-|コンテンツの種類|SSPROP_STREAM_CONTENTTYPE|
+|コンテンツ タイプ|SSPROP_STREAM_CONTENTTYPE|
 |カーソルの自動フェッチ|SSPROP_CURSORAUTOFETCH|
 |列の遅延|DBPROP_DEFERRED|
 |準備コマンドの遅延送信|SSPROP_DEFERPREPARE|

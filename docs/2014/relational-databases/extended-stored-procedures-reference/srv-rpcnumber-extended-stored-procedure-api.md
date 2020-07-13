@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1036cbe649a2448b3eb4838621ec8be0590b1c3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a4d5802d3dcee27a327237823b92f3b6240c17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62745563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050587"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  現在のリモート ストアド プロシージャ呼び出しの番号部分を返します。  
   
@@ -52,7 +50,7 @@ srvproc
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャの番号部分です。 クライアントがリモート ストアド プロシージャの実行時に番号部分を使用していない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、リモート ストアド プロシージャの番号部分のみを返します。 所有者、リモート ストアド プロシージャ名、およびデータベース名の省略可能な指定子は含まれません。  
   
 > [!IMPORTANT]  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7f4b28a7d63654441d8a66730e729483596b3a8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918268"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754580"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
 既存のファイルの内容を[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)に読み込みます。  
@@ -33,7 +33,7 @@ Stream.LoadFromFileFileName
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- */Db*  
+ *FileName*  
  **ストリーム**に読み込むファイルの名前を含む**文字列**値です。 *FileName*には、任意の有効なパスと名前を UNC 形式で含めることができます。 指定したファイルが存在しない場合は、実行時エラーが発生します。  
   
 ## <a name="remarks"></a>解説  

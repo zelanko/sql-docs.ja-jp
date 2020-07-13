@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b38b11917bf5d8a3248a6c9c0a64518109d7c83
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933284"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760188"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation プロパティ (ADO)
 カーソルサービスの場所を示します。  

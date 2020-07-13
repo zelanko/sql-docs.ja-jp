@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929282"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883670"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server の監査機能を使用して、サーバー監査オブジェクトを削除します。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67929282"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT audit_name  
     [ ; ]  

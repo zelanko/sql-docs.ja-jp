@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600122"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215489"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>コマンドプロンプトで Database Experimentation Assistant を実行する
 
@@ -34,17 +34,17 @@ ms.locfileid: "77600122"
 
 新しいワークロードのキャプチャを開始するには、コマンドプロンプトで次のコマンドを実行します。
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **例**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
-**その他のオプション**
+**追加オプション**
 
-`Deacmd.exe`コマンドを使用して新しいワークロードキャプチャを開始するときに、次の追加オプションを使用できます。
+コマンドを使用して新しいワークロードキャプチャを開始するときに `Deacmd.exe` 、次の追加オプションを使用できます。
 
-| オプション| [説明] |  
+| オプション| 説明 |  
 | --- | --- |
 | -n, --name | 必要トレースファイル名 |
 | -x、--format | 必要トレースの形式 (Trace = 0、Xevent = 1) |
@@ -72,27 +72,27 @@ ms.locfileid: "77600122"
 
 3. StartReplayCaptureTrace を使用して SQL Server を実行しているターゲットコンピューターでトレースキャプチャを開始します。
 
-    a.  SQL Server Management Studio (SSMS) で、<Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql. を開きます。
+    a.  SQL Server Management Studio (SSMS) で、<Dea_InstallPath \Scripts\StartReplayCaptureTrace.sql. を開きます。 \>
 
-    b.  を`Set @durationInMins=0`実行して、指定した時間が経過するとトレースキャプチャが自動的に停止しないようにします。
+    b.  を実行して、指定した `Set @durationInMins=0` 時間が経過するとトレースキャプチャが自動的に停止しないようにします。
 
-    c.  トレースファイルあたりの最大ファイルサイズを設定するに`Set @maxfilesize`は、を実行します。 推奨サイズは 200 (MB) です。
+    c.  トレースファイルあたりの最大ファイルサイズを設定するには、を実行 `Set @maxfilesize` します。 推奨サイズは 200 (MB) です。
 
-    d.  を`@Tracefile`編集して、トレースファイルの一意の名前を設定します。
+    d.  を編集し `@Tracefile` て、トレースファイルの一意の名前を設定します。
 
-    e.  ワーク`@dbname`ロードを特定のデータベースでのみキャプチャする必要がある場合は、データベース名を指定して編集します。 既定では、サーバー全体のワークロードがキャプチャされます。
+    e.  `@dbname`ワークロードを特定のデータベースでのみキャプチャする必要がある場合は、データベース名を指定して編集します。 既定では、サーバー全体のワークロードがキャプチャされます。
 
 4. ターゲット SQL Server インスタンスに対して IRF ファイルを再生するには、コマンドプロンプトで次のコマンドを実行します。
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  ステータスを監視するには、コマンドプロンプトでを`DReplay status -f 1`実行します。
+    a.  ステータスを監視するには、コマンドプロンプトでを実行 `DReplay status -f 1` します。
 
-    b.  再生を停止するには (たとえば、パス% が予想より低い場合)、コマンドプロンプトでを実行`DReplay cancel`します。
+    b.  再生を停止するには (たとえば、パス% が予想より低い場合)、コマンドプロンプトでを実行 `DReplay cancel` します。
 
 5. ターゲット SQL Server インスタンスのトレースキャプチャを停止します。
-6. SSMS でを開き`<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`ます。
-7. SQL Server `@Tracefile`を実行しているターゲットコンピューター上のトレースファイルのパスと一致するように、を編集します。
+6. SSMS でを開き `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` ます。
+7. `@Tracefile`SQL Server を実行しているターゲットコンピューター上のトレースファイルのパスと一致するように、を編集します。
 8. SQL Server を実行しているターゲットコンピューターに対してスクリプトを実行します。
 
 **組み込み再生の使用**
@@ -103,19 +103,19 @@ ms.locfileid: "77600122"
 
 新しいトレース分析を開始するには、コマンドプロンプトで次のコマンドを実行します。
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **例**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 これらのトレースファイルの分析レポートを表示するには、GUI を使用してグラフや構成されたメトリックを表示する必要があります。  ただし、指定された SQL Server インスタンスに分析データベースが書き込まれるため、生成された分析テーブルに対して直接クエリを実行することもできます。
 
-**その他のオプション**
+**追加オプション**
 
 DEA コマンドを使用してトレースを分析する場合は、次の追加オプションを使用できます。
 
-| オプション| [説明] |  
+| オプション| 説明 |  
 | --- | --- |
 | -a、--traceA | 必要インスタンスのイベントファイルへのファイルパス。 C:\traces\Sql2008trace.trc. の例  ファイルのバッチがある場合は、最初のファイルを選択し、DEA がロールオーバーファイルを自動的にチェックします。 ファイルが blob 内にある場合は、イベントファイルをローカルに保存するフォルダーのパスを指定します。  C:\traces\ の例 |
 | -b、--traceB | 必要B インスタンスのイベントファイルへのファイルパス。 C:\traces\Sql2014trace.trc. の例 ファイルのバッチがある場合は、最初のファイルを選択し、DEA がロールオーバーファイルを自動的にチェックします。 ファイルが blob 内にある場合は、イベントファイルをローカルに保存するフォルダーのパスを指定します。  C:\traces\ の例 |

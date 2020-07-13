@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6035aa3af7dbb55ee4f3b948806d9dc63626e13
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438759"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
@@ -197,8 +196,7 @@ ms.locfileid: "62771428"
         ```  
   
         > [!NOTE]  
-        >  
-  `Thread.Sleep` メソッドは、ミリ秒単位で指定される引数を想定しています。  
+        >  `Thread.Sleep` メソッドは、ミリ秒単位で指定される引数を想定しています。  
   
 7.  スクリプトの実行から `DtsExecResult.Success` を返す既定のコード行はそのまま使用します。  
   

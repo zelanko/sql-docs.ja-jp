@@ -12,16 +12,16 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from SQL to C types [ODBC], bit
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 57688f34c504b221f77c1b66792bf9ee9398df27
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056903"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296752"
 ---
-# <a name="sql-to-c-bit"></a>SQL から C へ: ビット
+# <a name="sql-to-c-bit"></a>SQL から C へ: bit
 ビット ODBC SQL データ型の識別子は次のとおりです。  
   
  SQL_BIT  
@@ -30,10 +30,10 @@ ms.locfileid: "68056903"
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*Bufferlength* > 1<br /><br /> *Bufferlength* <= 1|データ<br /><br /> 未定義|1 で保護されたプロセスとして起動されました<br /><br /> 未定義|該当なし<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*Bufferlength* > 1<br /><br /> *Bufferlength* <= 1|データ<br /><br /> 未定義。|1<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|なし [a]|データ|C データ型のサイズ|該当なし|  
 |SQL_C_BIT|なし [a]|データ|1 [b]|該当なし|  
-|SQL_C_BINARY|*Bufferlength* >= 1<br /><br /> *Bufferlength* < 1|データ<br /><br /> 未定義|1 で保護されたプロセスとして起動されました<br /><br /> 未定義|該当なし<br /><br /> 22003|  
+|SQL_C_BINARY|*Bufferlength* >= 1<br /><br /> *Bufferlength* < 1|データ<br /><br /> 未定義。|1<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
   
  [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
   

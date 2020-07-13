@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e84867e56a66a6f35c4de6c95d7cdbc0bfd72769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932813"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 のインスタンスへの機能の追加 (セットアップ)
-  ここでは、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに追加する手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに追加できます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+  ここでは、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに追加する手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに追加できます。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
- コマンドプロンプトからの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに機能を追加するには、「[コマンドプロンプトから SQL Server 2014 をインストール](install-sql-server-from-the-command-prompt.md)する」を参照してください。  
+ コマンドプロンプトからのインスタンスに機能を追加するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「[コマンドプロンプトから SQL Server 2014 をインストール](install-sql-server-from-the-command-prompt.md)する」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  続行する前に、「 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」のトピックを参照してください。  
@@ -33,11 +32,11 @@ ms.locfileid: "62779373"
 >  ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに機能を追加する場合、新しく追加した機能には既存の使用状況レポートの設定が適用されます。 これらの設定を変更するには、 **の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][構成ツール]** メニューにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[ エラーと使用状況レポート]** ツールを使用します。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに機能を追加する場合、新しく追加した機能には既存の使用状況レポートの設定が適用されます。 これらの設定を変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **[構成ツール]** メニューにある **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ エラーと使用状況レポート]** ツールを使用します。  
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、setup.exe をダブルクリックします。 [ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] セットアップ] ダイアログ ボックスが表示されます。必須コンポーネントをインストールする場合は [!INCLUDE[clickOK](../../includes/clickok-md.md)]**をインストールしない場合は** [キャンセル] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をクリックします。  
   
@@ -115,15 +114,15 @@ ms.locfileid: "62779373"
   
 20. [分散再生クライアントの構成] ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。 管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
   
-     **[コントローラー名]** は、省略可能なパラメーターで、既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。 次のことを考慮してください。  
+     **コントローラー名**は省略可能なパラメーターで、既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。 次のことを考慮してください。  
   
     -   コントローラーを既にセットアップしてある場合は、各クライアントを構成するときにコントローラーの名前を入力します。  
   
     -   コントローラーをまだセットアップしていない場合は、コントローラー名を空白にしておくことができます。 ただし、コントローラー名を **クライアント構成** ファイルに手動で入力する必要があります。  
   
-     分散再生クライアント サービス用の **[作業ディレクトリ]** を指定します。 既定の作業ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\ です。  
+     分散再生クライアント サービス用の **[作業ディレクトリ]** を指定します。 既定の作業ディレクトリは、 \<*drive letter*> \dreplayclient\workingdir ですファイルです \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ 。  
   
-     分散再生クライアント サービス用の **[結果ディレクトリ]** を指定します。 既定の結果ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\ です。  
+     分散再生クライアント サービス用の **[結果ディレクトリ]** を指定します。 既定の結果ディレクトリは、 \<*drive letter*> \dreplayclient\resultdir ですファイルです \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ 。  
   
      続行するには、 **[次へ]** をクリックします。  
   

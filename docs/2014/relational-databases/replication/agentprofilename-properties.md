@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 490b922cc76b6443317dbe7368db734f23e002fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016577"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  プロファイルの名前。  
   
  **説明**  

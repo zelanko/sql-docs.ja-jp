@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8f2887d5fa9f4fccc5a37931dfdc1eb6a51331aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027857"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 関数
   新しい SQL Server Express LocalDB インスタンスを作成します。  
@@ -97,7 +96,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定の名前を持つ完全に機能する LocalDB インスタンスが既にあり、そのバージョンが要求されたバージョン以上である場合、結果は S_OK です。  
   
  既存のインスタンスが破損した場合、`LocalDBCreateInstance` API メソッドのそれ以降の呼び出しは失敗します。 破損したインスタンスは、手動で修正するか明示的に削除しないと、再度使用できるようになりません。  

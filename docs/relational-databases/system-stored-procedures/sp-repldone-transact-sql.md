@@ -1,5 +1,6 @@
 ---
 title: sp_repldone (Transact-sql) |Microsoft Docs
+description: サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725740"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -56,7 +57,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_repldone**は、トランザクションレプリケーションで使用します。  
   
  **sp_repldone**は、配布されたトランザクションを追跡するために、ログリーダープロセスによって使用されます。  
@@ -68,7 +69,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーは、 **sp_repldone**を実行できます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  *Xactid*が null の場合、 *xact_seqno*が null で、 *reset*が**1**の場合、ログ内のすべてのレプリケートされたトランザクションが分散としてマークされます。 これは、トランザクションログに有効ではなく、ログを切り捨てる必要があるトランザクションがレプリケートされている場合に便利です。次に例を示します。  
   
 ```sql
@@ -78,8 +79,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  このプロシージャは、レプリケーションを保留しているトランザクションが存在するときにトランザクション ログの切り詰めを許可する、緊急の場合に使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

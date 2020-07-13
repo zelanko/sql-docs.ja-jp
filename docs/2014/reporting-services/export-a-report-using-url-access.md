@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109191"
 ---
 # <a name="export-a-report-using-url-access"></a>URL アクセスを使用してレポートをエクスポートする
@@ -38,7 +38,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
  *Format* パラメーターを URL の一部として含めない場合は、レポート サーバーがブラウザーを検出し、適切な HTML 形式でレポートを表示します。  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス (SSRS)](url-access-ssrs.md)   
- [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
+ [SSRS&#41;&#40;URL アクセス](url-access-ssrs.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
   

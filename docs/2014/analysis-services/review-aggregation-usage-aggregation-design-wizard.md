@@ -11,20 +11,18 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0a248721ee64ff815c1b5b73a81d3b29fc5d2b84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547404"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>[集計使用法の確認] (集計のデザイン ウィザード)
-  
   **[集計使用法の確認]** ページを使用すると、集計使用法の設定を構成できます。  
   
 ## <a name="options"></a>オプション  
- **標準**  
+ **[Default]**  
  属性の集計使用法の設定を Default に設定する場合に選択します。 この設定を使用すると、属性およびディメンションの型に基づいて既定のルールが適用されます。  
   
  `Full`  

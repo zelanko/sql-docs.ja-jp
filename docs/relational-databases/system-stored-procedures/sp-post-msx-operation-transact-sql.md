@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891556"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   対象サーバーをダウンロードして実行するための操作 (行) を**sysdownloadlist**システムテーブルに挿入します。  
   
@@ -47,7 +47,7 @@ sp_post_msx_operation
 ## <a name="arguments"></a>引数  
 `[ @operation = ] 'operation'`ポストされた操作の操作の種類。 *操作*は**varchar (64)**,、既定値はありません。 有効な操作は*object_type*によって異なります。  
   
-|オブジェクトの種類|Operation|  
+|オブジェクトの種類|操作|  
 |-----------------|---------------|  
 |**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|再参加<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`指定された操作を適用する対象サーバーの名前。 *Job_id*が指定されていても*target_server*が指定されていない場合、操作はジョブのすべてのジョブサーバーに対して通知されます。 *target_server*は**nvarchar (30)**,、既定値は NULL です。  
   
-`[ @value = ] value`ポーリング間隔 (秒単位)。 *値*は**int**,、既定値は NULL です。 このパラメーターは、*操作*が "**設定-ポーリング**" の場合にのみ指定します。  
+`[ @value = ] value`ポーリング間隔 (秒単位)。 *value* のデータ型は **int**で、既定値は NULL です。 このパラメーターは、*操作*が "**設定-ポーリング**" の場合にのみ指定します。  
   
 `[ @schedule_uid = ] schedule_uid`操作が適用されるスケジュールの一意の識別子。 *schedule_uid*は**uniqueidentifier**,、既定値はありません。  
   
@@ -81,7 +81,7 @@ sp_post_msx_operation
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
@@ -91,6 +91,6 @@ sp_post_msx_operation
  [sp_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

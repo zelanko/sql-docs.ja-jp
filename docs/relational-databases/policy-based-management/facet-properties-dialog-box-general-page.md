@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caba17d326c15420762a0224bc0d2d1eb3a0ea53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749382"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 各ファセットは、1 種類以上の対象 (サーバー、データベース、テーブルなど) に適用できます。 このページでは、このファセットに関連付けられている対象の種類を表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このページでは変更できません。  
   
 ## <a name="options"></a>オプション  

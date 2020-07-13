@@ -11,28 +11,23 @@ helpviewer_keywords:
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8dd4e6ce7800c3a0a9db51f6c1a4bddfe7a188c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62775235"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931693"
 ---
 # <a name="validate-a-sql-server-installation"></a>SQL Server のインストールの検証
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の検出レポートは、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を確認するために使用できます。 **インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート**には、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ローカルサーバーにインストールされている、、、、、およびの各製品と機能のレポートが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートは、 **インストール センターの** [ツール] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで利用できます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の検出レポートは、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を確認するために使用できます。 **インストール済み[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能の検出レポート**には、ローカル[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]さ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]れて[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]いる、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、、、、およびの各製品と機能のレポートが表示されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートは、 **インストール センターの** [ツール] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで利用できます。  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには**  
   
- **機能の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]検出レポートを実行するには:**  
+ インストールセンターを起動します。 [スタート] ボタンをクリックし、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] すべて** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<Version Name> **の**プログラム**]、[]、[**構成ツール**] の順にポイントし、[ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールセンター**] をクリックします。 **Start** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター]** の左側のナビゲーション領域にある **[ツール]** をクリックし、**[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。そのためには、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、[**[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<バージョン名>]**、**[構成ツール]** の順にポイントし、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センター]** をクリックします。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポートを実行するには、**[** インストール センター]** の左側のナビゲーション領域にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ツール]** をクリックし、**[インストール済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の検出レポート]** をクリックします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]検出レポートは、% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<最後のセットアップセッションに保存され \> ます。  
   
- 検出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レポート\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、% ProgramFiles% \120\Setup Bootstrap\Log\\<最後のセットアップセッション\>に保存されます。  
-  
- また、コマンド ラインから検出レポートを生成することができます。 コマンドプロンプトで "setup.exe/Action = rundiscovery" を実行します。上記のコマンドラインに "/q" を追加すると、UI は表示されませんが、レポートは% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<最後のセットアップ\>セッションで作成されます。  
+ また、コマンド ラインから検出レポートを生成することができます。 コマンドプロンプトから "Setup.exe/Action = rundiscovery" を実行します。上記のコマンドラインに "/q" を追加すると、UI は表示されませんが、レポートは% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<最後のセットアップセッションで作成され \> ます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](view-and-read-sql-server-setup-log-files.md)  

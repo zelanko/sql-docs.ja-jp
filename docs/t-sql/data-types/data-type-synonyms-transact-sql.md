@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732865"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはデータ型のシノニムが用意されています。 次の表に、シノニム、およびシノニムがマップされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型を一覧表示します。
   
@@ -38,8 +38,8 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
-|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
+|**float**[ **(** n **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** n **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
 |**national character(** _n_ **)**|**nchar(n)**|  
 |**national char(** _n_ **)**|**nchar(n)**|  

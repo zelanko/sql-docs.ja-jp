@@ -13,14 +13,14 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942810"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300388"
 ---
 # <a name="updating-data-overview"></a>データの概要の更新
 アプリケーションでは、SQL ステートメントを実行するか、 **SQLSetPos**または**sqlbulkoperations**を呼び出すことによって、データを更新できます。 **UPDATE**、 **DELETE**、および**INSERT**ステートメントは、データソース上で直接動作し、通常はドライバーによってサポートされます。 検索される update ステートメントと delete ステートメントには、変更する行の指定が含まれています。 位置指定の update および delete ステートメントと**SQLSetPos**は、カーソルを介してデータソースに対して動作し、広くサポートされていません。  

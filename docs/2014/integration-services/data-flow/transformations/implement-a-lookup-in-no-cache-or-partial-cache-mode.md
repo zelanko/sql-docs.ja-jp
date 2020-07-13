@@ -12,15 +12,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 345709e7f43f3d644fbb2c25a56589e4ab60ab89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770738"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430489"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
   参照変換は、次の部分キャッシュ モードまたはキャッシュなしのモードを使用するように構成できます。  

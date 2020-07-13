@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca3fbfa00f087d3728fa9244efd4e06ed1610c42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62643328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998771"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)
   このサンプルでは、IRowsetFastUpload インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
@@ -23,12 +22,11 @@ ms.locfileid: "62643328"
  Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../../blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../blob/enable-and-configure-filestream.md)」を参照)。  
   
  INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
- サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

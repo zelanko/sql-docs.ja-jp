@@ -8,14 +8,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 4cb802a7173a58e02626ec7b3242a36e7ec92465
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922446"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "71713294"
 ---
 # <a name="connecting-with-encryption"></a>暗号化を使用した接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +61,7 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  または、**SQLServerDataSource** クラスによって提供される適切な [setter](../../connect/jdbc/reference/sqlserverdatasource-class.md) メソッドを使用して、接続プロパティの値を設定することもできます。  
+>  または、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスによって提供される適切な **setter** メソッドを使用して、接続プロパティの値を設定することもできます。  
   
  **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **false** に設定され、接続文字列のサーバー名が TLS 証明書のサーバー名に一致しない場合は、次のエラーが発行されます: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 バージョン 7.2 では、ドライバーにより、TLS 証明書のサーバー名の左端のラベルでのワイルドカードのパターン マッチングがサポートされます。
 

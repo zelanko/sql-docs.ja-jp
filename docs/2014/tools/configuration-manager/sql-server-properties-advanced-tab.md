@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f6200171311f200c0939f93b436c77e729291fa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63028825"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054435"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   **[詳細設定]** タブには、以下のプロパティが既定で表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  

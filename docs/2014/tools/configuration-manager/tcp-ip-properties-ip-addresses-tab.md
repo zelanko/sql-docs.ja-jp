@@ -12,27 +12,23 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63151443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064128"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>[TCP-IP のプロパティ] ([IP アドレス] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックス ([IP アドレス] タブ) では、TCP/IP プロトコルの特定の IP アドレスに関するオプションを構成します。 **[TCP 動的ポート]** と **[TCP ポート]** だけは、 **[IP All]** を選択することですべてのアドレスを一度に構成できます。  
   
- 変更は、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再起動時に有効になります。 SQL Server Browser サービスの開始と停止の詳細については、オンライン ブックの「SQL Server Browser サービスを開始および停止する方法」を参照してください。  
+ 変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、の再起動時に有効になります。 SQL Server Browser サービスの開始と停止の詳細については、オンライン ブックの「SQL Server Browser サービスを開始および停止する方法」を参照してください。  
   
 ## <a name="static-vs-dynamic-ports"></a>静的ポートと動的ポート  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、着信接続をポート 1433 でリッスンします。 このポートは、セキュリティ上の理由またはクライアント アプリケーションの要件に応じて変更することができます。 既定では、名前付きインスタンス (SQL Server Express を含む) は動的ポートでリッスンするように構成されています。 静的ポートを構成するには、 **[TCP 動的ポート]** を空白にし、 **[TCP ポート]** に使用可能なポート番号を指定します。 ファイアウォールでポートを開く方法の詳細については、オンライン ブックの「SQL Server のアクセスを許可するための Windows ファイアウォールの構成」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、着信接続をポート 1433 でリッスンします。 このポートは、セキュリティ上の理由またはクライアント アプリケーションの要件に応じて変更することができます。 既定では、名前付きインスタンス (SQL Server Express を含む) は動的ポートでリッスンするように構成されています。 静的ポートを構成するには、 **[TCP 動的ポート]** を空白にし、 **[TCP ポート]** に使用可能なポート番号を指定します。 ファイアウォールでポートを開く方法の詳細については、オンライン ブックの「SQL Server のアクセスを許可するための Windows ファイアウォールの構成」を参照してください。  
   
 ## <a name="dynamic-ports"></a>動的ポート  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが動的ポートでリッスンするように構成されている場合、インスタンスは起動時にオペレーティング システムを調べて使用できるポートを検出し、そのポートに対するエンドポイントを開きます。 着信接続は、そのポート番号を指定して接続する必要があります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびにポート番号が変わる可能性があるので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ポートを監視して、着信接続をそのインスタンスの現在のポートにダイレクトする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが用意されています。 ファイアウォール経由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合に動的ポートを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動時にポート番号が変わる可能性があるので、そのたびにファイアウォールの設定を変更しなければなりません。 ファイアウォールによる接続の問題を回避するには、静的ポートを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが動的ポートでリッスンするように構成されている場合、インスタンスは起動時にオペレーティング システムを調べて使用できるポートを検出し、そのポートに対するエンドポイントを開きます。 着信接続は、そのポート番号を指定して接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するたびにポート番号が変わる可能性があるので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ポートを監視して、着信接続をそのインスタンスの現在のポートにダイレクトする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが用意されています。 ファイアウォール経由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合に動的ポートを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動時にポート番号が変わる可能性があるので、そのたびにファイアウォールの設定を変更しなければなりません。 ファイアウォールによる接続の問題を回避するには、静的ポートを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成します。  
   
 ## <a name="options"></a>オプション  
  **アクティブ**  
@@ -50,21 +46,18 @@ ms.locfileid: "63151443"
  **[IPAll]** には、使用する動的ポートのポート番号が表示されます。  
   
  **[TCP ポート]**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを表示または変更します。 既定では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスはポート 1433 でリッスンします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを表示または変更します。 既定では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスはポート 1433 でリッスンします。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、同じ IP アドレスで複数のポートをリッスンできます。複数のポートを指定するには、「1433,1500,1501」のようにコンマで区切って入力します。 このフィールドには最大 2,047 文字まで入力できます。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、同じ IP アドレスで複数のポートをリッスンできます。複数のポートを指定するには、「1433,1500,1501」のようにコンマで区切って入力します。 このフィールドには最大 2,047 文字まで入力できます。  
   
  1 つの IP アドレスを複数のポートでリッスンするように構成する場合は、 **[TCP/IP のプロパティ]** ダイアログ ボックスの **[プロトコル]** タブで **[すべて受信待ち]** パラメーターも **[いいえ]** に設定する必要があります。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「複数の TCP ポートでリッスンするようにデータベース エンジンを構成する方法」を参照してください。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>IP アドレスの追加または削除  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に使用可能になった IP アドレスが表示されます。 使用可能な IP アドレスは、ネットワーク カードが追加または削除された場合、動的に割り当てられた IP アドレスが期限切れになった場合、ネットワーク構造が再構成された場合、あるいはコンピューターの物理的な場所が変わった場合 (ラップトップ コンピューターが別の建物でネットワークに接続するときなど) に、変わることがあります。 IP アドレスを変更するには、**[IP アドレス]** ボックスを編集し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に使用可能になった IP アドレスが表示されます。 使用可能な IP アドレスは、ネットワーク カードが追加または削除された場合、動的に割り当てられた IP アドレスが期限切れになった場合、ネットワーク構造が再構成された場合、あるいはコンピューターの物理的な場所が変わった場合 (ラップトップ コンピューターが別の建物でネットワークに接続するときなど) に、変わることがあります。 IP アドレスを変更するには、**[IP アドレス]** ボックスを編集し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
   
 ## <a name="see-also"></a>参照  
- [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [TCP/IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server Browser サービス](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [ネットワークプロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [TCP IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5b454172d9be71390e383e3cdd03a2d92adc4d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62912196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053413"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Audit Broker Conversation** イベントを作成して、Service Broker のダイアログ セキュリティに関連した監査メッセージを報告します。  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation イベント クラスのデータ列  
   
-|データ列|種類|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|メッセージのメッセージ シーケンス番号。|52|いいえ|  
@@ -52,7 +51,7 @@ ms.locfileid: "62912196"
   
  次の表に、このイベント クラスのサブクラス値を示します。  
   
-|id|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|No Security Header|セキュリティで保護されたメッセージ交換時に、Service Broker がセッション キーを含んでいないメッセージを受信しました。 セキュリティで保護されたメッセージ交換が確立されると、ダイアログのプロトコルは、メッセージ交換で使用されるすべてのメッセージにセッション キーが含まれていることを必要とします。|  
 |2|No Certificate|メッセージ交換の送信者または受信者のどちらかの使用可能な証明書を Service Broker で検出できませんでした。 メッセージ交換をセキュリティで保護するには、メッセージ交換の送信者と受信者の両方が使用できる証明書がデータベースに格納されている必要があります。|  

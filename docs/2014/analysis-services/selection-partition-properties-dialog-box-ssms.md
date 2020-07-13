@@ -11,31 +11,29 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9884f29124984e605f5a72b9b712b0f076eda7d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940773"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>[選択項目] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[選択項目]** ページを使用すると、 **[全般]** ペイン、 **[プロアクティブ キャッシュ]** ペイン、または **[エラーの構成]** ペインでプロパティを表示または変更するメジャー グループからパーティションを選択できます。  
   
 ## <a name="options"></a>オプション  
- **行列**  
+ **グリッド**  
  選択されたパーティションが含まれているメジャー グループのパーティションを表示します。  
   
- 
-  **[全般]** ペイン、 **[プロアクティブ キャッシュ]** ペイン、または **[エラーの構成]** ペインでプロパティを表示するパーティションを選択します。  
+ **[全般]** ペイン、 **[プロアクティブ キャッシュ]** ペイン、または **[エラーの構成]** ペインでプロパティを表示するパーティションを選択します。  
   
  このグリッドには次の列が含まれています。  
   
-|列|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |**名前**|パーティションの名前が表示されます。|  
 |**ソース**|パーティションのソース データを提供するために使用されるテーブルまたはクエリが表示されます。|  
-|**体**|パーティションで使用される集計デザインを説明する文字列が表示されます。|  
+|**集計**|パーティションで使用される集計デザインを説明する文字列が表示されます。|  
   
 ## <a name="see-also"></a>参照  
  [[パーティションのプロパティ] ダイアログボックス &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   

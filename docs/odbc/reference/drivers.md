@@ -12,14 +12,14 @@ helpviewer_keywords:
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c8b40641be3db34fc6929edecdd5dd923700957
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915431"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294185"
 ---
 # <a name="drivers"></a>ドライバー
 *ドライバー*は、ODBC API の関数を実装するライブラリです。 各は特定の DBMS に固有です。たとえば、Oracle のドライバーは、Informix DBMS のデータに直接アクセスすることはできません。 ドライバーは、基になる Dbms の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 たとえば、基になる DBMS が外部結合をサポートしていない場合、どちらの場合もドライバーは必要ありません。 唯一の重要な例外は、Xbase などのスタンドアロンデータベースエンジンを搭載していない Dbms のドライバーは、少なくとも最小量の SQL をサポートするデータベースエンジンを実装する必要があることです。  

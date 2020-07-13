@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924934"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757768"
 ---
 # <a name="jumping-to-a-record"></a>レコードへのジャンプ
 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用すると、次の構文を使用して、**レコードセット**内で指定した数のレコードを前方または後方に移動できます。  

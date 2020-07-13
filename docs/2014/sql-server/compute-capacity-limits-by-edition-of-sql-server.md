@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62714766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013016"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQLServer のエディション別の計算容量制限
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
@@ -28,10 +27,10 @@ ms.locfileid: "62714766"
   
  次の表では、上の図で使用されている表記について説明します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0..1|0 個または 1 個|  
-|1 で保護されたプロセスとして起動されました|1 個|  
+|1|1 個|  
 |1..*|1 個以上|  
 |0..*|0 個以上|  
 |1..2|1 つまたは 2 つ|  
@@ -70,8 +69,7 @@ ms.locfileid: "62714766"
   
 -   ただし、ハイパースレッド コアの 2 個の論理プロセッサの計算容量は、ハイパースレッディングが無効になっている同じコアの計算容量よりも大きくなります。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションには、次の 2 つの計算容量制限があります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションには、次の 2 つの計算容量制限があります。  
   
 1.  ソケットの最大数 (物理プロセッサまたはソケットまたはプロセッサ パッケージと同じ)。  
   
@@ -81,7 +79,7 @@ ms.locfileid: "62714766"
   
  次の表に、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の各エディションの 1 つのインスタンスに適用される計算容量制限を示します。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Edition|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|1 つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスで使用される最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: コアベースのライセンス<sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Developer|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
@@ -93,7 +91,7 @@ ms.locfileid: "62714766"
 |Express with Tools|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |Express with Advanced Services|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
   
- <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
+ <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり最大20コアに制限されてい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 コアベースのサーバー ライセンス モデルでは、制限はありません。  
   
  仮想化された環境では、計算容量の制限はコアではなく論理プロセッサの数に基づいて決まります。これは、ゲスト アプリケーションがプロセッサのアーキテクチャを認識できないためです。  たとえば、クアッド コア プロセッサが搭載された 4 個のソケットと、コアごとに 2 個のハイパースレッドを有効にする機能を備えたサーバーには、ハイパースレッディングが有効になっている論理プロセッサが 32 個ありますが、ハイパースレッディングが無効になっている論理プロセッサは 16 個しかありません。 これらの論理プロセッサは、ホストサーバーの物理プロセッサの実行スレッドにマップされた論理プロセッサに対する仮想マシンの計算負荷を使用して、サーバー上の仮想マシンにマップできます。  
   

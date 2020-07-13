@@ -11,28 +11,23 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d76345044192ad6d3e3754ca990b29fffa17c707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72781823"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996689"
 ---
 # <a name="using-user-defined-tables"></a>ユーザー定義テーブルの使用
   ユーザー定義テーブルは、表形式の情報を表します。 ストアド プロシージャやユーザー定義関数に表形式のデータを渡すときにパラメーターとして使用されます。 データベース テーブルの列を表すために使用することはできません。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 その<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>コレクション内の各オブジェクトには、ユーザー定義テーブルの列を<xref:Microsoft.SqlServer.Management.Smo.Column>一覧表示するオブジェクトのコレクションを参照する**Columns**プロパティがあります。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>そのコレクション内の各オブジェクトには、ユーザー定義テーブルの列を一覧表示するオブジェクトのコレクションを参照する**Columns**プロパティがあり <xref:Microsoft.SqlServer.Management.Smo.Column> ます。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> オブジェクトを使用して新しいユーザー定義テーブルを定義するときには、テーブルの列と、それらの列のいずれかに基づく主キーを指定する必要があります。  
+ <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> オブジェクトを使用して新しいユーザー定義テーブルを定義するときには、テーブルの列と、それらの列のいずれかに基づく主キーを指定する必要があります。  
   
- ユーザー定義テーブル型は、作成後に変更することはできません。 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> は Alter メソッドをサポートしていません。 ユーザー定義テーブル型では CHECK 制約を使用できますが、型を変更できないために例外がスローされる場合があります。  
+ ユーザー定義テーブル型は、作成後に変更することはできません。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> は Alter メソッドをサポートしていません。 ユーザー定義テーブル型では CHECK 制約を使用できますが、型を変更できないために例外がスローされる場合があります。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DataType> クラスは、列やパラメーターに関連付けられたデータ型を指定するために使用します。 この型を使用して、ユーザー定義テーブル型を、ユーザー定義の関数やストアド プロシージャのパラメーターとして指定できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.DataType> クラスは、列やパラメーターに関連付けられたデータ型を指定するために使用します。 この型を使用して、ユーザー定義テーブル型を、ユーザー定義の関数やストアド プロシージャのパラメーターとして指定できます。  
   
 ## <a name="examples"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

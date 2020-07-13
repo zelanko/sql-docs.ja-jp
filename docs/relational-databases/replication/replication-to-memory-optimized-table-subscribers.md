@@ -11,15 +11,15 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf09640b63328dde0dee11b0b5f4bcd037cb1524
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716710"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   スナップショットとトランザクション レプリケーション サブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降のバージョンで使用できます。  
   
@@ -27,11 +27,11 @@ ms.locfileid: "76287349"
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、サブスクライバー データベースを構成する**  
   
-     **sp_addsubscription &#40;Transact-SQL&#41;\@ または** sp_changesubscription &#40;Transact-SQL&#41; **を使用して、** [memory_optimized](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) プロパティを [true](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) に設定します。  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、**\@memory_optimized** プロパティを **true** に設定します。  
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、アーティクルを構成する**  
   
-     `@schema_option = 0x40000000000`sp_addarticle &#40;Transact-SQL&#41;[ または ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_changearticle &#40;Transact-SQL&#41;[ を使用して、アーティクルに ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) オプションを設定します。  
+     [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を使用して、アーティクルに `@schema_option = 0x40000000000` オプションを設定します。  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>メモリ最適化テーブルをサブスクライバーとして構成するには  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76287349"
   
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle\@ ストアド プロシージャの** **schema_option** パラメーターを   
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **\@schema_option** パラメーターを   
     **0x40000000000** に設定します。  
   
 3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
@@ -54,16 +54,16 @@ ms.locfileid: "76287349"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のサブスクリプションのプロパティに移動して、 **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。 サブスクリプションを再初期化するまで変更は適用されません。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addsubscription\@ ストアド プロシージャの新しい** **memory_optimized** パラメーターを true に設定します。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addsubscription** ストアド プロシージャの新しい **\@memory_optimized** パラメーターを true に設定します。  
   
 2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でパブリケーションのアーティクルのプロパティに移動して、 **[Enable Memory optimization]** (メモリ最適化を有効にする) を true に設定します。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle\@ ストアド プロシージャの** **schema_option** パラメーターを   
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **\@schema_option** パラメーターを   
     **0x40000000000** に設定します。  
   
 3.  クラスター化インデックスは、メモリ最適化テーブルでサポートされていません。 レプリケーションにこれを処理させるには、変換先で非クラスター化インデックスに変換します。そのためには、 **[Convert clustered index to nonclustered for memory optimized article]** (クラスター化インデックスをメモリ最適化アーティクル向けに非クラスター化インデックスに変換する) を true に設定します。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle\@ ストアド プロシージャの** **schema_option** パラメーターを **0x0000080000000000** に設定します。  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **\@schema_option** パラメーターを **0x0000080000000000** に設定します。  
   
 4.  スナップショットを再生成します。  
   

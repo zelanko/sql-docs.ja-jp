@@ -1,7 +1,8 @@
 ---
-title: Microsoft ODBC Driver for SQL Server での XA の使用 | Microsoft Docs
+title: Microsoft ODBC Driver で XA を使用する
+description: Microsoft ODBC Driver for SQL Server では、Windows、Linux、および macOS 上での分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544929"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886329"
 ---
 # <a name="using-xa-transactions"></a>XA トランザクションの使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "77544929"
 
 ## <a name="overview"></a>概要
 
-バージョン 17.3 以降の Microsoft ODBC Driver for SQL Server では、Windows、Linux、および Mac 上で分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA が実装されると、クライアント アプリケーションから、トランザクション マネージャー (TM) に対してシリアル操作 (トランザクション ブランチの開始、コミット、ロールバックなど) を送信できます。 そして、TM はこれらの操作に従って Resource Manager (RM) と通信します。 XA 仕様と DTC の Microsoft 実装 (MS DTC) の詳細については、「[動作のしくみ:SQL Server DTC (MSDTC および XA トランザクション)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)」を参照してください。
+バージョン 17.3 以降の Microsoft ODBC Driver for SQL Server では、Windows、Linux、および macOS 上での分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA が実装されると、クライアント アプリケーションから、トランザクション マネージャー (TM) に対してシリアル操作 (トランザクション ブランチの開始、コミット、ロールバックなど) を送信できます。 そして、TM はこれらの操作に従って Resource Manager (RM) と通信します。 XA 仕様と DTC の Microsoft 実装 (MS DTC) の詳細については、「[動作のしくみ:SQL Server DTC (MSDTC および XA トランザクション)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions)」を参照してください。
 
 
 
@@ -49,16 +50,16 @@ typedef struct XACallParam {
 `XACALLPARAM` 構造体のサイズ。 これにより、`XACALLPARAM` に続くデータのサイズは除外されます。
 
 *operation*  
-TM に渡される XA 操作。 使用できる操作は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) で定義されています。
+TM に渡される XA 操作。 使用できる操作は [xadefs.h](use-xa-with-dtc.md#xadefsh) で定義されています。
 
 *xid*  
 トランザクション ブランチ識別子。
 
 *flags*  
-TM 要求に関連付けられているフラグ。 使用できる値は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) で定義されています。
+TM 要求に関連付けられているフラグ。 使用できる値は [xadefs.h](use-xa-with-dtc.md#xadefsh) で定義されています。
 
 *status*  
-TM から状態を返します。 返される可能性のある状態については、[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) ヘッダーを参照してください。
+TM から状態を返します。 返される可能性のある状態については、[xadefs.h](use-xa-with-dtc.md#xadefsh) ヘッダーを参照してください。
 
 *sizeData*  
 `XACALLPARAM` に続くデータ バッファーのサイズ。 
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>コード サンプル 
 
-次の例は、XA トランザクションのために TM と通信し、クライアント アプリケーションからさまざまな操作を実行する方法を示しています。 Microsoft SQL Server に対してテストを実行する場合、MS DTC を適切に構成して XA トランザクションを有効にする必要があります。 XA 定義は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) ヘッダー ファイル内にあります。 
+次の例は、XA トランザクションのために TM と通信し、クライアント アプリケーションからさまざまな操作を実行する方法を示しています。 Microsoft SQL Server に対してテストを実行する場合、MS DTC を適切に構成して XA トランザクションを有効にする必要があります。 XA 定義は [xadefs.h](#xadefsh) ヘッダー ファイル内にあります。 
 
 ```
 

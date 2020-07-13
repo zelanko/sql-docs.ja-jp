@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632962"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>workload_management_workload_classifiers (Transact-sql)
@@ -25,14 +25,14 @@ ms.locfileid: "73632962"
 
  ワークロード分類子の詳細を返します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類子の一意の ID。 Null 値はありません||
 group_name|**sysname**|分類子が割り当てられているワークロードグループの名前。 NULL 値は許可されません。 Workload_management_workload_groups に参加可能 ||
 name|**sysname**|分類子の名前。 インスタンスに対して一意である必要があります。 NULL 値は許可されません。||
 |importance|**sysname**|は、このワークロードグループ内の要求の相対的な重要度であり、共有リソースの複数のワークロードグループにまたがっています。  分類子で指定された重要度は、ワークロードグループの重要度の設定よりも優先されます。 NULL 値が許可されます。  Null の場合、ワークロードグループの重要度の設定が使用されます。|low、below_normal、normal (既定)、above_normal、high |
-|create_time|**DATETIME**|分類子が作成された時刻。 NULL 値は許可されません。||
-modify_time|**DATETIME**|分類子が最後に変更された時刻。 NULL 値は許可されません。||
+|create_time|**datetime**|分類子が作成された時刻。 NULL 値は許可されません。||
+modify_time|**datetime**|分類子が最後に変更された時刻。 NULL 値は許可されません。||
 is_enabled|**bit**|INTERNAL||
 |&nbsp;||||
   

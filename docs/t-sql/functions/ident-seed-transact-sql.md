@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9685c68127b5370d007981a2f01e67f8d22df5da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdc1a0feb05b46e9daa4f7eb54b9d3a22e1cbced
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784516"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブルやビューでの ID 列の作成時に指定された元のシード値を返します。 DBCC CHECKIDENT を使用して ID 列の現在の値を変更しても、この関数で返される値は変更されません。  
   
@@ -54,7 +54,7 @@ IDENT_SEED ( 'table_or_view' )
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 指定したテーブルのシード値を返す  
- 次の例では、`Person.Address` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルのシード値を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルのシード値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

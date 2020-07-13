@@ -11,16 +11,14 @@ helpviewer_keywords:
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d21773bb4c2108511b2e7db852d0cb108f7b63b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086069"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525430"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用マイニング モデル コンテンツ ビューアーは、マイニング アルゴリズムによって発見されたパターンについての詳細情報を提供します。また、分析処理中に生成されたさまざまな統計情報へのアクセスも提供します。 情報の量と種類は、使用されたアルゴリズムによって異なりますが、次のカテゴリを含んでいます。  
   
 -   データのセグメントとその特性  
@@ -34,25 +32,23 @@ ms.locfileid: "66086069"
  この情報を表示すると、分析結果を理解しやすくなります。 モデルを調整および再トレーニングする方法を特定することもできます。 また、別のアルゴリズムを使用して再トレーニングすることもできます。  
   
 ## <a name="viewing-mining-model-content"></a>マイニング モデル コンテンツの表示  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ビューアーは、列、ルール、プロパティ、属性、ノードなど、マイニング モデルの *コンテンツ スキーマ行セット* のコンテンツを表示します。 コンテンツ スキーマ行セットは、データ マイニング モデルのコンテンツに関する詳細情報を表すための汎用フレームワークです。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ビューアーは、列、ルール、プロパティ、属性、ノードなど、マイニング モデルの *コンテンツ スキーマ行セット* のコンテンツを表示します。 コンテンツ スキーマ行セットは、データ マイニング モデルのコンテンツに関する詳細情報を表すための汎用フレームワークです。  
   
  この詳細情報は、モデル内のパターン、クラスター、またはツリーを表す HTML テーブルにノードとして格納されています。 各ノードをクリックして展開し、数値属性の数式や個別の値数などの詳細を表示できます。 ノード間の親子リレーションシップを調べることもできます。  
   
  マイニング モデルのコンテンツに使用されている用語の一般的な意味については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。 このトピックには、特定の種類のモデルのマイニング モデルのコンテンツに関する情報へのリンクも含まれています。 それぞれの種類のマイニング モデルにはアルゴリズムに固有の情報とデータ内で見つかったパターンが含まれるため、各モデルの種類を十分に理解するために各モデルの種類のテクニカル リファレンス トピックを参照することをお勧めします。  
   
 ## <a name="querying-mining-model-content"></a>マイニング モデルのコンテンツのクエリ  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーで表示される情報は、マイニング モデルにクエリを実行することによっても取得できます。 マイニング モデル コンテンツに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントを使用して作成できます。 たとえば、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でコンテンツ クエリを実行するには、次の DMX ステートメントを実行します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーで表示される情報は、マイニング モデルにクエリを実行することによっても取得できます。 マイニング モデル コンテンツに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントを使用して作成できます。 たとえば、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でコンテンツ クエリを実行するには、次の DMX ステートメントを実行します。  
   
 ```  
 SELECT * FROM [<mining model name>].CONTENT  
 ```  
   
- 詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
+ 詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 汎用コンテンツツリービューアー &#40;データマイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -17,15 +17,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287476"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009688"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インメモリの並べ替えとハッシュ結合テクノロジを使用して、並べ替え、積集合、和集合、および差集合の各演算が実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この種のクエリ プランを使用することで、テーブルの列分割がサポートされます。列分割は、列記憶と呼ばれることもあります。   
 
@@ -173,7 +173,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 ハッシュの保留について詳しくは、「[Hash Warning イベント クラス](../../relational-databases/event-classes/hash-warning-event-class.md)」をご覧ください。    
 
 ## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> アダプティブ結合について
-[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが[終わる](#hash)まで、[ハッシュ結合](#nested_loops)方法または**ネステッド ループ**結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
+[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが**終わる**まで、[ハッシュ結合](#hash)方法または[ネステッド ループ](#nested_loops)結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
 
 > [!TIP]
 > 大小の結合入力スキャンが頻繁に切り替わるワークロードの場合、この機能から最もメリットがあります。

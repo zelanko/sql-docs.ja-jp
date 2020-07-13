@@ -1,5 +1,6 @@
 ---
 title: Issue 要素
+description: SQL Server では、Issue 要素を使用して、ssbdiagnose ユーティリティによって検出された問題が報告されます。 XML 出力ファイルには、報告される問題ごとに 1 つの Issue 要素が含まれています。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3a91cf0575cb84a744925b7b60be0146a4d9ec5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0f0d339322dea349f7769ae32d7380f70c922539
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254188"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150578"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
 
@@ -44,7 +45,7 @@ ms.locfileid: "75254188"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|-----------------|  
 |**type**|Issue 要素で報告する問題のカテゴリを次に示します。<br /><br /> **"Diagnosis"** では、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成の分析時に検出された構成の問題を報告します。<br /><br /> **"Problem"** では、 **ssbdiagnose** で分析を完了できない場合の原因となった問題を報告します。 問題を修正して、 **ssbdiagnose**を再実行します。<br /><br /> **"Event"** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **チェックの実行時に検出された** イベントを報告します。 イベントが報告されるのは、 **-SHOWEVENTS** が指定されている場合のみです。|  
 |**code**|メッセージのエラー番号を示します。|  

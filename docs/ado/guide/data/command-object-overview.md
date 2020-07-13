@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0048765d3a5f5cb57419f9dbd755790c9931e218
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761198"
 ---
 # <a name="command-object-overview"></a>Command オブジェクトの概要
 **Command**オブジェクトを使用すると、次の操作を実行できます。  

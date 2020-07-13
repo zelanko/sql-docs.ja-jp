@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15ef5e8621a5edd216b300a8a96f3a9656b55b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f309ef6d73d787ef591abc318536bd8a27d97b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63267148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048286"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>トレース テーブルの最大テーブル サイズの設定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース テーブルの最大テーブル サイズを設定する方法について説明します。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f562a0cbd489202d5dbab7de6ac0d19ebeef348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 300f9753b721bc3e0a821a6b77929a9bec09312b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051212"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
     

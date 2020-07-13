@@ -11,14 +11,14 @@ helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca71687887444cafc502c15683f3972cf6308e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070092"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302833"
 ---
 # <a name="system-functions"></a>システム関数
 次の表に、ODBC スカラー関数セットに含まれるシステム関数の一覧を示します。 SQL_SYSTEM_FUNCTIONS の*情報の種類*を使用して**SQLGetInfo**を呼び出すことによって、ドライバーでサポートされているシステム関数をアプリケーションで特定できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "68070092"
   
  返される値は、ODBC データ型として表されます。  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |**DATABASE ()** (ODBC 1.0)|接続ハンドルに対応するデータベースの名前を返します。 (データベースの名前は、SQL_CURRENT_QUALIFIER 接続オプションを指定して**SQLGetConnectOption**を呼び出すことによっても使用できます)。|  
 |**Ifnull (** _exp_,_value_**)** (ODBC 1.0)|場合*exp*が null の場合、*値*が返されます。 場合*exp*が null でない場合、 *exp*が返されます。 使用できるデータ型または*値*の型は、 *exp*のデータ型と互換性がある必要があります。|  

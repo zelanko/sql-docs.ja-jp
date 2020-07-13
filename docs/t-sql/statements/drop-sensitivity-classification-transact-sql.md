@@ -6,7 +6,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3751c7876af92ac32fc7836583cbf9e06bcf414c
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68223597"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85088339"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "68223597"
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 

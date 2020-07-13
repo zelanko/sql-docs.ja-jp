@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981987"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807906"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "73981987"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE ASSEMBLY assembly_name  
 [ AUTHORIZATION owner_name ]  
 FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }  
@@ -175,7 +175,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ```sql  
 CREATE ASSEMBLY HelloWorld   
-FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
+FROM '<system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll'  
 WITH PERMISSION_SET = SAFE;  
 ```  
 

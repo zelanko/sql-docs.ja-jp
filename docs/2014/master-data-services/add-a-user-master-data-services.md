@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 47c42afc2f09c43a678bb99c22ec7275cf2ca20f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972332"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
@@ -26,18 +25,15 @@ ms.locfileid: "65483772"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
 ### <a name="to-add-a-user"></a>メンバーを追加するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
+2.  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
   
-3.  *ドメイン*\\*user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
+3.  *ドメイン* \\ *user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
   
 4.  必要に応じて、 **[名前の確認]** をクリックします。  
   
@@ -45,9 +41,9 @@ ms.locfileid: "65483772"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [機能領域のアクセス許可を割り当て &#40;マスターデータサービス&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [機能領域の権限を割り当てる (マスター データ サービス)](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

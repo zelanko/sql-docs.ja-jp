@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d529a8ed50a885aa74969fc0cbb3668fc1e5587b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66090954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041419"
 ---
 # <a name="working-with-upgrade-advisor"></a>アップグレード アドバイザーの使用
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に確実にアップグレードできるように、アップグレード アドバイザーには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの前に、現在のインストールについて対処が必要な問題を検出するための中央コンソールが用意されています。  
   
  アップグレード アドバイザーでは次の操作を実行できます。  
@@ -30,8 +28,7 @@ ms.locfileid: "66090954"
 -   ローカル サーバーまたはリモート サーバー上にある以前のバージョンのコンポーネントを分析する。  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のリモート インスタンスを分析することはできません。  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のリモート インスタンスを分析することはできません。  
   
 -   分析の結果を表示します。  
   
@@ -41,7 +38,7 @@ ms.locfileid: "66090954"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[アップグレード アドバイザーの概要](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|アップグレード プロセス、アップグレード アドバイザー分析ウィザード、およびアップグレード アドバイザー レポート ビューアーの概要について説明します。|  
 |[アップグレード アドバイザーの操作方法に関するトピック](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|アップグレード アドバイザーを実行する一般的な手順について説明します。|  
@@ -49,6 +46,6 @@ ms.locfileid: "66090954"
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーをインストールしています](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
- [アップグレードに関する問題とその対処方法](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+ [アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

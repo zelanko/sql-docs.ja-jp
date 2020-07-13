@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104160"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
@@ -39,13 +39,13 @@ ms.locfileid: "66104160"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>Windows 7、Windows Server 2008 R2、Windows Server 2012 および 2012 R2 でポート 80 を開くには  
   
-1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]** 、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
+1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]**、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
   
 2.  **[詳細設定]** をクリックします。  
   
 3.  **[受信の規則]** をクリックします。  
   
-4.  [**アクション**] ウィンドウで [**新しいルール**] をクリックし**ます。**  
+4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします **。**  
   
 5.  **[ポート]** の **[規則の種類]** をクリックします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66104160"
   
 13. **[次へ]** をクリックします。  
   
-14. **[名前]** ページで、「**ReportServer (TCP on port 80)** 」という名前を入力します。  
+14. **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
   
 15. **[完了]** をクリックします。  
   
@@ -75,10 +75,9 @@ ms.locfileid: "66104160"
   
 1.  [**スタート**] ボタンをクリックし、[**コントロールパネル**]、[**セキュリティ**]、[ **Windows ファイアウォール**] の順にクリックします。  
   
-2.  
-  **[Windows ファイアウォールによるプログラムの許可]** をクリックします。  
+2.  **[Windows ファイアウォールによるプログラムの許可]** をクリックします。  
   
-3.  [**続行**] をクリックします。  
+3.  **[Continue]** をクリックします。  
   
 4.  [例外] タブで、[**ポートの追加**] をクリックします。  
   
@@ -92,19 +91,19 @@ ms.locfileid: "66104160"
   
 9. [**ネットワーク (サブネット) のみ**] をクリックし、[ **OK**] をクリックします。  
   
-10. [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
+10. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 11. コンピューターを再起動します。  
   
 ## <a name="next-steps"></a>次の手順  
- ポートを開いた後、リモート ユーザーがそのポートでレポート サーバーにアクセスできるかどうかを確認する前に、ホームに対するロールとサイト レベルのロールの割り当てを行って、レポート サーバーへのアクセスをユーザーに許可する必要があります。 ユーザーに十分な権限がない場合は、ポートを正しく開くことができてもレポート サーバーへの接続に失敗します。 詳細については、[ オンライン ブックの「](../security/grant-user-access-to-a-report-server.md)レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
+ ポートを開いた後、リモート ユーザーがそのポートでレポート サーバーにアクセスできるかどうかを確認する前に、ホームに対するロールとサイト レベルのロールの割り当てを行って、レポート サーバーへのアクセスをユーザーに許可する必要があります。 ユーザーに十分な権限がない場合は、ポートを正しく開くことができてもレポート サーバーへの接続に失敗します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../security/grant-user-access-to-a-report-server.md)」を参照してください。  
   
- 別のコンピューターでレポート マネージャーを起動することによって、ポートが正しく開かれているかどうかを確認することもできます。 詳細については、[ オンライン ブックの「](../report-manager-ssrs-native-mode.md)レポート マネージャー &#40;SSRS ネイティブ モード&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
+ 別のコンピューターでレポート マネージャーを起動することによって、ポートが正しく開かれているかどうかを確認することもできます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベースを作成&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108736"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>レポート サーバーの初期化 (SSRS 構成マネージャー)
@@ -68,10 +68,9 @@ ms.locfileid: "66108736"
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows Management Instrumentation (WMI) プロバイダーを使用して、レポート サーバーをプログラムで初期化することもできます。 詳細については、 [オンライン ブックの「](../tools/access-the-reporting-services-wmi-provider.md) Reporting Service WMI プロバイダーへのアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>レポート サーバーの初期化の確認方法  
- レポート サーバーの初期化を確認するには、コマンド ウィンドウで「**http://\<サーバー名>/reportserver**」と入力し、レポート サーバー Web サービスに対して ping を実行します。 
-  `RSReportServerNotActivated` エラーが発生した場合は、初期化が失敗しています。  
+ レポート サーバーの初期化を確認するには、コマンド ウィンドウで「**http://\<サーバー名>/reportserver**」と入力し、レポート サーバー Web サービスに対して ping を実行します。 `RSReportServerNotActivated` エラーが発生した場合は、初期化が失敗しています。  
   
 ## <a name="see-also"></a>参照  
- [暗号化されたレポートサーバーデータ &#40;SSRS Configuration Manager に格納&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

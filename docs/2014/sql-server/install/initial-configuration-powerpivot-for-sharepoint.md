@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 58d8e0c835cfcb47adbf837c1322b51a7b30c2e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054793"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初期構成 (PowerPivot for SharePoint)
   このトピックの手順を使用して、PowerPivot for SharePoint の最初のインストールを構成します。 最初のインストールを構成する最も簡単な方法は、PowerPivot 構成ツールを使用することです。 これによって、以下に説明したすべての構成手順が自動で行われます。  
@@ -28,8 +27,7 @@ ms.locfileid: "79112217"
  SharePoint サーバーは、SharePoint セットアップでサーバー ファーム インストール オプションを使用してインストールされたものである必要があります。 組み込みのデータベースを使用するスタンドアロン SharePoint サーバーはサポートされません。 詳細については、「 [SharePoint 2010 ファームで SQL SERVER BI 機能を使用するためのガイダンス](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] データベース サーバーを使用する PowerPivot for SharePoint または SharePoint ファームを構成する前に、SharePoint 2010 SP1 をインストールする必要があります。 サービス パックをインストールしていない場合は、サーバーの構成を始める前にここでインストールしてください。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] データベース サーバーを使用する PowerPivot for SharePoint または SharePoint ファームを構成する前に、SharePoint 2010 SP1 をインストールする必要があります。 サービス パックをインストールしていない場合は、サーバーの構成を始める前にここでインストールしてください。  
   
  PowerPivot for SharePoint をインストールする必要があります。 少なくともファーム ソリューションを配置する必要があります。 PowerPivot 構成ツールまたは PowerShell スクリプトを使用してファーム ソリューションを配置します。 この手順はこのトピックで説明します。  
   
@@ -37,7 +35,7 @@ ms.locfileid: "79112217"
   
  PowerPivot for SharePoint をファームに追加するには、ファームの管理者である必要があります。 サーバーおよびアプリケーションをファームに追加するためのパスフレーズを把握しておく必要があります。  
   
-##  <a name="deploywsp"></a>手順 1: PowerPivot ソリューションの配置  
+##  <a name="step-1-deploy-powerpivot-solutions"></a><a name="deploywsp"></a>手順 1: PowerPivot ソリューションの配置  
  ファーム ソリューションおよび Web アプリケーション ソリューションという 2 つのソリューションをインストールして配置する必要があります。  
   
 ### <a name="install-and-deploy-the-farm-solution"></a>ファーム ソリューションのインストールおよび配置
@@ -46,8 +44,7 @@ ms.locfileid: "79112217"
   
  この手順では、PowerShell を実行してファーム ソリューションをインストールおよび配置します。 詳細については、「 [Windows PowerShell を使用した PowerPivot の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)」を参照してください。  
   
-1.  
-  **[管理者として実行]** オプションを使用して SharePoint 2010 管理シェルを開きます。  
+1.  **[管理者として実行]** オプションを使用して SharePoint 2010 管理シェルを開きます。  
   
 2.  最初のコマンドレットを実行します。  
   
@@ -81,7 +78,7 @@ ms.locfileid: "79112217"
   
 7.  PowerPivot データ アクセスをサポートする他の SharePoint Web アプリケーションに対して、この手順を繰り返します。  
   
-##  <a name="Geneva"></a>手順 2: サーバーでサービスを開始する  
+##  <a name="step-2-start-services-on-the-server"></a><a name="Geneva"></a>手順 2: サーバーでサービスを開始する  
  PowerPivot for SharePoint の配置は、ファームに、Excel Calculation Services、Secure Store Service、Claims to Windows Token Service が含まれている必要があります。  
   
  Excel Services および PowerPivot for SharePoint には、Windows トークン サービスに対するクレームが必要です。 これは、現在の SharePoint ユーザーの Windows ID を使用して外部データ ソースとの接続を確立するために使用されるサービスです。 このサービスは、Excel Services または PowerPivot for SharePoint が有効になっている各 SharePoint サーバーで実行する必要があります。 このサービスが開始されていない場合は、Excel Services から PowerPivot System サービスに認証済みの要求を転送できるようにするために、ここで開始する必要があります。  
@@ -96,37 +93,35 @@ ms.locfileid: "79112217"
   
 5.  SQL Server Analysis Services と SQL Server PowerPivot System サービスの両方が開始されていることを確認します。  
   
-##  <a name="createapp"></a>手順 3: PowerPivot サービスアプリケーションを作成する  
+##  <a name="step-3-create-a-powerpivot-service-application"></a><a name="createapp"></a>手順 3: PowerPivot サービスアプリケーションを作成する  
  次に、PowerPivot サービス アプリケーションを作成します。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
-2.  
-  **[サービス アプリケーション]** リボンで、 **[新規作成]** をクリックします。  
+2.  **[サービス アプリケーション]** リボンで、 **[新規作成]** をクリックします。  
   
 3.  [ **PowerPivot サービスアプリケーションの SQL Server**] を選択します。 この項目が一覧に表示されない場合は、PowerPivot for SharePoint がインストールされていないか、ソリューションが配置されていません。  
   
-4.  [**新しい PowerPivot サービスアプリケーションの作成**] ページで、アプリケーションの名前を入力します。 既定値は Remove-powerpivotserviceapplication\<number> です。 複数の PowerPivot サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
+4.  [**新しい PowerPivot サービスアプリケーションの作成**] ページで、アプリケーションの名前を入力します。 既定値は Remove-powerpivotserviceapplication \<number> です。 複数の PowerPivot サービス アプリケーションを作成する場合は、それぞれの用途を明確に示す名前を付けると他の管理者にわかりやすくなります。  
   
 5.  [アプリケーション プール] で、新しいアプリケーション プールを作成して、そのアプリケーション プールのセキュリティ アカウントを選択します。 ドメイン ユーザー アカウントが必要となります。  
   
 6.  [**データベースサーバー**] で、サービスアプリケーションデータベースを作成するデータベースサーバーを選択します。 既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。  
   
-7.  [**データベース名**] の既定値は PowerPivotServiceApplication1_\<guid> です。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+7.  [**データベース名**] の既定値は PowerPivotServiceApplication1_ \<guid> です。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
-8.  **[データベース認証]** の既定値は、"Windows 認証" です。 
-  **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
+8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
 9. [**この PowerPivot サービスアプリケーションのプロキシを既定のプロキシグループに追加する**] チェックボックスをオンにします。 のチェック ボックスをオンにします。これにより、このサービス アプリケーション接続が既定のサービス接続のグループに追加されます。 既定の接続グループに少なくとも 1 つの PowerPivot サービス アプリケーションを追加する必要があります。  
   
      既定の接続グループの一覧に既に PowerPivot サービス アプリケーションが表示されている場合は、そのグループにサービス アプリケーションをそれ以上追加しないでください。 既定の接続グループに同じ型のサービス アプリケーションを 2 つ追加する構成はサポートされていません。 接続グループで追加のサービスアプリケーションを使用する方法の詳細については、「[サーバーの全体管理で PowerPivot サービスアプリケーションを SharePoint Web アプリケーションに接続](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca)する」を参照してください。  
   
-10. [ **OK] をクリックします。** 作成したサービスが、他のマネージド サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
+10. **[OK]** をクリックします。 作成したサービスが、他のマネージド サービスと共にファームのサービス アプリケーションの一覧に表示されます。  
   
-##  <a name="ExcelServ"></a>手順 4: Excel Services を有効にする  
+##  <a name="step-4-enable-excel-services"></a><a name="ExcelServ"></a>手順 4: Excel Services を有効にする  
  PowerPivot for SharePoint でファーム内の PowerPivot データ アクセスをサポートするには、Excel Services が必要です。 Excel Services が既に有効になっているかどうかを確認するには、サーバーの全体管理のサービス アプリケーションの一覧に Excel Services アプリケーションが表示されているかどうかを確認します。 Excel Services が一覧に表示されていない場合は、次の手順に従ってここで有効にしてください。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [サービスアプリケーション] リボンの [作成] で、[**新規**] をクリックします。  
   
@@ -154,7 +149,7 @@ ms.locfileid: "79112217"
   
 14. **[OK]** をクリックします。  
   
-##  <a name="SSS"></a>手順 5: Secure Store Service の有効化とデータ更新の構成  
+##  <a name="step-5-enable-secure-store-service-and-configure-data-refresh"></a><a name="SSS"></a>手順 5: Secure Store Service の有効化とデータ更新の構成  
  PowerPivot for SharePoint で資格情報とデータ更新用の自動実行アカウントを格納するには、Secure Store Service が必要です。 Secure Store Service が既に有効になっているかどうかを確認するには、サービス アプリケーションの一覧に表示されているかどうかを確認します。  
   
 > [!IMPORTANT]  
@@ -164,7 +159,7 @@ ms.locfileid: "79112217"
   
 ##### <a name="part-1-enable-secure-store-service"></a>作業 1: Secure Store Service の有効化  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [サービスアプリケーション] リボンの [作成] で、[**新規**] をクリックします。  
   
@@ -174,7 +169,7 @@ ms.locfileid: "79112217"
   
 5.  [**データベース**] で、このサービスアプリケーションのデータベースをホストする SQL Server インスタンスを指定します。 既定値は、ファーム構成データベースをホストする SQL Server データベース エンジン インスタンスです。  
   
-6.  [**データベース名**] に、サービスアプリケーションデータベースの名前を入力します。 既定値は Secure_Store_Service_DB_\<guid> です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
+6.  [**データベース名**] に、サービスアプリケーションデータベースの名前を入力します。 既定値は Secure_Store_Service_DB_ \<guid> です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
 7.  **[データベース認証]** の既定値は、"Windows 認証" です。 "SQL 認証" を選択する場合は、SharePoint 管理者ガイドを参照して、ファームでその認証の種類を使用する方法を確認してください。  
   
@@ -201,21 +196,20 @@ ms.locfileid: "79112217"
   
  データ更新で使用される自動 PowerPivot データ更新アカウントまたはその他の保存された資格情報を作成する方法については、「powerpivot[自動データ更新アカウントの構成 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)および[powerpivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。  
   
-##  <a name="Usage"></a>手順 6: 使用状況データ収集を有効にする  
+##  <a name="step-6-enable-usage-data-collection"></a><a name="Usage"></a>手順 6: 使用状況データ収集を有効にする  
  PowerPivot for SharePoint は、SharePoint の使用状況データ収集インフラストラクチャを使用して、PowerPivot の使用状況に関する情報をファーム全体で収集します。 使用状況データは常に SharePoint のインストールに含まれますが、使用する前に有効にする必要がある場合があります。 手順については、「 [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)」を参照してください。  
   
-##  <a name="Upload"></a>手順 7: SharePoint Web アプリケーションと Excel Services の最大アップロードサイズを増やす  
+##  <a name="step-7-increase-maximum-upload-size-for-sharepoint-web-applications-and-excel-services"></a><a name="Upload"></a>手順 7: SharePoint Web アプリケーションと Excel Services の最大アップロードサイズを増やす  
  PowerPivot ブックはサイズが大きくなる可能性があるため、最大ファイル サイズを増やしたい場合があります。 2 つのファイル サイズの設定として、Web アプリケーションには [アップロードの最大サイズ]、Excel Services には [ブックの最大サイズ] の設定を構成します。 最大ファイル サイズは、両方のアプリケーションで同じ値に設定してください。 手順については、「 [PowerPivot for SharePoint&#41;&#40;最大ファイルアップロードサイズを構成する](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)」を参照してください。  
   
-##  <a name="activatePP"></a>手順 8: サイトコレクションに対して PowerPivot 機能の統合をアクティブ化する  
+##  <a name="step-8-activate-powerpivot-feature-integration-for-site-collections"></a><a name="activatePP"></a>手順 8: サイトコレクションに対して PowerPivot 機能の統合をアクティブ化する  
  サイト コレクション レベルで機能をアクティブ化すると、サイトでアプリケーション ページやテンプレートを使用できるようになります。これには、定期データを更新するための構成ページや、PowerPivot ギャラリーとデータ フィード ライブラリのアプリケーション ページなどが含まれます。  
   
 1.  SharePoint サイトで、 **[サイトの操作]** をクリックします。  
   
-     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 つまり、多くの場合、SharePoint サイトにアクセスするには\<、http://コンピューター名> を入力して、ルートサイトコレクションを開きます。  
+     既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「http://\<computer name>」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。  
   
-2.  
-  **[サイトの設定]** をクリックします。  
+2.  **[サイトの設定]** をクリックします。  
   
 3.  [サイト コレクションの管理] で **[サイト コレクションの機能]** をクリックします。  
   
@@ -223,25 +217,25 @@ ms.locfileid: "79112217"
   
 5.  **[アクティブ化]** をクリックします。  
   
-6.  各サイトを開き、[**サイトの操作**] をクリックして、追加のサイトコレクションに対してを繰り返します。  
+6.  他のサイト コレクションについても、各サイトを開き、 **[サイトの操作]** をクリックして手順を繰り返します。  
   
  詳細については、「[サーバーの全体管理でサイトコレクションの PowerPivot 機能の統合をアクティブ化](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)する」を参照してください。  
   
-##  <a name="bkmk_redist"></a>手順 9: SQL Server 2012 PowerPivot for SharePoint インスタンスに SQL Server 2008 R2 バージョンの OLE DB プロバイダーをインストールする  
+##  <a name="step-9-install-the-sql-server-2008-r2-version-of-the-ole-db-provider-on-a-sql-server-2012-powerpivot-for-sharepoint-instance"></a><a name="bkmk_redist"></a>手順 9: SQL Server 2012 PowerPivot for SharePoint インスタンスに SQL Server 2008 R2 バージョンの OLE DB プロバイダーをインストールする  
  同じサーバーで古いバージョンと新しいバージョンの PowerPivot ブックを平行して実行するには、SQL Server 2008 R2 に付属の Analysis Services OLE DB プロバイダーを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot for SharePoint サーバーにインストールする必要があります。  
   
  このプロバイダーをインストールすると、データ接続文字列の MSOLAP.4 を参照するブックが [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot サーバーで正常に機能するようになります。 以前のバージョンの PowerPivot for Excel で作成されたブックをアップグレードするには、SQL Server 2008 R2 OLE DB プロバイダーをインストールする方法があります。  
   
- [SQL Server 2008 R2 Feature Pack ページ](https://www.microsoft.com/download/details.aspx?id=44272)からプロバイダーをダウンロードできます。 Microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**を探し、 `SQLServer2008_ASOLEDB10.msi`インストールプログラムの x64 パッケージをダウンロードします。  
+ [SQL Server 2008 R2 Feature Pack ページ](https://www.microsoft.com/download/details.aspx?id=44272)からプロバイダーをダウンロードできます。 Microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**を探し、インストールプログラムの x64 パッケージをダウンロードし `SQLServer2008_ASOLEDB10.msi` ます。  
   
  検証手順を含め、プロバイダーのインストールの詳細については、「 [SharePoint サーバーに Analysis Services OLE DB Provider をインストール](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)する」を参照してください。  
   
-##  <a name="verifyinstall"></a>手順 10: インストールの確認  
+##  <a name="step-10-verify-installation"></a><a name="verifyinstall"></a>手順 10: インストールの確認  
  ファームの PowerPivot クエリ処理は、ユーザーまたはアプリケーションが PowerPivot データを含む Excel ブックを開いたときに発生します。 PowerPivot 機能が使用可能になっているかどうかは、SharePoint サイトのページを調べれば確認できますが、 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
   
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL\<アドレスに> コンピューター名を指定できます。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://を指定でき \<your computer name> ます。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -259,9 +253,9 @@ ms.locfileid: "79112217"
   
 4.  [スタート] メニューの Microsoft SQL Server 2008 R2 プログラム グループから SQL Server Management Studio を起動します。 このツールがサーバーにインストールされていない場合は、最後の手順にスキップして、キャッシュされたファイルが存在することを確認できます。  
   
-5.  [サーバーの種類] で **[Analysis Services]** を選択します。  
+5.  [サーバーの種類] で、[ **Analysis Services**] を選択します。  
   
-6.  [サーバー名] に、「 ** \<サーバー名>** を入力します。ここ** \<** で、サーバー名>は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
+6.  [サーバー名] に「 ** \<server-name> \ powerpivot**」と入力します。ここで、 **\<server-name>** は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
 7.  **[Connect]** をクリックします。  
   
@@ -269,7 +263,7 @@ ms.locfileid: "79112217"
   
 9. コンピューターのファイル システムのフォルダーで、ファイルがディスクにキャッシュされているかどうかを確認します。 キャッシュされたファイルが存在していれば、配置が機能していることの確認になります。 ファイル キャッシュを表示するには、\Program Files\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup フォルダーに移動します。  
   
-##  <a name="nextsteps"></a>インストール後の手順  
+##  <a name="post-installation-steps"></a><a name="nextsteps"></a>インストール後の手順  
  インストールの確認が完了したら、PowerPivot ギャラリーを作成するか個々の構成設定を調整してサービスの構成を終了します。 インストールしたサーバー コンポーネントを完全に利用するには、[!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] をダウンロードし、最初の PowerPivot ブックを作成してパブリッシュします。  
   
 ### <a name="install-data-providers-used-for-data-refresh"></a>データの更新に使用されるデータ プロバイダーのインストール  

@@ -20,17 +20,17 @@ helpviewer_keywords:
 - ERROR_LINE function
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ce725d492c0f777f27198a3c686de7a80307e2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682028"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数では、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号が返されます。  
   

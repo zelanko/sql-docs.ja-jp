@@ -18,18 +18,18 @@ helpviewer_keywords:
 - blank characters [SQL Server]
 - trailing blanks
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42fc593c953df13800a0ba49177f5fa71347acd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb85e014f600ea2d88f4022694a490ef5d4a8c6c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089888"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003684"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   末尾のスペースを切り捨てた後の文字列を返します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68089888"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 RTRIM ( character_expression )  
 ```  
   
@@ -55,7 +55,7 @@ RTRIM ( character_expression )
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、文末に空白のある文字列を受け取り、文末の空白を除くテキストが返されます。  
   
-```  
+```sql  
 SELECT RTRIM('Removes trailing spaces.   ');  
 ```  
   
@@ -66,7 +66,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
 ### <a name="b-simple-example"></a>B: 簡単な例  
  この例では、`RTRIM` を使用して末尾のスペースを削除します。 今回は、スペースがなくなったことを示すために、最初の文字列に連結された別の文字列があります。  
   
-```  
+```sql  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
 ```  
   
@@ -77,7 +77,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
 ### <a name="c-using-rtrim-with-a-variable"></a>C. RTRIM を変数付きで使用する  
  この例では、`RTRIM` を使用して文字変数から後続する空白を削除します。  
   
-```  
+```sql  
 DECLARE @string_to_trim varchar(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
@@ -87,18 +87,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```sql   
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence.     Next string.  
- 
- (1 row(s) affected)`  
- 
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence. Next string.  
- 
- (1 row(s) affected)
- ```  
-  
+```
+Four spaces are after the period in this sentence.     Next string.
+
+Four spaces are after the period in this sentence. Next string.
+```
 
   
 ## <a name="see-also"></a>参照  

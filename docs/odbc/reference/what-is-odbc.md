@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bda4abf9802bd58e81f35bd4223b28f687e89b4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea0aa81188e5e58d3a66032af38700ece2d4e5b4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951794"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286502"
 ---
 # <a name="what-is-odbc"></a>ODBC とは
 ODBC に関する多くの誤解がコンピューティング環境に存在します。 エンドユーザーには、Microsoft® Windows®コントロールパネルのアイコンがあります。 アプリケーションプログラマは、データアクセスルーチンを含むライブラリです。 他の多くの場合は、これまでに発生したすべてのデータベースアクセスの問題に対する回答です。  

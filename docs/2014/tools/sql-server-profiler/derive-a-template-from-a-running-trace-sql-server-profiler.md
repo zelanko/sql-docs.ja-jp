@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 72744ce942cc49038129cf6064349e23c3e9a41d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63276311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064021"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>実行中のトレースからのテンプレートの作成 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、実行中の既存のトーレスからトレース テンプレートを作成する方法を説明します。  

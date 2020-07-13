@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68032640"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892967"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   新しいコレクションセットを作成します。 このストアドプロシージャを使用すると、データコレクションのカスタムコレクションセットを作成できます。  
   
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`収集したデータを管理データウェアハウスに保存する日数を指定します。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年) です。 *days_until_expiration*は、0または正の整数である必要があります。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントの一意の識別子を示します。 *proxy_id*は**int**で、既定値は NULL です。 指定する場合、 *proxy_name*は NULL である必要があります。 *Proxy_id*を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
+`[ @proxy_id = ] proxy_id`エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id*は**int**で、既定値は NULL です。 指定する場合、 *proxy_name*は NULL である必要があります。 *Proxy_id*を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 `[ @proxy_name = ] 'proxy_name'`プロキシアカウントの名前を指定します。 *proxy_name*は**sysname**で、既定値は NULL です。 指定する場合、 *proxy_id*は NULL である必要があります。 *Proxy_name*を取得するには、sysproxies システムテーブルに対してクエリを実行します。  
   
@@ -83,7 +83,7 @@ sp_syscollector_create_collection_set
   
 `[ @logging_level = ] logging_level`はログ記録レベルです。 *logging_level*は、次のいずれかの**値を使用**します。  
   
- 0: 実行情報と追跡[!INCLUDE[ssIS](../../includes/ssis-md.md)]するイベントを記録します。  
+ 0: 実行情報と [!INCLUDE[ssIS](../../includes/ssis-md.md)] 追跡するイベントを記録します。  
   
 -   コレクションセットの開始/停止  
   
@@ -112,7 +112,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -135,7 +135,7 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>B. 指定された値を使用してコレクションセットを作成する  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>B: 指定された値を使用してコレクションセットを作成する  
  次の例では、多くのパラメーターに値を指定してコレクションセットを作成します。  
   
 ```  
@@ -155,10 +155,10 @@ EXEC dbo.sp_syscollector_create_collection_set
     @collection_set_uid = @collection_set_uid OUTPUT;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql &#40;ジェネリック T-sql Query コレクター型を使用するカスタムコレクションセットを作成し&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

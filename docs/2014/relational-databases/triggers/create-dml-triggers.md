@@ -18,33 +18,32 @@ helpviewer_keywords:
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f843513ba634bcb3479e373eb9ac978ab584588d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72796389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042941"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE TRIGGER ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーを作成する方法について説明します。  
   
-##  <a name="Top"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="Top"></a> はじめに  
   
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DML トリガーの作成に関する制限事項と制約事項の一覧については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)」を参照してください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  トリガーを作成するテーブルまたはビューに対する ALTER 権限が必要です。  
   
-##  <a name="Procedures"></a> DML トリガーの作成方法  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> DML トリガーの作成方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "72796389"
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
-    |[説明]|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
+    |説明|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
     |Schema_Name|購入|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
@@ -100,7 +99,7 @@ ms.locfileid: "72796389"
   
  [はじめに](#Top)  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   

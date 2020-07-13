@@ -1,5 +1,6 @@
 ---
 title: 段階的な部分復元 (SQL Server) | Microsoft Docs
+description: SQL Server では、段階的な部分復元機能により、複数のファイル グループを含むデータベースを段階的に復元および復旧できます。 段階的な部分復元は、すべての復旧モデルで機能します。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72915999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670237"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディション (オンライン復元) または Standard エディション (オフライン復元) のデータベースだけに関するものです。  
   
  段階的な部分復元とメモリ最適化テーブルの詳細については、「 [メモリ最適化テーブルを持つデータベースの段階的な部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
@@ -122,7 +123,7 @@ ms.locfileid: "72915999"
   
 -   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>完全復旧モデルでの段階的な部分復元  
  完全復旧モデルまたは一括ログ復旧モデルでは、複数のファイル グループを含むすべてのデータベースで段階的な部分復元を実行でき、データベースを任意の時点に復元できます。 段階的な部分復元の復元シーケンスは、次のように行われます。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3671bb7ffcb1d51f6bb7582d8cce50e5e28e330a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921110"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749369"
 ---
 # <a name="ado-code-examples"></a>ADO のコード例
 ADO のオブジェクト、メソッド、プロパティ、およびイベントの使用方法については、次のコード例を参照してください。  

@@ -18,18 +18,17 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84ad905a0b9e19c27e8b24bf9d4b2d0329a7db2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66056892"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423919"
 ---
 # <a name="package-configurations"></a>[パッケージ構成]
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]には、実行時にプロパティの値を更新するために使用できるパッケージ構成が用意されています。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、実行時にプロパティの値を更新するために使用できるパッケージ構成が用意されています。  
   
 > [!NOTE]  
 >  パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -44,21 +43,18 @@ ms.locfileid: "66056892"
   
 -   構成を使用すると、パッケージの柔軟性が高まります。 たとえば、構成を使用すると、プロパティ式に使用されている変数の値を更新できます。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、XML ファイル、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース内のテーブル、および環境変数およびパッケージ変数など、パッケージ構成を格納するための複数の異なる方法がサポートされています。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、XML ファイル、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース内のテーブル、および環境変数およびパッケージ変数など、パッケージ構成を格納するための複数の異なる方法がサポートされています。  
   
  それぞれの構成は、プロパティと値のペアで定義されます。 XML 構成ファイルと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成の種類には、複数の構成を含めることができます。  
   
  構成は、パッケージをインストールするためのパッケージ配置ユーティリティを作成したときに追加されます。 パッケージをインストールするときに、パッケージのインストールの 1 つの手順として構成を更新できます。  
   
 ## <a name="understanding-how-package-configurations-are-applied-at-run-time"></a>実行時にパッケージ構成が適用されるしくみについて  
- 
-  **dtexec** コマンド プロンプト ユーティリティ (dtexec.exe) を使用して配置されたパッケージを実行する場合、パッケージ構成が 2 回適用されます。 コマンド ラインで指定したオプションの適用前と適用後の両方に構成が適用されます。  
+ **dtexec** コマンド プロンプト ユーティリティ (dtexec.exe) を使用して配置されたパッケージを実行する場合、パッケージ構成が 2 回適用されます。 コマンド ラインで指定したオプションの適用前と適用後の両方に構成が適用されます。  
   
  パッケージを読み込んで実行すると、次の順序でイベントが発生します。  
   
-1.  
-  **dtexec** ユーティリティでパッケージが読み込まれます。  
+1.  **dtexec** ユーティリティでパッケージが読み込まれます。  
   
 2.  デザイン時にパッケージに指定された構成が、パッケージに指定されている順序で適用されます (唯一の例外は、親パッケージ変数の構成です。 これらの構成は後から一度だけ適用されます)。  
   
@@ -70,35 +66,30 @@ ms.locfileid: "66056892"
   
 6.  パッケージが実行されます。  
   
- 
-  **dtexec** ユーティリティでの構成の適用方法は、次のコマンド ライン オプションに影響します。  
+ **dtexec** ユーティリティでの構成の適用方法は、次のコマンド ライン オプションに影響します。  
   
 -   実行時に **/Connection** または **/Set** オプションを使用すると、デザイン時に指定した場所とは別の場所からパッケージ構成を読み込むことができます。  
   
--   
-  **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を読み込むことができます。  
+-   **/ConfigFile** オプションを使用すると、デザイン時に指定しなかった追加の構成を読み込むことができます。  
   
  ただし、これらのコマンド ライン オプションには制限事項がいくつかあります。  
   
--   
-  **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値をオーバーライドすることはできません。  
+-   **/Set** または **/Connection** オプションを使用して、構成で設定されている単一の値をオーバーライドすることはできません。  
   
--   
-  **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
+-   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
- これらのオプションの詳細と、と以前のバージョンで[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]のこれらのオプションの動作の違いについては、「 [SQL Server 2014 の Integration Services 機能に対する動作の変更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)」を参照してください。  
+ これらのオプションの詳細と、と以前のバージョンでのこれらのオプションの動作の違いについて [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] は、「 [SQL Server 2014 の Integration Services 機能に対する動作の変更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)」を参照してください。  
   
 ## <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
   
-|種類|[説明]|  
+|Type|説明|  
 |----------|-----------------|  
 |XML 構成ファイル|XML ファイルに構成を格納します。 XML ファイルは、複数の構成を格納できます。|  
 |環境変数|環境変数に構成を格納します。|  
 |レジストリ エントリ|レジストリ エントリに構成を格納します。|  
 |親パッケージ変数|パッケージの変数に構成を格納します。 通常、この構成の種類は、子パッケージ内のプロパティを更新するために使用されます。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]一覧|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース内のテーブルに構成を格納します。 テーブルは、複数の構成を格納できます。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース内のテーブルに構成を格納します。 テーブルは、複数の構成を格納できます。|  
   
 ### <a name="xml-configuration-files"></a>XML 構成ファイル  
  構成の種類として **[XML 構成ファイル]** を選択した場合は、新しい構成ファイルを作成したり、既存のファイルを再利用して新しい構成を追加できます。また、既存のファイルを再利用しながら既存のファイルの内容を上書きすることもできます。  
@@ -131,7 +122,7 @@ ms.locfileid: "66056892"
 ### <a name="registry-entry"></a>レジストリ エントリ  
  レジストリ エントリを使用して構成を格納する場合は、既存のキーを使用するか、HKEY_CURRENT_USER で新しいキーを作成できます。 使用するレジストリ キーには、`Value` という名前の値が必要です。 この値には、DWORD または文字列を指定できます。  
   
- 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「`SSISPackages\MyPackage`」と入力します。  
+ 構成の種類として **[レジストリ エントリ]** を選択した場合は、[レジストリ エントリ] ボックスにレジストリ キーの名前を入力します。 形式は \<registry key> です。 HKEY_CURRENT_USER のルートにないレジストリキーを使用する場合は、という形式を使用して \<Registry key\registry key\\...> キーを識別します。 たとえば、SSISPackages にある MyPackage キーを使用する場合は、「`SSISPackages\MyPackage`」と入力します。  
   
 ### <a name="sql-server"></a>SQL Server  
  構成の種類として **[SQL Server]** を選択した場合は、構成を格納する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースへの接続を指定します。 構成は、既存のテーブルに保存することも、指定したデータベース内に新しいテーブルを作成して保存することもできます。  
@@ -152,8 +143,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  構成に指定される名前は、 **ConfigurationFilter** 列に格納されている値です。  
   
 ## <a name="direct-and-indirect-configurations"></a>直接構成および間接構成  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、直接構成と間接構成があります。 構成を直接指定した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、構成アイテムとパッケージ オブジェクト プロパティとの間に直接リンクを作成します。 直接構成は、ソースの位置が変化しない場合に適しています。 たとえば、パッケージ内のすべての配置で同じファイル パスが必ず使用される場合は、XML 構成ファイルを指定できます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、直接構成と間接構成があります。 構成を直接指定した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、構成アイテムとパッケージ オブジェクト プロパティとの間に直接リンクを作成します。 直接構成は、ソースの位置が変化しない場合に適しています。 たとえば、パッケージ内のすべての配置で同じファイル パスが必ず使用される場合は、XML 構成ファイルを指定できます。  
   
  間接構成では、環境変数が使用されます。 構成設定を直接指定する代わりに、構成値を格納する環境変数が指定されます。 間接構成は、パッケージのそれぞれの配置に対して構成の位置が変更される可能性がある場合に適しています。  
   

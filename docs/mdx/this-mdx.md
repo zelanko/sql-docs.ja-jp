@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893558"
 ---
 # <a name="this-mdx"></a>This (MDX)
@@ -27,10 +27,10 @@ ms.locfileid: "68893558"
 This   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **この**関数は、MDX 計算スクリプト内の現在のスコープ内で現在のサブキューブを指定するために、任意のサブキューブ式の代わりに使用できます。 **この**関数は、代入の左側で使用する必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の MDX スクリプトでは、This キーワードを SCOPE ステートメントと共に使用してサブキューブに代入する方法を示します。  
   
  `Scope`  

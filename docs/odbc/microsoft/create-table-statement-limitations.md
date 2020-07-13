@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CREATE TABLE statement limitations [ODBC]
 - ODBC SQL grammar, CREATE TABLE statement limitations
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a83acb061cf8192dff1c6adede349f49a0b0bbdb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096589"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280873"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE ステートメントの制限事項
 Microsoft Access、Microsoft Excel、または Paradoxdriver が使用されていて、テキストまたはバイナリ列の長さが指定されていない (または0として指定されている) 場合、列の長さは255に設定されます。  

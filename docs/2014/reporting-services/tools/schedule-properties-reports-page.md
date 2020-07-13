@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099791"
 ---
 # <a name="schedule-properties-reports-page"></a>[スケジュールのプロパティ] ([レポート] ページ)
@@ -27,20 +27,20 @@ ms.locfileid: "66099791"
  このページを開くには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、を起動してレポートサーバーに接続し、[**共有スケジュール**] フォルダーを開きます。共有スケジュールを右クリックし、[**プロパティ**] を選択し、[**レポート**] をクリックします。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」 (https://go.microsoft.com/fwlink/?linkid=232473)を参照してください。  
   
 ## <a name="options"></a>オプション  
  **フォルダー**  
  レポートのパスを指定します。  
   
- **Report**  
+ **レポート**  
  スケジュールを使用するレポートの名前を指定します。  
   
 ## <a name="see-also"></a>参照  
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   
  [[スケジュール]](../subscriptions/schedules.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [レポート &#40;レポートマネージャーの全般プロパティの構成&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

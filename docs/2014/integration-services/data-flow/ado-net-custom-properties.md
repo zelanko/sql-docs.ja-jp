@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17332a2d70fd66e3229105ce5666bbf9c6de801b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62828656"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432429"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -42,8 +41,8 @@ ms.locfileid: "62828656"
   
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|BatchSize|整数|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
-|CommandTimeOut|整数|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
+|BatchSize|Integer|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
+|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
 |TableOrViewName|String|変換先のテーブルまたはビューの名前。|  
   
  詳しくは、「 [ADO NET 変換先](ado-net-destination.md)」をご覧ください。  

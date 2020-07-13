@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37cae552008873c874840fd75a84e7496bafdd0d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835408"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435649"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>複数のテーブルの増分読み込みを実行する
   「 [変更データ キャプチャによる増分読み込みの向上](change-data-capture-ssis.md)」の図は、1 つのみのテーブルの増分読み込みを実行する基本的なパッケージを示しています。 ただし、1 つのテーブルの読み込みよりも、複数のテーブルの増分読み込みを実行する必要がある場合の方が一般的です。  

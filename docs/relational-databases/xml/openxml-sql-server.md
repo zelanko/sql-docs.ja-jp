@@ -1,10 +1,10 @@
 ---
 title: OPENXML (SQLServer) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995358"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269444"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。  
   
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。  
@@ -59,13 +59,13 @@ ms.locfileid: "67995358"
   
  次の例では、2 つの `<Customers>` ステートメントで `Customers` 要素を `<Orders>` テーブルに格納し、 `Orders` 要素を `INSERT` テーブルに格納することで、XML ドキュメントを細分化しています。 また、この例では、 `SELECT` を使用して XML ドキュメントから `OPENXML` と `CustomerID` を取得する `OrderDate` ステートメントも示しています。 この処理の最後に `sp_xml_removedocument`が呼び出されています。 これは、解析時に作成された内部 XML ツリー表現を保持するために割り当てられたメモリを解放するための処理です。  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +90,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -149,7 +150,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|要素行または属性行の実際のデータ型です。それ以外は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
 |**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
 |**text**|**ntext**|テキスト形式で表した属性の値または要素のコンテンツです。 エッジ テーブルのエントリに値が必要ない場合は NULL になります。|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>WITH 句を使用した既存のテーブルの指定  
  WITH 句を使用して、既存のテーブルの名前を指定できます。 これを行うには、OPENXML で使用して行セットを生成できるスキーマを持つ既存のテーブルの名前を指定するだけです。  
   

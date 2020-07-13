@@ -12,14 +12,14 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083381"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299152"
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
 列方向のバインドを使用する場合、アプリケーションは、データが返される各列に1つまたは2つ (場合によっては3つの配列) をバインドします。 最初の配列はデータ値を保持し、2番目の配列は長さ/インジケーターバッファーを保持します。 SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の記述子フィールドを異なる値に設定することにより、インジケーターと長さの値を別々のバッファーに格納できます。これを実行すると、3番目の配列がバインドされます。 各配列には、行セット内の行と同じ数の要素が含まれています。  

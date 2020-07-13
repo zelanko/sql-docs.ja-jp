@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb1a0a862d3e6bf2a1d4e4361e2151c6ee4bf843
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176852"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>行見出しと列見出しの制御 (レポート ビルダーおよび SSRS)
@@ -38,28 +38,28 @@ ms.locfileid: "78176852"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>Tablix データ領域の行と列について
  テーブルまたはマトリックスは、基になる Tablix データ領域のテンプレートです。 Tablix データ領域は、最大 4 つの領域で構成されます。行グループ領域 (レポートの上下方向に展開される行を制御する領域)、列グループ領域 (レポートの左右方向に展開される列を制御する領域)、本体 (データが表示される領域)、およびコーナーです。 実際にヘッダーの繰り返しまたは固定を制御するときに、どこでプロパティを設定すればよいかを適切に判断するためには、Tablix データ領域には次の 2 つの表現があることを理解しておくと役に立ちます。
 
--   **レポート定義内**Tablix データ領域定義内の各行または列は、特定の行グループまたは列グループの tablix メンバーです。 Tablix メンバーには静的なものと動的なものがあります。 静的 Tablix メンバーは、ラベルまたは小計を格納し、グループごとに 1 回繰り返されます。 動的 Tablix メンバーは、グループの値を格納し、グループの固有の値 (グループ インスタンス) につき 1 回繰り返されます。
+-   **レポート定義** Tablix データ領域定義内のそれぞれの行または列は、特定の行グループまたは列グループの Tablix メンバーにあたります。 Tablix メンバーには静的なものと動的なものがあります。 静的 Tablix メンバーは、ラベルまたは小計を格納し、グループごとに 1 回繰り返されます。 動的 Tablix メンバーは、グループの値を格納し、グループの固有の値 (グループ インスタンス) につき 1 回繰り返されます。
 
--   **デザイン画面**デザイン画面では、tablix データ領域が4つの領域に分割されます。 Tablix データ領域の各セルは、行と列で構成されます。 行と列はグループに関連付けられます (詳細グループを含む)。 特定の Tablix データ領域を選択すると、行と列のハンドルおよびハイライト バーによって、グループのメンバーシップが示されます。 行グループ領域または列グループ領域のセルは、Tablix メンバーのグループ ヘッダーを表します。 単一の行または列を、複数のグループに関連付けることもできます。
+-   **デザイン画面** デザイン画面では、Tablix データ領域の 4 つの領域が点線で区画されます。 Tablix データ領域の各セルは、行と列で構成されます。 行と列はグループに関連付けられます (詳細グループを含む)。 特定の Tablix データ領域を選択すると、行と列のハンドルおよびハイライト バーによって、グループのメンバーシップが示されます。 行グループ領域または列グループ領域のセルは、Tablix メンバーのグループ ヘッダーを表します。 単一の行または列を、複数のグループに関連付けることもできます。
 
      詳細については、「[Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)」と「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。
 
  行グループ領域または列グループ領域を持つ Tablix データ領域では、それに関連付けられている行および列を、Tablix データ領域のプロパティを設定することによって制御します。 それ以外の場合は、選択した Tablix メンバーのプロパティ ペインで、必要なプロパティを設定することにより、行および列を制御することになります。 段階的な手順については、「[複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」と「[レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)」を参照してください。
 
-##  <a name="Top"></a> 使用例
+##  <a name="examples"></a><a name="Top"></a> 例
  Tablix データ領域に表示される内容として最も一般的な例としては、マトリックス、グループを持たないテーブル、行グループと行グループ ヘッダーを持つテーブル、行グループはあるが行グループ ヘッダーは持たないテーブルなどがあります。 ヘッダーの繰り返しまたは固定を制御するには、制御の対象となる行または列が、その行グループ領域または列グループ領域でグループ ヘッダーに関連付けられているかどうかを見極める必要があります。
 
  次のセクションでは、Tablix データ領域の一般的なレイアウトの例を紹介します。
 
--   [マトリックス](#Matrix)
+-   [一覧](#Matrix)
 
--   [グループのないテーブル](#TableNoGroups)
+-   [グループを持たないテーブル](#TableNoGroups)
 
--   [行グループと行グループ領域を持つテーブル](#TableRowGroupsGroupHeader)
+-   [行グループおよび行グループ領域を持つテーブル](#TableRowGroupsGroupHeader)
 
--   [行グループがあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)
+-   [行グループはあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)
 
-###  <a name="Matrix"></a> マトリックス
+###  <a name="matrix"></a><a name="Matrix"></a>一覧
  既定では、単純なマトリックスには、行グループと列グループが 1 つずつ含まれています。 次の図は、Category (カテゴリ) に基づく行グループと、Geography (地理) に基づく列グループを持つマトリックスを示しています。
 
  ![Matrix、Category 行および Geography 列グループ](../media/rs-basicmatrixdesign.gif "Matrix、Category 行および Geography 列グループ")
@@ -74,7 +74,7 @@ ms.locfileid: "78176852"
 
  [先頭に戻る](#Top)
 
-###  <a name="TableNoGroups"></a>行グループのないテーブル
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a>行グループのないテーブル
  既定では、グループを持たない単純なテーブルには、詳細グループが含まれます。 次の図は、カテゴリ、注文番号、および売上データを表示するテーブルを示したものです。
 
  ![デザイン、1 つの静的行と 1 つの動的行があるテーブル](../media/rs-tableheaderstaticdesign.gif "デザイン、1 つの静的行と 1 つの動的行があるテーブル")
@@ -95,7 +95,7 @@ ms.locfileid: "78176852"
 
  [先頭に戻る](#Top)
 
-###  <a name="TableRowGroupsGroupHeader"></a>行グループと行グループ領域を持つテーブル
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a>行グループと行グループ領域を持つテーブル
  単純なテーブルに行グループを追加した場合、デザイン画面のテーブルに行グループ領域が追加されます。 次の図は、Category に基づいた行グループを持つテーブルを示しています。
 
  ![デザイン、1 つの行グループと詳細があるテーブル](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "デザイン、1 つの行グループと詳細があるテーブル")
@@ -112,12 +112,11 @@ ms.locfileid: "78176852"
 
  ![行グループ、詳細設定モードで静的メンバー](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行グループ、詳細設定モードで静的メンバー")
 
- 
-  **Static**、(**Static**)、Category、(**Details**) という一連の Tablix メンバーが並んでいます。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。
+ **Static**、(**Static**)、Category、(**Details**) という一連の Tablix メンバーが並んでいます。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。
 
  [先頭に戻る](#Top)
 
-###  <a name="TableRowGroupsNoGroupHeader"></a>行グループと行グループ領域を持たないテーブル
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a>行グループと行グループ領域を持たないテーブル
  テーブルに行グループがあるにもかかわらず、行グループ領域が存在しない場合があります。 その原因として、次の 2 点が考えられます。
 
 -   当初は、行グループと行グループ領域を持つテーブルとして作成したが、後でその行グループ領域から列を削除した (列だけを削除し、グループを削除しなかった)。 たとえば、テーブルを単純なグリッド形式に変更しようとした場合などに起こります。
@@ -138,9 +137,9 @@ ms.locfileid: "78176852"
 
  しかし、詳細設定モードで見ると、このレイアウト構造が異なる Tablix メンバーで構成されていることがわかります。 次の図は、このテーブルの詳細設定モードでのグループ化ペインを示しています。
 
- ![行グループ、詳細設定、グループ ヘッダーなし](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし")
+ ![行グループ、詳細設定、グループ ヘッダーなし。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし。")
 
- [行グループ] ペインには、(**Static**)、(Category)、(**Static**)、および (**Details**) の各 Tablix メンバーが一覧表示されます。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。
+ [行グループ] ペインには、(**Static**)、(Category)、(**Static**)、および (**Details**) の各 Tablix メンバーが一覧表示されます。 列見出しを繰り返し表示するか固定するには、最上位 (**静的**) の tablix メンバーを選択し、プロパティペインでプロパティを設定します。
 
  [先頭に戻る](#Top)
 

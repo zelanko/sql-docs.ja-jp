@@ -1,5 +1,6 @@
 ---
 title: マークされたトランザクションへのデータベースの復元
+description: 関連する更新を複数の関連したデータベースに対して実行する場合、SQL Server でトランザクション マークを使用して、それらのデータベースを論理的に一貫した状態に復旧できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc572ac7e1272274996b13dfb0886427cebc128e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631235"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。  
   

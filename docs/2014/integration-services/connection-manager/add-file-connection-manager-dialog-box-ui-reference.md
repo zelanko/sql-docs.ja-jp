@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67f738c92307fbf504bc6824ce3e6871746952b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833874"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438409"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
   **[ファイル接続マネージャーの追加]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーのグループへの接続を定義できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62833874"
  **[使用法の種類]**  
  複数のファイルの接続マネージャーに使用するファイルの種類を指定します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイルの作成]**|接続マネージャーはファイルを作成します。|  
 |**[既存のファイル]**|接続マネージャーは既存のファイルを使用します。|  

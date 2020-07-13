@@ -12,14 +12,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa17a5552855916798c78e0e7d371b58e58a401e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19bb2dd113fbeae871892ea510713c638c886e5a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046924"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305769"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性
 ドライバーは、次の目的でドライバー固有の値を割り当てることができます。  

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 66598697fd81fb7a577a91b9c3b65d881684cc8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62664051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030480"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Service Broker によりメッセージのルーティングが決定されると、 **Broker:Message Classify** イベントを生成します。  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Broker:Message Classify イベント クラスのデータ列  
   
-|データ列|データ型|[説明]|列番号|フィルターの適用|  
+|データ列|データ型|説明|列番号|フィルターの適用|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

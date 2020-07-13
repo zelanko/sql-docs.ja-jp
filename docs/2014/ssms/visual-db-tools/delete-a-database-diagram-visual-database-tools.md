@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ee4f3e08ea53730a0f6a1c5df4a9fb2398288825
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62670445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061785"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>データベース ダイアグラムの削除 (Visual Database Tools)
   不要になったデータベース ダイアグラムは削除できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62670445"
   
 3.  ショートカット メニューの **[削除]** をクリックします。  
   
-4.  削除するかどうかを確認するメッセージが表示されます。 **[はい]** をクリックします。  
+4.  削除するかどうかを確認するメッセージが表示されます。 **[はい]** を選択します。  
   
  データベース ダイアグラムがデータベースから削除されます。 データベース ダイアグラムを削除しても、ダイアグラムに含まれていたテーブルは削除されません。  
   

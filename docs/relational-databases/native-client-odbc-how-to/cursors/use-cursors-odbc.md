@@ -10,24 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4902d295e6ccaae83cdcd251616816f60d63d38e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009508"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-cursors"></a>カーソルを使用するには  
   
-1.  
-  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、目的のカーソル属性を設定します。  
+1.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、目的のカーソル属性を設定します。  
   
      SQL_ATTR_CURSOR_TYPE および SQL_ATTR_CONCURRENCY 属性を設定します (これは推奨オプションです)。  
   
@@ -35,28 +33,25 @@ ms.locfileid: "73781626"
   
      SQL_CURSOR_SCROLLABLE および SQL_CURSOR_SENSITIVITY 属性を設定します。  
   
-2.  
-  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、SQL_ATTR_ROW_ARRAY_SIZE 属性を使用して行セットのサイズを設定します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、SQL_ATTR_ROW_ARRAY_SIZE 属性を使用して行セットのサイズを設定します。  
   
 3.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合は、[SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出して、カーソル名を設定することもできます。  
   
 4.  SQL ステートメントを実行します。  
   
-5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出してカーソル名を取得することもできます。  
+5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) を呼び出してカーソル名を取得することもできます。  
   
-6.  
-  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
+6.  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
   
      列方向のバインドを使用します。  
   
-     \- - または -  
+     \- または  
   
      行方向のバインドを使用します。  
   
 7.  必要に応じてカーソルから行セットをフェッチします。  
   
-8.  
-  [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、別の結果セットが使用可能かどうかを判断します。  
+8.  [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、別の結果セットが使用可能かどうかを判断します。  
   
     -   SQL_SUCCESS が返された場合は、別の結果セットを使用できます。  
   
@@ -74,8 +69,7 @@ ms.locfileid: "73781626"
   
 10. 別の結果セットが使用できる場合は、手順 6. に進みます。  
   
-     手順 9. で、部分的に処理された結果セットで [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出すと、残りの結果セットがクリアされます。 
-  [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出してクリアする方法もあります。  
+     手順 9. で、部分的に処理された結果セットで [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出すと、残りの結果セットがクリアされます。 [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出してクリアする方法もあります。  
   
      使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   

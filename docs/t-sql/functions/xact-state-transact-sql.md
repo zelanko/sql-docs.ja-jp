@@ -20,18 +20,18 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a817d079c926db5d130c950e4a7d1a706a77b26d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927426"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991492"
 ---
 # <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在実行されている要求のユーザー トランザクション状態を報告するスカラー関数です。 XACT_STATE は、要求にアクティブなユーザー トランザクションがあるかどうか、およびそのトランザクションがコミット可能かどうかを示します。  
   

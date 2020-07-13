@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918441"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758658"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの分離レベルを示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "67918441"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)値を設定または返します。 既定値は**adXactReadCommitted**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **接続**オブジェクトの分離レベルを設定するには、 **IsolationLevel**プロパティを使用します。 この設定は、次に[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを呼び出したときまで有効になりません。 要求した分離レベルが使用できない場合、プロバイダーは、 **IsolationLevel**プロパティを更新せずに、次に高い分離レベルを返すことができます。  
   
  **IsolationLevel**プロパティは読み取り/書き込み可能です。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46b0b7c4eab855c33366550c981df8f03e9e1819
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921844"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747580"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VC + +)
 この例では、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)、および[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティを使用して、 ***Employee***テーブルからの名前と入社日を一度に5つずつ表示します。  

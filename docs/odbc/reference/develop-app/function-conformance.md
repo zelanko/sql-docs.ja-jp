@@ -13,19 +13,19 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069755"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305593"
 ---
 # <a name="function-conformance"></a>関数の適合性
 次の表は、各 ODBC 関数が適切に定義されている場合の準拠レベルを示しています。  
   
-|Function|一致レベル|  
+|関数|一致レベル|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|コア|  
 |**SQLBindCol**|コア|  
@@ -35,13 +35,13 @@ ms.locfileid: "68069755"
 |**SQLCancel**|コア [1]|  
 |**SQLCloseCursor**|コア|  
 |**SQLColAttribute**|コア [1]|  
-|**SQLColumnPrivileges**|Level 2|  
+|**SQLColumnPrivileges**|[レベル 2]|  
 |**SQLColumns**|コア|  
 |**SQLConnect**|コア|  
 |**SQLCopyDesc**|コア|  
 |**SQLDataSources**|コア|  
 |**SQLDescribeCol**|コア [1]|  
-|**SQLDescribeParam**|Level 2|  
+|**SQLDescribeParam**|[レベル 2]|  
 |**SQLDisconnect**|コア|  
 |**SQLDriverConnect**|コア|  
 |**SQLDrivers**|コア|  
@@ -50,7 +50,7 @@ ms.locfileid: "68069755"
 |**SQLExecute**|コア|  
 |**SQLFetch**|コア|  
 |**SQLFetchScroll**|コア [1]|  
-|**SQLForeignKeys**|Level 2|  
+|**SQLForeignKeys**|[レベル 2]|  
 |**SQLFreeHandle**|コア|  
 |**SQLFreeStmt**|コア|  
 |**SQLGetConnectAttr**|コア|  
@@ -85,7 +85,7 @@ ms.locfileid: "68069755"
 |**SQLSetStmtAttr**|コア [2]|  
 |**SQLSpecialColumns**|コア [1]|  
 |**SQLStatistics**|コア|  
-|**SQLTablePrivileges**|Level 2|  
+|**SQLTablePrivileges**|[レベル 2]|  
 |**SQLTables**|コア|  
   
  [1] この関数の重要な機能は、より高い準拠レベルでのみ使用できます。  

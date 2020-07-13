@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c83ca09ff6e519420a8a4f8d077d9b855d9459f4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68116768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890778"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ローカルの Microsoft Windows グループの一覧、または指定された Windows ドメインで定義されているグローバルグループの一覧が表示されます。  
   
@@ -47,27 +47,27 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**グループ**|**sysname**|Windows グループの名前|  
-|**関する**|**sysname**|Windows によって提供される Windows グループの説明|  
+|**group**|**sysname**|Windows グループの名前|  
+|**comment**|**sysname**|Windows によって提供される Windows グループの説明|  
   
-## <a name="remarks"></a>解説  
- *Domain_name*が、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが実行されている Windows ベースのコンピューターの名前である場合、またはドメイン名が指定されていない場合**xp_enumgroups**は、を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行しているコンピューターからローカルグループを列挙します。  
+## <a name="remarks"></a>注釈  
+ *Domain_name*が、のインスタンスが実行されている Windows ベースのコンピューターの名前である場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはドメイン名が指定されていない場合**xp_enumgroups**は、を実行しているコンピューターからローカルグループを列挙し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- **** の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが Windows 98 で実行されている場合、xp_enumgroups は使用できません。  
+ **xp_enumgroups**のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Windows 98 で実行されている場合、xp_enumgroups は使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Master**データベースの**db_owner**固定データベースロールのメンバーシップ、または**sysadmin**固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `sales`ドメイン内のグループを一覧表示します。  
+ 次の例では、ドメイン内のグループを一覧表示し `sales` ます。  
   
 ```  
 EXEC xp_enumgroups 'sales';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

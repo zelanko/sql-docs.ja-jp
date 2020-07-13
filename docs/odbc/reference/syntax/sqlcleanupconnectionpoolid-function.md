@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a74a92cc05ecd41e99ff87642c7fe3ee527e0c98
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036089"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301322"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 関数
 **互換性**  
@@ -50,7 +50,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  アプリケーションは、ドライバーによって返されたエラーメッセージを受信できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **SQLCleanupConnectionPoolID**はいつでも呼び出すことができますが、ドライバーマネージャーは、他のスレッドが同時に**SQLGetPoolID**を呼び出していないことを保証します。また、そのプール ID で割り当てられた接続情報トークンを使用して、他のスレッドが**SQLRateConnection**と**sqlpoolconnect**を同時に呼び出すことはありません。 そのため、ドライバーは、この機能がスレッドセーフであることを確認する必要があります。  
   
  ドライバーは、プール ID に関連付けられているリソースをクリーンアップできます。  

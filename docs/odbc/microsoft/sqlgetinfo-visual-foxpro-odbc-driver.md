@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898847"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295192"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -324,7 +324,7 @@ ms.locfileid: "67898847"
   
  SQL_STRING_FUNCTIONS では、SQL_FN_STR_INSERT、SQL_FN_STR_LOCATE、SQL_FN_STR_LOCATE_2、または SQL_FN_STR_SOUNDEX はサポートされていません。  
   
- 次の値が返されます。  
+ 戻り値は次のとおりです。  
   
 -   SQL_FN_STR_ASCII  
   
@@ -419,7 +419,7 @@ ms.locfileid: "67898847"
   
  SQL_TIMEDATE_FUNCTIONS では、SQL_FN_TD_QUARTER、SQL_FN_TD_TIMESTAMPADD、SQL_FN_TD_DAYOFYEAR、または SQL_FN_TD_WEEK はサポートされていません。  
   
- 次の値が返されます。  
+ 戻り値は次のとおりです。  
   
 -   SQL_FN_TD_CURDATE  
   

@@ -12,10 +12,10 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944687"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
@@ -42,7 +42,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   Optimistic  
   
--   完全  
+-   [完全]  
   
 -   Custom  
   
@@ -77,8 +77,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     3.  カスタム設定を指定するには、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
 また、現在のプロジェクトの設定をカスタマイズすることもできます。 設定は、現在のプロジェクトファイルに保存されます。  
   
@@ -92,10 +91,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     2.  カスタムモードを指定するには、[**モード**] ボックスの一覧の [**カスタム**] を選択します。 次に、適切なプロジェクト設定を選択します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「 [MySQL と SQL Server のデータ型 &#40;MySQLToSQL&#41;のマッピング](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)」を参照してください。  

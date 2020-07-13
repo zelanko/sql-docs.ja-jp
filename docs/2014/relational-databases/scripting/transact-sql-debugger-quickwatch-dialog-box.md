@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063281"
 ---
 # <a name="quickwatch-dialog-box"></a>[クイック ウォッチ] ダイアログ ボックス
   **コードのデバッグ時に** [クイック ウォッチ] [!INCLUDE[tsql](../../includes/tsql-md.md)] ダイアログ ボックスを使用すると、変数やパラメーターなど、1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のデータ型や値をすばやく表示できます。 複数の式を確認するために、 **[ウォッチ]** ウィンドウに式を追加することもできます。  
@@ -60,7 +59,7 @@ ms.locfileid: "75243038"
  **[値グリッド]**  
  現在監視されている式のプロパティを表示します。  
   
- **名前**  
+ **Name**  
  監視対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] 式です。  
   
  **Value**  

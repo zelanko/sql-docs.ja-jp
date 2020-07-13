@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ed120bedfd236dcb55780982f0f611368147f813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62795343"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939973"
 ---
 # <a name="understanding-the-tabular-object-model"></a>テーブル オブジェクト モデルについて
   テーブル モデルは、テーブル、リレーションシップ、階層、パースペクティブ、メジャー、および主要業績に関する論理的表現です。 ここでは、AMO を使用した内部実装について説明します。 AMO を使用していない場合は、「[分析管理オブジェクト &#40;amo&#41;を使用した開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
@@ -46,8 +45,7 @@ ms.locfileid: "62795343"
  計算されるメジャーは、モデルが展開された後で要求によって評価されるストアドの式です。 AMO オブジェクトでは、計算されるメジャーは一対多マッピングのリレーションシップを持ちます。 計算列は、必要な主要オブジェクトである次の AMO オブジェクトを使用して表現されます。<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> および <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>。 これは上記の AMO オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
 > [!NOTE]  
->  
-  <xref:Microsoft.AnalysisServices.Measure> オブジェクトはテーブル モデル内の計算されるメジャーとのリレーションシップを持たず、テーブル モデルでサポートされません。  
+>  <xref:Microsoft.AnalysisServices.Measure> オブジェクトはテーブル モデル内の計算されるメジャーとのリレーションシップを持たず、テーブル モデルでサポートされません。  
   
  計算されるメジャー表現を作成および操作する方法の詳細については、「[計算されるメジャー表現 &#40;表形式&#41;](tables-calculated-measure-representation.md) 」を参照してください。  
   
@@ -65,7 +63,7 @@ ms.locfileid: "62795343"
  KPI 表現を作成および操作する方法の詳細については、「 [&#40;表形式&#41;の主要業績評価指標表現](tables-key-performance-indicator-representation.md)」を参照してください。  
   
 ### <a name="partition-representation"></a>パーティション表現  
- 運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトの場合、パーティション表現はと<xref:Microsoft.AnalysisServices.Partition>一対一マッピングのリレーションシップを持ち、その他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
+ 運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。 それぞれのサブセットがテーブルのパーティションです。 AMO オブジェクトの場合、パーティション表現はと一対一マッピングのリレーションシップを持ち、 <xref:Microsoft.AnalysisServices.Partition> その他の主要 AMO オブジェクトは必要ありません。 これは AMO データベース オブジェクトに含まれるすべてのオブジェクトが、モデリングの際に使用できるという意味ではないことに注意する必要があります。  
   
  パーティション表現を作成および操作する方法の詳細については、「[パーティション表現 &#40;表形式&#41;](tables-partition-representation.md) 」を参照してください。  
   

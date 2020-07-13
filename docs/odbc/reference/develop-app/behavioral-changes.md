@@ -12,14 +12,14 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e4a433531d90eb0f89d9a5e446464b13fd02526
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103875"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283442"
 ---
 # <a name="behavioral-changes"></a>動作の変更
 動作の変更とは、インターフェイスの*構文*が変わりませんが、*セマンティクス*が変更された変更です。 これらの変更については、ODBC 2 で使用される機能です。*x*の動作は、ODBC 3 の同じ機能とは異なります。*x*。  

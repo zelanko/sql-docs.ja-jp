@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d1adfcc0beba3b06028ddf4e4c7ddc6ca44faae9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63225485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011156"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client における LocalDB のサポート
-  
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降、SQLServer の簡易バージョンである LocalDB を使用できるようになります。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。  
   
 ## <a name="remarks"></a>解説  
@@ -30,11 +28,9 @@ ms.locfileid: "63225485"
   
  要約すると、LocalDB では次の操作を実行できます。  
   
--   
-  `sqllocaldb.exe i` を使用して既定のインスタンスの名前を検出できます。  
+-   `sqllocaldb.exe i` を使用して既定のインスタンスの名前を検出できます。  
   
--   
-  `AttachDBFilename` 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 を使用`AttachDBFilename`する場合、データベース接続文字列キーワードでデータベースの名前を指定**しない**と、アプリケーションの終了時にデータベースが LocalDB インスタンスから削除されます。  
+-   `AttachDBFilename` 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 を使用する場合 `AttachDBFilename` 、データベース接続文字列キーワードでデータベースの名前を指定**Database**しないと、アプリケーションの終了時にデータベースが LocalDB インスタンスから削除されます。  
   
 -   接続文字列では、次のように LocalDB インスタンスを指定します。  
   

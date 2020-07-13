@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526462"
 ---
 # <a name="creating-a-data-mining-model"></a>データ マイニング モデルの作成
   データモデリングは、*アルゴリズム*をデータに適用してパターンや傾向を構築するデータマイニングの手順です。 その後、それらのデータを使って追加の分析を行ったり、予測を立てたりすることができます。  
   
  Office 用データ マイニング アドインは、ウィザードによるデータ マイニングをサポートすることで、モデルの作成を簡素化しています。 ウィザードでは、データの分析、相関関係の特定、あらゆる変数の統計的有意性の計算、最適なモデルの自動選択が実行されます。  
   
- この機能は、および[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]によって提供されるデータマイニングツールと同様に、すべての機能を備えていますが、ウィザードと使い慣れた Excel インターフェイスを組み合わせることにより、データマイニングの作成、変更、および使用が簡単になります。  
+ この機能は、およびによって提供されるデータマイニングツールと同様に、すべての機能を備えていますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィザードと使い慣れた Excel インターフェイスを組み合わせることにより、データマイニングの作成、変更、および使用が簡単になります。  
   
 ## <a name="advanced-data-mining"></a>詳細設定 (データ マイニング)  
- 詳細設定ウィザードでは、の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データマイニングアルゴリズムの1つを使用して、Excel に格納されているデータに基づいて新しいデータマイニングモデルを作成できます。  
+ 詳細設定ウィザードでは、のデータマイニングアルゴリズムの1つを使用して、Excel に格納されているデータに基づいて新しいデータマイニングモデルを作成でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 ### <a name="create-mining-structure"></a>マイニング構造の作成  
  マイニング構造の作成ウィザードを使用すると、新しいデータ マイニング構造を構築し、複数のマイニング モデルの基礎として使用できます。 このウィザードには、テスト セットとして使用するデータの一部を確保するオプションが用意されているので、一貫したテスト標準に従って同じデータを使用するすべてのモデルを評価できます。  
@@ -78,8 +77,7 @@ ms.locfileid: "66086727"
  [Excel 用のテーブル分析ツール &#40;のカテゴリの検出&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
 ## <a name="estimate-data-mining"></a>推定 (データ マイニング)  
- 推定ウィザードを使用すると、データのパターンを抽出し、そのパターンを基に、連続する数値、日付、または時刻の値を予測する推定モデルを構築できます。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] のデシジョン ツリー アルゴリズムが使用されます。  
+ 推定ウィザードを使用すると、データのパターンを抽出し、そのパターンを基に、連続する数値、日付、または時刻の値を予測する推定モデルを構築できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] のデシジョン ツリー アルゴリズムが使用されます。  
   
  [推定ウィザード &#40;Excel 用データマイニングアドイン&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   

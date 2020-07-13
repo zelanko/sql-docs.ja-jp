@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ce3513c67a0087dd00021de75f360b19819b46db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62876096"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957872"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>ミラー化バックアップ メディア セット (SQL Server)
     
@@ -35,17 +34,16 @@ ms.locfileid: "62876096"
 > [!NOTE]  
 >  メディア セットの概要については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)の Enterprise Edition のみでサポートされています。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
--   [ミラー化メディアセットの概要](#OverviewofMirroredMediaSets)  
+-   [ミラー化メディア セットの概要](#OverviewofMirroredMediaSets)  
   
--   [バックアップミラーのハードウェア要件](#HardwareReqs)  
+-   [バックアップ ミラーのハードウェア要件](#HardwareReqs)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a>ミラー化メディアセットの概要  
- メディアのミラー化は、メディア セットのプロパティです。 
-  *ミラー化メディア セット* は、メディア セットの複数のコピー (*ミラー*) で構成されています。 メディア セットには、1 つ以上のメディア ファミリが含まれており、各メディア ファミリが 1 つのバックアップ デバイスに対応します。 たとえば、BACKUP DATABASE ステートメントの TO 句に 3 つのデバイスを指定する場合、BACKUP によって 1 つのデバイスにつき 3 つのメディア ファミリにデータが分散されます。 メディア ファミリとミラーの数は、メディア セットを作成するときに定義します (BACKUP DATABASE ステートメントで WITH FORMAT を指定します)。  
+##  <a name="overview-of-mirrored-media-sets"></a><a name="OverviewofMirroredMediaSets"></a> ミラー化メディア セットの概要  
+ メディアのミラー化は、メディア セットのプロパティです。 *ミラー化メディア セット* は、メディア セットの複数のコピー (*ミラー*) で構成されています。 メディア セットには、1 つ以上のメディア ファミリが含まれており、各メディア ファミリが 1 つのバックアップ デバイスに対応します。 たとえば、BACKUP DATABASE ステートメントの TO 句に 3 つのデバイスを指定する場合、BACKUP によって 1 つのデバイスにつき 3 つのメディア ファミリにデータが分散されます。 メディア ファミリとミラーの数は、メディア セットを作成するときに定義します (BACKUP DATABASE ステートメントで WITH FORMAT を指定します)。  
   
  ミラー化メディア セットには、2 ～ 4 つのミラーがあります。 各ミラーには、メディア セットのすべてのメディア ファミリが含まれます。 ミラーには、メディア ファミリ 1 つにつき、同数のデバイスが必要です。 各ミラーには、メディア ファミリごとに別のバックアップ デバイスが必要です。 たとえば、3 つのミラーを持つ 4 つのメディア ファミリで構成されるミラー化メディア セットには、12 台のバックアップ デバイスが必要です。 これらのデバイスはすべて同等であることが必要です。 たとえば、同じ製造元で同じモデル番号のテープ ドライブなどです。  
   
@@ -55,28 +53,27 @@ ms.locfileid: "62876096"
   
  ミラーの対応するボリュームは、同じ内容です。 これにより、復元時にボリュームを交換できます。 たとえば、上の図では、テープ 2 の 3 番目のボリュームは、テープ 0 の 3 番目のボリュームと交換可能です。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、ミラー化メディアの内容がすべて同じになるように、デバイスへの書き込みの同期をとっています。 いずれかのミラーが満杯になると、同じことが同時にすべてのミラーに起こります。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、ミラー化メディアの内容がすべて同じになるように、デバイスへの書き込みの同期をとっています。 いずれかのミラーが満杯になると、同じことが同時にすべてのミラーに起こります。  
   
 > [!IMPORTANT]  
 >  ミラー化メディア セットは、ミラーを削除することによって暗黙的に分割できません。 ミラー内のいずれかのテープまたはディスクが損傷を受けたり再フォーマットされたりすると、そのミラーはその後のバックアップに使用できなくなります。 少なくとも 1 つのミラーが完全な状態になっていれば、メディア セットを読み取ることができます。 すべてのミラーで特定のメディア ファミリが失われると、そのメディア セットは使用できなくなります。  
   
  すべてのミラーが存在する必要があるかどうかは、バックアップ操作と復元操作で異なります。 ミラー化メディア セットを書き込む (作成または拡張する) バックアップ操作では、すべてのミラーが存在する必要があります。 一方、ミラー化メディア セットからバックアップを復元する場合は、各メディア ファミリに対して 1 つのミラーだけを指定できます。 ファミリ数よりも少ない数のデバイスからでも復元できますが、各メディア ファミリが処理されるのは 1 回だけです。 エラーが発生したとき、他に複数のミラーを用意しておくと復元に関する問題をすばやく解決できる場合があります。 損傷したメディア ボリュームは、別のミラーの対応するボリュームで代替できます。 これは、RESTORE および RESTORE VERIFYONLY によって、壊れたメディアと他のミラーの対応するバックアップ メディア ボリュームが置換されるためです。  
   
-##  <a name="HardwareReqs"></a>バックアップミラーのハードウェア要件  
+##  <a name="hardware-requirements-for-backup-mirrors"></a><a name="HardwareReqs"></a> バックアップ ミラーのハードウェア要件  
  ミラー化は、ディスクとテープの両方に適用されます (ディスクでは連続テープはサポートされていません)。 同一のバックアップ操作または復元操作に使用するバックアップ デバイスはすべて同じ種類、つまりディスクまたはテープのいずれかにする必要があります。  
   
  これらの大まかな種類の中では、同じプロパティを持つ同等のデバイスを使用する必要があります。 デバイスが同等でない場合は、エラー メッセージ (3212) が表示されます。 デバイスの不適合によって生じるリスクを回避するには、同じ製造元で同じモデル番号のドライブのみを使用するなど、同等のデバイスを使用してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
- **ミラー化されたバックアップデバイスにバックアップするには**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
+ **ミラー化バックアップ デバイスにバックアップするには**  
   
--   [Transact-sql&#41;&#40;ミラー化されたメディアセットへのバックアップ](back-up-to-a-mirrored-media-set-transact-sql.md)  
+-   [ミラー化メディア セットへのバックアップ &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [バックアップおよび復元中に発生する可能性のあるメディアエラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
- [バックアップデバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)   
- [メディアセット、メディアファミリ、およびバックアップセット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
+ [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)   
+ [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

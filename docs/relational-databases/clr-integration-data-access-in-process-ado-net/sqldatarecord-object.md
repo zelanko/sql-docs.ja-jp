@@ -1,5 +1,6 @@
 ---
 title: SqlDataRecord オブジェクト |Microsoft Docs
+description: SQL Server CLR 統合では、ストアドプロシージャは SqlDataRecord クラスを使用して、クライアントにカスタム結果セットを送信できます。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765434"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SqlDataRecord**オブジェクトは、関連するメタデータと共に1行のデータを表します。  
   
  マネージストアドプロシージャは、 **SqlDataReader**からではないクライアント結果セットに送信できます。 **SqlDataRecord**クラスは、 **sendresult Start**、 **Sendresult row**、および**SqlPipe**オブジェクトの**sendresultsstart**メソッドと共に、ストアドプロシージャがカスタム結果セットをクライアントに送信できるようにします。  
@@ -87,7 +88,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

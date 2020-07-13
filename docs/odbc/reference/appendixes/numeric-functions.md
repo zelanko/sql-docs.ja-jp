@@ -11,14 +11,14 @@ helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 03da5b6644e0f7df3dc4e5e16a211cb503023bad
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990729"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299872"
 ---
 # <a name="numeric-functions"></a>数値関数
 次の表では、ODBC スカラー関数セットに含まれる数値関数について説明します。 SQL_NUMERIC_FUNCTIONS の*情報の種類*を使用して**SQLGetInfo**を呼び出すことによって、ドライバーでサポートされている数値関数をアプリケーションで特定できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "67990729"
   
  CURRENT_DATE、CURRENT_TIME、および CURRENT_TIMESTAMP スカラー関数が、SQL-92 に合わせて ODBC 3.0 に追加されました。  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |**ABS (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*の絶対値を返します。|  
 |**ACOS (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*のアークコサインをラジアンで表した角度として返します。|  

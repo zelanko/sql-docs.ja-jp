@@ -1,7 +1,8 @@
 ---
 title: BINARY BASE64 オプションの使用 | Microsoft Docs
+description: SQL クエリで BINARY BASE64 オプションを使用して、base64 エンコード形式のバイナリ データを取得する方法について説明します。
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: eb192cdb9a7e9ffb43561b3b642f60144861c6df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 03ada0a70977968914cd00c14c279921a0652a2c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71199455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738388"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 オプションの使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 クエリに BINARY BASE64 オプションを指定すると、バイナリ データが base64 エンコード形式で返されます。
 

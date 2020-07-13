@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 108a9b981debc95e182b16847c39a03d4b242088
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012206"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>sysperfinfo.cntr_value から bigint 型の値を受け取れるようにアプリケーションを変更する
-  sysperfinfo は、 `bigint` cntr_value 列の値を返します。  
+  sysperfinfo は `bigint` 、cntr_value 列の値を返します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f83676f981742158ffad7f2d9ac5b50949172fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014868"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060079"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの削除 (SQLXML 4.0)
-  アップデートグラムは、レコードインスタンスが** \<after>** ブロックに対応するレコードがない>ブロックの** \<前**にある場合に、削除操作を示します。 この場合、アップデートグラムでは、 ** \<データベースから before>** ブロックのレコードが削除されます。  
+  アップデートグラムでは、ブロック内にレコードインスタンスが存在し、対応するレコードがブロック内にない場合の削除操作を示し **\<before>** **\<after>** ます。 この場合、アップデートグラムではブロック内のレコードがデータベースから削除され **\<before>** ます。  
   
  削除操作のアップデートグラムの形式は次のとおりです。  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66014868"
 </ROOT>  
 ```  
   
- アップデートグラムが削除操作のみを実行している場合は、 ** \<after>** タグを省略できます。 省略可能`mapping-schema`な属性を指定しない場合、アップデートグラムで指定した** \<ElementName>** はデータベーステーブルにマップされ、子要素または属性はテーブル内の列にマップされます。  
+ **\<after>** アップデートグラムが削除操作のみを実行している場合は、タグを省略できます。 省略可能な属性を指定しない場合 `mapping-schema` 、 **\<ElementName>** アップデートグラムで指定したはデータベーステーブルにマップされ、子要素または属性はテーブル内の列にマップされます。  
   
- アップデートグラムで指定された要素が、テーブル内の複数の行に一致するか、いずれの行とも一致しない場合、アップデートグラムはエラーを返し、 ** \<同期>** ブロック全体をキャンセルします。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
+ アップデートグラムで指定した要素が、テーブル内の複数の行に一致するか、いずれの行とも一致しない場合、アップデートグラムではエラーが返され、ブロック全体がキャンセルされ **\<sync>** ます。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
   
 ## <a name="examples"></a>例  
  この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
@@ -55,7 +54,7 @@ ms.locfileid: "66014868"
   
  この例のアップデートグラムでは、マッピング スキーマを指定しません。 したがって、アップデートグラムでは既定のマッピングが使用されます。このマッピングでは、要素名はテーブル名にマップされ、属性または副要素は列にマップされます。  
   
- この最初のアップデートグラムは属性中心であり、 ** \<before>** ブロックの2つのシフト (日、夜、夜) を識別します。 >ブロックの** \<後**に対応するレコードがないため、これは削除操作です。  
+ この最初のアップデートグラムは属性中心で、ブロック内の2つのシフト (日、夜、夜) を識別し **\<before>** ます。 ブロック内に対応するレコードがないため **\<after>** 、これは削除操作です。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -82,7 +81,7 @@ ms.locfileid: "66014868"
   
 1.  「 [XML アップデートグラムを使用してデータを挿入する](inserting-data-using-xml-updategrams-sqlxml-4-0.md)」の例 B (「アップデートグラムを使用して複数のレコードを挿入する」) を実行します。 &#40;SQLXML 4.0&#41;。  
   
-2.  上記のアップデートグラムをメモ帳にコピーし、Updategram-RemoveShifts として保存したのと同じフォルダー (「アップデートグラムを使用して複数のレコードを挿入する」) で、「 [Xml アップデート&#41;4.0 &#40;グラム](inserting-data-using-xml-updategrams-sqlxml-4-0.md)を使用してデータを挿入する」に記載されているものと同じフォルダーにとして保存します。  
+2.  上のアップデートグラムをメモ帳にコピーして、「 [XML アップデートグラムを使用したデータの挿入](inserting-data-using-xml-updategrams-sqlxml-4-0.md)」の「アップデートグラムを使用して複数のレコードを挿入する」で使用したのと同じフォルダーに Updategram-RemoveShifts.xml として保存します。 &#40;SQLXML 4.0&#41;。  
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   

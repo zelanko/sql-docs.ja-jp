@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105588"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
@@ -31,7 +31,7 @@ ms.locfileid: "66105588"
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint フォルダーへのレポート パーツの直接アップロード  
- レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../activate-report-server-file-sync-feature-sharepoint-central-administration.md)」をご覧ください。  
+ レポート パーツが、レポート作成アプリケーションからパブリッシュされるのではなく、SharePoint ドキュメント フォルダーに直接アップロードされた場合は、レポート サーバー カタログは更新されません。 レポート パーツ ギャラリーから検索しても、アップロードされたレポート パーツは見つかりません。 SharePoint フォルダーとレポート サーバー カタログの同期を維持するには、SharePoint サーバー上で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル同期機能をアクティブ化します。 詳細については、「SharePoint サーバーの[全体管理でレポートサーバー File Sync 機能をアクティブにする](../activate-report-server-file-sync-feature-sharepoint-central-administration.md)」を参照してください。  
   
  ファイルは、GetProperties や SetProperties などの、一部の Reporting Services 管理 API を呼び出すことによって同期することもできます。  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66105588"
   
  (*) は、このリリースでの新規フィールドを示しています。  
   
-|プロパティ|[説明]|レポート パーツ<br /><br /> ギャラリーの検索条件|  
+|プロパティ|説明|レポート パーツ<br /><br /> ギャラリーの検索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
-|[説明]|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|はい|  
+|名前|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
+|説明|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|はい|  
 |CreatedBy|レポート パーツをレポート サーバー データベースに追加したユーザーの ID です。 正確な形式は、認証の方法によって異なります。 たとえば、一部の認証方法では、CreatedBy フィールドおよび ModifiedBy フィールドに完全なドメインとユーザー名が表示されます。|はい|  
 |CreationDate|レポート パーツが最初に作成された日付です。<br /><br /> ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
 |ModifiedBy|ModifiedBy はレポート パーツを最後に変更したユーザーの ID です。|はい|  
@@ -67,18 +67,18 @@ ms.locfileid: "66105588"
   
 ### <a name="server-in-native-mode"></a>ネイティブ モードのサーバー  
   
-|アクション|ロール|  
+|Actions|ロール|  
 |-------------|-----------|  
 |アイテム プロパティの追加、削除、編集、セキュリティの管理、およびレポート パーツのダウンロード|コンテンツ マネージャー<br /><br /> 個人用レポート|  
-|レポート パーツの追加、削除、およびダウンロード|Publisher|  
-|検索および再利用|Browser<br /><br /> レポート ビルダー|  
+|レポート パーツの追加、削除、およびダウンロード|発行元|  
+|検索および再利用|ブラウザー<br /><br /> レポート ビルダー|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 統合モードのサーバー  
   
-|アクション|役割|  
+|Actions|Role|  
 |-------------|----------|  
 |アイテム プロパティの追加、削除、編集、セキュリティの管理、およびレポート パーツのダウンロード|フル コントロール|  
-|アイテム プロパティの追加、削除、編集、およびレポート パーツのダウンロード|デザイン<br /><br /> 投稿|  
+|アイテム プロパティの追加、削除、編集、およびレポート パーツのダウンロード|設計<br /><br /> 投稿|  
 |検索および再利用|Read<br /><br /> 表示のみ|  
   
 ### <a name="security-considerations"></a>セキュリティに関する考慮事項  
@@ -91,7 +91,7 @@ ms.locfileid: "66105588"
 -   レポート パーツでは、既存のアイテムの種類である "リソース" と同じ権限ポリシーが使用されます。 フォルダー内では、セキュリティ継承の観点からは、従来のリソース アイテムとレポート パーツとの区別はありません。 レポート パーツは、同じフォルダー内にある画像と同じ権限ポリシーを継承します。 この区別が必要な場合は、レポート パーツに対してアイテム レベルのセキュリティを構成できます。 または、適切な権限が構成されている別々のフォルダーにレポート パーツを保存することができます。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [レポートビルダー内のレポートパーツとデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [[全般] プロパティページ、レポートパーツ &#40;レポートマネージャー&#41;](../general-properties-page-report-parts-report-manager.md)   
  [[項目の移動] ページ &#40;レポートマネージャー&#41;](../move-items-page-report-manager.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

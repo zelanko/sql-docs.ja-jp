@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9e4b1de28ca94e244d4a172e37672260d65b9d54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62704723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058278"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>プロジェクト内の接続のプロパティを表示または変更する方法
   プロジェクトに保存されている接続のプロパティは表示することができ、一部のプロパティは修正が可能です。  

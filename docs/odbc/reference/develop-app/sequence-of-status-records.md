@@ -12,14 +12,14 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb26731a85d1d6313658fe9c24a32167b351d2d9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094347"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304173"
 ---
 # <a name="sequence-of-status-records"></a>状態レコードのシーケンス
 2つ以上の状態レコードが返された場合、ドライバーマネージャーとドライバーは、次の規則に従ってそれらを順位付けします。 ランクが最も高いレコードが最初のレコードになります。 レコードの順位付け時には、レコードのソース (ドライバーマネージャー、ドライバー、ゲートウェイなど) は考慮されません。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966270"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764909"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner メソッド (ADOX)
 [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)内のオブジェクトの所有者を返します。  
@@ -44,9 +44,9 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  オブジェクトの所有者を取得するオブジェクトの型を指定する、 [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つを指定する**Long 型**の値です。  
   
  *ObjectTypeId*  
- 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  プロバイダーがオブジェクトの所有者を返すことをサポートしていない場合、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

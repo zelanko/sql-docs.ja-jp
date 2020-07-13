@@ -10,15 +10,14 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abcad704ed02655c03a970d3fe4b80556b96cf69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62772136"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439399"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -37,7 +36,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure HDInsight 接続マネージャー](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   処理手順  
+-   タスク  
   
     -   [Azure BLOB のアップロード タスク](control-flow/azure-blob-upload-task.md)  
   
@@ -77,7 +76,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロー
 この機能パックをインストールする前に、次の前提条件をインストールする必要があります。  
   
 -   SQL Server Integration Services  
--   .Net Framework 4.5  
+-   .NET Framework 4.5  
   
 ## <a name="scenarios"></a>シナリオ  
   

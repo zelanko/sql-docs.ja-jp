@@ -1,5 +1,6 @@
 ---
 title: アセンブリを変更する |Microsoft Docs
+description: ALTER ASSEMBLY を使用して SQL Server に登録されているアセンブリを更新します。 また、アクセス許可セットを変更したり、アセンブリのソースコードやその他のファイルを追加したりすることもできます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80ef9d283f90c50406477a7a651fb418694ae445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b378f5a57b964521e511c99a7432017183076177
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027952"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885952"
 ---
 # <a name="altering-an-assembly"></a>アセンブリの変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録されているアセンブリは、ALTER ASSEMBLY ステートメントを使用することで、比較的最近のバージョンから更新できます。 アセンブリを更新するには、ALTER ASSEMBLY ステートメントを次の構文で使用します。  
   
 ```  
@@ -52,10 +52,10 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [アセンブリの削除](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [ALTER ASSEMBLY &#40;Transact-sql&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

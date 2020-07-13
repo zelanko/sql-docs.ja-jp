@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102526"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint ライブラリへのレポートのパブリッシュ
@@ -30,9 +30,9 @@ ms.locfileid: "66102526"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で既存または新規のレポート サーバー プロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 _[\<プロジェクト>_ **プロパティ ページ]** ダイアログ ボックスが開きます。  
+2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 [ _ \<プロジェクト>_**プロパティページ**] ダイアログボックスが表示されます。  
   
-3.  **[構成]** ボックスで、レポートのビルドとパブリッシュに使用するソリューション ビルド構成の名前を選択します。 現在の構成は **[アクティブ]** ( *\<configuration>* ) として表示されます。  
+3.  **[構成]** ボックスで、レポートのビルドとパブリッシュに使用するソリューション ビルド構成の名前を選択します。 現在の構成は、**アクティブ**(*\<構成>*) として表示されます。  
   
 4.  プロジェクトの共有データ ソースをパブリッシュし、以前にパブリッシュされた共有データ ソースを上書きするには、 **[OverwriteDataSources]** を **[True]** に設定します。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "66102526"
 9. ソリューション エクスプローラーで、パブリッシュするレポートを右クリックし、 **[配置]** をクリックします。 これで、 **[TargetReportFolder]** で指定した場所にレポートがパブリッシュされます。 配置エラーは出力ウィンドウに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[プロパティ ページ] ダイアログ ボックス](../tools/project-property-pages-dialog-box.md)   
- [配置プロパティを設定する (Reporting Services)](../tools/set-deployment-properties-reporting-services.md)   
- [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
- [SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [[プロジェクトプロパティページ] ダイアログボックス](../tools/project-property-pages-dialog-box.md)   
+ [展開プロパティを設定 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [レポートサーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)   
+ [SharePoint モードのレポートサーバー上のパブリッシュされたレポートアイテムの URL の例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [レポートで Office Data Connection &#40;.odc&#41; を使用する &#40;Reporting Services の SharePoint 統合モード&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e538a7cfb9b922bd7960fa5833f5a3c3d14da918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d0878f1501429bf148ab833285f234089eeacceb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660025"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880515"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   詳細プロパティの文字列値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "73660025"
 object.PropertyStrValue [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  詳細プロパティを表す[Sqlserviceadvanced プロパティクラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティの値を指定する文字列値  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

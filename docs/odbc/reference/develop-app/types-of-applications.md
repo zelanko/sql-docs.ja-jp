@@ -14,14 +14,14 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087805"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305533"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  

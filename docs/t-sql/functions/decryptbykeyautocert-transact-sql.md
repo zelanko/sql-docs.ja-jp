@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a8772e2e1ecb001b26db02750ae134f545180113
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3da50d9d0be3c206c6d3e8556021a3b988ad2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314565"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901655"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、対称キーでデータを復号します。 その対称キーは、証明書で自動的に復号されます。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "71314565"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  

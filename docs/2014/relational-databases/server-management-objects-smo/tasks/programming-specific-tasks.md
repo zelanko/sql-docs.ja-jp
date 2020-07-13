@@ -17,31 +17,28 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7e600048088dbc9e5c459f976720f1e626dcf5e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63158711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063093"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
   SMO オブジェクトを使用したプログラミングに特有のタスクには、バックアップ、統計の監視、レプリケーション、インスタンス オブジェクトの管理、および構成オプションの設定など、特定の関数を使用したプログラムにのみ必要となる場合がある複雑な処理が含まれています。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SMO でのリンク サーバーの使用](using-linked-servers-in-smo.md)|SMO が <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> オブジェクトを使用して OLE-DB サーバーをリンクする方法について説明します。|  
 |[SMO での SQL Server の構成](configuring-sql-server-in-smo.md)|SMO で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの構成設定を確認および変更する方法について説明します。|  
 |[テーブルおよびインデックスのパーティション分割の使用](using-table-and-index-partitioning.md)|SMO でインデックスおよびテーブル分割を使用する方法について説明します。|  
 |[ファイルとファイル グループを使用したデータの格納](using-filegroups-and-files-to-store-data.md)|SMO でファイル グループを使用する方法について説明します。|  
-|[WMI プロバイダーを使用したサービスの管理とネットワーク設定](managing-services-and-network-settings-by-using-wmi-provider.md)|構成管理用の WMI プロバイダーを表す [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクトを使用して、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> のインスタンスを追跡するいくつかの方法について説明します。|  
-|[データベース オブジェクトでの作業](creating-altering-and-removing-database-objects.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
+|[WMI プロバイダーを使用したサービスの管理とネットワーク設定](managing-services-and-network-settings-by-using-wmi-provider.md)|構成管理用の WMI プロバイダーを表す <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを追跡するいくつかの方法について説明します。|  
+|[データベース オブジェクトでの作業](creating-altering-and-removing-database-objects.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表すインスタンス クラスを作成する方法について説明します。|  
 |[ユーザー、ロール、およびログインの管理](managing-users-roles-and-logins.md)|SMO でセキュリティ ロールを使用する方法について説明します。|  
 |[権限の許可、取り消し、および拒否](granting-revoking-and-denying-permissions.md)|SMO を使用して、ユーザーまたはロールのメンバーに対して権限の許可、取り消し、および拒否を行う方法について説明します。|  
 |[暗号化の使用](using-encryption.md)|SMO で暗号化を使用してデータを保護する方法について説明します。|  
-|[SQL Server エージェントでの自動管理タスクのスケジュール設定](../../../ssms/agent/sql-server-agent.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用して、SMO のジョブの監視、レポート、およびスケジュール設定を行う方法について説明します。|  
+|[SQL Server エージェントでの自動管理タスクのスケジュール設定](../../../ssms/agent/sql-server-agent.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用して、SMO のジョブの監視、レポート、およびスケジュール設定を行う方法について説明します。|  
 |[データベースおよびトランザクション ログのバックアップと復元](backing-up-and-restoring-databases-and-transaction-logs.md)|SMO でデータベースおよびトランザクション ログのバックアップと復元を行う方法について説明します。|  
 |[スクリプトの作成](scripting.md)|SMO で、オブジェクトのスクリプト化およびオブジェクト間の依存関係の検出を行う方法について説明します。|  
 |[データの転送](transferring-data.md)|SMO でデータを転送する方法について説明します。|  

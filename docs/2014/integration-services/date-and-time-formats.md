@@ -12,15 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059646"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429709"
 ---
 # <a name="date-and-time-formats"></a>日付および時刻の形式
   高速解析は、データを解析するための高速で単純なルーチンのセットです。 高速解析では、日付および時刻のデータ型に対し次の形式がサポートされています。  
@@ -32,7 +31,7 @@ ms.locfileid: "66059646"
   
 -   次の表に示す ISO 8601 形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY-MM|4 桁の年および 2 桁の月を表す、有効桁数を減らした基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
@@ -52,7 +51,7 @@ ms.locfileid: "66059646"
   
  高速解析では、DT_DBDATE としてデータを出力します。 切り捨て形式の日付の値は、埋め込まれます。 たとえば、YYYY は YYYY0101 になります。  
   
- 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+ 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="time-data-type"></a>時刻データ型  
  高速解析では、次の文字列形式の時刻データがサポートされています。  
@@ -63,7 +62,7 @@ ms.locfileid: "66059646"
   
 -   次の表に示す ISO 8601 時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|2 桁の時、2 桁の分、および 2 桁の秒を表す、基本および拡張形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
     |HHMI<br /><br /> HH:MI|2 桁の時と 2 桁の分を表す、基本および拡張の切り捨て形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
@@ -72,7 +71,7 @@ ms.locfileid: "66059646"
   
 -   次の表に示す、タイム ゾーンを指定する時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|ローカル時間を求めるために協定世界時 (UTC) に加算される時間数と分数を示す基本形式と拡張形式。|  
     |-HH:MI<br /><br /> -HHMI|ローカル時間を求めるために協定世界時 (UTC) から減算される時間数と分数を示す基本形式と拡張形式。|  
@@ -80,7 +79,7 @@ ms.locfileid: "66059646"
     |-HH|ローカル時間を求めるために UTC から減算される時間数を示す切り捨て形式。|  
     |Z|時間が UTC で表されていることを示す 0 の値。|  
   
-     タイム ゾーン要素を含むことのできるすべての時刻および日付/時刻データの形式。 ただし、データが DT_DBTIMESTAMPOFFSET 型以外の場合、タイム ゾーン値は無視されます。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+     タイム ゾーン要素を含むことのできるすべての時刻および日付/時刻データの形式。 ただし、データが DT_DBTIMESTAMPOFFSET 型以外の場合、タイム ゾーン値は無視されます。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
      タイム ゾーン要素を含む形式では、次の例に示すように、時間要素とタイム ゾーン要素の間にスペースはありません。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66059646"
   
 -   次の表に示す、小数部を含む時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n は、時間の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 12.750 は 12:45 を示します。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n は、分の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 1220.500 は 12:20:30 を示します。|  
@@ -107,7 +106,7 @@ ms.locfileid: "66059646"
   
  高速解析では、DT_DBTIME および DT_DBTIME2 として文字列を出力します。 切り捨て形式の時刻値は、埋め込まれます。 たとえば、HH:MI は HH:MM:00.000 になります。  
   
- 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+ 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="datetime-data-type"></a>日付/時刻データ型  
  高速解析では、次の文字列形式の日付/時刻データがサポートされています。  
@@ -120,14 +119,14 @@ ms.locfileid: "66059646"
   
  高速解析では、DT_DATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET として文字列を出力します。 切り捨て形式の日付/時刻値は、埋め込まれます。 次の表に、欠けている日付および時刻の部分に対して追加される値を示します。  
   
-|日付/時刻部分|パディング|  
+|日付/時刻部分|余白|  
 |---------------------|-------------|  
 |Seconds|00 が追加されます。|  
 |分|00:00 が追加されます。|  
-|時|00:00:00 が追加されます。|  
-|日|月の日付として 01 が追加されます。|  
+|時間|00:00:00 が追加されます。|  
+|日間|月の日付として 01 が追加されます。|  
 |月|年の月として 01 が追加されます。|  
   
- 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+ 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
   

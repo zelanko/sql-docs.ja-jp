@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0e9a67ddf9ff079c4ff5075b8601aec4c0922e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63460047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000596"
 ---
 # <a name="granting-access-to-a-database"></a>データベースへのアクセス権の付与
   これで Mary は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のこのインスタンスにアクセスできますが、データベースにアクセスする権限がありません。 データベースのユーザーとして承認されるまでは、既定の **TestData** データベースにさえアクセスできません。  
@@ -40,6 +39,6 @@ ms.locfileid: "63460047"
      これで、Mary は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と `TestData` の両方のデータベースにアクセスできます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ビューとストアド プロシージャの作成](lesson-2-3-creating-views-and-stored-procedures.md)  
+ [ビューとストアドプロシージャの作成](lesson-2-3-creating-views-and-stored-procedures.md)  
   
   

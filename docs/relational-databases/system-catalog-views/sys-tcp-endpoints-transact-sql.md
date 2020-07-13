@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9355cc5c9aeafc6da302a12af3e276d8f5b35c97
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68116731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899020"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  システム内の TCP エンドポイントごとに1行のレコードを格納します。 Tcp_endpoints によって記述されるエンドポイントは、接続特権を許可および取り消すためのオブジェクトを提供し**ます**。 ポートと IP アドレスについて表示される情報は、プロトコルの構成には使用されず、実際のプロトコル構成と一致しない場合があります。 プロトコルを表示および構成するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、Configuration Manager を使用します。  
+  システム内の TCP エンドポイントごとに1行のレコードを格納します。 Tcp_endpoints によって記述されるエンドポイントは、接続特権を許可および取り消すためのオブジェクトを提供し**ます**。 ポートと IP アドレスについて表示される情報は、プロトコルの構成には使用されず、実際のプロトコル構成と一致しない場合があります。 プロトコルを表示および構成するには、Configuration Manager を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**< 継承された列>**||は、列を継承し[ます。](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)|  
-|**ポート**|INT|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
+|**port**|INT|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
 |**is_dynamic_port**|bit|1 = ポート番号は動的に割り当てられました。<br /><br /> NULL 値は許可されません。|  
 |**ip_address**|**nvarchar (45)**|LISTENER_IP 句によって指定されたリスナーの IP アドレス。 NULL 値が許可されます。|  
   
-## <a name="remarks"></a>解説  
- 次のクエリを実行して、エンドポイントと接続に関する情報を収集します。 現在の接続を使用していないエンドポイント、または TCP 接続がないエンドポイントは、NULL 値で表示されます。 現在の**** 接続に`WHERE des.session_id = @@SPID`関する情報を返す where 句を追加します。  
+## <a name="remarks"></a>Remarks  
+ 次のクエリを実行して、エンドポイントと接続に関する情報を収集します。 現在の接続を使用していないエンドポイント、または TCP 接続がないエンドポイントは、NULL 値で表示されます。 **WHERE** `WHERE des.session_id = @@SPID` 現在の接続に関する情報を返す where 句を追加します。  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -56,10 +56,10 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

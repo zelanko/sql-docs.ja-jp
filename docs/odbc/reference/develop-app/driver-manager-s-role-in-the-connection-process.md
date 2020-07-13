@@ -13,14 +13,14 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046941"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305803"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>接続プロセスの Driver Manager&#39;s ロール
 アプリケーションがドライバー関数を直接呼び出すことはないことに注意してください。 代わりに、同じ名前でドライバーマネージャーの関数を呼び出し、ドライバーマネージャーがドライバーの機能を呼び出します。 通常、これはほぼ即座に発生します。 たとえば、アプリケーションがドライバーマネージャーで**Sqlexecute**を呼び出し、いくつかのエラーチェックが行われた後、ドライバーマネージャーがドライバーで**sqlexecute**を呼び出します。  

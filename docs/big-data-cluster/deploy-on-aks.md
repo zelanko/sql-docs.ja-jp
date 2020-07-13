@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service の構成
 titleSuffix: SQL Server Big Data Clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。'
+description: SQL Server 2019 ビッグ データ クラスターの展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 39bebccfc01d379a2c3839fcd7f8fd8824aa18e4
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531101"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606934"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -76,7 +76,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    az account list-locations -o table
    ```
 
-1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`sqlbdcgroup` の場所に `westus2` という名前のリソース グループを作成します。
+1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -110,7 +110,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが *Standard_L8s* の Linux エージェント ノードを 1 つ備えた **kubcluster** という名前の Kubernetes クラスターを作成します。
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
 
    スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
 

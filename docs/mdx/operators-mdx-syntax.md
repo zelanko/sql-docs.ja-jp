@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892113"
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
@@ -30,14 +30,14 @@ ms.locfileid: "68892113"
   
  MDX では、以下の表に示す演算子がサポートされます。  
   
-|演算の種類|用途|  
+|演算の種類|使用|  
 |---------------------------------------|---------|  
 |変数に値を割り当てるか、または結果セット列を別名に関連付けます。|[代入演算子](../mdx/assignment-operators.md)|  
 |加算、減算、乗算、除算。|[算術演算子](../mdx/arithmetic-operators.md)|  
-|AND、OR、NOT、XOR などの条件の真偽をテストします。|[ビット演算子](../mdx/bitwise-operators.md)|  
+|AND、OR、NOT、XOR などの条件の真偽をテストします。|[ビット処理演算子](../mdx/bitwise-operators.md)|  
 |値を他の値または式と比較します。|[比較演算子](../mdx/comparison-operators.md)|  
 |2 つの文字列を永続的または一時的に 1 つの文字列に結合します。|[連結演算子](../mdx/concatenation-operators.md)|  
-|2つのセット式を1つのセットに永続的または一時的に結合します。|[セット演算子](../mdx/set-operators.md)|  
+|2つのセット式を1つのセットに永続的または一時的に結合します。|[集合演算子](../mdx/set-operators.md)|  
 |1つのオペランドに対して演算を実行します。|[単項演算子](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ ms.locfileid: "68892113"
   
 -   /, *  
   
--   +, -  
+-   +、-  
   
 -   既存  
   
@@ -95,10 +95,10 @@ ms.locfileid: "68892113"
 |Hierarchy|メンバー|\<階層>。 defaultmember|  
 |メンバー|タプル|(\<メンバー>)|  
 |タプル|メンバー|\<タプル>。 item (0)|  
-|タプル|"スカラー|\<タプル>。値|  
+|タプル|スカラー|\<タプル>。値|  
   
 ## <a name="see-also"></a>参照  
  [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Mdx 構文要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

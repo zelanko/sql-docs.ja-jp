@@ -13,30 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918256"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762533"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 編集中にレコードに適用されるロックの種類を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|オプティミスティックバッチ更新を示します。 バッチ更新モードでは必須です。|  
 |**adLockOptimistic**|3|オプティミスティックロック、レコードごとのレコードを示します。 プロバイダーはオプティミスティックロックを使用し、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出したときにのみレコードをロックします。|  
 |**adLockPessimistic**|2|ペシミスティックロック、レコードごとのレコードを示します。 プロバイダーは、レコードを正常に編集するために必要な処理を実行します。通常は、編集後すぐにデータソースのレコードをロックします。|  
-|**adLockReadOnly**|1 で保護されたプロセスとして起動されました|読み取り専用レコードを示します。 データを変更することはできません。|  
+|**adLockReadOnly**|1|読み取り専用レコードを示します。 データを変更することはできません。|  
 |**adLockUnspecified**|-1|はロックの種類を指定していません。 複製の場合、複製は元と同じロックの種類で作成されます。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums. BATCHOPTIMISTIC|  
 |AdoEnums|  

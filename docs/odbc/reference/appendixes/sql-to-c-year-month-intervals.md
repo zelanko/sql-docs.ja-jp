@@ -13,14 +13,14 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c7412226dd0674022da022b0a0a63e5bf2063cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba79a4d6165a43676634a6b79db56b88f5bcc234
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68065045"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296392"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL から C へ: 年月の間隔
 
@@ -34,11 +34,11 @@ ms.locfileid: "68065045"
 
 |C 型識別子|テスト|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH [a]<br /><br /> SQL_C_INTERVAL_YEAR [a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|末尾のフィールド部分が切り捨てられていません<br /><br /> 末尾のフィールドの一部が切り捨てられました<br /><br /> ターゲットの先頭の有効桁数が、ソースからのデータを保持するのに十分な大きさではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|間隔の有効桁数が1つのフィールドであり、切り捨てずにデータが変換されました<br /><br /> 間隔の精度は1つのフィールドで、全体が切り捨てられました<br /><br /> 間隔の有効桁数が1つのフィールドではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> データの長さ (バイト単位)<br /><br /> C データ型のサイズ|該当なし<br /><br /> 22003<br /><br /> 22015|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 22003|  
-|SQL_C_CHAR|文字のバイト長 < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|文字の長さ < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [a]<br /><br /> SQL_C_INTERVAL_YEAR [a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|末尾のフィールド部分が切り捨てられていません<br /><br /> 末尾のフィールドの一部が切り捨てられました<br /><br /> ターゲットの先頭の有効桁数が、ソースからのデータを保持するのに十分な大きさではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|間隔の有効桁数が1つのフィールドであり、切り捨てずにデータが変換されました<br /><br /> 間隔の精度は1つのフィールドで、全体が切り捨てられました<br /><br /> 間隔の有効桁数が1つのフィールドではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> データの長さ (バイト単位)<br /><br /> C データ型のサイズ|該当なし<br /><br /> 22003<br /><br /> 22015|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_CHAR|文字のバイト長 < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|文字の長さ < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
   
  [a] 年月間隔の SQL 型は、任意の年の月の C 型に変換できます。  
   

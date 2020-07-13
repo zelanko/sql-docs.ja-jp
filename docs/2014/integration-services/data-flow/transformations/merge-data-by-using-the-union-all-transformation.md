@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c537ff20c91cd280d56050dd3514a7345a69c90
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770344"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430329"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>全体結合変換を使用してデータをマージする
   全体結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 2 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -38,7 +37,7 @@ ms.locfileid: "62770344"
   
 4.  全体結合変換をダブルクリックします。  
   
-5.  **[全体結合変換エディター]** で、入力の一覧の行をクリックして次に列を選択し、入力の列を **[出力列の名前]** 一覧にある列にマップします。 列のマッピングをスキップするには、入力の一覧で **[\<無視>]** を選択します。  
+5.  **[全体結合変換エディター]** で、入力の一覧の行をクリックして次に列を選択し、入力の列を **[出力列の名前]** 一覧にある列にマップします。 入力リストでを選択して、 **\<ignore>** 列のマッピングをスキップします。  
   
     > [!NOTE]  
     >  2 つの列の間のマッピングでは、列のメタデータが一致する必要があります。  

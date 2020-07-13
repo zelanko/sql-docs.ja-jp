@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653864"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>レッスン 3: Market Basket マイニング構造の処理
@@ -33,11 +33,9 @@ ms.locfileid: "62653864"
   
 -   マイニング構造の列の一覧  
   
--   
-  `SHAPE` によるトレーニング データの定義  
+-   `SHAPE` によるトレーニング データの定義  
   
- 
-  `INSERT INTO` ステートメントの汎用例を次に示します。  
+ `INSERT INTO` ステートメントの汎用例を次に示します。  
   
 ```  
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
@@ -62,8 +60,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- コードの次の数行では、マイニング構造で定義される列を指定します。 ここではマイニング構造の各列を指定する必要があります。各列はソース クエリ データ内の列にマップされている必要があります。 
-  `SKIP` を使用すると、ソース データに存在するがマイニング構造に存在しない列を無視できます。 の使用`SKIP`方法の詳細については、「 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)」を参照してください。  
+ コードの次の数行では、マイニング構造で定義される列を指定します。 ここではマイニング構造の各列を指定する必要があります。各列はソース クエリ データ内の列にマップされている必要があります。 `SKIP` を使用すると、ソース データに存在するがマイニング構造に存在しない列を無視できます。 の使用`SKIP`方法の詳細については、「 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)」を参照してください。  
   
 ```  
 (  
@@ -109,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Market Basket  
@@ -123,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [OrderNumber],  
@@ -131,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     このステートメントでは、`Products` は SHAPE ステートメントで定義される Products テーブルを参照します。 
-  `SKIP` は、ソース データにキーとして存在する Model 列を無視するために使用します。マイニング構造に対しては使用できません。  
+     このステートメントでは、`Products` は SHAPE ステートメントで定義される Products テーブルを参照します。 `SKIP` は、ソース データにキーとして存在する Model 列を無視するために使用します。マイニング構造に対しては使用できません。  
   
 5.  次の部分を探します。  
   
@@ -147,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     SHAPE {  
@@ -164,8 +160,7 @@ RELATE [<case key>] TO [<foreign key>]
   
      ソースクエリは、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプルプロジェクトで定義されているデータソースを参照します。 ソース クエリはこのデータ ソースを使用して、vAssocSeqLineItems ビューと vAssocSeqOrders ビューにアクセスします。 これら 2 つのビューには、マイニング モデルのトレーニングに使用されるソース データが含まれます。 このプロジェクトまたはこれらのビューを作成していない場合は、「[基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)」を参照してください。  
   
-     
-  `SHAPE` コマンド内では、`OPENQUERY` を使用して 2 つのクエリを定義します。 最初のクエリでは親テーブルを定義し、2 つ目のクエリでは入れ子になったテーブルを定義します。 2 つのテーブルは、両方のテーブルに存在する OrderNumber 列を使用して関連付けられます。  
+     `SHAPE` コマンド内では、`OPENQUERY` を使用して 2 つのクエリを定義します。 最初のクエリでは親テーブルを定義し、2 つ目のクエリでは入れ子になったテーブルを定義します。 2 つのテーブルは、両方のテーブルに存在する OrderNumber 列を使用して関連付けられます。  
   
      最終的なステートメントは次のようになります。  
   

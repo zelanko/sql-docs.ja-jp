@@ -44,7 +44,7 @@ SQL Server インスタンスがない場合は、インスタンスを作成し
 - **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>データベースを作成する
-多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 `CREATE DATABASE` でオプション パラメーターを指定せずに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行すると、これらの多くのパラメーターでは既定値が使用されます。
+多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに `CREATE DATABASE` を実行すると、これらの多くのパラメーターでは既定値が使用されます。
 
 1.  クエリ エディターのウィンドウで、次のコードを入力します。ただし実行しないでください。  
   

@@ -11,24 +11,21 @@ f1_keywords:
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 95ea60385014e5ca8b998b986a66c384f7151081
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080508"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544168"
 ---
 # <a name="importing-ssas"></a>[インポートしています] (SSAS)
+  **テーブルのインポート ウィザード** のこのページを使用すると、インポート操作の進行状況を表示できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-  **テーブルのインポート ウィザード** のこのページを使用すると、インポート操作の進行状況を表示できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
-  
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **詳細**  
  データのインポート操作ごとに以下の情報が表示されます。  
   
-|列|[説明]|  
+|Column|説明|  
 |------------|-----------------|  
 |**作業項目**|インポートするテーブルまたはビューの名前を表示します。|  
 |**状態**|テーブルやビューのインポートに成功したかどうかと、インポートされた行数を示します。|  

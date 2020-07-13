@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC]
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301597"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 関数
 **互換性**  
@@ -36,7 +36,7 @@ ms.locfileid: "68093013"
 > [!NOTE]
 >  Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については、「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 > [!NOTE]  

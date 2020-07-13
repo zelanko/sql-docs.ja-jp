@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4b56fc1d00fe639d78d5f01fe44554b7fe2d7cc7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085860"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524958"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>マイニング構造のプロパティの変更
   マイニング構造には次の 2 種類のプロパティがあり、どちらも変更できます。  
@@ -34,11 +33,9 @@ ms.locfileid: "66085860"
   
 1.  データ マイニング デザイナーの **[マイニング構造]** タブで、マイニング構造またはマイニング構造内の列を右クリックし、 **[プロパティ]** を選択します。  
   
-     
-  **[プロパティ]** ウィンドウが画面の右側に表示されます (まだ表示されていない場合)。  
+     **[プロパティ]** ウィンドウが画面の右側に表示されます (まだ表示されていない場合)。  
   
-2.  
-  **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を選択し、新しい値を入力します。  
+2.  **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を選択し、新しい値を入力します。  
   
      新しい値は、デザイナーで別の要素を選択したときに有効になります。  
   

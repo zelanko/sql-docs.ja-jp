@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-creating-a-remote-table"></a>A. リモート テーブルの作成  
- この例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `MyOrdersTable` SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  
+ この例では、`MyOrdersTable` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

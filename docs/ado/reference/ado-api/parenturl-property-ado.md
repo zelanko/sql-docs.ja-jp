@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761990"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
 現在の**レコード**オブジェクトの親[レコード](../../../ado/reference/ado-api/record-object-ado.md)を指す絶対 URL 文字列を示します。  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- ここで、 `the` **parenturl**プロパティの値は`"https://first"`、 **ActiveConnection**と同じです。  
+ ここで、 `the` **parenturl**プロパティの値は `"https://first"` 、 **ActiveConnection**と同じです。  
   
- ソースには、の`"https://first/second"`ような絶対 URL を指定することもできます。 **Parenturl**プロパティは`"https://first"`、上記`"second"`のレベルです。  
+ ソースには、のような絶対 URL を指定することもでき `"https://first/second"` ます。 **Parenturl**プロパティは `"https://first"` 、上記のレベルです `"second"` 。  
   
  このプロパティは、次の場合に null 値になることがあります。  
   

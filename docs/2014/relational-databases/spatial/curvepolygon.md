@@ -8,37 +8,32 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996397"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  は`CurvePolygon` 、外部境界リングおよび0個以上の内部リングによって定義された位相的閉じサーフェイスです。  
+  は、 `CurvePolygon` 外部境界リングおよび0個以上の内部リングによって定義された位相的閉じサーフェイスです。  
   
 > [!IMPORTANT]  
->  サブタイプを含め、で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]導入された空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。 `CurvePolygon`  
+>  サブタイプを含め、で導入された空間機能の詳細な説明と例については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CurvePolygon` ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。  
   
- 次の条件では、 `CurvePolygon`インスタンスの属性を定義します。  
+ 次の条件では、インスタンスの属性を定義し `CurvePolygon` ます。  
   
--   
-  `CurvePolygon` インスタンスの境界は、外部リングとすべての内部リングによって定義されます。  
+-   `CurvePolygon` インスタンスの境界は、外部リングとすべての内部リングによって定義されます。  
   
--   
-  `CurvePolygon` インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
+-   `CurvePolygon` インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
   
- 
-  `CurvePolygon` インスタンスが `Polygon` インスタンスと異なるのは、`CurvePolygon` インスタンスは円弧 (`CircularString` および `CompoundCurve`) を含む場合があるという点です。  
+ `CurvePolygon` インスタンスが `Polygon` インスタンスと異なるのは、`CurvePolygon` インスタンスは円弧 (`CircularString` および `CompoundCurve`) を含む場合があるという点です。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
  有効な `CurvePolygon` の図を次に示します。  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- 
-  `CurvePolygon` インスタンスが許容されるためには、空であるか、または許容される円弧リングのみを含んでいる必要があります。 許容される円弧リングは、次の要件を満たしています。  
+ `CurvePolygon` インスタンスが許容されるためには、空であるか、または許容される円弧リングのみを含んでいる必要があります。 許容される円弧リングは、次の要件を満たしています。  
   
 1.  許容される `LineString` インスタンス、`CircularString` インスタンス、または `CompoundCurve` インスタンスであること。 許容されるインスタンスの詳細については、「 [LineString](linestring.md)」、「 [CircularString](circularstring.md)」、および「 [CompoundCurve](compoundcurve.md)」を参照してください。  
   
@@ -59,8 +54,7 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 始点と終点の Z 値が異なりますが Z 値は無視されるため、許容されます。 
-  `@g5` は、`geography` 型インスタンスは無効ですが、許容されます。  
+ `@g3` 始点と終点の Z 値が異なりますが Z 値は無視されるため、許容されます。 `@g5` は、`geography` 型インスタンスは無効ですが、許容されます。  
   
  次の例では、 `System.FormatException`がスローされます。  
   
@@ -72,8 +66,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 始点と終点の Y 値が同じでないため、許容されません。 `@g2` リングに十分な数の点が含まれていないため、許容されません。  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- 
-  `CurvePolygon` インスタンスを有効にするためには、外部リングと内部リングの両方が次の条件を満たす必要があります。  
+ `CurvePolygon` インスタンスを有効にするためには、外部リングと内部リングの両方が次の条件を満たす必要があります。  
   
 1.  1 つの接点でのみ接していること。  
   

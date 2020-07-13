@@ -11,14 +11,14 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], defined
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea322346b955fc8e252dc14b78b055d491d14f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04e1f562868d2a38bebd7dc0ffcaefaa8ebf5ee0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069854"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305663"
 ---
 # <a name="fetching-data"></a>データのフェッチ
 結果セットから行を取得してアプリケーションに返すプロセスは、*フェッチ*と呼ばれます。 ここでは、データをフェッチする方法について説明します。  

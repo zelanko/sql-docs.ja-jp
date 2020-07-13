@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75322254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751669"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   このストアド プロシージャにより、SQL Server のパブリッシャー インスタンス側のパブリケーション データベース、または SQL Server のサブスクライバー インスタンス側のサブスクリプション データベースから、すべてのレプリケーション オブジェクトが削除されます。 適切なデータベースで実行するか、または同じインスタンスにある別のデータベースのコンテキストで実行する場合は、レプリケーション オブジェクトを削除するデータベースを指定します。 このプロシージャでは、ディストリビューション データベースなどその他のデータベースからオブジェクトが削除されることはありません。  
   
@@ -42,20 +42,20 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
+`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname* のデータ型は **sysname**で、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
   
 `[ @type = ] type`データベースオブジェクトを削除するレプリケーションの種類を指定します。 *種類*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
   
 |||  
 |-|-|  
 |**さん**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
-|**マージ**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
+|**merge**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
 |**both** (既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_removedbreplication**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_removedbreplication**は、復元する必要のあるレプリケーションオブジェクトを持たないレプリケートされたデータベースを復元する場合に便利です。  
@@ -84,6 +84,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

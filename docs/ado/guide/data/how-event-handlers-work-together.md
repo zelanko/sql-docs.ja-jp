@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758108"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
 Visual Basic でプログラミングする場合を除き、すべてのイベントを実際に処理するかどうかに関係なく、**接続**イベントと**レコードセット**イベントのすべてのイベントハンドラーを実装する必要があります。 実行する必要のある実装作業の量は、プログラミング言語によって異なります。 詳細については、「[言語別の ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
@@ -30,7 +30,7 @@ Visual Basic でプログラミングする場合を除き、すべてのイベ�
 ## <a name="paired-event-handlers"></a>ペアのイベントハンドラー  
  各イベントハンドラーには、関連付けられた**完全な**イベントハンドラーがあります。 たとえば、アプリケーションでフィールドの値が変更された場合、 **「」というイベントハンドラー**が呼び出されます。 変更が許容される場合、アプリケーションは**Adstatus**パラメーターを変更せずにそのまま使用し、操作を実行します。 操作が完了すると、 **FieldChangeComplete**イベントによって、操作が完了したことがアプリケーションに通知されます。 正常に完了した場合、 **Adstatus**は**adstatusok**を含みます。それ以外の場合、 **Adstatus**に**Adstatuserrorの curred**が含まれています。エラーの原因を特定するには、 **error**オブジェクトを確認する必要があります。  
   
- が呼び出されたときに、変更を行わないことを決定**する場合が**あります。 その場合は、 **Adstatus**を**adstatuscancel**に設定します。 操作は取り消され、 **FieldChangeComplete**イベントは**Adstatuserror Curred**の**adstatus**値を受け取ります。 **エラー**オブジェクトには、操作が取り消されたことを**FieldChangeComplete**ハンドラーが認識するように、 **adErrOperationCancelled**が含まれています。 ただし、パラメーターを変更する前に**adstatus**パラメーターの値を確認する必要があります。 Adstatuscancel**に設定**した場合、パラメーターが**** **adstatuscantdeny**に設定されていると、プロシージャには影響しません。  
+ が呼び出されたときに、変更を行わないことを決定**する場合が**あります。 その場合は、 **Adstatus**を**adstatuscancel**に設定します。 操作は取り消され、 **FieldChangeComplete**イベントは**Adstatuserror Curred**の**adstatus**値を受け取ります。 **エラー**オブジェクトには、操作が取り消されたことを**FieldChangeComplete**ハンドラーが認識するように、 **adErrOperationCancelled**が含まれています。 ただし、パラメーターを変更する前に**adstatus**パラメーターの値を確認する必要があります。 Adstatuscancel**に設定**した場合、パラメーターが**adStatusCancel** **adstatuscantdeny**に設定されていると、プロシージャには影響しません。  
   
  場合によっては、1つの操作で複数のイベントを発生させることができます。 たとえば、**レコードセット**オブジェクトには、**フィールド**の変更や**レコード**の変更に関するイベントがペアで含まれています。 アプリケーションが**フィールド**の値を変更すると、"**イベントハンドラー** " が呼び出されます。 操作を続行できると判断された場合**は、発生したイベントハンドラー**も発生します。 また、このハンドラーによってイベントが続行される場合は、変更が行われ、 **FieldChangeComplete**イベントハンドラーと**RecordChangeComplete**イベントハンドラーが呼び出されます。 特定の操作のイベントハンドラーが呼び出される順序は定義されていないため、特定のシーケンスの呼び出しハンドラーに依存するコードを記述しないようにする必要があります。  
   
@@ -45,7 +45,7 @@ Visual Basic でプログラミングする場合を除き、すべてのイベ�
   
  単一の**完全な**イベントハンドラーは、非同期操作の管理に役立ちます。 各非同期操作には、適切な**完全**なイベントがあります。  
   
- たとえば、大きな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は`Recordset.Open(...,adAsyncExecute)` 、操作を開始して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
+ たとえば、大きな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを設定するには、長い時間がかかることがあります。 アプリケーションが適切に記述されている場合は、操作を開始 `Recordset.Open(...,adAsyncExecute)` して他の処理を続行できます。 **レコードセット**に**ExecuteComplete**イベントが設定されると、最終的に通知が表示されます。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>単一のイベントハンドラーと複数のオブジェクト  
  Microsoft Visual C++®のようなプログラミング言語の柔軟性により、複数のオブジェクトのイベントを1つのイベントハンドラーで処理できます。 たとえば、1つの**Disconnect**イベントハンドラーで複数の**接続**オブジェクトからイベントを処理することができます。 接続のいずれかが終了した場合、**切断**イベントハンドラーが呼び出されます。 イベントハンドラーオブジェクトのパラメーターが対応する**接続**オブジェクトに設定されるため、イベントが発生した接続を特定できます。  

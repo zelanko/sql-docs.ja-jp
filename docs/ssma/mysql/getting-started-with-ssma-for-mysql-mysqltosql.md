@@ -1,5 +1,6 @@
 ---
 title: SSMA for MySQL (MySQLToSQL) でのはじめに |Microsoft Docs
+description: SQL Server Migration Assistant (SSMA) for MySQL のインストールプロセスについて説明し、SSMA ユーザーインターフェイスについて理解を深めます。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67984537"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293799"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL を使用すると、MySQL データベーススキーマを SQL Server または Azure SQL DB スキーマに簡単に変換したり、結果として得られるスキーマを SQL Server または Azure SQL db にアップロードしたり、MySQL から SQL Server または Azure SQL DB にデータを移行したりすることができます。  
@@ -37,7 +38,7 @@ SSMA のインストールとライセンス供与が完了したら、SSMA を�
   
 移行を開始するには、次のことを行う必要があります。  
   
-1.  新しいプロジェクトを作成する。  
+1.  新しいプロジェクトを作成します。  
   
 2.  MySQL データベースに接続します。  
   
@@ -96,11 +97,11 @@ SSMA には、[プロジェクト] ツールバーと [移行] ツールバー�
   
 |||  
 |-|-|  
-|**ボタン**|**プロシージャ**|  
+|**ボタン**|**Function**|  
 |**レポートの作成**|選択した MySQL オブジェクトを SQL Server または Azure SQL DB オブジェクトに変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
 |**スキーマの変換**|選択された MySQL オブジェクトを SQL Server または Azure SQL DB オブジェクトに変換します。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
 |**データの移行**|MySQL データベースから SQL Server または Azure SQL DB にデータを移行します。 このコマンドを実行する前に、MySQL スキーマを SQL Server または Azure SQL DB スキーマに変換し、そのオブジェクトを SQL Server または Azure SQL DB に読み込む必要があります。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
-|**停止**|現在のプロセスを停止します。|  
+|**Stop**|現在のプロセスを停止します。|  
   
 ### <a name="menus"></a>メニュー  
 SSMA メニューを次の表に示します。  
@@ -108,11 +109,11 @@ SSMA メニューを次の表に示します。
 |||  
 |-|-|  
 |**メニュー**|**説明**|  
-|**拡張子**|プロジェクトを操作したり、MySQL に接続したり、SQL Server または Azure SQL DB に接続したりするためのコマンドが含まれています。|  
+|**ファイル**|プロジェクトを操作したり、MySQL に接続したり、SQL Server または Azure SQL DB に接続したりするためのコマンドが含まれています。|  
 |**[編集]**|詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 [**ブックマークの管理**] ダイアログを開くには、[編集] メニューの [ブックマークの管理] をクリックします。 ダイアログには、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
-|**モード**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、MySQL メタデータエクスプローラーと SQL Server または Azure SQL DB メタデータエクスプローラー間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション**レイアウト**も含まれています。|  
+|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、MySQL メタデータエクスプローラーと SQL Server または Azure SQL DB メタデータエクスプローラー間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション**レイアウト**も含まれています。|  
 |**ツール**|レポートを作成したり、スキーマを変換したり、データベースから更新したり、オブジェクトとデータを移行したり、スクリプトとして保存したりするためのコマンドが含まれています。 また、[**グローバル設定]、[既定のプロジェクト設定**]、[**プロジェクトの設定**] の各ダイアログボックスへのアクセスも提供します。|  
-|**Help**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
+|**ヘルプ**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>出力ウィンドウとエラー一覧ペイン  
 [**表示**] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 89bc125be4f6ae3aca7150082ddf28107c2706f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015453"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの使用 (SQLXML 4.0)
   ここでは、SQLXMLOLEDB プロバイダー固有のプロパティの使用法を示す ADO サンプル アプリケーションを紹介します。  

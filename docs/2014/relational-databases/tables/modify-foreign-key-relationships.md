@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 43b4fe6f4c3a7eafb0bf38a284c331bcaeaf4d5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68196840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067951"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
@@ -40,25 +39,23 @@ ms.locfileid: "68196840"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
   
--   
-  `char` 列または `sysname` 列は、`varchar` 列と関連付けることができます。  
+-   `char` 列または `sysname` 列は、`varchar` 列と関連付けることができます。  
   
--   
-  `binary` 列は、`varbinary` 列と関連付けることができます。  
+-   `binary` 列は、`varbinary` 列と関連付けることができます。  
   
 -   alias データ型は、その基本型に関連付けることができます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-modify-a-foreign-key"></a>外部キーを変更するには  
   
@@ -101,7 +98,7 @@ ms.locfileid: "68196840"
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
   
-     **名前**  
+     **Name**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
      **説明**  
@@ -141,9 +138,9 @@ ms.locfileid: "68196840"
   
     -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
+4.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  
   
  Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](create-foreign-key-relationships.md)」を参照してください。  

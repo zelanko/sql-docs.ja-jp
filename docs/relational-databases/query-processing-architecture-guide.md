@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510203"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108003"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -365,7 +365,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 `NOEXPAND` をビューに対して指定した場合、ビューに定義されたインデックスを使用することがクエリ オプティマイザーにより検討されます。 `NOEXPAND` をオプションの `INDEX()` 句で指定すると、クエリ オプティマイザーの判断で指定されたインデックスが強制的に使用されます。 `NOEXPAND` を指定できるのはインデックス付きビューに対してのみであり、インデックスのないビューには指定できません。
 
-ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
+ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます  (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
 
 `INDEX (index_val[ ,...n] )` という形式のテーブル ヒントでクエリ内のビューを参照しているときに、 `NOEXPAND` ヒントを指定しない場合、インデックス ヒントは無視されます。 特定のインデックスを使用するように指定するには `NOEXPAND` を使用します。 
 
@@ -714,7 +714,7 @@ WHERE ProductSubcategoryID = 4;
 
 パラメーターを使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと定数を切り離すと、同一のプランをリレーショナル エンジンが認識できるようになります。 パラメーターは、次の方法で使用できます。 
 
-* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します: 
+* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します:  
 
    ```sql
    DECLARE @MyIntParm INT
@@ -802,7 +802,7 @@ WHERE ProductSubcategoryID = 4;
 * ストアド プロシージャ、トリガー、またはユーザー定義関数の本体内のステートメント。 これらのルーチンのクエリ プランは既に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により再利用されています。
 * クライアント側のアプリケーションで既にパラメーター化されている、準備されたステートメント。
 * XQuery メソッド呼び出しを含んでいるステートメントを、 `WHERE` 句など通常は引数がパラメーター化されるコンテキストで使用した場合。 引数がパラメーター化されないコンテキストでこのメソッドを使用した場合は、ステートメントの残りの部分がパラメーター化されます。
-* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
+* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント  (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
 * 非推奨のクエリ構造。
 * `ANSI_PADDING` または `ANSI_NULLS` が `OFF`に設定されている状態で実行されているステートメント。
 * パラメーター化が可能なリテラルが 2,097 を超えるステートメント。
@@ -894,13 +894,13 @@ WHERE ProductID = 63;
 * 実行プランの作成および再利用のタイミングをアプリケーションで制御できます。
 * 準備/実行のモデルは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] など、他のデータベースに移植できます。
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> パラメーター スニッフィング
-"パラメーター スニッフィング" とは、コンパイルまたは再コンパイルの間に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が現在のパラメーター値を "スニッフィング (傍受)" し、クエリ オプティマイザーに渡すプロセスです。渡されたパラメーター値は、より効率的なクエリ実行プランを生成するために利用できます。
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> パラメーターの秘密度
+パラメーターの秘密度は "パラメーター スニッフィング" とも呼ばれ、コンパイルまたは再コンパイルの間に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が現在のパラメーター値を "スニッフィング (傍受)" し、クエリ オプティマイザーに渡すプロセスです。渡されたパラメーター値は、より効率的なクエリ実行プランを生成するために利用できます。
 
 パラメーター値は、次のようなバッチのコンパイルまたは再コンパイル中にスニッフィングされます。
 
 -  ストアド プロシージャ
--  sp_executesql 経由で送信されたクエリ 
+-  `sp_executesql` を介して送信されたクエリ 
 -  準備されたクエリ
 
 不適切なパラメーター スニッフィング問題のトラブルシューティングについては、「[Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview)」 (パラメーター依存のクエリ実行プランの問題を解決する) を参照してください。
@@ -929,11 +929,35 @@ WHERE ProductID = 63;
 -   **再帰クエリ**        
     再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
 
--   **テーブル値関数 (TVF)**         
-    TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
+-   **複数ステートメント テーブル値関数 (MSTVF)**         
+    MSTVF の詳細については、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
     
 -   **TOP キーワード**        
     詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。
+
+クエリ実行プランには、並列処理が使用されなかった理由を説明する **NonParallelPlanReason** 属性が **QueryPlan** 要素に含まれる場合があります。  この属性の値は次のとおりです。
+
+|NonParallelPlanReason Value|説明|
+|----|----|
+|MaxDOPSetToOne|並列処理の最大限度を 1 に設定します。|
+|EstimatedDOPIsOne|並列処理の推定次数は 1 です。|
+|NoParallelWithRemoteQuery|並列処理はリモート クエリではサポートされていません。|
+|NoParallelDynamicCursor|並列プランは動的カーソルではサポートされていません。|
+|NoParallelFastForwardCursor|並列プランは高速順方向カーソルではサポートされていません。|
+|NoParallelCursorFetchByBookmark|ブックマークによってフェッチされるカーソルに対しては、並列プランはサポートされていません。|
+|NoParallelCreateIndexInNonEnterpriseEdition|並列インデックスの作成は Enterprise 以外のエディションではサポートされていません。|
+|NoParallelPlansInDesktopOrExpressEdition|並列プランは Desktop および Express エディションではサポートされていません。|
+|NonParallelizableIntrinsicFunction|クエリは並列化できない組み込み関数を参照しています。|
+|CLRUserDefinedFunctionRequiresDataAccess|データ アクセスを必要とする CLR UDF の場合、並列処理はサポートされていません。|
+|TSQLUserDefinedFunctionsNotParallelizable|クエリは並列化できない T-SQL ユーザー定義関数を参照しています。|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|テーブル変数トランザクションは入れ子になった並列トランザクションをサポートしていません。|
+|DMLQueryReturnsOutputToClient|DML クエリからクライアントに出力が返されます。また、並列化できません。|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|1 つのオンライン インデックス ビルドにサポートされていない直列プランと並列プランが混在しています。|
+|CouldNotGenerateValidParallelPlan|並列プランを検証できませんでした。シリアルにフェールバックします。|
+|NoParallelForMemoryOptimizedTables|参照されるインメモリ OLTP テーブルでは並列処理はサポートされていません。|
+|NoParallelForDmlOnMemoryOptimizedTable|インメモリ OLTP テーブル上の DML では並列処理はサポートされていません。|
+|NoParallelForNativelyCompiledModule|参照されているネイティブ コンパイル モジュールでは並列処理はサポートされていません。|
+|NoRangesResumableCreate|再開可能な作成操作の範囲の生成に失敗しました。|
 
 交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でない (直列) クエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 
 
@@ -963,7 +987,13 @@ WHERE ProductID = 63;
  
 既に説明したような現在のシステムのワークロードと構成情報で並列実行が可能かどうかは、実行時に[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]によって判断されます。 並列実行の条件を満たしている場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]により、最適なワーカー スレッド数が判断され、これらのワーカー スレッド全体に並列プランの実行が分散されます。 複数のワーカー スレッドでクエリまたはインデックス操作が並列実行で開始された後は、操作で使用されるワーカー スレッド数は操作の完了時まで変化しません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、プラン キャッシュから実行プランを取得するたびに、最適なワーカー スレッド数を再調査して決定します。 たとえば、1 回のクエリの実行では直列プランを使用し、同じクエリを再度実行するときは 3 つのワーカー スレッドを使用する並列プランを使用し、3 回目に実行するときは 4 つのワーカー スレッドを使用する並列プランを使用する場合があります。
 
-並列クエリの実行プランでは、挿入操作、更新操作、および削除操作が直列に実行されます。 ただし、UPDATE ステートメントや DELETE ステートメントの WHERE 句、または INSERT ステートメントの SELECT 部分は並列に実行できます。 実際のデータ変更は、データベースに直列に適用されます。
+並列クエリ実行プランの更新および削除演算子は直列に実行されますが、UPDATE または DELETE ステートメントの WHERE 句は並列実行される場合があります。 実際のデータ変更は、データベースに直列に適用されます。
+
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] までは、挿入演算子も直列に実行されます。 ただし、INSERT ステートメントの SELECT 部分は並列で実行できます。 実際のデータ変更は、データベースに直列に適用されます。 
+
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] およびデータベース互換性レベル 110 以降、`SELECT … INTO` ステートメントは並列実行できるようになりました。 他の形式の挿入演算子は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の説明と同じように機能します。
+
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入し、TABLOCK ヒントを使用するときに、`INSERT … SELECT` ステートメントを並列実行できるようになりました。 ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。 詳細については、「[INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)」を参照してください。
 
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67928545"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764123"
 ---
 # <a name="adox-methods"></a>ADOX のメソッド
 
@@ -33,8 +33,8 @@ ms.locfileid: "67928545"
 |[追加 (ユーザー)](../../../ado/reference/adox-api/append-method-adox-users.md)|新しい**ユーザー**オブジェクトを**Users**コレクションに追加します。|  
 |[追加 (ビュー)](../../../ado/reference/adox-api/append-method-adox-views.md)|**Views**コレクションに新しい**ビュー**オブジェクトを追加します。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|ユーザーアカウントのパスワードを変更します。|  
-|[生成](../../../ado/reference/adox-api/create-method-adox.md)|新しいカタログを作成します。|  
-|[デリート](../../../ado/reference/adox-api/delete-method-adox-collections.md)|オブジェクトをコレクションから削除します。|  
+|[作成](../../../ado/reference/adox-api/create-method-adox.md)|新しいカタログを作成します。|  
+|[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|オブジェクトをコレクションから削除します。|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|カタログ内のオブジェクトの所有者を返します。|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|オブジェクトのグループまたはユーザーの権限を返します。|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|カタログ内のオブジェクトの所有者を指定します。|  

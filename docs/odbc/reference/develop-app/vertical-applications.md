@@ -12,14 +12,14 @@ helpviewer_keywords:
 - vertical applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022105"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300377"
 ---
 # <a name="vertical-applications"></a>垂直アプリケーション
 垂直アプリケーションは、通常、1つの DBMS に対して適切に定義されたタスクを実行します。 たとえば、注文エントリアプリケーションは、会社内の注文を追跡します。 これらの種類のアプリケーションでは、通常、データベーススキーマはアプリケーション開発者によって設計されていますが、アプリケーションはさまざまな Dbms で動作しますが、単一の顧客に対して1つの DBMS で動作します。  

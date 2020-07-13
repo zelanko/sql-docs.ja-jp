@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100666"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304343"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 関数およびカーソル ライブラリ
 > [!IMPORTANT]  

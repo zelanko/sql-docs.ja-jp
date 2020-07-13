@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1387b5773ee3521979a3afc18f3417cabc156fe4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66067196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938923"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>DirectQuery デザイン モードの有効化 (SSAS テーブル)
   DirectQuery モードでモデルを作成するには、最初にデザイン時環境を変更して、DirectQuery モードのユーザーがサポートされるようにする必要があります。 この場合、デザイナーで以下の操作も行われます。  
@@ -32,17 +31,15 @@ ms.locfileid: "66067196"
   
 ### <a name="to-enable-use-of-directquery-in-a-model"></a>モデルで DirectQuery の使用を有効にするには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ソリューション ファイルを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、ソリューション ファイルを開きます。  
   
 2.  オブジェクト エクスプローラーで、Model.bim ファイルをダブルクリックします。  
   
-3.  
-  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを **On**に変更します。  
+3.  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを **On**に変更します。  
   
 4.  エラーが発生した場合は、Visual Studio で**エラー一覧**を開き、モデルが DirectQuery モードに切り替わるのを妨げている問題を解決します。  
   
 ## <a name="see-also"></a>参照  
- [SSAS テーブル &#40;の DirectQuery モード&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)  
   
   

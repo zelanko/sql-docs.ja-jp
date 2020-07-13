@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930743"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 制約と外部キー制約の移行
-  Check 制約と foreign key 制約は、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ではサポートされていません。 これらの構成体は、通常、スキーマで論理データの整合性を確保するために使用され、アプリケーションの機能の正確性を維持するために重要な場合があります。  
+  Check 制約と foreign key 制約は、のではサポートされていません [!INCLUDE[hek_2](../includes/hek-2-md.md)] [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。 これらの構成体は、通常、スキーマで論理データの整合性を確保するために使用され、アプリケーションの機能の正確性を維持するために重要な場合があります。  
   
  Check 制約や foreign key 制約などのテーブルに対する論理的な整合性チェックでは、トランザクションに対する追加の処理が必要であり、通常はパフォーマンスを重視するアプリケーションでは回避する必要があります。 ただし、このようなチェックがアプリケーションにとって重要である場合は、2つの回避策が存在します。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62774933"
  この回避策は、データの変更が制約チェックによってブロックされないため、パフォーマンスへの影響が最小限になるという利点があります。 ただし、1つまたは複数の制約に違反する変更が発生した場合、その変更をロールバックするプロセスには時間がかかることがあります。  
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の前に制約を適用する  
- この回避策は、制約[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の動作をエミュレートします。 制約は、データ変更が行われる前にチェックされ、チェックに失敗した場合はトランザクションを終了します。 この方法では、データ変更のパフォーマンスが低下しますが、テーブル内のデータは常に制約を満たしていることが保証されます。  
+ この回避策は、制約の動作をエミュレート [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] します。 制約は、データ変更が行われる前にチェックされ、チェックに失敗した場合はトランザクションを終了します。 この方法では、データ変更のパフォーマンスが低下しますが、テーブル内のデータは常に制約を満たしていることが保証されます。  
   
  この回避策は、論理データの整合性が正確であることが重要であり、制約に違反する変更がある場合に使用します。 ただし、整合性を保証するために、これらの実施を含むストアドプロシージャを使用して、すべてのデータ変更を行う必要があります。 アドホッククエリやその他のストアドプロシージャを使用して変更を行っても、これらの制約は適用されないため、警告を表示せずに違反することがあります。  
   
@@ -99,7 +98,7 @@ GO
   
  メモリ最適化テーブルに変換した後、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
   
- ではサポートされていないため、rowguid は ROWGUIDCOL で[!INCLUDE[hek_2](../includes/hek-2-md.md)]はなくなっていることに注意してください。 列が削除されました。 さらに、LineTotal は計算列であり、この記事の範囲外であるため、削除されています。  
+ ではサポートされていないため、rowguid は ROWGUIDCOL ではなくなっていることに注意して [!INCLUDE[hek_2](../includes/hek-2-md.md)] ください。 列が削除されました。 さらに、LineTotal は計算列であり、この記事の範囲外であるため、削除されています。  
   
 ```sql  
 USE [AdventureWorks2012]  

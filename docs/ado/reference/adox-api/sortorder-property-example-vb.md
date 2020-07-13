@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965197"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762773"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
 この例では、インデックスの[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに追加された[列](../../../ado/reference/adox-api/column-object-adox.md)の[順序](../../../ado/reference/adox-api/sortorder-property-adox.md)[付け](../../../ado/reference/adox-api/index-object-adox.md)プロパティを示します。 このコードでは、 **Employees**テーブルの Country 列に昇順のインデックスが追加され、レコードが表示されます。 次に、このコードにより、 **Employees**テーブルの Country 列に降順のインデックスが追加され、レコードが再び表示されます。 昇順と降順のインデックスの違いを示します。  

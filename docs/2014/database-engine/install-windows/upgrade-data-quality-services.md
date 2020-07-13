@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62775632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931892"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services のアップグレード
   このトピックでは、Data Quality Services (DQS) の既存のインストールを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 にアップグレードする方法を紹介します。 DQS 内の Data Quality サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする作業の一環として、DQS データベース スキーマもアップグレードする必要があります。  
@@ -23,24 +22,22 @@ ms.locfileid: "62775632"
 > [!IMPORTANT]
 >  -   スキーマのアップグレード中に誤ってデータが削除されることを防ぐため、DQS をアップグレードする前に DQS データベースをバックアップしておく必要があります。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
 > -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS クレンジング変換 [を使用して、Data Quality サーバーの](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) バージョンに接続できます。  
-> -   Data Quality Services およびマスター データ サービスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 SP1 バージョンの Excel [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]用マスターデータサービスアドインは、[こちら](https://go.microsoft.com/fwlink/?LinkId=328664)からダウンロードできます。  
+> -   Data Quality Services およびマスター データ サービスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 にアップグレードした後も、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 バージョンの Excel 用マスター データ サービス アドインを使用し続けることができます。 ただし、SQL Server 2014 CTP2 にアップグレードした後、以前のバージョンの Excel 用マスター データ サービス アドインは機能しません。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 バージョンの Excel 用マスターデータサービスアドインは、[こちら](https://go.microsoft.com/fwlink/?LinkId=328664)からダウンロードできます。  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
   
--   
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
+-   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンピューターの Administrators グループのメンバーとしてログオンする必要があります。  
   
 -   Windows ユーザー アカウントが、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] がインストールされている SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   
-##  <a name="Upgrade"></a>DQS のアップグレード  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> DQS のアップグレード  
  DQS をアップグレードするには:  
   
 1.  スキーマのアップグレードを開始する前に、DQS データベースをバックアップします。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
   
 2.  DQS のインストール先である SQL Server インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードします。  
   
-    1.  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを実行します。  
+    1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを実行します。  
   
     2.  左ペインで、 **[インストール]** をクリックします。  
   
@@ -67,12 +64,12 @@ ms.locfileid: "62775632"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  処理を続ける前に DQS データベースをバックアップするように求められます。 既に DQS データベースをバックアップしている場合は`Y` 、 `Yes`またはを入力し、enter キーを押してアップグレードを続行します。  
+    4.  処理を続ける前に DQS データベースをバックアップするように求められます。 既に DQS データベースをバックアップしている場合 `Y` は、またはを入力し、enter `Yes` キーを押してアップグレードを続行します。  
   
     5.  DQS データベース スキーマのアップグレードが正常に完了すると、完了のメッセージが表示されます。  
   
-##  <a name="Verify"></a>DQS データベーススキーマのアップグレードを確認しています  
- DQS データベース スキーマが正常にアップグレードされたことを確認するために、各データベース内の A_DB_VERSION テーブルに対してクエリを実行し、DQS_MAIN データベースと DQS_PROJECTS データベースの現在のバージョンを確認することができます。 そのためには、次の操作を実行します。  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> DQS データベース スキーマのアップグレードの確認  
+ DQS データベース スキーマが正常にアップグレードされたことを確認するために、各データベース内の A_DB_VERSION テーブルに対してクエリを実行し、DQS_MAIN データベースと DQS_PROJECTS データベースの現在のバージョンを確認することができます。 次の手順に従います。  
   
 1.  SQL Server Management Studio を起動し、アップグレード後の DQS データベース スキーマを含む SQL Server インスタンスに接続します。  
   
@@ -87,8 +84,8 @@ ms.locfileid: "62775632"
   
     |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|状態|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<ドメイン \ ユーザー名の>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<ドメイン \ ユーザー名の>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>参照  
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   

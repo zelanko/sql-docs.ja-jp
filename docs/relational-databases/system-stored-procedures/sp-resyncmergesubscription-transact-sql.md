@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899221"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した既知の検証状態にマージサブスクリプションを再同期します。 これによって、サブスクリプション データベースを、正常終了した前回の検証時や指定の日時など、特定の時点に強制的に集約または同期できます。 この方法を使用してサブスクリプションを再同期する場合、スナップショットは再適用されません。 このストアド プロシージャは、スナップショット レプリケーション サブスクリプションまたはトランザクション レプリケーション サブスクリプションでは使用しません。 このストアドプロシージャは、パブリッシャー、パブリケーションデータベース、またはサブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`再同期が開始されるタイミングを定義します。 *resync_type*は**int**,、値は次のいずれかを指定することができます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|初期スナップショットの後から同期が開始されます。 初期スナップショット以降のすべての変更がサブスクライバーに再適用されるため、これは最もリソースを大量に消費するオプションです。|  
 |**1**|前回の検証が正常に完了した後に同期が開始されます。 最後に検証が正常に完了した後に発生した、新規または不完全なすべてのジェネレーションがサブスクライバーに再適用されます。|  
@@ -66,7 +66,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_resyncmergesubscription**は、マージレプリケーションで使用します。  
   
  *Resync_type*パラメーターの値が**0**の場合、初期スナップショット以降のすべての変更が再適用されますが、リソースを大量に消費する可能性がありますが、完全な再初期化よりもかなり少なくなる可能性があります。 たとえば、初期スナップショットが1か月前に配信された場合、この値によって過去1か月のデータが再適用されます。 初期スナップショットに 1 gb のデータが含まれていても、過去1か月の変更量が2メガバイト (MB) の変更されたデータである場合は、1 GB の完全なスナップショットを再適用するよりもデータを再適用する方が効率的です。  
@@ -74,7 +74,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_resyncmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

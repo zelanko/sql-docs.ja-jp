@@ -9,23 +9,21 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "69493986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543404"
 ---
 # <a name="browsing-the-deployed-cube"></a>配置したキューブの表示
   この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 分析で複数のディメンションにわたってメジャーを比較するため、データの参照には Excel のピボットテーブルを使用します。 ピボットテーブルを使用すると、顧客、日付、および製品情報を異なる軸に配置して、特定の期間、顧客の人口統計、および製品ラインにわたって見たときに、Internet Sales がどのように変化するかを確認できます。  
   
 ### <a name="to-browse-the-deployed-cube"></a>配置したキューブを表示するには  
   
-1.  のキューブデザイナー [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]に切り替えるには、ソリューションエクスプローラーの [**キューブ**] フォルダーにある [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアル**] キューブをダブルクリックします。  
+1.  のキューブデザイナーに切り替えるには、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ソリューションエクスプローラーの [**キューブ**] フォルダーにある [ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] チュートリアル**] キューブをダブルクリックします。  
   
-2.  
-  **[ブラウザー]** タブを開き、キューブ デザイナーのツール バーにある **[再接続]** ボタンをクリックします。  
+2.  **[ブラウザー]** タブを開き、キューブ デザイナーのツール バーにある **[再接続]** ボタンをクリックします。  
   
 3.  Excel アイコンをクリックして Excel を起動し、データ ソースとしてワークスペース データベースを使用します。 接続を有効にするように求めるメッセージが表示されたら、 **[有効]** をクリックします。  
   
@@ -33,8 +31,7 @@ ms.locfileid: "69493986"
   
 5.  ピボットテーブル フィールド リストで **Product**を展開します。  
   
-6.  
-  **Product Model Lines** ユーザー階層を **[列]** 領域にドラッグします。  
+6.  **Product Model Lines** ユーザー階層を **[列]** 領域にドラッグします。  
   
 7.  ピボットテーブル フィールド リストで **[Customer]** を展開し、 **[Location]** を展開します。次に、Customer ディメンション内の [Location] 表示フォルダーにある **[Customer Geography]** 階層を **[行]** 領域にドラッグします。  
   
@@ -47,6 +44,6 @@ ms.locfileid: "69493986"
      ![地域および製品ラインごとのインターネット販売](../../2014/tutorials/media/l3-cube-browser-finish.gif "地域および製品ラインごとのインターネット販売")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4 : 高度な属性およびディメンションのプロパティの定義](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [レッスン 4:高度な属性およびディメンションのプロパティの定義](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

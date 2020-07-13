@@ -12,14 +12,14 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061617"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304273"
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用する場合、アプリケーションは、データが返される各列に対して1つまたは2つ (場合によっては3つの要素) を含む構造体を定義します。 最初の要素はデータ値を保持し、2番目の要素は長さ/インジケーターバッファーを保持します。 SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の記述子フィールドを異なる値に設定することにより、インジケーターと長さの値を別々のバッファーに格納できます。この処理が完了すると、構造体に3番目の要素が含まれます。 次に、アプリケーションはこれらの構造体の配列を割り当てます。これには、行セット内の行と同じ数の要素が含まれます。  

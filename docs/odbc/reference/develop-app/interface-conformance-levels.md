@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138909"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304602"
 ---
 # <a name="interface-conformance-levels"></a>インターフェイスの適合性レベル
 平準化の目的は、ドライバーから使用可能な機能をアプリケーションに通知することです。 関数に基づく平準化方式では、この目標を達成することはできません。 ODBC 3 の場合。*x*は、ドライバーが所有する機能に基づいて分類されます。 機能をサポートするには、関数のサポートを含めることができます。また、記述子フィールド、ステートメント属性、 **SQLGetInfo**によって返される情報型の "Y" 値などをサポートすることもできます。  

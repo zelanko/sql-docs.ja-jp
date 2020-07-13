@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BETWEEN predicate [ODBC]
 - SQL grammar [ODBC], between predicate
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a0ac99729966acdcb03c2aab0175c34bba0c08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f3ff800938574bec81e9cbb86839e014085a2a8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138115"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283859"
 ---
 # <a name="between-predicate"></a>BETWEEN 述語
 構文は次のとおりです。  

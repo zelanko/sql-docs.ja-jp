@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4606b4345cc52d1371649449890400e01dbc5f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 86cecaf0b82c7b6d15b3f37262507d2cff0c3c10
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114352"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300932"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>環境、接続、およびステートメント属性
 ODBC では、環境、接続、またはステートメントに関連付けられている多数の属性が定義されています。  

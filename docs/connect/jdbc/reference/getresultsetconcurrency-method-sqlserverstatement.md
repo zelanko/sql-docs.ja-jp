@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: a0b1a9368bceaf9130dbb03c6e70b851d721be92
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921842"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67980382"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの結果セットのコンカレンシーを取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって生成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの結果セットのコンカレンシーを取得します。  
   
 ## <a name="syntax"></a>構文  
   

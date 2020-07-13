@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9aad983c315aae76dc30cbbbef645c25b9302bdf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920268"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758908"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize プロパティの例 (JScript)
 この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Cachesizejs. asp**として保存します。  

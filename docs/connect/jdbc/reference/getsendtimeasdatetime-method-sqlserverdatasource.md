@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 018d40464d6461cb4182daf5f93139e322517870
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: e1396ac28a7e41dbf530f7e4a251876f6c340871
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929207"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67979943"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>getSendTimeAsDatetime メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public boolean getSendTimeAsDatetime();
  java.sql.Time 値が **の**datetime[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 型としてサーバーに送信される場合は、**true** です。 java.sql.Time 値が **の**time[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 型としてサーバーに送信される場合は、**false** です。  
   
 ## <a name="remarks"></a>解説  
- [sendTimeAsDatetime](../../../connect/jdbc/setting-the-connection-properties.md) 接続プロパティの詳細については、「**接続プロパティの設定**」を参照してください。  
+ **sendTimeAsDatetime** 接続プロパティの詳細については、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
  [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) を使用すると、**sendTimeAsDatetime** 接続プロパティをプログラムから設定することができます。  
   

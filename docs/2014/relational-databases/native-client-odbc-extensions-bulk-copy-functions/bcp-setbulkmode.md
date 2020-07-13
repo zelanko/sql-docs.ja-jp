@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62688793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019329"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode を使用すると、一括コピー操作で列の形式を指定し、1回の関数呼び出しですべての列の属性を設定できます。  
@@ -52,7 +51,7 @@ cbRow
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *"*  
+ *プロパティ*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -70,20 +69,19 @@ cbRow
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode を使用すると、クエリまたはテーブルのいずれかから一括コピーできます。 Bcp_setbulkmode を使用してクエリステートメントを一括コピーする場合は、BCP_HINT で bcp_control を呼び出す前に、このステートメントを呼び出す必要があります。  
   
  bcp_setbulkmode は[bcp_setcolfmt](bcp-setcolfmt.md)と[bcp_columns](bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
- 
-  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
+ *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。EXE を実行し、プロパティ`BCP_FMT_TYPE`をに`SQLCHARACTER`設定して bcp_setcolfmt します。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。EXE と bcp_setcolfmt、 `BCP_FMT_TYPE`プロパティがに`SQLNCHAR`設定されています。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP の-N オプションに対応しています。列の型が`BCP_FMT_TYPE`文字列である`SQLNCHAR`場合は、プロパティがに設定された EXE および bcp_setcolfmt (文字列でない場合は既定)。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP の-n オプションに対応しています。EXE と bcp_setcolfmt、 `BCP_FMT_TYPE`既定値に設定されたプロパティを使用します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP.EXE の-c オプションに対応し、プロパティがに設定されたを bcp_setcolfmt し `BCP_FMT_TYPE` `SQLCHARACTER` ます。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP.EXE の-w オプションと、プロパティがに設定された bcp_setcolfmt に対応し `BCP_FMT_TYPE` `SQLNCHAR` ます。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP.EXE の-N オプション bcp_setcolfmt と、 `BCP_FMT_TYPE` `SQLNCHAR` 列の型が文字列である場合はに設定されたプロパティ (文字列でない場合は既定値) に対応します。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと `BCP_FMT_TYPE` 、プロパティが既定値に設定された bcp_setcolfmt に対応します。|  
   
  Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスと共に bcp_setbulkmode を使用しないでください。 たとえば、bcp_control (BCPTEXTFILE) および bcp_setbulkmode を呼び出すことはできません。  
   

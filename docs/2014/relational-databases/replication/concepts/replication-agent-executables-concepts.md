@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e533edec149513e240efb938d5fb9aad634e7cf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047707"
 ---
 # <a name="replication-agent-executables-concepts"></a>レプリケーション エージェント実行可能ファイルの概念
   レプリケーション エージェントは、次のような方法でプログラムから制御できます。  

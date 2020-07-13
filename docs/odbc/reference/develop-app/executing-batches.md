@@ -11,17 +11,17 @@ helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901266"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305733"
 ---
 # <a name="executing-batches"></a>バッチの実行
-アプリケーションでは、ステートメントのバッチを実行する前に、ステートメントがサポートされているかどうかを確認する必要があります。 これを行うには、アプリケーションは、SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用して**SQLGetInfo**を呼び出します。 最初のオプションは、行カウント生成ステートメントと結果セット生成ステートメントが明示的なバッチおよびプロシージャでサポートされているかどうかを返します。後者の2つのオプションは、パラメーター化された行数と結果セットの可用性に関する情報を返します。例外.  
+アプリケーションでは、ステートメントのバッチを実行する前に、ステートメントがサポートされているかどうかを確認する必要があります。 これを行うには、アプリケーションは、SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用して**SQLGetInfo**を呼び出します。 最初のオプションは、行カウント生成ステートメントと結果セット生成ステートメントが明示的なバッチおよびプロシージャでサポートされているかどうかを返します。後者の2つのオプションは、パラメーター化された実行での行数と結果セットの可用性に関する情報を返します。  
   
  ステートメントのバッチは、 **Sqlexecute**または**SQLExecDirect**を使用して実行されます。 たとえば、次の呼び出しでは、ステートメントの明示的なバッチが実行され、新しい販売注文が開かれます。  
   

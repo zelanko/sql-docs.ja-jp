@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65489270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061108"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (オプション): 新しいデータ セットを結合、照合、およびパブリッシュする
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータを MDS で既に管理されているデータと比較して、重複していないデータや不正確なデータを追加していないことを確認すると便利です。 Excel 用マスター データ サービス アドインを使用すると、データを MDS にパブリッシュする前に、2 つのワークシートのデータを結合し、データを比較することで重複を識別して削除できます。 MDS Excel アドインの照合機能は、データの一致を識別するための DQS 照合機能を使用します。 ここでは、MDS にパブリッシュする前に、2 つのワークシートのデータを 1 つに結合し、重複を識別して削除するための照合作業を行います。 詳細については、「Excel 用 MDS アドインと[データの結合](https://msdn.microsoft.com/library/hh548680.aspx)」トピックの「[データ品質照合](https://msdn.microsoft.com/library/hh548681.aspx)」を参照してください。  
@@ -38,7 +37,7 @@ ms.locfileid: "65489270"
   
 7.  下部にある [ **sheet2** ] をクリックして、[ **sheet2** ] タブに切り替えます。[ **Sheet2**] が表示されない場合は、新しいワークシートを追加します。  
   
-8.  **仕入先 .xls**ファイル (チュートリアルファイルに含まれている元の入力ファイル) を開き、連結の**eandクレンジング**ワークシートのすべての (3 行) を**Sheet2**にコピーします。  
+8.  **Suppliers.xls**ファイル (チュートリアルファイルに含まれている元の入力ファイル) を開き、連結の**eandクレンジング**ワークシートのすべての (3 行) を**Sheet2**にコピーします。  
   
 9. **MDS**に接続されている、(クレンジングされた**仕入先リスト**Excel ではなく) **Microsoft Excel ブック**の**Supplier**シートに戻ります。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "65489270"
   
 34. 次に、ファイルを保存せずに**Book1-Microsoft Excel**ウィンドウを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 5: Excel からドメイン ベースの属性を作成する](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

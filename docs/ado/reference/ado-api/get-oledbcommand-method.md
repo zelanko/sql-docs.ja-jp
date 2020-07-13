@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - get_OLEDBCommand method [ADO]
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 043e432bfef39f90fbeb5b147487272c4d284bdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918570"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760078"
 ---
 # <a name="get_oledbcommand-method"></a>get_OLEDBCommand メソッド
 基になる OLE DB コマンドを返します。最初に ADO コマンドで設定されたすべてのパラメーター情報を OLE DB コマンドに反映します。  

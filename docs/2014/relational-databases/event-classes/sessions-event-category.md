@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91c87062d00e46d931afba0599cf4b19ed316ebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4a68bcbd67ed7405468657c2450685f105159e32
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63049535"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028674"
 ---
 # <a name="sessions-event-category"></a>Sessions イベント カテゴリ
   **Sessions** イベント カテゴリには、 **ExistingConnection** イベント クラスが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[ExistingConnection イベント クラス](existingconnection-event-class.md)|トレースが開始されたときの既存のユーザー接続のプロパティを示します。|  
   

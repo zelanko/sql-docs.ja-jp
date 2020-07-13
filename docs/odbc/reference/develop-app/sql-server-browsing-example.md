@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114327"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301983"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
 次の例では、 **SQLBrowseConnect**を使用して、ドライバーで使用可能な接続を SQL Server で参照する方法を示します。 まず、アプリケーションが接続ハンドルを要求します。  

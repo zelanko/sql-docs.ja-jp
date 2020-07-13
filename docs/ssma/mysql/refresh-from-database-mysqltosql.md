@@ -10,10 +10,10 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066702"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>データベースからの更新 (MySQLToSQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68066702"
   
 |||  
 |-|-|  
-|**期間**|**定義**|  
+|**用語**|**定義**|  
 |**折りたたみ (-)**|すべてのオブジェクトグループを折りたたむと、個々のオブジェクトが非表示になります。|  
 |**展開 (+)**|[すべてのオブジェクトグループ] を展開して、個々のオブジェクトを表示します。|  
 |**同じオブジェクトの非表示/表示**|MySQL データベースと SSMA のオブジェクトメタデータが同じである場合、リストのオブジェクトを非表示にします。|  

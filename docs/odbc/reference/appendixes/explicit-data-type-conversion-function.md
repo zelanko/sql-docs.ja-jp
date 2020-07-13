@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913610"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306993"
 ---
 # <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
 明示的なデータ型の変換は、SQL データ型定義の観点から指定されます。  

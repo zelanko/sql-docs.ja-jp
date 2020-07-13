@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729295"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 Resource Governor を使用すると、着信アプリケーション要求で使用できる CPU、物理 IO、およびメモリの量に対して制限を指定できます。  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 Resource Governor を使用すると、着信アプリケーション要求で使用できる CPU、物理 I/O、およびメモリの量に対して制限を指定できます。  
   
 ## <a name="benefits-of-resource-governor"></a>リソース ガバナーの利点  
  リソース ガバナーでは、受け取った要求に応じてリソース消費を制限することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとリソースを管理することができます。 リソース ガバナーでは、同程度のサイズの複数のクエリや要求を 1 つのエンティティとして扱う場合、それらをワークロードと呼んでいます。 これは必須ではありませんが、ワークロードのリソースの使用パターンが統一化されていると、リソース ガバナーから得られる利点も増えます。 リソース制限は、実行中のワークロードへの影響を最小限に抑えながらリアルタイムで再構成できます。  
   
- 複数の個別のワークロードが同一サーバー上に存在する環境でリソース ガバナーを使用すると、指定された制限に基づいてこれらのワークロードを区別し、要求された共有リソースを割り当てることができます。 それらのリソースは CPU、物理 IO、およびメモリです。  
+ 複数の個別のワークロードが同一サーバー上に存在する環境でリソース ガバナーを使用すると、指定された制限に基づいてこれらのワークロードを区別し、要求された共有リソースを割り当てることができます。 それらのリソースは CPU、物理 I/O、およびメモリです。  
   
  リソース ガバナーを使用すると、次のことが可能です。  
   
@@ -34,22 +34,22 @@ ms.locfileid: "67912051"
   
 -   複数のワークロードが存在するマルチユーザー環境で、予測可能なパフォーマンスを実現し、ワークロード テナントの SLA をサポートします。  
   
--   IO サブシステムを飽和させ、他のワークロードに悪影響を与える可能性のある DBCC CHECKDB などの操作に対して、ランナウェイ クエリの分離と制限または IO リソースの調整を行います。  
+-   I/O サブシステムを飽和させ、他のワークロードに悪影響を与える可能性のある DBCC CHECKDB などの操作に対して、ランナウェイ クエリの分離と制限または I/O リソースの調整を行います。  
   
 -   リソース使用のチャージバックに対して詳細なリソースの追跡を追加し、サーバー リソースの消費者に予測可能な請求情報を提供します。  
   
 ## <a name="resource-governor-constraints"></a>リソース ガバナーの制約  
  このリリースのリソース ガバナーには次の制約があります。  
   
--   リソース管理は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に制限されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ではリソース ガバナーを使用できません。  
+-   リソース管理は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に制限されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Resource Governor を使用できません。  
   
--   SQL Server のインスタンス間のワークロードの監視機能、または管理機能はありません。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間のワークロードの監視機能、または管理機能はありません。  
   
--   リソース ガバナーで OLTP ワークロードを管理することは可能ですが、このような種類のクエリは通常短時間で、CPU 上の滞留期間が短いために帯域幅制御を適用できない場合があります。 この結果、CPU 使用率 % として返される統計が偏る可能性があります。  
+-   リソース ガバナーで OLTP ワークロードを管理することは可能ですが、このような種類のクエリは通常短時間で、CPU 上の滞留期間が短いために帯域幅制御を適用できない場合があります。 この結果、CPU 使用率として返される統計が偏る可能性があります。  
   
--   物理 IO を制御する機能は、ユーザー操作のみに適用され、システム タスクには適用されません。 システム タスクには、トランザクション ログへの書き込み操作およびレイジー ライターの IO 操作が含まれます。 ほとんどの書き込み操作は通常システム タスクによって実行されるため、リソース ガバナーは主にユーザーの読み取り操作に適用されます。  
+-   物理 I/O を制御する機能は、ユーザー操作のみに適用され、システム タスクには適用されません。 システム タスクには、トランザクション ログへの書き込み操作およびレイジー ライターの I/O 操作が含まれます。 ほとんどの書き込み操作は通常システム タスクによって実行されるため、Resource Governor は主にユーザーの読み取り操作に適用されます。  
   
--   内部リソース プールで IO のしきい値を設定することはできません。  
+-   内部リソース プールで I/O のしきい値を設定することはできません。  
   
 ## <a name="resource-concepts"></a>リソースの概念  
  次に示す 3 つの概念は、リソース ガバナーを理解し、使用するための基本となります。  

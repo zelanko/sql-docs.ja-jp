@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050938"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB のインスタンス API リファレンス
   従来のサービスベースの SQL Server 環境で、単一のコンピューターにインストールされた個々の SQL Server インスタンスは、物理的に独立しています。つまり、各インスタンスは独立したバイナリ セットを持っており、独立したサービス プロセスの下で実行されます。インストールと削除も個別に行われる必要があります。 ユーザーが接続する先の SQL Server インスタンスは、SQL Server インスタンス名を使用して指定されます。  
@@ -64,7 +63,7 @@ ms.locfileid: "63128639"
 ### <a name="named-instance-naming-rules"></a>名前付きインスタンスの名前付け規則  
  LocalDB インスタンス名の最大文字数は 128 文字です (これは `sysname` データ型による制約です)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この違いの理由は、LocalDB ではデータベースがファイルとして扱われるため、ファイルベースのセマンティクスを意味するので、ユーザーはより自由にインスタンス名を選択できます。  
   
- LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名コンポーネント内の無効な文字には、通常次の文字が含まれます: ASCII/Unicode 文字 1 ~ 31、引用符 ("\<)、小なり ()、大なり (>)、パイプ (|)、バックスペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)、疑問符 (\\?)、円記号 ()、スラッシュ (/) の順に移動します。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
+ LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名コンポーネント内の無効な文字には、通常、ASCII/Unicode 文字 1 ~ 31 の文字、引用符 (")、小なり ( \<), greater than (> )、パイプ (|)、バックスペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)、疑問符 (?)、円記号 ( \\ )、およびスラッシュ (/) が含まれます。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
   
 > [!NOTE]  
 >  無効な文字はオペレーティング システムによって異なり、今後のリリースで変わることもあります。  
@@ -77,7 +76,7 @@ ms.locfileid: "63128639"
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  
  LocalDB インスタンス API を見つけるためのヘッダー ファイル情報とレジストリ キーを提供します。  
   
- [コマンド ライン管理ツール: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
+ [コマンドライン管理ツール:SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)  
  コマンド ラインから LocalDB インスタンスを管理するツールである SqlLocalDB.exe について説明します。  
   
  [LocalDBCreateInstance 関数](localdbcreateinstance-function.md)  

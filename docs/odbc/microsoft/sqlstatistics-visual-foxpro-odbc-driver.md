@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab23cb3f470ed9a0b0a1bb6dc15b411fb9b69b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f225e37fd8bace25c90782d6a35b0eab09ea82cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037814"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306111"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

@@ -15,30 +15,30 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6b60abffcb4831223ee35ac530c979865e03e05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907391"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889972"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdistribution_history**テーブルには、ローカルディストリビューターに関連付けられているディストリビューションエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ディストリビューションエージェントの ID。|  
 |**runstatus**|**int**|実行中の状態:<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗。|  
-|**start_time**|**DATETIME**|ジョブの実行開始時刻です。|  
-|**time**|**DATETIME**|メッセージがログに記録される時刻。|  
-|**全**|**int**|メッセージ セッションの実行時間 (秒) です。|  
-|**comments**|**nvarchar(4000)**|メッセージ テキストです。|  
+|**start_time**|**datetime**|ジョブの実行開始時刻です。|  
+|**time**|**datetime**|メッセージがログに記録される時刻。|  
+|**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
+|**コメント**|**nvarchar (4000)**|メッセージ テキストです。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
 |**current_delivery_rate**|**float**|最後の履歴エントリ以降に1秒間に配信されたコマンド数の平均値。|  
 |**current_delivery_latency**|**int**|最後の履歴エントリ以降、コマンドがディストリビューションデータベースに入ってからサブスクライバーに適用されるまでの待機時間。 単位はミリ秒。|  
@@ -52,8 +52,8 @@ ms.locfileid: "67907391"
 |**updateable_row**|**bit**|履歴行を上書きできる場合は、 **1**に設定します。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

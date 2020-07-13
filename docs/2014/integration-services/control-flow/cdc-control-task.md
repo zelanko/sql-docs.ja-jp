@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb3d85e8617e3e2e84ea205d6c47bd3422a0ce7f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62832884"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433779"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  
@@ -28,7 +27,7 @@ ms.locfileid: "62832884"
   
  次の操作は、初期読み込みと変更処理との間の同期処理を行います。  
   
-|操作|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |ResetCdcState|この操作は、現在の CDC コンテキストに関連付けられた、永続的な CDC の状態をリセットするために使用されます。 この操作の実行後に、LSN-timestamp `sys.fn_cdc_get_max_lsn` テーブルの現在の最大 LSN が次の処理範囲の開始位置になります。 この操作には、ソース データベースへの接続が必要です。|  
 |MarkInitialLoadStart|この操作は初期読み込みパッケージの開始時に使用され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、 `sys.fn_cdc_get_max_lsn`を呼び出すための、ソース データベースへの接続が必要です。<br /><br /> (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に MarkInitialLoadStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
@@ -37,7 +36,7 @@ ms.locfileid: "62832884"
   
  処理範囲の管理には、次の操作を使用します。  
   
-|操作|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |GetProcessingRange|この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。<br /><br /> 格納される状態の詳細については、「 [状態変数の定義](../data-flow/define-a-state-variable.md)」を参照してください。|  
 |MarkProcessedRange|この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  

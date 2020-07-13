@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d132fbf5ce541a2bdab82e44dc55e6fc92df536d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007746"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>cancel オプション (Distributed Replay 管理ツール)
-  分散再生管理ツール`DReplay.exe`は、分散再生コントローラーとの通信に使用できるコマンドラインツールです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このトピックでは、 **cancel** コマンド ライン オプションとそれに対応する構文について説明します。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生管理ツールは、 `DReplay.exe` 分散再生コントローラーとの通信に使用できるコマンドラインツールです。 このトピックでは、 **cancel** コマンド ライン オプションとそれに対応する構文について説明します。
 
  **cancel** オプションは、コントローラーで実行されている現在の操作をキャンセルします。
 
@@ -34,13 +33,11 @@ dreplay cancel [-mcontroller] [-q]
 #### <a name="parameters"></a>パラメーター
  **-m** *コントローラー*コントローラーのコンピューター名。 "`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。
 
- 
-  **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
+ **-m** パラメーターが指定されていない場合、ローカル コンピューターが使用されます。
 
  **-q**Quiet モード。 確認のプロンプトは表示されません。
 
- 
-  **-q** パラメーターは省略可能です。
+ **-q** パラメーターは省略可能です。
 
 ## <a name="examples"></a>例
  次の例では、非表示モードでキャンセル要求が送信されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。

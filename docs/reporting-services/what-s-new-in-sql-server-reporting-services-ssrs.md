@@ -50,7 +50,7 @@ Azure Active Directory アプリケーション プロキシを使用すると�
 
 ### <a name="custom-headers"></a>カスタム ヘッダー
 
-指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「[[サーバーのプロパティ] の [詳細設定] ページ](tools/server-properties-advanced-page-reporting-services.md#customheaders)」の記事の**カスタム ヘッダー**のセクションを参照してください。
+指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
 
 ### <a name="transparent-database-encryption"></a>Transparent Database Encryption
 

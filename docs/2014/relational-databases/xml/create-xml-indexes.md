@@ -10,15 +10,14 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9e7800193222b8c9060fee1b247cc5585654cde4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046946"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "62637762"
   
 -   プライマリ XML インデックスの名前にはビュー名と同じ制限事項が適用されます。  
   
- ビューの`xml`型の列、型の列を持つ`xml` `xml` **テーブル**値変数、または型の変数に XML インデックスを作成することはできません。  
+ ビューの型の列、型の `xml` 列を持つ**テーブル**値変数 `xml` 、または型の変数に XML インデックスを作成することはできません `xml` 。  
   
 -   ALTER TABLE ALTER COLUMN オプションを使用して、`xml` 型の列を型指定されていない XML から型指定された XML に変更する場合、またはその逆の変更を行う場合は、その列に XML インデックスが存在してはいけません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
   

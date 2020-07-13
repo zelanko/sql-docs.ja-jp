@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_sql_modules catalog view
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 23c8596a1dc2d4cfa75f01b123d1f11cffcfe546
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68133018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882941"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>server_sql_modules (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TR 型のサーバーレベルのトリガーの SQL モジュールのセットを格納します。 このリレーションは sys.server_triggers に結合できます。 組 (object_id) はリレーションのキーです。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|これは、このモジュールが定義されているサーバーレベルのトリガーへの外部キー参照です。|  
 |**カスタム**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。<br /><br /> NULL = 暗号化されています。|  
@@ -40,9 +40,9 @@ ms.locfileid: "68133018"
 |**execute_as_principal_id**|**int**|EXECUTE AS サーバー プリンシパルの ID。<br /><br /> 既定、または EXECUTE AS CALLER の場合は、NULL です。<br /><br /> 指定されたプリンシパルの ID。 EXECUTE AS SELF EXECUTE as principal-2 = EXECUTE AS OWNER です。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

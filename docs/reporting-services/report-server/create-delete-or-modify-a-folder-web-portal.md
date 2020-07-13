@@ -88,7 +88,7 @@ ms.locfileid: "67492851"
   
 2. フォルダーを右クリックし、ドロップダウン メニューの **[削除]** を選択します。  
   
-3. **[削除]** **ダイアログ ボックスの <foldername>[削除]** ボタンを選択して、削除を確認します。  
+3. **[削除]<foldername>** ダイアログ ボックスの **[削除]** ボタンを選択して、削除を確認します。  
   
 ## <a name="to-modify-a-folders-properties"></a>フォルダーのプロパティを変更するには  
   
@@ -106,7 +106,7 @@ ms.locfileid: "67492851"
   
 7. **[適用]** を選択してプロパティの変更を保存します。  
   
-8. 必要に応じて、 **[プロパティ]** ページの上部の **[移動]** または **[削除]** ボタンを選択して、フォルダーを移動したり削除したりすることができます。 詳細については、[アイテムの移動または削除 (Web ポータル)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) に関する記事を参照してください。  
+8. 必要に応じて、**[プロパティ]** ページの上部の **[移動]** または **[削除]** ボタンを選択して、フォルダーを移動したり削除したりすることができます。 詳細については、[アイテムの移動または削除 (Web ポータル)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) に関する記事を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [フォルダーの作成、削除、または変更 (Web ポータル)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   

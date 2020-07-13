@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa340c64f6eb92d803d8918bc99ecf112b19f1e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083116"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287412"
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイル データ ソースを使用した接続
 ファイルデータソースの接続情報は、dsn ファイルに格納されます。 このため、接続文字列は、1人のユーザーが繰り返し使用することも、適切なドライバーがインストールされていれば複数のユーザー間で共有することもできます。 このファイルには、ドライバー名 (または unshareable file データソースの場合は別のデータソース名) と、必要に応じて**SQLDriverConnect**で使用できる接続文字列が含まれています。 ドライバーマネージャーは、 **SQLDriverConnect**への呼び出し用の接続文字列を、dsn ファイル内のキーワードから作成します。  

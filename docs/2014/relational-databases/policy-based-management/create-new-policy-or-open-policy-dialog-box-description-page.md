@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63255225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005742"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
@@ -27,13 +26,13 @@ ms.locfileid: "63255225"
  **説明**  
  ポリシーの説明を入力します。  
   
- **追加のヘルプハイパーリンク: 表示するテキスト**  
+ **[追加のヘルプ ハイパーリンク: 表示するテキスト]**  
  ポリシーを実行している場合は、 **[結果の詳細ビュー]** ページに追加のヘルプ ハイパーリンクが表示されます。 ハイパーリンクとして表示するテキストを入力します。  
   
- **追加のヘルプハイパーリンク: アドレス**  
+ **[追加のヘルプ ハイパーリンク: アドレス]**  
  ユーザーが **[結果の詳細ビュー]** ページに表示されるハイパーリンク テキストをクリックしたときに開く Web ページのハイパーリンクを入力します。  
   
- **追加のヘルプハイパーリンク: リンクのテスト**  
+ **[追加のヘルプ ハイパーリンク: リンクのテスト]**  
  クリックすると、リンクの有効性をテストするハイパーリンクが開きます。  
   
  **作成日**  
@@ -42,7 +41,7 @@ ms.locfileid: "63255225"
  **作成者**  
  ポリシーを作成したログイン。  
   
- **更新日**  
+ **更新日時**  
  ポリシーが最後に変更された日付。  
   
  **更新者**  

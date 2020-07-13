@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | Java 用 JavaLauncher.dll | Java 拡張機能 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、実行の分離のために、**AppContainers** を使用する [SQLRUserGroup](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) 以下で実行されます。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、実行の分離のために、[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) を使用する **SQLRUserGroup** 以下で実行されます。
 
 SQL Server Machine 言語拡張を追加したデータベース エンジン インスタンスごとに、個別の [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスが作成されます。 データベース エンジン インスタンスごとに 1 つのスタート パッド サービスが存在するため、外部スクリプトをサポートするインスタンスが複数ある場合は、インスタンスごとに 1 つずつスタート パッド サービスが存在します。 データベース エンジン インスタンスは、それに対して作成されたスタート パッド サービスにバインドされます。 ストアド プロシージャまたは T-SQL で外部スクリプトが呼び出されるたびに、SQL Server サービスにより、同じインスタンスに対して作成されたスタート パッド サービスが呼び出されます。
 

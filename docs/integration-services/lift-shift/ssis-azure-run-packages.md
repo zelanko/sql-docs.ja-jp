@@ -64,7 +64,7 @@ Azure SQL Database に接続し、Transact-SQL コードを実行できるあら
 
 ## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> スクリプトまたはコードでパッケージを実行する
 
-マネージド API を呼び出すことができるあらゆる開発環境で、`Execute` 名前空間で `Package` オブジェクトの `Microsoft.SQLServer.Management.IntegrationServices` メソッドを呼び出すことでパッケージを実行できます。
+マネージド API を呼び出すことができるあらゆる開発環境で、`Microsoft.SQLServer.Management.IntegrationServices` 名前空間で `Package` オブジェクトの `Execute` メソッドを呼び出すことでパッケージを実行できます。
 
 詳細については、次の例をご覧ください。
 

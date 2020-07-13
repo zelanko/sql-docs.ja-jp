@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78171771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035412"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>タスク 3: 照合するデータ品質プロジェクトを作成および実行する
   ここでは、照合アクティビティ用のデータ品質プロジェクトを作成し、クレンジングされた仕入先データで照合プロセスを実行して、データ内の重複部分を削除します。
@@ -32,10 +31,9 @@ ms.locfileid: "78171771"
 
 5.  **[次へ]** をクリックします。
 
-6.  
-  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。
+6.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。
 
-7.  [**参照**] をクリックして、クレンジングアクティビティの出力ファイルである [クレンジングされた**Supplier List .xls**] を選択します。
+7.  [**参照**] をクリックし、クレンジングアクティビティの出力ファイルである [クレンジングされた**Supplier List.xls**] を選択します。
 
 8.  [**仕入先** **ID** ] ドメイン、[ **supplier name** ] 列を [supplier **Name** domain] にマップし、 **ContactEmailAddress**列を [ **Contact Email** domain] にマップします。
 
@@ -47,7 +45,7 @@ ms.locfileid: "78171771"
 
 12. [**次へ**] をクリックして、[**エクスポート**] ページに移動します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 4: 照合アクティビティから Excel ファイルに結果をエクスポートする](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

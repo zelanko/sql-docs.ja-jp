@@ -14,14 +14,14 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be36bd8efc059c1a4f9b5ddf2cdd7faf32cf7dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 95bf46844e9ed91aac1ec6cb93a298995f0901d6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107449"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299772"
 ---
 # <a name="sql-type-identifiers"></a>SQL の型識別子
 各データソースは、独自の SQL データ型を定義します。 ODBC では、型識別子を定義し、各型識別子にマップされる可能性がある SQL データ型の一般的な特性について説明します。 これは、基になるデータソースの各データ型が ODBC の SQL 型識別子にマップされる方法によって異なります。  

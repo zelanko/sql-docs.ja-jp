@@ -12,14 +12,14 @@ helpviewer_keywords:
 - number of rows affected by update [ODBC]
 - data updates [ODBC], number of rows affected
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6a1bebf7d5cfb85e49fb0e382dacc4f4464054e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 156a5fe41d2c9b57a33bbc2bdb4540d1f5b00340
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039982"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305893"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受ける行数の決定
 アプリケーションによって行の更新、削除、または挿入が行われた後、 **SQLRowCount**を呼び出して、影響を受けた行数を調べることができます。 **SQLRowCount**は、 **update**、 **delete**、または**INSERT**ステートメントの実行、位置指定の update または delete ステートメントの実行、または**SQLSetPos**を呼び出すことによって、行が更新、削除、または挿入されたかどうかにかかわらず、この値を返します。  

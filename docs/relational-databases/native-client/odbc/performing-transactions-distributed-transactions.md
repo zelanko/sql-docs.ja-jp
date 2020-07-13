@@ -1,5 +1,6 @@
 ---
 title: 分散トランザクションを作成する |Microsoft Docs
+description: アプリケーションでは、MSDTC を使用して、SQL Server の複数のインスタンスにわたってトランザクションを拡張または分散できます。 .NET クラスは、トランザクションを配布することもできます。
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -14,19 +15,18 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009739"
 ---
 # <a name="create-a-distributed-transaction"></a>分散トランザクションの作成
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 <!--
 The following includes .md file is Empty, as of long before 2019/May/13.
@@ -38,7 +38,7 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC ドライバーは SQL Server オンプレミスの MSDTC を呼び出します。
 
-Microsoft 分散トランザクションコーディネーター (MSDTC) を使用すると、アプリケーション__ はの2つ以上の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対してトランザクションを拡張または配信できます。 分散トランザクションは、2つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
+Microsoft 分散トランザクションコーディネーター (MSDTC) を使用すると、アプリケーションはの2つ以上のインスタンスに対してトランザクションを拡張または_配信_でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 分散トランザクションは、2つのインスタンスが別々のコンピューターでホストされている場合でも機能します。
 
 MSDTC はオンプレミス Microsoft SQL Server 用にインストールされていますが、Microsoft の Azure SQL Database クラウドサービスでは使用できません。
 
@@ -57,7 +57,7 @@ _(1)_ ODBC を使用せずに MSDTC を呼び出すことができます。 こ�
 
 ### <a name="only-one-distributed-transaction"></a>1つの分散トランザクションのみ
 
-C++ Native Client ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションが2番目の分散トランザクションに参加します。 この場合、Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
+C++ Native Client ODBC アプリケーションが分散トランザクションに参加しているとします。 次に、アプリケーションが2番目の分散トランザクションに参加します。 この場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは元の分散トランザクションを残し、新しい分散トランザクションに参加します。
 
 詳細については、「 [DTC プログラマーズリファレンス](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))」を参照してください。
 
@@ -75,6 +75,6 @@ Azure SQL Database または Azure SQL Data Warehouse で MSDTC はサポート�
 - Transact-sql を使用したリンクサーバー
 - JDBC ドライバー
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [トランザクションの実行 (ODBC)](performing-transactions-in-odbc.md)

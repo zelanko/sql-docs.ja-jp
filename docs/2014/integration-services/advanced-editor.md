@@ -13,15 +13,14 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 632f519d045db314f6ed42d3b54bd792ae9981ce
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62772195"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439529"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
   **[詳細エディター]** ダイアログ ボックスを使用すると、選択した [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトのプロパティを構成できます。  

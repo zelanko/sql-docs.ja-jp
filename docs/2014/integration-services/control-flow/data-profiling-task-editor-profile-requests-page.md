@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 604024a203ba289a0e1213196041cc3f681f4cb4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62832066"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433299"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページを使用すると、計算するプロファイルを選択および構成することができます。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
@@ -64,7 +63,7 @@ ms.locfileid: "62832066"
  **[プロファイルの種類]**  
  次のオプションからデータ プロファイルを選択します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[候補キー プロファイル要求]**|候補キー プロファイルを計算します。<br /><br /> このプロファイルは、列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。|  
 |**[列長分布プロファイル要求]**|列長分布プロファイルを計算します。<br /><br /> 列長分布プロファイルは、選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、2 文字の米国州コードの列をプロファイルし、3 文字以上の値を検出できます。|  

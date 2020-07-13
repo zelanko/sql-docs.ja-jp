@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546424"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE の LANGUAGE と FORMAT_STRING
   FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
@@ -23,7 +22,7 @@ ms.locfileid: "66074398"
 ## <a name="value-format_string-language-properties"></a>VALUE プロパティ、FORMAT_STRING プロパティ、LANGUAGE プロパティ  
  これらのプロパティを組み合わせて使用するための準備として、次の表に各プロパティの概要を示します。  
   
- 値  
+ VALUE  
  書式設定されていないセルの値。  
   
  FORMAT_STRING  
@@ -74,8 +73,7 @@ ms.locfileid: "66074398"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
 |メンバー|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  
@@ -125,8 +123,7 @@ ms.locfileid: "66074398"
   
  `cell properties VALUE, FORMAT_STRING, LANGUAGE, FORMATTED_VALUE`  
   
- 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
+ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
 |メンバー|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  

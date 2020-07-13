@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67937840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759458"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch メソッド
 すべての保留中のバッチ更新をディスクに書き込みます。  
@@ -34,13 +34,13 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *影響のあるレコード*  
- 省略可能。 **UpdateBatch**メソッドが影響するレコードの数を示す[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値です。  
+ *AffectRecords*  
+ 任意。 **UpdateBatch**メソッドが影響するレコードの数を示す[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値です。  
   
  *PreserveStatus*  
- 省略可能。 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティによって示されるローカルの変更をコミットする必要があるかどうかを指定する**ブール**値です。 この値が**True**に設定されている場合、更新が完了した後も、各レコードの**Status**プロパティは変更されません。  
+ 任意。 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティによって示されるローカルの変更をコミットする必要があるかどうかを指定する**ブール**値です。 この値が**True**に設定されている場合、更新が完了した後も、各レコードの**Status**プロパティは変更されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  バッチ更新モードで**レコードセット**オブジェクトを変更する場合は、 **UpdateBatch**メソッドを使用して、**レコードセット**オブジェクトに加えられたすべての変更を基になるデータベースに転送します。  
   
  **レコードセット**オブジェクトでバッチ更新がサポートされている場合は、 **UpdateBatch**メソッドを呼び出すまで、1つ以上のレコードに対して複数の変更をローカルにキャッシュできます。 現在のレコードを編集している場合、または**UpdateBatch**メソッドを呼び出したときに新しいレコードを追加している場合、ADO は[Update](../../../ado/reference/ado-api/update-method.md)メソッドを自動的に呼び出して、保留中の変更を現在のレコードに保存してから、バッチされた変更をプロバイダーに送信します。 バッチ更新は、キーセットまたは静的カーソルのいずれかでのみ使用してください。  

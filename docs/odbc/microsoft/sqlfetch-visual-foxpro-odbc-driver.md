@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0087234d48c60779d783a934c99767b2a3613306
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6179dc5eccb6bf28d59f511965997bdef8b82d43
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053772"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304143"
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

@@ -11,101 +11,95 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63245752"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058732"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server エージェントのプロパティ ([警告システム] ページ)
-  このページを使用すると、エージェントの警告によって[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信されるメッセージの設定を表示および変更できます。  
+  このページを使用すると、エージェントの警告によって送信されるメッセージの設定を表示および変更でき [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="options"></a>オプション  
- **メールセッション**  
+ **[メール セッション]**  
  このセクションのオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールを構成します。  
   
- **メールプロファイルを有効にする**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールを有効にします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールは有効ではありません。  
+ **[メール プロファイルを有効にする]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールを有効にします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのメールは有効ではありません。  
   
- **メールシステム**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するメール システムを設定します。 データベース メール  
+ **[メール システム]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するメール システムを設定します。 データベース メール  
   
 > [!NOTE]  
 >  電子メール システムを変更したら、変更内容を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動する必要があります。  
   
- **メールプロファイル**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 [ ** \<新しいデータベースメールプロファイル... >** を選択して新しいプロファイルを作成することもできます。  
+ **[メール プロファイル]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 **\<new Database Mail profile...>** 新しいプロファイルを作成するように選択することもできます。  
   
- **ポケットベルメール**  
+ **[ポケットベル メール]**  
  このセクションのオプションを使用すると、ポケットベル アドレスに送信される電子メール メッセージをポケットベル システムに対応させることができます。  
   
- **ポケットベルメールのアドレス形式**  
+ **[ポケットベル メールのアドレス形式]**  
  このセクションでは、アドレスの形式とポケットベル メールに含める件名行を指定できます。  
   
- **To 行**  
+ **[[宛先] 行]**  
  メッセージの **[宛先]** 行のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[宛先]** 行の先頭に、システムから要求される固定テキストを入力します。  
   
- **ポケットベル**  
+ **ポケット**  
  メッセージの電子メール アドレスを、プレフィックスとサフィックスの間に含めます。  
   
- **敬称**  
+ **サフィックス**  
  ポケットベルに送信されるメッセージの **[宛先]** 行の末尾に、ポケットベル システムから要求される固定テキストを入力します。  
   
- **[Cc] 行**  
+ **[[CC] 行]**  
  メッセージの **[CC]** 行のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[CC]** 行の先頭に、システムから要求される固定テキストを入力します。  
   
- **ポケットベル**  
+ **ポケット**  
  メッセージの電子メール アドレスを、プレフィックスとサフィックスの間に含めます。  
   
- **敬称**  
+ **サフィックス**  
  ポケットベルに送信されるメッセージの **[CC]** 行の末尾に、ポケットベル システムから要求される固定テキストを入力します。  
   
  **件名**  
  メッセージの件名のオプションを指定します。  
   
- **Prefix**  
+ **プレフィックス**  
  ポケットベルに送信されるメッセージの **[件名]** 行の先頭に、ポケットベル システムから要求される固定テキストを入力します。  
   
- **敬称**  
+ **サフィックス**  
  ポケットベルに送信されるメッセージの **[件名]** 行の末尾に、ポケットベル システムから要求される固定テキストを入力します。  
   
- **通知メッセージに電子メールの本文を含める**  
+ **[通知メッセージに電子メールの本文を含める]**  
  ポケットベルに送信されるメッセージに、電子メールの本文を含めます。  
   
- **緊急時のオペレーター**  
+ **[緊急時のオペレーター]**  
  このセクションでは、緊急時のオペレーターのオプションを指定できます。  
   
- **緊急時のオペレーターを有効にする**  
+ **[緊急時のオペレーターを有効にする]**  
  緊急時のオペレーターを指定します。  
   
- **演算子**  
+ **Operator**  
  緊急時の通知を受け取るオペレーターを指定します。  
   
- **通知方法**  
+ **[通知方法]**  
  緊急時のオペレーターへの通知方法を設定します。  
   
- **トークンの置換**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告によって実行されるジョブで使用するジョブ ステップ トークンを有効にできます。 ジョブ ステップ トークンの詳細については、「 [ジョブ ステップでのトークンの使用](use-tokens-in-job-steps.md)」をご覧ください。  
+ **[トークンの置換]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告によって実行されるジョブで使用するジョブ ステップ トークンを有効にできます。 ジョブ ステップ トークンの詳細については、「 [ジョブ ステップでのトークンの使用](use-tokens-in-job-steps.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)** です。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)** です。  
 >   
 >  これらのトークンを使用する必要がある場合は、有効にする前に、信頼された Windows セキュリティ グループ (Administrators など) のメンバーだけが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動作するコンピューターのイベント ログに書き込み権限を持つことを確認してください。  
   
- **アラートに対するすべてのジョブ応答のトークンを置き換える**  
+ **[警告に応答するすべてのジョブのトークンを置き換える]**  
  このチェック ボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってアクティブになるジョブに対してトークンの置換が有効になります。  
   
 ## <a name="see-also"></a>参照  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cb5022df9628607c94754cbbadceecaea02c4db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087779"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304792"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC ドライバーのネイティブのエラー メッセージ
 次の表は、Visual FoxPro ODBC ドライバーにネイティブなエラーメッセージを示しています。  
@@ -28,7 +28,7 @@ ms.locfileid: "68087779"
   
 |||  
 |-|-|  
-|1 で保護されたプロセスとして起動されました|機能は使用できません。|  
+|1|機能は使用できません。|  
 |2|入力/出力操作に失敗しました。|  
 |3|無料ハンドルが見つかりません。|  
 |5|未割り当てハンドルの使用。|  
@@ -45,7 +45,7 @@ ms.locfileid: "68087779"
 |107|キーの長さが無効です。|  
 |109|レコードが範囲外です。|  
 |110|レコードがインデックスに含まれていません。|  
-|111|ファイル記述子が無効です。|  
+|111|無効なファイル記述子。|  
 |113|ファイルが開いていません。|  
 |114|*値*を格納するのに十分なディスク領域がありません。|  
 |115|カーソルの操作が無効です。|  

@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731068"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   *Expression1* で識別される 1 つ以上のノードを、*Expression2* で識別されるノードの子ノードまたは兄弟ノードとして挿入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 insert   
       Expression1 (  
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA セクションを使用したデータの挿入  
- < や > など、XML では無効な文字が含まれるテキストを挿入するときは、次のクエリに示すように、CDATA セクションを使用してデータを挿入できます。 クエリでは CDATA セクションが指定されていますが、無効な文字はエンティティに変換され、テキスト ノードとして追加されます。 たとえば、'<' は &lt; として保存されます。  
+ < や > など、XML では無効な文字が含まれるテキストを挿入するときは、次のクエリに示すように、CDATA セクションを使用してデータを挿入できます。 クエリでは CDATA セクションが指定されていますが、無効な文字はエンティティに変換され、テキスト ノードとして追加されます。 たとえば、`<` は `&lt;` として保存されます。  
   
 ```  
 USE AdventureWorks;  
@@ -236,7 +236,7 @@ GO
 ```  
 <Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
-<Features> <notxml> as text </notxml> or cdata </Features>  
+<Features> &lt;notxml@gt; as text &lt;/notxml&gt; or cdata </Features>  
 </ProductDescription>  
 </Root>       
 ```  

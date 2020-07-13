@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266518"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant を使用して Oracle スキーマを Linux 上の SQL Server 2017 に移行する
@@ -71,7 +71,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
    ![Oracle への接続](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. 次に **[接続]** をクリックします。 SSMA for Oracle は、しばらくしてデータベースに接続し、そのメタデータを読み取ります。
+1. 次いで **[Connect]** をクリックします。 SSMA for Oracle は、しばらくしてデータベースに接続し、そのメタデータを読み取ります。
 
 ## <a name="create-a-report"></a>レポートの作成
 
@@ -128,7 +128,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 より複雑な Orcale スキーマの場合、変換プロセスには、クライアントアプリケーションに対してより多くの時間、テスト、および可能性のある変更が含まれます。 このチュートリアルの目的は、移行プロセス全体の一部として SSMA for Oracle を使用する方法を説明することです。
 
-このチュートリアルでは、以下の内容を学習しました。
+このチュートリアルでは、次の作業を行う方法を学びました。
 > [!div class="checklist"]
 > * SSMA を Windows にインストールする
 > * 新しい SSMA プロジェクトを作成する

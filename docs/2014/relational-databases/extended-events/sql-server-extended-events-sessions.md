@@ -1,7 +1,7 @@
 ---
 title: SQL Server 拡張イベント セッション | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aab8f1203c34ab65b394ee2355b340f17ba8198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62705746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050882"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント セッションは、拡張イベント エンジンをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセス内で作成されます。 拡張イベント インフラストラクチャとその全体的な処理を理解するには、拡張イベント セッションの次の側面に注目します。  
@@ -30,12 +29,12 @@ ms.locfileid: "62705746"
   
 ## <a name="session-states"></a>セッション状態  
  拡張イベント セッションの各種の状態を次の図に示します。  
-  
- ![拡張イベント セッションの状態](../../database-engine/media/xesessionstate.gif "拡張イベント セッションの状態")  
-  
+
+![拡張イベント セッションの状態](../../database-engine/media/xesessionstate.png "拡張イベント セッションの状態")
+
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
-|図ラベル|DDL ステートメント|[説明]|  
+|図ラベル|DDL ステートメント|説明|  
 |------------------------|-------------------|-----------------|  
 |作成|CREATE EVENT SESSION|CREATE EVENT SESSION によって提供されたメタデータを含むセッション オブジェクトがホスト プロセスによって作成されます。 ホスト プロセスは、セッション定義を検証し、ユーザーの権限レベルを検証した後、メタデータを master データベースに格納します。 このときセッションはまだアクティブではありません。|  
 |Alter|ALTER EVENT SESSION, STATE=START|ホスト プロセスによってセッションが開始されます。 ホスト プロセスは、格納されているメタデータを読み取って、セッション定義を検証し、ユーザーの権限レベルを検証して、セッションを作成します。 イベントやターゲットなどのセッション オブジェクトが読み込まれ、イベント処理がアクティブになります。|  

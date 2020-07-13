@@ -1,5 +1,6 @@
 ---
 title: xml データ型に対する FOR XML サポート | Microsoft Docs
+description: xml データ型の SQL Database 列に対する FOR XML クエリの使用について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729889"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML クエリによって SELECT 句で **xml** 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 **xml** 型の列内の XML 宣言はシリアル化されません。  
   
  たとえば、次のクエリは、 `BusinessEntityID`、 `FirstName`、および `LastName` 列、および `AdditionalContactInfo` xml **型の** 列からの電話番号など、顧客の連絡先の情報を取得します。  

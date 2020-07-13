@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7468843aa111e8317efe4a9a088e93b675bc93c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62842978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928783"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理ツールの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 各バージョンでの動作の相違について説明します。  

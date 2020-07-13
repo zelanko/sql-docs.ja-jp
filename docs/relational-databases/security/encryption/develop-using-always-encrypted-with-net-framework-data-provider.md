@@ -12,15 +12,15 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 857823bf01c537842a3d18e23c003d38ac6b68d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765025"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Always Encrypted と .NET Framework Data Provider for SQL Server を使用する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、[Always Encrypted](always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) と [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) を使用して、.NET アプリケーションを開発する方法について説明します。
 
@@ -586,7 +586,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>参照
 
 - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted 関連のブログ](https://docs.microsoft.com/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
 - [SQL Database のチュートリアル:Always Encrypted で機密データを保護する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

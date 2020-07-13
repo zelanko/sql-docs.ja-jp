@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 42d79ed13a691c3d39a28e7ab35a740a9f613fac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62691511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066675"
 ---
 # <a name="set-the-auto_shrink-database-option-to-off"></a>AUTO_SHRINK データベース オプションを OFF に設定
   このルールでは、AUTO_SHRINK データベース オプションが OFF に設定されているかどうかをチェックします。 データベースの圧縮と拡張により、物理的な断片化が発生することがよくあります。  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299182"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>ストアド プロシージャ (for Oracle ODBC ドライバー)
 > [!IMPORTANT]  

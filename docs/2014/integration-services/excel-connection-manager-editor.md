@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059266"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437409"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 接続マネージャー
   **[Excel 接続マネージャー]** ダイアログ ボックスを使用すると、既存または新規の [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブック ファイルへの接続を追加できます。  
@@ -36,13 +35,13 @@ ms.locfileid: "66059266"
 > [!WARNING]  
 >  Excel**変換先エディター**では、存在しないファイルをポイントする**excel 接続**を選択すると、excel ファイルが自動的に作成されます。その後、[ **excel シートの名前**] で [**新規**] をクリックします。  
   
- **[参照]**  
- [**開く**] ダイアログボックスを使用して、excel ファイルが存在するフォルダー、または新しいファイルを作成する場所に移動します。  
+ **参照**  
+ **[開く]** ダイアログ ボックスを使用して、Excel ファイルが存在するフォルダー、または新しいファイルを作成するフォルダーを指定します。  
   
  **[Excel バージョン]**  
  ファイルを作成するために使用した Microsoft Excel のバージョンを指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[Microsoft Excel 97-2005]|ファイルは Excel 97 以降を使用して作成されています。|  
 |Excel 3.0|ファイルは Excel 3.0 を使用して作成されました。|  
@@ -52,7 +51,7 @@ ms.locfileid: "66059266"
  **[先頭行に列名を含める]**  
  選択されているワークシートのデータの 1 行目に列名が含まれているかどうかを指定します。 このオプションの既定値は **[true]** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   

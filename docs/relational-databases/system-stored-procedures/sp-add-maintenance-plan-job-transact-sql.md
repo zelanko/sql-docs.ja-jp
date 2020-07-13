@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879697"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   メンテナンス プランを既存のジョブに関連付けます。  
   
@@ -57,15 +57,15 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_maintenance_plan_job**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、 **sp_add_maintenance_plan_job**を使用して作成されたメンテナンスプランにジョブ "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" を追加します。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>参照  
- [メンテナンスプラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
+## <a name="see-also"></a>関連項目  
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

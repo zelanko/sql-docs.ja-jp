@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748883"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが指定の型と同じであるかどうかをテストするメソッド。 **geometry** インスタンスの型が指定された型と同じである場合は、1 を返します。 このメソッドは、指定された型がインスタンスの型の先祖である場合も、1 を返します。 それ以外の場合、このメソッドは 0 を返します。
   

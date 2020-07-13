@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode 要素 (DTA)
+description: dta ユーティリティでは、DropOnlyMode 要素により、データベース エンジン チューニング アドバイザーで既存のインデックス、インデックス付きビュー、またはパーティションの削除だけを対象にすることを指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305590"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831558"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 要素 (DTA)
 
@@ -43,7 +44,7 @@ ms.locfileid: "75305590"
   
  **既定値**  
   
- **出現回数**: 省略可能。 **TuningOptions** 要素につき 1 回のみ使用できます。 **TuningOptions** 要素内で以下の要素を指定する場合には使用できません。  
+ **発生頻度**: 省略可能。 **TuningOptions** 要素につき 1 回のみ使用できます。 **TuningOptions** 要素内で以下の要素を指定する場合には使用できません。  
   
 -   [FeatureSet 要素 &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "75305590"
 -   [KeepExisting 要素 &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) が **ALL** に設定されている  
   
 ## <a name="element-relationships"></a>要素の関係  
- **親要素**: [TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **親要素**:[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **子要素**  
   

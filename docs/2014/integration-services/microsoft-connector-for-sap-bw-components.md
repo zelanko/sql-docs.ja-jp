@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f1656121328c2c2f9ac81420207cbdd53a3f585
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd23e24bb1c66b6d45bc4a0c3b413c55415ca3ce
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62890658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424569"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Microsoft Connector 1.1 for SAP BW のコンポーネント
   ここでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 3 種類のコンポーネントについてのトピックが含まれています。  

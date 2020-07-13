@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62842987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928936"
 ---
 # <a name="source-control-basics"></a>ソース管理の基礎
   ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。  
@@ -40,8 +39,7 @@ ms.locfileid: "62842987"
   
 -   誤って削除した項目を復元します。 ソース管理にチェックインされている最新のファイル バージョンを復元できます。  
   
--   ソース管理クライアントとサーバーの両方でディスク容量を節約します。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe などの一部のソース管理プロバイダーでは、最新バージョンのファイルと各バージョン間の差分を格納することでサーバーのディスク容量を節約できます。 Visual SourceSafe の場合は、クライアントでもディスク容量の節約が可能です。 フォルダーやファイルを隠して、ローカル ディスクにダウンロードされないように設定できます。  
+-   ソース管理クライアントとサーバーの両方でディスク容量を節約します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe などの一部のソース管理プロバイダーでは、最新バージョンのファイルと各バージョン間の差分を格納することでサーバーのディスク容量を節約できます。 Visual SourceSafe の場合は、クライアントでもディスク容量の節約が可能です。 フォルダーやファイルを隠して、ローカル ディスクにダウンロードされないように設定できます。  
   
  ファイルのチェックアウト、チェックインなどのソース管理操作は、実際には [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のようなソース管理クライアントを経由して行います。 クライアントは、プロバイダーと対話することによって、分散したユーザー グループがプロバイダーの機能を使用できるように設計されています。 ユーザーは、ソース管理クライアントを使用して、ソース管理プロバイダーによって格納されたファイルの参照、ファイルの追加と削除、ファイルのチェックアウトとチェックイン、およびローカル ファイルのコピーの取得ができます。  
   
@@ -52,7 +50,7 @@ ms.locfileid: "62842987"
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**Task**|**トピック**|  
 |ソース管理オプションの設定|[ソース管理のオプションの設定](../../2014/database-engine/set-source-control-options.md)|  
 |ソース管理接続の変更|[ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)|  
 |ソース管理からファイルを除外する|[ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)|  

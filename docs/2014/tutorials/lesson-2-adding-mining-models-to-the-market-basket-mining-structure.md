@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204720"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加
@@ -113,8 +113,7 @@ ADD MINING MODEL [<mining model name>]
     > [!NOTE]  
     >  特定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに対する DMX クエリを作成するには、インスタンスではなくデータベースを右クリックします。  
   
-2.  
-  `ALTER MINING STRUCTURE` ステートメントの汎用例を空のクエリにコピーします。  
+2.  `ALTER MINING STRUCTURE` ステートメントの汎用例を空のクエリにコピーします。  
   
 3.  次の部分を探します。  
   
@@ -122,7 +121,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Market Basket]  
@@ -134,7 +133,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Default Association]  
@@ -150,7 +149,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     OrderNumber,  
@@ -170,7 +169,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Using Microsoft_Association_Rules  
@@ -205,8 +204,7 @@ ADD MINING MODEL [<mining model name>]
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
-2.  
-  `ALTER MINING STRUCTURE` ステートメントの汎用例を空のクエリにコピーします。  
+2.  `ALTER MINING STRUCTURE` ステートメントの汎用例を空のクエリにコピーします。  
   
 3.  次の部分を探します。  
   
@@ -214,7 +212,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Market Basket  
@@ -226,7 +224,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Modified Association]  
@@ -241,7 +239,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     OrderNumber,  
@@ -258,7 +256,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], support
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073903"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307803"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo のサポート
 ODBC 2 の場合。*x*アプリケーションが ODBC*3.x ドライバーに*対して**SQLGetInfo**を呼び出すと、次の表の*InfoType*引数がサポートされている必要があります。  

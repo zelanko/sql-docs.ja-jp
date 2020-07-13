@@ -14,29 +14,29 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942838"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284262"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
 SQL ベースのアプリケーションは、 **UPDATE**、 **DELETE**、および**INSERT**の各ステートメントを実行して、テーブルに変更を加えます。 これらのステートメントは、SQL 文法の最小一致レベルに含まれており、すべてのドライバーとデータソースでサポートされている必要があります。  
   
  これらのステートメントの構文は次のとおりです。  
   
- **** _テーブル名の_更新  
+ **UPDATE** _テーブル名の_更新  
   
- **** _列識別子_ **=** {*expression* &#124; **NULL**} の設定  
+ **SET** _列識別子_ **=** {*expression* &#124; **NULL**} の設定  
   
  [**,** _列識別子_ **=** {*式*&#124; **NULL**}]...  
   
- [**** _検索条件_]  
+ [**WHERE** _検索条件_]  
   
- _テーブル名_**からの削除**[**** _検索条件_]  
+ _テーブル名_**からの削除**[**WHERE** _検索条件_]  
   
  **INSERT INTO** _table-name_[**(** _列識別子_[**,** _列識別子_]...**)**]  
   

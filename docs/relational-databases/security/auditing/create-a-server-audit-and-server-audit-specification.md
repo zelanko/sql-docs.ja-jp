@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: DavidTrigano
+ms.author: datrigan
+ms.openlocfilehash: 05f3d283e90affc8a89e32e2e0f249153f2e4935
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952465"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899085"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  **このトピックの内容**  
@@ -35,7 +35,7 @@ ms.locfileid: "75952465"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次のものを使用してサーバー監査およびサーバー監査の仕様を作成するには:**  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75952465"
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
-     **Name**  
+     **名前**  
      サーバー監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -164,14 +164,19 @@ ms.locfileid: "75952465"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> 監査のファイル ターゲットとして UNC パスを使用することもできますが、注意が必要です。 そのファイル共有に対してネットワーク待機時間がある場合、SQL Server でパフォーマンスの低下が発生する可能性があります。これは、スレッドで、処理を続行する前に監査の書き込みが完了するのを待機するためです。 SQL Server エラー ログには、17894 などのさまざまなエラー メッセージが表示される場合があります:
+>
+>   2020-02-07 12:21:35.100 Server ディスパッチャー プール 'XE Engine main dispatcher pool' のディスパッチャー (0x7954) のワーカー 0x00000058E7300000 が、ノード 0 で応答を停止している可能性があります。
+
+
 #### <a name="to-create-a-server-audit-specification"></a>サーバー監査仕様を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  

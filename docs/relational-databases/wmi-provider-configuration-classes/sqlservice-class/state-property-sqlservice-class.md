@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbccc720f30bd98660e48d7c82a132f76dcf1a26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660844"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880590"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サービスの現在の状態を取得または設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +35,8 @@ ms.locfileid: "73660844"
 object.State [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
@@ -44,8 +44,8 @@ object.State [= value]
   
  値には、次のいずれかを指定できます。  
   
- 1 で保護されたプロセスとして起動されました  
- 停止中。 サービスは停止されています。  
+ 1  
+ 停止中。 サービスが停止しています。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  
@@ -65,9 +65,9 @@ object.State [= value]
  7  
  一時停止。 サービスは一時停止しています。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

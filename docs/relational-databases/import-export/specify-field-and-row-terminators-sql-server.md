@@ -1,5 +1,6 @@
 ---
 title: フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs
+description: フィールド ターミネータと行ターミネータは、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示します。
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062551"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001709"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
   
 > [!IMPORTANT]
@@ -183,7 +184,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. BULK INSERT を使用した対話的なターミネータの指定  
  次の例では、次の表に示す修飾子を指定した `Department-c-t.txt` ステートメントを使用して、 `BULK INSERT` データ ファイルを一括インポートします。  
   
-|オプション|Attribute|  
+|オプション|属性|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |FIELDTERMINATOR **='** `,` **'**|コンマ (`,`) をフィールド ターミネータとして指定します。|  

@@ -115,7 +115,7 @@ ms.locfileid: "70846508"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを再初期化するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **\@upload_first** に **true** の値を指定します。 これにより、マージ エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、**\@upload_first** に **true** の値を指定します。 これにより、マージ エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
@@ -124,7 +124,7 @@ ms.locfileid: "70846508"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを再初期化するには  
   
-1.  パブリッシャーで、[sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **\@upload_first** に **true** の値を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  パブリッシャーで、[sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、**\@upload_first** に **true** の値を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
@@ -146,7 +146,7 @@ ms.locfileid: "70846508"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>既存のマージ パブリケーションの再初期化ポリシーを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。 **\@property** に **automatic_reinitialization_policy** を指定し、次のいずれかの値を **\@value** に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。**\@property** に **automatic_reinitialization_policy** を指定し、次のいずれかの値を **\@value** に指定します。  
   
     -   **1** - パブリケーションに対する変更に応じてサブスクリプションが自動的に再初期化される前に、サブスクライバーの変更がアップロードされます。  
   

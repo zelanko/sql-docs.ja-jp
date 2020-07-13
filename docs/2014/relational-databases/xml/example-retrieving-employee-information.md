@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013364"
 ---
 # <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
   この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  
@@ -123,7 +122,7 @@ FOR XML EXPLICIT;
   
  結果の XML ツリーを生成する際、ユニバーサル テーブル内の行は、次のように処理されます。  
   
- 1 行目の `Tag` 列の値は `1`です。 これにより、 `Tag` 列に値 `1` が割り当てられた列グループとして `Employee!1!EmpID`が識別されます。 この列では、 `Employee` は要素名として識別されます。 その後、`Employee` 属性を持つ <`EmpID`> 要素が作成されます。 これらの属性には、対応する列の値が割り当てられます。  
+ 1 行目の `Tag` 列の値は `1`です。 これにより、 `Tag` 列に値 `1` が割り当てられた列グループとして `Employee!1!EmpID`が識別されます。 この列では、 `Employee` は要素名として識別されます。 その後、`EmpID` 属性を持つ <`Employee`> 要素が作成されます。 これらの属性には、対応する列の値が割り当てられます。  
   
  2 行目の `Tag` 列の値は `2`です。 これにより、 `Tag` 列に値 `2` が割り当てられた列グループとして `Name!2!FName`、 `Name!2!LName`が識別されます。 これらの列では、 `Name` が要素名として識別されます。 <`Name`> 要素の作成時には、`FName` 属性と `LName` 属性が識別されます。 これらの属性には、対応する列の値が割り当てられます。 この行の `1` 列には値 `Parent`が割り当てられています。 したがって、この要素は、1 行目の <`Employee`> 要素に子要素として追加されます。  
   

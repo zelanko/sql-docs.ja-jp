@@ -9,23 +9,21 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6307b4e138cc5523e496c8f4abb4f0bea0011a11
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65479377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971376"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
-  
   **[ステージング バッチ]** ページの **[統合管理]** 機能領域に表示される状態は次のとおりです。  
   
-|Status|[説明]|Status_ID|  
+|Status|説明|Status_ID|  
 |------------|-----------------|----------------|  
-|実行用のキューに登録済み|バッチ処理が開始されていません。|1 で保護されたプロセスとして起動されました|  
+|実行用のキューに登録済み|バッチ処理が開始されていません。|1|  
 |実行中|バッチ処理中です。|2|  
-|Completed|バッチ処理が完了しています。|3|  
+|完了|バッチ処理が完了しています。|3|  
 |消去用のキューに登録済み|バッチ処理が完了しており、消去されます。|4|  
 |クリア|バッチ処理が消去されました。|5|  
   

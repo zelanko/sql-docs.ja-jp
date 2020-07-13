@@ -13,26 +13,24 @@ helpviewer_keywords:
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fca9d196526745f1e700e8ada42230ef9bff0da7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933103"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>[トレース テンプレートのプロパティ] ([全般] タブ) の編集
-  
   **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル**メニューで、**テンプレート**、] をクリックし、**テンプレートの編集**。  
   
 ## <a name="options"></a>オプション  
- **サーバーの種類の選択**  
+ **[サーバーの種類の選択]**  
  このテンプレートを使用するサーバーの種類を選択します。  
   
- **テンプレート名の選択**  
+ **[テンプレート名の選択]**  
  編集するテンプレートを選択します。  
   
- **選択したサーバーの種類の既定のテンプレートとして使用する**  
+ **[選択したサーバーの種類に対する既定のテンプレートとして使用する]**  
  このサーバーの種類に対して作成されたトレースには、既定でこのテンプレートを使用します。  
   
 ## <a name="see-also"></a>参照  

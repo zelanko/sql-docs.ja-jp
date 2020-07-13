@@ -10,15 +10,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4db32776e59c6100594933fd8706129e8652790
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02d29866e0bee42f37cefa96df6bacc848c0cb15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428609"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (以上) (SSIS 式)
   最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68ed273989d738a768d8e5fffd116ea630d8043d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fc9ceb3bd250a25ce6d0166c55c43827758ea8ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045055"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284802"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの変更
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Visual FoxPro データソースを変更するには  

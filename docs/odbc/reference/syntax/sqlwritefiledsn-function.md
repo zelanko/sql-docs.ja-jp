@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteFileDSN [ODBC]
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b1ce34074a2326d17a199537b308a9a670d8163
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039431"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286892"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 関数
 **互換性**  
@@ -63,7 +63,7 @@ BOOL SQLWriteFileDSN(
 ## <a name="diagnostics"></a>診断  
  **SQLWriteFileDSN**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_PATH|無効なインストールパス|*Lpszfilename*引数で指定されたファイル名のパスが無効です。|  
@@ -78,6 +78,6 @@ BOOL SQLWriteFileDSN(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ファイル Dsn から情報を読み取っています|[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|

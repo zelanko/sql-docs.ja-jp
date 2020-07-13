@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754805"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 このデータ型には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートしている各種データ型の値が格納されます。
   
@@ -115,7 +115,7 @@ ODBC でサポートされていません **sql_variant**です。 クエリで�
 ## <a name="examples"></a>例  
 
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. テーブルで sql_variant を使用する  
- 次の例では、sql_variant データ型でテーブルを作成します。 次の例では、`SQL_VARIANT_PROPERTY` の `colA``46279.1``colB` 値  = に関する `1689` 情報を取得しています。 `tableA` には `colA` 型の `sql_variant` と、`colB` が含まれているものとします。  
+ 次の例では、sql_variant データ型でテーブルを作成します。 次の例では、`colA` の `colB` =`1689` 値 `46279.1` に関する `SQL_VARIANT_PROPERTY` 情報を取得しています。 `tableA` には `sql_variant` 型の `colA` と、`colB` が含まれているものとします。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -138,7 +138,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 変数として sql_variant を使用する   
- 次の例では、sql_variant データ型を使用して変数を作成し、`SQL_VARIANT_PROPERTY` という名前の変数に関する @v1情報を取得します。  
+ 次の例では、sql_variant データ型を使用して変数を作成し、@v1 という名前の変数に関する `SQL_VARIANT_PROPERTY`情報を取得します。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

@@ -13,15 +13,14 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 20c22162df97a9ae3921e6452b8a79e23035d459
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284951"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433319"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -56,7 +55,7 @@ ms.locfileid: "67284951"
   
  また、親パッケージと子パッケージが 1 つの単位として共に失敗する方が良い場合や、別のプロセスで追加のオーバーヘッドが発生しない方が良い場合もあります。 たとえば、子プロセスが失敗し、パッケージの親プロセス内の次の処理が、子プロセスが成功した場合に行われる場合、子パッケージは親パッケージのプロセス内で実行される必要があります。  
   
- 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティはに`False`設定され、子パッケージは親パッケージと同じプロセスで実行されます。 このプロパティを `True` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、このプロパティを `True` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../install-windows/install-integration-services.md)」を参照してください。  
+ 既定では、パッケージ実行タスクの ExecuteOutOfProcess プロパティはに設定され、 `False` 子パッケージは親パッケージと同じプロセスで実行されます。 このプロパティを `True` に設定すると、子パッケージは別のプロセスで実行されます。 これにより、子パッケージの起動が遅くなる場合があります。 また、このプロパティを `True` に設定した場合、ツールのみのインストールではパッケージをデバッグできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../install-windows/install-integration-services.md)」を参照してください。  
   
 ## <a name="extending-transactions"></a>トランザクションの拡張  
  親パッケージで使用するトランザクションを子パッケージに拡張できます。このため、両方のパッケージで実行される作業をコミットまたはロールバックできます。 たとえば、親パッケージで実行されるデータベースの挿入は、子パッケージで実行されるデータベースの挿入に基づいてコミットまたはロールバックできます。その逆も同様です。 詳細については、「 [トランザクションの継承](../inherited-transactions.md)」を参照してください。  
@@ -102,15 +101,13 @@ ms.locfileid: "67284951"
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [パッケージ実行タスク エディター](../execute-package-task-editor.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Description プロパティ |Microsoft Docs
+description: エラーの説明を含む文字列値を返す ADO の Error オブジェクトの description プロパティについて説明します。
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880540"
 ---
 # <a name="description-property"></a>Description プロパティ
 [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトについて説明します。  
@@ -30,7 +31,7 @@ ms.locfileid: "67933087"
 ## <a name="return-value"></a>戻り値  
  エラーの説明を含む**文字列**値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Description**プロパティを使用して、エラーの簡単な説明を取得します。 このプロパティを表示して、処理できない、または処理したくないエラーをユーザーに通知します。 文字列は、ADO またはプロバイダーから取得されます。  
   
  プロバイダーは、ADO に特定のエラーテキストを渡す役割を担います。 ADO は、受信したプロバイダーエラーまたは警告ごとに[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを**エラーコレクションに**追加します。 **エラー**コレクションを列挙して、プロバイダーが成功したエラーをトレースします。  

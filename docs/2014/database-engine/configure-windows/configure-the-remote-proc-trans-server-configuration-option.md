@@ -12,20 +12,17 @@ helpviewer_keywords:
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54fcaafa51eef33acb1ae8d1e2f36022840b76a1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62811336"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935553"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>remote proc trans サーバー構成オプションの構成
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 
-  **remote proc trans** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションによってサーバー間プロシージャの動作を保護する場合に使用します。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **remote proc trans** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションによってサーバー間プロシージャの動作を保護する場合に使用します。  
   
- 
-  **remote proc trans** の値を 1 に設定することで、トランザクションの ACID (原子性、一貫性、分離性、および持続性) プロパティを保護する、MS DTC によってコーディネートされる分散トランザクションを提供します。 このオプションを 1 に設定した後に開始したセッションは、この構成オプションの設定を既定値として継承します。  
+ **remote proc trans** の値を 1 に設定することで、トランザクションの ACID (原子性、一貫性、分離性、および持続性) プロパティを保護する、MS DTC によってコーディネートされる分散トランザクションを提供します。 このオプションを 1 に設定した後に開始したセッションは、この構成オプションの設定を既定値として継承します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
@@ -38,44 +35,42 @@ ms.locfileid: "62811336"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   **次のものを使用して remote proc trans オプションを構成するには:**  
+-   **以下を使用して remote proc trans オプションを構成するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [remote proc trans オプションを構成した後](#FollowUp)  
+-   **補足情報:** [remote proc trans オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   この値を設定するには、あらかじめリモート サーバー接続が許可されている必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   このオプションは、リモートストアドプロシージャを使用する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アプリケーションについて、以前のバージョンのとの互換性を維持するために用意されています。 リモート ストアド プロシージャを呼び出す代わりに、 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)を使用して定義されている、リンク サーバーを参照した分散クエリを使用してください。  
+-   このオプションは、リモート ストアド プロシージャを使用したアプリケーションにおいて以前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を保つために用意されています。 リモート ストアド プロシージャを呼び出す代わりに、 [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)を使用して定義されている、リンク サーバーを参照した分散クエリを使用してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>remote proc trans オプションを構成するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  
-  **[接続]** ノードをクリックします。  
+2.  **[接続]** ノードをクリックします。  
   
-3.  
-  **[リモート サーバー接続]** の **[サーバー間通信で使用する分散トランザクションを要求する]** チェック ボックスをオンにします。  
+3.  **[リモート サーバー接続]** の **[サーバー間通信で使用する分散トランザクションを要求する]** チェック ボックスをオンにします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>remote proc trans オプションを構成するには  
   
@@ -97,7 +92,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: remote proc trans オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-remote-proc-trans-option"></a><a name="FollowUp"></a>補足情報: remote proc trans オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

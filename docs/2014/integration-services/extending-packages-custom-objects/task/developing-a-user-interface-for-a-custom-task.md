@@ -18,22 +18,21 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a460e70865f9018361f307ab42049b72c3a4602
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768918"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427219"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
   
  タスク用のカスタム ユーザー インターフェイスを開発するには、2 つの重要なクラスを使用します。 次の表は、これらのクラスを示しています。  
   
-|クラス|[説明]|  
+|クラス|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|マネージド タスクを識別する属性。この属性のプロパティによってデザイン時の情報を提供し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでのオブジェクトの表示方法と操作方法を制御します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|タスクとカスタム ユーザー インターフェイスを関連付けるためにタスクが使用するインターフェイス。|  
@@ -49,7 +48,7 @@ ms.locfileid: "62768918"
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性のプロパティを示しています。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|制御フロー ツールボックスに表示するタスク名。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|タスクの説明 (<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute> から継承)。 ツールヒントに表示されるプロパティです。|  
@@ -117,8 +116,7 @@ End Class 'MyTask
   
  デザイナーは <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで表示するウィンドウを要求します。 タスクは、タスクのユーザー インターフェイスを含むウィンドウのインスタンスを作成し、ユーザー インターフェイスをデザイナーに返して表示させます。 通常、オーバーロードされたコンストラクターを介して、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトおよび <xref:Microsoft.SqlServer.Dts.Runtime.Connections> オブジェクトがウィンドウに渡されるため、これを使用してタスクを構成できます。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームを閉じると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはフォームの `DialogResult` プロパティの値を確認し、タスクが変更されたかどうか、およびその変更を保存する必要があるかどうかを判断します。 
-  `DialogResult` プロパティの値が `OK` の場合、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスクの持続メソッドを呼び出して変更を保存します。それ以外の場合は、変更は破棄されます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームを閉じると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはフォームの `DialogResult` プロパティの値を確認し、タスクが変更されたかどうか、およびその変更を保存する必要があるかどうかを判断します。 `DialogResult` プロパティの値が `OK` の場合、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスクの持続メソッドを呼び出して変更を保存します。それ以外の場合は、変更は破棄されます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> インターフェイスを実装します。ここでは、SampleTaskForm という名前の Windows フォーム クラスが存在するものと想定しています。  
   
@@ -198,9 +196,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタムタスクの作成](creating-a-custom-task.md)   
  [カスタムタスクのコーディング](coding-a-custom-task.md)   
  [カスタム タスク用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-task.md)  

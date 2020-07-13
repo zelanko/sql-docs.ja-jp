@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 247364d01575e9ffae5988df03c82ea198289507
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63240725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065436"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
   XML スキーマ コレクションを作成する権限は、次のいずれかの方法で取り消すことができます。  

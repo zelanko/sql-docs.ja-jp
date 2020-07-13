@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 255cc9373e18fc33ce1f43dd3be760e283d1e891
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771368"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438749"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
   新しいインスタンス ウィザードを起動すると、[CDC データベースの作成] ページが表示されます。 [CDC データベースの作成] ページを使用して、新しい CDC インスタンスに関する情報を提供し、新しい変更データベースを作成します。  

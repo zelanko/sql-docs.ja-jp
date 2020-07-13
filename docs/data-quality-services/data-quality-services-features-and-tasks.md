@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0f18a988a010026b3aeca3d23fc5616c5a7b685b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882900"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services の機能とタスク
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   データ スチュワード、Data Quality Services 管理者、または SQL Server 管理者がデータ品質プロジェクトを準備して実行するために必要とする情報を検索します。  
   
@@ -27,9 +27,9 @@ ms.locfileid: "75251699"
   
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [DQS&#41;&#40;データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)  
+ [データ品質プロジェクト &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)  
   
- [Data Cleansing](../data-quality-services/data-cleansing.md)  
+ [データクレンジング](../data-quality-services/data-cleansing.md)  
   
  [データ照合](../data-quality-services/data-matching.md)  
   

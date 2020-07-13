@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrepare function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 14c9358d04e539eb2c77a00e195e8216cd0f5496
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996307"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301558"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

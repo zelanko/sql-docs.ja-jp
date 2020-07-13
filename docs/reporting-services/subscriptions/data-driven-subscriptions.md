@@ -1,5 +1,6 @@
 ---
 title: データ ドリブン サブスクリプション | Microsoft Docs
+description: データ ドリブン サブスクリプションについて説明します。このサブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。
 ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfdd423b50a1d0b644c7db8fbfd0635675ef09fc
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175609"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742290"
 ---
 # <a name="data-driven-subscriptions"></a>データ ドリブン サブスクリプション
   データ ドリブン サブスクリプションでは、実行時に外部データ ソースから取得した動的サブスクリプション データを使用できます。 サブスクリプションの定義時に指定した静的テキストや既定値を使用することもできます。 データ ドリブン サブスクリプションを使用すると、次のようなことが可能になります。  
@@ -57,7 +58,7 @@ ms.locfileid: "66175609"
 |[データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|データ ドリブン サブスクリプションの作成方法について理解するための手順を記載しています。|  
 |[レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)|データ ドリブン サブスクリプションと NULL 配信プロバイダーを使用して、キャッシュを事前に読み込む方法を説明しています。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [キャッシュを事前に読み込む &#40;Web ポータル&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

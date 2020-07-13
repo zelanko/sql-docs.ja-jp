@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076981"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288298"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日付、時刻、およびタイムスタンプのリテラル
 日付、時刻、およびタイムスタンプリテラルのエスケープシーケンスは、  
@@ -26,11 +26,11 @@ ms.locfileid: "68076981"
   
  ここで、*リテラル型*は次の表に示すいずれかの値です。  
   
-|*リテラル-型*|意味|*値*の形式|  
+|*リテラル-型*|説明|*値*の形式|  
 |---------------------|-------------|-----------------------|  
-|**a**|Date|*yyyy*-** mm-*dd*|  
+|**d**|日付|*yyyy*-*mm*mm-*dd*|  
 |**\t**|ごと|*hh*:*mm*:*ss*[1]|  
-|**鏡**|Timestamp|*yyyy*-** mm-*dd* *hh*:*mm*:*ss*[.*f...*]1|  
+|**ts**|Timestamp|*yyyy*-*mm*mm-*dd* *hh*:*mm*:*ss*[.*f...*]1|  
   
  [1] 秒の部分を含む時間またはタイムスタンプの間隔リテラルの小数点の右側の桁数は、SQL_DESC_PRECISION 記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください)。  
   

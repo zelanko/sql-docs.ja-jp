@@ -13,14 +13,14 @@ helpviewer_keywords:
 - VBScript code examples [ADO], about VBScript code examples
 - VBScript code examples [ADO]
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd4bef039b082d281f2426cc9c7695d8115fad05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3289f97d4dd7d397d7eb4378e63ff0e6928d5524
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921174"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762963"
 ---
 # <a name="ado-code-examples-vbscript"></a>VBScript での ADO のコード例
 Microsoft® Visual Basic® Scripting Edition (VBScript) で記述するときに ADO メソッドを使用する方法の詳細については、次のコード例を参照してください。  
@@ -47,4 +47,4 @@ Microsoft® Visual Basic® Scripting Edition (VBScript) で記述するときに
 ## <a name="see-also"></a>参照  
  [Visual Basic の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Visual C++ の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

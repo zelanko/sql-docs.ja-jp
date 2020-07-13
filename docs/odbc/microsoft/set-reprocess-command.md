@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a7eb5fd19ca538c4f25077926567011ae133e54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063620"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300832"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS コマンド
 ロックの試行が失敗した後、ファイルまたはレコードをロックする回数または長さを指定します。  
@@ -52,5 +52,5 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
  自動に  
  Visual FoxPro がレコードまたはファイルを無期限にロックしようとすることを指定します。 (再処理を-2 に設定することは、同等のコマンドです)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  レコードまたはファイルを初めてロックしようとしても、常に成功するわけではありません。 多くの場合、レコードまたはファイルは、ネットワーク上の別のユーザーによってロックされています。 設定の再処理によって、最初の試行が失敗したときに、Visual FoxPro がレコードまたはファイルのロックをさらに試みるかどうかが決定されます。 追加の試行回数、または試行の実行時間を指定できます。 ON ERROR ルーチンは、ロックの試行が失敗した方法に影響します。

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - varchar column size [ODBC]
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a3156c3f71eb4b3f7b8319da5d5fec7514f08b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f11e1de3171521c57c80beb207d33e67d26d3e33
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087964"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304827"
 ---
 # <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR 列のサイズ (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6760ec93961075afa09ef265a80e8beb8434a5e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63241148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044190"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>[上書き保存] ダイアログ ボックス (Visual Database Tools)
   テーブル デザイナーで保存する作業内容が他のテーブルに影響を与える場合に表示されます。 このダイアログ ボックスでは、保存するテーブルを確認できます。  

@@ -12,22 +12,21 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2851d5b0f8681b46a8c5b4efc714620fa5cd64f0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897361"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428309"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[キャスト (SSIS 式)](cast-ssis-expression.md)|式をあるデータ型から別のデータ型に変換します。|  
 |[() (括弧) (SSIS 式)](parentheses-ssis-expression.md)|式の評価順序を特定します。|  
@@ -36,15 +35,15 @@ ms.locfileid: "62897361"
 |[- (減算) (SSIS 式)](subtract-ssis-expression.md)|最初の数値式から 2 番目の数値式を減算します。|  
 |[- (否定) (SSIS 式)](negate-ssis-expression.md)|数値式を負数化します。|  
 |[* (乗算) (SSIS 式)](multiply-ssis-expression.md)|2 つの数値式を乗算します。|  
-|[&#40;SSIS 式&#41;の分割](divide-ssis-expression.md)|最初の数値式を 2 番目の数値式で除算します。|  
-|[SSIS 式&#41; &#40;&#40;モジュロ&#41;](modulo-ssis-expression.md)|最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。|  
+|[除算 (SSIS 式)](divide-ssis-expression.md)|最初の数値式を 2 番目の数値式で除算します。|  
+|[(剰余) (SSIS 式)](modulo-ssis-expression.md)|最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。|  
 |[&#124;&#124; (論理 OR) (SSIS 式)](logical-or-ssis-expression.md)|論理 OR 演算を実行します。|  
 |[&& (論理 AND) (SSIS 式)](logical-and-ssis-expression.md)|論理 AND 演算を実行します。|  
 |[\! &#40;論理 NOT&#41; &#40;SSIS 式&#41;](logical-not-ssis-expression.md)|ブール型のオペランドを否定します。|  
 |[&#124; (ビット演算子包括的 OR) (SSIS 式)](bitwise-inclusive-or-ssis-expression.md)|2 つの整数値の OR 演算をビット単位で実行します。|  
 |[^ (ビット演算子排他的 OR) (SSIS 式)](bitwise-exclusive-or-ssis-expression.md)|2 つの整数値の排他的 OR 演算をビット単位で実行します。|  
 |[& (ビット演算子 AND) (SSIS 式)](bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
-|[~ &#40;ビットごとの Not&#41; &#40;SSIS 式&#41;](bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
+|[~ (ビット演算子 Not) (SSIS 式)](bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
 |[== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
 |[\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
 |[&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  

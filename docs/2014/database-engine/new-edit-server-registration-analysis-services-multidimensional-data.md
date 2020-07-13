@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9f10267bc90b30f2dbc46622a6e46fa44e1838b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930573"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>[新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) (Analysis Services - 多次元データ)
   このタブを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
  このページにアクセスするには、[登録済みサーバー] で、[登録済みサーバー] ツール バーの **[Analysis Services]** をクリックし、 **Analysis Services**などの登録済みサーバー グループを右クリックして、 **[新規作成]** をポイントし、 **[サーバーの登録]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **サーバーの種類**  
  [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、 **[登録済みサーバー]** ツール バーで目的のサーバーをクリックした後で、新しいサーバーの登録を開始します。  
   
@@ -43,13 +42,13 @@ ms.locfileid: "62774916"
  **パスワードを保存する**  
  このオプションは、このリリースでは使用できません。  
   
- **登録済みサーバー名**  
+ **[登録済みサーバーの名前]**  
  [登録済みサーバー] に表示する名前です。 この名前は、 **[サーバー名]** ボックスの名前と一致する必要はありません。  
   
- **登録済みサーバーの説明**  
+ **[登録済みサーバーの説明]**  
  サーバーの説明をオプションで入力します。  
   
- **Test**  
+ **テスト**  
  クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
  **保存**  

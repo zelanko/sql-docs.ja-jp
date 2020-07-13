@@ -16,14 +16,14 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919896"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758818"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文インデックス #import)
 コレクションが特定の共通メソッドとプロパティを継承することを理解しておくと便利です。  
@@ -38,7 +38,7 @@ ms.locfileid: "67919896"
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -54,7 +54,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -71,7 +71,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -89,7 +89,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  

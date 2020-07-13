@@ -1,5 +1,6 @@
 ---
 title: シーリング関数 (XQuery) |Microsoft Docs
+description: XQuery の天井 () 関数を使用して、関数の引数の値より小さくない小数部を含まない最小値を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775492"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数値関数 - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   小数部を含まない最小の数値を返します。引数の値よりも小さくありません。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
   
@@ -38,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  関数が適用される番号。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*の型が、 **xs: float**、 **xs: double**、または**xs: decimal**の3つの数値基本データ型のいずれかである場合、戻り値の型は *$arg*の型と同じになります。  
   
  *$Arg*の型が数値型の1つから派生した型である場合、戻り値の型は基本数値型です。  
@@ -47,10 +48,10 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 関数の使用  
+### <a name="a-using-the-ceiling-xquery-function"></a>A: ceiling() XQuery 関数の使用  
  製品モデル7の場合、このクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の一覧を返します。 ドキュメントに記載されている場合、ワークセンターの場所ごとに、場所 ID、労働時間、および膨大なサイズが返されます。 このクエリでは、**天井**関数を使用して、 **decimal**型の値として労働時間を返します。  
   
 ```  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **命令**は**xml**型の列です。 したがって、 [query () メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して XQuery を指定します。 XQuery ステートメントは、クエリメソッドの引数として指定されます。  
   
--   **...return**はループ構造です。 クエリでは、 **for**ループは> 要素の場所\<の一覧を識別します。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
+-   **...return**はループ構造です。 クエリでは、 **for**ループは要素のリストを識別し \<Location> ます。 各ワークセンターの場所では、 **for**ループの**return**ステートメントによって、生成される XML が記述されます。  
   
-    -   LocationID 属性と LaborHrs 属性を持つ要素> \<位置。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
+    -   \<Location>LocationID 属性と LaborHrs 属性を持つ要素。 中かっこ ({}) 内の対応する式は、ドキュメントから必要な値を取得します。  
   
-    -   {$i/@LotSize } 式は、ドキュメントから LotSize 属性を取得します (存在する場合)。  
+    -   {$ i/@LotSize } 式は、ドキュメントから LotSize 属性を取得します (存在する場合)。  
   
     -   結果を次に示します。  
   
@@ -99,7 +100,7 @@ ProductModelID Result
   
 -   **切り上げ ()** 関数は、すべての整数値を xs: decimal にマップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [floor 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [round 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   

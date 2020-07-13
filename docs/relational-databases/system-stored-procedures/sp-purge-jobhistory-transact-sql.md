@@ -15,18 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: db00bdaaf3414da7bf639331f47b4872992e016c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72313761"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012669"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ジョブの履歴レコードを削除します。  
   
@@ -48,7 +47,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  **Sysadmin**固定サーバーロールのメンバー、または**Sqlagentoperatorrole**固定データベースロールのメンバーは、 *job_name*または*job_id*を指定せずに**sp_purge_jobhistory**を実行できます。 **Sysadmin**ユーザーがこれらの引数を指定しない場合、すべてのローカルジョブとマルチサーバージョブのジョブ履歴が*oldest_date*によって指定された時間内に削除されます。 **Sqlagentoperatorrole**ユーザーがこれらの引数を指定しない場合、すべてのローカルジョブのジョブ履歴は*oldest_date*で指定された時間内に削除されます。  
   
-`[ @job_id = ] job_id`削除するレコードのジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 **Sysadmin**または**sqlagentoperatorrole**ユーザーがこの引数を使用する方法については、 ** \@job_name**の説明にある注を参照してください。  
+`[ @job_id = ] job_id`削除するレコードのジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 **Sysadmin**または**Sqlagentoperatorrole**ユーザーがこの引数を使用する方法については、 ** \@ job_name**の説明にある注を参照してください。  
   
 `[ @oldest_date = ] oldest_date`履歴に保持する最も古いレコード。 *oldest_date*は**datetime**,、既定値は NULL です。 *Oldest_date*を指定した場合、 **sp_purge_jobhistory**指定された値よりも古いレコードだけが削除されます。  
   
@@ -71,7 +70,7 @@ sp_purge_jobhistory
 ## <a name="examples"></a>例  
   
 ### <a name="a-remove-history-for-a-specific-job"></a>A. 特定のジョブの履歴を削除する  
- 次の例では、という名前`NightlyBackups`のジョブの履歴を削除します。  
+ 次の例では、という名前のジョブの履歴を削除し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -101,6 +100,6 @@ GO
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;オブジェクトの権限を許可する](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

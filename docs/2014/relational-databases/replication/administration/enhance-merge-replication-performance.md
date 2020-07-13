@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 443ce7c1da881edfe2c3b40d27e352498d416cc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62805890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061608"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
-  「[レプリケーションの一般的なパフォーマンスの強化](enhance-general-replication-performance.md)」で説明されている一般的なパフォーマンスのヒントを検討した後、マージレプリケーションに固有の追加の領域を検討してください。  
+  「 [レプリケーションの全般的パフォーマンスの向上](enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
   
 ## <a name="database-design"></a>データベースの設計  
   
 -   行フィルターおよび結合フィルター内で使用される列にインデックスを作成する。  
   
-     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、はテーブル内の各行を読み取って、その行をパーティションに含める必要があるかどうかを判断する必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
+     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、行をパーティション内に含めるかどうかを決定するためにテーブル内の各行を読み取る必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
   
      また、結合フィルターで使用するすべての列に対してもインデックスを作成することが重要です。 マージ エージェントは、実行時にベース テーブルを検索して、パーティションに含める親テーブルの行と関連テーブルの行を判断します。 結合された列のインデックスを作成すれば、マージ エージェントを実行するたびに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がテーブルの各行を読み取る必要はなくなります。  
   
@@ -41,8 +40,7 @@ ms.locfileid: "62805890"
   
 -   Large Object (LOB) データ型を含むテーブルで、正規化を十分に行うことを検討する。  
   
-     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 
-  `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
+     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   
@@ -54,7 +52,7 @@ ms.locfileid: "62805890"
   
      パブリケーションの保有期間は、サブスクリプションが同期されるまでの最長期間を示し、この期間によって追跡メタデータを保存する期間が決定されます。 この値を大きくすると、ストレージと処理のパフォーマンスが影響を受ける可能性があります。 パブリケーションの保有期間の設定の詳細については、「 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)」を参照してください。  
   
--   パブリッシャーでのみ変更されるテーブルについては、ダウンロード専用アーティクルを使用する。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+-   パブリッシャーでのみ変更されるテーブルについては、ダウンロード専用アーティクルを使用する。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 ### <a name="filter-design-and-use"></a>フィルターの設計および使用方法  
   
@@ -64,11 +62,11 @@ ms.locfileid: "62805890"
   
 -   パラメーター化されたフィルターによる事前計算済みパーティションを使用する (これは既定で使用される機能です)。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
-     事前計算済みパーティションでは、フィルターの動作にさまざまな制限が課せられます。 アプリケーションがこれらの制限に従うことができない場合は、 **keep_partition_changes** オプションを **True**に設定すると、パフォーマンスが向上します。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+     事前計算済みパーティションでは、フィルターの動作にさまざまな制限が課せられます。 アプリケーションがこれらの制限に従うことができない場合は、 **keep_partition_changes** オプションを **True**に設定すると、パフォーマンスが向上します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   フィルター選択されたデータがユーザー間で共有されていない場合は、重複しないパーティションを使用する。  
   
-     レプリケーションは、複数のパーティションまたはサブスクリプションによって共有されていないデータのパフォーマンスを最適化できます。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+     レプリケーションは、複数のパーティションまたはサブスクリプションによって共有されていないデータのパフォーマンスを最適化できます。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 -   複雑な結合フィルター階層を作成しない。  
   
@@ -92,7 +90,7 @@ ms.locfileid: "62805890"
   
 -   サブスクリプションの同期スケジュールをずらす。  
   
-     多数のサブスクライバーが 1 つのパブリッシャーと同期される場合、マージ エージェントが異なるタイミングで実行されるように、スケジュールをずらすことを検討してください。 詳細については、「[同期スケジュールの指定](../specify-synchronization-schedules.md)」を参照してください。  
+     多数のサブスクライバーが 1 つのパブリッシャーと同期される場合、マージ エージェントが異なるタイミングで実行されるように、スケジュールをずらすことを検討してください。 詳細については、「 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)」を参照してください。  
   
 ## <a name="merge-agent-parameters"></a>マージ エージェントのパラメーター  
  マージ エージェントおよびそのパラメーターの詳細については、「 [Replication Merge Agent](../agents/replication-merge-agent.md)」を参照してください。  
@@ -103,19 +101,19 @@ ms.locfileid: "62805890"
   
 -   サブスクリプションが高速接続を介して同期され、パブリッシャーおよびサブスクライバーから変更が送信される場合は、マージ エージェントに対して **-ParallelUploadDownload** パラメーターを使用する。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、新しいマージエージェントパラメーター: **-paralleluploaddownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **-ParallelUploadDownload** が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
-    -   [レプリケーション エージェント プロファイルを操作する](../agents/replication-agent-profiles.md)  
+    -   [レプリケーション エージェント プロファイルの操作](../agents/replication-agent-profiles.md)  
   
-    -   [レプリケーションエージェントコマンドプロンプトパラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [レプリケーションエージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
 -   特に同期でサブスクライバーにダウンロードするよりもサブスクライバーからダウンロードすることが多い場合は、 **-MakeGenerationInterval** パラメーターの値を大きくすることを検討する。  
   
 -   LOB 列を含む行など、大量のデータを含むデータ行を同期すると、Web 同期から追加メモリの割り当てが要求され、パフォーマンスが低下する場合があります。 この動作は、マージ エージェントから生成された XML メッセージに、大量のデータを含むデータ行が過剰に含まれている場合に発生します。 マージ エージェントが Web 同期中に使用するリソースが多すぎる場合は、次のいずれかの方法を使用して、1 つのメッセージで送信される行の数を減らします。  
   
-    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳細については、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」を参照してください。  
+    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   マージ エージェントの **-DownloadGenerationsPerBatch** パラメーターと **-UploadGenerationsPerBatch** パラメーターの値を 10 未満に減らす。 これらのパラメーターの既定値は 50 です。  
   

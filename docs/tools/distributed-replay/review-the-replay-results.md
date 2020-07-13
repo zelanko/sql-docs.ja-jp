@@ -1,6 +1,7 @@
 ---
 title: 再生結果の確認
 titleSuffix: SQL Server Distributed Replay
+description: SQL Server 分散再生機能によって分散再生が完了した後、各クライアントの再生アクティビティを各クライアントのトレース ファイルに保存できます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306943"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152145"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
 

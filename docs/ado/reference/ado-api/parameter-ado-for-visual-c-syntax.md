@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60d0c572386d31daa2a4ac4e3af1961c4436f399
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931778"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765463"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -29,7 +29,7 @@ ms.locfileid: "67931778"
 AppendChunk(VARIANT Val)  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_Attributes(LONG *plParmAttribs)  

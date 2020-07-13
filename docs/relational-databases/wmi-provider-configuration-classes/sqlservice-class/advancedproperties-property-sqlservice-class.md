@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a0ce08d388bf79fa26172742bacb7fe05b32f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659716"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888407"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties プロパティ (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   **Sqlservice**オブジェクトの詳細プロパティを含むオブジェクト参照の配列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,16 +34,16 @@ ms.locfileid: "73659716"
 object.AdvancedProperties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Sqlservice**オブジェクトの詳細プロパティを含む[Sqlserviceadvanced property クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクトの配列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb1771f88987073b1ef0bcc106f8de28549affe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085474"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299952"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>レベル 1 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

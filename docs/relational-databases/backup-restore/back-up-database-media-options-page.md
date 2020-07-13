@@ -1,5 +1,6 @@
 ---
 title: '[データベースのバックアップ] ([メディア オプション] ページ) | Microsoft Docs'
+description: SQL Server では、[データベースのバックアップ] ダイアログ ボックスの [メディア オプション] を使用して、メディアの上書き、信頼性、トランザクション ログなどのメディア オプションを表示または変更します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0c5b5b8df782652565247c7c050b1c1edc6a8b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719944"
 ---
 # <a name="back-up-database-media-options-page"></a>[データベースのバックアップ] ([メディア オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[データベースのバックアップ]** ダイアログ ボックスの **[メディア オプション]** ページを使用すると、データベースのメディアのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401011"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Integration Services を使用して並列データウェアハウスにデータを読み込む
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>方  
+## <a name="basics"></a><a name="Basics"></a>基本  
 Integration Services は、データの高パフォーマンスの抽出、変換、読み込み (ETL) を行うための SQL Server のコンポーネントであり、一般的にデータウェアハウスの設定と更新に使用されます。  
   
 PDW 変換先アダプターは Integration Services コンポーネントで、Integration Services .dtsx パッケージを使用して PDW にデータを読み込むことができます。 SQL ServerPDW のパッケージワークフローでは、複数のソースからデータを読み込んでマージし、複数の変換先にデータを読み込むことができます。 データの読み込みは、1 つのパッケージと、同時に実行されている複数のパッケージ内の両方で並行して行われます。同じアプライアンス上で最大 10 の読み込みを並行して実行できます。  
@@ -42,7 +42,7 @@ PDW 変換先アダプターは Integration Services コンポーネントで、
   
 Integration Services の詳細なドキュメントについては、「 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)」を参照してください。  
   
-## <a name="HowToDeployPackage"></a>Integration Services パッケージを実行する方法  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>Integration Services パッケージを実行する方法  
 これらの方法のいずれかを使用して、Integration Services パッケージを実行します。  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>SQL Server 2008 R2 Business Intelligence Development Studio (入札) からの実行  
@@ -63,7 +63,7 @@ Windows コマンドプロンプトから、 **dtexec**ユーティリティを�
   
 例: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>データ型  
+## <a name="data-types"></a><a name="DataTypes"></a>データ型  
 Integration Services を使用してデータソースから SQL Server PDW データベースにデータを読み込む場合、最初にデータがソースデータから Integration Services データ型にマップされます。 これにより、複数のデータ ソースのデータをデータ型の共通のセットにマップできます。  
   
 その後、データは Integration Services から SQL Server PDW データ型にマップされます。 次の表に、SQL Server PDW データ型ごとに、SQL Server PDW データ型に変換できるデータ型 Integration Services を示します。  
@@ -71,7 +71,7 @@ Integration Services を使用してデータソースから SQL Server PDW デ�
 |PDW データ型|PDW データ型にマップされるデータ型の Integration Services|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|BIGINT|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
+|bigint|DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE、DT_DBDATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2|  
@@ -84,7 +84,7 @@ Integration Services を使用してデータソースから SQL Server PDW デ�
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -126,10 +126,10 @@ Integration Services の読み込みパッケージを実行するには、次�
   
 -   ステージングデータベースが使用されていない場合は、コピー先データベースに対する権限を作成します。 これは、一時テーブルを作成するためのものです。  
   
-## <a name="GenRemarks"></a>一般的な解説  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>一般的な解説  
 Integration Services パッケージで複数の SQL Server PDW 変換先が実行されていて、いずれかの接続が終了した場合、Integration Services は SQL Server PDW のすべての送信先へのデータのプッシュを停止します。  
   
-## <a name="Limits"></a>制限事項と制約事項  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>制限事項と制約事項  
 Integration Services パッケージの場合、同じデータソースの SQL Server PDW の宛先の数は、アクティブな読み込みの最大数によって制限されます。 最大数は事前に構成されており、ユーザーは構成できません。 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 > ソーステーブルに SQL 照合順序が指定された char および varchar 列が含まれている場合、データソースを PDW のマップ先アダプターと共に SSIS で OLE DB 使用すると、データが破損する可能性があります。 ソーステーブルに SQL 照合順序を持つ char または varchar 列が含まれている場合は、ADO.NET ソースを使用することをお勧めします。 
 
   
-## <a name="Locks"></a>ロック動作  
+## <a name="locking-behavior"></a><a name="Locks"></a>ロック動作  
 Integration Services を使用してデータを読み込む場合、SQL ServerPDW は行レベルのロックを使用して、変換先テーブルのデータを更新します。 つまり、各行は更新時に読み取り/書き込み用にロックされます。 変換先テーブル内の行は、データがステージング テーブルに読み込まれる間はロックされません。  
   
-## <a name="Examples"></a>例  
+## <a name="examples"></a><a name="Examples"></a>使用例  
   
-### <a name="Walkthrough"></a>A. フラットファイルからの単純な読み込み  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. フラットファイルからの単純な読み込み  
 次のチュートリアルでは、Integration Services を使用して SQL Server PDW アプライアンスにフラットファイルデータを読み込む簡単なデータ読み込みについて説明します。  この例では、前に説明したように、Integration Services がクライアントコンピューターに既にインストールされており、SQL Server PDW の宛先がインストールされていることを前提としています。  
   
 この例では、次の DDL `Orders`を含むテーブルに読み込みます。 `Orders`テーブルは、 `LoadExampleDB`データベースの一部です。  
@@ -216,8 +216,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  [**新しい接続の作成**] を選択します。  
   
-5.  サーバー、ユーザー、パスワード、および宛先データベースの情報を、アプライアンス固有の情報に入力します。 (例を次に示します)。 
-  **[OK]** をクリックします。  
+5.  サーバー、ユーザー、パスワード、および宛先データベースの情報を、アプライアンス固有の情報に入力します。 (例を次に示します)。 **[OK]** をクリックします。  
   
     [InfiniBand connections] \ (**サーバー名**\) には、「<appliance-name>-name」と入力します。  
   
@@ -237,7 +236,7 @@ id,city,lastUpdateDate,orderDate
   
 1.  [**データフロー** ] ペインで、緑色の矢印を [**フラットファイルソース**] ボックスから [ **SQL Server PDW 変換先**] ボックスにドラッグします。  
   
-2.  [ **SQL Server PDW 先**] ボックスをダブルクリックして、 **SQL Server PDW 変換先エディター**が再度表示されるようにします。 左側の [マップされていない**入力列**] の下に、フラットファイルの列名が表示されます。 右側の [マップされていない**変換先列**] の下に、コピー先テーブルの列名が表示されます。 [マップされていない**入力列**] と [マップされていない**変換先列**] の列名をドラッグまたはダブルクリックし**て、列**をマップします。 [ **OK]** をクリックして設定を保存します。  
+2.  [ **SQL Server PDW 先**] ボックスをダブルクリックして、 **SQL Server PDW 変換先エディター**が再度表示されるようにします。 左側の [マップされていない**入力列**] の下に、フラットファイルの列名が表示されます。 右側の [マップされていない**変換先列**] の下に、コピー先テーブルの列名が表示されます。 [マップされていない**入力列**] と [マップされていない**変換先列**] の列名をドラッグまたはダブルクリックし**て、列**をマップします。 **[OK]** をクリックして設定を保存します。  
   
 3.  [**ファイル**] メニューの [**保存**] をクリックして、パッケージを保存します。  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105435"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -31,7 +31,7 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Hierarchize**関数は、指定されたセットのメンバーを階層順に編成します。 この関数は、常に重複部分を保持します。  
   
 -   **POST**が指定されていない場合、関数は、レベル内のメンバーを自然な順序で並べ替えます。 その自然な順序は、他の並べ替え条件が指定されていない場合の、階層におけるメンバーの既定の順序です。 子メンバーは親メンバーの直後になります。  
@@ -86,6 +86,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

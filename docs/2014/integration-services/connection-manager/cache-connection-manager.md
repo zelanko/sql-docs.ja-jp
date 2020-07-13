@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efa77442292b66f72886c8dad84e14df3ee0f985
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833605"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434239"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) からデータを読み取り、そのデータをキャッシュ ファイルに保存できます。 キャッシュ ファイルを使用するようにキャッシュ接続マネージャーを構成したかどうかに関係なく、データは常にメモリに格納されます。  
@@ -49,8 +48,7 @@ ms.locfileid: "62833605"
   
  プロパティを設定するには [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] デザイナーで設定できるプロパティの詳細については、「 [[キャッシュ接続マネージャー エディター] ダイアログ ボックス](../cache-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] デザイナーで設定できるプロパティの詳細については、「 [[キャッシュ接続マネージャー エディター] ダイアログ ボックス](../cache-connection-manager-editor.md)」を参照してください。  
   
  プログラムによる接続マネージャーの構成方法については、「<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>」および「[プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)」を参照してください。  
   

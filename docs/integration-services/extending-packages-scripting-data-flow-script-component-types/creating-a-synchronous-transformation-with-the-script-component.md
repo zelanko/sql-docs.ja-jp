@@ -43,7 +43,7 @@ ms.locfileid: "71296417"
  スクリプト コンポーネントのスクリプト言語を設定するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページにある **[ScriptLanguage]** プロパティを設定します。  
   
 > [!NOTE]  
->  スクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「[[全般] ページ](../general-page-of-integration-services-designers-options.md)」を参照してください。  
+>  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「[[全般] ページ](../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
  データ フロー変換コンポーネントには 1 つの入力があり、1 つ以上の出力がサポートされます。 コンポーネントの入力および出力の設定は、メタデータ デザイン モードでカスタム スクリプトを記述する前に完了する必要のある手順の 1 つです。これを行うには、 **[スクリプト変換エディター]** を使用します。  
   
@@ -73,16 +73,16 @@ ms.locfileid: "71296417"
  **[スクリプト変換エディター]** の **[入力および出力]** ページの詳細については、「[[スクリプト変換エディター] &#40;[入力および出力] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)」を参照してください。  
   
 ### <a name="adding-variables"></a>変数の追加  
- スクリプトで既存の変数を使用する場合は、 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
+ スクリプトで既存の変数を使用する場合は、**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドに追加できます。  
   
- プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックしてから、 **[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を選択することもできます。  
+ プロパティ フィールドに複数の変数を追加する場合は、各変数名をコンマで区切ります。 また、**ReadOnlyVariables** および **ReadWriteVariables** プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックしてから、**[変数の選択]** ダイアログ ボックスで変数を選択することで、複数の変数を選択することもできます。  
   
  スクリプト コンポーネントで変数を使用する方法に関する一般情報については、「[スクリプト コンポーネントでの変数の使用](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)」を参照してください。  
   
  **[スクリプト変換エディター]** の **[スクリプト]** ページの詳細については、「[[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>コード デザイン モードでの同期変換コンポーネントのスクリプト作成  
- コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][スクリプト][!INCLUDE[msCoName](../../includes/msconame-md.md)] ページの **[ScriptLanguage]** プロパティで、**Visual Basic と** Visual C# のどちらをスクリプト言語として選択したかによって決まります。  
+ コンポーネントのメタデータを構成した後、カスタム スクリプトを記述できます。 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開いて、カスタム スクリプトを追加できます。 使用するスクリプト言語は、**[スクリプト]** ページの **[ScriptLanguage]** プロパティで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のどちらをスクリプト言語として選択したかによって決まります。  
   
  スクリプト コンポーネントを使用して作成されたすべての種類のコンポーネントに適用される重要な情報については、「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296417"
   
  VSTA の **[プロジェクト エクスプローラー]** ウィンドウを開くと、スクリプト コンポーネントにより、**BufferWrapper** および **ComponentWrapper** というプロジェクト アイテムが、読み取り専用の状態で自動生成されていることもわかります。 **ScriptMain** クラスは、**ComponentWrapper** プロジェクト アイテム内の **UserComponent** クラスから継承されます。  
   
- 実行時に、データ フロー エンジンが **UserComponent** クラスの **ProcessInput** メソッドを呼び出します。これにより、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 親クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドがオーバーライドされます。 **ProcessInput** メソッドは、入力バッファーの行を順にループし、各行で 1 回ずつ **ProcessInputRow** メソッドを呼び出します。  
+ 実行時に、データ フロー エンジンが **UserComponent** クラスの **ProcessInput** メソッドを呼び出します。これにより、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 親クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> メソッドがオーバーライドされます。 **ProcessInput** メソッドは、入力バッファーの行を順にループし、各行で 1 回ずつ **ProcessInputRow** メソッドを呼び出します。  
   
 ### <a name="writing-your-custom-code"></a>カスタム コードの記述  
  同期出力型の変換コンポーネントは、記述するすべてのデータ フロー コンポーネントの中で最も単純です。 たとえば、このトピックの単一出力の例は、次のカスタム コードで構成されています。  
@@ -157,7 +157,7 @@ else
   
 5.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
-6.  **の変換先、または「** スクリプト コンポーネントによる変換先の作成 **」で説明されている変換先コンポーネントの例など、** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [City](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 列が予期される変換先コンポーネントを作成して構成します。 変換の出力を変換先コンポーネントに接続します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**データベースで次の** コマンドを実行して、変換先テーブルを作成できます。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、または「[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される変換先コンポーネントを作成して構成します。 変換の出力を変換先コンポーネントに接続します。 **AdventureWorks** データベースで次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行して、変換先テーブルを作成できます。  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -211,7 +211,7 @@ public class ScriptMain:
   
 6.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、続きのスクリプトを入力します。 その後、スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
-7.  **の変換先、フラット ファイル変換先、または「** スクリプト コンポーネントによる変換先の作成 **」で説明されている変換先コンポーネントの例など、** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [City](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 列が予期される 2 つの変換先コンポーネントを作成して構成します。 変換の各出力をいずれかの変換先コンポーネントに接続します。 変換先テーブルを作成するには、[!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**データベースで次のような** コマンド (一意のテーブル名を使用) を実行します。  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変換先、フラット ファイル変換先、または「[スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」で説明されている変換先コンポーネントの例など、**AddressID** および **City** 列が予期される 2 つの変換先コンポーネントを作成して構成します。 変換の各出力をいずれかの変換先コンポーネントに接続します。 変換先テーブルを作成するには、**AdventureWorks** データベースで次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド (一意のテーブル名を使用) を実行します。  
   
     ```sql
     CREATE TABLE [Person].[Address2](  

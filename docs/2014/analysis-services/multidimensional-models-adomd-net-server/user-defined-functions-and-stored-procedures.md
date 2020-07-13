@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62727858"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469017"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>ユーザー定義関数およびストアド プロシージャ
-  ADOMD.NET server オブジェクトを使用すると、サーバーからメタデータとデータを操作するため[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のユーザー定義関数 (UDF) またはストアドプロシージャを作成できます。 これらのインプロセス メソッドは、ネットワーク通信に関連する待機時間を伴わず、追加機能を提供する多次元式 (MDX) ステートメントまたはデータ マイニング拡張機能 (DMX) ステートメントを通して呼び出されます。  
+  ADOMD.NET server オブジェクトを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーからメタデータとデータを操作するためのユーザー定義関数 (UDF) またはストアドプロシージャを作成できます。 これらのインプロセス メソッドは、ネットワーク通信に関連する待機時間を伴わず、追加機能を提供する多次元式 (MDX) ステートメントまたはデータ マイニング拡張機能 (DMX) ステートメントを通して呼び出されます。  
   
 ## <a name="udf-examples"></a>UDF の例  
  UDF は、MDX ステートメントまたは DMX ステートメントのコンテキスト内で呼び出すことができます。また、任意の数のパラメーターを取り、任意の型のデータを返します。  
   
- MDX を使用して作成された UDF は、DMX の UDF と似ています。 主な相違点は、<xref:Microsoft.AnalysisServices.AdomdServer.Context> オブジェクトの一部のプロパティ (<xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A>、<xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A> など) は、いずれか 1 つのスクリプト言語でしか使用できないということです。  
+ MDX を使用して作成された UDF は、DMX の UDF と似ています。 主な違いは、Microsoft.analysisservices.sharepoint.integration.dll などの[microsoft.analysisservices.sharepoint.integration.dll](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120))オブジェクトの特定のプロパティ ( [Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube*](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120))など) は、1つのスクリプト言語またはもう一方のスクリプト言語でしか使用できないという点です。これは、microsoft.analysisservices.sharepoint.integration.dll プロパティや[CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120))プロパティなどです。  
   
  次の例では、UDF を使用して、ノードの記述を取得し、組をフィルターし、組に対してフィルターを適用する方法を示します。  
   

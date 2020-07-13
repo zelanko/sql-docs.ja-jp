@@ -15,15 +15,14 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6eef537f60e6e2bccfe5fea77aeb2afe2c1468ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996254"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
   以下の例では、XPath クエリにブール値述語を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -37,7 +36,7 @@ ms.locfileid: "66012463"
 /child::Customer[attribute::CustomerID="1"]/child::Order[attribute::OrderID="Ord-43860"]  
 ```  
   
- `attribute`軸 (@) へのショートカットを指定できます。 `child`軸が既定値であるため、クエリから省略できます。  
+ 軸 (@) へのショートカットを `attribute` 指定できます `child` 。軸が既定値であるため、クエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order[@SalesOrderID="Ord-43860"]  
@@ -67,7 +66,7 @@ ms.locfileid: "66012463"
   
      詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-     次に結果を示します。  
+     以下に結果を示します。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -89,21 +88,21 @@ ms.locfileid: "66012463"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 連続する述語を入れ子で指定する  
- 次のクエリでは、述語を連続して使用しています。 このクエリでは、 **SalesPersonID**属性の値が277で、 **TerritoryID**属性の値が3である、コンテキストノードのすべての** \<顧客>** 子要素が返されます。  
+ 次のクエリでは、述語を連続して使用しています。 このクエリでは、 **\<Customer>** **SalesPersonID**属性の値が277で、 **TerritoryID**属性の値が3であるコンテキストノードのすべての子要素が返されます。  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- このクエリでは、述語で指定された両方の条件を満たす要素** \<>顧客**が返されます。  
+ このクエリは、 **\<Customer>** 述語で指定された両方の条件を満たす要素を返します。  
   
- `attribute`軸 (@) へのショートカットを指定できます。 `child`軸が既定値であるため、クエリから省略できます。  
+ 軸 (@) へのショートカットを `attribute` 指定できます `child` 。軸が既定値であるため、クエリから省略できます。  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 次の XPath クエリでは、述語を入れ子にして使用しています。 このクエリは、 **SalesPersonID**属性の値が2である order ** \<>** 要素を少なくとも1つ持つ子要素** \<>order**を含むコンテキストノードのすべての** \<顧客>** 子要素を返します。  
+ 次の XPath クエリでは、述語を入れ子にして使用しています。 このクエリでは、 **\<Customer>** **\<Order>** **\<Order>** **SalesPersonID**属性の値が2である1つ以上の要素を含む子要素を含むコンテキストノードのすべての子要素が返されます。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,14 +165,13 @@ ms.locfileid: "66012463"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
- 次のクエリでは、 ** \<Order>** 要素の子を持つコンテキストノードの子要素ノード** \<>Customer**が返されます。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
+ 次のクエリでは、子 **\<Customer>** 要素を持つコンテキストノードの子要素ノードが返され **\<Order>** ます。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  
 /child::Customer[child::Order]  
 ```  
   
- 
-  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer[Order]  

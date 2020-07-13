@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2c118790-5dd2-4b10-93b6-7f065ee324ce
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 79421c39ba134a801d9c0de3bba3c7a7ec00b718
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 37c791c80c679afd70f4f1d2f3f2770fb0f38a16
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924496"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67952994"
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) クラスの [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。  
   
 ## <a name="syntax"></a>構文  
   

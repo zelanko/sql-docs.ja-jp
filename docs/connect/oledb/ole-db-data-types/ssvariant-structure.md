@@ -2,11 +2,11 @@
 title: SSVARIANT 構造体 | Microsoft Docs
 description: OLE DB Driver for SQL Server の SSVARIANT 構造
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: connectivity
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 09ff4af7026ce75a8668db22910e550dc0c72857
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995170"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219251"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BinaryVal|対応する OLE DB 型インジケーターはありません。|**struct _BinaryVal**|**VT_SS_VARBINARY、**<br /><br /> **VT_SS_BINARY**|**binary** と **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *prgbBinaryVal* がポイントするデータの実際の長さを指定します。<br /><br /> *sMaxLength* (**SHORT**) *prgbBinaryVal* がポイントするデータの最大長を指定します。<br /><br /> *prgbBinaryVal* (**BYTE** \*) バイナリ データへのポインター。<br /><br /> 使用されていないメンバー: *dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

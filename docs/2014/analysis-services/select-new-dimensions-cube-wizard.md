@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 73115f3613b63a63cfe07c80c23e97cd39639d5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940883"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>[新しいディメンションの選択] (キューブ ウィザード)
-  
   **[新しいディメンションの選択]** ページを使用すると、作成する新しいディメンションを選択できます。  
   
 ## <a name="options"></a>オプション  

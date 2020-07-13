@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7082304781a3feab0939b685b16321651b6fda91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62773368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927366"
 ---
 # <a name="view-file-status"></a>ファイルの状態の表示
   ソース管理では、ソース管理の対象であるすべての項目について、状態の詳細な情報が保持されます。 その情報に基づいて、ファイルの現在の状態を確認し、項目の状態レポートを作成できます。  

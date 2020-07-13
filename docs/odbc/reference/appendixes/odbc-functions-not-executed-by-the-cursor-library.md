@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100652"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308043"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行されない ODBC 関数
 > [!IMPORTANT]  

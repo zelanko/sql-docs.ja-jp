@@ -1,7 +1,7 @@
 ---
 title: '列ストア インデックス: 概要 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b44f45cfcefc1e413fbb13f9c172c1a11b66dc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009404"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007504"
 ---
 # <a name="columnstore-indexes-overview"></a>列ストア インデックス: 概要
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-列ストア インデックスは、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行する際の標準となります。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、従来の行指向ストレージと比較して最大 **10 倍のクエリ パフォーマンス**をデータ ウェアハウスで実現します。 また、非圧縮データ サイズと比較して、最大 **10 倍のデータ圧縮**を実現することも可能です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、列ストア インデックスでは運用分析が可能になりました。トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
+列ストア インデックスは、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行する際の標準となります。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、従来の行指向ストレージと比較して最大 10 倍のクエリ パフォーマンスをデータ ウェアハウスで実現します。 また、非圧縮データのサイズと比較して最大で 10 倍のデータ圧縮を実現できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、列ストア インデックスでは運用分析が可能になりました。トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
   
 関連するシナリオについての詳細は次のとおりです。  
   
@@ -55,6 +55,16 @@ ms.locfileid: "70009404"
   
 高パフォーマンスと高い圧縮率を実現するために、列ストア インデックスは、テーブルを行グループにスライスし、各行グループを列方向に圧縮します。 行グループ内の行数は、高い圧縮率が実現される程度に多く、インメモリ操作の利点を得られる程度に少なくなければなりません。    
 
+すべてのデータが削除された行グループは、COMPRESSED 状態から TOMBSTONE 状態に移行し、後で組ムーバーというバックグラウンド プロセスによって削除されます。 行グループの状態の詳細については、「[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)」を参照してください。
+
+> [!TIP]
+> 小さな行グループが多すぎると、列ストア インデックスの品質が低下します。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは、削除された行を削除して圧縮された行グループを結合する方法を決定する内部しきい値ポリシーに従って、小さな COMPRESSED 行グループをマージするには、再編成操作が必要です。    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、多数の行が削除された COMPRESSED 行グループをマージするには、バックグラウンド マージ タスクも利用できます。     
+> 小さい行グループをマージすると、インデックスの品質が改善されます。 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、組ムーバーは、内部しきい値によってしばらくの間存在していると判断された小さな OPEN デルタ行グループを自動的に圧縮するか、多数の行が削除されている COMPRESSED 行グループをマージするバックグラウンド マージ タスクによってサポートされています。 これにより、時間の経過とともに、列ストア インデックスの品質が向上します。         
+
 #### <a name="column-segment"></a>列セグメント
 列セグメントは、行グループ内のデータ列です。  
   
@@ -71,9 +81,16 @@ ms.locfileid: "70009404"
 列セグメントの断片化を低減し、パフォーマンスを高めるために、列ストア インデックスでは、一部のデータを、クラスター化インデックス ("*デルタストア*" と呼ばれます) と削除された行の ID の btree リストに格納することがあります。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。  
   
 #### <a name="delta-rowgroup"></a>デルタ行グループ
-デルタ行グループは、列ストア インデックスでのみ使用されるクラスター化インデックスです。 これは、行数がしきい値に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
+デルタ行グループは、列ストア インデックスでのみ使用されるクラスター化 B ツリー インデックスです。 これは、行数がしきい値 (1,048,576 行) に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
 
-デルタ行グループは、最大行数に達すると閉じられます。 閉じている行グループは、組ムーバー プロセスによって確認されます。 プロセスによって閉じている行グループが見つけられると、その行グループは圧縮され、列ストアに格納されます。  
+デルタ行グループが行数の上限に達すると、OPEN 状態から CLOSED 状態に移行します。 組ムーバーというバックグラウンド プロセスによって、閉じられた行グループがチェックされます。 プロセスによって閉じられた行グループが検出されると、デルタ行グループは圧縮され、COMPRESSED 行グループとして列ストアに格納されます。 
+
+デルタ行グループが圧縮されると、既存のデルタ行グループは TOMBSTONE 状態に移行し、参照がない場合は組ムーバーによって後で削除されます。 
+
+行グループの状態の詳細については、「[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)」を参照してください。 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、組ムーバーは、内部しきい値によってしばらくの間存在していると判断された小さな OPEN デルタ行グループを自動的に圧縮するか、多数の行が削除されている COMPRESSED 行グループをマージするバックグラウンド マージ タスクによってサポートされています。 これにより、時間の経過とともに、列ストア インデックスの品質が向上します。         
   
 #### <a name="deltastore"></a>デルタストア
 列ストア インデックスは、複数のデルタ行グループを持つことができます。 すべてのデルタ行グループを総称して、デルタストアと呼びます。   
@@ -120,7 +137,7 @@ ms.locfileid: "70009404"
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、列ストア インデックス上に 1 つまたは複数の非クラスター化行ストア インデックスを持たせて、基になる列ストア上で効率的にテーブルを検索できるようになりました。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で列ストアにその値を挿入することはできません。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
 列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスはキー列を持ちません。  
 
 |||
@@ -134,11 +151,11 @@ ms.locfileid: "70009404"
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>関連タスク  
-クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 `CREATE TABLE` オプションを指定しない場合、`WITH CLUSTERED COLUMNSTORE INDEX` によって行ストア テーブルが作成されます。  
+クラスター化列ストア インデックスとしてリレーショナル テーブルを指定していない限り、そのリレーショナル テーブルでは、行ストアが、基になるデータ形式として使用されます。 `WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定しない場合、`CREATE TABLE` によって行ストア テーブルが作成されます。  
   
 `CREATE TABLE` ステートメントでテーブルを作成する際に、`WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定することでそのテーブルを列ストアとして作成できます。 既に、行ストア テーブルがある場合、その行ストアは、`CREATE COLUMNSTORE INDEX` ステートメントを使用して列ストアに変換できます。  
   
-|タスク|参照トピック|メモ|  
+|タスク|参照トピック|Notes|  
 |----------|----------------------|-----------|  
 |テーブルを列ストアとして作成する。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、テーブルをクラスター化列ストア インデックスとして作成できます。 最初に行ストア テーブルを作成し、次に列ストアに変換する必要はありません。|  
 |列ストア インデックスを持つメモリ テーブルを作成します。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスを持つ、メモリ最適化テーブルを作成できます。 列ストア インデックスは、テーブルの作成後に `ALTER TABLE ADD INDEX` 構文を使用して追加することもできます。|  
@@ -156,7 +173,7 @@ ms.locfileid: "70009404"
 |列ストア インデックスを最適化する。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` は、列ストア インデックスをオンラインで最適化します。|  
 |テーブルと列ストア インデックスをマージする。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列ストア インデックス データの読み込み](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのバージョン管理機能の概要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [列ストア インデックスのクエリ パフォーマンス](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

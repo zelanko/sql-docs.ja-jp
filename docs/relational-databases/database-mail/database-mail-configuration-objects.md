@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726536"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース メールには、2 つの構成オブジェクトがあります。データベース アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent から電子メールを送信する際、データベース メールによって使用される設定は、データベース構成オブジェクトを通じて構成することができます。  
   
 -   データベース メール アカウント  
@@ -59,11 +59,11 @@ ms.locfileid: "68134431"
   
  データベース メールでは、SMTP サーバーとの通信に関して、次に示す 3 つの認証方法をサポートしています。  
   
--   Windows 認証 : SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
+-   Windows 認証:SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
   
--   基本認証 : SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
+-   基本認証: SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
   
--   匿名認証 : SMTP サーバーでの認証を要求しません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
+-   匿名認証:SMTP サーバーでは認証が必要ありません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
   
  アカウント情報は、 **msdb** データベースに保存されます。 各アカウントを構成する情報は、次のとおりです。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134431"
   
 -   電子メール サーバーのポート番号。  
   
--   SSL (Secure Sockets Layer) を使用して SMTP メール サーバーに接続しているかどうかを示すビット列。  
+-   トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して SMTP メール サーバーに接続しているかどうかを示すビット列。  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]用に構成された資格情報を使用して SMTP サーバーに接続しているかどうかを示すビット列。  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134431"
   
 ### <a name="database-mail-settings"></a>データベース メール設定  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|データベース メールの構成設定を変更します。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|データベース メールの構成設定を表示します。|  
   
 ### <a name="accounts-and-profiles"></a>アカウントおよびプロファイル  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|データベース メール プロファイルにメール アカウントを追加します。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|データベース メール アカウントを削除します。|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134431"
   
 ### <a name="security"></a>Security  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|データベース プリンシパルがデータベース メール プロファイルを使用するための権限を許可します。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|データベース ユーザーがパブリックまたはプライベートのデータベース メール プロファイルを使用するための権限を削除します。|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134431"
   
 ### <a name="system-state"></a>システム状態  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを開始します。|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを停止します。|  

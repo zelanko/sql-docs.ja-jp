@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822781"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>入れ子になったテーブルを伴うデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
@@ -45,8 +45,7 @@ ms.locfileid: "62822781"
   
      データ ソース ビュー ウィザードが開きます。  
   
-2.  
-  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**データソースの選択**] ページの [**リレーショナルデータソース**] で、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 「基本的なデータマイニングチュートリアル」で作成したデータソースを選択します。 **[次へ]** をクリックします。  
   
@@ -83,6 +82,6 @@ ms.locfileid: "62822781"
 ## <a name="see-also"></a>参照  
  [中級者向けデータマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [マイニング構造 &#40;Analysis Services-データマイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニングモデル &#40;Analysis Services-データマイニング&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデル (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 929a2322b9f3299a3f191515eace7cfdef7bc4d3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881383"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   即時更新サブスクリプションをサポートするアーティクルごとに1行のレコードを格納します。 このテーブルは、レプリケートされたデータベースに保存されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列。|  
 |**pubid**|**int**|アーティクルが属しているパブリケーションの ID。|  
@@ -42,8 +42,8 @@ ms.locfileid: "68130492"
 |**ins_conflict_proc**|**int**|競合を**conflict_table**に書き込むために使用されるプロシージャの ID。|  
 |**identity_support**|**bit**|キュー更新を使用するときに、自動 id 範囲処理を有効にするかどうかを指定します。 **0**は、id 範囲がサポートされていないことを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

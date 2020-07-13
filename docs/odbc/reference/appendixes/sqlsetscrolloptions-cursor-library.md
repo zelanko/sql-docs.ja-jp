@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Cursor Library
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18a0bc111f6b4e8d82d0ed353837b499f920479e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0099ca5e9bcb3aefdd86e0132f52d110ab64e8a4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023360"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304913"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (カーソル ライブラリ)
 > [!IMPORTANT]  

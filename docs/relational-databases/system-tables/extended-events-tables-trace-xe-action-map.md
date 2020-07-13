@@ -16,28 +16,28 @@ helpviewer_keywords:
 - extended events [SQL Server], tables
 - trace_xe_action_map
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 835ca342cabc37826c4425391e531820c8600b11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750207"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>拡張イベント テーブル - trace_xe_action_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。 このテーブルは、sys スキーマの master データベースに格納されます。  
   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|マップされる SQL トレース列の ID。|  
-|package_name|**nvarchar (60)**|マップされたアクションがある拡張イベント パッケージの名前です。|  
-|xe_action_name|**nvarchar (60)**|SQL トレース列にマップされる拡張イベントアクションの名前です。|  
+|package_name|**nvarchar(60)**|マップされたアクションがある拡張イベント パッケージの名前です。|  
+|xe_action_name|**nvarchar(60)**|SQL トレース列にマップされる拡張イベントアクションの名前です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のクエリを使用して、SQL トレース列に相当する拡張イベントアクションを特定できます。  
   
 ```  
@@ -49,7 +49,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  アクションにマップされない SQL トレース列は、テーブルには含まれません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

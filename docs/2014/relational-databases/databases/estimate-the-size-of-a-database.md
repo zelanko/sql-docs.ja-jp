@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6370b6b08639f57419b08a1c380b440d0d98a591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6e3a390c4ade2c2dc08f67d2d1461955516e866c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62871458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965994"
 ---
 # <a name="estimate-the-size-of-a-database"></a>データベース サイズの見積もり
   データベースをデザインするときは、データを格納したときにデータベースのサイズがどのくらい大きくなるかを見積もる必要性が生じる場合があります。 データベースのサイズを見積もると、次の目的に必要なハードウェア構成の決定に役立ちます。  
@@ -39,7 +38,7 @@ ms.locfileid: "62871458"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[テーブル サイズの見積もり](estimate-the-size-of-a-table.md)|テーブルおよび関連付けられたインデックスにデータを格納するために必要な領域を見積もる手順や計算方法について説明します。|  
 |[ヒープ サイズの見積もり](estimate-the-size-of-a-heap.md)|ヒープにデータを格納するために必要な領域を見積もる手順や計算方法について説明します。 ヒープとは、クラスター化インデックスを含まないテーブルのことです。|  

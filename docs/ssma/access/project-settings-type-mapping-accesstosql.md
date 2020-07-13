@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066658"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>プロジェクトの設定 (型のマッピング) (「」)
@@ -45,18 +45,18 @@ ms.locfileid: "68066658"
 |--------------------|------------------------|  
 |**バイナリ [\*..\*]**|**varbinary [\*]**|  
 |**boolean**|**bit**|  
-|**バイト**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**貨**|**money**|  
-|**date**|**DATETIME**|  
+|**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**UNIQUEIDENTIFIER**|  
-|**整数 (integer)**|**smallint**|  
-|**長い**|**int**|  
+|**guid**|**uniqueidentifier**|  
+|**integer**|**smallint**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**記**|**nvarchar(max)**|  
+|**メモ (memo)**|**nvarchar(max)**|  
 |**memo** -Access 97|**varchar(max)**|  
-|**1**|**本当の**|  
+|**single**|**real**|  
 |**テキスト [\*..\*]**|**nvarchar [\*]**|  
 |**テキスト [\*..] \*** -アクセス97用|**varchar [\*]**|  
   

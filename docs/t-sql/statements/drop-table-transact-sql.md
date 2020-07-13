@@ -37,15 +37,15 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86469f1f2b4a8e2d97b79315e2ceb5f4bf690cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155829"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006298"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つ以上のテーブルの定義、およびそれらのテーブルのすべてのデータ、インデックス、トリガー、制約、権限の仕様を削除します。 削除されたテーブルを参照しているすべてのビューとストアド プロシージャは、[DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) および [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md) を使用して明示的に削除する必要があります。 テーブルへの依存関係を報告するには [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) を使用します。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "70155829"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }

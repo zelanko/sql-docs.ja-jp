@@ -168,7 +168,7 @@ ms.locfileid: "76516553"
   
      詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
-3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、 *というコマンドを実行します (\<* servername>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` のインスタンスに置き換えます)。  
+3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します (*\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
   
 4.  Windows エクスプローラーを使用して、 **msdb** データベースの各ファイルの名前を変更します。 これらのファイルは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの DATA サブフォルダーにあります。  
   

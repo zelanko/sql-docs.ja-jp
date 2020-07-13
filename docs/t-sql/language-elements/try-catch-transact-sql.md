@@ -29,15 +29,15 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b23776208e246e4c36ce08c7c61c4245d891008c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121556"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003975"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] のエラー処理を実装します。これは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 言語および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 言語での例外処理に似ています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを TRY ブロックで囲むことができます。 TRY ブロック内でエラーが発生すると、CATCH ブロックで囲まれた別のステートメントのグループに制御が渡されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "68121556"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 BEGIN TRY  
      { sql_statement | statement_block }  
 END TRY  
@@ -70,9 +70,14 @@ END CATCH
   
  TRY...CATCH 構造は複数のバッチをまたぐことはできません。 TRY...CATCH 構造は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの複数のブロックをまたぐことはできません。 たとえば、TRY...CATCH 構造で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの 2 つの BEGIN...END ブロックをまたいだり、IF...ELSE 構造をまたいだりすることはできません。  
   
- TRY ブロックで囲まれたコードでエラーが発生しなかった場合は、TRY ブロック内の最後のステートメントの実行が完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 TRY ブロックで囲まれたコードでエラーが発生した場合は、関連する CATCH ブロックの最初のステートメントに制御が渡されます。 END CATCH ステートメントがストアド プロシージャまたはトリガー内の最後のステートメントである場合は、そのストアド プロシージャを呼び出した、またはトリガーを起動したステートメントに制御が渡されます。  
-  
- CATCH ブロック内のコードが完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 CATCH ブロックによってトラップされたエラーは、呼び出し元のアプリケーションに返されません。 エラー情報の一部をアプリケーションに返す必要がある場合は、CATCH ブロック内のコードがその処理を行います。これには、SELECT 結果セットや、RAISERROR ステートメントおよび PRINT ステートメントなどのメカニズムが使用されます。  
+ TRY ブロックで囲まれたコードでエラーが発生しなかった場合は、TRY ブロック内の最後のステートメントの実行が完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。
+ 
+ TRY ブロックで囲まれたコードでエラーが発生した場合は、関連する CATCH ブロックの最初のステートメントに制御が渡されます。 CATCH ブロック内のコードが完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 
+ 
+ > [!NOTE] 
+ > END CATCH ステートメントがストアド プロシージャまたはトリガー内の最後のステートメントである場合は、そのストアド プロシージャを呼び出した、またはトリガーを起動したステートメントに制御が渡されます。 
+ 
+ CATCH ブロックによってトラップされたエラーは、呼び出し元のアプリケーションに返されません。 エラー情報の一部をアプリケーションに返す必要がある場合は、CATCH ブロック内のコードがその処理を行います。これには、SELECT 結果セットや、RAISERROR ステートメントおよび PRINT ステートメントなどのメカニズムが使用されます。  
   
  TRY...CATCH 構造は入れ子にすることができます。 TRY ブロックと CATCH ブロックのどちらにも、入れ子になった TRY...CATCH 構造を含めることができます。 たとえば、CATCH ブロックに TRY...CATCH 構造を埋め込み、CATCH コードによって発生したエラーを処理することができます。  
   
@@ -133,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 関数は、`CATCH`ネイティブ コンパイル ストアド プロシージャ[内の ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) ブロックでも機能します。  
+ ERROR\_\* 関数は、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内の `CATCH` ブロックでも機能します。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 構造の影響を受けないエラー  
  TRY...CATCH 構造では、次の条件はトラップされません。  
@@ -158,7 +163,7 @@ END CATCH;
   
 TRY ブロック内の下位の実行レベル (たとえば、sp_executesql またはユーザー定義のストアド プロシージャを実行しているとき) でのコンパイル中またはステートメントレベルの再コンパイル中にエラーが発生した場合、そのエラーは TRY...CATCH 構造よりも下位のレベルで発生し、関連する CATCH ブロックによって処理されます。  
   
-次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `CATCH` ステートメントをストアド プロシージャ内で実行した場合には `SELECT` ブロックでキャッチされることを示しています。  
+次の例は、`SELECT` ステートメントによって生成されたオブジェクト名解決エラーが `TRY...CATCH` 構造でキャッチされず、同じ `SELECT` ステートメントをストアド プロシージャ内で実行した場合には `CATCH` ブロックでキャッチされることを示しています。  
   
 ```sql  
 BEGIN TRY  

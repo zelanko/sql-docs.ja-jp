@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1c370f09ada37f67e32231e58c70d2bb0bfd4c51
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923504"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763023"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic のデータ シェイプの例
 ```  
@@ -90,7 +90,7 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>試してみる  
+#### <a name="try-it"></a>手順を次に示します。  
   
 1.  Visual Basic の標準 EXE アプリケーションプロジェクトを作成する  
   

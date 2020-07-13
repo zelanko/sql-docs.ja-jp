@@ -1,5 +1,6 @@
 ---
 title: XQuery での名前空間の処理 |Microsoft Docs
+description: 新しい名前空間と既定の名前空間を宣言する方法を含む、XQuery での名前空間の処理例を示します。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a6f5a6dbe1db85dc5f25e9d68fa94dcd245e5a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68004534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772922"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery での名前空間の処理
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、クエリで名前空間を処理するためのサンプルを提供します。  
   
@@ -51,7 +52,7 @@ WHERE ProductModelID=7
   
  **名前空間**キーワードを使用して、新しい名前空間プレフィックス "awmi:" が定義されていることに注意してください。 このプレフィックスは、その名前空間のスコープ内にあるすべての要素に対してクエリで使用する必要があります。  
   
-### <a name="b-declaring-a-default-namespace"></a>B. 既定の名前空間の宣言  
+### <a name="b-declaring-a-default-namespace"></a>B: 既定の名前空間の宣言  
  前のクエリでは、新しい名前空間プレフィックスが定義されています。 そのプレフィックスをクエリで使用して、目的の XML 構造を選択する必要がありました。 または、次の変更後のクエリに示すように、名前空間を既定の名前空間として宣言することもできます。  
   
 ```  
@@ -72,8 +73,8 @@ where ProductModelID=7
   
  この例で、定義されている名前空間、`"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"` は、既定または空の名前空間をオーバーライドするように作成されています。 このため、のクエリに使用されるパス式には名前空間プレフィックスがなくなりました。 また、結果に表示される要素名にも、名前空間プレフィックスはありません。 既定の名前空間は、すべての要素に適用されますが、属性には適用されません。  
   
-### <a name="c-using-namespaces-in-xml-construction"></a>C. XML 構築時の名前空間の使用  
- 新しい名前空間を定義すると、クエリだけでなく、構築用にもスコープに取り込まれます。 たとえば、XML を構築するときに、"`declare namespace ...`" 宣言を使用して新しい名前空間を定義し、その名前空間を使用して、クエリの結果内に表示するように構成する任意の要素と属性を指定することができます。  
+### <a name="c-using-namespaces-in-xml-construction"></a>C: XML 構築時の名前空間の使用  
+ 新しい名前空間を定義すると、クエリだけでなく、構築用にもスコープに取り込まれます。 たとえば、XML を構築するときに、"" 宣言を使用して新しい名前空間を定義 `declare namespace ...` し、その名前空間を使用して、クエリの結果内に表示するように構成する任意の要素と属性を指定することができます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -114,8 +115,8 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
-### <a name="d-construction-using-default-namespaces"></a>D. 既定の名前空間を使用した構築  
- 構築後の XML で既定の名前空間が使用されるように定義することもできます。 たとえば、次のクエリでは、既定の名前空間 "uri: SomeNamespace"\\を指定して、 `<Result>`要素など、構築されるローカルの名前付き要素の既定値として使用する方法を示しています。  
+### <a name="d-construction-using-default-namespaces"></a>D: 既定の名前空間を使用した構築  
+ 構築後の XML で既定の名前空間が使用されるように定義することもできます。 たとえば、次のクエリでは、既定の名前空間 "uri: SomeNamespace" を指定して、要素など、 \\ 構築されるローカルの名前付き要素の既定値として使用する方法を示して `<Result>` います。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -145,7 +146,7 @@ where ProductModelID=19
   
  既定の要素の名前空間または空の名前空間をオーバーライドすることにより、構築された XML 内のローカルで名前が付けられたすべての要素は、その後、オーバーライドする既定の名前空間にバインドされます。 したがって、空の名前空間を利用して XML を柔軟に構築する必要がある場合は、要素の既定の名前空間をオーバーライドしないようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

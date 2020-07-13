@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetConnectOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c17cd473d3c96032817c2b183bf65fe360cf3cdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2dd801988343ded46305665ab2a99aa4e7d76cba
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053677"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298632"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -31,7 +31,7 @@ ms.locfileid: "68053677"
   
  次の表では、 **SQLGetConnectOption**の VISUAL FoxPro ODBC ドライバーの実装に固有の動作を持つ引数のみについて説明します。  
   
-|*fOption*|解説|  
+|*fOption*|Remarks|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは[Sqltransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。Visual FoxPro ODBC ドライバーは、完了時に不可能ステートメントを自動的にコミットしません。 ステートメントが不可能の場合、ドライバーはトランザクションを開始します。|  
 |SQL_CURRENT_QUALIFIER|には、完全修飾データベース (dbc ファイル) 名を指定することも、0個以上のテーブル (.dbf ファイル) を含むディレクトリへの完全修飾パスを指定することもできます。|  

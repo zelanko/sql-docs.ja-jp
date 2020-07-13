@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 902c46b4609a32139450843414a3c4d97b52fcf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63187967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060205"
 ---
 # <a name="password-policy"></a>パスワード ポリシー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のパスワード ポリシー メカニズムに対応しています。 パスワード ポリシーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインに適用され、パスワードを持つ包含データベース ユーザーに適用されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "63187967"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用されるパスワードに、Windows で使用されているものと同じ複雑性ポリシーおよび有効期限ポリシーを適用できます。 この機能は `NetValidatePasswordPolicy` API に依存します。  
   
 ## <a name="password-complexity"></a>パスワードの複雑性  
- パスワードの複雑性のポリシーは、使用可能なパスワードの数を増やすことにより、総当り攻撃を防ぐようにデザインされています。 パスワードの複雑性のポリシーが適用される場合、新しいパスワードは次のガイドラインを満たしている必要があります。  
+ パスワードの複雑性のポリシーは、考えられるパスワードの数を増やすことにより、総当たり攻撃を防ぐようにデザインされています。 パスワードの複雑性のポリシーが適用される場合、新しいパスワードは次のガイドラインを満たしている必要があります。  
   
 -   パスワードはユーザー アカウント名を含まない。  
   
@@ -64,12 +63,10 @@ ms.locfileid: "63187967"
  パスワードには最大 128 文字まで使用できます。 パスワードはできるだけ長く、複雑にすることをお勧めします。  
   
 ## <a name="password-expiration"></a>パスワードの有効期限  
- パスワードの有効期限のポリシーは、パスワードの寿命を管理します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってパスワードの有効期限が適用されている場合、ユーザーは古いパスワードを変更するよう通知され、有効期限が切れたパスワードを持つアカウントは無効になります。  
+ パスワードの有効期限のポリシーは、パスワードの寿命を管理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってパスワードの有効期限が適用されている場合、ユーザーは古いパスワードを変更するよう通知され、有効期限が切れたパスワードを持つアカウントは無効になります。  
   
 ## <a name="policy-enforcement"></a>ポリシーの適用  
- パスワード ポリシーの適用は、SQL Server ログインごとに個別に構成できます。 
-  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) を使用して、SQL Server ログインのパスワード ポリシー オプションを構成します。 パスワード ポリシーの適用を構成する際に、次の規則が当てはまります。  
+ パスワード ポリシーの適用は、SQL Server ログインごとに個別に構成できます。 [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) を使用して、SQL Server ログインのパスワード ポリシー オプションを構成します。 パスワード ポリシーの適用を構成する際に、次の規則が当てはまります。  
   
 -   CHECK_POLICY を ON に変更した場合、次の動作が行われます。  
   
@@ -77,7 +74,7 @@ ms.locfileid: "63187967"
   
     -   パスワードの履歴が、現在のパスワード ハッシュの値に初期化されます。  
   
-    -   [アカウントロック**アウトの期間**]、[アカウントロックアウトの**しきい値**]、および [**アカウントロックアウトカウンターのリセット**] も有効になっています。  
+    -   **[アカウント ロックアウトの期間]**、 **[アカウント ロックアウトのしきい値]**、および **[ロックアウト カウンターのリセット]** も有効になります。  
   
 -   CHECK_POLICY を OFF に変更した場合、次の動作が行われます。  
   
@@ -85,8 +82,7 @@ ms.locfileid: "63187967"
   
     -   パスワード履歴は消去されます。  
   
-    -   
-  `lockout_time` の値がリセットされます。  
+    -   `lockout_time` の値がリセットされます。  
   
  ポリシー オプションの組み合わせには、サポートされないものがあります。  
   
@@ -115,7 +111,7 @@ ms.locfileid: "63187967"
   
  [ログインの作成](authentication-access/create-a-login.md)  
   
- [データベースユーザーの作成](authentication-access/create-a-database-user.md)  
+ [データベース ユーザーの作成](authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [強力なパスワード](strong-passwords.md)  

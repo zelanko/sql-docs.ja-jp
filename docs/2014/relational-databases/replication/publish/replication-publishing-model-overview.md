@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c5e1eb0a35081cd9392178412db990308efcd0b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ebad816c90130ff430edd5ffed18e6832a29fa6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060399"
 ---
 # <a name="replication-publishing-model-overview"></a>レプリケーションのパブリッシング モデルの概要
   レプリケーションでは、パブリッシャー (出版社)、ディストリビューター (流通業者)、サブスクライバー (購読者)、パブリケーション (出版物)、アーティクル (記事)、サブスクリプション (定期購読物) など、レプリケーション トポロジ内のコンポーネントを出版業界にたとえて表しています。 雑誌を例にとって考えると、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを理解しやすくなります。

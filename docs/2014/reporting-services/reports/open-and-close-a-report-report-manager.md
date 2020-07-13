@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102588"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
@@ -28,12 +28,11 @@ ms.locfileid: "66102588"
   
 1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md) を開始します。  
   
-2.  フォルダーを参照するか、名前を指定して検索し、レポートを見つけます。 
-  **[コンテンツ]** ページのフォルダー名またはフォルダー アイコンをクリックして、フォルダーのコンテンツを参照します。 ページの先頭にある **[検索]** ボックスにレポート名の全部または一部を入力して、レポートを検索します。  
+2.  フォルダーを参照するか、名前を指定して検索し、レポートを見つけます。 **[コンテンツ]** ページのフォルダー名またはフォルダー アイコンをクリックして、フォルダーのコンテンツを参照します。 ページの先頭にある **[検索]** ボックスにレポート名の全部または一部を入力して、レポートを検索します。  
   
 3.  レポートを表示するには、レポート名またはアイコンをクリックします。 次のアイコンがレポートを表します。  
   
-     ![レポートアイコン](../media/hlp-16doc.gif "レポート アイコン")  
+     ![レポート アイコン](../media/hlp-16doc.gif "レポート アイコン")  
   
      一部のレポートでは、ユーザー名とパスワードまたはパラメーター値を指定する必要があります。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66102588"
 ## <a name="see-also"></a>参照  
  [レポートやその他のアイテム &#40;レポートビルダーおよび SSRS&#41;を検索する](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、および管理 &#40;レポートビルダーと SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

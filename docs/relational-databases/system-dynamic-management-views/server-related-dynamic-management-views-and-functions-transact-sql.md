@@ -9,17 +9,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f1ba084536b6826379091237d74152553dba50eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784963"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>サーバー関連の動的管理ビューおよび関数 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、ホストサーバーにインストールされている SQL Server、フルテキスト、および SQL Server エージェントサービスに関連付けられている動的管理ビューについて説明します。 これらのビューを使用すると、これらのサービスのプロパティ情報を返すことができます。 これらのビューにも、構成、インストール、およびメモリ ダンプ ファイルの情報が含まれています。  
   

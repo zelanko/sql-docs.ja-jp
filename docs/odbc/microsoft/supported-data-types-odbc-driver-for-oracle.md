@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915668"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301117"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>サポートされるデータ型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -26,7 +26,7 @@ ms.locfileid: "67915668"
   
  ODBC Driver for Oracle は、Oracle 7.3 のすべてのデータ型をサポートしています。ただし、ここに記載されている新しい Oracle8 データ型はサポートされていません。  
   
-|データ型|Oracle 7.3|Oracle8|  
+|データの種類|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|該当なし|サポートされていません|  
 |BLOB|該当なし|サポートされていません|  

@@ -1,5 +1,5 @@
 ---
-title: データ型 (OLE DB) |Microsoft Docs
+title: データ型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 62d7a3b828effb7b7daa3f8a92e18f8408b5d46d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73770753"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998219"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB プロバイダー [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してステートメントを実行し、結果を処理するには、行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セット内のパラメーターまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は列をバインドするとき、および**itabledefinition**インターフェイスを使用してで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があります。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB プロバイダーを使用してステートメントを実行し、結果を処理するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行セット内のパラメーターまたは列をバインドするとき、および**itabledefinition**インターフェイスを使用してでテーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

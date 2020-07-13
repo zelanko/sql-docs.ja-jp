@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4f45545212b494f955c6b9be97ccf0df7efeb622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c30ee6149c95d93bdaf1d2877f5fe1871a575ec1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62869914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969555"
 ---
 # <a name="mssqlserver_1457"></a>MSSQLSERVER_1457
     
@@ -49,7 +48,7 @@ ms.locfileid: "62869914"
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [データベースミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [データベースミラーリング &#40;SQL Server&#41;を削除しています](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  

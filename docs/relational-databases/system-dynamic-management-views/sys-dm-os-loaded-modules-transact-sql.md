@@ -16,24 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67900089"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898759"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアドレス空間に読み込まれたモジュールごとに1行の値を返します。  
   
 > [!NOTE]  
->  これをから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_loaded_modules**という名前を使用します。  
+>  これをから呼び出すには [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_loaded_modules**という名前を使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary (8)**|プロセス内のモジュールのアドレス。|  
 |**file_version**|**varchar (23)**|ファイルのバージョン。 次の形式で表示されます。<br /><br /> x.x:x.x|  
@@ -43,17 +43,17 @@ ms.locfileid: "67900089"
 |**リリース**|**bit**|1 = モジュールは読み込まれたモジュールのプレリリース バージョンです。|  
 |**private_build**|**bit**|1 = モジュールは読み込まれたモジュールの個人用ビルドです。|  
 |**special_build**|**bit**|1 = モジュールは、読み込まれたモジュールの特別なビルドです。|  
-|**言語**|**int**|モジュールのバージョン情報の言語。|  
+|**language**|**int**|モジュールのバージョン情報の言語。|  
 |**全社**|**nvarchar(256)**|モジュールを作成した会社の名前。|  
-|**記述**|**nvarchar(256)**|モジュールの説明。|  
+|**description**|**nvarchar(256)**|モジュールの説明。|  
 |**name**|**nvarchar(255)**|モジュールの名前。 モジュールの完全パスが含まれます。|  
-|**pdw_node_id**|**int**|**適用対象**:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

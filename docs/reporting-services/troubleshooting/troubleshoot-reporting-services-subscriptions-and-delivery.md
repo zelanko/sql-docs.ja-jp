@@ -1,5 +1,6 @@
 ---
-title: Reporting Services のサブスクリプションと配信に関するトラブルシューティング | Microsoft Docs
+title: Reporting Services のサブスクリプションと配信に関するトラブルシューティング
+description: この記事では、SQL Server Reporting Services でレポートのサブスクリプション、スケジュール、配信を操作するときに検出される問題を診断して修正します。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572113"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662749"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services のサブスクリプションと配信に関するトラブルシューティング
   
@@ -24,7 +25,7 @@ ms.locfileid: "65572113"
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [サブスクリプション] ページにはサブスクリプションの状態が含まれますが、サブスクリプションに問題がある場合、詳細情報は [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のログに見つかります。 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**トレース ログ:** トレース ログとは、次の場所に書き込まれるテキスト ファイルです。 `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**トレース ログ:** トレース ログとは、次の場所に書き込まれるテキスト ファイルです。`\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 次にログ エントリの例を示します。
 
@@ -52,7 +53,7 @@ Post Office Protocol version 3 (POP3) を使用する電子メール アプリ�
   
 レポートの電子メール配信のためにローカル SMTP サービスを使用する方法の詳細については、「電子メール配信用のレポート サーバーの構成」を参照してください。  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>電子メールを送信できません: サーバーによって送信者アドレスが拒否されました。 サーバーからの応答は次のとおりです。454 5.7.3 Client does not have permission to submit mail to this server (クライアントには、このサーバーに電子メールを送信するアクセス許可がありません)  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>メールを送信できません:サーバーによって送信者アドレスが拒否されました。 サーバーの応答内容:454 5.7.3 クライアントには、このサーバーに電子メールを送信するアクセス許可がありません  
 このエラーは、SMTP サーバーのセキュリティ ポリシーの設定により、認証されたユーザーだけがそれ以降の配信にメールを送信できる場合に発生します。 SMTP サーバーが匿名ユーザーからの電子メール送信を受け付けない場合、サーバーを使用する権限を得るにはシステム管理者に問い合わせてください。  
 > このエラーは、Exchange Server の名前を SMTPServer として指定している場合にも発生します。 電子メールの配信に Exchange Server を使用するには、そのサーバー用に構成した SMTP ゲートウェイの名前を指定する必要があります。 この情報については Exchange 管理者に問い合わせてください。  
   

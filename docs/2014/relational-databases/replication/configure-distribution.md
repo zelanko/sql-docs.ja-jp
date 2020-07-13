@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0378fe285ba57e1420b7e6bebf5e2e6fe13d29e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064643"
 ---
 # <a name="configure-distribution"></a>ディストリビューションの構成
   ディストリビューターは、ディストリビューション データベースを含むサーバーです。ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションに対するトランザクションが格納されます。 レプリケーションを設定するには、ディストリビューターを構成する必要があります。 パブリッシャーはそれぞれ 1 つのディストリビューター インスタンスにしか割り当てることができませんが、複数のパブリッシャーで 1 つのディストリビューターを共有できます。 サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  

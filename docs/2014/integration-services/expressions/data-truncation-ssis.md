@@ -12,15 +12,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0c4280c9eacd22ebf84bf1570d485de51cab09b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62898334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428969"
 ---
 # <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
   式により誤ってデータが切り捨てられる場合があります。 データの切り捨ては次の環境で発生する可能性があります。  

@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bf4123a46cc13359c936e6f9cfc0db3dcfdaa175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013456"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>選択的 XML インデックスの作成、変更、および削除
   新しい選択的 XML インデックスの作成や、既存の選択的 XML インデックスの変更または削除を行う方法について説明します。  
   
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](selective-xml-indexes-sxi.md)」を参照してください。  
   
-##  <a name="create"></a> 選択的 XML インデックスの作成  
+##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> 選択的 XML インデックスの作成  
   
 ### <a name="how-to-create-a-selective-xml-index"></a>方法: 選択的 XML インデックスを作成する  
  **Transact-SQL を使用して選択的 XML インデックスを作成する**  
@@ -46,7 +45,7 @@ FOR(
   
   
   
-##  <a name="alter"></a> 選択的 XML インデックスの変更  
+##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> 選択的 XML インデックスの変更  
   
 ### <a name="how-to-alter-a-selective-xml-index"></a>方法: 選択的 XML インデックスを変更する  
  **Transact-SQL を使用して選択的 XML インデックスを変更する**  
@@ -68,7 +67,7 @@ FOR
   
   
   
-##  <a name="drop"></a> 選択的 XML インデックスの削除  
+##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> 選択的 XML インデックスの削除  
   
 ### <a name="how-to-drop-a-selective-xml-index"></a>方法: 選択的 XML インデックスを削除する  
  **Transact-SQL を使用して選択的 XML インデックスを削除する**  

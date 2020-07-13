@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbcc0bc995788ac7c034ff114d2361f45281395e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63280377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001154"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
   テーブルがパーティション スキームに関連付けられている場合、このダイアログ ボックスを使用すると、パーティション関数を適用する列を選択できます。 関数が動作するためには、切り替え先の列のデータ型が、パーティション関数で定義されている列のデータ型と同じである必要があります。  
   
  パーティション スキームおよびパーティション関数の詳細については、『SQL Server オンライン ブック』を参照してください。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  データ型  
  パーティション スキームで定義されている列のデータ型を表示します。  
   

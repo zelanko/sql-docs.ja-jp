@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c409581771055e2c6d85d2cdd01937e2f033ba9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ce79c24b75fb0efd3b9934e90c7cb748cfe2f154
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898386"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>fn_cdc_has_column_changed (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した更新マスクが、関連付けられている変更行で指定した列が更新されたことを示すかどうかを識別します。  
   
@@ -54,7 +54,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  この関数を使用すると、変更データのクエリで返された更新マスクから情報を抽出できます。 これは、関連する変更行の特定の列が変更されているかどうかを知る必要がある場合に、更新マスクを後処理するときに最も役立ちます。 詳細については、「[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)」を参照してください。  
   
  この情報が変更データクエリの一部として返される場合は、この関数の代わりに、関数[sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)と[sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)を使用することをお勧めします。 必要な列序数が 1 回しか計算されないようにするために、変更データを照会する前に fn_cdc_get_column_ordinal 関数を使用します。 クエリ内で fn_cdc_is_bit_set を使用して、返された各行の更新マスクから情報を抽出します。  
@@ -62,7 +62,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="permissions"></a>アクセス許可  
  Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. &#60;capture_instance&#62;_CT &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
  [cdc. captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   

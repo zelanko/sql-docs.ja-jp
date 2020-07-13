@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813896"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーション ロールの名前、パスワード、または既定のスキーマを変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
   
-```  
+```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *application_role_name*  
  変更するアプリケーション ロールの名前です。  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  オブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>解説  
- 新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
+## <a name="remarks"></a>解説
+
+新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
   
 > [!IMPORTANT]  
 >  パスワードの有効期限ポリシーは、アプリケーション ロールのパスワードには適用されません。 このため、複雑なパスワードを選択する際には十分注意してください。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。  

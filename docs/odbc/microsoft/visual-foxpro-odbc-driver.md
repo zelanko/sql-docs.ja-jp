@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC]
 - FoxPro ODBC driver [ODBC], about FoxPro ODBC driver
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a388fd459ab9fb71a115ca7f9cf9149c872caf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7bfe59fd2b4a5b290fe34c3496ac4a76aeaaad76
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030681"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298732"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバー
 Microsoft Visual FoxPro は、データベース構築とアプリケーション開発を行うための強力なオブジェクト指向環境です。 Microsoft Visual FoxPro ODBC ドライバーを使用すると、アプリケーションは、Open Database Connectivity (ODBC) インターフェイスを使用して、Visual FoxPro およびそれ以前のバージョンの FoxPro のデータを開いたり、クエリを実行したり、更新したりすることができます。  
@@ -37,7 +37,7 @@ Microsoft Visual FoxPro は、データベース構築とアプリケーショ�
   
  このドライバーを使用して、他の多くのタスクを実行できます。 次の表に、作業の開始に役立ついくつかのトピックを示します。  
   
-|To|以下を参照してください。|  
+|終了|解決方法については、|  
 |--------|---------|  
 |Microsoft Office での Visual FoxPro データの使用に関する詳細を確認する|[Microsoft Office から Visual FoxPro データへのアクセス](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Visual Basic アプリケーションでの Visual FoxPro データの使用方法について説明します。|[Visual Basic アプリケーションでの Visual FoxPro ODBC ドライバーの使用](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  

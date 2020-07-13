@@ -12,14 +12,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a07e936617100c56f8fa873df1b490e1d61e3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1055f94cb54bba9262f210e5df5f028029aebf5b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909955"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292402"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>付録 G: ドライバーの下位互換性のガイドライン
 この付録では、ODBC 3 で動作するドライバーライターに関する情報を提供します。ODBC 2 をサポートする必要がある*x*ドライバー。*x*アプリケーション。 旧バージョンとの互換性の詳細については、「[旧バージョンとの互換性と標準の準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。  

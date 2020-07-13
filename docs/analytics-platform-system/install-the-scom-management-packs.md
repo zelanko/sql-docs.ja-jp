@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401072"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System 用 SQL Server Operations Manager (SCOM) 管理パックをインストールする
 SQL Server PDW 用の System Center Operations Manager (SCOM) 管理パックをダウンロードしてインストールするには、次の手順に従います。 SCOM から SQL Server PDW を監視するには、管理パックが必要です。  
   
-## <a name="BeforeBegin"></a>はじめに  
-**前提条件**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>開始する前に  
+**必要条件**  
   
 System Center Operations Manager をインストールして実行する必要があります。 SQL Server PDW 2012 では System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 Service Pack 1 が必要です。  
   
-## <a name="Step1"></a>手順 1: 管理パックをダウンロードする  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>手順 1: 管理パックをダウンロードする  
 APS PDW ワークロードの場合は、 [Microsoft Analytics Platform System 用の System Center 管理パック](https://go.microsoft.com/fwlink/?LinkId=396857)をダウンロードします。  
   
 アプライアンス管理については、 [SQL Server アプライアンスベース管理パック](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))をダウンロードしてください。  
@@ -33,7 +33,7 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>手順 2. 管理パックをインストールする  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>手順 2. 管理パックをインストールする  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>SQL Server アプライアンスベース管理パックをインストールする  
   
@@ -47,8 +47,7 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
     ![インストール先フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  
-  **[インストール]** をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
@@ -68,8 +67,7 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
     ![インストール先フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  
-  **[インストール]** をクリックします。  
+4.  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
@@ -77,7 +75,7 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
     ![インストールの完了](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 管理パックがインストールされたので、次の手順「 [PDW 用の SCOM 管理パックをインポートする &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)」に進みます。  
   
 <!-- MISSING LINKS ## See Also  

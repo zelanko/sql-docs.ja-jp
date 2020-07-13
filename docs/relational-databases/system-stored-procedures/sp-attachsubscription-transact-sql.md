@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68768966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716187"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアドプロシージャは、master データベースの新しいサブスクライバーで実行されます。  
   
 > [!IMPORTANT]  
->  この機能は非推奨とされており、今後のリリースでは削除されます。 新しい開発作業では、この機能を使用しないでください。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションの場合は、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+>  この機能は非推奨とされており、今後のリリースでは削除されます。 新しい開発作業では、この機能を使用しないでください。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションの場合は、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,7 +72,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく*subscriber_password*が指定されている場合は、エラーが返されます。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**0**です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**0**です。 **0**は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @distributor_login = ] 'distributor_login'`ディストリビューターへの接続時に、同期時に使用するディストリビューターログインを示します。 *distributor_security_mode*が**0**に設定されている場合は*distributor_login*が必要です。 *distributor_login*は**sysname**,、既定値は NULL です。  
   
@@ -81,7 +81,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は**1**です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は**1**です。 **0**の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`同期時にパブリッシャーに接続するときに使用するログインを示します。 *publisher_login*は**sysname**,、既定値は NULL です。  
   
@@ -105,7 +105,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_attachsubscription**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  パブリケーションの保有期間が終了している場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間が経過したサブスクリプションが指定されている場合、サブスクリプションがアタッチされているか、最初に同期されたときに、エラーが発生します。 パブリケーションの保有期間が**0** (期限切れにならない) のパブリケーションは無視されます。  
@@ -113,7 +113,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_attachsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

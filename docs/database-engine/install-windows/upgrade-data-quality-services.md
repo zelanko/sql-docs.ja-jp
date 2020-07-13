@@ -25,7 +25,7 @@ ms.locfileid: "67934856"
   
 > [!IMPORTANT]
 >  -   スキーマのアップグレード中に誤ってデータが削除されることを防ぐため、DQS をアップグレードする前に DQS データベースをバックアップしておく必要があります。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
-> -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]DQS クレンジング変換[を使用して、](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) Data Quality サーバーに接続できます。  
+> -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [DQS クレンジング変換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)を使用して、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality サーバーに接続できます。  
 > -   Data Quality Services およびマスター データ サービスをアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ここ [から、](https://go.microsoft.com/fwlink/?LinkID=506665)バージョンの Excel 用マスター データ サービス アドインをダウンロードできます。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  

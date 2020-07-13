@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761870"
 ---
 # <a name="recordset-object-ado"></a>Recordset オブジェクト (ADO)
 ベーステーブルまたは実行されたコマンドの結果のレコードのセット全体を表します。 **レコードセット**オブジェクトは、常に、セット内の1つのレコードのみを現在のレコードとして参照します。  
@@ -50,7 +50,7 @@ ms.locfileid: "67931365"
   
  [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 **MoveLast**、 **MoveNext**、および**MovePrevious**の各メソッドを使用できます。[Move](../../../ado/reference/ado-api/move-method-ado.md)メソッド。また、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[Filter](../../../ado/reference/ado-api/filter-property.md)の各プロパティは、プロバイダーが関連する機能をサポートしていることを前提として、現在のレコードの位置を変更します。 前方参照専用の**レコードセット**オブジェクトでは、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドのみがサポートされます。 **Move**メソッドを使用して各レコードにアクセスする (または**レコードセット**を列挙する) 場合、 **BOF**プロパティと**EOF**プロパティを使用して、**レコードセット**の先頭または末尾を超えて移動したかどうかを判断できます。  
   
- **レコードセット**オブジェクトの機能を使用する前に、オブジェクトの**Supports**メソッドを呼び出して、機能がサポートされているか使用可能であることを確認する必要があります。 **サポート**メソッドが false を返す場合は、この機能を使用しないでください。 たとえば、が**True**を返す場合**** `Recordset.Supports(adMovePrevious)`にのみ、MovePrevious メソッドを使用できます。 それ以外の場合は、エラーが発生します。これは、**レコードセット**オブジェクトが閉じられていて、インスタンスで使用できない機能が表示されている可能性があるためです。 関心のある機能がサポートされていない場合**は、も false を返し**ます。 この場合、**レコードセット**オブジェクトの対応するプロパティまたはメソッドを呼び出さないようにしてください。  
+ **レコードセット**オブジェクトの機能を使用する前に、オブジェクトの**Supports**メソッドを呼び出して、機能がサポートされているか使用可能であることを確認する必要があります。 **サポート**メソッドが false を返す場合は、この機能を使用しないでください。 たとえば、が True を返す場合にのみ、 **MovePrevious**メソッドを使用でき `Recordset.Supports(adMovePrevious)` ます。 **True** それ以外の場合は、エラーが発生します。これは、**レコードセット**オブジェクトが閉じられていて、インスタンスで使用できない機能が表示されている可能性があるためです。 関心のある機能がサポートされていない場合**は、も false を返し**ます。 この場合、**レコードセット**オブジェクトの対応するプロパティまたはメソッドを呼び出さないようにしてください。  
   
  **レコードセット**オブジェクトは、即時およびバッチ処理の2種類の更新をサポートできます。 即時更新では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後、データへのすべての変更が、基になるデータソースに直ちに書き込まれます。 また、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドおよび**Update**メソッドを使用して値の配列をパラメーターとして渡し、レコード内の複数のフィールドを同時に更新することもできます。  
   

@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926065"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761298"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO を使用すると、開発者は、OLE DB システムインターフェイスを使用して、さまざまなデータソースからプログラムを使用してデータにアクセスしたり、編集したり、更新したりすることができます。 ADO の最も一般的な使用方法は、リレーショナルデータベース内の1つまたは複数のテーブルに対してクエリを実行し、その結果を取得してアプリケーションで表示し、ユーザーがデータの変更を行って保存できるようにすることです。 その他のタスクは次のとおりです。  

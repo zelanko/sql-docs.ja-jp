@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 6b1ef2e7b05361ece8e54847b3c4d0d1df5ace08
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926080"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67986047"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap メソッド (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) クラスから拡張された [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスを拡張します。 このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) の各クラスにアンラップされます。  
+ [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスから拡張された [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) クラスを拡張します。 このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) の各クラスにアンラップされます。  
   
  詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   

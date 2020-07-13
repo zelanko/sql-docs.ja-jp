@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83e7abc5c20e429cdac419241a7f3c02f1ae16ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71118132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703814"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスの終点を返します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71118132"
  このメソッドは、空の **geometry** インスタンスに対して呼び出された場合は null を返します。  
   
 ## <a name="examples"></a>例  
- `LineString` で `STGeomFromText()` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
+ `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

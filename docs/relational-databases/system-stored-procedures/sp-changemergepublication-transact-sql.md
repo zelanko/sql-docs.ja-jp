@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68097681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872513"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージパブリケーションのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -49,39 +49,39 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  次の表では、変更できるパブリケーションのプロパティについて説明し、それらのプロパティの値に対する制限について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**allow_anonymous**|**本来**|匿名サブスクリプションを許可します。|  
+|**allow_anonymous**|**true**|匿名サブスクリプションを許可します。|  
 ||**false**|匿名サブスクリプションは許可されません。|  
-|**allow_partition_realignment**|**本来**|サブスクライバーのパーティションの一部ではなくなったデータを削除することによって、パーティション変更の結果を反映するために、削除がサブスクライバーに送信されます。 これは既定の動作です。|  
+|**allow_partition_realignment**|**true**|サブスクライバーのパーティションの一部ではなくなったデータを削除することによって、パーティション変更の結果を反映するために、削除がサブスクライバーに送信されます。 これは既定の動作です。|  
 ||**false**|古いパーティションのデータはサブスクライバー側に残ります。パブリッシャーでこのデータに変更を加えてもこのサブスクライバーにはレプリケートされません。 代わりに、サブスクライバーで行われた変更がパブリッシャーにレプリケートされます。 これは、履歴目的でデータにアクセスできる必要がある場合に、古いパーティションからサブスクリプションのデータを保持するために使用されます。|  
-|**allow_pull**|**本来**|指定されたパブリケーションでは、プルサブスクリプションが許可されます。|  
+|**allow_pull**|**true**|指定されたパブリケーションでは、プルサブスクリプションが許可されます。|  
 ||**false**|指定したパブリケーションに対してプル サブスクリプションを許可しません。|  
-|**allow_push**|**本来**|指定したパブリケーションに対してプッシュ サブスクリプションを許可します。|  
+|**allow_push**|**true**|指定したパブリケーションに対してプッシュ サブスクリプションを許可します。|  
 ||**false**|指定したパブリケーションに対してプッシュ サブスクリプションを許可しません。|  
-|**allow_subscriber_initiated_snapshot**|**本来**|サブスクライバーはスナップショット処理を開始できます。|  
+|**allow_subscriber_initiated_snapshot**|**true**|サブスクライバーはスナップショット処理を開始できます。|  
 ||**false**|サブスクライバーはスナップショット処理を開始できません。|  
-|**allow_subscription_copy**|**本来**|このパブリケーションをサブスクライブするサブスクリプション データベースをコピーすることができます。|  
+|**allow_subscription_copy**|**true**|このパブリケーションをサブスクライブするサブスクリプション データベースをコピーすることができます。|  
 ||**false**|このパブリケーションをサブスクライブするサブスクリプション データベースをコピーすることはできません。|  
-|**allow_synctoalternate**|**本来**|代替同期パートナーがこのパブリッシャーと同期できるようにします。|  
+|**allow_synctoalternate**|**true**|代替同期パートナーがこのパブリッシャーと同期できるようにします。|  
 ||**false**|代替同期パートナーがこのパブリッシャーと同期することを許可しません。|  
-|**allow_web_synchronization**|**本来**|サブスクリプションは HTTPS 上で同期できます。|  
+|**allow_web_synchronization**|**true**|サブスクリプションは HTTPS 上で同期できます。|  
 ||**false**|サブスクリプションは HTTPS 上で同期できません。|  
 |**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を示します。|  
 |**automatic_reinitialization_policy**|**1**|サブスクライバーから変更をアップロードしてからサブスクリプションを再初期化します。|  
 ||**0**|最初に変更をアップロードせずにサブスクリプションを再初期化します。|  
-|**centralized_conflicts**|**本来**|すべての競合レコードはパブリッシャーに格納されます。 このプロパティを変更する場合は、既存のサブスクライバーを再初期化する必要があります。|  
+|**centralized_conflicts**|**true**|すべての競合レコードはパブリッシャーに格納されます。 このプロパティを変更する場合は、既存のサブスクライバーを再初期化する必要があります。|  
 ||**false**|競合レコードは、競合の解決で失われたサーバーに格納されます。 このプロパティを変更する場合は、既存のサブスクライバーを再初期化する必要があります。|  
-|**compress_snapshot**|**本来**|代替スナップショット フォルダー内のスナップショットは CAB 形式に圧縮されます。 既定のスナップショットフォルダー内のスナップショットは圧縮できません。 このプロパティを変更するには、新しいスナップショットが必要です。|  
+|**compress_snapshot**|**true**|代替スナップショット フォルダー内のスナップショットは CAB 形式に圧縮されます。 既定のスナップショットフォルダー内のスナップショットは圧縮できません。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 ||**false**|既定では、スナップショットは圧縮されません。 このプロパティを変更するには、新しいスナップショットが必要です。|  
-|**conflict_logging**|**文書**|競合レコードはパブリッシャーに格納されます。|  
-||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーで[!INCLUDE[ssEW](../../includes/ssew-md.md)]はサポートされていません *。*|  
-||**両方**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
+|**conflict_logging**|**publisher**|競合レコードはパブリッシャーに格納されます。|  
+||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーではサポートされていません [!INCLUDE[ssEW](../../includes/ssew-md.md)] *。*|  
+||**両方とも**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
 |**conflict_retention**||競合を保持する保有期間を日数で指定する**int**です。 *Conflict_retention*を**0**に設定すると、競合のクリーンアップは必要ありません。|  
-|**記述**||パブリケーションの説明です。|  
-|**dynamic_filters**|**本来**|パブリケーションは動的な句に基づいてフィルター処理されます。|  
+|**description**||パブリケーションの説明です。|  
+|**dynamic_filters**|**true**|パブリケーションは動的な句に基づいてフィルター処理されます。|  
 ||**false**|パブリケーションは動的にフィルター選択されません。|  
-|**enabled_for_internet**|**本来**|パブリケーションがインターネットに対して有効になっています。 ファイル転送プロトコル (FTP) を使用して、スナップショット ファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルは、C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp ディレクトリに格納されます。|  
+|**enabled_for_internet**|**true**|パブリケーションがインターネットに対して有効になっています。 ファイル転送プロトコル (FTP) を使用して、スナップショット ファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルは、C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp ディレクトリに格納されます。|  
 ||**false**|パブリケーションはインターネットに対応していません。|  
 |**ftp_address**||ディストリビューター用の FTP サービスのネットワークアドレス。 パブリケーションのスナップショット ファイルを格納する場所を指定します。|  
 |**ftp_login**||FTP サービスへの接続に使用されるユーザー名です。|  
@@ -89,7 +89,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**ftp_port**||ディストリビューターの FTP サービスのポート番号。 パブリケーションのスナップショット ファイルが格納される FTP サイトの TCP ポート番号を指定します。|  
 |**ftp_subdirectory**||パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合にスナップショットファイルを作成する場所を指定します。|  
 |**generation_leveling_threshold**|**int**|生成に含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
-|**keep_partition_changes**|**本来**|同期は最適化され、変更されたパーティション内の行を持つサブスクライバーだけが影響を受けます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
+|**keep_partition_changes**|**true**|同期は最適化され、変更されたパーティション内の行を持つサブスクライバーだけが影響を受けます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 ||**false**|同期は最適化されず、サブスクライバーに送信されるパーティションは、パーティション内のデータが変更されたときに検証されます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**max_concurrent_merge**||これは、パブリケーションに対して実行できる同時マージプロセスの最大数を表す**int**です。 0の場合、制限はありません。この数を超えるマージプロセスが同時に実行されるようにスケジュールされている場合、余分なジョブは、マージプロセスが終了するまでキューに入れられます。|  
 |**max_concurrent_dynamic_snapshots**||これは、パラメーター化された行フィルターを使用するマージパブリケーションに対して同時に実行できる、フィルター選択されたデータスナップショットを生成するためのスナップショットセッションの最大数を表す**int**です。 **0**の場合、制限はありません。 ここで指定した数を超えるスナップショット処理が同時に実行されるようにスケジュールすると、超過したジョブはキューに保存されて、現在実行中のマージ処理が終了するまで待機します。|  
@@ -97,24 +97,24 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**pre_snapshot_script**||**.Sql**ファイルの場所へのポインターを指定します。 マージエージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクトスクリプトの前にプリスナップショットスクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
-|**publish_to_activedirectory**|**本来**|このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のためにのみサポートされています。 Active Directory にパブリケーション情報を追加できなくなりました。|  
+|**publish_to_activedirectory**|**true**|このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のためにのみサポートされています。 Active Directory にパブリケーション情報を追加できなくなりました。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントはレプリケートされます。|  
 ||**0**|DDL ステートメントはレプリケートされません。|  
 |**保有**||指定したパブリケーションの変更を保存する*retention_period_unit*単位の数を表す**int**です。 保有期間内にサブスクリプションが同期されず、受信した保留中の変更がディストリビューター側でクリーンアップ操作によって削除された場合、サブスクリプションは有効期限切れとなり、再初期化する必要があります。 許容される最大保有期間は、9999年12月31日から現在の日付までの日数です。<br /><br /> 注: マージパブリケーションの保有期間には、異なるタイムゾーンのサブスクライバーに対応するために、24時間の猶予期間があります。|  
-|**retention_period_unit**|**毎日**|保有期間は日数で指定します。|  
-||**前週**|保有期間は週単位で指定します。|  
-||**翌月**|保有期間は月単位で指定します。|  
-||**比**|保有期間は年単位で指定します。|  
-|**snapshot_in_defaultfolder**|**本来**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。|  
+|**retention_period_unit**|**day**|保有期間は日数で指定します。|  
+||**week**|保有期間は週単位で指定します。|  
+||**month**|保有期間は月単位で指定します。|  
+||**year**|保有期間は年単位で指定します。|  
+|**snapshot_in_defaultfolder**|**true**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。|  
 ||**false**|スナップショットファイルは、 *alt_snapshot_folder*によって指定された別の場所に格納されます。 この組み合わせでは、スナップショットファイルが既定の場所と代替の場所の両方に格納されることを指定します。|  
-|**snapshot_ready**|**本来**|パブリケーションのスナップショットを使用できます。|  
+|**snapshot_ready**|**true**|パブリケーションのスナップショットを使用できます。|  
 ||**false**|パブリケーションのスナップショットは使用できません。|  
-|**オンライン**|**能動的**|パブリケーションはアクティブな状態です。|  
-||**稼動**|パブリケーションは非アクティブな状態です。|  
+|**status**|**active**|パブリケーションはアクティブな状態です。|  
+||**inactive**|パブリケーションは非アクティブな状態です。|  
 |**sync_mode**|**ネイティブ**または<br /><br /> **bcp ネイティブ**|すべてのテーブルのネイティブモードの一括コピープログラム出力は、初期スナップショットに使用されます。|  
-||**記号**<br /><br /> または**bcp 文字**|すべての非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用されます。|  
-|**use_partition_groups**<br /><br /> 注: partition_groups を使用すると、 **setupbelongs**使用されるように復帰し、 **changemergearticle**で**use_partition_groups = false**に設定した場合、スナップショットの取得後に正しく反映されない可能性があります。 スナップショットによって生成されるトリガーは、パーティショングループに準拠しています。<br /><br /> このシナリオの回避策は、状態を非アクティブに設定し、 **use_partition_groups**を変更して、状態をアクティブに設定することです。|**本来**|パブリケーションは事前計算済みパーティションを使用します。|  
+||**記号**<br /><br /> または**bcp 文字**|すべての非サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**use_partition_groups**<br /><br /> 注: partition_groups を使用すると、 **setupbelongs**使用されるように復帰し、 **changemergearticle**で**use_partition_groups = false**に設定した場合、スナップショットの取得後に正しく反映されない可能性があります。 スナップショットによって生成されるトリガーは、パーティショングループに準拠しています。<br /><br /> このシナリオの回避策は、状態を非アクティブに設定し、 **use_partition_groups**を変更して、状態をアクティブに設定することです。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 ||**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |**validate_subscriber_info**||サブスクライバー情報の取得に使用する関数を一覧表示します。 次に、情報のパーティション分割が一貫性を保っていることをサブスクライバーが確認するときに使用する動的フィルター選択の基準の妥当性を検証します。|  
 |**web_synchronization_url**||Web 同期に使用されるインターネット URL の既定値です。|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergepublication**は、マージレプリケーションで使用します。  
   
  次のプロパティを変更するには、新しいスナップショットを生成する必要があります。 *Force_invalidate_snapshot*パラメーターには値**1**を指定する必要があります。  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- *Publish_to_active_directory*を使用して Active Directory するパブリケーションオブジェクトの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一覧を表示するには、オブジェクトが Active Directory で既に作成されている必要があります。  
+ *Publish_to_active_directory*を使用して Active Directory するパブリケーションオブジェクトの一覧を表示するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトが Active Directory で既に作成されている必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
@@ -186,12 +186,12 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>関連項目  
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216366"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298992"
 ---
 # <a name="getting-long-data"></a>長い形式のデータの取得
 Dbms では、255文字など、特定のサイズの文字またはバイナリデータとして*長い形式のデータ*を定義します。 このデータは、1つのバッファーに格納するのに十分な大きさになる場合があります。たとえば、複数の1000文字の部分の説明などです。 ただし、長いテキストドキュメントやビットマップなど、メモリに格納するには長すぎる場合があります。 このようなデータは1つのバッファーに格納できないので、行の他のデータがフェッチされた後、 **SQLGetData**を使用してドライバーから取得されます。  

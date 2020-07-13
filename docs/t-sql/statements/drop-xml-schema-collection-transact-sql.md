@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf078c2689163196e5424c526ad46642e470bf1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892095"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 XML スキーマ コレクション全体とそのすべてのコンポーネントを削除します。  
   
@@ -59,7 +59,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
   
 -   任意のテーブル制約で指定されているコレクション。  
   
--   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `MyCollection` が指定されるので、XML スキーマ コレクション `WITH SCHEMABINDING` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
+-   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `WITH SCHEMABINDING` が指定されるので、XML スキーマ コレクション `MyCollection` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  

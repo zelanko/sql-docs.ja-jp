@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67793925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998054"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -61,7 +60,7 @@ ms.locfileid: "67793925"
   
 -   左側の図では、更新は 2 つのサーバー間でパーティション分割されています。 たとえば、データベースに製品カタログが含まれている場合、カスタム アプリケーションでは、A ～ M で始まる製品名についてはノード **A** に更新を送信し、N ～ Z で始まる製品名についてはノード **B** に更新を送信するようにできます。その後、更新は他のノードにレプリケートされます。  
   
--   右側では、すべての更新がノード**B**に送信されます。そこから、更新はノード**A**にレプリケートされます。**B**がオフラインの場合 (たとえば、メンテナンスの場合)、アプリケーションサーバーはすべて**の**アクティビティをに転送できます。**B**がオンラインに戻ると、更新プログラムがフローに反映され、アプリケーションサーバーはすべての更新を**B**に移動するか **、** に転送し続けることができます。  
+-   右側の図では、すべての更新がノード **B** に送信されます。そこから、更新はノード **A** にレプリケートされます。**B** がメンテナンスなどの理由でオフラインになると、アプリケーション サーバーはすべての処理を **A** に送信できます。**B** がオンラインに戻ると、更新は B に送られて、アプリケーション サーバーはすべての更新を **B** に移動することも、**A** への送信を維持することもできます。  
   
  ピア ツー ピア レプリケーションはどちらの方法もサポートしますが、右側の図にある中央の更新例は、標準トランザクション レプリケーションでも頻繁に使用されます。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "67793925"
   
     -   オブジェクト名、オブジェクト スキーマ、およびパブリケーション名が同一である必要があります。  
   
-    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (これは、パブリケーションプロパティ**replicate_ddl**(既定の設定) に対して**1**に設定されています。詳細については、「[パブリケーションデータベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+    -   パブリケーションで、スキーマ変更のレプリケートが許可されている (パブリケーション プロパティ **replicate_ddl** が既定の **1** に設定されている) 必要があります。詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
     -   行と列のフィルター処理はサポートされません。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "67793925"
   
 -   サブスクリプションを作成するには、パブリケーションをピア ツー ピア レプリケーションで有効にする必要があります。  
   
--   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+-   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「[Replicate Identity Columns](../publish/replicate-identity-columns.md)」 (ID 列のレプリケート) で、"Assigning Ranges for Manual Identity Range Management" (手動で ID 範囲を管理する場合の範囲の割り当て) セクションを参照してください。  
   
@@ -123,8 +122,7 @@ ms.locfileid: "67793925"
   
 -   timestamp 列  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のパブリッシャーとサブスクライバー  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のパブリッシャーとサブスクライバー  
   
 -   即時更新とキュー更新サブスクリプション  
   
@@ -138,24 +136,24 @@ ms.locfileid: "67793925"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ** \@destination_owner**および** \@destination_table**。  
+-   アーティクルのプロパティ** \@ destination_owner**および** \@ destination_table**。  
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションプロパティ** \@allow_initialize_from_backup**には値が必要`true`です。  
+-   パブリケーションプロパティ** \@ allow_initialize_from_backup**には値が必要です `true` 。  
   
--   アーティクルのプロパティ** \@replicate_ddl**には、の`true`値が必要です。identityrangemanagementoption に`manual`は値が必要です。 ** \@** および** \@status**では、オプション**24**が設定されている必要があります。  
+-   アーティクルのプロパティ** \@ replicate_ddl**には、の値が必要です `true` 。** \@ identityrangemanagementoption**には値が必要です `manual` 。および** \@ status**では、オプション**24**が設定されている必要があります。  
   
--   アーティクルのプロパティ** \@ins_cmd**、 ** \@del_cmd**、および** \@upd_cmd**の値をに`SQL`設定することはできません。  
+-   アーティクルのプロパティ** \@ ins_cmd**、 ** \@ del_cmd**、および** \@ upd_cmd**の値をに設定することはできません `SQL` 。  
   
--   サブスクリプションプロパティ** \@sync_type**には、または`none` `automatic`の値が必要です。  
+-   サブスクリプションプロパティ** \@ sync_type**には、またはの値が必要です `none` `automatic` 。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
   
--   既存の[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]トポロジへのノードの追加  
+-   既存の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] トポロジへのノードの追加  
   
 -   既存のパブリケーションへのアーティクルの追加  
   

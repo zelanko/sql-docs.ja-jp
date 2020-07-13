@@ -18,18 +18,17 @@ helpviewer_keywords:
 - finding printers [SQL Server]
 - Script task [Integration Services], printers
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7dc14bdad65d5315f61d464d6fe2af5ae2e2ee9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176241"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426749"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>スクリプト タスクによるインストールされたプリンターの検索
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで変換されたデータは、最後の変換先で印刷レポートになることがよくあります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]の`System.Drawing.Printing` [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]名前空間は、プリンターを操作するためのクラスを提供します。
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで変換されたデータは、最後の変換先で印刷レポートになることがよくあります。 `System.Drawing.Printing`の名前空間は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] プリンターを操作するためのクラスを提供します。
 
 > [!NOTE]
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。
@@ -39,14 +38,13 @@ ms.locfileid: "78176241"
 
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには
 
-1.  
-  `PrinterList` という名前の、`Object` 型の変数を作成します。
+1.  `PrinterList` という名前の、`Object` 型の変数を作成します。
 
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、ReadWriteVariables プロパティに追加します。
 
 3.  このスクリプト プロジェクトでは、参照を **System.Drawing** 名前空間に追加します。
 
-4.  コードでは、ステートメント`Imports`を使用して、**システムコレクション**と`System.Drawing.Printing`名前空間をインポートします。
+4.  コードでは、ステートメントを使用して、 `Imports` **システムコレクション**と名前空間をインポートし `System.Drawing.Printing` ます。
 
 ### <a name="code"></a>コード
 
@@ -142,9 +140,9 @@ public void Main()
         }
 ```
 
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スクリプト タスクの例](../extending-packages-scripting-task-examples/script-task-examples.md)
 
 

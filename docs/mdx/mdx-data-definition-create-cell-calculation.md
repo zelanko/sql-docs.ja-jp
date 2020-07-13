@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892165"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX データ操作 - CREATE CELL CALCULATION
@@ -58,7 +58,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Logical_Expression*  
  有効な MDX 論理式です。  
   
- *以外*  
+ *整数*  
  有効な整数値。  
   
  *Calculation_Name*  
@@ -67,7 +67,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Scalar_Expression*  
  有効な MDX スカラー式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クライアントアプリケーションでは、計算されるセルを使用することによって、カスタムロールアップ式や計算されるメンバーの場合と同様に、セルのセット全体ではなく、特定のセルのセットに対してロールアップ値を指定できます。 たとえば、`{[Canada],[Time].[2000]}` によって定義されるセット内のセルに、特定の式によって定義される値を入れる、といった指定が可能です。 このセット内に含まれていないその他のセルは、通常どおりに計算されます。  
   
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
 title: CAST および CONVERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CAST および CONVERT Transact-SQL 関数のリファレンス。 これらの関数では、式がある型から別の型に変換されます。
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11afeedcc46f53b57b90e7e5b117c13af188da1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823337"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,8 +87,8 @@ date または time データ型の *expression* の場合、*style* には次�
 |**1**|**101**|米国|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|イギリス/フランス|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
-|**4**|**104**|German|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
-|**5**|**105**|Italian|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
+|**4**|**104**|ドイツ語|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
+|**5**|**105**|イタリア語|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8** または **24**|**108**|-|hh:mi:ss|  

@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b8c251686085de410a3b0885a4e1755217ee6c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 176cdb15a2b6930582fb5ffee96ab264542dad9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62680117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013160"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML スキーマ制約要素を使用する **xs:QName** から派生した型はサポートしません。 また、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メンバー型に **QName** を指定した共用体型をサポートしません。  

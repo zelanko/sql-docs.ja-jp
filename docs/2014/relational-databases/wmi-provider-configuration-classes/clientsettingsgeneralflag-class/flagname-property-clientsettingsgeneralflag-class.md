@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 249bb4024b993ff2494d994e6ead1259191e59fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63242971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065574"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>FlagName プロパティ (ClientSettingsGeneralFlag クラス)
   フラグの名前を取得します。  
@@ -36,14 +35,14 @@ object
 .FlagName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サーバー設定に使用する一般的なフラグを表す [ClientSettingsGeneralFlag クラス](clientsettingsgeneralflag-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  フラグの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

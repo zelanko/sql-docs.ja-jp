@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1164689720cbe65d406160b457b3016998000f0c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086300"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525739"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>データ マイニング ウィザードの F1 ヘルプ (Analysis Services - データ マイニング)
-  
   **データ マイニング ウィザード** を使用すると、新しいマイニング構造を作成し、必要に応じて関連するマイニング モデルを作成できます。  
   
 -   マイニング構造は、解決しようとしているビジネス上の問題に関する情報を表します。 マイニング構造には、属性を説明する列および列のデータのソースへのバインドが格納されます。 マイニング構造は、リレーショナル データまたはキューブ内のデータに基づいて作成できます。  
@@ -31,8 +29,7 @@ ms.locfileid: "66086300"
   
  詳細については、「データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」を参照してください。  
   
- 
-  **データ マイニング ウィザード** では、次の操作を行います。  
+ **データ マイニング ウィザード** では、次の操作を行います。  
   
 -   マイニング モデルの基になるデータ ソースの種類を選択します。  
   
@@ -54,8 +51,7 @@ ms.locfileid: "66086300"
   
 -   データをトレーニング セットとテスト セットにパーティション分割します。  
   
--   
-  **データ マイニング ウィザード**を終了します。  
+-   **データ マイニング ウィザード**を終了します。  
   
  マイニング構造および必要に応じてマイニング モデルを作成した後、 **データ マイニング デザイナー** を使用してそれらのプロパティを変更できます。  
   

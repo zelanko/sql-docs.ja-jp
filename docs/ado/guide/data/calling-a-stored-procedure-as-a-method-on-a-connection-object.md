@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925893"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761238"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Connection オブジェクトに対するメソッドとしてストアド プロシージャを呼び出す
 ストアドプロシージャは、関連付けられた開いている**接続**オブジェクトでネイティブメソッドであるかのように呼び出すことができます。 これは、**接続**オブジェクトで名前付きコマンドを呼び出す場合と似ています。  

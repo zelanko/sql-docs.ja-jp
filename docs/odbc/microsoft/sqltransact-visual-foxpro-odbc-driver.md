@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLTransact function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e554a8669b6e6e95e234a5b939477a8bb2f7b8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3910f24578bcbc409a84573e994c0680ed5949b2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948866"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299222"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

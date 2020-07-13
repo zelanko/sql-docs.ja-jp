@@ -1,5 +1,6 @@
 ---
 title: bcp による一括データのインポートおよびエクスポート
+description: bcp を使用して、SELECT が機能する SQL Server データベース内の任意の場所からデータをエクスポートします。 テーブルまたはクエリからデータを一括エクスポートし、ファイルから一括インポートします。
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: data-movement
@@ -11,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521ef35d9d06244c36395e96ab681a21abffe6ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c8fe0f93e10b4f73125e1a1d746bcd41b326fa7f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055991"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010154"
 ---
 # <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>bcp を使用した一括データのインポートおよびエクスポート (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の SELECT ステートメントで指定できる任意の場所 (パーティション ビューを含む) からデータをエクスポートする方法について説明します。  
   

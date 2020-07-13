@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63149852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007709"
 ---
 # <a name="column-element-for-index-dta"></a>Index の Column 要素 (DTA)
   ユーザー指定の構成で、インデックスを作成する列を指定します。  
@@ -38,27 +37,25 @@ ms.locfileid: "63149852"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Column の属性|[説明]|  
+|Column の属性|説明|  
 |----------------------|-----------------|  
-|`Type`|省略可能。 インデックスの列の種類を指定します。 この属性を指定するには **string** データ型を使用します。指定できる値は次のいずれかです。<br /><br /> `KeyColumn`:<br />                  列がインデックス キーによって参照されていることを指定します。 この属性を設定するには、以下の構文を使用します。<br />`<Column Type="KeyColumn">`<br />キー列の詳細については、「 [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)」を参照してください。<br /><br /> `IncludedColumn`: 列が (キー列ではなく) 付加列であることを指定します。 この属性を設定するには、以下の構文を使用します。<br />`<Column Type="IncludedColumn">`<br />付加列の詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。|  
-|`SortOrder`|省略可能。 列の並べ替え順を指定します。 
-  **string** データ型を使用して、 **"Ascending"** または **"Descending"** の並べ替え順のいずれかを以下のように指定します。<br /><br /> `<Column SortOrder="Ascending">`|  
+|`Type`|任意。 インデックスの列の種類を指定します。 この属性を指定するには **string** データ型を使用します。指定できる値は次のいずれかです。<br /><br /> `KeyColumn`:<br />                  列がインデックス キーによって参照されていることを指定します。 この属性を設定するには、以下の構文を使用します。<br />`<Column Type="KeyColumn">`<br />キー列の詳細については、「 [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)」を参照してください。<br /><br /> `IncludedColumn`: 列が (キー列ではなく) 付加列であることを指定します。 この属性を設定するには、以下の構文を使用します。<br />`<Column Type="IncludedColumn">`<br />付加列の詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。|  
+|`SortOrder`|任意。 列の並べ替え順を指定します。 **string** データ型を使用して、 **"Ascending"** または **"Descending"** の並べ替え順のいずれかを以下のように指定します。<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|
-  `Index` 要素につき 1024 列まで指定できます。|  
+|**個数**|`Index` 要素につき 1024 列まで指定できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[DTA&#41;&#40;の Index 要素](index-element-dta.md)|  
-|**子要素**|[DTA&#41;&#40;列の Name 要素](name-element-for-column-dta.md)|  
+|**親要素**|[Index 要素 &#40;DTA&#41;](index-element-dta.md)|  
+|**子要素**|[Column の Name 要素 &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

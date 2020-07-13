@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811783"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   モデル オブジェクトのみが含まれているパッケージを配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のモデル配置ウィザードを使用します。 データを含むパッケージを配置する必要がある場合は、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
@@ -36,18 +36,15 @@ ms.locfileid: "73729393"
   
 -   モデルの配置パッケージが必要です。 詳細については、「 [ウィザードを使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)」を参照してください。  
   
--   モデルを配置する環境の管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデルを配置する環境の管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>モデル オブジェクトのみのパッケージを配置するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  
-  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]** をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]** をクリックします。  
   
-3.  
-  **[モデル配置ウィザード]** で **[配置]** をクリックします。  
+3.  **[モデル配置ウィザード]** で **[配置]** をクリックします。  
   
 4.  **[参照]** をクリックします。  
   
@@ -59,10 +56,9 @@ ms.locfileid: "73729393"
   
 8.  モデルが既に存在する場合は、 **[既存のモデルを更新する]** を選択することによって、そのモデルを更新できます。 新しいモデルを作成するには、 **[新しいモデルを作成する]** を選択し、 **[次へ]** をクリックした後に新しいモデルの名前を入力できます。  
   
-9. 
-  **[完了]** をクリックして、ウィザードを終了します。  
+9. **[完了]** をクリックして、ウィザードを終了します。  
   
- **注記**  
+ **注:**  
   
 -   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、" **配置機能サブスクリプション ビューが名前変更されました**" という警告が表示されます。 さらに、このビューは *modelname.subscriptionviewname*として作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
@@ -81,9 +77,9 @@ ms.locfileid: "73729393"
 ## <a name="next-steps"></a>次の手順  
  ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください。  
   
--   [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
- [モデルの配置 &#40;マスターデータサービス&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>関連項目  
+ [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], literal prefixes and suffixes
 - literals [ODBC], prefixes and suffixes
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 56ee50071f622c114bd6d8d04444e78c0fb69d67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d52ca54c329353e3d9dc67ca35d89b2d28cedf74
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915561"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287984"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>リテラル プレフィックスおよびサフィックス
 SQL ステートメントでは、*リテラル*は実際のデータ値の文字表現です。 たとえば、次のステートメントでは、ABC、FFFF、および10がリテラルです。  

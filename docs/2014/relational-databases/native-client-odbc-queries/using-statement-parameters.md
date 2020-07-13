@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8657c439d35a539892e7f166d8a0a443a5fb759b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049725"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
   パラメーターは、ODBC アプリケーションで次の操作を可能にする SQL ステートメント内の変数です。  
@@ -32,7 +31,7 @@ ms.locfileid: "63200246"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   **Text**、 **ntext**、および**Image**データおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の C データ型を管理します。  
+-   **Text**、 **ntext**、および**Image**データおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定の C データ型を管理します。  
   
  たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   

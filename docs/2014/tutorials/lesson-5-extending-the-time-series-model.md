@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822072"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5 : 時系列モデルの拡張
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition では、時系列モデルに新しいデータを追加し、モデルに新しいデータを自動的に組み込むことができます。 次の 2 つの方法のいずれかで、時系列マイニング モデルに新しいデータを追加します。  
   
 -   PREDICTION JOIN を使用してトレーニング データに外部ソースのデータを結合します。  
@@ -62,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     SELECT [Model Region],  
@@ -79,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -91,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -112,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -235,6 +234,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## <a name="see-also"></a>参照  
  [タイムシリーズモデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [DMX&#41;&#40;PredictTimeSeries](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

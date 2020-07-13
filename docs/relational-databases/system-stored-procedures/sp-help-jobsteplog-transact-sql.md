@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891802"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  特定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントのジョブステップログに関するメタデータを返します。 **sp_help_jobsteplog**は実際のログを返しません。  
+  特定のエージェントのジョブステップログに関するメタデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_help_jobsteplog**は実際のログを返しません。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -58,19 +58,19 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意識別子。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
 |**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、ステップがジョブの最初のステップである場合、その*step_id*は1になります。|  
 |**step_name**|**sysname**|ジョブのステップの名前。|  
-|**step_uid**|**UNIQUEIDENTIFIER**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
-|**date_created**|**DATETIME**|ステップが作成された日付。|  
-|**date_modified**|**DATETIME**|ステップが最後に変更された日付。|  
+|**step_uid**|**uniqueidentifier**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
+|**date_created**|**datetime**|ステップが作成された日付。|  
+|**date_modified**|**datetime**|ステップが最後に変更された日付。|  
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
 |**出力**|**nvarchar(max)**|ジョブステップのログ出力。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_help_jobsteplog**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -100,7 +100,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>B. 特定のジョブ ステップに関するジョブ ステップ ログ情報を返す  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>B: 特定のジョブ ステップに関するジョブ ステップ ログ情報を返す  
  次の例では、`Weekly Sales Data Backup` という名前のジョブ内にある最初のジョブ ステップに関するジョブ ステップ ログ情報を返します。  
   
 ```  
@@ -113,7 +113,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c47f24152978fedf8f2c3d49ec3b721969712814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62711457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020586"
 ---
 # <a name="cursor-concurrency-odbc"></a>カーソル コンカレンシー (ODBC)
   カーソル操作は、カーソルの種類と同様に、アプリケーションで設定されるコンカレンシー オプションの影響を受けます。 同時実行オプションは、 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)の SQL_ATTR_CONCURRENCY オプションを使用して設定します。 コンカレンシーの種類は次のとおりです。  

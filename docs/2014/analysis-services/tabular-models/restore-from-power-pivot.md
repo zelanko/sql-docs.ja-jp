@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b153dfbe9dfdbb5741304153bd7b3dfd1d0d1b3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66066637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938673"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot から復元
   SQL Server Management Studio の PowerPivot から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、PowerPivot ブック (.xlsx) から既存のデータベースに復元したりできます。  
@@ -41,14 +40,11 @@ ms.locfileid: "66066637"
   
 2.  [ **PowerPivot から復元**] ダイアログボックスの [**復元元**] の [**バックアップファイル**] で、[**参照**] をクリックし、復元元の abf または .xslx ファイルを選択します。  
   
-3.  
-  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
+3.  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
   
-4.  
-  **[ストレージの場所]** で、 **[参照]** をクリックし、データベースを格納する場所を選択します。  
+4.  **[ストレージの場所]** で、 **[参照]** をクリックし、データベースを格納する場所を選択します。  
   
-5.  
-  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
+5.  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;テーブルモデルデータベース](tabular-model-databases-ssas-tabular.md)   

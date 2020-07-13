@@ -82,7 +82,7 @@ ms.locfileid: "79287806"
 ##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> トランザクション ログの切り捨て  
 ログの切り捨てによりログ ファイルの領域が解放され、トランザクション ログで再利用できるようになります。 トランザクション ログの定期的な切り捨ては、ログがいっぱいにならないようにするために不可欠です。 いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
  
-ログの切り捨てでは、[ データベースの論理トランザクション ログから非アクティブな](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)仮想ログ ファイル (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
+ログの切り捨てでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの論理トランザクション ログから非アクティブな[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が削除されます。これにより、論理ログの領域が解放され、物理トランザクション ログで再利用できるようになります。 トランザクション ログが切り捨てられなければ、物理ログ ファイルに割り当てられているディスク上の領域がいっぱいになってしまいます。  
   
 領域が足りなくなるのを回避するために、何かの理由でログの切り捨てが遅れている場合を除き、次のイベントの後に切り捨てが自動的に発生します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79287806"
 > [!IMPORTANT]
 > トランザクション ログがいっぱいに応答する方法については、「 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)」を参照してください。  
   
- 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、**sys.databases** カタログ ビューの **log_reuse_wait** 列と [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
+ 実際に、ログの切り捨てはさまざまな理由で遅延が発生する場合があります。 ログの切り捨てを妨げている原因を、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列に対するクエリを実行して確認してください。 次の表では、これらの列の値について説明します。  
   
 |log_reuse_wait の値|log_reuse_wait_desc の値|説明|  
 |----------------------------|----------------------------------|-----------------|  
@@ -141,7 +141,7 @@ ms.locfileid: "79287806"
   
 トランザクション レプリケーションが有効な場合、`SELECT INTO` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
--   新規データの挿入時または追加時の、`.WRITE`UPDATE[ ステートメントの ](../../t-sql/queries/update-transact-sql.md) 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
+-   新規データの挿入時または追加時の、[UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの `.WRITE` 句を使用した、大きな値のデータ型の部分更新。 既存の値を更新する場合は、最小ログ記録は使用されません。 大きな値のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
 -   [text](../../t-sql/queries/writetext-transact-sql.md) 、 [ntext](../../t-sql/queries/updatetext-transact-sql.md) 、 **image**の各データ型列に新規データを挿入または追加するときの **WRITETEXT**ステートメントおよび **UPDATETEXT** ステートメント。 既存の値を更新する場合は、最小ログ記録は使用されません。  
   

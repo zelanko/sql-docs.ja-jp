@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Views collection [ADOX], Visual Basic example
 - Fields collection [ADOX]
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7b8650dc2714b7d21450aed5bf816bda21f8201
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964823"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753006"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views および Fields コレクションの例 (VB)
 次のコードは、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティと[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915460"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294202"
 ---
 # <a name="driver-tasks"></a>ドライバーでの処理
 ドライバーによって実行される特定のタスクは次のとおりです。  

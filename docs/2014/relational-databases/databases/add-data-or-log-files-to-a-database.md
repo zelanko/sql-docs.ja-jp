@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62917722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952372"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースにデータ ファイルまたはログ ファイルを追加する方法について説明します。  
@@ -42,20 +41,20 @@ ms.locfileid: "62917722"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   BACKUP ステートメントの実行中にファイルを追加したり削除したりすることはできません。  
   
 -   各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>データ ファイルまたはログ ファイルをデータベースに追加するには  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62917722"
   
 6.  ファイルの種類 (データまたはログ) を選択します。  
   
-7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、 **[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
+7.  データファイルの場合は、ファイルを含めるファイルグループを一覧から選択するか、を選択して **\<new filegroup>** 新しいファイルグループを作成します。 トランザクション ログはファイル グループに追加できません。  
   
 8.  ファイルの初期サイズを指定します。 データベースに格納するデータの予想最大量に基づいて、データ ファイルのサイズを可能な限り大きく設定しておきます。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "62917722"
   
 12. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>データ ファイルまたはログ ファイルをデータベースに追加するには  
   

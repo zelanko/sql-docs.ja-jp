@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76ef28d83fca3fd0eb904f0d98b798866b9715eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904580"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896478"
 ---
 # <a name="sysremote_service_bindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このカタログビューには、リモートサービスバインドごとに1行が含まれています。 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|このリモートサービスバインドの名前。 NULL 値は許容されません。|  
 |**remote_service_binding_id**|**int**|このリモートサービスバインドの ID。 NULL 値は許容されません。|  
@@ -42,6 +42,6 @@ ms.locfileid: "67904580"
 |**is_anonymous_on**|**bit**|このリモートサービスバインドは、匿名セキュリティを使用します。 メッセージ交換を開始するユーザーの id が、発信先サービスに提供されていません。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
   

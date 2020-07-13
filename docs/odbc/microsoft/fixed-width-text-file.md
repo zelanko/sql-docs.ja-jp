@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL grammar [ODBC], fixed-width text files
 - fixed-width text files [ODBC]
 ms.assetid: 589e3240-a1a9-47ed-a559-abbf6d5ea9a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01acd5ab2101465cc0d891ba548a1af40f0edd5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a818e442f36993ecb750e587852950bff3871c1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085561"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286322"
 ---
 # <a name="fixed-width-text-file"></a>固定幅テキスト ファイル
 テキストドライバーを使用する場合、固定幅のテキストファイルの最後の列は可変長にすることができます。

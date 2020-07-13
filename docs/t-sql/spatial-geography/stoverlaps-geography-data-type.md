@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2d70a6af55587d87272c2317ea13e23f1d3a9ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702317"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスが別の **geography** インスタンスと空間的に重複する場合は 1 を返します。それ以外の場合は 0 を返します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68120853"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- **を呼び出したインスタンスと比較される、別の**geography`STOverlaps()` インスタンスです。  
+ `STOverlaps()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  

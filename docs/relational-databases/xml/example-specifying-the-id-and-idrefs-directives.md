@@ -1,5 +1,6 @@
 ---
-title: '例 : ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+title: '例: ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+description: SQL クエリで ID ディレクティブと IDREFS ディレクティブを指定することにより、ドキュメント内リンクを有効にする方法について説明します。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1574f3336ae06b8bfb368de7eff37d1bc4286af0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d38a541f1c323199e02a86f0c0e23cd5b5620659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632327"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 要素の属性は、 **ID** 型の属性として指定することができます。さらに、この属性を参照する **IDREFS** 属性を使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68006691"
 </Customer>  
 ```  
   
-`SalesOrderIDList` 要素の `<Customer>` 属性は、複数の値を指定できる属性であり、`SalesOrderID` 要素の `<SalesOrder>` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`SalesOrderIDList` 要素の `<Customer>` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
+`<Customer>` 要素の `SalesOrderIDList` 属性は、複数の値を指定できる属性であり、`<SalesOrder>` 要素の `SalesOrderID` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`<Customer>` 要素の `SalesOrderIDList` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
   
  **IDREFS** 型の要素も、複数の値を保持できます。 このため、別の SELECT 句を使用して、同じタグ、親、およびキー列の情報を再利用する必要があります。 さらに、 `ORDER BY` IDREFS **値を構成する一連の行が、それぞれの親要素の直後にグループ化された状態で表示されるように、** 句を指定します。  
   

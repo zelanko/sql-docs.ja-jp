@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918449"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760038"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの複数のレコードを配列に取得します。  
@@ -37,16 +37,16 @@ array = recordset.GetRows(Rows, Start, Fields )
  値が2次元配列である**バリアント**を返します。  
   
 #### <a name="parameters"></a>パラメーター  
- *[行]*  
- 省略可能。 取得するレコードの数を示す[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)値です。 既定値は**adGetRowsRest**です。  
+ *削減*  
+ 任意。 取得するレコードの数を示す[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)値です。 既定値は**adGetRowsRest**です。  
   
- *[開始]*  
- 省略可能。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値を使用することもできます。  
+ *スタート*  
+ 任意。 **GetRows**操作の開始位置となるレコードのブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値を使用することもできます。  
   
- *Fields*  
- 省略可能。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す**バリアント**。 ADO は、これらのフィールド内のデータのみを返します。  
+ *フィールド*  
+ 任意。 1つのフィールド名または序数位置、またはフィールド名または序数位置の配列を表す**バリアント**。 ADO は、これらのフィールド内のデータのみを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **GetRows**メソッドを使用して、レコード**セット**から2次元配列にレコードをコピーします。 最初の添字はフィールドを識別し、2番目のインデックスはレコード番号を識別します。 **GetRows**メソッドがデータを返すと、*配列*変数は自動的に正しいサイズに設定されます。  
   
  *Rows*引数の値を指定しない場合、 **GetRows**メソッドは**Recordset**オブジェクト内のすべてのレコードを自動的に取得します。 使用可能な数より多くのレコードを要求した場合、 **GetRows**は使用できるレコードの数のみを返します。  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097189"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>GetReportServerUrls メソッド (WMI MSReportServer_Instance)
@@ -35,13 +35,13 @@ public void GetReportServerUrls(out string[] applicationName,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *ApplicationName []*  
+ *ApplicationName[]*  
  インストールされているアプリケーションを含む配列。 値は `ReportServerWebService` または `ReportManager` です。  
   
- *Url []*  
+ *URLs[]*  
  正常に登録された URL を含む配列。  
   
- *数*  
+ *[データ型]*  
  返された配列の長さを含む整数値。  
   
  *HRESULT*  
@@ -53,7 +53,7 @@ public void GetReportServerUrls(out string[] applicationName,
  WMI 管理オブジェクトによって公開されるメソッドは、InvokeMethod 関数によって呼び出されます。 詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI ドキュメントの「管理オブジェクトのメソッドの実行」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

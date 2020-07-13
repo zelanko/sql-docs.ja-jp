@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3970ab8d8f446c4269e4b79c306d2dd9d2cf0426
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932103"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762331"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale プロパティ (ADO)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)または[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの数値の小数点以下桁数を示します。  

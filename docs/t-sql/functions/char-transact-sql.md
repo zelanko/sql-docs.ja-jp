@@ -24,18 +24,18 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0a56a5c8cc76ab2358d2a89d2b5290905092bf6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002200"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数では、**int** ASCII コードが文字値に変換されます。
   
@@ -43,7 +43,7 @@ ms.locfileid: "68113701"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 CHAR ( integer_expression )  
 ```  
   

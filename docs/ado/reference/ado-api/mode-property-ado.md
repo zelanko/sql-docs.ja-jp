@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932225"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762513"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトのデータを変更するために使用できるアクセス許可を示します。  

@@ -1,5 +1,6 @@
 ---
 title: コンストラクター関数 (XQuery) |Microsoft Docs
+description: XSD の組み込みまたはユーザー定義のアトミック型のインスタンスを作成できるようにする XQuery のコンストラクター関数について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68038993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773717"
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   コンストラクター関数は、指定された入力から、XSD の組み込みのアトミック型またはユーザー定義のアトミック型のインスタンスを生成します。  
   
@@ -43,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  任意の組み込み XSD 型。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  コンストラクターは基本データ型、および派生されたアトミック XSD 型に対してサポートされています。 ただし、 **xs: duration**のサブタイプ ( **Xdt: yearMonthDuration、Xdt: daytimeduration**、 **xs: QName**、 **XS: NMTOKEN**、および**xs: NOTATION**を含む) はサポートされていません。 関連するスキーマコレクションで使用可能なユーザー定義のアトミック型は、次の型から直接または間接的に派生している場合にも使用できます。  
   
 #### <a name="supported-base-types"></a>サポートされている基本型  
@@ -134,11 +135,11 @@ TYP($atomicvalue as xdt:anyAtomicType?
   
 -   引数が別の型のリテラルである場合、式はコンパイル時に評価されます。 値が型制約を満たしていない場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
- この例では、最初にサンプル XML ドキュメントが**xml**型の変数に割り当てられます。 このドキュメントには、3 `ProductDescription`つのサンプル <> 要素が含まれて`DateCreated`おり、それぞれに <> 子要素が含まれています。  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A: dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
+ この例では、最初にサンプル XML ドキュメントが**xml**型の変数に割り当てられます。 このドキュメントには、3つのサンプル <> 要素が含まれており `ProductDescription` 、それぞれに <> 子要素が含まれてい `DateCreated` ます。  
   
  次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較のために、クエリでは、 **xs: dateTime ()** コンストラクター関数を使用して日付を入力します。  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  上のクエリに関して、次の点に注意してください。  
   
--   ...Where loop 構造体は、WHERE 句\<で指定された条件を満たす productdescription> 要素を取得するために使用されます。  
+-   ...Where loop 構造体は、 \<ProductDescription> where 句で指定された条件を満たす要素を取得するために使用されます。  
   
 -   **Datetime ()** コンストラクター関数は、 **datetime**型の値を作成して適切に比較できるようにするために使用されます。  
   
@@ -187,7 +188,7 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

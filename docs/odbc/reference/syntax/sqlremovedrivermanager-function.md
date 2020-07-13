@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDriverManager function function [ODBC]
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024542"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301813"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **互換性**  
@@ -51,7 +51,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>診断  
  **Sqlremovedrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|コンポーネントがレジストリに見つかりません|インストーラーは、ドライバーマネージャーの情報を削除できませんでした。レジストリに存在しないか、レジストリに見つかりませんでした。|  
@@ -94,6 +94,6 @@ BOOL SQLRemoveDriverManager(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバーマネージャーのインストール|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|

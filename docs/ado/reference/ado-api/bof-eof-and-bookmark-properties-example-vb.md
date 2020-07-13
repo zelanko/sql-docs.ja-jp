@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920436"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762849"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、および Bookmark プロパティの例 (VB)
 この例では、ユーザーが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティと[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  

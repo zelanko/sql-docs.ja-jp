@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e5b8ed06ad9f996d644df0dfb99d15adcff86bc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912324"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307653"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>サポートされていない Visual FoxPro コマンドと関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual foxpro ODBC ドライバーではサポートされていないが、Microsoft® Visual FoxPro®でサポートされている FoxPro コマンドと関数の一覧を示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "67912324"
 |-|-|-|  
 |#DEFINE... #UNDEF|#IF... #ENDIF プリプロセッサディレクティブ|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE プリプロセッサディレクティブ|:: スコープ解決演算子|! コマンド (RUN &#124; を参照してください。 メニュー|  
-|? &#124; しますか? command|??? command|\ &#124; \\\ コマンド|  
+|? &#124; しますか? コマンド|??? コマンド|\ &#124; \\\ コマンド|  
 |@ ...BOX コマンド|@ ...クラスコマンド|@ ...CLEAR コマンド|  
 |@ ...エディットボックスの編集コマンド|@ ...FILL コマンド|@ ...取得|  
 |@ ...メニューコマンド|@ ...プロンプトコマンド|@ ...コマンドを言います。|  
@@ -236,7 +236,7 @@ ms.locfileid: "67912324"
 |接続の名前の変更コマンド|テーブル名の変更コマンド|RESTORE FROM コマンド|  
 |レポートコマンド|REQUERY () 関数|ウィンドウの復元コマンド|  
 |マクロの復元コマンド|RESTORE SCREEN コマンド|RGBSCHEME () 関数|  
-|RESUME コマンド|RGB () 関数|&#124; を実行します。 command|  
+|RESUME コマンド|RGB () 関数|&#124; を実行します。 コマンド|  
 |RMDIR コマンド|ROW () 関数||  
 |RUNSCRIPT コマンド|RDLEVEL () 関数||  
   

@@ -10,28 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004370"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  このトピックでは、C 型から日付型または時刻[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型に変換する際に考慮すべき問題を示します。  
+  このトピックでは、C 型から日付型または時刻型に変換する際に考慮すべき問題を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC は秒の小数部の切り捨てをエラーとして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]処理しますが、動作は round になります。たとえば、 **datetime2 (6)** から**datetime2 (2)** に進むと丸め処理が行われます。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC では、秒の小数部の切り捨てがエラーとして処理されます。一方、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime2 (6)** から**datetime2 (2)** に進むと丸めが発生します。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1 で保護されたプロセスとして起動されました|-|-|1、6|1、5、6|1、13|1、13|  
-|SQL_C_TIME|-|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|1、7|1、5、7|1、13|1、13|  
+|SQL_C_DATE|1|-|-|1、6|1、5、6|1、13|1、13|  
+|SQL_C_TIME|-|1|1|1、7|1、5、7|1、13|1、13|  
 |SQL_C_SS_TIME2|-|1、3|1、10|1、7|1、5、7|1、13|1、13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|該当なし|該当なし|1、10、11|該当なし|該当なし|該当なし|該当なし|  
 |SQL_C_TYPE_TIMESTAMP|1、2|1、3、4|1、4、10|1、10|1、5、10|1、13|1、13|  
@@ -81,8 +80,8 @@ ms.locfileid: "73783949"
   
     ||||  
     |-|-|-|  
-    |種類|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21.. 29|  
+    |Type|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.. 9|  
+    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "73783949"
   
      列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。  
   
--   **N/A**: 既存[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]の動作と以前の動作が維持されます。  
+-   **N/A**: 既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 動作と以前の動作が維持されます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - year-month intervals [ODBC]
 - data conversions from C to SQL types [ODBC], year-month intervals
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3db8d61bacefa8588db4c0081c6be591d7ffdacf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ec7bfda0015883c8470dd453c7ae5de9bfd6cec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019278"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306613"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C から SQL へ: 年月の間隔
 Month interval ODBC C データ型の識別子は次のとおりです。  

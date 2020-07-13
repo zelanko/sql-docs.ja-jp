@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725696"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定したデータベースのレプリケーション データベース オプションを設定します。 このストアドプロシージャは、任意のデータベースのパブリッシャーまたはサブスクライバーで実行されます。  
   
@@ -45,7 +45,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @optname = ] 'optname'`有効または無効にするレプリケーションデータベースオプションを指定します。 *optname*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**merge publish**|データベースは、マージ パブリケーションで使用できます。|  
 |**投稿**|データベースは、他の種類のパブリケーションで使用できます。|  
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 対応する**is_published** (transacational またはスナップショットレプリケーション)、 **is_merge_published** (マージレプリケーション)、または**is_distributor**ビットを**master データベース**テーブルに設定し、必要なシステムテーブルを作成します。  
@@ -71,12 +71,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replicationdboption**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーションを削除する](../../relational-databases/replication/publish/delete-a-publication.md)   
  [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

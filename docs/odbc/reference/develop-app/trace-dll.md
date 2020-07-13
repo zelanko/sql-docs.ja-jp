@@ -11,14 +11,14 @@ helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fe910c93beac676e5fb0f663b740c03a826c326
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985224"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81298072"
 ---
 # <a name="trace-dll"></a>トレース DLL
 トレースを実行する DLL は、ODBC のコアコンポーネントの1つです。 現在、トレース DLL は、Windows SDK の ODBC コンポーネントにサンプル DLL として提供されており、以前は Microsoft Data Access Components (MDAC) SDK に含まれていました。 そのため、トレース DLL のレジストリエントリ、インターフェイス、およびサンプルコードを使用できます。 この DLL は、ODBC ユーザーまたはサードパーティベンダーによって作成されたトレース DLL に置き換えることができます。 カスタムトレース DLL には、元のサンプルトレース DLL とは異なる名前を付ける必要があります。 トレース Dll がシステムディレクトリにインストールされている必要があります。インストールしないと、読み込みに失敗します。 接続文字列はドライバーマネージャーによってトレース DLL に渡されません。  

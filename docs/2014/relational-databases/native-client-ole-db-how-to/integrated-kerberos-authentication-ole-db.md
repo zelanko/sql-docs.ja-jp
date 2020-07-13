@@ -1,5 +1,5 @@
 ---
-title: 統合 Kerberos 認証 (OLE DB) |Microsoft Docs
+title: 統合 Kerberos 認証 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c20a4e4951b518f034332c1851ac238d7103dcaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62718149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998684"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で、OLE DB を使用して、Kerberos 相互認証を行う方法を紹介しています。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  

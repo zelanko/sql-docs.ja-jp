@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108471"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する
@@ -32,13 +32,13 @@ ms.locfileid: "66108471"
   
 4.  [**データ接続の選択**] ページで、[**新しい接続**] をクリックします。  
   
-5.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
+5.  [ **接続の追加** ] ダイアログ ボックスで、次の手順を実行します。  
   
     1.  [**サーバー名**] ボックスに、 **AdventureWorks2008**データベースが配置されているサーバーを入力します。  
   
          既定の SQL Server Express インスタンスは **(local)\sqlexpress**です。  
   
-    2.  **[サーバーへのログオン]** セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
+    2.  [ **サーバーへのログオン** ] セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
   
     3.  [**データベース名の選択または入力**] ドロップダウンリストで、[ **AdventureWorks2008**] をクリックします。  
   

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ab0bdabe8b2d66bf054f07ea51056a4044b4ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4f810e5c42b54ec871c233ab498936abae610dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114185"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302973"
 ---
-# <a name="step-4a-fetch-the-results"></a>ステップ 4a: 結果のフェッチ
+# <a name="step-4a-fetch-the-results"></a>手順 4a: 結果をフェッチする
 次の手順では、次の図に示すように結果を取得します。  
   
  ![ODBC アプリケーションでの結果のフェッチ](../../../odbc/reference/develop-app/media/pr14.gif "pr14")  

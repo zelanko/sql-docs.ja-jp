@@ -15,36 +15,33 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6a0b31c68f7ebbb956c2d539dee4bc4dca2eb5ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060124"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
-  定数要素 (つまり、データベーステーブルまたは列にマップされない XSD スキーマの要素) を指定するには、 `sql:is-constant`注釈を使用します。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 
-  `sql:is-constant` 注釈は、属性のない要素に指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
+  定数要素 (つまり、データベーステーブルまたは列にマップされない XSD スキーマの要素) を指定するには、注釈を使用し `sql:is-constant` ます。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 `sql:is-constant` 注釈は、属性のない要素に指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
   
- 
-  `sql:is-constant` 注釈は次の目的に使用できます。  
+ `sql:is-constant` 注釈は次の目的に使用できます。  
   
 -   最上位要素を XML ドキュメントに追加する。 XML では、ドキュメントに 1 つの最上位要素 (ルート要素) が必要です。  
   
--   すべての注文をラップする** \<注文>** 要素などのコンテナー要素を作成する。  
+-   **\<Orders>** すべての注文をラップする要素などのコンテナー要素を作成する。  
   
- この`sql:is-constant`注釈は、 ** \<complexType>** 要素に追加できます。  
+ `sql:is-constant`注釈は要素に追加でき **\<complexType>** ます。  
   
 ## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
- この注釈付き XSD スキーマでは、属性に`sql:is-constant`値1を指定することによって、 ** \<CustomerOrders>** が定数要素として定義されます。 したがって、 ** \<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、 ** \<子要素>順序**で構成されます。  
+ この注釈付き XSD スキーマで **\<CustomerOrders>** は、値が1の属性を指定することによって、が定数要素として定義され `sql:is-constant` ます。 したがって、 **\<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、子要素で構成さ **\<Order>** れます。  
   
- CustomerOrders>はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には、 ** \<順序>** 子要素を含むコンテナー要素として表示されます。 ** \<**  
+ **\<CustomerOrders>** はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には子要素を含むコンテナー要素として表示され **\<Order>** ます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

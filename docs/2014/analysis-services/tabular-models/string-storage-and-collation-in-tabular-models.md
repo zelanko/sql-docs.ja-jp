@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3aad4cf16c39897bc0796f4fb161eaf39abdb5fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938603"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>テーブル モデルの文字列ストレージと照合順序
   文字列 (テキスト値) は高度に圧縮された形式でテーブル モデルに格納されます。この圧縮により、文字列の全体または一部を取得するときに予期しない結果を取得することがあります。 文字列のロケールと照合順序は最も近い親プロジェクトから階層的に継承されるため、文字列の言語が明示的に定義されていない場合、親のロケールと照合順序は、文字列の格納方法、および文字列が一意であるか親の照合順序の定義に従って同様の文字列と結合されるかに影響することがあります。  
@@ -41,7 +40,7 @@ ms.locfileid: "70874490"
 |ツリー|  
 |PlAnT|  
 |trEE|  
-|ツリー|  
+|tree|  
 |PlAnT|  
 |trEE|  
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00ecddd29afe6b8f34c8096c20a6a0b3f51c2269
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67995511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893497"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザーがアクセスできるすべてのデータベースの名前と所有者を一覧表示します。  
   
@@ -44,7 +44,7 @@ sp_MShasdbaccess
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、 **public**ロールに与えられています。  
   
-## <a name="see-also"></a>参照  
- [sysdatabases &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: acd8ec235d357853266b0419024ae406fa62fb90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62870980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969942"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってエラーが発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した問題の種類がエラーの重大度によって示されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "62870980"
 ## <a name="levels-of-severity"></a>重大度レベル  
  次の表は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって発生したエラーの重大度レベルについて示しています。  
   
-|重大度レベル|[説明]|  
+|重大度レベル|説明|  
 |--------------------|-----------------|  
 |0-9|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 重大度 0 ～ 9 のシステム エラーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって発生することはありません。|  
 |10|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 互換性の理由から、呼び出し側アプリケーションにエラー情報を返す前に [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって重大度 10 から重大度 0 に変換されます。|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925322"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758308"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
 次の例では、データシェイプの文法を使用して、親、子、および孫**レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  

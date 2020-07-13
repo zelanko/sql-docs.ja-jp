@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], Cursor Library
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e34c07cdd248d5da4efd9f66d7292bd6ab443e92
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300612"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (カーソル ライブラリ)
 > [!IMPORTANT]  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9452ade90f6967dff6d72d5692efcf91b93154d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057244"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308003"
 ---
 # <a name="processing-sql-statements"></a>SQL ステートメントの処理
 > [!IMPORTANT]  

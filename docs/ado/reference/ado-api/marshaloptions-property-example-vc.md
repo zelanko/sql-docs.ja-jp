@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 92d6939f067563c00890ad2481c86c39bc9bfa49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932267"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754401"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions プロパティの例 (VC++)
 この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  

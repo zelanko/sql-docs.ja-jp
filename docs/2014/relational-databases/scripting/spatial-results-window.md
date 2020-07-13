@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048995"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
   **[空間結果]** ウィンドウには、空間データを表示するための視覚的なマッピング ツールが用意されています。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952128"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764173"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ での ADOX のコード例
 これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は Microsoft Visual C++ を使用して記述されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "67952128"
   
 -   [Keys Append メソッド、Key Type、UpdateRule 列、関連性テーブル、およびプロパティの例 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [Attributes プロパティの例 (VC++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
   

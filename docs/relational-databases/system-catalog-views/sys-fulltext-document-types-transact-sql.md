@@ -20,31 +20,31 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68133851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790543"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  フルテキストインデックス作成操作で使用できるドキュメントの種類ごとに1行の値を返します。 各行は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに登録されている IFilter インターフェイスを表します。  
+  フルテキストインデックス作成操作で使用できるドキュメントの種類ごとに1行の値を返します。 各行は、のインスタンスに登録されている IFilter インターフェイスを表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|サポートされているドキュメントの種類のファイル拡張子。<br /><br /> この値は、 **varbinary (max)** 型または**image**型の列のフルテキストインデックス作成時に使用されるフィルターを識別するために使用できます。|  
-|**class_id**|**UNIQUEIDENTIFIER**|ファイル拡張子をサポートする IFilter クラスの GUID。|  
-|**道**|**nvarchar (260)**|IFilter DLL へのパス。 このパスは、 **serveradmin**固定サーバーロールのメンバーだけに表示されます。|  
-|**バージョン**|**sysname**|IFilter DLL のバージョン。|  
-|**manufacturer**|**sysname**|IFilter 製造元の名前。<br /><br /> 注: で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]サポートされているのは製造元のドキュメントのみです。|  
+|**class_id**|**uniqueidentifier**|ファイル拡張子をサポートする IFilter クラスの GUID。|  
+|**path**|**nvarchar(260)**|IFilter DLL へのパス。 このパスは、 **serveradmin**固定サーバーロールのメンバーだけに表示されます。|  
+|**version**|**sysname**|IFilter DLL のバージョン。|  
+|**manufacturer**|**sysname**|IFilter 製造元の名前。<br /><br /> 注: でサポートされているのは製造元のドキュメントのみ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

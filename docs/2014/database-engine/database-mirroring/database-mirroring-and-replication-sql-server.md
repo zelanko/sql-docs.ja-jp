@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62807463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934343"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
   データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  
@@ -69,15 +68,13 @@ ms.locfileid: "62807463"
   
 2.  データベース ミラーリングを構成します。 詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」および「[データベース ミラーリングの設定 &#40;SQL Server&#41;](database-mirroring-sql-server.md)」を参照してください。  
   
-3.  ディストリビューションをミラー用に構成します。 ミラー名をパブリッシャーとして指定し、プリンシパルと同一のディストリビューターおよびスナップショット フォルダーを指定します。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、ディストリビューターで [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行し、次にミラーで [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 
-  **sp_adddistpublisher**の場合は、以下の手順を実行します。  
+3.  ディストリビューションをミラー用に構成します。 ミラー名をパブリッシャーとして指定し、プリンシパルと同一のディストリビューターおよびスナップショット フォルダーを指定します。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、ディストリビューターで [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行し、次にミラーで [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 **sp_adddistpublisher**の場合は、以下の手順を実行します。  
   
-    -   **@publisher**パラメーターの値をミラーのネットワーク名に設定します。  
+    -   パラメーターの値 **@publisher** をミラーのネットワーク名に設定します。  
   
-    -   **@working_directory**パラメーターの値を、プリンシパルによって使用されるスナップショットフォルダーに設定します。  
+    -   パラメーターの値を、 **@working_directory** プリンシパルによって使用されるスナップショットフォルダーに設定します。  
   
-4.  
-  **-PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
+4.  **-PublisherFailoverPartner** エージェント パラメーターの値にミラー名を指定します。 フェールオーバーの後、以下のエージェントでミラーを特定する場合にこのエージェント パラメーターが必要になります。  
   
     -   スナップショット エージェント (すべてのパブリケーション用)  
   
@@ -87,8 +84,7 @@ ms.locfileid: "62807463"
   
     -   マージ エージェント (マージ サブスクリプション用)  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (replisapi.dll : Web 同期を使用して同期したマージ サブスクリプション用)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (replisapi.dll : Web 同期を使用して同期したマージ サブスクリプション用)  
   
     -   SQL マージ ActiveX コントロール (このコントロールを使用して同期したマージ サブスクリプション用)  
   
@@ -96,12 +92,11 @@ ms.locfileid: "62807463"
   
      エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。 パラメーターは、エージェント プロファイルおよびコマンド プロンプトで指定できます。 詳細については、次を参照してください。  
   
-    -   [レプリケーションエージェントコマンドプロンプトパラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [レプリケーションエージェント実行可能ファイルの概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     
-  **-PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
+     **-PublisherFailoverPartner** をエージェント プロファイルに追加して、プロファイルにミラー名を指定することをお勧めします。 たとえば、ストアド プロシージャを使用してレプリケーションを構成する場合、以下のように指定します。  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -125,8 +120,7 @@ ms.locfileid: "62807463"
 ## <a name="maintaining-a-mirrored-publication-database"></a>ミラー化したパブリケーション データベースのメンテナンス  
  ミラー化したパブリケーション データベースのメンテナンスは、ミラー化していないデータベースの場合と基本的に同じです。ただし、以下の点に注意する必要があります。  
   
--   アクティブなサーバーで管理および監視を行う必要があります。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、アクティブなサーバーだけで、 **[ローカル パブリケーション]** フォルダー以下にパブリケーションが表示されます。 たとえば、ミラーへのフェールオーバーが発生した場合、パブリケーションがミラーで表示され、プリンシパルでは表示されなくなります。 データベースでミラーへのフェールオーバーが発生した場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびレプリケーション モニターを手動で更新して、変更を反映することが必要になる場合もあります。  
+-   アクティブなサーバーで管理および監視を行う必要があります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、アクティブなサーバーだけで、 **[ローカル パブリケーション]** フォルダー以下にパブリケーションが表示されます。 たとえば、ミラーへのフェールオーバーが発生した場合、パブリケーションがミラーで表示され、プリンシパルでは表示されなくなります。 データベースでミラーへのフェールオーバーが発生した場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびレプリケーション モニターを手動で更新して、変更を反映することが必要になる場合もあります。  
   
 -   レプリケーション モニターでは、プリンシパルとミラーの両方に対するオブジェクト ツリー内にパブリッシャー ノードが表示されます。 プリンシパルがアクティブなサーバーの場合、パブリケーション情報はレプリケーション モニターのプリンシパル ノード以下のみに表示されます。  
   
@@ -140,11 +134,10 @@ ms.locfileid: "62807463"
   
      パブリケーション データベースをミラー化した場合、ミラー データベースに格納されるレプリケーション メタデータとプリンシパル データベースに格納されるメタデータが同一になります。 その結果、プリンシパルでレプリケーションが有効なパブリケーション データベースでは、ミラーのシステム テーブルに格納されるパブリッシャーのインスタンス名は、ミラーではなくプリンシパルの名前になります。 これにより、パブリケーション データベースでミラーへのフェールオーバーが発生した場合のレプリケーションの構成およびメンテナンスが影響を受けます。 たとえば、フェールオーバー後にストアドプロシージャを使用してレプリケーションを構成し、プリンシパルで有効にしたパブリケーションデータベースにプルサブスクリプションを追加する場合は、 **@publisher** **sp_addpullsubscription**または**sp_addmergepullsubscription**のパラメーターにミラー名ではなくプリンシパル名を指定する必要があります。  
   
-     ミラーへのフェールオーバー後にミラーでパブリケーションデータベースを有効にした場合、システムテーブルに格納されているパブリッシャーのインスタンス名はミラーの名前になります。この場合は、 **@publisher**パラメーターにミラーの名前を使用します。  
+     ミラーへのフェールオーバー後にミラーでパブリケーションデータベースを有効にした場合、システムテーブルに格納されているパブリッシャーのインスタンス名はミラーの名前になります。この場合は、パラメーターにミラーの名前を使用し **@publisher** ます。  
   
     > [!NOTE]  
-    >  
-  **sp_addpublication** などを使う場合、** 以外のパブリッシャーに対してのみ @publisher**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
+    >  **sp_addpublication** などを使う場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーに対してのみ **@publisher** パラメーターがサポートされます。このような場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングとは無関係になります。  
   
 -   フェールオーバーの後、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   

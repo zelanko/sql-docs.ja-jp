@@ -21,15 +21,15 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd9c09ba45558daae53f7a1b4e26395e32edd5c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735608"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (データベース スコープの資格情報の権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   データベース スコープの資格情報に対する権限を許可します。 
   
@@ -37,7 +37,7 @@ ms.locfileid: "67942947"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON DATABASE SCOPED CREDENTIAL :: credential_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_operator
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009121"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862484"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   オペレーターを削除します。  
   
@@ -56,8 +56,8 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは**sp_delete_operator**を実行できます。  
   
-## <a name="examples"></a>例  
- 次の例では`François Ajenstat`、演算子を削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、演算子を削除し `François Ajenstat` ます。  
   
 ```  
 USE msdb ;  
@@ -67,10 +67,10 @@ EXEC sp_delete_operator @name = 'François Ajenstat' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extendedANSISQL [ODBC], enabling new data types
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b703c5c14c4743e13feee139d16e5dfeb3c24c63
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68031118"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303413"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>ExtendedAnsiSQL を設定して新しいデータ型の有効化
 ExtendedAnsiSQL フラグが有効になっている場合、Jet 4.0 データベースでは、SQL_DECIMAL と SQL_NUMERIC の2つの新しいデータ型を使用できます。 既定の有効桁数と小数点以下桁数はそれぞれ18と0です。 SQL_DECIMAL または SQL_NUMERIC として入力された ODBC を介してアクセスされるデータは、通貨ではなく Microsoft Jet Decimal にマップされます。  

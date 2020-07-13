@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d543045fc5aac67b266ceb94c569a226bfd36f53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972222"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を割り当てる (マスター データ サービス)
   階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
@@ -28,35 +27,27 @@ ms.locfileid: "65483733"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>階層メンバーの権限を割り当てるには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  
-  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
-4.  
-  **[階層メンバー]** タブをクリックします。  
+4.  **[階層メンバー]** タブをクリックします。  
   
-5.  
-  **[モデル]** ボックスの一覧からモデルを選択します。  
+5.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-6.  
-  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+6.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-7.  
-  **[階層]** ボックスの一覧から階層を選択します。  
+7.  **[階層]** ボックスの一覧から階層を選択します。  
   
-8.  [**編集**] をクリックします。  
+8.  **[編集]** をクリックします。  
   
 9. ツリーを展開して、権限を割り当てる階層ノードをクリックします。  
   
@@ -70,6 +61,6 @@ ms.locfileid: "65483733"
 ## <a name="see-also"></a>参照  
  [マスターデータサービス &#40;階層メンバーの権限を削除&#41;](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [階層メンバーの権限 (マスター データ サービス)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

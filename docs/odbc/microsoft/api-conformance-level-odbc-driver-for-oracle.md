@@ -12,14 +12,14 @@ helpviewer_keywords:
 - API conformance level [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 046469263866206fa3c4d04de3184cd0baaf7944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a692ec2047cac6131793481849ea49135e7804a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138197"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303023"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -22,21 +22,18 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2323dc4da3d1a8a67dad41ea189877ade25eff0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63260946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041332"
 ---
 # <a name="create-a-user-defined-event"></a>ユーザー定義イベントの作成
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって定義済みのイベント以外のイベントを監視するには、ユーザー定義イベントを作成します。 また、各ユーザー定義イベントに対して重大度レベルを割り当てることもできます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用中に、各ユーザー定義イベント メッセージに対して **[Windows アプリケーション イベント ログに書き込む]** オプションを選択して、そのメッセージがログに書き込まれるように設定できます。 既定では、ユーザー定義メッセージが生成された場合でも、その重大度が 19 より低い場合は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに送られません。 したがって、重大度が 19 より低いユーザー定義メッセージは、SQL Server エージェントの警告をトリガーしません。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用中に、各ユーザー定義イベント メッセージに対して **[Windows アプリケーション イベント ログに書き込む]** オプションを選択して、そのメッセージがログに書き込まれるように設定できます。 既定では、ユーザー定義メッセージが生成された場合でも、その重大度が 19 より低い場合は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに送られません。 したがって、重大度が 19 より低いユーザー定義メッセージは、SQL Server エージェントの警告をトリガーしません。  
   
  ユーザー定義イベントには、それぞれ一意のメッセージ番号が付けられている必要があります。 ユーザー定義イベントのメッセージ番号は、50,000 より大きくする必要があります。 イベントに対するメッセージを複数の言語で定義することもできます。 ただし、他の言語のメッセージを追加するには、 **En-US** エラー メッセージが存在している必要があります。  
   
@@ -44,13 +41,13 @@ ms.locfileid: "63260946"
   
  次のタスクでは、ユーザー定義イベントの作成方法とイベントに応答する警告についての情報が得られます。  
   
- **メッセージ番号に基づいて警告を作成するには**  
+ **メッセージ番号に基づいた警告を作成するには**  
   
 -   [SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **重大度レベルに基づいてアラートを作成するには**  
+ **重大度レベルに基づいた警告を作成するには**  
   
 -   [SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
@@ -62,15 +59,15 @@ ms.locfileid: "63260946"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **ユーザー定義のイベントエラーメッセージを作成するには**  
+ **ユーザー定義のイベント エラー メッセージを作成するには**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **ユーザー定義のイベントエラーメッセージを変更するには**  
+ **ユーザー定義のイベント エラー メッセージを変更するには**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **ユーザー定義のイベントエラーメッセージを削除するには**  
+ **ユーザー定義のイベント エラー メッセージを削除するには**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

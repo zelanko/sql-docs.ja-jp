@@ -13,10 +13,10 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029392"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>変数値ファイルの作成 (SybaseToSQL)
@@ -89,7 +89,7 @@ ms.locfileid: "68029392"
 ## <a name="variable-value-file-validation"></a>変数値ファイルの検証  
 ユーザーは、[スキーマ] フォルダーで使用可能なスキーマ定義ファイル**ConsoleScriptVariablesSchema**に対して、変数の値ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;SybaseToSQL&#41;を作成し](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)ます。  
   
 ## <a name="see-also"></a>参照  

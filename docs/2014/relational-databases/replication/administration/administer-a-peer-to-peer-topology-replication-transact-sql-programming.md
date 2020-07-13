@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a73af1c1f3a7196d87f77681ee9d62a3ef248a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62629715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068783"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>ピア ツー ピア トポロジの管理 (レプリケーション Transact-SQL プログラミング)
   ピア ツー ピア トポロジの管理は通常のトランザクション レプリケーション トポロジの管理と似ていますが、特別な考慮が必要な部分が数多くあります。 ピア ツー ピア トポロジの管理が通常のトポロジ管理と最も異なる点は、ある種の変更を行うときにシステムを *停止*する必要があることです。 システムを停止するときには、すべてのノードでパブリッシュ済みテーブルの利用を停止し、各ノードが他のすべてのノードの変更を受け取っていることを確認します。 詳細については、「[レプリケーション トポロジの停止 &#40;レプリケーション Transact-SQL プログラミング&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md)」を参照してください。  
@@ -35,15 +34,12 @@ ms.locfileid: "62629715"
   
 3.  CREATE TABLE ステートメントを実行して、トポロジ内の各ノードに新しいテーブルを追加します。  
   
-4.  
-  [bcp ユーティリティ](../../../tools/bcp-utility.md)を使用して、全ノードの新しいテーブルにデータを一括コピーします。  
+4.  [bcp ユーティリティ](../../../tools/bcp-utility.md)を使用して、全ノードの新しいテーブルにデータを一括コピーします。  
   
-5.  
-  [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) を実行して、トポロジ内の各ノードに新しいアーティクルを作成します。 詳しくは、「 [アーティクルを定義](../publish/define-an-article.md)」をご覧ください。  
+5.  [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) を実行して、トポロジ内の各ノードに新しいアーティクルを作成します。 詳しくは、「 [アーティクルを定義](../publish/define-an-article.md)」をご覧ください。  
   
     > [!NOTE]  
-    >  
-  [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) の実行後、レプリケーションによってトポロジ内のサブスクリプションにアーティクルが自動的に追加されます。  
+    >  [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) の実行後、レプリケーションによってトポロジ内のサブスクリプションにアーティクルが自動的に追加されます。  
   
 6.  トポロジ内の各ノードでディストリビューション エージェントを再起動します。  
   

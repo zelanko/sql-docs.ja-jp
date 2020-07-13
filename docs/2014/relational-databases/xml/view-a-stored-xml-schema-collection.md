@@ -15,15 +15,14 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6383fb17183a991d2f83325044663cc9671e9442
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63233603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012981"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>格納されている XML スキーマ コレクションの表示
   [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)を使用して XML スキーマ コレクションをインポートすると、メタデータにスキーマ コンポーネントが格納されます。 固有の関数 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)を使用して、XML スキーマ コレクションを再構築できます。 この関数は、`xml` データ型のインスタンスを返します。  
@@ -35,7 +34,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- XML スキーマ コレクションに含まれるスキーマを 1 つだけ表示する場合は、`xml` によって返された `xml_schema_namespace` 型の結果に対して、XQuery を指定できます。  
+ XML スキーマ コレクションに含まれるスキーマを 1 つだけ表示する場合は、`xml_schema_namespace` によって返された `xml` 型の結果に対して、XQuery を指定できます。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  

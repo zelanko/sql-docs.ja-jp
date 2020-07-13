@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a735b4c2b51e1c680c8129647733ce1efd9f9984
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055039"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル : hierarchyid データ型の使用
   このチュートリアルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] については理解しているが、`hierarchyid` データ型は初めて使用するユーザーを対象としています。  

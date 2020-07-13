@@ -21,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e6bca763db2c9c7278d3f1ac23fc87d7bb8833b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039087"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897097"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定した *session_id* の現在の出力バッファーを、16 進形式と ASCII 形式で返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-```sql
+```syntaxsql
 DBCC OUTPUTBUFFER ( session_id [ , request_id ])  
 [ WITH NO_INFOMSGS ]  
 ```  

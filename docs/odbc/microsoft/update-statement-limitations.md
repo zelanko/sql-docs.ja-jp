@@ -11,14 +11,14 @@ helpviewer_keywords:
 - UPDATE statement limitations [ODBC]
 - ODBC SQL grammar, UPDATE statement limitations
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1cc8cf58d4e4d826dc4b152e395dedbea395a095
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ddf19c0b672901b2e778833f8bf624996d4ced3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088204"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307623"
 ---
 # <a name="update-statement-limitations"></a>UPDATE ステートメントの制限事項
 Paradox ドライバーでテーブルを更新するには、テーブルに一意のインデックス (Paradox 主キー) が必要です。 Borland データベースエンジンを実装せずに Paradox ドライバーを使用する場合、Paradox テーブルを更新することはできません。  

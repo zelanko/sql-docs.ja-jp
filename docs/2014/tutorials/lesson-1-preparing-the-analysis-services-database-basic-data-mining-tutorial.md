@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494005"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>レッスン 1: Analysis Services データベースの準備 (基本的なデータ マイニング チュートリアル)
   で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]は、ビジネスインテリジェンスアプリケーション[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]の設計を担当してきた新しい従業員です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データマイニングエクスペリエンスを活用して、自転車を購入したユーザーに関する興味のある実用的な情報を見つけることを希望しています。 また、将来自転車を購入する可能性が最も高い顧客を予測することも求められています。  
   
- で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]このアプリケーションを設計するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]まず、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多次元モデリングとデータ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニングのプロジェクトテンプレートに基づくプロジェクトの作成を行います。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成したら、データ ソースを 1 つ以上定義します。 次に、データソースから選択したテーブルおよびビューから、*データソースビュー*と呼ばれるメタデータのビューを定義します。  
+ で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]このアプリケーションを設計するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]まず、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多次元モデリングとデータ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニングのプロジェクトテンプレートに基づくプロジェクトの作成を行います。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成したら、データ ソースを 1 つ以上定義します。 次に、データソースから選択したテーブルおよびビューから、*データソースビュー*と呼ばれるメタデータのビューを定義します。  
   
  このレッスンでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成し、データ ソースを 1 つ作成した後、テーブルのサブセットをデータ ソース ビューに追加します。 このレッスンには、次のタスクが含まれています。  
   

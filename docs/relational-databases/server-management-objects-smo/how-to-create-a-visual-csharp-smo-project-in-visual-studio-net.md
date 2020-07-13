@@ -13,28 +13,26 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 5b8ddf0d2ad098914997aa934cfc16cf7f750d99
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095964"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008605"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET で Visual C# SMO プロジェクトを作成する方法
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   このセクションでは、簡単な SMO コンソール アプリケーションを構築する方法について説明します。  
   
- この例では、プログラムが SMO の型を参照できるように、名前空間をインポートします。 **エージェント**の名前空間のインポートは任意です。 エージェントを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するプログラムを作成するときに使用します。 **共通**の名前空間は、のインスタンスへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セキュリティで保護された接続を確立するために必要です。 **SqlClient**名前空間は、SQL 例外エラーを処理するために使用されます。  
+ この例では、プログラムが SMO の型を参照できるように、名前空間をインポートします。 **エージェント**の名前空間のインポートは任意です。 エージェントを使用するプログラムを作成するときに使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **共通**の名前空間は、のインスタンスへのセキュリティで保護された接続を確立するために必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **SqlClient**名前空間は、SQL 例外エラーを処理するために使用されます。  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Visual C# SMO プロジェクトを Visual Studio.NET で作成する  
   
 1. Visual Studio を起動する
   
-2. [**ファイル**] メニューの [**新規作成**] をポイントし、[**プロジェクト**] をクリックします。  
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。   
+2. [**ファイル**] メニューの [**新規作成**] をポイントし、[**プロジェクト**] をクリックします。  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。   
   
-3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **インストール済み**] ウィンドウで、[**テンプレート**\\] [**Visual C#**\\] [**Windows** ] の順に移動し、[**コンソールアプリケーション**] を選択します。  
+3. [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **インストール済み**] ウィンドウで、[**テンプレート**] [Visual C#] [Windows] の順に移動し、 \\ **Visual C#** \\ **Windows** [**コンソールアプリケーション**] を選択します。  
   
 4. Optional[**名前**] テキストボックスに、新しいアプリケーションの名前を入力します。  
 
@@ -42,8 +40,7 @@ ms.locfileid: "74095964"
 
 6. [SMO のインストール](installing-smo.md)に関する手順に従って、参照するプロジェクトのパッケージをインストールします。
   
-7. 
-  **[表示]** メニューの **[コード]** をクリックします。
+7. **[表示]** メニューの **[コード]** をクリックします。
     
 8. コードの namespace ステートメントの前に、次の using ステートメントを入力し**て**、SMO 名前空間の型を修飾します。
   

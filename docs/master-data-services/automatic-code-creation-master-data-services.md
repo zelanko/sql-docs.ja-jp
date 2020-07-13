@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 057162b74045ac32a8f4504496417f274a02b423
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812061"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>コードの自動作成 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、Code 属性の数値または他の数値属性の数値を自動的に生成できます。 コードを自動生成するときは、コードに他の値を入力してもかまいません。正確には、初期値が自動的に設定されます。  
   
 ## <a name="generating-code-values"></a>コード値の生成  
@@ -38,15 +37,15 @@ ms.locfileid: "73729747"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|Code 属性の値を自動的に生成します。|[マスターデータサービス &#40;コード属性の値を自動的に生成&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|他の属性の値を自動的に生成します。|[Code &#40;マスターデータサービス以外の属性値を自動的に生成する&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Code 属性の値を自動的に生成します。|[Code 属性の値の自動生成 (マスター データ サービス)](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|他の属性の値を自動的に生成します。|[Code 以外の属性の値の自動生成 (マスター データ サービス)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [マスターデータサービス概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
--   [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)  
+-   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
   

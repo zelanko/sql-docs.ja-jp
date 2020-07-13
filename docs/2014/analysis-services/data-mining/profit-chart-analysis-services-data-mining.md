@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e574aaf4ab748ad61dc47984360e531ca98a3238
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083089"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520628"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利益チャート (Analysis Services - データ マイニング)
   利益チャートには、マイニング モデルの使用に関連して推定される収益性が表示されます。 たとえば、ビジネスシナリオにおいて会社がどの顧客に連絡する必要があるかをモデルが予測しているとします。 この場合、利益チャートに対して、ターゲット メーリング キャンペーンの実施コストに関する情報を追加します。 その後、完成したチャートで、ランダムに顧客に連絡を取った場合と比較して、顧客を正しくターゲット指定した場合に推定される利益を表示できます。  
@@ -31,8 +30,7 @@ ms.locfileid: "66083089"
   
  利益チャートを作成するには、既存のモデルを使用する必要があります。  
   
- この例では、絞り込みメールのデシジョン ツリー モデルを使用しました。 このモデルでは、自転車を購入する可能性がある顧客を識別します。 
-  **[利益チャート]** を適用して、利益を最大化するためにターゲット指定する顧客の数を判断することができます。  
+ この例では、絞り込みメールのデシジョン ツリー モデルを使用しました。 このモデルでは、自転車を購入する可能性がある顧客を識別します。 **[利益チャート]** を適用して、利益を最大化するためにターゲット指定する顧客の数を判断することができます。  
   
  サンプルモデルを持っていない場合は、「[基本的なデータマイニングチュートリアル](../../tutorials/basic-data-mining-tutorial.md)」を使用して作成できます。  
   
@@ -42,8 +40,7 @@ ms.locfileid: "66083089"
   
     -   SQL Server Data Tools で、モデルを作成したときに使用したプロジェクトを開き、 **[マイニング精度チャート]** タブをクリックします。  
   
-2.  
-  **[入力の選択]** タブでモデルを選択し、予測可能な属性値を選択します。  
+2.  **[入力の選択]** タブでモデルを選択し、予測可能な属性値を選択します。  
   
      この特定のシナリオでは、[Bike Buyer] =1 という 1 つの値のみを正確に予測した状況の収益性のみに関心があります。  
   
@@ -61,12 +58,12 @@ ms.locfileid: "66083089"
   
      このダイアログ ボックスは、ターゲット メーリング キャンペーンに関連付けられているコストと利益を指定するときに役立ちます。 これらの例のグラフでは、次の値を使用しました。  
   
-    |設定|値|説明|  
+    |設定|値|コメント|  
     |-------------|-----------|--------------|  
     |**作成**|20,000|対象になる母集団の合計に対する値の設定<br /><br /> データベースに多くの顧客が含まれている可能性もありますが、郵送料を抑えるために、最も反応がありそうな上位 20,000 人の顧客のみをターゲットにすると想定します。 予測クエリを実行し、予測モデルによって出力された確率で並べ替えると、この一覧を取得できます。|  
-    |**固定コスト**|500|20,000 人の顧客に対するターゲット メーリング キャンペーンの準備にかかる 1 回限りのコストを入力します。 このコストには、印刷コスト、または電子メール キャンペーンの準備コストが含まれる可能性があります。|  
-    |**個別コスト**|3|ターゲット メーリング キャンペーンの単位あたりのコストの入力<br /><br /> この金額に 20,000 以下の数 (実際の数は、モデルで適切な見込み客として予測された顧客の数によって決まります) を掛けた値を計算します。|  
-    |**個人ごとの収益**|400|成功した場合に期待できる利益または収入の金額を表す値の入力 この例では、カタログを郵送すると、付属品または自転車の平均 $400 が購入されると想定します。<br /><br /> この金額を使用して、可能性が高いケースに関連する利益総額が算出されます。|  
+    |**[固定コスト]**|500|20,000 人の顧客に対するターゲット メーリング キャンペーンの準備にかかる 1 回限りのコストを入力します。 このコストには、印刷コスト、または電子メール キャンペーンの準備コストが含まれる可能性があります。|  
+    |**変動コスト**|3|ターゲット メーリング キャンペーンの単位あたりのコストの入力<br /><br /> この金額に 20,000 以下の数 (実際の数は、モデルで適切な見込み客として予測された顧客の数によって決まります) を掛けた値を計算します。|  
+    |**[個人ごとの収益]**|400|成功した場合に期待できる利益または収入の金額を表す値の入力 この例では、カタログを郵送すると、付属品または自転車の平均 $400 が購入されると想定します。<br /><br /> この金額を使用して、可能性が高いケースに関連する利益総額が算出されます。|  
   
 7.  これらの必要なパラメーターを設定した後、 **[OK]** をクリックします。  
   
@@ -93,13 +90,13 @@ ms.locfileid: "66083089"
   
 |トピック|リンク|  
 |------------|-----------|  
-|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|関連するグラフの種類について説明します。|[リフトチャート &#40;Analysis Services-データマイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス &#40;Analysis Services-データマイニング&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散布図 &#40;Analysis Services-データマイニング&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|マイニング モデルとマイニング構造の相互検証について説明します。|[クロス検証 &#40;Analysis Services-データマイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストと検証のタスクと操作方法 &#40;データマイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|関連するグラフの種類について説明します。|[リフト チャート &#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
+|マイニング モデルとマイニング構造の相互検証について説明します。|[相互検証 &#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
+|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
  [データマイニング&#41;のテストと検証 &#40;](testing-and-validation-data-mining.md)   
- [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

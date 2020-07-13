@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8de0ecf246e05a6cdbb65df1f0e457ad7b65086c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764163"
 ---
 # <a name="adox-code-examples"></a>ADOX のコード例
 ADOX のオブジェクト、メソッド、プロパティ、およびイベントの使用方法については、次のコード例を参照してください。  

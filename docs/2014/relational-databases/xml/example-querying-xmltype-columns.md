@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6189b4115a9e04a58d155bbff3558e0ce2e64970
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048750"
 ---
 # <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
-  次のクエリには、`xml` 型の列が含まれています。 クエリでは、`Instructions` 型の `xml` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
+  次のクエリには、`xml` 型の列が含まれています。 クエリでは、`xml` 型の `Instructions` 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
 ## <a name="example"></a>例  
   

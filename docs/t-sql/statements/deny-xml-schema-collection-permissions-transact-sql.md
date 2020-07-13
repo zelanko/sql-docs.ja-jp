@@ -113,7 +113,7 @@ DENY permission  [ ,...n ] ON
  XML スキーマ コレクションに対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
 ## <a name="examples"></a>例  
- 次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`Sales` データベースの `AdventureWorks2012` スキーマ内にあります。  
+ 次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
 ```  
 USE AdventureWorks2012;  

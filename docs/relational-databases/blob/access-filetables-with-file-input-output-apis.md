@@ -26,7 +26,7 @@ ms.locfileid: "72908773"
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable でのファイル I/O API の使用  
  FileTable を使用する際、多くの場合は Windows ファイル システムとファイル I/O API が利用されます。 FileTable は、さまざまなファイル I/O API を利用した非トランザクション アクセスをサポートしています。  
   
-1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath &#40;Transact-SQL&#41;[ 関数を含む ](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
+1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
 2.  次に、この論理パスを使用して、ファイルまたはディレクトリに対するハンドルを取得し、オブジェクトを操作します。 CreateFile()、CreateDirectory() など、サポート対象のファイル システム API 関数にパスを渡して、ファイルを作成したり、開いたり、ハンドルを取得したりできます。 そのハンドルを使用することで、データのストリーミング、ディレクトリの列挙と編成、ファイル属性の取得と設定、ファイルまたはディレクトリの削除などの操作を実行できます。  
 

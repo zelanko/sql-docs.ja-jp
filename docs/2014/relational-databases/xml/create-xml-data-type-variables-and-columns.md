@@ -10,18 +10,17 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046812"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-  `xml`データ型は、の組み込みデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、や`int` `varchar`などの他の組み込み型と似ています。 他の組み込み型と同様に、変数の型、 `xml`パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  
+  `xml`データ型は、の組み込みデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やなどの他の組み込み型と似てい `int` `varchar` ます。 他の組み込み型と同様に、変数の型 `xml` 、パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  
  テーブルの一部として `xml` 型の列を作成するには、 `CREATE TABLE` ステートメントを使用します。次に例を示します。  
@@ -66,16 +65,14 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 次に例を示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 次に例を示します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
 ## <a name="specifying-constraints"></a>制約の指定  
- 
-  `xml` 型の列を作成するときには、列レベルまたはテーブル レベルの制約を定義できます。 制約は、次のような場合に使用してください。  
+ `xml` 型の列を作成するときには、列レベルまたはテーブル レベルの制約を定義できます。 制約は、次のような場合に使用してください。  
   
 -   ビジネス ルールが XML スキーマでは表現できない場合。 たとえば、花屋の配達可能地域が店舗から 80 km 以内に限られている場合などです。 このルールは XML 列の制約として記述できます。 この制約には、`xml` データ型のメソッドが必要になる場合があります。  
   
@@ -89,8 +86,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML では、独自のエンコードが使用されます。 照合順序は、文字列型にのみ適用されます。 
-  `xml` データ型は文字列型ではありません。 ただし、文字列で表記され、文字列データ型との相互のキャストが可能です。  
+     XML では、独自のエンコードが使用されます。 照合順序は、文字列型にのみ適用されます。 `xml` データ型は文字列型ではありません。 ただし、文字列で表記され、文字列データ型との相互のキャストが可能です。  
   
 -   RULE  
   
@@ -132,17 +128,15 @@ INSERT INTO T values(1,'<Product />')
 ## <a name="same-or-different-table"></a>同じテーブルと別のテーブル  
  `xml`データ型の列は、他のリレーショナル列を含むテーブル、またはメインテーブルとの外部キーリレーションシップを持つ別のテーブルに作成できます。  
   
- 次の`xml`いずれかの条件に該当する場合は、同じテーブルにデータ型の列を作成します。  
+ `xml`次のいずれかの条件に該当する場合は、同じテーブルにデータ型の列を作成します。  
   
 -   XML 列のデータを取得するが、その列に XML インデックスは不要な場合。  
   
--   
-  `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと同一である場合。 詳細については、「[XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)」をご覧ください。  
+-   `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと同一である場合。 詳細については、「[XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)」をご覧ください。  
   
  次の条件に該当する場合は、別のテーブルに `xml` データ型の列を作成してください。  
   
--   
-  `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと異なる場合、メイン テーブルに主キーがない場合、またはメイン テーブルがヒープである (クラスター化キーがない) 場合。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
+-   `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと異なる場合、メイン テーブルに主キーがない場合、またはメイン テーブルがヒープである (クラスター化キーがない) 場合。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
   
 -   テーブルに XML 列が存在することでテーブル スキャンが遅くなるのを避ける場合。 テーブル スキャンは、XML が行内に保存されていても行外に保存されていても領域を消費します。  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216374"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300142"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の実装
 **SQLGetDiagRec**と**SQLGetDiagField**は、ドライバーマネージャーと各ドライバーによって実装されます。 ドライバーマネージャーと各ドライバーは、各環境、接続、ステートメント、記述子ハンドルの診断レコードを保持し、そのハンドルを使用して別の関数が呼び出された場合、またはハンドルが解放された場合にのみ、これらのレコードを解放します。  

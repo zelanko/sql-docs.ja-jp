@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f37369821585845d63bd4d416b1868364045680f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 31d90f0577101e0fb01d012434b756f4f318198b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63255779"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064039"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>トレース テンプレートの作成 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して新しいトレース テンプレートを作成する方法について説明します。  

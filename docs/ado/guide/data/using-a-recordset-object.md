@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 183c8b3379d2ac90fa089f2f2834b46473961abf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923637"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763083"
 ---
 # <a name="using-a-recordset-object"></a>レコードセット オブジェクトを使用する
 または、**レコードセット**を使用して、暗黙的に接続を確立し、1回の操作でその接続に対してコマンドを発行することもできます。 たとえば、Visual Basic の場合は次のようになります。  

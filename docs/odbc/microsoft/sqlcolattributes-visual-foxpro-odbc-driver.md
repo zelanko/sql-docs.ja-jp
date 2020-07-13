@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fb35211160cb7cba866c2b1c9b1cf72340e92ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9508fa7b9ada8273e1250d7584e577892acf5c51
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132617"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307913"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.locfileid: "68132617"
   
  Visual FoxPro ODBC ドライバーは、すべての*fDescType*値をサポートしています。 次の表に、ドライバーによって選択された値の実装に関するコメントを示します。  
   
-|*fDescType*|解説|  
+|*fDescType*|コメント|  
 |-----------------|-------------|  
 |SQL_COLUMN_AUTO_INCREMENT|FALSE を返します。 Visual FoxPro にはカウンターフィールドがありません。|  
 |SQL_COLUMN_CASE_SENSITIVE|列の型が文字の場合は、常に TRUE を返します。|  

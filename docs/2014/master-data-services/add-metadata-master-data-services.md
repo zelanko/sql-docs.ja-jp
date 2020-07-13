@@ -12,22 +12,20 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972299"
 ---
 # <a name="add-metadata-master-data-services"></a>メタデータの追加 (マスター データ サービス)
-  で[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、ユーザー定義のメタデータを**メタデータ**モデルに追加して、モデルオブジェクトを記述します。  
+  で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 、ユーザー定義のメタデータを**メタデータ**モデルに追加して、モデルオブジェクトを記述します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
 -   **メタデータ**モデルの場合は、追加するメタデータエンティティまたはリーフメンバーの種類に対する**追加**アクセス許可が必要です。  
   
@@ -35,13 +33,11 @@ ms.locfileid: "66054287"
   
 ### <a name="to-add-metadata"></a>メタデータを追加するには  
   
-1.  ホームページの [**モデル**] ボックスの一覧で、**メタデータ**モデルを選択します。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]ホームページの [**モデル**] ボックスの一覧で、**メタデータ**モデルを選択します。  
   
-2.  
-  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  
-  **[エクスプローラー]** をクリックします。  
+3.  **[エクスプローラー]** をクリックします。  
   
 4.  メニューバーの [**エンティティ**] をポイントし、追加するメタデータエンティティをクリックします。  
   

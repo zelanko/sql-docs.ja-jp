@@ -22,18 +22,17 @@ helpviewer_keywords:
 - record updates [SQLXML]
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc2e24304679a7648f18148eb45f33b9bf719a9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015455"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、DiffGram を使用したデータ変更
-  DiffGram 形式は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の**データセット**コンポーネントで導入されました。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
+  DiffGram 形式は、.NET Framework の**データセット**コンポーネントで導入されました [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
   
 > [!NOTE]  
 >  ここでは、DiffGram の概要について説明し、使用例を紹介します。 .NET Framework での DiffGram の機能について理解していることを前提としています。 このドキュメントでは、SQLXML に固有の DiffGram に関する問題を中心に説明します。  

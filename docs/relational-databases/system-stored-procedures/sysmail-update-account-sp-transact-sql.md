@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68bd628eb791e7af102c6689e22b30ebd5bad73c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4d50c251d2486b53611c2f2fccfc7e8c2bfa352d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890840"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のデータベース メール アカウントの情報を変更します。  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`アカウントの新しい説明。 *説明*は**nvarchar (256)**,、既定値は NULL です。  
   
-`[ @mailserver_name = ] 'server_name'`このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するコンピューターは、 *server_name*を IP アドレスに解決できる必要があります。 *server_name*は**sysname**であり、既定値はありません。  
+`[ @mailserver_name = ] 'server_name'`このアカウントに使用する SMTP メールサーバーの新しい名前を指定します。 を実行するコンピューターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *SERVER_NAME*を IP アドレスに解決できる必要があります。 *server_name*は**sysname**であり、既定値はありません。  
   
 `[ @mailserver_type = ] 'server_type'`メールサーバーの新しい種類。 *server_type*は**sysname**であり、既定値はありません。 **' SMTP '** の値のみがサポートされています。  
   
@@ -76,26 +76,25 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`メールサーバーへのログオンに使用する新しいパスワード。 *パスワード*は**sysname**,、既定値はありません。  
   
-`[ @use_default_credentials = ] use_default_credentials`[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報[!INCLUDE[ssDE](../../includes/ssde-md.md)]を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ユーザー名**と** \@パスワード**を使用します。 ** \@ユーザー名**と** \@パスワード**が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
+`[ @use_default_credentials = ] use_default_credentials`サービスの資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールはの資格情報を使用し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ ユーザー名**と** \@ パスワード**を使用します。 ** \@ ユーザー名**と** \@ パスワード**が NULL の場合は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に相談してください。  
   
-`[ @enable_ssl = ] enable_ssl`データベースメールが Secure Sockets Layer (SSL) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**はビット,、既定値はありません。  
+`[ @enable_ssl = ] enable_ssl`データベースメールトランスポート層セキュリティ (TLS) を使用して通信を暗号化するかどうかを指定します。これは、以前 Secure Sockets Layer (SSL) と呼ばれていました。 このオプションは、SMTP サーバーで TLS が必要な場合に使用します。 **enable_ssl**はビット,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アカウント名とアカウント id の両方を指定すると、アカウントの情報を更新するだけでなく、アカウント名も変更されます。 アカウント名の変更は、アカウント名のエラーを修正する場合に利用できます。  
   
  ストアドプロシージャ**sysmail_update_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. アカウントの情報を変更する  
- 次の例では、 `AdventureWorks Administrator` **msdb**データベースのアカウントを更新します。 アカウントの情報は、指定された値に設定されます。  
+ 次の例では、msdb データベースのアカウントを更新し `AdventureWorks Administrator` ます。 **msdb** アカウントの情報は、指定された値に設定されます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -114,8 +113,8 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. アカウントの名前とアカウントの情報を変更する  
- 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前は`Backup Mail Server`です。  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B: アカウントの名前とアカウントの情報を変更する  
+ 次の例では、アカウント ID `125` の名前を変更し、アカウント情報を更新します。 アカウントの新しい名前は `Backup Mail Server` です。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  
@@ -135,7 +134,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c57ca648d2298705cd73752f07418987e49761e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784555"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 テーブルまたはビューの ID 列を作成するときに指定された増分値を返します。  
   
@@ -54,7 +54,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 指定したテーブルの増分値を返す  
- 次の例では、`Person.Address` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの増分値を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルの増分値を返します。  
   
 ```sql  
 USE AdventureWorks2012;  

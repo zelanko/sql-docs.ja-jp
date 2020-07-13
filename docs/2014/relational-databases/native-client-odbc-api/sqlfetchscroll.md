@@ -11,18 +11,17 @@ topic_type:
 helpviewer_keywords:
 - SQLFetchScroll function
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eecf9714a97577ff490b642cee5b9c380333e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63154690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022508"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
-  **Sqlfetchscroll**は、データの1つの行セットをアプリケーションに返します。 行セットのサイズは[SQLSetStmtAttr](sqlsetstmtattr.md)を使用して設定されます。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、定義済みのすべてのフェッチ命令 (SQL_FETCH_RELATIVE など) がサポートされていますが、次の制限があります。  
+  **Sqlfetchscroll**は、データの1つの行セットをアプリケーションに返します。 行セットのサイズは[SQLSetStmtAttr](sqlsetstmtattr.md)を使用して設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、定義済みのすべてのフェッチ命令 (SQL_FETCH_RELATIVE など) がサポートされていますが、次の制限があります。  
   
 -   ステートメントに順方向専用カーソルを定義する場合は、SQL_FETCH_NEXT が必要です。他の形式でフェッチを試行すると、エラーが返されます。  
   

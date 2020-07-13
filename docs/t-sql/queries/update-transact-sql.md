@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da8b8b87eceba11f6a39a10527ef90046232676a
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176692"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606809"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "78176692"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -103,8 +103,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -203,7 +224,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* は、列と同じ値に変数を設定します。 一方、SET **@** _variable_ = _column_, _column_ = _expression_ は、列の更新前の値に変数を設定します。  
   
  \<OUTPUT_Clause>  
- 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
   
  FROM \<table_source>  
  別のテーブル、ビュー、または派生テーブルのソースを使用して更新操作の基になる値を提供することを指定します。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
@@ -458,7 +479,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>ロック動作  
- UPDATE ステートメントでは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他ロックをかけたトランザクション以外はデータを変更できません。 別のロック手法を指定することにより、UPDATE ステートメントの存続期間におけるこの既定の動作をオーバーライドするためのテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ UPDATE ステートメントでは、変更するすべての行について排他 (X) ロックが獲得され、トランザクションが完了するまでそのロックが保持されます。 UPDATE ステートメントのクエリ プラン、変更される行の数、およびトランザクション分離レベルによっては、ロックが行レベルではなく、ページ レベルまたはテーブル レベルで取得される場合があります。 これらの上位レベルのロックを回避するには、何千もの行に影響を与える UPDATE ステートメントをバッチに分割し、結合およびフィルター条件がインデックスによってサポートされるようにすることを検討してください。 SQL Server でのロックのメカニズムの詳細については、「[データベース エンジンのロック](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)」の記事を参照してください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
  UPDATE ステートメントはログに記録されますが、 **\.WRITE** 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
@@ -466,7 +487,7 @@ ID     Value
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 対象のテーブルに対する `UPDATE` 権限が必要です。 UPDATE ステートメントに WHERE 句が含まれる場合や、SET 句の `SELECT`expression *でテーブル内の列を使用する場合は、* 権限も必要です。  
+ 対象のテーブルに対する `UPDATE` 権限が必要です。 UPDATE ステートメントに WHERE 句が含まれる場合や、SET 句の *expression* でテーブル内の列を使用する場合は、`SELECT` 権限も必要です。  
   
  UPDATE 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、テーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
@@ -514,7 +535,7 @@ GO
  このセクションの例では、UPDATE ステートメントによって影響を受ける行の数を制限する方法を示します。  
   
 #### <a name="c-using-the-where-clause"></a>C. WHERE 句を使用する  
- 次の例では、WHERE 句を使用して更新する行を指定します。 このステートメントは、`Color` テーブルの `Production.Product` 列の値を更新します。`Color` 列の既存の値が 'Red' で、なおかつ `Name` 列の値が 'Road-250' で始まるすべての行が対象となります。  
+ 次の例では、WHERE 句を使用して更新する行を指定します。 このステートメントは、`Production.Product` テーブルの `Color` 列の値を更新します。`Color` 列の既存の値が 'Red' で、なおかつ `Name` 列の値が 'Road-250' で始まるすべての行が対象となります。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -725,7 +746,7 @@ GO
  このセクションの例では、テーブルの行を別のテーブルの情報に基づいて更新する方法を示します。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>北 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
- 次の例では、`SalesYTD` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesOrderHeader` 列を変更します。  
+ 次の例では、`SalesOrderHeader` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesYTD` 列を変更します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -808,7 +829,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  このセクションの例では、ラージ オブジェクト (LOB) データ型で定義された列の値を更新する方法を示します。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを変更する  
- 次の例では、.WRITE 句を使用して、`DocumentSummary` テーブルの **型の**nvarchar(max)`Production.Document` 列の値を部分的に更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 また、この例では、OUTPUT 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar` テーブル変数に返します。  
+ 次の例では、.WRITE 句を使用して、`Production.Document` テーブルの `DocumentSummary` 型の **nvarchar(max)** 列の値を部分的に更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 また、この例では、OUTPUT 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar` テーブル変数に返します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1013,7 +1034,7 @@ GO
  このセクションの例では、他のステートメントでの UPDATE の使用方法を示します。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. UPDATE をストアド プロシージャで使用する  
- 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`VacationHours` テーブルの `HumanResources.Employee` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
+ 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1072,7 +1093,7 @@ GO
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 単純な UPDATE ステートメントを使用する  
  次の例は、更新する行の指定に WHERE 句が使用されなかった場合に、すべての行がどのように影響を受けるかを示します。  
   
- この例では、`EndDate` テーブルのすべての行の `CurrentFlag` 列と `DimEmployee` 列の値を更新します。  
+ この例では、`DimEmployee` テーブルのすべての行の `EndDate` 列と `CurrentFlag` 列の値を更新します。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -1136,85 +1157,33 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. 更新ステートメントの ANSI 結合置換
-UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。  
-
-たとえば、次のテーブルを更新する必要があるとします。  
+### <a name="ah-ansi-join-for-update-statements"></a>AH. 更新ステートメントの ANSI 結合
+この例は、別のテーブルとの結合結果に基づいてデータを更新する方法を示しています。
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-元のクエリは次のようになっている可能性があります。  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では UPDATE ステートメントの FROM 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。  
-
-CTAS と暗黙の結合を組み合わせて使用して、このコードを置き換えることができます。  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## <a name="see-also"></a>参照  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

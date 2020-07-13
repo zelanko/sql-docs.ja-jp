@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2fcf08a4a55a7c65dbc94219ac908da83ea15bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 178e3fad1ec062dd7f812125da66b7e21a7a4f4b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68344280"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290213"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 関数
 **互換性**  
@@ -86,7 +86,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>診断  
  **SQLAllocHandle**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値は、適切な*Handletype*と*Handle*を*InputHandle*の値に設定して**SQLGetDiagRec**を呼び出すことによって取得できます。 *OutputHandle*引数には SQL_SUCCESS_WITH_INFO (SQL_ERROR ではありません) を返すことができます。 次の表に、 **SQLAllocHandle**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08003|接続が開かれていません|(DM) *Handletype*引数が SQL_HANDLE_STMT または SQL_HANDLE_DESC でしたが、 *InputHandle*引数で指定された接続が開いていませんでした。 ドライバーがステートメントまたは記述子ハンドルを割り当てるには、接続プロセスが正常に完了し (接続が開いている必要があります) 必要があります。|  
@@ -129,7 +129,7 @@ SQLRETURN SQLAllocHandle(
   
  環境ハンドルを要求するために、アプリケーションは SQL_HANDLE_ENV の*Handletype*と SQL_NULL_HANDLE の*InputHandle*を使用して**SQLAllocHandle**を呼び出します。 ドライバーは、環境情報にメモリを割り当て、関連付けられているハンドルの値を* \*OutputHandlePtr*引数に返します。 アプリケーションは、環境ハンドル引数を必要とする後続のすべての呼び出しで* \*OutputHandle*値を渡します。 詳細については、「[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)」を参照してください。  
   
- ドライバーマネージャーの環境ハンドルの下で、ドライバーの環境ハンドルが既に存在する場合は、接続が確立されたときに SQL_HANDLE_ENV の*Handletype*と共に**SQLAllocHandle**が呼び出されません。 SQL_HANDLE_DBC の*handletype*を持つのは、 **SQLAllocHandle**のみです。 ドライバーマネージャーの環境ハンドルの下にドライバーの環境ハンドルが存在しない場合は、SQLAllocHandle と SQLAllocHandle の handletype Type を持つの両方が、最初 SQL_HANDLE_DBC の接続時にドライバーで呼び出されます。環境のハンドルはドライバーに接続されています。  
+ ドライバーマネージャーの環境ハンドルの下で、ドライバーの環境ハンドルが既に存在する場合は、接続が確立されたときに SQL_HANDLE_ENV の*Handletype*と共に**SQLAllocHandle**が呼び出されません。 SQL_HANDLE_DBC の*handletype*を持つのは、 **SQLAllocHandle**のみです。 ドライバーマネージャーの環境ハンドルの下にドライバーの環境ハンドルが存在しない場合は、環境の最初の接続ハンドルがドライバーに接続されているときに、SQLAllocHandle と SQLAllocHandle の SQL_HANDLE_ENV HandleType を持つと SQL_HANDLE_DBC の両方がドライバーで呼び出されます。  
   
  ドライバーマネージャーは、SQL_HANDLE_ENV の*Handletype*を使用して**SQLAllocHandle**関数を処理するときに、システム情報の [ODBC] セクションで**Trace**キーワードをチェックします。 1に設定されている場合、ドライバーマネージャーは現在のアプリケーションのトレースを有効にします。 トレースフラグが設定されている場合、最初の環境ハンドルが割り当てられた時点でトレースが開始され、最後の環境ハンドルが解放されると終了します。 詳細については、「[データソースの構成](../../../odbc/reference/install/configuring-data-sources.md)」を参照してください。  
   
@@ -162,7 +162,7 @@ SQLRETURN SQLAllocHandle(
   
  ステートメントハンドルを要求するために、アプリケーションはデータソースに接続し、SQL ステートメントを送信する前に**SQLAllocHandle**を呼び出します。 この呼び出しでは、 *Handletype*を SQL_HANDLE_STMT に設定し、 *InputHandle*を、そのハンドルを割り当てた**SQLAllocHandle**への呼び出しによって返された接続ハンドルに設定する必要があります。 ドライバーは、ステートメント情報にメモリを割り当て、指定された接続にステートメントハンドルを関連付け、関連付けられているハンドルの値を* \*OutputHandlePtr*に渡します。 アプリケーションは、ステートメントハンドルを必要とする後続のすべての呼び出しで* \*OutputHandlePtr*値を渡します。 詳細については、「[ステートメントハンドルの割り当て](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)」を参照してください。  
   
- ステートメントハンドルが割り当てられると、ドライバーは自動的に4つの記述子のセットを割り当て、これらの記述子のハンドルを SQL_ATTR_APP_ROW_DESC、SQL_ATTR_APP_PARAM_DESC、SQL_ATTR_IMP_ROW_DESC、およびに割り当て SQL_ATTR_IMP_PARAM_DESCステートメントの属性。 これらは、*暗黙的*に割り当てられた記述子と呼ばれます。 アプリケーション記述子を明示的に割り当てるには、次の「記述子ハンドルの割り当て」セクションを参照してください。  
+ ステートメントハンドルが割り当てられると、ドライバーは自動的に4つの記述子のセットを割り当て、これらの記述子のハンドルを SQL_ATTR_APP_ROW_DESC、SQL_ATTR_APP_PARAM_DESC、SQL_ATTR_IMP_ROW_DESC、および SQL_ATTR_IMP_PARAM_DESC ステートメント属性に割り当てます。 これらは、*暗黙的*に割り当てられた記述子と呼ばれます。 アプリケーション記述子を明示的に割り当てるには、次の「記述子ハンドルの割り当て」セクションを参照してください。  
   
 ## <a name="allocating-a-descriptor-handle"></a>記述子ハンドルの割り当て  
  アプリケーションが SQL_HANDLE_DESC の*Handletype*を使用して**SQLAllocHandle**を呼び出すと、ドライバーはアプリケーション記述子を割り当てます。 これらは、*明示的*に割り当てられた記述子と呼ばれます。 アプリケーションは、SQL_ATTR_APP_ROW_DESC または SQL_ATTR_APP_PARAM_DESC 属性で**SQLSetStmtAttr**関数を呼び出すことによって、特定のステートメントハンドルに対して自動的に割り当てられたアプリケーション記述子ではなく、明示的に割り当てられたアプリケーション記述子を使用するようにドライバーに指示します。 実装記述子を明示的に割り当てることはできません。また、 **SQLSetStmtAttr**関数呼び出しで実装記述子を指定することもできません。  
@@ -178,7 +178,7 @@ SQLRETURN SQLAllocHandle(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  

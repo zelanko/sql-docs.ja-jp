@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 65ba097629005598e6942577e3498813749fd91d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951785"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302933"
 ---
 # <a name="what39s-new-in-odbc-38"></a>ODBC 3.8 の新&#39;
 Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 Windows 8 の ODBC 3.8 には、次の機能が含まれています。  
@@ -40,7 +40,7 @@ Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 
   
  Odbc 3.8 ドライバーを使用して、odbc 3.x および ODBC 2.x アプリケーションで非同期接続操作を使用できます。  
   
- 詳細については、「[互換性マトリックス](../../odbc/reference/develop-app/compatibility-matrix.md)」を参照してください。  
+ 詳細については、「[Compatibility Matrix](../../odbc/reference/develop-app/compatibility-matrix.md)」 (互換性マトリックス) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC プログラマー リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)

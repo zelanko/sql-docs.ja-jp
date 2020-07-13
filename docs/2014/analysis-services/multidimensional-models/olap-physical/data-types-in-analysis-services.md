@@ -9,28 +9,27 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62725386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545930"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
-  すべて<xref:Microsoft.AnalysisServices.DataItem>のオブジェクトに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ついて、は次`System.Data.OleDb.OleDbType`ののサブセットをサポートします。 データ型を設定または読み取るには、 [DataItem データ型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)を使用します。  
+  すべてのオブジェクトについて <xref:Microsoft.AnalysisServices.DataItem> 、は [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 次ののサブセットをサポート `System.Data.OleDb.OleDbType` します。 データ型を設定または読み取るには、 [DataItem データ型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)を使用します。  
   
-## <a name="supported-data-types"></a>サポートされるデータ型  
+## <a name="supported-data-types"></a>サポートされているデータ型  
   
 |||  
 |-|-|  
 |BigInt|64 ビットの符号付き整数です。 *BigInt*値型は、負の9223372036854775808から正の9223372036854775807までの範囲の値を持つ整数を表します。|  
-|Binary|**バイト**型のバイナリデータのストリーム。 **Byte**は、0 ~ 255 の範囲の符号なし整数を表す値型です。|  
+|2 項|**バイト**型のバイナリデータのストリーム。 **Byte**は、0 ~ 255 の範囲の符号なし整数を表す値型です。|  
 |Boolean|この型のインスタンスの値は、`true` または `false` のいずれかになります。|  
-|Currency|-922337203685477.5808 から + 922337203685477.5807 までの範囲で、精度が通貨単位の10,000 分の 1 (小数点以下4桁) の*通貨*値。|  
-|Date|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
-|DOUBLE|-1.79769313486232E +308 から 1.79769313486232E +308 までの範囲の浮動小数点数です。 Double 値は、最大有効桁数が 15 の 10 進数の数値情報を格納します。|  
-|整数|負の 2,147,483,648 から正の 2,147,483,647 までの符号付き整数値を表す、32 ビットの符号付き整数です。|  
+|通貨|-922337203685477.5808 から + 922337203685477.5807 までの範囲で、精度が通貨単位の10,000 分の 1 (小数点以下4桁) の*通貨*値。|  
+|日付|日付と時刻データで、double として格納されます。 整数部分は 1899 年 12 月 30 日から起算した日数、小数部分は日の一部分 (時刻) を表します。|  
+|Double|-1.79769313486232E +308 から 1.79769313486232E +308 までの範囲の浮動小数点数です。 Double 値は、最大有効桁数が 15 の 10 進数の数値情報を格納します。|  
+|Integer|負の 2,147,483,648 から正の 2,147,483,647 までの符号付き整数値を表す、32 ビットの符号付き整数です。|  
 |Single|-3.4028235E +38 から 3.4028235E +38 までの範囲の浮動小数点数です。 Single 値は、最大有効桁数が 7 の 10 進数の数値情報を格納します。|  
 |Smallint|16 ビットの符号付き整数です。 *Smallint*値型は、負の32768から正の32767までの範囲の値を持つ符号付き整数を表します。|  
 |Tinyint|8 ビットの符号付き整数です。 Tinyint 値型は、負の 128 から正の 127 までの整数値を表します。|  
@@ -51,7 +50,7 @@ ms.locfileid: "62725386"
 ||CustomRollupColumn|WChar のみ|  
 ||CustomRollupPropertiesColumn|WChar のみ|  
 ||UnaryOperatorColumn|WChar のみ|  
-||ValueColumn|All|  
+||ValueColumn|すべて|  
 |AttributeTranslation|CaptionColumn|WChar のみ|  
 |ScalarMiningStructureColumn|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893611"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
@@ -39,13 +39,13 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  メジャーグループ名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 1.  Null 値を含んでいるメジャーを含むメジャーグループ行は、MeasureGroupName 引数が指定されている場合に**存在**することになります。 この形式の Exists と空でない関数の違いは次のようになります。これらのメジャーの NullProcessing プロパティが Preserve に設定されている場合、キューブのその部分に対してクエリを実行すると、メジャーで Null 値が表示されることを意味します。空でない場合は、メジャー値が Null のセットからは常にタプルが削除されます。一方、MeasureGroupName 引数を指定すると、メジャー値が Null の場合でも、メジャーグループ行に関連付けられているタプルはフィルター処理されません。  
   
 2.  *Measuregroupname*パラメーターが使用されている場合、結果は、参照先のメジャーグループに表示されるメジャーがあるかどうかによって異なります。参照先のメジャーグループに表示されるメジャーがない場合、EXISTS は、 *Set_Expression1*と*Set_Expression2*の値に関係なく、常に空のセットを返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  カリフォルニア州在住のお客様:  
   
 ```  

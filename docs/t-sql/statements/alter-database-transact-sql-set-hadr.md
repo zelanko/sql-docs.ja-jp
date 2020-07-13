@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 248057224ed371dd36474491fd26615f9d069234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761938"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックには、セカンダリ データベースで [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションを設定するための ALTER DATABASE 構文が含まれています。 ALTER DATABASE ステートメントごとに SET HADR オプションが 1 つだけ許可されます。 これらのオプションは、セカンダリ レプリカ上でのみサポートされます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68065731"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER DATABASE database_name  
    SET HADR   

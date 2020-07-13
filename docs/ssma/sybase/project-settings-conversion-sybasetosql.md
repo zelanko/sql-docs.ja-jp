@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028764"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
@@ -421,7 +421,7 @@ REPLICATE 関数は、指定された回数だけ文字列を繰り返します�
 **SUBSTRING 関数**  
 ASE では、式`SUBSTRING(expression, start, length)`の中の文字数よりも大きい値が指定されている場合、または長さが0の場合、関数は NULL を返します。 / [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure では、同等の式は空の文字列を返します。  
   
--   ASE の動作を使用するには、[**置換関数**] を選択します。 SUBSTRING 関数のすべての呼び出しは、SUBSTRING_VARCHAR または SUBSTRING_NVARCHAR または SUBSTRING_VARBINARY ユーザー定義関数の呼び出しに置き換えられます。これは、渡されたパラメーターの型 (スキーマ名の2つの下のユーザーデータベースで作成) に基づいて、Sybase ASE の動作。  
+-   ASE の動作を使用するには、[**置換関数**] を選択します。 SUBSTRING 関数のすべての呼び出しは、Sybase ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の2つの下のユーザーデータベースで作成された) に基づいて、SUBSTRING_VARCHAR または SUBSTRING_NVARCHAR または SUBSTRING_VARBINARY ユーザー定義関数への呼び出しに置き換えられます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 動作を使用するには、[**現在の構文を保持**する] を選択します。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8eac057177032892ac99f557aa9d18ce497b7b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65485239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054289"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>タスク 12: 派生列変換を追加して MDS で必要な列を追加する
   ここでは、派生列変換をデータ フローに追加します。 この変換に渡されるレコードには、 **Importtype**と**batchtag**という2つの派生列を追加します。 MDS のステージング テーブルにデータをアップロードする前に、これらの列を追加する必要があります。 これら 2 つは、MDS のステージング テーブルに必要な列です。 詳細については、「[リーフメンバーステージングテーブル](../master-data-services/leaf-member-staging-table-master-data-services.md)」を参照してください。  
@@ -56,7 +55,7 @@ ms.locfileid: "65485239"
   
 15. [ **OK** ] をクリックして、[**派生列変換**] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 13: データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

@@ -12,16 +12,16 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c405bcc285464983f844b386c36f97022428e522
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762970"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable イベント クラス
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 このインスタンスのサービスに配信する必要のある受信メッセージを、Service Broker が保持できないときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**Broker:Message Undeliverable** イベントを生成します。 転送されたメッセージの場合は、「 [Broker:Forwarded Message Dropped イベント クラス](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)」を参照してください。  
   

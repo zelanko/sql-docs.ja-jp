@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938363"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>トレース (Excel 用のデータ マイニング クライアント)
   ![[トレース] ボタン](media/misc-trace.gif "[トレース] ボタン")
 
- [**トレーサー** ] ダイアログボックスは、データマイニングに使用しているの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに送信されるステートメントを監視するのに役立ちます。 のインスタンスへの接続を作成すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クライアントとサーバー間のすべての対話が [**トレーサー** ] ペインに記録されます。これには、構造を作成したり、マイニングモデルを追加したり、予測を行ったり、サーバーから返されるメッセージを含めます。
+ [**トレーサー** ] ダイアログボックスは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データマイニングに使用しているのインスタンスに送信されるステートメントを監視するのに役立ちます。 のインスタンスへの接続を作成すると [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、クライアントとサーバー間のすべての対話が [**トレーサー** ] ペインに記録されます。これには、構造を作成したり、マイニングモデルを追加したり、予測を行ったり、サーバーから返されるメッセージを含めます。
 
  要求されるアクションに応じて、ステートメントは、データ マイニング拡張機能 (DMX) のデータ定義クエリやデータ操作クエリ、Analysis Services スクリプト言語 (ASSL) パケット、または Analysis Services ストアド プロシージャの呼び出しになります。 ただし、実際の数値で表される結果やデータ値は表示されません。
 
@@ -48,8 +47,7 @@ ms.locfileid: "78175571"
  いずれかのテーブル分析ツールを使用して作業を保持する場合は、[**セッションモデルを使用**する] オプションをオフにして、モデルをサーバーに永続的に保存することができます。 また、[**トレーサー** ] ペインのステートメントをファイルにコピーして、後で作業を再作成できるようにすることもできます。
 
 ## <a name="understanding-sessions"></a>セッションについて
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続すると、データ マイニング アドインによりセッションが開始されます。 それぞれのセッションは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス上の既存のセッションを識別するセッション識別子を受け取ります。 ただし、セッション識別子は、セッションが有効であることを保証するわけではありません。 セッションは、タイムアウトした場合やセッションに関連付けられた接続が解除された場合に期限切れとなります。 セッションが期限切れとなり有効でなくなった場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、セッションを終了し、進行中のトランザクションをロールバックします。 無効になったセッション識別子でメッセージを送信した場合は、指定したセッションが見つからないことを示すエラーが発生して、そのメッセージは失敗します。
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続すると、データ マイニング アドインによりセッションが開始されます。 それぞれのセッションは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス上の既存のセッションを識別するセッション識別子を受け取ります。 ただし、セッション識別子は、セッションが有効であることを保証するわけではありません。 セッションは、タイムアウトした場合やセッションに関連付けられた接続が解除された場合に期限切れとなります。 セッションが期限切れとなり有効でなくなった場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、セッションを終了し、進行中のトランザクションをロールバックします。 無効になったセッション識別子でメッセージを送信した場合は、指定したセッションが見つからないことを示すエラーが発生して、そのメッセージは失敗します。
 
  一部のデータ マイニング モデルはサーバー上に明示的に格納されますが、セッション マイニング モデルおよび構造は格納されず、セッション データ マイニング アクティビティのレコードも保存されません。 一時的なマイニング モデルおよび構造はセッションを終了するとすぐに削除されるため、必要な作業を保存するまでは Excel ブックを閉じないように注意してください。
 
@@ -70,6 +68,6 @@ ms.locfileid: "78175571"
 
  DMX 構文、および XMLA のコマンドや要素の詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。
 
- サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳しくは、SQL Server オンライン ブックをご覧ください。
+ サーバーに送信される一部のステートメントには、Analysis Services システム ストアド プロシージャを呼び出すクエリが含まれる場合があります。 詳細については、SQL Server オンライン ブックを参照してください。
 
 

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f983646fd87be27fe9861f3a37b0e852a05ba06b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931046"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759878"
 ---
 # <a name="skipline-method"></a>SkipLine メソッド
 テキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)を読み取るときに、1行全体をスキップします。  

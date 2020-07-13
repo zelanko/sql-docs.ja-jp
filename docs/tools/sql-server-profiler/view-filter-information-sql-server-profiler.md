@@ -1,6 +1,7 @@
 ---
 title: フィルター情報を表示する
 titleSuffix: SQL Server Profiler
+description: トレース対象のイベントを制限するために SQL Server Profiler によってデータ列に現在適用されているフィルターを表示する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: fb79fc3c75686d2a09d46d1a336a3376028382e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39c2d73e634d26ab28b890d72f08b55abfe2394b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307752"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151621"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
 

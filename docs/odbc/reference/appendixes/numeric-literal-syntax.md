@@ -12,14 +12,14 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990723"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299862"
 ---
 # <a name="numeric-literal-syntax"></a>数値リテラルの構文
 ODBC の数値リテラルには、次の構文が使用されます。  

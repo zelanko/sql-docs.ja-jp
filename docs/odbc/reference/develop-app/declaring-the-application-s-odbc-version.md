@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076841"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285232"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Application&#39;s ODBC バージョンを宣言しています
 アプリケーションで接続を割り当てる前に、SQL_ATTR_ODBC_VERSION 環境属性を設定する必要があります。 この属性は、次の項目を使用する場合に、アプリケーション*が odbc* *2.X または*odbc 3.x の仕様に従っていることを示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "68076841"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   __**Sqltables の CatalogName 引数**。   *ODBC 2.x では、* *CatalogName*引数のワイルドカード文字 ("%" と "_") は文字どおりに扱われます。 ODBC 3.x では、ワイルドカード文字として扱わ*れます。* したがって *、ODBC 2.x*仕様に従うアプリケーションでは、これらをワイルドカード文字として使用することはできません。また、リテラルとして使用する場合はエスケープされません。 ODBC 3.x 仕様に従うアプリケーションでは、これらをワイルドカード文字として使用したり、エスケープしてリテラルとして使用したりでき*ます。* 詳細については、「[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)」を参照してください。  
+-   _CatalogName_**Sqltables の CatalogName 引数**。   *ODBC 2.x では、* *CatalogName*引数のワイルドカード文字 ("%" と "_") は文字どおりに扱われます。 ODBC 3.x では、ワイルドカード文字として扱わ*れます。* したがって *、ODBC 2.x*仕様に従うアプリケーションでは、これらをワイルドカード文字として使用することはできません。また、リテラルとして使用する場合はエスケープされません。 ODBC 3.x 仕様に従うアプリケーションでは、これらをワイルドカード文字として使用したり、エスケープしてリテラルとして使用したりでき*ます。* 詳細については、「[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)」を参照してください。  
   
  ODBC 3.x*ドライバーマネージャーおよび odbc* *3.x ドライバーは*、アプリケーションが記述されている odbc 仕様のバージョンを確認し、それに応じて応答します。 たとえば、アプリケーションが ODBC *2.x 仕様に*従っていて、 **SQLPrepare**を呼び出す前に**sqlexecute**を呼び出すと、Odbc *3.X ドライバーマネージャー*は SQLSTATE S1010 (関数シーケンスエラー) を返します。 アプリケーションが ODBC *3. x*仕様に準拠している場合、ドライバーマネージャーは SQLSTATE HY010 (関数シーケンスエラー) を返します。 詳細については、「[旧バージョンとの互換性と標準の準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。  
   

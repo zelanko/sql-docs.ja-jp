@@ -22,20 +22,20 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738564"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   拡張イベント非同期ファイル ターゲットによって作成されるファイルを読み取ります。 行ごとに、XML 形式の 1 つのイベントが返されます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]および[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]は、XEL および XEM 形式で生成されたトレース結果を受け入れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]拡張イベントでは、XEL 形式のトレース結果のみがサポートされます。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は、XEL および XEM 形式で生成されたトレース結果を受け入れます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]拡張イベントでは、XEL 形式のトレース結果のみがサポートされます。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>引数  
- *道*  
+ *path*  
  読み取るファイルのパスです。 *パス*にはワイルドカードを含めることができ、ファイルの名前を含めることができます。 *パス*は**nvarchar (260)** です。 既定値はありません。 Azure SQL Database のコンテキストでは、この値は Azure Storage 内のファイルの HTTP URL です。
   
  *mdpath*  
@@ -67,19 +67,19 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|module_guid|**UNIQUEIDENTIFIER**|イベントモジュールの GUID。 NULL 値は許可されません。|  
-|package_guid|**UNIQUEIDENTIFIER**|イベント パッケージの GUID です。 NULL 値は許可されません。|  
+|module_guid|**uniqueidentifier**|イベントモジュールの GUID。 NULL 値は許可されません。|  
+|package_guid|**uniqueidentifier**|イベント パッケージの GUID です。 NULL 値は許可されません。|  
 |object_name|**nvarchar(256)**|イベントの名前です。 NULL 値は許可されません。|  
 |event_data|**nvarchar(max)**|イベントの内容 (XML 形式)。 NULL 値は許可されません。|  
-|file_name|**nvarchar (260)**|イベントが格納されているファイルの名前。 NULL 値は許可されません。|  
+|file_name|**nvarchar(260)**|イベントが格納されているファイルの名前。 NULL 値は許可されません。|  
 |file_offset|**bigint**|イベントを格納しているファイル内のブロックのオフセット。 NULL 値は許可されません。|  
-|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]以降、および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
+|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />イベントの日付と時刻 (UTC タイムゾーン)。 NULL 値は許可されません。|  
 
   
-## <a name="remarks"></a>解説  
- **Fn_xe_file_target_read_file**を実行して大きな結果セットを読み取る[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と、エラーが発生する可能性があります。 結果を**ファイル**モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
+## <a name="remarks"></a>Remarks  
+ **Fn_xe_file_target_read_file**を実行して大きな結果セットを読み取る [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と、エラーが発生する可能性があります。 結果を**ファイル**モード (**Ctrl + Shift + F キー**) に使用して、大きな結果セットをファイルにエクスポートし、代わりに別のツールでファイルを読み取ります。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -93,9 +93,9 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [拡張イベントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

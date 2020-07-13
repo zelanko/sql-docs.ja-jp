@@ -11,15 +11,14 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2822c1390b7807c60eecfad1d4ba41eaa232b16a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897308"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437119"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 式)
   数値式の符号として正 (+1)、負 (-1)、0 のいずれかを返します。  

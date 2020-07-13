@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bc46a5cf1252df209243623a63ec9bdc68e71873
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b30311d7f55231c1e7a6d5969d49c5d1bc07a848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62867957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85033376"
 ---
 # <a name="mssqlserver_360"></a>MSSQLSERVER_360
     

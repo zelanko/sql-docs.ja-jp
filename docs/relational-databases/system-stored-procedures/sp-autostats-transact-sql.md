@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_autostats
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70026248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716163"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   インデックス、統計オブジェクト、テーブル、またはインデックス付きビューの自動統計更新オプション (AUTO_UPDATE_STATISTICS) を表示または変更します。  
   
@@ -66,15 +66,15 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  *Stats_flag*が指定されていない場合、 **sp_autostats**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**インデックス名**|**varchar(60)**|インデックスまたは統計の名前。|  
 |**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS オプションの現在の値。|  
-|**最終更新日時**|**DATETIME**|統計の最終更新日。|  
+|**最終更新日時**|**datetime**|統計の最終更新日。|  
   
  テーブルまたはインデックス付きビューの結果セットには、インデックスに対して作成された統計、AUTO_CREATE_STATISTICS オプションで生成された単一列統計、 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)ステートメントで作成された統計が含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したインデックスが無効な場合、または指定したテーブルに無効なクラスター化インデックスがある場合は、エラー メッセージが表示されます。  
   
  AUTO_UPDATE_STATISTICS はメモリ最適化テーブルでは常に OFF です。  
@@ -85,7 +85,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. テーブルのすべての統計の状態を表示する  
- 次の`Product`表に、テーブルのすべての統計の状態を示します。  
+ 次の表に、テーブルのすべての統計の状態を示し `Product` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>B. テーブルのすべての統計に対して AUTO_UPDATE_STATISTICS を有効にする  
+### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>B: テーブルのすべての統計に対して AUTO_UPDATE_STATISTICS を有効にする  
  次の例では、`Product` テーブルのすべての統計の AUTO_UPDATE_STATISTICS オプションを有効にします。  
   
 ```  
@@ -104,8 +104,8 @@ EXEC sp_autostats 'Production.Product', 'ON';
 GO  
 ```  
   
-### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>C. 特定のインデックスの AUTO_UPDATE_STATISTICS を無効にする  
- 次の例では、 `AK_Product_Name` `Product`テーブルのインデックスの AUTO_UPDATE_STATISTICS オプションを無効にします。  
+### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>C: 特定のインデックスの AUTO_UPDATE_STATISTICS を無効にする  
+ 次の例では、テーブルのインデックスの AUTO_UPDATE_STATISTICS オプションを無効にし `AK_Product_Name` `Product` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -114,7 +114,7 @@ EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [値](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
@@ -123,6 +123,6 @@ GO
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

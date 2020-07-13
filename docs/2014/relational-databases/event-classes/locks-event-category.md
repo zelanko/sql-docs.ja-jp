@@ -16,23 +16,21 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a202279021e3e6c7c3c44a167792bb9439567aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62662316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029290"
 ---
 # <a name="locks-event-category"></a>Locks イベント カテゴリ
-  **Locks**イベントカテゴリのイベントクラスを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスでのロックアクティビティを監視します。 これらのイベント クラスを使用すると、複数のユーザーが同時にデータの読み取りや変更を行うことによって生じるロックの問題を調査できます。  
+  **Locks** イベント カテゴリのイベント クラスを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスでのロックの利用状況を監視します。 これらのイベント クラスを使用すると、複数のユーザーが同時にデータの読み取りや変更を行うことによって生じるロックの問題を調査できます。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では多数のロックが処理されることが多いため、トレース時に **Locks** イベント クラスがキャプチャされると、大きなオーバーヘッドが発生し、結果としてトレース ファイルまたはトレース テーブルが大きくなります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] では多数のロックが処理されることが多いため、トレース時に **Locks** イベント クラスがキャプチャされると、大きなオーバーヘッドが発生し、結果としてトレース ファイルまたはトレース テーブルが大きくなります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Deadlock Graph イベント クラス](deadlock-graph-event-class.md)|デッドロックについての XML の説明が提供されます。|  
 |[Lock:Acquired イベント クラス](lock-acquired-event-class.md)|テーブルの行などのリソースに対してロックが取得されたことを示します。|  
@@ -41,7 +39,7 @@ ms.locfileid: "62662316"
 |[Lock:Deadlock イベント クラス](lock-deadlock-event-class.md)|別のトランザクションによって既にロックされているリソースに対してトランザクションがロックを要求し、結果としてデッドロックが発生した時点を追跡します。|  
 |[Lock:Escalation イベント クラス](lock-escalation-event-class.md)|細かい単位のロックが大きい単位のロックに変換されたことを示します。|  
 |[Lock:Released イベント クラス](lock-released-event-class.md)|ロックが解除された時点を追跡します。|  
-|[Lock: Timeout &#40;timeout &#62; 0&#41; イベントクラス](lock-timeout-timeout-0-event-class.md)|要求されたリソースに対して別のトランザクションによるブロッキング ロックが存在するために、ロック要求が完了しなかった時点を追跡します。 このイベントは、ロック タイムアウト値が 0 より大きい場合にのみ発生します。|  
+|[Lock:Timeout &#40;timeout &#62; 0&#41; イベント クラス](lock-timeout-timeout-0-event-class.md)|要求されたリソースに対して別のトランザクションによるブロッキング ロックが存在するために、ロック要求が完了しなかった時点を追跡します。 このイベントは、ロック タイムアウト値が 0 より大きい場合にのみ発生します。|  
 |[Lock:Timeout イベント クラス](lock-timeout-event-class.md)|要求されたリソースに対して別のトランザクションによるブロッキング ロックが存在するために、ロック要求が完了しなかった時点を追跡します。|  
   
   

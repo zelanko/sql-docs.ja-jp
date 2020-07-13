@@ -25,7 +25,7 @@ ms.locfileid: "74412721"
 
 一時テーブルのメモリ最適化およびテーブルのシナリオの詳細については、「 [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)」 (メモリ最適化を使用した一時テーブルとテーブル変数の高速化) をご覧ください。
   
-  次の例では、3 つの列 (id、ProductID、Quantity) を含む temp テーブルの使用を、**dbo.OrderQuantityByProduct\@ 型のテーブル変数** **OrderQuantityByProduct** を使用して置き換える方法を示します。  
+  次の例では、3 つの列 (id、ProductID、Quantity) を含む temp テーブルの使用を、**dbo.OrderQuantityByProduct** 型のテーブル変数 **\@OrderQuantityByProduct** を使用して置き換える方法を示します。  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

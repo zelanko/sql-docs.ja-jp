@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e0c7697c6c65f6d39de4d5f52ea2fdb85ea4e218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731792"
 ---
-# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Filestream および FileTable システムストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Filestream および FileTable システム ストアド プロシージャ (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、FileTable および Filestream 機能に対するシステムストアドプロシージャについて説明します。  
 
@@ -36,10 +36,10 @@ ms.locfileid: "67942247"
   FileTable データに対する非トランザクション ファイル ハンドルを閉じます。
 
 
-## <a name="see-also"></a>参照
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+## <a name="see-also"></a>関連項目
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Filestream および FileTable の動的管理ビュー (Transact-sql)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Filestream および FileTable のカタログビュー (Transact-sql)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Filestream および FileTable の動的管理ビュー (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream および FileTable のカタログ ビュー (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
   
   

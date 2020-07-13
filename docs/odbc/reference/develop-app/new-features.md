@@ -14,14 +14,14 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b40803dac6c9f296043a8dcac50f9bc69036875a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086343"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302400"
 ---
 # <a name="new-features"></a>新機能
 ODBC 3.x では、次の新機能が導入されまし*た。* *Odbc 2.x アプリケーションで*odbc 2.x ドライバーを操作すると、この機能を使用できなく*なります。* *Odbc 2.x* driver Manager では *、odbc 2.x*ドライバーを使用する場合、これらの機能はマップされません。  

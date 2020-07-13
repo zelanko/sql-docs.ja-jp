@@ -20,22 +20,18 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62704773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001881"
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの利用状況モニターを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの利用状況モニターを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server エージェント セッション  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、サービスが開始されるたびに新しいセッションが作成されます。 新しいセッションが作成されると、すべての既存の定義済みジョブが、 **msdb** データベースの **sysjobactivity** テーブルに設定されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動したときには、ジョブの前回の利用状況がこのテーブルに保持されています。 各セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通常のジョブの利用状況が、開始から終了まで記録されます。 これらのセッションに関する情報は、 **msdb** データベースの **syssessions** テーブルに格納されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、サービスが開始されるたびに新しいセッションが作成されます。 新しいセッションが作成されると、すべての既存の定義済みジョブが、 **msdb** データベースの **sysjobactivity** テーブルに設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動したときには、ジョブの前回の利用状況がこのテーブルに保持されています。 各セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通常のジョブの利用状況が、開始から終了まで記録されます。 これらのセッションに関する情報は、 **msdb** データベースの **syssessions** テーブルに格納されます。  
   
 ## <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]  
  ジョブの利用状況モニターを使用すると、 **で** sysjobactivity [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]テーブルを表示できるようになります。 サーバーのすべてのジョブを表示するか、またはフィルターを定義して表示されるジョブの数を制限できます。 また、 **[エージェント ジョブの利用状況]** グリッドの列見出しをクリックすることによって、ジョブ情報を並べ替えることもできます。 たとえば、 **[最終実行]** 列見出しをクリックすると、最後に実行された順にジョブを並べ替えることができます。 もう一度この列見出しをクリックすると、最終実行日時に基づいて、ジョブの昇順と降順が切り替わります。  
@@ -48,11 +44,9 @@ ms.locfileid: "62704773"
   
 -   特定のジョブの履歴を表示する。  
   
--   
-  **[エージェント ジョブの利用状況]** グリッドの情報を手動で更新したり、 **[更新の設定を表示します]** をクリックして自動更新間隔を設定したりする。  
+-   **[エージェント ジョブの利用状況]** グリッドの情報を手動で更新したり、 **[更新の設定を表示します]** をクリックして自動更新間隔を設定したりする。  
   
- ジョブの利用状況モニターは、実行のスケジュールが設定されているジョブ、現在のセッション中に実行されたジョブの最終結果、および現在実行中であるかまたはアイドル状態のジョブを確認する場合に使用します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが予期せず停止した場合、ジョブの利用状況モニターで以前のセッションを参照することにより、サービスが停止したときに実行中であったジョブを確認できます。  
+ ジョブの利用状況モニターは、実行のスケジュールが設定されているジョブ、現在のセッション中に実行されたジョブの最終結果、および現在実行中であるかまたはアイドル状態のジョブを確認する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが予期せず停止した場合、ジョブの利用状況モニターで以前のセッションを参照することにより、サービスが停止したときに実行中であったジョブを確認できます。  
   
  ジョブの利用状況モニターを開くには、 **のオブジェクト エクスプローラーで** [SQL Server エージェント] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を展開します。次に、 **[ジョブの利用状況モニター]** を右クリックして、 **[ジョブの利用状況の表示]** をクリックします。  
   
@@ -63,13 +57,12 @@ ms.locfileid: "62704773"
 |||  
 |-|-|  
 |**説明**|**トピック**|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの実行状態を表示する方法を説明します。|[[ジョブの利用状況の表示]](view-job-activity.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの実行状態を表示する方法を説明します。|[[ジョブの利用状況の表示]](view-job-activity.md)|  
   
 ## <a name="see-also"></a>参照  
  [ジョブの利用状況の表示](view-job-activity.md)   
- [dbo. sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [&#40;Transact-sql&#41;の dbo. syssessions](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.sysセッション &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [sp_help_jobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

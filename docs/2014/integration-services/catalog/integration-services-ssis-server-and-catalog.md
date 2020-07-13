@@ -10,24 +10,21 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3425a628b5779f8f088a6144355449fc94d988b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771738"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439089"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) サーバー
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする `SSISDB`のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、`SSISDB` データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
   
- 
-  `SSISDB` データベース内のオブジェクト情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、データベースには、オブジェクトを管理するために呼び出すことができるストアド プロシージャも用意されています。  
+ `SSISDB` データベース内のオブジェクト情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、データベースには、オブジェクトを管理するために呼び出すことができるストアド プロシージャも用意されています。  
   
  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するには、まず `SSISDB` カタログを作成する必要があります。  
   
@@ -38,18 +35,16 @@ ms.locfileid: "62771738"
   
  SSIS と AlwaysOn 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳細については、Matt Masson による blogs.msdn.com のブログ記事「 [SSIS と AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)」を参照してください。  
   
-##  <a name="ssms"></a>SQL Server Management Studio の Integration Services サーバー  
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする `SSISDB`のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
+ `SSISDB` データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
   
 -   **SSISDB データベース**  
   
-     データベース`SSISDB`は、オブジェクトエクスプローラーの [**データベース**] ノードに表示されます。 ビューに対してクエリを実行し、ストアド プロシージャを呼び出して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーとサーバーに格納されているオブジェクトを管理できます。  
+     データベースは、 `SSISDB` オブジェクトエクスプローラーの [**データベース**] ノードに表示されます。 ビューに対してクエリを実行し、ストアド プロシージャを呼び出して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーとサーバーに格納されているオブジェクトを管理できます。  
   
--   **Integration Services カタログ**  
+-   **統合サービス カタログ**  
   
-     
-  **[Integration Services カタログ]** ノードには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトおよび環境のフォルダーが存在します。  
+     **[Integration Services カタログ]** ノードには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトおよび環境のフォルダーが存在します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

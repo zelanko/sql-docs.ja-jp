@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4d28d0d41ed28ac2f623f38e0a977ded66f3f88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ec7eb7bca850277b42de62a7e245d21e7f7f3f6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880924"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties プロパティ (ServerNetworkProtocol クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サーバー ネットワーク プロトコルに関連付けられたプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,12 +35,12 @@ ms.locfileid: "73660390"
 object.Properties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバーネットワークプロトコルによってサポートされるプロパティを表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   

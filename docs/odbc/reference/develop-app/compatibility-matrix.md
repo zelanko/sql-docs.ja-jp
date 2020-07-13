@@ -16,19 +16,19 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0406599e1657a900d1669861572ff13834cec670
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083274"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307455"
 ---
 # <a name="compatibility-matrix"></a>互換性マトリックス
 次の表では、このセクションで定義したアプリケーションとドライバーの種類の互換性について説明します。  
   
-|アプリケーションの種類<br /><br /> およびバージョン|32ビット ODBC<br /><br /> ** 2.x ドライバー|ODBC *3.x*<br /><br /> ドライバー●どらいば○|ODBC 3.8 ドライバー|ISO とオープングループに準拠しているドライバー|  
+|アプリケーションの種類<br /><br /> およびバージョン|32ビット ODBC<br /><br /> *2.x* 2.x ドライバー|ODBC *3.x*<br /><br /> ドライバー|ODBC 3.8 ドライバー|ISO とオープングループに準拠しているドライバー|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16ビットアプリケーション、すべてのバージョン|互換性あり|互換性あり|互換性あり|互換性あり|  
 |Pure *2.x*アプリケーション|互換性あり|互換性あり|互換性あり|互換性がありません [3]|  

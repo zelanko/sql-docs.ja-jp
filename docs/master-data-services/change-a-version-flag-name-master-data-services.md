@@ -12,39 +12,35 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 379422cdfe776eb0c7696c3d77df2562a7f0af41
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813626"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>バージョン フラグ名を変更する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、バージョン フラグの名前を変更できます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   [**バージョン管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
--   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-a-version-flag-name"></a>バージョン フラグ名を変更するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
   
-2.  
-  **[バージョンの管理]** ページのメニュー バーから **[管理]** をポイントして **[フラグ]** をクリックします。  
+2.  **[バージョンの管理]** ページのメニュー バーから **[管理]** をポイントして **[フラグ]** をクリックします。  
   
-3.  
-  **[バージョン フラグの管理]** ページの **[モデル]** フィールドでモデルを選択します。  
+3.  **[バージョン フラグの管理]** ページの **[モデル]** フィールドでモデルを選択します。  
   
 4.  グリッドのフラグ名の行で **[名前]** フィールドをダブルクリックします。  
   
@@ -52,8 +48,8 @@ ms.locfileid: "73729717"
   
 6.  Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   
- [バージョン &#40;マスターデータサービスにフラグを割り当てる&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+ [バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

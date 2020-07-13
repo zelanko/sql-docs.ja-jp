@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層制御の S3 のマウント
 titleSuffix: SQL Server big data clusters
-description: この記事では、外部の S3 ファイル システムを [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上の HDFS にマウントして HDFS の階層化を構成する方法について説明します。
+description: この記事では、HDFS 階層制御を構成して、外部の S3 ファイル システムを SQL Server 2019 ビッグ データ クラスター上の HDFS にマウントする方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606591"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための S3 をマウントする方法
 

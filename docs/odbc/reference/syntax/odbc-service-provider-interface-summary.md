@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a97bed3bb921b9c881a98d8d9a9031ef7630f26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b2f7e459cc7b89106bf1b7ebcd49c699d43da9f6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111906"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298899"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC サービス プロバイダー インターフェイスの概要
 次の表では、ODBC サービスプロバイダーのインターフェイス関数について説明します。 各関数の構文とセマンティクスの詳細については、「 [ODBC サービスプロバイダーインターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)」を参照してください。  

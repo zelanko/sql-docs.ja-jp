@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターの行セットの作成 |Microsoft Docs
+title: テーブル値パラメーターの行セットの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,31 +10,28 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: b26fa52fcb817dc7505dffb47d15421841f9c8ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761649"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013006"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>テーブル値パラメーターの行セットの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   コンシューマーはテーブル値パラメーターに任意の行セット オブジェクトを使用できますが、通常の行セット オブジェクトはバックエンドのデータ ストアに対して実装されるため、パフォーマンスが制限されます。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーがメモリ内データの上位に特殊な行セット オブジェクトを作成できます。 この特別なメモリ内の行セットオブジェクトは、テーブル値パラメーターの行セットと呼ばれる新しい COM オブジェクトです。 このオブジェクトには、パラメーター セットと同様の機能が用意されています。  
   
  テーブル値パラメーターの行セット オブジェクトは、コンシューマーが、複数のセッション レベルのインターフェイスを使用して、入力パラメーターに対して明示的に作成します。 テーブル値パラメーターの行セット オブジェクトは、テーブル値パラメーターごとに 1 つのインスタンスがあります。 コンシューマーは、既知のメタデータ情報を指定するか (静的なシナリオ)、プロバイダー インターフェイスを使用してメタデータ情報を検出する (動的なシナリオ) ことにより、テーブル値パラメーターの行セット オブジェクトを作成できます。 この後の各セクションで、これらの 2 つのシナリオについて説明します。  
   
 ## <a name="static-scenario"></a>静的なシナリオ  
- 型情報がわかっている場合、コンシューマーは ITableDefinitionWithConstraints:: CreateTableWithConstraints を使用して、テーブル値パラメーターに対応するテーブル値パラメーターの行セットオブジェクトをインスタンス化します。  
+ 型情報がわかっている場合、コンシューマーは ITableDefinitionWithConstraints::CreateTableWithConstraints を使用し、テーブル値パラメーターに対応するテーブル値パラメーターの行セット オブジェクトのインスタンスを作成します。  
   
- *Guid*フィールド (*ptableid*パラメーター) には、特別な guid (CLSID_ROWSET_TVP) が含まれています。 
-  *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 
-  *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
+ *guid* フィールド (*pTableID* パラメーター) には、特殊な GUID (CLSID_ROWSET_TVP) を含めます。 *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
   
- 集計の場合、コンシューマーは制御 IUnknown に*pUnkOuter*パラメーターを渡します。  
+ コンシューマーは集計の場合、制御している IUnknown と共に *pUnkOuter* パラメーターを渡します。  
   
  テーブル値パラメーターの行セットオブジェクトのプロパティは読み取り専用であるため、コンシューマーは*rgPropertySets*のプロパティを設定する必要はありません。  
   
@@ -51,7 +48,7 @@ ms.locfileid: "73761649"
   
  このシナリオでは、プロバイダーがコンシューマーに代わって、テーブル値パラメーターの行セット オブジェクトに関する型情報をサーバーから取得します。  
   
- *Ptableid*パラメーターと*pUnkOuter*パラメーターは、静的なシナリオのように設定する必要があります。 次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、Native Client OLE DB プロバイダーは、サーバーから型情報 (列の情報と制約) を取得し、 *ppRowset*パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
+ *pTableID* パラメーターおよび *pUnkOuter* パラメーターは、静的なシナリオと同様に設定します。 次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、サーバーから型情報 (列の情報と制約) を取得し、 *ppRowset*パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

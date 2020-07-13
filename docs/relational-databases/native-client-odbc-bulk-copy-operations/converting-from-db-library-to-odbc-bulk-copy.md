@@ -17,17 +17,16 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785189"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006600"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでサポートされている一括コピー関数は db-library の一括コピー関数に似ているため、db-library 一括コピープログラムを ODBC に変換するのは簡単です。ただし、次のような例外があります。  
+  Native Client ODBC ドライバーでサポートされている一括コピー関数は DB-LIBRARY の一括コピー関数に似ているため、DB-LIBRARY 一括コピープログラムを ODBC に変換するのは簡単です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。ただし、次のような例外があります。  
   
 -   DB-Library アプリケーションでは、DBPROCESS 構造体を指すポインターを一括コピー関数の最初のパラメーターに渡します。 ODBC アプリケーションでは、DBPROCESS ポインターが ODBC 接続ハンドルに置き換わります。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "73785189"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。ODBC 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。 odbc 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
   
 -   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の*varlen*パラメーターに指定された値は、ODBC **bcp_bind**の_cbdata_パラメーターとは異なる解釈になります。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "73785189"
   
     -   DB-LIBRARY **dbconvert**関数でサポートされている任意の形式の**datetime**文字列および**smalldatetime**文字列。  
   
-    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   クライアントネットワークユーティリティの [DB-LIBRARY**オプション**] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。  
   
      DB-LIBRARY 一括コピー関数では、ODBC **datetime**および**smalldatetime**形式は使用できません。  
   

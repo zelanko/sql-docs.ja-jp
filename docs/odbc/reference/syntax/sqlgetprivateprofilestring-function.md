@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetPrivateProfileString function [ODBC]
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061472"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303294"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 関数
 **互換性**  
@@ -71,7 +71,7 @@ int SQLGetPrivateProfileString(
 ## <a name="diagnostics"></a>診断  
  **Sqlgetprivateprofilestring**の呼び出しが失敗した場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
@@ -83,6 +83,6 @@ int SQLGetPrivateProfileString(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |システム情報への値の書き込み|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

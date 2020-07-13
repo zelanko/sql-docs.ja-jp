@@ -21,7 +21,7 @@ ms.locfileid: "75246487"
 
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
   
--   \-BEGIN TRANSACTION**と**ROLLBACK TRANSACTION **を使用する Transact**SQL テスト スクリプト内にトランザクションを作成します。  
+-   **BEGIN TRANSACTION** と **ROLLBACK TRANSACTION** を使用する Transact\-SQL テスト スクリプト内にトランザクションを作成します。  
   
 -   テスト クラスで単一のテスト メソッドのトランザクションを作成します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "75246487"
     ```  
   
     > [!NOTE]  
-    > Visual Basic を使用している場合は、(`Imports System.Transactions`、`Imports Microsoft.VisualStudio.TestTools.UnitTesting`、および `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` に加えて) `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` を追加する必要があります。Visual C# を使用している場合は、(Microsoft.VisualStudio.TestTools、Microsoft.VisualStudio.TeamSystem.Data.UnitTesting、および Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions の `using System.Transactions` ステートメントに加えて) `using` を追加する必要があります。 また、プロジェクトへの参照をこれらのアセンブリに追加する必要もあります。  
+    > Visual Basic を使用している場合は、(`Imports Microsoft.VisualStudio.TestTools.UnitTesting`、`Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`、および `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` に加えて) `Imports System.Transactions` を追加する必要があります。Visual C# を使用している場合は、(Microsoft.VisualStudio.TestTools、Microsoft.VisualStudio.TeamSystem.Data.UnitTesting、および Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions の `using` ステートメントに加えて) `using System.Transactions` を追加する必要があります。 また、プロジェクトへの参照をこれらのアセンブリに追加する必要もあります。  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>テスト クラスですべてのテスト メソッドのトランザクションを作成するには  
   

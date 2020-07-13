@@ -11,14 +11,14 @@ helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095680"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298772"
 ---
 # <a name="installer-dll-function-summary"></a>インストーラー DLL 関数の概要
 インストーラー DLL の関数を次の表に示します。 各関数の構文とセマンティクスの詳細については、「[インストーラー DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)」を参照してください。  

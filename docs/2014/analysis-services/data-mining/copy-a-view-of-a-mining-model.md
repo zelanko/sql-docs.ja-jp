@@ -13,32 +13,25 @@ helpviewer_keywords:
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3b91ee04b375a1329eb5f215e65a607ced8415ca
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524008"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>マイニング モデルの表示のコピー
-  
   **のデータ マイニング デザイナーの** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブでは、マイニング モデルの種類ごとに異なるビューアーを使用します。 これらのビューアーの一部には、コンテンツをクリップボードにコピーし、そこからドキュメントやイメージ操作ソフトウェアに貼り付けるためのコンポーネントがあります。 この機能は次のコンポーネントで使用可能です。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーのクラスター ダイアグラムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアー  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーのクラスター ダイアグラムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアー  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーのデシジョン ツリーと [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアー  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーのデシジョン ツリーと [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアー  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーの状態遷移  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーの状態遷移  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール ビューアーの依存関係ネットワーク、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアー、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアー  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール ビューアーの依存関係ネットワーク、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアー、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアー  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーの [ノードの詳細] ペインにあるマイニング モデル コンテンツ  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーの [ノードの詳細] ペインにあるマイニング モデル コンテンツ  
   
  マイニング モデル全体の表現をコピーすることも、ビューアーで表示している部分のみをコピーすることもできます。  
   
@@ -47,38 +40,29 @@ ms.locfileid: "66085597"
   
 ### <a name="to-copy-the-complete-model-to-the-clipboard"></a>モデル全体をクリップボードにコピーするには  
   
-1.  
-  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
+1.  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
   
-2.  
-  **[依存関係ネットワーク]** タブなど、適切なタブを選択してから、そのタブのツール バーで **[グラフ全体のコピー]** をクリックします。  
+2.  **[依存関係ネットワーク]** タブなど、適切なタブを選択してから、そのタブのツール バーで **[グラフ全体のコピー]** をクリックします。  
   
 ### <a name="to-copy-the-visible-piece-of-the-model-to-the-clipboard"></a>モデルの表示部分のみをクリップボードにコピーするには  
   
-1.  
-  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
+1.  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
   
-2.  
-  **[依存関係ネットワーク]** タブなど、適切なタブを選択し、モデルを拡大または縮小して、希望のレベルで表示します。  
+2.  **[依存関係ネットワーク]** タブなど、適切なタブを選択し、モデルを拡大または縮小して、希望のレベルで表示します。  
   
 3.  選択したタブのツール バーで **[グラフ ビューのコピー]** をクリックします。  
   
 ### <a name="to-copy-the-mining-model-content-to-the-clipboard"></a>マイニング モデル内容をクリップボードにコピーするには  
   
-1.  
-  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
+1.  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
   
-2.  
-  **[ビューアー]** ボックスの一覧で **[Microsoft 汎用コンテンツ ツリー ビューアー]** をクリックします。  
+2.  **[ビューアー]** ボックスの一覧で **[Microsoft 汎用コンテンツ ツリー ビューアー]** をクリックします。  
   
-3.  
-  **[ノードのキャプション (一意の ID)]** ペインでノードをクリックします。  
+3.  **[ノードのキャプション (一意の ID)]** ペインでノードをクリックします。  
   
-4.  
-  **[ノードの詳細]** ペインを右クリックし、 **[すべて選択]** をクリックします。  
+4.  **[ノードの詳細]** ペインを右クリックし、 **[すべて選択]** をクリックします。  
   
-5.  
-  **[ノードの詳細]** ペインをもう一度右クリックし、 **[コピー]** をクリックします。  
+5.  **[ノードの詳細]** ペインをもう一度右クリックし、 **[コピー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)  

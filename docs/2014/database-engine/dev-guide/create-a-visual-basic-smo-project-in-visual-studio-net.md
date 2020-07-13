@@ -13,40 +13,31 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933683"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET での Visual Basic SMO プロジェクトの作成
   このセクションでは、簡単な SMO コンソール アプリケーションを構築する方法について説明します。  
   
- この例では、プログラムが SMO の型を参照できるように、名前空間をインポートします。 
-  `Agent` 名前空間のインポートは省略可能です。 エージェントを使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するプログラムを作成するときに使用します。 
-  `Common` 名前空間は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのセキュリティで保護された接続を確立するために必要です。 
-  `SqlClient` 名前空間は、SQL 例外エラーの処理を行うために使用されます。  
+ この例では、プログラムが SMO の型を参照できるように、名前空間をインポートします。 `Agent` 名前空間のインポートは省略可能です。 エージェントを使用するプログラムを作成するときに使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `Common` 名前空間は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのセキュリティで保護された接続を確立するために必要です。 `SqlClient` 名前空間は、SQL 例外エラーの処理を行うために使用されます。  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Visual Studio .NET での Visual Basic SMO プロジェクトの作成  
   
-1.  
-  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] または [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] を起動します。  
+1.  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] または [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] を起動します。  
   
-2.  
-  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。 
-  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+2.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  [**プロジェクトの種類**] ダイアログボックスで、[ **Visual Basic**] を選択し、[ **Windows**] を選択します。 [インストール[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]されたテンプレート] ペインで、[コンソールアプリケーション] を選択し**ます。**  
+3.  [**プロジェクトの種類**] ダイアログボックスで、[ **Visual Basic**] を選択し、[ **Windows**] を選択します。 [ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] インストールされたテンプレート] ペインで、[**コンソールアプリケーション**] を選択します。  
   
 4.  Optional[**名前**] フィールドに、新しいアプリケーションの名前を入力します。  
   
-5.  [ **OK** ] をクリック[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]して、コンソールアプリケーションテンプレートを読み込みます。  
+5.  [ **OK** ] をクリックして、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コンソールアプリケーションテンプレートを読み込みます。  
   
-6.  
-  **[プロジェクト]** メニューの **[参照の追加]** を選択します。 
-  **[参照の追加]** ダイアログ ボックスが表示されます。  
+6.  **[プロジェクト]** メニューの **[参照の追加]** を選択します。 **[参照の追加]** ダイアログ ボックスが表示されます。  
   
 7.  [**参照**] をクリックし、C:\Program Server\120\SDK\Assemblies フォルダー内の SMO アセンブリを見つけて、次のファイルを選択します。 これらは、SMO アプリケーションのビルドに最低限必要なファイルです。  
   
@@ -59,7 +50,7 @@ ms.locfileid: "62753347"
      Microsoft.SqlServer.Management.Sdk.Sfc  
   
     > [!NOTE]  
-    >  複数の`Ctrl`ファイルを選択するには、キーを使用します。  
+    >  複数の `Ctrl` ファイルを選択するには、キーを使用します。  
   
 8.  必要に応じて任意の SMO アセンブリを追加します。 たとえば、[!INCLUDE[ssSB](../../includes/sssb-md.md)] に特化したプログラミングを行っている場合は、以下のアセンブリを追加します。  
   

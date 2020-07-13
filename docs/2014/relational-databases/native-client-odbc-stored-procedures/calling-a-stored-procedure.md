@@ -15,22 +15,20 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6fa704e45e4e85b479ae8a40a3e567bea1ec5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68207029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049722"
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーでは、ストアドプロシージャを実行するための[!INCLUDE[tsql](../../includes/tsql-md.md)]odbc CALL エスケープシーケンスと[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)ステートメントの両方がサポートされています。ODBC CALL エスケープシーケンスは、推奨される方法です。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、ストアドプロシージャを実行するための ODBC call エスケープシーケンスと EXECUTE ステートメントの両方がサポートされています [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 。 odbc call エスケープシーケンスを使用する方法をお勧めします。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
   
 > [!NOTE]  
->  ODBC で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名前付きパラメーターを使用してストアドプロシージャを呼び出す場合 (詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](https://go.microsoft.com/fwlink/?LinkID=209721)」を参照)、パラメーター名は '\@' 文字で始める必要があります。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC で名前付きパラメーターを使用してストアドプロシージャを呼び出す場合 (詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](https://go.microsoft.com/fwlink/?LinkID=209721)」を参照)、パラメーター名は ' ' 文字で始める必要があり \@ ます。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の制限です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Microsoft Data Access Components (MDAC) の場合よりも厳密にこの制限が適用されます。  
   
  プロシージャを呼び出す ODBC CALL エスケープ シーケンスは、次の構文を使用します。  
   
@@ -42,11 +40,11 @@ ms.locfileid: "68207029"
   
  プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かっこだけを指定し、パラメーターを指定しないでプロシージャを呼び出した場合、ドライバーは最初のパラメーターの既定値を使用するように、データ ソースに指示します。 次に例を示します。  
   
- {**** _procedure_name_**()**} を呼び出します  
+ {**call** _procedure_name_**()**} を呼び出します  
   
  プロシージャにパラメーターを指定しないと、失敗する可能性があります。 かっこを付けないでプロシージャを呼び出すと、ドライバーはパラメーター値を送信しません。 次に例を示します。  
   
- {**** _procedure_name_} を呼び出します  
+ {**call** _procedure_name_} を呼び出します  
   
  プロシージャ呼び出しでは、入力パラメーターや入出力パラメーターとしてリテラルを指定できます。 たとえば、InsertOrder プロシージャには 5 つの入力パラメーターがあるとします。 次の InsertOrder の呼び出しでは、最初のパラメーターを省略し、2 番目のパラメーターとしてリテラルを指定して、3 番目、4 番目、5 番目のパラメーターとしてパラメーター マーカーを使用しています (パラメーターには、値 1 から始まる序数が付けられます)。  
   
@@ -59,7 +57,7 @@ ms.locfileid: "68207029"
  入出力パラメーターを省略した場合、または入出力パラメーターとしてリテラルを指定した場合、ドライバーは出力値を破棄します。 同様に、プロシージャの戻り値のパラメーター マーカーを省略した場合、ドライバーは戻り値を破棄します。 最後に、値を返さないプロシージャに戻り値パラメーターを指定すると、ドライバーは、そのパラメーターにバインドされる長さ/インジケーター バッファーの値を SQL_NULL_DATA に設定します。  
   
 ## <a name="delimiters-in-call-statements"></a>CALL ステートメント内の区切り記号  
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーは、既定で ODBC {CALL} エスケープシーケンスに固有の互換性オプションもサポートしています。 ドライバーは、1 組の二重引用符でストアド プロシージャ名全体を区切る CALL ステートメントを受け付けます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーは、既定で odbc {CALL} エスケープシーケンスに固有の互換性オプションもサポートしています。 ドライバーは、1 組の二重引用符でストアド プロシージャ名全体を区切る CALL ステートメントを受け付けます。  
   
 ```  
 { CALL "master.dbo.sp_who" }  

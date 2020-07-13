@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911315"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285382"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
 **互換性**  
@@ -64,7 +64,7 @@ SQLRETURN SQLGetDiagRec(
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバーマネージャーとドライバーによってのみ使用されます。 アプリケーションでは、このハンドルの種類を使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、「 [ODBC ドライバーでの接続プールの認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)」を参照してください。  
   
- *扱え*  
+ *Handle*  
  代入*Handletype*によって示される型の診断データ構造体のハンドル。 *Handletype*が SQL_HANDLE_ENV の場合、*ハンドル*は共有環境ハンドルまたは非共有環境ハンドルのどちらかになります。  
   
  *RecNumber*  
@@ -131,7 +131,7 @@ SQLRETURN SQLGetDiagRec(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |診断レコードのフィールドまたは診断ヘッダーのフィールドを取得する|[SQLGetDiagField 関数](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 675e2d24cb84b2a68922528dcdaa09fb6b675605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067147"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果ペイン (Visual Database Tools)
   結果ペインには、最後に実行された選択クエリの結果が表示されます。 他の種類のクエリ結果は、メッセージ ボックスに表示されます。結果ペインを表示するには、クエリまたはビューを表示または作成するか、テーブルのデータを返します。 結果ペインが既定で表示されない場合は、 **[クエリ デザイナー]** メニューの **[ペイン]** をポイントし、 **[結果]** をクリックします。  

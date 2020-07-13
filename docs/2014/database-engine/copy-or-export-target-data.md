@@ -9,20 +9,18 @@ ms.topic: conceptual
 ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 610c9d33ecb2423a64ae76708d2f38d1f8fd88a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 040529d40e0fd6db8873add8ee998f2bef57c485
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934543"
 ---
 # <a name="copy-or-export-target-data"></a>ターゲット データのコピーまたはエクスポート
   ターゲット データをコピーしたり、ターゲット データを .CSV ファイルにエクスポートしたりできます。  
   
 > [!NOTE]  
->  
-  **ring_buffer** ターゲットのターゲット データをコピーまたはエクスポートすることはできません。  
+>  **ring_buffer** ターゲットのターゲット データをコピーまたはエクスポートすることはできません。  
   
 ## <a name="to-copy-target-data"></a>ターゲット データをコピーするには  
   
@@ -32,10 +30,8 @@ ms.locfileid: "66065100"
   
 1.  ターゲット データ ウィンドウで、エクスポートする行を選択して右クリックし、 **[CSV にエクスポート]** をクリックします。  
   
-2.  
-  **[名前を付けて保存]** ダイアログ ボックスで、ファイルのフォルダーおよび名前を指定します。  
+2.  **[名前を付けて保存]** ダイアログ ボックスで、ファイルのフォルダーおよび名前を指定します。  
   
-3.  
-  **[OK]** をクリックして、ターゲット データを CSV ファイルとして保存します。  
+3.  **[OK]** をクリックして、ターゲット データを CSV ファイルとして保存します。  
   
   

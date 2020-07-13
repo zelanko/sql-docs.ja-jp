@@ -12,16 +12,14 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0a9959189b3ce805c7d8e97dd3b4948a3674b0cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65483318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971732"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
 > [!NOTE]  
@@ -32,25 +30,21 @@ ms.locfileid: "65483318"
   
 -   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   少なくとも 1 つの属性が必要です。 詳細については、「 [テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-an-attribute-group"></a>属性グループを作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
 2.  [**モデルビュー** ] ページのメニューバーから [**管理**] をポイントし、[**属性グループ**] をクリックします。  
   
-3.  
-  **[モデル]** ボックスの一覧からモデルを選択します。  
+3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-4.  
-  **[エンティティ]** の一覧からエンティティを選択します。  
+4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  
-  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
+5.  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
   
 6.  [**属性グループの追加**] をクリックします。  
   
@@ -59,13 +53,11 @@ ms.locfileid: "65483318"
     > [!NOTE]  
     >  手順 5. で [**統合グループ**] または [**コレクショングループ**] を選択した場合、このボックスはそれぞれ [**統合グループ名**] または [**コレクショングループ名**] になります。  
   
-8.  
-  **[グループの保存]** をクリックします。  
+8.  **[グループの保存]** をクリックします。  
   
 9. グループのフォルダーを展開します。  
   
-10. 
-  **[属性]** をクリックします。  
+10. **[属性]** をクリックします。  
   
 11. [**選択したアイテムの編集**] をクリックします。  
   
@@ -77,7 +69,7 @@ ms.locfileid: "65483318"
   
 ## <a name="next-steps"></a>次の手順  
   
--   [属性グループをユーザー &#40;マスターデータサービスに表示させる&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [属性グループのユーザーへの表示 (マスター データ サービス)](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
  [属性グループ &#40;マスターデータサービス&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

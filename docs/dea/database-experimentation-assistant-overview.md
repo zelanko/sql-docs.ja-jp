@@ -1,10 +1,8 @@
 ---
 title: Database Experimentation Assistant の概要
 description: Database Experimentation Assistant の概要
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247121"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759158"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
 
@@ -94,7 +93,7 @@ DEA は、Windows 認証を使用してデータベースサーバーに接続�
 
 ## <a name="set-up-telemetry"></a>テレメトリの設定
 
-DEA にはインターネット対応の機能があり、製品のエクスペリエンスを向上させるために利用できるテレメトリ情報を Microsoft に送信できます。 収集された情報は、ローカル監査のためにコンピューターにも保存されるので、収集された情報を常に確認できます。 すべての DEA ログファイルは、% temp%\\dea フォルダーに保存されます。
+DEA にはインターネット対応の機能があり、製品のエクスペリエンスを向上させるために利用できるテレメトリ情報を Microsoft に送信できます。 収集された情報は、ローカル監査のためにコンピューターにも保存されるので、収集された情報を常に確認できます。 すべての DEA ログファイルは、% temp% dea フォルダーに保存され \\ ます。
 
 テレメトリデータは、次の4種類のイベントで収集できます。
 
@@ -105,7 +104,7 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 
 テレメトリデータの収集と送信は任意です。 収集されるイベントと収集されるイベントを指定するには、次の手順を実行します。
 
-1. DEA がインストールされている場所 (たとえば、C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant) に移動します。
+1. DEA がインストールされている場所 (たとえば、C: \\ Program Files (x86) \\ Microsoft Corporation Database Experimentation Assistant) に移動し \\ ます。
 2. 必要に応じて、**構成ファイル (** アプリケーションの場合) と**DEACMD .exe** (CLI の場合) を開いて変更し、シナリオに対処します。
     - イベントの種類の収集を停止するには、*イベント*の値 ( **traceevent**など) を**false**に設定します。 イベントの収集を再開するには、値を**true**に設定します。
     - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled**の値を**false**に設定します。 ローカルコピーの保存を再び開始するには、値を**true**に設定します。
@@ -113,6 +112,6 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 
 DEA は、Microsoft の[プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - この記事では、2つの環境におけるワークロードの比較に関連するプロセスについて説明します。[ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)について説明します。

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731356"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定された時間または期間が経過するか、指定されたステートメントによって少なくとも 1 つの行が変更または返されるまで、バッチ、ストアド プロシージャ、またはトランザクションの実行をブロックします。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68086111"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 WAITFOR   
 {  

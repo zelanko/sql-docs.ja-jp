@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ff006e7bead36c2aa6476b99552d1524c213b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c46ef88075a5adbd96138d7d1f03c26712f7ea1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091711"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300512"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (カーソル ライブラリ)
 > [!IMPORTANT]  

@@ -1,10 +1,8 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5acf669e6db68b5fceb3a83c7f036d5f8065bde3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752255"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -37,7 +36,7 @@ ms.locfileid: "68109371"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
@@ -77,16 +76,16 @@ JSON のパスを解析するための厳密でないまたは strict モード�
   
 ```json  
 {
-    "info": {
-        "type": 1,
-        "address": {
-            "town": "Bristol",
-            "county": "Avon",
-            "country": "England"
-        },
-        "tags": ["Sport", "Water polo"]
-    },
-    "type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -106,7 +105,7 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 
 **JSON_QUERY** は、有効な JSON フラグメントを返します。 その結果、**FOR JSON** は、**JSON_QUERY** 戻り値内の特殊文字をエスケープしません。
 
-FOR JSON を使用して結果を返すときに (列内または式の結果として) 既に JSON 形式になっているデータを含める場合は、**path** パラメーターなしで *JSON_QUERY* を使用して JSON データをラップします。
+FOR JSON を使用して結果を返すときに (列内または式の結果として) 既に JSON 形式になっているデータを含める場合は、*path* パラメーターなしで **JSON_QUERY** を使用して JSON データをラップします。
 
 ## <a name="examples"></a>例  
   
@@ -116,7 +115,7 @@ FOR JSON を使用して結果を返すときに (列内または式の結果と
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -132,7 +131,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
- [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

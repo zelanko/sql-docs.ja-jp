@@ -15,17 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931530"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>レッスン 2: 予測シナリオの作成 (中級者向けデータ マイニング チュートリアル)
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]のセールス アナリストであるあなたは、翌年の製品売上を予測するよう依頼されました。 具体的には、さまざまな地域および製品ラインの売上予測を比較する必要があります。 さらに、各製品の売上が一年を通じてどのように変化するかも調べなければなりません。  
   
- 依頼された情報を得るため、このレッスンでは、同社の売上データを月別に集計します。また、これらの販売成績をヨーロッパ、北アメリカ、太平洋の 3 つの地域別に集計します。  
+ 依頼された情報を得るため、このレッスンでは、同社の売上データを月別に集計します。また、これらの販売成績をヨーロッパ、北米、太平洋の 3 つの地域別に集計します。  
   
  このレッスンのタスクを完了すると、次の情報を取得できるようになります。  
   
@@ -44,9 +43,7 @@ ms.locfileid: "62931530"
  このレッスンのタスクを完了するには、「レッスン 1: 中級者向け[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データ[マイニングソリューションの作成 &#40;中間データマイニングチュートリアル&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)」で作成したデータソースを使用します。  
   
 > [!WARNING]  
->  
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] サンプル データベース内の日付は、このリリース用に更新されています。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]の以前のバージョンを使用する場合は、ここでの手順に従ってモデルを構築することはできますが、異なる結果が表示される場合があります。  
+>  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] サンプル データベース内の日付は、このリリース用に更新されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]の以前のバージョンを使用する場合は、ここでの手順に従ってモデルを構築することはできますが、異なる結果が表示される場合があります。  
   
  **簡単な予測モデルの作成**  
   
@@ -82,11 +79,11 @@ ms.locfileid: "62931530"
   
  レッスン 2: 予測シナリオ (中級者向けデータ マイニング チュートリアル)  
   
- [レッスン 3: マーケットバスケットシナリオの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
  [レッスン 4: シーケンスクラスターシナリオの構築中級者向けデータマイニングチュートリアル &#40;&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [レッスン 5: ニューラルネットワークとロジスティック回帰モデルの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   

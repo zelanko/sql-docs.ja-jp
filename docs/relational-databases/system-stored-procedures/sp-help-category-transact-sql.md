@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72304804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901528"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ジョブ、警告、またはオペレーターについて、指定されたクラスの情報を提供します。  
    
@@ -56,7 +56,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------|-----------------|  
 |**地元の**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
-|**存在**|**JOB**以外のクラスのカテゴリ。|  
+|**NONE**|**JOB**以外のクラスのカテゴリ。|  
   
 `[ @name = ] 'name'`情報が要求されるカテゴリの名前。 *名前*は**sysname**,、既定値は NULL です。  
   
@@ -66,23 +66,23 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ** \@サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@ サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- ** \@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@ サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
 |**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. アラート情報を返す  
+### <a name="b-returning-alert-information"></a>B: アラート情報を返す  
  次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

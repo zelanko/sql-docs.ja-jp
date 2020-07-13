@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 22c112a31cb3e2b68e2437a2f0aba25f5aff5c8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62791742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937283"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>編集するファイルの自動的なチェックアウト
   ファイルの編集を開始したときに、自動的にそのファイルがチェックアウトされるように [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を設定することができます。  

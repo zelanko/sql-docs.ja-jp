@@ -13,28 +13,24 @@ helpviewer_keywords:
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 689fe598cff74873c0a31f0e7aa47b15f760a789
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080109"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543994"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio での Analysis Services スクリプトの作成
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、スクリプトの生成機能、テンプレート、および Analysis Services オブジェクトとタスクのスクリプトを作成するために使用できるエディターが含まれています。  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Management Studio で Analysis Services タスクのスクリプトを作成する  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のタスクのスクリプト作成は、タスク指向のダイアログ ボックスで、いずれかのスクリプト オプションをクリックすることで実現します。 バックアップやデータベースの復元、オブジェクトの処理、集計のデザインなどのタスクを実行するために使用するすべてのダイアログ ボックスには、ダイアログ ボックスの上部にスクリプト オプションがあります。 これらのオプションのいずれかを選択すると、ダイアログ ボックス内の情報と設定に基づいて、XMLA スクリプトが生成されます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のタスクのスクリプト作成は、タスク指向のダイアログ ボックスで、いずれかのスクリプト オプションをクリックすることで実現します。 バックアップやデータベースの復元、オブジェクトの処理、集計のデザインなどのタスクを実行するために使用するすべてのダイアログ ボックスには、ダイアログ ボックスの上部にスクリプト オプションがあります。 これらのオプションのいずれかを選択すると、ダイアログ ボックス内の情報と設定に基づいて、XMLA スクリプトが生成されます。  
   
  既定では、スクリプトが生成され、XMLA クエリ エディター内に配置されますが、スクリプト オプション リストを拡張して、Windows クリップボードやファイルにスクリプトを出力することもできます。  
   
 #### <a name="to-script-an-analysis-services-task"></a>Analysis Services タスクのスクリプトを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。  
   
 2.  データベースを右クリックし、 **[バックアップ]** をクリックします。 [データベースのバックアップ] ダイアログ ボックスが開きます。 バックアップのファイル名を指定し、このバックアップに必要なオプションを選択します。  
   
@@ -47,8 +43,7 @@ ms.locfileid: "66080109"
      [データベースのバックアップ] ダイアログ ボックスを閉じて、XMLA スクリプトを直接、編集または実行できます。  
   
 ## <a name="script-analysis-services-objects-in-management-studio"></a>Management Studio で Analysis Services オブジェクトのスクリプトを作成する  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクトを右クリックし、 **[CREATE]**、 **[ALTER]**、または **[DELETE]** を選択して、オブジェクトのスクリプト作成を実行します。 これらの各オプションは、ウィンドウまたはファイルに出力できますが、スクリプトの出力先に関係なく、XMLA ラッパーの DDL スクリプトの形式で出力されます。 このようなスクリプトは、指定するどのサーバーに対しても実行できるという大きな利点があります。 また、スクリプトの名前は変更可能で、オブジェクトの大量作成、変更、または削除を反復的に行うことができます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクトを右クリックし、 **[CREATE]**、 **[ALTER]**、または **[DELETE]** を選択して、オブジェクトのスクリプト作成を実行します。 これらの各オプションは、ウィンドウまたはファイルに出力できますが、スクリプトの出力先に関係なく、XMLA ラッパーの DDL スクリプトの形式で出力されます。 このようなスクリプトは、指定するどのサーバーに対しても実行できるという大きな利点があります。 また、スクリプトの名前は変更可能で、オブジェクトの大量作成、変更、または削除を反復的に行うことができます。  
   
  スクリプトを作成できるオブジェクトには、データ ソース、データ ソース ビュー、キューブ、ディメンション、マイニング構造、およびロールを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの要素が含まれます。  
   
@@ -59,8 +54,7 @@ ms.locfileid: "66080109"
   
 #### <a name="to-script-analysis-services-objects"></a>Analysis Services オブジェクトのスクリプトを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。  
   
 2.  オブジェクトの作成、変更、削除のいずれかを行うスクリプトを作成するオブジェクトを選択します。  
   
@@ -71,6 +65,6 @@ ms.locfileid: "66080109"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA クエリエディター &#40;Analysis Services-多次元データ&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [XMLA クエリ エディター (Analysis Services - 多次元データ)](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

@@ -9,68 +9,64 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66056007"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422039"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>[アップグレード先の場所を選択] (SSIS パッケージ アップグレード ウィザード)
-  
   **[アップグレード先の場所を選択]** ページを使用すると、アップグレードされたパッケージの保存先を指定できます。  
   
 > [!NOTE]  
 >  このページは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードを [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] またはコマンド プロンプトから実行した場合にのみ使用できます。  
   
- **SSIS パッケージアップグレードウィザードを実行するには**  
+ **SSIS パッケージ アップグレード ウィザードを実行するには**  
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="static-options"></a>静的オプション  
- **ソースの場所に保存**  
+ **[アップグレード元の場所に保存する]**  
  ウィザードの **[ソースの場所を選択]** ページで指定した場所と同じ場所に、アップグレードされたパッケージを保存します。  
   
  元のパッケージがファイル システムに格納されている場合に、ウィザードでそれらのパッケージをバックアップするには、 **[ソースの場所に保存]** オプションを選択します。 詳細については、「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
- **新しいコピー先の場所を選択**  
+ **[新しいアップグレード先の場所を選択]**  
  このページで指定したアップグレード先の場所に、アップグレードされたパッケージを保存します。  
   
- **パッケージソース**  
+ **[パッケージ ソース]**  
  アップグレード パッケージが格納される場所を指定します。 このオプションには、次の表に示す値があります。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ファイル システム**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
-|**SSIS パッケージストア**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 (SSIS サービス)](service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
+|**SSIS パッケージストア**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
 |**Microsoft SQL Server**|アップグレードされたパッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンスに保存することを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
  **フォルダー**  
  アップグレードされたパッケージを保存するフォルダーの名前を入力するか、 **[参照]** をクリックしてフォルダーを指定します。  
   
- **[参照]**  
+ **参照**  
  アップグレードされたパッケージを保存するフォルダーを、参照して指定します。  
   
 ## <a name="package-source-dynamic-options"></a>パッケージ ソース動的オプション  
   
 ### <a name="package-source--ssis-package-store"></a>[パッケージ ソース] = [SSIS パッケージ ストア]  
- **サーバー**  
+ **[サーバー]**  
  アップグレード パッケージを保存するサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
 ### <a name="package-source--microsoft-sql-server"></a>[パッケージ ソース] = [Microsoft SQL Server]  
- **サーバー**  
+ **[サーバー]**  
  アップグレード パッケージを保存するサーバーの名前を入力するか、一覧からこのサーバーを選択します。  
   
  **Windows 認証を使用する**  
  Windows 認証を使用してサーバーに接続する場合に選択します。  
   
- **SQL Server 認証を使用する**  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバーに接続する場合に選択します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
+ **[SQL Server 認証を使用する]**  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバーに接続する場合に選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
@@ -78,7 +74,7 @@ ms.locfileid: "66056007"
  **パスワード**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081251"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528370"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>推定ウィザード (Excel 用データ マイニング アドイン)
   ![[データ マイニング] リボンの推定ウィザード](media/dmc-estimate.gif "[データ マイニング] リボンの推定ウィザード")  
@@ -89,7 +88,7 @@ ms.locfileid: "66081251"
   
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  データ推定ウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。  
   
  接続を作成する方法の詳細については、「 [Connect To Source data &#40;Excel 用データマイニングクライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)」を参照してください。  

@@ -23,12 +23,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034524"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528156"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,8 +106,8 @@ FROM ExpenseQueue;
 
 - インスタンス間の Service Broker はサポートされていません 
  - `sys.routes` - 前提条件: sys.routes からアドレスを選択してください。 すべてのルートでアドレスをローカルにする必要があります。 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md) をご覧ください。
- - `CREATE ROUTE` - `CREATE ROUTE` 以外の `ADDRESS` で `LOCAL` を使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
- - `ALTER ROUTE` では、`ALTER ROUTE` 以外の `ADDRESS` と共に `LOCAL` を使用することはできません。 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md) をご覧ください。  
+ - `CREATE ROUTE` - `LOCAL` 以外の `ADDRESS` で `CREATE ROUTE` を使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
+ - `ALTER ROUTE` では、`LOCAL` 以外の `ADDRESS` と共に `ALTER ROUTE` を使用することはできません。 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md) をご覧ください。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>メッセージを複数の対象サービスに送信可能 (マルチキャスト)  
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) ステートメントの構文が拡張され、複数のメッセージ交換ハンドルをサポートすることにより、マルチキャストが有効になりました。  
@@ -122,4 +122,8 @@ FROM ExpenseQueue;
  詳細については、「 [Service Broker と Always On 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
   
+## <a name="next-steps"></a>次のステップ
+
+Service Broker の最も一般的な用途は、[イベント通知](../../relational-databases/service-broker/event-notifications.md)に使用することです。 [イベント通知を実装する](../../relational-databases/service-broker/implement-event-notifications.md)方法、[ダイアログ セキュリティを構成する](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)方法、[詳細情報](../../relational-databases/service-broker/get-information-about-event-notifications.md)を確認してください。 
+
 

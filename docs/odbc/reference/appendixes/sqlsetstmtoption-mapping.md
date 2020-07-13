@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc4ed430b301f2b191c0586c0a54af19a2d2d526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91264cee0dfceeb7195e2bad40d1638a88e1e01a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091669"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304903"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption のマッピング
 アプリケーションが ODBC *3. x*ドライバーを介して**SQLSetStmtOption**を呼び出すとき、  

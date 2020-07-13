@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921887"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747602"
 ---
 # <a name="writing-your-own-customized-handler"></a>独自のカスタム ハンドラーの記述
 既定の RDS サポートを必要とするが、ユーザーの要求とアクセス権をより細かく制御できる IIS サーバー管理者の場合は、独自のハンドラーを作成することもできます。  
@@ -31,7 +31,7 @@ ms.locfileid: "67921887"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler インターフェイス  
  このインターフェイスには、 **Getrecordset**と**Reconnect**の2つのメソッドがあります。 どちらの方法でも、[カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定する必要があります。  
   
- どちらのメソッドも、"**Handler =**" キーワードの最初のコンマの後に表示される引数を受け取ります。 たとえば、 `"Handler=progid,arg1,arg2;"`は引数の`"arg1,arg2"`文字列を`"Handler=progid"`渡し、は null 引数を渡します。  
+ どちらのメソッドも、"**Handler =**" キーワードの最初のコンマの後に表示される引数を受け取ります。 たとえば、 `"Handler=progid,arg1,arg2;"` は引数の文字列を渡し、は `"arg1,arg2"` `"Handler=progid"` null 引数を渡します。  
   
 ## <a name="getrecordset-method"></a>GetRecordset メソッド  
  このメソッドは、指定された引数を使用して、データソースに対してクエリを行い、新しい[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを作成します。 **レコードセット**は**Adlockbatchoptimistic**で開かれている必要があり、非同期に開くことはできません。  

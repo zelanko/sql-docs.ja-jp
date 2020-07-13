@@ -1,5 +1,6 @@
 ---
 title: XPath クエリでのブール演算子の使用 (SQLXML)
+description: SQLXML 4.0 XPath クエリでブール演算子を使用する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 06d56d0537bfda3a2ce44033a30d0f8e429fc0c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773011"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理演算子の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下の例では、XPath クエリに論理演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 論理演算子を指定する  
- この XPath クエリでは、 **CustomerID**属性の値が13または31のコンテキストノードの** \<顧客>** 要素の子が返されます。  
+ この XPath クエリでは、 **\<Customer>** **CustomerID**属性値が13または31のコンテキストノードの子要素が返されます。  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252578"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述語では、 `attribute`は軸で、 `CustomerID`はノードテストです ( **CustomerID**が** \<属性>** ノードである場合は TRUE になります。これは、属性** \<>** ノードが**属性**軸のプライマリノードであるためです)。 述語は、 ** \<顧客>** 要素をフィルター処理し、述語に指定された条件を満たすものだけを返します。  
+ 述語では、 `attribute` は軸で、 `CustomerID` はノードテストです。これは**CustomerID** 、 **\<attribute>** **\<attribute>** ノードが**属性**軸のプライマリノードであるため、CustomerID がノードの場合は TRUE になります。 述語は、要素をフィルター処理 **\<Customer>** し、述語に指定された条件を満たす要素のみを返します。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>マッピングスキーマに対して XPath クエリをテストするには  
   

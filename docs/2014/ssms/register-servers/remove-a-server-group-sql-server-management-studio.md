@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c842e142dbf57dda870dbaf0834ae36974614996
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058361"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバー グループを削除する方法について説明します。 サーバー グループはいつでも削除できます。 サーバー グループが空でない場合は、削除するサーバー グループ内のサーバーまたはサーバー グループもすべて削除されます。 残しておくサーバーまたはサーバー グループがあれば、サーバー グループを削除する前に、別のサーバー グループに移動します。  

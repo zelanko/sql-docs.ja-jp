@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046353"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898369"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   序数位置が指定されたビットマスク内にあるかどうかを確認することで、キャプチャした列が更新されているかどうかを示します。  
   
@@ -42,7 +42,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>引数  
- *移動*  
+ *position*  
  確認するマスク内の序数位置です。 *position*は**int**です。  
   
  *update_mask*  
@@ -51,13 +51,13 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  通常、この関数は、列が変更されたかどうかを示すために、変更データクエリの一部として使用されます。 このシナリオでは、クエリの前に関数[sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)を使用して、必要な列の序数を取得します。 次に、返された変更データの各行に**sys. fn_cdc_is_bit_set**が適用され、返された結果セットの一部として列固有の情報が提供されます。  
   
  返される結果セットのすべての行に対して列が変更されたかどうかを判断するときは、関数の代わりにこの関数を使用することをお勧めします[。 fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) 。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、`sys.fn_cdc_is_bit_set` を使用して、クエリ関数 `cdc.fn_cdc_get_all_changes_HR_Department` によって生成された結果セットの前に列 '`IsGroupNmUpdated`' を付加します。このとき、事前計算済みの列序数と `__$update_mask` の値を呼び出しの引数として使用しています。  
@@ -76,12 +76,12 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データキャプチャ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [fn_cdc_get_column_ordinal &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [fn_cdc_has_column_changed &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

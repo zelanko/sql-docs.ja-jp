@@ -18,17 +18,17 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 385bdc1eef159fab35808516f3b5f55626235bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752371"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Full-Text Engine のプロパティに関する情報を返します。 これらのプロパティは、**sp_fulltext_service** を使用して設定および取得できます。  
   

@@ -11,15 +11,14 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedures function
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e37f15841a36eb95c1e9263d137ba2734d622367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63046686"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021795"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャは値を返します。 **Sqlprocedures**は、結果セット列 PROCEDURE_TYPE の SQL_PT_FUNCTION を報告します。  

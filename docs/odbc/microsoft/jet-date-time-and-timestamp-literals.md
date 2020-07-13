@@ -14,14 +14,14 @@ helpviewer_keywords:
 - timestamp literals [ODBC]
 - time literals [ODBC]
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372b7c1dab1ad8ff000fb88729c3b02e05d4a21c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085490"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299938"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 日付、時刻、およびタイムスタンプのリテラル
 相互運用性を最大にするために、アプリケーションは、エスケープ句の構文を使用して、ODBC 標準形式で日付リテラルを渡す必要があります。  

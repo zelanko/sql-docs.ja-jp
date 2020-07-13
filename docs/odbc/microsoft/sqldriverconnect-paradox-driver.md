@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLDriverConnect
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68171cfab2b65634433b107d829dd2a6e9b5c985
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967483"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307113"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox ドライバー)
 > [!NOTE]  
@@ -37,6 +37,6 @@ ms.locfileid: "67967483"
 > [!NOTE]  
 >  Paradox ドライバーに DBQ または DefaultDir が指定されていない場合、ドライバーは現在のディレクトリに接続します。  
   
-|Driver|キーワードが必要です|例|  
+|ドライバー|キーワードが必要です|例|  
 |------------|-----------------------|-------------|  
 |Paradox|ドライバー、DriverID|Driver = {Microsoft Paradox Driver (* db)};DBQ = c:\temp; DriverID = 26|

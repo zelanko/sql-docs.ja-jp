@@ -15,35 +15,35 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_identity_range system table
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4aafc6415d968d25b7ba4e708985e72378f9d95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889515"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSrepl_identity_range**テーブルでは、id 範囲の管理がサポートされています。 このテーブルは、パブリケーション、ディストリビューション、およびサブスクリプションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**文書**|**sysname**|パブリッシャーの名前です。|  
+|**publisher**|**sysname**|パブリッシャーの名前です。|  
 |**publisher_db**|**sysname**|パブリケーションデータベースの名前です。|  
 |**テーブル**|**sysname**|テーブルの名前。|  
 |**identity_support**|**int**|Id 範囲の自動処理を有効にするかどうかを指定します。 0は、自動 id 範囲の処理が有効になっていないことを示します。|  
 |**next_seed**|**bigint**|ID 範囲の自動処理が有効な場合、次の範囲の開始位置を指定します。|  
 |**pub_range**|**bigint**|パブリッシャーの id 範囲のサイズ。|  
-|**範囲**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
+|**range**|**bigint**|調整でサブスクライバーに割り当てられる連続する id 値のサイズ。|  
 |**max_identity**|**bigint**|ID 範囲の上限です。|  
-|**進入**|**int**|Id 範囲のしきい値の割合。|  
+|**threshold**|**int**|Id 範囲のしきい値の割合。|  
 |**current_max**|**bigint**|割り当て可能であるが必ずしも割り当てられていない、現在の最大値。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

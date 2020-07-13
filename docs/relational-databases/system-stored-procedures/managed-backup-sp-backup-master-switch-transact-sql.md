@@ -18,21 +18,20 @@ helpviewer_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942065"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053538"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup。 sp_backup_master_switch (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  を[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一時停止または再開します。  
+  を一時停止または再開 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。  
   
- 一時停止して再開[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]するには、このストアドプロシージャを使用します。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 が[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一時停止されている場合、保有期間は適用されません。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップファイルが壊れているかどうか、またはログチェーンを中断するかどうかを確認するチェックは行われません。  
+ 一時停止して再開するには、このストアドプロシージャを使用し [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ます。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 が一時停止されている場合 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、保有期間は適用されません。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップファイルが壊れているかどうか、またはログチェーンを中断するかどうかを確認するチェックは行われません。  
   
 
   
@@ -45,14 +44,14 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @state  
- の[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]状態を設定します。 @stateパラメーターは**BIT**です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
+ の状態を設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。 @stateパラメーターは**BIT**です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  このステートメントに関連したセキュリティの問題について説明します。サブセクション (H3 見出し) として「権限」を含めます。 必要に応じて、組み合わせ所有権や監査に関する他のサブセクションを含めることを検討してください。  
   
 ### <a name="permissions"></a>アクセス許可  

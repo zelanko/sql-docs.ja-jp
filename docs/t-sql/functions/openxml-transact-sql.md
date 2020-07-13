@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738070"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML は XML ドキュメントに対して行セット ビューを提供します。 OPENXML は行セット プロバイダーなので、テーブル、ビュー、または OPENROWSET 関数など、行セット プロバイダーを指定できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用できます。  
   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   

@@ -11,26 +11,21 @@ f1_keywords:
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33c44106a091f1d970b156a4b29a45738ee81169
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938153"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>[詳細表示] ダイアログ ボックス (Analysis Services - 多次元データ)
+  **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [詳細表示] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメッセージまたは操作についての詳細情報を表示できます。 **[詳細表示]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
-  **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [詳細表示] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメッセージまたは操作についての詳細情報を表示できます。 
-  **[詳細表示]** ダイアログ ボックスを表示するには、次の手順に従います。  
+-   **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目をダブルクリックするか、 **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目を選択して **[詳細表示]** をクリックします。  
   
--   
-  **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目をダブルクリックするか、 **[処理の進行状況]** ダイアログ ボックスの **[状態] ツリー ビュー** 内の項目を選択して **[詳細表示]** をクリックします。  
+-   **の** [配置状況] **ウィンドウの** [状態] ツリー ビュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内の項目をダブルクリックします。  
   
--   
-  **の** [配置状況] **ウィンドウの** [状態] ツリー ビュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内の項目をダブルクリックします。  
-  
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **詳細**  
  選択したメッセージまたは操作についての追加情報を表示します。  
   

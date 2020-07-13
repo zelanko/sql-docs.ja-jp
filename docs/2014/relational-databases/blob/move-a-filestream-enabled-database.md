@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79740ee86a89566113650865e3fd6ec54c7cb918
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66009954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970862"
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM が有効なデータベースの移動
   このトピックでは、FILESTREAM が有効なデータベースを移動する方法について説明します。  

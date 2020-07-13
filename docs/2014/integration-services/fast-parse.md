@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 343b8b8b74338512dbf29b3d2efd436df1ffa8ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425699"
 ---
 # <a name="fast-parse"></a>高速解析
   高速解析は、データを解析するための高速で単純なルーチンのセットです。 これらのルーチンはロケール依存型ではなく、日付、時刻、および整数形式のサブセットのみをサポートします。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - binary data transfers [ODBC]
 - converting data from c to SQL types [ODBC], binary
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7220497bfac2b74e933595cb7debfd35b98fc07b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 818de0086ce3996cc1f6194311d2a2bb80c9f564
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037731"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292118"
 ---
-# <a name="c-to-sql-binary"></a>C から SQL へ: バイナリ
+# <a name="c-to-sql-binary"></a>C から SQL へ: Binary
 バイナリ ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_BINARY  

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6ac93ebe2bc9c0ec63e22b3273592005873efac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 94687e1da630f4bd8bfa153e5bcd16d316b68d74
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001077"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860410"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSagent_profiles**テーブルからプロファイルを削除します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -42,7 +42,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_drop_agent_profile**は、すべての種類のレプリケーションで使用されます。  
   
  特定のプロファイルのパラメーターも**MSagent_parameters**テーブルから削除されます。  
@@ -50,10 +50,10 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ## <a name="permissions"></a>アクセス許可  
  **Sp_drop_agent_profile**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
  [sp_help_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -58,11 +58,11 @@ ms.locfileid: "75253480"
   
  このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定のインスタンス ID の例を次に示します。  
   
--   \{ の既定のインスタンスの場合: MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MSSQLSERVER。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既定のインスタンスの場合: MSSQL\{nn}.MSSQLSERVER。  
   
--   \{ Analysis Services の既定のインスタンスの場合: MSAS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nn}.MSSQLSERVER。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services の既定のインスタンスの場合: MSAS\{nn}.MSSQLSERVER。  
   
--   "MyInstance" という名前の \{ インスタンスの場合: MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MyInstance。  
+-   "MyInstance" という名前の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの場合: MSSQL\{nn}.MyInstance。  
   
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  

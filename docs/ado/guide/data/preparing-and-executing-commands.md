@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a59e357db60e3a29ec2473d4331ef4b6954889c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924560"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763103"
 ---
 # <a name="preparing-and-executing-commands"></a>準備とコマンドの実行
 コマンドは、基になるデータソースに対して何らかの操作を実行するためにプロバイダーに発行される命令です。 たとえば、SQL ステートメントは Microsoft SQL Data Provider のコマンドです。 ADO では、コマンドは通常、**コマンド**オブジェクトによって表されますが、**接続**または**レコードセット**オブジェクトを使用して簡単なコマンドを発行することもできます。  

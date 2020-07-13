@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772184"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡を使用している指定されたテーブルについて、保留中の挿入、更新、削除などの未処理の変更を返します。  
   
@@ -45,9 +45,9 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**[キー]**|*|指定したテーブルからのフルテキスト キー値。|  
+|**Key**|*|指定したテーブルからのフルテキスト キー値。|  
 |**DocId**|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
 |**状態**|**int**|0 = 行は、フルテキストインデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は遷移中 (バッチ処理されているがコミットされていない) 状態またはエラー状態です。|  
 |**DocState**|**tinyint**|内部ドキュメント識別子 (Docld) のマップ ステータス列の行ダンプ。|  
@@ -55,17 +55,16 @@ sp_fulltext_pendingchanges table_id
  <sup>* Key のデータ型は、ベース テーブルのフルテキスト キー列のデータ型と同じです。</sup>  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  未処理の変更がない場合、空の行セットが返されます。  
   
  フルテキスト検索クエリでは、 **Status**値が0の行は返されません。 これは、行がベーステーブルから削除され、フルテキストインデックスから削除されるのを待機しているためです。  
   
  特定のテーブルに対して保留中の変更の数を確認するには、OBJECTPROPERTYEX 関数の**TableFullTextPendingChanges**プロパティを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   

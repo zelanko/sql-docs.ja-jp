@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68205464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056473"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
   これは、「[すべてのメモリ内」](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)の手順に似ていますが、テーブル値パラメーターの実行時データを使用します。  
@@ -183,8 +182,8 @@ from @Items
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
- このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP で、SQLPutData の呼び出しごとに1行の行ストリーミングを使用できることを示します。  
+### <a name="description"></a>説明  
+ このサンプルでは、BCP.exe を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP で、SQLPutData の呼び出しごとに1行の行ストリーミングを使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   
@@ -371,8 +370,8 @@ EXIT:
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
- このサンプルでは、BCP を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP を使用して、SQLPutData の呼び出しごとに複数の行を使用できることを示します。  
+### <a name="description"></a>説明  
+ このサンプルでは、BCP.exe を使用してデータベースにデータを読み込む場合と同様に、ODBC TVP を使用して、SQLPutData の呼び出しごとに複数の行を使用できることを示します。  
   
  サンプルをビルドする前に、接続文字列のサーバー名を変更してください。  
   

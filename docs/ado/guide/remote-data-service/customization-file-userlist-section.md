@@ -11,14 +11,14 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 002bb8b92105547086ea8649a877b4a9d6f71d3b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922767"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749796"
 ---
 # <a name="customization-file-userlist-section"></a>カスタマイズ ファイルの UserList セクション
 **Userlist**セクションは、同じセクション*識別子*パラメーターを持つ**connect**セクションに関連しています。  
@@ -34,9 +34,9 @@ ms.locfileid: "67922767"
  _ユーザー名_**=**   
  **_accessRights_**  
   
-|要素|[説明]|  
+|パーツ|説明|  
 |----------|-----------------|  
-|*ユーザー名*|この接続を採用している*ユーザーのユーザー名*。 有効なユーザー名は、[IIS **Service Manager** ] ダイアログで確立されます。|  
+|*userName*|この接続を採用している*ユーザーのユーザー名*。 有効なユーザー名は、[IIS **Service Manager** ] ダイアログで確立されます。|  
 |**_accessRights_**|次のいずれかのアクセス権。<br /><br /> -   **NoAccess** -ユーザーはデータソースにアクセスできません。<br />-   **ReadOnly** -ユーザーはデータソースを読み取ることができます。<br />-   **ReadWrite** -ユーザーは、データソースに対して読み取りまたは書き込みを行うことができます。|  
   
 ## <a name="see-also"></a>参照  

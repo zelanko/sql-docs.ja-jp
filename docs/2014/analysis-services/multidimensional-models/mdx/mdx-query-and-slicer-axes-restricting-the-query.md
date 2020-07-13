@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ed4d50aa40d2915c60f887e64cdc3ef8a6d52c5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074040"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546274"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>クエリ軸とスライサー軸によるクエリの制限 (MDX)
   多次元式 (MDX) の SELECT ステートメントを作成する場合、アプリケーションでは通常、キューブを調べ、階層のセットを以下の 2 つのサブセットに分けます。  

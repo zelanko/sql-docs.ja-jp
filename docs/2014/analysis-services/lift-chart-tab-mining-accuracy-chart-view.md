@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66078101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541894"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>[リフト チャート] タブ ([マイニング精度チャート] ビュー)
-  
   **[リフト チャート]** ペインを使用すると、選択されたマイニング構造に含まれている、選択されたすべてのマイニング モデルを比較するグラフを表示できます。  
   
  不連続属性を予測するモデルの場合、リフト チャートまたは利益チャートを表示できます。 リフト チャートの詳細については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」を参照してください。  
@@ -32,9 +30,8 @@ ms.locfileid: "66078101"
  マイニング モデルの精度の測定方法に関する一般的な情報については、「[リフト チャート &#40;Analysis Services - データ マイニング&#41;](data-mining/lift-chart-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **グラフの種類**  
- ビューアーに表示するグラフの種類を設定します。 
-  **[リフト チャート]** または **[利益チャート]** のいずれかを選択できます。  
+ **[グラフの種類]**  
+ ビューアーに表示するグラフの種類を設定します。 **[リフト チャート]** または **[利益チャート]** のいずれかを選択できます。  
   
  **設定**  
  利益チャートの構成に使用できる **[利益チャートの設定]** ダイアログ ボックスを開きます。  
@@ -47,6 +44,6 @@ ms.locfileid: "66078101"
 ## <a name="see-also"></a>参照  
  [マイニング精度チャートデザイナー &#40;データマイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テストと検証のタスクと操作方法 &#40;データマイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [データマイニング&#41;のテストと検証 &#40;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

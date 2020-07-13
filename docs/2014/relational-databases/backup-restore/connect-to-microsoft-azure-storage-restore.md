@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9fb4a8943c237e37ca612bf367abe99d47c8eb08
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70154771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958787"
 ---
 # <a name="connect-to-azure-storage-restore"></a>Azure Storage への接続 (復元)
   このダイアログ ボックスを使用すると、Azure ストレージ アカウントのファイル ストレージを取得するために、Azure ストレージ アカウント情報への接続を指定できます。 必要な情報を指定した後、 **[接続]** をクリックして Azure Storage への接続を確立します。  

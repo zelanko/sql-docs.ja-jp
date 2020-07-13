@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a179e78b2e17391ce243a4e6b51ef5bb49f67d68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66056702"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423399"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>[パーティション処理変換先エディター] ([マッピング] ページ)
-  
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列をパーティション列にマップできます。  
   
  パーティション処理変換先の詳細については、「 [Partition Processing Destination](data-flow/partition-processing-destination.md)」を参照してください。  
@@ -31,22 +29,21 @@ ms.locfileid: "66056702"
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
   
 ## <a name="options"></a>オプション  
- **使用できる入力列**  
+ **[使用できる入力列]**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
  **使用できる変換先列**  
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 上の表で選択された入力列が表示されます。 
-  **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[パーティション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [[パーティション処理変換先エディター] &#40;詳細設定ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [[パーティション処理変換先エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

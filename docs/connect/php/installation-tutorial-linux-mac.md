@@ -1,6 +1,7 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル | Microsoft Docs
-ms.date: 12/12/2019
+title: Drivers for PHP 用の Linux と macOS のインストール
+description: この手順では、SQL Server on Linux または macOS 用の Microsoft Drivers for PHP をインストールする方法について説明します。
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058576"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886279"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル
-次の手順では、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache Web サーバー、Microsoft Drivers for PHP for SQL Server を、Ubuntu 16.04、18.04、および 19.10、RedHat 7 および 8、Debian 8、9、および 10、Suse 12 および 15、Alpine 3.11 (試験段階)、macOS 10.13、10.14、および 10.15 にインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールすることをお勧めしていますが、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページから事前構築済みバイナリをダウンロードし、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)に関するセクションを参照してください。
+次の手順では、クリーンな環境を想定し、PHP 7.x、Microsoft ODBC ドライバー、Apache Web サーバー、Microsoft Drivers for PHP for SQL Server を、Ubuntu 16.04、18.04、および 19.10、RedHat 7 および 8、Debian 8、9、および 10、Suse 12 および 15、Alpine 3.11、macOS 10.13、10.14、および 10.15 にインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールすることをお勧めしていますが、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページから事前構築済みバイナリをダウンロードし、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)に関するセクションを参照してください。
 
-これらの手順では、既定で PHP 7.4 がインストールされます。 サポートされている一部の Linux ディストリビューションでは、既定で PHP 7.1 が設定されますが、これは最新バージョンの SQL Server 用 PHP ドライバーではサポートされないことに注意してください。各セクションの先頭にある注記を参照して、代わりに PHP 7.2 または 7.3 をインストールしてください。
+これらの手順では、`pecl install` を使用して既定で PHP 7.4 がインストールされます。 最初に `pecl channel-update pecl.php.net` を実行することが必要な場合があります。 サポートされている一部の Linux ディストリビューションでは、既定で PHP 7.1 が設定されますが、これは最新バージョンの SQL Server 用 PHP ドライバーではサポートされないことに注意してください。各セクションの先頭にある注記を参照して、代わりに PHP 7.2 または 7.3 をインストールしてください。
 
 Ubuntu に PHP FastCGI Process Manager (PHP FPM) をインストールする手順も記載されています。 Apache ではなく nginx web サーバーを使用する場合は、これが必要です。
 
@@ -97,7 +98,7 @@ systemctl status php7.4-fpm
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーのインストール
 ```
-sudo pecl config-set php_ini /etc/php/7.3/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
@@ -123,7 +124,7 @@ sudo apt-get update
 sudo apt-get install nginx
 sudo systemctl status nginx
 ```
-nginx を構成するには、`/etc/nginx/sites-available/default` ファイルを編集する必要があります。 `index.php` というセクションの下にある一覧に `# Add index.php to the list if you are using PHP` を追加します。
+nginx を構成するには、`/etc/nginx/sites-available/default` ファイルを編集する必要があります。 `# Add index.php to the list if you are using PHP` というセクションの下にある一覧に `index.php` を追加します。
 ```
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
@@ -230,7 +231,7 @@ sudo su
 sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 ```
-`/usr/sbin` への `$PATH` の追加が必要になる場合があります。これは `locale-gen` 実行可能ファイルがその場所に配置されるためです。
+`$PATH` への `/usr/sbin` の追加が必要になる場合があります。これは `locale-gen` 実行可能ファイルがその場所に配置されるためです。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーのインストール
 ```
@@ -308,13 +309,10 @@ sudo systemctl restart apache2
 ## <a name="installing-the-drivers-on-alpine-311"></a>Alpine 3.11 へのドライバーのインストール
 
 > [!NOTE]
-> Alpine のサポートは試験段階です。
-
-> [!NOTE]
-> PHP の既定のバージョンは 7.3 です。 Alpine 3.11 の他のリポジトリから別のバージョンの PHP を入手することはできません。 代わりに、ソースから PHP をコンパイルできます。
+> PHP の既定のバージョンは 7.3 です。 Alpine 3.11 の他のリポジトリから、別のバージョンの PHP を入手できる場合があります。 代わりに、ソースから PHP をコンパイルできます。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP のインストール
-Alpine 用の PHP パッケージは、`edge/community` リポジトリにあります。 次の行の `/etc/apt/repositories` を Alpine リポジトリ ミラーの URL に置き換えて、`<mirror>` に追加します。
+Alpine 用の PHP パッケージは、`edge/community` リポジトリにあります。 WIKI ページで「[コミュニティ リポジトリの有効化](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository)」を確認してください。 次の行の `<mirror>` を Alpine リポジトリ ミラーの URL に置き換えて、`/etc/apt/repositories` に追加します。
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -335,10 +333,7 @@ sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 ```
-ロケールの定義が必要になる場合があります。
-```
-export LC_ALL=C
-```
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache のインストールとドライバーの読み込みの構成
 ```
 sudo apk add php7-apache2 apache2
@@ -406,7 +401,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>インストールのテスト
 
-このサンプル スクリプトをテストするには、システムのドキュメント ルートに testsql.php というファイルを作成します。 これは、Ubuntu、Debian、および Redhat では `/var/www/html/`、SUSE では `/srv/www/htdocs`、Alpine では `/var/www/localhost/htdocs`、macOS では `/usr/local/var/www` です。 次のスクリプトをそれにコピーし、該当する場合にサーバー、データベース、ユーザー名、およびパスワードを置き換えます。 Alpine 3.11 では、**配列に**CharacterSet`$connectionOptions` を 'UTF-8' として指定することも必要になる場合があります。
+このサンプル スクリプトをテストするには、システムのドキュメント ルートに testsql.php というファイルを作成します。 これは、Ubuntu、Debian、および Redhat では `/var/www/html/`、SUSE では `/srv/www/htdocs`、Alpine では `/var/www/localhost/htdocs`、macOS では `/usr/local/var/www` です。 次のスクリプトをそれにコピーし、該当する場合にサーバー、データベース、ユーザー名、およびパスワードを置き換えます。
 ```
 <?php
 $serverName = "yourServername";

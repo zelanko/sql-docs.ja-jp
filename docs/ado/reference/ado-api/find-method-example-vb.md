@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932624"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760108"
 ---
 # <a name="find-method-example-vb"></a>Find メソッドの例 (VB)
 この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドを使用して、 ***Pubs***データベース内のビジネスタイトルの数を検索し、カウントします。 この例では、基になるプロバイダーが同様の機能をサポートしていないと想定しています。  

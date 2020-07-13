@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: f00d0104477bdf0f1794fd47e8413db096f8c380
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929190"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67979880"
 ---
 # <a name="getshort-method-int"></a>getShort (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public short getShort(int index)
 ## <a name="remarks"></a>解説  
  この getShort メソッドは、java.sql.CallableStatement インターフェイスの getShort メソッドで規定されています。  
   
- このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]smallint **、** tinyint **、** bit**などの整数値を安全に返すことができる** データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、**smallint**、**tinyint**、**bit** などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getShort メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6ec24cd980cbfc71c5b9ba834f01bd17eb422400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c1606359b0757b24d0f9c2eee2bc2b3d76df334
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437209"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乗算) (SSIS 式)
   2 つの数値式を乗算します。  

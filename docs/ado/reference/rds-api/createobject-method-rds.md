@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964543"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762673"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネスオブジェクトのプロキシを作成し、そのオブジェクトへのポインターを返します。 プロキシは、ビジネスオブジェクトとの通信のためにデータをパッケージ化してサーバー側スタブにマーシャリングし、インターネット経由で要求とデータを送信します。 インプロセスコンポーネントオブジェクトの場合、プロキシは使用されません。オブジェクトへのポインターだけが使用されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "67964543"
   
 |Protocol|構文|  
 |--------------|------------|  
-|HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId\:", "https/websrvr")|  
-|HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId\:", "https/websrvr")|  
+|HTTP|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
+|HTTPS|Set object = の場合は、CreateObject. CreateObject ("ProgId", "https/ \: websrvr")|  
 |DCOM|Set object = の場合は、CreateObject. CreateObject ("ProgId", "computername")|  
 |インプロセス|Set object = を設定します。 CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>パラメーター  
- *Object*  
+ *オブジェクト*  
  *ProgID*で指定された型のオブジェクトに評価されるオブジェクト変数。  
   
  *DataSpace*  

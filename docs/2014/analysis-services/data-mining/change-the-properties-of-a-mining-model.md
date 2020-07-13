@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085878"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525038"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>マイニング モデルのプロパティの変更
   マイニング モデルのプロパティには、モデル全体に適用されるものと個別の列に適用されるものがあります。 モデル全体に適用されるプロパティの例は、ケース データをクエリで使用可能にする必要があるかどうかを指定する `Drillthrough` プロパティと、`Description` プロパティです。 列に適用されるプロパティには、モデル内で列のデータが使用される方法を制御する `Usage` および `ModelingFlags` があります。  
@@ -46,7 +45,7 @@ ms.locfileid: "66085878"
 2.  画面の右側の **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を強調表示し、新しい値を入力します。  
   
     > [!NOTE]  
-    >  列の使用法がに`Ignore`設定されている場合、列の [**プロパティ**] ウィンドウは空白になります。  
+    >  列の使用法がに設定されている場合 `Ignore` 、列の [**プロパティ**] ウィンドウは空白になります。  
   
      新しい値は、デザイナーで別の要素を選択したときに有効になります。  
   

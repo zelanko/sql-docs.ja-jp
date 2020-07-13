@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
 - sql12.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d5fd68fc4569dfb4cd151c2751fa3a466c49961b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771656"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439039"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトは、配置の 1 単位です。 各プロジェクトには、パッケージ、パラメーター、および環境の参照を含めることができます。 プロジェクトはセキュリティ保護可能なオブジェクトであり、データベース プリンシパルの権限を定義できます。 プロジェクトを再配置するときに、以前のバージョンのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログに保存できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62771656"
   
 -   [[権限] ページのオプションの設定](#permissions)  
   
-##  <a name="open_dialog"></a> [プロジェクトのプロパティ] ダイアログ ボックスを開く  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> [プロジェクトのプロパティ] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -47,10 +46,10 @@ ms.locfileid: "62771656"
   
 5.  プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="general"></a> [全般] ページのオプションの設定  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  
   
- **名前**  
+ **Name**  
  プロジェクト名を一覧表示します。  
   
  **識別子**  
@@ -65,13 +64,13 @@ ms.locfileid: "62771656"
  **配置日**  
  プロジェクトを配置または再配置した日付と時刻を一覧表示します。  
   
-##  <a name="permissions"></a> [権限] ページのオプションの設定  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> [権限] ページのオプションの設定  
  プロジェクトの明示的な権限を表示および設定するには、 **[権限]** ページを使用します。  
   
  参照  
  **[参照]** をクリックすると、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、権限を設定するユーザーおよびロールを選択できます。  
   
- **名前**  
+ **Name**  
  ユーザーまたはロールの名前を一覧表示します。  
   
  **Type**  

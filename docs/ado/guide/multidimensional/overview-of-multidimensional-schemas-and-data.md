@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748089"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>多次元スキーマについて  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>階層  
  階層は、ディメンションのレベルを "ロールアップ" またはグループ化する方法を定義します。 ディメンションには、複数の階層を含めることができます。 Geography ディメンションには自然階層が存在します。  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>レベル  
  前の図に示されている Geography ディメンションの例では、各ボックスは階層内のレベルを表します。  
   
  各レベルには、次のようにメンバーのセットがあります。  

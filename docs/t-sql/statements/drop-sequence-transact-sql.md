@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27fa82b3dfcdf6f789ead291ca6331be57c7bf67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766122"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースからシーケンス オブジェクトを削除します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68077720"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  

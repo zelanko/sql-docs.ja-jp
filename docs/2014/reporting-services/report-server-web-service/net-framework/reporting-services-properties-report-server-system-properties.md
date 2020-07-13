@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260824"
 ---
 # <a name="report-server-system-properties"></a>レポート サーバーのシステム プロパティ
@@ -25,7 +25,7 @@ ms.locfileid: "63260824"
   
 ## <a name="properties"></a>Properties  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |SiteName|ユーザー インターフェイスに表示されるレポート サーバー サイトの名前。 既定値は `Microsoft Report Server` です。 このプロパティには空の文字列を指定できます。 最大長は 8,000 文字です。|  
 |SystemSnapshotLimit|レポートに格納されるスナップショットの最大数。 有効値は `-1` ～ `2`、`147`、`483`、`647` です。 値が `-1` の場合、スナップショットに制限はありません。|  
@@ -36,13 +36,9 @@ ms.locfileid: "63260824"
 |MyReportsRole|ユーザーの個人用レポート フォルダーに、セキュリティ ポリシーを作成する際に使用するロールの名前。 既定値は `My Reports Role` です。|  
 |EnableExecutionLogging|レポート実行のログ記録が有効になっているかどうかを示します。 既定値は `true` です。|  
 |ExecutionLogDaysKept|レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は `0` ～ `2`、`147`、`483`、`647` です。 値が `0` の場合、エントリは実行ログ テーブルから削除されません。 既定値は `60` です。|  
-|SnapshotCompression|スナップショットの圧縮方法を定義します。 既定値は `SQL` です。 有効な値は次のとおりです。<br /><br /> 
-  `SQL` = スナップショットは、レポート サーバー データベースへの格納時に圧縮されます。 これは現在の動作です。<br /><br /> **なし** = スナップショットは圧縮されません。<br /><br /> 
-  `All` = すべてのストレージ オプションのスナップショットが圧縮されます。このオプションには、レポート サーバー データベースやファイル システムが含まれます。|  
+|SnapshotCompression|スナップショットの圧縮方法を定義します。 既定値は `SQL` です。 有効な値は次のとおりです。<br /><br /> `SQL` = スナップショットは、レポート サーバー データベースへの格納時に圧縮されます。 これは現在の動作です。<br /><br /> **なし** = スナップショットは圧縮されません。<br /><br /> `All` = すべてのストレージ オプションのスナップショットが圧縮されます。このオプションには、レポート サーバー データベースやファイル システムが含まれます。|  
 |EnableClientPrinting|レポート サーバーからのダウンロードに RSClientPrint ActiveX コントロールが使用可能かどうかを示します。 有効な値は`true` 、 `false`とです。 既定値は `true` です。 このコントロールに必要な追加設定に関する詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。|  
-|EnableIntegratedSecurity|統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定では、 `True`です。 有効な値は次のとおりです。<br /><br /> 
-  `True` = 統合セキュリティが有効になります。<br /><br /> 
-  `False` = 統合セキュリティが有効になりません。 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|  
+|EnableIntegratedSecurity|統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は、`True` です。 有効な値は次のとおりです。<br /><br /> `True` = 統合セキュリティが有効になります。<br /><br /> `False` = 統合セキュリティが有効になりません。 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|  
 |EnableRemoteErrors|リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効な値は `true` と `false` です。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../report-server/enable-remote-errors-reporting-services.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 8b975fcc9fae02ec5e54d48191e3ab8aa5ac0ee8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922654"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75681703"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC ドライバーの Always Encrypted API のリファレンス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "80922654"
 
 |Name|説明|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|**API メソッドを使用して**暗号化された`setObject()/updateObject()` datetime、smalldatetime、money、smallmoney、uniqueidentifier 列にパラメーター値を送信するときは、これらの型をターゲット SQL 型として使用します。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|`setObject()/updateObject()` API メソッドを使用して**暗号化された** datetime、smalldatetime、money、smallmoney、uniqueidentifier 列にパラメーター値を送信するときは、これらの型をターゲット SQL 型として使用します。|  
   
   
  **SQLServerStatementColumnEncryptionSetting Enum**  

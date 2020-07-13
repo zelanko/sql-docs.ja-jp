@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138277"
 ---
 # <a name="mdx-scripting---scope"></a>MDX スクリプティング - SCOPE
@@ -72,7 +72,7 @@ Limited_Set ::=
  *single_tuple*  
  1 つの組です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SCOPE ステートメントは、1つまたは複数の MDX ステートメントの実行によって影響を受けるサブキューブを決定します。 MDX ステートメントが SCOPE ステートメント内にある場合を除き、MDX ステートメントの暗黙的なスコープはキューブ全体です。  
   
 > [!NOTE]  
@@ -114,6 +114,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

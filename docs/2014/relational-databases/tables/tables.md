@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055047"
 ---
 # <a name="tables"></a>テーブル
   テーブルは、データベースのすべてのデータを格納するデータベース オブジェクトです。 テーブルでは、スプレッドシートのように、データが論理的に行と列の形式にまとめられます。 各行は一意なレコードを表し、各列はレコードのフィールドを表します。 たとえば、会社の従業員のデータを格納するテーブルを、各従業員に相当する行と、従業員の社員番号、姓名、住所、役職名、自宅の電話番号などの情報を格納する列から構成する場合があります。  
@@ -30,19 +29,16 @@ ms.locfileid: "68211786"
 -   テーブル内のデータは、行ごとまたはページごとに圧縮できます。 データを圧縮すると、より多くの行をページに格納できます。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 ## <a name="types-of-tables"></a>テーブルの種類  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、標準的な役割を果たす基本的なユーザー定義のテーブル以外に、データベース内で特別な目的で使用される次のようなテーブルがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、標準的な役割を果たす基本的なユーザー定義のテーブル以外に、データベース内で特別な目的で使用される次のようなテーブルがあります。  
   
  パーティション テーブル  
- パーティション テーブルはデータが行方向に分割されているテーブルで、パーティションがデータベースの複数のファイル グループに分散される場合もあります。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、最大 15,000 個のパーティションを既定でサポートしています。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
+ パーティション テーブルはデータが行方向に分割されているテーブルで、パーティションがデータベースの複数のファイル グループに分散される場合もあります。 大きなテーブルやインデックスをパーティション分割すると、コレクション全体の整合性を維持しながら、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うことができるので、大きなテーブルやインデックスを管理しやすくなります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、最大 15,000 個のパーティションを既定でサポートしています。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  一時テーブル  
- 一時テーブルはに`tempdb`格納されます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。  
+ 一時テーブルはに格納され `tempdb` ます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。  
   
  システム テーブル  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーの構成とすべてのテーブルの構成を定義したデータが、システム テーブルという特殊なテーブル セットに格納されます。 ユーザーは、システム テーブルに対して直接クエリや更新を行うことはできません。 システム テーブル内の情報は、システム ビューから入手できます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](/sql/t-sql/language-reference)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーの構成とすべてのテーブルの構成を定義したデータが、システム テーブルという特殊なテーブル セットに格納されます。 ユーザーは、システム テーブルに対して直接クエリや更新を行うことはできません。 システム テーブル内の情報は、システム ビューから入手できます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](/sql/t-sql/language-reference)」を参照してください。  
   
  幅の広いテーブル  
  幅の広いテーブルでは、 [スパース列](use-sparse-columns.md) を使用して、テーブルに持たせることができる列の合計数が 30,000 まで増加します。 スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 幅の広いテーブルでは [列セット](use-column-sets.md)が定義されています。これは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 インデックスと統計情報の数も、それぞれ 1,000 と 30,000 に増加します。 幅の広いテーブルの最大行サイズは 8,019 バイトです。 そのため、特定の行のデータの大部分を NULL にする必要があります。 幅の広いテーブルの非スパース列と計算列の最大数は合わせて 1,024 のままです。  
@@ -66,10 +62,10 @@ ms.locfileid: "68211786"
   
 |テーブルのタスク|トピック|  
 |-----------------|-----------|  
-|テーブルを作成する方法について説明します。|[テーブルを作成 &#40;データベースエンジン&#41;](create-tables-database-engine.md)|  
-|テーブルを削除する方法について説明します。|[データベースエンジン &#40;テーブルの削除&#41;](delete-tables-database-engine.md)|  
+|テーブルを作成する方法について説明します。|[テーブルの作成 &#40;データベース エンジン&#41;](create-tables-database-engine.md)|  
+|テーブルを削除する方法について説明します。|[テーブルの削除 &#40;データベース エンジン&#41;](delete-tables-database-engine.md)|  
 |既存のテーブルの一部またはすべての列を含む新しいテーブルを作成する方法について説明します。|[テーブルの複製](duplicate-tables.md)|  
-|テーブル名を変更する方法について説明します。|[テーブル名の変更 &#40;データベースエンジン&#41;](rename-tables-database-engine.md)|  
+|テーブル名を変更する方法について説明します。|[テーブル名の変更 &#40;データベース エンジン&#41;](rename-tables-database-engine.md)|  
 |テーブルのプロパティを表示する方法について説明します。|[テーブルの定義の表示](view-the-table-definition.md)|  
 |ビューやストアド プロシージャなどの他のオブジェクトがテーブルに依存しているかどうかを判断する方法について説明します。|[テーブルの依存関係の表示](view-the-dependencies-of-a-table.md)|  
   
@@ -77,17 +73,17 @@ ms.locfileid: "68211786"
   
 |列のタスク|トピック|  
 |------------------|-----------|  
-|既存のテーブルに列を追加する方法について説明します。|[テーブルへの列の追加 &#40;データベースエンジン&#41;](add-columns-to-a-table-database-engine.md)|  
+|既存のテーブルに列を追加する方法について説明します。|[テーブルへの列の追加 &#40;データベース エンジン&#41;](add-columns-to-a-table-database-engine.md)|  
 |テーブルの列を削除する方法について説明します。|[テーブルからの列の削除](delete-columns-from-a-table.md)|  
-|列の名前を変更する方法について説明します。|[列名の変更 &#40;データベースエンジン&#41;](rename-columns-database-engine.md)|  
-|列の定義のみ、または定義とデータの両方をコピーすることで、あるテーブルから別のテーブルに列をコピーする方法について説明します。|[テーブル間での列のコピー &#40;データベースエンジン&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|データ型やその他のプロパティを変更することによって列定義を変更する方法について説明します。|[データベースエンジン &#40;の列の変更&#41;](modify-columns-database-engine.md)|  
+|列の名前を変更する方法について説明します。|[列名の変更 &#40;データベース エンジン&#41;](rename-columns-database-engine.md)|  
+|列の定義のみ、または定義とデータの両方をコピーすることで、あるテーブルから別のテーブルに列をコピーする方法について説明します。|[テーブル間での列のコピー &#40;データベース エンジン&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
+|データ型やその他のプロパティを変更することによって列定義を変更する方法について説明します。|[列の変更 &#40;データベース エンジン&#41;](modify-columns-database-engine.md)|  
 |列の表示順序を変更する方法について説明します。|[テーブル内の列の順序の変更](change-column-order-in-a-table.md)|  
 |テーブルに計算列を作成する方法について説明します。|[テーブルの計算列の指定](specify-computed-columns-in-a-table.md)|  
 |列の既定値を指定する方法を説明します。 この値は、別の値が指定されない場合に使用されます。|[列の既定値の指定](specify-default-values-for-columns.md)|  
   
 ## <a name="see-also"></a>参照  
  [Primary および Foreign Key 制約](primary-and-foreign-key-constraints.md)   
- [UNIQUE 制約と CHECK 制約](unique-constraints-and-check-constraints.md)  
+ [Unique 制約と Check 制約](unique-constraints-and-check-constraints.md)  
   
   

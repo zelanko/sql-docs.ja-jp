@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aeeed1f69513979a566a7db4385e4dc00b4855b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940460"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>[単項演算子の指定] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
-  
   **[単項演算子の指定]** ページを使用すると、親属性が定義されており、ビジネス インテリジェンス ウィザードで単項演算子が適用されるディメンションを選択できます。 親属性の詳細については、「 [属性と属性階層](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
   
 > [!NOTE]  

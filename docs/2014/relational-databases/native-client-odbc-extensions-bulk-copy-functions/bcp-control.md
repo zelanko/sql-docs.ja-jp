@@ -15,15 +15,14 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9006d6810d03cce7cb996b500449a7a4f864bb96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62689524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019713"
 ---
 # <a name="bcp_control"></a>bcp_control
   ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の一括コピーに使用するさまざまな制御パラメーターの既定の設定を変更します。  
@@ -61,7 +60,7 @@ iValue
  BCPDELAYREADFMT  
  ブール値を true に設定すると、 [bcp_readfmt](bcp-readfmt.md)が実行時に読み込まれます。 False (既定値) の場合、bcp_readfmt はすぐにフォーマットファイルを読み取ります。 BCPDELAYREADFMT が true で bcp_columns または bcp_setcolfmt を呼び出すと、シーケンスエラーが発生します。  
   
- Bcpdelayreadfmt`, (void *)TRUE)`および bcp_writefmt を呼び出し`bcp_control(hdbc,` `, (void *)FALSE)` `bcp_control(hdbc,`た後に bcpdelayreadfmt を呼び出した場合も、シーケンスエラーが発生します。  
+ `bcp_control(hdbc,` `, (void *)FALSE)` Bcpdelayreadfmt および bcp_writefmt を呼び出した後に bcpdelayreadfmt を呼び出した場合も、シーケンスエラーが発生し `bcp_control(hdbc,` `, (void *)TRUE)` ます。  
   
  詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
@@ -75,7 +74,7 @@ iValue
  BCPFILE_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコード ページが使用されます。  
   
  BCPFILEFMT  
- データ ファイル形式のバージョン番号を指定します。 80[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]()、90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]()、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 たとえば、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバーのテキスト列から取得したデータを、以降のサーバーの[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **varchar (max)** 列にインポートするには、80を指定する必要があります。 同様に、 **varchar (max)** 列からデータをエクスポートするときに80を指定した場合は、テキスト列が[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]形式で保存され、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバーのテキスト列にインポートできるのと同じように保存されます。  
+ データ ファイル形式のバージョン番号を指定します。 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] )、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] )、100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] )、または 120 () [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 たとえば、サーバーのテキスト列から取得したデータを、以降の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーの**varchar (max)** 列にインポートするには、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 80 を指定する必要があります。 同様に、 **varchar (max)** 列からデータをエクスポートするときに80を指定した場合は、テキスト列が形式で保存され、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーのテキスト列にインポートできるのと同じように保存され [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。  
   
  BCPFIRST   
  ファイルまたはテーブルにコピーする最初のデータ行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。  
@@ -99,10 +98,10 @@ iValue
  *Ivalue*には、sqltchar 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理のヒントの詳細については、「 [Bcp ユーティリティ](../../tools/bcp-utility.md)」を参照してください。  
   
  BCPKEEPIDENTITY  
- *Ivalue*が TRUE の場合、一括コピー関数は、id 制約で定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された列に対して指定されたデータ値を挿入するように指定します。 入力ファイルには ID 列の値を指定する必要があります。 このオプションを設定しないと、挿入される行に対して新しい ID 値が生成されます。 ファイル内に存在する ID 列用のデータはすべて無視されます。  
+ *Ivalue*が TRUE の場合、一括コピー関数は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 制約で定義された列に対して指定されたデータ値を挿入するように指定します。 入力ファイルには ID 列の値を指定する必要があります。 このオプションを設定しないと、挿入される行に対して新しい ID 値が生成されます。 ファイル内に存在する ID 列用のデータはすべて無視されます。  
   
  BCPKEEPNULLS   
- ファイル内の空のデータ値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルで NULL 値に変換するかどうかを指定します。 *Ivalue*が TRUE の場合、空の値は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルで NULL に変換されます。 既定では、空の値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列の既定値 (存在する場合) に変換されます。  
+ ファイル内の空のデータ値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルで NULL 値に変換するかどうかを指定します。 *Ivalue*が TRUE の場合、空の値はテーブルで NULL に変換され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定では、空の値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列の既定値 (存在する場合) に変換されます。  
   
  BCPLAST   
  コピーする最後の行を示します。 既定では、すべての行がコピーされます。1 より小さい値を指定すると、このオプションは既定値にリセットされます。  
@@ -137,12 +136,12 @@ iValue
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数では、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  
   
  また、この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から SELECT ステートメントの結果セットを一括コピーするときに、その SELECT ステートメントを指定するためにも使用します。 *EOption*を BCPHINTS に設定し、 *ivalue*を SET ステートメントを含む sqltchar 文字列へのポインターを持つように設定します。  
   
- これらの制御パラメーターは、ユーザー ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの間でコピーを行う場合のみ意味があります。 コントロールパラメーターの設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)でにコピーされる行には影響しません。  
+ これらの制御パラメーターは、ユーザー ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの間でコピーを行う場合のみ意味があります。 コントロールパラメーターの設定は、bcp_sendrow でにコピーされる行には影響しません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](bcp-sendrow.md)  
   
 ## <a name="example"></a>例  
   

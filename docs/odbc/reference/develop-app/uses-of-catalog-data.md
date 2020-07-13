@@ -12,14 +12,14 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc8999c0a7189772145f553646b45eb1f1fbd695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 429d42d4a82d0f9f34e33eb4f5f3293100505da9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091609"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306813"
 ---
 # <a name="uses-of-catalog-data"></a>カタログ データの使用
 アプリケーションでは、さまざまな方法でカタログデータを使用します。 一般的な用途を次に示します。  

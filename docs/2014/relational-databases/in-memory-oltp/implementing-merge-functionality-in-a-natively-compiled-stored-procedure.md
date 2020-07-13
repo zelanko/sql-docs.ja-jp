@@ -7,21 +7,19 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 14a57452c7b2f5234e230665734d5048b5421b51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63015923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050141"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 機能の実装
   データベースは、特定の行がデータベースに既に存在するかどうかによって、挿入か更新のどちらかの実行が必要になる場合があります。  
   
- 
-  `MERGE` ステートメントを使用せずに [!INCLUDE[tsql](../../includes/tsql-md.md)] で使用できる方法の 1 つは次のとおりです。  
+ `MERGE` ステートメントを使用せずに [!INCLUDE[tsql](../../includes/tsql-md.md)] で使用できる方法の 1 つは次のとおりです。  
   
 ```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  

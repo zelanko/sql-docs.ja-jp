@@ -1,5 +1,6 @@
 ---
 title: id 関数 (XQuery) |Microsoft Docs
+description: 'XQuery id 関数を使用して、指定された xs: IDREF 値を使用して、ドキュメント順で XML インスタンス内の要素のシーケンスを返す方法について説明します。'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68004659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753552"
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの関数 - id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*で指定された1つ以上の XS: IDREF 値の値と一致する XS: ID 値を持つ要素ノードのシーケンスを返します。  
   
@@ -38,16 +39,16 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  1つ以上の xs: IDREF 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  関数の結果は、ドキュメント順に XML インスタンス内の要素のシーケンスであり、xs: ID 値が、候補 xs: IDREFs のリスト内の1つ以上の xs: IDREFs と同じになります。  
   
  xs:IDREF 値がどの要素とも一致しない場合は、空のシーケンスを返します。  
   
-## <a name="examples"></a>例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>使用例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得する  
- 次の例では、fn: id を使用`employee`して、IDREF マネージャー属性に基づいて <> 要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A: IDREF 属性値に基づいて要素を取得する  
+ 次の例では、fn: id を使用して、 `employee` IDREF マネージャー属性に基づいて <> 要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
   
  **Id ()** 関数は、特定のマネージャー属性値に対して、 `employee` id 型の属性値が入力 IDREF 値と一致する <> 要素を検索します。 つまり、 **id ()** 関数は、特定の従業員の従業員マネージャーを返します。  
   
@@ -57,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   型指定された**xml**変数は、xml スキーマコレクションを使用して作成されます。  
   
--   クエリは、<`employee`> 要素の**manager** IDREF 属性によって参照される ID 属性値を持つ要素を取得します。  
+-   クエリは、<> 要素の**manager** IDREF 属性によって参照される ID 属性値を持つ要素を取得し `employee` ます。  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -97,8 +98,8 @@ Go
   
  このクエリでは、値として "Dave" が返されます。 これは、Dave が Joe のマネージャーであることを示します。  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 属性値に基づいて要素を取得する  
- 次の例では、<`Customer`> 要素の orderlist 属性は IDREFS 型の属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 注文 id ごとに、order 値を指定`Order`> <`Customer`の下に子要素> <が存在します。  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B: OrderList IDREFS 属性値に基づいて要素を取得する  
+ 次の例では、<> 要素の OrderList 属性 `Customer` は IDREFS 型の属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 注文 id ごとに、 `Order` order 値を指定> <の下に子要素> <が存在 `Customer` します。  
   
  クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値は、 **id ()** 関数に渡されます。 次に、関数は、 `Order` OrderID 属性値が**id ()** 関数への入力と一致する <> 要素を検索します。  
   
@@ -180,7 +181,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、 **id ()** の引数の型が XS: IDREF * のサブタイプである必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Unicode [ODBC]
 - Unicode [ODBC], about Unicode
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e0044a2e2efbf0d8921a07ed4679806ba50bcd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9824e76cebabb6f5f84505292801a0094e359f0f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087562"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302448"
 ---
 # <a name="unicode"></a>Unicode
 Unicode では、多くの言語で文字のエンコードを定義します。  

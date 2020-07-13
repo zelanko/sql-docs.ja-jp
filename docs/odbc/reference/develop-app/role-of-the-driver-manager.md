@@ -16,14 +16,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee3d704ea43125c3cd912a4e67d90bf5d50c733e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020401"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304303"
 ---
 # <a name="role-of-the-driver-manager"></a>ドライバー マネージャーのロール
 ドライバーマネージャーは、生成された状態レコードを返す最終的な順序を決定します。 特に、順位が最も高いレコードを決定し、最初に返されるレコードを決定します。 ドライバーは、生成された状態レコードの順序付けを行います。 状態レコードがドライバーマネージャーとドライバーの両方によって投稿されている場合は、ドライバーマネージャーによってそれらの順序が決定されます。 詳細については、「[一連の状態レコード](../../../odbc/reference/develop-app/sequence-of-status-records.md)」を参照してください。  

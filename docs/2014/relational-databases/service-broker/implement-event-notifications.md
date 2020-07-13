@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a89c66ca5c3b420fff14c087bd604b16c641369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68197748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996549"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
   イベント通知を実装するには、最初にイベント通知を受け取る通知先サービスを作成してから、イベント通知を作成する必要があります。  

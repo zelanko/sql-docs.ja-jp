@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088478"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527718"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes モデルの参照
   **参照**を使用して単純な Bayes モデルを開くと、4つの異なるペインを含む対話型ビューアーにモデルが表示されます。 ビューアーを使用して、相関関係を調査し、モデルと基になるデータに関する情報を取得します。  
@@ -28,14 +27,14 @@ ms.locfileid: "66088478"
   
 -   [属性の識別](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>モデルの調査  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>モデルの調査  
  ビューアーの目的は、[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes モデルで検出された入力属性と出力属性 (入力と従属変数) の相互作用を調査することです。  
   
  単純な Bayes ビューアーを試してみる場合は、[データマイニング] リボンの [ [Excel 用データマイニングアドインの &#40;データマイニングアドイン]&#41;](classify-wizard-data-mining-add-ins-for-excel.md)ウィザードを使用して、[**詳細設定**] オプションをクリックし、単純な Bayes アルゴリズムを使用するようにアルゴリズムを変更します。  
   
  これらの例では、サンプルブックのソースデータを使用して、**年収**の列を、**非常に低い**から**非常に高い**5 つの収入グループにグループ化しています。 その後、Naïve Bayes モデルを使って、各収入カテゴリと相関関係を持つ要因を分析しました。  
   
-###  <a name="bkmk_DepNet"></a>依存関係ネットワーク  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>依存関係ネットワーク  
  最初に使用するウィンドウは、**依存関係ネットワーク**です。 どの入力が選択した結果と密接に関連しているかがひとめでわかります。  
   
  ![Naive Bayes ビューアーに表示された依存関係ネットワーク](media/dm13-nb.gif "Naive Bayes ビューアーに表示された依存関係ネットワーク")  
@@ -56,7 +55,7 @@ ms.locfileid: "66088478"
   
  [トップに戻る](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>属性のプロファイル  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> 属性のプロファイル  
  [**属性プロファイル**ウィンドウには、他のすべての変数が個々の結果にどのように関連しているかが視覚的に示されます。  
   
 ##### <a name="explore-the-profiles"></a>プロファイルの調査  
@@ -73,7 +72,7 @@ ms.locfileid: "66088478"
   
  [トップに戻る](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>属性の特性  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>属性の特性  
  **属性特性**ビューは、特定の結果変数および関与する要因の詳細な調査に役立ちます。  
   
  ![Naive Bayes ビューアーに表示された属性の特性](media/dm13-nb-viewer.gif "Naive Bayes ビューアーに表示された属性の特性")  
@@ -90,7 +89,7 @@ ms.locfileid: "66088478"
   
  [トップに戻る](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>属性の識別  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>属性の識別  
  **属性の識別**ビューは、2つの結果、または1つの結果と他のすべての結果を比較するのに役立ちます。  
   
  ![Naive Bayes ビューアーに表示された属性の識別](media/dm13-nb-attdisc.gif "Naive Bayes ビューアーに表示された属性の識別")  

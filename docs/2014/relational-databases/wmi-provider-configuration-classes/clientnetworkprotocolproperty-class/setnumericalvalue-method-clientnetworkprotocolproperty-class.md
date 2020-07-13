@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f5459373689c17e0a55d8df0f02507bf24989ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d846b13ac75ac1c0f4eb4ca2abe8cf7fb6e99440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63245071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013940"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue メソッド (ClientNetworkProtocolProperty クラス)
   [Propertyidx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)の値によって参照される、現在のプロパティの数値を設定します。  
@@ -36,21 +35,20 @@ object
 .SetNumericalValue [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- クライアントによって[!INCLUDE[msCoName](../../../includes/msconame-md.md)]使用されるネットワークプロトコルの属性を表す[clientnetworkprotocolproperty クラス](clientnetworkprotocolproperty-class.md)オブジェクト。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="parts"></a>指定項目  
+ *object*  
+ クライアントによって使用されるネットワークプロトコルの属性を表す[Clientnetworkprotocolproperty クラス](clientnetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
-|*数値*|参照されたプロパティの数値を指定する `uint32` 値|  
+|*value*|参照されたプロパティの数値を指定する `uint32` 値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100592"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298222"
 ---
 # <a name="procedure-call-escape-sequence"></a>プロシージャ呼び出しのエスケープ シーケンス
 ODBC では、プロシージャ呼び出しにエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  

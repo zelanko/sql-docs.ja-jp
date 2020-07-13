@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8d52790be862d4a41552a32a7be4082decf2af0f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061759"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>タスク 1: データ品質プロジェクトを作成する
   ここでは、このチュートリアルで既に作成した Suppliers ナレッジ ベースに対して Excel ファイルの仕入先データをクレンジングするためのデータ品質プロジェクトを作成します。
@@ -32,7 +31,7 @@ ms.locfileid: "78177302"
 
      ![[新しいデータ品質プロジェクト] ページ - クレンジングが選択されている場合](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "[新しいデータ品質プロジェクト] ページ - クレンジングが選択されている場合")
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 2: DQS ドメインに Excel 列をマップする](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
 
 

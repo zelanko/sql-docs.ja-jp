@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f44097ef41a4dc1a115dbdad9f9ff7940a1c2880
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62676307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058148"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
   テーブルの作成クエリを使用すると、新しいテーブルに行をコピーできます。これは、処理するデータのサブセットを作成したり、データベース間でテーブルの内容をコピーしたりするのに役立ちます。 テーブルの作成クエリは結果の挿入クエリと似ていますが、新しいテーブルを作成してそこに行をコピーする点で異なります。  
@@ -59,11 +58,9 @@ WHERE country = 'UK'
   
 1.  ダイアグラム ペインにコピー元テーブルを追加します。  
   
-2.  
-  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
+2.  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
   
-3.  
-  **[テーブルの作成]** ダイアログ ボックスで、コピー先テーブルの名前を入力します。 クエリおよびビュー デザイナーでは、名前が既に使用されているかどうかや、テーブルを作成する権限があるかどうかなどの確認は行われません。  
+3.  **[テーブルの作成]** ダイアログ ボックスで、コピー先テーブルの名前を入力します。 クエリおよびビュー デザイナーでは、名前が既に使用されているかどうかや、テーブルを作成する権限があるかどうかなどの確認は行われません。  
   
      他のデータベースにコピー先テーブルを作成するには、目的のデータベース名、所有者 (必要な場合)、およびテーブル名を含む完全なテーブル名を指定します。  
   

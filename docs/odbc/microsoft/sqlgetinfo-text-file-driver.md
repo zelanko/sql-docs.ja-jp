@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Text File Driver
 - text file driver [ODBC], SQLGetInfo
 ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 892fdabc319b1d495120cdce20d77f05cd232418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09ca2e42e20a6f314de3b68fe5d5b143f41269c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898829"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298503"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (テキスト ファイル ドライバー)
 > [!NOTE]  
@@ -36,9 +36,9 @@ ms.locfileid: "67898829"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|ドライバー|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
-|Text|1.0|01.00.0000|  
+|テキスト|1.0|01.00.0000|  
   
 ## <a name="sql_catalog_usage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  

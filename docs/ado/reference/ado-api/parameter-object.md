@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931661"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759998"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーター化クエリまたはストアドプロシージャに基づいて[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトに関連付けられたパラメーターまたは引数を表します。  

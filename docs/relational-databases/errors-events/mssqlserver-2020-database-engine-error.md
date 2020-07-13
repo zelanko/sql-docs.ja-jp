@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60736413f572f997bdad1e10eb1fdf79b612aa48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893060"
 ---
 # <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|2020|  
 |イベント ソース|MSSQLSERVER|  
@@ -38,7 +38,8 @@ ms.locfileid: "67896758"
 ## <a name="user-action"></a>ユーザーの操作  
 エラー 2020 発生前のメッセージで確認されたエラーをすべて修正します。 たとえば次のコード例では、`Production.ApprovedDocuments` テーブルの `Title`、`ChangeNumber`、`Status` の各列で、ビュー `Production.Document` が定義されています。 **sys.dm_sql_referenced_entities** システム関数で、`ApprovedDocuments` ビューが依存するオブジェクトと列がクエリされます。 このビューの作成には WITH SCHEMA_BINDING 句が使用されていないため、ビューで参照されている列が参照先テーブルで変更される可能性があります。 この例では、`ChangeNumber` テーブルの `Production.Document` 列の名前が `TrackingNumber` に変更されています。 カタログ ビューに対して `ApprovedDocuments` ビューに関するクエリが再度実行されますが、ビューに定義されているどの列にもバインドできません。 この問題を示すエラー 207 と 2020 が返されます。 問題を解決するには、列の新しい名前が反映されるようにビューを変更する必要があります。  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 CREATE VIEW Production.ApprovedDocuments  
 AS  
@@ -57,11 +58,13 @@ SELECT referenced_schema_name AS schema_name
 ,referenced_entity_name AS table_name  
 ,referenced_minor_name AS referenced_column  
 FROM sys.dm_sql_referenced_entities ('Production.ApprovedDocuments', 'OBJECT');  
-GO</pre>  
+GO
+```
   
 このクエリでは、次のエラー メッセージが返されます。  
   
-<pre>Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
+```
+Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
 Invalid column name 'ChangeNumber'.  
 Msg 2020, Level 16, State 1, Line 1  
 The dependencies reported for entity  
@@ -70,18 +73,21 @@ columns. This is either because the entity references an
 object that does not exist or because of an error in one or  
 more statements in the entity. Before rerunning the query,  
 ensure that there are no errors in the entity and that all  
-objects referenced by the entity exist.</pre>  
+objects referenced by the entity exist.
+```
   
 次の例では、ビュー内の列名を修正しています。  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 ALTER VIEW Production.ApprovedDocuments  
 AS  
 SELECT Title,TrackingNumber, Status  
 FROM Production.Document  
 WHERE Status = 2;  
-GO</pre>  
+GO
+```
   
 ## <a name="see-also"></a>参照  
 [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  

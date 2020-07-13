@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetDescField function [ODBC], Cursor Library
 - SQLGetDescRec function [ODBC], Cursor Library
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49ceea6b6180e1b51f2f103f74412c3e2b4cbe02
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073911"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307833"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField および SQLGetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -28,7 +28,7 @@ ms.locfileid: "68073911"
   
  カーソルライブラリは、 **Sqlgetdescrec**を実行してブックマーク列のメタデータを返します。 カーソルライブラリは**SQLGetDescField**を実行して、 **Sqlgetdescrec**によって返されるのと同じフィールドを返します。これは SQL_DESC_NAME、SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE、SQL_DESC_OCTET_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_NULLABLE です。 一貫性を確保するために、 **SQLGetDescField**も SQL_DESC_UNNAMED を返します。  
   
- SQLGetDescField、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_LENGTH のバインドブックマーク SQL_DESC_DATA_PTR 列に設定されている次のフィールドの値を返すために、カーソルライブラリが呼び出されると、 **** が実行されます。  
+ SQLGetDescField、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_LENGTH のバインドブックマーク SQL_DESC_DATA_PTR 列に設定されている次のフィールドの値を返すために、カーソルライブラリが呼び出されると、 **SQLGetDescField**が実行されます。  
   
  カーソルライブラリは、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR の各フィールドの値を返すために呼び出されると、 **SQLGetDescField**を実行します。 これらのフィールドは、ブックマーク行だけでなく、任意の行に対して返すことができます。  
   

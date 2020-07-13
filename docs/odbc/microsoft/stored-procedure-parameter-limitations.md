@@ -11,14 +11,14 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbd748884575791d5f170e95bc5aa465b61624b7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948822"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299202"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>ストアド プロシージャのパラメーターの制限
 > [!IMPORTANT]  

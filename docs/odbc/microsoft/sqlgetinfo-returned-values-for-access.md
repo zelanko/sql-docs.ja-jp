@@ -14,14 +14,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003227"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298562"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo で Access に返される値
 次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
@@ -83,7 +83,7 @@ ms.locfileid: "68003227"
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|ファイル名|  
+|SQL_DATABASE_NAME|［ファイル名］|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|ACCESS|  
 |SQL_DBMS_VER|[複数の値]|  

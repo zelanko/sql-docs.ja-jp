@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac566b47ff5ec9e1d69d0bdb24e29587aea017ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62704844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013404"
 ---
 # <a name="example-retrieving-binary-data"></a>例 : バイナリ データの取得
   次のクエリでは、`varbinary(max)` 型の列に格納された製品の写真が返されます。 クエリで `BINARY BASE64` オプションが指定されているので、バイナリ データは Base64 エンコード形式で返されます。  

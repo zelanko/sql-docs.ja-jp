@@ -20,17 +20,17 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 265654db2e2523b5cd54e4a07b6889e5d312f748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882447"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたパススルー クエリを、指定されたリンク サーバーで実行します。 このサーバーは OLE DB データ ソースです。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 OPENQUERY は、INSERT、UPDATE、または DELETE ステートメントの対象のテーブルとしても参照できます。 これは OLE DB プロバイダーの機能により制限されます。 クエリでは複数の結果セットが返されることがありますが、OPENQUERY では最初の 1 つのみが返されます。  
   

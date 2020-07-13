@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107670"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>[レポート セクション] ダイアログ ボックス (レポート ビルダー)
@@ -26,10 +26,9 @@ ms.locfileid: "66107670"
   
  レポート、レポート サーバー、プロジェクト、またはレポート作成環境の現在のレポート定義形式を特定する場合は、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
- 
-  **[OK]** をクリックして続行します。  
+ **[OK]** をクリックして続行します。  
   
 ## <a name="see-also"></a>参照  
- [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

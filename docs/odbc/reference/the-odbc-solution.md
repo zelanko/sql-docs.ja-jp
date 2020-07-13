@@ -13,14 +13,14 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6992e084c210cea1b95157744addfd40180fccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2b35883ff4d621f0ecc092020ad744455281dd63
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039344"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286755"
 ---
 # <a name="the-odbc-solution"></a>ODBC ソリューション
 次に、ODBC がデータベースへのアクセスを標準化する方法を説明します。 アーキテクチャには、次の2つの要件があります。  

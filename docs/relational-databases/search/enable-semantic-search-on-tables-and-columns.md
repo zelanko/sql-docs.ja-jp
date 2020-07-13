@@ -12,15 +12,15 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730201"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ドキュメントまたはテキストが格納されている選択した列に対して統計的セマンティック インデックス作成を有効または無効にする方法について説明します。  
   
  統計的セマンティック検索では、フルテキスト検索によって作成されたインデックスを使用し、追加のインデックスを作成します。 このフルテキスト検索に対する依存関係があるため、新しいフルテキスト インデックスの定義や既存のフルテキスト インデックスの変更の際には、新しいセマンティック インデックスを作成します。 新しいセマンティック インデックスを作成するには、このトピックで説明するように、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のフルテキスト インデックス作成ウィザードおよびその他のダイアログ ボックスを使用します。  
@@ -158,7 +158,7 @@ GO
 **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを削除する  
-1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
+1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN** **column**name _\_DROP_ オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
+列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN**_column\_name_**DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>データベース オブジェクトでセマンティック検索が有効かどうかの確認  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>データベースに対してセマンティック検索が有効化されていますか?
   
- **DATABASEPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティのクエリを実行します。  
+ [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) メタデータ関数の **IsFullTextEnabled** プロパティのクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索が有効化されていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索が有効化されていないことを示します。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>テーブルに対してセマンティック検索が有効化されていますか?  
  
- **OBJECTPROPERTYEX &#40;Transact-SQL&#41;** メタデータ関数の [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) プロパティのクエリを実行します。  
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) メタデータ関数の **TableFullTextSemanticExtraction** プロパティのクエリを実行します。  
   
  戻り値 1 は、テーブルに対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   
@@ -218,7 +218,7 @@ GO
    
  特定の列に対して統計的セマンティック検索が有効化されているかどうかを確認するには、次の操作を実行します。  
   
--   **COLUMNPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) プロパティのクエリを実行します。  
+-   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) メタデータ関数の **StatisticalSemantics** プロパティのクエリを実行します。  
   
      戻り値 1 は、列に対してセマンティック検索が有効化されていることを示します。戻り値 0 は、セマンティック検索が有効化されていないことを示します。  
   

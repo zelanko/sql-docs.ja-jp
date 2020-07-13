@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b8fd9f9e4294e085f2bb7b100fc409f25adb818
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080789"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544302"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[階層] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  
   **[階層]** ペインを使用すると、現在選択されているディメンションの階層とレベルを管理できます。 ユーザー定義階層の作成の詳細については、「 [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  
   
  [階層] ペインを使用すると、次の手順を実行できます。  
@@ -33,13 +31,12 @@ ms.locfileid: "66080789"
   
  **[階層] ペインを表示するには**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
   
 2.  選択されていない場合は、 **[ディメンション構造]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
- **階層**  
+ **Hierarchies (階層)**  
  現在作成されている階層を表示します。 各階層内には、階層のレベルを構成する属性があります。 属性リレーションシップも表示されますが、これらは読み取り専用です。  
   
 ## <a name="see-also"></a>参照  

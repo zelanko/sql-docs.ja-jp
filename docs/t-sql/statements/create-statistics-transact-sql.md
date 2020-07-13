@@ -249,7 +249,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>使用例では、AdventureWorks データベースを使用します。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS を SAMPLE number PERCENT と共に使用する  
- 次の例では、`ContactMail1` データベースの `BusinessEntityID` テーブルにある `EmailPromotion` 列と `Person` 列の 5% のランダムなサンプルを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 統計情報を作成します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Person` テーブルにある `BusinessEntityID` 列と `EmailPromotion` 列の 5% のランダムなサンプルを使用して、`ContactMail1` 統計情報を作成します。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
- 次の例では、`NamePurchase` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `Person` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
+ 次の例では、`Person` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `NamePurchase` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
- 次の例では、`CustomerStats1` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`DimCustomer` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
+ 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. フル スキャンを使用して統計を作成する  
- 次の例では、`CustomerStatsFullScan` テーブルのすべての行のスキャンに基づいて `DimCustomer` 統計を作成します。  
+ 次の例では、`DimCustomer` テーブルのすべての行のスキャンに基づいて `CustomerStatsFullScan` 統計を作成します。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. サンプル率を指定して統計を作成する  
- 次の例では、`CustomerStatsSampleScan` テーブルの行の 50 パーセントのスキャンに基づいて `DimCustomer` 統計を作成します。  
+ 次の例では、`DimCustomer` テーブルの行の 50 パーセントのスキャンに基づいて `CustomerStatsSampleScan` 統計を作成します。  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

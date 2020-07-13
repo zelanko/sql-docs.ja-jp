@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc35ba06f17b3b067e3b7ba9059c27e1f6db2d18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68032668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892974"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクションセットにコレクションアイテムを作成します。 コレクションアイテムでは、収集するデータと、データの収集頻度を定義します。  
   
@@ -46,32 +46,32 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  コレクションセットの一意なローカル識別子を設定します。 *collection_set_id*は**int**です。  
   
- [ @collector_type_uid = ]'*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  この項目に使用するコレクター型を識別する GUID を指定します*collector_type_uid*既定値が指定されていない**uniqueidentifier**です。 コレクター型の一覧については、syscollector_collector_types システム ビューにクエリを実行します。  
   
- [ @name = ]'*name*'  
+ [ @name =] '*name*'  
  コレクションアイテムの名前を指定します。 *名前*は**sysname**で、空の文字列または NULL にすることはできません。  
   
  *名前*は一意である必要があります。 現在のコレクション アイテムの名前の一覧については、syscollector_collection_items システム ビューにクエリを実行します。  
   
- [ @frequency = ]*頻度*  
+ [ @frequency =]*頻度*  
  は、このコレクションアイテムによってデータが収集される頻度を秒単位で指定するために使用します。 *frequency*は**int**,、既定値は5です。 指定できる最小値は5秒です。  
   
  コレクションセットが非キャッシュモードに設定されている場合、このモードではコレクションセットに指定されたスケジュールでデータ収集とアップロードの両方が行われるため、頻度は無視されます。 コレクションセットのコレクションモードを表示するには、 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)システムビューに対してクエリを実行します。  
   
- [ @parameters = ]'*parameters*'  
+ [ @parameters =] '*parameters*'  
  コレクター型の入力パラメーターを指定します。 *パラメーター*は**xml**で、既定値は NULL です。 *パラメーター*スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
   
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  コレクション セット アイテムを識別する一意な識別子を指定します。 *collection_item_id*は**int**であり、出力があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_create_collection_item は、msdb システム データベースのコンテキストで実行する必要があります。  
   
  コレクションアイテムを追加するコレクションセットは、コレクションアイテムを作成する前に停止する必要があります。 コレクションアイテムをシステムコレクションセットに追加することはできません。  
@@ -79,8 +79,8 @@ sp_syscollector_create_collection_item
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、コレクション型`Generic T-SQL Query Collector Type`に基づいてコレクションアイテムを作成し、という名前`Simple collection set test 2`のコレクションセットに追加します。 指定したコレクションセットを作成するには、 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)で例 B を実行します。  
+## <a name="examples"></a>使用例  
+ 次の例では、コレクション型に基づいてコレクションアイテムを作成 `Generic T-SQL Query Collector Type` し、という名前のコレクションセットに追加し `Simple collection set test 2` ます。 指定したコレクションセットを作成するには、 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)で例 B を実行します。  
   
 ```  
 USE msdb;  
@@ -115,13 +115,13 @@ EXEC sp_syscollector_create_collection_item
     @collection_item_id = @collection_item_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_update_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
  [sp_syscollector_delete_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
  [syscollector_collector_types &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
  [sp_syscollector_create_collection_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

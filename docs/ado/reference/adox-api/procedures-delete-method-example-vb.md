@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d270dbc8bc14ba0ce5fdde9a5c964117856e8f51
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748637"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete メソッドの例 (VB)
 次のコード[は、プロシージャコレクションの](../../../ado/reference/adox-api/procedures-collection-adox.md) [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用してプロシージャを削除する方法を示しています。  

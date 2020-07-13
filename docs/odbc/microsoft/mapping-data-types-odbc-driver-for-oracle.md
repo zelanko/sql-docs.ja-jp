@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 432c21b70efcdd63ef36bfe3d26f8488ddb11d1d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080735"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302673"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>データ型のマッピング (ODBC Driver for Oracle)
 > [!IMPORTANT]  

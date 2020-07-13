@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetEnvAttr function [ODBC], Cursor Library
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db1608415ae74bcaafd89f4afe01393cfb700379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 42d6804bf8a3544de44c03266ce28712e1b04d90
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300522"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr およびカーソル ライブラリ
 > [!IMPORTANT]  

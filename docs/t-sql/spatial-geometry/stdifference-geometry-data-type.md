@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3c89b8573f7694093027073199788560f664f31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748692"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 別の **geometry** インスタンス内に含まれていない、任意の **geometry** インスタンスの地点のセットを表すオブジェクトを返します。
   
@@ -38,7 +38,7 @@ ms.locfileid: "68127367"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスからどの地点を削除するかを示す、別の**geometry`STDifference()` インスタンスです。  
+ `STDifference()` を呼び出したインスタンスからどの地点を削除するかを示す、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  

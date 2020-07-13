@@ -13,19 +13,19 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078906"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300362"
 ---
 # <a name="writing-odbc-3x-drivers"></a>ODBC 3.x ドライバーの作成
 次の表は、ODBC 3 での関数のサポートを示しています。*x*ドライバーと odbc アプリケーション、および odbc 3 に対して関数が呼び出されたときにドライバーマネージャーによって実行されるマッピング。*x*ドライバー。  
   
-|Function|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> driver?|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> 適用?|マップ/サポート<br /><br /> ODBC 3.*x*<br /><br /> ドライバーマネージャーから<br /><br /> ODBC 3.*x*ドライバーですか?|  
+|関数|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> driver?|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> 適用?|マップ/サポート<br /><br /> ODBC 3.*x*<br /><br /> ドライバーマネージャーから<br /><br /> ODBC 3.*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|いいえ|いいえ [1]|はい|  
 |**SQLAllocEnv**|いいえ|いいえ [1]|はい|  

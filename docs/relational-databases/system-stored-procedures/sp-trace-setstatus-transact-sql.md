@@ -15,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095933"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891399"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したトレースの現在の状態を変更します。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  次の表に、指定できる状態を示します。  
   
-|Status|[説明]|  
+|Status|説明|  
 |------------|-----------------|  
 |**0**|指定されたトレースを停止します。|  
 |**1**|指定されたトレースを開始します。|  
@@ -61,17 +60,17 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
   
-|リターンコード|[説明]|  
+|リターン コード|説明|  
 |-----------------|-----------------|  
 |**0**|エラーなし。|  
 |**1**|不明なエラー。|  
 |**8**|指定した状態は無効です。|  
 |**9**|指定されたトレースハンドルは無効です。|  
-|**第**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
+|**13**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
   
- トレースが既に指定された状態に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ある場合、は**0**を返します。  
+ トレースが既に指定された状態にある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**0**を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  すべての SQL トレースストアドプロシージャ (**sp_trace_xx**) のパラメーターは厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
@@ -79,7 +78,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   

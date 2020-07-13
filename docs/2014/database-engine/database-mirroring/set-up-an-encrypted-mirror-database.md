@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a5148411792f1ea881bba59e599252284575bbdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933973"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>暗号化されたミラー データベースの設定
 
@@ -35,11 +34,11 @@ ms.locfileid: "62754379"
 
 ## <a name="see-also"></a>参照
 
-[sp_control_dbmasterkey_password &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
+[sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)
 
-[ALTER MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
+[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)
 
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
 

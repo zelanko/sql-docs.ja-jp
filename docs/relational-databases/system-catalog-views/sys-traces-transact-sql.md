@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f8edc61622c2748208a62d2bdaeb66650a78840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68126675"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897704"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   システム上で現在実行中のトレースは、の**トレース**カタログビューに含まれています。 このビューは、 **fn_trace_getinfo**関数の代わりとして使用されます。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "68126675"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|トレース ID。|  
-|**オンライン**|**int**|トレースの状態。<br /><br /> 0 = 停止<br /><br /> 1 = 実行中|  
-|**道**|**nvarchar (260)**|トレースファイルのパス。 トレースが行セットトレースの場合、この値は null になります。|  
+|**id**|**int**|トレース ID。|  
+|**status**|**int**|トレースの状態。<br /><br /> 0 = 停止<br /><br /> 1 = 実行中|  
+|**path**|**nvarchar(260)**|トレースファイルのパス。 トレースが行セットトレースの場合、この値は null になります。|  
 |**max_size**|**bigint**|トレース ファイル サイズの上限 (MB 単位)。 トレースが行セットトレースの場合、この値は null になります。|  
-|**stop_time**|**DATETIME**|実行中のトレースを停止する時刻。|  
+|**stop_time**|**datetime**|実行中のトレースを停止する時刻。|  
 |**max_files**|**int**|ロールオーバー ファイルの最大数。 最大数が設定されていない場合、この値は null になります。|  
 |**is_rowset**|**bit**|1 = 行セットトレース。|  
 |**is_rollover**|**bit**|1 = ロールオーバーオプションが有効になっています。|  
@@ -52,15 +52,15 @@ ms.locfileid: "68126675"
 |**buffer_size**|**int**|各バッファーのサイズ (KB)。|  
 |**file_position**|**bigint**|最後のトレース ファイルの位置。 トレースが行セットトレースの場合、この値は null になります。|  
 |**reader_spid**|**int**|行セットトレースリーダーのセッション ID。 トレースがファイルトレースの場合、この値は null になります。|  
-|**start_time**|**DATETIME**|トレースの開始日時。|  
-|**last_event_time**|**DATETIME**|最後にイベントが発生した時刻。|  
+|**start_time**|**datetime**|トレースの開始日時。|  
+|**last_event_time**|**datetime**|最後にイベントが発生した時刻。|  
 |**event_count**|**bigint**|発生したイベントの総数。|  
 |**dropped_event_count**|**int**|削除されたイベントの合計数。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

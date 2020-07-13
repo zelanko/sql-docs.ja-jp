@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resetsnapshotdeliveryprogress
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129647"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901389"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   スナップショットの配信が再起動できるように、プル サブスクリプションのスナップショット配信処理をリセットします。 サブスクライバー側でサブスクリプション データベースについて実行されます。  
   
@@ -45,13 +45,13 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_resetsnapshotdeliveryprogress**は、 **Mssnapshotdeliveryprogress**テーブル内のすべての行を削除します。 これにより、スナップショット配信プロセスで行われた以前の進行状況によって、サブスクリプションデータベースで残されているすべてのメタデータが実質的に削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_resetsnapshotdeliveryprogress**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

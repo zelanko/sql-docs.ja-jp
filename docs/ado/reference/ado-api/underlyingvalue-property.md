@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67dd3f7a6892d4fa139ffd14b3dc33e4231a6cb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938853"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759528"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue プロパティ
 データベース内の[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの現在の値を示します。  

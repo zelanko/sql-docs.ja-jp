@@ -11,36 +11,34 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 82c2e5f35d7418f9c1c44a9a7711b7ef546eb3ac
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095356"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998185"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ここでは、 **datetime**値と**datetimeoffset**値の間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
+  このセクションでは、**datetime** 値と **datetimeoffset** 値の間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
   
  OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、クライアントとの間でデータが転送される際に型の変換しか実行されないため、アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に DBTYPE_DATE と文字列形式の変換を強制することができません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
   
--   **Datetime**および**datetimeoffset**文字列の形式は次のとおりです。  
+-   **datetime** および **datetimeoffset** 文字列の形式は次のとおりです。  
   
-     *yyyy*-** mm-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]]  
+     *yyyy* -*mm* -*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]]  
   
--   
-  **time** 型の文字列の形式は次のとおりです。  
+-   **time** 型の文字列の形式は次のとおりです。  
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   **日付**文字列の形式は次のとおりです。  
+-   **date** 文字列の形式は次のとおりです。  
   
-     *yyyy*-** mm-*dd*  
+     *yyyy* -*mm* -*dd*  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 以降によって実行された変換には、OLE DB 仕様と異なるものがあります。  
@@ -67,14 +65,12 @@ ms.locfileid: "74095356"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クライアントからサーバーへの変換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
   
  [サーバーからクライアントへの変換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB &#40;の日付と時刻の改善&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

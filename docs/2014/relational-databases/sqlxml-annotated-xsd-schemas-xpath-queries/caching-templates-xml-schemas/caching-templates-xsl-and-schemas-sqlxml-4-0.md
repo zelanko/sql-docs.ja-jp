@@ -11,15 +11,14 @@ helpviewer_keywords:
 - cache [SQLXML]
 - memory [SQLXML]
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4df25909cf156957908abf0691964fd66a76343a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015925"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>テンプレート、XSL、およびスキーマのキャッシュ (SQLXML 4.0)
   パフォーマンス向上のため、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 ではテンプレート、XSL、およびスキーマのキャッシュがサポートされています。  

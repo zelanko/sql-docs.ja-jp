@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017088"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -37,14 +37,14 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターが**true**と評価される場合に true を返すブール値です。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **And**演算子は、両方の式をブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理積演算を実行します。 次の表は、And 演算子が論理積をどのように実行するか**を**示しています。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  
-|**本来**|**本来**|**本来**|  
-|**本来**|**false**|**false**|  
-|**false**|**本来**|**false**|  
+|**true**|**true**|**true**|  
+|**true**|**false**|**false**|  
+|**false**|**true**|**false**|  
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>例  

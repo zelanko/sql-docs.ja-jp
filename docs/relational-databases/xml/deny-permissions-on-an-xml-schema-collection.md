@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクションに対する権限の拒否 | Microsoft Docs
+description: 新しい XML スキーマ コレクションを作成する権限、または既存の XML スキーマ コレクションを使用する権限を拒否する方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17174d9fc10ad522e006c6a90936341856be52df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68052283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633153"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   新しい XML スキーマ コレクションを作成したり、既存の XML スキーマ コレクションを使用する権限を拒否できます。  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>XML スキーマ コレクションを作成する権限の拒否  

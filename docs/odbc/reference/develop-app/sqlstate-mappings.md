@@ -12,14 +12,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLSTATE
 - SQLSTATE [ODBC]
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107362"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299742"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
 このトピックでは、ODBC 2.x*および odbc* *3. x*の SQLSTATE 値について説明します。 ODBC *3. x* SQLSTATE の値の詳細については、「[付録 a: odbc エラーコード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。  

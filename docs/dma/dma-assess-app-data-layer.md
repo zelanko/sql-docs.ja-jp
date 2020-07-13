@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 24763f190172da637d19df7ce36553b7341bd894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76761986"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886179"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Data Migration Assistant を使用したアプリのデータアクセス層の評価
 
@@ -104,7 +104,7 @@ ms.locfileid: "76761986"
 
 これで、データベースの観点から見ると、ユーザーはアプリケーションの観点から見ることもできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Data Migration Assistant の概要](../dma/dma-overview.md)
 * [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)

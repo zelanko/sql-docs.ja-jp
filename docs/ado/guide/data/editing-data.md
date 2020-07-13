@@ -12,14 +12,14 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925492"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761038"
 ---
 # <a name="editing-data"></a>データの編集
 ADO を使用してデータソースに接続し、コマンドを実行して、**レコードセット**オブジェクトの結果を取得し、**レコードセット**内を移動する方法について説明しました。 このセクションでは、データの編集に関する次の基本的な ADO 操作について説明します。  
@@ -91,4 +91,4 @@ End Function
   
 -   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [他の方法: SQL ステートメントを使用する](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [代替: SQL ステートメントの使用](../../../ado/guide/data/alternatives-using-sql-statements.md)

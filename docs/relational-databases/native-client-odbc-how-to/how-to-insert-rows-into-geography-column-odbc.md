@@ -8,18 +8,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a952f0442f41ede8c2151a580fb4ad19b516d1cf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781291"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009410"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 次に、そのテーブルから 1 行選択し、::STAsText() を使用してその行を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーションは POINT(56.4595 -2.9842) をコンソールに出力します。  
   
@@ -30,16 +29,15 @@ ms.locfileid: "73781291"
  空間ストレージの詳細については、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 1つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用するテーブルを作成します。  
+ 1つ目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用するテーブルを作成します。  
   
  odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 3番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用されるテーブルを削除します。  
+ 3番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用されるテーブルを削除します。  
   
 ```sql
 use tempdb  

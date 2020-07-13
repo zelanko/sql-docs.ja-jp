@@ -14,21 +14,18 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 95df855e8e41c5937aae02884c71792537eb2bfc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62806865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934193"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Windows 認証を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
-  この例では、Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階を示しています。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する代わりに、データベース ミラーリング セキュリティ構成ウィザードを使用してデータベース ミラーリングを設定することもできます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
+  この例では、Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階を示しています。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する代わりに、データベース ミラーリング セキュリティ構成ウィザードを使用してデータベース ミラーリングを設定することもできます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  
- この例では、既定により単純復旧モデルを使用する **AdventureWorks** サンプル データベースを使用します。 このデータベースでデータベース ミラーリングを使用するには、完全復旧モデルを使用するように変更する必要があります。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してこの変更を行うには、次のように ALTER DATABASE ステートメントを使用します。  
+ この例では、既定により単純復旧モデルを使用する **AdventureWorks** サンプル データベースを使用します。 このデータベースでデータベース ミラーリングを使用するには、完全復旧モデルを使用するように変更する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してこの変更を行うには、次のように ALTER DATABASE ステートメントを使用します。  
   
 ```  
 USE master;  
@@ -38,8 +35,7 @@ SET RECOVERY FULL;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の復旧モデルを変更する方法については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」をご覧ください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の復旧モデルを変更する方法については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」をご覧ください。  
   
 ### <a name="permissions"></a>アクセス許可  
  データベースにおける ALTER 権限、および CREATE ENDPOINT 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -53,7 +49,7 @@ GO
 |----------------------------|-----------------|-------------------------|  
 |プリンシパル|PARTNERHOST1|*\<Mydomain>\\<dbousername\>*|  
 |ミラー|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
-|ミラーリング監視サーバー|WITNESSHOST4|*\<ドメイン>\\<witnessuser\>*|  
+|ミラーリング監視サーバー|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
 1.  プリンシパル サーバー インスタンス (PARTNERHOST1 の既定のインスタンス) でエンドポイントを作成します。  
   
@@ -118,7 +114,7 @@ GO
     GO  
     ```  
   
-4.  ミラー データベースを作成します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)のすべてのエディションで使用できるわけではありません。  
+4.  ミラー データベースを作成します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 5.  PARTNERHOST5 のミラー サーバー インスタンスで、PARTNERHOST1 のサーバー インスタンスをパートナーとして設定します (初期プリンシパル サーバー インスタンスにします)。  
   
@@ -146,25 +142,25 @@ GO
     GO  
     ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [ミラーリング &#40;SQL Server のミラーデータベースを準備する&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [データベースミラーリングセキュリティ構成ウィザード &#40;SQL Server Management Studio を開始し&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+-   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
--   [信頼できるプロパティを使用するようにミラーデータベースを設定する Transact-sql&#41;&#40;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
--   [データベースミラーリングエンドポイントで、Transact-sql&#41;&#40;の送信接続に証明書を使用できるようにする](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [データベースミラーリングエンドポイントが受信接続に証明書を使用できるようにするには &#40;Transact-sql&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [例: 証明書を使用したデータベースミラーリングの設定 &#40;Transact-sql&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [データベースミラーリングエンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [データベースを別のサーバーインスタンスで使用できるようにするときにメタデータを管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

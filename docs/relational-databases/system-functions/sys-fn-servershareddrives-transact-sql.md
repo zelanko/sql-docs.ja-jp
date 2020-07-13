@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fa0b61680108d669ce023797b787ccb0e1d9c840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122551"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898315"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   クラスター化されたサーバーが使用する共有ドライブの名前を返します。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのシステム関数は、旧バージョンとの互換性のために用意されています。 代わりに、 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)を使用することをお勧めします。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのシステム関数は、旧バージョンとの互換性のために用意されています。 代わりに、 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)を使用することをお勧めします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,17 +49,16 @@ fn_servershareddrives()
   
  現在のサーバーインスタンスがクラスター化されたサーバーでない場合、 **fn_servershareddrives**は空の行セットを返します。  
   
-## <a name="remarks"></a>解説  
- `fn_servershareddrives`このクラスター化されたサーバーによって使用される共有ドライブの一覧を返します。 これらの共有ドライブは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソースと同じクラスターグループに属しています。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
+## <a name="remarks"></a>注釈  
+ `fn_servershareddrives`このクラスター化されたサーバーによって使用される共有ドライブの一覧を返します。 これらの共有ドライブは、リソースと同じクラスターグループに属して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
   
  この機能は、ユーザーが利用できるドライブを特定するのに役立ちます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例で`fn_servershareddrives`は、を使用して、クラスター化されたサーバーインスタンスに対してクエリを実行します。  
+ 次の例では、を使用し `fn_servershareddrives` て、クラスター化されたサーバーインスタンスに対してクエリを実行します。  
   
 ```  
 SELECT * FROM fn_servershareddrives();  
@@ -76,7 +74,7 @@ SELECT * FROM fn_servershareddrives();
   
  n  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_io_cluster_valid_path_names &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
  [dm_io_cluster_shared_drives &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [fn_virtualservernodes &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  

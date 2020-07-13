@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 826630e1d344322268a2f2638310b3a1e182de6d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039557"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287172"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **互換性**  
@@ -81,7 +81,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名。 この引数を null ポインターにすることはできません。 *TableName*に文字列検索パターンを含めることはできません。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *TableName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *TableName*は通常の引数です。これは文字どおりに処理され、大文字と小文字が区別されます。  
@@ -89,7 +89,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  代入**TableName*の長さ (文字数)。  
   
- *スコープ*  
+ *Scope*  
  代入Rowid の最低限必要なスコープ。 返された rowid の範囲がより大きくなる可能性があります。 次のいずれかである必要があります。  
   
  SQL_SCOPE_CURROW: rowid は、その行に位置している場合にのみ有効であることが保証されます。 後で rowid を使用して再選択すると、行が別のトランザクションによって更新または削除された場合に、行が返されない可能性があります。  
@@ -98,7 +98,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_SCOPE_SESSION: rowid は、(トランザクションの境界を越えて) セッションが継続している間は有効であることが保証されます。  
   
- *Nullable*  
+ *NULL 値の使用*  
  代入NULL 値を持つことができる特殊な列を返すかどうかを決定します。 次のいずれかである必要があります。  
   
  SQL_NO_NULLS: NULL 値を持つことができる特殊な列を除外します。 一部のドライバーでは SQL_NO_NULLS がサポートされていません。 SQL_NO_NULLS が指定されている場合、これらのドライバーは空の結果セットを返します。 この場合はアプリケーションを準備し、必要な場合にのみ SQL_NO_NULLS 要求します。  
@@ -109,9 +109,9 @@ SQLRETURN SQLSpecialColumns(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **SqlSQLGetDiagRec**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**** を呼び出します。 次の表は、通常**Sqlの列**によって返される SQLSTATE 値の一覧です。この関数のコンテキストでは、それぞれについて説明しています。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **SqlSQLGetDiagRec**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表は、通常**Sqlの列**によって返される SQLSTATE 値の一覧です。この関数のコンテキストでは、それぞれについて説明しています。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -162,14 +162,14 @@ SQLRETURN SQLSpecialColumns(
   
  次の表に、結果セット内の列の一覧を示します。 列 8 (PSEUDO_COLUMN) 以外の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|スコープ (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Smallint|Rowid の実際のスコープ。 次のいずれかの値が含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> *Identifiertype*が SQL_ROWVER 場合、NULL が返されます。 各値の説明については、このセクションで前述した「構文」の*スコープ*の説明を参照してください。|  
+|スコープ (ODBC 1.0)|1|Smallint|Rowid の実際のスコープ。 次のいずれかの値が含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> *Identifiertype*が SQL_ROWVER 場合、NULL が返されます。 各値の説明については、このセクションで前述した「構文」の*スコープ*の説明を参照してください。|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar not NULL|列名。 ドライバーは、名前のない列に対して空の文字列を返します。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型。 ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧については、「 [Sql データ型](../../../odbc/reference/appendixes/sql-data-types.md)」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar not NULL|データソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、"CHAR () FOR BIT DATA" などです。|  
-|COLUMN_SIZE (ODBC 1.0)|5|整数|データソース上の列のサイズ。 列のサイズの詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
-|BUFFER_LENGTH (ODBC 1.0)|6|整数|SQL_C_DEFAULT が指定されている場合に、 **SQLGetData**または**sqlfetch**操作で転送されるデータのバイト単位の長さ。 数値データの場合、このサイズは、データソースに格納されているデータのサイズとは異なる場合があります。 この値は、文字またはバイナリデータの COLUMN_SIZE 列と同じです。 詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|COLUMN_SIZE (ODBC 1.0)|5|Integer|データソース上の列のサイズ。 列のサイズの詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|BUFFER_LENGTH (ODBC 1.0)|6|Integer|SQL_C_DEFAULT が指定されている場合に、 **SQLGetData**または**sqlfetch**操作で転送されるデータのバイト単位の長さ。 数値データの場合、このサイズは、データソースに格納されているデータのサイズとは異なる場合があります。 この値は、文字またはバイナリデータの COLUMN_SIZE 列と同じです。 詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|データソース上の列の小数点以下の桁数。 10進数が適用されないデータ型に対しては NULL が返されます。 10進数の詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が、Oracle ROWID などの疑似列であるかどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**メモ:** 相互運用性を最大にするには、 **SQLGetInfo**によって返される識別子引用符文字で擬似列を引用符で囲む必要があります。|  
   
@@ -188,7 +188,7 @@ SQLRETURN SQLSpecialColumns(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

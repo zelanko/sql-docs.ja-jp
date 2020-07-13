@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f3a72234a6d5e5cbb8e0dc9f5d625b93f15f437f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931638"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763333"
 ---
 # <a name="precision-property-ado"></a>Precision プロパティ (ADO)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは数値[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの数値の有効桁数を示します。  

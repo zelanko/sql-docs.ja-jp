@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd3a0a199267065b2045a07b63dd33a004ab4c52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761891"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキスト カタログのプロパティを変更します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68065596"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  

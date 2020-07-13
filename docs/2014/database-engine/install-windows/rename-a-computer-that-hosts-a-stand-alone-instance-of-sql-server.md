@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 079348921900a7cbf880027433280253df1a9e30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62775011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932173"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
@@ -47,7 +46,7 @@ ms.locfileid: "62775011"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動した後、新しいコンピューター名を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 @@SERVERNAME がローカル サーバー インスタンスの更新後の名前を返すことを確認するには、シナリオに応じて次のプロシージャを手動で実行する必要があります。 使用するプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスと名前付きインスタンスのどちらをホストするコンピューターを更新しているかによって決まります。  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>スタンドアロン インスタンスをホストするコンピューターの名前を変更するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>スタンドアロン インスタンスをホストするコンピューターの名前を変更するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62775011"
     SELECT @@SERVERNAME AS 'Server Name';  
     ```  
   
-## <a name="additional-considerations"></a>追加の考慮事項  
+## <a name="additional-considerations"></a>その他の考慮事項  
  **リモート ログイン** - コンピューターでリモート ログインを行っている場合に、 **sp_dropserver** を実行すると次のようなエラーが発生することがあります:  
   
  `Server: Msg 15190, Level 16, State 1, Procedure sp_dropserver, Line 44 There are still remote logins for the server 'SERVER1'.`  
@@ -105,8 +104,7 @@ ms.locfileid: "62775011"
     GO  
     ```  
   
- **リンク サーバー構成** - リンク サーバー構成はコンピューター名の変更操作の影響を受けます。 
-  `sp_addlinkedserver` または `sp_setnetname` を使用してコンピューターの名前参照を更新します。 詳細については、「[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)」または「[sp_setnetname &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql)」を参照してください。  
+ **リンク サーバー構成** - リンク サーバー構成はコンピューター名の変更操作の影響を受けます。 `sp_addlinkedserver` または `sp_setnetname` を使用してコンピューターの名前参照を更新します。 詳細については、「[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)」または「[sp_setnetname &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql)」を参照してください。  
   
  **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](https://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
   

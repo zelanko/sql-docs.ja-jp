@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67900956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734562"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   インデックス付きドキュメント内のキーワード位置情報を返します。  
   
@@ -49,22 +49,22 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |キーワード (keyword)|**varbinary (128)**|キーワードを表すバイナリ文字列。|  
-|display_term|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。|  
+|display_term|**nvarchar (4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。|  
 |column_id|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
 |document_id|**bigint**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
 |position|**int**|ドキュメント内のキーワードの位置。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DMV を使用して、インデックス付きドキュメント内のインデックス付けされた単語の場所を特定します。 この DMV を使用すると、 **dm_fts_index_keywords_by_document システム**がフルテキストインデックスに含まれていることを示す場合に問題のトラブルシューティングを行うことができますが、これらの単語を使用してクエリを実行すると、ドキュメントは返されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、 `Production.Document` `AdventureWorks`サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返します。  
+## <a name="examples"></a>使用例  
+ 次の例では、サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返し `Production.Document` `AdventureWorks` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -89,13 +89,13 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 WHERE document_id = 7 AND display_term = 'performance';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキストインデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [フルテキスト検索およびセマンティック検索関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [検索プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

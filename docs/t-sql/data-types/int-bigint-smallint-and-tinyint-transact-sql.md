@@ -1,6 +1,6 @@
 ---
 title: int、bigint、smallint、および tinyint (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Int、bigint、smallint、tinyint データ型の Transact-SQL リファレンス。 これらのデータ型は整数データを表わすために使用されます。
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -28,15 +28,15 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93043aae421bd36186558d8902403fdf72697e9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077897"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008023"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 整数データを使用する実数データ型です。 データベースの容量を節約するために、すべての可能な値を確実に含めることができる最小のデータ型を使用します。 たとえば、255 歳以上の人は誰もいきていないので、人の年齢には tinyint で十分でしょう。 しかし、255 年を超える建物はあり得るので、建物の経過年数には tinyint では不十分になります。
   
@@ -107,7 +107,7 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

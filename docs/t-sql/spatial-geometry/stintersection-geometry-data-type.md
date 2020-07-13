@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63edfe76d39fe00c01134e79b34511b78fe5984a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762435"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが別の **geometry** インスタンスと交差する地点を表すオブジェクトを返します。
   
@@ -38,7 +38,7 @@ ms.locfileid: "67950134"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- 交差する地点を特定するために、**を呼び出したインスタンスと比較される、別の**geometry`STIntersection()` インスタンスです。  
+ 交差する地点を特定するために、`STIntersection()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
@@ -46,7 +46,7 @@ ms.locfileid: "67950134"
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>解説  
- `STIntersection()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
+ **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STIntersection()` は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  
   

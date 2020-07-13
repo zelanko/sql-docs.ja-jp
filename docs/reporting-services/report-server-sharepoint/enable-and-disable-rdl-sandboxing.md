@@ -158,7 +158,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作
 
- 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、 **\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
+ 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、**\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9a1d41649a9d1c6d43ddbc8cf50d2776a1e170c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765984"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE (スキーマ権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   スキーマに対する権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67914280"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON SCHEMA :: schema_name   

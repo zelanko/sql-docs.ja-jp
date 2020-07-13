@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883910"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>SQL Server on Linux を管理するための適切なツールの選択
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server on Linux を管理するには、いくつかの方法があります。 以下のセクションでは、各種管理ツールについて概説すると共に、他の資料へのリンクを示します。
 

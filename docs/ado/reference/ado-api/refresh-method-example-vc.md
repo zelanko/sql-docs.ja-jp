@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917272"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756528"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh メソッドの例 (VC++)
 この例では、 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを更新します。  
@@ -224,7 +224,7 @@ void PrintComError(_com_error &e) {
 25  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Authors with 25 percent royalty  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39b70f92f7b239b011cdd4fdd6abd36c27561c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076803"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305953"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos による行セットの行の削除
 **SQLSetPos**の削除操作により、データソースはテーブルの選択された1つ以上の行を削除します。 **Sqlsetpos**を使用して行を削除するには、アプリケーションは、*操作*が SQL_DELETE に設定された**sqlsetpos**を呼び出し、 *RowNumber*を削除する行の番号に設定します。 *RowNumber*が0の場合、行セット内のすべての行が削除されます。  

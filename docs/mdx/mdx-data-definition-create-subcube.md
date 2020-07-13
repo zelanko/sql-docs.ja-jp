@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887438"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ操作 - CREATE SUBCUBE
@@ -37,7 +37,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Select ステートメントと**NON VISUAL**句の構文の詳細については、「 [SELECT ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) 」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定のメンバーがサブキューブの定義で除外されると、それに応じて座標が変わります。 集計できる属性の場合、既定のメンバーは [All] メンバーに移動されます。 集計が不可能な属性の場合、既定のメンバーはサブキューブ内に存在するメンバーに移動します。 次の表には、サブキューブと既定のメンバーの組み合わせの例が含まれています。  
   
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  

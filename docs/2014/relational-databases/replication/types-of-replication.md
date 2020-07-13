@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5576331004eca44bc32dbde8f430284f75e6eb70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63255452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047609"
 ---
 # <a name="types-of-replication"></a>レプリケーションの種類
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、分散アプリケーションで使用する次の種類のレプリケーションが用意されています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の種類のレプリケーションを分散型アプリケーションで利用できます。  
   
 -   トランザクション レプリケーション。 詳細については、「 [Transactional Replication](transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。  
   
@@ -35,6 +34,6 @@ ms.locfileid: "63255452"
  スナップショット レプリケーションでは、データの変更は追跡されず、スナップショットが適用されるたびに、既存のデータがすべて上書きされます。 トランザクション レプリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログを使用して変更が追跡され、マージ レプリケーションでは、トリガーとメタデータ テーブルを使用して変更が追跡されます。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションエージェントの概要](agents/replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   
   

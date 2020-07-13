@@ -8,16 +8,16 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924066"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760788"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>手順 4: Details テキスト ボックスに値を設定する
+# <a name="step-4-populate-the-details-text-box"></a>手順 4:Details テキスト ボックスに値を設定する
 詳細テキストボックスを設定するには、 **Recfields**という名前の新しいサブルーチンを作成し、次のコードを挿入します。  
   
 ```  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- このコードは`lstDetails` 、に`recFields`渡される単純なレコードのフィールドと値を設定します。 リソースがテキストファイルの場合は、リソースレコードからテキストストリームが開かれます。 このコードは、文字セットが ASCII であるかどうかを判断`txtDetails`し、ストリームの内容をにコピーします。  
+ このコードは、 `lstDetails` に渡される単純なレコードのフィールドと値を設定し `recFields` ます。 リソースがテキストファイルの場合は、リソースレコードからテキストストリームが開かれます。 このコードは、文字セットが ASCII であるかどうかを判断し、ストリームの内容をにコピーし `txtDetails` ます。  
   
 ## <a name="see-also"></a>参照  
  [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 3: Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [手順 3:Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

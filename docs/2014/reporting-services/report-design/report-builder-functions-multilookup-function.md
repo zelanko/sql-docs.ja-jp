@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105212"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 関数 (レポート ビルダーおよび SSRS)
@@ -44,15 +44,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  レポート内のデータセットの名前を指定する定数。 たとえば、"Colors" と指定します。  
   
 ## <a name="return"></a>戻り値  
- 
-  `VariantArray` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
+ `VariantArray` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
   
 ## <a name="remarks"></a>解説  
- データセットで、名前と値の各ペアに 1 対 1 のリレーションシップが存在する場合、`Multilookup` を使用して一連の値を取得します。 
-  `MultiLookup` は、一連の名前またはキーに対して `Lookup` を呼び出すことと同じです。 たとえば、主キー識別子に基づく複数値パラメーターの場合、テーブルのテキスト ボックス内の式で `Multilookup` を使用して、パラメーターまたはテーブルにバインドされていないデータセットから、関連付けられている値を取得することができます。  
+ データセットで、名前と値の各ペアに 1 対 1 のリレーションシップが存在する場合、`Multilookup` を使用して一連の値を取得します。 `MultiLookup` は、一連の名前またはキーに対して `Lookup` を呼び出すことと同じです。 たとえば、主キー識別子に基づく複数値パラメーターの場合、テーブルのテキスト ボックス内の式で `Multilookup` を使用して、パラメーターまたはテーブルにバインドされていないデータセットから、関連付けられている値を取得することができます。  
   
- 
-  `Multilookup` を実行すると、次の処理が行われます。  
+ `Multilookup` を実行すると、次の処理が行われます。  
   
 -   現在のスコープ内でソース式が評価され、variant オブジェクトの配列が生成されます。  
   
@@ -64,8 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  次の制限事項が適用されます。  
   
--   
-  `Multilookup` は、すべてのフィルター式が適用された後で評価されます。  
+-   `Multilookup` は、すべてのフィルター式が適用された後で評価されます。  
   
 -   1 レベルの参照のみがサポートされます。 変換元、変換先、または結果の式に、Lookup 関数への参照を含めることはできません。  
   
@@ -73,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   
-  `Multilookup` は、次のレポート アイテムを求める式として使用することはできません。  
+-   `Multilookup` は、次のレポート アイテムを求める式として使用することはできません。  
   
     -   データ ソースの動的な接続文字列。  
   

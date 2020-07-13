@@ -14,17 +14,17 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107290"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299695"
 ---
 # <a name="state-transitions"></a>状態遷移
-ODBC では、各環境、各接続、および各ステートメントの個別の*状態*が定義されます。 たとえば、環境には3つの状態があります。未割り当て (環境が割り当てられていない)、割り当て済み (環境が割り当てられているが、接続が割り当てられていない)、および接続 (環境と1つ以上の接続が割り当て済み)。 接続には、7つの状態があります。ステートメントには、可能な状態が13個あります。  
+ODBC では、各環境、各接続、および各ステートメントの個別の*状態*が定義されます。 たとえば、環境には、未割り当て (環境が割り当てられていない)、割り当て済み (環境が割り当てられているが、接続が割り当てられていない)、接続 (環境と1つ以上の接続が割り当てられている) の3つの状態があります。 接続には、7つの状態があります。ステートメントには、可能な状態が13個あります。  
   
  特定の項目がハンドルによって識別されると、アプリケーションが特定の関数または関数を呼び出し、その項目にハンドルを渡すと、ある状態から別の項目に移動します。 このような移動は、*状態遷移*と呼ばれます。 たとえば、 **SQLAllocHandle**を使用して環境ハンドルを割り当てると、環境が未割り当てから割り当て済みに移動し、 **sqlfreehandle**でそのハンドルを解放すると、割り当てられたから未割り当てに戻されます。 ODBC では、制限された数の有効な状態遷移を定義します。これは、関数を特定の順序で呼び出す必要があることを示すもう1つの方法です。  
   

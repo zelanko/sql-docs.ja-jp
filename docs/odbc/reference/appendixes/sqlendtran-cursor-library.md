@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2277a67cd5410ea3c2a5d5b03b16d4533ed6ee1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064506"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304773"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (カーソル ライブラリ)
 > [!IMPORTANT]  

@@ -9,32 +9,27 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81349af5984f7fafda863f0091cae3375f3dd8d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961462"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
   
  属性の型を変更して制約リスト (ドメイン ベースの属性) を作成する場合は、「[ドメイン ベースの属性を作成する (Excel 用 MDS アドイン)](create-a-domain-based-attribute-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!NOTE]  
->  
-  **[名前]** 列または **[コード]** 列の型または長さを更新することはできません。  
+>  **[名前]** 列または **[コード]** 列の型または長さを更新することはできません。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
+-   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../administrators-master-data-services.md)」を参照してください。  
   
 -   既存のモデル、エンティティ、および属性が存在している必要があります。  
   
@@ -44,11 +39,9 @@ ms.locfileid: "65482765"
   
 2.  変更する列の任意のセルをクリックします。  
   
-3.  
-  **[モデルの構築]** グループの **[属性プロパティ]** をクリックします。  
+3.  **[モデルの構築]** グループの **[属性プロパティ]** をクリックします。  
   
-4.  
-  **[属性プロパティ]** ダイアログ ボックスで、必要に応じて設定を更新します。  
+4.  **[属性プロパティ]** ダイアログ ボックスで、必要に応じて設定を更新します。  
   
 5.  **[OK]** をクリックします。  
   
@@ -80,6 +73,6 @@ ms.locfileid: "65482765"
   
 ## <a name="see-also"></a>参照  
  [属性 &#40;マスターデータサービス&#41;](../attributes-master-data-services.md)   
- [モデル &#40;Excel 用 MDS アドインの構築&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [モデルの構築 (Excel 用 MDS アドイン)](building-a-model-mds-add-in-for-excel.md)  
   
   

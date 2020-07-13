@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929395"
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (Sql server への移行)
@@ -38,7 +38,7 @@ ms.locfileid: "67929395"
   
 -   **フルモード**: False  
   
-**トリガーの起動**  
+**[トリガーを起動する]**  
 データをテーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]追加するときに ssma が挿入トリガーを起動するかどうかを指定します。  
   
 -   **既定のモード**: False  
@@ -47,7 +47,7 @@ ms.locfileid: "67929395"
   
 -   **フルモード**: False  
   
-**Id を保持する**  
+**[ID を保持する]**  
 にデータを追加するときに、SSMA がアクセス id [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値を保持するかどうかを指定します。 この値が False の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、によって id 値が割り当てられます。  
   
 -   **既定のモード**: True  
@@ -56,7 +56,7 @@ ms.locfileid: "67929395"
   
 -   **フルモード**: False  
   
-**Null を保持する**  
+**[NULL を保持する]**  
 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されている既定値に関係なく、ソースデータのに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを追加するときに、ssma がソースデータ内の null 値を保持するかどうかを指定します。  
   
 -   **既定のモード**: True  

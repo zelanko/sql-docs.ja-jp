@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5d73339bc87097d81eade4df0b8ab1604979e07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 927e79b318dfc9f06bc9103120e05cd72acd0c84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054057"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283912"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45c38038ee3d3214e4303c0ddbe0110be926c37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059200"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>ドキュメントに記載されていないシステム テーブルへの参照の削除
   以前のリリースのドキュメントには記載されていなかった多くのシステム テーブルが変更されたか、存在しなくなりました。そのため、アップグレード後にそのようなシステム テーブルを使用すると、エラーが発生する場合があります。 アップグレード アドバイザーはシステム テーブル名への参照を検索するので、システム テーブルと同じ名前のユーザー テーブルへの参照を報告します。  
@@ -26,7 +25,7 @@ ms.locfileid: "66093144"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  ドキュメントに記載されていない以下のシステム テーブルは削除されました。  
   
 -   **spt_datatype_info**  
@@ -83,7 +82,7 @@ ms.locfileid: "66093144"
 |以前のシステム ストアド プロシージャ|用途|  
 |----------------|---------|  
 |**sysfulltextnotify**|OBJECTPROPERTYEX 関数の**TableFulltextPendingChanges**プロパティ。|  
-|**syslocks**|**dm_tran_locks**動的管理ビュー、sp_lock、または**syslockinfo**互換性ビュー。|  
+|**syslocks**|**dm_tran_locks**動的管理ビュー、sp_lock、または**sys.syslockinfo**互換性ビュー。|  
 |**sysproperties**|**extended_properties**カタログビューまたは**fn_listextendedproperty**関数|  
 |**sysxlogins**|**server_principals**カタログビューまたは**syslogins**互換性ビュー。|  
 |すべての**spt_** テーブル|置き換えることはできません|  

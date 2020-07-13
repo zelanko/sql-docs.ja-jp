@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923510"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763033"
 ---
 # <a name="using-pages"></a>ページを使用する
 **PageCount**プロパティを使用して、**レコードセット**オブジェクトに含まれるデータのページ数を確認します。 *ページ*は、サイズが**PageSize**プロパティ設定と等しいレコードのグループです。 **PageSize**値よりも少数のレコードがあるため、最後のページが不完全な場合でも、 **PageCount**値の追加ページとしてカウントされます。 **Recordset**オブジェクトがこのプロパティをサポートしていない場合、 **PageCount**は、 **PageCount**がわからないであることを示す-1 になります。  

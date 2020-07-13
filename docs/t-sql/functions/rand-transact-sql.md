@@ -17,15 +17,15 @@ helpviewer_keywords:
 - values [SQL Server], random float
 - random float value
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61303b7bffb07b2a42628af54d054250308723f2
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948444"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942922"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ SELECT RAND(100), RAND(), RAND()
  次の例では、RAND 関数によって 4 つの異なる乱数が生成されます。  
   
 ```sql  
-DECLARE @counter smallint;  
+DECLARE @counter SMALLINT;  
 SET @counter = 1;  
 WHILE @counter < 5  
    BEGIN  

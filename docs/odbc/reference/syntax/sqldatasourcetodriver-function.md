@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDataSourceToDriver function [ODBC]
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba5019b15fdbb8bce06f04d5109813b88c40647d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92df58b76a9a11d0d4ab9821756bff014ecae29a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104844"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301192"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 関数
 ODBC ドライバー用の**Sqldatasourcetodriver** supportstranslations。 この関数は、ODBC 対応のアプリケーションでは呼び出されません。アプリケーションは**SQLSetConnectAttr**を通じて変換を要求します。 **SQLSetConnectAttr**で指定された*connectionhandle*に関連付けられているドライバーは、指定された DLL を呼び出して、データソースからドライバーへのすべてのデータフローの変換を実行します。 既定の変換 DLL は、ODBC 初期化ファイルで指定できます。  
@@ -104,7 +104,7 @@ BOOL SQLDataSourceToDriver(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースに送信されるデータの変換|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
 |接続属性の設定を返す|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  

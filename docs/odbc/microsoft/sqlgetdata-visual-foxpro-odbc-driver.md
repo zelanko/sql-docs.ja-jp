@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee603023798638b7bd5c25a72d1018d379da2075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88a872ca15544c3dd6909cd210f98987d21a13dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003320"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304113"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

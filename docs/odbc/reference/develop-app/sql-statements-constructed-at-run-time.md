@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107463"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301973"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>実行時に構築された SQL ステートメント
 アドホック分析を実行するアプリケーションは、通常、実行時に SQL ステートメントを作成します。 たとえば、スプレッドシートでは、ユーザーがデータを取得する列を選択できます。  

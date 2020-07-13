@@ -15,18 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999906"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在の環境でクエリを実行できる、指定されたオブジェクトの列情報を返します。  
   
@@ -51,9 +50,9 @@ sp_columns [ @table_name = ] object
   
  指定した名前のオブジェクトを現在のユーザーが所有している場合は、そのオブジェクトの列が返されます。 *Owner*が指定されておらず、現在のユーザーが指定された*オブジェクト*を持つオブジェクトを所有していない場合、 **sp_columns**は、データベース所有者が所有する、指定された*オブジェクト*を持つオブジェクトを検索します。 存在する場合は、そのオブジェクトの列が返されます。  
   
-`[ \@table_qualifier = ] qualifier`オブジェクト修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するオブジェクト (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この列はデータベース名を表します。 一部の製品では、オブジェクトのデータベース環境のサーバー名を表します。  
+`[ \@table_qualifier = ] qualifier`オブジェクト修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するオブジェクト (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、オブジェクトのデータベース環境のサーバー名を表します。  
   
-`[ \@column_name = ] column`は1つの列であり、カタログ情報の列が1つだけ必要な場合に使用します。 *列*は**nvarchar (384)**,、既定値は NULL です。 *列*が指定されていない場合は、すべての列が返されます。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*列*は**syscolumns**テーブルに示されている列名を表します。 ワイルドカードパターンマッチングがサポートされています。 相互運用性を最大にするために、ゲートウェイクライアントでは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
+`[ \@column_name = ] column`は1つの列であり、カタログ情報の列が1つだけ必要な場合に使用します。 *列*は**nvarchar (384)**,、既定値は NULL です。 *列*が指定されていない場合は、すべての列が返されます。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、*列*は**syscolumns**テーブルに示されている列名を表します。 ワイルドカードパターンマッチングがサポートされています。 相互運用性を最大にするために、ゲートウェイクライアントでは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
 `[ \@ODBCVer = ] ODBCVer`使用されている ODBC のバージョンを示します。 *Odbcver*は**int**,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン2とバージョン3の動作の違いについては、ODBC **Sqlcolumns**の仕様を参照してください。  
   
@@ -63,7 +62,7 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>結果セット  
  **Sp_columns**カタログストアドプロシージャは、ODBC の**sqlcolumns**に相当します。 返される結果は、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**順に並べ替えられます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|オブジェクト修飾子の名前です。 このフィールドは NULL にすることができます。|  
 |**TABLE_OWNER**|**sysname**|オブジェクト所有者の名前。 このフィールドは常に値を返します。|  
@@ -74,10 +73,10 @@ sp_columns [ @table_name = ] object
 |**精度**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズ。<sup>1</sup>|  
 |**段階**|**smallint**|小数点の右側の桁数。|  
-|**RADIX**|**smallint**|数値データ型のベース。|  
+|**ベース**|**smallint**|数値データ型のベース。|  
 |**NULLABLE**|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
-|**」**|**varchar (254)**|このフィールドは常に NULL を返します。|  
-|**COLUMN_DEF**|**nvarchar(4000)**|列の既定値です。|  
+|**備考**|**varchar (254)**|このフィールドは常に NULL を返します。|  
+|**COLUMN_DEF**|**nvarchar (4000)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、 **datetime**および SQL-92 **interval**データ型を除き、 **DATA_TYPE**列と同じです。 この列は常に値が返されます。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**および SQL-92 **interval**データ型のサブタイプコード。 他のデータ型の場合、この列は NULL を返します。|  
 |**CHAR_OCTET_LENGTH**|**int**|文字型または整数型の列の最大長 (バイト単位)。 他のすべてのデータ型については、この列は NULL を返します。|  
@@ -90,7 +89,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT および VIEW DEFINITION 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_columns**は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
@@ -103,7 +102,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、指定されたテーブルの列情報を返します。  
   
 ```  
@@ -116,7 +115,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ## <a name="see-also"></a>参照  
  [sp_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Transact-sql&#41;&#40;のカタログストアドプロシージャ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 

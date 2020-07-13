@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402649"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152169"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps ツール
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 拡張機能は **Azure DevOps** Marketplace で入手できます。
 
@@ -172,7 +172,7 @@ SSIS カタログ構成 JSON ファイルのソース。 [ファイル パス] �
 
 SSIS カタログ構成 JSON ファイルのパス。 このプロパティは、構成ファイル ソースとして [ファイル パス] を選択した場合にのみ表示されます。
 
-構成 JSON ファイルで[パイプライン変数](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
+構成 JSON ファイルで[パイプライン変数](/azure/devops/pipelines/process/variables)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
 
 #### <a name="inline-configuration-json"></a>インライン構成 JSON
 
@@ -344,6 +344,20 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |sensitive|環境変数の値が機微であるかどうか。|有効な入力は次のとおりです。 <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-101"></a>Version 1.0.1
+
+リリース日:2020 年 5 月 9 日
+
+- プロジェクト パスとして 1 つの dtproj ファイルのみが指定されている場合でも、SSIS ビルド タスクによって常にソリューション全体がビルドされる問題を修正しました。
+
+### <a name="version-100"></a>バージョン 1.0.0
+
+リリース日:2020 年 5 月 8 日
+
+- 一般公開 (GA) リリース。
+- エージェントに対する .NET Framework の最小バージョンに制限が追加されました。 現在、.NET Framework の最小バージョンは 4.6.2 です。
+- SSIS Build タスクと SSIS Deploy タスクの説明が改善されました。
 
 ### <a name="version-020-preview"></a>バージョン 0.2.0 プレビュー
 

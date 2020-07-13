@@ -1,5 +1,6 @@
 ---
-title: 高可用性、ディザスター リカバリーのための JDBC ドライバーのサポート | Microsoft Docs
+title: 高可用性、ディザスター リカバリーのための JDBC ドライバーのサポート
+description: このトピックでは、高可用性、ディザスター リカバリー (AlwaysOn 可用性グループ) のための Microsoft JDBC Driver for SQL Server のサポートについて説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bfaf987fe9eb674ece6724b903c6a629f213fc3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 941136eb74d217f0af7b2687e618bf93f2454b8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923127"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635063"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>高可用性、ディザスター リカバリーのための JDBC ドライバーのサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  このトピックでは、高可用性のディザスター リカバリーを実現する [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のための [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] のサポートについて説明します。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] オンライン ブックを参照してください。  
+  このトピックでは、高可用性のディザスター リカバリーを実現する [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] のための [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のサポートについて説明します。 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]の詳細については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] オンライン ブックを参照してください。  
   
- Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続プロパティを使用して、(高可用性のディザスター リカバリー) 可用性グループ (AG) の可用性グループ リスナーを指定できます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションを AlwaysOn データベースに接続しているときにフェールオーバーが発生した場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。 [ では、次の](../../connect/jdbc/setting-the-connection-properties.md)接続プロパティ[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]が追加されました。  
+ Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続プロパティを使用して、(高可用性のディザスター リカバリー) 可用性グループ (AG) の可用性グループ リスナーを指定できます。 フェールオーバーが発生した AlwaysOn データベースに [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションが接続されていた場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、次の[接続プロパティ](setting-the-connection-properties.md)が追加されました。  
   
 -   **multiSubnetFailover**  
   
@@ -32,7 +33,7 @@ ms.locfileid: "80923127"
  
 Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Always On 可用性グループまたは複数の IP アドレスが関連付けられているサーバーに透過的に接続するために、新しい接続プロパティ **transparentNetworkIPResolution** (TNIR) が追加されています。 **transparentNetworkIPResolution** が true の場合、ドライバーは、使用可能な最初の IP アドレスへの接続を試みます。 最初の試行が失敗した場合、ドライバーは、タイムアウトになるまですべての IP アドレスに並行して接続を試みます。いずれかの試行に成功すると、保留中の接続試行はすべて破棄されます。   
 
-次の点に注意してください。
+以下の点に注意してください。
 * transparentNetworkIPResolution は既定で true に設定されます。
 * multiSubnetFailover が true の場合、transparentNetworkIPResolution は無視されます。
 * データベース ミラーリングが使用されている場合、transparentNetworkIPResolution は無視されます。
@@ -49,11 +50,11 @@ Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Alway
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>multiSubnetFailover を使用した接続  
- **可用性グループまたは** フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]multiSubnetFailover=true[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を指定してください。 **multiSubnetFailover** を使用することで、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバー中、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では TCP 接続が積極的に再試行されます。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **multiSubnetFailover=true** を指定してください。 **multiSubnetFailover** を使用することで、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバー中、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では TCP 接続が積極的に再試行されます。  
   
- **multiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=true** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 これにより、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
+ **multiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=true** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 この動作により、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。これは、単一サブネットとマルチサブネット両方の可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用できます。  
   
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の接続文字列キーワードの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の接続文字列キーワードの詳細については、「[接続プロパティの設定](setting-the-connection-properties.md)」を参照してください。  
   
  可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに **multiSubnetFailover=true** を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
   
@@ -61,7 +62,7 @@ Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Alway
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
--   **multiSubnetFailover** 接続プロパティと同じ接続文字列内で **instanceName** 接続プロパティを使用した場合、ドライバーはエラーを生成します。 これは、SQL ブラウザーは可用性グループ内で使用されないという事実を反映しています。 ただし、**portNumber** 接続プロパティも指定した場合、ドライバーは、**instanceName** を無視して、**portNumber** を使用します。  
+-   **multiSubnetFailover** 接続プロパティと同じ接続文字列内で **instanceName** 接続プロパティを使用した場合、ドライバーはエラーを生成します。 このエラーは、SQL Browser が可用性グループ内で使用されていないという事実を反映しています。 ただし、**portNumber** 接続プロパティも指定した場合、ドライバーは、**instanceName** を無視して、**portNumber** を使用します。  
   
 -   単一サブネットまたはマルチサブネットに接続する場合に **multiSubnetFailover** 接続プロパティを使用すると、両方の場合のパフォーマンスを向上させることができます。  
   
@@ -69,7 +70,7 @@ Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Alway
   
 -   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   **multiSubnetFailover** 接続プロパティを使用するアプリケーションの動作は、認証の種類 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証) の影響を受けません。  
+-   **multiSubnetFailover** 接続プロパティを使用するアプリケーションの動作は、次の認証の種類に影響されません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証。  
   
 -   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   
@@ -84,7 +85,7 @@ Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Alway
  プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に **ApplicationIntent=ReadOnly** が含まれていると、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングからマルチサブネット クラスターの使用へのアップグレード  
- 現在、データベース ミラーリングを使用している [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションをマルチサブネットのシナリオにアップグレードする場合、**failoverPartner** 接続プロパティを削除して **multiSubnetFailover** に置き換え、それを **true** に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列で **failoverPartner** および **multiSubnetFailover=true** が使用されている場合、ドライバーによってエラーが生成されます。 ただし、接続文字列に **failoverPartner** と **multiSubnetFailover=false** (または **ApplicationIntent=ReadWrite**) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
+ 現在、データベース ミラーリングを使用している [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] アプリケーションをマルチサブネットのシナリオにアップグレードする場合、**failoverPartner** 接続プロパティを削除して **multiSubnetFailover** に置き換え、それを **true** に設定し、接続文字列内のサーバー名を可用性グループ リスナーに置き換える必要があります。 接続文字列で **failoverPartner** および **multiSubnetFailover=true** が使用されている場合、ドライバーによってエラーが生成されます。 ただし、接続文字列に **failoverPartner** と **multiSubnetFailover=false** (または **ApplicationIntent=ReadWrite**) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
  AG のプライマリ データベースでデータベース ミラーリングが使用されている場合、および可用性グループ リスナーではなく、プライマリ データベースに接続する接続文字列内で **multiSubnetFailover=true** が使用されている場合、ドライバーによってエラーが返されます。  
 
@@ -95,27 +96,27 @@ Microsoft JDBC Driver for SQL Server のバージョン 6.0 以降では、Alway
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>multiSubnetFailover および applicationIntent をサポートする新しいメソッド  
  次のメソッドを使用すると、プログラムから **multiSubnetFailover**、**applicationIntent**、**transparentNetworkIPResolution** 接続文字列キーワードにアクセスできます。  
   
--   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getApplicationIntent](reference/getapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setApplicationIntent](../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setApplicationIntent](reference/setapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.getMultiSubnetFailover](../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getMultiSubnetFailover](reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setMultiSubnetFailover](reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- **getMultiSubnetFailover**、**setMultiSubnetFailover**、**getApplicationIntent**、**setApplicationIntent**、**getTransparentNetworkIPResolution**、**setTransparentNetworkIPResolution** の各メソッドも [SQLServerDataSource クラス](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource クラス](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、[SQLServerXADataSource クラス](../../connect/jdbc/reference/sqlserverxadatasource-class.md) に追加されます。  
+ **getMultiSubnetFailover**、**setMultiSubnetFailover**、**getApplicationIntent**、**setApplicationIntent**、**getTransparentNetworkIPResolution**、**setTransparentNetworkIPResolution** の各メソッドも [SQLServerDataSource クラス](reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource クラス](reference/sqlserverconnectionpooldatasource-class.md)、[SQLServerXADataSource クラス](reference/sqlserverxadatasource-class.md) に追加されます。  
   
-## <a name="ssl-certificate-validation"></a>SSL 証明書の検証  
- 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、SSL 証明書における **Subject Alternate Name** のサポートが追加されているため、複数のホストを同じ証明書に関連付けることができます。 SSL の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」を参照してください。  
+## <a name="tlsssl-certificate-validation"></a>TLS/SSL 証明書の検証  
+ 可用性グループは、複数の物理サーバーで構成されます。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] で、TLS/SSL 証明書に対する **Subject Alternate Name** のサポートが追加されたため、複数のホストを同じ証明書に関連付けることができるようになりました。 TLS の詳細については、「[暗号化のサポートについて](understanding-ssl-support.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)  
+## <a name="see-also"></a>関連項目  
+ [JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [接続プロパティの設定](setting-the-connection-properties.md)  
   
   

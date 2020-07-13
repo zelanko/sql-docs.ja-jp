@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Hierarchies collection [ADO MD], members
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e49929c80dbaea4ccf1424267be10bf060207640
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949743"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753929"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "67949743"
 ## <a name="methods"></a>メソッド  
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787496"
 ---
 # <a name="activity-monitor"></a>利用状況モニター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 利用状況モニターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスおよびこれらのプロセスが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに与える影響に関する情報が表示されます。  
   
 利用状況モニターは、 **[概要]** 、 **[プロセス]** 、 **[リソースの待機]** 、 **[データ ファイル I/O]** 、 **[最近コストの高いクエリ]** 、および **[アクティブなコストの高いクエリ]** の展開と折りたたみが可能なペインを含むタブ付きドキュメント ウィンドウです。 ペインを展開すると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することができます。  

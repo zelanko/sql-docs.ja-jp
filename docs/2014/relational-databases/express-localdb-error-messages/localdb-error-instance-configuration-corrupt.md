@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40e660cc41724310e7462b2d78b7d3d8787784ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a4dee8fe1cc275369652d647ba48c39ce5cd9fc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051196"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
     

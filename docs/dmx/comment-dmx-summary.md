@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e6c616cef5a2f4945a1335e1297aa3ad3a2ce4
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073090"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669377"
 ---
 # <a name="---comment-dmx-summary"></a>--(コメント) (DMX) の概要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  実行しないテキスト文字列[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を示します。 コメントは、データマイニング拡張機能 (DMX) ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。  
+  実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 コメントは、データマイニング拡張機能 (DMX) ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68073090"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この演算子は、単一行または入れ子になったコメントに使用します。 --を使用して挿入されたコメントは、改行文字で区切られます。  
   
  コメントの長さには制限がありません。  

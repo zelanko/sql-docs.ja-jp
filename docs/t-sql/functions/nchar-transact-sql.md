@@ -16,18 +16,18 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e2994f4b141a9c162101e3bbfb2fe25f0710d89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130159"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005085"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Unicode 標準の定義に従って、指定された整数コードの Unicode 文字を返します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68130159"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 NCHAR ( integer_expression )  
 ```  
   
@@ -54,7 +54,7 @@ NCHAR ( integer_expression )
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'𣅿';
+DECLARE @d NVARCHAR(10) = N'𣅿';
 -- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
  次の例では、`UNICODE` 関数と `NCHAR` 関数を使用して、`UNICODE` という文字列の 2 番目の文字の `NCHAR` 値と `København` (Unicode 文字) を出力することによって、`ø` という実際の 2 番目の文字を出力します。  
   
 ```sql  
-DECLARE @nstring nchar(8);  
+DECLARE @nstring NCHAR(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
    NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
@@ -93,7 +93,7 @@ GO
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(9);  
+DECLARE @position INT, @nstring NCHAR(9);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  

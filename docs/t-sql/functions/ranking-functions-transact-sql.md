@@ -15,18 +15,18 @@ helpviewer_keywords:
 - functions [SQL Server], ranking
 - ranking rows
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e0ba15f12f86b92c679c373463c4684cf56878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7b8e84e35e2af64a83c323474bfc46a81553c7c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486573"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003749"
 ---
 # <a name="ranking-functions-transact-sql"></a>順位付け関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   順位付け関数により、パーティションの各行の順位値が返されます。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
   

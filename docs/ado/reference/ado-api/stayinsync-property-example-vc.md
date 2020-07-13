@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930755"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759668"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync プロパティの例 (VC++)
 この例では、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを使用して、階層[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  

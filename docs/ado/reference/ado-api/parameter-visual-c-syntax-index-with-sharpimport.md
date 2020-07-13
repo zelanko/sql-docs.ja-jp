@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Parameter collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b998aa20df1110c6708bf857d39e679ed871e68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917761"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763423"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parameter (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -29,7 +29,7 @@ ms.locfileid: "67917761"
 HRESULT AppendChunk( const _variant_t & Val );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 long GetAttributes( );  

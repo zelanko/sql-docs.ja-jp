@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ddf4a72fa81e12f49b8974881dd964473c863c28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048707"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  

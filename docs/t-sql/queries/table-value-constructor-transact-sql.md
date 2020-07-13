@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705961"
 ---
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブルに設定される行の値式のセットを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用すると、単一の DML ステートメントで複数行のデータを指定できます。 テーブル値コンストラクターは、INSERT ... VALUES ステートメントの VALUES 句として、または MERGE ステートメントの USING 句または FROM 句の派生テーブルとして指定できます。
   
@@ -33,7 +33,7 @@ ms.locfileid: "67948253"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 VALUES ( <row value expression list> ) [ ,...n ]   
   

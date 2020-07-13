@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b710812bdc0ca8992b6eb865be8fac7787acff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 902ed324a4823267e49331b75dbc78f51f63937d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62812606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936117"
 ---
 # <a name="backup-restore-and-recovery-of-memory-optimized-tables"></a>メモリ最適化テーブルのバックアップ、復元、復旧
   このセクションのトピック:  

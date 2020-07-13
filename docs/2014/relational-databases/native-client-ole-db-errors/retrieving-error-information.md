@@ -1,5 +1,5 @@
 ---
-title: エラー情報の取得 |Microsoft Docs
+title: エラー情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e99842237bee512d3489e83be07612715a5a6e1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048074"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
-  この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって公開されるさまざまなエラーインターフェイスから情報を取得します。  
+  この例では、Native Client OLE DB プロバイダーによって公開されるさまざまなエラーインターフェイスから情報を取得し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  

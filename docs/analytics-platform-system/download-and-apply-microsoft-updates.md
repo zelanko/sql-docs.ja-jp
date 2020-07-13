@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401192"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Analytics Platform System の Microsoft 更新プログラムをダウンロードして適用する
 このトピックでは、Microsoft Update カタログから Windows Server Update Services (WSUS) に更新プログラムをダウンロードし、それらの更新プログラムを Analytics Platform System appliance サーバーに適用する方法について説明します。 Microsoft Update によって、Windows および SQL Server の適用可能なすべての更新プログラムがインストールされます。 WSUS は、アプライアンスの VMM バーチャルマシンにインストールされます。  
   
-## <a name="TOP"></a>はじめに  
+## <a name="before-you-begin"></a><a name="TOP"></a>開始する前に  
   
 > [!WARNING]  
 > アプライアンスまたはアプライアンスコンポーネントが停止しているか、またはフェールオーバー状態になっている場合は、更新プログラムの適用を試行しないでください。 その場合は、サポートにお問い合わせください。  
@@ -35,9 +35,9 @@ ms.locfileid: "74401192"
   
 -   Analytics Platform System 管理コンソールにアクセスし、アプライアンスの状態情報を表示するためのアクセス許可を持つログインがあること。  
   
--   ほとんどの場合、WSUS はアプライアンスの外部のサーバーにアクセスする必要があります。 この使用シナリオをサポートするには、分析プラットフォームシステムのホストと Virtual Machines (Vm) が外部 DNS サーバーを使用して外部 DNS サーバーを使用して外部の名前を解決できるようにする外部名フォワーダーをサポートするように、Analytics Platform システム DNS を構成します。nas. 詳細については、「 [Dns フォワーダーを使用してアプライアンス以外の Dns 名を解決する」 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)」を参照してください。  
+-   ほとんどの場合、WSUS はアプライアンスの外部のサーバーにアクセスする必要があります。 この使用シナリオをサポートするために、Analytics platform system DNS を構成して、Analytics Platform システムホストと Virtual Machines (Vm) が外部 DNS サーバーを使用してアプライアンスの外部にある名前を解決できるようにすることができます。 詳細については、「 [Dns フォワーダーを使用してアプライアンス以外の Dns 名を解決する」 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)」を参照してください。  
   
-## <a name="bkmk_ImportUpdates"></a>Microsoft 更新プログラムをダウンロードして適用するには  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>Microsoft 更新プログラムをダウンロードして適用するには  
   
 #### <a name="verify-the-appliance-state-indicators"></a>アプライアンスの状態インジケーターを確認する  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74401192"
   
 1.  WSUS コンソールの左側のウィンドウで、[すべての**更新プログラム**] をクリックします。  
   
-2.  [**すべての更新プログラム**] ウィンドウで、[**承認**] ドロップダウンメニューをクリックし、[**拒否] 以外**の [**承認**] を設定します。 [**状態**] ドロップダウンメニューをクリックし、[**状態**] を [**任意**] に設定します。 [**更新**] をクリックします。  
+2.  [**すべての更新プログラム**] ウィンドウで、[**承認**] ドロップダウンメニューをクリックし、[**拒否] 以外**の [**承認**] を設定します。 [**状態**] ドロップダウンメニューをクリックし、[**状態**] を [**任意**] に設定します。 **[最新の情報に更新]** をクリックします。  
   
     [**タイトル**] 列を右クリックし、[**ファイルの状態**] を選択して、ダウンロードの完了後にファイルの状態を確認します。  
   
@@ -81,8 +81,7 @@ ms.locfileid: "74401192"
   
 4.  [ [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)] で作成したアプライアンスサーバーグループを選択します。  
   
-5.  
-  **[インストールの承認]** をクリックし、**[OK]** をクリックします。  
+5.  **[インストールの承認]** をクリックし、 **[OK]** をクリックします。  
   
     ![コンピューター グループの更新を承認します。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -130,7 +129,7 @@ ms.locfileid: "74401192"
   
 8.  [**すべての更新プログラム**] ウィンドウで、[**状態**] を [**失敗] または [必要**] に設定します。  
   
-9. [**更新**] をクリックします。  
+9. **[最新の情報に更新]** をクリックします。  
   
 10. **必要な更新プログラム**がゼロより大きい場合は、サポートにお問い合わせください。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "74401192"
   
 2.  **クラスター**および**ネットワーク**の列がすべてのノードに対して緑 (または n) と表示されていることを確認します。 これらのいずれかの列にアラートが存在する場合、アプライアンスは更新プログラムを正しくインストールできない可能性があります。 重大なアラートがある場合は、サポートにお問い合わせください。  
   
-## <a name="RunUpdateWizard"></a>更新プログラムの実行  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>更新プログラムの実行  
 Analytics Platform System Update プログラムを実行するには、次の手順に従います。  
   
 > [!NOTE]  

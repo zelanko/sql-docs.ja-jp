@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926604"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761600"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple Provider の概要
 Microsoft OLE DB Simple Provider (OSP) を使用すると、ADO は、 [OLE DB Simple provider (osp) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)を使用して、プロバイダーが記述されているすべてのデータにアクセスできます。 単純なプロバイダーは、メモリ内配列や XML ドキュメントなどの基本的な OLE DB サポートのみを必要とするデータソースにアクセスすることを目的としています。
@@ -44,10 +44,10 @@ MSDAOSP
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
-|**Data Source**|サーバーの名前を指定します。|
+|**データ ソース**|サーバーの名前を指定します。|
 
 ## <a name="xml-document-example"></a>XML ドキュメントの例
  MDAC 2.7 以降の OLE DB Simple Provider (OSP) と Windows Data Access Components (Windows DAC) は、任意の XML ファイルに対する階層型 ADO**レコードセット**のオープンをサポートするように強化されています。 これらの XML ファイルには ADO XML 永続化スキーマが含まれている場合がありますが、必須ではありません。 これは、OSP を**msxml2.dll**に接続することによって実装されています。そのため、 **msxml2.dll**以降が必要です。

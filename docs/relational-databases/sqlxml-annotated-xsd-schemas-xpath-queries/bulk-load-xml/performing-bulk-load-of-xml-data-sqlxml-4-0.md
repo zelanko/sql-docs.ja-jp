@@ -1,5 +1,6 @@
 ---
 title: XML データの一括読み込みの実行 (SQLXML)
+description: SQLXML 4.0 で XML 一括読み込みを使用して Microsoft SQL Server テーブルに半構造化 XML データを読み込む方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f72b11c9e6981a435df34a13c8eaa6be8899caf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c696f39c3e41afa42f5f4f0fac5c7dfd1a4dd080
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773075"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML データの一括読み込みの実行 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 一括読み込みはスタンドアロン COM オブジェクトであり、これを使用すると、半構造化された XML データを Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに読み込むことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

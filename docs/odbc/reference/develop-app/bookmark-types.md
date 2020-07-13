@@ -13,14 +13,14 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - fixed-length bookmarks [ODBC]
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 26d0297cd9dc57e9f30945a9248b235ae469da3e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118779"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306333"
 ---
 # <a name="bookmark-types"></a>ブックマークの種類
 ODBC *3. x*のすべてのブックマークは、可変長のブックマークです。 これにより、テーブルに関連付けられている主キーまたは一意のインデックスをブックマークとして使用できます。 ブックマークは *、ODBC 2.x*で使用されていた32ビット値にすることもできます。 ブックマークをカーソルと共に使用するように指定するには、ODBC *3. x*アプリケーションで、SQL_ATTR_USE_BOOKMARK statement 属性を SQL_UB_VARIABLE に設定します。 可変長のブックマークが自動的に使用されます。  

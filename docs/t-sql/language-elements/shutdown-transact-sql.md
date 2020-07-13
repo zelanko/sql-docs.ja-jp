@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f3d338531b2d7e7d76571ad2d04793c6200c63d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121702"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893392"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server を直ちに停止します。  
   
@@ -71,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
  **sqlservr.exe** をコマンド プロンプトから起動した場合は、Ctrl キーを押しながら C キーを押すと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされます。 Ctrl+C キーを押してもチェックポイントは挿入されません。  
   
 > [!NOTE]  
->  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、`SERVICE_CONTROL_STOP` には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージが送信されます。  
+>  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には `SERVICE_CONTROL_STOP` メッセージが送信されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  SHUTDOWN アクセス許可は、既定では固定サーバー ロール **sysadmin** および **serveradmin** のメンバーに与えられています。このアクセス許可を譲渡することはできません。  

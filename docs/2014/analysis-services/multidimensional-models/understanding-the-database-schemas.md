@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547454"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
   スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
@@ -82,8 +81,7 @@ ms.locfileid: "68811048"
  このウィザードでは、翻訳列を必要とするメジャー グループのすべてのプロパティの翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>データ型変換と既定の長さ  
- スキーマ生成ウィザードでは、データ型を使用する列を除き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`すべての場合にデータ型が無視されます。 
-  `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
+ スキーマ生成ウィザードでは、データ型を使用する列を除き、すべての場合にデータ型が無視さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` れます。 `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
   
  属性のバインドなどのデータ アイテムに長さが指定されていない場合、次の表に示す既定の長さが列に使用されます。  
   
@@ -93,7 +91,7 @@ ms.locfileid: "68811048"
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|1 で保護されたプロセスとして起動されました|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>参照  
  [増分生成の理解](understanding-incremental-generation.md)   

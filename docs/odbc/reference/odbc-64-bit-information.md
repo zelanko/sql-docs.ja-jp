@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67937979"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298302"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
 Windows Server 2003 以降、Microsoft オペレーティングシステムでは、64ビットの ODBC ライブラリがサポートされています。 MDAC 2.7 SDK に最初に付属する ODBC ヘッダーおよびライブラリには、プログラマが新しい64ビットプラットフォームのコードを簡単に記述できるようにするための変更が含まれています。 コードで次に示す ODBC 定義型を使用することにより、 **_WIN64**または**WIN32**マクロに基づいて、64ビットプラットフォームと32ビットプラットフォームの両方で同じソースコードをコンパイルできます。  

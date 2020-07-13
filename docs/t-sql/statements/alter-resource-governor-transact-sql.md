@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e83131031e3504e8ace98d7e410baeb33f33f928
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982021"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895627"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で次のリソース ガバナー操作を実行するために使用します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73982021"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER RESOURCE GOVERNOR   
       { DISABLE | RECONFIGURE }  
     | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  

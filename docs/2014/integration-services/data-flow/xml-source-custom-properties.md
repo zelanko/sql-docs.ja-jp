@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e4f6ad2be4f2253ad09403231fca01a0996bd2f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770189"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429869"
 ---
 # <a name="xml-source-custom-properties"></a>XML 入力元のカスタム プロパティ
   XML ソースには、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
   
  次の表は、XML ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整数|XML データへのアクセスに使用するモード。|  
 |UseInlineSchema|Boolean|XML ソース内のインライン スキーマ定義を使用するかどうかを示す値。 このプロパティの既定値は `False` です。|  
@@ -31,7 +30,7 @@ ms.locfileid: "62770189"
   
  次の表は、XML ソースの出力のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |RowsetID|String|出力に関連付けられた行セットを識別する値。|  
   

@@ -12,10 +12,10 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024743"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>データベースの検索ウィザード (選択の確認) (データベースへの参照)
@@ -24,13 +24,13 @@ ms.locfileid: "68024743"
 データベースの検索ウィザードを開くには、[**ファイル**] メニューの [**データベースの検索**] をクリックします。  
   
 ## <a name="options"></a>オプション  
-**ファイル名**  
+**[ファイル名]**  
 SSMA に追加する Access データベースファイルの名前を表示します。  
   
 **[ファイル パス]**  
 Access データベースファイルのパスを表示します。  
   
-**[所有者]**  
+**所有者**  
 ファイルの所有者を表示します。  
   
 ## <a name="see-also"></a>参照  

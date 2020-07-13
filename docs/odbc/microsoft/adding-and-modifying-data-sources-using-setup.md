@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data sources [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], adding data sources
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901401"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281412"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>セットアップを使用してデータ ソースを追加および変更する
 > [!IMPORTANT]  

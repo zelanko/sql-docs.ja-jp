@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108567"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -32,19 +32,17 @@ ms.locfileid: "66108567"
   
 -   [SharePoint モードのインストールの確認](#bkmk_sharepointmode)  
   
--   [ネイティブモードのインストールの確認](#bkmk_nativemode)  
+-   [ネイティブ モードのインストールの確認](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>SharePoint モードのインストールの確認  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> SharePoint モードのインストールの確認  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Reporting Services サービスを確認するには  
   
 1.  SharePoint サーバーの全体管理で、 **[システム設定]** の **[サーバーのサービスの管理]** をクリックします。  
   
-2.  
-  **SQL Server Reporting Services サービス** がインストールされ、 **実行中** の状態であることを確認します。  
+2.  **SQL Server Reporting Services サービス** がインストールされ、 **実行中** の状態であることを確認します。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」の「Reporting Services sharepoint サービスのインストールと開始」セクションを参照してください。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスが一覧に表示されない場合は、サービスがインストールされていることを確認します。 詳細については、「sharepoint [2010 用 Reporting Services Sharepoint モードのインストール](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」の「Reporting Services sharepoint サービスのインストールと開始」セクションを参照してください。  
   
 #### <a name="to-verify-the-service-application"></a>サービス アプリケーションを確認するには  
   
@@ -60,8 +58,7 @@ ms.locfileid: "66108567"
   
 1.  サイトの設定の **[サイト コレクションの管理]** で **[サイト コレクションの機能]** をクリックします。  
   
-2.  
-  **[レポート サーバーの統合機能]** がアクティブであることを確認します。  
+2.  **[レポート サーバーの統合機能]** がアクティブであることを確認します。  
   
 #### <a name="to-verify-reporting-server-content-types"></a>レポート サーバー コンテンツの種類を確認するには  
   
@@ -71,8 +68,7 @@ ms.locfileid: "66108567"
   
 1.  ドキュメント ライブラリから、SharePoint リボンの **[ドキュメント]** をクリックします。  
   
-2.  
-  **[新しいドキュメント]** をクリックし、 **[レポート ビルダー レポート]** をクリックします。 このオプションが表示されない場合は、レポート サーバー コンテンツの種類をライブラリに追加するための前の手順を確認してください。  
+2.  **[新しいドキュメント]** をクリックし、 **[レポート ビルダー レポート]** をクリックします。 このオプションが表示されない場合は、レポート サーバー コンテンツの種類をライブラリに追加するための前の手順を確認してください。  
   
 #### <a name="create-a-basic-report"></a>基本的なレポートを作成する  
   
@@ -86,13 +82,12 @@ ms.locfileid: "66108567"
   
 2.  CodePlex から AdventureWorks の作業のサンプル データベースと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サンプル レポートをダウンロードします。 詳細については、「 [AdventureWorks レポート サンプル](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)」を参照してください。  
   
-##  <a name="bkmk_nativemode"></a>ネイティブモードのインストールの確認  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>ネイティブモードのインストールの確認  
  既定の構成を使用してネイティブ モードでレポート サーバーをインストールする場合、セットアップでサーバーをインストールし、配置します。 いくつかの簡単なテストを行うことで、レポート サーバーが正常に配置されたかどうかを確認できます。 これらの手順を実行するには、ローカル管理者である必要があります。 他のユーザーがテストを実行する場合は、そのユーザーがレポート サーバーにアクセスできるように構成する必要があります。  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>レポート サーバーが正常にインストールされ、実行されていることを確認するには  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行し、インストールしたレポート サーバー インスタンスに接続します。 [Web サービス URL] ページには、レポート サーバー Web サービスへのリンクが含まれています。 このリンクをクリックして、サーバーにアクセスできることを確認します。 レポート サーバー データベースが構成されていない場合は、リンクをクリックする前にレポート サーバー データベースを構成してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを実行し、インストールしたレポート サーバー インスタンスに接続します。 [Web サービス URL] ページには、レポート サーバー Web サービスへのリンクが含まれています。 このリンクをクリックして、サーバーにアクセスできることを確認します。 レポート サーバー データベースが構成されていない場合は、リンクをクリックする前にレポート サーバー データベースを構成してください。  
   
 2.  Services コンソール アプリケーションを開き、レポート サーバー サービスが実行されていることを確認します。 レポート サーバー サービスの状態を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をポイントして、 **[管理ツール]** をダブルクリックします。次に、 **[サービス]** をダブルクリックします。 サービスの一覧が表示されたら、 **[Report Server (MSSQLSERVER)]** までスクロールします。 状態が **[開始]** になっていることを確認してください。  
   
@@ -112,8 +107,7 @@ ms.locfileid: "66108567"
   
 #### <a name="to-verify-that-report-designer-is-installed-and-running"></a>レポート デザイナーが正常にインストールされ、実行されていることを確認するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を開き、レポート サーバーのプロジェクトの種類に基づいて新しいプロジェクトを作成します。 レポート サーバー プロジェクト ウィザードの使用方法の詳細については、SQL Server オンライン ブックの「[SQL Server データ ツールの Reporting Services (SSDT)](../tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を開き、レポート サーバーのプロジェクトの種類に基づいて新しいプロジェクトを作成します。 レポート サーバー プロジェクト ウィザードの使用方法の詳細については、SQL Server オンライン ブックの「[SQL Server データ ツールの Reporting Services (SSDT)](../tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
 2.  サンプル レポートをインストールした場合は、サンプル レポート プロジェクト ファイルを開き、レポート サーバーにレポートをパブリッシュします。  
   

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018964"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290220"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **互換性**  
@@ -51,7 +51,7 @@ BOOL SQLManageDataSources(
 ## <a name="diagnostics"></a>診断  
  **Sqlmanagedatasources ソース**が FALSE を返すと、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|**Configdsn**の呼び出しが失敗しました。|  
@@ -123,6 +123,6 @@ BOOL SQLManageDataSources(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データ ソースの作成|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|

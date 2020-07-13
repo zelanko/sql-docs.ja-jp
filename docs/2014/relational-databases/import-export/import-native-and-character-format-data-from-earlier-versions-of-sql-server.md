@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 274c984d6ecec8af8f5bea27496450a45fc2f1df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026804"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 **bcp** を使用すると、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からネイティブ形式データおよび文字形式データを **-V** スイッチを指定してインポートすることができます。 **-V** スイッチを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は指定された以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型を使用し、データ ファイル形式はその以前のバージョンのものと同じになります。  
@@ -52,36 +51,35 @@ ms.locfileid: "66011915"
  <sup>1</sup> UDT は、ユーザー定義型を示します。  
   
 ## <a name="exporting-using--v-80"></a>-V 80 を使用したエクスポート  
- **-V80**スイッチ`nvarchar(max)` `varchar(max)`を使用してデータを一括エクスポートする場合、 `varbinary(max)`、、 `text`、XML、およびネイティブモードの UDT データは、、、および`image` `ntext`データのように4バイトのプレフィックスを使用して格納されます。これは、以降の[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]バージョンの既定の8バイトのプレフィックスではなく、、、などです。  
+ **-V80**スイッチを使用してデータを一括エクスポートする場合、、、 `nvarchar(max)` `varchar(max)` `varbinary(max)` 、XML、およびネイティブモードの UDT データは、、、およびデータのように4バイトのプレフィックスを使用して格納され `text` `image` `ntext` ます。これは、以降のバージョンの既定の8バイトのプレフィックス [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではなく、、、などです。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
- **bcp**は、ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  
+ **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]) を使用します。  
   
- **Bcp**コマンドは、および`datetime` `smalldatetime`の値に対して ODBC の既定の形式を使用して、文字形式のデータファイルをエクスポートします。 たとえば、日付 `datetime` が含まれた `12 Aug 1998` 型の列は、文字列 `1998-08-12 00:00:00.000` としてデータ ファイルに一括コピーされます。  
+ **Bcp**コマンドは、およびの値に対して ODBC の既定の形式を使用して、文字形式のデータファイルをエクスポートし `datetime` `smalldatetime` ます。 たとえば、日付 `12 Aug 1998` が含まれた `datetime` 型の列は、文字列 `1998-08-12 00:00:00.000` としてデータ ファイルに一括コピーされます。  
   
 > [!IMPORTANT]  
->  Bcp を使用して`smalldatetime`フィールドに**** データをインポートする場合は、秒の値が00.000 であることを確認してください。それ以外の場合、操作は失敗します。 
-  `smalldatetime` データ型には、最も近い "分" までの値のみが保持されます。 この場合、BULK INSERT および INSERT ... SELECT * FROM OPENROWSET(BULK...) は失敗しませんが、秒の値は切り捨てられます。  
+>  Bcp を使用してフィールドにデータをインポートする場合は、 `smalldatetime` 秒の値が00.000 であることを確認してください。そうしないと、操作は失敗します。 **bcp** `smalldatetime` データ型には、最も近い "分" までの値のみが保持されます。 この場合、BULK INSERT および INSERT ... SELECT * FROM OPENROWSET(BULK...) は失敗しませんが、秒の値は切り捨てられます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
   
--   [文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode 文字形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Unicode ネイティブ形式を使用してデータをインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [データ型 &#40;Transact-sql&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [SQL Server データベースエンジン旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
- [&#40;Transact-sql&#41;の CAST と CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)  
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
+ [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

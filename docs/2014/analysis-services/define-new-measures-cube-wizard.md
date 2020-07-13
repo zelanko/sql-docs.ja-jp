@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082108"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528808"
 ---
 # <a name="define-new-measures-cube-wizard"></a>[新しいメジャーの定義] (キューブ ウィザード)
-  
   **[新しいメジャーの定義]** ページを使用すると、データ ソースを使用せずに作成されるキューブの新しいメジャーを作成できます。  
   
 > [!NOTE]  
@@ -89,7 +87,7 @@ ms.locfileid: "66082108"
   
  集計を変更するには、変更する集計をクリックして、一覧からデータ型を選択します。  
   
- **閉じる**  
+ **X**  
  キューブから新しいメジャーを削除します。  
   
  新しいメジャーをキューブから削除するには、削除するメジャーの **[X]** ボタンをクリックします。  

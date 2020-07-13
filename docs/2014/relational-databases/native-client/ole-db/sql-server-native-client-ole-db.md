@@ -15,31 +15,27 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c69ded7b487168063109d1acb3f44f20e138e38f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63033561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055830"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データへのアクセスに使用する低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データへのアクセスに使用する低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションに OLE DB サポートを提供します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションに OLE DB サポートを提供します。  
-  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [データソースオブジェクト &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [データ ソース オブジェクト &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [コマンド](../../native-client-ole-db-commands/commands.md)  
   
@@ -57,7 +53,7 @@ ms.locfileid: "63033561"
   
 -   [テーブル値パラメーター &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [OLE DB &#40;の日付と時刻の改善&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日付と時刻の強化機能 &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [大きな CLR ユーザー定義型 &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -69,7 +65,7 @@ ms.locfileid: "63033561"
   
 -   [クライアント接続 &#40;OLE DB&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [スパース列は &#40;OLE DB をサポート&#41;](sparse-columns-support-ole-db.md)  
+-   [スパース列のサポート &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41; 参照](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   

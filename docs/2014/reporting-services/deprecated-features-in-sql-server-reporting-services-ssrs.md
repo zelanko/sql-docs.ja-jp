@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109352"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の非推奨機能
@@ -35,10 +35,10 @@ ms.locfileid: "66109352"
   
 -   [SQL Server 2008 R2 Reporting Services の非推奨の機能](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 非推奨の機能  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services 非推奨の機能  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンでサポートされない機能  
- 次の[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]バージョンの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で**は、次**の機能はサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。  
+ 以下の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能は、 **の次の**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]バージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 表示拡張機能のデバイス情報設定  
  HTML 表示拡張機能の次のデバイス情報設定は、非推奨とされます。  
@@ -59,7 +59,7 @@ ms.locfileid: "66109352"
   
 -   UsePx  
   
--   ズーム  
+-   Zoom  
   
  HTML 表示拡張機能の詳細については、「 [HTML Device Information Settings](html-device-information-settings.md)」を参照してください。  
   
@@ -95,22 +95,19 @@ ms.locfileid: "66109352"
  非推奨の web パーツの詳細については、「 [SharePoint Web パーツを使用したネイティブモードのレポートの表示と探索 (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx) 」を参照してください。  
   
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
- 以下の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
+ 以下の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で非推奨の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]機能はありません。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で非推奨の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]機能はありません。  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 非推奨の機能  
- ここでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で非推奨とされた [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能について説明します。 以下の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のどのバージョンであるかは決定していません。  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services 非推奨の機能  
+ ここでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で非推奨とされた [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能について説明します。 以下の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
 ### <a name="sharepoint-web-parts"></a>Sharepoint Web パーツ  
  インストール キャビネット ファイル **RSWebParts.cab** とその cab ファイルから抽出できる SharePoint Web パーツは非推奨とされています。 非推奨の web パーツは、レポートエクスプローラー (**Spexplorer.**.dwp) とレポートビューアー (**spexplorer. .dwp**) です。  
   
  非推奨の web パーツの詳細については、「 [SharePoint Web パーツを使用したネイティブモードのレポートの表示と探索 (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx) 」を参照してください。  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 非推奨の機能  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services 非推奨の機能  
  ここでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で非推奨とされた [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 機能について説明します。  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>HTML 表示拡張機能のデバイス情報設定  
@@ -132,7 +129,7 @@ ms.locfileid: "66109352"
   
 -   UsePx  
   
--   ズーム  
+-   Zoom  
   
  HTML 表示拡張機能の詳細については、「 [HTML Device Information Settings](html-device-information-settings.md)」を参照してください。  
   
@@ -162,7 +159,7 @@ ms.locfileid: "66109352"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 非推奨の機能  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services 非推奨の機能  
   
 > [!NOTE]  
 >  SQL Server 2008 R2 は SQL Server 2008 のマイナー バージョン アップグレードなので、SQL Server 2008 のセクションのコンテンツも確認することをお勧めします。  

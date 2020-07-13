@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a26192eb47faddfb8776fb873e9c19253969d1e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 60d369dcbf76258ec51887f961352587645fe0ac
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436623"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
   SQL Server の**インポートおよびエクスポートウィザード**を使用すると、サポートされているデータソースと変換先の間でデータをコピーしたり変換したりできます。  
@@ -27,7 +26,7 @@ ms.locfileid: "62767774"
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **次回からこの開始ページを表示しない**  
+ **[次回からこの開始ページを表示しない]**  
  次回ウィザードを開いたときに、ようこそページをスキップします。  
   
   

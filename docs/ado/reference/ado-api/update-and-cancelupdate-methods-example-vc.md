@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3e1b9eed98ba310498706c9708cb47ee8d6680
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67940089"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759508"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update および CancelUpdate メソッドの例 (VC++)
 この例では、[更新](../../../ado/reference/ado-api/update-method.md)メソッドと[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドの組み合わせを示します。  

@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759338"
 ---
 # <a name="columns-collection-adox"></a>Columns コレクション (ADOX)
 テーブル、インデックス、またはキーのすべての[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを格納します。  

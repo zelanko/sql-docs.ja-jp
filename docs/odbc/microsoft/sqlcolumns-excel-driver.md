@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLColumns function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLColumns
 ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8481a4ea9cf69b615aa0142cc01556018801e823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c168168e0cb44d6aff2102bb18c07cbf1a1953a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132540"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307883"
 ---
 # <a name="sqlcolumns-excel-driver"></a>SQLColumns (Excel ドライバー)
 > [!NOTE]  

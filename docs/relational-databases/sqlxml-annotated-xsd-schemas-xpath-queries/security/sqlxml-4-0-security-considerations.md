@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 のセキュリティに関する注意点
+description: SQLXML 4.0 のセキュリティに関する考慮事項に関する情報を表示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bacd3ecf628d6f79eb1bd74e7159b0e158175743
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b21bd5b2a2a02ccc8cc9dbbd04cd24cf1165d77e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750733"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 のセキュリティに関する注意点
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML のセキュリティに関する考慮事項について、情報を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

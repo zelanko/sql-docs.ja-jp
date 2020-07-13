@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67911592"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765323"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection プロパティ (ADO MD)
 現在のセルセットまたはカタログが現在どの ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "67911592"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続または**接続**オブジェクトを定義する文字列を含む**Variant**を設定します。値の取得もできます。 既定値は空です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このプロパティは、有効な ADO**接続**オブジェクトまたは有効な接続文字列に設定できます。 このプロパティが接続文字列に設定されている場合、プロバイダーはこの定義を使用して新しい**接続**オブジェクトを作成し、接続を開きます。  
   
  [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)メソッドの*ActiveConnection*引数を使用して[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトを開くと、 **ActiveConnection**プロパティは引数の値を継承します。  

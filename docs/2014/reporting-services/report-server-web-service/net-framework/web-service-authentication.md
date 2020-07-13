@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518728"
 ---
 # <a name="web-service-authentication"></a>Web サービス認証
@@ -28,7 +28,7 @@ ms.locfileid: "62518728"
   
  以降のセクションでは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用して資格情報を送信するコード例を示します。  
   
-## <a name="windows-authentication"></a>[Windows 認証]  
+## <a name="windows-authentication"></a>Windows 認証  
  次のコードは、Windows 資格情報を Web サービスに渡します。  
   
 ```vb  
@@ -57,8 +57,7 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
  資格情報は、レポート サーバー Web サービスのメソッドを呼び出す前に設定しておく必要があります。 資格情報を設定しないと、"HTTP 401 エラー : アクセスが拒否されました。" というエラーが発生します。 サービスを使う前にサービスを認証する必要があります。ただし、資格情報を設定した後は、*rs* などの同じサービス変数を続けて使う限り、再度設定する必要はありません。  
   
 ## <a name="custom-authentication"></a>カスタム認証  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] にはプログラミング API が含まれ、開発者は、セキュリティ拡張機能と呼ばれるカスタム認証拡張機能を設計および開発できます。 詳細については、「 [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] にはプログラミング API が含まれ、開発者は、セキュリティ拡張機能と呼ばれるカスタム認証拡張機能を設計および開発できます。 詳細については、「 [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)   

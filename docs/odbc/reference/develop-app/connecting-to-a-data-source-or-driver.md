@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083141"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307464"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>データ ソースまたはドライバーへの接続
 アプリケーションは、任意の数のドライバーとデータソースに接続できます。 さまざまなドライバーとデータソース、同じドライバーとさまざまなデータソース、または同じドライバーとデータソースへの複数の接続を使用できます。  

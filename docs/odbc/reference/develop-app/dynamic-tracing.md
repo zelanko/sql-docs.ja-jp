@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tracing options [ODBC], dynamic
 - dynamic tracing [ODBC]
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8cbd2dbae4f4b437f45845ce2791f4a9b0aa8c8b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046891"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305770"
 ---
 # <a name="dynamic-tracing"></a>動的トレース
 トレースは、アプリケーションの実行の任意の時点で有効または無効にすることができます。 これにより、アプリケーションは任意の数の関数呼び出しをトレースできます。  

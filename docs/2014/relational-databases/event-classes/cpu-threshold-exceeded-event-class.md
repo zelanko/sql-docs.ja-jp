@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 07b51e1a6f08f48c601b00d2dcb67bc6d09006f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030174"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded イベント クラス
   CPU Threshold Exceeded イベント クラスは、REQUEST_MAX_CPU_TIME_SEC に指定されている CPU しきい値を超えるクエリがリソース ガバナーによって検出されたことを示します。  
@@ -29,7 +28,7 @@ ms.locfileid: "62663485"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>CPU Threshold Exceeded のデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|CPU 使用率 (ミリ秒単位)。|18|はい|  
 |EventClass|`int`|214|27|いいえ|  
@@ -40,6 +39,6 @@ ms.locfileid: "62663485"
 |StartTime|`datetime`|このイベントが発生した時刻。|14|はい|  
   
 ## <a name="see-also"></a>参照  
- [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

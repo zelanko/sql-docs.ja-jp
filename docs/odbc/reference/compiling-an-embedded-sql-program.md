@@ -13,14 +13,14 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eb801dc532009410055b67031b3e036cc6b9c3d0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135658"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306533"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>埋め込み SQL プログラムのコンパイル
 Embedded SQL プログラムには SQL とホストの言語ステートメントが混在しているため、ホスト言語のコンパイラに直接送信することはできません。 代わりに、マルチステップのプロセスを通じてコンパイルされます。 このプロセスは製品によって異なりますが、この手順はすべての製品でほぼ同じです。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ca00dfe612f5735f767d50c66ebbb0e079bc39c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62902608"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432179"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB ソースを使用してデータを抽出する
   OLE DB ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  

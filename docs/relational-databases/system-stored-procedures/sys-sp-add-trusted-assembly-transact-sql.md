@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72452873"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
@@ -40,7 +40,7 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 この手順では、アセンブリを[trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)に追加します。
 
@@ -56,7 +56,7 @@ sp_add_trusted_assembly
 
 `sysadmin`固定サーバーロールまたは`CONTROL SERVER`権限のメンバーシップが必要です。
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 
 次の例では、と`pointudt`いう名前のアセンブリをサーバーの信頼されたアセンブリの一覧に追加します。 これらの値は、 [sys. アセンブリ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)から入手できます。     
 
@@ -68,7 +68,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
 ## <a name="see-also"></a>参照  
   [sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
-  [CREATE ASSEMBLY &#40;Transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
+  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  

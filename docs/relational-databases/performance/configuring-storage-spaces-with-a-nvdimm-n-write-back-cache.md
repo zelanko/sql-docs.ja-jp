@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655752"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 は、超高速の入出力 (I/O) 操作を可能にする NVDIMM-N デバイスをサポートします。 そのようなデバイスを使用する魅力的な方法の 1 つは、書き込みの低待機時間を実現するためのライトバック キャッシュです。 このトピックでは、ミラー化された NVDIMM-N ライトバック キャッシュを使用して、SQL Server トランザクション ログを格納するための仮想ドライブとしてミラー化された記憶域スペースをセットアップする方法について説明します。 この記憶域スペースをデータ テーブルまたは他のデータを格納するためにも活用する場合は、記憶域プールにディスクを追加するか、分離が重要な場合は複数のプールを作成します。  
   
  この手法を使用して Channel 9 のビデオを視聴するには、「 [Windows Server 2016 でブロック記憶域として不揮発性メモリ (NVDIMM-N) を使用する](https://channel9.msdn.com/Events/Build/2016/P466)」をご覧ください。  

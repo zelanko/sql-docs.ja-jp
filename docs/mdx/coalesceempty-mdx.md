@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006306"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
@@ -44,7 +44,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  有効な文字列式です。通常は、最初の文字列式によって返される NULL 値に置き換えられる、指定された文字列値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  1つ以上の数値式が指定されている場合、 **CoalesceEmpty**関数は、空でない値に解決できる最初の数値式 (左から右) の数値を返します。 指定されている数値式に、空でない値に解決される式がない場合、この関数は、空のセル値を返します。 通常、2番目の数値式の値は、最初の数値式によって返される NULL 値に置き換えられる数値です。  
   
  1つ以上の文字列式が指定されている場合、関数は、空でない値に解決できる最初の文字列式 (左から右) の文字列値を返します。 指定された文字列式のいずれも空でない値に解決できない場合、関数は空のセル値を返します。 通常、2番目の文字列式の値の値は、最初の文字列式から返された NULL を置き換える文字列値です。  
@@ -78,6 +78,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

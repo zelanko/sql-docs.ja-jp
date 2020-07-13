@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 724d5b531f15d94a686c91f71e8cfee5ef83e239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ab13997991e9d33ad4b0cdca5338766cc83f9a85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880531"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   詳細プロパティの数値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,9 +38,9 @@ object.PropertyNumValue [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティの数値を指定する uint32 値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

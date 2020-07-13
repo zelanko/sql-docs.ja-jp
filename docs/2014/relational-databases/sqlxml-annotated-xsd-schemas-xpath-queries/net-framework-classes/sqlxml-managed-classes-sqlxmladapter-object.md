@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQLXML Managed Classes, SqlXmlAdapter object
 - Managed Classes [SQLXML], SqlXmlAdapter object
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b339e67b07ddb4168f9922c22e620eb2fa10d85e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f950ad2bd22fa84b5f62711ee4fd290ebab136bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015303"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter オブジェクト (SQLXML マネージド クラス)
   このオブジェクトでは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のデータセットとの対話を容易にするためのメソッドが提供されます。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
@@ -29,8 +28,7 @@ ms.locfileid: "66014929"
  SqlXmlAdapter オブジェクトは、次のメソッドをサポートしています。  
   
  void の Fill (DataSet ds)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から取得した XML データを .NET Framework のデータセットに格納します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から取得した XML データを .NET Framework のデータセットに格納します。  
   
  void 更新 (データセット ds)  
  データセットのデータから、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレコードを更新します。  

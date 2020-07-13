@@ -12,14 +12,14 @@ helpviewer_keywords:
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 738c563961eae56471f0238d9726a1ebb0bdc76e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939776"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81289218"
 ---
 # <a name="table-name-limitations"></a>テーブル名の制限
 テーブル名には、任意の有効な文字 (たとえば、スペース) を含めることができます。 テーブル名に文字、数字、およびアンダースコア以外の文字が含まれている場合は、名前を引用符 (') で囲むことによって区切る必要があります。  

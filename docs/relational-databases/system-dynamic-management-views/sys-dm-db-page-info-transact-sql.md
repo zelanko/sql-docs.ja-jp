@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68841597"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -57,63 +57,63 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 ## <a name="table-returned"></a>返されるテーブル  
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id |INT |データベース ID |
-|file_id |INT |ファイル ID |
-|page_id |INT |ページ ID |
-|page_header_version |INT |ページヘッダーのバージョン |
-|page_type |INT |ページの種類 |
+|database_id |int |データベース ID |
+|file_id |int |ファイル ID |
+|page_id |int |ページ ID |
+|page_header_version |int |ページヘッダーのバージョン |
+|page_type |int |ページの種類 |
 |page_type_desc |nvarchar (64) |ページの種類の説明 |
 |page_type_flag_bits |nvarchar (64) |ページヘッダーにフラグビットを入力 |
 |page_type_flag_bits_desc |nvarchar (64) |ページヘッダーの型フラグのビットの説明 |
 |page_flag_bits |nvarchar (64) |ページヘッダーのフラグビット |
 |page_flag_bits_desc |nvarchar(256) |ページヘッダーのビットの説明にフラグを付ける |
 |page_lsn |nvarchar (64) |ログシーケンス番号/タイムスタンプ |
-|page_level |INT |インデックス内のページのレベル (リーフ = 0) |
-|object_id |INT |ページを所有しているオブジェクトの ID |
-|index_id |INT |インデックスの ID (ヒープデータページの場合は 0) |
+|page_level |int |インデックス内のページのレベル (リーフ = 0) |
+|object_id |int |ページを所有しているオブジェクトの ID |
+|index_id |int |インデックスの ID (ヒープデータページの場合は 0) |
 |partition_id |bigint |パーティションの ID |
 |alloc_unit_id |bigint |アロケーションユニットの ID |
 |is_encrypted |bit |ページが暗号化されているかどうかを示すビット |
 |has_checksum |bit |ページにチェックサム値があるかどうかを示すビット |
-|チェックサム (checksum) |INT |データの破損を検出するために使用されるチェックサム値を格納します。 |
+|チェックサム (checksum) |int |データの破損を検出するために使用されるチェックサム値を格納します。 |
 |is_iam_pg |bit |ページが IAM ページであるかどうかを示すビット  |
 |is_mixed_ext |bit |混合エクステントで割り当てられているかどうかを示すビット |
 |has_ghost_records |bit |ページにゴーストレコードが含まれているかどうかを示すビット <br> ゴーストレコードとは、削除対象としてマークされているものの、まだ削除されていないレコードのことです。|
 |has_version_records |bit |ページに[データベースの高速復旧](../backup-restore/restore-and-recovery-overview-sql-server.md#adr)に使用されるバージョンレコードが含まれているかどうかを示すビット |
-|pfs_page_id |INT |対応する PFS ページのページ ID |
+|pfs_page_id |int |対応する PFS ページのページ ID |
 |pfs_is_allocated |bit |対応する PFS ページでページが割り当て済みとしてマークされているかどうかを示すビット |
-|pfs_alloc_percent |INT |対応する PFS バイトによって示される割り当て比率 |
+|pfs_alloc_percent |int |対応する PFS バイトによって示される割り当て比率 |
 |pfs_status |nvarchar (64) |PFS バイト |
 |pfs_status_desc |nvarchar (64) |PFS バイトの説明 |
-|gam_page_id |INT |対応する GAM ページのページ ID |
+|gam_page_id |int |対応する GAM ページのページ ID |
 |gam_status |bit |GAM で割り当てられているかどうかを示すビット |
 |gam_status_desc |nvarchar (64) |GAM ステータスビットの説明 |
-|sgam_page_id |INT |対応する SGAM ページのページ ID |
+|sgam_page_id |int |対応する SGAM ページのページ ID |
 |sgam_status |bit |SGAM で割り当てられているかどうかを示すビット |
 |sgam_status_desc |nvarchar (64) |SGAM ステータスビットの説明 |
-|diff_map_page_id |INT |対応する差分ビットマップページのページ ID |
+|diff_map_page_id |int |対応する差分ビットマップページのページ ID |
 |diff_status |bit |Diff の状態が変更されたかどうかを示すビット |
 |diff_status_desc |nvarchar (64) |Diff ステータスビットの説明 |
-|ml_map_page_id |INT |対応する最小ログ記録ビットマップページのページ ID |
+|ml_map_page_id |int |対応する最小ログ記録ビットマップページのページ ID |
 |ml_status |bit |ページが最小ログ記録されるかどうかを示すビット |
 |ml_status_desc |nvarchar (64) |最小ログ記録ステータスビットの説明 |
 |prev_page_file_id |smallint |前のページファイル ID |
-|prev_page_page_id |INT |前のページページ ID |
+|prev_page_page_id |int |前のページページ ID |
 |next_page_file_id |smallint |次のページファイル ID |
-|next_page_page_id |INT |次のページページ ID |
+|next_page_page_id |int |次のページページ ID |
 |fixed_length |smallint |固定サイズの行の長さ |
 |slot_count |smallint |スロットの合計数 (使用済みおよび未使用) <br> データページの場合、この数値は行の数と同じです。 |
 |ghost_rec_count |smallint |ページでゴーストとしてマークされたレコードの数 <br> ゴーストレコードとは、削除対象としてマークされているものの、まだ削除されていないレコードのことです。 |
 |free_bytes |smallint |ページの空きバイト数 |
-|free_data_offset |INT |データ領域の端にある空き領域のオフセット |
+|free_data_offset |int |データ領域の端にある空き領域のオフセット |
 |reserved_bytes |smallint |すべてのトランザクションで予約されている空きバイト数 (ヒープの場合) <br> ゴースト行の数 (インデックスのリーフの場合) |
 |reserved_bytes_by_xdes_id |smallint |M_reservedCnt に m_xdesID によって提供される領域 <br> デバッグ目的のみ |
 |xdes_id |nvarchar (64) |M_reserved によって提供される最新のトランザクション <br> デバッグ目的のみ |
 ||||
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 動的`sys.dm_db_page_info`管理関数は`page_id`、ページヘッダーに存在`file_id`する`index_id`、 `object_id` 、、などのページ情報を返します。 この情報は、さまざまなパフォーマンス (ロックとラッチの競合) と破損の問題に関するトラブルシューティングとデバッグに役立ちます。
 
 `sys.dm_db_page_info`多くの場合、 `DBCC PAGE`ステートメントの代わりに使用できますが、ページの本文ではなくページヘッダー情報のみが返されます。 `DBCC PAGE`は、ページのコンテンツ全体が必要な場合にも必要になります。
@@ -148,7 +148,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ```
 
 ## <a name="see-also"></a>参照  
-[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)

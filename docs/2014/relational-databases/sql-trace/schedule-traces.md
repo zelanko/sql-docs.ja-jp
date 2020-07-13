@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f177db7495e3304dff4653dbc778fdce25bfe7c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a698d88db35c84f7611293cf45807203c883865a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63028399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068281"
 ---
 # <a name="schedule-traces"></a>トレースのスケジュール設定
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でトレースのスケジュールを設定するには、次の 2 つの方法があります。 次のようにすることができます。  

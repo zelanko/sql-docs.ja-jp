@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 809420b875ebf20b45efb6b297cb198cfed8422b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5656eed2a9a645ebb04808a8a3f09be1c548e346
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62990400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051147"
 ---
 # <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
     

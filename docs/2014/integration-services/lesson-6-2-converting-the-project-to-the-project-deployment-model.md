@@ -7,17 +7,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cf03c77aba7544667073799f5b315eb959b0d155
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767354"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440349"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>手順 2: プロジェクトをプロジェクト配置モデルに変換する
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>手順 2:プロジェクトをプロジェクト配置モデルに変換する
   ここでは、Integration Services プロジェクトの変換ウィザードを使用して、プロジェクトをプロジェクト配置モデルに変換します。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>プロジェクトをプロジェクト配置モデルに変換する  
@@ -51,6 +50,6 @@ ms.locfileid: "62767354"
 13. [パラメーター] タブをクリックし、パッケージが VarFolderName のパラメーターに含まれ、値がレッスン 5 の構成ファイルの新しいサンプル データ フォルダーに指定されたパスと同じであることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3: レッスン 6 のパッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
+ [手順 3:レッスン 6 のパッケージのコピー](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

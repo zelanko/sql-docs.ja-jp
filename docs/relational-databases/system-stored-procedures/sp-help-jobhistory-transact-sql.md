@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893692"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マルチサーバー管理ドメインに所属するサーバーのジョブに関する情報を提供します。  
   
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`ジョブの実行状態です。 *run_status*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|失敗|  
 |**1**|成功|  
 |**2**|再試行 (ステップのみ)|  
-|**番**|Canceled|  
+|**3**|Canceled|  
 |**4**|実行中のメッセージ|  
-|**5/5**|Unknown|  
+|**5**|不明|  
   
 `[ @minimum_retries = ] minimum_retries`ジョブの実行を再試行する最小回数。 *minimum_retries*は**int**,、既定値は NULL です。  
   
@@ -98,18 +98,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>結果セット  
  実際の列の一覧は、*モード*の値によって異なります。 最も包括的な列のセットを以下に示します。*モード*がいっぱいになったときに返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|履歴エントリの識別番号。|  
-|**job_id**|**UNIQUEIDENTIFIER**|ジョブの識別番号。|  
+|**job_id**|**uniqueidentifier**|ジョブの識別番号。|  
 |**job_name**|**sysname**|ジョブ名。|  
 |**step_id**|**int**|ステップの識別番号 (ジョブ履歴の場合は**0**になります)。|  
 |**step_name**|**sysname**|ステップ名。ジョブ履歴の場合は NULL です。|  
-|**sql_message_id**|**int**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に最も新しく発生した [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの番号。|  
-|**sql_severity**|**int**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に発生した最も重大な [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの重大度。|  
-|**メッセージ**|**nvarchar (1024)**|ジョブまたはステップの履歴メッセージ。|  
+|**sql_message_id**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に最も新しく発生した [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの番号。|  
+|**sql_severity**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に発生した最も重大な [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの重大度。|  
+|**message**|**nvarchar(1024)**|ジョブまたはステップの履歴メッセージ。|  
 |**run_status**|**int**|ジョブまたはステップの結果。|  
 |**run_date**|**int**|ジョブまたはステップの実行が開始された日付。|  
 |**run_time**|**int**|ジョブまたはステップの実行が開始された時刻。|  
@@ -118,9 +116,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|このジョブに関するネットワークメッセージを送信したオペレーター (ステップ履歴の場合は NULL)。|  
 |**operator_paged**|**nvarchar (20)**|このジョブに関してページングされたオペレーター (ステップ履歴の場合は NULL)。|  
 |**retries_attempted**|**int**|ステップが再試行された回数 (ジョブ履歴の場合は常に 0)。|  
-|**server**|**nvarchar (30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**) です。|  
+|**server**|**nvarchar(30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**) です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobhistory**は、指定したスケジュールされたジョブの履歴を含むレポートを返します。 どのパラメーターも指定しない場合は、レポートにはすべての定期ジョブの履歴が含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -139,7 +137,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-job-information-for-a-job"></a>A. ジョブのすべてのジョブ情報を一覧表示する  
- 次の例では、 `NightlyBackups`ジョブのすべてのジョブ情報を一覧表示します。  
+ 次の例では、ジョブのすべてのジョブ情報を一覧表示し `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -150,8 +148,8 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>B. 一定の条件に一致するジョブに関する情報を一覧表示する  
- 次の例では、すべての`50100`列と、失敗したジョブのすべてのジョブ情報を出力し`20`ます。エラーメッセージ (ユーザー定義のエラーメッセージ) と重大度を指定して、失敗したジョブステップを表示します。  
+### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>B: 一定の条件に一致するジョブに関する情報を一覧表示する  
+ 次の例では、すべての列と、失敗したジョブのすべてのジョブ情報を出力し `50100` ます。エラーメッセージ (ユーザー定義のエラーメッセージ) と重大度を指定して、失敗したジョブステップを表示し `20` ます。  
   
 ```  
 USE msdb  
@@ -165,8 +163,8 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_purge_jobhistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

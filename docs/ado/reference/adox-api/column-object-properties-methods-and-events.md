@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759378"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -44,7 +44,7 @@ ms.locfileid: "67966899"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

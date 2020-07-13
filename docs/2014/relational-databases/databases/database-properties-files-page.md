@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62871988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970172"
 ---
 # <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
   このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)** に該当します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **データベース名**  
  データベースの名前を追加または表示します。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62871988"
  FILESTREAM データ ファイル グループにファイル (コンテナー) を追加するには、FILESTREAM を有効にする必要があります。 FILESTREAM を有効にするには、 [[サーバーのプロパティ] ([詳細設定] ページ)](../../database-engine/configure-windows/server-properties-advanced-page.md) ダイアログ ボックスを使用します。  
   
  **[ファイル グループ]**  
- ファイルのファイル グループを一覧から選択します。 既定のファイル グループは PRIMARY です。 新しいファイル グループを作成するには、 **[\<新しいファイル グループ>]** を選択し、ファイル グループに関する情報を **[新しいファイル グループ]** ダイアログ ボックスに入力します。 また、 **[ファイル グループ]** ページで新しいファイル グループを作成することもできます。 既存のファイルのファイル グループは変更できません。  
+ ファイルのファイル グループを一覧から選択します。 既定のファイル グループは PRIMARY です。 新しいファイルグループを作成するには **\<new filegroup>** 、[**新しいファイルグループ**] ダイアログボックスでファイルグループに関する情報を選択して入力します。 また、 **[ファイル グループ]** ページで新しいファイル グループを作成することもできます。 既存のファイルのファイル グループは変更できません。  
   
  メモリ最適化ファイル グループにファイル (コンテナー) を追加すると、データベースのメモリ最適化ファイル グループ名が **[ファイル グループ]** フィールドに表示されます。  
   

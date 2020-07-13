@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. ログインから権限を取り消す  
- 次の例では、`VIEW SERVER STATE` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から、アクセス許可 `WanidaBenshoof` を取り消します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` から、アクセス許可 `VIEW SERVER STATE` を取り消します。  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. WITH GRANT オプションを取り消す  
- 次の例では、`CONNECT SQL` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から、`JanethEsteves` を許可する権利を取り消します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `JanethEsteves` から、`CONNECT SQL` を許可する権利を取り消します。  
   
 ```  
 USE master;  

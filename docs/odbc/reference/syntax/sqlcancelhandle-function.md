@@ -12,20 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCancelHandle function [ODBC]
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036133"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279602"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数
 **互換性**  
- 導入されたバージョン: ODBC 3.8  
-  
- 標準への準拠: なし  
+ 導入されたバージョン: ODBC 3.8 標準準拠: なし  
   
  ほとんどの ODBC 3.8 (およびそれ以降) のドライバーでは、この関数が実装されることが想定されています。 ドライバーがサポートしていない場合、*ハンドル*パラメーターの接続ハンドルを使用して**sqlcancelhandle**を呼び出すと、IM001 が SQL_ERROR 返され、メッセージ ' driver はこの関数をサポートしていません。 *handle*パラメーターとしてのステートメントハンドルを持つ**Sqlcancelhandle**の呼び出しは、ドライバーマネージャーによって**SQLCancel**への呼び出しにマップされ、ドライバーが**SQLCancel**を アプリケーションで**Sqlgetfunctions**を使用して、ドライバーが**sqlgetfunctions**をサポートしているかどうかを判断できます。  
   
@@ -53,15 +51,15 @@ SQLRETURN SQLCancelHandle(
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
-## <a name="diagnostics"></a>診断  
+## <a name="diagnostics"></a>Diagnostics  
  **Sqlcancelhandle**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値は、 *handletype*が SQL_HANDLE_STMT、ステートメントハンドル*ハンドル*、または SQL_HANDLE_DBC の*handletype*と接続ハンドル*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって取得できます。  
   
  次の表に、 **Sqlcancelhandle**によって一般的に返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 *SQLGetDiagRec \** によって返さ[](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)れるエラーメッセージには、エラーとその原因が記述されています。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)によって返されるエラーメッセージに* \* *は、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンスエラー|*ハンドル*に関連付けられているステートメントハンドルの1つに対して、ステートメント関連の非同期関数が呼び出され、 *handletype*が SQL_HANDLE_DBC に設定されました。 **Sqlcancelhandle**が呼び出されたときに、非同期関数がまだ実行されていました。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_STMT ました。関連付けられた接続ハンドルで非同期に実行する関数が呼び出されました。関数は、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**が*ハンドル*に関連付けられているいずれかのステートメントハンドルに対して呼び出され、 *handletype*が SQL_HANDLE_DBC に設定され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> **SQLBrowseConnect**が*connectionhandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、参照プロセスが完了する前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
@@ -72,7 +70,7 @@ SQLRETURN SQLCancelHandle(
   
  *Handletype*を SQL_HANDLE_STMT に設定して**sqlcancelhandle**を呼び出すと、関数**SQLCancel**によって返されるすべての SQLSTATE を返すことができます。  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>コメント  
  この関数は**SQLCancel**に似ていますが、接続またはステートメントハンドルだけではなく、パラメーターとしてのハンドルを受け取る場合があります。 *Handletype*が SQL_HANDLE_STMT 場合、ドライバーマネージャーは**sqlcancelhandle**への呼び出しを**SQLCancel**への呼び出しにマップします。 これにより、ドライバーが**Sqlcancelhandle**を実装していない場合でも、アプリケーションは**sqlcancelhandle**を使用してステートメント操作を取り消すことができます。  
   
  ステートメント操作のキャンセルの詳細については、「 [SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)」を参照してください。  
@@ -102,11 +100,11 @@ SQLRETURN SQLCancelHandle(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ステートメントハンドルで非同期に実行されている関数をキャンセルする、データが必要なステートメントで関数を取り消す、または別のスレッドのステートメントで実行される関数をキャンセルする。|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
- [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

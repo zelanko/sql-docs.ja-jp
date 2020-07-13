@@ -1,5 +1,6 @@
 ---
 title: バイナリ ラージ オブジェクト (Blob) データ (SQL Server) | Microsoft Docs
+description: FILESTREAM、Filetable、リモート BLOB ストア (RBS) を使用すると、SQL Server でデータベースまたはリモート ストレージに BLOB を格納できます。 BLOB を格納するオプションの比較
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b38a13252001f9c50b62510f11e43822cde1666
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15673e9ee67b4499a3c20729a73eb063610baedc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68018862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781744"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>バイナリ ラージ オブジェクト (Blob) データ (SQLServer)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルおよびドキュメントをデータベースまたはリモート ストレージ デバイスに格納するためのソリューションが用意されています。  
   
 ## <a name="compare-options-for-storing-blobs-in-sql-server"></a>SQL Server に Blob を保存するオプションの比較

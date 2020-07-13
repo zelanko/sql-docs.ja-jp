@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: a7c5ce08-8841-49a3-b252-116807ba469a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5f86efc789bd978606dfa5528191f24dcdc70ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61392e655f46e17d3641ee91e37433f0aa436fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67995846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756896"
 ---
 # <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

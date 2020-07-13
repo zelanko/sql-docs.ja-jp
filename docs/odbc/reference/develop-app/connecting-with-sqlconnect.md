@@ -18,14 +18,14 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083123"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294652"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
 **SQLConnect**は最も単純な接続関数です。 データソース名が必要で、オプションのユーザー ID とパスワードを受け取ります。 この機能は、データソース名をハードコーディングし、ユーザー ID やパスワードを必要としないアプリケーションに適しています。 また、独自の "ルックアンドフィール" を制御したり、ユーザーインターフェイスを持たないアプリケーションにも適しています。 このようなアプリケーションでは、 **sqldatasources**を使用してデータソースの一覧を作成し、データソース、ユーザー ID、およびパスワードをユーザーに要求してから、 **SQLConnect**を呼び出すことができます。  

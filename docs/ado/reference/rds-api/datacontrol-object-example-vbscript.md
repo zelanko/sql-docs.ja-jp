@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bb581ab66f4422b392c0031c1e69faa00e21069f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748776"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl オブジェクトの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコードは、RDS を設定する方法を示して[います。](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時にパラメーターを DataControl し、データを認識するコントロールにバインドします。 このコードを切り取って、 \<通常の HTML \<ドキュメントの body> と body> のタグの間に貼り付け、 **DataControlDesignVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次のコードは、RDS を設定する方法を示して[います。](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時にパラメーターを DataControl し、データを認識するコントロールにバインドします。 このコードを切り取って、 \< 通常の HTML ドキュメントの body> と body> のタグの間に貼り付け、 \< **DataControlDesignVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +92,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- 次の例は、RDS の必要なパラメーターを設定する方法を示して**います。** 実行時に DataControl。 この例をテストするには、通常の HTML ドキュメント\<で body> \<と body> タグの間でこのコードを切り取って貼り付け、 **DataControlRuntimeVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次の例は、RDS の必要なパラメーターを設定する方法を示して**います。** 実行時に DataControl。 この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **DataControlRuntimeVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

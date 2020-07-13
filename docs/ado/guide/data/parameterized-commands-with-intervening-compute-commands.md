@@ -13,14 +13,14 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924725"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764783"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>介在する COMPUTE コマンドを含むパラメーター化されたコマンド
 一般的なパラメーター化された shape APPEND コマンドには、クエリコマンドを使用して親**レコードセット**を作成する句と、パラメーター化されたクエリコマンドを使用して子**レコードセット**を作成する句があります。これは、パラメーターのプレースホルダー (疑問符 "?") を含むコマンドです。 結果の整形された**レコードセット**には、親が上位レベルを占め、子が下位レベルを占める2つのレベルがあります。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumParams function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8020bdd1339cf9b46682e85456c3d1a26db6c517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c695c3b37df90f3c675a28b5bb63a53c42f5c0
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002260"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81299492"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

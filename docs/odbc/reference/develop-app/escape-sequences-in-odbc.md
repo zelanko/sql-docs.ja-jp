@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68051124"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300422"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC でのエスケープ シーケンス
 外部結合やスカラー関数呼び出しなどの多くの言語機能は、通常、Dbms によって実装されます。 ただし、これらの機能の構文は、標準の構文がさまざまな標準の本体によって定義されている場合でも、DBMS 固有の傾向があります。 このため、ODBC では、次の言語機能の標準的な構文を含むエスケープシーケンスが定義されています。  
@@ -42,7 +42,7 @@ ms.locfileid: "68051124"
   
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  エスケープシーケンスは、ドライバーによって認識および解析されます。これにより、エスケープシーケンスは DBMS 固有の文法に置き換えられます。 エスケープシーケンスの構文の詳細については、「付録 C: SQL 文法」の「 [ODBC エスケープシーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)」を参照してください。  
   
 > [!NOTE]  

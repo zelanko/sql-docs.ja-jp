@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68768994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716222"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   テーブルが列または行でフィルター選択されている場合に、パブリッシュされたアーティクルを定義するビューを作成します。 このビューは、出力先のテーブル用にフィルター選択されたスキーマやデータのソースとして使用されます。 このストアドプロシージャで変更できるのは、サブスクライブされていないアーティクルだけです。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -68,10 +68,10 @@ sp_articleview [ @publication = ] 'publication'
   
  **1**に設定すると、アーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を行う権限が与えられます。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーからパブリッシュする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
+>  パブリッシャーからパブリッシュする場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`レプリケーションの同期に使用するストアドプロシージャが自動的に再作成されるかどうかを示します。 *refreshsyncの proc*は**ビット**,、既定値は1です。  
   
@@ -84,7 +84,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_articleview**は、パブリッシュされたアーティクルを定義するビューを作成し、このビューの ID を[sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルの**sync_objid**列に挿入し、restriction 句のテキストを**filter_clause**列に挿入します。 すべての列がレプリケートされ、 **filter_clause**が存在しない場合、 [sysarticles &#40;transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルの**SYNC_OBJID**はベーステーブルの ID に設定され、 **sp_articleview**の使用は必須ではありません。  
   
  行方向にフィルター選択されたテーブルをパブリッシュする (つまり、列をフィルター選択する) 場合は[&#40;sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 、最初に*sync_object*パラメーターを指定せずに**sp_addarticle**を実行し、レプリケートされる各列に対して (列フィルターを定義して) transact-sql&#41;を**1 回ずつ**実行します  
@@ -103,7 +103,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_articleview**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [静的行フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
@@ -111,6 +111,6 @@ sp_articleview [ @publication = ] 'publication'
  [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

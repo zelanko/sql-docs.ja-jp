@@ -11,15 +11,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c421a21210dda44f48512ecc2475b8d84fa8fdfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063444"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>ブロックの挿入 Transact-SQL スニペットの挿入
   ブロックの挿入スニペットは、BEGIN、IF、または WHILE ブロックで一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを囲むときに出発点として使用できるテンプレートです。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1437f710725df5c87d31f6a80939a5d7869b412
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011264"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063216"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>フルテキスト クエリのパフォーマンスの向上
   フルテキスト クエリのパフォーマンスを向上させるための推奨事項を次に示します。  
@@ -26,8 +25,7 @@ ms.locfileid: "66011264"
   
 -   [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)を使用して、フルテキスト カタログを再構成します。 このステートメントを実行するとそのカタログのフルテキスト インデックスがマスター マージされるため、この作業はパフォーマンス テストの前に行うようにしてください。  
   
--   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 
-  `int` および `bigint` を使用すると、最適なパフォーマンスが得られます。  
+-   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 `int` および `bigint` を使用すると、最適なパフォーマンスが得られます。  
   
 -   整数型のフルテキスト キーを使用すると、 **docid** マッピング テーブルとの結合が回避されます。 したがって、整数型のフルテキスト キーにより、クエリのパフォーマンスが大幅に向上し、クロールのパフォーマンスも向上します。 フルテキスト キーがクラスター化インデックス キーでもある場合、パフォーマンスがさらに向上する可能性があります。  
   

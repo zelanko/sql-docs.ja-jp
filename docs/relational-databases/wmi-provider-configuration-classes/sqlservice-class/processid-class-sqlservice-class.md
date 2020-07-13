@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8418bd70e3aa2b28e0274bec63c312aba2849b84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 226530ebb5347ab2ace2804fc8e293d1c5899793
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73657073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888396"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId クラス (SqlService クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サービスを一意に識別するシステム プロセス ID を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,14 +35,14 @@ ms.locfileid: "73657073"
 object.ProcessId [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロセスを一意に識別する ID を指定する**uint32**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>例  
   

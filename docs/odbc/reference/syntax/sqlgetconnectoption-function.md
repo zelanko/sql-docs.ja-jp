@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetConnectOption function [ODBC]
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7461304a9aa015eac223dc726e669ad5c4ecd4ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94a29637365862990ea067f663023fae04a7af3e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103832"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285572"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption 関数
 **互換性**  

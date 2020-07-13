@@ -15,14 +15,14 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100622"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303603"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Interval データ型での既定の先頭有効桁数と秒小数部分のオーバーライド
 **SQLBindCol**または**SQLSetDescField**のいずれかを呼び出すことによって、の SQL_DESC_TYPE フィールドが Datetime または interval C 型に設定されている場合、SQL_DESC_PRECISION フィールド (秒の有効桁数を含む) は次の既定値に設定されます。  

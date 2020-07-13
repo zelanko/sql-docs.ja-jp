@@ -18,15 +18,14 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b654568c93df0a0c3e08cf6eaa615b7026a9c18a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003122"
 ---
 # <a name="other-annotations-sqlxml-40"></a>その他の注釈 (SQLXML 4.0)
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  

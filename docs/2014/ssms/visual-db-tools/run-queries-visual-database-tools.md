@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc75e12aa71e0688b475c221d83e384042fd7249
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62710807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067103"
 ---
 # <a name="run-queries-visual-database-tools"></a>クエリの実行 (Visual Database Tools)
   クエリのデザインが完了したら、クエリを実行できます。  

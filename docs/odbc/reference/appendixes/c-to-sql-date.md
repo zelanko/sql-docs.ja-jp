@@ -12,16 +12,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fa3df8aaee03472076b3241cb9bb60e2a307e28b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019410"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298850"
 ---
-# <a name="c-to-sql-date"></a>C から SQL へ: 日付
+# <a name="c-to-sql-date"></a>C から SQL へ: Date
 Date ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_TYPE_DATE  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758935"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server:SQL Errors オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Microsoft **の**SQLServer:SQL Errors[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、 **SQL Errors**を監視するカウンターが用意されています。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Errors** オブジェクトには、 **SQL Errors**を監視するカウンターが用意されています。  
   
  次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** カウンターについて説明します。  
   

@@ -12,22 +12,20 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175721"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545998"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータマイニングモードで**は、従来の OLAP およびデータマイニングがサポートされます。 **表形式モード**では、テーブルモデルがサポートされます。 **SharePoint 統合モード**は、ブック内の Excel または PowerPivot データモデルの読み込みとクエリを実行するために使用される PowerPivot for SharePoint としてインストールされた Analysis Services のインスタンスを参照します。
 
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、「[テーブルモデリング &#40;Ssas 表形式&#41;](../../tabular-models/tabular-models-ssas.md) 」と「 [ssas&#41;&#40;の表形式ソリューションと多次元ソリューションの比較](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)」を参照してください。
 
-## <a name="basic-architecture"></a>基本のアーキテクチャ
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスには、"\<ServerName>\\<InstanceName\>" という名前が付けられます。 次の図は、オブジェクト間の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]すべての関係を示しています。
+## <a name="basic-architecture"></a>基本アーキテクチャ
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 のインスタンス [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、" \<ServerName><InstanceName" という名前が付けられ \\ \> ます。 次の図は、オブジェクト間のすべての関係を示して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] います。
 
  ![AMO の実行オブジェクトの関係](../../dev-guide/media/amo-runningobjects.gif "AMO の実行オブジェクトの関係")
 
@@ -37,15 +35,14 @@ ms.locfileid: "78175721"
 
  キューブは、ディメンションおよびメジャー グループから構築されます。 キューブのディメンション コレクション内のディメンションは、データベースのディメンション コレクションに属しています。 メジャー グループは、同じデータ ソース ビューおよびキューブのディメンションの同じサブセットを持つ、メジャーのコレクションです。 1 つのメジャー グループには、物理データを管理するパーティションが 1 つ以上あります。 メジャー グループには、既定の集計デザインを指定できます。 既定の集計デザインを、メジャー グループ内のすべてのパーティションに使用できます。また、各パーティションに独自の集計デザインを使用することもできます。
 
- サーバーオブジェクトの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]各インスタンスは、AMO では異なるサーバーオブジェクトとして表示されます。各インスタンスは、異なる接続に<xref:Microsoft.AnalysisServices.Server>よってオブジェクトに接続されます。 各サーバー オブジェクトには、1 つ以上のデータ ソース、データ ソース ビュー、データベース オブジェクト、アセンブリ、およびセキュリティ ロールが含まれています。
+ サーバーオブジェクトの各インスタンス [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、AMO では異なるサーバーオブジェクトとして表示されます。各インスタンスは、 <xref:Microsoft.AnalysisServices.Server> 異なる接続によってオブジェクトに接続されます。 各サーバー オブジェクトには、1 つ以上のデータ ソース、データ ソース ビュー、データベース オブジェクト、アセンブリ、およびセキュリティ ロールが含まれています。
 
  ディメンションオブジェクト各データベースオブジェクトには、複数のディメンションオブジェクトが含まれます。 各ディメンション オブジェクトには 1 つ以上の属性が含まれ、属性は階層で構成されます。
 
  キューブオブジェクト各データベースオブジェクトには、1つまたは複数のキューブオブジェクトが含まれます。 キューブは、メジャーとディメンションによって定義されます。 キューブのメジャーとディメンションは、そのキューブの基になっているか、またはメジャー定義とディメンション定義から生成されたデータ ソース ビュー内のテーブルおよびビューから派生します。
 
 ## <a name="object-inheritance"></a>オブジェクトの継承
- ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、要素グループ "`Dimensions`を含む`Hierarchies`" は、要素のディメンション階層を定義します。 
-  `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。
+ ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、要素グループ "を含む" は、 `Dimensions` `Hierarchies` 要素のディメンション階層を定義します。 `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。
 
  明示的にオーバーライドされない限り、要素はこれらの繰り返される要素グループの詳細を上位レベルから継承します。 たとえば、`Translations` の `CubeDimension` は、先祖要素である `Translations` の `Cube` と同じです。
 
@@ -77,7 +74,7 @@ ms.locfileid: "78175721"
 
  1 つのディメンションを使用してメジャーを集計するだけでなく、さまざまなディメンションのメンバーを組み合わせて使用し、メジャーを集計できます。 これにより、ビジネス ユーザーは複数のディメンション内で同時にメジャーを評価できます。 たとえば、ビジネス ユーザーが Eastern Hemisphere と Western Hemisphere から air によって搬送された輸入品を四半期別に分析する必要があれば、キューブ上でクエリを実行して次のデータセットを取得できます。
 
-||||パッケージ|||Last (最後へ)|||
+||||パッケージ|||末尾|||
 |-|-|-|--------------|-|-|----------|-|-|
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|
 |All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|
@@ -95,12 +92,12 @@ ms.locfileid: "78175721"
 
 |メジャーまたは属性 (レベル)|メンバー|ソース テーブル|基になる列|サンプル列の値|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
-|パッケージメジャー|適用不可|ImportsFactTable|パッケージ|12|
-|Last メジャー|適用不可|ImportsFactTable|Last (最後へ)|May-03-99|
+|パッケージメジャー|適用なし|ImportsFactTable|パッケージ|12|
+|Last メジャー|適用なし|ImportsFactTable|末尾|May-03-99|
 |Route ディメンションの Route_Category レベル|nonground、ground|RouteDimensionTable|Route_Category|Nonground|
 |Route ディメンションの Route 属性|air、sea、road、rail|RouteDimensionTable|ルート|Sea|
 |Source ディメンションの Hemisphere 属性|Eastern Hemisphere、Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Source ディメンションの Continent 属性|Africa,Asia,AustraliaEurope,N. America,S. アメリカ合衆国|SourceDimensionTable|Continent|ヨーロッパ|
+|Source ディメンションの Continent 属性|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|ヨーロッパ|
 |Time ディメンションの Half 属性|1st half、2nd half|TimeDimensionTable|Half|2nd half|
 |Time ディメンションの Quarter 属性|1st quarter、2nd quarter、3rd quarter、4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -108,13 +105,13 @@ ms.locfileid: "78175721"
 
 |||||||
 |-|-|-|-|-|-|
-|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|パッケージ|Last (最後へ)|
-|3516987|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|15|Jan-10-99|
-|3554790|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|40|Jan-19-99|
-|3572673|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|34|Jan-27-99|
-|3600974|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|45|Feb-02-99|
-|3645541|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|20|Feb-09-99|
-|3674906|1 で保護されたプロセスとして起動されました|6|1 で保護されたプロセスとして起動されました|36|Feb-17-99|
+|Import_ReceiptKey|RouteKey|SourceKey|TimeKey|パッケージ|末尾|
+|3516987|1|6|1|15|Jan-10-99|
+|3554790|1|6|1|40|Jan-19-99|
+|3572673|1|6|1|34|Jan-27-99|
+|3600974|1|6|1|45|Feb-02-99|
+|3645541|1|6|1|20|Feb-09-99|
+|3674906|1|6|1|36|Feb-17-99|
 
  上の表では、行ごとに、 **Routekey**、 **sourcekey**、および**timekey**列の値が同じで、これらの行が同じキューブセルに寄与することを示しています。
 
@@ -123,6 +120,6 @@ ms.locfileid: "78175721"
  ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンションリレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。
 
 ## <a name="see-also"></a>参照
- [SSAS&#41;&#40;多次元モデルデータベース](../multidimensional-model-databases-ssas.md)
+ [多次元モデル データベース &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
 
 

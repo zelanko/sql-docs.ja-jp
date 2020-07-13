@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a925b66b0d09a9beb32e4441d62bc4fa9296313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 13510332ae8bfab07a13d7831f9f74a048551214
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990739"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288620"
 ---
 # <a name="location-of-cache"></a>キャッシュの場所
 > [!IMPORTANT]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62917446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970242"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
@@ -39,18 +38,18 @@ ms.locfileid: "62917446"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ユーザー定義データ型の別名は、識別子のルールに準拠した名前である必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  現在のデータベース内の CREATE TYPE 権限、および *schema_name*に対する ALTER 権限が必要です。 *schema_name* を指定しなかった場合は、現在のユーザーのスキーマを判断するための既定の名前解決ルールが適用されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
@@ -70,8 +69,8 @@ ms.locfileid: "62917446"
   
      長さは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   
-     **名前**  
-     ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 最大文字数は、システム`sysname`データ型と一致している必要があります。 既存のユーザー定義データ型の別名は編集できません。  
+     **Name**  
+     ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 最大文字数は、システムデータ型と一致している必要があり `sysname` ます。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
      必要に応じて、ユーザー定義データ型の別名にバインドするルールを選択します。  
@@ -92,7 +91,7 @@ ms.locfileid: "62917446"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     および`nchar` `nvarchar`データ型の場合、ストレージ値は常に**長さ**の2倍の値になります。  
+     `nchar`およびデータ型の場合、 `nvarchar` ストレージ値は常に**長さ**の2倍の値になります。  
   
      ストレージは、`nvarchar(max)`、`varchar(max)`、`varbinary(max)` の各データ型に対しては表示されません。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62917446"
   
 7.  新しいデータ型の別名に既定値またはルールをバインドする場合は、 **[バインド]** で、 **[既定値]** または **[ルール]** ボックスへの設定を完了します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、既定値やルールを作成できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 既定値やルールを作成するためのサンプル コードは、テンプレート エクスプローラーで使用できます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名を作成するには  
   

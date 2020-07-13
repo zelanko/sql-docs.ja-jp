@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e35cf86a91be42a2a39a38642e34e747d7d13fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949622"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753914"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
 セルの座標を使用して、セル[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)からセルを取得します。  

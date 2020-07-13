@@ -39,14 +39,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965767"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763823"
 ---
 # <a name="name-property-adox"></a>Name プロパティ (ADOX)
 オブジェクトの名前を示します。  

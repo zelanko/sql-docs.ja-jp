@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055680"
 ---
 # <a name="order-mdx"></a>Order (MDX)
@@ -44,12 +44,12 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  有効な文字列式です。通常は、文字列として表現された数値を返すセル座標の有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Order**関数は、( **ASC**または**desc**フラグを使用して指定されたように)、または非階層型 ( **basc**または**bdesc**フラグを使用して指定された) のいずれかにすることができます。 **B**は "break hierarchy" を表します。 **ASC**または**DESC**が指定されている場合、 **Order**関数は、まず階層内の位置に基づいてメンバーを配置し、次に各レベルを順序付けます。 **Basc**または**bdesc**が指定されている場合、 **Order**関数は、階層に関係なく、セット内のメンバーを整列します。 フラグを指定しない場合、 **ASC**が既定値になります。  
   
  2つ以上の階層がクロス結合されているセットで**Order**関数が使用されていて、 **DESC**フラグが使用されている場合、セット内の最後の階層のメンバーのみが並べ替えられます。 この点が Analysis Services 2000 とは異なります。Analysis Services 2000 では、セットのすべての階層が並べ替えられます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **Adventure works**キューブから、Date ディメンションの calendar 階層のすべての四半期の再販業者の注文数を返します。**Order**関数は、ROWS 軸のセットを並べ替えます。 **Order**関数は、 `[Reseller Order Count]` `[Calendar]`階層によって決定される階層の降順でセットを並べ替えます。  
   
  `SELECT`  
@@ -211,6 +211,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

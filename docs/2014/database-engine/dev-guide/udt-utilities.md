@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8217f3571c7ec285d10e04d1c289f1a4963ee384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933243"
 ---
 # <a name="udt-utilities"></a>UDT ユーティリティ
   UDT Utilities サンプルには、さまざまなユーティリティ関数が含まれています。 Transact-SQL へアセンブリ メタデータを公開するための関数、アセンブリ内の型をテーブルとして返すサンプル ストリーミング テーブル値関数、およびユーザー定義データ型のフィールド、メソッド、プロパティを返す関数などがあります。 例示されているテクノロジは、ストリーミング テーブル値関数、.NET Framework リフレクション API、Transact-SQL からのテーブル値関数の呼び出しなどです。  
@@ -23,11 +22,9 @@ ms.locfileid: "73637729"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
--   Codeplex [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手可能なデータベース  
+-   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]Codeplex [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手可能なデータベース  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -50,7 +47,7 @@ ms.locfileid: "73637729"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] インスタンスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースがインストールされている必要があります。  
   
@@ -74,21 +71,19 @@ ms.locfileid: "73637729"
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /keyfile:Key.snk /out:UDTUtilities.dll /target:library AssemblyBrowser.cs`  
   
-5.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
+5.  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
   
 6.  次のコマンドを実行して、アセンブリとストアド プロシージャを配置します。  
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+7.  [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-9. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
+9. [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
   
 10. 次のコマンドを使用してこのスクリプトを実行します。  
   
@@ -1601,6 +1596,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63270602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061825"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>抽出条件ペイン (Visual Database Tools)
   抽出条件ペインでは、表示するデータ列、結果の順序、選択する行などのクエリ オプションを選択してスプレッドシート形式のグリッドに入力することにより、クエリ オプションを指定できます。 抽出条件ペインでは次の内容を指定できます。  

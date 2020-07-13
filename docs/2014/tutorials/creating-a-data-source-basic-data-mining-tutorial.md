@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494025"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>データ ソースの作成 (基本的なデータ マイニング チュートリアル)
@@ -27,7 +27,7 @@ ms.locfileid: "69494025"
   
 1.  **ソリューションエクスプローラー**で、[**データソース**] フォルダーを右クリックし、[**新しいデータソース**] をクリックします。  
   
-2.  [**データソースウィザードへようこそ**] ページで、[**次へ**] をクリックします。  
+2.  **[データ ソース ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**接続の定義方法を選択**します] ページで、[**新規**] をクリック[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]してデータベースに接続を追加します。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "69494025"
 ## <a name="see-also"></a>参照  
  [SSAS 多次元&#41;&#40;データソースを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [データソースの定義](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [SSAS-多次元&#41;&#40;権限借用オプションを設定する](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [権限借用オプションの設定 &#40;SSAS - 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046340"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898349"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>fn_cdc_map_lsn_to_time (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたログシーケンス番号 (LSN) について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**tran_end_time**列から日付と時刻の値を返します。 この関数を使用すると、変更テーブルの日付範囲に LSN 範囲を体系的にマップできます。  
   
@@ -46,16 +46,16 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  照合する LSN 値を指定します。 *lsn_value*は**binary (10)** です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **DATETIME**  
+ **datetime**  
   
 ## <a name="remarks"></a>解説  
  この関数を使用すると、変更データの行に返された **__ $ start_lsn**値に基づいて、変更がコミットされた時刻を確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `sys.fn_cdc_map_lsn_to_time`関数を使用して、 `HumanResources_Employee`キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認します。  
+ 次の例では、関数を使用して、 `sys.fn_cdc_map_lsn_to_time` キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認し `HumanResources_Employee` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -67,7 +67,7 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

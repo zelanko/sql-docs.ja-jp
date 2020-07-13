@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18cc9317b8e610b442299cfee3777a183c9146df
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895450"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースからイベント通知トリガーを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67910057"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP EVENT NOTIFICATION notification_name [ ,...n ]  
 ON { SERVER | DATABASE | QUEUE queue_name }  

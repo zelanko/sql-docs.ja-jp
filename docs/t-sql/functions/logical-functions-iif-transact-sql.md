@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - IIF function
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4175c95cd73c444f7a1df5c2f11009bc6b854c33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784454"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>論理関数 - IIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではブール式が true または false のいずれに評価されるかによって、2 つの値のいずれかを返します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68059754"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 IIF ( boolean_expression, true_value, false_value )  
 ```  

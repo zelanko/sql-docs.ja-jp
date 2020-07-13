@@ -11,20 +11,17 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 093aa1043744381848db1c9ec8c46c992d32801b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537439"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>[マイニング構造] ビュー (データ マイニング モデル デザイナー)
-  
   **[マイニング構造]** ビューを使用すると、マイニング構造を変更したり、マイニング構造および関連付けられているすべてのマイニング モデルを処理したりできます。  
   
- 
-  **[マイニング構造]** ビューでは、次のツールとダイアログ ボックスを使用できます。  
+ **[マイニング構造]** ビューでは、次のツールとダイアログ ボックスを使用できます。  
   
 -   [[新しいマイニングモデル] ダイアログボックス &#40;マイニング構造ビュー&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
@@ -36,6 +33,6 @@ ms.locfileid: "66077670"
  [マイニングモデルビュー &#40;データマイニングモデルデザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [マイニング精度チャートデザイナー &#40;データマイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [予測クエリビルダー &#40;データマイニング&#41;](prediction-query-builder-data-mining.md)  
+ [予測クエリ ビルダー &#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  
   
   

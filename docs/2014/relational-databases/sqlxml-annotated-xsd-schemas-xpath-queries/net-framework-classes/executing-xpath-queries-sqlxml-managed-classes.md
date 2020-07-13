@@ -13,15 +13,14 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d7430b8e32353e40ede0baf42b6c5306461988f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015321"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath クエリの実行 (SQLXML マネージド クラス)
   この例では、マッピング スキーマに対する XPath クエリの実行方法を示します。  

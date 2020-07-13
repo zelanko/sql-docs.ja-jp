@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68117877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85875216"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パブリケーションの ID 範囲を調整し、パブリケーションのしきい値に基づいて新しい範囲を再割り当てします。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -48,7 +48,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_adjustpublisheridentityrange**は、すべての種類のレプリケーションで使用されます。  
   
  自動 ID 範囲が有効になっているパブリケーションの場合は、ディストリビューション エージェントまたはマージ エージェントが、パブリケーションのしきい値に基づいてパブリケーションの ID 範囲を自動的に調整します。 ただし、何らかの理由でディストリビューションエージェントまたはマージエージェントが一定期間実行されていない場合や、id 範囲のリソースがしきい値のポイントまで頻繁に使用されている場合、ユーザーは**sp_adjustpublisheridentityrange**を呼び出して、パブリッシャーの新しい範囲の値を割り当てることができます。  
@@ -58,8 +58,8 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_adjustpublisheridentityrange**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

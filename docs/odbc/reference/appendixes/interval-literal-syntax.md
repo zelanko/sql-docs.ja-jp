@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3387b07a8e769206a6a495addff4287000691fec
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041625"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290572"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
 ODBC の interval リテラルには、次の構文が使用されます。  

@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Groups collection [ADOX], members
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 424a57e47b9e9f788126680a2090071f517abeeb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966163"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761720"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "67966163"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

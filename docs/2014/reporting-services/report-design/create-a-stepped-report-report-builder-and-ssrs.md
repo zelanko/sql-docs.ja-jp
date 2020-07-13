@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106128"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
@@ -42,11 +42,9 @@ ms.locfileid: "66106128"
   
     2.  グループ化ペインで、グループの詳細を右クリックし、 **[グループの追加]** をポイントして **[親グループ]** をクリックします。  
   
-    3.  
-  **[Tablix のグループ]** ダイアログ ボックスで、グループの名前を指定し、グループ式を入力するかドロップダウン リストから選択します。 ボックスの一覧には、レポート データ ペインで使用できる簡単なフィールド式が表示されます。 たとえば、[PostalCode] は、データセット内の PostalCode フィールドの簡単なフィールド式です。  
+    3.  **[Tablix のグループ]** ダイアログ ボックスで、グループの名前を指定し、グループ式を入力するかドロップダウン リストから選択します。 ボックスの一覧には、レポート データ ペインで使用できる簡単なフィールド式が表示されます。 たとえば、[PostalCode] は、データセット内の PostalCode フィールドの簡単なフィールド式です。  
   
-    4.  
-  **[グループ ヘッダーの追加]** を選択します。 このオプションを選択すると、グループの上部にグループ ラベルおよびグループ合計の静的行が追加されます。 同様に、 **[グループ フッターの追加]** を選択して、グループの下に静的行を追加できます。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    4.  **[グループ ヘッダーの追加]** を選択します。 このオプションを選択すると、グループの上部にグループ ラベルおよびグループ合計の静的行が追加されます。 同様に、 **[グループ フッターの追加]** を選択して、グループの下に静的行を追加できます。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
      これで、基本的なテーブル レポートが作成されました。 レポートが表示されると、1 つの列にグループ インスタンス値、1 つ以上の列にグループ化された詳細データが含まれています。 デザイン画面でのデータ領域の外観は次の図のようになります。  
   
@@ -82,9 +80,9 @@ ms.locfileid: "66106128"
   
      ![階段状レポートのデータ領域](../media/steppedreportdataregion.gif "階段状レポートのデータ領域")  
   
-     **階段状レポートレイアウトのデータ領域**  
+     **段階状レポート レイアウトのデータ領域**  
   
-     [**ホーム**] タブで [**実行**] をクリックします。 レポートに、子グループ値がインデント設定されたグループが表示されます。  
+     **[ホーム]** タブで **[実行]** をクリックします。 レポートに、子グループ値がインデント設定されたグループが表示されます。  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>複数のグループを含む階段状レポートを作成するには  
   
@@ -97,23 +95,21 @@ ms.locfileid: "66106128"
         > [!NOTE]  
         >  データ領域にグループを追加するには、いくつかの方法があります。 詳細については、「 [&#40;レポートビルダーと SSRS&#41;」の「データ領域でのグループの追加または削除](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
-    2.  
-  **[Tablix のグループ]** ダイアログ ボックスで、名前を入力します。  
+    2.  **[Tablix のグループ]** ダイアログ ボックスで、名前を入力します。  
   
-    3.  
-  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+    3.  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
     4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 3.  グループ データを表示するセルの埋め込みを変更します。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
- [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
- [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [ページヘッダーとページフッター &#40;レポートビルダーと SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポートアイテムの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
+ [Tablix データ領域 &#40;レポートビルダーと SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポートビルダーと SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポートビルダーと SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

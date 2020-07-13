@@ -12,14 +12,14 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], data types
 - data types [ODBC], Visual FoxPro ODBC driver
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2d23ddc5fdd00db45aee235e96f13a8cf08082a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fc28464a7c14f9801473cc125b0e90c50247d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080777"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301102"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>サポートされるデータ型 (Visual FoxPro ODBC ドライバー)
 ドライバーでサポートされているデータ型の一覧については、ODBC API と Microsoft Query を使用して説明します。  

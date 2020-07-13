@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8410ffdf38f8ae2d7dc5676debd13343c02c8f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716826"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールを実装する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] または [COM ベースのカスタム競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
   
  **このトピックの内容**  
@@ -120,7 +120,7 @@ ms.locfileid: "75322162"
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
+2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、**\@publication**、**\@article** を指定し、**\@property** に **article_resolver** 値、**\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
   
 
 ## <a name="see-also"></a>関連項目  

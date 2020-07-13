@@ -17,18 +17,18 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f9735ca8a40997e88430810cf4119c060f0c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61561d3ef5b0b2c27f2b2a01eee5a367e87fea8c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844491"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002225"
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、指定された数値式に等しいかそれより大きい最小整数を返します。
   
@@ -36,7 +36,7 @@ ms.locfileid: "73844491"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CEILING ( numeric_expression )  
 ```  
   

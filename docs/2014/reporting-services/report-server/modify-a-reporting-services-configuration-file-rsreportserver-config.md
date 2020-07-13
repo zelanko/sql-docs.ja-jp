@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103760"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103760"
   
 -   [Reporting Services の構成ファイルを編集するには](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> 構成値の読み取りと使用  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> 構成値の読み取りと使用  
  レポート サーバーが構成ファイルを読み取るタイミングは、サービスが開始されたときと、構成ファイルが保存されたときです。 新しい値や変更された値は、現在のアプリケーション ドメインの有効期間が切れた後、新しいアプリケーション ドメインで有効になります。 現在のアプリケーション ドメインで処理中の要求は、できる限り最後まで完了するように配慮されます。 ただし、いくつかの設定については、アプリケーション ドメインのリサイクルが直ちに必要となります。 この場合、処理中の要求はすべて、新しいアプリケーション ドメインで再開されます。  
   
  無効な値が検出された場合、レポート サーバーによって Windows アプリケーション ログにエラーが記録され、エラーの内容に応じてレポート サーバーの起動が失敗するか、または既定値が使用されます。  
@@ -46,13 +46,13 @@ ms.locfileid: "66103760"
   
  正常な変更も含め、構成ファイルに対するすべての変更は、レポート サーバーのトレース ログ ファイルに記録されます。 アプリケーション イベント ログには、エラーだけが記録されます。  
   
-##  <a name="bkmk_default_values"></a> 既定値について  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> 既定値について  
  ほとんどの構成設定には、レポート サーバー内部で指定される既定値があります。 ユーザー定義の値が無効であったり、指定されていなかった場合は、既定値が使用されます。 構成設定が無効であるため既定値を使用した場合は、トレース ログ ファイルにエラーが書き込まれます。  
   
-##  <a name="bkmk_delete_config_settings"></a> 構成設定の削除  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> 構成設定の削除  
  既定値がある構成設定の場合は、構成ファイルから設定を削除しても影響はありません。 ほとんどの構成設定は、実際には内部的に定義および構成されます。 構成ファイルから項目を削除しても、内部コピーは引き続き使用でき、その項目に対して定義されている既定値が使用されます。  
   
-##  <a name="bkmk_edit_configuation_file"></a> Reporting Services の構成ファイルを編集するには  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Reporting Services の構成ファイルを編集するには  
   
 1.  編集する構成ファイルを探します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66103760"
   
 ## <a name="see-also"></a>参照  
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
- [ReportingServicesService 構成ファイル](reportingservicesservice-configuration-file.md)   
+ [Reportingservices サービス構成ファイル](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 構成ファイル](rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../extensions/delivery-extension/deploying-a-delivery-extension.md)   

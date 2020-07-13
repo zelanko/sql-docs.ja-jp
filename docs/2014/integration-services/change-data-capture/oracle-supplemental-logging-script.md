@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78a379e0757ab604451cd720a6ab388d97902f97
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435599"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle の補足ログ スクリプト
   このダイアログ ボックスには、Oracle の補足ログ スクリプトが表示されます。  

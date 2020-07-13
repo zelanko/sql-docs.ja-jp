@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105335"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
@@ -39,7 +39,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Expression2 ヒント [一括 |Strict |Lazy]]*  
  論理式が**false**に評価されるときに使用されます。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  論理式で指定された条件は、この式の値が0の場合は**false**に評価されます。 その他の値は**true**に評価されます。  
   
  条件が**true**の場合、 **IIf**関数は最初の式を返します。 それ以外の場合、関数は2番目の式を返します。  
@@ -65,7 +65,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](https://go.microsoft.com/fwlink/?LinkId=269540)」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、計算されるメジャー内の**IIF**を使用して、Internet Sales Amount メジャーが $1万より大きいか、または未満の場合に、2つの異なる文字列値のいずれかを返す簡単な方法を示しています。  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
@@ -177,6 +177,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

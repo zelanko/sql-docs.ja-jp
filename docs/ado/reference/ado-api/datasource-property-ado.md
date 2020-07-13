@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933248"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763473"
 ---
 # <a name="datasource-property-ado"></a>DataSource プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして表されるデータを格納するオブジェクトを示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "67933248"
   
  参照されるオブジェクトは、 **IDataSource**インターフェイスを実装する必要があり、 **IRowset**インターフェイスを含んでいる必要があります。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs as New ADODB.Recordset  

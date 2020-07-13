@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fd30518f441dc2f54e65c838911503fd6d57fd56
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889039"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [Setordervalue メソッド (ClientNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)によって指定されたクライアントネットワークプロトコルに必要なフラグオプションの数を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,17 +35,16 @@ ms.locfileid: "73659128"
 object.NumberofFlags [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  [クライアントによって使用されるネットワーク プロトコルを表す](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [クライアントによって使用されるネットワーク プロトコルを表す](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **Ordervalue**プロパティによって参照されるクライアントネットワークプロトコルに必要なフラグオプションの数を指定する**Uint32**値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

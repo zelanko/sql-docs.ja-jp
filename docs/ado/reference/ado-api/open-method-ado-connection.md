@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931937"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762203"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO Connection)
 データソースへの接続を開きます。  
@@ -36,16 +36,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>パラメーター  
  *文字列*  
- 省略可能。 接続情報を含む**文字列**値です。 有効な設定の詳細については、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
+ 任意。 接続情報を含む**文字列**値です。 有効な設定の詳細については、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
  *UserID*  
- 省略可能。 接続を確立するときに使用するユーザー名を含む**文字列**値です。  
+ 任意。 接続を確立するときに使用するユーザー名を含む**文字列**値です。  
   
  *パスワード*  
- 省略可能。 接続を確立するときに使用するパスワードを含む**文字列**値です。  
+ 任意。 接続を確立するときに使用するパスワードを含む**文字列**値です。  
   
- *オプション*  
- 省略可能。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)値。  
+ *[オプション]*  
+ 任意。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)値。  
   
 ## <a name="remarks"></a>解説  
  [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトで**Open**メソッドを使用すると、データソースへの物理的な接続が確立されます。 このメソッドが正常に完了すると、接続が有効になり、その接続に対してコマンドを発行して結果を処理できるようになります。  

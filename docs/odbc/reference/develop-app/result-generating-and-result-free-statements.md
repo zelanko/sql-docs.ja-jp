@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fc94aabd7982fba5879519573980db03b1857ef6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020601"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300092"
 ---
 # <a name="result-generating-and-result-free-statements"></a>結果生成および結果解放ステートメント
 SQL ステートメントは、次の5つのカテゴリに疎に分けることができます。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CreateRecordset method [RDS], VBScript example
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 485413a9fee94998d76f24829298faffe00c8dab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964529"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758578"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset メソッドの例 (VBScript)
 > [!IMPORTANT]

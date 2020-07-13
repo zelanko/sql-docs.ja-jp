@@ -13,14 +13,14 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: f3a6765bf5665704293233293982edfc1e746ce5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927449"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67973107"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  adaptive は、JDBC ドライバー バージョン 2.0 および 3.0 の既定値です。 JDBC ドライバー バージョン 2.0 より前の既定値は full でした。  
   
- [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用すると、現在の **SQLServerStatement** オブジェクトの **responseBuffering** 接続の [String](../../../connect/jdbc/reference/sqlserverstatement-class.md) プロパティをオーバーライドできます。 応答バッファリング モードの使用方法の詳細については、「[アダプティブ バッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用すると、現在の [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの **responseBuffering** 接続の **String** プロパティをオーバーライドできます。 応答バッファリング モードの使用方法の詳細については、「[アダプティブ バッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
  アプリケーションで [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドに無効なパラメーター値が指定された場合は、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   

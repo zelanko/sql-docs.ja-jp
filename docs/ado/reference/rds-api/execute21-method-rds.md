@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964204"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752636"
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
 要求を実行し、ado 2.1 で使用する ADO レコードセットを作成します。  
@@ -37,11 +37,11 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *文字列*  
  要求が実行のために送信される OLE DB プロバイダーに接続するために使用される文字列。 ハンドラーが handler*文字列*を使用して指定されている場合は、接続文字列を編集または置換できます。  
   
- *ハンドラ文字列*  
+ *HandlerString*  
  文字列は、この実行で使用されるハンドラーを識別します。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法は、ハンドラー固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます (ただし、引数の文字列には追加のコンマを含めることができます)。 引数は省略可能です。  
   
  *クエリ*  
- 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]コマンドステートメントが含まれている場合がありますが、sql 以外のプロバイダー (MSDataShape など) の場合[!INCLUDE[tsql](../../../includes/tsql-md.md)] 、これはクエリステートメントではない可能性があります。  
+ 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーでは、コマンドステートメントが含まれている場合があり [!INCLUDE[tsql](../../../includes/tsql-md.md)] ますが、sql 以外のプロバイダー (MSDataShape など) の場合、これはクエリステートメントではない可能性があり [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
  また、ハンドラーが使用されている場合 (ハンドラーを使用することを強くお勧めします)、ハンドラーはここで指定された値を変更または置換できます。 たとえば、ハンドラーは通常、 *QueryString*を .ini ファイルのクエリ文字列に置き換えます。 既定では、Msdfmap .ini ファイルが使用されます。  
   
@@ -69,7 +69,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  パラメーター定義のセーフ配列を含むバリアント。 [ *GetInfo* ] オプションが*lexecuteoptions*で指定されている場合、このパラメーターを使用して、OLE DB プロバイダーから取得したパラメーター定義が返されます。 それ以外の場合、このパラメーターは空になることがあります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーの構成方法によって異なります。 "MSDFMAP. handler" というハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap .dll) を使用する必要があることを示します。 "" のハンドラー文字列 "は、" "のハンドラー文字列" は、Msdfmap .dll ハンドラーを使用する必要があり、引数 "sample .ini" をハンドラーに渡す必要があることを示します。 MSDFMAP .dll は、この引数を、サンプルの .ini を使用して接続とクエリ文字列を確認するための方向として解釈します。  
   
 > [!NOTE]

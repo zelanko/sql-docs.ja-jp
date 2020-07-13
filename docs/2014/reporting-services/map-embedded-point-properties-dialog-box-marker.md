@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108332"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス)
-  
   **[埋め込みポイントのプロパティ]** ダイアログ ボックスの **[マーカー]** を選択すると、次のマップ要素のマーカーの種類およびマーカー サイズに関するオプションを変更できます。  
   
 -   [現在選択されている埋め込みポイント]。 このページは、[全般] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス) ページでオーバーライド オプションを選択した場合にのみ表示されます。 これらのオプションは、選択された点にのみ適用され、[全般] ([マップ ポイントのプロパティ] ダイアログ ボックス) ページまたは [全般] ([マップ マーカーの種類ルールのプロパティ] ダイアログ ボックス) ページのオプションをオーバーライドします。  
@@ -32,12 +31,12 @@ ms.locfileid: "66108332"
   
 ## <a name="options"></a>オプション  
  **[マーカーの種類]**  
- マーカーの種類を指定します。 既定では、 `Circle`です。  
+ マーカーの種類を指定します。 既定値は、`Circle` です。  
   
  **[マーカー サイズ]**  
  マーカーのサイズを指定します。 既定値は [10pt] です。  
   
 ## <a name="see-also"></a>参照  
- [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
+ [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5939ace6c8f09bdf4ab2025dc4858c0236fd4920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 796455f93248522108d349de5e9c0036b8a0cb2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63071680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051069"
 ---
 # <a name="localdb_error_unknown_instance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
     

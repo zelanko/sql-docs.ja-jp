@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0675c412d753a1ce60fa41c7ced40528b3c58f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f91c04e8d69880b451c1479e2907cd1910e8f9c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042124"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>トリガーの入れ子がオフになっている場合でも、入れ子になった AFTER トリガーが起動される
   アップグレード アドバイザーによって、1 つ以上のテーブルで定義されている INSTEAD OF トリガー内に入れ子になった AFTER トリガーが検出されました。 入れ子になった AFTER トリガーは、`nested triggers` サーバー構成オプションが 0 に設定されている場合でも起動されることがあります。  
@@ -27,8 +26,8 @@ ms.locfileid: "66093826"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>[説明]  
- INSTEAD OF トリガー内で入れ子になっている最初の AFTER トリガー `nested triggers`は、サーバー構成オプションが0に設定されている場合でも起動されます。 ただし、この設定では、後続の AFTER トリガーは起動されません。  
+## <a name="description"></a>説明  
+ INSTEAD OF トリガー内で入れ子になっている最初の AFTER トリガーは、 `nested triggers` サーバー構成オプションが0に設定されている場合でも起動されます。 ただし、この設定では、後続の AFTER トリガーは起動されません。  
   
 ## <a name="corrective-action"></a>修正措置  
  アプリケーションに入れ子になったトリガーがないかどうかを調査し、`nested triggers` サーバー構成オプションが 0 に設定されている場合の新しい動作に関して、アプリケーションがビジネス ルールに従っているかどうかを判断します。その後、適切な変更を加えてください。  

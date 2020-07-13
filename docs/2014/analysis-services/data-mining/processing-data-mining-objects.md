@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a4a6693a46679badc068111a311bb82219e752cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520758"
 ---
 # <a name="processing-data-mining-objects"></a>データ マイニング オブジェクトの処理
-  データ マイニング オブジェクトは、処理されるまでは単なる空のコンテナーです。 データマイニングモデルの*処理*は、*トレーニング*とも呼ばれます。  
+  データ マイニング オブジェクトは、処理されるまでは単なる空のコンテナーです。 データ マイニング モデルの*処理* は *トレーニング*とも呼ばれます。  
   
- **マイニング構造の処理:** マイニング構造は、列バインドと使用状況メタデータで定義されている外部データソースからデータを取得し、そのデータを読み取ります。 このデータの全体が読み取られて分析され、さまざまな統計情報が抽出されます。 Analysis Services では、データ マイニング アルゴリズムによる分析に適した、簡潔な表現のデータがローカル キャッシュに格納されます。 モデルを処理した後、このキャッシュを保持することも削除することもできます。 既定では、キャッシュが保存されます。 詳細については、「 [マイニング構造の処理](process-a-mining-structure.md)」を参照してください。  
+ **マイニング構造の処理:** マイニング構造は、列バインドと使用方法のメタデータの定義に従って外部のデータ ソースからデータを取得し、データを読み取ります。 このデータの全体が読み取られて分析され、さまざまな統計情報が抽出されます。 Analysis Services では、データ マイニング アルゴリズムによる分析に適した、簡潔な表現のデータがローカル キャッシュに格納されます。 モデルを処理した後、このキャッシュを保持することも削除することもできます。 既定では、キャッシュが保存されます。 詳細については、「 [マイニング構造の処理](process-a-mining-structure.md)」を参照してください。  
   
- **マイニングモデルの処理:** マイニングモデルは、処理されるまで空で、定義のみを含んでいます。 マイニング モデルを処理するには、基になるマイニング構造の処理が完了している必要があります。 マイニング モデルは、マイニング構造のキャッシュからデータを取得し、モデルに対して作成されたフィルターがあれば適用した後、データセットをアルゴリズムに渡してパターンを検出します。 処理後のモデルには、データ自体ではなく処理結果だけが保存されます。 詳細については、「 [マイニング モデルの処理](process-a-mining-model.md)」を参照してください。  
+ **マイニング モデルの処理:** マイニング モデルは処理されるまで空で、定義だけが含まれています。 マイニング モデルを処理するには、基になるマイニング構造の処理が完了している必要があります。 マイニング モデルは、マイニング構造のキャッシュからデータを取得し、モデルに対して作成されたフィルターがあれば適用した後、データセットをアルゴリズムに渡してパターンを検出します。 処理後のモデルには、データ自体ではなく処理結果だけが保存されます。 詳細については、「 [マイニング モデルの処理](process-a-mining-model.md)」を参照してください。  
   
  次の図は、マイニング構造とマイニング モデルの処理時のデータ フローを示しています。  
   
@@ -59,6 +58,6 @@ ms.locfileid: "66083149"
  [データマイニング &#40;のドリルスルークエリ&#41;](drillthrough-queries-data-mining.md)   
  [マイニング構造 &#40;Analysis Services-データマイニング&#41;](mining-structures-analysis-services-data-mining.md)   
  [マイニングモデル &#40;Analysis Services-データマイニング&#41;](mining-models-analysis-services-data-mining.md)   
- [論理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](logical-architecture-analysis-services-data-mining.md)  
   
   

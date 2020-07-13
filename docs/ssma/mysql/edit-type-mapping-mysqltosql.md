@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102999"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>型のマッピングの編集 (MySQLToSQL)
@@ -29,18 +29,18 @@ ms.locfileid: "68102999"
   
 ## <a name="options"></a>オプション  
   
-##### <a name="source-type"></a>ソースの種類  
+##### <a name="source-type"></a>変換元の型  
 SQL Server データ型にマップするソースデータ型を選択します。  
   
 データ型が可変長の場合、[ **Sourcetype**] の下に次のフィールドが表示されます。  
   
-##### <a name="from"></a>移行元  
+##### <a name="from"></a>ソース  
 このマッピングの最小の長さを指定します。 たとえば、 **nchar**データ型の場合は、「10」と入力して、このマッピングが**nchar (10)** から始まる範囲になるように指定できます。  
   
-##### <a name="to"></a>To  
+##### <a name="to"></a>終了  
 このマッピングの最大長を指定します。 たとえば、 **nchar**データ型の場合は、「20」と入力すると、このマッピングが**nchar (20)** で終わる範囲に対して指定されます。  
   
-##### <a name="target-type"></a>[対象になる種類]  
+##### <a name="target-type"></a>変換後の型  
 変換元のデータ型のマップ先となる SQL Server データ型を選択します。 SSMA によってテーブルまたは SQL Server が作成されると、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[**対象の型**] の下に次のフィールドが表示されます。  

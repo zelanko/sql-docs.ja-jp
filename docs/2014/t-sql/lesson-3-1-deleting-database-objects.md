@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63063121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054560"
 ---
 # <a name="deleting-database-objects"></a>データベース オブジェクトの削除
   このチュートリアルのすべてのトレースを削除するには、データベースを削除します。 ただし、このトピックでは、チュートリアルを進みながら実行したすべての操作を元に戻す手順を実行します。  
@@ -39,8 +38,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-3.  
-  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
+3.  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
   
     ```  
     DROP USER Mary;  
@@ -48,8 +46,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-4.  
-  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
+4.  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
   
     ```  
     DROP LOGIN [<computer_name>\Mary];  
@@ -73,8 +70,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-7.  
-  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
+7.  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DELETE FROM Products;  
@@ -82,8 +78,7 @@ ms.locfileid: "63063121"
   
     ```  
   
-8.  
-  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
+8.  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DROP Table Products;  
@@ -113,7 +108,7 @@ ms.locfileid: "63063121"
  [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
- [Transact-sql&#41;&#40;データベースの削除](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
+ [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

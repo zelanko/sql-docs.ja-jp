@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - strings [SQL Server], XML
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b768f963f4b905d9d7e5a1004247b305c132262a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63205019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059445"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>文字列データ型の FOR XML のサポート
   FOR XML で XML が生成されるときに、データ内の空白文字はエンティティに変換されます。  

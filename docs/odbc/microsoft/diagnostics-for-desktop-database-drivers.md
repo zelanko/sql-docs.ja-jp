@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99603c047e77d3cd3e077c1b07c2192eeb65f93c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68031220"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303483"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>デスクトップ データベース ドライバーの診断
 ドライバーマネージャーによって確認または部分的にチェックされていないすべてのエラーと警告は、ドライバーによって処理されます。 また、このドライバーは、ネイティブエラー、またはデータソースから返されたエラーを SQLSTATEs にマップします。 *ODBC プログラマーズリファレンス*に記載されている各関数には、条件とメッセージを指定する "診断" セクションが含まれています。  

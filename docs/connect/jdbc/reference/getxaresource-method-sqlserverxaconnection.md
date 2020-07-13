@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: beee81cbc62a1257c9f9f0fbe8c93720fa54a523
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910140"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67977978"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource メソッド (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトの分散トランザクションへの参加を管理するため、トランザクション マネージャーが使用する [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) オブジェクトを取得します。  
+  [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) オブジェクトの分散トランザクションへの参加を管理するため、トランザクション マネージャーが使用する [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   

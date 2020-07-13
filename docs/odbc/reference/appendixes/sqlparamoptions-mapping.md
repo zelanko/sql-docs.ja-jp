@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLParamOptions
 - SQLParamOptions function [ODBC], mapping
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f4fa71c06b4a9bf3b01d39fa02d4eadeb9b0778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b083800b660b8ccd26da747e4caf745531188e5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125717"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300562"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions のマッピング
 アプリケーションが ODBC *3. x*ドライバーを使用して**sqlparamoptions**を呼び出すとき、  

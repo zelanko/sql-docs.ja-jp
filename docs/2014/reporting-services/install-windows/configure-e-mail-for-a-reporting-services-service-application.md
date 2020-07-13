@@ -11,16 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6caa06af68eddfd85cb4f19ab2cfb8dd41bbdd95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798108"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)
-  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ警告機能は、電子メール メッセージで警告を送信します。 電子メールを送信するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成して、このサービス アプリケーションの電子メール配信拡張機能を変更しなければならない場合があります。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプション機能の電子メール配信拡張機能を使用する場合、電子メールの設定も必要です。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ警告機能は、電子メール メッセージで警告を送信します。 電子メールを送信するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成して、このサービス アプリケーションの電子メール配信拡張機能を変更しなければならない場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプション機能の電子メール配信拡張機能を使用する場合、電子メールの設定も必要です。  
   
 ||  
 |-|  
@@ -30,35 +28,27 @@ ms.locfileid: "72798108"
   
 1.  SharePoint の全体管理で **[アプリケーション管理]** をクリックします。  
   
-2.  
-  **[サービス アプリケーション]** グループで、 **[サービス アプリケーションの管理]** をクリックします。  
+2.  **[サービス アプリケーション]** グループで、 **[サービス アプリケーションの管理]** をクリックします。  
   
-3.  
-  **[名前]** ボックスの一覧で、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前をクリックします。  
+3.  **[名前]** ボックスの一覧で、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前をクリックします。  
   
-4.  
-  **[Reporting Services アプリケーションの管理]** ページの **[電子メールの設定]** をクリックします。  
+4.  **[Reporting Services アプリケーションの管理]** ページの **[電子メールの設定]** をクリックします。  
   
-5.  
-  **[SMTP サーバーの使用]** を選択します。  
+5.  **[SMTP サーバーの使用]** を選択します。  
   
-6.  
-  **[送信 SMTP サーバー]** ボックスに、SMTP サーバーの名前を入力します。  
+6.  **[送信 SMTP サーバー]** ボックスに、SMTP サーバーの名前を入力します。  
   
-7.  
-  **[差出人アドレス]** ボックスに、電子メール アドレスを入力します。  
+7.  **[差出人アドレス]** ボックスに、電子メール アドレスを入力します。  
   
      このアドレスはすべての警告電子メール メッセージの送信元になります。  
   
-     
-  **[差出人アドレス]** に指定するユーザーのアカウントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのアプリケーション プールを構成するときに指定した管理アカウントである必要があります。 権限がある場合、SharePoint サーバーの全体管理の [サービス アカウント] ページで既存の管理アカウントの一覧を表示できます。  
+     **[差出人アドレス]** に指定するユーザーのアカウントは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションのアプリケーション プールを構成するときに指定した管理アカウントである必要があります。 権限がある場合、SharePoint サーバーの全体管理の [サービス アカウント] ページで既存の管理アカウントの一覧を表示できます。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### <a name="ntlm-authentication"></a>NTLM 認証  
   
-1.  NTLM 認証を必要とする電子メール環境で匿名アクセスを許可しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの電子メール配信拡張機能の構成を変更する必要があります。 
-  **SMTPAuthenticate** の値を "2" に変更します。 この値はユーザー インターフェイスから変更することはできません。 次の PowerShell スクリプトの例では、"SSRS_TESTAPPLICATION" という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の構成全体を更新します。 スクリプトに示されているノードの一部は、[差出人アドレス] などのユーザー インターフェイスからも設定できます。  
+1.  NTLM 認証を必要とする電子メール環境で匿名アクセスを許可しない場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの電子メール配信拡張機能の構成を変更する必要があります。 **Smtpauthenticate**を、値 "2" を使用するように変更します。 この値はユーザー インターフェイスから変更することはできません。 次の PowerShell スクリプトの例では、"SSRS_TESTAPPLICATION" という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の構成全体を更新します。 スクリプトに示されているノードの一部は、[差出人アドレス] などのユーザー インターフェイスからも設定できます。  
   
     ```powershell
     $app = Get-SPRSServiceApplication | Where {$_.name -like "SSRS_TESTAPPLICATION *"}  

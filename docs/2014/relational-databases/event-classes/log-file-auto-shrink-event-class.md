@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 59bcc5bda489edcd337bba78bd07d55ff0a28806
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62662216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029270"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink イベント クラス
   **Log File Auto Shrink** イベント クラスは、ログ ファイルが自動的に圧縮されたことを示します。 明示的な ALTER DATABASE ステートメントによってログ ファイルが圧縮される場合は、このイベントが発生しません。  
@@ -28,7 +27,7 @@ ms.locfileid: "62662216"
   
 ## <a name="log-file-auto-shrink-event-class-data-columns"></a>Log File Auto Shrink イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**Int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

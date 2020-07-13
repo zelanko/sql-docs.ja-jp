@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597527"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
@@ -98,13 +98,13 @@ ms.locfileid: "67597527"
   
 5.  [**ソース**] 列の次の空白行をクリックし、[マイニングモデルの**TM_Decision_Tree** ] を選択します。  
   
-6.  行の [フィールド] 列で、を選択`Bike Buyer`します。 **** `TM_Decision_Tree`  
+6.  行の [フィールド] 列で、を選択`Bike Buyer`します。 **Field** `TM_Decision_Tree`  
   
 7.  行の [**条件と引数**] 列に「」と`=1`入力します。 `TM_Decision_Tree`  
   
 8.  [**ソース**] 列の次の空白行をクリックし、[ **ProspectiveBuyer table**] を選択します。  
   
-9. 行の [**フィールド**] 列で、[ProspectiveBuyerKey] を選択します。 **** `ProspectiveBuyer`  
+9. 行の [**フィールド**] 列で、[ProspectiveBuyerKey] を選択します。 **ProspectiveBuyerKey** `ProspectiveBuyer`  
   
      予測クエリに一意識別子が追加され、自転車を購入する可能性が高い顧客とそうでない顧客を特定できるようになります。  
   

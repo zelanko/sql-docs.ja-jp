@@ -14,15 +14,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce781a80b03e937f875214a74c60aeacf016246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62766165"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420459"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>トラブルシューティング ツールのパッケージ接続
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージと、パッケージがデータを抽出して読み込むデータ ソースとの接続のトラブルシューティングを行うための、機能とツールが用意されています。  

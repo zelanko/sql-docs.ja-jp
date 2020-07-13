@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68198991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055579"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションにおける競合検出
   ピア ツー ピア トランザクション レプリケーションを使用すると、トポロジ内の任意のノードでデータの挿入、更新、または削除を実行し、データ変更をその他のノードに反映させることができます。 どのノードでもデータを変更できるので、さまざまなノードで行われたデータ変更が相互に競合する場合があります。 行が複数のノードで変更されると、他のノードに反映される際に競合が発生したり、場合によっては更新データが失われたりする可能性があります。  
@@ -71,8 +70,7 @@ ms.locfileid: "68198991"
   
 -   [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページまたはピア ツー ピア トポロジ構成ウィザードの **[トポロジの構成]** ページを使用して、検出を有効または無効にできます。  
   
-     
-  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して競合検出を構成すると、ディストリビューション エージェントは、競合の検出時に変更の適用を停止するように構成されます。  
+     [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して競合検出を構成すると、ディストリビューション エージェントは、競合の検出時に変更の適用を停止するように構成されます。  
   
 -   検出は、 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) ストアド プロシージャまたは [sp_configure_peerconflictdetection](/sql/relational-databases/system-stored-procedures/sp-configure-peerconflictdetection-transact-sql)ストアド プロシージャを使用して有効または無効にすることもできます。  
   
@@ -87,18 +85,18 @@ ms.locfileid: "68198991"
   
 -   ディストリビューション エージェントが引き続き変更を適用できるようにすることで、ノードの同期を再試行します。  
   
-    1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)の実行: パラメーターに ' p2p_continue_onconflict ' @property `true`を指定し、 @valueパラメーターにを指定します。  
+    1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)の実行: パラメーターに ' p2p_continue_onconflict ' を指定し、パラメーターにを指定し @property `true` @value ます。  
   
     2.  ディストリビューション エージェントを再起動します。  
   
     3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
-    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」 を参照してください。  
+    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  
   
-    5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)の実行: パラメーターに ' p2p_continue_onconflict ' @property `false`を指定し、 @valueパラメーターにを指定します。  
+    5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)の実行: パラメーターに ' p2p_continue_onconflict ' を指定し、パラメーターにを指定し @property `false` @value ます。  
   
 ## <a name="see-also"></a>参照  
  [ピアツーピアトランザクションレプリケーション](peer-to-peer-transactional-replication.md)  

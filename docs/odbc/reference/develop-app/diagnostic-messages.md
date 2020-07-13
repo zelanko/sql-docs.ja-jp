@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be63e9d78960e40ac5e9ee016d2cfd868d99a922
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039894"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305833"
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 各 SQLSTATE で診断メッセージが返されます。 同じ SQLSTATE が多くの場合、多数の異なるメッセージと共に返されます。 たとえば、SQL 構文のほとんどのエラーに対して、SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージによって記述される可能性があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "68039894"
   
  次の表は、各要素の意味を示しています。  
   
-|要素|意味|  
+|要素|説明|  
 |-------------|-------------|  
 |*ベンダー識別子*|エラーまたは警告が発生したコンポーネント、またはデータソースから直接エラーまたは警告を受け取ったコンポーネントのベンダを識別します。|  
 |*ODBC-コンポーネント識別子*|エラーまたは警告が発生したコンポーネント、またはデータソースから直接エラーまたは警告を受け取ったコンポーネントを識別します。|  

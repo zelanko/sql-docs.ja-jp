@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2687acdf1c4d9b3decc8fe83f7c967173cdba3a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe41085c78077477a495e9cc136c30857938310a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048816"
 ---
 # <a name="enumeration-facets"></a>列挙ファセット
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファセットに違反するパターン ファセットや列挙を含む型を使用する XML スキーマを拒否します。  

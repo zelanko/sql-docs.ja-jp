@@ -23,16 +23,15 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a9fe9717342edb8f02cdc503b6efb8e47b755bb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68670555"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85997315"
 ---
 # <a name="system-catalog-views-transact-sql"></a>システムカタログビュー (Transact-sql)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 カタログ ビューは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって使用される情報を返します。 カタログビューはカタログメタデータに最も一般的なインターフェイスであり、この情報を取得、変換、およびカスタマイズされた形式で表示するための最も効率的な方法を提供するため、カタログビューを使用することをお勧めします。 すべてのユーザーが利用できるカタログメタデータは、カタログビューによって公開されます。
 
@@ -45,26 +44,25 @@ ms.locfileid: "68670555"
 - 派生ビューには列のスーパーセットと行のサブセットが含まれます。
 
 > [!IMPORTANT]
-> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 返される列の数が変更\*され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys. catalog_view_name*を使用することをお勧めします。
+> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 \*返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys. catalog_view_name*を使用することをお勧めします。
 
-
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカタログ ビューは、次のカテゴリに分類されます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカタログ ビューは、次のカテゴリに分類されます。
 
 |||
 |-|-|
-|[Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)|[エラーのメッセージ &#40;&#41; カタログビュー &#40;transact-sql&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md))|
-|[カタログビューの Azure SQL Database](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
+|[AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)|[エラーのメッセージ &#40;&#41; カタログビュー &#40;transact-sql&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md))|
+|[カタログビューの Azure SQL Database](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
 |[Change Tracking カタログビュー &#40;Transact-sql&#41;](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)|[パーティション関数のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)|
-|[CLR アセンブリカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[ポリシーベースの管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
-|[データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)|[Resource Governor カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)|
-|[データ領域 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)|[クエリストアカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)|
+|[CLR アセンブリカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
+|[データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)|[Resource Governor カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)|
+|[データ領域 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)|[クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)|
 |[データベースメールビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)|[Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)|
 |[データベースミラーリング監視サーバーのカタログビュー &#40;Transact-sql&#41;](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)|[スキーマカタログビュー &#40;Transact-sql&#41;](../system-catalog-views/schemas-catalog-views-sys-schemas.md)|
-|[データベースとファイルのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)|[セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|
-|[エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Service Broker カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
-|[Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)|[サーバー全体の構成のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)|
-|[拡張プロパティのカタログビュー &#40;Transact-sql&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)|[空間データのカタログ ビュー](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)|
-|[外部の操作カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)|[SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)|
+|[データベースとファイルのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)|[セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|
+|[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Service Broker カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
+|[拡張イベント カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)|[サーバー全体の構成のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)|
+|[拡張プロパティ カタログ ビュー &#40;Transact-SQL&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)|[空間データのカタログ ビュー](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)|
+|[外部の操作カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)|[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)|
 |[Filestream および FileTable のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)|[Stretch Database カタログビュー &#40;Transact-sql&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)|
 |[Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)|[Xml スキーマ &#40;XML 型システム&#41; カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)|
 |[リンクサーバーのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)||
@@ -72,5 +70,5 @@ ms.locfileid: "68670555"
 ## <a name="see-also"></a>参照
 
 - [情報スキーマビュー &#40;Transact-sql&#41;](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [システムテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+- [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)

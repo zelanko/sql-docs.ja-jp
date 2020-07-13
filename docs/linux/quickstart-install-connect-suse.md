@@ -3,21 +3,21 @@ title: SUSE:SQL Server on Linux のインストール
 description: このクイックスタートでは、SUSE Linux Enterprise Server に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44c4cfb05af24d91b392dab78b20d464b9c0384b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487610"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897768"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート:SUSE Linux Enterprise Server で SQL Server をインストールし、データベースを作成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -184,7 +184,7 @@ SLES 上で SQL Server を構成するには、ターミナルで次のコマン
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. unixODBC 開発者パッケージと共に **mssql-tools** をインストールします。
+1. unixODBC 開発者パッケージと共に **mssql-tools** をインストールします。 詳細については、「[Microsoft ODBC Driver for SQL Server をインストールする (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)」を参照してください。
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

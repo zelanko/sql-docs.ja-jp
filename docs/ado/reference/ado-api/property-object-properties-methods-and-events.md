@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Property object [ADO], members
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 863e3591e8160373129f740b0d6bc4fb218ae082
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917508"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759958"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Property オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Name プロパティ](../../../ado/reference/ado-api/name-property-ado.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "67917508"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

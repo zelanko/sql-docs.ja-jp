@@ -10,18 +10,16 @@ helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f91fd3914fb807eb1a9a2d9c8ee1f2082174a61f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928423"
 ---
 # <a name="technical-reference-database-engine"></a>テクニカル リファレンス (データベース エンジン)
-  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]には、ツール、言語、および管理プログラミングのリファレンス ドキュメントがあります。
 
  ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**機能参照**[登録済みサーバーの F1 ヘルプ](../ssms/register-servers/registered-servers-f1-help.md)

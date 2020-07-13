@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045819"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873077"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   プライマリデータベースの設定を変更します。  
   
@@ -110,8 +110,8 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- この例では、 **sp_change_log_shipping_primary_database**を使用して、プライマリデータベース[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]に関連付けられている設定を更新する方法を示します。  
+## <a name="examples"></a>使用例  
+ この例では、 **sp_change_log_shipping_primary_database**を使用して、プライマリデータベースに関連付けられている設定を更新する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -130,6 +130,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact-sql&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

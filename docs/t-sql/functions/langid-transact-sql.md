@@ -19,17 +19,17 @@ helpviewer_keywords:
 - ID for language in use
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf0aa9d1bcdd2fc8de86d64c4a70455ef8f8864a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752222"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在使用している言語のローカル言語識別子 (ID) を返します。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105250"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 関数 (レポート ビルダーおよび SSRS)
@@ -34,16 +34,14 @@ InScope(scope)
  (`String`) スコープを指定するデータセット、データ領域、またはグループの名前です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 
-  `Boolean` を返します。  
+ `Boolean` を返します。  
   
 ## <a name="remarks"></a>解説  
  関数`InScope`は、レポートアイテムの現在のインスタンスのスコープをテストして、 *scope*パラメーターで指定されたスコープのメンバーシップを調べます。  
   
  *Scope* には、式を指定することはできません。  
   
- 
-  `InScope` 関数は、通常、動的スコープを利用するデータ領域で使用されます。 たとえば、`InScope` をデータ領域のセル内のドリルスルー リンクに使用して、クリックされたセルに応じて異なるレポート名とパラメーター セットが返されるようにすることができます。 この例を以下に示します。  
+ `InScope` 関数は、通常、動的スコープを利用するデータ領域で使用されます。 たとえば、`InScope` をデータ領域のセル内のドリルスルー リンクに使用して、クリックされたセルに応じて異なるレポート名とパラメーター セットが返されるようにすることができます。 この例を以下に示します。  
   
 -   次の式では、ドリルスルー リンクのレポート名として使用し、 `ProductDetail` グループ内のセルがクリックされた場合は `Month` レポートが開き、それ以外のセルがクリックされた場合は `ProductSummary` レポートが開くようにしています。  
   

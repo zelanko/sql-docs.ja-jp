@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VC++ example
 - MoveFirst method [ADO], VC++ example
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 625bf0eddf76fb0acf7afdf790d8f88d41409b5f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932077"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762453"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VC + +)
 この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用して、指定されたコマンドに基づいてレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のレコードポインターを移動します。 この例を実行するには、MoveAny 関数が必要です。  

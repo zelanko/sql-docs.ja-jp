@@ -11,17 +11,17 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5f2c4fde17918e148ac26581fcb6f99057e38800
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008911"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197320"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  **Sp_pdw_database_encryption**を使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アプライアンスに対して透過的なデータ暗号化を有効にします。 **Sp_pdw_database_encryption**を1に設定した場合は、 **ALTER database**ステートメントを使用して、tde を使用してデータベースを暗号化します。  
+  **Sp_pdw_database_encryption**を使用して、アプライアンスに対して透過的なデータ暗号化を有効にし [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。 **Sp_pdw_database_encryption**を1に設定した場合は、 **ALTER database**ステートメントを使用して、tde を使用してデータベースを暗号化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

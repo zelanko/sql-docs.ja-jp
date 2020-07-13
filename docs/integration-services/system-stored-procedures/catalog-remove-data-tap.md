@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b46bd78709861b4967bdb9657f445d35d819e3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637586"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   実行内のコンポーネント出力からデータ タップを削除します。 データ タップの一意な識別子が実行のインスタンスに関連付けられています。  
   
@@ -48,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  なし  
   
 ## <a name="remarks"></a>解説  
- データ タップを削除するには、実行のインスタンスが作成済みの状態 (**catalog.operations &#40;SSISDB データベース&#41;** ビューの [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 列の値が 1) である必要があります。  
+ データ タップを削除するには、実行のインスタンスが作成済みの状態 ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が 1) である必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャには、次の権限のいずれかが必要です。  

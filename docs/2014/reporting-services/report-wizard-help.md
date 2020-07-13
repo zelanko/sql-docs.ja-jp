@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102990"
 ---
 # <a name="report-wizard-help"></a>レポート ウィザードのヘルプ
@@ -31,13 +31,13 @@ ms.locfileid: "66102990"
   
 -   [レポート ウィザードへようこそ](../../2014/reporting-services/welcome-to-the-report-wizard.md)  
   
--   [データ ソースを選択します](../../2014/reporting-services/select-the-data-source.md)  
+-   [データ ソースを選択する](../../2014/reporting-services/select-the-data-source.md)  
   
 -   [クエリのデザイン](../../2014/reporting-services/design-the-query.md)  
   
 -   [クエリビルダー &#40;レポートウィザード&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
--   [レポートの種類を選択します](../../2014/reporting-services/select-the-report-type.md)  
+-   [レポートの種類を選択する](../../2014/reporting-services/select-the-report-type.md)  
   
 -   [テーブル &#40;レポートウィザードのデザイン&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   

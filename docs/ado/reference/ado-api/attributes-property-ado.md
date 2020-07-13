@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADO]
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b40b71dee32608756721d84a2e13f5f54f7bcbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920541"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762909"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの1つまたは複数の特性を示します。  

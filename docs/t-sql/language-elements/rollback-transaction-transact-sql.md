@@ -51,7 +51,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引数  
  *transaction_name*  
- BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 *のインスタンスで大文字と小文字が区別されない場合であっても、* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
+ BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*transaction_name* では常に大文字と小文字が区別されます。  
   
  **@** *tran_name_variable*  
  有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0a9bc891fc85fd948e78119056744f4d74718ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105129"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 関数 (レポート ビルダーおよび SSRS)
@@ -38,8 +38,7 @@ Sum(expression, scope, recursive)
  (`String`) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 
-  `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
  10 進数型の式には `Decimal` 値が、その他すべての式には `Double` 値が返されます。  

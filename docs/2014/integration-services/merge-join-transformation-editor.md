@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b74b8cd3e010f372cf0c0a50f5c0e19054924d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057707"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424599"
 ---
 # <a name="merge-join-transformation-editor"></a>マージ結合変換エディター
-  
   **[マージ結合変換エディター]** ダイアログ ボックスを使用すると、結合の種類、結合列、および結合によって組み合わされた 2 つの入力をマージするための出力列を指定できます。  
   
 > [!IMPORTANT]  
@@ -34,11 +32,10 @@ ms.locfileid: "66057707"
  **結合の種類**  
  内部結合、左外部結合、または完全結合を使用するかどうかを指定します。  
   
- **入力の入れ替え**  
- 
-  **[入力の入れ替え]** ボタンを使用して、入力間の順序を切り替えます。 この選択は、左外部結合オプションで使用すると便利です。  
+ **[入力の入れ替え]**  
+ **[入力の入れ替え]** ボタンを使用して、入力間の順序を切り替えます。 この選択は、左外部結合オプションで使用すると便利です。  
   
- **代入**  
+ **入力**  
  出力をマージする各列は、使用できる入力の一覧から最初に選択します。  
   
  入力は 2 つの個別のテーブルに表示されます。 出力に含める列を選択します。 テーブル間の結合を作成する列をドラッグします。 結合を削除するには、選択してから Del キーを押します。  
@@ -49,7 +46,7 @@ ms.locfileid: "66057707"
  **出力のエイリアス**  
  各出力列の別名を入力します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [マージ変換およびマージ結合変換のデータの並べ替え](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [マージ結合変換を使用してデータセットを拡張する](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   

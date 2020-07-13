@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109458"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス)
-  
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内のデータ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
@@ -43,12 +42,12 @@ ms.locfileid: "66109458"
  **[プロンプト文字列の入力]**  
  データ ソースのログイン資格情報を指定するようユーザーに指示する文を入力します。  
   
- **資格情報なし**  
+ **資格情報がありません**  
  データ ソースの資格情報を指定しません。 このオプションは、データ ソースで資格情報が不要な場合、または他の方法で資格情報を渡している場合にのみ機能します。  
   
 ## <a name="see-also"></a>参照  
  [[全般] ([データソースのプロパティ] ダイアログボックス)](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [レポートデータソースの資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

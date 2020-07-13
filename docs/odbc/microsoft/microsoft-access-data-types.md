@@ -15,14 +15,14 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045164"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307731"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access データ型
 次の表に、Microsoft Access のデータ型、テーブルの作成に使用されるデータ型、および ODBC SQL データ型を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "68045164"
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |対抗|対抗|SQL_INTEGER|  
-|Currency|Currency|SQL_NUMERIC|  
+|通貨|通貨|SQL_NUMERIC|  
 |日付/時刻|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |LONG バイナリ|LONGBINARY|SQL_LONGVARBINARY|  
@@ -42,11 +42,11 @@ ms.locfileid: "68045164"
 |数値 (FieldSize = SINGLE)|1|SQL_REAL|  
 |数値 (FieldSize = DOUBLE)|DOUBLE|SQL_DOUBLE|  
 |数値 (FieldSize = バイト)|符号なしバイト|SQL_TINYINT|  
-|数値 (FieldSize = 整数)|短い|SQL_SMALLINT|  
+|数値 (FieldSize = 整数)|SHORT|SQL_SMALLINT|  
 |数値 (FieldSize)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE●ole○|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR [1] SQL_WVARCHAR [2]|  
+|[TEXT]|VARCHAR|SQL_VARCHAR [1] SQL_WVARCHAR [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] 4.0 アプリケーションのみにアクセスします。 最大長は4000バイトです。 LONGBINARY と同様の動作です。  
@@ -60,7 +60,7 @@ ms.locfileid: "68045164"
   
  次の表は、Microsoft Access のデータ型に関する制限を示しています。  
   
-|データ型|[説明]|  
+|データ型|説明|  
 |---------------|-----------------|  
 |BINARY、VARBINARY、および VARCHAR|長さ0または未指定の BINARY、VARBINARY、または VARCHAR 型の列を作成すると、実際には510バイトの列が返されます。|  
 |BYTE|FieldSize が "バイト" である Microsoft アクセス番号フィールドが符号なしの場合でも、Microsoft Access ドライバーを使用するときに負の値をフィールドに挿入できます。|  

@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - cdc.captured_columns
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42a87821f13ecbfd08f12257a2c2145423eb4a65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68119258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890643"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キャプチャインスタンスで追跡されている列ごとに1行の値を返します。 既定では、ソーステーブルのすべての列がキャプチャされます。 ただし、列リストを指定することで、ソース テーブルでの変更データ キャプチャが有効になっているときに列を含めたり除外したりできます。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
   
  **システムテーブルに対して直接クエリを実行しない**ことをお勧めします。 代わりに、 [sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)ストアドプロシージャを実行します。  
    
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|キャプチャされた列が属するソーステーブルの ID。|  
 |**column_name**|**sysname**|キャプチャされた列の名前です。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68119258"
 |**column_ordinal**|**int**|変更テーブル内の列の序数 (1 から始まる)。 変更テーブル内のメタデータ列は除外されます。 最初にキャプチャされた列には、序数1が割り当てられます。|  
 |**is_computed**|**bit**|キャプチャされた列がソーステーブル内の計算列であることを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [cdc. change_tables &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

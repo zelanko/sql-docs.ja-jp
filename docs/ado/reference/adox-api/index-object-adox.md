@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763883"
 ---
 # <a name="index-object-adox"></a>Index オブジェクト (ADOX)
 データベーステーブルのインデックスを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次のコードでは、新しい**インデックス**を作成します。  
   
 ```  

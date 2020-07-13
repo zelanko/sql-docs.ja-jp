@@ -1,5 +1,6 @@
 ---
 title: 'sql: limit-field および sql: limit-value (SQLXML)'
+description: 'XML 一括読み込みを使用するときにデータをフィルター処理するために、SQLXML 注釈 sql: limit-field および sql: limit-value を使用する方法について説明します。'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 211e14cbc8f965a660a087346a437d814489b7c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724718"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>注釈の解釈 - sql:limit-field および sql:limit-value
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 一括読み込みでは、 **sql: limit-field**注釈と**sql: limit-value**注釈が定義に従って処理されます。 詳細については、「 [sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター選択](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)」を参照してください。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  

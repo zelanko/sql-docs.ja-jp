@@ -16,29 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fbad328f7b384cc75620a5be04b624331796a51b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75322123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889896"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_conflict_publication_article**テーブルには、データの収束を実現するために元に戻された、競合または行の変更が行われた行に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にパブリケーションとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、競合ログで使用するデータベースに保存されます。通常、これはパブリケーション データベースですが、集中型でない競合ログの場合はサブスクリプション データベースの場合もあります。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**_アーティクル\_列\_名_**|**変動**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
-|**rowguid**|**UNIQUEIDENTIFIER**|競合行の行識別子。|  
-|**ModifiedDate**|**DATETIME**|競合が発生した時刻。|  
-|**配信\_元\_データソース id**|**UNIQUEIDENTIFIER**|行変更が取り消された、または競合が失われたサブスクリプション。|  
+|**_アーティクル \_ 列 \_ 名_**|**変動**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
+|**rowguid**|**uniqueidentifier**|競合行の行識別子。|  
+|**ModifiedDate**|**datetime**|競合が発生した時刻。|  
+|**配信元 \_ データソース \_ id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

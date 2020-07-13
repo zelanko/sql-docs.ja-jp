@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68893883"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666695"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>引数  
- テーブル列参照>、 * \< * * \<スカラー列以下>*  
+ * \< テーブル列参照>*、 * \< スカラー列以下>*  
  予測する列の名前を指定します。 列には、スカラーデータまたは表形式データを含めることができます。  
   
  *n*  
@@ -67,8 +67,8 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>戻り値の型  
  \<*テーブル式*>。  
   
-## <a name="remarks"></a>解説  
- タイム[!INCLUDE[msCoName](../includes/msconame-md.md)]シリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
   
  予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーターの値には、0より大きい整数を指定する必要があります。  
   
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>例 1: 複数のタイムスライスを予測する  
- 次の例では、 **PredictTimeSeries**関数を使用して、次の3回のステップの予測を返し、ヨーロッパと太平洋地域の M200 シリーズに結果を制限します。 この特定のモデルでは、予測可能な属性は Quantity である`[Quantity]`ため、PredictTimeSeries 関数の最初の引数としてを使用する必要があります。  
+ 次の例では、 **PredictTimeSeries**関数を使用して、次の3回のステップの予測を返し、ヨーロッパと太平洋地域の M200 シリーズに結果を制限します。 この特定のモデルでは、予測可能な属性は Quantity であるため、 `[Quantity]` PredictTimeSeries 関数の最初の引数としてを使用する必要があります。  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- クエリでは*EXTEND_MODEL_CASES*オプションが使用さ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]れるため、では、予測に対して次の操作を実行します。  
+ クエリでは*EXTEND_MODEL_CASES*オプションが使用されるため、では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 予測に対して次の操作を実行します。  
   
 -   2 か月分の新しいデータをモデルに追加して、トレーニング ケースの合計サイズを大きくします。  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>例 4: 時系列予測の統計を返す  
  **PredictTimeSeries**関数では、パラメーターとして*INCLUDE_STATISTICS*がサポートされていません。 ただし、次のクエリを使用して、時系列クエリの予測統計を返すことができます。 この方法は、テーブル列を入れ子にしているモデルにも使用できます。  
   
- この特定のモデルでは、予測可能な属性は Quantity である`[Quantity]`ため、PredictTimeSeries 関数の最初の引数としてを使用する必要があります。 モデルで異なる予測可能な属性を使用している場合は、別の列名に置き換えることができます。  
+ この特定のモデルでは、予測可能な属性は Quantity であるため、 `[Quantity]` PredictTimeSeries 関数の最初の引数としてを使用する必要があります。 モデルで異なる予測可能な属性を使用している場合は、別の列名に置き換えることができます。  
   
 ```  
 SELECT FLATTENED [Model Region],  
@@ -249,11 +249,11 @@ OR [Model Region] = 'M200 North America'
 |M200 North America|9/25/2008 12:00:00 AM|156|1.68969399185442|1.68969399185442|  
   
 > [!NOTE]  
->  この例では、FLATTENED キーワードを使用して、結果を表形式でわかりやすくしました。ただし、プロバイダーで階層的な行セットがサポートされている場合は、FLATTENED キーワードを省略できます。 フラット化されたキーワードを省略した場合、クエリは2つの列、 `[Model Region]`データ系列を識別する値を含む最初の列、および統計の入れ子になったテーブルを含む2番目の列を返します。  
+>  この例では、FLATTENED キーワードを使用して、結果を表形式でわかりやすくしました。ただし、プロバイダーで階層的な行セットがサポートされている場合は、FLATTENED キーワードを省略できます。 フラット化されたキーワードを省略した場合、クエリは2つの列、データ系列を識別する値を含む最初の列、 `[Model Region]` および統計の入れ子になったテーブルを含む2番目の列を返します。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [タイムシリーズモデルのクエリ例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [DMX&#41;の予測 &#40;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

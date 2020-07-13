@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColumns function [ODBC]
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118672"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301258"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **互換性**  
@@ -71,7 +71,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名の文字列検索パターン。  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  代入**TableName*の長さ (文字数)。  
   
- *ColumnName*  
+ *[ColumnName]*  
  代入列名の文字列検索パターン。  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ SQLRETURN SQLColumns(
 ## <a name="diagnostics"></a>診断  
  **Sqlcolumns**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlcolumns**によって通常返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -132,7 +132,7 @@ SQLRETURN SQLColumns(
 > [!NOTE]  
 >  **Sqlcolumns**は、すべての列を返すとは限りません。 たとえば、ドライバーが Oracle ROWID などの擬似列に関する情報を返さない場合があります。 アプリケーションでは、 **Sqlcolumns**によって返されるかどうかにかかわらず、任意の有効な列を使用できます。  
 >   
->  Sqlstatistics によって返される**** 列には、 **sqlstatistics**によって返されないものがあります。 たとえば、 **Sqlcolumns**は、式またはフィルターに対して作成されたインデックスの列を返しません (例: SALARY + 福利厚生または DEPT = 0012)。  
+>  Sqlstatistics によって返される**SQLStatistics**列には、 **sqlstatistics**によって返されないものがあります。 たとえば、 **Sqlcolumns**は、式またはフィルターに対して作成されたインデックスの列を返しません (例: SALARY + 福利厚生または DEPT = 0012)。  
   
  VARCHAR 型の列の長さはテーブルには表示されません。実際の長さは、データソースによって異なります。 TABLE_CAT、TABLE_SCHEM、TABLE_NAME、および COLUMN_NAME 列の実際の長さを確認するには、アプリケーションで、SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN、および SQL_MAX_COLUMN_NAME_LEN の各オプションを指定して**SQLGetInfo**を呼び出すことができます。  
   
@@ -157,16 +157,16 @@ SQLRETURN SQLColumns(
   
  次の表に、結果セット内の列の一覧を示します。 列 18 (IS_NULLABLE) を超える追加の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列<br /><br /> number|データ型|説明|  
+|列名|列<br /><br /> number|データの種類|説明|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Varchar|カタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名;データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|テーブル名。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|列名。 ドライバーは、名前のない列に対して空の文字列を返します。|  
 |DATA_TYPE (ODBC 1.0)|5|Smallint (NULL 以外)|SQL データ型。 ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 Datetime データ型および interval データ型の場合、この列には、SQL_DATETIME や SQL_INTERVAL などの簡潔ではないデータ型ではなく、SQL_TYPE_DATE や SQL_INTERVAL_YEAR_TO_MONTH などの簡潔なデータ型が返されます。 有効な ODBC SQL データ型の一覧については、「付録 D: データ型」の「 [Sql データ](../../../odbc/reference/appendixes/sql-data-types.md)型」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 で返されるデータ型。*x*および ODBC 2。*x*アプリケーションは異なる場合があります。 詳細については、「[旧バージョンとの互換性と標準の準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。|  
 |TYPE_NAME (ODBC 1.0)|6|Varchar not NULL|データソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"、または "CHAR () FOR BIT DATA" などです。|  
-|COLUMN_SIZE (ODBC 1.0)|7|整数|DATA_TYPE が SQL_CHAR または SQL_VARCHAR の場合、この列には列の最大文字数が格納されます。 Datetime データ型の場合、これは、値を文字に変換したときに値を表示するために必要な文字の合計数です。 数値データ型の場合は、NUM_PREC_RADIX 列に従って、列に許可されている合計桁数または合計ビット数を示します。 Interval データ型の場合は、間隔のリテラルの文字表現に含まれる文字数です (「付録 D: データ型」の「 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)」を参照してください)。 詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
-|BUFFER_LENGTH (ODBC 1.0)|8|整数|SQL_C_DEFAULT が指定されている場合に、SQLGetData、SQLFetch、または SQLFetchScroll 操作で転送されるデータのバイト単位の長さ。 数値データの場合、このサイズは、データソースに格納されているデータのサイズとは異なる場合があります。 この値は、文字データの COLUMN_SIZE 列とは異なる場合があります。 長さの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|COLUMN_SIZE (ODBC 1.0)|7|Integer|DATA_TYPE が SQL_CHAR または SQL_VARCHAR の場合、この列には列の最大文字数が格納されます。 Datetime データ型の場合、これは、値を文字に変換したときに値を表示するために必要な文字の合計数です。 数値データ型の場合は、NUM_PREC_RADIX 列に従って、列に許可されている合計桁数または合計ビット数を示します。 Interval データ型の場合は、間隔のリテラルの文字表現に含まれる文字数です (「付録 D: データ型」の「 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)」を参照してください)。 詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|BUFFER_LENGTH (ODBC 1.0)|8|Integer|SQL_C_DEFAULT が指定されている場合に、SQLGetData、SQLFetch、または SQLFetchScroll 操作で転送されるデータのバイト単位の長さ。 数値データの場合、このサイズは、データソースに格納されているデータのサイズとは異なる場合があります。 この値は、文字データの COLUMN_SIZE 列とは異なる場合があります。 長さの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
 |DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|小数点の右側の有効桁数の合計。 SQL_TYPE_TIME と SQL_TYPE_TIMESTAMP の場合、この列には秒の小数部の桁数が含まれます。 その他のデータ型の場合は、データソースの列の小数点以下の桁数になります。 時間部分を含む interval データ型の場合、この列には小数点の右側の桁数 (秒の小数部) が格納されます。 時間部分を含まない interval データ型の場合、この列は0になります。 10進数の詳細については、「付録 D: データ型」の「[列のサイズ、10進数字、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。 DECIMAL_DIGITS が適用されないデータ型に対しては NULL が返されます。|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|数値データ型の場合は、10または2のいずれかになります。 10の場合、COLUMN_SIZE と DECIMAL_DIGITS の値によって、列に許可される小数点以下桁数が指定されます。 たとえば、DECIMAL (12, 5) 列は、10、COLUMN_SIZE 12、および DECIMAL_DIGITS 5 の NUM_PREC_RADIX を返します。FLOAT 型の列は、10、COLUMN_SIZE 15、および NULL の DECIMAL_DIGITS の NUM_PREC_RADIX を返す場合があります。<br /><br /> 2の場合、COLUMN_SIZE と DECIMAL_DIGITS の値によって、列で許可されるビット数が与えられます。 たとえば、FLOAT 型の列は、基数が2、COLUMN_SIZE が53、DECIMAL_DIGITS が NULL の場合に返されます。<br /><br /> NUM_PREC_RADIX が適用されないデータ型に対しては NULL が返されます。|  
 |NULLABLE (ODBC 1.0)|11|Smallint (NULL 以外)|列に NULL 値を含めることができなかった場合に SQL_NO_NULLS します。<br /><br /> 列が NULL 値を許容するかどうかを SQL_NULLABLE します。<br /><br /> 列が NULL 値を許容するかどうかが不明な場合に SQL_NULLABLE_UNKNOWN します。<br /><br /> この列に返される値は、IS_NULLABLE 列に返される値とは異なります。 NULL 値を許容する列は、列が null を許容できることを意味しますが、Null 値を許容しない列であることを示すことはできません。 IS_NULLABLE 列は、列が Null 値を許容できないことを示していますが、列が Null 値を許容するという確実性を示すことはできません。|  
@@ -174,7 +174,7 @@ SQLRETURN SQLColumns(
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|列の既定値です。 この列の値は、引用符で囲まれている場合は、文字列として解釈される必要があります。<br /><br /> NULL が既定値として指定されている場合、この列は NULL で、引用符で囲まれていません。 既定値を切り捨てずに表すことができない場合、この列には単一引用符を囲まずに切り捨てられたが含まれます。 既定値が指定されていない場合、この列は NULL になります。<br /><br /> COLUMN_DEF の値は、切り捨てられた値が含まれている場合を除き、新しい列定義を生成するときに使用できます。|  
 |SQL_DATA_TYPE (ODBC 3.0)|14|Smallint (NULL 以外)|IRD の [SQL_DESC_TYPE レコード] フィールドに表示される SQL データ型。 ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 この列は、datetime および interval データ型を除き、DATA_TYPE 列と同じです。 この列は、DATETIME データ型および INTERVAL データ型の簡潔なデータ型 (SQL_TYPE_DATE や SQL_INTERVAL_YEAR_TO_MONTH など) ではなく、簡潔なデータ型 (SQL_DATETIME や SQL_INTERVAL など) を返します。 この列が SQL_DATETIME または SQL_INTERVAL を返す場合、SQL_DATETIME_SUB 列から特定のデータ型を特定できます。 有効な ODBC SQL データ型の一覧については、「付録 D: データ型」の「 [Sql データ](../../../odbc/reference/appendixes/sql-data-types.md)型」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 で返されるデータ型。*x*および ODBC 2。*x*アプリケーションは異なる場合があります。 詳細については、「[旧バージョンとの互換性と標準の準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Datetime および interval データ型のサブタイプコード。 その他のデータ型の場合、この列は NULL を返します。 Datetime および interval サブコードの詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の「SQL_DESC_DATETIME_INTERVAL_CODE」を参照してください。|  
-|CHAR_OCTET_LENGTH (ODBC 3.0)|16|整数|文字またはバイナリデータ型の列の最大長 (バイト単位)。 他のすべてのデータ型については、この列は NULL を返します。|  
+|CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|文字またはバイナリデータ型の列の最大長 (バイト単位)。 他のすべてのデータ型については、この列は NULL を返します。|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer (NULL 以外)|テーブル内の列の序数位置です。 テーブルの最初の列は number 1 です。|  
 |IS_NULLABLE (ODBC 3.0)|18|Varchar|列に Null が含まれていない場合は "NO" になります。<br /><br /> 列に Null を含めることができる場合は "YES" になります。<br /><br /> Null 値許容属性が不明の場合、この列は長さ0の文字列を返します。<br /><br /> ISO ルールの後に、null 値の許容属性が決定されます。 ISO SQL に準拠している DBMS では、空の文字列を返すことはできません。<br /><br /> この列に返される値は、NULL 許容列に対して返される値とは異なります。 (NULL 許容列の説明を参照してください)。|  
   
@@ -285,7 +285,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

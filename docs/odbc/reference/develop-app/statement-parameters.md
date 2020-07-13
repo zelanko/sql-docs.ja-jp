@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02327ff4bb6a1ac3ac57fbf7d3c6b09b70c11534
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107243"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306823"
 ---
 # <a name="statement-parameters"></a>ステートメント パラメーター
 *パラメーター*は、SQL ステートメント内の変数です。 たとえば、Parts テーブルに、PartID、Description、および Price という名前の列があるとします。 パラメーターを指定せずにパートを追加するには、次のような SQL ステートメントを構築する必要があります。  

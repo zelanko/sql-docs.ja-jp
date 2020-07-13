@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 864a8bd892315b060fc6fcf42dbe69dfea61ae59
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071854"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303453"
 ---
 # <a name="driver-version-scheme"></a>ドライバー バージョン スキーム
 > [!IMPORTANT]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 84a0fb2152a7e05b853abd28b94e82bffa32273b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63270581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058047"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>更新クエリの作成 (Visual Database Tools)
   更新クエリを使用すると、複数行の内容を一度に変更できます。 たとえば、 `titles` テーブルで更新クエリを使用すると、特定の出版社から出版されているすべての本の価格に、10% 加算するような処理を行うことができます。  

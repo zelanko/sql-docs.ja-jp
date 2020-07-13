@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 461bed154720f1e17fb4aeff92a4ba2993b16538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785063"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>[条件を開く] ダイアログ ボックスの [依存ポリシー] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、このポリシー ベースの管理条件を現在参照しているポリシーの一覧を表示できます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDrivers function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b75d1cc79a5fe2b3113a6d65345956d5ea801f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053869"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307083"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

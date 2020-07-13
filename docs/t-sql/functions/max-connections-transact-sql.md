@@ -19,17 +19,17 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0066488fd917e5ffbe88767318954c1727adf238
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6f005f603a3fa63fa55a94f3e8900758f5799279
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899149"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで同時に確立できるユーザー接続の最大数を返します。 返される数値は必ずしも現在構成されている数値ではありません。  
   

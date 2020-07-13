@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882013"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 すべてのデータベースを対象として、トランザクション ログ領域の使用状況に関する統計情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、待機統計情報とラッチ統計情報のリセットにも使用できます。
   
@@ -77,7 +77,7 @@ WITH NO_INFOMSGS
 |**状態**|ログ ファイルの状態。 常に 0 です。|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 解説  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、[ の代わりに ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV を使用します。    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、`DBCC SQLPERF(LOGSPACE)` の代わりに [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV を使用します。    
  
 トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
   
@@ -89,7 +89,7 @@ WITH NO_INFOMSGS
 ## <a name="examples"></a>例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. すべてのデータベースのログ領域情報を表示する  
-次の例では、`LOGSPACE` インスタンスに含まれているすべてのデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情報を表示します。
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれているすべてのデータベースの `LOGSPACE` 情報を表示します。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

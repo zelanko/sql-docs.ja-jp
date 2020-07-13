@@ -20,14 +20,14 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b5e005485fd2ebef3d9454286584bba03267201
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920444"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762863"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの関連付けられた操作の実行が終了した後に呼び出されます。  

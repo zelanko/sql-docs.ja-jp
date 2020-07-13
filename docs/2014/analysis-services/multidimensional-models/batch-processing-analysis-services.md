@@ -11,16 +11,14 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544624"
 ---
 # <a name="batch-processing-analysis-services"></a>バッチ処理 (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、Batch コマンドを使用して、1 つの要求で複数の処理コマンドをサーバーに送信することができます。 バッチ処理では、どのオブジェクトがどの順序で処理されるのかを制御できます。 また、バッチは、一連のスタンドアロン ジョブとして実行するか、1 つのプロセスが失敗したときにバッチ全体をロールバックするトランザクションとして実行することもできます。  
   
  バッチ処理では、変更をコミットするのに必要な時間をまとめることで短縮し、データの可用性を最大にします。 ディメンションを完全に処理すると、そのディメンションを使用するパーティションには未処理のマークが付きます。 その結果、未処理のパーティションを含むキューブは参照できなくなります。 この問題は、バッチ処理ジョブを使用し、影響を受けるパーティションと共にディメンションを処理することで対処できます。 バッチ処理ジョブをトランザクションとして実行すると、すべての処理が完了するまで、そのトランザクションに含まれるすべてのオブジェクトをクエリ用に使用できます。 トランザクションが変更をコミットするときに、影響を受けるオブジェクトはロックされるため、オブジェクトは一時的に使用できなくなります。ただし、変更をコミットするために必要な全体の時間は、オブジェクトを個々に処理した場合よりも短縮されます。  
@@ -29,13 +27,12 @@ ms.locfileid: "66076940"
   
  このトピックのセクションは次のとおりです。  
   
- [SQL Server Data Tools でのバッチ処理](#bkmk_ssdt)  
+ [SQL Server データ ツールでのバッチ処理](#bkmk_ssdt)  
   
- [Management Studio の XMLA を使用したバッチ処理](#bkmk_xmla)  
+ [Management Studio での XMLA を使用したバッチ処理](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>SQL Server Data Tools でのバッチ処理  
- 
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でオブジェクトを処理するには、そのオブジェクトを含んでいるプロジェクトを配置する必要があります。 詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)」を参照してください。  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a>SQL Server Data Tools でのバッチ処理  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でオブジェクトを処理するには、そのオブジェクトを含んでいるプロジェクトを配置する必要があります。 詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を開きます。  
   
@@ -53,34 +50,28 @@ ms.locfileid: "66076940"
   
 8.  バッチ処理ジョブをカスタマイズするには、 **[設定の変更]** をクリックします。  
   
-9. 
-  **[処理オプション]** で、以下の設定を行います。  
+9. **[処理オプション]** で、以下の設定を行います。  
   
-    -   **処理順序**は**シーケンシャル**に設定され、**トランザクションモード**は**1 つのトランザクション**に設定されます。  
+    -   **[処理順序]** を **[シーケンシャル]** に、 **[トランザクション モード]** を **[1 つのトランザクション]** に設定します。  
   
-    -   **書き戻しテーブルオプション**は、**既存**のを使用するように設定されています。  
+    -   **[書き戻しテーブル オプション]** を **[既存のデータを使用する]** に設定します。  
   
-    -   
-  **[影響を受けたオブジェクト]** の **[影響を受けたオブジェクトを処理する]** チェック ボックスをオンにします。  
+    -   **[影響を受けたオブジェクト]** の **[影響を受けたオブジェクトを処理する]** チェック ボックスをオンにします。  
   
 10. [**ディメンションキーのエラー** ] タブをクリックします。 [**既定のエラー構成を使用**する] が選択されていることを確認します。  
   
-11. 
-  **[OK]** をクリックし、 **[設定の変更]** 画面を閉じます。  
+11. **[OK]** をクリックし、 **[設定の変更]** 画面を閉じます。  
   
-12. 
-  **[ディメンションの処理]** 画面で **[実行]** をクリックし、処理ジョブを開始します。  
+12. **[ディメンションの処理]** 画面で **[実行]** をクリックし、処理ジョブを開始します。  
   
-13. 
-  **[状態]** ボックスに **"処理が成功しました"** と表示されたら、 **[閉じる]** をクリックします。  
+13. **[状態]** ボックスに **"処理が成功しました"** と表示されたら、 **[閉じる]** をクリックします。  
   
-14. 
-  **[ディメンションの処理]** 画面で **[閉じる]** をクリックします。  
+14. **[ディメンションの処理]** 画面で **[閉じる]** をクリックします。  
   
-##  <a name="bkmk_xmla"></a>Management Studio の XMLA を使用したバッチ処理  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Management Studio の XMLA を使用したバッチ処理  
  バッチ処理を実行する XMLA スクリプトを作成することができます。 まず、各オブジェクトに対して、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で XMLA スクリプトを生成し、次にそれらを対話形式で、またはスケジュールされているタスク内で実行する単一の XMLA クエリに統合します。  
   
- 段階を追った手順については、「 **SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う** 」の [Schedule SSAS Adm」のistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)を参照してください。  
+ 詳細な手順については、「 [SQL Server エージェントを使用した SSAS 管理タスクのスケジュール](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)」の**例 2**を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのオブジェクト処理](processing-a-multidimensional-model-analysis-services.md)  

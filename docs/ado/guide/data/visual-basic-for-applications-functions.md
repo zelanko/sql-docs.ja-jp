@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923460"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763013"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications の関数
 次の Visual Basic for Applications 関数は、データシェイプの CALC 式で使用できます。  
@@ -31,21 +31,21 @@ ms.locfileid: "67923460"
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|日|DDB|  
-|エラー|Error$|Exp|解決策|Format|Format$|  
-|FV|Hex|Hex$|時|IIF|InStr|  
+|DateDiff|DatePart|DateSerial|DateValue|日間|DDB|  
+|Error|Error$|Exp|Fix|形式|Format$|  
+|FV|Hex|Hex$|時間|IIF|InStr|  
 |int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
+|IsNull|IsNumeric|IsObject|LCase|LCase$|左|  
 |LeftB|Left$|LeftB $|Len|ログ|LTrim|  
-|LTrim$|Mid|Mid$|分|MIRR|月|  
+|LTrim$|Mid|Mid$|Minute|MIRR|月|  
 |Now|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|料金|RGB|Right|  
+|PPmt|PV|QBColor|料金|RGB|権限|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|秒|Sgn|Sin|SLN|スペース|Space$|  
+|Second|Sgn|Sin|SLN|Space|Space$|  
 |R-sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|平日|年||  
+|UCase$|Val|VarType|平日|Year||  
   
 ## <a name="see-also"></a>参照  
  [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f22a024b0edddbcc6cad17cecb62aa026b8a6b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63228567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038925"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>テーブル値パラメーターを含むコマンドの実行
   テーブル値パラメーターを含むコマンドを実行するには、次の 2 つのフェーズが必要になります。  
@@ -29,13 +28,12 @@ ms.locfileid: "63228567"
 ## <a name="table-valued-parameter-specification"></a>テーブル値パラメーターの指定  
  コンシューマーは、テーブル値パラメーターの型を指定できます。 この情報には、テーブル値パラメーターの型名が含まれます。 また、テーブル値パラメーターのユーザー定義テーブル型が接続の現在の既定のスキーマにない場合は、スキーマ名も含まれます。 サーバーでサポートされているかどうかに応じて、コンシューマーでは、省略可能なメタデータ情報 (列の順序など) を指定したり、特定の列のすべての行に既定値が設定されるよう指定したりすることもできます。  
   
- コンシューマーは、テーブル値パラメーターを指定するために、ISSCommandWithParameter:: SetParameterInfo を呼び出します。オプションで Isscommandwithparameter:: SetParameterProperties を呼び出すこともできます。 テーブル値パラメーターの場合、DBPARAMBINDINFO 構造体の *pwszDataSourceType* フィールドの値は DBTYPE_TABLE になります。 
-  *ulParamSize* フィールドには ~0 が設定され、長さが不明であることを示します。 スキーマ名、型名、列の順序、既定の列など、テーブル値パラメーターの特定のプロパティは、ISSCommandWithParameters:: SetParameterProperties を使用して設定できます。  
+ テーブル値パラメーターを指定する目的で、コンシューマーは ISSCommandWithParameter::SetParameterInfo を呼び出し、任意で ISSCommandWithParameters::SetParameterProperties を呼び出します。 テーブル値パラメーターの場合、DBPARAMBINDINFO 構造体の *pwszDataSourceType* フィールドの値は DBTYPE_TABLE になります。 *ulParamSize* フィールドには ~0 が設定され、長さが不明であることを示します。 テーブル値パラメーターの特定のプロパティ (スキーマ名、型名、列の順序、既定の列など) は、ISSCommandWithParameters::SetParameterProperties を使用して設定できます。  
   
 ## <a name="table-valued-parameter-binding"></a>テーブル値パラメーターのバインド  
  テーブル値パラメーターには、任意の行セット オブジェクトを指定できます。 プロバイダーは、実行中、このオブジェクトからテーブル値パラメーターを読み取って、サーバーに送信します。  
   
- テーブル値パラメーターをバインドするために、コンシューマーは IAccessor:: CreateAccessor を呼び出します。 テーブル値パラメーターの DBBINDING 構造体の *wType* フィールドには、DBTYPE_TABLE が設定されます。 DBBINDING 構造体の *pObject* メンバーは NULL ではなく、*pObject* の *iid* メンバーは IID_IRowset、またはその他のテーブル値パラメーターの行セット オブジェクト インターフェイスに設定されます。 DBBINDING 構造体の残りのフィールドは、ストリームされた BLOB の場合と同じように設定する必要があります。  
+ テーブル値パラメーターをバインドするために、コンシューマーは IAccessor::CreateAccessor を呼び出します。 テーブル値パラメーターの DBBINDING 構造体の *wType* フィールドには、DBTYPE_TABLE が設定されます。 DBBINDING 構造体の *pObject* メンバーは NULL ではなく、*pObject* の *iid* メンバーは IID_IRowset、またはその他のテーブル値パラメーターの行セット オブジェクト インターフェイスに設定されます。 DBBINDING 構造体の残りのフィールドは、ストリームされた BLOB の場合と同じように設定する必要があります。  
   
  テーブル値パラメーターと、テーブル値パラメーターに関連付けられる行セット オブジェクトのバインドでは、次の制限が適用されます。  
   

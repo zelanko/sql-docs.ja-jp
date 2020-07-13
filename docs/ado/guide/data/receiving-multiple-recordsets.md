@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving multiple Recordsets [ADO]
 - Recordset object [ADO], receiving multiple Recordsets
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12aa80b918d11dad07119a26da3da8f27ef82cdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924532"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759108"
 ---
 # <a name="receiving-multiple-recordsets"></a>複数のレコードセットの受信
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)では、複数の sql ステートメント (sql ステートメントごとに1つの**レコードセット**) を含む1つのコマンドに対して複数の**レコードセット**オブジェクトを返すことができます。 **レコードセット**が返される順序は、SQL ステートメントがコマンドテキストに配置される順序に従います。  

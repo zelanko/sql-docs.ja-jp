@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6eccb4e20fca03079a04a0219b07f6411b80a433
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546314"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>クエリ スコープの名前付きセットの作成 (MDX)
   1 つの多次元式 (MDX) クエリでのみ名前付きセットが必要な場合は、WITH キーワードを使用してその名前付きセットを定義できます。 WITH キーワードを使用して作成した名前付きセットは、そのクエリの実行が終了した時点で存在しなくなります。  
@@ -43,8 +42,7 @@ FROM <SELECT subcube clause>
   
 ```  
   
- WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 
-  `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
+ WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
   
 ## <a name="with-keyword-example"></a>WITH キーワードの例  
  以下に示すのは、Microsoft SQL Server 2000 Analysis Services のサンプル データベース `FoodMart 2000` に登録されている Chardonnay ワインと Chablis ワインの売上数量を調べる MDX クエリです。 このクエリは、結果セットという観点からすれば非常にシンプルですが、クエリの管理という観点から見ると長すぎて扱いが厄介です。  
@@ -95,6 +93,6 @@ FROM Sales
   
 ## <a name="see-also"></a>参照  
  [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [MDX&#41;&#40;セッションスコープの名前付きセットを作成する](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [セッション スコープの名前付きセットの作成 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

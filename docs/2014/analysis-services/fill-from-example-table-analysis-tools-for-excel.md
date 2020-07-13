@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081314"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528348"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>自動推論 (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールの [自動推論] ボタン](media/tat-fillex.gif "テーブル分析ツールの [自動推論] ボタン")  
@@ -49,7 +48,7 @@ ms.locfileid: "66081314"
   
      また、新しい値を含む列が、元のデータ テーブルに自動的に追加されます。 挿入された値を元の状態と比較しながら確認できます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  処理できるのは、列方向に格納されたデータだけです。 自動推論によって挿入する一連のデータが行として格納されている場合は、Excel の Paste、Transpose 関数を使用して、データを列形式に変換できます。  
   
 ## <a name="understanding-the-pattern-report"></a>パターン レポートについて  
@@ -59,7 +58,7 @@ ms.locfileid: "66081314"
   
  たとえば、注文の配送距離が記されたワークシートに対してデータを挿入しようとする場合、配送距離に強く影響するのは、配送先となる目的地です。 この場合、レポートには、次のような行が表示されます。  
   
-|列|Value|ライター|相対的影響|  
+|Column|値|ライター|相対的影響|  
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 キロメートル|80%|  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66081314"
 > [!NOTE]  
 >  **相対影響**は、網掛けされたバーとして表示されます。 棒グラフが長いほど、そのルールが、適切な挿入値を予測できる確率が高いことを示します。  
   
- また、このツールでは、元のデータテーブルに新しい列\<が追加されます。この列の名前は、> 拡張されています。  
+ また、このツールは、元のデータテーブルに Extended という名前の新しい列を追加し \<column name> ます。  
   
  元のデータ列に値が存在した場合、その値が、この新しい列にコピーされます。 ただし、元の列が空白セルであった場合、新しい列には、ウィザードによって予測された値が格納されます。  
   

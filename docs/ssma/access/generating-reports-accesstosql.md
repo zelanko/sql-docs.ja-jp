@@ -10,10 +10,10 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986434"
 ---
 # <a name="generating-reports-accesstosql"></a>レポートの生成
@@ -27,8 +27,8 @@ ms.locfileid: "67986434"
   
     ||||  
     |-|-|-|  
-    |**Sl. いいえ。**|**command**|**レポート タイトル**|  
-    |1 で保護されたプロセスとして起動されました|生成-評価-レポート|AssessmentReport&lt;n&gt;XML|  
+    |**Sl. いいえ。**|**コマンド**|**レポート タイトル**|  
+    |1|生成-評価-レポート|AssessmentReport&lt;n&gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport&lt;n&gt;XML|  
     |3|データの移行|DataMigrationReport&lt;n&gt;XML|  
     |4|同期-ターゲット|Target同期レポート&lt;n&gt;。XML|  
@@ -44,7 +44,7 @@ ms.locfileid: "67986434"
     ||||  
     |-|-|-|  
     |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1 で保護されたプロセスとして起動されました|verbose = "false"|アクティビティの概要レポートを生成します。|  
+    |1|verbose = "false"|アクティビティの概要レポートを生成します。|  
     |2|verbose = "true"|各活動の概要と詳細な状態レポートを生成します。|  
   
     > [!NOTE]  
@@ -55,13 +55,13 @@ ms.locfileid: "67986434"
     ||||  
     |-|-|-|  
     |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
-    |1 で保護されたプロセスとして起動されました|レポート-エラー = "false"|エラー/警告/情報メッセージについての詳細はありません。|  
+    |1|レポート-エラー = "false"|エラー/警告/情報メッセージについての詳細はありません。|  
     |2|レポート-エラー = "true"|詳細なエラー/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は、レポートの生成、スキーマの変換、およびデータの移行の各コマンドに適用されます。  
   
-**よう**  
+**例:**  
   
 ```xml  
 <generate-assessment-report  

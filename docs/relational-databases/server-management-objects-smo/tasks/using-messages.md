@@ -13,15 +13,14 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4d79ac396f480100319bec8ea6a9c82bd984bce5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70911227"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008935"
 ---
 # <a name="using-messages"></a>メッセージの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO では、システムメッセージは、 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **サーバー**オブジェクトに属するオブジェクトによって表されます。 システムメッセージは変更できないため、 **Systemmessage**オブジェクトのプロパティは読み取り専用です。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 855d754750e9c5e58c63a3cfd2dee4ac7f9ce3e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63066480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067123"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
   多くの場合、 [結果ペイン](visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  

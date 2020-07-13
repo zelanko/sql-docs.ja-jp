@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 14be41e48262bc7ebc8aeeaf55185f5e35d0c72e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050930"
 ---
 # <a name="alter-an-extended-events-session"></a>拡張イベント セッションの変更
   拡張イベント セッションを作成したら、 **SQL Server 拡張イベント ウィザード**を使用して、必要に応じて拡張イベント セッションを変更できます。  
@@ -49,7 +48,7 @@ ms.locfileid: "63128607"
 -   **[プロパティ]** ダイアログ ボックスで、必要な変更を行い、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの変更](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [クエリ エディターを使用した拡張イベント セッションの作成](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   
   

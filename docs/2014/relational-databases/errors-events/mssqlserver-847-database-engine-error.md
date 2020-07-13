@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f198e9bdecc5e0898ba0a33e1e3522f3fd542e33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053609"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
     
@@ -35,7 +34,7 @@ ms.locfileid: "70874545"
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってバッファー ラッチ エラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれるのと同時に、コンピューターが応答を停止するか、タイムアウトなどにより通常の操作が中断される場合があります。  
   
- メッセージの状態フィールドの値 0x04 がオンの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は I/O 操作を待機しています。 [ エラー ログにメッセージ ](mssqlserver-833-database-engine-error.md)MSSQLSERVER_833[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を受信する場合もあります。  
+ メッセージの状態フィールドの値 0x04 がオンの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は I/O 操作を待機しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにメッセージ [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) を受信する場合もあります。  
   
  メッセージの状態フィールドの値 0x04 がオフの場合、ページに対して多数の競合が存在します。 オブジェクトがデータ ページの場合、非効率なコード デザインに起因している可能性があります。 データ以外のページの場合、ハードウェア リソースの不足など、サーバーのボトルネックによってエラーが発生した可能性があります。  
   

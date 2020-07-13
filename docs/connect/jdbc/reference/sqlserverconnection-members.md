@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 3f7000c8737d8d950968a9074e092a88c738941e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921059"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67971722"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "80921059"
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|**disableStatementPooling** 接続プロパティの値が返されます。 この設定により、この接続に対してステートメント プーリングを有効にするかどうかを制御します。|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|現在未処理の準備されたステートメントの unprepare アクションの数が返されます。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|**enablePrepareOnFirstPreparedStatementCall** 接続プロパティの値が返されます。|
-|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトの現在の保持機能を取得します。|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|この [SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。|  
+|[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の保持機能を取得します。|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|この [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトを取得します。|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|**serverPreparedStatementDiscardThreshold** 接続プロパティの値が返されます。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|プール済みの準備されたステートメントの現在のハンドル数が返されます。|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|この接続のために準備されたステートメント キャッシュのサイズが返されます。|  
@@ -79,7 +79,7 @@ ms.locfileid: "80921059"
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|クライアント情報のプロパティの値を設定します。|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|ステートメント プーリングが true または false に設定されます。|  
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|**enablePrepareOnFirstPreparedStatementCall** 接続プロパティの新しい値が指定されます。|  
-|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。|  
+|[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの保持機能を、渡された保持機能に変更します。|  
 |[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを読み取り専用モードにして、データベースの最適化を有効にするヒントを JDBC ドライバーに提供します。|  
 |[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|名前を割り当てられていないセーブポイントを現在のトランザクションに作成し、そのセーブポイントを表す新しい [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトを返します。|  
 |[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|**serverPreparedStatementDiscardThreshold** 接続プロパティの新しい値が設定されます。|  

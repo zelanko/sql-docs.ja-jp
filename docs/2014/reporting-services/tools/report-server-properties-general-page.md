@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100012"
 ---
 # <a name="server-properties-general-page"></a>[サーバーのプロパティ] ([全般] ページ)
@@ -26,14 +26,14 @@ ms.locfileid: "66100012"
   
  サーバー モードによって、設定できるサーバー プロパティが決まります。 SharePoint 統合モード用に構成されたレポート サーバーを管理している場合は、個人用レポートを有効にしたり、レポート マネージャーのアプリケーション タイトルを設定することができません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  レポート マネージャーで表示されるアプリケーション名を入力します。 既定では、この値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]はです。 指定した名前は、レポート マネージャーでのみ表示されます。  
   
- **バージョン**  
+ **Version**  
  このプロパティは読み取り専用です。 使用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のバージョンを指定します。  
   
- **Edition**  
+ **のエディション**  
  このプロパティは読み取り専用です。 現在のレポート サーバー インスタンスを指定します。 レポート マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  **認証モード**  
@@ -42,21 +42,20 @@ ms.locfileid: "66100012"
  **URL**  
  このプロパティは読み取り専用です。 レポート サーバー Web サービスへの URL を示します。 この値は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで指定されます。 詳細については、「[URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)」をご覧ください。  
   
- **各ユーザーの個人用レポートフォルダーを有効にする**  
+ **[ユーザーごとに個人用レポート フォルダーを有効にする]**  
  ユーザーが個人用レポートを使用できるようにします。 このオプションはネイティブ モードのレポート サーバーでのみ使用できます。  
   
- **各個人用レポートフォルダーに適用するロールを選択します**  
+ **[個人用フォルダーごとに適用するロールを選択します]**  
  個人用レポートのセキュリティに使用するロール定義を指定します。 ロール定義は、各個人用レポート フォルダーでサポートされるタスクのセットを特定します。  
   
  **[ActiveX クライアントの印刷コントロールのダウンロードを有効にする]**  
- 
-  `EnableClientPrinting` レポート サーバー システム プロパティを設定します。 クライアント側の印刷を有効にすると、ローカル管理者の権限を持つユーザーは、HTML レポートを印刷するための署名済み ActiveX コントロールをダウンロードすることができます。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
+ `EnableClientPrinting` レポート サーバー システム プロパティを設定します。 クライアント側の印刷を有効にすると、ローカル管理者の権限を持つユーザーは、HTML レポートを印刷するための署名済み ActiveX コントロールをダウンロードすることができます。 詳細については、「 [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [レポートサーバーのプロパティ &#40;Management Studio の設定&#41;](set-report-server-properties-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [個人用レポートを有効または無効にする](../report-server/enable-and-disable-my-reports.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
  [個人用レポートをセキュリティで保護する](../security/secure-my-reports.md)  
   
   

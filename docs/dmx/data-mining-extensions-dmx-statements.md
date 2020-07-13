@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070862"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670416"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>データ マイニング拡張機能 (DMX) ステートメント
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  でデータマイニングモデルを使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]するには、次の主要なタスクが必要です。  
+  でデータマイニングモデルを使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] するには、次の主要なタスクが必要です。  
   
 -   マイニング構造とマイニングモデルの作成  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68070862"
  [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)ステートメントを使用して、既存のマイニングモデルの構造を新しいマイニングモデルにコピーし、同じデータを使用して新しいモデルをトレーニングします。  
   
  マイニングモデルの参照  
- [Select &#40;DMX&#41;](../dmx/select-dmx.md)ステートメントを使用して、データマイニングアルゴリズムによって計算され、モデルのトレーニング中にデータマイニングモデルに格納される情報を参照します。 と[!INCLUDE[tsql](../includes/tsql-md.md)]同様に、SELECT ステートメントで複数の句を使用して、その機能を拡張することができます。 これらの句には、モデル> の[ \<モデル>](../dmx/select-distinct-from-model-dmx.md)と[ \<は別のものが含まれます。](../dmx/select-from-model-cases-dmx.md)[モデル> から\<のケース。](../dmx/select-from-model-sample-cases-dmx.md)[モデル> から\<の SAMPLE_CASES。コンテンツ](../dmx/select-from-model-content-dmx.md)および[モデル\<からの>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
+ [Select &#40;DMX&#41;](../dmx/select-dmx.md)ステートメントを使用して、データマイニングアルゴリズムによって計算され、モデルのトレーニング中にデータマイニングモデルに格納される情報を参照します。 と同様に、 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT ステートメントで複数の句を使用して、その機能を拡張することができます。 これらの句には、モデル> の[ \< モデル>](../dmx/select-distinct-from-model-dmx.md)とは別のものが含ま[ \< れます。](../dmx/select-from-model-cases-dmx.md)[モデル> からのケース \< 。](../dmx/select-from-model-sample-cases-dmx.md)[モデル> からの SAMPLE_CASES \< 。コンテンツ](../dmx/select-from-model-content-dmx.md)および[モデルからの \<>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
   
  マイニングモデルに対する予測  
  既存のマイニングモデルに基づいた予測を作成するには、SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用します。  
@@ -58,9 +58,9 @@ ms.locfileid: "68070862"
   
  これらのタスクは、次の表に示す、データ定義ステートメントとデータ操作ステートメントの 2 つのカテゴリに分類されます。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)|データ定義言語 (DDL) の一部。 新しいマイニング モデルの定義 (学習を含む)、またはデータベースからの既存のマイニング モデルのドロップに使用されます。|  
+|[データ マイニング拡張機能 (DMX) データ定義ステートメント](../dmx/dmx-statements-data-definition.md)|データ定義言語 (DDL) の一部。 新しいマイニング モデルの定義 (学習を含む)、またはデータベースからの既存のマイニング モデルのドロップに使用されます。|  
 |[DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)|データ操作言語 (DML) の一部。 モデルの参照または予測の作成を含む、既存のマイニング モデルでの作業に使用されます。|  
   
 ## <a name="see-also"></a>参照  

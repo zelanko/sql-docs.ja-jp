@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0c9f7f83-9972-4545-9ac7-1bb98201115c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cb2a5713dbe8326259851db346c2edc942215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e1b3b3506f7162eda0384ba26aacc87e3eb56687
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059185"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>SQL Server フェールオーバー クラスター ノードの削除
   [フェールオーバー クラスター ノードの削除] ページを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] フェールオーバー クラスター ノードとして削除するコンピューターを特定します。  

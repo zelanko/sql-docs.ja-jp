@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f27efed55a2ae63b8c3726263077441bdacc49b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c0438478f5aa625ffdd4d3bcd1c0a6f0f80d3367
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135717"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301393"
 ---
 # <a name="what-the-driver-does"></a>ドライバーの機能
 次の表は、ODBC *3.x ドライバーが*ブロックおよびスクロール可能なカーソルに対して実装する必要がある関数とステートメントの属性をまとめたものです。  

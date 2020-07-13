@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 34b15b956f3361b13e42745688025e0d30279ca9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048955"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
   次に、データ アクセスに SQLXML を使用するときのセキュリティ ガイドラインを示します。  
@@ -49,6 +48,6 @@ ms.locfileid: "66010552"
 -   DiffGrams を実行すると、SQLXML では DiffGram が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの `sql:query` ブロックにコマンドを含めます。  
   
 ## <a name="see-also"></a>参照  
- [SQLXML 4.0 のセキュリティに関する注意点](sqlxml-4-0-security-considerations.md)  
+ [SQLXML 4.0 のセキュリティに関する考慮事項](sqlxml-4-0-security-considerations.md)  
   
   

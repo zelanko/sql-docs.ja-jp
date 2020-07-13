@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4b59c92d6cf66749cd487c3cb175c0534e757bad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646804"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>カーソル ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、カーソル変数機能を実装する次のシステムストアドプロシージャをサポートしています。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67942437"
 |[sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)|[sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)|  
 |[sp_cursoroption](../../relational-databases/system-stored-procedures/sp-cursoroption-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

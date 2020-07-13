@@ -12,14 +12,14 @@ helpviewer_keywords:
 - concurrency models [ODBC]
 - FoxPro ODBC driver [ODBC], concurrency
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 253a6dd86f6dc974d53dd151636bb8b8132e4d02
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080689"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307718"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>サポートされているコンカレンシー モデル (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーでは、読み取り専用の*同時実行*がサポートされています。 アプリケーションでは、SQL_CONCUR_READ_ONLY の SQL_CONCURRENCY オプションを使用して[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)を呼び出すことができます。  

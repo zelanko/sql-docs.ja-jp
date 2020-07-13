@@ -11,17 +11,15 @@ ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 72147bbb3349839a8dd20ff7153b456f43a0c908
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70148776"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006433"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO の旧バージョンとの互換性
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを使用して記述されている SMO アプリケーションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の SMO を使用して再コンパイルできます。  
   
 ## <a name="migrating-smo-applications"></a>SMO アプリケーションの移行  
@@ -60,6 +58,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  コードで Transfer オブジェクトを直接使用している場合は、Microsoft.SqlServer.Management.SmoExtended 名前空間へのリンクが必要になります。  
   
- コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、オンラインブックの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 「 [SQL Server 2016 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)」を参照してください。  
+ コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、オンラインブックの「 [SQL Server 2016 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)」を参照してください [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
   

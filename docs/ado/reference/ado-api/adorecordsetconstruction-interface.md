@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920790"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747084"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
 **ADORecordsetConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB**行**セットオブジェクトから ADO**レコードセット**オブジェクトを構築するために使用されます。  
   
  このインターフェイスは、次のプロパティをサポートしています。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
@@ -38,11 +38,11 @@ ms.locfileid: "67920790"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="remarks"></a>解説  
- OLE DB の**行**セットオブジェクト (`pRowset`) がある場合、ADO**レコードセット**オブジェクト (`adoRs`) の構造は、次の3つの基本的な操作になります。  
+## <a name="remarks"></a>Remarks  
+ OLE DB の**行**セットオブジェクト ( `pRowset` ) がある場合、ADO**レコードセット**オブジェクト () の構造は、 `adoRs` 次の3つの基本的な操作になります。  
   
 1.  ADO**レコードセット**オブジェクトを作成します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67920790"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  プロパティメソッドを呼び出して、ADO `Recordset`オブジェクト`Rowset`の OLE DB オブジェクトを設定します。 `IADORecordsetConstruction::put_Rowset`  
+3.  `IADORecordsetConstruction::put_Rowset`プロパティメソッドを呼び出して、ADO オブジェクトの OLE DB オブジェクトを設定し `Rowset` `Recordset` ます。  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,7 +67,7 @@ ms.locfileid: "67920790"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 結果`adoRs`のオブジェクトは、OLE DB**行**セットオブジェクトから構築された ADO**レコードセット**オブジェクトを表します。  
+ 結果の `adoRs` オブジェクトは、OLE DB**行**セットオブジェクトから構築された ADO**レコードセット**オブジェクトを表します。  
   
  また、OLE DB**チャプター**または**ROWPOSITION**オブジェクトから ADO**レコードセット**オブジェクトを構築することもできます。  
   

@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75656599"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298742"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 関数
 **互換性**  
@@ -114,7 +114,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>診断  
  **SQLBindCol**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLBindCol**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|(DM) *Columnnumber*引数が0で、 *TargetType*引数が SQL_C_BOOKMARK または SQL_C_VARBOOKMARK ではありませんでした。|  
@@ -236,7 +236,7 @@ SQLRETURN SQLBindCol(
   
  ここでは、次の表に示すように、数式の変数を定義します。  
   
-|変数|[説明]|  
+|変数|説明|  
 |--------------|-----------------|  
 |*バインドされたアドレス*|データバッファーの場合は、 **SQLBindCol**の*targetvalueptr*引数で指定されたアドレス。<br /><br /> 長さ/インジケーターバッファーの場合、 **SQLBindCol**の*StrLen_or_IndPtr*引数で指定されたアドレス。 詳細については、「記述子と SQLBindCol」セクションの「その他のコメント」を参照してください。<br /><br /> バインドされたアドレスが0の場合、前の数式で計算されたアドレスが0以外の場合でも、データ値は返されません。|  
 |*バインドオフセット*|行方向のバインドを使用する場合は、SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性で指定したアドレスに格納されている値。<br /><br /> 列方向のバインドが使用されている場合、または SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性の値が null ポインターの場合、*バインドオフセット*は0になります。|  
@@ -379,7 +379,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セットの列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |データのブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  

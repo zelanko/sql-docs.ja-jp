@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43786561a88d970cc89587ed5a37adcc45c646d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900104"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存の **text**、**ntext**、または **image** フィールドを更新します。 **text**、**ntext**、または **image** 型の列の一部だけを適切に変更するには、UPDATETEXT を使用します。 **text**、**ntext**、または **image** 型のフィールド全体を更新して置き換えるには、WRITETEXT を使用します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67948222"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  

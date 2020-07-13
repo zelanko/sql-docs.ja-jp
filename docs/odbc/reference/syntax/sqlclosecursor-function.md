@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef336a4deb734c0e44f9c15ae7f9faf0dcb32d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2703af46e6043fbadb7d3ceb5c00c565c1f6777
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343147"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301302"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>診断  
  **Sqlcloに**よって SQL_ERROR または SQL_SUCCESS_WITH_INFO が返される場合、SQL_HANDLE_STMT の*Handletype*と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **Sqlcloに**よって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |24000|カーソル状態が無効|*StatementHandle*で開かれているカーソルはありません。 (これは、ODBC 3 によってのみ返されます。*x*ドライバー。)|  
@@ -65,10 +65,10 @@ SQLRETURN SQLCloseCursor(
 |IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
   
 ## <a name="comments"></a>説明  
- カーソルが開いていない場合、 **Sqlcloが**24000 返されます。 **SqlcloSQLFreeStmt**を呼び出すことは、SQL_CLOSE オプションを指定して**SQLFreeStmt**を呼び出すことと同じです。ただし、ステートメントでカーソルが開かれていない場合は、 **** SQL_CLOSE with を使用してもアプリケーションには影響しませんが、 **Sqlcloは**SQLSTATE 24000 (無効なカーソル状態) を返します。  
+ カーソルが開いていない場合、 **Sqlcloが**24000 返されます。 **SqlcloSQLFreeStmt**を呼び出すことは、SQL_CLOSE オプションを指定して**SQLFreeStmt**を呼び出すことと同じです。ただし、ステートメントでカーソルが開かれていない場合は、 **SQLFreeStmt** SQL_CLOSE with を使用してもアプリケーションには影響しませんが、 **Sqlcloは**SQLSTATE 24000 (無効なカーソル状態) を返します。  
   
 > [!NOTE]  
->  ODBC 3 の場合。*x*アプリケーションが ODBC 2 で動作する。*x*ドライバーは**sqlcloを**呼び出します。カーソルが開かれていない場合、SQLSTATE 24000 (無効なカーソル状態) は返されません。これは、ドライバーマネージャーが**sqlcloSQLFreeStmt**を SQL_CLOSE でマップするためです。 ****  
+>  ODBC 3 の場合。*x*アプリケーションが ODBC 2 で動作する。*x*ドライバーは**sqlcloを**呼び出します。カーソルが開かれていない場合、SQLSTATE 24000 (無効なカーソル状態) は返されません。これは、ドライバーマネージャーが**sqlcloSQLFreeStmt**を SQL_CLOSE でマップするためです。 **SQLFreeStmt**  
   
  詳細については、「[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)」を参照してください。  
   
@@ -77,7 +77,7 @@ SQLRETURN SQLCloseCursor(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |ハンドルの解放|[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  

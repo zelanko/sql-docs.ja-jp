@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bad95475a55257a9f65bfc84b673b58c7e8ed47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765702"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行せず、 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はステートメントの実行方法に関する詳細情報を返します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67941662"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,7 +61,8 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |列名|説明|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「**SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 」の「[Argument](../../t-sql/statements/set-showplan-all-transact-sql.md)」列を参照してください。|  
-  
+|||
+
  プラン表示の出力に含まれる物理操作と論理操作の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -80,7 +81,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  インデックスを使用するクエリは次のとおりです。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -109,7 +110,7 @@ StmtText
   
  インデックスを使用しないクエリは次のとおりです。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

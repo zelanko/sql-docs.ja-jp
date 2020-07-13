@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67906106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891733"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたオペレーターのアラートの一覧、または特定のアラートのオペレーターの一覧を報告します。  
   
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`返される*object_type*情報。 ほとんどの場合、 *enum_type*は実際のものです。 *enum_type*は**char (10)** で、既定値はありません。これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |ACTUAL|*名前*に関連付けられている*object_types*のみを一覧表示します。|  
 |ALL|*名前*に関連付けられていないものを含むすべての*object_types*を一覧表示します。|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`返される通知方法の列を決定する数値。 *notification_method*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|電子メール: **use_email**列だけを返します。|  
 |**2**|Pager: **use_pager**列だけを返します。|  
@@ -73,7 +73,7 @@ sp_help_notification
 ## <a name="result-sets"></a>結果セット  
  *Object_type*が**警告**の場合、結果セットには特定のオペレーターに対するすべての警告が表示されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|アラートの識別子番号。|  
 |**alert_name**|**sysname**|アラート名。|  
@@ -86,7 +86,7 @@ sp_help_notification
   
  **Object_type**が**演算子**の場合、結果セットには特定の警告のすべての演算子が表示されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|オペレーター識別番号。|  
 |**operator_name**|**sysname**|オペレーター名。|  
@@ -97,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|オペレーターがポケットベル アドレスを持っているかどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**has_netsend**|**int**|オペレーターには、net send 通知が構成されています。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -120,8 +120,8 @@ EXEC dbo.sp_help_notification
 GO  
 ```  
   
-### <a name="b-listing-operators-for-a-specific-alert"></a>B. 特定の警告の送信先となるオペレーターを表示する  
- 次の例では、 `Test Alert`警告に対して任意の種類の通知を受け取るすべてのオペレーターを返します。  
+### <a name="b-listing-operators-for-a-specific-alert"></a>B: 特定の警告の送信先となるオペレーターを表示する  
+ 次の例では、警告に対して任意の種類の通知を受け取るすべてのオペレーターを返し `Test Alert` ます。  
   
 ```  
 USE msdb ;  
@@ -135,10 +135,10 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

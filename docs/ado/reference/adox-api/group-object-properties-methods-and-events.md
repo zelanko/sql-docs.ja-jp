@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - group object [ADOX], members
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3521c85e8666ee5386ac38c3158331c3f882cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1c2dd2d773ff0a4605793e1815d051e35e78550
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966235"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761750"
 ---
 # <a name="group-object-properties-methods-and-events"></a>Group オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -32,7 +32,7 @@ ms.locfileid: "67966235"
   
  [SetPermissions メソッド](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

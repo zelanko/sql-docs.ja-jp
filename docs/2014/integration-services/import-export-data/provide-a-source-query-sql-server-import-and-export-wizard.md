@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b81b801d76342e13e22335fe4f60b65a9b138468
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767864"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436769"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
   [基になる**クエリの指定**] ページを使用すると、データソースからコピー先にコピーするデータを生成する SQL ステートメントを入力できます。  
@@ -36,14 +35,13 @@ FROM Sales.SalesPerson
 WHERE CommissionPct > 0.015  
 ```  
   
- **分解**  
- 
-  **[SQL ステートメント]** テキスト ボックスで、SQL ステートメントの構文をチェックします。  
+ **Parse**  
+ **[SQL ステートメント]** テキスト ボックスで、SQL ステートメントの構文をチェックします。  
   
 > [!NOTE]  
 >  ステートメントの構文をチェックするのに必要な時間がタイムアウト値の 30 秒を超えると、解析は停止し、エラーが発生します。 解析が成功するまでは、ウィザードのこのページ以降に進めません。 1 つの解決策として、クエリに基づくデータベース ビューを作成し、クエリ テキストを直接入力するのではなく、ウィザードからビューに対してクエリを実行する方法があります。  
   
- **[参照]**  
+ **参照**  
  [**開く**] ダイアログボックスを使用して、SQL ステートメントを含むファイルを選択します。 ファイルを選択すると、ファイルから [**クエリステートメント**] テキストボックスにテキストがコピーされます。  
   
   

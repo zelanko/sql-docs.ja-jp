@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ae1779447ac2552fb929034e50733c76eadf2c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63240546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064003"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>トレース ファイルを開く (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース ファイルを開く方法について説明します。  

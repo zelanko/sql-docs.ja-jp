@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 188a0409fbad3f12283adacafbfcb5f176650b72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62876219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958672"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション* は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
@@ -39,7 +38,7 @@ ms.locfileid: "62876219"
 |アクション|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
 |------------|-----------------------------------------------------------------------|  
 |サーバーの起動|遅延トランザクション|  
-|[復元]|遅延トランザクション|  
+|復元|遅延トランザクション|  
 |Attach|アタッチの失敗|  
 |Autorestart|遅延トランザクション|  
 |データベースまたはデータベース スナップショットの作成|作成の失敗|  
@@ -84,7 +83,7 @@ ms.locfileid: "62876219"
   
          緊急モードの詳細については、「 [データベースの状態](../databases/database-states.md)」を参照してください。  
   
-    -   次に、 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
+    -   次に、下記の DBCC ステートメントのいずれかで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用してデータベースを修復します: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、[DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)。  
   
          DBCC では、不適切なページが検出されると、そのページの割り当てが解除され、関連するすべてのエラーが修復されます。 この方法を使用すると、物理的に一貫性のある状態でデータベースをオンラインに戻すことができます。 ただし、追加されたデータが失われる場合もあるため、この方法は最後の手段として使用してください。  
   

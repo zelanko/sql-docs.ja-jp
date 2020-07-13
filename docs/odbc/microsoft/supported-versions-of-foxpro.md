@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 400a3a29bebd5fbd8c19bef1e3d027549394595e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939848"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286182"
 ---
 # <a name="supported-versions-of-foxpro"></a>サポートされているバージョンの FoxPro
 Microsoft® Visual FoxPro® ODBC ドライバーを使用して、FoxPro テーブルに格納されているデータにアクセスできます。 次のバージョンの FoxPro データがサポートされています。  

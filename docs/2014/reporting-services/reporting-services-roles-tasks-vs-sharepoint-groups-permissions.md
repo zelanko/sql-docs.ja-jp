@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102813"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較
@@ -40,7 +40,7 @@ ms.locfileid: "66102813"
   
 -   [ネイティブ モード タスクと SharePoint の権限の比較](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> 権限ツールと用語の比較  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> 権限ツールと用語の比較  
  **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの権限オブジェクト (ロールおよびタスク) は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 内で作成し、レポート マネージャー内で個々のユーザーに対して構成します。  
   
  **SharePoint モード:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint の権限の機能を活用します。 SharePoint のグループと権限は、次の **[サイトの設定]** ページで管理します。  
@@ -55,7 +55,7 @@ ms.locfileid: "66102813"
   
  Sharepoint の権限の詳細については、「 [Sharepoint Server のユーザー権限と権限レベル](/sharepoint/sites/user-permissions-and-permission-levels)」および「 [sharepoint 2013 の権限レベルとグループを確認](https://technet.microsoft.com/library/cc262690.aspx)する」を参照してください。  
   
-##  <a name="bkmk_compare_roles_groups"></a> ネイティブ モードと SharePoint グループの比較  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> ネイティブ モードと SharePoint グループの比較  
  次の表では、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で事前定義されているロールの定義と、標準の SharePoint グループとを比較しています。 SharePoint のグループが目的のロールと一致しない場合は、SharePoint でカスタム グループを作成し、権限レベルを割り当てることができます。  
   
  **注**:使用できる既定の SharePoint グループは、SharePoint サイトの作成に使用したサイト テンプレートによって異なります。  
@@ -70,7 +70,7 @@ ms.locfileid: "66102813"
 |-|表示されたレポートを閲覧する権限を許可するには、 **閲覧者** グループを使用します。 **閲覧者** グループは、レポート アイテムのコンテンツをダウンロードすることも表示することもできません。<br /><br /> **注:** SQL Server 2012 以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、**閲覧者**グループには、サブスクリプションを作成する権限がなくなりました。|  
 |**システム ユーザー** および **システム管理者**|これらのロールは、SharePoint モードで動作するレポート サーバーでは必要ありません。 **システム ユーザー** と **システム管理者** は、SharePoint ファーム レベルまたは Web アプリケーション レベルの権限に対応します。 レポート サーバーでは、これらのレベルでの承認が必要となる機能が提供されません。|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> ネイティブ モード タスクと SharePoint の権限の比較  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> ネイティブ モード タスクと SharePoint の権限の比較  
  次の表は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードのタスクと SharePoint の権限との対応関係を示しています。 **[種類]** 列では、ネイティブ モードのタスクが、システム ロールと、標準的なロールおよびアイテムのどちらに関連しているかを示します。 システム ロールは、システム レベルの権限、たとえば共有スケジュールを管理します。  
   
 |ネイティブ モードのタスク|ロールの種類|同等の SharePoint の権限|  

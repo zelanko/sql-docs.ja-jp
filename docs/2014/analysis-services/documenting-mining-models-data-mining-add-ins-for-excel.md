@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081589"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528488"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルのドキュメント化とスケーリング (Excel 用データ マイニング アドイン)
   ![[データ マイニング] リボンの [モデルのドキュメント化] ボタン](media/dmc-docmodel.gif "[データ マイニング] リボンの [モデルのドキュメント化] ボタン")  
@@ -56,7 +55,7 @@ ms.locfileid: "66081589"
 ||||  
 |-|-|-|  
 |**Metadata**|モデル名<br /><br /> モデルの説明<br /><br /> アルゴリズム名<br /><br /> 最終処理日||  
-|**モデルの結果**|アソシエーション|アイテムセット数<br /><br /> ルール数|  
+|**モデルの結果**|関連付け|アイテムセット数<br /><br /> ルール数|  
 ||クラスタリング|クラスター数<br /><br /> 各クラスターのサポート|  
 ||デシジョン ツリー|ツリー数<br /><br /> 各ツリーのノード数|  
 ||Linear regression (線形回帰)|ツリー数 (常に 1)<br /><br /> ノード数 (常に 1)|  
@@ -70,7 +69,7 @@ ms.locfileid: "66081589"
 ||||  
 |-|-|-|  
 |**Metadata**|モデルのメタデータ|アルゴリズム パラメーターおよび値|  
-||列のメタデータ|列名<br /><br /> 使用法<br /><br /> データ型<br /><br /> Content type<br /><br /> 値 (不連続値の一覧または特定の範囲の値)|  
+||列のメタデータ|列名<br /><br /> 使用法<br /><br /> データの種類<br /><br /> Content type<br /><br /> 値 (不連続値の一覧または特定の範囲の値)|  
 |**モデルの統計**|連続列|平均値<br /><br /> 最小値<br /><br /> 最大値<br /><br /> 2 乗平均平方根誤差<br /><br /> 平均絶対誤差<br /><br /> ログ スコア<br /><br /> 回帰式 (線形回帰モデルのみ)。|  
 ||不連続列|合格数<br /><br /> 不合格数<br /><br /> ログ スコア<br /><br /> リフト|  
   

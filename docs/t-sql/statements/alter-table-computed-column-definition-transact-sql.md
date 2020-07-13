@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec1b0f13f67d632a33b5fc53248a6c641e58bd71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760975"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使ってテーブルに追加された計算列のプロパティを指定します。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73982041"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -52,10 +52,10 @@ column_name AS computed_column_expression
   
 ## <a name="arguments"></a>引数  
 *column_name*  
- 変更、追加、または削除する列の名前を指定します。 *column_name* の有効文字数は、1 ～ 128 文字です。 *timestamp* データ型で作成された新しい列の場合、**column_name** は省略できます。 *timestamp* データ型の列に対して **column_name** を指定しない場合には、名前 **timestamp** が使われます。  
+ 変更、追加、または削除する列の名前を指定します。 *column_name* の有効文字数は、1 ～ 128 文字です。 **timestamp** データ型で作成された新しい列の場合、*column_name* は省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
   
 *computed_column_expression*  
- 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 たとえば、計算列は cost AS price * qty のように定義できます。式には、非計算列の名前、定数、関数、および変数のほか、これらを 1 つ以上の演算子によって結合した組み合わせを使用できます。 サブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
+ 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 式は値を生成する必要があります。 たとえば、計算列は cost AS price * qty のように定義できます。ビット演算子を使用したもう 1 つの例: is_finalised AS is_checked | is_approved。 式には、非計算列の名前、定数、関数、変数、および 1 つ以上の演算子によってこれらを結合した組み合わせを使用できます。 検索条件やサブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
   
  計算列は、選択リスト、WHERE 句、ORDER BY 句、および正規表現を使用できるその他の場所で使用できます。ただし、次の場合は除きます。  
   

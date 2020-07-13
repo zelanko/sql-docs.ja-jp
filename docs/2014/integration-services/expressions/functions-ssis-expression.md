@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2023cccadefaf3274a7032fe188b7d887a23b3d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428659"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -38,7 +37,7 @@ ms.locfileid: "62769128"
   
  式言語には、次の数学関数が用意されています。  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 式&#41;](abs-ssis-expression.md)|数値式の正の絶対値を返します。|  
 |[EXP &#40;SSIS 式&#41;](exp-ssis-expression.md)|指定した式の e を基数とする指数を返します。|  
@@ -54,7 +53,7 @@ ms.locfileid: "62769128"
   
  式エバリュエーターには、次の文字列関数が用意されています。  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 式&#41;](codepoint-ssis-expression.md)|文字式の左端の文字の Unicode コード値を返します。|  
 |[FINDSTRING &#40;SSIS 式&#41;](findstring-ssis-expression.md)|文字式内のある文字列が指定回数目に検出された場所を、1 を基点とするインデックスで返します。|  
@@ -74,7 +73,7 @@ ms.locfileid: "62769128"
   
  式エバリュエーターには、次の日付と時刻関数が用意されています。  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[DATEADD (SSIS 式)](dateadd-ssis-expression.md)|指定された日付に日付または期間を加えて、新しい DT_DBTIMESTAMP 値を返します。|  
 |[DATEDIFF (SSIS 式)](datediff-ssis-expression.md)|指定された 2 つの日付間の差を、日付および時刻の単位で返します。|  
@@ -87,7 +86,7 @@ ms.locfileid: "62769128"
   
  式エバリュエーターには、次の NULL 関数が用意されています。  
   
-|Function|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 式&#41;](null-ssis-expression.md)|式が NULL かどうかに基づいてブール型の結果を返します。|  
 |[NULL &#40;SSIS 式&#41;](null-ssis-expression.md)|要求されたデータ型の NULL 値を返します。|  

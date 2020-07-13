@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783799"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   サブスクライバーの現在のデータベースでサブスクリプションを削除します。 このストアド プロシージャは、サブスクライバー側でプル サブスクリプション データベースについて実行されます。  
   
@@ -51,7 +51,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_droppullsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_droppullsubscription**によって、 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルの対応する行と、サブスクライバー側の対応するディストリビューターエージェントが削除されます。 [Transact-sql&#41;&#40;MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)に行が残されていない場合は、テーブルが削除されます。  
@@ -62,7 +62,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_droppullsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、またはプルサブスクリプションを作成したユーザーだけです。 **Db_owner**固定データベースロールは、プルサブスクリプションを作成したユーザーがこのロールに属している場合にのみ**sp_droppullsubscription**を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

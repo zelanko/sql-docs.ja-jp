@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2cdca0a3cd9ce47ccb39ebeaf8fd1cd260aafbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62761710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031650"
 ---
 # <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
@@ -39,7 +38,7 @@ ms.locfileid: "62761710"
  USE PLAN ヒントで指定したすべてのデータベースが存在することを確認します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;クエリヒント](/sql/t-sql/queries/hints-transact-sql-query)   
+ [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [プラン ガイド](../performance/plan-guides.md)  
   
   

@@ -11,18 +11,17 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 635cd541e0341caadb8e3ad166bc14f78aa9cccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bdbf9ed057f9dd031634c3ab42d5ce28dea47bd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73790501"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006235"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、ODBC でテーブル値パラメーターを使用する主なユーザー シナリオについて説明します。  
   
@@ -58,12 +57,12 @@ ms.locfileid: "73790501"
   
  アプリケーションでは、テーブル値パラメーターとして SQLPutData を使用して、テーブル値パラメーターの構成列のデータを使用できるかどうかを示します。 SQLPutData がテーブル値パラメーターに対して呼び出される場合、 *DataPtr*は常に null である必要があります。また、 *StrLen_or_Ind*は、テーブル値パラメーターのバッファーに指定された配列のサイズ (SQLBindParameter の*columnsize*パラメーター) 以下である必要があります。 0 はテーブル値パラメーターの行がなくなったことを示すため、ドライバーはプロシージャの次の実パラメーターの処理に進みます。 *StrLen_or_Ind*が0でない場合、ドライバーはテーブル値パラメーターではないパラメーターと同じ方法でテーブル値パラメーターを構成する列を処理します。各テーブル値パラメーターの列は、実際のデータ長、SQL_NULL_DATA を指定することも、長さ/インジケーターバッファーを使用して実行時にデータを指定することもできます。 文字またはバイナリ値を部分的に渡すときに、通常どおり SQLPutData を繰り返し呼び出すことで、テーブル値パラメーターの列の値を渡すことができます。  
   
- テーブル値パラメーターのすべての列が処理されたら、ドライバーはテーブル値パラメーターに戻り、テーブル値パラメーターのデータの次の行を処理します。 したがって、実行時データのテーブル値パラメーターの場合、バインドされたパラメーターを順番にスキャンする通常の方法には従いません。 バインドされたテーブル値パラメーターは、SQLPutData が0に等しい*StrLen_Or_IndPtr*呼び出されるまでポーリングされます。このとき、ドライバーはテーブル値パラメーターの列をスキップし、次の実際のストアドプロシージャパラメーターに移動します。  SQLPutData が1以上のインジケーター値を渡すと、ドライバーは、バインドされたすべての行と列の値を持つまで、テーブル値パラメーターの列と行を順番に処理します。 その後、ドライバーはテーブル値パラメーターに戻ります。 テーブル値パラメーターに対して、SQLParamData からのテーブル値パラメーターのトークンを受け取り、Sqlparamdata (hstmt, NULL, n) を呼び出す場合は、アプリケーションでテーブル値パラメーターを構成する列のデータとインジケーターバッファーの内容を設定する必要があります。サーバーに渡される次の行。  
+ テーブル値パラメーターのすべての列が処理されたら、ドライバーはテーブル値パラメーターに戻り、テーブル値パラメーターのデータの次の行を処理します。 したがって、実行時データのテーブル値パラメーターの場合、バインドされたパラメーターを順番にスキャンする通常の方法には従いません。 バインドされたテーブル値パラメーターは、SQLPutData が0に等しい*StrLen_Or_IndPtr*呼び出されるまでポーリングされます。このとき、ドライバーはテーブル値パラメーターの列をスキップし、次の実際のストアドプロシージャパラメーターに移動します。  SQLPutData が1以上のインジケーター値を渡すと、ドライバーは、バインドされたすべての行と列の値を持つまで、テーブル値パラメーターの列と行を順番に処理します。 その後、ドライバーはテーブル値パラメーターに戻ります。 テーブル値パラメーターのテーブル値パラメーターのトークンを受信してから、テーブル値パラメーターの Sqlparamdata (hstmt, NULL, n) を呼び出す場合、アプリケーションでは、サーバーに渡される次の行に対して、テーブル値パラメーターの構成列データとインジケーターバッファーの内容を設定する必要があります。  
   
  このシナリオのサンプルコードは、「 `demo_variable_TVP_binding` [テーブル値パラメーター &#40;ODBC&#41;に使用する](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)」のルーチンに含まれています。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
- アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はスキーマの名前を返します。テーブル値パラメーターのテーブル型が定義されています。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ドライバー固有の列の前と、odbc 自体によって指定されたすべての列の前に表示されます。  
+ アプリケーションが SQLProcedureColumns を呼び出して、テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すと、DATA_TYPE が SQL_SS_TABLE として返され、TYPE_NAME はテーブル値パラメーターのテーブル型の名前になります。 SQLProcedureColumns によって返される結果セットには、次の2つの列が追加されます。 SS_TYPE_CATALOG_NAME は、テーブル値パラメーターのテーブル型が定義されているカタログの名前を返し、SS_TYPE_SCHEMA_NAME はテーブル値パラメーターのテーブル型が定義されているスキーマの名前を返します。 ODBC 仕様に準拠して、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、以前のバージョンので追加されたすべてのドライバー固有の列の前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、odbc 自体によって指定されたすべての列の前に表示されます。  
   
  新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります  (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], character
 - converting data from c to SQL types [ODBC], character
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: acde0d2a79492607185d56d3082797c79a100fa2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037723"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292033"
 ---
 # <a name="c-to-sql-character"></a>C から SQL へ: 文字
 文字 ODBC C データ型の識別子は次のとおりです。  

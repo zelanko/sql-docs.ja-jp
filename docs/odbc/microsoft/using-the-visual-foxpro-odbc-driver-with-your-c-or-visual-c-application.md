@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], C or C++ applications
 - C applications [ODBC]
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d1fb400fec20017fc37a937b2ca5d911e8413bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e2f3a87503a94da75acc824a0937b92631c01bde
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087974"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292632"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C または Visual C++ アプリケーションで Visual FoxPro ODBC ドライバーを使用する
 C または C++ アプリケーションは、 [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)または[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)ステートメントを visual foxpro に送信することによって、visual foxpro データと通信します。 このステートメントには、次のものを含めることができます。  

@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94cce7c3debc467d2c06f97d9a390455245f5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63032337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020146"
 ---
 # <a name="parameter-and-result-metadata"></a>パラメーターと結果のメタデータ
   このトピックでは、日付と時刻のデータ型に対して実装パラメーター記述子 (IPD) フィールドと実装行記述子 (IRD) フィールドに返される情報について説明します。  
@@ -40,7 +39,7 @@ ms.locfileid: "63032337"
 |SQL_DESC_TYPE_NAME|`date`|`time`|IRD では `smalldatetime`、IPD では `datetime2`|IRD では `datetime`、IPD では `datetime2`|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|該当なし|該当なし|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|該当なし|  
+|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  値の範囲が連続しない場合があります。 たとえば、"8,10..16" には 9 がありません。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63032337"
   
  SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは、アプリケーションで `sqlvariant` (SQL_SSVARIANT) 列とパラメーターに関連付けられた値の型を指定できるようにするために IRD と IPD に追加されました。  
   
- SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 SQLExecute または SQLExecDirect が呼び出されたときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP (または SQL_SS_VARIANT で C 型が SQL_C_TYPE_TIMESTAMP) の場合、SQL_CA_SS_SERVER_TYPE の値によって、パラメーター値の表形式のデータストリーム (TDS) の型が決定されます。次に例を示します。  
+ SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 SQLExecute または SQLExecDirect が呼び出されたときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP (または SQL_SS_VARIANT で C 型が SQL_C_TYPE_TIMESTAMP) の場合、次のように SQL_CA_SS_SERVER_TYPE の値によって、パラメーター値の表形式のデータストリーム (TDS) の型が決定されます。  
   
 |SQL_CA_SS_SERVER_TYPE の値|SQL_DESC_PRECISION の有効な値|SQL_DESC_LENGTH の有効な値|TDS 型|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -66,7 +65,7 @@ ms.locfileid: "63032337"
   
  SQLSetDescField の呼び出しによって SQL_CA_SS_SERVER_TYPE が設定されている場合、その値は SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME である必要があります。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
   
- SQL_CA_SS_SERVER_TYPE 属性を使用できるのは、`datetime` および `smalldatetime` でサポートされ、`datetime2` ではサポートされない機能に依存するアプリケーションです。 たとえば、で`datetime2`は、関数`dateadd`と**datediif**関数を使用する必要`datetime`が`smalldatetime`あります。一方、では算術演算子も使用できます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
+ SQL_CA_SS_SERVER_TYPE 属性を使用できるのは、`datetime` および `smalldatetime` でサポートされ、`datetime2` ではサポートされない機能に依存するアプリケーションです。 たとえば、では、 `datetime2` `dateadd` 関数と**datediif**関数を使用する必要があります。一方、では `datetime` `smalldatetime` 算術演算子も使用できます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD フィールドに返される情報  
  IRD フィールドには次の情報が返されます。  

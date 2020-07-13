@@ -174,7 +174,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
   
 |パラメーター|Default|説明|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|該当なし|省略可能なパラメーターです。**string** で指定されたディスク上の場所に DeployReport XML 出力ファイルまたは Script SQL 出力ファイルを作成することを *dbSqlPackage* に対して指定します。 この操作では、文字列で指定された場所にある現在のスクリプトが上書きされます。|  
+|**OutputPath**={ *string* }|該当なし|省略可能なパラメーターです。*string* で指定されたディスク上の場所に DeployReport XML 出力ファイルまたは Script SQL 出力ファイルを作成することを **dbSqlPackage** に対して指定します。 この操作では、文字列で指定された場所にある現在のスクリプトが上書きされます。|  
   
 > [!NOTE]  
 > **OutputPath** パラメーターが **DeployReport** または **Script** 操作に対して指定されない場合、出力はメッセージとして返されます。  

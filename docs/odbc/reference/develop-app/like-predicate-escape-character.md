@@ -11,14 +11,14 @@ helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027231"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306153"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 述語のエスケープ文字
 **LIKE**述語では、パーセント記号 (%)0個以上の任意の文字と一致し、アンダースコア (_) は任意の1文字と一致します。 **LIKE**述語の実際のパーセント記号またはアンダースコアを一致させるには、パーセント記号またはアンダースコアの前にエスケープ文字を指定する必要があります。 **LIKE**述語エスケープ文字を定義するエスケープシーケンスは次のとおりです。  

@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1a42ace7fc657f0f8637c2e5316c2c952917df7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905156"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891029"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sp_cdc_stop_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに対して変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブを停止します。  
   
@@ -55,7 +55,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを停止します。  
   
 ```  
@@ -65,7 +65,7 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   

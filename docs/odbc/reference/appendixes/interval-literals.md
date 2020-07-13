@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041910"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304943"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
 ODBC では、すべてのドライバーで SQL_CHAR または SQL_VARCHAR データ型からすべての C interval データ型への変換がサポートされている必要があります。 ただし、基になるデータソースで interval データ型がサポートされていない場合、ドライバーは、これらの変換をサポートするために、[SQL_CHAR] フィールドの値の正しい形式を認識している必要があります。 同様に、ODBC では、任意の ODBC C 型が SQL_CHAR または SQL_VARCHAR に変換可能である必要があるため、ドライバーは、文字フィールドに格納されている間隔の形式を認識している必要があります。 このセクションでは、間隔リテラルの構文について説明します。この構文では、ドライバーライターは、C の interval データ型の間で変換中に SQL_CHAR フィールドを検証するために使用する必要があります。  

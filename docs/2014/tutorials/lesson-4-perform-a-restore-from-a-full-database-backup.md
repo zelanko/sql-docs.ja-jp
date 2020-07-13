@@ -9,25 +9,22 @@ ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 139c6ff36e37532f6704a346a44a2e1d40d91087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063925"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>レッスン 4: データベースの完全バックアップからの復元の実行
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>レッスン 4:データベースの完全バックアップからの復元の実行
   このレッスンでは、TSQL ステートメントを使用して、前のレッスンで作成したデータベースの完全バックアップからの復元を実行する方法を紹介します。  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>データベース バックアップの復元の実行  
  データベースの完全バックアップを復元するには、次の手順を実行します。  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続します。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続します。  
   
-2.  
-  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のインスタンスに接続します。  
+2.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のインスタンスに接続します。  
   
 3.  [標準] メニュー バーの **[新しいクエリ]** をクリックします。  
   

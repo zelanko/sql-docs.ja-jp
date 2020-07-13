@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cd0b269c0ced445017d573cfad08a767d5f2008
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054859"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439989"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>[Master ストアド プロシージャ転送タスク エディター] ([ストアド プロシージャ] ページ)
-  
   **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[ストアド プロシージャ]** ページを使用すると、 **の 1 つのインスタンスの** master [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースから **の別のインスタンスの** master [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースに、1 つ以上のユーザー定義ストアド プロシージャをコピーする場合のプロパティを指定できます。 このタスクの詳細については、「 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)」を参照してください。  
   
 > [!NOTE]  
@@ -30,35 +28,34 @@ ms.locfileid: "66054859"
   
 ## <a name="options"></a>オプション  
  **[Sourceconnection]**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行元サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行元サーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、[ ** \<新しい接続... >** をクリックして、移行先サーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行先サーバーへの新しい接続を作成します。  
   
- **IfObjectExists**  
+ **[IfObjectExists]**  
  コピー先のサーバーの **master** データベースに存在する名前と同じ名前を持つ、ユーザー定義ストアド プロシージャの処理方法を選択します。  
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**FailTask**|ストアド プロシージャがコピー先のサーバーの **master** データベースに既に存在する名前と同じ名前を持つ場合、タスクは失敗します。|  
-|**オーバーライド**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャを上書きします。|  
-|**Tim**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャをスキップします。|  
+|**[FailTask]**|ストアド プロシージャがコピー先のサーバーの **master** データベースに既に存在する名前と同じ名前を持つ場合、タスクは失敗します。|  
+|**Overwrite**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャを上書きします。|  
+|**Skip**|コピー先のサーバーの **master** データベースにある同じ名前のストアド プロシージャをスキップします。|  
   
- **TransferAllStoredProcedures**  
+ **[TransferAllStoredProcedures]**  
  コピー元のサーバーの **master** データベースのすべてのユーザー定義ストアド プロシージャをコピー先のサーバーにコピーするかどうかを選択します。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**本来**|
-  **master** データベースのユーザー定義ストアド プロシージャをすべてコピーします。|  
+|**True**|**master** データベースのユーザー定義ストアド プロシージャをすべてコピーします。|  
 |**False**|指定したストアド プロシージャのみをコピーします。|  
   
- **StoredProceduresList**  
+ **[StoredProceduresList]**  
  コピー先の **master** データベースにコピーする、コピー元サーバーの **master** データベースのユーザー定義ストアド プロシージャを選択します。 このオプションは、 **[TransferAllStoredProcedures]** を **[False]** に設定した場合のみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [Master ストアドプロシージャ転送タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   

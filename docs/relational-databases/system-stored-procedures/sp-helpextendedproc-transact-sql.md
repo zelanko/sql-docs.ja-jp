@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67943504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881578"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在定義されている拡張ストアドプロシージャと、プロシージャ (関数) が属するダイナミックリンクライブラリ (DLL) の名前を報告します。  
   
@@ -49,12 +49,12 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|拡張ストアドプロシージャの名前。|  
 |**dll**|**nvarchar(255)**|DLL の名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *プロシージャ*を指定した場合は、指定した拡張ストアドプロシージャに対して**sp_helpextendedproc**レポートが作成されます。 このパラメーターが指定されていない場合、 **sp_helpextendedproc**は、すべての拡張ストアドプロシージャ名と各拡張ストアドプロシージャが属する DLL 名を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -72,8 +72,8 @@ EXEC sp_helpextendedproc;
 GO  
 ```  
   
-### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 1つの拡張ストアドプロシージャに関するヘルプをレポートする  
- 次の例では、 `xp_cmdshell`拡張ストアドプロシージャに関するレポートを作成します。  
+### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B: 1つの拡張ストアドプロシージャに関するヘルプをレポートする  
+ 次の例では、拡張ストアドプロシージャに関するレポートを作成し `xp_cmdshell` ます。  
   
 ```  
 USE master;  
@@ -82,9 +82,9 @@ EXEC sp_helpextendedproc xp_cmdshell;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

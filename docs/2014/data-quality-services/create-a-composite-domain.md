@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: e8918da2943e81adbe2e28eb81b37586c8d81f28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937953"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../../2014/data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
@@ -27,19 +26,19 @@ ms.locfileid: "79289320"
   
  複合ドメインを作成したら、複合ドメインのプロパティの変更、ドメインへの参照データ サービスのアタッチ、ドメイン間のルールの作成、または値のリレーションの作成を行うことができます。 そのためには、 **[ドメイン管理]** ページの **[ドメイン リスト]** で複合ドメインを選択し、適切なタブを選択します。  
   
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>始める前に  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  複合ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。また、複合ドメインに追加する単一ドメインを少なくとも 2 つ作成しておく必要があります。  
   
-###  <a name="security"></a><a name="Security"></a>セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="permissions"></a><a name="Permissions"></a> アクセス許可  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  複合ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>ナレッジ検出アクティビティでの複合ドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][データ品質クライアント アプリケーションを実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)します。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "79289320"
   
 7.  **[複合ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>ドメイン管理アクティビティでの複合ドメインの作成  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>ドメイン管理アクティビティで複合ドメインを作成する  
   
 1.  Data Quality Services クライアントのホーム ページで、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -69,13 +68,13 @@ ms.locfileid: "79289320"
   
 7.  **[OK]** をクリックします。  
   
-##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>複合ドメインのプロパティを設定する  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>複合ドメインのプロパティの設定  
   
 1.  **[複合ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
 2.  **[ドメイン リスト]** で、複合ドメインの一部となるドメインを選択し、右矢印をクリックして **"複合ドメイン内のドメイン"** テーブルに移動します。 これは、作成する複合ドメインに追加できる単一ドメインの一覧です。 既存の複合ドメインに追加されていない既に作成済みの単一ドメインのみを使用できます。 単一ドメインをナレッジ ベースの複数の複合ドメインに追加したり、複合ドメインを別の複合ドメインに追加したりすることはできません。  
   
-3.  [**詳細設定**] をクリックします。  
+3.  **[詳細設定]** をクリックします。  
   
 4.  **[解析方法]** で、次のいずれかを選択します。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "79289320"
   
 6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>フォローアップ: 複合ドメインの作成後  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>補足情報: 複合ドメインの作成後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>ナレッジベースの解析  

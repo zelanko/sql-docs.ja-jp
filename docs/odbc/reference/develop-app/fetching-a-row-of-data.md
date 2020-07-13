@@ -13,14 +13,14 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069857"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305673"
 ---
 # <a name="fetching-a-row-of-data"></a>データの行のフェッチ
 データ行をフェッチするために、アプリケーションは**Sqlfetch**を呼び出します。 **Sqlfetch**は任意の種類のカーソルを使用して呼び出すことができますが、前方参照専用の方向でのみ行セットカーソルを移動します。 **Sqlfetch**はカーソルを次の行に進め、 **SQLBindCol**の呼び出しでバインドされたすべての列のデータを返します。 カーソルが結果セットの末尾に達すると、 **Sqlfetch**は SQL_NO_DATA を返します。 **Sqlfetch**の呼び出しの例については、「 [Using SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)」を参照してください。  

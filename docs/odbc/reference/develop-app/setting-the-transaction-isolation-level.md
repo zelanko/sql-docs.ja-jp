@@ -12,14 +12,14 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107580"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299812"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>トランザクション分離レベルの設定
 トランザクション分離レベルを設定するには、アプリケーションで SQL_ATTR_TXN_ISOLATION 接続属性を使用します。 データソースが要求された分離レベルをサポートしていない場合、ドライバーまたはデータソースはより高いレベルを設定できます。 データソースがサポートするトランザクション分離レベルと既定の分離レベルを決定するために、アプリケーションでは、SQL_TXN_ISOLATION_OPTION オプションと SQL_DEFAULT_TXN_ISOLATION オプションを使用して**SQLGetInfo**を呼び出します。  

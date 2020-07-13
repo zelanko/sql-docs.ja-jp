@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62876195"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957842"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
@@ -54,18 +53,17 @@ ms.locfileid: "62876195"
     > [!NOTE]  
     >  上記の情報は、オフライン ファイルにも当てはまります。  
   
--   最初の復元ステートメントが実行された時点でオンラインになっていた読み取りと書き込みが可能なファイル、またはその復元ステートメントで自動的にオフラインになった読み取りと書き込みが可能なファイルは、特殊なケースです。 この場合、最初の *復元シーケンス* (復元、ロールフォワード、およびデータの復旧を行う、1 つ以上の RESTORE ステートメントのシーケンス) の間にログ バックアップを実行する必要があります。 通常、このログ バックアップは、すべての完全バックアップの復元後かつデータ復旧の前に行われる必要があります。 ただし、特定のファイル グループに対して複数のファイル バックアップが存在する場合、ログ バックアップの最小復旧ポイントはそのファイル グループがオフラインになった後の時点になります。 このデータ復元後のログ バックアップにより、ファイルがオフラインになった時点がキャプチャされます。 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ではオンライン復元のオンライン ログを使用できないので、データ復元後のログ バックアップが必要です。  
+-   最初の復元ステートメントが実行された時点でオンラインになっていた読み取りと書き込みが可能なファイル、またはその復元ステートメントで自動的にオフラインになった読み取りと書き込みが可能なファイルは、特殊なケースです。 この場合、最初の *復元シーケンス* (復元、ロールフォワード、およびデータの復旧を行う、1 つ以上の RESTORE ステートメントのシーケンス) の間にログ バックアップを実行する必要があります。 通常、このログ バックアップは、すべての完全バックアップの復元後かつデータ復旧の前に行われる必要があります。 ただし、特定のファイル グループに対して複数のファイル バックアップが存在する場合、ログ バックアップの最小復旧ポイントはそのファイル グループがオフラインになった後の時点になります。 このデータ復元後のログ バックアップにより、ファイルがオフラインになった時点がキャプチャされます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ではオンライン復元のオンライン ログを使用できないので、データ復元後のログ バックアップが必要です。  
   
     > [!NOTE]  
     >  または、復元シーケンスの前に手動でファイルをオフラインにすることもできます。 詳細については、このトピックの「データベースまたはファイルのオフライン化」を参照してください。  
   
-##  <a name="taking_db_or_file_offline"></a>データベースまたはファイルをオフラインにする  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
  オンライン復元を使用しない場合、次のいずれかの方法で、復元シーケンスを開始する前にデータベースをオフラインにできます。  
   
 -   どの復旧モデルでも、次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用することにより、データベースをオフラインにできます。  
   
-     ALTER DATABASE *DATABASE_NAME*オフラインに設定します  
+     ALTER DATABASE *database_name* SET OFFLINE  
   
 -   完全復旧モデルでは、次の [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) ステートメントを使用してデータベースを復元状態にすることにより、ファイル復元またはページ復元を強制的にオフラインで実行することができます。  
   
@@ -78,36 +76,36 @@ ms.locfileid: "62876195"
 > [!NOTE]  
 >  オンライン復元シーケンスでは、オフライン復元シーケンスと同じ構文を使用します。  
   
--   [例: データベース &#40;単純復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイルグループのみを &#40;単純復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [例: データベース &#40;完全復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [例: 完全復旧モデル &#40;一部のファイルグループのみを復元する段階的な部分復元&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   [例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [ファイルとファイルグループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
+-   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
--   [ページの復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)  
+-   [ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)  
   
--   [Suspect_pages テーブル &#40;SQL Server を管理&#41;](manage-the-suspect-pages-table-sql-server.md)  
+-   [suspect_pages テーブルの管理 &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
   
--   [Transact-sql&#41;&#40;データを復元せずにデータベースを復旧する](recover-a-database-without-restoring-data-transact-sql.md)  
+-   [データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
--   [機能していないファイルグループを削除する &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
+-   [機能していないファイル グループの削除 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [完全復旧モデルのファイル復元 &#40;&#41;](file-restores-full-recovery-model.md)   
- [ファイル復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
- [ページの復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
+ [ファイルの復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
+ [ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

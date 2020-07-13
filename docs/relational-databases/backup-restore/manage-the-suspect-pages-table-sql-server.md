@@ -1,5 +1,6 @@
 ---
 title: suspect_pages テーブルの管理 (SQL Server) | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server で suspect_pages (問題のあるページ) テーブルを管理する方法について説明します。 問題のあるページとは、特定のエラーが発生したページです。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718028"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルは、 [msdb データベース](../../relational-databases/databases/msdb-database.md)にあります。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
@@ -51,7 +52,7 @@ ms.locfileid: "72908922"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   

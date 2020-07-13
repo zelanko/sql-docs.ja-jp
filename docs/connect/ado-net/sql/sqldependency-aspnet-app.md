@@ -9,21 +9,21 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 403346644d04839d1b24acd2d90e18226a951d90
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e159a6db1820169cd81caa05e70765ac32f0d56
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918677"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896224"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET アプリケーションでの SqlDependency
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-このセクションの例は、ASP.NET <xref:Microsoft.Data.SqlClient.SqlDependency> オブジェクトを利用して <xref:System.Web.Caching.SqlCacheDependency> を間接的に使用する方法を示しています。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトは <xref:Microsoft.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを正しく更新します。  
+このセクションの例は、ASP.NET <xref:System.Web.Caching.SqlCacheDependency> オブジェクトを利用して <xref:Microsoft.Data.SqlClient.SqlDependency> を間接的に使用する方法を示しています。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトは <xref:Microsoft.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを正しく更新します。  
   
 > [!NOTE]
 >  このサンプル コードを実行するには、「[クエリ通知の有効化](enable-query-notifications.md)」のスクリプトを実行してクエリ通知を有効にしておく必要があります。  

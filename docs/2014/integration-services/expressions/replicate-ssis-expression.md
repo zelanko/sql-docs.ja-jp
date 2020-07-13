@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94869b1144631c76b242e61617fbe64c23e09904
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428269"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 式)
   指定された回数だけレプリケートされた文字式を返します。 *times* 引数は整数に評価される必要があります。  

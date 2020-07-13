@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e296bf3230fbbf3c308aa6c84dba288b9e64e12f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717097"
 ---
 # <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|5228|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|メッセージ テキスト|テーブル エラー: オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ PG_ID、行 R_ID。 DBCC により、オンラインのインデックス構築操作で不完全なクリーンアップが検出されました。 (問題のある列の値は VALUE です)。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ PG_ID、行 R_ID。 DBCC により、オンラインのインデックス構築操作で不完全なクリーンアップが検出されました。 (問題のある列の値は VALUE です)。|  
   
 ## <a name="explanation"></a>説明  
 オブジェクト *O_ID*、インデックス *I_ID*、およびパーティション *PN_ID* に対して完了していないオンライン インデックス構築が検出されました。 この現象は、問題のある列が行 *R_ID* に存在することによって生じます。 問題のある列は、オンライン インデックスの構築時に複数のソースからのレコードを調整するときに使用されます。 このエラー メッセージには、問題のある列の値も示されます。  

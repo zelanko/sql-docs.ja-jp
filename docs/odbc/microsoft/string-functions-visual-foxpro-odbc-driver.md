@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 988ba23b95f6b138148b1fa17ad303d7aa2dc895
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948776"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299192"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>文字列関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 文字列操作関数の一覧を示します。同じ関数の Visual FoxPro 文法が ODBC 構文と異なる場合は、Visual FoxPro と同等のものが表示されます。  

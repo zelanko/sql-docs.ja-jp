@@ -124,7 +124,7 @@ SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いで
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>アクセス許可  
-CTAS には、`SELECT`select_criteria*で参照されるすべてのオブジェクトに対する* 権限が必要です。
+CTAS には、*select_criteria* で参照されるすべてのオブジェクトに対する `SELECT` 権限が必要です。
 
 テーブルを作成する権限については、CREATE TABLE の「[権限](https://msdn.microsoft.com/library/mt203953/#Permissions)」を参照してください。 
   
@@ -171,7 +171,7 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 
 `CTAS` の最も一般的な使用方法の 1 つとして、DDL を変更できるようにテーブルのコピーを作成することが考えられます。 たとえば、最初に `ROUND_ROBIN` としてテーブルを作成し、それを列で分散されるテーブルに変更する必要がある場合、`CTAS` を使用して分散列を変更します。 また、`CTAS` を使用して、パーティション、インデックス、列の型を変更することができます。
 
-たとえば、分散列が `ROUND_ROBIN` で指定されていないため、既定の分散種類である `CREATE TABLE` 分散を使用して、このテーブルを作成したとします。
+たとえば、分散列が `CREATE TABLE` で指定されていないため、既定の分散種類である `ROUND_ROBIN` 分散を使用して、このテーブルを作成したとします。
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -529,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`FROM` ステートメントの `UPDATE` 句で ANSI 結合を置き換える  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`UPDATE` ステートメントの `FROM` 句で ANSI 結合を置き換える  
 適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-SQL Data Warehouse では `FROM` ステートメントの `UPDATE` 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。
+SQL Data Warehouse では `UPDATE` ステートメントの `FROM` 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。
 
 `CTAS` と暗黙の結合を組み合わせて使用して、このコードを置き換えることができます。
 
@@ -736,7 +736,7 @@ from ctas_r
 
 2 つの結果の間でこのような違いが見られる理由は、暗黙的な型キャストへの依存です。 最初の例では、テーブルで列定義が定義されます。 行が挿入されたときに、暗黙的な型変換が発生します。 2 番目の例では、式で列のデータ型が定義されるため、暗黙的な型変換は発生しません。 また、2 番目の例の列が NULL 許容列として定義されているのに対して、最初の例では定義されていないことに注目してください。 最初の例でテーブルが作成されたときに、列の NULL 値の許容は明示的に定義されました。 2 番目の例では、式にただ任せ、その結果、既定で NULL 定義となります。  
 
-これらの問題を解決するには、`SELECT` ステートメントの `CTAS` 部分で型変換と NULL 値の許容を明示的に設定する必要があります。 CREATE TABLE 部分でこれらのプロパティを設定することはできません。
+これらの問題を解決するには、`CTAS` ステートメントの `SELECT` 部分で型変換と NULL 値の許容を明示的に設定する必要があります。 CREATE TABLE 部分でこれらのプロパティを設定することはできません。
 
 次の例ではコードを修正する方法を示します。
 
@@ -757,7 +757,7 @@ SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 - ISNULL の 2 番目の部分は定数 (つまり、0) である
 
 > [!NOTE]
-> NULL 値の許容を正しく設定するには、`ISNULL` ではなく、`COALESCE` を使用することが重要です。 `COALESCE` は決定的関数ではないため、式の結果は常に NULL 許容になります。 `ISNULL` は異なります。 これは決定的です。 そのため、`ISNULL` 関数の 2 番目の部分が定数またはリテラルである場合、結果の値は NOT NULL になります。
+> NULL 値の許容を正しく設定するには、`COALESCE` ではなく、`ISNULL` を使用することが重要です。 `COALESCE` は決定的関数ではないため、式の結果は常に NULL 許容になります。 `ISNULL` は異なります。 これは決定的です。 そのため、`ISNULL` 関数の 2 番目の部分が定数またはリテラルである場合、結果の値は NOT NULL になります。
 
 このヒントは、計算の整合性を確保するために役立つだけではありません。 テーブルのパーティション切り替えにも重要になります。 以下のテーブルがファクトとして定義されているとします。
 

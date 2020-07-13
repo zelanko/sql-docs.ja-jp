@@ -15,14 +15,14 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4f336a7ebfaf5e76ac464944900231c452809f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ec2bbba824eaf3d74133cf9754eca2593c9fb79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020547"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300062"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo によるデータ型情報の取得
 基になる SQL データ型から ODBC 型識別子へのマッピングは概数であるため、ODBC では、ドライバーがデータソース内の各 SQL データ型を完全に記述できる関数 (**SQLGetTypeInfo**) を提供しています。 この関数は、結果セットを返します。各行は、名前、型識別子、有効桁数、小数点以下桁数、null 値の許容など、1つのデータ型の特性を記述します。  

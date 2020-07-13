@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a2c8cae3e47a6f48014cbafe588dde782c097260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68186127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040108"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>サーバーへの接続後の自動的なトレースの開始 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]のインスタンスに接続したら、自動的にトレースが開始されるようにする方法について説明します。  

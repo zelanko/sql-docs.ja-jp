@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63280671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040861"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
   ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  

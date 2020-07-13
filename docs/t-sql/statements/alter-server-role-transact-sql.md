@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. SQL Server ログインをサーバー ロールに追加する  
-次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `Ted` ログインを `diskadmin` 固定サーバー ロールに追加します。  
+次の例では、`Ted` という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを `diskadmin` 固定サーバー ロールに追加します。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. サーバー ロールからドメイン アカウントを削除する  
-次の例では、`adventure-works\roberto0` という名前のユーザー定義サーバー ロールから `Production` という名前のドメイン アカウントを削除します。  
+次の例では、`Production` という名前のユーザー定義サーバー ロールから `adventure-works\roberto0` という名前のドメイン アカウントを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. サーバー ロールから SQL Server ログインを削除する  
-次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールから `Ted` という名前の `diskadmin` ログインを削除します。  
+次の例では、`diskadmin` 固定サーバー ロールから `Ted` という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. ロールのメンバーシップを表示するには  
-ロールのメンバーシップを表示するには、**の**[サーバー ロール (メンバー)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ページを使用するか、次のクエリを実行します。  
+ロールのメンバーシップを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバー ロール (メンバー)]** ページを使用するか、次のクエリを実行します。  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

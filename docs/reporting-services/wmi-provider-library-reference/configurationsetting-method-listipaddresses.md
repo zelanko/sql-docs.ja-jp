@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579932"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630637"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting メソッド - ListIPAddresses
   レポート サーバー コンピューターの IP アドレスを一覧表示します。  
@@ -56,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>解説  
  *IPVersion* の文字列は、"V4" または "V6" です。  
   
- *IsDhcpEnabled* が **True**の場合、 *IPAddress* は動的です。 これは、SSL バインドには使用しないでください。  
+ *IsDhcpEnabled* が **True**の場合、 *IPAddress* は動的です。 これは、TLS バインドには使用しないでください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

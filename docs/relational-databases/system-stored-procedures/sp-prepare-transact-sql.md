@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085804"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832588"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-パラメーター化[!INCLUDE[tsql](../../includes/tsql-md.md)]されたステートメントを準備し、実行用のステートメント*ハンドル*を返します。  `sp_prepare` は、ID = 11 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
+パラメーター化さ [!INCLUDE[tsql](../../includes/tsql-md.md)] れたステートメントを準備し、実行用のステートメント*ハンドル*を返します。  `sp_prepare` は、ID = 11 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ sp_prepare handle OUTPUT, params, stmt, options
  *stmt*  
  カーソル結果セットを定義します。 *Stmt*パラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
- *オプション*  
+ *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の int 入力値が必要です。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -107,6 +107,6 @@ GO
 ```
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

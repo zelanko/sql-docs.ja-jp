@@ -10,24 +10,24 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6558e944df0107eb13abb4658ebefe048af33da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720400"
 ---
 # <a name="spatial-data-catalog-views"></a>空間データのカタログ ビュー
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、空間データに関する情報を提供するカタログビューについて説明します。  
   
- [spatial_index_tessellations &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
+ [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  各空間インデックスのテセレーション スキームおよびパラメーターに関する情報を表します。  
   
- [spatial_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
+ [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  空間インデックスの主インデックス情報を表します。  
   
  [spatial_reference_systems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  

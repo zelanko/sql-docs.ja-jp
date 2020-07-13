@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6b0633f1dc56cc4060af34336fc69292dde9d57b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047064"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
   指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル内のイベントの表示に関するプロパティを提供します。  
@@ -45,19 +44,19 @@ class SQLErrorLogEvent
 |FileName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> エラー ログ ファイルの名前です。|  
 |InstanceName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LogDate|データ型: `datetime`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> イベントがログ ファイルに記録された日時。|  
-|Message|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
+|メッセージ|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
 |ProcessInfo|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
+|[DLL]|Sqlmgmprovider.dll|  
 |名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
- 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 この例を実行するに\<は、 *Instance_Name*> をの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前 (' Instance1 ' など) に置き換え、' File_Name ' をエラーログファイルの名前 (' log. 1 ' など) に置き換えます。  
+ 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 この例を実行するには、を \<*Instance_Name*> のインスタンスの名前 (' Instance1 ' など) に置き換え、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' File_Name ' をエラーログファイルの名前 (' log. 1 ' など) に置き換えます。  
   
 ```  
 on error resume next  
@@ -77,21 +76,21 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>説明  
- WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログファイルに関する情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
+## <a name="comments"></a>コメント  
+ WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>Security  
- WMI を使用し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てログファイルに接続するには、ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
+ WMI を使用してログファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
--   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあります\<*ドライブ>* は、がインストールさ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<れているドライブを表し、 *InstanceName*> は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前です)。  
+-   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあり \<*Drive> ます (* は、がインストールされているドライブを表し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> はのインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )。  
   
-     **ドライブ>: Server\MSSQL12 を実行します。 \<** **\<InstanceName> \MSSQL\Log**  
+     ** \<Drive> : Server\MSSQL12** **。 \<InstanceName>\MSSQL\Log**  
   
  ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   

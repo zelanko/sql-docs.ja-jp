@@ -11,12 +11,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60026dd35a22ccf5ea693619912ef1aadab77745
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165701"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873178"
 ---
 # <a name="temporal-tables"></a>テンポラル テーブル
 
@@ -40,7 +40,7 @@ SQL Server 2016 では、現時点の正しいデータのみではなく、テ�
   - [メモリ最適化およびシステム バージョン管理されたテンポラル テーブルの使用](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
   - [システム バージョン管理のテンポラル テーブルのデータの変更](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
   - [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
-  - **Adventure Works サンプル データベースをダウンロードする:** テンポラル テーブルの使用を開始するには、「[SQL Server 2016 CTP3 用の AdventureWorks データベース](https://www.microsoft.com/download/details.aspx?id=49502)」をサンプルのスクリプトと共にダウンロードし、'Temporal' フォルダー内の指示に従ってください。
+  - **Adventure Works サンプル データベースをダウンロードする:** テンポラル テーブルの使用を開始するには、[SQL Server 用の AdventureWorks データベース](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)をサンプルのスクリプトと共にダウンロードし、'Temporal' フォルダー内の指示に従ってください。
 
 - **構文 :**
 

@@ -19,24 +19,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520566"
 ---
 # <a name="report-server-web-service"></a>レポート サーバー Web サービス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートサーバー Web サービスを使用して、レポートサーバーのすべての機能にアクセスできます。 レポート サーバー Web サービスは、SOAP API を使用した XML Web サービスです。 SOAP over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能します。 Web サービスは 2 つのエンドポイントを提供します。1 つはレポートを実行するためのもので、もう 1 つはレポートを管理するためのものです。加えて、レポート サーバーの機能を公開するメソッドが用意されています。このメソッドにより、レポートのライフ サイクルの任意の時点に対するカスタム ツールを作成できます。  
   
- Web サービスに基づいた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを開発する主な方法は 3 種類あります。 次のようにすることができます。  
+ Web サービスに基づいた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを開発する主な方法は 3 種類あります。 次の操作を行います。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]および[!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用してアプリケーションを開発します。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の使用方法の詳細については、「[Web サービスと、.NET Framework を使用してのアプリケーションの構築](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]および[!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]を使用してアプリケーションを開発します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の使用方法の詳細については、「[Web サービスと、.NET Framework を使用してのアプリケーションの構築](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  
   
--   
-  ** のスクリプト環境である、** rs[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ユーティリティ (RS.exe) を使用してアプリケーションを開発する。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] スクリプトを使用すると、レポート サーバー Web サービスのあらゆる操作を実行できます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のスクリプトの詳細については、「[rs.exe ユーティリティと Web サービスを使用したスクリプト](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)」を参照してください。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のスクリプト環境である、**rs** ユーティリティ (RS.exe) を使用してアプリケーションを開発する。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] スクリプトを使用すると、レポート サーバー Web サービスのあらゆる操作を実行できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のスクリプトの詳細については、「[rs.exe ユーティリティと Web サービスを使用したスクリプト](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)」を参照してください。  
   
 -   SOAP 対応の開発ツールを使用してアプリケーションを開発する。 詳細については、「[Reporting Services における SOAP の役割](../report-server-web-service/the-role-of-soap-in-reporting-services.md)」を参照してください。  
   
@@ -45,7 +41,7 @@ ms.locfileid: "62520566"
 Reporting Services で利用可能な Web サービス開発オプション  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [レポート サーバー Web サービスのメソッド](../report-server-web-service/methods/report-server-web-service-methods.md)  
+ [レポート サーバー Web サービス メソッド](../report-server-web-service/methods/report-server-web-service-methods.md)  
  各レポート サーバー Web サービスの機能とメソッドについて説明します。  
   
  [Reporting Services における SOAP の役割](../report-server-web-service/the-role-of-soap-in-reporting-services.md)  
@@ -58,8 +54,7 @@ Reporting Services で利用可能な Web サービス開発オプション
  Reporting Services SOAP API を呼び出すアプリケーションと Web サービスの開発について説明します。  
   
  [rs.exe ユーティリティと Web サービスを使用したスクリプト](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト環境の概要を説明します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプト環境の概要を説明します。  
   
  [テクニカル リファレンス (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)  
  レポート サーバー Web サービスのメソッドおよび対応する複合型のリファレンス情報です。  

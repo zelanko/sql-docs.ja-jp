@@ -16,20 +16,17 @@ helpviewer_keywords:
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa3cbb7b78577bc1fd01115ddae792efa1d8fc92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 354cbb452454c19e74872663bbac305705733fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042314"
 ---
 # <a name="install-rules"></a>インストール ルール
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中、システム構成チェッカー (SCC) は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先コンピューターをスキャンします。 SCC は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ操作の成功を妨げる条件がないかどうかを調べます。 セットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動する前に、SCC は各項目の状態を取得します。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中、システム構成チェッカー (SCC) は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先コンピューターをスキャンします。 SCC は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ操作の成功を妨げる条件がないかどうかを調べます。 セットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動する前に、SCC は各項目の状態を取得します。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
-  
- システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェックのレポートは、\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
+ システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェックのレポートは、% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>にあり \\ ます。  
   
  セットアップ操作を実行する前に、次のトピックを確認してください。  
   
@@ -43,14 +40,14 @@ ms.locfileid: "66094481"
   
  その他の参考資料:  
   
-1.  [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
+1.  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
 2.  [フェールオーバー クラスタリングをインストールする前に](../failover-clusters/install/before-installing-failover-clustering.md)  
   
 ## <a name="additional-rule-topics"></a>その他のルール トピック  
  シナリオ固有のセットアップ ルールについては、次のトピックを参照してください。  
   
--   [[次へ]](../../../2014/sql-server/install/installation-rules.md)  
+-   [インストール ルール](../../../2014/sql-server/install/installation-rules.md)  
   
 -   [機能ルール &#40;アップグレード&#41;](../../../2014/sql-server/install/feature-rules-upgrade.md)  
   

@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888112"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Windows で読み取りスケール ワークロードの SQL Server Always On 可用性グループを構成できます。 可用性グループには、2 種類のアーキテクチャがあります。
 * 高可用性のアーキテクチャでは、クラスター マネージャーを利用し、ビジネス継続性を改善します。また、読み取り可能なセカンダリ レプリカを含めることもできます。 この高可用性アーキテクチャを作成するには、「[可用性グループの作成と構成 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)」を参照してください。 

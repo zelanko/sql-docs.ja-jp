@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - For Each Item Columns dialog box
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7423058574534f5557732cdef3b7f54cb6dc393f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425359"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>[For Each Item 列] ダイアログ ボックスの UI リファレンス
-  
   **[For Each Item 列]** ダイアログ ボックスを使用すると、Foreach Item 列挙子が列挙するアイテムの列を定義できます。  
   
 ## <a name="options"></a>オプション  
@@ -32,13 +30,13 @@ ms.locfileid: "66058548"
  **[データ型]**  
  データ型を選択します。  
   
- **追加**  
+ **[追加]**  
  新しい列を追加します。  
   
- **Remove**  
+ **[削除]**  
  列を選択してから、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Foreach ループエディター &#40;コレクションページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)  
   

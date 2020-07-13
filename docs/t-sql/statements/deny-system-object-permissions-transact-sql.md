@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54959f89172d0d382c20c60d46dac11df5837137
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ca841fd5c1e0b6c2fcd25e1476f8dfa8a7b26e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67984411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766625"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY (システム オブジェクトの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限を拒否します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67984411"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  

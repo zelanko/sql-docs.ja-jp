@@ -15,15 +15,14 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursors, positioned updates
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c9f21d5679e3bc926fc9a824ba11d8283dc9dad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020747"
 ---
 # <a name="positioned-updates-odbc"></a>位置指定更新 (ODBC)
   ODBC では、カーソルで位置指定更新を実行するために、次の 2 とおりの方法をサポートします。  

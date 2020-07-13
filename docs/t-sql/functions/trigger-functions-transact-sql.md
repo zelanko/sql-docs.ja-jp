@@ -10,17 +10,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eeb1d9072874b24cf73c93eb3113417c66ee4f0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: be86c1b21efc84269f659a08a3dc1e3bc5fa4907
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714559"
 ---
 # <a name="trigger-functions-transact-sql"></a>トリガー関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   次のスカラー関数は、データ値の変更をテストする、またはその他のデータを返すトリガーの定義で使用できます。  
   

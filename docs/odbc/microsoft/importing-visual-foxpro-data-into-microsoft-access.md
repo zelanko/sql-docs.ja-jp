@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Access
 - Visual FoxPro data [ODBC], importing
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 557b5505b9eb6a15080a7d0495df2e63aefd2d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90ac16bbdbaf7f4dd29e14e66cf5b9dc666057f4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085543"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302453"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Visual FoxPro データの Microsoft Access へのインポート
 [インポート] オプションを使用して、Visual FoxPro データベースに格納されているデータを Microsoft Access データベースにインポートできます。  

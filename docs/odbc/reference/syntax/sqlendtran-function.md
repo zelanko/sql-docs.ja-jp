@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98a0f072af79c2c6e39d0cfc49e72cbeef1c2193
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cce7792e52fce4984f3da41e11d79c34b6b79e53
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68344768"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302743"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
 **互換性**  
@@ -51,7 +51,7 @@ SQLRETURN SQLEndTran(
  *HandleType*  
  代入ハンドル型識別子。 SQL_HANDLE_ENV ( *handle*が環境ハンドルの場合) または SQL_HANDLE_DBC (*ハンドル*が接続ハンドルの場合) のいずれかを含みます。  
   
- *扱え*  
+ *Handle*  
  代入*Handletype*によって示される型のハンドル。トランザクションのスコープを示します。 詳細については、「コメント」を参照してください。  
   
  *入力型*  
@@ -65,7 +65,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>診断  
  **SQLEndTran**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合は、適切な*Handletype*と*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **SQLEndTran**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08003|接続が開かれていません|(DM) *Handletype*が SQL_HANDLE_DBC ましたが、*ハンドル*が接続状態ではありませんでした。|  
@@ -146,7 +146,7 @@ SQLRETURN SQLEndTran(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |接続ハンドルで非同期に実行されている関数をキャンセルする。|[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |ドライバーまたはデータソースに関する情報を返す|[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905644"
 ---
 # <a name="levels-mdx"></a>レベル (MDX)
@@ -41,7 +41,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  レベル名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  レベル番号が指定されている場合、 **Levels**関数は、指定された0から始まる位置に関連付けられているレベルを返します。  
   
  レベル名が指定されている場合、 **Levels**関数は指定されたレベルを返します。  
@@ -49,7 +49,7 @@ Hierarchy_Expression.Levels( Level_Name )
 > [!NOTE]  
 >  ユーザー定義関数については、文字列式の構文を使用してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、各**レベル**の関数の構文について説明します。  
   
 ### <a name="numeric"></a>数値  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,22 +13,22 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: ac38e670cbb0aae3d18e3f066440ba1a81491830
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: c4f3c26ca45da6cba3a86324e970117cde9fcc4b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927270"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67971993"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob コンストラクター (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverblob-class.md) オブジェクトと [byte](../../../connect/jdbc/reference/sqlserverconnection-class.md) 配列が渡されたときに、**SQLServerBlob** クラスの新しいインスタンスを初期化します。  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトと **byte** 配列が渡されたときに、[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) クラスの新しいインスタンスを初期化します。  
   
 > [!NOTE]  
->  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) クラスの [createBlob](../../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用してください。  
+>  このメソッドは、JDBC Driver Version 2.0 では非推奨とされました。 代わりに、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,25 +1,31 @@
 ---
 title: Python のチュートリアル:データを準備する
-description: この 4 部構成のチュートリアル シリーズのパート 2 では、Python を使用して、スキー レンタルを予測するデータを SQL Server Machine Learning Services で準備します。
+titleSuffix: SQL machine learning
+description: この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用して、SQL 機械学習によりスキー レンタルを予測するデータを準備します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116425"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606724"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python のチュートリアル:SQL Server Machine Learning Services で線形回帰モデルをトレーニングするためのデータを準備する
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをトレーニングするためのデータを準備する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアル シリーズのパート 2 では、Python を使用して SQL Server データベースからデータを準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python で線形回帰モデルをトレーニングし、デプロイします。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを準備します。 このシリーズの後半では、本データを使用して、ビッグ データ クラスター上の SQL Server Machine Learning Services を使用して Python で線形回帰モデルをトレーニングし、デプロイします。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python で線形回帰モデルをトレーニングし、デプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
@@ -31,7 +37,7 @@ ms.locfileid: "81116425"
 
 [パート 3](python-ski-rental-linear-regression-train-model.md) では、Python で線形回帰機械学習モデルをトレーニングする方法について学習します。
 
-[第 4 部](python-ski-rental-linear-regression-deploy-model.md)では、モデルを SQL Server に格納し、そして第 2 部と第 3 部で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うために SQL Server で実行されます。
+[第 4 部](python-ski-rental-linear-regression-deploy-model.md)では、モデルをデータベースに格納した後、第 2 部と 3 部で開発した Python スクリプトからストアド プロシージャを作成する方法について学習します。 ストアド プロシージャは、新しいデータに基づいて予測を行うためにサーバーで実行されます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -39,7 +45,7 @@ ms.locfileid: "81116425"
 
 ## <a name="explore-and-prepare-the-data"></a>データの探索と準備
 
-Python でデータを使用するには、SQL Server データベースから、pandas データ フレームにデータを読み込みます。
+Python でデータを使用するために、データベースから、pandas データ フレームにデータを読み込みます。
 
 Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 `<SQL Server>` を独自の SQL Server 名に置換します。
 
@@ -54,7 +60,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
@@ -92,7 +98,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 このチュートリアル シリーズの第 2 部では、次の手順を完了しました。
 
-* SQL Server データベースから **pandas** データ フレームにデータを読み込む
+* データベースから **pandas**データ フレームにデータを読み込む
 * いくつかの列を削除して Python でデータを準備する
 
 TutorialDB データベースのデータを使用する機械学習モデルをトレーニングするには、このチュートリアル シリーズのパート 3 に従ってください。

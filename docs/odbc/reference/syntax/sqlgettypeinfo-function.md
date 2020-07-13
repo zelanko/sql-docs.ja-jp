@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC]
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47273c75a005f11b33e9929977b57607b36898de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030593"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303263"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 関数
 **互換性**  
@@ -58,7 +58,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>診断  
  **SQLGetTypeInfo**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLGetTypeInfo**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S02|オプションの値が変更されました|実装の動作条件により、指定されたステートメント属性は無効でした。そのため、類似した値が一時的に置き換えられました。 ( **SQLGetStmtAttr**を呼び出して、一時的に置き換えられる値を決定します。)代替値は、カーソルが閉じられるまで*StatementHandle*に対して有効です。 変更できるステートメント属性は、SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR です。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -111,11 +111,11 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo**では、すべてのデータ型が返されるとは限りません。 たとえば、ドライバーがユーザー定義データ型を返さない場合があります。 アプリケーションでは、 **SQLGetTypeInfo**によって返されるかどうかにかかわらず、任意の有効なデータ型を使用できます。 **SQLGetTypeInfo**によって返されるデータ型は、データソースでサポートされています。 これらは、データ定義言語 (DDL) ステートメントで使用するためのものです。 ドライバーは、 **SQLGetTypeInfo**によって返される型以外のデータ型を使用して、結果セットのデータを返すことができます。 カタログ関数の結果セットを作成するときに、ドライバーがデータソースでサポートされていないデータ型を使用している可能性があります。  
   
-|列名|列<br /><br /> number|データ型|説明|  
+|列名|列<br /><br /> number|データの種類|説明|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1 で保護されたプロセスとして起動されました|Varchar not NULL|データソースに依存するデータ型の名前。たとえば、「CHAR ()」、「VARCHAR ()」、「MONEY」、「LONG VARBINARY」、または「CHAR () FOR BIT DATA」とします。 アプリケーションでは、 **CREATE TABLE**および**ALTER TABLE**ステートメントでこの名前を使用する必要があります。|  
+|TYPE_NAME (ODBC 2.0)|1|Varchar not NULL|データソースに依存するデータ型の名前。たとえば、「CHAR ()」、「VARCHAR ()」、「MONEY」、「LONG VARBINARY」、または「CHAR () FOR BIT DATA」とします。 アプリケーションでは、 **CREATE TABLE**および**ALTER TABLE**ステートメントでこの名前を使用する必要があります。|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint (NULL 以外)|SQL データ型。 ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 Datetime または interval データ型の場合、この列は簡潔なデータ型 (SQL_TYPE_TIME や SQL_INTERVAL_YEAR_TO_MONTH など) を返します。 有効な ODBC SQL データ型の一覧については、「付録 D: データ型」の「 [Sql データ](../../../odbc/reference/appendixes/sql-data-types.md)型」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。|  
-|COLUMN_SIZE (ODBC 2.0)|3|整数|サーバーがこのデータ型に対してサポートする最大列サイズ。 数値データの場合、これは最大有効桁数です。 文字列データの場合は、文字数で指定します。 Datetime データ型の場合、これは文字列形式の文字数 (秒の小数部の最大有効桁数を想定) です。 列サイズが適用されないデータ型に対しては NULL が返されます。 Interval データ型の場合、これは間隔のリテラルの文字表現に含まれる文字数です。これは、間隔の先頭の有効桁数によって定義されます。「付録 D: データ型」の「 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)」を参照してください。<br /><br /> 列のサイズの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|COLUMN_SIZE (ODBC 2.0)|3|Integer|サーバーがこのデータ型に対してサポートする最大列サイズ。 数値データの場合、これは最大有効桁数です。 文字列データの場合は、文字数で指定します。 Datetime データ型の場合、これは文字列形式の文字数 (秒の小数部の最大有効桁数を想定) です。 列サイズが適用されないデータ型に対しては NULL が返されます。 Interval データ型の場合、これは間隔のリテラルの文字表現に含まれる文字数です。これは、間隔の先頭の有効桁数によって定義されます。「付録 D: データ型」の「 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)」を参照してください。<br /><br /> 列のサイズの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|リテラルのプレフィックスとして使用される文字または文字。たとえば、文字データ型には単一引用符 (')、バイナリデータ型には0x を使用します。リテラルプレフィックスが適用されないデータ型に対しては NULL が返されます。|  
 |LITERAL_SUFFIX (ODBC 2.0)|5|Varchar|リテラルを終了するために使用される文字。たとえば、文字データ型には単一引用符 (') を使用します。リテラルサフィックスが適用されないデータ型に対しては NULL が返されます。|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|TYPE_NAME フィールドで返される名前を使用するときに、アプリケーションがかっこで囲んで指定できる各パラメーターに対応する、コンマで区切られたキーワードの一覧。 リスト内のキーワードには、長さ、有効桁数、または小数点以下のいずれかを指定できます。 構文の使用に必要な順序で表示されます。 たとえば、DECIMAL の CREATE_PARAMS は "precision, scale" です。VARCHAR の CREATE_PARAMS は "length" と等しくなります。 データ型の定義にパラメーターがない場合は、NULL が返されます。たとえば、INTEGER のようになります。<br /><br /> ドライバーは、使用されている国/地域の言語で CREATE_PARAMS テキストを提供します。|  
@@ -128,16 +128,16 @@ SQLRETURN SQLGetTypeInfo(
 |LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|データソースに依存するデータ型のローカライズされたバージョン。 ローカライズされた名前がそのデータ ソースによってサポートされない場合は NULL が返されます。 この名前は、ダイアログボックスなどの表示のみを目的としています。|  
 |MINIMUM_SCALE (ODBC 2.0)|14|Smallint|データソースのデータ型の最小小数点以下桁数です。 データ型の小数点以下桁数が固定されている場合は、MINIMUM_SCALE 列および MAXIMUM_SCALE 列の両方にこの値が入ります。 たとえば、SQL_TYPE_TIMESTAMP 列には、秒の小数部に固定された小数点以下桁数があります。 小数点以下桁数が適用されない場合は NULL が返されます。 詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
 |MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|データソースのデータ型の最大小数点以下桁数です。 小数点以下桁数が適用されない場合は NULL が返されます。 最大小数点以下桁数がデータソースで個別に定義されていないが、最大有効桁数と同じになるように定義されている場合、この列には COLUMN_SIZE 列と同じ値が格納されます。 詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
-|SQL_DATA_TYPE (ODBC 3.0)|16|Smallint NOT NULL|記述子の SQL_DESC_TYPE フィールドに表示される SQL データ型の値。 この列は DATA_TYPE 列と同じですが、interval データ型と datetime データ型は除きます。<br /><br /> Interval データ型および datetime データ型の場合、結果セットの SQL_DATA_TYPE フィールドは SQL_INTERVAL または SQL_DATETIME を返し、SQL_DATETIME_SUB フィールドは特定の interval データ型または datetime データ型のサブコードを返します。 (「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください)。|  
+|SQL_DATA_TYPE (ODBC 3.0)|16|NULL でない Smallint|記述子の SQL_DESC_TYPE フィールドに表示される SQL データ型の値。 この列は DATA_TYPE 列と同じですが、interval データ型と datetime データ型は除きます。<br /><br /> Interval データ型および datetime データ型の場合、結果セットの SQL_DATA_TYPE フィールドは SQL_INTERVAL または SQL_DATETIME を返し、SQL_DATETIME_SUB フィールドは特定の interval データ型または datetime データ型のサブコードを返します。 (「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください)。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合、この列には DATETIME/INTERVAL サブコードが格納されます。 Datetime および interval 以外のデータ型の場合、このフィールドは NULL になります。<br /><br /> Interval データ型または datetime データ型の場合、結果セットの SQL_DATA_TYPE フィールドは SQL_INTERVAL または SQL_DATETIME を返し、SQL_DATETIME_SUB フィールドは特定の interval データ型または datetime データ型のサブコードを返します。 (「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください)。|  
-|NUM_PREC_RADIX (ODBC 3.0)|18|整数|データ型が概数型の場合、この列には値2が含まれ、COLUMN_SIZE によってビット数が指定されていることを示します。 真数型の場合、この列には値10が格納され、COLUMN_SIZE が小数点以下桁数を指定することを示します。 それ以外の場合、この列は NULL になります。|  
+|NUM_PREC_RADIX (ODBC 3.0)|18|Integer|データ型が概数型の場合、この列には値2が含まれ、COLUMN_SIZE によってビット数が指定されていることを示します。 真数型の場合、この列には値10が格納され、COLUMN_SIZE が小数点以下桁数を指定することを示します。 その他の場合、この列は NULL になります。|  
 |INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|データ型が interval データ型の場合、この列には、間隔の先頭の有効桁数の値が格納されます。 (「付録 D: データ型」の「 [Interval データ型の有効桁数](../../../odbc/reference/appendixes/interval-data-type-precision.md)」を参照してください)。それ以外の場合、この列は NULL になります。|  
   
  属性情報は、データ型または結果セット内の特定の列に適用できます。 **SQLGetTypeInfo**は、データ型に関連付けられている属性に関する情報を返します。**Sqlcolattribute**は、結果セット内の列に関連付けられている属性に関する情報を返します。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

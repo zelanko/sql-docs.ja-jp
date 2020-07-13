@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07b6151c723cb5e05189791100338e9e343c28aa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019235"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306583"
 ---
 # <a name="column-size"></a>列サイズ
 数値データ型の列 (またはパラメーター) のサイズは、列またはパラメーターのデータ型、またはデータの有効桁数によって使用される最大桁数として定義されます。 文字型の場合は、データの長さを文字数で示します。バイナリデータ型の場合、列のサイズはデータの長さ (バイト単位) として定義されます。 Time、timestamp、および all interval データ型の場合、このデータの文字表現に含まれる文字数です。 次の表に、各簡潔な SQL データ型に対して定義されている列サイズを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "68019235"
 |-------------------------|-----------------|  
 |すべての文字型 [a]、[b]|列またはパラメーターの文字数で定義された、または最大の列サイズ (SQL_DESC_LENGTH 記述子フィールドに含まれる)。 たとえば、CHAR (10) として定義された1バイト文字の列の列サイズは10です。|  
 |SQL_DECIMAL SQL_NUMERIC|定義されている桁数。 たとえば、NUMERIC (10, 3) として定義された列の有効桁数は10です。|  
-|SQL_BIT [c]|1 で保護されたプロセスとして起動されました|  
+|SQL_BIT [c]|1|  
 |SQL_TINYINT [c]|3|  
 |SQL_SMALLINT [c]|5|  
 |SQL_INTEGER [c]|10|  

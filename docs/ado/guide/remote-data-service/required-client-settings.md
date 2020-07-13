@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922293"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749387"
 ---
 # <a name="required-client-settings"></a>必要なクライアントの設定
 > [!IMPORTANT]

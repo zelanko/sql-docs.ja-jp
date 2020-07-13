@@ -1,5 +1,6 @@
 ---
 title: 複数のデータベースのバックアップ:Azure Blob Storage
+description: この記事では、PowerShell コマンドレットを使用して SQL Server で Azure Blob Storage サービスへのバックアップを自動化するために使用できるサンプル スクリプトを提供します。
 titleSuffix: PowerShell
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,16 +12,16 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722496"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure BLOB ストレージへの複数のデータベースのバックアップ - PowerShell
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、PowerShell コマンドレットを使用して Azure Blob Storage サービスへのバックアップを自動化するために使用できるサンプル スクリプトを提供します。  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922655"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749575"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域の確保
 Microsoft SQL Server 6.5 の処理領域を必要とする[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの処理中にエラーが発生した場合は、TempDB のサイズを大きくすることが必要になることがあります。 (クエリによっては、一時的な処理領域が必要になる場合があります。たとえば、ORDER BY 句を使用するクエリには、いくつかの一時領域を必要とする**レコードセット**の並べ替えが必要です)。  

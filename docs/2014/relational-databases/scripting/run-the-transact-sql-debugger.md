@@ -17,15 +17,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7665894e3e7ce7a152631b584c35fcacbc8de707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009564"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。  
@@ -103,9 +102,9 @@ ms.locfileid: "75243703"
 |使用不可|**[ウォッチ式の追加]**|使用不可|使用不可|選択されている式を **[ウォッチ]** ウィンドウに追加します。|  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](transact-sql-debugger.md)   
+ [Transact-sql デバッガー](transact-sql-debugger.md)   
  [Transact-sql コードのステップ実行](step-through-transact-sql-code.md)   
- [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)   
+ [Transact-sql デバッガー情報](transact-sql-debugger-information.md)   
  [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

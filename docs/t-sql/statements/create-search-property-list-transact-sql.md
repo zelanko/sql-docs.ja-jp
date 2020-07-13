@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f47844d1eab39240c29041b930afe862e0c03728
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767064"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   新しい検索プロパティ リストを作成します。 検索プロパティ リストは、フルテキスト インデックスに含める 1 つまたは複数の検索プロパティを指定するために使用します。  
   
@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 空のプロパティ リストを作成し、インデックスに関連付ける  
- 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `Production.Document` データベースにある `AdventureWorks` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
+ 次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `AdventureWorks` データベースにある `Production.Document` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  
   
 > [!NOTE]  
 >  定義済みで既知の検索プロパティをこの検索プロパティ リストに追加する例については、「[ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)」をご覧ください。 検索プロパティをリストに追加した後、データベース管理者は、START FULL POPULATION 句を指定して別の ALTER FULLTEXT INDEX ステートメントを使用する必要があります。  

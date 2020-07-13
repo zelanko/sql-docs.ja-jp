@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286886"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924829"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -32,7 +32,7 @@ Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog
 SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
 ## <a name="1-prerequisites"></a>1.前提条件
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.プライマリ ノードに Scale Out Master をインストールする
 Scale Out Master のプライマリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 
@@ -53,7 +53,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3.セカンダリ ノードに Scale Out Master をインストールする
 Scale Out Master のセカンダリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 
 
-プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
+プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master TLS/SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
 
 ![HA マスターの構成 2](media/ha-master-config2.PNG)
 

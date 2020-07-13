@@ -11,19 +11,17 @@ f1_keywords:
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a20782e83422e6d8f7b6a550f23e57c6339b1a24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940203"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>[関連列の提示] (データ マイニング ウィザード)
-  
   **[関連列の提示]** ページには、ウィザードの前のページで選択した **[候補検索]** 機能による推奨設定が表示されます。 選択した **[予測可能]** 列と関連している入力列が、あらかじめ選択されています。 このダイアログ ボックスで変更すると、**[トレーニング データの指定]** ページにその変更が反映されます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **列名**  
@@ -32,7 +30,7 @@ ms.locfileid: "66068023"
  **Score**  
  この列と、前に選択した **[予測可能]** 列との関係が表示されます。  
   
- **代入**  
+ **入力**  
  選択すると、この列が推奨設定の計算に使用されます。  
   
 ## <a name="see-also"></a>参照  

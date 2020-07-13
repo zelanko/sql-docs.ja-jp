@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4d38041ce4daa12911dc706d382460324931c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088505"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926603"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server の旧バージョンとの互換性
-  「旧バージョンとの互換性」セクションの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のバージョン間の動作の変更について説明します。  
+  「旧バージョンとの互換性」セクションのトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョン間の動作の変更について説明し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。  
   
  このトピック領域に含まれる機能には、データ プログラミング、セキュリティ構成ツール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス、およびその他の幅広い機能の変更が含まれます。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 2014 の非推奨の SQL Server 機能](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|このリリースで非推奨とされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成とセットアップ機能について説明します。|  
 |[SQL Server 2014 で提供が中止された機能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|このリリースで廃止された [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成とセットアップ機能について説明します。|  

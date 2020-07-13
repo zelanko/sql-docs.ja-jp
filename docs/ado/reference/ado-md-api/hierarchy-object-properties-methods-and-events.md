@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Hierarchy object [ADO MD], members
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 366e40cd507970b88a1a844454eeae8699ae699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f60b0138abdfba0cc6bd49d509d5b43b3432e405
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753960"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -34,7 +34,7 @@ ms.locfileid: "67949640"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

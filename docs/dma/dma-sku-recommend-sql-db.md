@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72586735"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885830"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
 
@@ -38,15 +38,15 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 
 次に示すのは、Azure SQL Database SKU の推奨事項を特定し、対応する単一データベースまたは Azure のマネージインスタンスを DMA を使用してプロビジョニングするための手順です。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - 最新バージョンの[DMA](https://aka.ms/get-dma)をダウンロードしてインストールします。 以前のバージョンのツールが既にある場合は、それを開くと、DMA をアップグレードするように求められます。
-- すべてのスクリプトを実行するために必要な[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを findoug する方法については、「 [Windows powershell 5.1 のダウンロードとインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)」を参照してください。
+- すべてのスクリプトを実行するために必要な[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを確認する方法については、「 [Windows powershell 5.1 をダウンロードしてインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)する」を参照してください。
 - コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)」を参照してください。
 - パフォーマンスカウンターを収集するために必要な PowerShell ファイル**SkuRecommendationDataCollectionScript**が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
-## <a name="collect-performance-counters"></a>パフォーマンスカウンターの収集
+## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
 
 プロセスの最初の手順では、データベースのパフォーマンスカウンターを収集します。 パフォーマンスカウンターを収集するには、データベースをホストするコンピューターで PowerShell コマンドを実行します。 DMA はこの PowerShell ファイルのコピーを提供しますが、独自の方法を使用してコンピューターからパフォーマンスカウンターをキャプチャすることもできます。
 

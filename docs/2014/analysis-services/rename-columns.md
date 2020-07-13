@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539364"
 ---
-# <a name="lesson-3-rename-columns"></a>レッスン 3: 列名の変更
+# <a name="lesson-3-rename-columns"></a>レッスン 3:列名の変更
   このレッスンでは、インポートした各テーブル内の多くの列の名前を変更します。 名前を変更することで、列がより識別しやすくなり、モデル デザイナー内でも、またクライアント アプリケーションでユーザーがフィールドを選択する際にも、移動が行いやすくなります。 詳細については、「[テーブルまたは列名の変更 (SSAS テーブル)](tabular-models/rename-a-table-or-column-ssas-tabular.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -26,7 +25,7 @@ ms.locfileid: "66070316"
  このレッスンの推定所要時間: **20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックは、表形式モデルのチュートリアルの一部であり、順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 2: データの追加](lesson-2-add-data.md)」を完了している必要があります。  
+ このトピックは、表形式モデルのチュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 2: データの追加](lesson-2-add-data.md)」を完了している必要があります。  
   
 ## <a name="rename-columns"></a>列名の変更  
   
@@ -36,13 +35,12 @@ ms.locfileid: "66070316"
   
      タブをクリックすると、そのテーブルがモデル デザイナー ウィンドウでアクティブになります。  
   
-2.  [**顧客キー** ] 列の名前をダブルクリック`Customer  Id`し、「」と入力して、enter キーを押します。  
+2.  [**顧客キー** ] 列の名前をダブルクリックし、「」と入力して `Customer  Id` 、enter キーを押します。  
   
     > [!TIP]  
     >  列の名前を変更するには、列の [**プロパティ**] ウィンドウまたはダイアグラムビューの [**列名**] プロパティを使用することもできます。  
   
-3.  
-  **Customer** テーブル内の残りの列と、その他のテーブル内の列についても、ソース名を次の表示名に置き換えて名前変更します。  
+3.  **Customer** テーブル内の残りの列と、その他のテーブル内の列についても、ソース名を次の表示名に置き換えて名前変更します。  
   
      **Customer テーブル**  
   
@@ -60,7 +58,7 @@ ms.locfileid: "66070316"
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|教育|  
+    |EnglishEducation|Education|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
@@ -70,18 +68,18 @@ ms.locfileid: "66070316"
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **予定**  
+     **日付**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|日付|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|月|  
+    |MonthNumberOfYear|Month|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -89,7 +87,7 @@ ms.locfileid: "66070316"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **地理的な場所**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -101,7 +99,7 @@ ms.locfileid: "66070316"
     |PostalCode|郵便番号|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **製品**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -122,10 +120,10 @@ ms.locfileid: "66070316"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|[説明]|  
+    |EnglishDescription|説明|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
-    |Status|Product Status|  
+    |状態|Product Status|  
   
      **製品カテゴリ**  
   
@@ -144,7 +142,7 @@ ms.locfileid: "66070316"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **インターネット販売**  
+     **Internet Sales**  
   
     |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
@@ -171,7 +169,7 @@ ms.locfileid: "66070316"
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  このチュートリアルを続行するには、次のレッスン「 [レッスン 4: 日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)」に進んでください。  
   
   

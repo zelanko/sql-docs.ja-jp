@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5c4a7e8ba43ac8ede0bd60409f84a6fa233ce182
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073477"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545897"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>親子階層の属性
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、通常、ディメンションのメンバーのコンテンツに関して一般的な想定が行われます。 リーフ メンバーには、基になるデータ ソースから直接派生したデータが含まれ、非リーフ メンバーには、子メンバーで実行した集計から算出したデータが含まれています。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、通常、ディメンションのメンバーのコンテンツに関して一般的な想定が行われます。 リーフ メンバーには、基になるデータ ソースから直接派生したデータが含まれ、非リーフ メンバーには、子メンバーで実行した集計から算出したデータが含まれています。  
   
  ただし、親子階層では、一部の非リーフ メンバーに、子メンバーから取得したデータだけでなく、基になるデータ ソースから取得したデータも含まれている場合があります。 親子階層の非リーフ メンバーの場合、基になるファクト テーブル データを含む特殊なシステム生成の子メンバーが作成されます。 これらの子メンバーは *データ メンバー*と呼ばれ、非リーフ メンバーの子孫から計算される集計値に依存しない、非リーフ メンバーに直接関係付けられた値が含まれます。  
   
  データ メンバーは、親子階層を持つディメンションでのみ使用でき、親属性によって許可される場合にのみ表示されます。 ディメンション デザイナーを使用すると、データ メンバーの表示を制御できます。 データ メンバーを公開するには、親属性の `MembersWithData` プロパティを `NonLeafDataVisible.` に設定します。親属性に含まれているデータ メンバーを非表示にするには、親属性の `MembersWithData` プロパティを `NonLeafDataHidden` に設定します。  
   
- この設定により、非リーフ メンバーの通常の集計動作がオーバーライドされることはありません。データ メンバーは、常に集計の目的で子メンバーとして含まれています。 ただし、カスタム ロールアップ式を使用して通常の集計動作をオーバーライドすることはできます。 多次元式 (MDX) の[DataMember](/sql/mdx/datamember-mdx)関数を使用すると、 `MembersWithData`プロパティの値に関係なく、関連付けられているデータメンバーの値にアクセスできます。  
+ この設定により、非リーフ メンバーの通常の集計動作がオーバーライドされることはありません。データ メンバーは、常に集計の目的で子メンバーとして含まれています。 ただし、カスタム ロールアップ式を使用して通常の集計動作をオーバーライドすることはできます。 多次元式 (MDX) の[DataMember](/sql/mdx/datamember-mdx)関数を使用すると、プロパティの値に関係なく、関連付けられているデータメンバーの値にアクセスでき `MembersWithData` ます。  
   
  親属性の `MembersWithDataCaption` プロパティを使用すると、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] で名前付けテンプレートを使用してデータ メンバーのメンバー名を生成できます。  
   

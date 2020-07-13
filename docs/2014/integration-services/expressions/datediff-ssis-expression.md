@@ -10,15 +10,14 @@ helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcbdbeef226b59f4d30e51458e5ecc77950b4896
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62898087"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428909"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
   指定された 2 つの日付間の差を、日付および時刻の単位で返します。 *datepart* パラメーターにより、差分を計算する基となる日付と時刻を指定します。  
@@ -81,7 +80,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- この例では、 **ModifiedDate** 列の日付と、 **YearEndDate** 変数の日付の間の週数が返されます。 **YearEndDate**に`date`データ型がある場合は、明示的なキャストは必要ありません。  
+ この例では、 **ModifiedDate** 列の日付と、 **YearEndDate** 変数の日付の間の週数が返されます。 **YearEndDate**にデータ型がある場合は `date` 、明示的なキャストは必要ありません。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874619"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースをサーバーにアタッチします。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72305266"
 >  複数のログファイルを再構築するには、1つまたは複数の場所に新しい場所がある場合は、CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG を使用します。  
   
 > [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働していないサーバー上のデータベースに対して[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)を実行し、データベース内のストアドプロシージャやその他のユーザー定義コードなどのコードを確認します。  
+>  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbnam_ '`サーバーにアタッチするデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**,、既定値は NULL です。  
   
-`[ @filename1 = ] 'filename_n'`データベースファイルの物理名 (パスを含む) を指定します。 *filename_n*は**nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@filename1**から始まり、 ** \@filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
+`[ @filename1 = ] 'filename_n'`データベースファイルの物理名 (パスを含む) を指定します。 *filename_n*は**nvarchar (260)**,、既定値は NULL です。 ファイル名は 16 個まで指定できます。 パラメーター名は** \@ filename1**から始まり、 ** \@ filename16**にインクリメントされます。 ファイル名の一覧には、少なくともプライマリファイルが含まれている必要があります。 プライマリファイルには、データベース内の他のファイルを指すシステムテーブルが含まれています。 また、データベースをデタッチした後に移動されたすべてのファイルを一覧に含める必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -85,8 +85,8 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  データベースがアタッチされているときの権限の処理方法については、「 [CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>例  
- 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]から現在のサーバーにファイルをアタッチします。  
+## <a name="examples"></a>使用例  
+ 次の例では、から [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 現在のサーバーにファイルをアタッチします。  
   
 ```  
 EXEC sp_attach_db @dbname = N'AdventureWorks2012',   
@@ -96,11 +96,11 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

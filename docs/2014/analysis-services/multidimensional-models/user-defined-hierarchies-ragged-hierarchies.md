@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68889330"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535634"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -28,56 +27,52 @@ ms.locfileid: "68889330"
   
  まず、クライアント アプリケーションを調べて、ドリル ダウン パスの処理方法を確認します。 たとえば、Excel では、不足値のプレースホルダーとして親の名前が繰り返されます。 この動作を確認するには、Adventure Works 多次元モデルの Sales Territory ディメンションを使用してピボットテーブルを構築します。 ピボットテーブルでは、Sales Territory 属性として "グループ"、"国"、"地域" を設定します。地域の値が欠落している場合、国がプレースホルダーとして使用されることを確認します。この場合は、地域の上の親 (国名) が繰り返し使用されます。 この動作は、Excel 内で固定されている MDX Compatibility=1 接続文字列プロパティから派生します。 必要としているドリル ダウンの動作をクライアントが実現しない場合は、それらの動作のいくつかを変更するように、モデルのプロパティを設定することができます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [不規則階層でのドリルダウンナビゲーションを変更する方法](#bkmk_approach)  
   
 -   [HideMemberIf を設定して標準階層のメンバーを非表示にする](#bkmk_Hide)  
   
--   [クライアントアプリケーションでのプレースホルダーの表示方法を決定するための MDX 互換性の設定](#bkmk_Mdx)  
+-   [MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a>不規則階層でのドリルダウンナビゲーションを変更する方法  
+##  <a name="approaches-for-modifying-drilldown-navigation-in-a-ragged-hierarchy"></a><a name="bkmk_approach"></a> 不規則階層でのドリル ダウン ナビゲーションを変更する方法  
  ドリル ダウン ナビゲーションが予期した値を返さない場合や使いにくい場合、不規則階層の存在が問題になります。 不規則階層が原因となるナビゲーションの問題を解決するには、次の点を検討してください。  
   
--   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 
-  `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
+-   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
   
 -   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンラインブックの詳細については、「[親子階層](parent-child-dimension.md)」を参照してください。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
  ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この手法の詳細について[は、「Martin を使用した SSAS 財務キューブ-パート 1a-不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」を参照してください。  
   
-##  <a name="bkmk_Hide"></a>HideMemberIf を設定して標準階層のメンバーを非表示にする  
+##  <a name="set-hidememberif-to-hide-members-in-a-regular-hierarchy"></a><a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、`HideMemberIf` プロパティ、クライアント アプリケーションの `MDX Compatibility` 接続文字列プロパティによって決まります。  
   
  不規則階層の表示をサポートしているクライアント アプリケーションの場合、これらのプロパティを使用して、論理的に欠落しているメンバーを非表示にできます。  
   
 1.  SSDT で、ディメンションをダブルクリックし、ディメンション デザイナーでそのディメンションを開きます。 最初のタブである [ディメンション構造] の [階層] ペインには、属性階層が表示されます。  
   
-2.  階層内のメンバーを右クリックし、 **[プロパティ]** をクリックします。 
-  `HideMemberIf` を、次に説明する値のいずれかに設定します。  
+2.  階層内のメンバーを右クリックし、 **[プロパティ]** をクリックします。 `HideMemberIf` を、次に説明する値のいずれかに設定します。  
   
-    |HideMemberIf の設定値|[説明]|  
+    |HideMemberIf の設定値|説明|  
     |--------------------------|-----------------|  
     |`Never`|レベル メンバーがすべて表示されます。 これが既定値です。|  
-    |**OnlyChildWithNoName 場合**|レベル メンバーは、その親の唯一の子で、その名前が null または空の文字列である場合、表示されません。|  
+    |**OnlyChildWithNoName**|レベル メンバーは、その親の唯一の子で、その名前が null または空の文字列である場合、表示されません。|  
     |**OnlyChildWithParentName**|レベル メンバーは、その親の唯一の子で、その名前がその親の名前と同じである場合、表示されません。|  
-    |**ボード**|レベル メンバーは、その名前が空の場合、表示されません。|  
+    |**NoName**|レベル メンバーは、その名前が空の場合、表示されません。|  
     |**ParentName**|レベル メンバーは、名前がその親の名前と同じである場合、表示されません。|  
   
-##  <a name="bkmk_Mdx"></a>クライアントアプリケーションでのプレースホルダーの表示方法を決定するための MDX 互換性の設定  
- 階層レベルで `HideMemberIf` を設定したら、クライアント アプリケーションから送信される接続文字列の `MDX Compatibility` プロパティも設定する必要があります。 
-  `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
+##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>クライアントアプリケーションでのプレースホルダーの表示方法を決定するための MDX 互換性の設定  
+ 階層レベルで `HideMemberIf` を設定したら、クライアント アプリケーションから送信される接続文字列の `MDX Compatibility` プロパティも設定する必要があります。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
   
-|MDX Compatibility の設定|[説明]|使用法|  
+|MDX Compatibility の設定|説明|使用法|  
 |-------------------------------|-----------------|-----------|  
 |**1**|プレースホルダーの値を表示します。|この値は、Excel、SSDT、SSMS で既定で使用される値です。 この値は、サーバーに対して、不規則階層で空のレベルがドリル ダウンされた場合にプレースホルダーの値を返すように指示します。 プレースホルダーの値をクリックすると、ドリル ダウンを継続して、子 (リーフ) ノードを取得できます。<br /><br /> Excel には Analysis Services に接続する際に使用される接続文字列があり、この接続文字列では、新しく接続を行うたびに `MDX Compatibility` が必ず 1 に設定されます。 この動作は、旧バージョンとの互換性のために保持されています。|  
-|**2**|プレースホルダーの値 (null 値または親レベルの複製) を非表示にします。ただし、関連する値を持つ他のレベルとノードは表示します。|不規則階層では、通常、`MDX Compatibility`=2 が優先される設定として示されます。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートと一部のサードパーティのクライアント アプリケーションでは、この設定を保存できます。|  
+|**2**|プレースホルダーの値 (null 値または親レベルの複製) を非表示にします。ただし、関連する値を持つ他のレベルとノードは表示します。|不規則階層では、通常、`MDX Compatibility`=2 が優先される設定として示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートと一部のサードパーティのクライアント アプリケーションでは、この設定を保存できます。|  
   
 ## <a name="see-also"></a>参照  
  [ユーザー定義階層の作成](user-defined-hierarchies-create.md)   
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [親子階層](parent-child-dimension.md)   
- [接続文字列のプロパティ &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
+ [接続文字列プロパティ &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

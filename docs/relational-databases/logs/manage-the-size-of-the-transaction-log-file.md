@@ -28,7 +28,7 @@ ms.locfileid: "68084019"
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>ログ領域の使用量の監視  
 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) を利用し、ログ領域の使用量を監視します。 この DMV は、現在使用されているログ領域の量に関する情報を返し、いつトランザクション ログを切り捨てる必要があるかを示します。 
 
-ログ ファイルの現在のサイズ、最大サイズ、およびファイルの自動拡張オプションについては、**sys.database_files** にある、そのログ ファイルに関する **size**、**max_size**、[growth](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) の各列も使用できます。  
+ログ ファイルの現在のサイズ、最大サイズ、およびファイルの自動拡張オプションについては、[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) にある、そのログ ファイルに関する **size**、**max_size**、**growth** の各列も使用できます。  
   
 > [!IMPORTANT]
 > ログ ディスクの過負荷を避けてください。 ログ ストレージがトランザクション負荷の [IOPS](https://wikipedia.org/wiki/IOPS) 要件と短い待ち時間要件に対応できることを確認してください。 
@@ -63,8 +63,8 @@ ms.locfileid: "68084019"
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> ログ ファイルの追加または拡大  
 既存のログ ファイルを拡大するか (ディスク領域が十分にある場合)、通常、別のディスク上にあるデータベースにログ ファイルを追加することによって、領域を確保することができます。 ログ領域が不足し、さらにログ ファイルが保存されているボリュームでディスク容量が不足しない限り、トランザクション ログ ファイルは 1 つで十分です。   
   
--   データベースにログ ファイルを追加するには、`ADD LOG FILE` ステートメントの `ALTER DATABASE` 句を使用します。 ログ ファイルを追加すると、ログを大きくすることができます。  
--   ログ ファイルを大きくするには、`MODIFY FILE` ステートメントの `ALTER DATABASE` 句を使用します。`SIZE` および `MAXSIZE` 構文を指定します。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
+-   データベースにログ ファイルを追加するには、`ALTER DATABASE` ステートメントの `ADD LOG FILE` 句を使用します。 ログ ファイルを追加すると、ログを大きくすることができます。  
+-   ログ ファイルを大きくするには、`ALTER DATABASE` ステートメントの `MODIFY FILE` 句を使用します。`SIZE` および `MAXSIZE` 構文を指定します。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。  
 
 詳細については、このトピックの「[推奨事項](#Recommendations)」を参照してください。
     
@@ -90,7 +90,7 @@ ms.locfileid: "68084019"
     -  最も大規模なインデックス保守管理に必要な時間。
     -  データベースで最も大規模な一括処理を実行するときに必要な時間。
 
--   **オプションを利用し、データとログのファイルに**自動拡張`FILEGROWTH`を設定するとき、**パーセンテージ**より**サイズ**で設定したほうが増加の制御に優れている場合があります。割合は常に増加する量であるためです。
+-   `FILEGROWTH` オプションを利用し、データとログのファイルに**自動拡張**を設定するとき、**パーセンテージ**より**サイズ**で設定したほうが増加の制御に優れている場合があります。割合は常に増加する量であるためです。
     -  トランザクション ログでは[ファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を活用できないことに留意してください。そのため、ログ拡張の回数増加が重要になります。 
     -  ベスト プラクティスとしては、トランザクション ログに対して `FILEGROWTH` オプションの値を 1,024 MB 以上に設定しないでください。 `FILEGROWTH` オプションの既定値:  
   

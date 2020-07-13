@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930814"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759678"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync プロパティの例 (VB)
 この例では、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを使用して、階層[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca5a4561c4b3f55044eb63068036105d878f150c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175081"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター
@@ -29,7 +29,7 @@ ms.locfileid: "78175081"
 > [!NOTE]
 >  このパフォーマンス オブジェクトを使用して、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。
 
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。
 
  このトピックの内容:
 
@@ -41,9 +41,8 @@ ms.locfileid: "78175081"
 
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード |ネイティブモード。
 
-##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)
- 
-  `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 名前付きインスタンスのカウンターは、 `ReportServer$<` *instance_name*`>:Service`の形式で表示されます。
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)
+ `ReportServer:Service` パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、`ReportServer:Service` という形式で表示されます。 名前付きインスタンスのカウンターは、 `ReportServer$<` *instance_name*`>:Service`の形式で表示されます。
 
  パフォーマンス`ReportServer:Service`オブジェクトは、の新[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]機能であり、インターネットインフォメーションサービス (IIS) および[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]以前のバージョンの[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]に含まれていたカウンターのサブセットを提供します。 これらは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。
 
@@ -79,29 +78,29 @@ ms.locfileid: "78175081"
 |`Requests/sec`|1 秒あたりに処理された要求の数。 この値はアプリケーションの現在のスループットを表します。|
 |`Tasks Queued`|スレッドが使用可能になるのを待機しているタスクの数。 レポート サーバーに対する要求は、それぞれ、1 つまたは複数のタスクと対応します。 このカウンターによって表されるのは、処理の準備が整っているタスクの数だけです。現在実行中のタスクの数は含まれません。|
 
-##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint: Service (SharePoint モードのレポートサーバー)
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint モードのレポート サーバー)
  `ReportServerSharePoint:Service`パフォーマンスオブジェクトがに[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]追加されました。
 
- ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは、CounterSetName のパフォーマンスカウンターの一覧を返します。
+ ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName のパフォーマンス カウンターの一覧を返します
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
 ```
 
-|カウンター|
+|カウンタ|
 |-------------|
 |`Memory Pressure State`|
 |`Memory Shrink Amount`|
 |`Memory Shrink Notifications/Sec`|
 
-##  <a name="bkmk_powershell"></a>PowerShell コマンドレットを使用してリストを返す
- ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは、CounterSetName "ReportServerSharePoint: Service" のパフォーマンスカウンターの一覧を返します。
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>PowerShell コマンドレットを使用してリストを返す
+ ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは CounterSetName "ReportServerSharePoint:Service" のパフォーマンス カウンターの一覧を返します。
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths
 ```
 
 ## <a name="see-also"></a>参照
- [](monitoring-report-server-performance.md) [Msrs 2014 WEB サービスおよび Msrs 2014 Windows Service パフォーマンス &#40;オブジェクトのレポートサーバーパフォーマンスカウンターの監視ネイティブモード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [&#40;のパフォーマンスカウンター Msrs 2014 web SERVICE sharepoint Mode と Msrs 2014 Windows Service sharepoint Mode パフォーマンスオブジェクト SharePoint モード&#41;]../performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)
+ [Monitoring Report Server Performance](monitoring-report-server-performance.md) [Msrs 2014 WEB サービスおよび Msrs 2014 Windows Service パフォーマンス &#40;オブジェクトのレポートサーバーパフォーマンスカウンターの監視ネイティブモード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [&#40;のパフォーマンスカウンター Msrs 2014 web SERVICE sharepoint Mode と Msrs 2014 Windows Service sharepoint Mode パフォーマンスオブジェクト SharePoint モード&#41;]../performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)
 
 

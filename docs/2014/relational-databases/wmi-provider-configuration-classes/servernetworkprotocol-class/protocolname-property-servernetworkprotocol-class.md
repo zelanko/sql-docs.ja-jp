@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7192928377b04fb317f5b55c32f18af1834f4c53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ecc24dcbdb6198c719f4fac394ca5e78ca915c79
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68196219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059883"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルの名前を取得します。  
@@ -36,14 +35,14 @@ object
 .ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスによって使用されるネットワークプロトコルを表す[servernetworkprotocol クラス](servernetworkprotocol-class.md)オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](servernetworkprotocol-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルの名前を指定する文字列。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

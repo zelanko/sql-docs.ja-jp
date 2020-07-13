@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891699"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1つまたは複数のプロキシの情報を一覧表示します。  
   
@@ -57,33 +57,33 @@ sp_help_proxy
 |CmdExec|オペレーティング システム (CmdExec)|  
 |スナップショット|レプリケーション スナップショット エージェント|  
 |LogReader|レプリケーション ログ リーダー エージェント|  
-|Distribution|レプリケーションディストリビューションエージェント|  
-|Merge|レプリケーション マージ エージェント|  
+|配布|レプリケーションディストリビューションエージェント|  
+|Merge|Replication Merge Agent|  
 |QueueReader|Replication Queue Reader Agent|  
 |ANALYSISQUERY|Analysis Services コマンド|  
 |ANALYSISCOMMAND|Analysis Services クエリ|  
-|Dts|SSIS パッケージの実行|  
+|Dts|SSIS パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
-`[ @name = ] 'name'`プロキシを一覧表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するログインの名前を指定します。 名前は**nvarchar (256)**,、既定値は NULL です。 *Name*を指定する場合は、 *subsystem_name*も指定する必要があります。  
+`[ @name = ] 'name'`プロキシを一覧表示するログインの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 名前は**nvarchar (256)**,、既定値は NULL です。 *Name*を指定する場合は、 *subsystem_name*も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|プロキシの識別番号。|  
 |**name**|**sysname**|プロキシの名前。|  
 |**credential_identity**|**sysname**|プロキシに関連付けられている資格情報の Microsoft Windows ドメイン名とユーザー名。|  
 |**enabled**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
-|**記述**|**nvarchar (1024)**|このプロキシの説明。|  
+|**description**|**nvarchar(1024)**|このプロキシの説明。|  
 |**user_sid**|**varbinary (85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
 |**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 存在しない、1 = 存在する}|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パラメーターを指定しない場合、 **sp_help_proxy**インスタンス内のすべてのプロキシに関する情報が一覧表示されます。  
   
  特定のサブシステムに対してログインが使用できるプロキシを特定するには、*名前*と*subsystem_name*を指定します。 これらの引数を指定すると、 **sp_help_proxy**指定されたログインがアクセスする可能性があり、指定したサブシステムに使用できるプロキシが一覧表示されます。  
@@ -109,8 +109,8 @@ EXEC dbo.sp_help_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-proxy"></a>B. 特定のプロキシに関する情報を一覧表示する  
- 次の例では、という名前`Catalog application proxy`のプロキシに関する情報を一覧表示します。  
+### <a name="b-listing-information-for-a-specific-proxy"></a>B: 特定のプロキシに関する情報を一覧表示する  
+ 次の例では、という名前のプロキシに関する情報を一覧表示 `Catalog application proxy` します。  
   
 ```  
 USE msdb ;  
@@ -121,7 +121,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

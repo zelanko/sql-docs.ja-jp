@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965844"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746550"
 ---
 # <a name="keys-collection-adox"></a>Keys コレクション (ADOX)
 [テーブル](../../../ado/reference/adox-api/table-object-adox.md)のすべての[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [キーコレクション](../../../ado/reference/adox-api/keys-collection-adox.md)の[Append](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
 -   [追加](../../../ado/reference/adox-api/append-method-adox-keys.md)メソッドを使用して、新しいキーをコレクションに追加します。  

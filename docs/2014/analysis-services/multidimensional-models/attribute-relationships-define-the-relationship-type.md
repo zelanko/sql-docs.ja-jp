@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 605ba513b7cd47d9e719a619de4ebfb745360ba6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077076"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544654"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップの種類の定義
   属性リレーションシップのリレーションシップの種類を定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。ディメンション デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
@@ -33,8 +32,7 @@ ms.locfileid: "66077076"
 2.  ダイアグラムまたは **[属性リレーションシップ]** ペインで、属性リレーションシップを右クリックし、 **[リレーションシップの種類]** をクリックして、 **[可変]** または **[固定]** をクリックします。  
   
     > [!NOTE]  
-    >  
-  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
+    >  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
   
      可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   

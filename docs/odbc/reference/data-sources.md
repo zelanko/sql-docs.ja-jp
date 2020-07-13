@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135629"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306513"
 ---
 # <a name="data-sources"></a>ソリューション エクスプローラー
 *データソース*は、単にデータのソースです。 ファイル、DBMS 上の特定のデータベース、またはライブデータフィードを使用できます。 データが、プログラムと同じコンピューター、またはネットワーク上の別のコンピューターに配置されている可能性があります。 たとえば、データソースは、Novell® Netware によってアクセスされる OS/2®オペレーティングシステムで実行されている Oracle DBMS である場合があります。ゲートウェイ経由でアクセスされる IBM DB2 DBMS。サーバーディレクトリ内の Xbase ファイルのコレクション。または、ローカルの Microsoft® Access データベースファイル。  
@@ -29,7 +29,7 @@ ms.locfileid: "68135629"
   
  このセクションでは、次のトピックを扱います。  
   
--   [データ ソースの種類](../../odbc/reference/types-of-data-sources.md)  
+-   [データソースの種類](../../odbc/reference/types-of-data-sources.md)  
   
 -   [データ ソースの使用](../../odbc/reference/using-data-sources.md)  
   

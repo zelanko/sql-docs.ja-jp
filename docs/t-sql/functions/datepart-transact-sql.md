@@ -1,6 +1,6 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DATEPART 関数の Transact-SQL リファレンス。 この関数では、指定日付の datepart に対応する整数が返されます。
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2070959765886bc5345b35489e37396ccf2a1f8b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011389"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 この関数は、指定された *date* の指定された *datepart* を表す整数を返します。
@@ -217,7 +217,8 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
   
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  
--- Returns: 1900    1    1 */  
+
+-- Returns: 1900    1    1 
 ```  
   
 この例は、日付 `12/20/1974` の日の部分を返します。
@@ -226,13 +227,8 @@ SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-20
+
+-- Returns: 20
 ```  
   
 この例は、日付 `12/20/1974` の年の部分を返します。
@@ -241,13 +237,8 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-1974
+
+-- Returns: 1974
 ```  
   
 ## <a name="see-also"></a>関連項目

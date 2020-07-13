@@ -1,5 +1,6 @@
 ---
 title: データの一括インポート時の ID 値の保持
+description: ID 値を含むデータを SQL Server インスタンスに一括インポートする場合、既定では新しい値が割り当てられます。 元の値を保持することができます。
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007205"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ID 値を含んでいるデータ ファイルを Microsoft SQL Server のインスタンスに一括インポートできます。  既定では、インポートされたデータ ファイルの ID 列の値は無視され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって固有の値が自動的に割り当てられます。  固有の値は、テーブル作成時に指定されたシード値と増分値に基づいています。
 
 データ ファイルにテーブルの ID 列の値が含まれていない場合は、フォーマット ファイルを使用してデータをインポートするときにテーブルの ID 列をスキップするように指定します。  詳細については、「 [フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) 」を参照してください。
@@ -134,7 +135,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### <a name="using-bcp-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../tools/bcp-utility.md)で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md) を使用して ID 値を維持する方法**<a name="bcp_identity_fmt"></a>
+### <a name="using-bcp-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [bcp](../../tools/bcp-utility.md) を使用して ID 値を維持する方法**<a name="bcp_identity_fmt"></a>
 **-E** スイッチと **-f** スイッチ。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 REM Truncate table (for testing)
@@ -160,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### <a name="using-bcp-and-generated-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../tools/bcp-utility.md)で [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md) と生成された ID 値を使用する方法**<a name="bcp_default_fmt"></a>
+### <a name="using-bcp-and-generated-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [bcp](../../tools/bcp-utility.md) と生成された ID 値を使用する方法**<a name="bcp_default_fmt"></a>
 既定値と **-f** スイッチを使用します。  コマンド プロンプトで、次のコマンドを入力します。
 ```
 REM Truncate table (for testing)
@@ -192,7 +193,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### <a name="using-bulk-insert-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../t-sql/statements/bulk-insert-transact-sql.md)で [BULK INSERT](../../relational-databases/import-export/non-xml-format-files-sql-server.md) を使用して ID 値を維持する方法**<a name="bulk_identity_fmt"></a>
+### <a name="using-bulk-insert-and-keeping-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) を使用して ID 値を維持する方法**<a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** 引数と **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```sql
 USE TestDatabase;
@@ -228,7 +229,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### <a name="using-bulk-insert-and-generated-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../t-sql/statements/bulk-insert-transact-sql.md)で [BULK INSERT](../../relational-databases/import-export/non-xml-format-files-sql-server.md) と生成された ID 値を使用する方法**<a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-generated-identity-values-with-a-non-xml-format-file"></a>**[XML 形式以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)で [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と生成された ID 値を使用する方法**<a name="bulk_default_fmt"></a>
 既定値と **FORMATFILE** 引数を使用します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```sql
 USE TestDatabase;

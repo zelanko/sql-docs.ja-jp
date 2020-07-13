@@ -9,15 +9,14 @@ ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5b5fcc363acb7f6bfc9a7288c2a9c7718a6b6f47
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "69493812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524394"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 の開発者向けリファレンス
 

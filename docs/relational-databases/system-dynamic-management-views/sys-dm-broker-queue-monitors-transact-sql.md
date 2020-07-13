@@ -16,28 +16,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1df4b4387d79cc6e8b2dc59b7a5a00f61a6d07f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948635"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894595"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   インスタンス内のキュー モニターごとに 1 行のデータを返します。 キューモニターは、キューのアクティブ化を管理します。  
   
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|モニターが監視するキューを含むデータベースのオブジェクト識別子。 NULLABLE.|  
 |**queue_id**|**int**|モニターが監視するキューのオブジェクト識別子。 NULLABLE.|  
-|**状態**|**nvarchar (32)**|モニターの状態。 NULLABLE. これは、次のいずれかになります。<br /><br /> **稼動**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
-|**last_empty_rowset_time**|**DATETIME**|キューからの受信によって空の結果が返された最後の時刻。 NULLABLE.|  
-|**last_activated_time**|**DATETIME**|キュー モニターによってストアド プロシージャがアクティブ化された前回の時刻。 NULLABLE.|  
+|**状態**|**nvarchar(32)**|モニターの状態。 NULLABLE. これは、次のいずれかになります。<br /><br /> **稼動**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**last_empty_rowset_time**|**datetime**|キューからの受信によって空の結果が返された最後の時刻。 NULLABLE.|  
+|**last_activated_time**|**datetime**|キュー モニターによってストアド プロシージャがアクティブ化された前回の時刻。 NULLABLE.|  
 |**tasks_waiting**|**int**|このキューの RECEIVE ステートメント内で現在待機しているセッションの数。 NULLABLE.<br /><br /> 注: この数には、キューモニターがセッションを開始したかどうかに関係なく、receive ステートメントを実行するすべてのセッションが含まれます。 これは、RECEIVE と共に WAITFOR を使用する場合に該当します。 基本的に、これらのタスクは、メッセージがキューに到着するのを待機しています。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -74,9 +74,9 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連する動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077003"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305193"
 ---
 # <a name="data-types-in-odbc"></a>ODBC のデータ型
 ODBC では、SQL データ型と C データ型の2セットのデータ型を使用します。 データソースでは SQL データ型が使用され、C データ型はアプリケーションの C コードで使用されます。  
@@ -31,4 +31,4 @@ ODBC では、SQL データ型と C データ型の2セットのデータ型を�
   
 -   [ODBC の C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)  
   
--   [データ型変換](../../../odbc/reference/develop-app/data-type-conversions.md)
+-   [データ型の変換](../../../odbc/reference/develop-app/data-type-conversions.md)

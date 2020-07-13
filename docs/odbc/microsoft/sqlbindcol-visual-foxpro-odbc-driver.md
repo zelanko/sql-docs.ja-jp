@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 706677b71d1243baac0ca576bb3087d50abb6796
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e5eda58c6dec31206de9ddb10e73bdf90272d0a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68098300"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300642"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

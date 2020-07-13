@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0a2878591c92fe0b2070a295d9dc622c245c17e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094160"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306423"
 ---
 # <a name="driver-setup-dll"></a>ドライバーのセットアップ DLL
 > [!NOTE]  

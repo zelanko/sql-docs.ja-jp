@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f4b5e0f04f893bd5f351857a5a1b655d52350c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b09c799e553990715a8dd4f30bcd4adc9ce9dda1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898350"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890722"
 ---
 # <a name="xp_revokelogin-transact-sql"></a>xp_revokelogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Windows グループまたはユーザーからへのアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を取り消します。  
+  Windows グループまたはユーザーからへのアクセスを取り消し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)を使用してください。  
@@ -53,7 +53,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

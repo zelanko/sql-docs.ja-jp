@@ -12,15 +12,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa94e484ea82f0ca5421ada5a6e8779e02dfd461
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62829495"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438029"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
@@ -72,7 +71,7 @@ Select * FROM Win32_QuickFixEngineering
 ```  
   
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>WMI データ リーダー タスクで使用できるカスタム ログ メッセージ  
- 次の表は、WMI データ リーダー タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、WMI データ リーダー タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -82,10 +81,9 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>WMI データ リーダー タスクの構成  
  プロパティはプログラムによって設定するか、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[Wmi データリーダータスクエディター] &#40;[WMI オプション] ページ&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [[WMI データ リーダー タスク エディター] ([WMI オプション] ページ)](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -94,12 +92,11 @@ Select * FROM Win32_QuickFixEngineering
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

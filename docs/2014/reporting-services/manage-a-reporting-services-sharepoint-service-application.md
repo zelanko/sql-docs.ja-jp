@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4024ae380a1ab6513f8bc055680d8848e97fbf6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173315"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスアプリケーションは、SharePoint サーバーの全体管理から管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。
 
  このトピックの内容は次のとおりです。
 
--   [サービスアプリケーションの管理ページを開くには](#bkmk_openpages)
+-   [サービス アプリケーションの管理ページを開くには](#bkmk_openpages)
 
 -   [[システム設定] ページ](#bkmk_systemsettings)
 
@@ -34,7 +34,7 @@ ms.locfileid: "78173315"
 
 -   [電子メールの設定](#bkmk_email)
 
--   [サブスクリプションとアラートを準備する](#bkmk_provisionsubscriptions)
+-   [サブスクリプションと警告の準備](#bkmk_provisionsubscriptions)
 
 ## <a name="to-open-service-application-properties-page"></a>サービス アプリケーションのプロパティ ページを開くには
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションのプロパティ ページを開くには、次の手順を実行します。
@@ -45,7 +45,7 @@ ms.locfileid: "78173315"
 
  サービス アプリケーション プロパティの詳細については、「 [3: Reporting Services サービス アプリケーションの作成](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)」を参照してください。
 
-##  <a name="bkmk_openpages"></a>サービスアプリケーションの管理ページを開くには
+##  <a name="to-open-service-application-management-pages"></a><a name="bkmk_openpages"></a>サービスアプリケーションの管理ページを開くには
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを開くには、次の手順を実行します。
 
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。
@@ -54,20 +54,20 @@ ms.locfileid: "78173315"
 
 3.  別の方法として、サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[管理]** をクリックする方法もあります。
 
-##  <a name="bkmk_systemsettings"></a>[システム設定] ページ
+##  <a name="system-settings-page"></a><a name="bkmk_systemsettings"></a>[システム設定] ページ
  システム設定ページでは、各種タイムアウトなど、サービス アプリケーションの動作やユーザー エクスペリエンスを構成できます。
 
--   [レポートの設定](#bkmk_report_settings_section)
+-   [レポート設定](#bkmk_report_settings_section)
 
 -   [セッションの設定](#bkmk_session_settings_section)
 
--   [ログ記録のシステム設定](#bkmk_logging_settings_section)
+-   [ログ記録用のシステム設定](#bkmk_logging_settings_section)
 
 -   [セキュリティ設定](#bkmk_security_settings_section)
 
 -   [クライアント設定](#bkmk_client_settings_section)
 
-###  <a name="bkmk_report_settings_section"></a>レポートの設定
+###  <a name="report-settings"></a><a name="bkmk_report_settings_section"></a>レポートの設定
 
 |設定|説明|
 |-------------|--------------|
@@ -78,7 +78,7 @@ ms.locfileid: "78173315"
 |保存済みパラメーターの有効期間|既定値は 180 です|
 |保存済みパラメーターのしきい値|既定の日数は 1500 日です。|
 
-###  <a name="bkmk_session_settings_section"></a>セッションの設定
+###  <a name="session-settings"></a><a name="bkmk_session_settings_section"></a>セッションの設定
 
 |設定|説明|
 |-------------|--------------|
@@ -86,7 +86,7 @@ ms.locfileid: "78173315"
 |セッション Cookie の使用|既定値は TRUE です。|
 |EDLX レポートのタイムアウト|既定値は 1800 秒です。|
 
-###  <a name="bkmk_logging_settings_section"></a>ログ記録のシステム設定
+###  <a name="system-settings-for-logging"></a><a name="bkmk_logging_settings_section"></a>ログ記録のシステム設定
 
 |設定|説明|
 |-------------|--------------|
@@ -95,7 +95,7 @@ ms.locfileid: "78173315"
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 
-###  <a name="bkmk_security_settings_section"></a>セキュリティ設定
+###  <a name="security-settings"></a><a name="bkmk_security_settings_section"></a>セキュリティ設定
 
 |設定|説明|
 |-------------|--------------|
@@ -104,7 +104,7 @@ ms.locfileid: "78173315"
 |リモート エラーを有効にする|既定値は FALSE です|
 |接続テストの詳細なエラーを有効にする|既定値は TRUE です。|
 
-###  <a name="bkmk_client_settings_section"></a>クライアント設定
+###  <a name="client-settings"></a><a name="bkmk_client_settings_section"></a>クライアント設定
 
 |設定|説明|
 |-------------|--------------|
@@ -114,25 +114,25 @@ ms.locfileid: "78173315"
 |セッション タイムアウトの編集|既定値は 7200 秒です。|
 |セッション キャッシュ制限の編集|既定値は 5 です。|
 
-##  <a name="bkmk_managejobs"></a>ジョブの管理
+##  <a name="manage-jobs"></a><a name="bkmk_managejobs"></a>ジョブの管理
  レポート サブスクリプションおよびデータ ドリブン サブスクリプションによって作成されたジョブなど、実行中のジョブを表示および削除できます。 ページはサブスクリプションの管理には使用されるのではなく、サブスクリプションによってトリガーされるジョブです。 たとえば、1 時間に 1 回実行するようにスケジュールされているサブスクリプションは、 **[ジョブの管理]** ページに 1 時間に 1 回表示されるジョブを生成します。
 
  ![実行中のジョブの管理](media/ssrs-manage-jobs.gif "実行中のジョブの管理")
 
-##  <a name="bkmk_keymgt"></a>キー管理
+##  <a name="key-management"></a><a name="bkmk_keymgt"></a>キー管理
  次の表は、キー管理ページをまとめたものです。
 
 > [!IMPORTANT]
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。
 
-|ページ|[説明]|
+|ページ|説明|
 |----------|-----------------|
 |暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|
 |暗号化キーの変更|この操作を行うと、新しいキーが作成され、暗号化されたコンテンツが再暗号化されます。 コンテンツの量が多い場合は、この操作は数時間かかります。<br /><br /> 暗号化キーの変更操作が完了したら、新しいキーのバックアップを作成することをお勧めします。|
-|削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> **\*\* 重要: \*\*** 対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|
+|削除された暗号化されたコンテンツ|削除されたコンテンツを復旧することはできません。<br /><br /> ** \*重要\* \* **対称キーを削除して再作成する操作は、元に戻すことも元に戻すこともできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。|
 
-##  <a name="bkmk_executionaccount"></a>実行アカウント
+##  <a name="execution-account"></a><a name="bkmk_executionaccount"></a>実行アカウント
  このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。
 
 -   資格情報を必要としないデータ ソースにレポート サーバーが接続する場合。 資格情報を必要としないデータ ソースの例には、XML ドキュメントや一部のクライアント側データベース アプリケーションがあります。
@@ -156,25 +156,25 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。
 
 ### <a name="options"></a>オプション
- **実行アカウントの指定**アカウントを指定する場合に選択します。
+ **[実行アカウントの指定]** アカウントを指定します。
 
- **アカウント**Windows ドメインユーザーアカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。
+ **アカウント** Windows のドメイン ユーザー アカウントを入力します。 *ドメイン>\\<ユーザーアカウント\>の形式を使用し\<* ます。
 
- **パスワード**パスワードを入力します。
+ **[パスワード]** パスワードを入力します。
 
- **パスワードの確認入力**パスワードを再入力します。
+ **[パスワードの確認入力]** 再度、パスワードを入力します。
 
-##  <a name="bkmk_email"></a>電子メールの設定
+##  <a name="e-mail-settings"></a><a name="bkmk_email"></a>電子メールの設定
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。
 
 ### <a name="options"></a>オプション
  **SMTP サーバーを使用する**レポートサーバーの電子メールが SMTP サーバー経由でルーティングされることを指定します。
 
- **送信 SMTP サーバー**使用する SMTP サーバーまたはゲートウェイを指定します。 ローカル サーバーまたはネットワーク上の SMTP サーバーを使用できます。
+ **[送信 SMTP サーバー]** 使用する SMTP サーバーまたはゲートウェイを指定します。 ローカル サーバーまたはネットワーク上の SMTP サーバーを使用できます。
 
  **差出人アドレス**生成された電子メールの [差出人] フィールドで使用する電子メールアドレスを指定します。 SMTP サーバーからメールを送信する権限のあるユーザー アカウントを指定する必要があります。
 
-##  <a name="bkmk_provisionsubscriptions"></a>サブスクリプションとアラートを準備する
+##  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provisionsubscriptions"></a>サブスクリプションとアラートを準備する
  このページは、SQL Server エージェントが実行中かどうかを確認したり、レポート サービスが SQL Server エージェントを使用するためのアクセス権を準備するために使用します。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のサブスクリプション、スケジュール、およびデータ警告に必要です。 [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)
 
 ## <a name="proxy-association"></a>プロキシの関連付け

@@ -13,21 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aba02928ead04c3ad4ab1027f86e367b7bb787d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066783"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
   システム モニターを使用すると、システム リソースの使用率を監視できます。 プロセッサやメモリの使用率などのサーバー リソース、ロックやトランザクションなどの多くの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースについて、リアルタイムのパフォーマンス データをカウンター形式で収集し表示できます。  
   
 ### <a name="to-start-system-monitor-in-windows"></a>Windows のシステム モニターを起動するには  
   
-1.  
-  **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をクリックします。[ファイル名を指定して実行] ダイアログ ボックスで「 **perfmon** 」と入力し、 **[OK]** をクリックします。  
+1.  **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をクリックします。[ファイル名を指定して実行] ダイアログ ボックスで「 **perfmon** 」と入力し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [システム モニターの実行](../performance-monitor/run-system-monitor.md)  

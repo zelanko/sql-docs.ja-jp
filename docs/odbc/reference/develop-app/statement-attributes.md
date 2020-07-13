@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec24cc43e8c57e47ddda9f20fac1807f42453e84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107276"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299645"
 ---
 # <a name="statement-attributes"></a>ステートメント属性
 ステートメント属性は、ステートメントの特性です。 たとえば、ブックマークを使用するかどうか、およびステートメントの結果セットと共に使用するカーソルの種類は、ステートメント属性です。  

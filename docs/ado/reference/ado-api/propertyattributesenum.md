@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcb17116d7332e9afb359a7dd47d69cb3eb75df4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931569"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759938"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 [プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの属性を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
-|**adPropRequired**|1 で保護されたプロセスとして起動されました|データソースが初期化される前に、ユーザーがこのプロパティの値を指定する必要があることを示します。|  
+|**adPropRequired**|1|データソースが初期化される前に、ユーザーがこのプロパティの値を指定する必要があることを示します。|  
 |**他の adpropop**|2|データソースが初期化される前に、ユーザーがこのプロパティの値を指定する必要がないことを示します。|  
 |**adPropRead**|512|ユーザーがプロパティを読み取ることができることを示します。|  
 |**adPropWrite**|1024|ユーザーがプロパティを設定できることを示します。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931569"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums NOTSUPPORTED|  
 |AdoEnums。必須|  

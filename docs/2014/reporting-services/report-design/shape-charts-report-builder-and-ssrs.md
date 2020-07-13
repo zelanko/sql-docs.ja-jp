@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104945"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66104945"
   
 ## <a name="variations"></a>バリエーション  
   
--   **ピラミッド**。 ピラミッド グラフでは、相対的なデータが表示されるため、グラフはピラミッドのようになります。  
+-   **ピラミッド**: ピラミッド グラフでは、相対的なデータが表示されるため、グラフはピラミッドのようになります。  
   
 ## <a name="data-considerations-for-shape-charts"></a>図形グラフのデータに関する注意点  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66104945"
 -   視覚的な効果を高めるために、円グラフおよびドーナツ グラフに追加で描画スタイルを適用できます。 詳細については、「[グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [グラフの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータポイントおよび Null データポイント &#40;レポートビルダーと SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフ](pie-charts-report-builder-and-ssrs.md)  
   
   

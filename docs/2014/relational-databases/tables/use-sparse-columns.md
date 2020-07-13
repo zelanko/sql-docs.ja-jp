@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68196651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002902"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。 スパース列および列セットを定義するには、 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) または [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ステートメントを使用します。  
@@ -65,15 +64,14 @@ ms.locfileid: "68196651"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>領域を節約するためのデータ型別推定値  
- スパース列は、同一データが SPARSE とマークされていない場合に比べて、NULL 以外の値により多くのストレージ領域を必要とします。 次の表は、各データ型の使用領域を示したものです。 
-  **NULL の比率** 列は、正味 40% の領域を節約するために必要な NULL データの割合を示します。  
+ スパース列は、同一データが SPARSE とマークされていない場合に比べて、NULL 以外の値により多くのストレージ領域を必要とします。 次の表は、各データ型の使用領域を示したものです。 **NULL の比率** 列は、正味 40% の領域を節約するために必要な NULL データの割合を示します。  
   
  **固定長データ型**  
   
-|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`bit`|0.125|5|98%|  
-|`tinyint`|1 で保護されたプロセスとして起動されました|5|86%|  
+|`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
 |`bigint`|8|12|52%|  
@@ -88,7 +86,7 @@ ms.locfileid: "68196651"
   
  **有効桁数に依存する長さのデータ型**  
   
-|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52%|  
@@ -102,12 +100,12 @@ ms.locfileid: "68196651"
   
  **データに依存する長さのデータ型**  
   
-|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|基になるデータ型で異なります。|||  
-|`varchar`もしくは`char`|2*|4*|60%|  
-|`nvarchar`もしくは`nchar`|2*|4*+|60%|  
-|`varbinary`もしくは`binary`|2*|4*|60%|  
+|`varchar` または `char`|2*|4*|60%|  
+|`nvarchar` または `nchar`|2*|4*+|60%|  
+|`varbinary` または `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -167,7 +165,7 @@ ms.locfileid: "68196651"
   
      マージ レプリケーションでは、スパース列または列セットがサポートされません。  
   
--   変更の追跡  
+-   Change tracking  
   
      変更の追跡では、スパース列と列セットがサポートされます。 テーブルで列セットが更新されると、変更の追跡でその操作が行全体の更新として処理されます。 列セットの更新操作で更新された一連のスパース列を正確に特定するための詳細な変更追跡は行われません。 スパース列が DML ステートメントを通じて明示的に更新された場合は、その列に対する変更の追跡が通常どおりに機能し、変更された一連の列を正確に特定できます。  
   
@@ -234,8 +232,8 @@ WHERE ProductionSpecification IS NOT NULL ;
   
 ## <a name="see-also"></a>参照  
  [列セットの使用](../tables/use-column-sets.md)   
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

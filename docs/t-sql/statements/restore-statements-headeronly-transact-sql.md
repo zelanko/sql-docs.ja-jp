@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486582"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262102"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "79486582"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   
@@ -170,8 +170,7 @@ FROM <backup_device>
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

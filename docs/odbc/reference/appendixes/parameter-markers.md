@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], minimum SQL syntax supported
 - parameter markers [ODBC]
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100583"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303573"
 ---
 # <a name="parameter-markers"></a>パラメーター マーカー
 SQL-92 仕様に従って、アプリケーションは次の場所にパラメーターマーカーを配置することはできません。 より包括的な一覧については、「SQL-92 の仕様」を参照してください。  

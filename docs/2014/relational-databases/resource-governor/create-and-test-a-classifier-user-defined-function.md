@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68212004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063640"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
   このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
@@ -118,8 +117,7 @@ ms.locfileid: "68212004"
 4.  時刻関数および参照テーブル内の時間に対して評価可能な値を使用する分類子関数を作成します。 分類子関数における参照テーブルの使用については、このトピックの「分類子関数に参照テーブルを使用する際のベスト プラクティス」を参照してください。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 日付と時刻のデータ型および関数の拡張セットが導入されました。 詳細については、「[日付と時刻のデータ型および関数&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)」を参照してください。  
+    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 日付と時刻のデータ型および関数の拡張セットが導入されました。 詳細については、「[日付と時刻のデータ型および関数&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)」を参照してください。  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -248,8 +246,7 @@ ms.locfileid: "68212004"
   
 3.  参照テーブルでのブロックを回避します。  
   
-    1.  
-  `NOLOCK` ヒントを使用してブロックを回避するか、 `SET LOCK_TIMEOUT` (最大値は 1000 ミリ秒) を関数に使用します。  
+    1.  `NOLOCK` ヒントを使用してブロックを回避するか、 `SET LOCK_TIMEOUT` (最大値は 1000 ミリ秒) を関数に使用します。  
   
     2.  テーブルは、master データベース内に存在している必要があります (クライアント コンピューターの接続試行時に復旧が保証されるデータベースは、master データベースだけです)。  
   
@@ -265,16 +262,16 @@ ms.locfileid: "68212004"
         >  以上のベスト プラクティスに従うことを強くお勧めします。 ベスト プラクティスに従うことのできない事情がある場合は、問題の発生を事前に防ぐためにも、Microsoft サポートにお問い合わせいただくことをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [Resource Governor](resource-governor.md)   
- [Resource Governor を有効にする](enable-resource-governor.md)   
- [リソースプールの Resource Governor](resource-governor-resource-pool.md)   
- [ワークロードグループの Resource Governor](resource-governor-workload-group.md)   
- [テンプレートを使用して Resource Governor を構成する](configure-resource-governor-using-a-template.md)   
- [Resource Governor のプロパティの表示](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [Transact-sql&#41;&#40;リソースプールの作成](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Transact-sql&#41;&#40;ワークロードグループを作成する](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [リソース ガバナー](resource-governor.md)   
+ [リソース ガバナーの有効化](enable-resource-governor.md)   
+ [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
+ [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
+ [テンプレートを使用してリソース ガバナーを構成する](configure-resource-governor-using-a-template.md)   
+ [リソース ガバナー プロパティの表示](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

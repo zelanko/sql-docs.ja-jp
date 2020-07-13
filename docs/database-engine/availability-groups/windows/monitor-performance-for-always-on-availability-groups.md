@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897347"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 可用性グループのパフォーマンス面は、ミッション クリティカルなデータベースに対するサービス レベル アグリーメント (SLA) を維持する上で重要です。 可用性グループがセカンダリ レプリカにログを配布する方法を理解することで、可用性実装の回復時刻の目標 (RTO) および回復ポイントの目標 (RPO) の推定、ならびにパフォーマンスに問題がある可用性グループまたはレプリカにおけるボトルネックの特定が容易になります。 この記事では、同期プロセスについて説明し、主要なメトリックの計算方法を示すと共に、一般的なパフォーマンス トラブルシューティング シナリオへのリンクをいくつか紹介します。  
    
 ##  <a name="data-synchronization-process"></a>データ同期プロセス  
@@ -312,7 +312,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO と RPO の監視  
- このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
+ このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
   
  [フェールオーバー時間 (RTO) の推定](#estimating-failover-time-rto) および[データ損失の可能性 (RPO) の推定](#estimating-potential-data-loss-rpo) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
   

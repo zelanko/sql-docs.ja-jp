@@ -15,15 +15,14 @@ topic_type:
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 294241eb586a70f4e0a826b1dce5d35879b3ee3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62689090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019511"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   列形式のプロパティ値を確認するために使用します。  
@@ -60,7 +59,7 @@ pcbLen
  *分野*  
  プロパティを取得する列番号です。  
   
- *"*  
+ *プロパティ*  
  プロパティ定数のいずれかを指定します。  
   
  *pValue*  
@@ -75,13 +74,13 @@ pcbLen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  列形式のプロパティ値については、 [bcp_setcolfmt](bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
   
- 以前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンと比較して、( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以前のバージョンと比較して、(またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt による機能強化された日付と時刻のサポート  
- 日付型または時刻`BCP_FMT_TYPE`型のプロパティと共に使用される型は、 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)で指定されています。  
+ 日付型または時刻型のプロパティと共に使用される型 `BCP_FMT_TYPE` は、 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)で指定されています。  
   
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   

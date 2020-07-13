@@ -11,14 +11,14 @@ helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020421"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304313"
 ---
 # <a name="return-codes-odbc"></a>リターン コード (ODBC)
 ODBC の各関数は、関数の全体的な成功または失敗を示す*リターンコード*と呼ばれるコードを返します。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
@@ -44,7 +44,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  次の表では、リターンコードを定義します。  
   
-|リターンコード|[説明]|  
+|リターン コード|説明|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|関数は正常に完了しました。 アプリケーションは**SQLGetDiagField**を呼び出して、ヘッダーレコードから追加情報を取得します。|  
 |SQL_SUCCESS_WITH_INFO|関数が正常に完了しました。致命的でないエラーが発生した可能性があります (警告)。 アプリケーションは、 **SQLGetDiagRec**または**SQLGetDiagField**を呼び出して、追加情報を取得します。|  

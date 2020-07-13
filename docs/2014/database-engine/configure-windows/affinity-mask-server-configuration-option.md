@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62814036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935957"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
     
@@ -59,11 +58,9 @@ ms.locfileid: "62814036"
   
  存在しない CPU にマップしているような関係マスクを指定した場合、RECONFIGURE コマンドによりクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログの両方にエラー メッセージが報告されます。 この場合、RECONFIGURE WITH OVERRIDE オプションを使用しても影響がなく、同じ構成エラーが再度報告されます。  
   
- Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 を 0 ( `affinity mask`既定値) に設定すると、Microsoft Windows 2000 または windows Server 2003 のスケジューリングアルゴリズムによってスレッドのアフィニティが設定されます。 
-  `affinity mask` を 0 以外の値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
+ Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 `affinity mask`を 0 (既定値) に設定すると、Microsoft Windows 2000 または Windows Server 2003 のスケジューリングアルゴリズムによってスレッドのアフィニティが設定されます。 `affinity mask` を 0 以外の値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを特定のプロセッサ上の実行から隔離すると、Microsoft Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 では、システムによる Windows 固有のプロセス処理を評価しやすくなります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 2 つ (インスタンス A および B) を実行する 8 CPU サーバーで、システム管理者は affinity mask オプションを使用して最初の 4 個の CPU をインスタンス A に割り当て、残りの 4 個をインスタンス B に割り当てることができます。33 プロセッサ以上を構成する場合は、affinity mask および affinity64 mask の両方を設定します。 
-  `affinity mask` の値は、以下のとおりです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを特定のプロセッサ上の実行から隔離すると、Microsoft Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 では、システムによる Windows 固有のプロセス処理を評価しやすくなります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 2 つ (インスタンス A および B) を実行する 8 CPU サーバーで、システム管理者は affinity mask オプションを使用して最初の 4 個の CPU をインスタンス A に割り当て、残りの 4 個をインスタンス B に割り当てることができます。33 プロセッサ以上を構成する場合は、affinity mask および affinity64 mask の両方を設定します。 `affinity mask` の値は、以下のとおりです。  
   
 -   1 バイトの `affinity mask` はマルチプロセッサ コンピューターの最大 8 個の CPU に対応します。  
   
@@ -80,8 +77,7 @@ ms.locfileid: "62814036"
 > [!NOTE]  
 >  各プロセッサの利用状況を表示して分析するには、Windows のシステム モニターを使用します。  
   
- affinity I/O mask オプションを指定する場合は、affinity mask 構成オプションの設定を考慮して使用する必要があります。 
-  `affinity mask` スイッチと affinity I/O mask オプションの両方で同じ CPU を有効にしないようにしてください。 各 CPU に対応するビットは、次の 3 つの状態のうちのいずれかに設定します。  
+ affinity I/O mask オプションを指定する場合は、affinity mask 構成オプションの設定を考慮して使用する必要があります。 `affinity mask` スイッチと affinity I/O mask オプションの両方で同じ CPU を有効にしないようにしてください。 各 CPU に対応するビットは、次の 3 つの状態のうちのいずれかに設定します。  
   
 -   affinity mask オプションと affinity I/O mask オプションの両方で 0。  
   

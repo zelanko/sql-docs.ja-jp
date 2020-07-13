@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 397526d89ed6e89eb90f619b3bf891bf156e61be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3bc96e3289c7e1c0013e08531b77994a76650907
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73727857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812705"
 ---
 # <a name="technical-reference-master-data-services"></a>テクニカル リファレンス (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] コンポーネントに関するテクニカル リファレンス情報を参照してください。  
   
  

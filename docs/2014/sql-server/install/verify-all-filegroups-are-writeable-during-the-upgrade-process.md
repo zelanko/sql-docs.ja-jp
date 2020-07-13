@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 758207977c8ddf92d6696dda71a8943e6a596d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8146efb876bf97c36c549a2b58d104592df611e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062315"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>アップグレード処理中にすべてのファイル グループが書き込み可能であることを確認する
   アップグレード アドバイザーによって、1 つ以上の読み取り専用のファイル グループを含むデータベースが検出されました。 アップグレードする前に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内のすべてのデータベースでファイル グループを READ_WRITE に設定しておく必要があります。  

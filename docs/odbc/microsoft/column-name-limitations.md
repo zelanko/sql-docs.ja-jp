@@ -11,14 +11,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14e62555db2e88c6573f3bdca0d4a1a2733d428b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 41d973afdac360af114da41620997cad23a2c740
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68006240"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281382"
 ---
 # <a name="column-name-limitations"></a>列名の制限
 列名には、任意の有効な文字 (たとえば、スペース) を含めることができます。 列名に文字、数字、およびアンダースコア以外の文字が含まれている場合は、名前を引用符 (') で囲むことによって区切る必要があります。  

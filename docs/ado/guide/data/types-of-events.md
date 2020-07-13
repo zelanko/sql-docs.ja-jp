@@ -14,20 +14,20 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f8d0dd197b5f74b25aad2f7e9e888165c2dc02ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923815"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759028"
 ---
 # <a name="types-of-events"></a>イベントの種類
 イベントには、次の2つの基本的な種類があります。 "は、操作が開始される前に呼び出されるイベントです。通常は、名前に" **WillChangeRecordset** "が含まれます。たとえば、「」と**接続**します。 イベントの完了後に呼び出されるイベントには、通常、名前に "Complete" が含まれます。たとえば、 **RecordChangeComplete**や**connectcomplete**などです。 **Infomessage**などの例外が存在しますが、関連付けられた操作が完了した後に発生します。  
   
 ## <a name="will-events"></a>イベントを発生させる  
- 操作が開始される前に呼び出されるイベントハンドラーによって、操作パラメーターを確認または変更し、操作をキャンセルするか、または完了を許可することができます。 これらのイベントハンドラールーチンには、通常、<strong>という**</strong>形式の名前が付いています。  
+ 操作が開始される前に呼び出されるイベントハンドラーによって、操作パラメーターを確認または変更し、操作をキャンセルするか、または完了を許可することができます。 これらのイベントハンドラールーチンには、通常、<strong>という*Event*</strong>形式の名前が付いています。  
   
 ## <a name="complete-events"></a>完了イベント  
  操作の完了後に呼び出されるイベントハンドラーは、操作が終了したことをアプリケーションに通知できます。 このようなイベントハンドラーは、がイベントハンドラーによって保留中の操作をキャンセルしたときにも通知されます。 これらのイベントハンドラールーチンには、通常、フォーム<strong>*イベント*</strong>の名前があります。  

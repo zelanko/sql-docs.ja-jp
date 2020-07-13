@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67951877"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299012"
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
 基本的なレベルの相互運用性が判明したら、アプリケーションで使用されるデータベース機能を考慮する必要があります。 たとえば、アプリケーションはどのような SQL ステートメントを実行しますか。 アプリケーションはスクロール可能なカーソルを使用しますか。 トランザクション? プロシージャ? 長いデータ? すべての Dbms でサポートされていない機能の詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明」と「[付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」を参照してください。 アプリケーションが必要とする機能によって、ターゲット Dbms の一覧から一部の Dbms が削除される場合があります。 また、アプリケーションが多くの Dbms を簡単にターゲットにできることを示している場合もあります。  

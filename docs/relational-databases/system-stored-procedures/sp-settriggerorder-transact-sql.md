@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719188"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   最初または最後に起動される AFTER トリガーを指定します。 最初と最後のトリガーの間で起動される AFTER トリガーは、任意の順序で実行されます。  
   
@@ -50,27 +50,27 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **最初**のトリガーと**最後**のトリガーは、2つの異なるトリガーである必要があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**まずは**|トリガーは最初に起動されます。|  
+|**First**|トリガーは最初に起動されます。|  
 |**前の**|最後にトリガーが起動されます。|  
 |**なし**|トリガーは、定義されていない順序で発生します。|  
   
-`[ @stmttype = ] 'statement_type'`トリガーを起動する SQL ステートメントを指定します。 *statement_type*は**varchar (50)** で、INSERT、UPDATE、DELETE、LOGON、または[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL イベント](../../relational-databases/triggers/ddl-events.md)に記載されている任意のステートメントイベントを指定できます。 イベントグループを指定することはできません。  
+`[ @stmttype = ] 'statement_type'`トリガーを起動する SQL ステートメントを指定します。 *statement_type*は**varchar (50)** で、INSERT、UPDATE、DELETE、LOGON、または [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL イベント](../../relational-databases/triggers/ddl-events.md)に記載されている任意のステートメントイベントを指定できます。 イベントグループを指定することはできません。  
   
- トリガーは、そのステートメントの種類のトリガーとして定義されている場合にのみ、ステートメントの種類の**最初**のトリガーまたは**最後**のトリガーとして指定できます。 たとえば、 **tr1**が insert トリガーとして定義されている場合、トリガー **Tr1**をテーブル**T1**の insert に対して**最初**に指定できます。 INSERT [!INCLUDE[ssDE](../../includes/ssde-md.md)]トリガーとしてのみ定義されている**TR1**が UPDATE ステートメントの**最初**のトリガーまたは**最後**のトリガーとして設定されている場合、はエラーを返します。 詳細については、「解説」を参照してください。  
+ トリガーは、そのステートメントの種類のトリガーとして定義されている場合にのみ、ステートメントの種類の**最初**のトリガーまたは**最後**のトリガーとして指定できます。 たとえば、 **tr1**が insert トリガーとして定義されている場合、トリガー **Tr1**をテーブル**T1**の insert に対して**最初**に指定できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]INSERT トリガーとしてのみ定義されている**TR1**が UPDATE ステートメントの**最初**のトリガーまたは**最後**のトリガーとして設定されている場合、はエラーを返します。 詳細については、「解説」を参照してください。  
   
- 名前空間 = { **' データベース '** | **' サーバー '** | ** \@** 空白  
- *トリガー*が DDL トリガーである場合、 ** \@名前空間**は、*トリガー*がデータベーススコープとサーバースコープのどちらで作成されたかを指定します。 *トリガー*が logon トリガーの場合は、SERVER を指定する必要があります。 DDL トリガーのスコープの詳細については、「 [Ddl Triggers](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。 指定されていない場合、または NULL が指定されている場合、*トリガー*は DML トリガーです。  
+ ** \@ 名前空間 =** { **' データベース '**  |  **' サーバー '** |空白  
+ *トリガー*が DDL トリガーである場合、 ** \@ 名前空間**は、*トリガー*がデータベーススコープとサーバースコープのどちらで作成されたかを指定します。 *トリガー*が logon トリガーの場合は、SERVER を指定する必要があります。 DDL トリガーのスコープの詳細については、「 [Ddl Triggers](../../relational-databases/triggers/ddl-triggers.md)」を参照してください。 指定されていない場合、または NULL が指定されている場合、*トリガー*は DML トリガーです。  
   
 ||  
 |-|  
-|サーバーは[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、以降に適用されます。|  
+|サーバーは、以降に適用さ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>DML トリガー  
  1つのテーブルに対して、ステートメントごとに1つの**最初**と**最後**のトリガーを1つだけ指定できます。  
@@ -109,7 +109,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="examples"></a>例  
   
 ### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. DML トリガーの起動順序を設定する  
- 次の例では、 `uSalesOrderHeader` `UPDATE` `Sales.SalesOrderHeader`テーブルで操作が行われた後に起動される最初のトリガーとして、トリガーを指定します。  
+ 次の例では、 `uSalesOrderHeader` テーブルで操作が行われた後に起動される最初のトリガーとして、トリガーを指定し `UPDATE` `Sales.SalesOrderHeader` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,8 +117,8 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. DDL トリガーの起動順序を設定する  
- 次の例では、トリガー `ddlDatabaseTriggerLog` が、`ALTER_TABLE` データベースで [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] イベントの発生後、最初に起動されるトリガーとなるよう指定します。  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B: DDL トリガーの起動順序を設定する  
+ 次の例では、トリガー `ddlDatabaseTriggerLog` が、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで `ALTER_TABLE` イベントの発生後、最初に起動されるトリガーとなるよう指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -126,9 +126,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-sql&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

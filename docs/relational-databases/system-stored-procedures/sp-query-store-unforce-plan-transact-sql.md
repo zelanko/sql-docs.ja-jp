@@ -18,18 +18,17 @@ helpviewer_keywords:
 - sys.sp_query_store_unforce_plan
 - sp_query_store_unforce_plan
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9cff3bb0491db53e195a692014b74a08c4fdcdee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: c6af13e434fcf7fdc4c1738f71c76f092a0ed71d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71207711"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012614"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   特定のクエリに対して以前に強制されたプランの強制を解除できるようにします。  
   

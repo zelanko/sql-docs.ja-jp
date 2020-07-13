@@ -1,5 +1,6 @@
 ---
 title: 既存のファイルにファイル (およびファイル グループ) を復元する
+description: この記事では、SQL Server Management Studio または Transact-SQL を使用して、SQL Server でファイルとファイル グループを既存のファイルに復元する方法について示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a237383f2bc36aa3e3dd1b74174e5fbdd455920a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737695"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>既存のファイルにファイルとファイル グループを復元する (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを既存のファイルに復元する方法について説明します。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75241873"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ファイルとファイル グループを既存のファイルに復元する方法:**  
   
@@ -90,9 +91,9 @@ ms.locfileid: "75241873"
     |列見出し|値|  
     |-----------------|------------|  
     |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
-    |**Name**|バックアップ セットの名前です。|  
-    |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**Type**|実行するバックアップの種類です。 **[完全]** 、 **[差分]** 、または **[トランザクション ログ]** のいずれかを指定します。|  
+    |**名前**|バックアップ セットの名前です。|  
+    |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  

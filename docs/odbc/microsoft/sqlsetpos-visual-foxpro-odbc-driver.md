@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetPos function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d420a1591840029a2a468f747c033ad4bcdb7f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46a7620e998533bb5e60d48f322b7098d4aaf647
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905415"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301473"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

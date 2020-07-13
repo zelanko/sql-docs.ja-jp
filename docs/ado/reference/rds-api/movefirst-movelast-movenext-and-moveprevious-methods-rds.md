@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963884"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751599"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)
 指定された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の最初、最後、次、または前のレコードに移動します。  
@@ -40,7 +40,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  RDS で**Move**メソッドを使用でき**ます。DataControl**オブジェクトを使用して、Web ページ上のデータバインドコントロール内のデータレコード間を移動します。 たとえば、RDS にバインドすることによって、**レコードセット**をグリッドに表示するとし**ます。DataControl**オブジェクト。 次に、ユーザーがクリックして、表示されている**レコードセット**内の最初、最後、次、または前のレコードに移動するためのボタンを追加できます。 これを行うには、RDS の**MoveFirst**、 **MoveLast**、 **MoveNext**、および**MovePrevious**の各メソッドを呼び出し**ます。** First、Last、Next、および Previous の各ボタンの onClick プロシージャ内の DataControl オブジェクト。 [アドレス帳の例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)では、これを行う方法を示しています。  
   
 ## <a name="applies-to"></a>適用対象  

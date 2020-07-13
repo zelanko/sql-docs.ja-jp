@@ -11,17 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086332"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525878"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用すると、洗練されたデータマイニングソリューションを簡単に作成でき[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ます。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すると、リレーショナル データまたはキューブ データを使用するデータ マイニング モデルを設計、作成、および管理することができます。 データ マイニング モデルへのクライアント アクセスを管理したり、複数のクライアントから予測クエリを作成したりできます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を使用すると、洗練されたデータマイニングソリューションを簡単に作成できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すると、リレーショナル データまたはキューブ データを使用するデータ マイニング モデルを設計、作成、および管理することができます。 データ マイニング モデルへのクライアント アクセスを管理したり、複数のクライアントから予測クエリを作成したりできます。  
   
  操作手順が詳しく説明されている以下のチュートリアルでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを最大限に活用し、高度な分析を行うことで従来のビジネス インテリジェンスの方法では対処できないビジネス上の問題を解決する方法を学習できます。  
   
@@ -47,23 +45,23 @@ ms.locfileid: "66086332"
   
      これらのレッスンで説明する高度な概念には、入れ子になったテーブル、クロス予測、カスタム データ ソース ビューとカスタム名前付きクエリ、およびデータ マイニング クエリのフィルター処理があります。 また、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に付属する予測クエリ ツールの使用方法についても説明します。  
   
-## <a name="reference"></a>リファレンス  
- [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [DMX&#41; リファレンス &#40;データマイニング拡張機能](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>関連項目  
  [データ マイニング ツール](data-mining/data-mining-tools.md)  
   
- [論理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [論理アーキテクチャ &#40;Analysis Services-多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [論理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [データ マイニング プロジェクト](data-mining/data-mining-projects.md)  
   
 ## <a name="see-also"></a>参照  
  [データマイニングソリューション](data-mining/data-mining-solutions.md)   
  [データマイニングリソースの Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=97965)   
- [DMX を使用したデータマイニングモデルの作成とクエリ: チュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル &#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

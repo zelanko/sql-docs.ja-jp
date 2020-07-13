@@ -19,10 +19,10 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907145"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>SQL Server へのアクセスデータの移行-Azure SQL DB (アクセス許可 Sql)
@@ -50,10 +50,10 @@ ms.locfileid: "67907145"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Bcp**コマンドラインユーティリティまたは[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、ssma の外部でデータを移行することもできます。 これらのツールの詳細について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、オンラインブックを参照してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行後も引き続き使用するアクセスデータベースアプリケーションがある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、access データベーステーブルをまたは SQL Azure テーブルにリンクします。 詳細については、「 [SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[変換と移行のオプションの設定](setting-conversion-and-migration-options-accesstosql.md)  
+[変換オプションと移行オプションの設定](setting-conversion-and-migration-options-accesstosql.md)  
   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b33b83338f1886a464d1831146db683008779799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63033474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001066"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>[保存前の通知] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、テーブルへ変更を保存するときにエラーが発生した場合に表示されます。 このダイアログ ボックスには、データベースに正常に保存されたオブジェクト、保存されなかったオブジェクト、および発生したエラーが一覧表示されます。  

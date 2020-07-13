@@ -13,14 +13,14 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078983"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81289084"
 ---
 # <a name="writing-an-interoperable-application"></a>相互運用可能なアプリケーションの作成
 アプリケーションが複数のドライバーに対して同じコードを使用する場合は、そのコードをそれらのドライバー間で相互運用できる必要があります。 ほとんどの場合、これは簡単なタスクです。 たとえば、順方向専用カーソルを使用して行をフェッチするコードは、すべてのドライバーで同じです。 場合によっては、これがより困難になることがあります。 たとえば、SQL ステートメントで使用するための識別子を構築するコードでは、識別子の大文字と小文字の区別、引用符、および3つの部分で構成される名前付け規則を考慮する必要があります。  

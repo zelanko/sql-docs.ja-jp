@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68140567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662576"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたテーブル内の指定された列に関連付けられているキー フレーズに対し、0 行、1 行、または複数の行を含むテーブルを返します。  
   
@@ -44,8 +44,8 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="Arguments"></a>数値  
- **一覧**  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
+ **テーブル**  
  フルテキスト インデックスとセマンティック インデックスが有効になっているテーブルの名前を指定します。  
   
  この名前には 1 ~ 4 つの部分名を指定できますが、リモートサーバー名は許可されません。  
@@ -67,7 +67,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>返されるテーブル  
  次の表は、この行セット関数が返すキーフレーズに関する情報を示しています。  
   
-|Column_name|種類|[説明]|  
+|Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|現在のキーフレーズを抽出してインデックスを作成した列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**document_key**|**\***<br /><br /> このキーは、ソーステーブル内の一意なキーの型と一致します。|現在のキーフレーズのインデックスが作成されたドキュメントまたは行の一意のキー値。|  
@@ -80,21 +80,19 @@ SEMANTICKEYPHRASETABLE
 ## <a name="metadata"></a>Metadata  
  セマンティックなキー フレーズの抽出および生成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  
   
--   [dm_db_fts_index_physical_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [dm_fts_index_population &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
   
-###  <a name="HowToTopPhrases"></a>例 1: 特定のドキュメントに含まれる上位のキーフレーズを検索する  
- 次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 
-  @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。 
-  **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。 この例では、列がフルテキストインデックスとセマンティックインデックス作成用に構成されていることを前提としています。  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>例 1: 特定のドキュメントに含まれる上位のキーフレーズを検索する  
+ 次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。 **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。 この例では、列がフルテキストインデックスとセマンティックインデックス作成用に構成されていることを前提としています。  
   
 ```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
@@ -108,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>例 2: 特定のキーフレーズを含む上位のドキュメントを検索する  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>例 2: 特定のキーフレーズを含む上位のドキュメントを検索する  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列から、キー フレーズ "Bracket" を含む上位 25 個のドキュメントを取得します。 この例では、列がフルテキストインデックスとセマンティックインデックス作成用に構成されていることを前提としています。  
   
 ```sql  

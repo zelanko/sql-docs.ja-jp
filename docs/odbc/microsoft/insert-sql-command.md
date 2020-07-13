@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ce00005fb1aa0ca9732fc5e9cfeacd6faf6ef9e1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019453"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300009"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL コマンド
 指定されたフィールド値を含むテーブルの末尾にレコードを追加します。  
@@ -46,7 +46,7 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
  値 ( *eExpression1*[, *eExpression2*[,...]])  
  新しいレコードに挿入されるフィールド値を指定します。 フィールド名を省略した場合は、テーブル構造によって定義された順序でフィールド値を指定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  新しいレコードには、VALUES 句に一覧表示されたデータが含まれています。  
   
 ## <a name="driver-remarks"></a>ドライバーの解説  

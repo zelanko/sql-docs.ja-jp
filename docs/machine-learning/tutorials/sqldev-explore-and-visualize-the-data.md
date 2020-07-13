@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116105"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632112"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:データの探索および視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "81116105"
 > SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end
 
-プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャでラップすることができます。これには、**PlotRxHistogram** を使用します。
+プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RxPlotHistogram** でラップすることができます。
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
-2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RPlotRxHistogram* という名前が付けられています。
+2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RxPlotHistogram** という名前が付けられています。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

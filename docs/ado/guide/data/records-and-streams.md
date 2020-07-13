@@ -12,19 +12,19 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924494"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760988"
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 現在、ADO では、リレーショナルデータベースなどのデータソース内の情報にアクセスする主な手段として、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが提供されています。 ただし、一部のプロバイダーでは、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトおよび[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを、プロバイダーからのデータを操作できる代替オブジェクトまたは補完的オブジェクトとしてサポートしています。 **レコード**の動作の詳細については、プロバイダーのドキュメントを参照してください。  
   
-## <a name="records"></a>[レコード]  
+## <a name="records"></a>レコード  
  **レコード**オブジェクトは、基本的には1行の**レコードセット**として機能します。 ただし、**レコード**は、レコード**セット**と比較して機能が制限され、プロパティとメソッドが異なる場合があります。**レコード**オブジェクト内のデータのソースは、プロバイダーから1行のデータを返すコマンドにすることができます。 レコード**セット**オブジェクトではなく**レコード**オブジェクトを使用して、1行のデータを返すクエリから結果を受け取ると、より複雑な**レコードセット**オブジェクトをインスタンス化するオーバーヘッドがなくなります。  
   
  **レコード**オブジェクトは、特に、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)などの従来のリレーショナルデータベース以外のデータソースのプロバイダーによって、別の目的に利用できます。 処理する必要がある情報の多くは、データベース内のテーブルとしてではなく、電子メールシステムおよび最新のファイルシステムのファイル内のメッセージとして存在します。 **レコード**オブジェクトと**ストリーム**オブジェクトを使用すると、リレーショナルデータベース以外のソースに格納されている情報に簡単にアクセスできます。  

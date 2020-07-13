@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72304942"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872498"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   一部のマージフィルタープロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -55,15 +55,15 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、サブスクライバーを[!INCLUDE[ssEW](../../includes/ssew-md.md)]サポートするために必要です。|  
+|**filter_type**|**1**|結合フィルター。<br /><br /> このオプションは、サブスクライバーをサポートするために必要です [!INCLUDE[ssEW](../../includes/ssew-md.md)] 。|  
 ||**2**|論理レコードリレーションシップ。|  
-||**番**|結合フィルターは論理レコードリレーションシップでもあります。|  
+||**3**|結合フィルターは論理レコードリレーションシップでもあります。|  
 |**filtername**||フィルターの名前。|  
 |**join_articlename**||結合アーティクルの名前。|  
 |**join_filterclause**||フィルター句。|  
-|**join_unique_key**|**本来**|結合は、一意なキーに基づいて行われます。|  
+|**join_unique_key**|**true**|結合は、一意なキーに基づいて行われます。|  
 ||**false**|結合が一意のキーではありません。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
@@ -81,21 +81,21 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergefilter**は、マージレプリケーションで使用します。  
   
- マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@force_reinit_subscription**を**1**に設定します。  
+ マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@ force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@ force_reinit_subscription**を**1**に設定します。  
   
  論理レコードを使用するには、パブリケーションとアーティクルが多くの要件を満たしている必要があります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

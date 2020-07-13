@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58cce35e57116618137f4ee776901dba2a44eff4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761960"
 ---
 # <a name="prepared-property-ado"></a>Prepared プロパティ (ADO)
 コンパイルされたバージョンの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を実行前に保存するかどうかを示します。  

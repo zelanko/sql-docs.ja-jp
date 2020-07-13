@@ -18,18 +18,17 @@ helpviewer_keywords:
 - sys.sp_query_store_remove_query
 - sp_query_store_remove_query
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c87dc88db41e6699e1ce39e924b017c11bf5621e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68418908"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012634"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリストアから、関連付けられているすべてのプランとランタイム統計を削除します。  
   

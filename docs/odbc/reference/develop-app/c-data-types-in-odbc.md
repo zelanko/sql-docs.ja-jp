@@ -12,14 +12,14 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 748347b0a5b20f22cf7191213c59d2879df67522
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e1efba2187e2c1f2d813d43640fc9259ad4f2b3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118718"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306297"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC の C データ型
 ODBC では、アプリケーション変数とそれに対応する型識別子によって使用される C データ型を定義します。 これらは、結果セットの列およびステートメントのパラメーターにバインドされるバッファーによって使用されます。 たとえば、アプリケーションが文字形式で結果セットの列からデータを取得するとします。 SQLCHAR * データ型の変数を宣言し、この変数を SQL_C_CHAR の型識別子を使用して結果セット列にバインドします。 C データ型と型識別子の完全な一覧については、「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  

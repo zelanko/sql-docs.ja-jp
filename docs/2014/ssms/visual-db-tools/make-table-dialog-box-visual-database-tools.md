@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 29fabc5de86c41dd00e85dfb4fe23b76d7a524dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63459973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066135"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>[テーブルの作成] ダイアログ ボックス (Visual Database Tools)
   行のコピー先として作成したテーブルに名前を付けることができます。 このダイアログ ボックスは、クエリの種類を MAKE TABLE クエリに変更したときに表示されます。 クエリの種類を変更するには、 **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  

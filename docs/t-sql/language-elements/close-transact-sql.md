@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63234f9f337bd6427c4c5ed33c146e2ed3a714c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc5a4f189585cbafad4e59e46b6305eeb0dbefa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706624"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在の結果セットを解放し、カーソルが置かれている行に設定されているカーソル ロックを解除して、開いているカーソルを閉じます。 `CLOSE` では、再度開けるようにデータ構造がアクセス可能なままになりますが、フェッチや位置指定更新は、カーソルを再度開くまで実行できません。 `CLOSE` は開いているカーソル上で実行する必要があります。宣言されただけのカーソルや、既に閉じているカーソルでは実行できません。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67950326"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   

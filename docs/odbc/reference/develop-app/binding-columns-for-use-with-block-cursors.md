@@ -16,14 +16,14 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106229"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284902"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>ブロック カーソルで使用するためのバインディング列
 ブロックカーソルは複数の行を返すので、それらを使用するアプリケーションは、変数の配列を1つの変数ではなく各列にバインドする必要があります。 これらの配列は、まとめて*行セットバッファー*と呼ばれます。 バインディングの2つのスタイルを次に示します。  

@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f8f62eb69a50d7543af41dddb9c62c842d17151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063300"
 ---
-# <a name="locals-window"></a>[ローカル] ウィンドウ
+# <a name="locals-window"></a>ローカル ウィンドウ
   **[ローカル]** ウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの現在のスコープ内にあるローカル式についての情報が表示されます。 スコープは、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームに設定されます。 ローカル式を表示するには、デバッグ モードである必要があります。  
   
 ## <a name="task-list"></a>タスク一覧  
@@ -32,7 +31,7 @@ ms.locfileid: "75243049"
 -   式を右クリックし、 **[値の編集]** を選択します。  
   
 ## <a name="columns"></a>[列]  
- **名前**  
+ **Name**  
  ローカル式の名前です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、変数、パラメーター、および名前が @@ で始まるシステム関数が一覧表示されます。  
   
  **Value**  

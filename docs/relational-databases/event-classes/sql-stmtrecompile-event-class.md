@@ -12,15 +12,15 @@ ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e9bcf25f84e13ddd7c21ed8752a6ac0bbde6ea0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790983"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQL:StmtRecompile イベント クラスは、ストアド プロシージャ、トリガー、アドホック バッチ、クエリなど、すべての種類のバッチに起因するステートメント レベルの再コンパイルが発生したことを示します。 クエリは、sp_executesql、動的 SQL、Prepare メソッド、Execute メソッド、または同様のインターフェイスを使用して送信できます。 SP:Recompile イベント クラスでなく、SQL:StmtRecompile イベント クラスを使用してください。  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile イベント クラスのデータ列  

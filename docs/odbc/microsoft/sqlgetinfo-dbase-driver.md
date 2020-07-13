@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetInfo
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ba029c2f75fc715b1286a950cf11c1658bdab35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003297"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298602"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE ドライバー)
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.locfileid: "68003297"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|ドライバー|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |DBASE|3.0|03.00.0000|  
 ||4.0|04.00.0000|  

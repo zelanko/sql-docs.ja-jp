@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b9bd2228b38af302d96cd3794cc00674449fcac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762403"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError プロパティ (ADO)
 特定の[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトのプロバイダー固有のエラーコードを示します。  

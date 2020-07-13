@@ -269,7 +269,7 @@ FOR XML PATH('ProductModelData');
   
 -   最初の `SELECT` サブクエリは、列名として `data()` を使用することで ProductID の一覧を返しています。 `FOR XML PATH`の行要素名として空文字列が指定されているので、要素は生成されません。 代わりに、値リストが `ProductID` 属性に割り当てられています。  
   
--   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductName` を指定しているので、生成した <`ProductNames`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
+-   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductNames` を指定しているので、生成した <`ProductName`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
   
  結果の一部を次に示します。  
   
@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- <`@xml:lang`> 要素に追加されている `English` 属性は、定義済みの XML 名前空間で定義されています。  
+ <`English`> 要素に追加されている `@xml:lang` 属性は、定義済みの XML 名前空間で定義されています。  
   
  結果を次に示します。  
 

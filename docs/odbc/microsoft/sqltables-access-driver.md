@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLTables function [ODBC], Access Driver
 - Access driver [ODBC], SQLTables
 ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e23e6993f66dd706a800ae2b34a9fdc0d219898d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df3a23af365efbef6a0f0da2c52568501425ecb3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132462"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306093"
 ---
 # <a name="sqltables-access-driver"></a>SQLTables (Access ドライバー)
 > [!NOTE]  

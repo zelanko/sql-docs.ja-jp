@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b4daf2e777b20b1b84c090757d0d84796a4cae1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107331"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299719"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>標準に準拠したアプリケーションとドライバー
 標準に準拠しているアプリケーションまたはドライバーは、Open Group CAE Specification "データ管理: SQL 呼び出しレベルインターフェイス (CLI)、および ISO/IEC 9075-3:1995 (E) の呼び出しレベルインターフェイス (SQL/CLI) に準拠しています。  

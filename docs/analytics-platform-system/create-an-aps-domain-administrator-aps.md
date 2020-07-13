@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401229"
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS ドメイン管理者の作成
@@ -26,7 +26,7 @@ ms.locfileid: "74401229"
   
 1.  既存のアプライアンスドメイン管理者アカウントを使用して、アクティブな AD ノード **(_アプライアンス\_ドメイン_-AD01**または** _\_アプライアンスのドメイン_-AD02**) にログインします。  
   
-2.  [スタート] メニューの [**実行**] をクリックします。 [**名前**] ボックスに「 **dsa.msc**」と入力します。 **[OK]** をクリックします。  
+2.  [スタート] メニューの **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「 **dsa.msc**」と入力します。 **[OK]** をクリックします。  
   
 3.  **Active Directory ユーザーとコンピューター** ] プログラムで、[**ユーザー**] を右クリックし、[**新規作成**] をポイントして [**ユーザー**] をクリックします。  
   
@@ -41,8 +41,7 @@ ms.locfileid: "74401229"
   
 5.  ユーザーの一覧で、新しいユーザーをダブルクリックして、[ユーザーのプロパティ] ダイアログボックスを開きます。  
   
-6.  
-  **[所属するグループ]** タブの **[追加]** をクリックします。  
+6.  **[所属するグループ]** タブの **[追加]** をクリックします。  
   
     「Domain Admins」と入力し**ます。PdwControlNodeAccess**をクリックし、[**名前の確認**] をクリックします。 **[OK]** をクリックします。  
   

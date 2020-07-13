@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400932"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データウェアハウスコンポーネント-分析プラットフォームシステム
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![並列データウェアハウスソフトウェア](media/parallel-data-warehouse-software.png "並列データウェアハウスソフトウェア")  
   
-## <a name="sec1"></a>アプライアンスソフトウェア-クエリ処理とユーザーデータストレージ  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>アプライアンスソフトウェア-クエリ処理とユーザーデータストレージ  
   
 ### <a name="control-node"></a>制御ノード  
 MPP エンジン  
-MPP エンジンは、超並列処理 (MPP) システムの頭脳です。 その内容は次のとおりです。  
+MPP エンジンは、超並列処理 (MPP) システムの頭脳です。 その後、次の処理を実行します。  
   
 -   並列クエリプランを作成し、計算ノードでの並列クエリの実行を調整します。  
   
@@ -55,7 +55,7 @@ MPP エンジンは、超並列処理 (MPP) システムの頭脳です。 そ�
 -   ハードウェアとソフトウェアの状態を追跡します。  
   
 ### <a name="data-movement-service-dms"></a>データ移動サービス (DMS)  
-データ移動サービス (DMS) は、PDW の "secret ソース" の一部です。 その内容は次のとおりです。  
+データ移動サービス (DMS) は、PDW の "secret ソース" の一部です。 その後、次の処理を実行します。  
   
 -   SQL Server PDW のノードとの間でデータを転送します。  
   
@@ -110,7 +110,7 @@ Windows 展開サービス (WDS) は、Windows Server オペレーティング�
   
 DHCP サービスによって IP アドレスが作成されるため、アプライアンスドメイン内のホストは、事前に構成された IP アドレスがなくてもアプライアンスネットワークに参加できるようになります。  
   
-### <a name="virtual-machine-manager"></a>Virtual Machine Manager   
+### <a name="virtual-machine-manager"></a>Virtual Machine Manager  
 Analytics Platform System は、仮想化を使用して高可用性を実現します。 Virtual Machine Manager は、System Center をホストして、物理ホストにオペレーティングシステムを展開します。  
   
 すべてのホストとバーチャルマシンで Windows 更新プログラムを適用または削除するには、Windows Server Update Services (WSUS) をご活用ください。  
@@ -121,13 +121,13 @@ Analytics Platform System は、仮想化を使用して高可用性を実現し
 ### <a name="failover-clustering"></a>フェールオーバー クラスタリング  
 Windows フェールオーバークラスタリングには、ホストで障害が発生した場合にパッシブホスト上のプロセスを再開する機能が用意されています。  
   
-### <a name="storage-spaces"></a>記憶域スペース  
+### <a name="storage-spaces"></a>記憶域  
 Windows 記憶域スペースは、少数のコンピューティングノードグループの記憶域プールとしてユーザーデータを管理します。 コンピューティングノードで障害が発生した場合でも、グループ内の別のコンピューティングノードを介してデータにアクセスできます。  
   
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server は、シンプルで信頼性の高い仮想化ソリューションを提供します。 Analytics Platform System は、仮想化を使用して CPU リソースのバランスを調整し、PDW ノードとアプライアンスファブリックコンポーネントの高可用性を実現します。  
   
-## <a name="sec2"></a>非リレーショナルデータ
+## <a name="non-relational-data"></a><a name="sec2"></a>非リレーショナル データ
 PolyBase テクノロジは、SQL Server PDW データを外部の Hadoop データと統合します。 Hadoop データは、次のいずれかの Hadoop データソースに格納できます。  
   
 -   Hortonworks Hadoop ディストリビューション  

@@ -12,25 +12,24 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2ae7fb9683c3e56bc848d3203abfc56a38cde2a9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73727896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811397"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>サーバーの構成 (MDS 構成マネージャー)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   ローカル サーバー コンピューターの構成情報を表示するには、 **[サーバーの構成]** ページを使用します。  
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
   
-|コントロール名|[説明]|  
+|コントロール名|説明|  
 |------------------|-----------------|  
 |**インターネット インフォメーション サービス**|ローカル コンピューターにインストールされているインターネット インフォメーション サービス (IIS) のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、IIS Version 1.0 以降が必要です。|  
-|**MDS 製品バージョン**|
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の製品バージョンを表示します。|  
+|**MDS の製品バージョン**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の製品バージョンを表示します。|  
   
   

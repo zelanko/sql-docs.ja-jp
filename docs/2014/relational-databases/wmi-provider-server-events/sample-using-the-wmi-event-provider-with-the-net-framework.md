@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4e336eb9c89c05656d75cc13cec4d46ddde68d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c34922286d38e422cfd9667b64adac443e6a1c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059635"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>サンプル: .NET Framework での WMI イベント プロバイダーの使用
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>サンプル:.NET Framework での WMI イベント プロバイダーの使用
   次のサンプルでは、C# でアプリケーションを作成しています。WMI イベント プロバイダーを使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定のインストールで発生したすべての DDL (データ定義言語) イベントに対応するイベント データを返します。  
   
 ## <a name="example"></a>例  

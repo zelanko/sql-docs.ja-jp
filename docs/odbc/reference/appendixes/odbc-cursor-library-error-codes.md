@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c263ce53c41546e63dc2a830d3db3b903e2e3515
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100669"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301433"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC カーソル ライブラリのエラー コード
 > [!IMPORTANT]  
@@ -30,7 +30,7 @@ ms.locfileid: "68100669"
 > [!NOTE]  
 >  カーソルライブラリでは、状態レコードが順序付けされません。ドライバーマネージャーおよび ODBC 3.*x*ドライバーは、ステータスレコードの順序付けを行います。  
   
-|SQLSTATE|[説明]|から返される可能性があります。|  
+|SQLSTATE|説明|から返される可能性があります。|  
 |--------------|-----------------|--------------------------|  
 |01000|カーソルは更新できません。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|カーソルライブラリが使用されていません。 読み込みに失敗しました。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68140462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879931"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このストアドプロシージャは、このサーバーで警告ジョブが作成されたかどうかを確認します。 警告ジョブが存在しない場合、このストアドプロシージャは警告ジョブを作成し、そのジョブ ID を**log_shipping_monitor_alert**テーブルに追加します。 警告ジョブは、既定で有効になっており、2分ごとに1回のスケジュールで実行されます。  
   
@@ -40,7 +40,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ配布警告ジョブのエージェントジョブ ID。  
+`[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布警告ジョブのエージェントジョブ ID。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,7 +54,7 @@ sp_add_log_shipping_alert_job
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、 **sp_add_log_shipping_alert_job**を実行して警告ジョブ ID を作成します。  
   
 ```  
@@ -65,6 +65,6 @@ EXEC sp_add_log_shipping_alert_job;
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

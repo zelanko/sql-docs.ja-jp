@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63b8e4491d4d0a561bf5e7f108684570fc550928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949708"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753972"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies コレクション (ADO MD)
 ディメンションからの[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)オブジェクトのセットが含まれます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **階層**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
 -   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  

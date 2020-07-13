@@ -23,15 +23,15 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8234b560994ccf89c8d1f7914ac9fabb3b87ccb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072097"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011068"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つまたは複数のビューを現在のデータベースから削除します。 DROP VIEW は、インデックス付きビューに対して実行できます。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "68072097"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
   
-```sql
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 DROP VIEW [ schema_name . ] view_name [ ; ]  

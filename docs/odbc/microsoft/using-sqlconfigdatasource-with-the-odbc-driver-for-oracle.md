@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 718e444d63e0d4cf3821c0c03eb851732ed5b4e4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088031"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292772"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>ODBC Driver for Oracle を使用した SQLConfigDatasource の使用
 > [!IMPORTANT]  
@@ -32,21 +32,21 @@ ms.locfileid: "68088031"
   
  次の表で*は、/N は*、許容される最大長までの有効な英数字文字列を意味します。 最大*Len* (最大長) は、文字列終端文字を含む、設定で許容される最大文字列長です。  
   
-|設定|最大長|既定値|有効な値|[説明]|  
+|設定|最大長|既定値|有効な値|説明|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65,535|1000|最小フェッチバッファーサイズは65535バイトまで|  
-|CatalogCap|2|1 で保護されたプロセスとして起動されました|0 または 1|1の場合、引用符で囲まれていない識別子は、カタログ関数では大文字に変換されます。|  
+|CatalogCap|2|1|0 または 1|1の場合、引用符で囲まれていない識別子は、カタログ関数では大文字に変換されます。|  
 |ConnectString|128|""|A/N|接続文字列: Msorcl10 ドライバーを使用してサーバー名を指定するために必要なメソッドです。|  
-|[説明]|256|""|A/N|説明|  
+|説明|256|""|A/N|説明|  
 |DSN (DSN)|33|""|A/N|データソース名。|  
 |GuessTheColDef|4|0|A/N|Oracle で定義された小数点以下桁数がない列に対して0以外の値を返します。|  
 |数値 float|2|""|0 または 1|0の場合、FLOAT 型の列は SQL_FLOAT として扱われます。 1の場合、FLOAT 型の列は SQL_DOUBLE として扱われます。|  
 |PWD|30|""|A/N|パスワード。|  
 |RDOSupport|2|""|0 または 1|RDO が Oracle プロシージャを呼び出すことができるようにします。|  
-|解説|2|0|0 または 1|カタログ関数に注釈を含めます。|  
+|Remarks|2|0|0 または 1|カタログ関数に注釈を含めます。|  
 |RowLimit|4|""|0 ~ 99|SELECT ステートメントによって返される行の最大数。 長さが0の文字列は、制限が適用されていないことを示します。|  
-|サーバー|128|""|A/N|Oracle サーバー名。|  
-|SynonymColumns|2|1 で保護されたプロセスとして起動されました|0 または 1|SQLColumns にシノニムを含めます。|  
+|Server (サーバー)|128|""|A/N|Oracle サーバー名。|  
+|SynonymColumns|2|1|0 または 1|SQLColumns にシノニムを含めます。|  
 |SystemTable|2|""|0 または 1|0の場合、システムテーブルは表示されません。 1の場合、システムテーブルが表示されます。|  
 |TranslationDLL|33|""|A/N|変換 .dll 名。|  
 |TranslationName|33|""|A/N|翻訳名。|  

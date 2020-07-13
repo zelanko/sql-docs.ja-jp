@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43d4fe1ab363326269daf40375e126b930d2548b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901641"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307199"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 接続プール オプションの設定
 接続プールを使用すると、アプリケーションは、使用するたびに再確立する必要のない接続のプールからの接続を使用できます。 [ **ODBC データソースアドミニストレーター** ] ダイアログボックスの [**接続プール**] タブを使用すると、パフォーマンスの監視を有効または無効にすることができます。 ドライバー名をダブルクリックして、接続のタイムアウト期間を設定します。  
@@ -31,7 +31,7 @@ ms.locfileid: "67901641"
 ## <a name="performance-monitoring"></a>パフォーマンス監視  
  パフォーマンスの監視では、さまざまな統計情報を記録することで、接続のパフォーマンスを追跡します。 これらの統計情報は、開発者が次のような項目を含めるようにカスタマイズできます。  
   
-|カウンター|定義|  
+|カウンタ|定義|  
 |-------------|----------------|  
 |1秒あたりの ODBC ハード接続カウンター|サーバーに対して行われた1秒あたりの実際の接続数。 環境に大きな負荷がかかると、このカウンターは非常に短時間で開始されます。 数秒後に0になります。 これは、接続プールが機能している場合の通常の状況です。 サーバーへの接続が確立されると、それらが使用され、再利用のためにプールに配置されます。|  
 |1秒あたりの ODBC ハード切断カウンター|サーバーに対して発行された1秒あたりのハード切断の数。 これらは、接続プールによって解放されるサーバーへの実際の接続です。 システム上のすべてのクライアントを停止し、接続がタイムアウトになると、この値は0から増加します。|  

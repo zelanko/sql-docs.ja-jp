@@ -7,22 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e900225cc4215d586ea7494a60ba04835bcd2652
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62890255"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423711"
 ---
 # <a name="deployment-of-projects-and-packages"></a>プロジェクトとパッケージの展開
-  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルとパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
  パッケージ配置モデルの詳細については、「[パッケージ配置 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)」を参照してください。  
   
@@ -38,8 +35,7 @@ ms.locfileid: "62890255"
 |データベース エンジンでは CLR 統合が必要です。|データベース エンジンでは CLR 統合は不要です。|  
 |環境固有のパラメーター値は、環境変数に格納されます。|環境固有の構成値は、構成ファイルに格納されます。|  
 |カタログ内のプロジェクトとパッケージは、実行前にサーバー上で検証できます。 SQL Server Management Studio、ストアド プロシージャ、またはマネージド コードを使用して検証を実行できます。|パッケージは実行の直前に検証されます。 dtExec またはマネージド コードを使用してパッケージを検証することもできます。|  
-|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> 
-  `dtExec` を使用してパッケージを実行することもできます。|パッケージは、`dtExec` および `DTExecUI` 実行ユーティリティを使用して実行されます。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
+|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> `dtExec` を使用してパッケージを実行することもできます。|パッケージは、`dtExec` および `DTExecUI` 実行ユーティリティを使用して実行されます。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
 |実行時に、パッケージによって生成されたイベントが自動的にキャプチャされ、カタログに保存されます。 Transact-SQL ビューを使用して、これらのイベントに対してクエリを実行できます。|実行時に、パッケージによって生成されたイベントは自動的にキャプチャされません。 イベントをキャプチャするには、パッケージにログ プロバイダーを追加する必要があります。|  
 |パッケージは、個別の Windows プロセスで実行されます。|パッケージは、個別の Windows プロセスで実行されます。|  
 |SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|  
@@ -47,7 +43,7 @@ ms.locfileid: "62890255"
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
   
-|機能|[説明]|  
+|機能|説明|  
 |-------------|-----------------|  
 |パラメーター|パラメーターは、パッケージで使用されるデータを指定します。 パラメーターは、パッケージ パラメーターとプロジェクト パラメーターを使用して、パッケージ レベルとプロジェクト レベルそれぞれにスコープを設定できます。 パラメーターは、式またはタスクで使用できます。 プロジェクトをカタログに配置すると、パラメーターごとにリテラル値を割り当てることも、設計時に割り当てられた既定値を使用することもできます。 リテラル値の代わりに、環境変数を参照することもできます。 環境変数値は、パッケージ実行時に解決されます。|  
 |環境|環境とは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトが参照できる変数のコンテナーです。 各プロジェクトには複数の環境参照を含めることができますが、1 回のパッケージ実行で参照できるのは、1 つの環境の変数のみです。 環境を使用すると、パッケージに割り当てる値をまとめることができます。 たとえば、"Dev"、"test"、"Production" という名前の環境を使用できます。|  
@@ -65,7 +61,7 @@ ms.locfileid: "62890255"
 ## <a name="related-content"></a>関連コンテンツ  
  mattmasson.com のブログ「 [SSIS プロジェクトの分岐方法について](https://go.microsoft.com/fwlink/?LinkId=245739)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dtexec ユーティリティ](dtexec-utility.md)  
   
   

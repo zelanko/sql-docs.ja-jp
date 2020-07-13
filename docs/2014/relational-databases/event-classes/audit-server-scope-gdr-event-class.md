@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07016bd61abc84617c8a32935417b7ec936d3dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fa94f6f8d7705a0784da66d3d353e9537bc7d1a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63015869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030934"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR イベント クラス
   **Audit Server Scope GDR** イベント クラスは、ログインの作成など、サーバー スコープでの権限に対して GRANT、REVOKE、または DENY が実行されているときに発生します。  
   
 ## <a name="audit-server-scope-gdr-event-class-data-columns"></a>Audit Server Scope GDR イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

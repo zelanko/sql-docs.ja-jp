@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077061"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306413"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)
 ODBC を使用すると、接続およびステートメント操作を非同期に実行できます。 アプリケーションスレッドは、非同期モードで ODBC 関数を呼び出すことができます。また、関数は、操作が完了する前にを返すことができます。これにより、アプリケーションスレッドで他のタスクを実行できるようになります。 Windows 7 SDK で、非同期ステートメントまたは接続操作の場合、アプリケーションは、ポーリングメソッドを使用して非同期操作が完了したと判断しました。 詳細については、「[非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)」を参照してください。 Windows 8 SDK 以降では、通知メソッドを使用して非同期操作が完了したことを確認できます。  
@@ -47,7 +47,7 @@ ODBC を使用すると、接続およびステートメント操作を非同期
   
  アプリケーションでは、この機能を使用する前に、ドライバーマネージャーのバージョンを確認する必要があります。 それ以外の場合、適切に記述されていないドライバーがエラーになり、ドライバーマネージャーのバージョンが ODBC 3.81 より前の場合、動作は未定義になります。  
   
-## <a name="use-cases"></a>ユース ケース  
+## <a name="use-cases"></a>例  
  ここでは、非同期実行のユースケースとポーリング機構について説明します。  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>複数の ODBC ソースからのデータを統合する  
@@ -328,9 +328,9 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
 |SQL_ATTR_ASYNC_ENABLE または SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT または SQL_ATTR_ASYNC_DBC_EVENT|モード|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|[有効化]|null 以外|非同期通知|  
-|[有効化]|null|非同期ポーリング|  
-|Disable|任意|同期|  
+|有効化|null 以外|非同期通知|  
+|有効化|null|非同期ポーリング|  
+|Disable|any|同期|  
   
  アプリケーションでは、非同期操作モードを一時的にに無効にすることができます。 接続レベルの非同期操作が無効になっている場合、ODBC は SQL_ATTR_ASYNC_DBC_EVENT の値を無視します。 ステートメントレベルの非同期操作が無効になっている場合、ODBC は SQL_ATTR_ASYNC_STMT_EVENT の値を無視します。  
   
@@ -371,7 +371,7 @@ retcode = SQLSetConnectAttr ( hDBC,
   
  SQL_ATTR_ASYNC_DBC_EVENT の既定値は NULL です。 ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT の取得または設定では、SQLSTATE HY092 (無効な属性/オプション識別子) の SQL_ERROR が返されます。  
   
- ODBC 接続ハンドルで設定された最後の SQL_ATTR_ASYNC_DBC_EVENT 値が NULL ではなく、アプリケーションが SQL_ASYNC_DBC_ENABLE_ON で属性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE を設定して非同期モードを有効にした場合は、ODBC 接続を呼び出します。非同期モードをサポートする関数は、完了通知を受け取ります。 ODBC 接続ハンドルに設定されている最後の SQL_ATTR_ASYNC_DBC_EVENT 値が NULL の場合、非同期モードが有効かどうかに関係なく、ODBC はアプリケーションに通知を送信しません。  
+ ODBC 接続ハンドルで設定された最後の SQL_ATTR_ASYNC_DBC_EVENT 値が NULL ではなく、アプリケーションが SQL_ASYNC_DBC_ENABLE_ON で属性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE を設定して非同期モードを有効にした場合、非同期モードをサポートする ODBC 接続関数を呼び出すと完了通知が返されます。 ODBC 接続ハンドルに設定されている最後の SQL_ATTR_ASYNC_DBC_EVENT 値が NULL の場合、非同期モードが有効かどうかに関係なく、ODBC はアプリケーションに通知を送信しません。  
   
  アプリケーションでは、属性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE を設定する前または後に SQL_ATTR_ASYNC_DBC_EVENT を設定できます。  
   

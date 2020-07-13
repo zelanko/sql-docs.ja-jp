@@ -35,7 +35,7 @@ ms.locfileid: "68045760"
  この記事では、ローカル コンピューターから [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] をアンインストールして削除する手順について説明します。  
   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)  
- この記事では、[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントのみをアンインストールした後、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] オブジェクトを手動で削除する方法について説明します。  
+ この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントのみをアンインストールした後、[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトを手動で削除する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
   

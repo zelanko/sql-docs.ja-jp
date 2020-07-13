@@ -11,14 +11,14 @@ helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086040"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81297957"
 ---
 # <a name="transactions-odbc"></a>トランザクション (ODBC)
 *トランザクション*とは、単一のアトミックな操作として実行される作業単位です。つまり、操作は成功または失敗します。 たとえば、ある銀行口座から別の銀行口座に資金を譲渡することを検討してください。 これには、最初のアカウントからの資金の取り出しと2番目のアカウントの購入という2つの手順が含まれます。 両方の手順が成功することが重要です。1つのステップが成功し、もう一方のステップが失敗することは許容されません。 トランザクションをサポートするデータベースは、このことを保証できます。  

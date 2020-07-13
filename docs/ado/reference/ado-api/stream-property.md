@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cdcd6d9fb734f50c110a3e59e9d24874ea71b974
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67916698"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759600"
 ---
 # <a name="stream-property"></a>Stream プロパティ
 **ADOStreamConstruction**オブジェクトからの OLE DB**ストリーム**オブジェクトを取得します。値の設定もできます。  

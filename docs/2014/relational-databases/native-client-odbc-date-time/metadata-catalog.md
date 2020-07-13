@@ -10,24 +10,22 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b37c86616aa1a8077f147fa9bc64b24bcaf17b42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62511526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020179"
 ---
 # <a name="catalog-metadata"></a>カタログ メタデータ
   このトピックでは、`SQLColumns` および `SQLProcedureColumns` によって返される列のメタデータと、`SQLGetTypeInfo` によって返されるデータ型のメタデータについて説明します。  
   
-## <a name="remarks"></a>解説  
- 
-  `SQLColumns` および `SQLProcedureColumns` によって日付型または時刻型に対して返される列の値を次に示します。  
+## <a name="remarks"></a>Remarks  
+ `SQLColumns` および `SQLProcedureColumns` によって日付型または時刻型に対して返される列の値を次に示します。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -39,10 +37,9 @@ ms.locfileid: "62511526"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 
-  `SQLGetTypeInfo` によって日付型または時刻型に対して返される列の値を次に示します。  
+ `SQLGetTypeInfo` によって日付型または時刻型に対して返される列の値を次に示します。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  

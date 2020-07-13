@@ -13,18 +13,18 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a64052771d767f64880118f3940461b7f0fb1a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: daa8c79e9216785ef0e1433f501ae05ee2c22957
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68220355"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897985"
 ---
 # <a name="object-catalog-views-transact-sql"></a>オブジェクトカタログビュー (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ここでは、次のカタログビューへのリンクを示します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68220355"
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  システム[カタログビュー](catalog-views-transact-sql.md) [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

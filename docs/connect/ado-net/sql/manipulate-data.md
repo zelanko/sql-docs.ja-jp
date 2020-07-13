@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bb0d7fe3519c5f86c6d1d750afaa36c08341a8ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924335"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896692"
 ---
 # <a name="manipulating-data"></a>データの操作
 
@@ -26,7 +26,7 @@ ms.locfileid: "80924335"
 複数のアクティブな結果セット (MARS) を導入する場合は、開発者が事前に複数の接続またはサーバー側のカーソルを使用して、特定のシナリオを解決しておく必要がありました。 さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。 次のシナリオは、MARS が有効になっている接続を、複数の接続の代わりに使用する方法を示しています。  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS を使った複数コマンドの使用  
-次のコンソール アプリケーションは、MARS を有効にして、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使用する方法を示しています。  
+次のコンソール アプリケーションは、MARS を有効にして、2 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。  
   
 ### <a name="example"></a>例  
 この例では、**AdventureWorks** データベースへの 1 つの接続を開きます。 <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用することで、<xref:Microsoft.Data.SqlClient.SqlDataReader> が作成されます。 そのリーダーが使用されるとき、最初の <xref:Microsoft.Data.SqlClient.SqlDataReader> のデータが 2 番目のリーダーの WHERE 句への入力として使用され、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> が開きます。  
@@ -109,7 +109,7 @@ static void Main()
 MARS を使用すると、複数の保留中の操作を使用して、読み取り操作およびデータ操作言語 (DML) 操作の両方に対して接続を使用できます。 この機能により、アプリケーションが接続ビジー エラーを処理する必要がなくなります。 さらに、MARS によって、通常多くのリソースを消費するサーバー側カーソルのユーザーを置き換えることができます。 最後に、複数の操作を単一の接続で実行できるので、同じトランザクション コンテキストを共有することにより、システムのストアド プロシージャである **sp_getbindtoken** と **sp_bindsession** を使用する必要がなくなります。  
   
 ### <a name="example"></a>例  
-次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使用する方法を示しています。 最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。 2 番目のコマンド オブジェクトは、<xref:Microsoft.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> を読み込みます。 各製品レコードには、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> によってアクセスされます。 計算が実行され、新規 **OnOrderQty** を判定します。 3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。 このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。  
+次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:Microsoft.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。 最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。 2 番目のコマンド オブジェクトは、<xref:Microsoft.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> を読み込みます。 各製品レコードには、2 番目の <xref:Microsoft.Data.SqlClient.SqlDataReader> によってアクセスされます。 計算が実行され、新規 **OnOrderQty** を判定します。 3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。 このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。  
   
 > [!NOTE]
 >  次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。 サンプル コードに示されている接続文字列では、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。 実際の環境では必要に応じて接続文字列を変更してください。  

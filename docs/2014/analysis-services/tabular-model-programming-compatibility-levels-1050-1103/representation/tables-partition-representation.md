@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6a29f273a584f3e60c6cf6458751965158cf8704
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62795521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940003"
 ---
 # <a name="partition-representation-tabular"></a>パーティション表現 (テーブル)
   運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。それぞれのサブセットがテーブルのパーティションです。  

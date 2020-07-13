@@ -11,22 +11,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLSetEnvAttr function
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e1d8e6ea962f5cd8fe094fca195a2fa59a5701d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 315a34127e5ff7d9a23f24fd37de23eb7dffef8a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785633"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012398"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Odbc[プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)では、odbc ドライバーが odbc 2 に書き込まれたアプリケーションから**SQLSetEnvAttr**属性の仕様を解釈する方法を定義します。*x*または ODBC 3。*x* API。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、これらの規則に準拠しています。  
+  Odbc[プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)では、odbc ドライバーが odbc 2 に書き込まれたアプリケーションから**SQLSetEnvAttr**属性の仕様を解釈する方法を定義します。*x*または ODBC 3。*x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、これらの規則に準拠しています。  
   
- **SQLSetEnvAttr**によって制御される属性の1つは、接続プールを使用するかどうかです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーで接続プールを使用する場合は、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)または**SQLConnect**を使用して接続するときに、 *drivercompletion*パラメーターを SQL_DRIVER_NOPROMPT に設定する必要があります。  
+ **SQLSetEnvAttr**によって制御される属性の1つは、接続プールを使用するかどうかです。 Native Client ODBC ドライバーで接続プールを使用する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)または**SQLConnect**を使用して接続するときに、 *drivercompletion*パラメーターを SQL_DRIVER_NOPROMPT に設定する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQLSetEnvAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59369)   

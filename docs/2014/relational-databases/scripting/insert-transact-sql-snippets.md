@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3984f1f7d9744fee36c5fc52af080d783e87615c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063438"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL スニペットの挿入
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  

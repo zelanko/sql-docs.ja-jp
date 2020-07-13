@@ -13,14 +13,14 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96a1aa891ef8ba26c6c239cf35e62a8f36018e65
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913627"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307003"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの実行
 > [!IMPORTANT]  
@@ -32,9 +32,9 @@ ms.locfileid: "67913627"
   
 2.  次の構文を使用して、位置指定の update または delete ステートメントを構築します。  
   
-     **** *テーブル名の*更新  
+     **UPDATE** *テーブル名の*更新  
   
-     **** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
+     **SET** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
   
      [**,** *列識別子* **=** {*式*&#124; **NULL**}]  
   

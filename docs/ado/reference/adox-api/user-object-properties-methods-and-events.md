@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - User object [ADOX], members
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9a7b7f3939ff617ab67589d7566cdbf28719731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e993688a7ac1c0dfe8e03f875d4cd91153debc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762693"
 ---
 # <a name="user-object-properties-methods-and-events"></a>User オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,7 +36,7 @@ ms.locfileid: "67964964"
   
  [SetPermissions メソッド](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

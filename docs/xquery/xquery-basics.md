@@ -1,5 +1,6 @@
 ---
 title: XQuery の基礎 |Microsoft Docs
+description: 、Sequence と QNames、式のコンテキスト、アトミック化、型システム、エラー処理、コメントなど、XQuery 言語の基礎について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81a506c9f7b079dc86062976fca1b8785c1a80dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4d0568988fc1652005b036cefebe507b9a47f82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775447"
 ---
 # <a name="xquery-basics"></a>XQuery の基礎
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   ここでは、XQuery の基礎について説明します。  
   
@@ -46,12 +47,12 @@ ms.locfileid: "67946055"
  XQuery の静的エラー、動的エラー、および型エラーの処理について説明します。  
   
  [XQuery のコメント](../xquery/comments-in-xquery.md)  
- "`(:`" および "`:)`" 区切り記号を使用して XQuery にコメントを追加する方法について説明します。  
+ " `(:` " および " `:)` " 区切り記号を使用して XQuery にコメントを追加する方法について説明します。  
   
  [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)  
  静的に型指定された言語として [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

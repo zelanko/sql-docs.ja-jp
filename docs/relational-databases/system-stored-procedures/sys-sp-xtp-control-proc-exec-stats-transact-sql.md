@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 940caad59adf191e0ed1fe550707788de820c6b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67909220"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814519"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value=*値*  
  プロシージャレベルの統計コレクションが on (1) か off (0) かを指定します。  
   
- @new_collection_valueまたはデータベースの起動時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、は0に設定されます。  
+ @new_collection_valueまたはデータベースの起動時には、は0に設定され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  @old_collection_value=*値*  
  現在の状態を返します。  
@@ -53,7 +53,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  固定 sysadmin ロールのメンバーシップが必要です。  
   
 ## <a name="code-samples"></a>コード サンプル  
- の値@new_collection_valueを設定してクエリを実行するには@new_collection_value:  
+ @new_collection_valueの値を設定してクエリを実行するには@new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107781"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
@@ -32,7 +32,7 @@ ms.locfileid: "66107781"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>レポート ビルダーでのキーボード ショートカット  
   
-|[説明]|キーの組み合わせ|  
+|説明|キーの組み合わせ|  
 |-----------------|---------------------|  
 |レポート ビルダーのメニューを開く。|Alt + F|  
 |レポートを作成する。|Ctrl + N|  
@@ -59,7 +59,7 @@ ms.locfileid: "66107781"
 |コピー|Ctrl + C、Alt + H + C|  
 |切り取り|Ctrl + X、Alt + H + X|  
 |貼り付け|Ctrl + V、Alt + H + V|  
-|すべて選択|CTRL + A|  
+|すべて選択|Ctrl + A|  
 |元に戻す|Ctrl + Z、Alt + Z|  
 |やり直し|Ctrl + Y、Alt + Y|  
 |[拡大]|Ctrl + 正符号 (+) キー|  
@@ -93,7 +93,7 @@ ms.locfileid: "66107781"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のレポートビルダー](report-builder-in-sql-server-2016.md)   
- [レポート デザイン ビュー (レポート ビルダー)](report-design-view-report-builder.md)   
- [用語集 &#40;レポートビルダー&#41;](glossary-report-builder.md)  
+ [レポートデザインビュー &#40;レポートビルダー&#41;](report-design-view-report-builder.md)   
+ [用語集 (レポート ビルダー)](glossary-report-builder.md)  
   
   

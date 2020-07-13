@@ -11,14 +11,14 @@ helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083261"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294852"
 ---
 # <a name="concurrency-control"></a>同時実行制御
 *同時実行*は、2つのトランザクションが同時に同じデータを使用できるようにする機能であり、トランザクションの分離を増やすことで、通常は同時実行性が低下します。 これは、トランザクション分離は通常、行をロックすることによって実装されるためです。また、ロックされている行が増えるにつれて、ロックされた行によって一時的にブロックされることなく、トランザクションを完了できるようになります。 データベースの整合性を維持するために必要な高いトランザクション分離レベルのトレードオフとして、同時実行数の削減が一般に認められていますが、カーソルを使用する読み取り/書き込みアクティビティが高い対話型アプリケーションで問題になる可能性があります。  

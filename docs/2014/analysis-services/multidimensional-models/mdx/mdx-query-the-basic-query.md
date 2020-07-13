@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b6b1a70753abe8e477bd1e522a37f4513cc12a52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546190"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>MDX の基本的なクエリ (MDX)
   基本的な多次元式 (MDX) クエリは SELECT ステートメントであり、MDX で最も頻繁に使用されるクエリです。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  

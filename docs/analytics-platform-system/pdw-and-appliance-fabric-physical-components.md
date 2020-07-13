@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400908"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理コンポーネント-分析プラットフォームシステム
@@ -21,7 +21,7 @@ PDW およびアプライアンスファブリック物理コンポーネント�
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>コンポーネント図  
+## <a name="component-diagrams"></a><a name="diagrams"></a>コンポーネント図  
 物理コンポーネントの名前と、6コンピューティングノードアプライアンスの最初のラックに配置されている場所が表示されます。  
   
 ![PDW リージョン コンポーネント名 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ PDW コンポーネントの実際の名前は、PDW のリージョン名、ダ
   
 ![PDW コンポーネント名](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>PDW コンポーネント  
+## <a name="pdw-components"></a><a name="pdw"></a>PDW コンポーネント  
 PDW の仮想マシンは、PDW のリージョンに含まれています。  
   
 *PDW_region*-CTL01  
@@ -46,7 +46,7 @@ PDW の仮想マシンは、PDW のリージョンに含まれています。
 *PDW_region*- *PDW_Region*から pqth4a-cmp01-CMP06  
 コンピューティングノードを実行する仮想マシン。 この6コンピューティングノードの図では、HSA06 を介して HSA01 を介してホストがコンピューティングノード Vm をそれぞれ PQTH4A-CMP01 から CMP06 に実行します。  
   
-## <a name="fabric"></a>アプライアンスファブリックコンポーネント  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>アプライアンスファブリックコンポーネント  
 これらのコンポーネントは、アプライアンスファブリックの一部です。  
   
 ### <a name="virtual-machines"></a>Virtual Machines  
@@ -64,7 +64,7 @@ Virtual Machine Manager (VMM) は仮想マシンで実行され、HST02 にフ�
 *appliance_domain*-ISCSI01  
 記憶域が接続されている各ホストで1つの ISCSI 仮想マシンが実行されます (HSA01-HSA06)。 この VM はフェールオーバーしません。  
   
-### <a name="hosts"></a>ホスト  
+### <a name="hosts"></a>Hosts  
 *appliance_domain*- *appliance_domain*から HST01-HST06  
 PDW コントロールノードおよびアプライアンスファブリック仮想マシンのホスト。 HST03 はオプションのパッシブホストです。  
   

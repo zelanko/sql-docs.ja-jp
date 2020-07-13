@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54c1cb71a3a5ed546c7408d3fcb747792e9cc248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68197992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063106"
 ---
 # <a name="using-capture-mode"></a>キャプチャ モードの使用
   SMO プログラムは、プログラムによって実行されるステートメントの代替または追加として、プログラムによって発行される同等の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのキャプチャおよび記録を行うことができます。 キャプチャ モードを有効にするには、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用するか、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Server> プロパティを使用します。  

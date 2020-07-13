@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallDriverManager function [ODBC]
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f1e3ac7f0a76c607fa07d6eb92d069d99ef5e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076209"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302113"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
 **互換性**  
@@ -59,7 +59,7 @@ BOOL SQLInstallDriverManager(
 ## <a name="diagnostics"></a>診断  
  **Sqlinstalldrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszpath*引数は、出力パスを格納するのに十分な大きさではありませんでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *Cbpathmax*引数が _MAX_PATH 未満でした。|  
@@ -77,7 +77,7 @@ BOOL SQLInstallDriverManager(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバーの追加、変更、または削除|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
 |ドライバーのインストール|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  

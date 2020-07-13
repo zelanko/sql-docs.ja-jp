@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917923"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762193"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
 既存の[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くか、ファイルやディレクトリなどの**レコード**によって表される新しい項目を作成します。  
@@ -35,25 +35,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 この**レコード**オブジェクトによって表されるエンティティの URL、**コマンド**、開いているレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)または別の**レコード**オブジェクト、SQL SELECT ステートメントまたはテーブル名を含む文字列を表す**バリアント**。  
+ 任意。 この**レコード**オブジェクトによって表されるエンティティの URL、**コマンド**、開いているレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)または別の**レコード**オブジェクト、SQL SELECT ステートメントまたはテーブル名を含む文字列を表す**バリアント**。  
   
  *ActiveConnection*  
- 省略可能。 接続文字列または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを表す**バリアント**です。  
+ 任意。 接続文字列または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを表す**バリアント**です。  
   
  *モード*  
- 省略可能。 結果の**レコード**オブジェクトのアクセスモードを指定する[connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値です。 既定値は**Admodeunknown**です。  
+ 任意。 結果の**レコード**オブジェクトのアクセスモードを指定する[connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値です。 既定値は**Admodeunknown**です。  
   
  *CreateOptions*  
- 省略可能。 既存のファイルまたはディレクトリを開くか、新しいファイルまたはディレクトリを作成する必要があるかを指定する[Recordcreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)値。 既定値は**Adfailifnotexists**です。 既定値に設定されている場合、アクセスモードは[mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティから取得されます。 *Source*パラメーターに URL が含まれていない場合、このパラメーターは無視されます。  
+ 任意。 既存のファイルまたはディレクトリを開くか、新しいファイルまたはディレクトリを作成する必要があるかを指定する[Recordcreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)値。 既定値は**Adfailifnotexists**です。 既定値に設定されている場合、アクセスモードは[mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティから取得されます。 *Source*パラメーターに URL が含まれていない場合、このパラメーターは無視されます。  
   
- *オプション*  
- 省略可能。 **レコード**を開くためのオプションを指定する[RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)値です。 既定値は**Adopenrecordunspecified**です。 これらの値は組み合わせることができます。  
+ *[オプション]*  
+ 任意。 **レコード**を開くためのオプションを指定する[RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)値です。 既定値は**Adopenrecordunspecified**です。 これらの値は組み合わせることができます。  
   
  *ユーザー名*  
- 省略可能。 必要に応じて、*ソース*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
+ 任意。 必要に応じて、*ソース*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
  *パスワード*  
- 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
+ 任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
 ## <a name="remarks"></a>解説  
  *ソース*は次のようになります。  

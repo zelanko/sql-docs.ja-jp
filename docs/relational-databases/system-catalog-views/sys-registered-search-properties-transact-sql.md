@@ -24,28 +24,28 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 055e64c743c453fb6362d45587b395bf6f3d77bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09b95722f47442b2d5d749d8ba36888fb9605f58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717615"
 ---
 # <a name="sysregistered_search_properties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースの検索プロパティリストに含まれる検索プロパティごとに1行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|このプロパティが属する検索プロパティリストの ID。|  
-|**property_set_guid**|**UNIQUEIDENTIFIER**|検索プロパティが属するプロパティ セットを識別するグローバル一意識別子 GUID。|  
+|**property_set_guid**|**uniqueidentifier**|検索プロパティが属するプロパティ セットを識別するグローバル一意識別子 GUID。|  
 |**property_int_id**|**int**|プロパティセット内でこの検索プロパティを識別する整数。 **property_int_id**は、プロパティセット内で一意です。|  
 |**property_name**|**nvarchar (64)**|検索プロパティリストでこの検索プロパティを一意に識別する名前。<br /><br /> 注: プロパティを検索するには、 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)述語でこのプロパティ名を指定します。|  
 |**property_description**|**nvarchar(512)**|プロパティの説明。|  
-|**property_id**|**int**|**Property_list_id**値によって識別される検索プロパティリスト内の検索プロパティの内部プロパティ ID。<br /><br /> 特定のプロパティが特定の検索プロパティ リストに追加されると、Full-Text Engine は、プロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID (整数) は、特定の検索プロパティリストに対して一意です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、プロパティを検索プロパティリストに追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> フルテキストインデックス内のすべてのプロパティ関連コンテンツを表示するには、次のようにします。 <br />                  [dm_fts_index_keywords_by_property &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|**Property_list_id**値によって識別される検索プロパティリスト内の検索プロパティの内部プロパティ ID。<br /><br /> 特定のプロパティが特定の検索プロパティ リストに追加されると、Full-Text Engine は、プロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID (整数) は、特定の検索プロパティリストに対して一意です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、プロパティを検索プロパティリストに追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> フルテキストインデックス内のすべてのプロパティ関連コンテンツを表示するには、次のようにします。 <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  検索プロパティ リストについて詳しくは、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -54,7 +54,7 @@ ms.locfileid: "68067894"
 > [!NOTE]  
 >  検索プロパティリストの所有者は、一覧に対する参照または制御権限を許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCE 権限を与えることができます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、登録されている検索プロパティのすべてのメタデータを表示します。  
   
 ```  
@@ -64,7 +64,7 @@ SELECT * FROM sys.registered_search_properties;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキストインデックスの変更](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [fulltext_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  

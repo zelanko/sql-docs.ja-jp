@@ -291,7 +291,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による **xml** データ型のサポートにより、**TYPE ディレクティブ**を指定することで、FOR XML クエリの結果を、string データ型または image データ型ではなく、[xml](../../relational-databases/xml/type-directive-in-for-xml-queries.md) データ型で返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](../../relational-databases/xml/use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による **xml** データ型のサポートにより、[TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)を指定することで、FOR XML クエリの結果を、string データ型または image データ型ではなく、**xml** データ型で返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](../../relational-databases/xml/use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
 ## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  

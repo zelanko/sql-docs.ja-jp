@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbae126c819088bd277621b207454503a86c8955
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68892849"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306043"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 関数
 **互換性**  
@@ -69,7 +69,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>診断  
  **Configdsn**が FALSE を返す場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効でした。|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*Lpszattributes*引数に構文エラーが含まれています。|  
@@ -95,7 +95,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
  ダイアログボックスを表示するには、 *hwndParent*を null にすることはできません。  
   
-## <a name="adding-a-data-source"></a>データソースの追加  
+## <a name="adding-a-data-source"></a>データ ソースの追加  
  *Lpszattributes*で**configdsn**にデータソース名が渡されると、 **configdsn**によって名前が有効であることがチェックされます。 データソース名が既存のデータソース名と一致し、 *hwndParent*が null の場合、 **configdsn**は既存の名前を上書きします。 既存の名前と一致し、 *hwndParent*が null でない場合、 **configdsn**はユーザーに対して既存の名前を上書きするように求めます。  
   
  *Lpszattributes*にデータソースへの接続に必要な情報が含まれている場合は、 **configdsn**を使用してデータソースを追加したり、ユーザーが接続情報を変更できるダイアログボックスを表示したりすることができます。 *Lpszattributes*にデータソースに接続するための十分な情報が含まれていない場合は、 **configdsn**によって必要な情報が決定される必要があります。*hwndParent*が null でない場合は、ユーザーから情報を取得するためのダイアログボックスが表示されます。  
@@ -116,12 +116,12 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## <a name="deleting-a-data-source"></a>データソースの削除  
  データソースを削除するには、 *Lpszattributes*の**configdsn**にデータソース名を渡す必要があります。 **Configdsn**は、データソース名が Odbc .ini ファイル (またはレジストリ) にあることを確認します。 次に、インストーラー DLL で**Sqlremovedsnfromini**を呼び出して、データソースを削除します。  
   
-## <a name="note"></a>注意
+## <a name="note"></a>メモ
  このルーチンの Unicode バージョンを記述する場合は、LPCSTR ではなく LPCWSTR 引数を使用して、 **ConfigDSNW**を呼び出す必要があります。
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Odbc .ini ファイルまたはレジストリから値を取得する|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|  

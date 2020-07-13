@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentRow property [ADO]
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54d89c536145f413513fa67a8e76f7f00cf8322c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917670"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763373"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow プロパティ (ADO)
 行の親が ADO **Record**オブジェクトに変換されるように、 **ADORecordConstruction**オブジェクトの OLE DB **row**オブジェクトのコンテナーを設定します。  

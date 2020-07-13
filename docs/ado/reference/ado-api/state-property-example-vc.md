@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759728"
 ---
 # <a name="state-property-example-vc"></a>State プロパティの例 (VC++)
 この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用してメッセージを表示します。  

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6494c70226195f3cab10c3a3925c19dcfcdd954e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827951"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432269"
 ---
 # <a name="create-infosource"></a>[インフォソースの作成]
   **[インフォソースの作成]** ダイアログ ボックスを使用すると、新しいインフォソースを作成できます。 新しいインフォソースを作成するには、 **[トランザクション データのインフォソースの作成]** または **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  

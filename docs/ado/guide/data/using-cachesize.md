@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923576"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763043"
 ---
 # <a name="using-cachesize"></a>CacheSize を使用する
 プロバイダーからローカルメモリに一度に取得するレコードの数を制御するには、 **CacheSize**プロパティを使用します。 たとえば、 **CacheSize**が10の場合、最初に**レコードセット**オブジェクトを開いた後、プロバイダーは最初の10個のレコードをローカルメモリに取得します。 **レコードセット**オブジェクト内を移動すると、プロバイダーはローカルメモリバッファーからデータを返します。 キャッシュ内の最後のレコードを越えて移動すると、プロバイダーは、次の10個のレコードをデータソースからキャッシュに取得します。  

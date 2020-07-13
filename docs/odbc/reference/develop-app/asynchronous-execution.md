@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f30f026c-7e8d-4ef2-a2ee-877ce19dd6a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49461b354c466d6d681f4c35e332f02f04c3e2a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4d003f2752bac46c9c9da73405db5c0ff21be5a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106237"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285142"
 ---
 # <a name="asynchronous-execution"></a>非同期実行
 ODBC では、ステートメントと接続の両方の操作に対して非同期操作をサポートしています。 非同期操作が完了したことを確認するには、次の2つの方法があります。  

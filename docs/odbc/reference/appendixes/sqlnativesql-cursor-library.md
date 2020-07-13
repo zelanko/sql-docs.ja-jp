@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLNativeSql function [ODBC], Cursor Library
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a8c42efbd87296cf7157d75d1848e4655247818
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 41f7617530f34d49852ca67db9f47cab94292385
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125708"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300572"
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (カーソル ライブラリ)
 > [!IMPORTANT]  

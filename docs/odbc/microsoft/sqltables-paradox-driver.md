@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48cbc19506a7f695433489c952f53864b614a05e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa13b5395d8f3c2cb470a4eff1b1ef02a43bad53
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949024"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299290"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (Paradox ドライバー)
 > [!NOTE]  

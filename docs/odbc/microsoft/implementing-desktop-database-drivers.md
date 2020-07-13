@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952351"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290612"
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーの実装
 Microsoft ODBC Desktop データベースドライバを実装およびセットアップする方法については、ODBC データソースアドミニストレーターのオンラインヘルプを参照してください。 このファイルには、 [MICROSOFT ODBC データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)のドライバーセットアップルーチンの実行中にアクセスできます。  

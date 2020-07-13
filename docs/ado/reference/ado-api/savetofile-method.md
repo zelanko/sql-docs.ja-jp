@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917034"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755826"
 ---
 # <a name="savetofile-method"></a>SaveToFile メソッド
 [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)のバイナリコンテンツをファイルに保存します。  
@@ -34,7 +34,7 @@ Stream.SaveToFile FileName, SaveOptions
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- */Db*  
+ *FileName*  
  **ストリーム**の内容の保存先となるファイルの完全修飾名を含む**文字列**値です。 任意の有効なローカルの場所、または UNC 値を使用してアクセスできる任意の場所に保存できます。  
   
  *System.xml.linq.saveoptions>*  
@@ -43,7 +43,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  既存のファイルを上書きする場合 ( **adSaveCreateOverwrite**が設定されている場合)、 **SaveToFile**は新しい[EOS](../../../ado/reference/ado-api/eos-property.md)の後にある元の既存のファイルからすべてのバイトを切り捨てます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **SaveToFile**は、**ストリーム**オブジェクトの内容をローカルファイルにコピーするために使用できます。 **ストリーム**オブジェクトの内容またはプロパティに変更はありません。 **ストリーム**オブジェクトは、 **SaveToFile**を呼び出す前に開いている必要があります。  
   
  このメソッドは、**ストリーム**オブジェクトと基になるソースとの関連付けを変更しません。 **ストリーム**オブジェクトは、開いたときにソースであった元の URL または**レコード**と関連付けられたままになります。  

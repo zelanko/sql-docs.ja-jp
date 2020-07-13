@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019933"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890968"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースメールログからイベントを削除します。 ログ内のすべてのイベント、または日付または種類の条件を満たすイベントを削除します。  
   
@@ -48,7 +48,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベースメールログからエントリを完全に削除するには、 **sysmail_delete_log_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い記録だけを削除できます。 この場合、引数で指定した日時より前のイベントが削除されます。 省略可能な引数を使用すると、 **event_type**引数として指定された特定の種類のイベントのみを削除できます。  
   
  データベース メール ログのエントリを削除しても、データベース メールのテーブルから電子メールのエントリは削除されません。 [Sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)を使用して、データベースメールテーブルから電子メールを削除します。  
@@ -66,7 +66,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>B. 最も古いイベントを削除する  
+### <a name="b-deleting-the-oldest-events"></a>B: 最も古いイベントを削除する  
  次の例では、データベース メール ログにあるイベントのうち、2005 年 10 月 9 日より前のイベントを削除します。  
   
 ```  
@@ -75,7 +75,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-### <a name="c-deleting-all-events-of-a-certain-type"></a>C. 特定の種類のすべてのイベントを削除する  
+### <a name="c-deleting-all-events-of-a-certain-type"></a>C: 特定の種類のすべてのイベントを削除する  
  次の例では、データベース メール ログにある成功メッセージを削除します。  
   
 ```  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sysmail_event_log &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  

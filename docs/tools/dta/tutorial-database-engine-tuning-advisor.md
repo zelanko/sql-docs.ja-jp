@@ -1,5 +1,6 @@
 ---
-title: チュートリアル:データベース エンジン チューニング アドバイザー
+title: チュートリアル:Database Engine Tuning Advisor
+description: データベース エンジン チューニング アドバイザーでは、クエリがどのように処理されるかが調査され、データベース構造を変更することによってクエリ処理のパフォーマンスを向上させる方法が推奨されます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304702"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151486"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:データベース エンジン チューニング アドバイザー
+# <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -32,13 +33,13 @@ ms.locfileid: "75304702"
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルでは、データベース エンジン チューニング アドバイザー GUI の操作方法、および基本的な作業を GUI と **dta** ユーティリティの両方で実行する方法を学習します。 ここで学習する内容は次のとおりです。  
   
-[レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 このレッスンでは、データベース エンジン チューニング アドバイザーの新しい GUI に慣れ親しみ、表示オプションとレイアウトの設定方法を学習します。  
   
-[レッスン 2: データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[レッスン 2:データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 このレッスンでは、データベース エンジン チューニング アドバイザーの GUI を使った基本的なチューニング タスクの実行方法を学習します。  
   
-[レッスン 3: dta コマンド プロンプト ユーティリティの使用](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[レッスン 3:dta コマンド プロンプト ユーティリティの使用](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 このレッスンでは、 **dta** コマンド プロンプト ユーティリティを起動する方法と、いくつかの簡単なチューニング コマンドを実行する方法を学習します。  
   
 ## <a name="requirements"></a>必要条件  
@@ -54,7 +55,7 @@ ms.locfileid: "75304702"
 -   コマンド プロンプト ユーティリティおよびユーティリティの動作の制御に使用できるオプションの XML ファイルに関するリファレンス情報については、「[dta Utility](../../tools/dta/dta-utility.md) 」を参照してください。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

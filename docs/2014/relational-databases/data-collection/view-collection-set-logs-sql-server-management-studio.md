@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a68d71c44304d2f57c39d5a32fd57a5efb9617e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 925029966c0d6ea023b18655fc7399b2a0b3af70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62918242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970375"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>コレクション セット ログの表示 (SQL Server Management Studio)
   すべてのコレクション セットのログまたは個々のコレクション セットのログは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から表示できます。  

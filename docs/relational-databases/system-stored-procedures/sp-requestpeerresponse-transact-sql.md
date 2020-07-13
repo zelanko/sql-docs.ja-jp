@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f8d75b208cc91d52d20fb4e94340809cd6857fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899282"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このプロシージャは、ピアツーピアトポロジ内のノードから実行された場合、トポロジ内の他のすべてのノードからの応答を要求します。 この手順を実行し、対応する応答を確認することで、前のすべてのコマンドが応答ノードに配信されたことを保証できます。 このストアドプロシージャは、任意のデータベースの要求元のノードで実行されます。  
   
@@ -48,7 +48,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_requestpeerresponse**は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_requestpeerresponse**は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する前に、すべてのコマンドが他のすべてのノードによって受信されたことを確認するために使用されます。 また、ノードがオフラインの間に行われたデータ定義言語 (DDL) の変更をレプリケートするときに、これらの変更が他のノードに到達する時間を推定する場合にも使用できます。  
@@ -58,7 +58,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_requestpeerresponse**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   

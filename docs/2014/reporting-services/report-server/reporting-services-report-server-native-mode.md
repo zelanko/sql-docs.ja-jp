@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103312"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
@@ -30,7 +30,7 @@ ms.locfileid: "66103312"
   
  このトピックの内容は次のとおりです。  
   
--   [ネイティブモードの概要](#bkmk_sum)  
+-   [ネイティブ モードの概要](#bkmk_sum)  
   
 -   [コンテンツの管理](#bkmk_managecontent)  
   
@@ -38,9 +38,8 @@ ms.locfileid: "66103312"
   
 -   [レポートからの画像リソースの参照](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a>ネイティブモードの概要  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードは、管理とメンテナンスが必要な複数のサーバー側機能で構成されます。 次に、それらのサーバー機能の例を示します。  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a>ネイティブモードの概要  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードは、管理とメンテナンスが必要な複数のサーバー側機能で構成されます。 次に、それらのサーバー機能の例を示します。  
   
 -   レポート サーバー Web サービス。レポート サーバー サービス内で実行されます。  
   
@@ -48,27 +47,23 @@ ms.locfileid: "66103312"
   
 -   レポート サーバー データベース。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールを完全に管理するには、次の権限が必要です。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールを完全に管理するには、次の権限が必要です。  
   
 -   レポート サーバー コンピューターのローカル Administrator グループのメンバーシップ。 リモート コンピューターで実行されるサーバー機能がインストールに含まれている場合に、リモート接続を介してサーバーを管理するには、リモート コンピューターの管理者権限が必要です。  
   
 -   データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベース管理者権限。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をドメイン コントローラーにインストールする場合は、ドメイン管理者のアクセス許可が必要です。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をドメイン コントローラーにインストールする場合は、ドメイン管理者のアクセス許可が必要です。  
   
-##  <a name="bkmk_managecontent"></a>コンテンツの管理  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> コンテンツの管理  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理はレポート、モデル、フォルダー、リソース、および共有データ ソースの管理を指します。 これらのすべてのアイテムは、プロパティおよびセキュリティの設定をとおして、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。  
   
 > [!NOTE]  
 >  コンテンツ管理はレポート サーバー管理とは異なります。 レポートサーバーが実行されている環境を管理する方法の詳細については、「 [Administration (Reporting Services)](reporting-services-report-server-native-mode.md)」を参照してください。  
   
  コンテンツ管理には、次のタスクが含まれます。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されるロールベースのセキュリティを適用することにより、レポート サーバー サイトおよびアイテムをセキュリティで保護します。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供されるロールベースのセキュリティを適用することにより、レポート サーバー サイトおよびアイテムをセキュリティで保護します。  
   
 -   フォルダーを追加、変更、および削除することにより、レポート サーバーのフォルダー階層を構造化します。  
   
@@ -84,15 +79,14 @@ ms.locfileid: "66103312"
   
  管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
- レポート サーバーのコンテンツを管理するためのツールには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーがあります。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 レポート マネージャーでは、レポート サーバーのアイテムや操作に対するアクセス権を付与できます。また、レポートをはじめとする各種のコンテンツ、さらに、すべての共有アイテムとレポート配信機能を表示および使用できます。  
+ レポート サーバーのコンテンツを管理するためのツールには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 レポート マネージャーでは、レポート サーバーのアイテムや操作に対するアクセス権を付与できます。また、レポートをはじめとする各種のコンテンツ、さらに、すべての共有アイテムとレポート配信機能を表示および使用できます。  
   
-##  <a name="bkmk_manageresources"></a>リソースの保護と管理  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a>リソースの保護と管理  
  リソースはレポート サーバーに格納される管理対象アイテムですが、レポート サーバーで処理されるものではありません。 通常、リソースにレポート ユーザー向けの外部コンテンツが用意されています。 例としては、.jpg ファイルや、レポートで使用されるビジネス ルールを示す HTML ファイルなどがあります。 JPG ファイルや HTML ファイルはレポート サーバーに格納されますが、このファイルはレポート サーバーで処理されずに、ブラウザーに直接渡されます。  
   
  レポート サーバーにリソースを追加するには、ファイルをアップロードまたはパブリッシュします。  
   
-|Operation|ファイルの種類|  
+|操作|ファイルの種類|  
 |---------------|---------------|  
 |アップロード|レポート定義 (.rdl) ファイルとレポート モデル (.smdl) ファイルを除くすべてのファイルがアップロードされます。<br /><br /> リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
 |発行|.rdl、.smdl、.rds データ ソース ファイルを除くすべてのファイルが、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  
@@ -103,7 +97,7 @@ ms.locfileid: "66103312"
   
  リソースは、レポート サーバーのフォルダー階層に、レポート、共有データ ソース、共有スケジュール、フォルダーなどと共に名前付きアイテムとして置かれます。 レポート サーバーに保存されているアイテムと同様に、リソースは検索、表示、保護、プロパティの設定を実行できます。 リソースの表示や管理を行うには、リソース表示タスクやリソース管理タスクのロールが割り当てられている必要があります。  
   
-##  <a name="bkmk_referenceimage"></a>レポートからの画像リソースの参照  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a>レポートからの画像リソースの参照  
  リソースには、レポートで参照する画像を含めることができます。 レポートで外部画像を使用する必要がある場合、リソースに画像を保存しておくと次の利点が得られます。  
   
 -   レポート サーバー データベースにストレージを集中する。 レポート サーバー データベースとその内容を別のコンピューターに移動しても、外部画像はレポート上にそのまま残ります。 ディスク上や他のコンピューターに保存されている画像ファイルを追跡する必要はありません。  

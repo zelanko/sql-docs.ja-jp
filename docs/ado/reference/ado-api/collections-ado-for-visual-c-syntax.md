@@ -15,14 +15,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919916"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748877"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -35,7 +35,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -43,14 +43,14 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
 get_Item(VARIANT Index, _ADOParameter **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -66,7 +66,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -74,14 +74,14 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
 get_Item(VARIANT Index, ADOField **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -96,26 +96,26 @@ Clear(void);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
 get_Item(VARIANT Index, ADOError **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ### <a name="methods"></a>メソッド  
   
@@ -123,18 +123,18 @@ get_Item(VARIANT Index, ADOError **ppvObject);
 Refresh(void);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
 get_Item(VARIANT Index, ADOProperty **ppvObject);  
 ```  
   
- 詳細については、このトピックの後半の「  
+ 詳細については、「  
   
 -   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   

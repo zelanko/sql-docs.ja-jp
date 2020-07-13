@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896800"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924626"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 
 この記事では、Data Migration Assistant の各リリースで追加された機能の一覧を示します。
+
+## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5.2
+Data Migration Assistant の v1.0 リリースでは、次のことがサポートされています。
+- Azure Government および national クラウド (ソブリンオファリング) をサポートする Azure Migrate に評価をアップロードしています。  この機能により、は、Azure SQL に移行する SQL Server のデータ資産の準備状況を評価できるようになります。
+- Azure Government および国内のクラウドをサポートする Azure Migrate に評価をアップロードするためのコマンドラインサポート。  これで、Azure migrate project への評価のアップロードを完全に自動化して、統合された Azure SQL 対応レポートを取得できます。 
 
 ## <a name="data-migration-assistant-v-50"></a>Data Migration Assistant v 5.0
 
@@ -82,7 +87,7 @@ Data Migration Assistant の v2.0 リリースでは Azure SQL Database マネ�
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v4.0
 
-Data Migration Assistant の v2.0 リリースでは、Azure SQL Database SKU 推奨事項機能が導入されています。これにより、ユーザーは、をホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、推奨される最小 Azure SQL Database SKU を特定できます。データベース. この機能では、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項に加え、月あたりの推定コストも提供します。 また、すべてのデータベースを Azure に一括してプロビジョニングする機能も提供されます。
+Data Migration Assistant の v2.0 リリースでは、Azure SQL Database SKU の推奨事項機能が導入されています。これにより、ユーザーは、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、推奨される最小 Azure SQL Database SKU を特定できます。 この機能では、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項に加え、月あたりの推定コストも提供します。 また、すべてのデータベースを Azure に一括してプロビジョニングする機能も提供されます。
 
 > [!NOTE]
 > 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
@@ -176,13 +181,13 @@ V2.0 リリースの Data Migration Assistant には、ストレージの節約�
 Data Migration Assistant の v1.0 リリースは最初のリリースであり、次の機能を備えています。
 
 - オンプレミスバージョンの SQL Server へのアップグレードに影響する可能性がある問題の検出。 すべての結果は互換性の問題として記述されており、次の領域に分類されています。
-  - 重大な変更
+  - 互換性に影響する変更
   - 動作の変更
   - 非推奨の機能
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能の検出。 すべての結果は、機能に関する推奨事項として説明されており、次の領域に分類されています。
-  - パフォーマンス
-  - Security
-  - ストレージ
+  - [パフォーマンス]
+  - セキュリティ
+  - Storage
 - 評価を実行する最新のユーザーエクスペリエンス。
 
 ## <a name="see-also"></a>関連項目

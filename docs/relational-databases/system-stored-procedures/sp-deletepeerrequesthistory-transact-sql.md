@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletepeerrequesthistory
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1af3aad1f66f3de7dd2fce44990718980018d3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111944"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861423"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   要求履歴 ([MSpeer_request &#40;transact-sql&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)) と応答履歴 ([MSpeer_response &#40;transact-sql&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)) を含む、パブリケーション状態要求に関連する履歴を削除します。このストアドプロシージャは、ピアツーピアレプリケーショントポロジに参加しているパブリッシャー側のパブリケーションデータベースで実行されます。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
@@ -48,7 +48,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_deletepeerrequesthistory**は、ピアツーピアトランザクションレプリケーショントポロジで使用されます。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  **Sp_deletepeerrequesthistory**を実行する場合は、 *request_id*または*cutoff_date*のいずれかを指定する必要があります。  
@@ -56,7 +56,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_deletepeerrequesthistory**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_helppeerrequests &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
  [sp_helppeerresponses &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
  [sp_requestpeerresponse &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  

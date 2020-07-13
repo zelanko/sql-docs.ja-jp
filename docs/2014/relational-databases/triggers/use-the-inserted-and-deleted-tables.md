@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014390"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
   DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  
@@ -49,8 +48,7 @@ ms.locfileid: "62524378"
 > [!NOTE]  
 >  トリガーの動作が、データ変更の影響のある行の数に依存する場合、複数行データ変更 (SELECT ステートメントに基づく INSERT、DELETE、または UPDATE) に @@ROWCOUNT の検査などのテストを使用し、適切な動作を実行する必要があります。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で `text` 列、`ntext` 列、または `image` 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大量のデータのストレージには、`varchar(max)` データ型、`nvarchar(max)` データ型、および `varbinary(max)` データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted および deleted テーブルの `varchar(max)`、`nvarchar(max)`、および `varbinary(max)` 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)」を参照してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で `text` 列、`ntext` 列、または `image` 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大量のデータのストレージには、`varchar(max)` データ型、`nvarchar(max)` データ型、および `varbinary(max)` データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted および deleted テーブルの `varchar(max)`、`nvarchar(max)`、および `varbinary(max)` 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)」を参照してください。  
   
  **トリガーで inserted テーブルを使用してビジネス ルールを適用する例**  
   
@@ -88,7 +86,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- このビューの結果セットには 3 列があり、1 つは `int` 列で、後の 2 つは `nvarchar` 列です。 ビューで定義された INSTEAD OF トリガーに渡される inserted テーブルと deleted テーブルには、`int` という名前の `BusinessEntityID` 列、`nvarchar` という名前の `LName` 列、および `nvarchar` という名前の `FName` 列があります。  
+ このビューの結果セットには 3 列があり、1 つは `int` 列で、後の 2 つは `nvarchar` 列です。 ビューで定義された INSTEAD OF トリガーに渡される inserted テーブルと deleted テーブルには、`BusinessEntityID` という名前の `int` 列、`LName` という名前の `nvarchar` 列、および `FName` という名前の `nvarchar` 列があります。  
   
  ビューの選択リストには、単一のベース テーブルの列に直接マップされない式を含めることができます。 ビューの式の中には、定数や関数の呼び出しなど、列を参照しない可能性があり、無視できるものがあります。 複合式を使用して複数の列を参照できます。ただし、inserted テーブルおよび deleted テーブルでは、挿入された行ごとに 1 つの値のみを持つことができます。 このことは、複合式を持つ計算列を参照するビューの単純式にも当てはまります。 このような種類の式は、ビューの INSTEAD OF トリガーが処理する必要があります。  
   

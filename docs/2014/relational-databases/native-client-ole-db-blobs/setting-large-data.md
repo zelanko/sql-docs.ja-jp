@@ -1,5 +1,5 @@
 ---
-title: 大きなデータを設定する |Microsoft Docs
+title: 大きなデータの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b1a0b6fdce858175fa4d59e5cefaf1e3760d24f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63140621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056458"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
@@ -49,9 +48,7 @@ ms.locfileid: "63140621"
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  
-  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 
-  **GetData** を呼び出して、その行セットからデータを読み取ります。  
+5.  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 **GetData** を呼び出して、その行セットからデータを読み取ります。  
   
 6.  データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して **IRowsetChange::SetData** (または **IRowsetChange::InsertRow**) を呼び出し、データを設定します。  
   

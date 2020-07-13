@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68770961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731762"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   エージェント プロファイルに新しいパラメーターとその値を追加します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -43,44 +43,44 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
  この*profile_id*が表すエージェントの種類を確認するには、 [MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルの*profile_id*を見つけ、 *agent_type*フィールドの値をメモします。 値は次のとおりです。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント|  
 |**2**|ログ リーダー エージェント (Log Reader Agent)|  
-|**番**|ディストリビューション エージェント|  
+|**3**|ディストリビューション エージェント|  
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
 `[ @parameter_name = ] 'parameter_name'`パラメーターの名前を指定します。 *parameter_name*は**sysname**であり、既定値はありません。 システムプロファイルで既に定義されているパラメーターの一覧については、「[レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。 各エージェントの有効なパラメーターの完全な一覧については、次のトピックを参照してください。  
   
--   [レプリケーションスナップショットエージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [レプリケーション ログ リーダー エージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [レプリケーション ディストリビューション エージェント](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [レプリケーションマージエージェント](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [レプリケーションキューリーダーエージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
 `[ @parameter_value = ] 'parameter_value'`パラメーターに割り当てる値を指定します。 *parameter_value*は**nvarchar (255)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_add_agent_parameter**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_agent_parameter**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションエージェントプロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
  [sp_change_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

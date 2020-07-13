@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106220"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)
@@ -76,8 +76,8 @@ ms.locfileid: "66106220"
 >  2 つ目の円グラフの書式は設定できません。 このため、円スライスを収集する際は最初の方法を使用することを強くお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフ](charts-report-builder-and-ssrs.md)   
+ [グラフ上のデータポイントの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [レポートビルダーおよび SSRS&#41;&#40;円グラフの外側にデータポイントラベルを表示する](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [レポートビルダーおよび SSRS&#41;&#40;円グラフにパーセンテージ値を表示する](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [グラフへの 3D 効果の追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  

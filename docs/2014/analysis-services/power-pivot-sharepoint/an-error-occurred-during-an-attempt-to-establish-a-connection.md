@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 242fefb2ca22d7b0129268a8a3ea8ed98e80bbe3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547614"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続は更新に失敗しました: PowerPivot データ
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました:PowerPivot データ
   このエラーは、PowerPivot for SharePoint がインストールされていないサーバーで PowerPivot データのクエリを実行した場合に発生します。 また、SQL Server Analysis Services (PowerPivot) サービスが停止した場合や、PowerPivot データを以前のバージョンで表示しようとした場合にも発生します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>詳細情報  
   
 |||  
 |-|-|  
 |適用対象|PowerPivot for SharePoint|  
 |製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|データ接続に失敗しました。|  
-|メッセージ テキスト|外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続は更新に失敗しました: PowerPivot データ|  
+|メッセージ テキスト|外部データ ソースへの接続を確立しようとしましたが、エラーが発生しました。 次の接続の更新に失敗しました:PowerPivot データ|  
   
 ## <a name="explanation"></a>説明  
  SharePoint にパブリッシュされた Excel ブック内の PowerPivot データのクエリを実行するときに SharePoint 環境に PowerPivot for SharePoint サーバーがないか、SQL Server Analysis Services (PowerPivot) サービスが停止している場合は、Excel Services からこのエラーが返されます。  

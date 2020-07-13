@@ -1,21 +1,21 @@
 ---
-title: モデル&gt;予測&lt;結合 (DMX) から選択します。Microsoft Docs
+title: '&lt;モデル &gt; 予測結合 (DMX) から選択します。Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67928328"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670130"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>モデル&gt;予測&lt;結合 (DMX) からの選択
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>&lt;モデル &gt; 予測結合 (DMX) からの選択
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   では、マイニングモデルを使用して、外部データソースの列の状態を予測します。 **予測結合**ステートメントは、各ケースをソースクエリからモデルに一致させます。  
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式リストの選択*  
  マイニング モデルから派生する、列の識別子と式のコンマ区切りのリストです。  
@@ -48,15 +48,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  ソース クエリです。  
   
  *結合マッピングの一覧*  
- 省略可能。 モデルの列をソースクエリの列と比較する論理式。  
+ 任意。 モデルの列をソースクエリの列と比較する論理式。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
- *条件*  
- 省略可能。 スカラー値を返す式。  
+ *式 (expression)*  
+ 任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ON 句は、ソースクエリの列とマイニングモデルの列との間のマッピングを定義します。 このマッピングは、列を入力として使用して予測を作成できるように、ソースクエリの列をマイニングモデルの列に転送するために使用されます。 \<次の例に示すように、*結合マッピングリスト*> の列は、等号 (=) を使用して関連付けられています。  
   
 ```  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  予測結合のソース クエリは、テーブルまたは単一クエリのどちらかにできます。  
   
- \< *[式の選択] ボックスの一覧*でテーブル式を返さない予測関数を指定できます\<。*条件式*>> ます。  
+ [式の選択] ボックスの一覧でテーブル式を返さない予測関数を指定でき \< *select expression list* \< ます。*条件式*>> ます。  
   
  **自然予測結合**では、モデル内の列名に一致するソースクエリの列名が自動的にマップされます。 **自然予測**を使用する場合は、ON 句を省略できます。  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>例 2: OPENQUERY の使用  
- 次の例では、外部データセットに格納されている潜在顧客の一覧を使用して、バッチ予測クエリを作成する方法を示します。 テーブルはの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスで定義されているデータソースビューの一部であるため、クエリは[OPENQUERY](../dmx/source-data-query-openquery.md)を使用してデータを取得できます。 テーブル内の列の名前がマイニングモデルの列の名前と異なるため、テーブルの列をモデルの列にマップするには**ON**句を使用する必要があります。  
+ 次の例では、外部データセットに格納されている潜在顧客の一覧を使用して、バッチ予測クエリを作成する方法を示します。 テーブルはのインスタンスで定義されているデータソースビューの一部であるため、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリは[OPENQUERY](../dmx/source-data-query-openquery.md)を使用してデータを取得できます。 テーブル内の列の名前がマイニングモデルの列の名前と異なるため、テーブルの列をモデルの列にマップするには**ON**句を使用する必要があります。  
   
  このクエリでは、テーブル内の各ユーザーの姓と名が返されます。これは、各ユーザーが自転車を購入する可能性があるかどうかを示すブール型の列と共に返されます。0は "自転車を購入しない" ことを表し、1は "自転車を購入する可能性がある" ことを意味します。 最後の列には、予測結果の確率が含まれます。  
   
@@ -183,12 +183,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- 予測可能な属性`[v Assoc Seq Line Items]`を含む列はテーブル列であるため、クエリは入れ子になったテーブルを含む単一の列を返します。 既定では、入れ子になった`Expression`テーブル列にはという名前が付けられます。 プロバイダーが階層的な行セットをサポートしていない場合は、次の例に示すように**フラット**化されたキーワードを使用して、結果を見やすくすることができます。  
+ 予測可能な属性を含む列はテーブル列であるため、 `[v Assoc Seq Line Items]` クエリは入れ子になったテーブルを含む単一の列を返します。 既定では、入れ子になったテーブル列にはという名前が付けられ `Expression` ます。 プロバイダーが階層的な行セットをサポートしていない場合は、次の例に示すように**フラット**化されたキーワードを使用して、結果を見やすくすることができます。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
  [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

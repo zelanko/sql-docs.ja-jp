@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c944b402b8b1ba9b78036d667ec728ccaf561a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62807667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934283"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
   このトピックでは、データベース ミラーリング セッションの同期動作モードおよび非同期動作モードについて説明します。  
   
 > [!NOTE]  
->  データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。  
+>  データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)」を参照してください。  
   
  
   
-##  <a name="TermsAndDefinitions"></a>用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  ここでは、このトピックの中心となるいくつかの用語を紹介します。  
   
  高パフォーマンス モード  
@@ -42,12 +41,11 @@ ms.locfileid: "62807667"
  ミラーリング監視サーバー  
  高い安全性モードの場合にのみ使用します。必要に応じて配置できる SQL Server のインスタンスです。ミラーリング監視サーバーを使用することにより、ミラー サーバーが自動フェールオーバーを開始するかどうかを決定できるようになります。 2 つのフェールオーバー パートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーの唯一の役割は、自動フェールオーバーをサポートすることです。  
   
-##  <a name="VisualElement"></a>非同期データベースミラーリング (高パフォーマンスモード)  
+##  <a name="asynchronous-database-mirroring-high-performance-mode"></a><a name="VisualElement"></a>非同期データベースミラーリング (高パフォーマンスモード)  
  ここでは、非同期データベース ミラーリングのしくみ、高パフォーマンス モードの使用に適した状況、およびプリンシパル サーバーで障害が発生した場合の対処法について説明します。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベースミラーリングを完全にサポートするエディションについては、「 [SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「高可用性 (AlwaysOn)」を参照してください。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベースミラーリングを完全にサポートするエディションについては、「 [SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「高可用性 (AlwaysOn)」を参照してください。  
   
  トランザクションの安全性が OFF に設定されていると、データベース ミラーリング セッションが非同期に動作します。 非同期動作は、高パフォーマンス モードという動作モードのみでサポートされています。 このモードでは高可用性という点を譲歩してパフォーマンスが強化されています。 高パフォーマンス モードでは、プリンシパル サーバーおよびミラー サーバーのみを使用します。 ミラー サーバーで発生した問題がプリンシパル サーバーに影響を及ぼすことはありません。 プリンシパル サーバーが停止した場合、ミラー データベースは DISCONNECTED になりますがウォーム スタンバイ状態で利用できます。  
   
@@ -63,13 +61,13 @@ ms.locfileid: "62807667"
   
  
   
-###  <a name="WhenUseHighPerf"></a>高パフォーマンスモードが適しているのはどのような場合ですか?  
+###  <a name="when-is-high-performance-mode-appropriate"></a><a name="WhenUseHighPerf"></a>高パフォーマンスモードが適しているのはどのような場合ですか?  
  プリンシパル サーバーから非常に離れた場所にミラー サーバーを設置していたり、軽度のエラーによるプリンシパル サーバーへの影響でも不都合が生じる災害復旧シナリオでは、高パフォーマンス モードが適切である場合があります。  
   
 > [!NOTE]  
 >  ログ配布はデータベース ミラーリングを補うことができ、非同期データベース ミラーリングの有効な代替手段です。 ログ配布の利点については、「[高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)」を参照してください。 ログ配布とデータベース ミラーリングの使用方法の詳細については、「[データベース ミラーリングとログ配布 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)」を参照してください。  
   
-###  <a name="WitnessImpactOnHighPerf"></a>高パフォーマンスモードでのミラーリング監視サーバーの影響  
+###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 高パフォーマンス モードのミラーリング監視の影響  
  Transact-SQL を使用して高パフォーマンス モードを構成する場合、SAFETY プロパティを OFF に設定した際には常に、WITNESS プロパティも OFF に設定することを強くお勧めします。 ミラーリング監視は高パフォーマンス モードでも使用できますが、使用による利点はなく、リスクが増えるだけです。  
   
  いずれかのパートナーがダウンし、ミラーリング監視がセッションから切断された場合、データベースは使用できなくなります。 この理由は、高パフォーマンス モードにミラーリング監視は本来必要でないにもかかわらず、ミラーリング監視が設定されている場合、セッションには 2 つ以上のサーバー インスタンスから構成されるクォーラムが必要になるからです。 セッションがクォーラムを失った場合、データベースとして機能することができません。  
@@ -83,7 +81,7 @@ ms.locfileid: "62807667"
 > [!NOTE]  
 >  クォーラムの種類の詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
-###  <a name="WhenPrincipalFails"></a>プリンシパルの障害への対応  
+###  <a name="responding-to-failure-of-the-principal"></a><a name="WhenPrincipalFails"></a> プリンシパルの障害への対応  
  プリンシパルに障害が発生した場合、データベースの所有者は次のいずれかを選択できます。  
   
 -   プリンシパルが再度使用できるようになるまで、データベースを復旧しない。  
@@ -99,11 +97,11 @@ ms.locfileid: "62807667"
   
 -   ミラー サーバーにサービスを強制する (データが損失する可能性があります)。  
   
-     強制されたサービスは、厳密には災害時の復旧方法なので、慎重に使用する必要があります。 サービスを強制できるのは、プリンシパル サーバーがダウンし、セッションが非同期である (トランザクションの安全性が OFF に設定されている) 状態で、セッションにミラーリング監視サーバーが存在しない (WITNESS プロパティが OFF に設定されている) か、ミラーリング監視サーバーがミラー サーバーに接続している (つまり、クォーラムがある) かのいずれかの場合に限ります。  
+     強制されたサービスは、厳密にはディザスター リカバリーの方法なので、慎重に使用する必要があります。 サービスを強制できるのは、プリンシパル サーバーがダウンし、セッションが非同期である (トランザクションの安全性が OFF に設定されている) 状態で、セッションにミラーリング監視サーバーが存在しない (WITNESS プロパティが OFF に設定されている) か、ミラーリング監視サーバーがミラー サーバーに接続している (つまり、クォーラムがある) かのいずれかの場合に限ります。  
   
      サービスを強制されたミラー サーバーは、プリンシパルの役割を引き継ぎ、サーバー内にあるデータベースのコピーをクライアントに提供します。 サービスが強制された時点でミラー サーバーに送信されていないプリンシパルのトランザクション ログは、すべて失われます。 このため、強制されたサービスを使用する方法は、データを損失する可能性を許容でき、データベースの早急な復旧が最優先される場合にのみ使用するようにしてください。 サービス強制のしくみ、およびそれを使用する際のベスト プラクティスの詳細については、「[データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
-##  <a name="Sync"></a>同期データベースミラーリング (高い安全性モード)  
+##  <a name="synchronous-database-mirroring-high-safety-mode"></a><a name="Sync"></a>同期データベースミラーリング (高い安全性モード)  
  ここでは、同期データベース ミラーリングのしくみ、高い安全性モード (自動フェールオーバーを伴うモードと伴わないモード)、および自動フェールオーバーにおけるミラーリング監視サーバーの役割について説明します。  
   
  トランザクションの安全性が FULL に設定されている場合、データベース ミラーリング セッションは高い安全性モードで実行され、初期同期フェーズの後に同期操作を行います。 ここでは、同期操作を行うように構成されているデータベース ミラーリング セッションについて詳しく説明します。  
@@ -111,7 +109,7 @@ ms.locfileid: "62807667"
  セッションの同期をとるには、ミラー サーバーがミラー データベースとプリンシパル データベースの同期をとる必要があります。 セッションが開始されると、プリンシパル サーバーはアクティブなログをミラー サーバーに送信し始めます。 ミラー サーバーは、できるだけ早く、受信したすべてのログ レコードをディスクに書き込みます。 受信したログ レコードがすべてディスクに書き込まれると、データベースが同期されます。 データベースの同期は、パートナーが互いに通信している限り保持されます。  
   
 > [!NOTE]  
->  データベース ミラーリング セッションでの状態変更を監視するには、 **Database Mirroring State Change** イベント クラスを使用します。 詳細については、「 [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)」を参照してください。  
+>  データベース ミラーリング セッションでの状態変更を監視するには、 **Database Mirroring State Change** イベント クラスを使用します。 詳しくは、「 [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)」をご覧ください。  
   
  同期が完了したら、プリンシパル データベースにコミットされるトランザクションはすべてミラー サーバーにもコミットされるので、データが確実に保護されます。 これは、トランザクションのログがディスクに再実行用として書き込まれたことを伝えるメッセージをプリンシパル サーバーがミラー サーバーから受信するまで、プリンシパル データベースへのトランザクションのコミットを待機することで実現します。 このメッセージを待機することで、トランザクションの待機時間が長くなることに注意してください。  
   
@@ -133,21 +131,21 @@ ms.locfileid: "62807667"
   
 
   
-###  <a name="HighSafetyWithOutAutoFailover"></a>自動フェールオーバーを伴わない高い安全性モード  
+###  <a name="high-safety-mode-without-automatic-failover"></a><a name="HighSafetyWithOutAutoFailover"></a>自動フェールオーバーを伴わない高い安全性モード  
  自動フェールオーバーを伴わない高い安全性モードの構成を次の図に示します。 この構成は、2 つのパートナーのみで構成されています。  
   
- ![ミラーリング監視サーバーなしで通信するパートナー](../media/dbm-high-protection-mode.gif "ミラーリング監視サーバーなしで通信するパートナー")  
+ ![ミラーリング監視なしで通信するパートナー](../media/dbm-high-protection-mode.gif "ミラーリング監視なしで通信するパートナー")  
   
- パートナーが接続され、データベースが既に同期されている場合、手動フェールオーバーがサポートされます。 ミラー サーバー インスタンスがダウンしても、プリンシパル サーバー インスタンスは影響を受けず、公開された状態で (つまり、データをミラー化せずに) 実行されます。 プリンシパル サーバーが利用できなくなると、ミラーリングが中断されますが、サービスをミラー サーバーに強制的に引き継ぐことができます (データを損失する可能性もあります)。 詳細については、「[データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)」を参照してください。  
+ パートナーが接続され、データベースが既に同期されている場合、手動フェールオーバーがサポートされます。 ミラー サーバー インスタンスがダウンしても、プリンシパル サーバー インスタンスは影響を受けず、公開された状態で (つまり、データをミラー化せずに) 実行されます。 プリンシパル サーバーが利用できなくなると、ミラーリングが中断されますが、サービスをミラー サーバーに強制的に引き継ぐことができます (データを損失する可能性もあります)。 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。  
   
-###  <a name="HighSafetyWithAutoFailover"></a>自動フェールオーバーを伴う高い安全性モード  
+###  <a name="high-safety-mode-with-automatic-failover"></a><a name="HighSafetyWithAutoFailover"></a>自動フェールオーバーを伴う高い安全性モード  
  自動フェールオーバーは、1 台のサーバーが機能しなくなった後もデータベースが動作し続けるようにすることで、高可用性を実現します。 自動フェールオーバーでは、セッションに 3 番目のサーバー インスタンスとして *ミラーリング監視サーバー*が存在する必要があります。このサーバーは、第 3 のコンピューターに常駐するのが理想的です。 自動フェールオーバーをサポートする高い安全性モードのセッションの構成を次の図に示します。  
   
- ![1 台のミラーリング監視サーバーと 2 台のパートナーによるセッション](../media/dbm-high-availability-mode.gif "1 台のミラーリング監視サーバーと 2 台のパートナーによるセッション")  
+ ![ミラーリング監視と 2 台のパートナーによるセッション](../media/dbm-high-availability-mode.gif "ミラーリング監視と 2 台のパートナーによるセッション")  
   
  2 つのパートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーは、プリンシパル サーバーが正常に動作しているかどうかを確認することにより、自動フェールオーバーをサポートするだけです。 ミラー サーバーが自動フェールオーバーを開始するのは、ミラー サーバーとミラーリング監視サーバーの両方がプリンシパル サーバーから切断された後、そのまま相互に接続されている場合だけです。  
   
- ミラーリング監視サーバーが設定されると、セッションでは *クォーラム*が必要になります。クォーラムとは、データベースを使用できるようにする、少なくとも 2 つのサーバー インスタンス間のリレーションシップのことです。 詳細については、「[データベース ミラーリング監視サーバー](database-mirroring-witness.md)」および「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+ ミラーリング監視サーバーが設定されている場合、このセッションでは、データベースを使用できるようにするために、少なくとも2つのサーバーインスタンス間に*クォーラム*が必要です。 詳細については、「[データベース ミラーリング監視サーバー](database-mirroring-witness.md)」および「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
  自動フェールオーバーを行うには以下の条件を満たしている必要があります。  
   
@@ -159,7 +157,7 @@ ms.locfileid: "62807667"
   
 -   プリンシパル サーバーが使用できなくなると、上記の条件で自動フェールオーバーが発生します。 ミラー サーバーはプリンシパル ロールに切り替わり、そのデータベースをプリンシパル データベースとして提供します。  
   
--   上記の条件が満たされていない場合にプリンシパル サーバーが使用できなくなると、サービスの強制が可能になる場合があります (ただし、データ損失の可能性があります)。 詳細については、「[データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)」を参照してください。  
+-   上記の条件が満たされていない場合にプリンシパル サーバーが使用できなくなると、サービスの強制が可能になる場合があります (ただし、データ損失の可能性があります)。 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。  
   
 -   ミラー サーバーのみが使用できなくなっても、プリンシパル サーバーとミラーリング監視サーバーはそのままの状態を維持します。  
   
@@ -168,21 +166,20 @@ ms.locfileid: "62807667"
 > [!NOTE]  
 >  ミラーリング監視サーバーが長時間切断されたままであることが予想される場合は、使用できるようになるまでミラーリング監視サーバーをセッションから削除することをお勧めします。  
   
-##  <a name="TsqlSettingsAndOpModes"></a>Transact-sql の設定とデータベースミラーリングの動作モード  
+##  <a name="transact-sql-settings-and-database-mirroring-operating-modes"></a><a name="TsqlSettingsAndOpModes"></a> Transact-SQL の設定とデータベース ミラーリングの動作モード  
  ここでは、ALTER DATABASE の設定、ミラー化されたデータベースの状態、およびミラーリング監視サーバー (存在する場合) という観点から、データベース ミラーリング セッションについて説明します。 このセクションは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ではなく、主に [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してデータベース ミラーリングを管理するユーザーを対象としています。  
   
 > [!TIP]  
->  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用する代わりに、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用して、オブジェクト エクスプローラーでセッションの動作モードを制御できます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用する代わりに、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用して、オブジェクト エクスプローラーでセッションの動作モードを制御できます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
   
 
   
-###  <a name="TxnSafetyAndWitness"></a>トランザクションの安全性とミラーリング監視サーバーの状態の動作モードへの影響  
+###  <a name="how-transaction-safety-and-witness-state-affect-the-operating-mode"></a><a name="TxnSafetyAndWitness"></a> トランザクションの安全性とミラーリング監視サーバーの状態の動作モードへの影響  
  セッションの動作モードは、トランザクションの安全性設定とミラーリング監視サーバーの状態の組み合わせによって決まります。 データベース所有者はいつでも、トランザクションの安全性レベルを変更でき、ミラーリング監視サーバーを追加または削除できます。  
   
 
   
-####  <a name="TxnSafety"></a>トランザクションの安全性  
+####  <a name="transaction-safety"></a><a name="TxnSafety"></a>トランザクションの安全性  
  トランザクションの安全性とは、データベース ミラーリング セッションが同期して動作するか、非同期で動作するかを決定する、ミラーリング固有のデータベース プロパティです。 安全性レベルには FULL と OFF の 2 種類があります。  
   
 -   SAFETY FULL  
@@ -201,7 +198,7 @@ ms.locfileid: "62807667"
   
  データベース所有者であれば、トランザクションの安全性レベルをいつでも変更できます。  
   
-####  <a name="WitnessState"></a>ミラーリング監視サーバーの状態  
+####  <a name="the-state-of-the-witness"></a><a name="WitnessState"></a>ミラーリング監視サーバーの状態  
  ミラーリング監視サーバーが設定されている場合、クォーラムが必要なため、ミラーリング監視サーバーの状態は常に重要です。  
   
  ミラーリング監視サーバーが存在する場合、その状態は以下の 2 つの状態のいずれかになります。  
@@ -224,16 +221,16 @@ ms.locfileid: "62807667"
   
  <sup>1</sup>ミラーリング監視サーバーが切断された場合は、ミラーリング監視サーバーインスタンスが使用可能になるまでミラーリング監視サーバーをオフに設定することをお勧めします。  
   
- <sup>2</sup>ミラーリング監視が高パフォーマンスモードで存在する場合、ミラーリング監視サーバーはセッションに参加しません。 ただし、データベースを使用できるようにするには、少なくとも 2 つのサーバー インスタンスが接続された状態にしておく必要があります。 そのため、高パフォーマンス モードのセッションでは、WITNESS プロパティを OFF に設定しておくことをお勧めします。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+ <sup>2</sup>ミラーリング監視が高パフォーマンスモードで存在する場合、ミラーリング監視サーバーはセッションに参加しません。 ただし、データベースを使用できるようにするには、少なくとも 2 つのサーバー インスタンスが接続された状態にしておく必要があります。 そのため、高パフォーマンス モードのセッションでは、WITNESS プロパティを OFF に設定しておくことをお勧めします。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
-###  <a name="ViewWitness"></a>安全性設定とミラーリング監視サーバーの状態の表示  
+###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a>安全性設定とミラーリング監視サーバーの状態の表示  
  安全性設定やデータベースのミラーリング監視サーバーの状態を表示するには、 **sys.database_mirroring** カタログ ビューを使用します。 関連する列は次のとおりです。  
   
-|係数|[列]|[説明]|  
+|要素|[列]|説明|  
 |------------|-------------|-----------------|  
-|トランザクションの安全性|**mirroring_safety_level**または**mirroring_safety_level_desc**|ミラー データベース上での更新に関するトランザクションの安全性設定。次のいずれかになります。<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= データベースがオンラインではありません。|  
+|トランザクションの安全性|**mirroring_safety_level** または **mirroring_safety_level_desc**|ミラー データベース上での更新に関するトランザクションの安全性設定。次のいずれかになります。<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= データベースがオンラインではありません。|  
 |ミラーリング監視サーバーの有無|**mirroring_witness_name**|データベース ミラーリングのミラーリング監視サーバー名または NULL。NULL はミラーリング監視サーバーが存在しないことを示します。|  
-|ミラーリング監視サーバーの状態|**mirroring_witness_state**または**mirroring_witness_state_desc**|特定のパートナー上のデータベースでのミラーリング監視サーバーの状態。<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = ミラーリング監視サーバーが存在しないか、データベースがオンラインではありません。|  
+|ミラーリング監視サーバーの状態|**mirroring_witness_state** または **mirroring_witness_state_desc**|特定のパートナー上のデータベースでのミラーリング監視サーバーの状態。<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL = ミラーリング監視サーバーが存在しないか、データベースがオンラインではありません。|  
   
  たとえば、プリンシパル サーバーまたはミラー サーバーのいずれかで、次のクエリを入力します。  
   
@@ -243,7 +240,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
  このカタログ ビューの詳細については、「[sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)」を参照してください。  
   
-###  <a name="FactorsOnLossOfPrincipal"></a>プリンシパルサーバーの消失時の動作に影響する要因  
+###  <a name="factors-affecting-behavior-on-loss-of-the-principal-server"></a><a name="FactorsOnLossOfPrincipal"></a>プリンシパルサーバーの消失時の動作に影響する要因  
  次の表に、トランザクションの安全性設定、データベースの状態、およびミラーリング監視サーバーの状態の組み合わせが、プリンシパル サーバーの消失時のミラーリング セッションの動作にどのように影響するかを示します。  
   
 |トランザクションの安全性|ミラー データベースのミラーリングの状態|ミラーリング監視サーバーの状態|プリンシパルが停止しているときの動作|  
@@ -253,17 +250,17 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED または DISCONNECTED|NULL (ミラーリング監視サーバーなし)|サービスがミラー サーバーに強制的に引き継がれます (データが消失する可能性があります)。|  
 |FULL|SYNCHRONIZING または SUSPENDED|NULL (ミラーリング監視サーバーなし)|サービスがミラー サーバーに強制的に引き継がれます (データが消失する可能性があります)。|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [データベースミラーリング監視サーバーを追加または置き換える &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Windows 認証 &#40;使用してデータベースミラーリング監視サーバーを追加する Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [データベースミラーリングセッションからミラーリング監視サーバーを削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+-   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [データベースミラーリングセッションでのトランザクションの安全性の変更 Transact-sql&#41;の &#40;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   

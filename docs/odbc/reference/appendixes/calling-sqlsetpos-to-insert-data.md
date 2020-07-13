@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLSetPos function [ODBC], inserting data
 - backward compatibility [ODBC], SqlSetPos
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb374b2506d55b400207c8f60bdf42bb6bb4065e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037709"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306603"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>データを挿入するための SQLSetPos の呼び出し
 *Odbc 2.x アプリケーションで*odbc *3.x ドライバーを*使用する場合、SQL_ADD の*操作*引数を使用して**SQLSetPos**を呼び出すと、ドライバーマネージャーはこの呼び出しを**sqlbulkoperations**にマップしません。 ODBC *3. x*ドライバーが SQL_ADD で**SQLSetPos**を呼び出すアプリケーションで動作する必要がある場合、ドライバーはその操作をサポートする必要があります。  

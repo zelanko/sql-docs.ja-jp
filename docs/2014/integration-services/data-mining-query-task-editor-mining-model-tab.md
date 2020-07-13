@@ -11,23 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a79b0966dd43d5da8599699cb4b345bb34f30cc7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890773"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437519"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
-  
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
   
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
-## <a name="general-options"></a>[全般] のオプション  
+## <a name="general-options"></a>一般オプション  
  **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -41,20 +39,20 @@ ms.locfileid: "68890773"
  **接続**  
  既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:**  [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:**  [Analysis Services 接続マネージャーの追加](connection-manager/analysis-services-connection-manager.md)  
   
  **[新規作成]**  
  新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを作成します。  
   
- **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **マイニング構造**  
  一覧からマイニング構造を選択します。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  選択したマイニング構造に基づいて構築されるマイニング モデルを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データマイニングクエリタスクエディター &#40;[クエリ] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [[データマイニングクエリタスクエディター] &#40;[出力] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   

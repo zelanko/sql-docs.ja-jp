@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62670928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064518"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
-  変更の追跡は、アプリケーションの効率的な変更追跡メカニズムを提供する簡易ソリューションです。 一般に、データベース内のデータに対する変更のクエリをアプリケーションで実行し、その変更に関連する情報にアクセスできるようにするには、アプリケーション開発者がカスタムの変更追跡メカニズムを実装する必要がありました。 通常、これらのメカニズムを作成するには多くの作業が関係し、多く`timestamp`の場合、トリガー、列、追跡情報を格納する新しいテーブル、およびカスタムクリーンアッププロセスを組み合わせて使用します。  
+  変更の追跡は、アプリケーションの効率的な変更追跡メカニズムを提供する簡易ソリューションです。 一般に、データベース内のデータに対する変更のクエリをアプリケーションで実行し、その変更に関連する情報にアクセスできるようにするには、アプリケーション開発者がカスタムの変更追跡メカニズムを実装する必要がありました。 通常、これらのメカニズムを作成するには多くの作業が関係し、多くの場合、トリガー、 `timestamp` 列、追跡情報を格納する新しいテーブル、およびカスタムクリーンアッププロセスを組み合わせて使用します。  
   
  変更に必要な情報量はアプリケーションの種類ごとに異なります。 アプリケーションでは、変更の追跡を使用して、ユーザー テーブルに加えられた変更に関する次の情報を取得することができます。  
   
@@ -68,9 +67,9 @@ ms.locfileid: "62670928"
  変更の追跡を使用して、各行に加えられた変更に関する情報を取得することもできます。 たとえば、変更を行った DML 操作の種類 (挿入、更新、または削除) や、更新操作の一環として変更された列などの情報を取得できます。  
   
 ## <a name="see-also"></a>参照  
- [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server を有効または無効にする&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Change Tracking &#40;SQL Server の操作&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [変更の追跡の管理 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server の管理&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

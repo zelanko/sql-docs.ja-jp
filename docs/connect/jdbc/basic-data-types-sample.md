@@ -40,7 +40,7 @@ ms.locfileid: "69028459"
 
 ## <a name="example"></a>例
 
-次の例では、サンプル コードは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] データベースへの接続を行い、DataTypesTable テスト テーブルから 1 行のデータを取得します。 カスタム displayRow メソッドが呼び出され、\<SQLServerResultSet[ クラスのさまざまな get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type> メソッドを使用して、結果セット内のすべてのデータが表示されます。
+次の例では、サンプル コードは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] データベースへの接続を行い、DataTypesTable テスト テーブルから 1 行のデータを取得します。 カスタム displayRow メソッドが呼び出され、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスのさまざまな get\<Type> メソッドを使用して、結果セット内のすべてのデータが表示されます。
 
 次に、このサンプルでは、SQLServerResultSet クラスのさまざまな update\<Type> メソッドを使用して、結果セット内のデータを更新し、さらに [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドを呼び出して、データをデータベースに戻して保持します。
 

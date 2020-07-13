@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856163"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>絞り込みメール配信マイニング モデル構造の作成 (基本的なデータ マイニング チュートリアル)
@@ -26,8 +26,7 @@ ms.locfileid: "62856163"
   
 1.  ソリューションエクスプローラーで、[**マイニング構造**] を右クリックし、[**新しいマイニング構造**] をクリックして、データマイニングウィザードを起動します。  
   
-2.  
-  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  **[データ マイニング ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
 3.  [**定義方法の選択**] ページで、[**既存のリレーショナルデータベースまたはデータウェアハウスから**] が選択されていることを確認し、[**次へ**] をクリックします。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62856163"
   
     -   **FirstName**  
   
-    -   **LastName**  
+    -   **タイトル**  
   
      上記の行の左の列のみがオンになっていることを確認します。 これらの列は構造に追加されますが、モデルには追加されません。 ただし、モデル作成後は、ドリルスルーやテストに使用できるようになります。 ドリルスルーの詳細については、「[データマイニング &#40;のドリルスルークエリ](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)」を参照してください&#41;  
   
@@ -115,6 +114,6 @@ ms.locfileid: "62856163"
 ## <a name="see-also"></a>参照  
  [データマイニングウィザード &#40;テーブルの種類の指定&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
  [データマイニングデザイナー](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
+ [Microsoft デシジョンツリーアルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

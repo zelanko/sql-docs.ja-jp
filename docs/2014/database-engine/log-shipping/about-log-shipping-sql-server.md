@@ -24,20 +24,19 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931496"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ配布を使用すると、トランザクションログバックアップを、*プライマリサーバー*インスタンスの*プライマリデータベース*から、別の*セカンダリサーバー*インスタンスの1つ以上の*セカンダリデータベース*に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、 *プライマリ サーバー* インスタンスの *プライマリ データベース* から、別の *セカンダリ サーバー* インスタンスの 1 つ以上の *セカンダリ データベース* に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
   
- **このトピックの内容:**  
+ **このトピックの内容**  
   
--   [効果](#Benefits)  
+-   [メリット](#Benefits)  
   
 -   [用語と定義](#TermsAndDefinitions)  
   
@@ -45,9 +44,9 @@ ms.locfileid: "62774554"
   
 -   [相互運用性](#Interoperability)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a>効果  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
   
 -   1 つのプライマリ データベースと 1 つ以上のセカンダリ データベース (それぞれが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の個別のインスタンスに存在) で構成される災害復旧ソリューションを提供します。  
   
@@ -55,13 +54,12 @@ ms.locfileid: "62774554"
   
 -   プライマリ サーバーでプライマリ データベースのログをバックアップする時点と、セカンダリ サーバーがそのログ バックアップを復元 (適用) する時点との間に生じる遅延時間をユーザーが指定できます。 たとえば、プライマリ データベースでデータが誤って変更された場合などに、長い遅延が役立ちます。 誤った変更にすぐに気付いた場合、遅延があれば、変更が反映される前に、セカンダリ データベースにあるまだ変更されていないデータを取得できます。  
   
-##  <a name="TermsAndDefinitions"></a>用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  プライマリ データベース  
  実稼働サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
- プライマリ サーバー  
- 別のサーバーにバックアップするプライマリ サーバーのデータベース。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用したログ配布構成の管理は、すべてプライマリ データベースから実行されます。  
+ プライマリ データベース  
+ 別のサーバーにバックアップするプライマリ サーバーのデータベース。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用したログ配布構成の管理は、すべてプライマリ データベースから実行されます。  
   
  セカンダリ データベース  
  プライマリ データベースのウォーム スタンバイ コピーを保持しておく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
@@ -96,7 +94,7 @@ ms.locfileid: "62774554"
 > [!TIP]  
 >  警告 1 件につき警告番号を指定する必要があります。 また、警告が発生するとオペレーターに通知されるよう警告を構成してください。  
   
-##  <a name="ComponentsAndConcepts"></a>ログ配布の概要  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> ログ配布の概要  
  ログ配布は、次に示す 3 つの操作から構成されます。  
   
 1.  プライマリ サーバー インスタンスでトランザクション ログをバックアップする。  
@@ -124,40 +122,39 @@ ms.locfileid: "62774554"
   
  プライマリ サーバー インスタンスおよびセカンダリ サーバー インスタンスは、それぞれの履歴および状態を監視サーバー インスタンスに送信します。  
   
- ![バックアップジョブ、コピージョブ、& 復元ジョブを示す構成](../media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
+ ![ジョブのバックアップ、コピー、復元を示す構成](../media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
   
-##  <a name="Interoperability"></a>共存  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 相互運用性  
  ログ配布は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [ログ配布から AlwaysOn 可用性グループ &#40;SQL Server への移行の前提条件&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [データベースミラーリングとログ配布 &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [データベース ミラーリングとログ配布 &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [ログ配布とレプリケーション &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] とデータベース ミラーリングは、相互に排他的です。 これらの機能のいずれかに対して構成されたデータベースを他の機能用に構成することはできません。  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] とデータベース ミラーリングは、相互に排他的です。 これらの機能のいずれかに対して構成されたデータベースを他の機能用に構成することはできません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ログ配布を SQL Server 2014 &#40;Transact-sql&#41;にアップグレードする](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [ログ配布 &#40;SQL Server&#41;を構成する](configure-log-shipping-sql-server.md)  
+-   [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)  
   
--   [ログ配布構成 &#40;SQL Server にセカンダリデータベースを追加&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [ログ配布構成へのセカンダリ データベースの追加 &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [ログ配布構成からセカンダリデータベースを削除する &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [ログ配布構成からのセカンダリ データベースの削除 &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [ログ配布 &#40;SQL Server の削除&#41;](remove-log-shipping-sql-server.md)  
+-   [ログ配布の削除 &#40;SQL Server&#41;](remove-log-shipping-sql-server.md)  
   
--   [ログ配布レポート &#40;SQL Server Management Studio を表示&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [ログ配布レポートの表示 &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Transact-sql&#41;&#40;ログ配布の監視](monitor-log-shipping-transact-sql.md)  
+-   [ログ配布の監視 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
--   [ログ配布のセカンダリ &#40;SQL Server にフェールオーバーする&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [ログ配布のセカンダリ &#40;SQL Server にフェールオーバーする&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   

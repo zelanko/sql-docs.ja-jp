@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eb2a149c9e96af29b32f41153b340c2ab653c968
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66075987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547160"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>ディメンション デザイナーでのディメンション データの参照
-  ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー]** ビューを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスできます。  
+  ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ビューを使用します。ディメンション デザイナーには、** からアクセスできます。  
   
  ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
@@ -29,8 +28,7 @@ ms.locfileid: "66075987"
   
 1.  参照するディメンションを開いて、 **[ブラウザー]** タブをクリックします。  
   
-2.  
-  **[階層]** ボックスの一覧で、データを参照する階層を選択します。  
+2.  **[階層]** ボックスの一覧で、データを参照する階層を選択します。  
   
 3.  ディメンションに翻訳が含まれている場合は、必要に応じて **[言語]** ボックスの一覧からデータの表示に使用する言語を選択します。  
   

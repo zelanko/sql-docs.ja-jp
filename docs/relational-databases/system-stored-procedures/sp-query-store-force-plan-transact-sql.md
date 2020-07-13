@@ -18,22 +18,21 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 8b8cfc9116440bfba43f16fd1c05bd004fcca0cb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71207724"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012665"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   特定のクエリに対して特定のプランを強制することができます。  
   
- 特定のクエリに対してプランが強制されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、クエリが発生するたびに、クエリオプティマイザーでプランが強制的に実行されます。 プランの強制に失敗した場合は、拡張イベントが発生し、通常の方法で最適化するようにクエリオプティマイザーに指示されます。  
+ 特定のクエリに対してプランが強制されると、クエリが発生するたびに、クエリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプティマイザーでプランが強制的に実行されます。 プランの強制に失敗した場合は、拡張イベントが発生し、通常の方法で最適化するようにクエリオプティマイザーに指示されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

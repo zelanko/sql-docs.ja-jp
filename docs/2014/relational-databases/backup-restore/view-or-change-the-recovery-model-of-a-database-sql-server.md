@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 889080301109938f0514bd6b81265c100237ab60
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62875081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956124"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの復旧モデルを表示または変更する方法について説明します。 *復旧モデル* は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62875081"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベースの復旧モデルを表示または変更する方法:**  
   
@@ -42,13 +41,13 @@ ms.locfileid: "62875081"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **フォローアップに関する推奨事項:**  [復旧モデルを変更した後](#FollowUp)  
+-   **補足の推奨事項:**  [復旧モデルを変更した後](#FollowUp)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   完全復旧モデルまたは一括ログ復旧モデルから切り替える前に、トランザクション ログをバックアップしてください。  
   
@@ -63,32 +62,30 @@ ms.locfileid: "62875081"
 > [!NOTE]  
 >  一括操作中に完全復旧モデルに切り替える場合は、一括操作のログ記録が最小ログ記録から完全ログ記録に変わり、また、その逆も同様です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>復旧モデルを表示または変更するには  
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスへの接続後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  [**データベース] を展開し**、データベースに応じて、ユーザーデータベースを選択するか、[**システムデータベース**] を展開してシステムデータベースを選択します。  
+2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
 3.  データベースを右クリックし、 **[プロパティ]** をクリックすると、 **[データベースのプロパティ]** ダイアログ ボックスが開きます。  
   
-4.  
-  **[ページの選択]** ペインの **[オプション]** をクリックします。  
+4.  **[ページの選択]** ペインの **[オプション]** をクリックします。  
   
-5.  
-  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
+5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]** 、 **[一括ログ]** 、 **[単純]** のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-recovery-model"></a>復旧モデルを表示するには  
   
@@ -119,7 +116,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>フォローアップに関する推奨事項: 復旧モデルを変更した後  
+##  <a name="follow-up-recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a>フォローアップに関する推奨事項: 復旧モデルを変更した後  
   
 -   **完全復旧モデルと一括ログ復旧モデルの切り替え後の処理**  
   
@@ -148,25 +145,25 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
     -   定期的なデータベースのバックアップがスケジュールされていることを確認します。 データの保護と、トランザクション ログのアクティブでない部分の切り捨ての両方にとって、データベースのバックアップは重要です。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [データベースの完全バックアップを作成する &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [トランザクションログ &#40;SQL Server のバックアップ&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [ジョブを作成する](../../ssms/agent/create-a-job.md)  
+-   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [データベースメンテナンスプラン](../maintenance-plans/maintenance-plans.md)(オンライン[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ブック)  
+-   [メンテナンス プラン](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
 ## <a name="see-also"></a>参照  
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [トランザクションログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

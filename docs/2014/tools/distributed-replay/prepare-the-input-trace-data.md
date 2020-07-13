@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9fd6ab191e3838de7d461df0626168ff08ef9afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63149995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064136"
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
-  分散再生機能を使用し[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]て分散再生を開始する前に、distributed replay 管理ツールから前処理段階を開始することで、入力トレースデータを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散再生機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
   
- ![分散された再生の前処理段階](../../database-engine/media/preprocess.gif "分散された再生の前処理段階")  
+ ![分散再生の前処理段階](../../database-engine/media/preprocess.gif "分散再生の前処理段階")  
   
  前処理段階の詳細については、「 [SQL Server Distributed Replay](sql-server-distributed-replay.md)」を参照してください。  
   
@@ -29,7 +28,7 @@ ms.locfileid: "63149995"
   
 ### <a name="to-prepare-the-input-trace-data"></a>入力トレース データを準備するには  
   
-1.  **(省略可能) 前処理構成設定を変更**する: システムセッションをフィルター処理するか、最大アイドル時間を構成するかなどの前処理構成設定を変更する場合は、 `<PreprocessModifiers>` XML ベースの前処理構成ファイルの要素を変更`DReplay.exe.preprocess.config`する必要があります。 前処理構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
+1.  **(省略可能) 前処理構成設定の変更**:前処理構成設定 (システム セッションをフィルター処理するかどうか、最大アイドル時間を構成するかどうかなど) を変更する場合は、XML ベースの前処理構成ファイル `DReplay.exe.preprocess.config` の `<PreprocessModifiers>` 要素を変更する必要があります。 前処理構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
   
     1.  既定の前処理構成ファイル `DReplay.exe.preprocess.config`のコピーを作成し、新しいファイルの名前を変更します。 既定の前処理構成ファイルは管理ツールのインストール フォルダーにあります。  
   
@@ -39,17 +38,15 @@ ms.locfileid: "63149995"
   
      前処理構成ファイルの詳細については、「 [Distributed Replay の構成](configure-distributed-replay.md)」を参照してください。  
   
-2.  **前処理段階を開始**する: 入力トレースデータを準備するには、**前処理**オプションを使用して管理ツールを実行する必要があります。 詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
+2.  **前処理段階を開始する**:入力トレース データを準備するには、**preprocess** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
   
     1.  Windows のコマンド プロンプト ユーティリティ (`CMD.exe`) を開き、Distributed Replay 管理ツール (`DReplay.exe`) のインストール場所に移動します。  
   
     2.  (省略可能) 管理ツールを実行するコンピューターとは別のコンピューター上でコントローラー サービスが実行されている場合、 *controller* パラメーター **-m**を使用して、コントローラーを指定します。  
   
-    3.  
-  *input_trace_file* パラメーター **-i**を使用して、入力トレース ファイルの場所と名前を指定します。  
+    3.  *input_trace_file* パラメーター **-i**を使用して、入力トレース ファイルの場所と名前を指定します。  
   
-    4.  
-  *controller_working_directory* パラメーター **-d**を使用して、コントローラーで中間ファイルを保存する場所を指定します。  
+    4.  *controller_working_directory* パラメーター **-d**を使用して、コントローラーで中間ファイルを保存する場所を指定します。  
   
     5.  (省略可能) *config_file* パラメーター **-c**を使用して、前処理構成ファイルの場所を指定します。 既定の前処理構成ファイルのコピーを変更した場合は、このパラメーターを使用して、新しい構成ファイルを指定します。  
   
@@ -60,9 +57,9 @@ ms.locfileid: "63149995"
 3.  前処理段階が完了したら、コントローラー作業ディレクトリに中間ファイルが格納されます。 イベント再生段階を開始するには、 **再生** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「 [トレース データの再生](replay-trace-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 分散再生](sql-server-distributed-replay.md)   
- [分散再生の要件](distributed-replay-requirements.md)   
- [管理ツールのコマンドラインオプション &#40;分散再生ユーティリティ&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [分散再生の構成](configure-distributed-replay.md)  
   
   

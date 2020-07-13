@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002514"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
   このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
@@ -192,7 +191,7 @@ GO
   
  REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)」 を参照してください。  
   
-##  <a name="CompleteExample"></a>完全な例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>コード例全体  
  次に、完全なサンプル コードを示します。  
   
 ```  

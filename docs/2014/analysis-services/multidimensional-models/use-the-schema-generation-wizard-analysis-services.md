@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3ea4eee9909b4af80a5d8471f58d569690ff0962
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072653"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535914"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザードの使用 (Analysis Services)
   スキーマ生成ウィザードが生成フェーズで必要とする情報の量は限られています。 スキーマ生成ウィザードでリレーショナル スキーマを生成するために必要な情報のほとんどは、プロジェクトで既に作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションから抽出されます。 また、サブジェクト領域データベース スキーマの生成方法とスキーマ内のオブジェクトの名前付け方法をカスタマイズすることもできます。  
@@ -26,11 +25,9 @@ ms.locfileid: "66072653"
 ## <a name="start-the-wizard"></a>ウィザードの起動  
  スキーマ生成ウィザードを開くには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で次のいずれかの方法を使用します。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトを右クリックして、コンテキスト メニューの **[リレーショナル スキーマの生成]** をクリックします。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトを右クリックして、コンテキスト メニューの **[リレーショナル スキーマの生成]** をクリックします。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトをクリックして、 **[データベース]** メニューの **[リレーショナル スキーマの生成]** をクリックします。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトをクリックして、 **[データベース]** メニューの **[リレーショナル スキーマの生成]** をクリックします。  
   
 -   スキーマ生成ウィザードをディメンション ウィザードから直接起動します。これを行うには、ディメンション ウィザードの最後のページにある **[今すぐスキーマを生成する]** チェック ボックスをオンにします。  
   
@@ -59,7 +56,6 @@ ms.locfileid: "66072653"
  既定では、スキーマ生成ウィザードは、データベース スキーマが再生成されるときにデータを保存しようとします。 スキーマが変更されてスキーマ生成ウィザードで行を削除する必要がある場合は、行を削除する前に警告が表示されます。 たとえば、ディメンションを削除した場合や、ディメンションの属性を変更したときにデータ型が変わった場合には、行を削除して参照整合性の問題を解決する必要があります。 データベース スキーマを再生成するときにデータを保存するには、 **[再生成時にデータを保存する]** を選択します。  
   
 ## <a name="step-4-specify-naming-conventions"></a>手順 4: 名前付け規則の指定  
- スキーマ生成ウィザードの **[名前付け規則の指定]** ページで、サブジェクト領域データベースに特定のオブジェクトを生成するときにウィザードが使用する名前付け規則を定義できます。 
-  **[名前付け規則の指定]** ページで使用できるオプションの詳細については、「[[名前付け規則の指定] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)」を参照してください。  
+ スキーマ生成ウィザードの **[名前付け規則の指定]** ページで、サブジェクト領域データベースに特定のオブジェクトを生成するときにウィザードが使用する名前付け規則を定義できます。 **[名前付け規則の指定]** ページで使用できるオプションの詳細については、「[[名前付け規則の指定] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)」を参照してください。  
   
   

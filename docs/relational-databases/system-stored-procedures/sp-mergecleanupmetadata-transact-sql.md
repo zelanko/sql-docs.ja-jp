@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0196993f863d973e14834f7eb3b93b797a825ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72907326"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891623"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 より前のバージョンのを実行しているサーバーを含むレプリケーショントポロジでのみ使用してください。**sp_mergecleanupmetadata**を使用すると、管理者は、 **MSmerge_genhistory**、 **MSmerge_contents**および**MSmerge_tombstone**システムテーブル内のメタデータをクリーンアップできます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -38,27 +38,27 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリケーションのメタデータがクリーンアップされます。 明示的に指定した場合、パブリケーションは既に存在している必要があります。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリケーションのメタデータがクリーンアップされます。 明示的に指定した場合、パブリケーションは既に存在している必要があります。  
   
 `[ @reinitialize_subscriber = ] 'subscriber'`サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)**,、 **true**または**FALSE**,、既定値は**true**です。 **TRUE**の場合、サブスクリプションに再初期化のマークが付けられます。 **FALSE**の場合、サブスクリプションには再初期化のマークが付けられません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_mergecleanupmetadata**は、Service Pack 1 より前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]実行しているサーバーを含むレプリケーショントポロジでのみ使用してください。 Service Pack 1 以降[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]のみを含むトポロジでは、自動保有期間に基づくメタデータのクリーンアップを使用する必要があります。 このストアド プロシージャを実行する場合は、実行するコンピューター上で、きわめて大きいログファイルが必要であり、作成される可能性があることに注意してください。  
+## <a name="remarks"></a>注釈  
+ **sp_mergecleanupmetadata**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 1 より前のバージョンのを実行しているサーバーを含むレプリケーショントポロジでのみ使用してください [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。 Service Pack 1 以降のみを含むトポロジでは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 自動保有期間に基づくメタデータのクリーンアップを使用する必要があります。 このストアド プロシージャを実行する場合は、実行するコンピューター上で、きわめて大きいログファイルが必要であり、作成される可能性があることに注意してください。  
   
 > [!CAUTION]
 >  **Sp_mergecleanupmetadata**の実行後、既定では、 **MSmerge_genhistory**、 **MSmerge_contents**および**MSmerge_tombstone**にメタデータが格納されているパブリケーションのサブスクライバーのすべてのサブスクリプションは再初期化のマークが付けられ、サブスクライバーでの保留中の変更はすべて失われ、現在のスナップショットは古い形式に設定されます。  
 > 
 > [!NOTE]
->  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間 (**\@リテンション**=**0**) を使用している場合は、 **sp_mergecleanupmetadata**を実行しても、データベースのマージレプリケーション変更追跡メタデータはクリーンアップされません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
+>  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間 (** \@ リテンション**0) を使用している場合 = **0**は、 **sp_mergecleanupmetadata**を実行しても、データベースのマージレプリケーション変更追跡メタデータはクリーンアップされません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
   
- このストアドプロシージャを実行するときに、 ** \@reinitialize_subscriber**パラメーターを**TRUE** (既定値) または**FALSE**に設定して、サブスクライバーを再初期化するかどうかを選択できます。 ** \@Reinitialize_subscriber**パラメーターを**TRUE**に設定して**sp_mergecleanupmetadata**を実行すると、初期スナップショットを使用せずにサブスクリプションが作成された場合でも、サブスクライバーでスナップショットが再適用されます (スナップショットデータとスキーマが手動で適用された場合や、サブスクライバーに既に存在していた場合など)。 パラメーターを**FALSE**に設定する場合は、注意してください。パブリケーションが再初期化されない場合は、パブリッシャーとサブスクライバーのデータが同期されていることを確認する必要があります。  
+ このストアドプロシージャを実行するときに、 ** \@ reinitialize_subscriber**パラメーターを**TRUE** (既定値) または**FALSE**に設定して、サブスクライバーを再初期化するかどうかを選択できます。 ** \@ Reinitialize_subscriber**パラメーターを**TRUE**に設定して**sp_mergecleanupmetadata**を実行すると、初期スナップショットを使用せずにサブスクリプションが作成された場合でも、サブスクライバーでスナップショットが再適用されます (スナップショットデータとスキーマが手動で適用された場合や、サブスクライバーに既に存在していた場合など)。 パラメーターを**FALSE**に設定する場合は、注意してください。パブリケーションが再初期化されない場合は、パブリッシャーとサブスクライバーのデータが同期されていることを確認する必要があります。  
   
- ** \@Reinitialize_subscriber**の値に関係なく、ストアドプロシージャが呼び出されたときに、パブリッシャーまたは再パブリッシュサブスクライバーに変更をアップロードしようとしている進行中のマージプロセスがある場合、 **sp_mergecleanupmetadata**は失敗します。  
+ ** \@ Reinitialize_subscriber**の値に関係なく、ストアドプロシージャが呼び出されたときに、パブリッシャーまたは再パブリッシュサブスクライバーに変更をアップロードしようとしている進行中のマージプロセスがある場合、 **sp_mergecleanupmetadata**は失敗します。  
   
- **Reinitialize_subscriber を TRUE \@にして sp_mergecleanupmetadata を実行する:**  
+ **Reinitialize_subscriber を TRUE にして sp_mergecleanupmetadata を実行する \@ :**  
   
 1.  パブリケーションデータベースとサブスクリプションデータベースに対するすべての更新を停止することをお勧めしますが、必須ではありません。 更新が続行された場合、パブリケーションが再初期化されると、前回のマージ以降にサブスクライバーで行われた更新は失われますが、データの収束が維持されます。  
   
@@ -74,7 +74,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  パブリケーション データベースをバックアップします。 この操作を行わないと、パブリケーションデータベースの復元後にマージエラーが発生する可能性があります。  
   
- **Reinitialize_subscriber = FALSE \@を使用して sp_mergecleanupmetadata を実行しています:**  
+ **Reinitialize_subscriber = FALSE を使用して sp_mergecleanupmetadata を実行してい \@ ます:**  
   
 1.  パブリケーションデータベースとサブスクリプションデータベースに対する**すべて**の更新を停止します。  
   
@@ -113,9 +113,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_mergecleanupmetadata**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
- このストアド プロシージャを使用するには、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] を実行していることが必要です。 サブスクライバーで[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2 が実行されている必要があります。  
+ このストアド プロシージャを使用するには、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] を実行していることが必要です。 サブスクライバーで [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] は、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2 が実行されている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSmerge_genhistory &#40;Transact-sql&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
  [MSmerge_contents &#40;Transact-sql&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
  [MSmerge_tombstone &#40;Transact-sql&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  

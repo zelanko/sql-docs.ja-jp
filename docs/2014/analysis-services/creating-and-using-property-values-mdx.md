@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086688"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526278"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>プロパティ値の作成および使用 (MDX)
   多次元式 (MDX) では、ディメンション、レベル、メンバー、およびセルの固有プロパティとユーザー定義プロパティがサポートされています。 固有プロパティでは、一意な名前、キャプション、および書式やフォント サイズを、個別のセルに対して設定できます。 一方、ユーザー定義プロパティを使用すると、ほぼどんな属性でもメンバーに追加指定できます。  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statement handles [ODBC]
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d7a1e93d222e2b87058bc878f7eca85313b4108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018341"
 ---
 # <a name="freeing-a-statement-handle"></a>ステートメント ハンドルの解放
   ステートメント ハンドルは、削除して新しいハンドルを割り当てるよりも、再利用する方が効率的です。 アプリケーションでは、任意のステートメント ハンドルで新しい SQL ステートメントを実行する前に、現在のステートメント設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 通常、古い SQL ステートメントのパラメーターと結果セットは、SQL_RESET_PARAMS と SQL_UNBIND のオプションで[SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md)を呼び出し、新しい sql ステートメントに対して再バインドすることによって、バインドを解除する必要があります。  

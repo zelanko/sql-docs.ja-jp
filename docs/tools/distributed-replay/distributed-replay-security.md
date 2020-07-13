@@ -1,6 +1,7 @@
 ---
 title: 分散再生のセキュリティ
 titleSuffix: SQL Server Distributed Replay
+description: この記事では、SQL Server 分散再生のためのセキュリティ構成手順と、データ保護手順と削除手順に関する重要な考慮事項について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307012"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151105"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
 
@@ -33,7 +34,7 @@ ms.locfileid: "75307012"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|ドメイン ユーザー アカウントまたはローカル ユーザー アカウントを使用できます。 ローカル ユーザー アカウントを使用する場合、コントローラー、クライアント、および対象の SQL Server のすべてが同じコンピューター上で実行されている必要があります。<br /><br /> **\*\* セキュリティに関する注意 \*\*** このアカウントには、Windows のローカルの Administrators グループのメンバー以外を使用することをお勧めします。|  
 |Distributed Replay 管理ツールの実行に使用する対話ユーザー アカウント|ローカル ユーザーまたはドメイン ユーザー アカウントを使用できます。 ローカル ユーザー アカウントを使用するには、管理ツールとコントローラーが同じコンピューター上で実行されている必要があります。|  
   
- **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+ **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
 -   ドメイン ユーザー アカウント  
   
@@ -74,7 +75,7 @@ ms.locfileid: "75307012"
   
  コントローラーの DCOM 権限を構成するには、次の手順を実行します。  
   
-1.  **コンポーネント サービス スナップイン dcomcnfg.exe を開く**: dcomcnfg.exe は、DCOM 権限を構成するために使用するツールです。  
+1.  **コンポーネント サービス スナップイン dcomcnfg.exe を開く**:これは、DCOM 権限を構成するために使用するツールです。  
   
     1.  コントローラーのコンピューターで、 **[スタート]** ボタンをクリックします。  
   
@@ -82,9 +83,9 @@ ms.locfileid: "75307012"
   
     3.  Enter キーを押します。  
   
-2.  **コンピューター全体の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+2.  **コンピューター全体の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
-3.  **アプリケーション固有の DCOM 権限を構成する**: 次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「 [チェック リスト: DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+3.  **アプリケーション固有の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
  次の表に、管理ツールの対話ユーザー アカウントとクライアント サービス アカウントに必要な DCOM 権限を示します。  
   
@@ -123,7 +124,7 @@ ms.locfileid: "75307012"
   
 -   Distributed Replay によって生成されたすべての中間ファイルおよびディスパッチ ファイルに、適切な ACL と保有ポリシーを適用します。  
   
--   Secure Sockets Layer (SSL) を使用して、ネットワーク トランスポートを保護します。  
+-   トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、ネットワーク トランスポートを保護します。  
   
 ## <a name="important-removal-steps"></a>重要な削除手順  
  Distributed Replay はテスト環境のみで使用することをお勧めします。 テストが完了したら、それらのコンピューターを別のタスク用に準備する前に、次の作業を必ず行います。  

@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 56e498fb942b87f187ae53a04ec1b240b71d2c96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103301"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898869"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>dm_filestream_file_io_handles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   名前空間の所有者 (NSO) が認識しているファイルハンドルを表示します。 **Opensqlfilestream**を使用してクライアントが受け取った Filestream ハンドルは、このビューに表示されます。  
   
-|列|種類|[説明]|  
+|Column|種類|Description|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary (8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを表示します。 NULL 値が許可されます。|  
 |**creation_request_id**|**int**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値は許可されません。|  
@@ -39,14 +39,14 @@ ms.locfileid: "68103301"
 |**creation_client_thread_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
 |**creation_client_process_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
 |**filestream_transaction_id**|**varbinary (128)**|特定のハンドルに関連付けられているトランザクションの ID を示します。 これは、 **get_filestream_transaction_context**関数によって返される値です。 このフィールドを使用して、 **dm_filestream_file_io_requests**ビューに結合します。 NULL 値が許可されます。|  
-|**access_type**|**nvarchar (60)**|NULL 値は許可されません。|  
+|**access_type**|**nvarchar(60)**|NULL 値は許可されません。|  
 |**logical_path**|**nvarchar(256)**|このハンドルによって開かれたファイルの論理パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の PathName メソッド。 NULL 値が許可されます。|  
 |**physical_path**|**nvarchar(256)**|ファイルの実際の NTFS パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の physicalpathname メソッド。 トレースフラグ5556によって有効にされます。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の Filestream および FileTable の動的管理ビュー](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

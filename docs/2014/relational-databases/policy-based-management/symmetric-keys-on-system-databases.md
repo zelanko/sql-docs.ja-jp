@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac7d41bc693813f471caff7e746a44184146962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 81c657ededc694ed87df99e0739ff74b1eb9e39b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63252657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066602"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>システム データベースの対称キー
   このルールでは、master、msdb、model、および tempdb の各データベースにあるユーザーが作成した対称キーについて確認します。  

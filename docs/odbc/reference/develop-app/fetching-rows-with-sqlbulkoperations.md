@@ -15,14 +15,14 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0b4c2114059cecaaf8f8825169300f131bd473
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069839"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305651"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations による行のフェッチ
 **Sqlbulkoperations**を呼び出すことにより、ブックマークを使用してデータを行セットに変換できます。 フェッチされる行は、バインドされたブックマーク列のブックマークによって識別されます。 値が SQL_COLUMN_IGNORE の列はフェッチされません。  

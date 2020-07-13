@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de0d2fea002beda0eca480bd27140bdd202fcb83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546198"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本的な MDX スクリプト (MDX)
-  多次元式 (MDX) スクリプトでは、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]キューブの計算プロセスを定義します。 MDX スクリプトには、以下の 2 種類があります。  
+  多次元式 (MDX) スクリプトでは、のキューブの計算プロセスを定義 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] します。 MDX スクリプトには、以下の 2 種類があります。  
   
  **既定の MDX スクリプト**  
  キューブを作成すると、そのキューブの既定の MDX スクリプトが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって作成されます。 このスクリプトは、キューブ全体の計算パスを定義します。  
@@ -36,8 +35,7 @@ ms.locfileid: "66073809"
   
  既定の MDX スクリプトには、キューブ デザイナーで作成された、名前付きセット、割り当て、および計算されるメンバーを作成するためのスクリプト コマンドも入ります。  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は既定の MDX スクリプトに直接スクリプト コマンドを追加します。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は既定の MDX スクリプトに直接スクリプト コマンドを追加します。  
   
 -   キューブ内の名前付きセットごとに、対応する CREATE SET ステートメントが既定の MDX スクリプトに存在します。  
   
@@ -61,10 +59,10 @@ ms.locfileid: "66073809"
   
  MDX スクリプト ステートメントの詳細については、「[MDX スクリプト ステートメント &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)」を参照してください。  
   
- [メンバーの作成](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER ステートメントは、計算されるメンバーを作成します。 計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
- [セットの作成](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET ステートメントは名前付きセットを作成します。 名前付きセットの作成方法の詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)」を参照してください。  
   
  条件付きステートメント  

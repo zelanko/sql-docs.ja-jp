@@ -15,30 +15,30 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d46b3d8fa816a1c980c1486b233232c46c90df65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68029738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881301"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーションの警告が発生する原因となった条件に関する情報が含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警告の ID。|  
-|**オンライン**|**int**|ユーザー定義の値です。<br /><br /> **0** = サービス解除。<br /><br /> **1** = サービス。|  
+|**status**|**int**|ユーザー定義の値です。<br /><br /> **0** = サービス解除。<br /><br /> **1** = サービス。|  
 |**agent_type**|**int**|エージェントのタイプです。<br /><br /> **1** = スナップショットエージェント。<br /><br /> **2** = ログリーダーエージェント。<br /><br /> **3** = ディストリビューションエージェント。<br /><br /> **4** = マージエージェント。|  
 |**agent_id**|**int**|テーブル**MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**、または**MSmerge_agents**のエージェント ID。|  
 |**error_id**|**int**|**MSrepl_errors**に格納されているエラーの ID。|  
 |**alert_error_code**|**int**|このレコードをログに記録するときに発生する警告のメッセージ ID。|  
-|**time**|**DATETIME**|レコードが挿入された時刻。|  
-|**文書**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
+|**time**|**datetime**|レコードが挿入された時刻。|  
+|**publisher**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
 |**publisher_db**|**sysname**|この警告を発生したエージェントに関連付けられているパブリッシャーデータベース。|  
 |**レプリケーション**|**sysname**|この警告を発生したエージェントに関係するパブリケーションです。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = スナップショット。<br /><br /> **1** = トランザクション。<br /><br /> **2** = Merge。|  
@@ -49,8 +49,8 @@ ms.locfileid: "68029738"
 |**source_object**|**sysname**|警告に関連付けられているパブリッシュ済みテーブルの名前。|  
 |**alert_error_text**|**ntext**|警告のテキスト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

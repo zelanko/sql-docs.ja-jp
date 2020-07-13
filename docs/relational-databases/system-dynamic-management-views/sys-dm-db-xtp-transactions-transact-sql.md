@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_transactions dynamic management view
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d83894ed9ca328db945201c0078c1f560ee2e618
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68097933"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830744"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68097933"
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
     
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|XTP トランザクションマネージャーでのこのトランザクションの内部 ID。|  
 |transaction_id|**bigint**|トランザクション ID。 他のトランザクション関連の DMV (sys.dm_tran_active_transactions など) にあるトランザクション ID と結合されます。<br /><br /> ネイティブ コンパイル ストアド プロシージャによって開始されたトランザクションなど、XTP のみのトランザクションの場合は 0 です。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68097933"
 |end_tsn|**bigint**|トランザクションの終了トランザクションのシリアル番号。|  
 |state|**int**|トランザクションの状態。<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|トランザクションの状態の説明。|  
-|result|**int**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> 0 - IN PROGRESS<br /><br /> 1-成功<br /><br /> 2-エラー<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5-検証に失敗しました (SR)<br /><br /> 6-ロールバック|  
+|結果|**int**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> 0 - IN PROGRESS<br /><br /> 1-成功<br /><br /> 2-エラー<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5-検証に失敗しました (SR)<br /><br /> 6-ロールバック|  
 |result_desc|**nvarchar**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> コミットの依存関係<br /><br /> 検証に失敗しました (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|内部でのみ使用されます|  
 |is_speculative|**bit**|内部でのみ使用されます|  
@@ -64,7 +64,7 @@ ms.locfileid: "68097933"
 |commit_dependency_total_attempt_count|**int**|内部でのみ使用されます|  
 |scan_area|**int**|内部でのみ使用されます|  
 |scan_area_desc|**nvarchar**|内部でのみ使用されます|  
-|scan_location|**int**|内部使用のみです。|  
+|scan_location|**int**|内部使用のみ。|  
 |dependent_1_address|**varbinary (8)**|内部でのみ使用されます|  
 |dependent_2_address|**varbinary (8)**|内部でのみ使用されます|  
 |dependent_3_address|**varbinary (8)**|内部でのみ使用されます|  
@@ -78,6 +78,6 @@ ms.locfileid: "68097933"
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

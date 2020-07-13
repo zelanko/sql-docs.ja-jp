@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4413b86a9882087c01c785e5f5bfdb596f7be698
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099396"
 ---
 # <a name="user-role-properties-management-studio"></a>[ユーザー ロールのプロパティ]\(Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66099396"
 >  ユーザー ロールの割り当ては、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページには、SharePoint サイトで定義されているロールと権限レベルに関する読み取り専用の情報が表示されます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  ロールの定義名を指定します。  
   
  **説明**  

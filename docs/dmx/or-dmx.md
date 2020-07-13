@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008145"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668728"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,17 +37,17 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>戻り値  
  いずれかまたは両方の引数が TRUE に評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  両方の引数は、演算子が論理和を実行する前に、ブール値 (FALSE の場合は0、それ以外の場合は TRUE) として扱われます。 いずれかの引数または両方の引数が TRUE に評価された場合、演算子は TRUE を返します。 *Expression1*が true と評価され、 *Expression2*が FALSE と評価された場合、演算子は true を返します。  
   
  次の表は、論理和の実行方法を示しています。  
   
 |Expression1|Expression2|戻り値はです。|  
 |-----------------------|-----------------------|---------------------|  
-|TRUE|TRUE|TRUE|  
-|TRUE|FALSE|TRUE|  
-|FALSE|TRUE|TRUE|  
-|FALSE|FALSE|FALSE|  
+|true|true|true|  
+|true|FALSE|TRUE|  
+|FALSE|TRUE|true|  
+|false|false|false|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   

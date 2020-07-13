@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af288cf9f0564f6fe0dbef14f66143667120c656
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996233"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307523"
 ---
-# <a name="appendix-a-odbc-error-codes"></a>付録 A : ODBC エラー コード
+# <a name="appendix-a-odbc-error-codes"></a>付録 A: ODBC エラー コード
 このトピックでは、ODBC 3 の SQLSTATE 値について説明します。*x*。 ODBC 3 の詳細については、「」を参照してください。*x* sqlstate 値、「 [sqlstate マッピング](../../../odbc/reference/develop-app/sqlstate-mappings.md)」を参照してください。  
   
  **SQLGetDiagRec**または**SQLGetDiagField**は、Open Group*データ管理: 構造化照会言語 (SQL)、Version 2* (1995 年3月) によって定義された SQLSTATE 値を返します。 SQLSTATE 値は、5つの文字を含む文字列です。 次の表に、ドライバーが**SQLGetDiagRec**に対して返すことができる SQLSTATE 値を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "67996233"
 > [!NOTE]  
 >  関数は正常に実行されますが、通常は戻り値の SQL_SUCCESS によって示されますが、SQLSTATE 00000 も成功したことを示します。  
   
-|SQLSTATE|エラー|から返される可能性があります。|  
+|SQLSTATE|Error|から返される可能性があります。|  
 |--------------|-----------|--------------------------|  
 |01000|一般警告|次を除くすべての ODBC 関数:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|カーソル操作の競合|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

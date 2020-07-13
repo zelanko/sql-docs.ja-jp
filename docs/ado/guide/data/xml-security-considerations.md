@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML security in ADO
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab98aaf7bb2a0f4887df5a1c2276fe0df8862972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923353"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748217"
 ---
 # <a name="xml-security-considerations"></a>XML のセキュリティに関する考慮事項
 Recordset オブジェクトの ADO Save および Open メソッドは、Internet Explorer で実行するための安全な操作とは見なされません。 このため、これらのメソッドが、ブラウザーでホストされているアプリケーションまたはコントロールで実行されているスクリプトコードで使用されている場合、ブラウザーのセキュリティ構成はその動作に影響します。  

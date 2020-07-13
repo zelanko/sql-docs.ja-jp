@@ -19,14 +19,14 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: fbebb46cc091d8a4a033480237827cf95b6b0c59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914751"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822412"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67914751"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  

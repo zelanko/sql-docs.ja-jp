@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 46af27730ab2bb7a0c1bfaa4f4e9dc625ed0eb0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63188118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048440"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 要素 (DTA)
   データベース エンジン チューニング アドバイザーに対する XML 入力の定義が含まれます。  
@@ -36,7 +35,7 @@ ms.locfileid: "63188118"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特性|説明|  
 |---------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

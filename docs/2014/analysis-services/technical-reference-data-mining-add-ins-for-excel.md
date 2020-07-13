@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1a904ebd4330c1207fe2f5b0cbef6756d6370b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66066216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938473"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>テクニカル リファレンス (Excel 用データ マイニング アドイン)
   Office 用データ マイニング アドインには、プログラマおよび高度なデータ マイニング担当者に役立つ機能があります。  

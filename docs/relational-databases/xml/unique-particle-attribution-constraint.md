@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078014"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665211"
 ---
 # <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XSD では、UPA (一意のパーティクル属性) 制約の規則によって、複雑なコンテンツ モデルが制約を受けます。 この規則では、あいまいさを排除し、インスタンス ドキュメント内の各要素が、その親のコンテンツ モデル内の `<xsd:element>` パーティクルまたは `<xsd:any>` パーティクルの 1 つに正確に対応することが必要です。 あいまいなコンテンツ モデルになる可能性のある型を含むスキーマは拒否されます。  
   
  あいまいさの最も一般的な原因は、`<xsd:any>` のワイルドカード文字や、minOccurs < maxOccurs のような可変の出現範囲を持つパーティクルです。 たとえば、次のコンテンツ モデルでは、<`e1`> 要素は `<xsd:element>` 要素または `<xsd:any>` 要素のどちらにも一致するので、あいまいになります。  

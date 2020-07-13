@@ -11,14 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653750"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>レッスン 2 : xsd ツールを使用して RDL スキーマからクラスを作成
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成したら、次はレポート定義スキーマのローカル コピーを取得して、XML スキーマ定義ツール (Xsd.exe) を実行します。  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL クラスを生成するには  
@@ -31,8 +30,7 @@ ms.locfileid: "62653750"
   
 2.  RDL スキーマがブラウザーで開かれたら、[**ファイル**] メニューに移動し、[名前を付け**て保存**] を選択します。  
   
-3.  
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成した場所に移動して、スキーマをファイル名 ReportDefinition.xsd として保存します。  
+3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成した場所に移動して、スキーマをファイル名 ReportDefinition.xsd として保存します。  
   
 4.  ファイルが保存されたら、 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]コマンドプロンプトのインスタンスを開きます。 コマンドプロンプトのインスタンスを開くには、[スタート] ボタンをクリックし、[**すべてのプログラム**]、[ **Microsoft Visual Studio 2010**]、[ **Visual Studio Tools**の順にポイントし、[ **Visual Studio コマンドプロンプト (2010)**] をクリックします。  
   

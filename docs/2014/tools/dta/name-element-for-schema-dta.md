@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 43c02481623ea66dbf677c99ea2b3abf63c901fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62657276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011495"
 ---
 # <a name="name-element-for-schema-dta"></a>Schema の Name 要素 (DTA)
   スキーマの名前が入ります。  
@@ -36,7 +35,7 @@ ms.locfileid: "62657276"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`(1 ~ 255 文字)|  
 |**既定値**|[なし] :|  

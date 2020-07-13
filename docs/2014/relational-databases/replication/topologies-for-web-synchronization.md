@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c26ffa3421cca7ec2359bb94eabcec9921a57391
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63273547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064624"
 ---
 # <a name="topologies-for-web-synchronization"></a>Web 同期トポロジ
-  さまざま[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]な Web 同期レプリケーショントポロジから選択できます。 Web 同期の一般的な構成には以下のものがあります。  
+  さまざまな [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同期レプリケーション トポロジを選択できます。 Web 同期の一般的な構成には以下のものがあります。  
   
 -   単一サーバー  
   
@@ -49,8 +48,7 @@ ms.locfileid: "63273547"
   
  ![複数の IIS サーバーでの Web 同期](media/web-sync04.gif "複数の IIS サーバーでの Web 同期")  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターにも負荷の分散が必要となった場合は、複数のコンピューターに再パブリッシュの階層を作成することもできます。 最上位レベルのパブリッシャーはデータをサブスクライバーにパブリッシュし、これを受けてサブスクライバーはデータを再パブリッシュします。結果としてサブスクライバーからの要求の負荷が分散されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターにも負荷の分散が必要となった場合は、複数のコンピューターに再パブリッシュの階層を作成することもできます。 最上位レベルのパブリッシャーはデータをサブスクライバーにパブリッシュし、これを受けてサブスクライバーはデータを再パブリッシュします。結果としてサブスクライバーからの要求の負荷が分散されます。  
   
 > [!NOTE]  
 >  サブスクライバーは、特定のパブリッシャーとのみ同期できます。 たとえば、リパブリッシャー A が使用できない場合に、リパブリッシャー A に対するサブスクライバーをリパブリッシャー B と同期することはできません。  
@@ -58,7 +56,7 @@ ms.locfileid: "63273547"
  ![再パブリッシュでの Web 同期](media/web-sync05.gif "再パブリッシュでの Web 同期")  
   
 ## <a name="see-also"></a>参照  
- [Web 同期の構成](configure-web-synchronization.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)   
  [マージ レプリケーションの Web 同期](web-synchronization-for-merge-replication.md)  
   
   

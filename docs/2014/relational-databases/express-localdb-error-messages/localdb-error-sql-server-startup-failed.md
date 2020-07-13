@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6478f29c150181b477e6fecc5c4b35f25db3e817
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f3ba0ba2e6b8e1549016a6cc1fc7b1fba4af2fc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63066290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051104"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
     

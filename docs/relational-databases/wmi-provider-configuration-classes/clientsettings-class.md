@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 834c41b00945d9de09cf9964ee8aa2ca6e63c414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e929a3982103db95839a9a69e8c7e54d311e9da3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660677"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888849"
 ---
 # <a name="clientsettings-class"></a>ClientSettings クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Clientsettings クラス](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)は、クライアント[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の設定を表します。  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [Clientsettings クラス](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)は、クライアントの設定を表し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  このクラスにより、プログラムによるクライアントの管理が可能になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

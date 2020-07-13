@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4e736beb22f40008d2a8aa5fac797b9f48904c52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013301"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例 : ELEMENTS ディレクティブで XSINIL を指定する
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>例: ELEMENTS ディレクティブで XSINIL を指定する
   次のクエリでは、 `ELEMENTS` ディレクティブを指定し、クエリ結果から要素中心の XML を生成します。  
   
 ## <a name="example"></a>例  

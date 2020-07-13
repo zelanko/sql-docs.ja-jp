@@ -8,16 +8,16 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12c31fcd18918b05626dc1dda817bb524bca9449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924070"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760808"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1: Visual Basic プロジェクトを設定する
+# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1:Visual Basic プロジェクトを設定する
 このシナリオでは、Microsoft Visual Basic 6.0、ADO 2.5 以降、および Microsoft OLE DB Provider for Internet Publishing がシステムにインストールされていることを前提としています。 最初に新しいプロジェクトを作成し、次にプロジェクトの既定のフォームにコントロールを追加します。  
   
 ### <a name="to-create-an-ado-project"></a>ADO プロジェクトを作成するには:  
@@ -38,4 +38,4 @@ ms.locfileid: "67924070"
   
 ## <a name="see-also"></a>参照  
  [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 2: Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [手順 2:Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

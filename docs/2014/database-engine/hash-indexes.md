@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 420cf534b57dc6b6592b4dd55cf5ec2addd04b2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932863"
 ---
 # <a name="hash-indexes"></a>ハッシュ インデックス
   インデックスは、メモリ最適化テーブルのエントリ ポイントとして使用します。 テーブルから行を読み取るときには、データがメモリ上のどの場所にあるかを特定するためのインデックスが必要になります。  
@@ -26,10 +25,9 @@ ms.locfileid: "62779492"
   
  ハッシュ インデックスに使用するハッシュ関数には、以下の特徴があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、あらゆるハッシュ インデックスに使用するハッシュ関数が 1 つ用意されています。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、あらゆるハッシュ インデックスに使用するハッシュ関数が 1 つ用意されています。  
   
--   ハッシュ関数は決定性があります。 インデックス キーが同じであれば、常にハッシュ インデックスの同じバケットにマッピングされます。  
+-   ハッシュ関数は決定的です。 インデックス キーが同じであれば、常にハッシュ インデックスの同じバケットにマッピングされます。  
   
 -   インデックス キーが違っても、同じハッシュ バケットにマッピングされることがあります。  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918193"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762503"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の現在のレコードの位置を移動します。  
@@ -37,8 +37,8 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  現在のレコード位置が移動するレコードの数を指定する、符号付き**Long**式。  
   
- *[開始]*  
- 省略可能。 ブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値を使用することもできます。  
+ *スタート*  
+ 任意。 ブックマークに評価される**文字列**値または**バリアント**。 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値を使用することもできます。  
   
 ## <a name="remarks"></a>解説  
  **Move**メソッドは、すべての**レコードセット**オブジェクトでサポートされています。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9341cb3647db9e8e7061b1418b169c4ac4d158d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 995632c691daf8210b7c01a6c132878228968f01
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769628"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437289"
 ---
 # <a name="-add-ssis"></a>+ (加算) (SSIS)
   2 つの数値式を加算します。  

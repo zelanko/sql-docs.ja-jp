@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74685345"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>レポート サーバーの構成と管理 (Reporting Services SharePoint モード)
@@ -33,30 +33,28 @@ ms.locfileid: "74685345"
   
     -   [共有データセットを管理する](report-data/manage-shared-datasets.md)  
   
-    -   [パブリッシュされたレポートのパラメーターを SharePoint 統合モードで Reporting Services &#40;設定&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
+    -   [パブリッシュ済みレポートのパラメーターの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-    -   [キャッシュ更新オプション &#40;レポートマネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
+    -   [[キャッシュ更新オプション] &#40;レポート マネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
--   [Reporting Services サイト コレクション機能](../../2014/reporting-services/reporting-services-site-collection-features.md)  
+-   [Reporting Services サイトコレクションの機能](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
 -   [SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
--   [SharePoint モード&#40;のサイト設定とサイト機能の Reporting Services&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
+-   [Reporting Services のサイト設定とサイト機能 &#40;SharePoint モード&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
--   [SharePoint サーバーの全体管理でレポートサーバーの File Sync 機能をアクティブにする](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+-   [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
 -   [SharePoint 統合モードの &#40;Reporting Services ライブラリにレポートサーバーのコンテンツの種類を追加&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [レポートビューアーでのローカルモードと接続モードのレポートは、SharePoint モードの &#40;Reporting Services&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   [レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
--   [Sharepoint モードで Reporting Services &#40;ドキュメントを SharePoint ライブラリにアップロード&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
+-   [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に関する一般的な情報については、[ オンライン ブックの「](create-deploy-and-manage-mobile-and-paginated-reports.md)Reporting Services &#40;SSRS&#41;[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]」を参照してください。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/index.yml)を参照してください。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に関する一般的な情報については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント、ツール、およびリソースについては、 [SQL Server オンライン ブック](../2014-toc/index.yml)を参照してください。  
   
   

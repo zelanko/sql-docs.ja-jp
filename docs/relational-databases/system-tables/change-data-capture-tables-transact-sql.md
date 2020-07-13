@@ -10,17 +10,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c61cc87f293b589f9c3726fcff5c3408774f34bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68082683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890592"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>変更データキャプチャテーブル (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   変更データキャプチャを使用すると、テーブルに対するデータ操作言語 (DML) およびデータ定義言語 (DDL) の変更をデータウェアハウスに増分読み込みできるように、テーブルに対する変更の追跡が有効になります。 このセクションのトピックでは、変更データキャプチャ操作で使用される情報を格納するシステムテーブルについて説明します。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "68082683"
  [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  変更データ キャプチャのエージェント ジョブの構成パラメーターを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データキャプチャのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [変更データキャプチャ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

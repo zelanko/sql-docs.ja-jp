@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932668"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763443"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter プロパティと RecordCount プロパティの例 (VC + +)
 この例では、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、既存の**レコードセット**に適用された指定の条件に基づいて新しい[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 この例では、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを使用して、2つのレコード**セット**内のレコードの数を表示しています。 このプロシージャを実行するには、FilterField 関数が必要です。  
@@ -286,7 +286,7 @@ void PrintComError(_com_error &e) {
 USA  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Orders in original recordset:  

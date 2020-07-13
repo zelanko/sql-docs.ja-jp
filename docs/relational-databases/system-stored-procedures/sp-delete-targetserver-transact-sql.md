@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862186"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたサーバーを使用可能な対象サーバーの一覧から削除します。  
    
@@ -59,8 +59,8 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>例  
- 次の例では、 `LONDON1`使用可能なジョブサーバーからサーバーを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、 `LONDON1` 使用可能なジョブサーバーからサーバーを削除します。  
   
 ```  
 USE msdb ;  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_help_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

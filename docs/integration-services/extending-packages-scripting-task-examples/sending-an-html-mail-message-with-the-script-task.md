@@ -60,7 +60,7 @@ ms.locfileid: "71286744"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用して構成するには  
   
-1.  `HtmlEmailServer`ReadOnlyVariables**の一覧から** 変数を削除して、前に構成したスクリプト タスクを変更します。  
+1.  **ReadOnlyVariables** の一覧から `HtmlEmailServer` 変数を削除して、前に構成したスクリプト タスクを変更します。  
   
 2.  サーバー名を取得する次のコード行を置き換えます。  
   

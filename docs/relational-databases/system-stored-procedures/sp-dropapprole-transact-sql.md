@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 86aa6e39cd8086b906f3bf2c8c0dc9e80bc33034
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85860020"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   アプリケーション ロールを現在のデータベースから削除します。  
   
@@ -55,19 +55,19 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
-## <a name="examples"></a>例  
- 次の例では`SalesApp` 、アプリケーションロールを現在のデータベースから削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、 `SalesApp` アプリケーションロールを現在のデータベースから削除します。  
   
 ```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [Transact-sql&#41;&#40;アプリケーションロールを削除する](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [sp_changeobjectowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

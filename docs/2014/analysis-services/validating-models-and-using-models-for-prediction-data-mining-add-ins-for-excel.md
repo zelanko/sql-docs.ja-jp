@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 00048ea3c5f344a90e93799a92b4d48c07325482
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938163"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>モデルの検証と予測用モデルの使用 (Excel 用データ マイニング アドイン)
   モデルのテストと検証は、データ マイニング プロセスにおける重要な手順です。 実際のデータに対するマイニング モデルの性能を、運用環境に配置する前に知っておく必要があります。  

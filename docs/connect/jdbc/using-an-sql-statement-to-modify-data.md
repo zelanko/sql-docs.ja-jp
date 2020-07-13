@@ -21,16 +21,16 @@ ms.locfileid: "69026751"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれるデータを SQL ステートメントを使用して変更するには、[SQLServerStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) クラスの [executeUpdate](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用できます。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行数を示す値を返します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれるデータを SQL ステートメントを使用して変更するには、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドを使用できます。 executeUpdate メソッドは、SQL ステートメントをデータベースに渡して処理し、影響を受けた行数を示す値を返します。
 
-この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) クラスの [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
+この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) メソッドを使用して、SQLServerStatement オブジェクトを作成する必要があります。
 
 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡して、テーブルにデータを追加する SQL ステートメントを作成および実行し、戻り値を出力します。
 
 [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]
 
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを変更するためのパラメーターを含む SQL ステートメントを使用する必要がある場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) クラスの [executeUpdate](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドを使用する必要があります。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを変更するためのパラメーターを含む SQL ステートメントを使用する必要がある場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) メソッドを使用する必要があります。
 >
 > データの挿入先の列にスペースなどの特殊文字が含まれる場合は、それが既定値である場合を含め、挿入する値を指定する必要があります。 ここで指定しないと、挿入操作が失敗します。
 >

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd96072358100583689cd00b218d578180940de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7a1abedd3b0cbd11e94387694c5535bffc2fa7ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881040"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [Clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)は、クライアントネットワークプロトコルのプロパティを表します。  
   
  [Clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)を使用すると、次のタスクを実行できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "73660201"
   
 -   現在のプロパティに対するフラグの設定  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

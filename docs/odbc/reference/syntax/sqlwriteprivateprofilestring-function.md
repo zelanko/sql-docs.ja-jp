@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0de5ad074fb2b760420686feddff58b26887112
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039383"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286885"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 関数
 **互換性**  
@@ -63,10 +63,10 @@ BOOL SQLWritePrivateProfileString(
 ## <a name="diagnostics"></a>診断  
  **Sqlwriteprivateprofilestring**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した要求|要求されたシステム情報を書き込めませんでした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|要求されたシステム情報を書き込めませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
 ## <a name="comments"></a>説明  
@@ -76,6 +76,6 @@ BOOL SQLWritePrivateProfileString(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |システム情報から値を取得する|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

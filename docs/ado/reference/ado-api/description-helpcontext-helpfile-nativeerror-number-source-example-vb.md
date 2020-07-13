@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SQLState property [ADO], Visual Basic example
 - HelpContext property [ADO], Visual Basic example
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90673f82643ae24d242879fb19b748d5d1e3cc43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f12456e8331739d665eb14ba3553e4f4f1d36ce3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757278"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)
 この例では、エラーをトリガーし、トラップして、結果として生成される[error](../../../ado/reference/ado-api/error-object.md)オブジェクトの[Description](../../../ado/reference/ado-api/description-property.md)、 [helpcontext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、 [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、の[エラー](../../../ado/reference/ado-api/nativeerror-property-ado.md)、 [Number](../../../ado/reference/ado-api/number-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-error.md)、および[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)の各プロパティを表示します。  

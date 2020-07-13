@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f09b1827ae26f5ba8b8168e9c53809120bce6133
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921198"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760578"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic での ADO のコード例
 次のコード例を使用して、Visual Basic に書き込むときに ADO のメソッド、プロパティ、およびイベントを使用する方法を学習します。  
@@ -89,7 +89,7 @@ ms.locfileid: "67921198"
   
 -   [UpdateBatch および CancelBatch メソッドの例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [AbsolutePage、PageCount、および PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
@@ -158,4 +158,4 @@ ms.locfileid: "67921198"
 ## <a name="see-also"></a>参照  
  [ADO コード例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C++ の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65481236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064811"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>タスク 10: 参照データ サービスを使用して複合ドメインを構成する
   このタスクでは、 **Melissa Check**サービスを使用するように**Address Validation**複合ドメインを構成します。 実行時のクレンジング アクティビティでは、クレンジングのために Address Validation ドメインのドメイン値が DQS からこのサービスに渡されます。 詳細については、「[参照データへのドメインまたは複合ドメインのマップ」を](https://msdn.microsoft.com/library/hh213030.aspx)参照してください。  
@@ -46,9 +45,9 @@ ms.locfileid: "65481236"
   
      ![RDS スキーマ項目をドメインにマップする](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "RDS スキーマ項目をドメインにマップする")  
   
-9. [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
+9. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 11: ナレッジ ベースをパブリッシュする](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

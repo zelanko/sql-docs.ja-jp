@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003950"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
   以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、`varbinary`、`varbinary(max)` (`FILESTREAM` を含む)、または `image` バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
   
  特定の種類のドキュメントでプロパティ検索が可能かどうかは、対応する [フィルター](configure-and-manage-filters-for-search.md) (IFilter) によって異なります。 ドキュメントの種類によっては、ドキュメント本文の内容に加えて、そのドキュメントの種類に対して定義されている検索プロパティの一部またはすべてが、対応する IFilter によって抽出されます。 フルテキスト インデックスの作成時に IFilter によって抽出されたプロパティに対してのみプロパティ検索をサポートするように、フルテキスト インデックスを構成することができます。 さまざまなドキュメント プロパティを抽出する IFilter の一例として、Microsoft Office のドキュメントの種類 (.docx、.xlsx、.pptx など) に対応した IFilter があります。 一方、XML IFilter では、プロパティは生成されません。  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> 検索プロパティのフルテキスト検索  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> 検索プロパティのフルテキスト検索  
   
 ### <a name="internal-property-ids"></a>内部プロパティ ID  
  Full-Text Engine は、登録されている各プロパティに対して内部プロパティ ID を適宜割り当てます。この内部プロパティ ID は、特定の検索リスト内のプロパティを一意に識別するためのもので、検索プロパティ リストで固有の ID になります。 また、1 つのプロパティを複数の検索プロパティ リストに追加した場合、その内部 ID がリスト間で異なる可能性があります。  
@@ -58,17 +57,17 @@ ms.locfileid: "66011077"
   
   
   
-##  <a name="impact"></a> プロパティ検索を有効にした場合の影響  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> プロパティ検索を有効にした場合の影響  
  1 つまたは複数のプロパティを対象とした検索をサポートするようにフルテキスト インデックスを構成すると、検索プロパティ リストに指定したプロパティの数および各プロパティの内容に応じて、インデックスのサイズが増加します。  
   
  Microsoft Word の一般的なコーパス、Excel<sup>??</sup><sup>、および</sup><sup>PowerPoint の</sup>テスト ドキュメントでは、一般的な検索プロパティにインデックスを作成するようにフルテキストインデックスを構成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
   
   
   
-##  <a name="creating"></a>検索プロパティリストの作成とプロパティ検索の有効化  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a> 検索プロパティ リストの作成とプロパティ検索の有効化  
   
-###  <a name="creating_sub"></a>検索プロパティリストの作成  
- **Transact-sql を使用して検索プロパティリストを作成するには**  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a>検索プロパティリストの作成  
+ **Transact-SQL を使用して検索プロパティ リストを作成するには**  
   
  少なくともリストの名前を指定して、[CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) ステートメントを使用します。  
   
@@ -76,14 +75,11 @@ ms.locfileid: "66011077"
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  
-  **[データベース]** を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
+2.  **[データベース]** を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
   
-3.  
-  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** を右クリックします。  
+3.  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** を右クリックします。  
   
-4.  
-  **[新しい検索プロパティ リスト]** をクリックします。  
+4.  **[新しい検索プロパティ リスト]** をクリックします。  
   
 5.  プロパティ リストの名前を指定します。  
   
@@ -91,9 +87,9 @@ ms.locfileid: "66011077"
   
 7.  次のいずれかのオプションを選択します。  
   
-    -   **空の検索プロパティリストを作成する**  
+    -   **[空の検索プロパティ リストを作成する]**  
   
-    -   **既存の検索プロパティリストから作成する**  
+    -   **[既存の検索プロパティ リストから作成する]**  
   
      詳細については、「 [New Search Property List](../../database-engine/new-search-property-list.md)」を参照してください。  
   
@@ -101,7 +97,7 @@ ms.locfileid: "66011077"
   
  
   
-###  <a name="adding"></a>検索プロパティリストへのプロパティの追加  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>検索プロパティリストへのプロパティの追加  
  プロパティを検索するには、 *検索プロパティ リスト* を作成し、検索可能にする 1 つまたは複数のプロパティを指定する必要があります。 プロパティを検索プロパティ リストに追加すると、プロパティはその特定のリスト用に登録されます。 プロパティを検索プロパティ リストに追加するには、次の値が必要です。  
   
 -   プロパティ セット GUID  
@@ -129,14 +125,13 @@ ms.locfileid: "66011077"
   
      検索プロパティを検索プロパティ リストに追加するとき、オプションで説明を記述できます。 たとえば、名前からはその内容がわかりにくいプロパティに関する情報を記述したり、プロパティのプロパティ セットに関する説明を記述したりできます。  
   
- **検索プロパティリストの値を取得するには**  
+ **検索プロパティ リストの値を取得するには**  
   
  「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。  
   
- **Transact-sql を使用してプロパティを検索プロパティリストに追加するには**  
+ **Transact-SQL を使用してプロパティを検索プロパティ リストに追加するには**  
   
- 
-  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを、「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](find-property-set-guids-and-property-integer-ids-for-search-properties.md)」に説明されているいずれかの方法を使用して取得した値と共に使用します。  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを、「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](find-property-set-guids-and-property-integer-ids-for-search-properties.md)」に説明されているいずれかの方法を使用して取得した値と共に使用します。  
   
  次の例では、これらの値を使用してプロパティを検索プロパティ リストに追加する方法を示しています。  
   
@@ -147,33 +142,30 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
       PROPERTY_DESCRIPTION = 'System.Title - Title of the item.' );  
 ```  
   
- **Management Studio の検索プロパティリストにプロパティを追加するには**  
+ **Management Studio でプロパティを検索プロパティ リストに追加するには**  
   
- 
-  **[検索プロパティ リストのプロパティ]** ダイアログ ボックスを使用して、検索プロパティを追加および削除します。 オブジェクト エクスプローラーでは、関連するデータベースの **[ストレージ]** ノードの下に **[検索プロパティ リスト]** があります。  
-  
+ **[検索プロパティ リストのプロパティ]** ダイアログ ボックスを使用して、検索プロパティを追加および削除します。 オブジェクト エクスプローラーでは、関連するデータベースの **[ストレージ]** ノードの下に **[検索プロパティ リスト]** があります。  
   
   
-###  <a name="associating"></a>検索プロパティリストとフルテキストインデックスの関連付け  
+  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a>検索プロパティリストとフルテキストインデックスの関連付け  
  検索プロパティ リストに登録されているプロパティを対象としたプロパティ検索をフルテキスト インデックスでサポートするためには、検索プロパティ リストとインデックスを関連付けた後、インデックスを再作成する必要があります。 フルテキスト インデックスを再作成すると、登録された各プロパティに含まれている検索語句に対して、プロパティ固有のインデックス エントリが作成されます。  
   
  フルテキスト インデックスがこの検索プロパティ リストに関連付けられている限り、フルテキスト クエリで CONTAINS 述語の PROPERTY オプションを使用して、検索プロパティ リストに登録されているプロパティを対象に検索を実行できます。  
   
  フルテキスト インデックスに関連付けられている検索プロパティ リストを変更した場合は、インデックスを一貫性のある状態に保つために、インデックスの再構築が必要になります。 インデックスは即座に切り捨てられ、完全作成が実行されるまで空になります。 検索プロパティ リストの変更によってインデックスが再構築される場合の詳細については、「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)」の「解説」を参照してください。  
   
- **Transact-sql を使用して検索プロパティリストをフルテキストインデックスに関連付けるには**  
+ **Transact-SQL を使用して検索プロパティ リストをフルテキスト インデックスに関連付けるには**  
   
- 
-  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ステートメントを `SET SEARCH PROPERTY LIST = <property_list_name>` 句と共に使用します。  
+ [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ステートメントを `SET SEARCH PROPERTY LIST = <property_list_name>` 句と共に使用します。  
   
- **検索プロパティリストをフルテキストインデックスに関連付けるには Management Studio**  
+ **Management Studio を使用して検索プロパティ リストをフルテキスト インデックスに関連付けるには**  
   
- 
-  **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[検索プロパティ リスト]** の値を指定します。  
+ **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[検索プロパティ リスト]** の値を指定します。  
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a>CONTAINS を使用した検索プロパティのクエリ  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a>CONTAINS を使用した検索プロパティのクエリ  
  プロパティ スコープのフルテキスト クエリのための [CONTAINS](/sql/t-sql/queries/contains-transact-sql) の基本的な構文を次に示します。  
   
 ```sql  
@@ -195,35 +187,30 @@ GO
   
   
   
-##  <a name="managing"></a>検索プロパティリストの管理  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a> 検索プロパティ リストの管理  
   
-###  <a name="viewing"></a>検索プロパティリストの表示と変更  
- **Transact-sql を使用して検索プロパティリストを変更するには**  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a> 検索プロパティ リストの表示および変更  
+ **Transact-SQL を使用して検索プロパティ リストを変更するには**  
   
- 
-  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを使用して、検索プロパティを追加または削除します。  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) ステートメントを使用して、検索プロパティを追加または削除します。  
   
 ##### <a name="to-view-and-change-a-search-property-list-in-management-studio"></a>Management Studio で検索プロパティ リストを表示および変更するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  
-  **[データベース]** を展開し、データベースを展開します。  
+2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  
-  **[記憶域]** を展開します。  
+3.  **[記憶域]** を展開します。  
   
-4.  
-  **[検索プロパティ リスト]** を展開して、検索プロパティ リストを表示します。  
+4.  **[検索プロパティ リスト]** を展開して、検索プロパティ リストを表示します。  
   
 5.  プロパティ リストを右クリックし、 **[プロパティ]** をクリックします。  
   
-6.  
-  **[検索プロパティ リスト エディター]** ダイアログ ボックスで、プロパティ グリッドを使用して、検索プロパティを追加または削除します。  
+6.  **[検索プロパティ リスト エディター]** ダイアログ ボックスで、プロパティ グリッドを使用して、検索プロパティを追加または削除します。  
   
     1.  ドキュメント プロパティを削除するには、プロパティの左側にある行ヘッダーをクリックして、Del キーを押します。  
   
-    2.  ドキュメントプロパティを追加するには、一覧の一番下にある空の行をの右側**\*** にクリックし、新しいプロパティの値を入力します。  
+    2.  ドキュメントプロパティを追加するには、一覧の一番下にある空の行をの右側にクリックし、 **\*** 新しいプロパティの値を入力します。  
   
          これらの値の詳細については、「 [検索プロパティ リスト エディター](../../database-engine/search-property-list-editor.md)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
@@ -231,23 +218,20 @@ GO
   
   
   
-###  <a name="deleting"></a>検索プロパティリストの削除  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> 検索プロパティ リストの削除  
  リストがいずれかのフルテキスト インデックスに関連付けられている場合は、データベースからプロパティ リストを削除できません。  
   
- **Transact-sql を使用して検索プロパティリストを削除するには**  
+ **Transact-SQL を使用して検索プロパティ リストを削除するには**  
   
- 
-  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql) ステートメントを使用します。  
+ [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql) ステートメントを使用します。  
   
 ##### <a name="to-delete-a-search-property-list-in-management-studio"></a>Management Studio で検索プロパティ リストを削除するには  
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  
-  **[データベース]** を展開し、データベースを展開します。  
+2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  
-  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** ノードを展開します。  
+3.  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** ノードを展開します。  
   
 4.  削除するプロパティ リストを右クリックして、 **[削除]** をクリックします。  
   

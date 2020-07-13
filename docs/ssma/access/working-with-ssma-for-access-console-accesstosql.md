@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259784"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールを使用した作業 (アクセス権のある Sql)
@@ -38,6 +38,6 @@ ms.locfileid: "68259784"
 |[&#40;にレポートを生成する Sql&#41;](../../ssma/access/generating-reports-accesstosql.md)|レポートを生成するコマンドを一覧表示します。|  
 |[&#40;のトラブルシューティング Sql&#41;](../../ssma/access/troubleshooting-accesstosql.md)|移行の問題の修正に関する簡単な情報を提供します。|  
   
-## <a name="see-also"></a>参照  
-[SSMA for Access コンソール入門](getting-started-with-ssma-for-access-console-accesstosql.md)  
+## <a name="see-also"></a>関連項目  
+[SSMA for Access コンソールでのはじめに](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

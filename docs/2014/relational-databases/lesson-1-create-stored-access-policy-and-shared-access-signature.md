@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80bd9c253adfcf1d1a677953fef183d9109534ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 73056d9d70b66a519074e06d4e9420173fb1b190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75231821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025049"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>レッスン 2: コンテナーのポリシーを作成し、Shared Access Signature (SAS) キーを生成する
   このレッスンでは、BLOB コンテナーのポリシーを作成する方法と、SAS キーを生成する方法について学習します。  
@@ -44,5 +43,5 @@ ms.locfileid: "75231821"
   
  **次のレッスン:**  
   
- [レッスン 3: SQL Server 資格情報の作成](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [レッスン 3:SQL Server 資格情報の作成](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Cursor Library
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3fd7d02d74b0e19d91871c5df7c9c5915d028f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe39b2d2cbbaf72ce3844c35187040589d1dac58
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064450"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302063"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (カーソル ライブラリ)
 > [!IMPORTANT]  

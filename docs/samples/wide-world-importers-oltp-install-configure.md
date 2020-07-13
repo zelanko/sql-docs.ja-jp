@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 14570059925fa5f8d8d24502c18593a118d84e37
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718662"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 大規模な環境では、OLTP データベースのインストールと構成の手順について説明します。
 
 ## <a name="prerequisites"></a>前提条件
@@ -36,7 +36,7 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 
 サンプルデータベースを再作成するソースコードは、次の場所から入手できます。 データ生成にはランダムな要因があるため、サンプルを再作成すると、データにわずかな違いが生じることに注意してください。
 
-[ワイド-インポーター](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[ワイド-インポーター](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>インストール
 

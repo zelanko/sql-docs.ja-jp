@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetEnvAttr function [ODBC]
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b69b08a5004252f9016fbc616e9198179db31fb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 640b1e6947d67b92e2b7f8e623597e1d99d4a877
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343082"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299542"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 関数
 **互換性**  
@@ -66,7 +66,7 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="diagnostics"></a>診断  
  **SQLSetEnvAttr**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_ENV と*EnvironmentHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetEnvAttr**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。 ドライバーで環境属性がサポートされていない場合、接続時にのみエラーが返されることがあります。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S02|オプションの値が変更されました|ドライバーは、 *Valueptr*に指定された値をサポートしておらず、同様の値に置き換えられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -92,14 +92,14 @@ SQLRETURN SQLSetEnvAttr(
   
 |*属性*|*Valueptr*コンテンツ|  
 |-----------------|-------------------------|  
-|SQL_ATTR_CONNECTION_POOLING (ODBC 3.8)|環境レベルでの接続プールを有効または無効にする32ビット SQLUINTEGER 値。 次の値が使用されます。<br /><br /> SQL_CP_OFF = 接続プーリングはオフになっています。 これが既定値です。<br /><br /> SQL_CP_ONE_PER_DRIVER = 各ドライバーで1つの接続プールがサポートされています。 プール内のすべての接続は、1つのドライバーに関連付けられています。<br /><br /> SQL_CP_ONE_PER_HENV = 1 つの接続プールが各環境でサポートされています。 プール内のすべての接続は、1つの環境に関連付けられています。<br /><br /> SQL_CP_DRIVER_AWARE = 使用可能な場合は、ドライバーの接続プールの認識機能を使用します。 ドライバーで接続プールの認識がサポートされていない場合、SQL_CP_DRIVER_AWARE は無視され、SQL_CP_ONE_PER_HENV が使用されます。 詳細については、「[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)」を参照してください。 一部のドライバーがサポートしていて、一部のドライバーで接続プールの認識がサポートされていない環境では、SQL_CP_DRIVER_AWARE は、これらのサポートドライバーで接続プールの認識機能を有効にすることができますが、これはに SQL_CP_ONE_PER_HENV を設定することと同じです。これらのドライバーは、接続プールの認識機能をサポートしていません。<br /><br /> 接続プールを有効にするには、 **SQLSetEnvAttr**を呼び出して、SQL_ATTR_CONNECTION_POOLING 属性を SQL_CP_ONE_PER_DRIVER または SQL_CP_ONE_PER_HENV に設定します。 この呼び出しは、アプリケーションが接続プールを有効にする共有環境を割り当てる前に行う必要があります。 **SQLSetEnvAttr**の呼び出しの環境ハンドルは null に設定されます。これにより、プロセスレベルの属性が SQL_ATTR_CONNECTION_POOLING されます。 接続プールを有効にした後、アプリケーションは、 *InputHandle*引数を SQL_HANDLE_ENV に設定して**SQLAllocHandle**を呼び出すことによって、暗黙的な共有環境を割り当てます。<br /><br /> 接続プールが有効化され、アプリケーションの共有環境が選択されると、この属性を設定するときに**SQLSetEnvAttr**が null 環境ハンドルで呼び出されるため、その環境に対して SQL_ATTR_CONNECTION_POOLING をリセットできません。 共有環境で接続プールが既に有効になっている間にこの属性が設定されている場合、属性は、後で割り当てられた共有環境にのみ影響します。<br /><br /> 環境で接続プールを有効にすることもできます。 環境接続プールについては、次の点に注意してください。<br /><br /> -NULL ハンドルでの接続プールの有効化は、プロセスレベルの属性です。 その後、割り当てられた環境は共有環境になり、プロセスレベルの接続プーリング設定が継承されます。<br />-環境が割り当てられた後も、アプリケーションは接続プールの設定を変更できます。<br />-環境接続プーリングが有効になっていて、接続のドライバーがドライバープーリングを使用している場合、環境プーリングが優先されます。<br /><br /> SQL_ATTR_CONNECTION_POOLING は、ドライバーマネージャー内で実装されます。 ドライバーは、SQL_ATTR_CONNECTION_POOLING を実装する必要はありません。 ODBC 2.0 および3.0 アプリケーションでは、この環境属性を設定できます。<br /><br /> 詳細については、「 [ODBC Connection Pooling (ODBC 接続プール)](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)」を参照してください。|  
-|SQL_ATTR_CP_MATCH (ODBC 3.0)|接続プールから接続を選択する方法を決定する32ビット SQLUINTEGER 値。 **SQLConnect**または**SQLDriverConnect**が呼び出されると、ドライバーマネージャーによって、プールから再利用される接続が決まります。 ドライバーマネージャーは、呼び出しの接続オプションと、アプリケーションによって設定された接続属性を、プール内の接続のキーワードと接続属性に一致させようとします。 この属性の値によって、一致条件の精度のレベルが決まります。<br /><br /> この属性の値を設定するには、次の値を使用します。<br /><br /> SQL_CP_STRICT_MATCH = 呼び出しの接続オプションと完全に一致する接続のみが、アプリケーションによって設定された接続属性を再利用します。 これが既定値です。<br /><br /> SQL_CP_RELAXED_MATCH = 一致する接続文字列キーワードを使用した接続を使用できます。 キーワードは一致している必要がありますが、すべての接続属性が一致している必要はありません。<br /><br /> プールされた接続への接続でドライバーマネージャーが照合を実行する方法の詳細については、「 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)」を参照してください。 接続プールの詳細については、「 [ODBC 接続プール](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)」を参照してください。|  
+|SQL_ATTR_CONNECTION_POOLING (ODBC 3.8)|環境レベルでの接続プールを有効または無効にする32ビット SQLUINTEGER 値。 次の値が使用されます。<br /><br /> SQL_CP_OFF = 接続プーリングはオフになっています。 既定値です。<br /><br /> SQL_CP_ONE_PER_DRIVER = 各ドライバーで1つの接続プールがサポートされています。 プール内のすべての接続は、1つのドライバーに関連付けられています。<br /><br /> SQL_CP_ONE_PER_HENV = 1 つの接続プールが各環境でサポートされています。 プール内のすべての接続は、1つの環境に関連付けられています。<br /><br /> SQL_CP_DRIVER_AWARE = 使用可能な場合は、ドライバーの接続プールの認識機能を使用します。 ドライバーで接続プールの認識がサポートされていない場合、SQL_CP_DRIVER_AWARE は無視され、SQL_CP_ONE_PER_HENV が使用されます。 詳細については、「[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)」を参照してください。 一部のドライバーがサポートしていて、一部のドライバーで接続プールの認識がサポートされていない環境では、SQL_CP_DRIVER_AWARE は、サポートするドライバーで接続プールの認識機能を有効にすることができますが、これは、接続プールの認識機能をサポートしていないドライバーで SQL_CP_ONE_PER_HENV に設定することと同じです。<br /><br /> 接続プールを有効にするには、 **SQLSetEnvAttr**を呼び出して、SQL_ATTR_CONNECTION_POOLING 属性を SQL_CP_ONE_PER_DRIVER または SQL_CP_ONE_PER_HENV に設定します。 この呼び出しは、アプリケーションが接続プールを有効にする共有環境を割り当てる前に行う必要があります。 **SQLSetEnvAttr**の呼び出しの環境ハンドルは null に設定されます。これにより、プロセスレベルの属性が SQL_ATTR_CONNECTION_POOLING されます。 接続プールを有効にした後、アプリケーションは、 *InputHandle*引数を SQL_HANDLE_ENV に設定して**SQLAllocHandle**を呼び出すことによって、暗黙的な共有環境を割り当てます。<br /><br /> 接続プールが有効化され、アプリケーションの共有環境が選択されると、この属性を設定するときに**SQLSetEnvAttr**が null 環境ハンドルで呼び出されるため、その環境に対して SQL_ATTR_CONNECTION_POOLING をリセットできません。 共有環境で接続プールが既に有効になっている間にこの属性が設定されている場合、属性は、後で割り当てられた共有環境にのみ影響します。<br /><br /> 環境で接続プールを有効にすることもできます。 環境接続プールについては、次の点に注意してください。<br /><br /> -NULL ハンドルでの接続プールの有効化は、プロセスレベルの属性です。 その後、割り当てられた環境は共有環境になり、プロセスレベルの接続プーリング設定が継承されます。<br />-環境が割り当てられた後も、アプリケーションは接続プールの設定を変更できます。<br />-環境接続プーリングが有効になっていて、接続のドライバーがドライバープーリングを使用している場合、環境プーリングが優先されます。<br /><br /> SQL_ATTR_CONNECTION_POOLING は、ドライバーマネージャー内で実装されます。 ドライバーは、SQL_ATTR_CONNECTION_POOLING を実装する必要はありません。 ODBC 2.0 および3.0 アプリケーションでは、この環境属性を設定できます。<br /><br /> 詳細については、「 [ODBC Connection Pooling (ODBC 接続プール)](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)」を参照してください。|  
+|SQL_ATTR_CP_MATCH (ODBC 3.0)|接続プールから接続を選択する方法を決定する32ビット SQLUINTEGER 値。 **SQLConnect**または**SQLDriverConnect**が呼び出されると、ドライバーマネージャーによって、プールから再利用される接続が決まります。 ドライバーマネージャーは、呼び出しの接続オプションと、アプリケーションによって設定された接続属性を、プール内の接続のキーワードと接続属性に一致させようとします。 この属性の値によって、一致条件の精度のレベルが決まります。<br /><br /> この属性の値を設定するには、次の値を使用します。<br /><br /> SQL_CP_STRICT_MATCH = 呼び出しの接続オプションと完全に一致する接続のみが、アプリケーションによって設定された接続属性を再利用します。 既定値です。<br /><br /> SQL_CP_RELAXED_MATCH = 一致する接続文字列キーワードを使用した接続を使用できます。 キーワードは一致している必要がありますが、すべての接続属性が一致している必要はありません。<br /><br /> プールされた接続への接続でドライバーマネージャーが照合を実行する方法の詳細については、「 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)」を参照してください。 接続プールの詳細については、「 [ODBC 接続プール](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)」を参照してください。|  
 |SQL_ATTR_ODBC_VERSION (ODBC 3.0)|特定の機能*で odbc 2.x 動作また**は odbc 3.x*動作が動作するかどうかを決定する32ビット整数。 この属性の値を設定するには、次の値を使用します。<br /><br /> SQL_OV_ODBC3_80 = ドライバーマネージャーとドライバーは、次の ODBC 3.8 動作を示しています。<br /><br /> -ドライバーは、日付、時刻、およびタイムスタンプの ODBC *3. x*コードを返します。<br />- **SQLError**、 **SQLGetDiagField**、または**SQLGetDiagRec**が呼び出されると、ドライバーは ODBC 3.x コードを返します *。*<br />- **Sqltables**の呼び出しの*CatalogName*引数は、検索パターンを受け入れます。<br />-ドライバーマネージャーは、C データ型の拡張機能をサポートしています。 C データ型の拡張機能の詳細については、「 [ODBC の c データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)」を参照してください。<br /><br /> 詳細については、「 [ODBC 3.8 の新機能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)」を参照してください。<br /><br /> SQL_OV_ODBC3 = ドライバーマネージャーとドライバーは、次の ODBC *3. x*動作を示しています。<br /><br /> -ドライバーは、日付、時刻、およびタイムスタンプの ODBC *3. x*コードを返します。<br />- **SQLError**、 **SQLGetDiagField**、または**SQLGetDiagRec**が呼び出されると、ドライバーは ODBC 3.x コードを返します *。*<br />- **Sqltables**の呼び出しの*CatalogName*引数は、検索パターンを受け入れます。<br />-ドライバーマネージャーは、C データ型の拡張機能をサポートしていません。<br /><br /> SQL_OV_ODBC2 = ドライバーマネージャーとドライバーは、次*の ODBC 2.x*動作を示しています。 これは *、odbc 2.x アプリケーションで*odbc *2.x ドライバーを*使用する場合に特に便利です。<br /><br /> -ドライバーはを返し、日付、時刻、およびタイムスタンプの ODBC 2.x コードを想定*します。*<br />- **SQLError**、 **SQLGetDiagField**、または**SQLGetDiagRec**が呼び出されると、ドライバーは ODBC 2.x コードを返し*ます。*<br />- **Sqltables**の呼び出しの*CatalogName*引数は、検索パターンを受け入れません。<br />-ドライバーマネージャーは、C データ型の拡張機能をサポートしていません。<br /><br /> アプリケーションでは、SQLHENV 引数を持つ関数を呼び出す前に、この環境属性を設定する必要があります。そうしないと、呼び出しによって SQLSTATE HY010 (関数シーケンスエラー) が返されます。 これらの環境フラグに追加の動作が存在するかどうかは、ドライバーによって異なります。<br /><br /> -詳細については、「[アプリケーションの ODBC のバージョン](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)と[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)の宣言」を参照してください。|  
 |SQL_ATTR_OUTPUT_NTS (ODBC 3.0)|ドライバーが文字列データを返す方法を決定する32ビット整数。 SQL_TRUE した場合、ドライバーは null で終わる文字列データを返します。 SQL_FALSE した場合、ドライバーは null で終わる文字列データを返しません。<br /><br /> この属性の既定値は SQL_TRUE です。 SQL_TRUE に設定する**SQLSetEnvAttr**を呼び出すと、SQL_SUCCESS が返されます。 SQL_FALSE に設定する**SQLSetEnvAttr**を呼び出すと、SQL_ERROR と SQLSTATE HYC00 (省略可能な機能が実装されていません) が返されます。|  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |環境属性の設定を返す|[SQLGetEnvAttr 関数](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|  

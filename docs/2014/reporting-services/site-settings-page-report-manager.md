@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101122"
 ---
 # <a name="site-settings-page-report-manager"></a>[サイトの設定] ページ (レポート マネージャー)
@@ -34,7 +34,7 @@ ms.locfileid: "66101122"
   
      **注:** メニューに [**サイトの設定**] オプションが表示されない場合は、必要なアクセス許可がありません。詳細については、「[ローカル管理用のネイティブモードのレポートサーバーの構成 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」の「サイトの設定」セクションを参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート マネージャーのインスタンスに使用するタイトルを指定します。 既定では、タイトルは "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]" です。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66101122"
   
  SharePoint 統合モード: 既定の URL は、http://\<*SharePoint_site*>/_vti_bin/reportbuilder/ReportBuilder_3_0_0_0. "の形式になります。  
   
- **[適用]**  
+ 適用****  
  レポート サーバーに変更を保存する場合にクリックします。  
   
  **セキュリティ**  

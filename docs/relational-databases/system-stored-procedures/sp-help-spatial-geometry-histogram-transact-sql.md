@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733252"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   空間インデックスの境界ボックスおよびグリッドパラメーターのキーイングを容易にします。  
   
@@ -65,7 +65,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|各セルの一意の ID を表します。カウントは1から始まります。|  
 |**cell**|**geometry**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
@@ -74,12 +74,12 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。 テーブル内のオブジェクトは複数のセルに対応している場合があるため、セルの合計が実際のオブジェクトの数よりも大きくなる可能性があります。  
   
  境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 この行の**cellid**は0で、この行の**セル**には、境界ボックスを表す**LineString**が含まれています。 この行は、境界ボックス外の領域全体を表します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、サンプルテーブルを作成し、テーブルに対して**sp_help_spatial_geometry_histogram**を呼び出します。  
   
  `USE AdventureWorksDW2012`  
@@ -146,7 +146,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  `GO`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

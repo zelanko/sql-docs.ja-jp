@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107299"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107299"
 |&#124; (垂直線)|構文項目に複数の選択肢があることを示します。 選択できる項目は 1 つだけです。|  
 |`[ ] (brackets)`|省略可能な構文項目。 角かっこは入力しません。|  
 |**{ }** (中かっこ)|構文項目のパラメーターを区切ります。|  
-|[ **,** ...*n*]|先行する項目を *n* 回繰り返せることを示します。 出現箇所は、コンマで区切られます。|  
+|[**,**...*n*]|先行する項目を*n*回繰り返すことができることを示します。 出現箇所は、コンマで区切られます。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,41 +72,37 @@ XMLLocalName :: =
 > [!NOTE]  
 >  XML タグでは大文字と小文字が区別されます。 要素パスに ElementNode を指定する場合は、データ ソース内の XML タグと完全に一致させる必要があります。  
   
-|期間|定義|  
+|用語|定義|  
 |----------|----------------|  
 |Element path|XML ドキュメント内のノードのシーケンス、つまり、どのようにノードをたどっていけば、XML データ ソースからデータセットのフィールド データを取得できるかを定義します。|  
 |`ElementNode`|XML ドキュメント内の XML ノードです。 各ノードは他のノードと階層的な関係にあり、タグによって指定されます。 たとえば、\<Customers> は、ルート要素ノードです。 \<Customer> は、\<Customers> のサブ要素です。|  
 |`XMLName`|ノード名。 たとえば、Customers ノードの名前は Customers です。 すべてのノード名を一意に識別できるように、`XMLName` の先頭には名前空間識別子を付けることができます。|  
 |`Encoding`|この要素の `Value` はエンコードされた XML であり、この要素のサブ要素としてデコードおよび追加する必要があることを示します。|  
-|`FieldList`|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 ( **{}** )、このノードのフィールドは使用されません。<br /><br /> 
-  `FieldList` には、`Value` や `Element`、`ElementNode` は含まれません。|  
+|`FieldList`|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールドリストが指定され**{}** ている場合 ()、このノードのフィールドは使用されません。<br /><br /> `FieldList` には、`Value` や `Element`、`ElementNode` は含まれません。|  
 |`Field`|データセットのフィールドとして取得するデータを指定します。|  
-|`Attribute`|
-  `ElementNode` 内に指定される名前と値のペアです。 たとえば、 \<要素ノード Customer ID = "1" > で`ID`は、は属性であり、 `@ID(Integer)`対応するデータフィールド`ID`で整数型として "1" を返します。|  
-|`Value`|要素の値です。 
-  `Value` は、要素パス内で最後の `ElementNode` でのみ使用できます。 たとえば、戻り> \<はリーフノードであるため、要素パスの最後に含めると、の`Return {@}`値は`Chair`になります。|  
+|`Attribute`|`ElementNode` 内に指定される名前と値のペアです。 たとえば、 \<要素ノード Customer ID = "1" > で`ID`は、は属性であり、 `@ID(Integer)`対応するデータフィールド`ID`で整数型として "1" を返します。|  
+|`Value`|要素の値です。 `Value` は、要素パス内で最後の `ElementNode` でのみ使用できます。 たとえば、戻り> \<はリーフノードであるため、要素パスの最後に含めると、の`Return {@}`値は`Chair`になります。|  
 |`Element`|指定されたサブ要素の値です。 たとえば、Customers {}/Customer {}/LastName とすると、LastName 要素についてのみ値が取得されます。|  
 |`Type`|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
-|`NamespacePrefix`|
-  `NamespacePrefix` は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML `ElementPath` の名前空間は無視されます。 XML Query 要素が存在する場合は、XML `ElementPath` に属性 `IgnoreNamespaces` を使用できます (省略可)。 IgnoreNamespaces が`true`の場合、XML `ElementPath`および xml ドキュメント内の名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](report-data-ssrs.md)」を参照してください。|  
+|`NamespacePrefix`|`NamespacePrefix` は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML `ElementPath` の名前空間は無視されます。 XML Query 要素が存在する場合は、XML `ElementPath` に属性 `IgnoreNamespaces` を使用できます (省略可)。 IgnoreNamespaces が`true`の場合、XML `ElementPath`および xml ドキュメント内の名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](report-data-ssrs.md)」を参照してください。|  
   
 ## <a name="example---no-namespaces"></a>例 - 名前空間なし  
  データ ソースとして、XML ドキュメント (Customers.xml) を使用した例を次に示します。 要素パスの構文を示しながら、データセットを定義するクエリでその要素パスを使用した場合にどのような結果が得られるかを説明しています。  
   
  要素パスが空の場合、クエリは既定の要素パス (リーフノードコレクションへの最初のパス) を使用することに注意してください。 1 つ目は要素パスを空にする例です。/Customers/Customer/Orders/Order という要素パスを指定した場合と同じ結果になります。 このパス上に存在するすべてのノードの値と属性が結果セットに返され、ノード名と属性名がデータセットのフィールドとして表示されます。  
   
--   *指定*  
+-   *空*  
   
-    |Order|数量|id|FirstName|LastName|Customer.ID|xmlns|  
+    |Order|数量|ID|FirstName|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-    |Chair|6|1 で保護されたプロセスとして起動されました|Bobby|Moore|11|http://www.adventure-works.com|  
-    |テーブル|1 で保護されたプロセスとして起動されました|2|Bobby|Moore|11|http://www.adventure-works.com|  
+    |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
+    |テーブル|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
     |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
     |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
 -   `Customers {}/Customer`  
   
-    |FirstName|LastName|id|  
+    |FirstName|LastName|ID|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -125,15 +121,15 @@ XMLLocalName :: =
     |Order|数量|  
     |-----------|---------|  
     |Chair|6|  
-    |テーブル|1 で保護されたプロセスとして起動されました|  
+    |テーブル|1|  
     |Sofa|2|  
     |EndTables|2|  
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|FirstName|LastName|id|  
+    |Order.ID|FirstName|LastName|ID|  
     |--------------|---------------|--------------|--------|  
-    |1 で保護されたプロセスとして起動されました|Bobby|Moore|11|  
+    |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
     |8|Crystal|Hu|20|  
     |15|Wyatt|Diaz|33|  
@@ -207,8 +203,8 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [XML の接続の種類 (SSRS)](xml-connection-type-ssrs.md)   
- [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [XML 接続の種類 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [SSRS&#41;&#40;チュートリアル Reporting Services](../reporting-services-tutorials-ssrs.md)   
  [レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

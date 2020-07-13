@@ -11,40 +11,36 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528858"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>[勘定科目インテリジェンスの定義] (ディメンション ウィザード)
-  
   **[勘定科目インテリジェンスの定義]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義された勘定科目の種類を、ディメンションの **[勘定科目の種類]** の属性の種類に関連付けられた、ディメンションの属性で定義された勘定科目の種類にマップできます。  
   
 > [!NOTE]  
->  
-  **[ディメンションの種類の選択]** ページの **[標準ディメンション]** を選択した場合、およびディメンションの属性を **[ディメンションの種類を指定]** ページの **[勘定科目の種類]** にマップした場合のみ、このページが表示されます。  
+>  **[ディメンションの種類の選択]** ページの **[標準ディメンション]** を選択した場合、およびディメンションの属性を **[ディメンションの種類を指定]** ページの **[勘定科目の種類]** にマップした場合のみ、このページが表示されます。  
   
 ## <a name="options"></a>オプション  
  **[基になるテーブルの勘定科目の種類]**  
- 
-  **[ディメンションのキーおよび種類を指定]** ページの **[勘定科目の種類]** の属性の種類に割り当てられた、ディメンションの属性に含まれる値を表示します。  
+ **[ディメンションのキーおよび種類を指定]** ページの **[勘定科目の種類]** の属性の種類に割り当てられた、ディメンションの属性に含まれる値を表示します。  
   
  **[ビルトイン勘定科目の種類]**  
  ソース テーブルの勘定科目の種類にマップされる、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義される勘定科目の種類を選択します。  
   
  次の表は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義される勘定科目の種類を示しています。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**資産**|ある時点で所有している物の価値です。|  
+|**[Asset]**|ある時点で所有している物の価値です。|  
 |**Balance**|ある時点でのある物の数です。|  
-|**伴う**|費やした物の価値です。|  
-|**フロー**|物の増加数です。|  
-|**収入**|受け取った物の価値です。|  
-|**対する**|ある時点で借りている物の価値です。|  
+|**[Expense]**|費やした物の価値です。|  
+|**Flow**|物の増加数です。|  
+|**Income**|受け取った物の価値です。|  
+|**[Liability]**|ある時点で借りている物の価値です。|  
 |**統計**|ある物の計算された割合、または集計されない物の数です。|  
   
 ## <a name="see-also"></a>参照  

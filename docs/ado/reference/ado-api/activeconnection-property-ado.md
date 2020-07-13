@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921514"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764573"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在どの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -30,10 +30,10 @@ ms.locfileid: "67921514"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続が閉じられている場合は接続の定義を含む**文字列**値、または接続が開いている場合は現在の**接続**オブジェクトを含む**バリアント**を設定または返します。 既定値は null オブジェクト参照です。 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ActiveConnection**プロパティを使用して、指定した**コマンド**オブジェクトを実行する**接続**オブジェクトを決定します。指定した**レコードセット**が開かれます。  
   
-## <a name="command"></a>command  
+## <a name="command"></a>コマンド  
  **Command**オブジェクトの場合、 **ActiveConnection**プロパティは読み取り/書き込み可能です。  
   
  このプロパティを開いている**接続**オブジェクトまたは有効な接続文字列に設定する前に**Command**オブジェクトで[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出そうとすると、エラーが発生します。  

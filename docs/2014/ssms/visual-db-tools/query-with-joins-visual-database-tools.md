@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 598a6cd3f891dc838bc5a797ad99e545a67bcf65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63010754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048575"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>結合を使用したクエリ (Visual Database Tools)
   クエリ結果には、複数のテーブルまたはテーブル値オブジェクトのデータを含めることができます。 複数のテーブル値オブジェクトのデータを結合するには、SQL の JOIN 演算子を使用します。  

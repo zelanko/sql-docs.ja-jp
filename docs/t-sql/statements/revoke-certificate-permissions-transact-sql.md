@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1aab98d77a5b52e6b75683126d78e52e38baa7e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735412"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (証明書の権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   証明書に対する権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68140905"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON CERTIFICATE :: certificate_name   

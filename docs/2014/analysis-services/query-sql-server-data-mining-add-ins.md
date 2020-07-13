@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070480"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539574"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>クエリ (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの [クエリ モデル] ボタン](media/dmc-query.gif "[データ マイニング] リボンの [クエリ モデル] ボタン")  
@@ -47,8 +46,8 @@ ms.locfileid: "66070480"
   
  いつでも、[**詳細設定**] をクリックして**データマイニング詳細クエリエディター**に切り替えることができます。これにより、DMX ステートメントの各部分をより細かく制御できます。 高度なクエリ編集ツールの使用方法の詳細については、「[高度なデータマイニングクエリエディター](advanced-data-mining-query-editor.md)」を参照してください。  
   
-### <a name="requirements"></a>必要条件  
- **クエリ**ウィザードを使用するには、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続されている必要があります。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して新しいマイニングモードを作成する方法については、「[データマイニングモデルの作成](creating-a-data-mining-model.md)」を参照してください。  
+### <a name="requirements"></a>要件  
+ **クエリ**ウィザードを使用するには、のインスタンスに接続されている必要があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して新しいマイニングモードを作成する方法については、「[データマイニングモデルの作成](creating-a-data-mining-model.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用データマイニングアドイン &#40;のマイニングモデルの配置とスケーリング&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

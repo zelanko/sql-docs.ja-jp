@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63269890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061470"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
   変更データ キャプチャのコンシューマーは、テーブル値関数 (TVF) を使用することによって変更データを利用できるようになります。 これらの関数のすべてのクエリには、ログ シーケンス番号 (LSN) の範囲を定義する 2 つのパラメーターが必要です。これらのパラメーターは、返される結果セットを開発する際に検討の対象になります。 期間の両端を示す LSN の上限値と下限値は、期間内に含まれると見なされます。  
   
  TVF のクエリで使用する適切な LSN 値を特定するための関数がいくつか用意されています。 [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 関数は、キャプチャ インスタンスの有効期間に関連付けられた最小の LSN を返します。 この有効期間は、現在キャプチャ インスタンスが変更データを利用できる期間です。 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 関数は、有効期間内の最大の LSN を返します。 [sys.fn_cdc_map_time_to_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql) 関数と [sys.fn_cdc_map_lsn_to_time](/sql/relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql) 関数は、LSN 値を従来のタイムラインに配置する場合に使用できます。 変更データ キャプチャでは両端の値を含む閉区間のクエリ範囲が使用されるため、連続したクエリ ウィンドウで変更が重複しないようにするためにシーケンス内の次の LSN 値を生成することが必要になる場合があります。 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 関数と [sys.fn_cdc_decrement_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql) 関数は、LSN 値の増分の調整が必要な場合に役立ちます。  
   
-##  <a name="LSN"></a> LSN の下限と上限の検証  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> LSN の下限と上限の検証  
  TVF クエリで使用する LSN の下限と上限は、使用前に検証することをお勧めします。 下限または上限が Null の場合やキャプチャ インスタンスの有効期間から外れている場合、変更データ キャプチャの TVF からエラーが返されます。  
   
  たとえば、すべての変更のクエリで、クエリ範囲の定義に使用されたパラメーターが無効または範囲外である場合や、行フィルター オプションが無効である場合は、次のエラーが返されます。  
@@ -36,8 +35,7 @@ ms.locfileid: "63269890"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- 
-  `net changes` のクエリに対して返される対応するエラーは次のとおりです。  
+ `net changes` のクエリに対して返される対応するエラーは次のとおりです。  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -63,7 +61,7 @@ ms.locfileid: "63269890"
 > [!NOTE]  
 >  SQL Server Management Studio で変更データ キャプチャ テンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を展開し、 **[変更データ キャプチャ]** フォルダーを展開します。  
   
-##  <a name="Functions"></a> クエリ関数  
+##  <a name="query-functions"></a><a name="Functions"></a> クエリ関数  
  追跡されているソース テーブルの特性とそのキャプチャ インスタンスの構成方法に応じて、変更データのクエリのための TVF が 1 つまたは 2 つ生成されます。  
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 関数は、指定した期間に発生したすべての変更を返します。 この関数は常に生成されます。 エントリは、必ず並べ替えて返されます。まず変更のトランザクション コミット LSN で並べ替えられ、次にそのトランザクション内の変更のシーケンス値で並べ替えられます。 選択した行フィルター オプションに応じて、更新について最後の行が返される (行フィルター オプションが "all" の場合) か、新しい値と古い値の両方が返されます (行フィルター オプションが "all update old" の場合)。  
@@ -77,7 +75,7 @@ ms.locfileid: "63269890"
   
  クエリ関数から返される更新マスクは、変更データの行で変更されたすべての列を特定できるように簡潔に表現したものです。 通常、この情報が必要とされるのは、キャプチャ対象列の小さなサブセットを使用する場合のみです。 アプリケーションでより直接的に使用できる形式の情報をこのマスクから抽出するための関数も用意されています。 [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 関数は、特定のキャプチャ インスタンスの指定した列の位置を表す序数を返します。一方、 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 関数は、関数呼び出しで指定した序数に基づいて、指定したマスクのビットのパリティを返します。 この 2 つの関数により、更新マスクから情報を効率的に抽出し、変更データの要求と共に返すことができます。 これらの関数の使用例については、"All With Mask を使用した差分変更の列挙" テンプレートを参照してください。  
   
-##  <a name="Scenarios"></a> クエリ関数のシナリオ  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> クエリ関数のシナリオ  
  以降のセクションでは、クエリ関数の cdc.fn_cdc_get_all_changes_<capture_instance> および cdc.fn_cdc_get_net_changes_<capture_instance> を使用して変更データ キャプチャ データのクエリを実行するための一般的なシナリオについて説明します。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>キャプチャ インスタンスの有効期間内のすべての変更のクエリ  

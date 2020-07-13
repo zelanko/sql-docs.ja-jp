@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC], Desktop Database Drivers
 ms.assetid: 9bd7c87b-d99d-4e23-b2db-868d3b461c94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 53ef01423ad14cb5606e14ca004ca614e68101e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d618a7f845a87394c2fc3c7978a7aef5716e21f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905498"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301483"
 ---
 # <a name="sqlsetcursorname-desktop-database-drivers"></a>SQLSetCursorName (デスクトップ データベース ドライバー)
 ドライバーは位置指定更新をサポートしておらず、WHERE CURRENT OF*カーソル名*構文による削除をサポートしていないため、 **SQLSetCursorName**はサポートされていますが、位置指定更新には使用できません。 カーソルライブラリが有効になっていて、アプリケーションが**SQLExtendedFetch**を使用している場合にのみ使用できます。

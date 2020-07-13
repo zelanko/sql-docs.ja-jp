@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725688"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたレプリケーションマージエージェントの過去のセッションに関する情報を返します。フィルターの条件に一致する各セッションに対して1行のデータが返されます。 このストアドプロシージャは、マージレプリケーションの監視に使用され、ディストリビューター側のディストリビューションデータベースまたはサブスクライバー側でサブスクリプションデータベースに対して実行されます。  
   
@@ -67,13 +67,13 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|エージェント ジョブ セッションの ID。|  
 |**状態**|**int**|エージェントの実行状態:<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
-|**StartTime**|**DATETIME**|エージェントジョブセッションが開始した時刻。|  
-|**EndTime**|**DATETIME**|エージェントジョブセッションが完了しました。|  
-|**Duration**|**int**|このジョブセッションの累積時間 (秒単位)。|  
+|**StartTime**|**datetime**|エージェントジョブセッションが開始した時刻。|  
+|**EndTime**|**datetime**|エージェントジョブセッションが完了しました。|  
+|**期間**|**int**|このジョブセッションの累積時間 (秒単位)。|  
 |**UploadedCommands**|**int**|エージェントセッション中にアップロードされたコマンドの数。|  
 |**ダウンロードコマンド**|**int**|エージェントセッション中にダウンロードされたコマンドの数。|  
 |**ErrorMessages**|**int**|エージェント セッション中に生成されたエラー メッセージ数。|  
@@ -86,7 +86,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorhelpmergesession**は、マージレプリケーションの監視に使用されます。  
   
  サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesession**は、最後の5つのマージエージェントセッションに関する情報のみを返します。  
@@ -94,7 +94,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replmonitorhelpmergesession**を実行できるのは、ディストリビューター側のディストリビューションデータベースまたはサブスクライバー側のサブスクリプションデータベースで、 **db_owner**または**replmonitor**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

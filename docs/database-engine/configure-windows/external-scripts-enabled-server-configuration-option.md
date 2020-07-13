@@ -40,7 +40,7 @@ ms.locfileid: "72006050"
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] は SQL Server 2016 の場合と同じアーキテクチャを使いますが、Python 言語のサポートを提供します。
 
-    外部スクリプトの実行を有効にするには、 **のセットアップの間に、** Advanced Analytics Extensions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能をインストールします。 初期セットアップのときに、必ず少なくとも 1 つの言語を選んでください (R と Python のどちらか一方または両方)。 
+    外部スクリプトの実行を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に、**Advanced Analytics Extensions** 機能をインストールします。 初期セットアップのときに、必ず少なくとも 1 つの言語を選んでください (R と Python のどちらか一方または両方)。 
 
 ## <a name="additional-requirements"></a>その他の要件
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b43be7165898ab396e646dd5a3e13add86d8b114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540181"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot データ アクセス
   このトピックでは、SharePoint ライブラリにパブリッシュされる PowerPivot ブックからデータを取得する方法について説明します。  
@@ -28,7 +27,7 @@ ms.locfileid: "66071250"
   
  SharePoint ファームでは、Excel Services はローカル MSOLAP OLE DB プロバイダーを使用して PowerPivot データに接続します。 プロバイダーは、この接続要求をファーム内の PowerPivot for SharePoint サーバーに送信します。 このサーバーがデータをロードし、クエリを実行し、結果セットを返します。  
   
-##  <a name="queryproc"></a>SharePoint での PowerPivot データのクエリ  
+##  <a name="querying-powerpivot-data-in-sharepoint"></a><a name="queryproc"></a>SharePoint での PowerPivot データのクエリ  
  PowerPivot ブックを SharePoint ライブラリから表示すると、ブック内の PowerPivot データがファームにある Analysis Services サーバー インスタンスで個別に検出、抽出、および処理されて、同時に Excel Services によってプレゼンテーション層が描画されます。 完全に処理されたブックは、ブラウザー ウィンドウ、または PowerPivot アドインを持つ Excel 2010 デスクトップ アプリケーションで表示できます。  
   
  次の図は、クエリ処理の要求がファーム内をどのように移動するかを示しています。 PowerPivot データは Excel 2010 ブックの一部なので、クエリ処理の要求は、ユーザーが Excel ブックを SharePoint ライブラリから開いて、PowerPivot データを含むピボットテーブルまたはピボットグラフを操作したときに発生します。  

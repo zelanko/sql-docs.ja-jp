@@ -17,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68262700"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009372"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>dm_tran_active_snapshot_database_transactions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでは、この動的管理ビューは、行バージョンを生成またはアクセスする可能性のあるすべてのアクティブなトランザクションの仮想テーブルを返します。 トランザクションは、次の条件を 1 つ以上満たします。  
+  インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この動的管理ビューは、行バージョンを生成またはアクセスする可能性のあるすべてのアクティブなトランザクションの仮想テーブルを返します。 トランザクションは、次の条件を 1 つ以上満たします。  
   
 -   ALLOW_SNAPSHOT_ISOLATION データベース オプションと READ_COMMITTED_SNAPSHOT データベース オプションのいずれかまたは両方が ON に設定されている場合、  
   
@@ -47,9 +46,9 @@ ms.locfileid: "68262700"
  この動的管理ビューには、システムトランザクションは含まれません。  
   
 > [!NOTE]  
->  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_tran_active_snapshot_database_transactions**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_active_snapshot_database_transactions**という名前を使用します。  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -58,7 +57,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|トランザクションに割り当てられている一意な識別番号。 トランザクション ID は主に、ロック操作でトランザクションを識別するために使用されます。|  
 |**transaction_sequence_num**|**bigint**|トランザクションのシーケンス番号。 これは、トランザクションが開始されるときに、トランザクションに割り当てられる一意のシーケンス番号です。 バージョン レコードを生成せず、スナップショット スキャンを行わないトランザクションには、トランザクション シーケンス番号は割り当てられません。|  
@@ -67,16 +66,16 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|トランザクションを開始したセッションの ID。|  
 |**first_snapshot_sequence_num**|**bigint**|スナップショット取得時にアクティブだったトランザクションの最小トランザクションシーケンス番号。 実行時には、スナップショットトランザクションは、その時点でアクティブなすべてのトランザクションのスナップショットを取得します。 スナップショット以外のトランザクションの場合、この列には0が表示されます。|  
 |**max_version_chain_traversed**|**int**|トランザクション全体で一貫性のあるバージョンを検索するためにスキャンされるバージョン チェーンの最大長。|  
-|**average_version_chain_traversed**|**本当の**|走査されるバージョンチェーン内の行バージョンの平均数。|  
+|**average_version_chain_traversed**|**real**|走査されるバージョンチェーン内の行バージョンの平均数。|  
 |**elapsed_time_seconds**|**bigint**|トランザクションがトランザクションシーケンス番号を取得してから経過した時間。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  dm_tran_active_snapshot_database_transactions は、トランザクションシーケンス番号 (XSN) が割り当てられているトランザクションを報告し**ます。** XSN は、トランザクションが最初にバージョンストアにアクセスしたときに割り当てられます。 行のバージョン管理を使用するスナップショット分離または READ COMMITTED 分離が有効なデータベースにおいて、XSN がトランザクションに割り当てられるときの例を次に示します。  
   
 -   トランザクションが serializable 分離レベルで実行されている場合、更新操作などのステートメントをトランザクションが最初に実行するときに XSN が割り当てられ、行バージョンが作成されます。  
@@ -145,18 +144,18 @@ elapsed_time_seconds
   
  次の情報は、dm_tran_active_snapshot_database_transactions の結果を評価し**ます**。  
   
--   XSN-57: このトランザクションはスナップショット分離で実行されてい`is_snapshot`ないため`first_snapshot_sequence_num` 、 `0`値とはです。 `transaction_sequence_num`ALLOW_SNAPSHOT_ISOLATION または READ_COMMITTED_SNAPSHOT データベースオプションのいずれかまたは両方がオンになっているため、トランザクションシーケンス番号がこのトランザクションに割り当てられていることを示します。  
+-   XSN-57: このトランザクションはスナップショット分離で実行されていないため、 `is_snapshot` 値と `first_snapshot_sequence_num` は `0` です。 `transaction_sequence_num`ALLOW_SNAPSHOT_ISOLATION または READ_COMMITTED_SNAPSHOT データベースオプションのいずれかまたは両方がオンになっているため、トランザクションシーケンス番号がこのトランザクションに割り当てられていることを示します。  
   
 -   XSN-58: このトランザクションはスナップショット分離で実行されていません。 XSN-57 についても同じ情報が適用されます。  
   
--   XSN-59: これは、スナップショット分離で実行されている最初のアクティブなトランザクションです。 このトランザクションは、によっ`first_snapshot_sequence_num`て示されているように、XSN-57 より前にコミットされたデータを読み取ります。 このトランザクションの出力では、1 行にスキャンされるバージョン チェーンの最大長が `1` で、アクセスした行ごとに平均で `1` つのバージョンがスキャンされていることも示されています。 これは、トランザクション XSN-57、XSN-58、および XSN-60 では行が変更されずコミットされていないことを表します。  
+-   XSN-59: これは、スナップショット分離で実行されている最初のアクティブなトランザクションです。 このトランザクションは、によって示されているように、XSN-57 より前にコミットされたデータを読み取り `first_snapshot_sequence_num` ます。 このトランザクションの出力では、1 行にスキャンされるバージョン チェーンの最大長が `1` で、アクセスした行ごとに平均で `1` つのバージョンがスキャンされていることも示されています。 これは、トランザクション XSN-57、XSN-58、および XSN-60 では行が変更されずコミットされていないことを表します。  
   
 -   XSN-60: これは、スナップショット分離で実行されている2番目のトランザクションです。 出力では、XSN-59 と同じ情報が示されます。  
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;トランザクション分離レベルを設定する](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

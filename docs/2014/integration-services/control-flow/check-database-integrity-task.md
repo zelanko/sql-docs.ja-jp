@@ -16,15 +16,14 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a123557bdeb84ed8d36664b6451772b669edbbec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 99a2620a6f3f6a9a73c27fe6bb1abd34af73707d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62832851"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433669"
 ---
 # <a name="check-database-integrity-task"></a>データベースの整合性確認タスク
   データベースの整合性確認タスクは、指定されたデータベース内のすべてのオブジェクトの割り当てと構造上の整合性をチェックします。 このタスクは、単一のデータベースまたは複数のデータベースをチェックできます。また、データベースのインデックスもチェックするかどうかを選択できます。  

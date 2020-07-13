@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940733"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>サーバー構成ユーティリティ (Excel 用のデータ マイニング アドイン)
-  Excel 用データマイニングアドインをインストールすると、サーバー構成ユーティリティもインストールされ、アドインを初めて開いたときに実行されます。このトピックでは、ユーティリティを使用しての[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続し、データマイニングモデルを操作するためのデータベースを設定する方法について説明します。  
+  Excel 用データマイニングアドインをインストールすると、サーバー構成ユーティリティもインストールされ、アドインを初めて開いたときに実行されます。このトピックでは、ユーティリティを使用してのインスタンスに接続 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] し、データマイニングモデルを操作するためのデータベースを設定する方法について説明します。  
   
 
   
-##  <a name="bkmk_step1"></a>手順 1: Analysis Services に接続する  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>手順 1: Analysis Services に接続する  
  データ マイニング アルゴリズムを提供し、データ マイニング モデルを格納する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを選択します。  
   
  データ マイニング用の接続を作成する場合、データ マイニング モデルをテストできるサーバーを選択します。 サーバー上に新しいデータベースを作成し、その新しいデータベースをデータ マイニング専用にすることをお勧めします。または、自分用のデータ マイニング サーバーを準備するように管理者に依頼します。 この方法で、他のサービスのパフォーマンスに影響を与えずに、モデルを作成できます。  
@@ -33,10 +32,9 @@ ms.locfileid: "66069070"
  データ マイニングに使用する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスが存在するサーバーの名前を入力します。  
   
  **認証**  
- 認証方法を指定します。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]への接続に、管理者が HTTPPump を使用してサーバーへのアクセスを構成した場合以外は、Windows 認証が必要です。  
+ 認証方法を指定します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]への接続に、管理者が HTTPPump を使用してサーバーへのアクセスを構成した場合以外は、Windows 認証が必要です。  
   
-##  <a name="bkmk_step2"></a>手順 2: 一時的なモデルを許可する  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>手順 2: 一時的なモデルを許可する  
  アドインを使用する前に、一時的なマイニング モデルの作成を許可するように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のサーバー プロパティを変更する必要があります。  
   
  一時的なマイニングモデルは、*セッションモデル*とも呼ばれます。 これは、現在のセッションが開いている間だけモデルを格納できるためです。 サーバーへの接続を閉じると、セッションが終了し、セッション中に使用されたモデルはすべて削除されます。  
@@ -45,7 +43,7 @@ ms.locfileid: "66069070"
   
  ウィザードでは、最初に指定したサーバーの設定が検出されます。 サーバーで一時的なマイニングモデルが既に許可されている場合は、[**次へ**] をクリックして続行することができます。 ウィザードでは、指定した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーで一時的なマイニング モデルを有効にする方法や、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者に対して要求を行う方法に関する説明も表示されます。  
   
-##  <a name="bkmk_step3"></a>手順 3: アドインユーザー用のデータベースを作成する  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>手順 3: アドインユーザー用のデータベースを作成する  
  セットアップおよび構成ウィザードのこのページでは、データ マイニング専用の新しいデータベースを作成すること、または既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを選択することができます。  
   
 > [!WARNING]  
@@ -53,8 +51,7 @@ ms.locfileid: "66069070"
   
  データ マイニング専用の別のデータベースを作成することをお勧めします。 この結果、他のソリューションのオブジェクトに影響を与えずにデータ マイニング モデルを試してみることができます。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンス上にある既存のデータベースを選択した場合は、アドインを使用してモデルを作成する際に、その名前のモデルが既に存在する状況では既存のモデルを上書きできることに注意してください。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンス上にある既存のデータベースを選択した場合は、アドインを使用してモデルを作成する際に、その名前のモデルが既に存在する状況では既存のモデルを上書きできることに注意してください。  
   
  **新しいデータベースの作成**  
  選択したサーバーに新規データベースを作成する場合は、このオプションを選択します。 データ マイニング データベースには、データ ソース、マイニング構造、およびマイニング モデルが格納されます。  
@@ -68,7 +65,7 @@ ms.locfileid: "66069070"
  **[データベース]**  
  既存のデータベースを使用するためにこのオプションを選択した場合は、一覧からデータベース名を選択する必要があります。  
   
-##  <a name="bkmk_step4"></a>手順 4: アドインユーザーに適切なアクセス許可を付与する  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>手順 4: アドインユーザーに適切なアクセス許可を付与する  
  データ マイニング構造およびモデルを参照、編集、処理、または作成するために必要な権限を、自分 (またはアドインの他のユーザー) に設定する必要があります。  
   
  既定では、アドインを使用するには統合 Windows 認証が必要です。  
@@ -88,7 +85,7 @@ ms.locfileid: "66069070"
  **追加**  
  ダイアログ ボックスを開いてユーザーまたはグループを追加する場合にクリックします。  
   
- **Remove**  
+ **削除**  
  選択したユーザーまたはグループを、管理権限を持つユーザーの一覧から削除する場合にクリックします。  
   
   

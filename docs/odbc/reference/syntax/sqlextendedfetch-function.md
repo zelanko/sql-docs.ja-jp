@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC]
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12c64be42c921a4dff57ccca6278e1f84bd717ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc832e5a20b1d3c0a1ad63b3e2a070563de2b46d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345214"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285982"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 関数
 **互換性**  
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  Output各行の状態を返す配列へのポインター。 この配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によって指定された配列と同じ方法で使用されます。  
   
- ただし、この配列のアドレスは、IRD の SQL_DESC_STATUS_ARRAY_PTR フィールドに格納されていません。 さらに、この配列は、 **SQLExtendedFetch**によって、または**SQLExtendedFetch**の後に呼び出されたときに SQL_ADD または**SQLSetPos**操作を伴う**sqlbulkoperations**によってのみ使用されます。 ** **Sqlfetch**または**sqlfetchscroll**では使用されません。 **Sqlfetch**または**sqlfetchscroll**の後に呼び出された場合、 **sqlbulkoperations**または**SQLSetPos**では使用されません。 また、fetch 関数が呼び出される前に、SQL_ADD*操作*を伴う**sqlbulkoperations**が呼び出された場合にも使用されません。 つまり、ステートメントの状態 S7 でのみ使用されます。 ステートメントの状態 S5 または S6 では使用されません。 詳細については、「付録 B: ODBC 状態遷移テーブル」の「[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)」を参照してください。  
+ ただし、この配列のアドレスは、IRD の SQL_DESC_STATUS_ARRAY_PTR フィールドに格納されていません。 さらに、この配列は、 **SQLExtendedFetch**によって、または**SQLExtendedFetch**の後に呼び出されたときに SQL_ADD または**SQLSetPos**操作を伴う**sqlbulkoperations**によってのみ使用されます。 *Operation* **Sqlfetch**または**sqlfetchscroll**では使用されません。 **Sqlfetch**または**sqlfetchscroll**の後に呼び出された場合、 **sqlbulkoperations**または**SQLSetPos**では使用されません。 また、fetch 関数が呼び出される前に、SQL_ADD*操作*を伴う**sqlbulkoperations**が呼び出された場合にも使用されません。 つまり、ステートメントの状態 S7 でのみ使用されます。 ステートメントの状態 S5 または S6 では使用されません。 詳細については、「付録 B: ODBC 状態遷移テーブル」の「[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)」を参照してください。  
   
  アプリケーションでは、 *Rowstatusarray*引数に有効なポインターを指定する必要があります。それ以外の場合、 **SQLExtendedFetch**の動作と、カーソルが**SQLExtendedFetch**によって配置された後の**Sqlbulkoperations**または**SQLSetPos**の動作は未定義になります。  
   
@@ -75,7 +75,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>診断  
  **SQLExtendedFetch**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合は、 **SQLError**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **SQLExtendedFetch**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。 1つの列でエラーが発生した場合は、エラーが発生した列を特定するために、SQL_DIAG_COLUMN_NUMBER の*DiagIdentifier*を使用して**SQLGetDiagField**を呼び出すことができます。および**SQLGetDiagField**は、その列を含む行を判断するために、SQL_DIAG_ROW_NUMBER の*DiagIdentifier*を使用して呼び出すことができます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|列に対して返された文字列またはバイナリデータにより、空白以外の文字または NULL 以外のバイナリデータが切り捨てられました。 文字列値の場合は、右側が切り捨てられました。 数値の場合は、数値の小数部が切り捨てられています。  (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -98,7 +98,7 @@ SQLRETURN SQLExtendedFetch(
 |HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLExtendedFetch**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 指定された*StatementHandle*は実行状態ではありませんでした。 最初に**SQLExecDirect**、 **sqlexecute**、またはカタログ関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) **SQLExtendedFetch**は、 **sqlfetch**または**sqlfetchscroll**が呼び出された後、および SQL_CLOSE オプションを使用して**SQLFreeStmt**が呼び出される前に、 *StatementHandle*に対して呼び出されました。<br /><br /> (DM) **Sqlbulkoperations**が、 **sqlfetch**、 **Sqlbulkoperations**、または**SQLExtendedFetch**が呼び出される前にステートメントに対して呼び出された後、 **SQLFreeStmt**が SQL_CLOSE 呼び出される前に**SQLExtendedFetch**が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
 |HY106|フェッチの型が範囲を超えています|(DM) 引数*Fetchorientation*に指定された値が無効でした。 (「コメント」を参照してください)。<br /><br /> 引数*Fetchorientation*が SQL_FETCH_BOOKMARK、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されました。<br /><br /> SQL_CURSOR_TYPE statement オプションの値が SQL_CURSOR_FORWARD_ONLY ましたが、引数*Fetchorientation*の値が SQL_FETCH_NEXT いませんでした。<br /><br /> 引数*Fetchorientation*が SQL_FETCH_RESUME でした。|  
-|HY107|行の値が有効範囲にありません|SQL_CURSOR_TYPE statement オプションで指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_KEYSET_SIZE statement 属性で指定された値は、0より大きく、SQL_ROWSET_SIZE statement 属性で指定された値よりも小さくなっています。.|  
+|HY107|行の値が有効範囲にありません|SQL_CURSOR_TYPE statement オプションで指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_KEYSET_SIZE statement 属性で指定された値は、0より大きく、SQL_ROWSET_SIZE statement 属性で指定された値よりも小さくなっています。|  
 |HY111|ブックマークの値が無効です|引数*Fetchorientation*が SQL_FETCH_BOOKMARK、 *fetchorientation*引数で指定されたブックマークが有効ではありませんでした。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
 |HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースは、指定されたフェッチの種類をサポートしていません。<br /><br /> ドライバーまたはデータソースが、 **SQLBindCol**の*TargetType*と対応する列の SQL データ型の組み合わせによって指定された変換をサポートしていません。 このエラーは、列の SQL データ型がドライバー固有の SQL データ型にマップされている場合にのみ適用されます。|  
@@ -129,7 +129,7 @@ SQLRETURN SQLExtendedFetch(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |一括挿入、更新、または削除操作の実行|[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  

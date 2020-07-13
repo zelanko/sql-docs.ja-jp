@@ -12,14 +12,14 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307053"
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
 アプリケーションで**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**の SQL_C_DEFAULT が指定されている場合、ドライバーでは、出力バッファーまたは入力バッファーの C データ型が、バッファーのバインド先の列またはパラメーターの SQL データ型に対応していると見なされます。  

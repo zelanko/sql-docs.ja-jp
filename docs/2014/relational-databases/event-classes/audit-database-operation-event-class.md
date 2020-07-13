@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e4a4565a3b9734219afd6e62cd08aec463ee7168
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62698856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053299"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation イベント クラス
   **Audit Database Operation** イベント クラスは、チェックポイント処理、クエリ通知のサブスクライブなど、データベースで操作が行われるときに発生します。  
   
 ## <a name="audit-database-operation-event-class-data-columns"></a>Audit Database Operation イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**DatabaseID**|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  

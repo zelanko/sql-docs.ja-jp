@@ -9,25 +9,21 @@ ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecbbaba1441fa150daaecbfcbc7cbdf65636de55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 939ec9727cc81ce3b206b8bc7ca3ed8dd62c3877
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961302"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>データ品質照合の列 (Excel 用 MDS アドイン)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータを照合した後、リボンの **[データ品質]** グループの **[詳細の表示]** をクリックすると照合の詳細が含まれる列を表示できます。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータを照合した後、リボンの **[データ品質]** グループの **[詳細の表示]** をクリックすると照合の詳細が含まれる列を表示できます。  
   
  次の表に、データの照合時に表示される列を示します。  
   
-|Name|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
-|**CLUSTER_ID**|類似レコードのグループ化に使用する一意識別子です。 類似するすべての行は、同じ **CLUSTER_ID**を持ちます。 
-  **CLUSTER_ID** が行に対して表示されない場合、類似レコードが見つかっていません。|  
+|**CLUSTER_ID**|類似レコードのグループ化に使用する一意識別子です。 類似するすべての行は、同じ **CLUSTER_ID**を持ちます。 **CLUSTER_ID** が行に対して表示されない場合、類似レコードが見つかっていません。|  
 |**RECORD_ID**|レコードの識別に使用する一意識別子です。 MDS リポジトリに格納されているコード値と同様に、レコードの識別に使用される値です。 照合が実行されるたびに自動的に生成されます。|  
 |**PIVOT_MARK**|他のレコードと比較される任意のレコードで、スコアの値はありません。|  
 |**学生**|グループ内のレコードがピボット レコードとどの程度類似しているかを表します。 このスコアは DQS によって決定されます。 スコアが表示されない場合、そのレコードは他のレコードのピボットであるか、照合が見つかりませんでした。|  

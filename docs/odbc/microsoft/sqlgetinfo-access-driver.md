@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003308"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298592"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "68003308"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|ドライバー|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -123,7 +123,7 @@ ms.locfileid: "68003308"
   
  対抗  
   
- Currency  
+ 通貨  
   
  DATABASE  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68003308"
   
  MONEY  
   
- NOTE  
+ 注  
   
  NUMBER  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68003308"
   
  PIVOT  
   
- 短い  
+ SHORT  
   
  1  
   
@@ -201,7 +201,7 @@ ms.locfileid: "68003308"
   
  TABLEID  
   
- TEXT  
+ [TEXT]  
   
  TOP  
   

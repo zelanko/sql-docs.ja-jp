@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70846639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890963"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースメール内部テーブルから電子メールメッセージを完全に削除します。  
   
@@ -47,8 +47,8 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- データベースメールメッセージとその添付ファイルは、 **msdb**データベースに格納されます。 **Msdb**が予想以上に大きくなり、組織のドキュメント保持プログラムに準拠するように、メッセージを定期的に削除する必要があります。 データベースメールテーブルから電子メールメッセージを完全に削除するには、 **sysmail_delete_mailitems_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう1つの省略可能な引数を使用すると、 **sent_status**の引数として指定された特定の種類の電子メールのみを削除できます。 ** \@Sent_before**または** \@sent_status**の引数を指定する必要があります。 すべてのメッセージを削除するには、 ** \@sent_before = getdate ()** を使用します。  
+## <a name="remarks"></a>Remarks  
+ データベースメールメッセージとその添付ファイルは、 **msdb**データベースに格納されます。 **Msdb**が予想以上に大きくなり、組織のドキュメント保持プログラムに準拠するように、メッセージを定期的に削除する必要があります。 データベースメールテーブルから電子メールメッセージを完全に削除するには、 **sysmail_delete_mailitems_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう1つの省略可能な引数を使用すると、 **sent_status**の引数として指定された特定の種類の電子メールのみを削除できます。 ** \@ Sent_before**または** \@ sent_status**の引数を指定する必要があります。 すべてのメッセージを削除するには、 ** \@ sent_before = getdate ()** を使用します。  
   
  電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、 **sysmail_event_log**内の対応するエントリは削除されません。 [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)を使用して、ログから項目を削除します。  
   
@@ -67,8 +67,8 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>B. 最も古いメールを削除する  
- 次の例では、データベースメールログでよりも`October 9, 2005`古い電子メールを削除します。  
+### <a name="b-deleting-the-oldest-e-mails"></a>B: 最も古いメールを削除する  
+ 次の例では、データベースメールログでよりも古い電子メールを削除し `October 9, 2005` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>C. 特定の種類のすべての電子メールを削除する  
+### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>C: 特定の種類のすべての電子メールを削除する  
  次の例では、データベースメールログ内の失敗したすべての電子メールを削除します。  
   
 ```  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sysmail_allitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   

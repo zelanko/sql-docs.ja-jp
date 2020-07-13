@@ -17,14 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101998"
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
-  
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
   
  ロールの割り当ては、 *アイテムレベル* または *システムレベル*で有効です。  
@@ -64,7 +63,7 @@ ms.locfileid: "66101998"
  削除する各ロールの割り当てのチェック ボックスをオンにして、 **[削除]** をクリックすることにより、ロールの割り当てを削除できます。 また、 **[親のセキュリティに戻す]** をクリックして、ロールの割り当てを削除することもできます。 このボタンをクリックすると、アイテムの既存のロールの割り当てが削除され、代わりに親アイテムから提供されるロールの割り当てが使用されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
+ [レポートサーバーへのユーザーアクセスを許可する &#40;レポートマネージャー&#41;](grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する &#40;レポートマネージャー&#41;](role-assignments-modify-or-delete.md)   
  [ロールの割り当て](role-assignments.md)   
  [ロールの定義](role-definitions.md)   

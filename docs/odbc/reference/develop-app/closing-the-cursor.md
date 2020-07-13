@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ODBC], closing
 - closing cursors [ODBC]
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 723e40e6d83eed84ed93ee1eeab3535622ad5f04
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036546"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299142"
 ---
 # <a name="closing-the-cursor"></a>カーソルを閉じる
 アプリケーションがカーソルの使用を終了すると、 **Sqlcloを**呼び出してカーソルを閉じます。 次に例を示します。  

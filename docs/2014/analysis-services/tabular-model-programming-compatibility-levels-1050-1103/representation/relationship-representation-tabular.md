@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7311fda8b3d4b8054d406ee97749c81f7d588e97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0b0a9ef87aa696292a1011a9b8d829a595eaeec2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76929510"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940063"
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
   リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  

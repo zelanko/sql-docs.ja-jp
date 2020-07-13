@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020471"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304333"
 ---
 # <a name="retrieving-results-basic"></a>結果の取得 (基本)
-*結果セット*は、特定の条件に一致するデータソースの行セットです。 これは、クエリによって生成され、表形式でアプリケーションで使用できる概念テーブルです。 **SELECT**ステートメント、カタログ関数、およびいくつかのプロシージャによって結果セットが作成されます。 次の例では、最初の SQL ステートメントによって、Orders テーブルのすべての行とすべての列を含む結果セットが作成されます。2番目の SQL ステートメントでは、Orders テーブルの行に対して OrderID、販売員、および状態の各列を含む結果セットが作成されます。状態が [開く] の場合:  
+*結果セット*は、特定の条件に一致するデータソースの行セットです。 これは、クエリによって生成され、表形式でアプリケーションで使用できる概念テーブルです。 **SELECT**ステートメント、カタログ関数、およびいくつかのプロシージャによって結果セットが作成されます。 次の例では、最初の SQL ステートメントによって、Orders テーブル内のすべての行とすべての列を含む結果セットが作成され、2番目の SQL ステートメントによって、その状態が開いている Orders テーブルの行に対して OrderID、販売員、および状態の各列を含む結果セットが作成されます。  
   
 ```  
 SELECT * FROM Orders  

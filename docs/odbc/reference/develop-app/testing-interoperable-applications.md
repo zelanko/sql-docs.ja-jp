@@ -11,14 +11,14 @@ helpviewer_keywords:
 - interoperability [ODBC], testing interoperable applications
 - testing interoperable applications [ODBC]
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114085"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307743"
 ---
 # <a name="testing-interoperable-applications"></a>相互運用可能なアプリケーションのテスト
 相互運用可能なアプリケーションのテストは、時間がかかり、市場に新しいドライバーが継続的に表示されるため、ほとんどの場合は不可能です。 ただし、妥当なレベルのテストが可能です。 相互運用性が制限されているか、または低いアプリケーションは、サポートが保証されているドライバーに対してのみテストする必要があります。 ただし、これらのドライバーに対して完全にテストする必要があります。  

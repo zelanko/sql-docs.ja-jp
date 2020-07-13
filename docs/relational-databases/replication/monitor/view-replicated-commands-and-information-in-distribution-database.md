@@ -38,7 +38,7 @@ ms.locfileid: "76286339"
   
 1.  (省略可) パブリッシャーのパブリケーション データベースで [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 `@publication` および `@article` を指定します。 結果セットの **article id** の値を確認します。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)を実行します。 (省略可) 手順 2 のアーティクル ID を `@article_id` に指定します。 (省略可) パブリケーション データベースの ID を `@publisher_database_id` に指定します。この ID は、**sys.databases** カタログ ビューの [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列で確認できます。  
+2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)を実行します。 (省略可) 手順 2 のアーティクル ID を `@article_id` に指定します。 (省略可) パブリケーション データベースの ID を `@publisher_database_id` に指定します。この ID は、[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **database_id** 列で確認できます。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

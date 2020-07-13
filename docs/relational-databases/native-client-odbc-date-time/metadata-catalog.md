@@ -11,25 +11,24 @@ helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 853f8bae81b4d3039d4e06e4f0ec67ee22f3c5c3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783700"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004330"
 ---
 # <a name="metadata---catalog"></a>メタデータ - カタログ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 **Sqlcolumns**と**SQLProcedureColumns**によって返される列のメタデータと、 **SQLGetTypeInfo**によって返されるデータ型のメタデータについて説明します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の列の値は、 **Sqlcolumns**および**SQLProcedureColumns**によって日付/時刻型に対して返されます。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -43,7 +42,7 @@ ms.locfileid: "73783700"
   
  次の列の値は、 **SQLGetTypeInfo**によって日付/時刻型に対して返されます。  
   
-|パラメーターのタイプ|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|パラメーターの型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  

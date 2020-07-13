@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d6056fcd26a8fdef16d17178cd12e8d5f27e97c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547384"
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
   メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
@@ -37,16 +36,14 @@ ms.locfileid: "66072902"
   
 -   キューブ デザイナーの [パーティション] タブで、パーティションを右クリックし、 **[書き戻しの設定]** をクリックします。  
   
--   
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]** をクリックします。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]** をクリックします。  
   
  書き戻しは、SUM 集計を使用するメジャーに対してのみサポートされます。 AdventureWorks サンプル データベースでは、Sales Targets メジャー グループを使用して、書き戻しの動作をテストできます。  
   
  パーティションを書き込み許可する場合は、書き戻しテーブルを保存するためのテーブル名とデータ ソースを指定します。 その後のメジャー グループの変更は、このテーブルに記録されます。  
   
 ## <a name="browse-writeback-data-in-a-partition"></a>パーティションの書き戻しデータの参照  
- 
-  **[データの参照]** ダイアログ ボックスでは、キューブの書き戻しテーブルの内容を参照できます。このダイアログ ボックスにアクセスするには、キューブ デザイナーの **[パーティション]** タブで、書き込み許可パーティションを右クリックします。  
+ **[データの参照]** ダイアログ ボックスでは、キューブの書き戻しテーブルの内容を参照できます。このダイアログ ボックスにアクセスするには、キューブ デザイナーの **[パーティション]** タブで、書き込み許可パーティションを右クリックします。  
   
 ## <a name="delete-writeback-data-or-disable-writeback"></a>書き戻しデータの削除と書き戻しの無効化  
  書き戻しデータを削除すると、ライトバック キャッシュが消去されます。つまり、データが削除されるとすぐに、追加の書き戻し作業が白紙の状態から実行されます。 キューブ パーティションの書き戻しを無効にすると、そのパーティションの書き戻しがオフになります。  
@@ -64,6 +61,6 @@ ms.locfileid: "66072902"
 ## <a name="see-also"></a>参照  
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Excel 2010 のセルレベルで OLAP キューブへの書き戻しを有効にする](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Analysis Services 書き戻しを使用したデータ入力の有効化とセキュリティ保護](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Analysis Services の書き戻しを使用したデータ入力の有効化と保護](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 549bab6484613bbd313d0938dd1e744047b26257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71952614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037135"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>SharePoint を使用した BI 機能のインストール用チェック リスト
   ここでは、SQL Server BI 機能をさまざまな組み合わせで、またはスケールアウト トポロジでインストールする場合のチェック リストを示します。 セットアップ プログラムを実行して BI 機能をインストールする方法が既にわかっている場合は、推奨されるインストールの順序を確認し、機能統合シナリオの実現に追加の構成変更が必要かどうかを判断するためにチェックリストを使用するのが次のステップになります。  
@@ -27,6 +26,6 @@ ms.locfileid: "71952614"
   
  [配置のチェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- [配置のチェックリスト: 既存の SharePoint ファームへの Reporting Services のインストール](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [配置のチェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

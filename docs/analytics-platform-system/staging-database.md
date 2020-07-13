@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400285"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>並列データウェアハウスでのステージングデータベースの使用 (PDW)
 SQL Server 並列データウェアハウス (PDW) では、ステージングデータベースを使用して、読み込み処理中にデータを一時的に格納します。 既定では、SQL Server PDW は転送先データベースをステージングデータベースとして使用するため、テーブルの断片化が発生する可能性があります。 テーブルの断片化を減らすために、ユーザー定義のステージングデータベースを作成できます。 または、読み込みエラーからのロールバックが問題にならない場合は、一時テーブルをスキップして変換先テーブルに直接読み込むことで、fastappend 読み込みモードを使用してパフォーマンスを向上させることができます。  
   
-## <a name="StagingDatabase"></a>ステージングデータベースの基礎  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>ステージングデータベースの基礎  
 *ステージングデータベース*は、ユーザーが作成した PDW データベースであり、アプライアンスへの読み込み中にデータを一時的に保存します。 負荷にステージングデータベースが指定されている場合、アプライアンスはまずデータをステージングデータベースにコピーし、次にステージングデータベースの一時テーブルからコピー先のデータベースのパーマネントテーブルにデータをコピーします。  
   
 ロードにステージングデータベースが指定されていない場合、SQL ServerPDW は、読み込まれたデータをパーマネントコピー先テーブルに挿入する前に、コピー先データベースに一時テーブルを作成し、読み込まれたデータを格納するために使用します。  
@@ -38,7 +38,7 @@ SQL Server 並列データウェアハウス (PDW) では、ステージング�
   
 -   行ストアクラスター化インデックスへの読み込みでは、ステージングテーブルは行ストアクラスター化インデックスです。  
   
-## <a name="Permissions"></a>アクセス許可  
+## <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 ステージングデータベースに CREATE 権限 (一時テーブルを作成する場合) が必要です。 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>ステージングデータベースを作成するためのベストプラクティス  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>ステージングデータベースを作成するためのベストプラクティス  
   
 1.  アプライアンスごとにステージングデータベースは1つだけ存在します。 ステージングデータベースは、すべての転送先データベースのすべてのロードジョブで共有できます。  
   
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   ログサイズは、通常、レプリケートされたテーブルのサイズに似ています。  
   
-## <a name="Examples"></a>例  
+## <a name="examples"></a><a name="Examples"></a>例  
   
 ### <a name="a-create-a-staging-database"></a>A. ステージングデータベースの作成 
 次の例では、アプライアンス上のすべての負荷で使用するステージングデータベース Stagedb を作成します。 5 GB のサイズのレプリケートされたテーブルがそれぞれ同時に読み込まれることを推定したとします。 この同時実行では、レプリケートされたサイズに対して 25 GB 以上が割り当てられます。 サイズが100、200、400、500、500、および 550 GB の6つの分散テーブルが同時に読み込まれることを推定したとします。 この同時実行の結果、分散テーブルサイズに 2250 GB 以上が割り当てられます。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 941c821d7622b2364ec1cd417dd9b50302540b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7ce996a7c4816d4d14491e226f891904b6cf8c02
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088171"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307613"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 16 ビットおよび 32 ビット アプリケーションを使用
 > [!IMPORTANT]  

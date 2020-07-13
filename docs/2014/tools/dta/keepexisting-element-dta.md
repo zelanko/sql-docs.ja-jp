@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bcfa71becfda386031d6267e2b7f97f1eac5b731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62735634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048354"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 要素 (DTA)
   データベース エンジン チューニング アドバイザーが、推奨設定を生成するときに保持しなければならない物理設計構造 (インデックス、インデックス付きビュー、パーティション分割) を指定します。  
@@ -36,14 +35,12 @@ ms.locfileid: "62735634"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `string`。長さの制限は、サーバーによって決まります。|  
+|**データ型と長さ**|`string`。長さの制限は、サーバーによって決まります。|  
 |**指定できる値**|**NONE**<br /> 既存の構造を保持しません。<br /><br /> **ALL**<br /> 既存の構造をすべて保持します。<br /><br /> **ALIGNED**<br /> パーティションで固定された構造をすべて保持します。<br /><br /> **CL_IDX**<br /> テーブルのクラスター化インデックスをすべて保持します。<br /><br /> **IDX**<br /> テーブルのクラスター化インデックスと非クラスター化インデックスをすべて保持します。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|[なし] :|  
-|**個数**|省略可能。 
-  `TuningOptions` 要素につき 1 回だけ使用できます。|  
+|**個数**|省略可能。 `TuningOptions` 要素につき 1 回だけ使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

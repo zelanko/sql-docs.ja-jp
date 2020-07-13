@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9bdf5e50e994454db0793aacdd4a3f60f1b07f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 55ca636a88abf7f0492947690a474023bea6cf1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63309244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064184"
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (SQL Server 構成マネージャー)
   これは [!INCLUDE[ssIS](../../includes/ssis-md.md)]をサポートするサービスです。 このサービスのプロパティを表示するには、詳細ペインでそのサービスを右クリックし、 **[プロパティ]** をクリックします。  

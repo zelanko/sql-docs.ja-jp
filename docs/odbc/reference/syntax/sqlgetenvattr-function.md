@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0940a5a2c70a7b670ca6a81521759fd08e60461e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77cd24386a8eea6769aee59f3674b681c516d9ed
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345629"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285312"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 関数
 **互換性**  
@@ -70,7 +70,7 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="diagnostics"></a>診断  
  **SQLGetEnvAttr**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_ENV と*EnvironmentHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLGetEnvAttr**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|\* *Valueptr*に返されたデータは、 *bufferlength*から null 終了文字を引いた値に切り詰められました。 切り捨てられていない文字列値の長さは、**Stringlength ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -93,7 +93,7 @@ SQLRETURN SQLGetEnvAttr(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |接続属性の設定を返す|[SQLGetConnectAttr 関数](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |ステートメント属性の設定を返す|[SQLGetStmtAttr 関数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  

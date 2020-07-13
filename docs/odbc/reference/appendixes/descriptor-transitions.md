@@ -12,19 +12,19 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130000"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307043"
 ---
 # <a name="descriptor-transitions"></a>記述子の遷移
 ODBC 記述子には、次の3つの状態があります。  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |D0|未割り当ての記述子|  
 |D1i|暗黙的に割り当てられた記述子|  
@@ -34,7 +34,7 @@ ODBC 記述子には、次の3つの状態があります。
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |D1i [1]|--|--|  
 |D1e [2]|--|--|  
@@ -45,13 +45,13 @@ ODBC 記述子には、次の3つの状態があります。
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
 |(IH)3|(HY017)|D0|  
@@ -62,13 +62,13 @@ ODBC 記述子には、次の3つの状態があります。
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField と SQLGetDescRec  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField と SQLSetDescRec  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(IH)1|--|--|  
   
@@ -76,6 +76,6 @@ ODBC 記述子には、次の3つの状態があります。
   
 ## <a name="all-other-odbc-functions"></a>その他すべての ODBC 関数  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

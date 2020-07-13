@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d0ba141e3f04eaf1b6edfc1a2427ed75793bceb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63186902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006777"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 要素 (ssbdiagnose)
   **DiagnosticInformation** 要素には、ユーティリティによって検出された診断情報を報告するすべての要素が含まれます。 **DiagnosticInformation** は、 **ssbdiagnostic** XML 出力ファイルのルート要素です。  
@@ -35,18 +34,17 @@ ms.locfileid: "63186902"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`None`|該当なし|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|
-  **ssbdiagnose** XML 出力ファイルごとに 1 つ。|  
+|**個数**|**ssbdiagnose** XML 出力ファイルごとに 1 つ。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

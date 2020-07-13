@@ -14,14 +14,14 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f8eaebca02ef3987e3613b5dd896e0f7c130086
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2237c725d6fe3696d1f28d80c09f22183f718de8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938034"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295585"
 ---
 # <a name="network-database-access"></a>ネットワーク データベース アクセス
 ネットワーク経由でデータベースにアクセスするには、さまざまなコンポーネントが必要です。これらはそれぞれ独立しており、プログラミングインターフェイスの下に存在します。 次の図は、これらのコンポーネントについて示しています。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f04e021e656646361114d5be33b5ab6a63b1b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917421"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754313"
 ---
 # <a name="put_oledbcommand-method"></a>put_OLEDBCommand メソッド
 このメソッドは操作を実行せず、常に S_OK を返します。  

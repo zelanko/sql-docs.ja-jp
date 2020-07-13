@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930934"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759818"
 ---
 # <a name="source-property-ado-record"></a>Source プロパティ (ADO Record)
 [レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるデータソースまたはオブジェクトを示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "67930934"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **レコード**によって表されるエンティティを示す**バリアント**値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Source**プロパティは、 **Record**オブジェクト[Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの*source*引数を返します。 絶対 URL または相対 URL 文字列を含めることができます。 絶対 URL を使用する場合は、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを設定しなくても**レコード**オブジェクトを直接開くことができます。 この場合、暗黙的な**接続**オブジェクトが作成されます。  
   
  **ソース**プロパティには、既に開いている**レコードセット**への参照を含めることもできます。これにより、レコード**セット**の現在の行を表す**Record**オブジェクトが開きます。  

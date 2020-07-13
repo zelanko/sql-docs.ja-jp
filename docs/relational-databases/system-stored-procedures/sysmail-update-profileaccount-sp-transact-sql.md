@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890802"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイル内のアカウントのシーケンス番号を更新します。  
   
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
- 次の例では、 **msdb**データベースのプロファイル`Admin-BackupServer` `AdventureWorks Administrator`内のアカウントのシーケンス番号を変更します。 このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
+ 次の例では、msdb データベースのプロファイル内のアカウントのシーケンス番号を変更し `Admin-BackupServer` `AdventureWorks Administrator` ます。 **msdb** このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
     ,@sequence_number = 3;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e5f15575d34031d9886219af5677b4fc5f1d5aa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897783"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301535"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access ドライバー)
 > [!NOTE]  
 >  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|fOption|解説|  
+|fOption|コメント|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption は、SQL_MODE_READ_ONLY または SQL_MODE_READ_WRITE のいずれかに設定できます。 ただし、SQL_ACCESS_MODE が SQL_MODE_READ_ONLY に設定されている場合、ドライバーは更新を妨げることはありません。|  
 |SQL_AUTOCOMMIT|Microsoft access ドライバーではトランザクション [1] がサポートされているため、Microsoft Access ドライバーを使用する場合は、SQL_AUTOCOMMIT オプションを SQL_AUTOCOMMIT_ON または SQL_AUTOCOMMIT_OFF に設定できます。|  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266549"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
@@ -36,17 +36,17 @@ SSMA Tester がテストケースを実行すると、テスト用に選択さ�
 ### <a name="prerequisites"></a>前提条件  
 SSMA Tester は、テストを開始する前に、テストの実行ですべての前提条件が満たされているかどうかを確認します。 条件が満たされていない場合は、エラーメッセージが表示されます。  
   
-### <a name="initialization"></a>初期化する  
+### <a name="initialization"></a>初期化  
 この手順で、SSMA Tester は、Oracle サーバーの SSMATESTER_ORACLE スキーマに補助オブジェクト (テーブル、トリガー、およびビュー) を作成します。 検証用に選択された影響を受けるオブジェクトで行われた変更のトレースを許可します。  
   
 検証されたテーブルに USER_TABLE という名前が付けられているとします。 このようなテーブルの場合、次の補助オブジェクトが Oracle で作成されます。  
   
 ||||  
 |-|-|-|  
-|Name|種類|[説明]|  
+|名前|Type|説明|  
 |USER_TABLE $ Trg|トリガー (trigger)|検証されたテーブルの変更の監査をトリガーします。|  
-|USER_TABLE $ AUD|テーブル|削除された行と上書きされた行が保存されるテーブル。|  
-|USER_TABLE $ AUDID|テーブル|新しい行と変更された行が保存されるテーブル。|  
+|USER_TABLE $ AUD|table|削除された行と上書きされた行が保存されるテーブル。|  
+|USER_TABLE $ AUDID|table|新しい行と変更された行が保存されるテーブル。|  
 |USER_TABLE|view|テーブル変更の簡略化された表現。|  
 |USER_TABLE $ NEW|view|挿入行と上書き行の簡略化された表現。|  
 |USER_TABLE $ NEW_ID|view|挿入および変更された行の識別。|  
@@ -56,16 +56,16 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
   
 ||||  
 |-|-|-|  
-|Name|種類|[説明]|  
+|名前|Type|説明|  
 |USER_TABLE $ Trg|トリガー (trigger)|検証されたテーブルの変更の監査をトリガーします。|  
   
 次のオブジェクトは、ssmatesterdb データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のに作成されます。  
   
 ||||  
 |-|-|-|  
-|Name|種類|[説明]|  
-|USER_TABLE $ Aud|テーブル|削除された行と上書きされた行が保存されるテーブル。|  
-|USER_TABLE $ AudID|テーブル|新しい行と変更された行が保存されるテーブル。|  
+|名前|Type|説明|  
+|USER_TABLE $ Aud|table|削除された行と上書きされた行が保存されるテーブル。|  
+|USER_TABLE $ AudID|table|新しい行と変更された行が保存されるテーブル。|  
 |USER_TABLE|view|テーブル変更の簡略化された表現。|  
 |USER_TABLE $ new|view|挿入行と上書き行の簡略化された表現。|  
 |USER_TABLE $ new_id|view|挿入および変更された行の識別。|  
@@ -77,7 +77,7 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
 ### <a name="finalization"></a>最終  
 終了処理中に、**初期化**ステップで作成された補助オブジェクトがクリーンアップされます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [テストケースレポートの表示 &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

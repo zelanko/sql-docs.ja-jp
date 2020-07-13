@@ -12,20 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118629"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279590"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 関数
 **互換性**  
- 導入されたバージョン: ODBC 3.8  
-  
- 標準への準拠: なし  
+ 導入されたバージョン: ODBC 3.8 標準準拠: なし  
   
  **まとめ**  
  **Sqlcompleteasync**を使用すると、通知またはポーリングベースの処理のいずれかを使用して非同期関数が完了したかどうかを判断できます。 非同期操作の詳細については、「[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)」を参照してください。  
@@ -61,8 +59,8 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE。  
   
-## <a name="diagnostics"></a>診断  
- **Sqlcompleteasync**が SQL_SUCCESS を返す場合、アプリケーションは、 *AsyncRetCodePtr*が指すバッファーから非同期関数のリターンコードを取得する必要があります。 関連する SQLSTATE (存在する場合) は、SQLGetDiagRec SQL_HANDLE_STMT の*Handletype*を使用して**** を呼び出し、ステートメントハンドル、または SQL_HANDLE_DBC の*handletype*と接続ハンドルを呼び出すことによって取得できます。 これらの診断レコードは、 **Sqlcompleteasync**関数ではなく、非同期関数に関連付けられています。  
+## <a name="diagnostics"></a>Diagnostics  
+ **Sqlcompleteasync**が SQL_SUCCESS を返す場合、アプリケーションは、 *AsyncRetCodePtr*が指すバッファーから非同期関数のリターンコードを取得する必要があります。 関連する SQLSTATE (存在する場合) は、SQLGetDiagRec SQL_HANDLE_STMT の*Handletype*を使用して**SQLGetDiagRec**を呼び出し、ステートメントハンドル、または SQL_HANDLE_DBC の*handletype*と接続ハンドルを呼び出すことによって取得できます。 これらの診断レコードは、 **Sqlcompleteasync**関数ではなく、非同期関数に関連付けられています。  
   
  **Sqlcompleteasync**は、 **sqlcompleteasync**が正しく呼び出されないことを示す SQL_SUCCESS 以外のコードを返します。 この場合、 **Sqlcompleteasync**は診断レコードを通知しません。 考えられるリターンコードは次のとおりです。  
   
@@ -72,8 +70,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: 通知モードで、非同期操作が進行中でないか、またはドライバーマネージャーによってアプリケーションに通知されませんでした。 ポーリングモードでは、非同期操作は実行されていません。  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>コメント  
  ポーリングベースの非同期処理モードでは、 **Sqlcompleteasync**が SQL_SUCCESS を返すときに*AsyncRetCodePtr*が SQL_STILL_EXECUTING される可能性があります。 *AsyncRetCodePtr*が SQL_STILL_EXECUTING されないようにするには、アプリケーションでポーリングを続ける必要があります。 通知ベースの非同期処理モードでは、 *AsyncRetCodePtr*が SQL_STILL_EXECUTING されることはありません。  
   
-## <a name="see-also"></a>参照  
- [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## <a name="see-also"></a>関連項目  
+ [非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

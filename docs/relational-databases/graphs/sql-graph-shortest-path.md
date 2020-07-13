@@ -1,7 +1,7 @@
 ---
 title: 最短パス (SQL グラフ) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056399"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032562"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   再帰的または繰り返し検索されるグラフの検索条件を指定します。 SHORTEST_PATH は、SELECT ステートメント内のグラフノードとエッジテーブルとの一致内部で使用できます。 
   
@@ -62,7 +61,7 @@ LAST_NODE () 関数を使用すると、2つの任意の長さのトラバーサ
 ## <a name="graph-path-aggregate-functions"></a>グラフパスの集計関数
 任意の長さのパターンに関係するノードとエッジによってコレクション (そのパスでスキャンされたノードとエッジ) が返されるため、ユーザーは従来の attributename 構文を使用して直接属性を射影することはできません。 中間ノードまたはエッジテーブルから属性値を射影する必要があるクエリの場合、走査されるパスで、STRING_AGG、LAST_VALUE、SUM、AVG、MIN、MAX、COUNT の各グラフパスの集計関数を使用します。 SELECT 句でこれらの集計関数を使用するための一般的な構文は次のとおりです。
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -93,10 +92,11 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 この関数は、指定されたノード/エッジ属性値またはスキャンされたパスに出現する式の合計を返します。
 
 ### <a name="count"></a>[COUNT]
-この関数は、パス内の必要なノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数では、ノード\*またはエッジテーブルの別名を持つ ' ' 演算子がサポートされています。 ノードまたはエッジテーブルの別名がないと、 \*の使用法があいまいになり、エラーが発生します。
+この関数は、パス内の必要なノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数では、 \* ノードまたはエッジテーブルの別名を持つ ' ' 演算子がサポートされています。 ノードまたはエッジテーブルの別名がないと、の使用法があいまいになり、エラーが発生し \* ます。
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>AVG
 指定されたノード/エッジ属性値またはスキャンされたパスに出現する式の平均を返します。
@@ -107,7 +107,7 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="max"></a>[MAX]
 指定されたノード/エッジ属性値、またはスキャンされたパスに出現する式から最大値を返します。
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 shortest_path 関数は、MATCH 内でのみ使用できます。     
 LAST_NODE は shortest_path 内でのみサポートされます。     
 重み付けされた最短パス、すべてのパス、またはすべての最短パスを検索することはできません。         
@@ -120,7 +120,7 @@ LAST_NODE は shortest_path 内でのみサポートされます。
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  2つのメンバーの間の最短パスを検索する
  次の例では、Jacob と Alice の間の最短のパスを見つけます。 Graph サンプルスクリプトから作成された Person ノードと FriendOf edge が必要になります。 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +135,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  指定されたノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 
  次の例では、グラフ内の Jacob が接続されているすべてのユーザーと、Jacob からすべてのユーザーを対象とする最短パスを検索します。 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +150,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  グラフ内で1人のユーザーから別のユーザーに送られるホップ数またはレベル数をカウントします。
  次の例では、Jacob と Alice の間の最短パスを検索し、Jacob から Alice に移動するために必要なホップ数を出力します。 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +171,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 特定のユーザーからの1-3 のホップを検索する
 次の例では、Jacob と、その接続先であるすべての人の間の最短のパスを、グラフ1-3 のホップから離れた場所に検索します。 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +191,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 特定のユーザーからのホップが2人だけ離れている人を検索する
 次の例では、Jacob の間の最短のパスと、そのグラフ内のホップが2人以上離れている人を検索します。 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT
@@ -212,5 +212,5 @@ WHERE Q.levels = 2
  [MATCH (SQL グラフ)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)]  
- [SQL Server 2017 を使用したグラフの処理](../../relational-databases/graphs/sql-graph-overview.md)     
+ [SQL Server 2017 でのグラフ処理](../../relational-databases/graphs/sql-graph-overview.md)     
  

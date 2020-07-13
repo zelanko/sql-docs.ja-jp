@@ -1,5 +1,6 @@
 ---
 title: SSMS を使用したデータベース バックアップの復元 | Microsoft Docs
+description: この記事では、SQL Server Management Studio を使用して、SQL Server データベースの完全バックアップを復元する方法について説明します。
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718016"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用してデータベース バックアップを復元する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、SQL Server Management Studio を使用して、データベースの完全バックアップを復元する方法について説明します。    
        
@@ -70,7 +71,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
         -   **[バックアップ デバイスの選択]** ダイアログ ボックス  
         
             **バックアップ メディアの種類**  
-         **[バックアップ メディアの種類]** ドロップダウン リストからメディアの種類を選択します。  注: **[テープ]** オプションは、テープ ドライブがコンピューターにマウントされている場合だけ表示されます。また、 **[バックアップ デバイス]** オプションは、1 つ以上のバックアップ デバイスが存在する場合だけ表示されます。
+         **[バックアップ メディアの種類]** ドロップダウン リストからメディアの種類を選択します。  注: **[テープ]** オプションは、テープ ドライブがコンピューターにセットされている場合だけ表示されます。また、 **[バックアップ デバイス]** オプションは、1 つ以上のバックアップ デバイスが存在する場合だけ表示されます。
 
             **追加**  
             **[追加]** をクリックすると、 **[バックアップ メディアの種類]** ドロップダウン リストで選択したメディアの種類に応じて、次のダイアログ ボックスのいずれかが開きます。 ( **[バックアップ メディア]** ボックスの一覧がいっぱいの場合、 **[追加]** ボタンは使用できません)。
@@ -80,7 +81,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
             |**[最近使ったファイル]**|**[バックアップ ファイルの検索]**|このダイアログ ボックスでは、ツリーからローカル ファイルを選択するか、完全修飾の汎用名前付け規則 (UNC) 名を使用したリモート ファイルを指定できます。 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|    
             |**[デバイス]**|**[バックアップ デバイスの選択]**|このダイアログ ボックスでは、サーバー インスタンスで定義された論理バックアップ デバイスの一覧から選択できます。|    
             |**[テープ]**|**[バックアップ テープの選択]**|このダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスが動作しているコンピューターに物理的に接続されているテープ ドライブの一覧から選択できます。|    
-            |**[URL]**|**[バックアップ ファイルの場所を選択]**|このダイアログ ボックスで、既存の SQL Server 資格情報/Azure ストレージ コンテナーを選択し、共有アクセス署名で新しい Azure ストレージ コンテナーを追加するか、共有アクセス署名と既存のストレージ コンテナーの SQL Server 資格情報を生成します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」 (Microsoft Azure サブスクリプションへの接続) もご覧ください。|  
+            |**URL**|**[バックアップ ファイルの場所を選択]**|このダイアログ ボックスで、既存の SQL Server 資格情報/Azure ストレージ コンテナーを選択し、共有アクセス署名で新しい Azure ストレージ コンテナーを追加するか、共有アクセス署名と既存のストレージ コンテナーの SQL Server 資格情報を生成します。  「 [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)」 (Microsoft Azure サブスクリプションへの接続) もご覧ください。|  
          
              **[削除]**     
              選択されている 1 つまたは複数のファイル、テープ、または論理バックアップ デバイスを削除します。    
@@ -93,7 +94,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
              **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。    
     
-         **[ソース: デバイス: データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。    
+         **[ソース: デバイス:データベース]** リスト ボックスで、復元するデータベースの名前を選択します。    
     
          > [!NOTE]
          > この一覧は **[デバイス]** を選択した場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。    
@@ -146,7 +147,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 7.  **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]** チェック ボックスをオンにします。
 
     > [!NOTE]
-    > このオプションをオンにしない場合、次のエラー メッセージが表示されることがあります。"System.Data.SqlClient.SqlError: バックアップ セットは、既存のデータベース '`Sales`' 以外のデータベースのバックアップを保持しています。 (Microsoft.SqlServer.SmoExtended)"
+    > このオプションをオンにしない場合、次のエラー メッセージが表示されることがあります。"System.Data.SqlClient.SqlError:バックアップ セットは、既存のデータベース '`Sales`' 以外のデータベースのバックアップを保持しています。 (Microsoft.SqlServer.SmoExtended)"
 
 8.  **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]** チェック ボックスをオフにします。
 
@@ -158,7 +159,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 9.  **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]** チェック ボックスをオンにします。
 
     > [!NOTE]
-    > このオプションをオンにしない場合、次のエラー メッセージが表示されることがあります。"System.Data.SqlClient.SqlError: データベースは使用中なので、排他アクセスを獲得できませんでした。 (Microsoft.SqlServer.SmoExtended)"
+    > このオプションをオンにしない場合、次のエラー メッセージが表示されることがあります。"System.Data.SqlClient.SqlError:データベースは使用中なので、排他アクセスを獲得できませんでした。 (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,7 +182,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 
     > [!NOTE]
     > 次のエラー メッセージが表示された場合:      
-    > "System.Data.SqlClient.SqlError: データベース "`Sales`" のログの末尾がバックアップされませんでした。 この部分の作業を保存しておく場合は `BACKUP LOG WITH NORECOVERY` を使用してログをバックアップしてください。 ログのコンテンツを上書きするだけの場合は、`WITH REPLACE` ステートメントで `WITH STOPAT` 句または `RESTORE` 句を使用してください。 (Microsoft.SqlServer.SmoExtended)"。      
+    > "System.Data.SqlClient.SqlError:データベース "`Sales`" のログの末尾がバックアップされませんでした。 この部分の作業を保存しておく場合は `BACKUP LOG WITH NORECOVERY` を使用してログをバックアップしてください。 ログのコンテンツを上書きするだけの場合は、`RESTORE` ステートメントで `WITH REPLACE` 句または `WITH STOPAT` 句を使用してください。 (Microsoft.SqlServer.SmoExtended)"。      
     > 上記の手順 6 で新しいデータベース名を入力していない可能性があります。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 `RESTORE` ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  特定の時点に以前のディスク バックアップを復元する

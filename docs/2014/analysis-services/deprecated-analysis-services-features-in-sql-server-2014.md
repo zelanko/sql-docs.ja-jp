@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d2bd86518027210ac3546633f39ca3e6588e955b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081916"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528718"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 に含まれている非推奨の Analysis Services 機能
   このトピックでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -34,11 +33,10 @@ ms.locfileid: "66081916"
 |MDX 関数|CalculationCurrentPass 関数|[なし] : OLAP エンジンは計算パスを管理します。 この関数は必要ではなくなりました。|  
 |多次元式 (MDX) (Multidimensional Expressions (MDX))|NON_EMPTY_BEHAVIOR クエリ オプティマイザー ヒントが既定で有効になっていました。|NON_EMPTY_BEHAVIOR クエリ オプティマイザー ヒントは、将来のリリースでは既定で無効にされる予定です。 MDX 最適化ヒントは、適切に使用しないと正しくない結果が生じる可能性があります。|  
 |その他|CELL_EVALUATION_LIST intrinsic セル プロパティ|以前は、セルに適用する評価された数式の一覧を提供していました。 このリリースの Analysis Services では、このプロパティは空白です。  解決順序は MDX スクリプトで指定されるようになりました。 詳細については、「 [MDX&#41;&#40;パス順序と解決順序につい](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)て」を参照してください。|  
-|Objects|COM アセンブリ|COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 COM アセンブリのサポートは、将来のリリースでは削除される予定です。|  
+|オブジェクト|COM アセンブリ|COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 COM アセンブリのサポートは、将来のリリースでは削除される予定です。|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
- 以下の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
+ 以下の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
 |カテゴリ|非推奨の機能|代替|  
 |--------------|------------------------|-----------------|  

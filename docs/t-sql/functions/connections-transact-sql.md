@@ -19,17 +19,17 @@ helpviewer_keywords:
 - number of connection attempts
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b614ba90bddad592bedbf67e82d250ea8ba51e25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26da6bd0224941773c91dda8703015e4200f5552
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132079"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882002"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に開始された後に試行された接続数 (成功と失敗の両方) を返します。
   

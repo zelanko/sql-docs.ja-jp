@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103395"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
   
  HTTP ログは既定では有効になっていません。 HTTP ログを有効にするには、インストールでこの機能を使用するように**Reportingservices**の構成ファイルを変更します。  
@@ -30,7 +29,7 @@ ms.locfileid: "66103395"
   
 |||  
 |-|-|  
-|**ファイル名**|既定では、ログ ファイル名は次のとおりです。<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
+|**[ファイル名]**|既定では、ログ ファイル名は次のとおりです。<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
 |**ファイルの場所**|ファイルは、次の場所に書き込まれます。<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**ファイル形式**|このファイルは EN-US 形式です。 ASCII テキスト ファイルです。|  
 |**ファイルの作成および保存**|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
@@ -55,9 +54,9 @@ ms.locfileid: "66103395"
 ```  
   
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
- 次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、`HTTPTraceSwitches` 構成設定で指定できます。 を**** 指定`HTTPTraceSwitches`しない場合、既定の列によって、フィールドがログファイルに自動的に含まれるかどうかが指定されます。  
+ 次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、`HTTPTraceSwitches` 構成設定で指定できます。 を**Default**指定`HTTPTraceSwitches`しない場合、既定の列によって、フィールドがログファイルに自動的に含まれるかどうかが指定されます。  
   
-|フィールド|[説明]|Default|  
+|フィールド|説明|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  

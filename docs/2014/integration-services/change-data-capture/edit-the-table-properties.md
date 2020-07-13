@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 307f2a2a0769caf1124ba07905eacca9bcb2976a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835990"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438689"
 ---
 # <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
   変更がキャプチャされている選択したテーブルの特定の列を編集するには、このダイアログ ボックスを使用します。 **[セキュリティ ロール]** と **[キャプチャ インスタンス]** の情報を編集することもできます。  

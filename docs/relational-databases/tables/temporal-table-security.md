@@ -11,16 +11,16 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66afff04e14964c4540b47b6ebaabe45d9aefcf9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72452903"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006152"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 テンポラル テーブルに適用されるセキュリティを理解するには、テンポラル テーブルに適用されるセキュリティ原則を理解することが重要です。 これらのセキュリティ原則について理解したら、 **CREATE TABLE**、 **ALTER TABLE**、 **SELECT** ステートメントのセキュリティの学習に入ることができます。
 

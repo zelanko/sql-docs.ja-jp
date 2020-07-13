@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPWriteFmt (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ topic_type:
 helpviewer_keywords:
 - BCPWriteFmt method
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec126f82b3bae86701f2723bb8b93180916dc6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62826844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047949"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   フォーマット ファイルに列ごとのフォーマット情報を書き込みます。  
@@ -34,13 +33,10 @@ HRESULT BCPWriteFmt(
 const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>解説  
- フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 
-  [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドの呼び出しでは、データ ファイルの形式を定義します。 
-  **BCPWriteFmt** メソッドでは、この定義を pwszFormatFile 引数で参照されるファイルに保存します。  
+## <a name="remarks"></a>Remarks  
+ フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドの呼び出しでは、データ ファイルの形式を定義します。 **BCPWriteFmt** メソッドでは、この定義を pwszFormatFile 引数で参照されるファイルに保存します。  
   
- 
-  **BCPWriteFmt** メソッドでは、XML 形式またはテキスト形式のいずれかの形式でフォーマット ファイルを保存できます。 そのためには、BCP_OPTION_XML 制御オプションを指定して [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドを使用する必要があります。  
+ **BCPWriteFmt** メソッドでは、XML 形式またはテキスト形式のいずれかの形式でフォーマット ファイルを保存できます。 そのためには、BCP_OPTION_XML 制御オプションを指定して [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドを使用する必要があります。  
   
  保存されたフォーマット ファイルを読み込むには、[IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) メソッドを使用します。  
   

@@ -8,13 +8,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b342941c163208703d6cef932cb52cac3694d8e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4d0dff2366370209296b1cd07b3c3bb9aa112f97
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62876457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958572"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
 「[復元の続行」を](../../database-engine/continue-with-restore.md)参照してください。

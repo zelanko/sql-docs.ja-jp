@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c5200a785b533a4d013f7e9b24eed2fac863ba7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867257"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。  
   
@@ -45,7 +45,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] name`互換性レベルを変更するデータベースの名前を指定します。 データベース名は、識別子の規則に従っている必要があります。 *名前*は**sysname**,、既定値は NULL です。  
   
-`[ @new_cmptlevel = ] version`データベースに互換性を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]持たせるのバージョンを指定します。 *version*は**tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
+`[ @new_cmptlevel = ] version`データベースに互換性を持たせるのバージョンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *version*は**tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -63,18 +63,18 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果セット  
  パラメーターが指定されていない場合、または*name*パラメーターが指定されていない場合、 **sp_dbcmptlevel**はエラーを返します。  
   
- *Name*が指定されて*いない場合、は* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、指定されたデータベースの現在の互換性レベルを表示するメッセージを返します。  
+ *Name*が指定されて*いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、データベース所有者、固定サーバーロール**sysadmin**のメンバー、および**db_owner**固定データベースロール (現在のデータベースを変更している場合) だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [予約済みキーワード &#40;Transact-sql&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

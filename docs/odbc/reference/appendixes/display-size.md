@@ -13,19 +13,19 @@ helpviewer_keywords:
 - data types [ODBC], display size
 - SQL data types [ODBC], column characteristics
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130017"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307033"
 ---
 # <a name="display-size"></a>表示サイズ
 列の表示サイズは、文字形式でデータを表示するために必要な最大文字数です。 次の表では、各 ODBC SQL データ型の表示サイズを定義します。  
   
-|SQL 型識別子|表示サイズ|  
+|SQL 型識別子|ディスプレイ サイズ|  
 |-------------------------|------------------|  
 |すべての文字型 [a]|定義された (固定型の場合) または最大値 (変数型の場合)。データを文字形式で表示するために必要な文字数。|  
 |SQL_DECIMAL SQL_NUMERIC|列の有効桁数に2を加えた値 (符号、*有効*桁数、および小数点)。 たとえば、NUMERIC (10, 3) として定義されている列の表示サイズは12です。|  

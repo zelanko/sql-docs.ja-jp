@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084418"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522507"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*は、データマイニングで一般的に使用される用語であり、処理と分析のために管理しやすいサイズに入力を減らすために使用できるツールと手法を記述します。 特徴選択は、*カーディナリティの削減*だけではなく、モデルの構築時に考慮できる属性の数に対して任意または事前に定義されたカットオフを強制することを意味します。つまり、アナリストまたはモデリングツールは、分析のためにその有用性に基づいて属性をアクティブに選択または破棄します。  
@@ -44,8 +43,7 @@ ms.locfileid: "66084418"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services によるデータ マイニングでの機能の選択  
  通常、機能の選択は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で自動的に実行され、各アルゴリズムには、機能の削減を適切に適用する一連の既定の技法が含まれています。 機能の選択は、常にモデルのトレーニングの前に実行されます。これにより、モデルで使用される可能性の高い属性がデータセット内で自動的に選択されます。 ただし、機能の選択の動作に影響を与えるようにパラメーターを手動で設定することもできます。  
   
- 一般に機能の選択では、各属性のスコアが計算されて、ベスト スコアの属性のみが選択されます。 トップ スコアのしきい値を調整することもできます。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、これらのスコアを計算するための複数のメソッドを提供しており、モデルに適したメソッドは、次の要因によって異なります。  
+ 一般に機能の選択では、各属性のスコアが計算されて、ベスト スコアの属性のみが選択されます。 トップ スコアのしきい値を調整することもできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、これらのスコアを計算するための複数のメソッドを提供しており、モデルに適したメソッドは、次の要因によって異なります。  
   
 -   モデルで使用されるアルゴリズム  
   
@@ -63,7 +61,7 @@ ms.locfileid: "66084418"
   
  " *興味深さ* " のスコアは、非バイナリの連続する数値データを含む列の属性を順位付けして並べ替えるために使用されます。  
   
- *Shannon のエントロピ*と2つの*ベイジアン*スコアは、不連続データと分離されたデータを含む列で使用できます。 ただし、連続した列がモデルに含まれる場合、一貫性を保つために、すべての入力列の評価に興味深さのスコアが使用されます。  
+ "*Shannon のエントロピ* " のスコア、および 2 つの " *ベイズ* " のスコアは、不連続データおよび分離されたデータを含む列で使用できます。 ただし、連続した列がモデルに含まれる場合、一貫性を保つために、すべての入力列の評価に興味深さのスコアが使用されます。  
   
  次のセクションでは、機能の選択の各メソッドについて説明します。  
   
@@ -78,7 +76,7 @@ ms.locfileid: "66084418"
   
  列に非バイナリの連続する数値データが含まれている場合は、常にこのスコアが既定で使用されます。  
   
-#### <a name="shannons-entropy"></a>Shannon のエントロピ  
+#### <a name="shannons-entropy"></a>Shannon のエントロピー  
  Shannon のエントロピは、特定の結果に対する確率変数の不確かさを測定します。 たとえばコイン投げのエントロピは、コインが表になる確率の関数として表すことができます。  
   
  Analysis Services では、次の数式を使用して Shannon のエントロピを計算します。  
@@ -104,12 +102,12 @@ ms.locfileid: "66084418"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services のアルゴリズムで使用される機能の選択の方法  
  次の表は、機能の選択をサポートするアルゴリズム、そのアルゴリズムによって使用される機能の選択の方法、および機能の選択の動作を制御するために設定するパラメーターの一覧です。  
   
-|アルゴリズム|分析の方法|説明|  
+|アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft Naïve Bayes アルゴリズムで使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](microsoft-naive-bayes-algorithm-technical-reference.md)」を参照してください。|  
-|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の機能の選択の方法か、モデルを作成したときに指定した方法が使用されます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。|  
-|ニューラル ネットワーク|興味深さのスコア<br /><br /> Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ニューラル ネットワーク アルゴリズムでは、データに連続列が含まれている限り、ベイズおよびエントロピに基づく方法の両方を使用できます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](microsoft-neural-network-algorithm-technical-reference.md)」を参照してください。|  
-|Logistic regression (ロジスティック回帰)|興味深さのスコア<br /><br /> Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ロジスティック回帰アルゴリズムは Microsoft ニューラル ネットワーク アルゴリズムに基づいていますが、ロジスティック回帰モデルをカスタマイズして機能の選択動作を制御することはできません。したがって、機能の選択では、常に属性に最も適した方法が既定で使用されます。<br /><br /> すべての属性が不連続属性または分離された属性の場合は、既定値は BDEU です。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)」を参照してください。|  
+|Naive Bayes|Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft Naïve Bayes アルゴリズムで使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](microsoft-naive-bayes-algorithm-technical-reference.md)」を参照してください。|  
+|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の機能の選択の方法か、モデルを作成したときに指定した方法が使用されます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。|  
+|ニューラル ネットワーク|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ニューラル ネットワーク アルゴリズムでは、データに連続列が含まれている限り、ベイズおよびエントロピに基づく方法の両方を使用できます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](microsoft-neural-network-algorithm-technical-reference.md)」を参照してください。|  
+|Logistic regression (ロジスティック回帰)|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ロジスティック回帰アルゴリズムは Microsoft ニューラル ネットワーク アルゴリズムに基づいていますが、ロジスティック回帰モデルをカスタマイズして機能の選択動作を制御することはできません。したがって、機能の選択では、常に属性に最も適した方法が既定で使用されます。<br /><br /> すべての属性が不連続属性または分離された属性の場合は、既定値は BDEU です。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)」を参照してください。|  
 |クラスタリング|興味深さのスコア|Microsoft クラスタリング アルゴリズムでは、不連続なデータまたは分離されたデータを使用できます。 ただし、各属性のスコアは距離として計算され、連続する数値として表現されるため、興味深さのスコアを使用する必要があります。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。|  
 |Linear regression (線形回帰)|興味深さのスコア|Microsoft 線形回帰アルゴリズムでは、連続列のみをサポートするため、使用できるのは興味深さのスコアだけです。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)」を参照してください。|  
 |相関ルール<br /><br /> シーケンス クラスター|使用されていない|これらのアルゴリズムでは、機能の選択は実行されません。<br /><br /> ただし、必要に応じてパラメーター MINIMUM_SUPPORT および MINIMUM_PROBABILIITY の値を設定することによって、アルゴリズムの動作を制御し、入力データのサイズを小さくすることができます。<br /><br /> 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](microsoft-association-algorithm-technical-reference.md) 」および「 [Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)」を参照してください。|  
@@ -119,8 +117,7 @@ ms.locfileid: "66084418"
  機能の選択をサポートするアルゴリズムでは、以下のパラメーターを使用して、機能の選択をいつオンにするかを制御できます。 各アルゴリズムには、許可される入力数の既定値がありますが、その既定値をオーバーライドして属性の数を指定できます。 このセクションは、機能の選択を管理するために提供されるパラメーターを示します。  
   
 #### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
- 
-  *MAXIMUM_INPUT_ATTRIBUTES* パラメーターで指定した数より多い列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
+ *MAXIMUM_INPUT_ATTRIBUTES* パラメーターで指定した数より多い列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
   
 #### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  同様に、 *MAXIMUM_OUTPUT_ATTRIBUTES* パラメーターで指定した数より多い予測可能列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  

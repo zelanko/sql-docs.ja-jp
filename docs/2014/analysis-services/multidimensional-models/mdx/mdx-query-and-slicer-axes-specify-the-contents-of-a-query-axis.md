@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4b310c3fd762274a038198f7d88456b85d156ba3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074081"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546244"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  
@@ -26,8 +25,7 @@ ms.locfileid: "66074081"
  クエリ軸を指定するには、 `<SELECT query axis clause>` を使用して特定のクエリ軸にセットを割り当てます。 それぞれの `<SELECT query axis clause>` の値によって、1 つのクエリ軸を定義します。 データセットの軸の数は、SELECT ステートメントの `<SELECT query axis clause>` 値の数と同じです。  
   
 ## <a name="query-axis-syntax"></a>クエリ軸の構文  
- 
-  `<SELECT query axis clause>`の構文は以下のとおりです。  
+ `<SELECT query axis clause>`の構文は以下のとおりです。  
   
 ```  
   
@@ -41,8 +39,7 @@ ms.locfileid: "66074081"
   
 ```  
   
- 各クエリ軸には番号が付いており、0 は X 軸、1 は Y 軸、2 は Z 軸のようになっています。 
-  `<SELECT query axis clause>`の構文では、 `Integer_Expression` の値によって軸の番号を指定します。 MDX クエリでは、最大 128 個まで軸を指定できます。ただし、5 つを超える軸を使用する MDX クエリはほとんどありません。 最初の 5 つの軸については、COLUMNS、ROWS、PAGES、SECTIONS、CHAPTERS という別名を使用することも可能です。  
+ 各クエリ軸には番号が付いており、0 は X 軸、1 は Y 軸、2 は Z 軸のようになっています。 `<SELECT query axis clause>`の構文では、 `Integer_Expression` の値によって軸の番号を指定します。 MDX クエリでは、最大 128 個まで軸を指定できます。ただし、5 つを超える軸を使用する MDX クエリはほとんどありません。 最初の 5 つの軸については、COLUMNS、ROWS、PAGES、SECTIONS、CHAPTERS という別名を使用することも可能です。  
   
  MDX クエリは、クエリ軸をスキップできません。 つまり、1 つ以上のクエリ軸を含むクエリでは、番号の小さい方の軸または中間の軸を除外できません。 たとえば、クエリで COLUMNS 軸を除外して ROWS 軸を指定することや、ROWS 軸を除外して COLUMNS 軸と PAGES 軸を指定することはできません。  
   
@@ -117,6 +114,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX&#41;&#40;スライサー軸の内容の指定](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [スライサー軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

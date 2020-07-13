@@ -13,17 +13,17 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c057221d9d5cc7252d7dd290d438f647a98240d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67929776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895227"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML スキーマ (XML 型システム) のカタログビュー (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "67929776"
 |[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

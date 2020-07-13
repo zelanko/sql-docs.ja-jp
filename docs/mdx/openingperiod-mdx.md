@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088221"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
@@ -34,7 +34,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この関数は、主に時間ディメンションを使用することを目的としていますが、どのディメンションでも使用できます。  
   
 -   レベル式が指定されている場合、 **OpeningPeriod**関数は、指定されたレベルを含む階層を使用して、指定したレベルの既定のメンバーの子孫の中から最初の兄弟を返します。  
@@ -46,8 +46,8 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
 > [!NOTE]  
 >  [Closingperiod](../mdx/closingperiod-mdx.md)関数は、 **OpeningPeriod**関数に似ていますが、 **closingperiod**関数は、最初の兄弟ではなく最後の兄弟を返す点が異なります。  
   
-## <a name="examples"></a>例  
- 次の例では、Date ディメンション (Time 型) の FY2002 メンバーの既定のメジャーの値を返します。 このメンバーが返されるのは、会計年度レベルが [All] レベルの最初の子孫であるためです。これは、会計階層が階層コレクション内の最初のユーザー定義階層であり、FY2002 メンバーがの最初の兄弟であるためです。このレベルの階層です。  
+## <a name="examples"></a>使用例  
+ 次の例では、Date ディメンション (Time 型) の FY2002 メンバーの既定のメジャーの値を返します。 このメンバーは、会計年度レベルが [All] レベルの最初の子孫であるために返されます。会計階層は、階層コレクション内の最初のユーザー定義階層であるため、既定の階層になります。このレベルでは、FY2002 メンバーがこの階層の最初の兄弟になります。  
   
 ```  
 SELECT OpeningPeriod() ON 0  

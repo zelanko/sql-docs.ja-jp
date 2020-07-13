@@ -12,14 +12,14 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002109"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302134"
 ---
 # <a name="core-interface-conformance"></a>コア インターフェイスの適合性
 すべての ODBC ドライバーは、少なくともコアレベルのインターフェイスへの準拠を示す必要があります。 コアレベルの機能は、ほとんどの一般的な相互運用可能なアプリケーションで必要とされる機能なので、ドライバーはこのようなアプリケーションで動作します。 コアレベルの機能は、ISO CLI 仕様で定義されている機能と、Open Group CLI 仕様で定義されているオプション以外の機能にも対応しています。 コアレベルのインターフェイスに準拠した ODBC ドライバーを使用すると、アプリケーションは次のすべての操作を実行できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "68002109"
   
 -   **Sqlparamdata**および**sqlparamdata**の呼び出しに関連する、実行時データダイアログを使用します。  
   
--   **SqlcloSQLSetCursorName**、 **sqlgetcursor Name**、および**** を呼び出して、カーソルとカーソル名を管理します。  
+-   **SqlcloSQLSetCursorName**、 **sqlgetcursor Name**、および**SQLSetCursorName**を呼び出して、カーソルとカーソル名を管理します。  
   
 -   **Sqlcolattribute**、 **SQLDescribeCol**、 **sqlnumresultcols**、および**SQLRowCount**を呼び出すことにより、結果セットの説明 (メタデータ) にアクセスできます。 (列番号0に対してこれらの関数を使用すると、ブックマークメタデータを取得できます。これは、[レベル2のインターフェイス準拠](../../../odbc/reference/develop-app/level-2-interface-conformance.md)の機能204です)。  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae10946be501adb16fdda5fa9f053e389eea4bed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aec3d6b23383edcc9659ff884e8cd71b0595dae1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070081"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302823"
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
 次の表は、ODBC スカラー関数セットに含まれている日付と時刻の関数を示しています。 アプリケーションでは、SQL_TIMEDATE_FUNCTIONS の*情報の種類*を指定して**SQLGetInfo**を呼び出すことによって、ドライバーによってサポートされる時刻と日付の関数を特定できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "68070081"
   
  SQL-92 に合わせて、CURRENT_DATE、CURRENT_TIME、および CURRENT_TIMESTAMP timedate スカラー関数が ODBC 3.0 に追加されました。  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |**CURRENT_DATE ()** (ODBC 3.0)|現在の日付を返します。|  
 |**CURRENT_TIME [(** *時間精度* **)]** (ODBC 3.0)|現在のローカル時間を返します。 *時間精度*引数は、返される値の秒の有効桁数を決定します。|  

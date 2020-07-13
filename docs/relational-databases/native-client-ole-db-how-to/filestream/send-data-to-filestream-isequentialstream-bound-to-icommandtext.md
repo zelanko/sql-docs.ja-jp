@@ -8,30 +8,28 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4395a52b49bdf5e41350a1e37cd33f72b35f1d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d7216ae29d82f51d0788ddfd03bc259407033ff5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241717"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999628"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
  Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)」を参照)。  
   
  INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
- サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

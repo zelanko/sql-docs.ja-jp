@@ -14,29 +14,25 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084827"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522958"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、データマイニングソリューションの作成に使用できる次のツールが用意されてい[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データマイニングソリューションの作成に使用できる次のツールが用意されています。  
   
--   
-  **では、** データ マイニング ウィザード [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって、リレーショナル データ ソースまたはキューブの多次元データを使用して、マイニング構造およびマイニング モデルを簡単に作成できます。  
+-   **では、** データ マイニング ウィザード [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって、リレーショナル データ ソースまたはキューブの多次元データを使用して、マイニング構造およびマイニング モデルを簡単に作成できます。  
   
      このウィザードでは、使用するデータを選択してから、クラスタリング、ニューラル ネットワーク、タイム シリーズ モデルなど、特定のデータ マイニング技法を適用します。  
   
--   **モデルビューアー**は、マイニングモデル[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]作成した後に調査するために、との両方で提供されます。  各アルゴリズムに合わせて調整されたビューアーを使用してモデルを参照したり、モデル コンテンツ ビューアーを使用して詳しい分析を行ったりすることができます。  
+-   **と** の両方では、マイニング モデルを作成した後で調べるために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] モデル ビューアー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]が提供されます。  各アルゴリズムに合わせて調整されたビューアーを使用してモデルを参照したり、モデル コンテンツ ビューアーを使用して詳しい分析を行ったりすることができます。  
   
--   
-  **と** の両方では、予測クエリを作成するために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 予測クエリ ビルダー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] が提供されます。 また、予約データセットまたは外部データに対してモデルの精度をテストしたり、クロス検証を使用してデータセットの品質を調査したりすることもできます。  
+-   **と** の両方では、予測クエリを作成するために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 予測クエリ ビルダー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] が提供されます。 また、予約データセットまたは外部データに対してモデルの精度をテストしたり、クロス検証を使用してデータセットの品質を調査したりすることもできます。  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに配置された既存のデータ マイニング ソリューションを管理するためのインターフェイスです。 構造とモデルを再処理して、データを更新することができます。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに配置された既存のデータ マイニング ソリューションを管理するためのインターフェイスです。 構造とモデルを再処理して、データを更新することができます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、データのクリーンアップ、予測の作成やモデルの更新、テキストマイニングソリューションの作成などのタスクを自動化するために使用できるツールが含まれています。  
   
@@ -45,7 +41,7 @@ ms.locfileid: "66084827"
 ## <a name="data-mining-wizard"></a>では、  
  データ マイニング ウィザードを使用して、データ マイニング ソリューションの作成を開始します。 このウィザードはすぐに簡単に使用でき、データ マイニング構造および初期関連マイニング モデルを順を追って作成する方法が示されます。また、アルゴリズムの種類やデータ ソースの選択と、分析に使用されるケース データの定義も行うことができます。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services-データマイニング」](data-mining-wizard-analysis-services-data-mining.md)を参照してください&#41;  
+ **詳細:** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  データ マイニング ウィザードを使用してマイニング構造およびマイニング モデルを作成したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のデータ マイニング デザイナーを使用して、既存のモデルと構造に対する操作を行うことができます。  
@@ -69,14 +65,12 @@ ms.locfileid: "66084827"
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  マイニング モデルを作成してサーバーに配置したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データ マイニング オブジェクトをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを管理できます。 また、モデルの調査、新しいデータの処理、予測の作成など、モデルを使用するタスクの実行を続けることもできます。  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] にはクエリ エディターも含まれ、データ マイニング拡張機能 (DMX) クエリの設計と実行や、XMLA を使用するデータ マイニング オブジェクトの操作に使用できます。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] にはクエリ エディターも含まれ、データ マイニング拡張機能 (DMX) クエリの設計と実行や、XMLA を使用するデータ マイニング オブジェクトの操作に使用できます。  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services のデータ マイニング タスクおよび変換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、データマイニングをサポートする多くのコンポーネントが用意されています。  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 次に例を示します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 次に例を示します。  
   
 -   新しい顧客によってデータセットが更新されるたびに自動的にモデルを更新する、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの作成。  
   
@@ -92,7 +86,7 @@ ms.locfileid: "66084827"
   
 -   新たな顧客をリスク別にセグメント化する、ロジスティック回帰の使用。  
   
- **詳細については、「** [データマイニングソリューションの関連プロジェクト](data-mining-solutions.md)」を参照してください。  
+ **詳細:** [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](/sql/dmx/data-mining-extensions-dmx-reference)   

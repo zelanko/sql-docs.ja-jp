@@ -1,5 +1,6 @@
 ---
 title: SQL クエリの実行 (SQLXMLOLEDB プロバイダー)
+description: クライアント側の SQL クエリの実行時に、SQLXMLOLEDB プロバイダーの ClientSideXML および xml のルートプロパティを使用する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f716d9e682c3b98fe35ea80dd4b630486d7e836
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9c3e0bff2a35d617fd3083f6f454f653bb59e58f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650398"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL クエリの実行 (SQLXMLOLEDB プロバイダー)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティの使用方法を示します。  
   
 -   ClientSideXML  

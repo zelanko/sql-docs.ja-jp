@@ -19,12 +19,12 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbf2bdf2249209da0c46c7ba4e1dc95df6789c5e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173361"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81388545"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定の種類のデータソースを操作する方法の詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)」を参照してください。
@@ -32,11 +32,11 @@ ms.locfileid: "78173361"
  。
 
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー
- グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、**Text**、**StoredProcedure**、および **TableDirect** の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。
+ グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、 **Text**、 **StoredProcedure**、および **TableDirect**の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。
 
  クエリの種類には、次のオプションがあります。
 
--   **Text** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリ テキストをサポートします。
+-   **Text** [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クエリ テキストをサポートします。
 
 -   **[TableDirect]** 指定したテーブルのすべての列を選択します。 たとえば、Customers という名前のテーブルの場合、これは [!INCLUDE[tsql](../../../includes/tsql-md.md)] という `SELECT * FROM Customers`ステートメントと同じです。
 
@@ -76,7 +76,7 @@ ms.locfileid: "78173361"
 |![グリッド ペインの表示/非表示の切り替え](../media/rsqdicon-showhidegrid.gif "グリッド ペインの表示/非表示の切り替え")|グリッド ペインの表示と非表示を切り替えます。|
 |![SQL ペインの表示/非表示の切り替え](../media/rsqdicon-showhidesql.gif "SQL ペインの表示/非表示の切り替え")|SQL ペインの表示と非表示を切り替えます。|
 |![結果ペインの表示/非表示の切り替え](../media/rsqdicon-showhideresult.gif "結果ペインの表示/非表示の切り替え")|結果ペインの表示と非表示を切り替えます。|
-|![クエリの実行](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行します。|
+|![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|クエリを実行します。|
 |![SQL ペインの [SQL の確認] ボタン](../media/rsqdicon-verifysql.gif "SQL ペインの [SQL の確認] ボタン")|クエリ テキストの構文が正しいかどうかを確認します。|
 |![選択したフィールドでの昇順による並べ替え](../media/rsqdicon-sortascending.gif "選択したフィールドでの昇順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[昇順で並べ替え]** に設定します。|
 |![選択したフィールドでの降順による並べ替え](../media/rsqdicon-sortdescending.gif "選択したフィールドでの降順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[降順で並べ替え]** に設定します。|
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|
 |![汎用クエリ デザイナー ボタンのアイコン](../media/icongenericquerydesigner.gif "汎用クエリ デザイナー ボタンのアイコン")|クエリ テキスト ビューまたはストアド プロシージャ ビューを維持したまま、汎用クエリ デザイナーとグラフィカル クエリ デザイナーを切り替えます。|
-|![クエリの実行](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリの実行")|選択したテーブルのすべての列が選択されます。|
+|![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|選択したテーブルのすべての列が選択されます。|
 
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)
  コマンドの種類が **[StoredProcedure]** の場合、グラフィカル クエリ デザイナーには、データ ソースで利用可能なストアド プロシージャを一覧にしたドロップダウン リストと結果ペインが表示されます。 次の表に各ペインの機能を示します。
@@ -135,7 +135,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|
-|![クエリの実行](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリの実行")|選択されたストアド プロシージャを実行します。|
+|![クエリの実行](../../analysis-services/media/rsqdicon-run.gif "クエリの実行")|選択されたストアド プロシージャを実行します。|
 |[ストアド プロシージャ] ドロップダウン リスト|下矢印をクリックすると、データ ソースで利用可能なストアド プロシージャが一覧表示されます。 この一覧から目的のストアド プロシージャをクリックして選択します。|
 
 #### <a name="example"></a>例

@@ -1,6 +1,6 @@
 ---
 title: PIVOT および UNPIVOT の使用 | Microsoft Docs
-ms.custom: ''
+description: PIVOT および UNPIVOT 関係演算子の Transact-SQL リファレンス。 SELECT ステートメントでこれらの演算子を使用すると、テーブル値式を別のテーブルに変更できます。
 ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,16 +24,16 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ffc3d6b3ec03d8903124e1fd75515a93fd43cd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77255996"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999191"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 関係演算子 `PIVOT` および `UNPIVOT` を使用すると、テーブル値式を別のテーブルに変更できます。 `PIVOT` では、式内の 1 つの列にある複数の一意の値を出力内の複数の列に変えることにより、テーブル値式が行列変換されます。 また、`PIVOT` で集計が実行されるのは、最終出力で必要な残りの任意の列値に対して集計が必要な場合です。 `UNPIVOT` 関係演算子の機能は PIVOT 関係演算子の逆で、テーブル値式の複数の列を列値に行列変換します。  
   
@@ -116,7 +116,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>PIVOT の複雑な例  
-`PIVOT` 関係演算子が役立つ一般的なシナリオは、データの概要を示すためのクロス集計レポートを生成する場合です。 たとえば、`PurchaseOrderHeader` サンプル データベースの `AdventureWorks2014` テーブルにクエリを実行し、特定の従業員の発注数を抽出するとします。 このレポートを仕入先別に返すクエリを次に示します。  
+`PIVOT` 関係演算子が役立つ一般的なシナリオは、データの概要を示すためのクロス集計レポートを生成する場合です。 たとえば、`AdventureWorks2014` サンプル データベースの `PurchaseOrderHeader` テーブルにクエリを実行し、特定の従業員の発注数を抽出するとします。 このレポートを仕入先別に返すクエリを次に示します。  
   
 ```sql
 USE AdventureWorks2014;  
@@ -160,7 +160,7 @@ FROM PurchaseOrderHeader;
 
 ## <a name="unpivot-example"></a>UNPIVOT の例
   
-`UNPIVOT` 関係演算子で行われる操作は、基本的に `PIVOT` 演算子の逆で、列を行に変換します。 上記の例で作成されたテーブルが `pvt` という名前でデータベースに保存されていて、列 ID `Emp1`、`Emp2`、`Emp3`、`Emp4`、および `Emp5` を、特定の仕入先に対応する行の値に行列変換するとします。 そのため、さらに 2 つの列を指定する必要があります。 行列変換する列値 (`Emp1`、`Emp2`、...) を格納する列を `Employee` と呼び、行列変換する列に現在存在している値を保持する列を `Orders` と呼びます。 これらの列は、それぞれ *定義の*pivot_column*と*value_column[!INCLUDE[tsql](../../includes/tsql-md.md)] に対応します。 このクエリは次のようになります。  
+`UNPIVOT` 関係演算子で行われる操作は、基本的に `PIVOT` 演算子の逆で、列を行に変換します。 上記の例で作成されたテーブルが `pvt` という名前でデータベースに保存されていて、列 ID `Emp1`、`Emp2`、`Emp3`、`Emp4`、および `Emp5` を、特定の仕入先に対応する行の値に行列変換するとします。 そのため、さらに 2 つの列を指定する必要があります。 行列変換する列値 (`Emp1`、`Emp2`、...) を格納する列を `Employee` と呼び、行列変換する列に現在存在している値を保持する列を `Orders` と呼びます。 これらの列は、それぞれ [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義の *pivot_column* と *value_column* に対応します。 このクエリは次のようになります。  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -205,7 +205,7 @@ VendorID    Employee    Orders
   
 `UNPIVOT` 関係演算子の動作は `PIVOT` 関係演算子の動作と正反対ではないことに注意してください。 `PIVOT` 関係演算子を実行すると集計が行われ、複数である可能性のある行が出力では 1 つの行にマージされます。 `UNPIVOT` 関係演算子を実行しても、行が既にマージされているので、最初のテーブル値式の結果を再現することはできません。 さらに、`UNPIVOT` の入力に含まれる NULL 値は、出力には表示されません。 値が表示されない場合、それは `PIVOT` 操作の前の入力に、NULL 値が含まれている可能性があることを示しています。  
   
-`Sales.vSalesPersonSalesByFiscalYears` サンプル データベースのビュー [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] では、`PIVOT` 関係演算子を使用して会計年度別に販売員ごとの総売上を返します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でビューをスクリプト化するには、**オブジェクト エクスプローラー**の **データベースの**[ビュー][!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] フォルダーで、スクリプト化するビューを探します。 ビュー名を右クリックし、 **[ビューをスクリプト化]** をクリックします。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのビュー `Sales.vSalesPersonSalesByFiscalYears` では、`PIVOT` 関係演算子を使用して会計年度別に販売員ごとの総売上を返します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でビューをスクリプト化するには、**オブジェクト エクスプローラー**の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **[ビュー]** フォルダーで、スクリプト化するビューを探します。 ビュー名を右クリックし、 **[ビューをスクリプト化]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

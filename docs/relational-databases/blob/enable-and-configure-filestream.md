@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM の有効化と構成 | Microsoft Docs
+description: FILESTREAM を使用するには、まず、それを SQL Server データベース エンジン インスタンスで有効にします。 SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法を学習します。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767983"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FILESTREAM の使用を開始するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで FILESTREAM を有効にする必要があります。 このトピックでは、SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法について説明します。  
   
 ##  <a name="enabling-filestream"></a><a name="enabling"></a> FILESTREAM の有効化  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676269"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>レッスン 1: Market Basket マイニング構造の作成
@@ -80,8 +80,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  定義できるマイニング構造列の種類の詳細については、「[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)」を参照してください。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、既定で、マイニング構造ごとに 30% の予約データ セットが作成されます。ただし、DMX を使用してマイニング構造を作成する場合は、必要に応じて予約データ セットを手動で追加する必要があります。  
+>  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、既定で、マイニング構造ごとに 30% の予約データ セットが作成されます。ただし、DMX を使用してマイニング構造を作成する場合は、必要に応じて予約データ セットを手動で追加する必要があります。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンでは、次のタスクを実行します。  
@@ -99,8 +98,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  [**サーバーへの接続**] ダイアログボックスの [**サーバーの種類**] で、[ **Analysis Services**] を選択します。 [**サーバー名**] に`LocalHost`、このレッスンで接続するの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスの名前またはを入力します。 
-  **[接続]** をクリックします。  
+2.  [**サーバーへの接続**] ダイアログボックスの [**サーバーの種類**] で、[ **Analysis Services**] を選択します。 [**サーバー名**] に`LocalHost`、このレッスンで接続するの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスの名前またはを入力します。 **[Connect]** をクリックします。  
   
 3.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
@@ -119,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Market Basket]  
@@ -131,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     OrderNumber TEXT KEY  
@@ -145,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     を以下に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Products] TABLE (  

@@ -19,19 +19,18 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 87cbd2a6de772aa0886ee47d0c4d27fc734cbc3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782689"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010085"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 一括コピー操作を初期化します。  
 
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
 RETCODE bcp_init (  
@@ -69,8 +68,8 @@ Unicode および ANSI 名:
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
- 他の一括コピー関数を呼び出す前に**bcp_init**を呼び出します。 **bcp_init**は、ワークステーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の間のデータの一括コピーに必要な初期化を実行します。  
+## <a name="remarks"></a>コメント  
+ 他の一括コピー関数を呼び出す前に**bcp_init**を呼び出します。 **bcp_init**は、ワークステーションとの間のデータの一括コピーに必要な初期化を実行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **Bcp_init**関数は、一括コピー関数で使用できるように ODBC 接続ハンドルが有効になっている必要があります。 ハンドルを有効にするには、SQL_COPT_SS_BCP が割り当てられていて、接続されていない接続ハンドルで SQL_BCP_ON に設定されている[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を使用します。 接続済みのハンドルの属性を割り当てようとすると、エラーが発生します。  
   
@@ -84,7 +83,7 @@ Unicode および ANSI 名:
   
 -   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイルにデータベース テーブル内の各列に格納するデータが含まれている必要があります。 データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーするときは、データベース テーブル、ビュー、または SELECT 結果セット内のすべての列のデータがデータ ファイルにコピーされます。  
   
--   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コピーする場合、 **bcp_exec**は、データベーステーブル内の列の序数位置に基づいてデータを格納します。  
+-   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 からコピーする場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **bcp_exec**は、データベーステーブル内の列の序数位置に基づいてデータを格納します。  
   
 -   データベースのデータ型が可変長 (たとえば、 **varbinary (22)**) の場合、またはデータベース列に null 値を含めることができる場合は、データファイル内のデータの先頭に長さ/null インジケーターが付きます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。  
   
@@ -92,7 +91,7 @@ Unicode および ANSI 名:
   
  インデックスを含まないテーブルの場合は、データベース復旧モデルを SIMPLE または BULK_LOGGED に設定することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」および「 [ALTER database](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
- データファイルが使用されていない場合は、 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を呼び出し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て各列のデータの形式と場所を指定し、 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を使用してデータ行をにコピーする必要があります。  
+ データファイルが使用されていない場合は、 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を呼び出して各列のデータの形式と場所を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)を使用してデータ行をにコピーする必要があります。  
   
 ## <a name="example"></a>例  
  このサンプルでは、ODBC bcp_init 関数をフォーマット ファイルと共に使用する方法を示します。  

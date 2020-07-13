@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ff9f2c372d6857257fa71e771f6eabe50eaf8fb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940843"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>[変更するパーティションの選択] (使用法に基づく最適化ウィザード)
-  
   **[変更するパーティションの選択]** ページを使用すると、集計をデザインするパーティションを選択できます。  
   
 ## <a name="options"></a>オプション  
@@ -29,13 +27,13 @@ ms.locfileid: "66069329"
   
  選択したパーティションのみに対する集計をデザインするには、パーティションのチェック ボックスをオンにします。  
   
- **パーティション名**  
+ **[パーティション名]**  
  パーティションの名前が表示されます。  
   
  **ソース**  
  パーティションのソース データを提供するために使用されるテーブルまたはクエリが表示されます。  
   
- **[集計のデザイン]**  
+ **集計のデザイン**  
  パーティションで使用される集計デザインを説明する文字列が表示されます。  
   
 ## <a name="see-also"></a>参照  

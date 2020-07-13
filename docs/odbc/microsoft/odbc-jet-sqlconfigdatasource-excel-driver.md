@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Excel Driver
 - Excel driver [ODBC], SqlConfigDataSource
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab33bfdef2b633cd5a7a3e215a3f6522d8d664ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a76482acd1182d900336d7ac9826b16968e00caa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915701"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293012"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (Excel ドライバー)
 > [!NOTE]  
@@ -26,11 +26,11 @@ ms.locfileid: "67915701"
   
  データソースを動的に追加、変更、または削除するために使用される**Sqlconfigdatasource**関数は、次のキーワードを動的に使用します。  
   
-|Keyword|[説明]|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |DBQ|Microsoft excel driver For microsoft Excel 5.0 以降のファイルにアクセスする場合は、ブックファイルの名前。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**データベース**] と同じオプションが設定されます。|  
 |DEFAULTDIR|ディレクトリへのパス指定。<br /><br /> これにより、 **[ディレクトリの選択**] または [セットアップ] ダイアログボックスの **[ブックの選択**] と同じオプションが設定されます。|  
-|説明|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
+|Description|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
 |DRIVER|ドライバー DLL へのパス指定。|  
 |DRIVERID|ドライバーの整数 ID。<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (Microsoft Excel 5.0/7.0)<br /><br /> 790 (Microsoft Excel 97-2003)|  
 |FIL|ファイルの種類。たとえば、Excel 3.0、Excel 4.0、Excel 5.0、Excel 7.0、Excel 97、Excel 2000、Excel 2003 などです。|  

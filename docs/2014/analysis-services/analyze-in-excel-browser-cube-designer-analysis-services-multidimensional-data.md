@@ -12,28 +12,23 @@ f1_keywords:
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a84fd7daf954b7537d34189ce6848472aa8818e6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527972"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
-  " **Excel で分析**" を使用すると、キューブの開発者は、プロジェクトがエンドユーザーにどのように表示されるかをすばやく確認することができます。 
-  **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  
+  キューブ開発者は、プロジェクトがエンド ユーザーにどのように表示されるかを **"Excel で分析"** で簡単に確認できます。 **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  
   
  **キューブ データを表示するには:**  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のソリューション エクスプローラーでキューブをダブルクリックすると、キューブ デザイナーでそのキューブが開きます。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のソリューション エクスプローラーでキューブをダブルクリックすると、キューブ デザイナーでそのキューブが開きます。  
   
-2.  
-  **[ブラウザー]** タブをクリックします。  
+2.  **[ブラウザー]** タブをクリックします。  
   
-3.  
-  **[再接続]** をクリックして、接続を検証します。  
+3.  **[再接続]** をクリックして、接続を検証します。  
   
 4.  メニュー バーの Excel アイコンをクリックします。  
   
@@ -46,12 +41,11 @@ ms.locfileid: "66062366"
 > [!NOTE]  
 >  "Excel で分析" 機能を使用するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]と同じコンピューターに Excel がインストールされている必要があります。 Excel が同じコンピューターにインストールされていない場合は、別のコンピューターの Excel を使用して、データ ソースとしてキューブに接続できます。 これにより、ピボットテーブルをワークシートに手動で追加することができます。 モデル オブジェクト (テーブル、列、メジャー、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
   
- 
-  **"Excel で分析"** 機能の詳細については、以下のリソースを参照してください。  
+ **"Excel で分析"** 機能の詳細については、以下のリソースを参照してください。  
   
- [Excel での分析 &#40;SSAS 表形式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel で分析 &#40;SSAS テーブル&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Excel でのテーブルモデルの分析 &#40;SSAS 表形式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Excel でのテーブル モデルの分析 (SSAS テーブル)](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [キューブ内のデータおよびメタデータの参照](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

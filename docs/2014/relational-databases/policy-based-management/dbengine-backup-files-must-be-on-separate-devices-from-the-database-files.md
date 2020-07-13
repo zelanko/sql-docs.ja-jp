@@ -8,13 +8,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79ffc57fd8d8dffbda0afd623b652e0d05764f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44803ff14d7e017f4164b692676baa50a85386eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62705435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057120"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する
 「[バックアップファイルは、データベースファイルとは別のデバイスに配置する必要があり](../../database-engine/backup-files-must-be-on-separate-devices-from-the-database-files.md)ます」を参照してください。

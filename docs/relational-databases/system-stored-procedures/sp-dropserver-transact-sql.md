@@ -15,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropserver
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a28fc7481c310ebd1f051f620fbcc7d691653301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124833"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891928"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスにある、既知のリモート サーバーおよびリンク サーバーの一覧からサーバーを削除します。  
   
- ![リンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>引数  
  *server*  
- 削除するサーバーを指定します。 *サーバー*は**sysname**,、既定値はありません。 *サーバー*が存在している必要があります。  
+ 削除するサーバーを指定します。 *server* のデータ型は **sysname**で、既定値はありません。 *サーバー*が存在している必要があります。  
   
  *droplogins*  
  **Droplogins**を指定した場合に、*サーバー*の関連するリモートサーバーおよびリンクサーバーログインも削除する必要があることを示します。 **`@droplogins`** の型は**char (10)** で、既定値は NULL です。  
@@ -58,19 +57,19 @@ sp_dropserver [ @server = ] 'server'
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LINKED SERVER 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、リモート サーバー `ACCOUNTS` とそれに関連するすべてのリモート ログインを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスから削除します。  
   
 ```  
 sp_dropserver 'ACCOUNTS', 'droplogins';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

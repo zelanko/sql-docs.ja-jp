@@ -1,5 +1,6 @@
 ---
 title: CommandStream プロパティを使用してテンプレートファイルを実行する
+description: SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを実行する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 90f2d7e20d4cb490e738a3dd813ce6037a1bfac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649499"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例は、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを指定する方法を示しています。 このアプリケーションでは、コマンドファイルの FileStreamobject が開かれ、実行される CommandStream としてファイルストリームが割り当てられます。  
   
  次の例では、CommandType プロパティが (TemplateFile としてではなく) SqlXmlCommandType. Template として指定されています。  

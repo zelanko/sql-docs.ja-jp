@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b48696fb56c40062d62f04845715170887f84fda
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62773315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929166"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定
   このルールでは、ユーザー定義データベースの定義に使用されたデータベース照合順序と master または model の照合順序が一致しているかどうかを確認します。  
@@ -44,9 +43,9 @@ ms.locfileid: "62773315"
   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [COLLATE &#40;Transact-sql&#41;](/sql/t-sql/statements/collations)  
+ [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)  
   
- [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
+ [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
  [マイクロソフトサポート技術情報の記事325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   

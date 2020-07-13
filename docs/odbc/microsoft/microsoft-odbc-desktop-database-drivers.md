@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ee91a2e544babdd02a22bcbe426a7fb0d770f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68109681"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302983"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
 ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語として使用する API です。 アプリケーションのソースコードに直接組み込まれているのと同じ ODBC ソースコードを使用して、さまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC Desktop データベースドライバーを使用すると、ODBC 対応のアプリケーションのユーザーは、ODBC インターフェイスを使用してデスクトップデータベースを開いたり、クエリを実行したり、更新したりできます。  
   
- Microsoft ODBC Desktop データベースドライバーは、Microsoft Jet ベースの ODBC ドライバーのセットです。 Microsoft ODBC Desktop Database Drivers 2.0 には16ビットドライバーと32ビットドライバーの両方が含まれていますが、バージョン3.0 以降では、Windows 95 以降、Windows NT Workstation または Server version 4.0、Windows 2000 Professional、または Windows 2000 で動作する32ビットドライバーのみが含まれます。Server. これらのドライバーは、次の種類のデータソースへのアクセスを提供します。  
+ Microsoft ODBC Desktop データベースドライバーは、Microsoft Jet ベースの ODBC ドライバーのセットです。 Microsoft ODBC Desktop Database driver 2.0 には16ビットと32ビットの両方のドライバーが含まれていますが、バージョン3.0 以降では、Windows 95 以降、Windows NT Workstation または Server version 4.0、Windows 2000 Professional、または Windows 2000 Server で動作する32ビットドライバーのみが含まれます。 これらのドライバーは、次の種類のデータソースへのアクセスを提供します。  
   
 -   Microsoft Access  
   
@@ -37,7 +37,7 @@ ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語�
   
 -   dBASE  
   
--   Text  
+-   テキスト  
   
  Microsoft Visual FoxPro® ODBC ドライバーに関する詳細なドキュメントについては、「 [Visual FOXPRO Odbc ドライバー](../../odbc/microsoft/visual-foxpro-odbc-driver.md) 」を参照してください。  
   

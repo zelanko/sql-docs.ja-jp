@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa60ae2e275646812c226bd2fd9cd945174bab54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068468"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター ウィンドウでどの [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを実行するかを制御できます。 個々のステートメントでデバッガーを一時停止して、その時点のコード要素の状態を確認できます。  
@@ -51,9 +50,9 @@ ms.locfileid: "75243157"
   
 |アクション|手順|  
 |------------|---------------|  
-|現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|[**デバッグ**] メニューの [**続行**] をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**続行**] ボタンをクリックします。|  
+|現在のステートメントから次のブレークポイントまですべてのステートメントを実行する。|**[デバッグ]** メニューの **[続行]** をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**続行**] ボタンをクリックします。|  
 |次のステートメントまたはモジュールにステップ インする。|[**デバッグ**] メニューの [**ステップイン**] をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**ステップイン**] ボタンをクリックします。<br /><br /> F11 キーを押す。|  
-|次のステートメントまたはモジュールにステップ オーバーする。|[**デバッグ**] メニューの [**ステップオーバー**] をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**ステップオーバー** ] ボタンをクリックします。<br /><br /> F10 キーを押す。|  
+|次のステートメントまたはモジュールにステップ オーバーする。|**[デバッグ]** メニューの **[ステップ オーバー]** をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**ステップオーバー** ] ボタンをクリックします。<br /><br /> F10 キーを押す。|  
 |モジュールからステップ アウトする。|[**デバッグ**] メニューの [**ステップアウト**] をクリックします。<br /><br /> [**デバッグ**] ツールバーの [**ステップアウト**] ボタンをクリックします。<br /><br /> Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F11&lt;/localizedText&gt; キーを押す。|  
 |現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、 **[カーソルまで実行]** をクリックする。<br /><br /> Ctrl</localizedText> + <localizedText>F10</localizedText> キーを押す。|  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2012 Service Pack のリリース ノート | Microsoft Docs
+description: この記事には、SQL Server 2012 の 4 つのサービス パックの集約したリリース ノートが含まれています。 各サービス パックは、前のサービス パックの累積です。
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -7,15 +8,15 @@ ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e06daf1c4963df2706781ba222ef5efd07ab9249
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49f60415135a40ffeb470f09903cd3cd080ab69
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112372"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999463"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

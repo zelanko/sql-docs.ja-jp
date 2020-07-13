@@ -2,7 +2,7 @@
 title: tempdb データベース | Microsoft Docs
 description: このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,21 +17,21 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b2be32e712e6ab897f9b1a8777b4e1f37f8afcc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694838"
 ---
 # <a name="tempdb-database"></a>TempDB データベース
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **TempDB** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
   
 - グローバルまたはローカルな一時テーブルおよびインデックス、一時ストアド プロシージャ、テーブル変数、テーブル値関数で返されるテーブル、カーソルなど、明示的に作成された一時的な**ユーザー オブジェクト**。  
-- データベース エンジンによって作成された**内部オブジェクト**。 チェックの内容は次のとおりです
+- データベース エンジンによって作成された**内部オブジェクト**。 これには以下が含まれます。
   - スプール、カーソル、並べ替え、および一時的なラージ オブジェクト (LOB) 記憶域の中間結果を格納する作業テーブル。
   - ハッシュ結合操作またはハッシュ集計操作用の作業ファイル
   - インデックスの作成または再構築などの操作 (SORT_IN_TEMPDB を指定した場合) や、GROUP BY、ORDER BY、または UNION クエリにおける並べ替えの中間結果
@@ -111,26 +111,26 @@ ms.locfileid: "79288496"
 
 |SLO|TempDB データ ファイルの最大サイズ (GB)|TempDB データ ファイルの数|TempDB データの最大サイズ (GB)|
 |---|---:|---:|---:|
-|Basic|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Basic|13.9|1|13.9|
+|S0|13.9|1|13.9|
+|S1|13.9|1|13.9|
+|S2|13.9|1|13.9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Premium エラスティック プール (すべての DTU 構成)|13|12|156|
-|Standard エラスティック プール (S0-S2)|13|12|156|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|Premium エラスティック プール (すべての DTU 構成)|13.9|12|166.7|
+|Standard エラスティック プール (S0-S2)|13.9|12|166.7|
 |Standard エラスティック プール (S3 以降) |32|12|384|
-|Basic エラスティック プール (すべての DTU 構成)|13|12|156|
+|Basic エラスティック プール (すべての DTU 構成)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore に基づくサービス層の TempDB のサイズ
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、[-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) スタートアップ オプションを使用して**最小構成**で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
+メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、 **-f** スタートアップ オプションを使用して[最小構成](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の TempDB に使用するディスク領域の計画
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運用環境での TempDB の適切なサイズを判断するには、多くの要因が関係します。 この記事で前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。

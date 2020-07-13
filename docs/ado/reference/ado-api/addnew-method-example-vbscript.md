@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921280"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760618"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  

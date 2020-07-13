@@ -18,16 +18,16 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c4eec871d08eebbc18da84dec95d148fe161f5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012815"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で COLLATE 句に Windows 照合順序名を指定します。 Windows 照合順序名は、照合順序指定子と比較形式で構成されます。
 
@@ -35,7 +35,7 @@ ms.locfileid: "70874464"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -234,6 +234,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|Lithuanian_Classic|Lithuanian_Classic|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨とされており、サーバー レベルでは利用できません|マケドニア語|マケドニア語|
+||||
 
 <sup>1</sup> Windows の Unicode のみの照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。
 

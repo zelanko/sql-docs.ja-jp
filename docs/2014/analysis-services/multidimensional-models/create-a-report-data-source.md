@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536264"
 ---
 # <a name="create-a-report-data-source"></a>レポート データ ソースの作成
   Power View が多次元モデルに接続するためには、共有レポート データ ソース定義 (.rsds ファイル) を SharePoint ライブラリに作成する必要があります。 .rsds ファイルは、多次元モデルへの接続に使用する Analysis Services サーバー インスタンスの名前、接続の種類、接続文字列、および資格情報の名前を指定します。 ユーザーが .rsds ファイルをクリックすると、新しい空白の Power View レポート (.rdlx ファイル) がブラウザーで開きます。  
@@ -39,19 +38,16 @@ ms.locfileid: "66076339"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.  [**新しいドキュメント** > ] [**レポートデータソース**] をクリックします。  
+2.  [**新しいドキュメント**] [  >  **レポートデータソース**] をクリックします。  
   
     > [!NOTE]  
     >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint 統合モードでのレポートサーバーコンテンツタイプのライブラリへの追加 &#40;Reporting Services」&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
   
-3.  
-  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
+3.  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
   
-4.  
-  **[データ ソースの種類]** で **[Power View 用 Microsoft BI セマンティック モデル]** をクリックします。  
+4.  **[データ ソースの種類]** で **[Power View 用 Microsoft BI セマンティック モデル]** をクリックします。  
   
-5.  
-  **[接続文字列]** で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
+5.  **[接続文字列]** で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
   
      接続文字列: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
@@ -62,8 +58,7 @@ ms.locfileid: "66076339"
   
      (オプション) キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、接続文字列に "Locale Identifier" プロパティを追加する必要があります。`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
-6.  
-  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
+6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
   
     -   レポートを開いたユーザーの資格情報を使用してデータにアクセスする場合は、 **[Windows 認証 (統合)]** を選択します。 SharePoint サイトまたはファームでフォーム認証を使用する場合や、信頼済みアカウントを使用してレポート サーバーに接続する場合は、このオプションを選択しないでください。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報は別のコンピューター 1 台にしか渡すことができません。 つまり、外部データ ソースが別のコンピューターにあり、別の接続が必要な場合、意図したデータを取得できずにエラーが発生します。  
   
@@ -73,8 +68,7 @@ ms.locfileid: "66076339"
   
     -   接続文字列で資格情報を指定する場合や、最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** をクリックします。  
   
-7.  
-  **[接続テスト]** をクリックして検証します。  
+7.  **[接続テスト]** をクリックして検証します。  
   
 8.  データ ソースをアクティブにする場合は、 **[このデータ ソースを有効にする]** を選択します。 データ ソースが構成されていてもアクティブでない場合は、ユーザーがレポートを作成しようとするとエラー メッセージが表示されます。  
   

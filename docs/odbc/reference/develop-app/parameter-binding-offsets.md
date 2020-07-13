@@ -11,14 +11,14 @@ helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023346"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282496"
 ---
 # <a name="parameter-binding-offsets"></a>パラメーター バインディングのオフセット
 アプリケーションでは、バインドされたパラメーターバッファーアドレスにオフセットが追加されるように指定できます。また、 **SQLExecDirect**または**sqlexecute**が呼び出されたときに、対応する長さ/インジケーターバッファーアドレスが使用されます。 これらの追加の結果によって、これらの操作で使用されるアドレスが決まります。  

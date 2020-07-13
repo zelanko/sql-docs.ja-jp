@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2ddc0a4147623753e04b14e60359c397b00a8d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62807473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934373"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
   特定のデータベースをミラーリングまたはログ配布することができます。また、ミラーリングとログ配布を同時に行うこともできます。 使用する方法を選択するには、次の点を検討します。  
@@ -61,12 +60,11 @@ ms.locfileid: "62807473"
  ローカル ログ配布モニターを使用している場合、このシナリオのために特別に考慮が必要な事項はありません。 このシナリオでリモート監視インスタンスを使用する際の詳細については、このトピックの「リモート監視インスタンスでのデータベース ミラーリングの影響」を参照してください。  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>プリンシパルからミラー データベースへのフェールオーバー  
- 次の図に、自動フェールオーバーを伴う高い安全性モードでミラーリングを実行する際の、ログ配布とデータベース ミラーリングの連係動作を示します。 
-  **Server_A** はミラーリング用のプリンシパル サーバーであり、ログ配布用のプライマリ サーバーでもあります。 **Server_B**はミラーサーバーであり、現在非アクティブになっているプライマリサーバーとして構成されています。 **Server_C**と**Server_D**は、ログ配布のセカンダリサーバーです。 ログ配布セッションの可用性を最大にするため、バックアップの場所は独立したホスト コンピューターの共有ディレクトリに作成します。  
+ 次の図に、自動フェールオーバーを伴う高い安全性モードでミラーリングを実行する際の、ログ配布とデータベース ミラーリングの連係動作を示します。 **Server_A** はミラーリング用のプリンシパル サーバーであり、ログ配布用のプライマリ サーバーでもあります。 **Server_B** はミラー サーバーであり、プライマリ サーバーとして構成されています。現在はアクティブになっていません。 **Server_C** および **Server_D** はログ配布のセカンダリ サーバーです。 ログ配布セッションの可用性を最大にするため、バックアップの場所は独立したホスト コンピューターの共有ディレクトリに作成します。  
   
  ![ログ配布とデータベース ミラーリング](../media/logshipping-and-dbm-automatic-failover.gif "ログ配布とデータベース ミラーリング")  
   
- ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 .  
+ ミラーリング フェールオーバー後も、セカンダリ サーバーで定義されているプライマリ サーバーの名前は変わりません。 。  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>リモート監視インスタンスでのデータベース ミラーリングの影響  
  ログ配布をリモート監視インスタンスと共に使用しているときは、ログ配布セッションとデータベース ミラーリングを組み合わせることでモニター テーブルの情報に影響が及びます。 プライマリに関する情報は、プリンシパル/プライマリで構成されたモニターと各セカンダリで構成されたモニターの組み合わせです。  
@@ -76,7 +74,7 @@ ms.locfileid: "62807473"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>ミラーリングとログ配布を合わせた設定  
  データベース ミラーリングとログ配布を合わせて設定するには、次の手順を実行する必要があります。  
   
-1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)のすべてのエディションで使用できるわけではありません。  
+1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 2.  データベース ミラーリングをセットアップする。 詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」または「[データベース ミラーリングの設定 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
@@ -92,9 +90,9 @@ ms.locfileid: "62807473"
   
      手動フェールオーバーを実行するには、次の手順を実行します。  
   
-    -   [データベースミラーリングセッションを手動でフェールオーバーする &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Transact-sql&#41;&#40;データベースミラーリングセッションを手動でフェールオーバーする](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 6.  プライマリ データベースである新しいプリンシパル (以前のミラー) にログ配布を設定します。  
   
@@ -103,8 +101,7 @@ ms.locfileid: "62807473"
   
      手順 4. で使用したものと同一のバックアップ共有を使用する必要があります。  
   
-     
-  **の** [トランザクション ログの配布] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インターフェイスで、ログ配布構成ごとにサポートされるプライマリ データベースは 1 つのみです。 このため、新しいプリンシパルをプライマリとして設定するにはストアド プロシージャを使用する必要があります。  
+     **の** [トランザクション ログの配布] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インターフェイスで、ログ配布構成ごとにサポートされるプライマリ データベースは 1 つのみです。 このため、新しいプリンシパルをプライマリとして設定するにはストアド プロシージャを使用する必要があります。  
   
 7.  元のプリンシパルにフェールバックするには、別の手動フェールオーバーを実行します。  
   

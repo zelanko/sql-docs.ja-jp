@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: eb7ddb23-12d0-4c81-9609-4046ccaca7d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb86615f0023ff5c2c65e02af5c597ed3c1fdf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: adaea30ec9838ff4b1b82a8f929ebeb2f5858b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66096259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037032"
 ---
 # <a name="complete---installation"></a>完了 - インストール
-  
   **[閉じる]** をクリックしてインストールを終了します。  
   
 ## <a name="see-also"></a>参照  

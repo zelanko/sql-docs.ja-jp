@@ -14,14 +14,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003165"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298542"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo で Excel に返される値
 次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 37b6be71c7b62a80491656b98f997dd4eb7ec28f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62695404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058019"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>1 つの列に対して複数の検索条件を指定する方法 (Visual Database Tools)
   場合によっては、同じデータ列に複数の検索条件を適用する必要があります。 たとえば、次の場合です。  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079000"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282005"
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
 SQL ステートメントでは、特殊文字または一致するキーワードを含む識別子は、*識別子引用符*で囲む必要があります。このような文字で囲まれた識別子は、*引用符で囲ま*れた識別子 (SQL-92 では区切られた*識別子*とも呼ばれます) と呼ばれます。 たとえば、次の**SELECT**ステートメントでは、アカウントの買掛金識別子は引用符で囲まれています。  

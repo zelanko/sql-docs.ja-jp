@@ -11,14 +11,14 @@ helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9cb78dae32bb17598ee0e86c26e621be1b6362c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8a2a8363371d6f6c3644c2b7b49aa77644d496e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068550"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306643"
 ---
 # <a name="administration-program"></a>管理プログラム
 > [!NOTE]  

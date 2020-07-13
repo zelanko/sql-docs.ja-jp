@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 135ba193e2249d0028a4ed04e703187fd9bd127d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62856442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047438"
 ---
 # <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ] ([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
@@ -36,7 +35,7 @@ ms.locfileid: "62856442"
  **[作成日]**  
  ストアド プロシージャが作成された日付を表示します。  
   
- **名前**  
+ **Name**  
  現在のストアド プロシージャの名前です。  
   
  **[スキーマ]**  

@@ -17,15 +17,14 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97540979cee50c1d9b27772f994cd92e6d5de411
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009770"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
   エディターには、コードの表示を制御するさまざまな方法が用意されています。  

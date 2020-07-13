@@ -11,14 +11,14 @@ helpviewer_keywords:
 - configuring ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], configuring
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc163f53c9dc234702f6f74426eb65f57cec26b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bbdbe36ed9e6f254e2b738479698bd9eece09f8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096686"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281372"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>ODBC Driver for Oracle の構成
 > [!IMPORTANT]  

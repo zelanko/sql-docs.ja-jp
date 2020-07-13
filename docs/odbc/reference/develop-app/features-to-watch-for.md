@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069883"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305683"
 ---
 # <a name="features-to-watch-for"></a>ウォッチする機能
 このセクションでは、多くの場合、アプリケーション開発者が付与する多くの機能について説明します。 実際、これらの機能は、Dbms 間のサポートとサポートの方法に大きく異なります。これらのコードをコーディングしないと、相互運用可能なアプリケーションで問題が発生する可能性があります。  

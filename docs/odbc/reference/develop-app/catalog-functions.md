@@ -13,14 +13,14 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC], catalog functions
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eb28ec6f4ea299dae8737fc707fd53e4d102442d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064397"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305203"
 ---
 # <a name="catalog-functions"></a>カタログ関数
 すべてのデータベースには、データをデータベースに格納する方法を示す構造があります。 たとえば、単純な販売注文データベースには、次の図に示す構造があります。ここでは、ID 列を使用してテーブルをリンクします。  

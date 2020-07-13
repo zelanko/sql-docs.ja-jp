@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_increased_partitions
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e73f98e2548427ae8d102b56e729c2bd21235572
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867747"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたデータベースに対して最大15000のパーティションのサポートを有効または無効にします。  
   
@@ -44,10 +44,10 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @dbname= ]'*database_name*'  
+ [ @dbname =] '*database_name*'  
  データベースの名前です。 *dbname*は**sysname**で、既定値は NULL です。 場合*dbname*が指定されていない、現在のデータベースが使用されます。  
   
- [ @increased_partitions= ]'*increased_partitions*'  
+ [ @increased_partitions =] '*increased_partitions*'  
  指定したデータベースに対して 15, 000 個のパーティションのサポートを有効または無効にします。 *increased_partitions*は**varchar (6)** で、既定値は NULL です。 使用できる値は ' ON ' または ' TRUE ' で、サポートを有効にし、' OFF ' または ' FALSE ' を使用してサポートを無効にします。 *Increased_partitions*が指定されていない場合、指定されたデータベースに対してサポートが有効になっていることを示すために1を返し、サポートが無効になっていることを示す0を返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

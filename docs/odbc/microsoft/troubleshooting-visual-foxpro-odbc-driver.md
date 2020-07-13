@@ -17,14 +17,14 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4eeb6210b9bce124e16a1b4e666dee03c1d992be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70b035069c0be88d05a3aa5e17b96af991c27405
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912380"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303033"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>トラブルシューティング (Visual FoxPro ODBC ドライバー)
 以下のセクションでは、Visual FoxPro ODBC ドライバーの使用中に発生する可能性のあるパフォーマンスを向上させ、問題を解決する方法について説明します。  

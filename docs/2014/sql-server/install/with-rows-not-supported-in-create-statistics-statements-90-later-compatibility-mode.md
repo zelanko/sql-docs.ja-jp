@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e48602f61c09a8de76e2894a4fa808b2f39f4cbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d28a05e7cd025e213e2cebdce9d582a9df446fea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66090969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065046"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>互換性モード 90 以上では CREATE STATISTICS ステートメントで WITH ROWS がサポートされない
   互換性モードが 90 以上に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CREATE STATISTICS ステートメントに WITH ROWS を指定できません。  

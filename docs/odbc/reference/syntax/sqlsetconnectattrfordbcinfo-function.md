@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f43a0fc6cd02fe566579a543667f9a4c4c1a108
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67910368"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301889"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 関数
 **互換性**  
@@ -68,7 +68,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>診断  
  [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)と同じですが、Driver Manager では SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**が使用される点が異なります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **SQLSetConnectAttrForDbcInfo**は**SQLSetConnectAttr**と同じですが、接続ハンドルではなく、接続情報トークンの属性を設定します。 たとえば、 **SQLSetConnectAttr**が属性を認識しない場合、 **SQLSetConnectAttrForDbcInfo**はその属性の SQL_ERROR も返す必要があります。  
   
  ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーはこの属性を無視してプール ID を計算する必要があります。 また、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに SQL_SUCCESS_WITH_INFO を返します。 そのため、アプリケーションでは、一部の属性を設定できない理由に関する詳細を取得できます。  

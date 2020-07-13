@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 16c8c5fc4fd3ac63aa3613b41e530446dffec118
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046933"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305793"
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**では、データソース名、ユーザー ID、およびパスワードを使用してデータソースに接続し、他のすべての接続情報をシステムに格納できることを前提としています。 これは多くの場合、そうではありません。 たとえば、サーバーにログオンするために1つのユーザー ID とパスワードが必要であり、DBMS にログオンするために別のユーザー ID とパスワードが必要になる場合があります。 **SQLConnect**は単一のユーザー id とパスワードを受け付けるため、 **SQLConnect**を使用する場合は、他のユーザー id とパスワードをシステム上のデータソース情報と共に保存する必要があります。 これはセキュリティ違反の可能性があるため、パスワードを暗号化しない限り回避する必要があります。  

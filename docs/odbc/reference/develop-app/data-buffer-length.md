@@ -13,14 +13,14 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40fe9d23f14d4a7af80fe31a418cccf7133b7252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4a4e9a739201d74cfc6c4f7c18e64b91e0fabe4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067417"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305263"
 ---
 # <a name="data-buffer-length"></a>データ バッファーの長さ
 アプリケーションは、データバッファーのバイト長を、 *Bufferlength*または類似した名前という名前の引数でドライバーに渡します。 たとえば、次の**SQLBindCol**への呼び出しでは、アプリケーションは*valueptr*バッファー (**sizeof (***valueptr***)**) の長さを指定します。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947494"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764413"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキスト文字列を[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに書き込みます。  
@@ -37,10 +37,10 @@ Stream.WriteText Data, Options
  *データ*  
  書き込む文字のテキストを含む**文字列**値。  
   
- *オプション*  
+ *[オプション]*  
  省略可能。 指定した文字列の末尾に行区切り記号を書き込む必要があるかどうかを指定する[Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md)値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定された文字列は、**ストリーム**オブジェクトに書き込まれます。文字列の間にスペースや文字は含まれません。  
   
  現在の[位置](../../../ado/reference/ado-api/position-property-ado.md)は、書き込まれたデータに続く文字に設定されます。 **WriteText**メソッドは、ストリーム内の残りのデータを切り捨てません。 これらの文字を切り捨てたい場合は、 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)を呼び出します。  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890872"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のデータベース メール プロファイルに関連付けられているアカウントを一覧表示します。  
     
@@ -59,14 +59,14 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |**profile_id**|**int**|プロファイルのプロファイル ID。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *Profile_id*または*profile_name*が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのプロファイルに関する情報を返します。  
   
  ストアドプロシージャ**sysmail_help_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -77,7 +77,7 @@ sysmail_help_profileaccount_sp
 ## <a name="examples"></a>例  
  **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
   
- 次の例では、プロファイル名を`AdventureWorks Administrator`指定して、プロファイルの情報を一覧表示します。  
+ 次の例では、プロファイル名を指定して、プロファイルの情報を一覧表示し `AdventureWorks Administrator` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp  
@@ -129,7 +129,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

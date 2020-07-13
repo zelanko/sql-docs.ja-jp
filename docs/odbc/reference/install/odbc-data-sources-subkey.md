@@ -12,20 +12,20 @@ helpviewer_keywords:
 - data sources [ODBC], subkeys
 - registry entries for data sources [ODBC], subkeys
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5e97e643a78187b15e91833c832cd16ca435c7f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71207688"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304061"
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC データソースサブキー
 
 サブキーの`ODBC Data Sources`下の値には、データソースが一覧表示されます。 これらの値の形式を次の表に示します。
 
-| Name | データ型 | データ |
+| 名前 | データの種類 | データ |
 | :--- | :-------- | :--- |
 | *データソース名* | REG_SZ | *ドライバー-説明* |
 | &nbsp; | &nbsp; | &nbsp; |

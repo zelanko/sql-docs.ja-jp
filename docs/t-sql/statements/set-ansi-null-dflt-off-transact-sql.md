@@ -24,15 +24,15 @@ ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc89ff5115596998bd1a38fdab9a04d626b22e09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc993ab2b3dbe8d167a91bcf4c52e786844c73fe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913928"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002450"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベースの ANSI null default オプションが **true** に設定されているときに、セッションの動作を変更して、新しい列で NULL 値を許可するかどうかの既定の設定をオーバーライドします。 ANSI null default の値の設定について詳しくは、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "67913928"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_OFF OFF

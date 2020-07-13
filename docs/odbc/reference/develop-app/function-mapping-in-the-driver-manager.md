@@ -12,14 +12,14 @@ helpviewer_keywords:
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bfa535d4175c109e96098dd1e40e93be9521de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db8e525bb7e8f3e167deb8061a4dd5b75073933c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069687"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305583"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>ドライバー マネージャーの関数マッピング
 ドライバーマネージャーは、文字列引数を受け取る関数の2つのエントリポイントをサポートしています。 非装飾関数 (**SQLDriverConnect**) は、関数の ANSI 形式です。 Unicode 形式は*W* (**SQLDriverConnectW**) で修飾されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "68069687"
   
 -   ( *W*サフィックスの付いた) Unicode 関数を直接ドライバーに渡します。  
   
--   文字列引数を Unicode 文字に変換することに*より、(サフィックスが*付いた** ) ANSI 関数を unicode 関数に変換し、その unicode 関数をドライバーに渡します。  
+-   文字列引数を Unicode 文字に変換することに*より、(サフィックスが*付いた*W* ) ANSI 関数を unicode 関数に変換し、その unicode 関数をドライバーに渡します。  
   
  ドライバーが ANSI ドライバーの場合、ドライバーマネージャーは次のように関数呼び出しを行います。  
   

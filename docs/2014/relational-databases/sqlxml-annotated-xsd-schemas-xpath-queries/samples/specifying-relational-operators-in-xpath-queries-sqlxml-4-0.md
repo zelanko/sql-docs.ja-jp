@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cdf3fa4dfd62016c7f260369f9ebcbdf52863ac5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002849"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに関係演算子を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -28,16 +27,15 @@ ms.locfileid: "66012437"
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリを実行すると、 ** \<Customer>** 要素の子要素が返されます。ここで、 **CustomerID**属性値が "1" で、すべての子** \<の Order>** 要素に** \<orderdetail>** 子と値が3より大きい**OrderQty**属性が含まれています。  
+ この XPath クエリで **\<Customer>** は、 **CustomerID**属性値が "1" で、 **\<Order>** 値が **\<OrderDetail>** 3 より大きい**OrderQty**属性を持つ子要素を含む要素の子要素が返されます。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 角かっこで指定された述語は、 ** \<顧客>** 要素をフィルター処理します。 OrderQty 属性値が3を超える** \<orderdetail>** 孫が少なくとも1つある** \<顧客>** の要素のみが返されます。  
+ 角かっこで指定された述語は、要素をフィルター処理し **\<Customer>** ます。 **\<Customer>** OrderQty 属性値が3を超える孫を1つ以上含む要素のみ **\<OrderDetail>** が返されます。  
   
- 
-  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
+ `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -80,20 +78,20 @@ ms.locfileid: "66012437"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath クエリに関係演算子を指定し、論理関数を使用して結果を比較する  
- このクエリでは**** 、 ** \<** SalesPersonID 属性値が270未満であるコンテキストノードのすべての注文>子要素が返されます。  
+ このクエリ **\<Order>** は、 **SalesPersonID**属性値が270未満であるコンテキストノードのすべての子要素を返します。  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- `attribute`軸 (@) へのショートカットを指定できます。 `child`軸が既定値であるため、クエリから省略できます。  
+ 軸 (@) へのショートカットを `attribute` 指定できます `child` 。軸が既定値であるため、クエリから省略できます。  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
 ```  
   
 > [!NOTE]  
->  このクエリがテンプレートで指定されている場合、< 文字は XML ドキュメント内で特別な意味を持つため、< 文字はエンティティエンコードされている必要があります。 テンプレートで、を使用`<`して < 文字を指定します。  
+>  このクエリがテンプレートで指定されている場合、< 文字は XML ドキュメント内で特別な意味を持つため、< 文字はエンティティエンコードされている必要があります。 テンプレートで、を使用し `<` て < 文字を指定します。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   

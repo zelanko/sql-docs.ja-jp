@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fec409bf6f391e14dd5e1a2b8b102df2fd00cfd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6f845927fdd74fba476139fccbf9a5fa112d434e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62921757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958273"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する例 (完全復旧モデル)
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>例:プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する (完全復旧モデル)
   このトピックは、複数のファイル グループを含む、完全復旧モデルのデータベースだけに関連しています。  
   
  この例では、 `adb` というデータベースに 3 つのファイル グループが含まれているとします。 ファイル グループ `A` とファイル グループ `C` は読み取り/書き込みが可能で、ファイル グループ `B` は読み取り専用です。 プライマリ ファイル グループとファイル グループ `B` は破損していますが、ファイル グループ `A` とファイル グループ `C` は破損していません。 障害が発生する前は、すべてのファイル グループがオンラインになっていました。  

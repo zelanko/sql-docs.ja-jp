@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: bcc46c9ca565f162a2ab8b4273f3b314790f6db4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006421"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>タスク 7: Excel でマスター データ マネージャーを使用して行った更新を表示する
   ここでは、Excel に MDS から更新されたデータが表示されることを確認します。
@@ -30,7 +29,7 @@ ms.locfileid: "78177220"
 
      ![Excel - 更新された州のコードと名前](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - 更新された州のコードと名前")
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 8: Excel で State エンティティに新しい値を追加する](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
 
 

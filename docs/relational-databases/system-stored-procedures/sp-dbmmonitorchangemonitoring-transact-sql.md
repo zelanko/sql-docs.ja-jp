@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_dbmmonitorchangemonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b2fa71ba90acc49f3edf70ff35363410fb3d3b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866645"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング監視パラメーターの値を変更します。  
   
@@ -41,42 +41,41 @@ sp_dbmmonitorchangemonitoring parameter
 ```  
   
 ## <a name="arguments"></a>引数  
- *引き*  
+ *パラメーター*  
  変更するパラメーターの識別子を指定します。 現時点では、次のパラメーターのみを使用できます。  
   
  1 = 更新期間  
   
  データベース モニタリングの状態テーブルの更新間隔 (分単位) です。 既定の時間は 1 分です。  
   
- *数値*  
+ *value*  
  変更するパラメーターの新しい値を指定します。  
   
 |パラメーター|値の説明|  
 |---------------|--------------------------|  
-|1 で保護されたプロセスとして起動されました|新しい更新間隔 (分単位) を表す 1 ～ 120 の範囲の整数。|  
+|1|新しい更新間隔 (分単位) を表す 1 ～ 120 の範囲の整数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、更新間隔を 5 分に変更します。  
   
 ```  
 EXEC sp_dbmmonitorchangemonitoring 1, 5 ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

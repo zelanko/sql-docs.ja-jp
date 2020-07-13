@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568085"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607863"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -193,6 +193,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-1180"></a>バージョン 1.18.0
+
+#### <a name="improvements"></a>機能強化
+
+1. Flexible File タスクの場合、次の 3 点で改善されます:(1) コピー操作と削除操作でワイルドカードが使用できるようになる、(2) ユーザーは削除操作で再帰的検索の有効と無効を切り替えることができる、(3) コピー操作のコピー先となるファイル名を空にし、コピー元のファイル名を維持できる。
 
 ### <a name="version-1170"></a>バージョン 1.17.0
 

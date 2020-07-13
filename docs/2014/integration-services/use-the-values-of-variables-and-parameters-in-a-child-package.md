@@ -12,21 +12,20 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054730"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420199"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
   
 > [!NOTE]  
->  親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするようにパッケージ実行タスクを構成することで、値を子パッケージに渡すこともできます。 詳細については、「[パッケージ実行タスク](control-flow/execute-package-task.md)」を参照してください。  
+>  親パッケージの変数またはパラメーター、またはプロジェクトのパラメーターを子パッケージのパラメーターにマップするようにパッケージ実行タスクを構成することで、値を子パッケージに渡すこともできます。 詳細については、「 [パッケージ実行タスク](control-flow/execute-package-task.md)」を参照してください。  
   
  親パッケージ内のこの変数は、子パッケージのパッケージ構成を作成する前に作成する必要はありません。 変数はいつでも親パッケージに追加できますが、パッケージ構成では親変数の正確な名前を使用する必要があります。 ただし、親変数パッケージ構成を作成するには、子パッケージ内に、この構成で更新できる変数が既に存在している必要があります。 変数の追加と構成の詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)」を参照してください。  
   
@@ -34,13 +33,11 @@ ms.locfileid: "66054730"
   
 ### <a name="to-add-a-variable-to-a-parent-package"></a>親パッケージに変数を追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、子パッケージに渡す変数の追加先パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、子パッケージに渡す変数の追加先パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、変数のスコープを定義するには、次のいずれかの操作を行います。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、変数のスコープを定義するには、次のいずれかの操作を行います。  
   
     -   スコープをパッケージに設定するには、 **[制御フロー]** タブのデザイン画面上の任意の場所をクリックします。  
   
@@ -57,13 +54,11 @@ ms.locfileid: "66054730"
   
 ### <a name="to-add-a-variable-to-a-child-package"></a>子パッケージに変数を追加するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、親変数パッケージ構成の追加先パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、親変数パッケージ構成の追加先パッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、スコープをパッケージに設定するには、 **[制御フロー]** タブのデザイン画面上の任意の場所をクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、スコープをパッケージに設定するには、 **[制御フロー]** タブのデザイン画面上の任意の場所をクリックします。  
   
 4.  変数を追加および構成します。  
   
@@ -76,27 +71,22 @@ ms.locfileid: "66054730"
   
 1.  子パッケージが開かれていない場合は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で開きます。  
   
-2.  
-  **[制御フロー]** タブのデザイン画面で任意の場所をクリックします。  
+2.  **[制御フロー]** タブのデザイン画面で任意の場所をクリックします。  
   
-3.  
-  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
+3.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
-4.  
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]** を選択し、 **[追加]** をクリックします。  
+4.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]** を選択し、 **[追加]** をクリックします。  
   
-5.  パッケージ構成ウィザードの [ようこそ] ページで、[**次へ**] をクリックします。  
+5.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
 6.  [構成の種類の選択] ページの **[構成の種類]** ボックスの一覧で、 **[親パッケージ変数]** を選択して、次のいずれかの操作を行います。  
   
-    -   
-  **[構成設定を直接指定する]** を選択し、 **[親変数]** ボックスで、その構成で使用する親パッケージ内の変数名を指定します。  
+    -   **[構成設定を直接指定する]** を選択し、 **[親変数]** ボックスで、その構成で使用する親パッケージ内の変数名を指定します。  
   
         > [!IMPORTANT]  
         >  変数名では大文字と小文字が区別されます。  
   
-    -   
-  **[構成の場所を環境変数に格納する]** を選択し、 **[環境変数]** ボックスの一覧で、変数の名前を含む環境変数を選択します。  
+    -   **[構成の場所を環境変数に格納する]** を選択し、 **[環境変数]** ボックスの一覧で、変数の名前を含む環境変数を選択します。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -106,15 +96,13 @@ ms.locfileid: "66054730"
   
 10. [ウィザードの完了] ページで、必要に応じて、構成の既定の名前を変更し、構成情報を確認します。  
   
-11. 
-  **[完了]** をクリックしてウィザードを完了し、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスに戻ります。  
+11. **[完了]** をクリックしてウィザードを完了し、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスに戻ります。  
   
-12. 
-  **[パッケージ構成オーガナイザー]** ダイアログ ボックスの **[構成]** タブに、新しい構成が表示されます。  
+12. **[パッケージ構成オーガナイザー]** ダイアログ ボックスの **[構成]** タブに、新しい構成が表示されます。  
   
 13. **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージの構成](../../2014/integration-services/package-configurations.md)   
  [パッケージ構成の作成](../../2014/integration-services/create-package-configurations.md)   
  [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   

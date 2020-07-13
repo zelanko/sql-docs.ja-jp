@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 96120924b3362ec14df84d5043f7b7741a0f2b8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898444"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   この関数は、指定されたトレースに対してキャプチャされたすべてのイベントを返します。  
   
@@ -49,14 +49,14 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<すべてのトレース列>|\<変化>|管理データ ウェアハウス データベースの snapshots.trace_data テーブルからのトレース データ。<br /><br /> 次のクエリを使用して、指定したトレースの列の一覧を取得できます。<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注:** Fn_trace_gettable 関数によって返される列は、sys. trace_columns システムビューの name 列の値に対応します。 この関数から GroupID 列が返されない点のみが異なります。|  
+|\<All trace columns>|\<Varies>|管理データ ウェアハウス データベースの snapshots.trace_data テーブルからのトレース データ。<br /><br /> 次のクエリを使用して、指定したトレースの列の一覧を取得できます。<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **注:** Fn_trace_gettable 関数によって返される列は、sys. trace_columns システムビューの name 列の値に対応します。 この関数から GroupID 列が返されない点のみが異なります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  mdw_reader に対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

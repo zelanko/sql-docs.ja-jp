@@ -15,12 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52f5093d4f9ba61bda2b3fb44cf6a64e76b6fe4e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 297d37f6e0451e207d92dbc8a342b087c4d28895
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920790"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219371"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +42,11 @@ public void setPacketSize(int packetSize)
 ## <a name="remarks"></a>解説  
  このプロパティの値の許容範囲は、[-1 | 0 | 512..32767] です。 このプロパティが許容範囲外の値に設定されている場合は、例外が発生します。  
   
- SSL (Secure Sockets Layer) 暗号化を使用して接続しているときに、アプリケーションで packetSize プロパティを設定する場合があります。 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、パケット サイズがサーバーとの間でネゴシエートされます。 encrypt プロパティが "**true**" に設定されている場合に、ネゴシエートされたパケット サイズが Java 仮想マシン (JVM) における既定のセキュリティ プロバイダーの SSL レコード サイズを超えるときは、ドライバーでエラーが発生して接続が終了します。  
+ TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 暗号化を使用して接続しているときに、アプリケーションで packetSize プロパティを設定する場合があります。 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、パケット サイズがサーバーとの間でネゴシエートされます。 encrypt プロパティが "**true**" に設定されている場合に、ネゴシエートされたパケット サイズが Java 仮想マシン (JVM) の既定のセキュリティ プロバイダーの TLS レコード サイズを超えるときは、ドライバーでエラーが発生して接続が終了します。  
   
- また、SSL 暗号化を要求せずにアプリケーションで packetSize プロパティを設定する場合もあります。 この場合、クライアントによる SSL 暗号化のサポートをサーバーで必要としているときは、JVM における既定のセキュリティ プロバイダーの SSL レコード サイズが、ドライバーによってチェックされます。 packetSize プロパティが JVM における既定のセキュリティ プロバイダーの SSL レコード サイズを超えるときは、ドライバーでエラーが発生して接続が終了します。  
+ また、TLS 暗号化を要求せずにアプリケーションで packetSize プロパティが設定される場合もあります。 この場合、クライアントによる TLS 暗号化のサポートをサーバーが求めている場合は、JVM の既定のセキュリティ プロバイダーの TLS レコード サイズが、ドライバーによってチェックされます。 packetSize プロパティが JVM の既定のセキュリティ プロバイダーの TLS レコード サイズを超えるときは、ドライバーでエラーが発生して接続が終了します。  
   
- SSL の使用方法の詳細については、「[SSL 暗号化の使用](../../../connect/jdbc/using-ssl-encryption.md)」を参照してください。  
+ TLS の使用方法の詳細については、[暗号化の使用](../../../connect/jdbc/using-ssl-encryption.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

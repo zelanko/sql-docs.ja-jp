@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e49d0919-c2ff-44ae-8ca7-1f3084720eba
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 4aaa5f7169ee38a23f04140f86fe43fd903cd7f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ee5da00354d78dee23b7098a18b103b0a021efe9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065123"
 ---
 # <a name="verify-or-troubleshoot-sql-server-bi-feature-installation-problems"></a>SQL Server の BI 機能のインストールの問題の確認またはトラブルシューティング
   ここでは、インストールの確認またはインストール中に発生したエラーのトラブルシューティングについて説明します。  

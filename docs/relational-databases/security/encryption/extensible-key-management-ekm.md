@@ -88,7 +88,7 @@ GO
  EKM モジュールでは複数の種類の認証をサポートできますが、 各プロバイダーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に公開する認証の種類は 1 つだけです。したがって、モジュールで基本認証とその他の認証方法がサポートされている場合、公開されるのはいずれか一方だけで、両方は公開されません。  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>ユーザー名/パスワードを使用する EKM デバイス固有の基本認証  
- *では、* ユーザー名/パスワード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のペアを使用する基本認証をサポートしている EKM モジュールで、資格情報による透過的な認証を利用できます。 資格情報の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、*ユーザー名/パスワード*のペアを使用する基本認証をサポートしている EKM モジュールで、資格情報による透過的な認証を利用できます。 資格情報の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
  EKM プロバイダーに対して資格情報を作成し、それをログイン (Windows アカウントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントの両方) にマップすることにより、ログインごとに EKM モジュールにアクセスできます。 資格情報の *[識別]* フィールドにユーザー名を含め、 *[シークレット]* フィールドに EKM モジュールに接続するためのパスワードを含めます。  
   

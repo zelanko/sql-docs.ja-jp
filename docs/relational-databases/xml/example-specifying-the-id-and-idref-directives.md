@@ -24,7 +24,7 @@ ms.locfileid: "68006696"
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、< **> 要素と <** > 要素の `OrderHeader`SalesPersonID`OrderDetail` 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
+この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
   
 ```sql
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id],
 FOR XML EXPLICIT, XMLDATA;
 ```  
   
- 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、< **> 要素と <** > 要素の `OrderHeader`SalesOrderID`OrderDetail` 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
+ 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesOrderID** 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
   
 ```xml
 <Schema

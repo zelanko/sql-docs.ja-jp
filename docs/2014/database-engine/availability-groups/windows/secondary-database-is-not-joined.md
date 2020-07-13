@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ca86d30647ea0dd2841248a512725aabb5617b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c61f2466747141b3eae12dd0de457364f15ae7a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62788440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936493"
 ---
 # <a name="secondary-database-is-not-joined"></a>セカンダリ データベースが参加していない
     
@@ -32,7 +31,7 @@ ms.locfileid: "62788440"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) の参加状態をチェックします。 データセット レプリカが参加していない場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  
@@ -46,6 +45,6 @@ ms.locfileid: "62788440"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

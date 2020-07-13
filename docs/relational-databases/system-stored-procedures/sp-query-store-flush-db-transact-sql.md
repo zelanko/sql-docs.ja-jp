@@ -18,18 +18,17 @@ helpviewer_keywords:
 - sys.sp_query_store_flush_db
 - sp_query_store_flush_db
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96c4e7a366c1235fa1062e5d66c2d6be160a6d22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 229a954f4665550e30c017fed59d71ac1ff3a0b6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68418892"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012654"
 ---
 # <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリストアデータのメモリ内の部分をディスクにフラッシュします。  
   

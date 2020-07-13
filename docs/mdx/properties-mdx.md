@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893673"
 ---
 # <a name="properties-mdx"></a>プロパティ (MDX)
@@ -34,7 +34,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  メンバープロパティ名の有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Properties**関数は、指定されたメンバープロパティの指定されたメンバーの値を返します。 メンバープロパティには、**名前**、 **ID**、**キー**、**キャプション**などの固有メンバープロパティを使用することも、ユーザー定義メンバープロパティを使用することもできます。 詳細については、「 [mdx&#41;&#40;の固有メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)」および「 [Mdx&#41;&#40;ユーザー定義メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)」を参照してください。  
   
  既定では、値は文字列に変換されます。 **型**指定された場合、戻り値は厳密に型指定されます。  
@@ -106,6 +106,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;メンバープロパティを使用する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

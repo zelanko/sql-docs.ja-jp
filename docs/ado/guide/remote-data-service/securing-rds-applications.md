@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d91b8f41c344d45bfde646d24819e73c0cd8f283
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f785eed6124970d8c270492b98dc8e5ea815f18a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758968"
 ---
 # <a name="securing-rds-applications"></a>RDS アプリケーションの保護
 このトピックでは、RDS のセキュリティ情報について説明します。  

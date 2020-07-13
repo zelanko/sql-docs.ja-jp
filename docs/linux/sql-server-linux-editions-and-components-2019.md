@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402658"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894033"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、SQL Server 2019 on Linux のさまざまなエディションでサポートされている機能の詳細を説明します。 SQL Server on Windows の各エディションとサポートされている機能については、[SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md) に関する記事をご覧ください。  
   
@@ -152,7 +152,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |動的データ マスク|はい|はい|はい|はい|   
 |基本的な監査|はい|はい|はい|はい| 
 |詳細な監査|はい|はい|はい|はい| 
-|透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|   
+|透過的なデータベースの暗号化|はい|はい|いいえ|いいえ|   
 |ユーザー定義ロール|はい|はい|はい|はい| 
 |包含データベース|はい|はい|はい|はい| 
 |バックアップの暗号化|はい|はい|いいえ|いいえ|  
@@ -227,7 +227,6 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | 管理対象のバックアップ |
-| &nbsp; | MSX と TSX を使用するマルチサーバー管理 |
 | **高可用性** | データベース ミラーリング  |
 | **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーに対する AD 認証 | 

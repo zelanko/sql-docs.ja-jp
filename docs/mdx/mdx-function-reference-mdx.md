@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003511"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 関数リファレンス (MDX)
@@ -24,13 +24,13 @@ ms.locfileid: "68003511"
   
 ## <a name="array-functions"></a>配列関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|1つ以上のセットを、ユーザー定義関数で使用する配列に変換します。|  
   
 ## <a name="hierarchy-functions"></a>階層関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[階層 &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|指定されたメンバーまたはレベルを含む階層を返します。|  
 |[ディメンション &#40;MDX&#41;](../mdx/dimension-mdx.md)|指定されたメンバー、レベル、または階層を含むディメンションを返します。|  
@@ -38,14 +38,14 @@ ms.locfileid: "68003511"
   
 ## <a name="level-functions"></a>レベル関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[MDX&#41;&#40;レベル](../mdx/level-mdx.md)|メンバーのレベルを返します。|  
 |[MDX&#41;&#40;レベル](../mdx/levels-mdx.md)|ディメンションまたは階層内の位置が数値式で指定されているか、文字列式で指定された名前を持つレベルを返します。|  
   
 ## <a name="logical-functions"></a>論理関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|指定されたメンバーが別の指定されたメンバーの先祖であるかどうかを示す値を返します。|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|評価した式が空のセル値かどうかを返します。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68003511"
   
 ## <a name="member-functions"></a>メンバー関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[先祖 &#40;MDX&#41;](../mdx/ancestor-mdx.md)|メンバーの先祖のうち、指定されたレベルまたは距離にある先祖を返します。|  
 |[&#40;MDX&#41;の ClosingPeriod](../mdx/closingperiod-mdx.md)|指定したレベルのメンバーの子孫のうち、最後の兄弟を返します。|  
@@ -83,17 +83,17 @@ ms.locfileid: "68003511"
   
 ## <a name="numeric-functions"></a>数値関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
-|[MDX&#41;の集計 &#40;](../mdx/aggregate-mdx.md)|指定されたセットの組に対してメジャーまたはオプションで指定された数値式を集計することによって計算されたスカラー値を返します。|  
+|[Aggregate (MDX)](../mdx/aggregate-mdx.md)|指定されたセットの組に対してメジャーまたはオプションで指定された数値式を集計することによって計算されたスカラー値を返します。|  
 |[平均 &#40;MDX&#41;](../mdx/avg-mdx.md)|指定されたセットに対して評価される、メジャーの平均値またはオプションの数値式の平均値を返します。|  
-|[計算 Ationcurrentpass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|指定されたクエリコンテキストのキューブの現在の計算パスを返します。|  
-|[MDX&#41;&#40;計算 Ationpass 値](../mdx/calculationpassvalue-mdx.md)|キューブの指定した計算パスに対して評価される MDX 式の値を返します。|  
+|[CalculationCurrentPass (MDX)](../mdx/calculationcurrentpass-mdx.md)|指定されたクエリコンテキストのキューブの現在の計算パスを返します。|  
+|[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|キューブの指定した計算パスに対して評価される MDX 式の値を返します。|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|空のセル値を数値または文字列に連結し、結合された値を返します。|  
 |[MDX&#41;&#40;相関関係](../mdx/correlation-mdx.md)|セットに対して評価される2つの系列の相関係数を返します。|  
 |[&#40;ディメンション&#41; &#40;MDX&#41;のカウント](../mdx/count-dimension-mdx.md)|キューブ内のディメンション数を返します。|  
 |[MDX&#41;&#41; &#40;&#40;階層レベルのカウント](../mdx/count-hierarchy-levels-mdx.md)|ディメンションまたは階層内のレベル数を返します。|  
-|[MDX&#41;&#41; &#40;設定 &#40;数](../mdx/count-set-mdx.md)|セット内のセルの数を返します。|  
+|[Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|セット内のセルの数を返します。|  
 |[MDX&#41;&#41; &#40;組 &#40;数](../mdx/count-tuple-mdx.md)|組の次元数を返します。|  
 |[&#40;MDX&#41;の共変性](../mdx/covariance-mdx.md)|バイアスをかけた母集団の公式を使用して、セットに対して評価される2つの系列の母共分散を返します。|  
 |[MDX&#41;&#40;Coバリエーション](../mdx/covariancen-mdx.md)|バイアスをかけない母集団の公式を使用して、セットに対して評価される2つの系列のサンプル共分散を返します。|  
@@ -126,9 +126,9 @@ ms.locfileid: "68003511"
   
 ## <a name="set-functions"></a>集合関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
-|[MDX&#41;&#40;の Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)|計算されるメンバーを指定されたセットに追加することによって生成されるセットを返します。|  
+|[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|計算されるメンバーを指定されたセットに追加することによって生成されるセットを返します。|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|指定されたディメンション、階層、またはレベルのすべてのメンバー (計算されるメンバーを含む) を含むセットを返します。|  
 |[先祖 &#40;MDX&#41;](../mdx/ancestors-mdx.md)|メンバーの先祖のうち、指定されたレベルまたは距離にあるすべての先祖のセットを返します。|  
 |[先祖 &#40;MDX&#41;](../mdx/ascendants-mdx.md)|指定されたメンバー自体も含めたメンバーの先祖のセットを返します。|  
@@ -136,12 +136,12 @@ ms.locfileid: "68003511"
 |[&#40;MDX&#41;の下端数](../mdx/bottomcount-mdx.md)|セットを昇順に並べ替え、値の小さい方から指定された数の組を返します。|  
 |[MDX&#41;&#40;下の割合](../mdx/bottompercent-mdx.md)|セットを昇順に並べ替え、累積合計が指定した割合以上になるように、最小値を持つ組のセットを返します。|  
 |[BottomSum &#40;MDX&#41;](../mdx/bottomsum-mdx.md)|セットを昇順で並べ替え、合計が指定された値以下になるように、値の小さい方から組のセットを作成して返します。|  
-|[子 &#40;MDX&#41;](../mdx/children-mdx.md)|指定されたメンバーの子メンバーを返します。|  
+|[Children &#40;MDX&#41;](../mdx/children-mdx.md)|指定されたメンバーの子メンバーを返します。|  
 |[Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)|1 つ以上のセットのクロス積を返します。|  
 |[CurrentOrdinal &#40;MDX&#41;](../mdx/currentordinal-mdx.md)|反復処理中に、セット内の現在のイテレーション数を返します。|  
 |[MDX&#41;&#40;子孫](../mdx/descendants-mdx.md)|メンバーの子孫のうち、指定したレベルまたは距離にある子孫のセットを返します。他のレベルの子孫を含めたり除外したりすることもできます。|  
 |[Distinct &#40;MDX&#41;](../mdx/distinct-mdx.md)|指定されたセットから重複した組を削除して、セットを返します。|  
-|[MDX&#41;&#40;ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)|セットのメンバーを、セット内で表される最下位レベルの1レベル下にドリルダウンします。または、セット内で指定されたメンバーのレベルのうち、必要に応じてレベルを1つ下に表示します。|  
+|[DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|セットのメンバーを、セット内で表される最下位レベルの1レベル下にドリルダウンします。または、セット内で指定されたメンバーのレベルのうち、必要に応じてレベルを1つ下に表示します。|  
 |[DrilldownLevelBottom &#40;MDX&#41;](../mdx/drilldownlevelbottom-mdx.md)|指定されたレベルで、セットの最下位メンバーを1レベル下にドリルダウンします。|  
 |[DrilldownLevelTop &#40;MDX&#41;](../mdx/drilldownleveltop-mdx.md)|セットの最上位メンバーを、指定されたレベルで1レベル下にドリルダウンします。|  
 |[ドリルダウンメンバー &#40;MDX&#41;](../mdx/drilldownmember-mdx.md)|2 番目に指定されたセット内に存在する、指定されたセットのメンバーをドリル ダウンします。 または、関数は組のセットをドリルダウンします。|  
@@ -152,7 +152,7 @@ ms.locfileid: "68003511"
 |[Except &#40;MDX&#41;](../mdx/except-mdx-function.md)|2 つのセットの差異を検出します。重複部分を保持することも可能です。|  
 |[MDX&#41;&#40;存在](../mdx/exists-mdx.md)|1つ以上の他のセットの1つ以上の組に存在する1つのセットのメンバーのセットを返します。|  
 |[MDX&#41;を抽出 &#40;](../mdx/extract-mdx.md)|抽出されたディメンション要素から組のセットを返します。|  
-|[MDX&#41;のフィルター処理 &#40;](../mdx/filter-mdx.md)|検索条件に基づいて、指定されたセットをフィルター処理した結果のセットを返します。|  
+|[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|検索条件に基づいて、指定されたセットをフィルター処理した結果のセットを返します。|  
 |[MDX&#41;を生成 &#40;](../mdx/generate-mdx.md)|あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 または、この関数は、セットに対して文字列式を評価することによって作成された連結文字列を返します。|  
 |[&#40;MDX&#41;の Head](../mdx/head-mdx.md)|重複部分を保持したまま、セット内の最初に指定した数の要素を返します。|  
 |[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|階層内のセットのメンバーを並べ替えます。|  
@@ -182,16 +182,16 @@ ms.locfileid: "68003511"
   
 ## <a name="string-functions"></a>文字列関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
-|[MDX&#41;&#40;計算 Ationpass 値](../mdx/calculationpassvalue-mdx.md)|キューブの指定された計算パスを評価し、MDX 式の値を返します。|  
+|[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|キューブの指定された計算パスを評価し、MDX 式の値を返します。|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|空のセル値を数値または文字列に連結し、結合された値を返します。|  
 |[MDX&#41;を生成 &#40;](../mdx/generate-mdx.md)|あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 または、この関数は、セットに対して文字列式を評価することによって作成された連結文字列を返します。|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|論理テストによって判別される 2 つの値の 1 つを返します。|  
 |[MDX&#41;&#40;LookupCube](../mdx/lookupcube-mdx.md)|同じデータベース内で別に指定されたキューブに対して評価される MDX 式の値を返します。|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|指定されたメンバーに対応する MDX 形式の文字列を返します。|  
 |[MDX&#41;&#40;名前](../mdx/name-mdx.md)|ディメンション、階層、レベル、またはメンバーの名前を返します。|  
-|[MDX&#41;&#40;プロパティ](../mdx/properties-mdx.md)|メンバー プロパティ値を含む文字列または厳密に型指定された値を返します。|  
+|[プロパティ &#40;MDX&#41;](../mdx/properties-mdx.md)|メンバー プロパティ値を含む文字列または厳密に型指定された値を返します。|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|指定されたセットに対応する MDX 形式の文字列を返します。|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|指定された組に対応する MDX 形式の文字列を返します。|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|指定されたディメンション、階層、レベル、メンバーの一意の名前を返します。|  
@@ -199,14 +199,14 @@ ms.locfileid: "68003511"
   
 ## <a name="subcube-functions"></a>サブキューブ関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
-|[この &#40;MDX&#41;](../mdx/this-mdx.md)|現在のサブキューブを返します。|  
+|[This (MDX)](../mdx/this-mdx.md)|現在のサブキューブを返します。|  
 |[&#40;MDX&#41;を残します](../mdx/leaves-mdx.md)|指定されたディメンション、メンバー、または組のリーフメンバーのセットを返します。|  
   
 ## <a name="tuple-functions"></a>組関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[現在の &#40;MDX&#41;](../mdx/current-mdx.md)|反復処理中に、セットから現在の組を返します。|  
 |[項目 &#40;組&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|セットから組を返します。|  
@@ -215,11 +215,11 @@ ms.locfileid: "68003511"
   
 ## <a name="other-functions"></a>その他の関数  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |[MDX&#41;&#40;エラー](../mdx/error-mdx.md)|指定されたエラーメッセージを提供して、オプションでエラーを生成します。|  
   
 ## <a name="see-also"></a>参照  
- [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

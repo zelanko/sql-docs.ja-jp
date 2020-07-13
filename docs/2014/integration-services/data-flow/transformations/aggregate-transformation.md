@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e69d741ddd2bd14a31d7aa79a8c825641713523
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770638"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431239"
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "62770638"
 ## <a name="operations"></a>操作  
  集計変換では、次の操作がサポートされています。  
   
-|操作|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |グループ化|データセットをグループに分割します。 グループ化には、任意のデータ型の列を使用できます。 詳細については、「[GROUP BY (Transact-SQL)](/sql/t-sql/queries/select-group-by-transact-sql)」を参照してください。|  
 |SUM|列内の値を合計します。 numeric データ型を持つ列のみ、合計することができます。 詳細については、「[SUM (Transact-SQL)](/sql/t-sql/functions/sum-transact-sql)」を参照してください。|  
@@ -110,16 +109,13 @@ ms.locfileid: "62770638"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[集計変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[集計変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [集計変換エディター &#40;集計] タブ&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [[集計変換エディター] ([集計] タブ)](../../aggregate-transformation-editor-aggregations-tab.md)  
   
 -   [[集計変換エディター] &#40;[詳細設定] タブ&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
@@ -136,7 +132,7 @@ ms.locfileid: "62770638"
 ## <a name="related-tasks"></a>Related Tasks  
  [集計変換を使用してデータセットの値を集計する](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   

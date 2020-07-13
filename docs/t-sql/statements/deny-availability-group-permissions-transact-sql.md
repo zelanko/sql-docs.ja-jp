@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を拒否する  
- 次の例では、可用性グループ `VIEW DEFINITION` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  
+ 次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  
   
 ```  
 USE master;  

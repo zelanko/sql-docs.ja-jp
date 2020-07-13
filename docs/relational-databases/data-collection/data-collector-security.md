@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733853"
 ---
 # <a name="data-collector-security"></a>データ コレクターのセキュリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データ コレクターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実装されるロールベースのセキュリティ モデルを使用します。 このモデルを使用すると、データベース管理者は、データ コレクターのさまざまなタスクをそのタスクの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。 この方法は、ストアド プロシージャかビューを使用しないとアクセスできない内部テーブルに関係する操作に対しても使用されます。 内部テーブルに対する権限は与えられず、 テーブルへのアクセスに使用されるストアド プロシージャやビューのユーザーに対して権限がチェックされます。  
   
 > [!IMPORTANT]  

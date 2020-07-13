@@ -1,8 +1,8 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
-description: Microsoft OLE DB Driver for SQL Server
+title: Microsoft OLE DB Driver for SQL Server
+description: Microsoft OLE DB Driver for SQL Server を使うと、標準の OLE DB API を使用して SQL Server や Azure SQL Database に接続できます。
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918808"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886359"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ OLE DB Driver for SQL Server とは、[!INCLUDE[ssVersion2005](../../includes/ss
 SQL Server 向けの Microsoft OLE DB プロバイダーには 3 つの世代があります。
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1.Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
-[Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) は、現在でも [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx) の一部として付属しています。 これに対する保守は今後行われません。また、新規開発にこのドライバーを使用することはお勧めしません。
+[Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) は、現在でも [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)) の一部として付属しています。 これに対する保守は今後行われません。また、新規開発にこのドライバーを使用することはお勧めしません。
 
 ### <a name="2-sql-server-native-client-snac"></a>2.SQL Server Native Client (SNAC)
 [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から始まり、OLE DB プロバイダー インターフェイス (SQLNCLI) が含まれる、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に付属する OLE DB ドライバーです。
 
-[2011 年に非推奨として発表済み](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)であり、新規開発にこのドライバーを使用することはお勧めしません。 SNAC ライフサイクルと使用可能なダウンロードの詳細については、[「SNAC lifecycle explained」 (SNAC ライフサイクルの説明)](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/) を参照してください。
+[2011 年に非推奨として発表済み](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)であり、新規開発にこのドライバーを使用することはお勧めしません。 SNAC ライフサイクルと使用可能なダウンロードの詳細については、[「SNAC lifecycle explained」 (SNAC ライフサイクルの説明)](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained) を参照してください。
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3.Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)
-2018 年に OLE DB の[非推奨が取り消しとなり](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)、リリースされました。
+2018 年に OLE DB の[非推奨が取り消しとなり](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server)、リリースされました。
 
 新しい OLE DB プロバイダーは、Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) と呼ばれます。 この新しいプロバイダーは今後最新のサーバー機能で更新されます。
 

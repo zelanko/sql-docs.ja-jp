@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72d262bf73e69388f65ff281e62235d2d831669e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061581"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304203"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>行のスクロールとフェッチ (ODBC)
 スクロール可能なカーソルを使用すると、アプリケーションは**Sqlfetchscroll**を呼び出してカーソルを移動し、行をフェッチします。 **Sqlfetchscroll**は、相対スクロール (次、前、相対*n*行)、絶対スクロール (最初、最後、および行*n*)、およびブックマークによる配置をサポートしています。 次の図に示すように、 **Sqlfetchscroll**の*Fetchorientation*引数と*fetchorientation*引数は、フェッチする行セットを指定します。  

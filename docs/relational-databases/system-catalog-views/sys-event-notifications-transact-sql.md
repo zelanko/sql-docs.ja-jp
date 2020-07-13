@@ -17,39 +17,39 @@ dev_langs:
 helpviewer_keywords:
 - sys.event_notifications catalog view
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44f10a61c79feea046b59c78e608022acfc77136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68048420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752910"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>event_notifications (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   イベント通知であるオブジェクトごとに1行の値を返します **。型**= EN。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|イベント通知名。|  
 |**object_id**|**int**|オブジェクト ID 番号。 データベース内で一意です。|  
 |**parent_class**|**tinyint**|親のクラス。<br /><br /> 0 = データベース<br /><br /> 1 = オブジェクトまたは列|  
-|**parent_class_desc**|**nvarchar (60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|親オブジェクトの0以外の ID。<br /><br /> 0 = 親クラスはデータベースです。|  
-|**create_date**|**DATETIME**|作成日。|  
-|**modify_date**|**DATETIME**|常に**create_date**と等しくなります。|  
+|**create_date**|**datetime**|作成日。|  
+|**modify_date**|**datetime**|常に**create_date**と等しくなります。|  
 |**service_name**|**nvarchar(256)**|通知の送信先のサービスの名前です。|  
-|**broker_instance**|**nvarchar(128**|通知が送信されるブローカーインスタンス。|  
+|**broker_instance**|**nvarchar(128)**|通知が送信されるブローカーインスタンス。|  
 |**principal_id**|**int**|このイベント通知を所有するデータベースプリンシパルの ID。|  
 |**creator_sid**|**varbinary (85)**|イベント通知を作成したログインの SID。<br /><br /> FAN_IN オプションが指定されていない場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

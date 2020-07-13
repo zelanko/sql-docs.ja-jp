@@ -12,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9f1266fb9967dc429160377bcc1b42d227be5222
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74119266"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052911"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database の拡張ストアドプロシージャ (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  ここでは、Stretch Database に関連する拡張ストアドプロシージャについて説明します。  
   

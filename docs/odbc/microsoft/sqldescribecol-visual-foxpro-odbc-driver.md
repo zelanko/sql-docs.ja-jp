@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78e75981031b1e91dbb31ba0c07ccbee3ac26e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d41ecca15b7c363782f4b7b4f59bac9efc5d4d3c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054041"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283858"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

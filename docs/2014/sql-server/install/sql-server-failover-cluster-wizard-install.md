@@ -9,20 +9,17 @@ ms.topic: conceptual
 ms.assetid: 65a447f9-80f4-4cd5-94e4-1d2c918a8bd6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a63c501a3e232977a725cbc9a9f2f87c4a30d63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8e46df8cf72ebf485c7df916f9670115f831d27c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036210"
 ---
 # <a name="sql-server-failover-cluster-wizard---install"></a>SQL Server フェールオーバー クラスター ウィザード - インストール
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中、システム構成チェッカー (SCC) は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先コンピューターをスキャンします。 SCC は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ操作の成功を妨げる条件がないかどうかを調べます。 セットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動する前に、SCC は各項目の状態を取得します。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中、システム構成チェッカー (SCC) は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先コンピューターをスキャンします。 SCC は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ操作の成功を妨げる条件がないかどうかを調べます。 セットアップで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動する前に、SCC は各項目の状態を取得します。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
-  
- システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェックのレポートは、\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
+ システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェックのレポートは、% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>にあり \\ ます。  
   
  セットアップ操作を実行する前に、次のトピックを確認してください。  
   
@@ -36,7 +33,7 @@ ms.locfileid: "66091964"
   
  その他の参考資料:  
   
-1.  [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
+1.  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
 2.  [フェールオーバー クラスタリングをインストールする前に](../failover-clusters/install/before-installing-failover-clustering.md)  
   

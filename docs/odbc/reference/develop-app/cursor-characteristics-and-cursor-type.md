@@ -12,19 +12,19 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8354fdabf6830780ec2d128492c86cc1edd582ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002056"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301629"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>カーソルの特定とカーソルの種類
-アプリケーションでは、カーソルの種類 (順方向専用、静的、キーセットドリブン、または動的) を指定する代わりに、カーソルの特性を指定できます。 これを行うには、アプリケーションは、ステートメントでカーソルを開く前に、カーソルのスクロール機能 (SQL_ATTR_CURSOR_SCROLLABLE ステートメントの属性を設定して) と感度 (SQL_ATTR_CURSOR_SENSITIVITY statement 属性を設定することによって) を選択します。扱え. 次に、ドライバーは、アプリケーションが要求した特性を最も効率的に提供するカーソルの種類を選択します。  
+アプリケーションでは、カーソルの種類 (順方向専用、静的、キーセットドリブン、または動的) を指定する代わりに、カーソルの特性を指定できます。 これを行うには、アプリケーションは、ステートメントハンドルでカーソルを開く前に、カーソルのスクロール機能 (SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定して) と感度 (SQL_ATTR_CURSOR_SENSITIVITY statement 属性を設定することによって) を選択します。 次に、ドライバーは、アプリケーションが要求した特性を最も効率的に提供するカーソルの種類を選択します。  
   
- アプリケーションでステートメント属性 SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_SCROLLABLE、SQL_ATTR_CURSOR_SENSITIVITY、または SQL_ATTR_CURSOR_TYPE を設定するたびに、ドライバーによって、このセット内の他のステートメント属性に必要な変更が加えられます。4つの属性によって、値の一貫性が維持されます。 その結果、アプリケーションがカーソルの特性を指定すると、ドライバーは、この暗黙的な選択に基づいてカーソルの種類を示す属性を変更できます。アプリケーションが型を指定すると、ドライバーは、他の属性を変更して、選択した型の特性との一貫性を保つことができます。 これらのステートメント属性の詳細については、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明を参照してください。  
+ アプリケーションでステートメント属性 SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_SCROLLABLE、SQL_ATTR_CURSOR_SENSITIVITY、または SQL_ATTR_CURSOR_TYPE が設定されるたびに、ドライバーは、この4つの属性のセットにある他のステートメント属性に対して必要な変更を加えて、値の一貫性を維持します。 その結果、アプリケーションがカーソルの特性を指定すると、ドライバーは、この暗黙的な選択に基づいてカーソルの種類を示す属性を変更できます。アプリケーションが型を指定すると、ドライバーは、他の属性を変更して、選択した型の特性との一貫性を保つことができます。 これらのステートメント属性の詳細については、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明を参照してください。  
   
  ステートメント属性を設定してカーソルの種類とカーソルの特性の両方を指定するアプリケーションでは、アプリケーションの要件を満たすドライバーで使用できる最も効率的な方法ではないカーソルを取得するリスクがあります。  
   

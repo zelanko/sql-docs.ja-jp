@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68082019"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281152"
 ---
 # <a name="connection-string-format-and-attributes"></a>接続文字列の形式と属性
 > [!IMPORTANT]  
@@ -39,16 +39,16 @@ ms.locfileid: "68082019"
   
  接続文字列の属性は次のとおりです。  
   
-|Attribute|[説明]|既定値|  
+|属性|説明|既定値|  
 |---------------|-----------------|-------------------|  
 |DSN (DSN)|[ **ODBC データソースアドミニストレーター** ] ダイアログボックスの [ドライバー] タブに表示されるデータソース名。|""|  
 |PWD|アクセスする Oracle サーバーのパスワードです。 このドライバーは、Oracle がパスワードに配置する制限をサポートしています。|""|  
 |SERVER|アクセスする Oracle サーバーの接続文字列。|""|  
 |UID|Oracle サーバーのユーザー名。 システムによっては、この属性は省略可能でない場合があります。つまり、特定のデータベースとテーブルでは、セキュリティ上の理由からこの属性が必要になる場合があります。<br /><br /> Oracle のオペレーティングシステム認証を使用するには、"/" を使用します。|""|  
 |BUFFERSIZE|列をフェッチするときに使用される最適なバッファーサイズ。<br /><br /> ドライバーは、Oracle サーバーからの1つのフェッチがこのサイズのバッファーを格納するために必要な行を返すように、フェッチを最適化します。 値が大きいほど、大量のデータをフェッチするとパフォーマンスが向上する傾向があります。|65,535|  
-|SYNONYMCOLUMNS|この値が true (1) の場合、SQLColumn () API 呼び出しによって列情報が返されます。 それ以外の場合、SQLColumn () はテーブルとビューの列のみを返します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。|1 で保護されたプロセスとして起動されました|  
-|備考|この値が true (1) の場合、ドライバーは[sqlcolumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セットの注釈列を返します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。|0|  
-|StdDayOfWeek|DAYOFWEEK スカラーに ODBC 標準を適用します。 既定では、この設定は有効になっていますが、ローカライズされたバージョンを必要とするユーザーは、Oracle が返すあらゆる動作を使用するように動作を変更できます。|1 で保護されたプロセスとして起動されました|  
+|SYNONYMCOLUMNS|この値が true (1) の場合、SQLColumn () API 呼び出しによって列情報が返されます。 それ以外の場合、SQLColumn () はテーブルとビューの列のみを返します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。|1|  
+|REMARKS|この値が true (1) の場合、ドライバーは[sqlcolumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セットの注釈列を返します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。|0|  
+|StdDayOfWeek|DAYOFWEEK スカラーに ODBC 標準を適用します。 既定では、この設定は有効になっていますが、ローカライズされたバージョンを必要とするユーザーは、Oracle が返すあらゆる動作を使用するように動作を変更できます。|1|  
 |GuessTheColDef|ドライバーが**SQLDescribeCol**の*cbcoldef*引数に対して0以外の値を返す必要があるかどうかを指定します。 計算された数値列や、精度や小数点以下桁数のない数値として定義された列など、Oracle によって定義された小数点以下桁数がない列にのみ適用されます。 Oracle がその情報を提供していない場合、 **SQLDescribeCol**の呼び出しでは、有効桁数として130が返されます。|0|  
   
  たとえば、MyOracleServerOracle サーバーと Oracle ユーザー Mydatasource を使用して MyDataSource データソースに接続する接続文字列は次のようになります。  

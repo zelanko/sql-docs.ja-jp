@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759048"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
 一般的な規則として、アプリケーションでは、必要なデータアクセスを提供する最も単純なカーソルを使用する必要があります。 基本を超える各カーソル特性 (順方向専用、読み取り専用、静的、スクロール、バッファーなし) には、クライアントメモリ、ネットワーク負荷、またはパフォーマンスの価格があります。 多くの場合、既定のカーソルオプションでは、アプリケーションで実際に必要とされるよりも複雑なカーソルが生成されます。  
   
- カーソルの種類の選択は、アプリケーションでの結果セットの使用方法や、結果セットのサイズ、使用される可能性が高いデータの割合、データの変更に対する感度、アプリケーションのパフォーマンスなど、いくつかの設計上の考慮事項によって異なります。必要性.  
+ カーソルの種類の選択は、アプリケーションでの結果セットの使用方法や、結果セットのサイズ、使用される可能性が高いデータの割合、データの変更に対する感度、アプリケーションのパフォーマンス要件など、いくつかの設計上の考慮事項によって異なります。  
   
  最も基本的なカーソルの選択は、データを変更する必要があるか、単にデータを表示する必要があるかによって異なります。  
   

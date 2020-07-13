@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63011499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016246"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>ログイン、ユーザー、およびスキーマの管理方法に関するトピック
   ここでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン、データベース ユーザー、およびデータベース スキーマの管理方法を示すトピックと、ロールの追加およびプリンシパルへの権限の許可の方法を示すトピックへのリンクを示します。  
@@ -26,16 +25,16 @@ ms.locfileid: "63011499"
   
 -   [ログインの作成](create-a-login.md)  
   
--   [データベースユーザーの作成](create-a-database-user.md)  
+-   [データベース ユーザーの作成](create-a-database-user.md)  
   
 -   [データベーススキーマの作成](create-a-database-schema.md)  
   
 -   [ロールに参加する](join-a-role.md)  
   
--   [プリンシパルに権限を付与する](grant-a-permission-to-a-principal.md)  
+-   [プリンシパルに対する権限の許可](grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>参照  
- [プリンシパル &#40;データベースエンジン&#41;](principals-database-engine.md)   
+ [プリンシパル &#40;データベース エンジン&#41;](principals-database-engine.md)   
  [SQL Server の保護](../securing-sql-server.md)  
   
   

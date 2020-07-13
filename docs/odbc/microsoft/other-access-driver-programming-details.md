@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 806e981ea897f3482c88808212dce1d0f5a02829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002300"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291092"
 ---
 # <a name="other-access-driver-programming-details"></a>その他の Access ドライバーのプログラミングの詳細
 > [!NOTE]  

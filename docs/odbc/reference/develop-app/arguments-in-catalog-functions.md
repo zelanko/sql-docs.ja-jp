@@ -13,14 +13,14 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106293"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288168"
 ---
 # <a name="arguments-in-catalog-functions"></a>カタログ関数の引数
 すべてのカタログ関数は、返されるデータのスコープをアプリケーションが制限できる引数を受け取ります。 たとえば、次のコードの**Sqltables**の最初と2番目の呼び出しでは、すべてのテーブルに関する情報を含む結果セットが返されますが、3回目の呼び出しでは Orders テーブルに関する情報が返されます。  
@@ -33,7 +33,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
  カタログ関数の文字列引数は、通常の引数 (OA)、パターン値の引数 (PV)、識別子の引数 (ID)、および値リストの引数 (VL) の4つの異なる型に分類されます。 文字列引数のほとんどは、SQL_ATTR_METADATA_ID statement 属性の値に応じて、2つの異なる型のいずれかになります。 次の表は、各カタログ関数の引数の一覧と、SQL_ATTR_METADATA_ID の SQL_TRUE または SQL_FALSE 値の引数の型を示しています。  
   
-|Function|引数|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
+|関数|引数|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID ID|  
 |**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID ID ID ID|  

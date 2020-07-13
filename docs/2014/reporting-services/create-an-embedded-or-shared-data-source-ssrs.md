@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109658"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)
-  レポートのデータ ソースは名前と接続情報を指定します。 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」を参照してください。  
+  レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」を参照してください。  
   
  レポート ビルダーで、レポート サーバーまたは SharePoint サイト上の保存先を参照してデータ ソースを選択するか、または埋め込みデータ ソースを作成します。 共有データ ソースをレポート ビルダーで作成することはできません。  
   
@@ -34,37 +33,30 @@ ms.locfileid: "66109658"
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>埋め込みデータ ソースまたは共有データ ソースを作成するには  
   
-1.  レポートデータペインのツールバーで、[**新規作成**] をクリックし、[**データソース**] をクリックします。 
-  **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  レポートデータペインのツールバーで、[**新規作成**] をクリックし、[**データソース**] をクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
     >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
   
-2.  
-  **[名前]** ボックスにデータ ソースの名前を入力するか、既定値をそのまま使用します。 データ ソース名は、レポートの内部で使用されます。 判別がつきやすいように、データ ソース名には、接続文字列に指定するデータベース名を含めることをお勧めします。  
+2.  **[名前]** ボックスにデータ ソースの名前を入力するか、既定値をそのまま使用します。 データ ソース名は、レポートの内部で使用されます。 判別がつきやすいように、データ ソース名には、接続文字列に指定するデータベース名を含めることをお勧めします。  
   
 3.  埋め込みデータソースの場合は、[**埋め込み接続**] が選択されていることを確認します。  
   
-    1.  
-  **[種類]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]** など) を選択します。  
+    1.  **[種類]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]** など) を選択します。  
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
-    -   
-  **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧については、「[レポートビルダーのデータ接続、データソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)」または「データ[接続、データソース、Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
+    -   **[接続文字列]** ボックスに接続文字列を直接入力します。 接続文字列の例の一覧については、「[レポートビルダーのデータ接続、データソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)」または「データ[接続、データソース、Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
-    -   式 (**[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 
-  **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+    -   式 (**[fx]** ) ボタンをクリックして、接続文字列を評価する式を作成します。 **[式]** ダイアログ ボックスで、式ペインに式を直接入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    -   
-  **[編集]** をクリックして、手順 2 で選択したデータ ソースの種類の **[接続のプロパティ]** ダイアログ ボックスを開きます。  
+    -   **[編集]** をクリックして、手順 2 で選択したデータ ソースの種類の **[接続のプロパティ]** ダイアログ ボックスを開きます。  
   
          データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。 特定のデータ ソースの種類の詳細については、「[外部データ ソースのデータを追加する (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)」のトピックを参照してください。  
   
 4.  共有データソースの場合は、[**共有データソース参照を使用**する] が選択されていることを確認します。  
   
-    1.  **[新規作成]** をクリックします。 
-  **[共有データ ソース]** のプロパティ ダイアログ ボックスで、手順 2. および 3. を実行して新規データ ソースを作成します。  
+    1.  **[新規]** をクリックします。 **[共有データ ソース]** のプロパティ ダイアログ ボックスで、手順 2. および 3. を実行して新規データ ソースを作成します。  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -76,8 +68,7 @@ ms.locfileid: "66109658"
   
 ### <a name="to-import-an-existing-data-source-in-report-designer"></a>レポート デザイナーで既存のデータ ソースをインポートするには  
   
-1.  ソリューション エクスプローラーで、レポート サーバー プロジェクトの **[共有データ ソース]** フォルダーを右クリックして、 **[既存項目の追加]** をクリックします。 
-  **[既存項目の追加]** ダイアログ ボックスが表示されます。  
+1.  ソリューション エクスプローラーで、レポート サーバー プロジェクトの **[共有データ ソース]** フォルダーを右クリックして、 **[既存項目の追加]** をクリックします。 **[既存項目の追加]** ダイアログ ボックスが表示されます。  
   
 2.  既存のレポート定義共有データ ソース (rds) ファイルを参照して、 **[開く]** をクリックします。  
   
@@ -99,6 +90,6 @@ ms.locfileid: "66109658"
  [埋め込みデータソースから共有 &#40;レポートビルダーと SSRS に変換&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [レポートまたはモデルの共有データソースへのバインド &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [レポート &#40;レポートマネージャーのデータソースプロパティの構成&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services でサポートされるデータ ソース (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

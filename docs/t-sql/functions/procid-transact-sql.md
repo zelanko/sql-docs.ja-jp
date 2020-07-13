@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e9f862ab78cbfd9db885ca2f0c7c9c0f483920d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 092b4dee65e98678e97fa7eb3501793d8e466ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737933"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールのオブジェクト識別子 (ID) を返します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールは、ストアド プロシージャ、ユーザー定義関数、またはトリガーです。 CLR モジュールやインプロセス データ アクセス プロバイダーでは @@PROCID は指定できません。  
   

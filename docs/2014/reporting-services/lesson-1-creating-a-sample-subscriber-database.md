@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108535"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
@@ -24,8 +24,7 @@ ms.locfileid: "66108535"
   
 ### <a name="to-create-a-sample-subscriber-database"></a>サンプル サブスクライバー データベースを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] を起動し、[!INCLUDE[ssDE](../includes/ssde-md.md)]への接続を開きます。  
+1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] を起動し、[!INCLUDE[ssDE](../includes/ssde-md.md)]への接続を開きます。  
   
 2.  [データベース] を右クリックして **[新しいデータベース]** をクリックします。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66108535"
  以上の操作で、レポートを配信し、各サブスクライバーごとにレポート出力を変えるサブスクリプション データを作成できました。 次に、サブスクライバーに配信するレポートのデータ ソース プロパティを更新します。 データ ソース プロパティを更新する目的は、データ ドリブン サブスクリプション配信用のレポートを準備することです。 また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2: レポートデータソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="see-also"></a>参照  
- [SSRS チュートリアル &#40;データドリブンサブスクリプションの作成&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [データベースを作成する](../relational-databases/databases/create-a-database.md)   
  [基本的なテーブル レポートの作成 (SSRS チュートリアル)](create-a-basic-table-report-ssrs-tutorial.md)  
   

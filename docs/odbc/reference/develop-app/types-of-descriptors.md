@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a6c7b55194eb61c1a909ced2296e4ad2050b674
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087792"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304893"
 ---
 # <a name="types-of-descriptors"></a>記述子の種類
 記述子は、次のいずれかを説明するために使用されます。  

@@ -9,48 +9,41 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2018b038c76c745c1a81e11e713547a7b10dcce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043949"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>実行時データ パラメーターの使用 (ODBC)
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>実行時データ text パラメーター、ntext パラメーター、または image パラメーターを使用するには  
   
-1.  
-  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) を呼び出してプログラム バッファーをステートメント パラメーターにバインドするときに、次のように指定します。  
+1.  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) を呼び出してプログラム バッファーをステートメント パラメーターにバインドするときに、次のように指定します。  
   
-    -   最後のパラメーターには、SQL_LEN_DATA_AT_EXEC (*length*) を使用します。 *length*は`text`、、 `ntext`、また`image`はパラメーターデータの合計長 (バイト単位) です。  
+    -   最後のパラメーターには、SQL_LEN_DATA_AT_EXEC (*length*) を*length*使用し `text` ます。 length は、、 `ntext` 、またはパラメーターデータの合計長 `image` (バイト単位) です。  
   
     -   プログラム定義のパラメーター識別子として `rgbValue` (8 番目のパラメーター) を使用します。  
   
-2.  
-  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) または [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
+2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) または [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ パラメーターを処理する準備が整っていることを示します。  
   
 3.  実行時データの各パラメーターに対して次の操作を行います。  
   
-    -   
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、プログラム定義のパラメーター ID を取得します。 実行時データ パラメーターが他にもある場合は、SQL_NEED_DATA が返されます。  
   
-    -   
-  [SQLPutData](../native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、パラメーター データを length の長さまで送信します。  
+    -   [SQLPutData](../native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、パラメーター データを length の長さまで送信します。  
   
-4.  
-  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ パラメーターのデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
   
 ## <a name="example"></a>例  
  このサンプルでは、SQLParamData と SQLPutData を使用して、SQL_LONG 変数の文字データを読み込む方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
  AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、サンプルで使用するテーブルを作成します。  
   

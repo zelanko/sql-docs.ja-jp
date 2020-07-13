@@ -1,5 +1,6 @@
 ---
 title: avg 関数 (XQuery) |Microsoft Docs
+description: 指定された一連の数値の平均を返す XQuery 関数 avg () について説明します。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726790"
 ---
 # <a name="aggregate-functions---avg"></a>集計関数 - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   一連の数値の平均値を返します。  
   
@@ -38,7 +39,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  平均が計算されるアトミック値のシーケンス。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Avg ()** に渡されるアトミック値のすべての型は、3つの組み込み数値基本型または xdt: untypedAtomic のいずれか1つのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 **Avg ()** の結果は、xdt: untypedAtomic の場合、xs: double など、渡された型の基本型を受け取ります。  
   
  入力が静的に空の場合、空のが暗黙的に指定され、静的なエラーが発生します。  
@@ -53,10 +54,10 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  他のすべての場合は、関数から静的エラーが返されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Avg () XQuery 関数を使用して、製造プロセス内のワークセンターの場所を検索します。この場合、労働時間はすべてのワークセンターの場所の平均よりも大きくなります。  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A: Avg () XQuery 関数を使用して、製造プロセス内のワークセンターの場所を検索します。この場合、労働時間はすべてのワークセンターの場所の平均よりも大きくなります。  
  [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリを書き直して、 **avg ()** 関数を使用することができます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
@@ -68,7 +69,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

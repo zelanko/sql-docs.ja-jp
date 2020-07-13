@@ -9,18 +9,15 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc9b648b3713141f5250d268a2cec555de686183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65482603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961562"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>ビジネス ルールの適用 (Excel 用 MDS アドイン)
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
-  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、データを検証してデータが有効であることを確認する必要がある場合に、ビジネス ルールを適用できます。 検証に基づいて修正し、データを再度パブリッシュできます。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、データを検証してデータが有効であることを確認する必要がある場合に、ビジネス ルールを適用できます。 検証に基づいて修正し、データを再度パブリッシュできます。  
   
 > [!NOTE]  
 >  データの検証は、データをパブリッシュするときに自動的に行われます。 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../validation-stored-procedure-master-data-services.md)」を参照してください。  
@@ -28,15 +25,13 @@ ms.locfileid: "65482603"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[エクスプローラー]** 機能領域へのアクセス権が必要です。  
+-   **[エクスプローラー]** 機能領域へのアクセス権が必要です。  
   
 -   MDS によって管理されるデータが含まれているアクティブなワークシートが必要です。  
   
 ### <a name="to-apply-business-rules"></a>ビジネス ルールを適用するには  
   
-1.  
-  **[パブリッシュと検証]** グループの **[ルールの適用]** をクリックします。  
+1.  **[パブリッシュと検証]** グループの **[ルールの適用]** をクリックします。  
   
     > [!NOTE]  
     >  一度に検証されるメンバー (行) の数は、 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]の設定によって異なります。 詳細については、「 [ビジネス ルール設定](../system-settings-master-data-services.md#BusinessRules)」を参照してください。  

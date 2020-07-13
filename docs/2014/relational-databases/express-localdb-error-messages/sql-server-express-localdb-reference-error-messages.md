@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6d73ae981f4fc1b04a63fcc34673ceae98fe8d89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62714909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051034"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB のエラー メッセージ リファレンス
   ここでは、次の SQL Server Express LocalDB エラー メッセージについての参照情報を示します。  

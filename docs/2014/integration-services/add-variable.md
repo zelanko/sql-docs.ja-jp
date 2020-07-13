@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6181b7f18027315a7f2162a5693493bcb595db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66061785"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439569"
 ---
 # <a name="add-variable"></a>[変数の追加]
-  
   **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  
   
 ## <a name="options"></a>オプション  
@@ -39,13 +37,12 @@ ms.locfileid: "66061785"
  データ型を選択します。  
   
  **Value**  
- 値を入力します。 
-  **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
+ 値を入力します。 **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
   
  **読み取り専用**  
  変数を読み取り専用にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [データ型の Integration Services](data-flow/integration-services-data-types.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)  

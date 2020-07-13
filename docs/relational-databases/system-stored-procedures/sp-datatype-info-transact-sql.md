@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108301"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826216"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`使用する ODBC のバージョンを示します。 *odbc_version*は**tinyint**,、既定値は2です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
@@ -68,18 +68,18 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |MAXIMUM_SCALE|**smallint**|データ ソースでのデータ型の最大小数点以下桁数です。 最大小数点以下桁数がデータソースで個別に定義されておらず、最大有効桁数と同じになるように定義されている場合、この列には PRECISION 列と同じ値が格納されます。|  
 |SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、 **datetime**および ANSI **interval**データ型を除き、DATA_TYPE 列と同じです。 このフィールドは常に値を返します。|  
 |SQL_DATETIME_SUB|**smallint**|SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合は、 **datetime**または ANSI **interval**サブコード。 **Datetime**および ANSI **interval**以外のデータ型の場合、このフィールドは NULL になります。|  
-|NUM_PREC_RADIX|**int**|列が保持できる最大数を計算するビット数または桁数。 データ型が概数型である場合、この列に含まれる値は 2 で、複数のビットを示します。 真数型の場合、この列には10進数を示す値10が含まれます。 それ以外の場合、この列は NULL になります。 アプリケーションは、基数と精度を組み合わせて、その列が保持できる最大数を計算できます。|  
+|NUM_PREC_RADIX|**int**|列が保持できる最大数を計算するビット数または桁数。 データ型が概数型である場合、この列に含まれる値は 2 で、複数のビットを示します。 真数型の場合、この列には10進数を示す値10が含まれます。 その他の場合、この列は NULL になります。 アプリケーションは、基数と精度を組み合わせて、その列が保持できる最大数を計算できます。|  
 |INTERVAL_PRECISION|**smallint**|*Data_type*が**interval**の場合の間隔の先頭の有効桁数の値。それ以外の場合は NULL。|  
 |USERTYPE|**smallint**|systypes テーブルの**usertype**値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_datatype_info は、ODBC の SQLGetTypeInfo に相当します。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 *data_type*の`-9`値を指定して、 **sysname**および**nvarchar**データ型の情報を取得します。  
+ 次の例では、 *data_type*の値を指定して、 **sysname**および**nvarchar**データ型の情報を取得 `-9` します。  
   
 ```  
 USE master;  
@@ -90,7 +90,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [データ型 &#40;Transact-sql&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

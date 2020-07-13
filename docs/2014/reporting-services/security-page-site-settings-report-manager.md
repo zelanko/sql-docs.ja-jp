@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102176"
 ---
 # <a name="security-page-site-settings-report-manager"></a>[セキュリティ] ページ、サイトの設定 ( レポート マネージャー)
@@ -36,7 +36,7 @@ ms.locfileid: "66102176"
 3.  [**セキュリティ**] タブを選択します。  
   
 ## <a name="options"></a>オプション  
- **デリート**  
+ **削除**  
  既存のロールの割り当てを削除する場合にクリックします。 削除するグループ名またはユーザー名の横のチェック ボックスをオンにしてから、 **[削除]** をクリックします。 1 つしか残っていないロールの割り当ては削除できません。 ロールの割り当てを削除しても、グループ アカウントやユーザー アカウント、またはロールの定義は削除されません。  
   
  **新しいロールの割り当て**  

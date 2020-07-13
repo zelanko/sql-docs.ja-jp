@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48198318ec2febe4e79a501ef27d1bb56905f1f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047535"
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
   ブレークポイントのヒット カウントは、ブレークポイントに達するたびに [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによって増加されるカウンターです。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  

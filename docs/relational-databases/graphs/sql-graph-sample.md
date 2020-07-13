@@ -15,18 +15,18 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68035873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751152"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>グラフデータベースを作成し、T-sql を使用して何らかのパターン一致クエリを実行する
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-このサンプルでは[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 、ノードとエッジを含むグラフデータベースを作成し、新しい MATCH 句を使用していくつかのパターンに一致し、グラフを走査するスクリプトを示します。 このサンプルスクリプトは、Azure SQL Database との両方で動作します。[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+このサンプルでは、 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ノードとエッジを含むグラフデータベースを作成し、新しい MATCH 句を使用していくつかのパターンに一致し、グラフを走査するスクリプトを示します。 このサンプルスクリプトは、Azure SQL Database との両方で動作します。[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>サンプルスキーマ
 
@@ -163,10 +163,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>スクリプトの説明  
-このスクリプトでは、新しい T-sql 構文を使用して、ノードテーブルとエッジテーブルを作成します。 ステートメントを使用してノードテーブルとエッジテーブルに`INSERT`データを挿入する方法につい`MATCH`て説明します。また、パターンマッチングとナビゲーションに句を使用する方法についても説明します。
+このスクリプトでは、新しい T-sql 構文を使用して、ノードテーブルとエッジテーブルを作成します。 ステートメントを使用してノードテーブルとエッジテーブルにデータを挿入する方法について説明 `INSERT` し `MATCH` ます。また、パターンマッチングとナビゲーションに句を使用する方法についても説明します。
 
-|command    |メモ
+|コマンド    |Notes
 |---  |---  |
-|[CREATE TABLE &#40;Transact-sql&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフノードまたはエッジテーブルの作成  |
+|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフノードまたはエッジテーブルの作成  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |ノードまたはエッジテーブルに挿入する  |
 |[Transact-sql&#41;と一致 &#40;](../../t-sql/queries/match-sql-graph.md)  |一致を使用してパターンに一致させるか、グラフをスキャンします  |

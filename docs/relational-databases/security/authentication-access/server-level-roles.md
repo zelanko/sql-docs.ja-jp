@@ -52,7 +52,7 @@ ms.locfileid: "68116787"
 |**serveradmin**|**serveradmin** 固定サーバー ロールのメンバーは、サーバー全体の構成オプションを変更したり、サーバーをシャットダウンしたりできます。|  
 |**securityadmin**|**securityadmin** 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 サーバー レベルのアクセス許可を `GRANT`、`DENY`、`REVOKE` することができます。 また、データベースにアクセスできる場合は、データベース レベルのアクセス許可も `GRANT`、`DENY`、`REVOKE` できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **重要:** セキュリティ管理者は、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]へのアクセスを許可する権限およびユーザー アクセス許可を構成する権限を使用して、ほとんどのサーバー アクセス許可を割り当てることができます。 **securityadmin** ロールは、 **sysadmin** ロールと同等のものとして扱う必要があります。|  
 |**processadmin**|**processadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス内で実行中のプロセスを終了できます。|  
-|**setupadmin**|**setupadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます (**を使用するときは**sysadmin[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] メンバーシップが必要になります)。|  
+|**setupadmin**|**setupadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます ([!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を使用するときは **sysadmin** メンバーシップが必要になります)。|  
 |**bulkadmin**|**bulkadmin** 固定サーバー ロールのメンバーは、`BULK INSERT` ステートメントを実行できます。|  
 |**diskadmin**|**diskadmin** 固定サーバー ロールは、ディスク ファイルを管理するために使用します。|  
 |**dbcreator**|**dbcreator** 固定サーバー ロールのメンバーは、任意のデータベースを作成、変更、削除、および復元できます。|  

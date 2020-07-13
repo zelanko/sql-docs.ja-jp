@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2736d5990de4453a063a688a988bad0f3a74d962
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63135619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068268"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
   このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
   
 ### <a name="to-modify-an-existing-trace"></a>既存のトレースを変更するには  
   
-1.  トレースが既に実行中の場合は、 **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、**@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  トレース イベントを変更するには、パラメーターを使用して変更を指定し、 **sp_trace_setevent** を実行します。 パラメーターは次の順序で指定します。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "63135619"
   
     -   **@on**代わっ  
   
-     **@on**パラメーターを変更する場合は、 **@columnid**パラメーターとの相互作用に注意してください。  
+     パラメーターを変更する場合は **@on** 、パラメーターとの相互作用に注意してください **@columnid** 。  
   
     |ON|列 ID|結果|  
     |--------|---------------|------------|  

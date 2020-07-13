@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 13201a8b904a5fc5232b9fa860710e4e39cce67a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064755"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする
   ここでは、コンピューター支援型のクレンジング プロセスを実行します。 DQS は、指定されたしきい値に基づいて高度なアルゴリズムと信頼レベルを使用して、選択したナレッジベースに対してデータを分析し、クレンジングします。 詳細については、「 [DQS (内部) ナレッジを使用したデータのクレンジング](https://msdn.microsoft.com/library/hh213061.aspx)」を参照してください。
@@ -30,7 +29,7 @@ ms.locfileid: "78177282"
 
 3.  [**次へ**] をクリックし**て、[管理と結果の表示**] ページに切り替えます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 4: 結果を管理および表示する](../../2014/tutorials/task-4-manaing-and-viewing-results.md)
 
 

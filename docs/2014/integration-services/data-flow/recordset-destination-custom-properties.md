@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1df2143b50a2d85e74fb544e4fef4a0a246488a4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770778"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431518"
 ---
 # <a name="recordset-destination-custom-properties"></a>レコードセット変換先のカスタム プロパティ
   レコードセット変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
   
  次の表は、レコードセット変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|ADO レコードセットが保持する変数の名前。|  
   

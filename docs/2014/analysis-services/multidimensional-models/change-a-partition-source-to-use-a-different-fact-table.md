@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94ab489420b4661cea27b942c39dff91a219a38d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0063a6023d769dc6dccd616655d10e0bd3c65a98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076713"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537171"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>別のファクト テーブルを使用するためのパーティション ソースの変更
   キューブのパーティションを作成する場合、複数のファクト テーブルを使用するように選択できます。 複数のテーブルは、単一のデータ ソース ビュー、複数のデータ ソース ビュー、または複数のデータ ソースから得たものである場合があります。 データ ソース ビューには、複数のデータ ソースから得た複数のテーブルが含まれている場合もあります。  
@@ -32,6 +31,6 @@ ms.locfileid: "66076713"
  重複データを含む複数のファクト テーブルを使用することは可能ですが、お勧めはできません。 使用する場合は、パーティション内でフィルターを使用して、あるパーティションで使用されるデータが、別のパーティションで使用されないようにする必要があります。 詳細については、「 [ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ローカルパーティション &#40;Analysis Services の作成と管理&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

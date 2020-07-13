@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903809"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488132"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 
@@ -55,7 +55,7 @@ Scale Out Master サービスは、Scale Out Worker との通信を担当する 
 |構成  |説明  |Default value  |
 |---------|---------|---------|
 |PortNumber|Scale Out Worker との通信に利用されるネットワーク ポート番号。|8391|
-|SSLCertThumbprint|Scale Out Worker との通信の保護に利用される SSL 証明書のサムプリント。|Scale Out Master のインストール時に指定される SSL 証明書のサムプリント|
+|SSLCertThumbprint|Scale Out Worker との通信の保護に利用される TLS/SSL 証明書のサムプリント。|Scale Out Master のインストール時に指定される TLS/SSL 証明書のサムプリント|
 |SqlServerName|SSISDB カタログが含まれている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の名前。 たとえば、ServerName\\InstanceName です。|Scale Out Master と共にインストールされる SQL Server の名前。|
 |CleanupCompletedJobsIntervalInMs|完了した実行ジョブを消去する間隔 (ミリ秒単位)。|43200000|
 |DealWithExpiredTasksIntervalInMs|期限切れ実行ジョブを処理する間隔 (ミリ秒単位)。|300000|

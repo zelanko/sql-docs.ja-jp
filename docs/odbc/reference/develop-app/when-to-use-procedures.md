@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f25b629372bbe089489cccdbfa0258dafef3dd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31aeea226bc8c8aa41f748d1d9a97d55147c4d67
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078970"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81289099"
 ---
 # <a name="when-to-use-procedures"></a>プロシージャを使用する場合
 プロシージャの使用にはさまざまな利点があります。これは、プロシージャを使用することによって、アプリケーションからデータソースに SQL ステートメントを移動するという事実に基づいています。 アプリケーションの残りの部分は、相互運用可能なプロシージャ呼び出しです。 次のような利点があります。  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ff0b9740cbdd8eb25bdfa6d8c55e7551fe946a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897850"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   キューから 1 つ以上のメッセージを受信します。 キューの保有期間の設定に応じて、キューからメッセージを削除するか、キュー内のメッセージの状態を更新します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70211440"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   

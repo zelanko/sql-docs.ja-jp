@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eec3fa9a747d37d6d1fad39f1b2e784c1beb786c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933803"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 データベース エンジンの非推奨の機能
   このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -27,52 +26,41 @@ ms.locfileid: "62754174"
  非推奨の機能の使用は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンでサポートされない機能  
- 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 
-  **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターおよび sys.dm_os_performance_counters にはインスタンス名として表示されます。 
-  **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
+ 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターおよび sys.dm_os_performance_counters にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
   
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |バックアップと復元|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD はこれまでどおり非推奨とされます。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD および BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD は廃止されました。|[なし] :|BACKUP DATABASE または LOG WITH PASSWORD<br /><br /> BACKUP DATABASE または LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|互換性レベル|バージョン 90 ([!INCLUDE[ssDEversion2005](../includes/ssdeversion2005-md.md)]) からのアップグレード|互換性レベルは、最新の 2 つのバージョンについてのみ使用できます。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。<br /><br /> 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、SQL Server 2005 データベースをアップグレードできますが、互換性レベルはアップグレード操作中に 90 から 100 に更新されます。|Database compatibility level 90|107|  
-|データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
+|互換性レベル|バージョン 90 ([!INCLUDE[ssDEversion2005](../includes/ssdeversion2005-md.md)]) からのアップグレード|互換性レベルは、最新の 2 つのバージョンについてのみ使用できます。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。<br /><br /> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、SQL Server 2005 データベースをアップグレードできますが、互換性レベルはアップグレード操作中に 90 から 100 に更新されます。|Database compatibility level 90|107|  
+|データベース オブジェクト|トリガーから結果セットを返す機能|None|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨とされます。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
+|リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|None|None|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
-|SET オプション|
-  `SET ROWCOUNT`、`INSERT`、および `UPDATE` ステートメントの `DELETE`|TOP キーワード|SET ROWCOUNT|109|  
+|SET オプション|`SET ROWCOUNT`、`INSERT`、および `UPDATE` ステートメントの `DELETE`|TOP キーワード|SET ROWCOUNT|109|  
 |テーブル ヒント|HOLDLOCK table hint without parenthesis|かっこ付きの HOLDLOCK を使用します。|HOLDLOCK table hint without parenthesis|167|  
-|ツール|sqlmaint ユーティリティ|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プラン機能を使用してください。|なし|なし|  
+|ツール|sqlmaint ユーティリティ|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プラン機能を使用してください。|None|None|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
- 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
+ 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|互換性レベル|sp_dbcmptlevel|データベースの変更...COMPATIBILITY_LEVEL を設定します。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。|sp_dbcmptlevel|80|  
+|互換性レベル|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。|sp_dbcmptlevel|80|  
 |互換性レベル|Database compatibility level 100|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。|Database compatibility level 100|108|  
 |XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
 |バックアップと復元|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE または LOG TO TAPE|235|  
-|バックアップと復元|sp_addumpdevice '`tape`'|sp_addumpdevice '`disk`'|ADDING TAPE DEVICE|236|  
+|バックアップと復元|sp_addumpdevice ' `tape` '|sp_addumpdevice ' `disk` '|ADDING TAPE DEVICE|236|  
 |バックアップと復元|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |照合順序|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|[なし] : これらの照合順序は [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]に存在しますが、fn_helpcollations には表示されません。|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |照合順序|ヒンディー語<br /><br /> マケドニア語|これらの照合順序は [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降に存在しますが、fn_helpcollations には表示されません。 代わりに Macedonian_FYROM_90 および Indic_General_90 を使用してください。|ヒンディー語<br /><br /> マケドニア語|190<br /><br /> 193|  
 |照合順序|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
 |構成|SET ANSI_NULLS OFF および ANSI_NULLS OFF データベース オプション<br /><br /> SET ANSI_PADDING OFF および ANSI_PADDING OFF データベース オプション<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF および CONCAT_NULL_YIELDS_NULL OFF データベース オプション<br /><br /> SET OFFSETS|[なし] :<br /><br /> ANSI_NULLS、ANSI_PADDING、および CONCAT_NULLS_YIELDS_NULL は常に ON に設定されます。 SET OFFSETS は使用できなくなります。|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |データ型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
-|データ型|
-  `timestamp` データ型の `rowversion` 構文|
-  `rowversion` データ型の構文|TIMESTAMP|158|  
-|データ型|
-  `timestamp` 列に null 値を挿入する機能|代わりに DEFAULT を使用してください。|TIMESTAMP 列への INSERT NULL|179|  
-|データ型|'text in row' テーブル オプション|
-  `varchar(max)`、`nvarchar(max)`、および `varbinary(max)` のデータ型を使用します。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)」を参照してください。|Text in row テーブル オプション|9|  
-|データ型|データ型:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|
-  `varchar(max)`、`nvarchar(max)`、および `varbinary(max)` のデータ型を使用します。|データ型: `text`、`ntext`、または `image`|4|  
+|データ型|`timestamp` データ型の `rowversion` 構文|`rowversion` データ型の構文|timestamp|158|  
+|データ型|`timestamp` 列に null 値を挿入する機能|代わりに DEFAULT を使用してください。|TIMESTAMP 列への INSERT NULL|179|  
+|データ型|'text in row' テーブル オプション|`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` のデータ型を使用します。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)」を参照してください。|Text in row テーブル オプション|9|  
+|データ型|データ型:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` のデータ型を使用します。|データ型: `text`、`ntext`、または `image`|4|  
 |データベースの管理|sp_attach_db<br /><br /> sp_attach_single_file_db|CREATE DATABASE ステートメントで FOR ATTACH オプションを使用します。 複数のログ ファイルを再構築するときに、これらのログ ファイル 1 つ以上に対して新しい場所を指定する場合は、FOR ATTACH_REBUILD_LOG を使用します。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |データベース オブジェクト|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE および ALTER TABLE の DEFAULT キーワード|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |データベース オブジェクト|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE および ALTER TABLE の CHECK キーワード|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -105,77 +93,65 @@ ms.locfileid: "62754174"
 |ネイティブ XML Web サービス|FOR SOAP オプションを指定した CREATE ENDPOINT または ALTER ENDPOINT ステートメント<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |リムーバブル データベース|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |リムーバブル データベース|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Security|ALTER LOGIN WITH SET CREDENTIAL 構文|新しい ALTER LOGIN ADD および DROP CREDENTIAL 構文に置き換えられます。|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|セキュリティ|ALTER LOGIN WITH SET CREDENTIAL 構文|新しい ALTER LOGIN ADD および DROP CREDENTIAL 構文に置き換えられます。|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|セキュリティ|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
 |Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
 |Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
 |Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
 |Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
 |Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
 |Security|sp_changeobjectowner|ALTER SCHEMA または ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Security|sp_control_dbmasterkey_password|マスター キーが存在し、パスワードが正しくなければなりません。|sp_control_dbmasterkey_password|274|  
-|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|これらのストアド プロシージャは、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]で正しかった情報を返します。 出力には、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]に実装された権限階層への変更が反映されません。 詳細については、「 [固定サーバー ロールの権限](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)」を参照してください。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|特定の権限に対する GRANT、DENY、および REVOKE を使用してください。|ALL 権限|35|  
-|Security|PERMISSIONS 組み込み関数|代わりに sys.fn_my_permissions をクエリしてください。|PERMISSIONS|170|  
-|Security|SETUSER|EXECUTE AS|SETUSER|165|  
-|Security|RC4 および DESX 暗号化アルゴリズム|AES など、別のアルゴリズムを使用してください。|DESX アルゴリズム|238|  
-|SET オプション|SET FMTONLY|[sys dm_exec_describe_first_result_set &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、&#40;&#41;transact-sql [sp_describe_first_result_set、および](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)&#40;&#41;[transact-sql sp_describe_undeclared_parameters](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)を &#40;して、transact-sql&#41;を[dm_exec_describe_first_result_set_for_object](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)します。|SET FMTONLY|250|  
+|セキュリティ|sp_control_dbmasterkey_password|マスター キーが存在し、パスワードが正しくなければなりません。|sp_control_dbmasterkey_password|274|  
+|セキュリティ|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|セキュリティ|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|セキュリティ|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|セキュリティ|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|これらのストアド プロシージャは、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]で正しかった情報を返します。 出力には、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]に実装された権限階層への変更が反映されません。 詳細については、「 [固定サーバー ロールの権限](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)」を参照してください。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|セキュリティ|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|特定の権限に対する GRANT、DENY、および REVOKE を使用してください。|ALL 権限|35|  
+|セキュリティ|PERMISSIONS 組み込み関数|代わりに sys.fn_my_permissions をクエリしてください。|PERMISSIONS|170|  
+|セキュリティ|SETUSER|EXECUTE AS|SETUSER|165|  
+|セキュリティ|RC4 および DESX 暗号化アルゴリズム|AES など、別のアルゴリズムを使用してください。|DESX アルゴリズム|238|  
+|SET オプション|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、[sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)。|SET FMTONLY|250|  
 |サーバー構成オプション|c2 audit オプション<br /><br /> default trace enabled オプション|[common criteria compliance enabled サーバー構成オプション](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|SMO クラス|`Microsoft.SQLServer.Management.Smo.Information`講義<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings`講義<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions`講義<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication`"|`Microsoft.SqlServer.Management.Smo.Server`講義<br /><br /> `Microsoft.SqlServer.Management.Smo.Server`講義<br /><br /> `Microsoft.SqlServer.Management.Smo.Database`講義<br /><br /> なし|なし|なし|  
-|SQL Server エージェント|**net send**通知<br /><br /> ポケットベルによる通知<br /><br /> ActiveX サブシステム|メール通知<br /><br /> メール通知<br /><br /> コマンドまたは PowerShell スクリプト|なし|なし|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのソリューション エクスプローラーの統合<br /><br /> 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのソース管理の統合||なし|なし|  
-|システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
-|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)」を参照してください。<br /><br /> ** \*重要\* \* **互換性ビューでは、で[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]導入された機能のメタデータは公開されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
-|システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|なし|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
+|SMO クラス|`Microsoft.SQLServer.Management.Smo.Information` クラス<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` クラス<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` クラス<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` プロパティ|`Microsoft.SqlServer.Management.Smo.Server` クラス<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` クラス<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` クラス<br /><br /> None|None|なし|  
+|SQL Server エージェント|**net send** による通知<br /><br /> ポケットベルによる通知<br /><br /> ActiveX サブシステム|メール通知<br /><br /> メール通知<br /><br /> コマンドまたは PowerShell スクリプト|なし|なし|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのソリューション エクスプローラーの統合<br /><br /> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのソース管理の統合||None|None|  
+|システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
+|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)」を参照してください。<br /><br /> 重要互換性ビューは、で導入された機能のメタデータを公開しません。 ** \* \* \* \* ** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |システム関数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |システム ビュー|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は非推奨とされます。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
-|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
+|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
+|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
 |テーブル圧縮|sp_estimated_rowsize_reduction_for_vardecimal プロシージャの使用|代わりにデータ圧縮と sp_estimate_data_compression_savings プロシージャを使用してください。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|1 で保護されたプロセスとして起動されました|  
+|テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|1|  
 |テーブル ヒント|WITH キーワードを使用しないテーブル ヒントの指定|WITH を使用します。|Table hint without WITH|8|  
 |テーブル ヒント|INSERT_HINTS||INSERT_HINTS|34|  
-|テキスト ポインター|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|なし|UPDATETEXT または WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
+|テキスト ポインター|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT または WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |テキスト ポインター|TEXTPTR()<br /><br /> TEXTVALID()|なし|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 関数呼び出しの手順|SELECT *column_list* FROM sys.\<*function_name*>() で置き換えられました。<br /><br /> たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。|'::' 関数呼び出し構文|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 関数呼び出しの手順|Sys から SELECT *column_list*に置き換えられました。 \<*function_name*>().<br /><br /> たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。|'::' 関数呼び出し構文|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|3 つおよび 4 つの部分で構成された列参照|2 つの部分で構成される名前が標準に準拠した動作です。|3 つ以上の部分で構成される列名|3|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|SELECT リストの式に対して、列の別名として使用される、引用符で囲まれた文字列:<br /><br /> '*string_alias*' = *expression*|*式*[AS] *column_alias*<br /><br /> *式*[AS] [*column_alias*]<br /><br /> *式*[AS] "*column_alias*"<br /><br /> *式*[AS] '*column_alias*'<br /><br /> *column_alias* = *式*|列の別名としての文字列リテラル|184|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|SELECT リストの式に対して、列の別名として使用される、引用符で囲まれた文字列:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|列の別名としての文字列リテラル|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|番号付きプロシージャ|[なし] : 使用しないでください。|ProcNums|160|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|*table_name index_name*構文 DROP INDEX|*index_name**Table_name*構文で DROP INDEX です。|2 部構成の名前が使用された DROP INDEX|163|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|セミコロンで終了しない [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント|
-  [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをセミコロンで (;) で終了してください。|なし|なし|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|DROP INDEX での*table_name.index_name* 構文|DROP INDEX での*index_name* ON *table_name* 構文です。|2 部構成の名前が使用された DROP INDEX|163|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|セミコロンで終了しない [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント|[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをセミコロンで (;) で終了してください。|None|なし|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|GROUP BY ALL|状況に応じて UNION または派生テーブルを使用したカスタム ソリューションを使用してください。|GROUP BY ALL|169|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての IDENTITYCOL の使用|$identity を使用してください。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|一時テーブル名および一時ストアド プロシージャ名としての #、## の使用|別の文字を少なくとも 1 文字は使用してください。|'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|
-  \@ 識別子としての \@、\@\@、または \@[!INCLUDE[tsql](../includes/tsql-md.md)] で始まる名前の使用。|
-  \@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|
-  \@ 識別子としての '\@' と '\@[!INCLUDE[tsql](../includes/tsql-md.md)]' で始まる名前|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての \@、\@\@、または \@\@ で始まる名前の使用。|\@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。|[!INCLUDE[tsql](../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|既定値としての DEFAULT キーワードの使用|DEFAULT キーワードを既定値として使用しないでください。|既定値としての DEFAULT キーワード|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|テーブル ヒントの区切り文字としてのスペースの使用|テーブル ヒントはコンマを使用して区切ってください。|コンマで区切られていない複数のテーブル ヒント|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|集計インデックス付きビューの選択リストには、互換性モードが 90 の場合、COUNT_BIG (*) の指定が必要|COUNT_BIG (*) を使用してください。|COUNT_BIG(\*) がないインデックス付きビューの選択リスト|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ビュー経由で複数ステートメントのテーブル値関数 (TVF) を呼び出す、テーブル ヒントの間接アプリケーション|[なし] :|間接的な TVF ヒント|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 構文:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
-|その他|DB-Library<br /><br /> Embedded SQL for C|
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 
-  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。|なし|なし|  
-|ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。<br /><br /> 注: Analysis Services ワークロードのトレースキャプチャには、SQL Server プロファイラーを引き続き使用します。|SQL Server プロファイラー|なし|  
-|ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注: Analysis Services ワークロードのトレース再生には、引き続き SQL Server プロファイラーを使用します。|SQL Server プロファイラー|なし|  
-|トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生: なし|||  
+|その他|DB-Library<br /><br /> Embedded SQL for C|[!INCLUDE[ssDE](../includes/ssde-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。|None|None|  
+|ツール|SQL Server Profiler for Trace Capture|SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。<br /><br /> 注: Analysis Services ワークロードのトレースキャプチャには、SQL Server プロファイラーを引き続き使用します。|SQL Server Profiler|なし|  
+|ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注: Analysis Services ワークロードのトレース再生には、引き続き SQL Server プロファイラーを使用します。|SQL Server Profiler|None|  
+|トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生:なし|||  
 |SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  の`OUTPUT` `sp_setapprole` cookie パラメーターは現在、正しい最大`varbinary(8000)`長であるとしてドキュメントに記載されています。 ただし、現在の実装では `varbinary(50)` を返します。 開発者が `varbinary(50)` を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)」を参照してください。  
+>  の cookie `OUTPUT` パラメーター `sp_setapprole` は現在、 `varbinary(8000)` 正しい最大長であるとしてドキュメントに記載されています。 ただし、現在の実装では `varbinary(50)` を返します。 開発者が `varbinary(50)` を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md)  

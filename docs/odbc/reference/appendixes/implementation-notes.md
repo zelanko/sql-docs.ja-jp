@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135743"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284313"
 ---
 # <a name="implementation-notes"></a>実装に関するメモ
 > [!IMPORTANT]  

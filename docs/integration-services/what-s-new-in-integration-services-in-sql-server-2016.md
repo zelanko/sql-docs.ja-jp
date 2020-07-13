@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295042"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922342"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 
@@ -187,9 +187,9 @@ ms.locfileid: "71295042"
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> SSIS カタログでの Always Encrypted のサポート  
  SSIS は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の Always Encrypted 機能を既にサポートしています。 詳細については、次のログの投稿を参照してください。  
   
--   [SSIS with Always Encrypted (SSIS と Always Encrypted)](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted (SSIS と Always Encrypted)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted (参照変換と Always Encrypted)](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted (参照変換と Always Encrypted)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>デバッグの強化
 
@@ -215,7 +215,7 @@ ms.locfileid: "71295042"
   
 -   スクリプト コンポーネントまたはカスタムデータフロー コンポーネントで、IDTSComponentMetadata100 インターフェイスの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドを呼び出します。  
   
- この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS データ フローのエラー列の機能強化)。  
+ この機能強化の詳細については、SSIS 開発者である Bo Fan による次のブログの投稿を参照してください: [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)(SSIS データ フローのエラー列の機能強化)。  
   
 > [!NOTE]  
 >  (このサポートはその後のリリースで拡張されています。 詳細については、「 [エラー列名の拡張サポート](#getidstring) 」および「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
@@ -225,7 +225,7 @@ ms.locfileid: "71295042"
   
  GetIdentificationStringByLineageID メソッドの名前が <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>で追加または更新された機能について説明します。 詳細については、「 [データ フロー内のエラー列の名前](#ErrorColumn)」を参照してください。  
   
- この変更とエラー列の強化の詳細については、次の更新されたブログの投稿を参照してください。 [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) (Error Column Improvements for SSIS データ フローでのエラー列の強化 (CTP3.3 での更新))](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ この変更とエラー列の強化の詳細については、次の更新されたブログの投稿を参照してください。 [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) (Error Column Improvements for SSIS データ フローでのエラー列の強化 (CTP3.3 での更新))](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (RC0 では、このメソッドは、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスに移動されています。 詳細については、「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  

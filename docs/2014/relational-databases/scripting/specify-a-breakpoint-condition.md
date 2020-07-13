@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 659b6ca1149eb8f0412efbe2adbaf4c1ffce59d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997869"
 ---
 # <a name="specify-a-breakpoint-condition"></a>ブレークポイント条件の指定
   ブレークポイント条件は、ブレークポイントに達したときにデバッガーによって評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 式です。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、デバッガーはブレークポイントに指定されたアクションを実行するか、中断します。  
@@ -37,11 +36,11 @@ ms.locfileid: "75243231"
   
 2.  **[ブレークポイントの条件]** ダイアログ ボックスで、 **[条件]** ボックスに有効なブール式を入力します。  
   
-3.  式**** がに`true`評価されたときに中断する場合は [true]、式の値が変更されたときに中断する場合は [**変更済み**] を選択します。  
+3.  式がに評価されたときに中断する場合は [ **true** ] `true` 、式の値が変更されたときに中断する場合は [**変更済み**] を選択します。  
   
     > [!NOTE]  
     >  デバッガーは、初めてブレークポイントに達するまでブール式を評価しません。 **[変更された場合]** を選択した場合、デバッガーは最初の評価を変更とは見なさないため、最初の評価でブレークすることはありません。  
   
 ## <a name="see-also"></a>参照  
- [ヒット カウントの指定](specify-a-hit-count.md)   
+ [ヒットカウントの指定](specify-a-hit-count.md)   
  [ブレークポイント アクションの指定](specify-a-breakpoint-action.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042437"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>アップグレード アドバイザーのレポートを表示する方法
   アップグレード アドバイザーでは、分析対象として選択したコンポーネントごとにレポートが作成されます。 このトピックでは、アップグレード アドバイザーの開始ページからアップグレード アドバイザーのレポートを表示する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "66094802"
   
 ### <a name="to-view-a-report"></a>レポートを表示するには  
   
-1.  [**スタート**]、[**すべて**のプログラム**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**]、[]、[ ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレードアドバイザー**] の順にクリックします。  
+1.  [**スタート**]、[**すべてのプログラム**]、[]、[ **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アップグレードアドバイザー**] の順にクリックします。  
   
 2.  アップグレードアドバイザーの開始ページで、[**アップグレードアドバイザーレポートビューアーの起動**] をクリックします。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094802"
   
     -   [**重要度**]: 問題を解決するための重要度を示します。  
   
-    -   **修正する**場合は、アプリケーションまたはデータを移行する前または後に、またはいつ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]でもアップグレードする前または後に、問題を修正する必要があるかどうかを示します。  
+    -   **修正する**場合は、アプリケーションまたはデータを移行する前または後に、またはいつでもアップグレードする前または後に、問題を修正する必要があるかどうかを示します [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。  
   
     -   問題の簡潔な説明。  
   

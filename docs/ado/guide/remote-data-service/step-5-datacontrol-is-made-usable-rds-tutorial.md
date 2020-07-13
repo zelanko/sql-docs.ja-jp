@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71576df284f3345d1f72b4043e904ae39ab031d4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922058"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764653"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5: DataControl が使用可能になる (RDS チュートリアル)
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>手順 5:DataControl が使用可能になる (RDS チュートリアル)
 返された**レコードセット**オブジェクトを使用できます。 他の**レコードセット**と同じように、確認、移動、または編集を行うことができます。 **レコードセット**でできることは、環境によって異なります。 Visual Basic と Visual C++ には、データコントロールを有効にすることで、直接または間接的に**レコードセット**を使用できるビジュアルコントロールがあります。  
   
 > [!IMPORTANT]

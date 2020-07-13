@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262078"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>dm_db_log_info (Transact-sql)
@@ -48,7 +48,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>返されるテーブル  
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベース ID。|
 |file_id|**smallint**|トランザクションログのファイル id。|  
@@ -60,9 +60,9 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |[仮想ログファイル (%)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のパリティ。指定した範囲内のログの末尾を特定するために内部的に使用されます。|
 |vlf_first_lsn|**nvarchar (48)** |[仮想ログファイル (](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)列 1) 内の最初のログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
 |vlf_create_lsn|**nvarchar (48)** |[仮想ログファイル](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を作成したログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
-|vlf_encryptor_thumbprint|**varbinary (20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 値が[Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用して暗号化されている場合は、オフの暗号化の拇印を表示します。それ以外の場合は NULL を示します。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 値が[Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用して暗号化されている場合は、オフの暗号化の拇印を表示します。それ以外の場合は NULL を示します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 動的`sys.dm_db_log_info`管理関数は、ステートメント`DBCC LOGINFO`を置き換えます。    
  
 ## <a name="permissions"></a>アクセス許可  
@@ -110,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>参照  
-[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

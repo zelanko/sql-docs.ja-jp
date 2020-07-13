@@ -19,15 +19,14 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 874f59097a7f8b9bb575eb50318b60804e388f39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060114"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
   属性を ID 型属性として指定することができます。 ID 型属性を指定すると、IDREF または IDREFS として指定した属性から ID 型属性を参照でき、ドキュメント間をリンクできるようになります。  
@@ -42,20 +41,19 @@ ms.locfileid: "66013921"
   
 -   ID、IDREF、IDREFS の値が名前付きトークンであること。 たとえば、整数値 101 は ID 値にできません。  
   
--   ID、IDREF、および IDREFS 型の属性は、 `text`型、型`ntext`、また`image`はその他のバイナリデータ型 (たとえば、 `timestamp`) の列にマップできません。  
+-   ID、IDREF、および IDREFS 型の属性は、型、型、また `text` `ntext` `image` はその他のバイナリデータ型 (たとえば、) の列にマップできません `timestamp` 。  
   
- XML ドキュメントに複数の Id が含まれて`sql:prefix`いる場合は、注釈を使用して、値が一意であることを確認します。  
+ XML ドキュメントに複数の Id が含まれている場合は、注釈を使用し `sql:prefix` て、値が一意であることを確認します。  
   
- 
-  `sql:prefix` 注釈は、XSD 固定属性では使用できないことに注意してください。  
+ `sql:prefix` 注釈は、XSD 固定属性では使用できないことに注意してください。  
   
 ## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
- 次のスキーマでは、 ** \<Customer>** 要素は** \<Order>** 子要素で構成されています。 Order>要素には、子要素である** \<orderdetail>** 要素もあります。 ** \<**  
+ 次のスキーマでは、 **\<Customer>** 要素は子要素で構成されて **\<Order>** います。 要素には、 **\<Order>** 子要素である要素もあり **\<OrderDetail>** ます。  
   
- ** \<Customer>** の**orderidlist**属性は、 ** \<Order>** 要素の**OrderID**属性を参照する IDREFS 型の属性です。  
+ の**Orderidlist**属性 **\<Customer>** は、要素の**OrderID**属性を参照する IDREFS 型の属性です **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

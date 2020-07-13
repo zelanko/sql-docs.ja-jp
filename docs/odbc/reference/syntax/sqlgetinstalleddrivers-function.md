@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061522"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303329"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 関数
 **互換性**  
@@ -59,7 +59,7 @@ BOOL SQLGetInstalledDrivers(
 ## <a name="diagnostics"></a>診断  
  **Sqlgetのドライバー**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszbuf*引数が NULL または無効であったか、 *cbBufMax*引数が0以下でした。|  
@@ -71,6 +71,6 @@ BOOL SQLGetInstalledDrivers(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバーの説明と属性を返す|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|

@@ -1,5 +1,6 @@
 ---
 title: XPath クエリの実行 (SQLXML)
+description: SQLXML マネージクラスを使用してマッピングスキーマに対して XPath クエリを実行する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 999ab1ad269b32c0e02cff2fb143777dc1e2e24a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 139ebeadb8ea481180aa97df600bfc9d3280d20f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649358"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath クエリの実行 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、マッピング スキーマに対する XPath クエリの実行方法を示します。  
   
  次のスキーマについて考えてみます。  

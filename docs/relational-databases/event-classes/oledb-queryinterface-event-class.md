@@ -12,15 +12,15 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39059275021f1196b729af4f30f23a09fd95c197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b6122d9128d42b49da2d041c19a07dcf51fa8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753329"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **OLEDB QueryInterface** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの **OLE DB QueryInterface** 呼び出しが行われるときに発生します。 このイベント クラスは、分散クエリやリモート ストアド プロシージャに関連する問題を監視するトレースに含めます。  
   
  **OLEDB QueryInterface** イベント クラスを含めると、オーバーヘッドが大きくなります。 このようなイベントが頻繁に発生すると、トレースによってパフォーマンスが大きく低下することがあります。 発生するオーバーヘッドを最小限に抑えるには、短期間だけ特定の問題を監視するトレースに限定してこのイベント クラスを使用するようにします。  

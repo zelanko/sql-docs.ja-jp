@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109827"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>テーブルのスタイルを選択/マトリックスのスタイルを選択
@@ -25,7 +25,7 @@ ms.locfileid: "66109827"
  また、新しいスタイル テンプレートを追加することもできます。  
   
 ## <a name="see-also"></a>参照  
- [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポートビルダーと SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  
   
   

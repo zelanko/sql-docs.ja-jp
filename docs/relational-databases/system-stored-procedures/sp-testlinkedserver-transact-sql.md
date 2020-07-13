@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6aadde09a22d766033704dffe0ecc8b4247954c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892610"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リンク サーバーへの接続をテストします。 テストが成功しなかった場合は、例外が発生し、失敗の理由が示されます。  
   
@@ -48,7 +48,7 @@ sp_testlinkedserver [ @servername ] = servername
  アクセス許可はチェックされません。ただし、呼び出し元には適切なログインマッピングが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、という`SEATTLESales`名前のリンクサーバーを作成し、接続をテストします。  
+ 次の例では、という名前のリンクサーバーを作成 `SEATTLESales` し、接続をテストします。  
   
 ```  
 USE master;  
@@ -61,8 +61,8 @@ sp_testlinkedserver SEATTLESales;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
   

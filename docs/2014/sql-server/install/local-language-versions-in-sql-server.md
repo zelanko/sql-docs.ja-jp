@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c857b6e77e6fbf4ea7eb4d5e11b72d76708ad86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63195066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045125"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server のローカル言語版
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows オペレーティング システムでサポートされているすべての言語がサポートされています。  
@@ -30,7 +29,7 @@ ms.locfileid: "63195066"
   
 -   また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ版は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の英語インスタンスとサイド バイ サイドでインストールできます。  
   
-##  <a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
+##  <a name="configure-operating-system-to-support-localized-versions"></a><a name="BK_ConfigureOS"></a> Configure Operating System to Support Localized Versions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各言語のバージョンは、Windows Multilingual User Interface Pack (MUI) 設定を使用することにより、サポートされているオペレーティング システムの英語バージョン上でサポートされます。  
   
  ただし、英語以外の MUI 設定を持つ英語オペレーティング システムを実行しているサーバーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ バージョンをインストールする場合は、事前にオペレーティング システムのいくつかの設定を確認する必要があります。 以下のオペレーティング システム設定が、インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカライズ バージョンの言語に一致していることを確認する必要があります。  

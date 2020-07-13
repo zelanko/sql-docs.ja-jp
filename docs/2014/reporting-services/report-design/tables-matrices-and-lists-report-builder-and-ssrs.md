@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104749"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66104749"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a>一覧  
+##  <a name="table"></a><a name="Table"></a>一覧  
  テーブルを使用すると詳細データの表示やデータの行グループへの編成、またはその両方が可能です。 テーブル テンプレートには、テーブル ヘッダー行およびデータの詳細行と共に、3 つの列が含まれます。 次の図では、デザイン画面で初期のテーブル テンプレートが選択されています。  
   
  ![デザイン画面上のテーブル テンプレート、選択](../media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
@@ -76,7 +76,7 @@ ms.locfileid: "66104749"
   
 
   
-##  <a name="Matrix"></a>一覧  
+##  <a name="matrix"></a><a name="Matrix"></a>一覧  
  PivotTable またはクロス集計と同様に、マトリックスは、行と列にグループ化した集計データ サマリの表示に使用します。 グループの行と列の数は、各行グループおよび列グループに含まれている一意の値の数によって決定します。 次の図では、デザイン画面で初期のマトリックス テンプレートが選択されています。  
   
  ![ツールボックスから追加された新しいマトリックス、選択済み](../media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択済み")  
@@ -91,7 +91,7 @@ ms.locfileid: "66104749"
   
 
   
-##  <a name="List"></a>表  
+##  <a name="list"></a><a name="List"></a>表  
  一覧は、自由形式のレイアウトの作成に使用します。 グリッド レイアウトのみに制限されず、フィールドは一覧内に自由に配置できます。 一覧は、多数のデータセット フィールドを表示するフォームの設計に使用したり、グループ化されたデータの場合は、複数のデータ領域を並列に表示するコンテナーとして使用したりすることができます。 たとえば、一覧にグループを定義し、テーブル、グラフ、およびイメージを追加し、従業員や患者のレコードを表示する際と同様に、各グループ値についてテーブルまたはグラフィック形式で値を表示することができます。  
   
  ![ツールボックスから追加された新しい一覧、選択](../media/rs-listtemplatenewselected.gif "ツールボックスから追加された新しい一覧、選択")  
@@ -100,7 +100,7 @@ ms.locfileid: "66104749"
   
 
   
-##  <a name="PreparingData"></a>データの準備  
+##  <a name="preparing-data"></a><a name="PreparingData"></a>データの準備  
  テーブル、マトリックス、および一覧のデータ領域には、データセットのデータが表示されます。 データセットのデータを取得するクエリのデータを準備することも、テーブル、マトリックス、または一覧でプロパティを設定してデータを準備することもできます。  
   
  レポート データセットのデータを取得するのに使用する、 [!INCLUDE[tsql](../../includes/tsql-md.md)]などのクエリ言語でデータを準備するには、データのサブセットのみを含むようにフィルターを適用し、レポートが読みやすくなるように NULL 値や空白を定数に置き換え、データの並べ替えやグループ化を行います。  
@@ -111,15 +111,15 @@ ms.locfileid: "66104749"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a>テーブル、マトリックス、または一覧の構築と構成  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a>テーブル、マトリックス、または一覧の構築と構成  
  テーブルまたはマトリックスをレポートに追加する場合は、テーブルまたはマトリックス ウィザードを使用するか、レポート ビルダーおよびレポート デザイナーに用意されたテンプレートから手動で構築できます。 一覧は、一覧のテンプレートから手動で構築します。  
   
  ウィザードを使用すると、手順に従ってテーブルやマトリックスを簡単に構築および構成できます。 ウィザードを完了した後、または Tablix データ領域を最初から構築する場合、さらに詳細に構成および調整できます。 データ領域の右クリック メニューで表示されるダイアログ ボックスで、改ページ、ヘッダーとフッターの繰り返しと表示設定、表示オプション、フィルター、並べ替えなどの一般的に使用するプロパティを簡単に設定できます。 ただし、Tablix データ領域にはレポート ビルダーのプロパティ ペインでのみ設定できる追加のプロパティも多数含まれています。 たとえば、テーブル、マトリックス、または一覧のデータセットが空の場合にメッセージを表示するには、プロパティ ペインの NoRowsMessage Tablix プロパティでメッセージ テキストを指定します。  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a>Tablix テンプレート間の変更  
- 最初に選択した Tablix テンプレートによる制限はありません。 グループ、合計、ラベルなどの追加に伴い、Tablix デザインを変更できます。 たとえば、テーブルから開始し、その後詳細行を削除したり、列グループを追加したりする場合があります。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a>Tablix テンプレート間の変更  
+ 最初に選択した Tablix テンプレートによる制限はありません。 グループ、合計、ラベルなどの追加に伴い、Tablix デザインを変更できます。 たとえば、テーブルから開始し、その後詳細行を削除したり、列グループを追加したりする場合があります。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  Tablix 機能を追加することで、テーブル、マトリックス、または一覧の改良を続けることができます。 Tablix 機能には、詳細データやグループ化されたデータの集計を行および列に表示する機能が含まれます。 入れ子構造のグループ、独立した隣接するグループ、または再帰的なグループを作成できます。 グループ データのフィルター処理や並べ替えが可能なほか、複数のグループ式をグループ定義に含めることにより、グループを簡単に組み合わせることができます。  
   
@@ -127,51 +127,51 @@ ms.locfileid: "66104749"
   
 
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作方法に関するトピック  
  このセクションでは、レポートでテーブル、マトリックス、および一覧を使用する手順について説明しているトピックの一覧を紹介します。具体的には、行と列のデータの表示、列の追加と削除、セルの結合、および行および列グループの小計を含める方法を示します。  
   
--   [詳細グループ &#40;レポートビルダーと SSRS&#41;を追加します。](add-a-details-group-report-builder-and-ssrs.md)  
+-   [詳細グループの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [グループまたは Tablix データ領域 &#40;レポートビルダーと SSRS に合計を追加&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [セル内の項目を変更するレポートビルダーと SSRS を &#40;&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [セル内のアイテムの変更 &#40;レポート ビルダーおよび SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [レポートビルダーと SSRS の &#40;行の高さまたは列の幅を変更&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [行の高さまたは列の幅の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [列 &#40;レポートビルダーと SSRS&#41;の挿入または削除](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [行 &#40;レポートビルダーと SSRS&#41;の挿入または削除](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [行の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [データ領域内のセルの結合 &#40;レポートビルダーと SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [データ領域内のセルの結合 &#40;レポート ビルダーおよび SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [レポートビルダーと SSRS の &#40;再帰型階層グループを作成&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [データ領域でのグループの追加または削除 &#40;レポートビルダーと SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [レポートビルダーおよび SSRS&#41;&#40;階段状レポートを作成する](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [階段状レポートの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [テーブル、マトリックス、または一覧の追加、移動、または削除 &#40;レポートビルダーと SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [テーブル、マトリックス、または一覧の追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>このセクションの説明  
  次の各トピックでは、Tablix データ領域の使用に関する追加情報について説明します。  
   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  Tablix データ、詳細データ、およびグループ化されたデータの領域、列グループおよび行グループ、静的および動的な行と列など、Tablix データ領域に関連する主な概念について説明します。  
   
- [Tablix データ領域 &#40;レポートビルダーと SSRS&#41;にデータを追加する](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix データ領域へのデータの追加 &#40;レポート ビルダーおよび SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Tablix データ領域に詳細データ、グループ化されたデータ、小計と総計、およびラベルを追加する方法について詳しく説明します。  
   
  [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  レポートに表示したときの Tablix データ領域の表示方法を変更するための Tablix データ領域のプロパティについて説明します。  
   
- [レポートビルダーおよび SSRS&#41;&#40;の行見出しと列見出しの制御](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [行見出しと列見出しの制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  テーブル、マトリックス、または一覧のデータ領域が上下または左右の複数のページにわたる場合、行見出しおよび列見出しの表示を制御する方法について説明します。  
   
- [レポートビルダーおよび SSRS&#41;&#40;の再帰型階層グループの作成](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  親子間のリレーションシップがデータセットのフィールドで表されている再帰型データを表示する方法について説明します。  
   
  [グループについて &#40;レポート ビルダーおよび SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
@@ -180,13 +180,13 @@ ms.locfileid: "66104749"
 
   
 ## <a name="see-also"></a>参照  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
- [同じデータセットへの複数のデータ領域のリンク &#40;レポート ビルダーおよび SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [データセットフィルター、データ領域フィルター、およびグループフィルターを追加 &#40;レポートビルダーと SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [入れ子になったデータ領域 &#40;レポートビルダーと SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [同じデータセットへの複数のデータ領域のリンク &#40;レポートビルダーと SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67916826"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759708"
 ---
 # <a name="status-property-example-field-vb"></a>Status プロパティの例 (Field) (VB)
 次の例では、[インターネット発行プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を使用して、読み取り/書き込みフォルダーからドキュメントを開きます。 [レコード](../../../ado/reference/ado-api/record-object-ado.md)の[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Status](../../../ado/reference/ado-api/status-property-ado-field.md)プロパティは、最初に**adfieldpendinginsert**に設定され、次に**adFieldOk**に更新されます。  

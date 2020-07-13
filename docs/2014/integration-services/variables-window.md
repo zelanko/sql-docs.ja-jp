@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62daceac93eda76f2d81ea0fdce00a3c5fa7e97f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62877877"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420149"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
   **[変数]** ウィンドウを使用すると、ユーザー定義変数を作成、変更し、システム変数を表示できます。  
@@ -29,8 +28,7 @@ ms.locfileid: "62877877"
  必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   
 > [!NOTE]
->  
-  `Name` プロパティと `Namespace` プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
+>  `Name` プロパティと `Namespace` プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
 ## <a name="options"></a>オプション  
  **変数の追加**  
@@ -65,9 +63,9 @@ ms.locfileid: "62877877"
  変数の値を表示します。 ユーザー定義変数の値を更新できます。 この値は、リテラルまたは式にすることができます。また、複数行の文字列にすることもできます。 変数に式を割り当てるには、 **[変数]** ウィンドウの **[式]** 列の横にある参照ボタンをクリックします。  
   
  `Namespace`  
- 名前空間名を表示します。 ユーザー定義変数は、最初に**ユーザー**名前空間で作成されますが、 `Namespace`フィールドの名前空間の名前を変更することもできます。 この列を表示するには、 **[グリッドのオプション]** をクリックします。  
+ 名前空間名を表示します。 ユーザー定義変数は、最初に**ユーザー**名前空間で作成されますが、フィールドの名前空間の名前を変更することもでき `Namespace` ます。 この列を表示するには、 **[グリッドのオプション]** をクリックします。  
   
- **変更イベントの発生**  
+ **[Raise Change Event]**  
  値を変更した場合に `OnVariableValueChanged` イベントを発生させるかどうかを示します。 ユーザー定義変数およびシステム変数の値を更新できます。 既定では、 **[変数]** ウィンドウにこの列は表示されません。 この列を表示するには、 **[グリッドのオプション]** をクリックします。  
   
  **説明**  
@@ -78,7 +76,7 @@ ms.locfileid: "62877877"
   
  変数に式を割り当てると、変数の横に特別なアイコン マーカーが表示されます。 この特別なアイコン マーカーは、式が設定されている接続マネージャーおよびタスクの横にも表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
  [SSIS&#41; 式の Integration Services &#40;](expressions/integration-services-ssis-expressions.md)   

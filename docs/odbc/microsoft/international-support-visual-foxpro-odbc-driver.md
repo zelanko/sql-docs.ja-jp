@@ -16,14 +16,14 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b4b0c758bb478ea6a468e6756c3d6f0f52c766f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085500"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299972"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>国際化サポート (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーでは、次の機能がサポートされています。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bbc90dc2d818ca880a9f712d551fd6a98fb9ecf3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760428"
 ---
 # <a name="commandtype-property-ado"></a>CommandType プロパティ (ADO)
 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの種類を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "67919690"
 > [!NOTE]
 >  **Adcmdfile**の**commandtypeenum**値、または**CommandType**と共に**adcmdtabledirect**を使用しないでください。 これらの値は、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドおよび[Requery](../../../ado/reference/ado-api/requery-method.md)メソッドでオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **CommandType**プロパティを使用して、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティの評価を最適化します。  
   
  **CommandType**プロパティ値が既定値の**adcmdunknown**に設定されている場合、 **ado.net プロパティが**SQL ステートメント、ストアドプロシージャ、またはテーブル名であるかどうかを確認するために ADO がプロバイダーの呼び出しを行う必要があるため、パフォーマンスが低下する可能性があります。 使用しているコマンドの種類がわかっている場合は、 **CommandType**プロパティを設定することによって、関連するコードに直接アクセスするように ADO に指示します。 **CommandType**プロパティが**CommandText**プロパティ内のコマンドの型と一致しない場合、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出すとエラーが発生します。  

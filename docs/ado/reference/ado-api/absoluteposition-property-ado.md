@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921692"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747520"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在のレコードの位置を表す序数を示します。  

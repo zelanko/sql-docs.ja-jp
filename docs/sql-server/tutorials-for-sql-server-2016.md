@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: 5e9223f957692074090b949cd522c0146d4a57fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665395"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000676"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には、新しいテクノロジと機能の学習に役立つチュートリアルが用意されています。 通常、以前のバージョンのチュートリアルを新しいバージョンで使用できます。 チュートリアルで新しい機能を扱っている場合は、そのチュートリアルを完了するための最低限のバージョンが示されています。  
      
--   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    
+-   チュートリアルでいずれかの [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] データベースが使われている場合は、最新のバージョンを CodePlex からダウンロードして使う必要があります。 詳しくは、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] チュートリアルで使用する [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ブックと [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをダウンロードし、 [「SQL Server 2012 用の Power View のサンプル」](https://go.microsoft.com/fwlink/?LinkId=220734)にアクセスしてください。  
 - [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub リポジトリに提供されている [Wide World Importers](https://github.com/Microsoft/sql-server-samples) の新しいサンプルを確認します。 
 

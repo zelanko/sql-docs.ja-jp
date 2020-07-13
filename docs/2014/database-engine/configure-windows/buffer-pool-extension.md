@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935893"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。
@@ -25,7 +24,7 @@ ms.locfileid: "78175435"
 
  データ ページとインデックス ページがディスクからバッファー プールに読み込まれ、変更されたページ (ダーティ ページとも呼ばれます) がディスクに書き戻されます。 サーバー チェックポイントおよびデータベース チェックポイントでメモリ不足が発生すると、バッファー キャッシュ内のホットな (アクティブな) ダーティ ページがキャッシュから削除され、機械式ディスクに書き込まれた後、再度キャッシュに読み込まれます。 通常、これらの I/O 操作は、4 ～ 16 KB という小規模なデータのランダム読み取り/書き込みです。 小規模なランダム I/O パターンの場合、頻繁なシークが発生して機械式ディスクのアームが動き続けるため、I/O 待機時間が長くなり、システムの総 I/O スループットが低下します。
 
- このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重大な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の増加に伴い運用コストが増加します。
+ このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重要な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の拡大に伴い運用コストが増加します。
 
  バッファー プール拡張機能は、不揮発性ストレージ (通常は SSD) でバッファー プール キャッシュを拡張します。 この拡張により、より大きなデータベースのワーキング セットをバッファー プールに格納でき、その結果、RAM と SSD の間の I/O のページングが強制的に実行されます。 これによって、小規模なランダム I/O の処理が実質的に機械式ディスクから SSD に移行されます。 SSD は待機時間が短くランダム I/O のパフォーマンスに優れているため、バッファー プール拡張によって I/O スループットが大幅に向上します。
 
@@ -46,18 +45,18 @@ ms.locfileid: "78175435"
 
  ソリッドステートドライブ (SSD) ソリッドステートドライブは、データをメモリ (RAM) に永続的な方法で格納します。 詳細については、 [この定義](http://en.wikipedia.org/wiki/Solid-state_drive)を参照してください。
 
- バッファーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、バッファーはメモリ内の 8 KB のページで、データページやインデックスページと同じサイズです。 したがって、バッファー キャッシュは 8 KB 単位のページに分割されます。 バッファー マネージャーが別のデータを読み取るためのバッファー領域を必要とするまで、そのページはバッファー キャッシュ内に残ります。 データに変更が加えられた場合だけ、そのデータがディスクに書き戻されます。 これらのメモリ内の修正されたページは、"ダーティ ページ" と呼ばれます。 ページは、ディスク上のデータベース イメージと等価であるときにクリーンです。 バッファー キャッシュ内のデータは、ディスクに書き戻す前に何度でも変更できます。
+ バッファーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、バッファーはメモリ内の 8 KB のページで、データページやインデックスページと同じサイズです。 したがって、バッファー キャッシュは 8 KB 単位のページに分割されます。 バッファー マネージャーが別のデータを読み取るためのバッファー領域を必要とするまで、そのページはバッファー キャッシュ内に残ります。 データに変更が加えられた場合だけ、そのデータがディスクに書き戻されます。 これらのメモリ内の修正されたページは、"ダーティ ページ" と呼ばれます。 ページは、ディスク上のデータベース イメージと等価であるときにクリーンです。 バッファー キャッシュ内のデータは、ディスクに書き戻す前に何度でも変更できます。
 
  バッファープールは、バッファーキャッシュとも呼ばれます。 バッファー プールは、キャッシュされたデータ ページを利用するためにすべてのデータベースで共有されるグローバル リソースです。 バッファー プール キャッシュの最大サイズと最小サイズは、起動時か、または SQL Server のインスタンスが sp_configure を使用して動的に再構成されるときに決定されます。 このサイズにより、実行中のインスタンスで任意のときにバッファー プールにキャッシュできる最大ページ数が決まります。
 
- チェックポイントチェックポイントを作成すると、予期し[!INCLUDE[ssDE](../../includes/ssde-md.md)]ないシャットダウンやクラッシュの後、復旧中にトランザクションログに含まれていた変更の適用をが開始できる優れたポイントが作成されます。 チェックポイントは、変更されたページとトランザクション ログ情報をメモリからディスクに書き込み、さらにトランザクション ログに関する情報を記録します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。
+ チェックポイントチェックポイントを作成すると、予期し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ないシャットダウンやクラッシュの後、復旧中にトランザクションログに含まれていた変更の適用をが開始できる優れたポイントが作成されます。 チェックポイントは、変更されたページとトランザクション ログ情報をメモリからディスクに書き込み、さらにトランザクション ログに関する情報を記録します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。
 
 ## <a name="buffer-pool-extension-details"></a>バッファー プール拡張の詳細
  SSD ストレージは、ディスク ストレージ サブシステムではなく、メモリ サブシステムの拡張として使用されます。 つまり、バッファー プール拡張ファイルによって、バッファー プール マネージャーが DRAM と NAND フラッシュ メモリの両方を使用し、SSD を使用した不揮発性ランダム アクセス メモリ上に "微温" ページ用のはるかに大きなバッファー プールを保持できるようになります。 これにより、DRAM としてのレベル 1 (L1) と SSD 上のバッファー プール拡張ファイルとしてのレベル 2 (L2) から成る複数レベルのキャッシュ階層が作成されます。 データの安全性を維持するため、L2 キャッシュにはクリーンなページのみが書き込まれます。 バッファー マネージャーは、L1 キャッシュと L2 キャッシュの間のクリーンなページの移動を処理します。
 
  次の図は、バッファー プールのアーキテクチャを他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントに関連して示した概要図です。
 
- ![SSD バッファー プールの拡張機能アーキテクチャ](../media/ssdbufferpoolextensionarchitecture.gif "SSD バッファー プールの拡張機能アーキテクチャ")
+ ![SSD バッファー プール拡張機能のアーキテクチャ](../media/ssdbufferpoolextensionarchitecture.gif "SSD バッファー プール拡張機能のアーキテクチャ")
 
  有効な場合、バッファー プール拡張は、SSD 上のバッファー プール キャッシュ ファイルのサイズおよびファイル パスを指定します。 このファイルは SSD 上のストレージの連続的なエクステントで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの起動時に静的に構成されます。 ファイルの構成パラメーターの変更は、バッファー プール拡張機能が無効になっている場合にのみ実行できます。 バッファー プール拡張を無効にすると、すべての関連する構成設定がレジストリから削除されます。 バッファー プール拡張ファイルは、SQL Server インスタンスがシャットダウンされると削除されます。
 
@@ -73,9 +72,9 @@ ms.locfileid: "78175435"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>バッファー プール拡張に関する情報の取得
  次の動的管理ビューを使用して、バッファー プール拡張の構成を表示し、拡張のデータ ページに関する情報を取得できます。
 
--   [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  SQL Server ではパフォーマンス カウンターが用意されており、Buffer Manager オブジェクトを使用して、バッファー プール拡張ファイル内のデータ ページを追跡することができます。 詳細については、「 [バッファー プール拡張のパフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)」を参照してください。
 
@@ -93,9 +92,9 @@ ms.locfileid: "78175435"
 |||
 |-|-|
 |**タスクの説明**|**トピック**|
-|バッファー プール拡張を有効化および構成する|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|バッファー プール拡張の構成を変更する|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|バッファー プール拡張の構成を表示する|[dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|バッファー プール拡張を監視する|[dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [パフォーマンスカウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|バッファー プール拡張を有効化および構成する|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|バッファー プール拡張の構成を変更する|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|バッファー プール拡張の構成を表示する|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|バッファー プール拡張を監視する|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [パフォーマンス カウンター](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

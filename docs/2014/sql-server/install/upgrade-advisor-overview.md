@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b3d10ff74c78e97ea554acdbcce3a5df0d76b74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062385"
 ---
 # <a name="upgrade-advisor-overview"></a>アップグレード アドバイザーの概要
   アップグレード アドバイザーには、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のコンポーネントを分析し、分析結果に関する情報が記載されたレポートを表示するための中央コンソールが用意されています。  
@@ -50,8 +49,7 @@ ms.locfileid: "66091594"
  アップグレード アドバイザー分析ウィザードによる分析が完了すると、分析対象として選択したコンポーネントごとに XML ファイルが作成されます。 これらの XML ファイルには、各コンポーネントの検出されたアイテムと問題が含まれています。  
   
 ### <a name="what-upgrade-advisor-analyzes"></a>アップグレード アドバイザーの分析対象  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントごとに、アップグレード アドバイザーのコンテキスト内で専用のアナライザーが実行されます。 各アナライザーは、コンポーネントに関する XML レポートを出力します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントごとに、アップグレード アドバイザーのコンテキスト内で専用のアナライザーが実行されます。 各アナライザーは、コンポーネントに関する XML レポートを出力します。  
   
  アップグレード アドバイザーでは、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが照会されます。  
   
@@ -74,13 +72,11 @@ ms.locfileid: "66091594"
 ## <a name="upgrade-advisor-report-viewer"></a>アップグレード アドバイザー レポート ビューアー  
  アップグレードアドバイザーレポートを表示するには、アップグレードアドバイザーの開始ページで [**アップグレードアドバイザーレポートビューアーの起動**] をクリックします。 アップグレード アドバイザー レポート ビューアーが起動し、既定ディレクトリのレポートが読み込まれます。 アップグレードアドバイザーのレポートビューアーで既定のディレクトリにレポートが検出されない場合、レポートは表示されません。 既定ディレクトリにレポートがない場合は、アップグレード アドバイザー分析ウィザードを実行してレポートを作成するか、別のサーバーまたはサブディレクトリから既存のレポートを読み込みます。  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アップグレード アドバイザーで、既存のレポートは上書きされません。 ただし、レポート ビューアーで表示されるのは、最近 5 件のレポートのみです。 以前のレポートを表示するには、[**レポート**] ボックスの一覧からレポートを選択します。 タイムスタンプにより、レポートが生成された日時が示されます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アップグレード アドバイザーで、既存のレポートは上書きされません。 ただし、レポート ビューアーで表示されるのは、最近 5 件のレポートのみです。 以前のレポートを表示するには、[**レポート**] ボックスの一覧からレポートを選択します。 タイムスタンプにより、レポートが生成された日時が示されます。  
   
  XML ファイルがアップグレード アドバイザー分析ウィザードからアップグレード アドバイザー レポート ビューアーに読み込まれると、各コンポーネントのレポートが表示されます。 レポートには、対処が必要な既知の問題が検出できるできないに限らず、すべて含まれています。 各問題には、重要度を示すアイコン、問題の修正が必要な時期を示すラベル、および簡単な説明が付けられています。 問題を展開すると、より詳しい説明、問題の詳細へのリンク、およびヘルプ ファイルへのリンクが表示されます。 各問題の情報は、問題を修正するために十分な情報を提供するように設計されています。  
   
- ほとんどのコンポーネントには、検出できない問題があります。 これらの問題を表示するには、コンポーネントの [**その他のアップグレードの問題**] 項目を展開し、リンクをクリックして、ドキュメントの問題に関する追加情報を表示します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の下位互換性の問題の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
+ ほとんどのコンポーネントには、検出できない問題があります。 これらの問題を表示するには、コンポーネントの [**その他のアップグレードの問題**] 項目を展開し、リンクをクリックして、ドキュメントの問題に関する追加情報を表示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の下位互換性の問題の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

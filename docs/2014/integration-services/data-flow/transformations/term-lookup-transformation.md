@@ -17,15 +17,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b349710494d52d01ba82c572b4646057b8d52a02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430119"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
@@ -62,7 +61,7 @@ ms.locfileid: "62770318"
 |参照用語|Windows, Windows 7 Professional|  
 |Output|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字は次のとおりです:%、@、&、$、#、 \* 、:、;、.、 **、、** !,?, \<, > 、+、=、^、~、|、 \\ 、/、(、)、[、]、{、}、"、および '。  
   
 ## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](data-conversion-transformation.md)」を参照してください。  
@@ -78,8 +77,7 @@ ms.locfileid: "62770318"
   
  変換出力列の InputColumnType プロパティが 0 または 2 に設定されている場合、1 つの列に CustomLineageID プロパティが含まれます。このプロパティには、上流のデータ フロー コンポーネントによって列に割り当てられた、系列 ID が含まれます。  
   
- 用語参照変換は、`Term` と `Frequency` という既定の名前野付いた 2 つの列を変換出力に追加します。 
-  `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
+ 用語参照変換は、`Term` と `Frequency` という既定の名前野付いた 2 つの列を変換出力に追加します。 `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
   
  参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換の出力がテーブルに保存されている場合、このテーブルを参照テーブルとして使用できます。ただし、他のテーブルを使用することもできます。 フラット ファイルのテキスト、Excel ブック、または他の変換元を用語参照変換で使用するには、これらを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースまたは Access データベースにインポートする必要があります。  
   
@@ -93,22 +91,20 @@ ms.locfileid: "62770318"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[用語参照変換エディター] &#40;[参照テーブル] タブ&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [用語参照変換エディター ([参照テーブル] タブ)](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [[用語参照変換エディター] &#40;[詳細設定] タブ&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [用語参照変換エディター ([詳細設定] タブ)](../../term-lookup-transformation-editor-advanced-tab.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

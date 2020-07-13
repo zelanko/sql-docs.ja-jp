@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0f0950e48245bed53581d2f91b120ab9555aa562
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63033730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064580"
 ---
 # <a name="statistics"></a>統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したりクエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
   
-##  <a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
  統計  
  クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するオブジェクトです。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の *カーディナリティ*、つまり行数を推定します。 これらの *カーディナリティの推定* に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、リソースの消費が多い Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、クエリのパフォーマンスが向上します。  
   
@@ -103,9 +102,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]から[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
-##  <a name="CreateStatistics"></a>統計を作成する場合  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 統計を作成する場合  
  クエリ オプティマイザーによって、既に次のようにして統計が作成されています。  
   
 1.  インデックスの作成時に、クエリ オプティマイザーによってテーブルまたはビューのインデックスに対する統計が作成されます。 これらの統計は、インデックスのキー列について作成されます。 インデックスがフィルター選択されたインデックスの場合は、フィルター選択されたインデックスに指定された行のサブセットと同じ行のサブセットについて、フィルター選択された統計が作成されます。 フィルター選択されたインデックスの詳細については、「[フィルター選択されたインデックスの作成](../indexes/create-filtered-indexes.md)」および 「[CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)」を参照してください。  
@@ -118,8 +117,7 @@ ORDER BY s.name;
   
  次のいずれかに該当する場合は、CREATE STATISTICS ステートメントを使用して統計を作成することを検討してください。  
   
--   
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] チューニング アドバイザーで統計を作成するように提示される。  
+-   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] チューニング アドバイザーで統計を作成するように提示される。  
   
 -   相関関係にある複数の列がクエリ述語に含まれているが、それらがまだ同じインデックスに存在しない。  
   
@@ -148,8 +146,7 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- この例では、統計オブジェクト `LastFirst` に、列プレフィックス (`LastName`)、(`LastName, MiddleName`)、および (`LastName, MiddleName, FirstName`) の密度が格納されています。 (`LastName, FirstName`) の密度は使用できません。 
-  `LastName` を使用せずに `FirstName` と `MiddleName` を使用したクエリの場合は、カーディナリティの推定に密度を使用することはできません。  
+ この例では、統計オブジェクト `LastFirst` に、列プレフィックス (`LastName`)、(`LastName, MiddleName`)、および (`LastName, MiddleName, FirstName`) の密度が格納されています。 (`LastName, FirstName`) の密度は使用できません。 `LastName` を使用せずに `FirstName` と `MiddleName` を使用したクエリの場合は、カーディナリティの推定に密度を使用することはできません。  
   
 ### <a name="query-selects-from-a-subset-of-data"></a>データのサブセットから選択するクエリを使用する  
  クエリ オプティマイザーでは、1 列ずつおよびインデックスに対して統計を作成する際、すべての行の値に対する統計を作成します。 行のサブセットから選択するクエリの場合、その行のサブセットのデータ分布が一意であれば、フィルター選択された統計情報を使用することでクエリ プランを向上させることができます。 フィルター選択された統計情報は、CREATE STATISTICS ステートメントを WHERE 句と共に使用してフィルター述語の式を定義することで作成できます。  
@@ -187,21 +184,17 @@ GO
   
 -   存在しない統計を CREATE STATISTICS ステートメントを使用して作成します。  
   
- 読み取り専用データベースまたは読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]は、`tempdb` に一時的な統計を作成して維持します。 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で一時的な統計を作成する場合は、一時的な統計と永続的な統計とを区別するためのサフィックス _readonly_database_statistic が統計名に付加されます。 サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 読み書き可能なデータベースでは、一時的な統計用のスクリプトを作成して再現できます。 スクリプトを作成する場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、統計名のサフィックスを _readonly_database_statistic から _readonly_database_statistic_scripted に変更します。  
+ 読み取り専用データベースまたは読み取り専用スナップショットに関する統計が欠落しているか、古くなっている場合、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]は、`tempdb` に一時的な統計を作成して維持します。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で一時的な統計を作成する場合は、一時的な統計と永続的な統計とを区別するためのサフィックス _readonly_database_statistic が統計名に付加されます。 サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 読み書き可能なデータベースでは、一時的な統計用のスクリプトを作成して再現できます。 スクリプトを作成する場合、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、統計名のサフィックスを _readonly_database_statistic から _readonly_database_statistic_scripted に変更します。  
   
  一時的な統計を作成して更新できるのは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のみです。 ただし、永続的な統計の場合と同じツールを使用すると、一時的な統計を削除して、統計のプロパティを監視できます。  
   
--   
-  [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) ステートメントを使用して作成された統計に適用されます。  
+-   [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) ステートメントを使用して作成された統計に適用されます。  
   
--   
-  
-  **sys.stats** カタログ ビューと **sys.stats_columns** カタログ ビューを使用して統計を監視します。 **sys_stats**には、永続的な統計と一時的な統計を示すための**is_temporary**列が含まれています。  
+-   **sys.stats** カタログ ビューと **sys.stats_columns** カタログ ビューを使用して統計を監視します。 **sys_stats** には、どの統計が一時的または永続的なものかを示すための **is_temporary** 列が含まれています。  
   
  一時的な統計は `tempdb` に格納されるので、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計がすべて表示されなくなります。  
   
-##  <a name="UpdateStatistics"></a>統計を更新する場合  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 統計を更新する場合  
  クエリ オプティマイザーでは、古くなっている可能性がある統計を判断し、それらがクエリ プランに必要な場合は更新します。 場合によっては、AUTO_UPDATE_STATISTICS をオンにした場合より頻繁に統計を更新することで、クエリ プランが向上し、クエリのパフォーマンスが向上することがあります。 統計は、UPDATE STATISTICS ステートメントまたは sp_updatestats ストアド プロシージャを使用して更新できます。  
   
  統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。  
@@ -231,7 +224,7 @@ GO
   
  インデックスの再構築、デフラグ、再構成などの操作では、データの分布は変わりません。 そのため、ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG、または ALTER INDEX REORGANIZE の各操作を実行した後に統計を更新する必要はありません。 ALTER INDEX REBUILD または DBCC DBREINDEX を使用してテーブルまたはビューのインデックスを再構築した場合、クエリ オプティマイザーによって統計が更新されますが、この統計の更新はインデックスを再作成する過程で実行されるものです。 DBCC INDEXDEFRAG 操作または ALTER INDEX REORGANIZE 操作の後は、クエリ オプティマイザーで統計は更新されません。  
   
-##  <a name="DesignStatistics"></a>統計を効果的に使用するクエリ  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
  クエリ述語にローカル変数や複雑な式が含まれている場合など、特定のクエリ実装では、最適なクエリ プランにならないことがあります。 クエリのデザイン ガイドラインに従って統計を効果的に使用することで、この問題を回避できる場合があります。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)」を参照してください。   
   
  クエリのデザイン ガイドラインを適用して統計を効果的に使用することで、クエリ述語で使用される式、変数、および関数に対する *カーディナリティの推定* を向上させると、クエリ プランを向上させることができます。 クエリ オプティマイザーでは、式、変数、または関数の値が不明な場合、ヒストグラムで参照する値を特定できないため、ヒストグラムから最適なカーディナリティの推定を得ることができません。 その場合、クエリ オプティマイザーでは、ヒストグラム内のサンプリングされたすべての行の値ごとの平均行数に基づいてカーディナリティの推定を行います。 その結果、カーディナリティが適切に推定されず、クエリのパフォーマンスが低下することがあります。  
@@ -336,5 +329,5 @@ GO
  [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [DROP STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [フィルター選択されたインデックスの作成](../indexes/create-filtered-indexes.md)  

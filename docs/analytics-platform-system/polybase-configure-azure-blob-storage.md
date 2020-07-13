@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400727"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データにアクセスするように PolyBase を構成する
@@ -66,8 +66,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 
-  [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
+1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -79,8 +78,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
    );  
    ```
 
-1. 
-  [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
+1. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -91,8 +89,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. 
-  [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Azure ストレージに格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
+1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Azure ストレージに格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

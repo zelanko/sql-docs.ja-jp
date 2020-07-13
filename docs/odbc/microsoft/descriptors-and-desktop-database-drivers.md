@@ -13,14 +13,14 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68112050"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303513"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>記述子およびデスクトップ データベース ドライバー
 記述子は、列データまたは動的パラメーターに関する情報を保持するデータ構造です。 **SQLGetDescField**は、次に示すサポートされている記述子を取得するために使用できます。 **SQLDescribeParam**はサポートされていないため、実装パラメーター記述子 (IPD) は自動的に設定されません。 Jet で使用できない記述子フィールド (SQL_DESC_BASE_TABLE_NAME など) もサポートされていません。  

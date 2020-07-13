@@ -3,18 +3,18 @@ title: R でパーティションベースのモデルを作成する
 description: SQL Server Machine Learning のパーティション ベースのモデリング機能を使用するときに、動的に作成されるパーティション分割されたデータをモデル化、トレーニング、使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9dd7cd37b724611eedfc98c64cec1ef1acd98b7c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116135"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606684"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server 上の R でパーティション ベースのモデルを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ SQL Server 2019 でのパーティション ベースのモデリングは、パ
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)。ローカル環境のデータベース エンジン インスタンスに[ダウンロードして復元](demo-data-nyctaxi-in-sql.md)することができます。 ファイル サイズは約 90 MB です。
 
 + Machine Learning Services と R の統合を使用した、 SQL Server 2019 のデータベース エンジン インスタンス。
+
++ このチュートリアルでは、[ODBC 経由で R スクリプトから SQL Server へのループバック接続](../connect/loopback-connection.md)を使用します。 そのため、[SQLRUserGroup のログインを作成する](../security/create-a-login-for-sqlrusergroup.md)必要があります。
 
 クエリ ツールで T-SQL クエリとして **`SELECT @@Version`** を実行し、バージョンを確認します。
 

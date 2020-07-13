@@ -148,7 +148,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- `instance of sqltypes:varchar?` 変数に関連付けられているスキーマに従うと、<`root`> 要素の値の型が **varchar** 型の派生型であるため、`@var` 式は TRUE を返します。  
+ `@var` 変数に関連付けられているスキーマに従うと、<`root`> 要素の値の型が **varchar** 型の派生型であるため、`instance of sqltypes:varchar?` 式は TRUE を返します。  
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクション &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

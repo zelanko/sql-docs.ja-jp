@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5594aab7f7d21f10b3b20d42c61558984e71193
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5e152fc2950ab6f3cf605bec3b7e595d5e105d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065344"
 ---
 # <a name="installation-progress"></a>Installation Progress
-  
-  ** のセットアップ状況を監視するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][インストールの進行状況][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ状況を監視するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールの進行状況]** ページを使用します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

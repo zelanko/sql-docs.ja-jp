@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5678208e8b7aebdeae98959bb50631e801c6c865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024235"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
   メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
@@ -64,9 +63,8 @@ ms.locfileid: "68206853"
 |||  
 |-|-|  
 |**説明**|**トピック**|  
-|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](create-a-maintenance-plan.md)|  
-|メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンスプラン &#40;メンテナンスプランを作成デザインサーフェイス&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|オブジェクト エクスプローラーで利用できるメンテナンス プランの機能について説明します。|[メンテナンスプランノード &#40;オブジェクトエクスプローラー&#41;](../../ssms/object/object-explorer.md)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](create-a-maintenance-plan.md)|  
+|メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
+|オブジェクト エクスプローラーで利用できるメンテナンス プランの機能について説明します。|[[メンテナンス プラン] ノード &#40;オブジェクト エクスプローラー&#41;](../../ssms/object/object-explorer.md)|  
   
   

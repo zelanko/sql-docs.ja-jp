@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a4ed0e63c0a4502321a21f04f5b65e878fcca17
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118285"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087382"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
 
@@ -81,7 +81,7 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 |Release  |コンポーネント | ダウンロード リンク  | 対処された問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | `sp_execute_external_script` で R スクリプトを実行すると警告メッセージが表示されるバグを修正しました。 |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 以前のバージョンからの変更はありません。 |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 以前のバージョンからの変更はありません。 |

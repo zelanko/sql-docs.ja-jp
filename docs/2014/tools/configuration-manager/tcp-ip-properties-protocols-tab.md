@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 388b13ad4c381c89eeaeae2f61778161830ea895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040457"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>[TCP-IP のプロパティ] ([プロトコル] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
@@ -35,8 +34,7 @@ ms.locfileid: "63150458"
  コンピューター上のネットワーク カードに割り当てられているすべての IP アドレスで SQL Server がリッスンするかどうかを指定します。 **[いいえ]** に設定した場合は、各 IP アドレスのプロパティ ダイアログ ボックスを使用して、IP アドレスごとに個別の構成を行ってください。 **[はい]** に設定した場合は、 **[IPAll]** プロパティ ボックスの設定がすべての IP アドレスに適用されます。 既定値は **[はい]** です。  
   
  **[遅延なし]**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このプロパティに対する変更は実装されません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このプロパティに対する変更は実装されません。  
   
 ## <a name="see-also"></a>参照  
  [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

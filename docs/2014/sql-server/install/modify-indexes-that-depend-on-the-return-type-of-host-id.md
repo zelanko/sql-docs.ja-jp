@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47b4a4ff-3ec8-430c-8bb7-779a36d0e134
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 429b3b0638f8a9abab8fb2f58fe08d2d58227d58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aa964971c15810cc67f1885b6b0bef310abbd1e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012134"
 ---
 # <a name="modify-indexes-that-depend-on-the-return-type-of-host_id"></a>HOST_ID の戻り型に依存するインデックスを変更する
   HOST_ID 関数は `char(10)` を返すようになりました。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71314531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682666"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は証明書の秘密キーを使用し、暗号化データを復号します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71314531"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  

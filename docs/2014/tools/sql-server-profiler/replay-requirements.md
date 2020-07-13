@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65546f6820765286b558d2043e0155a79a07eb58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62688596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057748"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  

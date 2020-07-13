@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67943787"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300942"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1つ以上のテーブルからデータを取得します。  
@@ -271,7 +271,7 @@ WHERE customer.cust_id NOT IN ;
   
  ORDER BY で order を指定しない場合、クエリ結果は順序なしとして表示されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SELECT は、他の Visual FoxPro コマンドと同様に、Visual FoxPro に組み込まれている SQL コマンドです。 SELECT を使用してクエリを実行すると、Visual FoxPro はクエリを解釈し、テーブルから指定されたデータを取得します。 SELECT クエリは、コマンドプロンプトウィンドウまたは Visual FoxPro プログラム (他の Visual FoxPro コマンドと同様) のいずれかで作成できます。  
   
 > [!NOTE]  

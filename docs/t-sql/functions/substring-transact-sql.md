@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: SUBSTRING 関数の Transact-SQL リファレンス。 この関数からは、指定の文字、バイナリ、テキスト、イメージ型の式の一部が返されます。
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecc99e2612acb17013f47619f32d64b7968ebc9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117679"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85994235"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、文字、バイナリ、テキスト、またはイメージ型の式の一部を返します。  
   
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  返された文字の開始位置を示す integer 式または **bigint** 式です。 (番号は 1 から開始し、これは式の最初の文字が 1 であることを意味します)。 *start* に 1 より小さい値を指定した場合は、*expression* に指定された文字の先頭から値が返されます。 この場合、返される文字数は、*start* + *length*-1 の合計値か、0 のどちらか大きい方になります。 *start* が値式の文字数を上回る場合は、長さがゼロの式が返されます。  
   
  *length*  
- **expression** で返す文字数を正の整数または *bigint* 式で指定します。 *length* が負の場合はエラーが生成され、ステートメントは終了します。 *start* と *length* の合計が *expression* の文字数を上回る場合は、*start* の先頭から値式全体が返されます。  
+ *expression* で返す文字数を正の整数または **bigint** 式で指定します。 *length* が負の場合はエラーが生成され、ステートメントは終了します。 *start* と *length* の合計が *expression* の文字数を上回る場合は、*start* の先頭から値式全体が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  *expression* が、サポートされている文字データ型の 1 つである場合は、文字データが返されます。 *expression* が、サポートされている **binary** データ型の 1 つである場合は、binary データが返されます。 返される文字列のデータ型は、指定した式のデータ型と同じです。ただし、次の表の場合は例外です。  
@@ -87,10 +87,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   
@@ -115,7 +115,7 @@ bcd
 > [!NOTE]  
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
- 次の例では、**データベースにある** テーブルの **text** および `pub_info`image`pubs` データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary**です。  
+ 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary**です。  
   
 ```  
 USE pubs;  
@@ -135,7 +135,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 次の例では、**text** データと **ntext** データの両方に対する SUBSTRING の効果を示します。 この例では最初に、`pubs` という名前の `npub_info` データベースに新しいテーブルを作成します。 次に、`pr_info` 列の最初の 80 文字から `npub_info` テーブルの `pub_info.pr_info` 列を作成し、最初の文字として `ü` を追加します。 最後に、`INNER JOIN` を使って、`SUBSTRING`text**および**ntext**の両方のパブリッシャー情報列から、すべてのパブリッシャー ID 番号と** を取得します。  
+ 次の例では、**text** データと **ntext** データの両方に対する SUBSTRING の効果を示します。 この例では最初に、`npub_info` という名前の `pubs` データベースに新しいテーブルを作成します。 次に、`pr_info` 列の最初の 80 文字から `npub_info` テーブルの `pub_info.pr_info` 列を作成し、最初の文字として `ü` を追加します。 最後に、`INNER JOIN` を使って、**text** および **ntext** の両方のパブリッシャー情報列から、すべてのパブリッシャー ID 番号と `SUBSTRING` を取得します。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   

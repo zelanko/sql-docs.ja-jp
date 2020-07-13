@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: f97a568c-dab4-4e3b-a70a-1aa9af186805
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 203a1baf1079667ddb84aa986f2a805b0e71f1a4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087716"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527378"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>[ウィザードの完了] (キューブ ウィザード)
-  
   **[ウィザードの完了]** ページを使用すると、キューブに名前を付け、ウィザードの完了時に作成されるキューブをプレビューできます。  
   
 ## <a name="options"></a>オプション  

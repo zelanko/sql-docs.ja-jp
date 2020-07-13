@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922527"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747754"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
 RDS プログラミングモデルの主な要素は次のとおりです。  
@@ -64,7 +64,7 @@ RDS プログラミングモデルの主な要素は次のとおりです。
   
  **RDS。DataControl**オブジェクトには、関連付けられた**レコードセット**オブジェクトの行を移動、並べ替え、およびフィルター処理するための独自のメソッドもあります。 これらのメソッドは似ていますが、ADO**レコードセット**オブジェクトのメソッドと同じではありません。  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  RDS は、ADO イベントモデルに依存しない独自のイベントを2つサポートしています。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)イベントは、RDS が呼び出されるたびに呼び出され**ます。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティが変更され、非同期操作が正常に完了したか、終了したか、またはエラーが発生したときに通知されます。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントは、非同期操作中にエラーが発生した場合でも、エラーが発生するたびに呼び出されます。  
   
 > [!NOTE]

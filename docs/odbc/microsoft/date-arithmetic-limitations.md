@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 4ae40066-5911-4d32-937a-040bacc853ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c15a80ec72e17e1c290a4cf5832b96ec34c3cc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 13a1986da4c84aae475f69d300a83aba7597db0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081880"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280652"
 ---
 # <a name="date-arithmetic-limitations"></a>日付の算術演算の制限事項
 日付データ型から日付データ型を減算する場合、日付の算術演算はサポートされていません。

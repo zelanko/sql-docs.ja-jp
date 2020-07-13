@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101268"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>[共有データセットの選択] ページ (レポート マネージャー)
@@ -33,30 +33,27 @@ ms.locfileid: "66101268"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[共有データセット]** タブをクリックします。  
+4.  **[共有データセット]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
- **[参照]**  
+ **参照**  
  レポートの共有データセット名ごとに、対象になる共有データセットの現在のフォルダー パスと名前を確認できます。  
   
  データセット名によって参照される共有データセットを変更するには、 **[参照]** ボタンをクリックします。  
   
- 
-  **[参照]** ボタンにより、レポート サーバーのフォルダー構造が開きます。 共有データセットをクリックすると、 **[場所]** フィールドに完全なパスが追加されます。  
+ **[参照]** ボタンにより、レポート サーバーのフォルダー構造が開きます。 共有データセットをクリックすると、 **[場所]** フィールドに完全なパスが追加されます。  
   
- 
-  **[OK]** ボタンをクリックして共有データセットの選択を完了するか、または **[キャンセル]** をクリックして共有データセットの参照を取り消します。  
+ **[OK]** ボタンをクリックして共有データセットの選択を完了するか、または **[キャンセル]** をクリックして共有データセットの参照を取り消します。  
   
- **[適用]**  
+ 適用****  
  変更を保存します。  
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [共有データセットを管理する](report-data/manage-shared-datasets.md)   
+ [共有データセットの管理](report-data/manage-shared-datasets.md)   
  [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
- [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポートビルダーおよび SSRS&#41;&#40;埋め込みデータセットと共有データセット](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポートビルダー内のレポートパーツとデータセット](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

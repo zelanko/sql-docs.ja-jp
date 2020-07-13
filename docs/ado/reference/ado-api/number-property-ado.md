@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 02663507e19bf57f46b45ab7a99a717aec844dc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917996"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762363"
 ---
 # <a name="number-property-ado"></a>Number プロパティ (ADO)
 [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを一意に識別する番号を示します。  

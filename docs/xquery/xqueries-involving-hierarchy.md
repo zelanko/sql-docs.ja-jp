@@ -1,5 +1,6 @@
 ---
 title: 階層を含む XQueries |Microsoft Docs
+description: 階層を含む XQueries の例を表示します。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 21348f838ab51f2352ea975b81688ac0777fe277
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730717"
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   **AdventureWorks**データベースのほとんどの**xml**型の列は、半構造化されたドキュメントです。 したがって、各行に格納されているドキュメントは、外観が異なる場合があります。 このトピックのクエリサンプルでは、これらのさまざまなドキュメントから情報を抽出する方法について説明します。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 製造手順ドキュメントから、ワークセンターの場所とその場所の最初の製造手順を取得します。  
- 製品モデル7では、 `ManuInstr` <> 要素、 **Productmodelid**属性、 **ProductModelName**属性、および1つ以上の <`Location`> 子要素を含む XML が構築されます。  
+ 製品モデル7では、<`ManuInstr`> 要素、 **Productmodelid**属性、 **ProductModelName**属性、および1つ以上の <> 子要素を含む XML が構築され `Location` ます。  
   
- 各 <`Location`> 要素には、独自の属性セットと 1 `step`つの <> 子要素があります。 この <`step`> 子要素は、ワークセンターの場所での最初の製造手順です。  
+ 各 <`Location`> 要素には、独自の属性セットと1つの <`step`> 子要素があります。 この <`step`> 子要素は、ワークセンターの場所での最初の製造手順です。  
   
 ```sql
 SELECT Instructions.query('  
@@ -61,9 +62,9 @@ WHERE ProductModelID=7
   
 -   **Sql: column ()** は、構築される XML にリレーショナル値を含めるために使用されます。  
   
--   <`Location`の> 要素を構築する場合、$wc/@ * はすべてのワークセンターの場所の属性を取得します。  
+-   <の `Location`> 要素を構築する場合、$wc/@ * はすべてのワークセンターの場所の属性を取得します。  
   
--   **String ()** 関数は、<`step`> 要素から文字列値を返します。  
+-   **String ()** 関数は、<> 要素から文字列値を返し `step` ます。  
   
  結果の一部を次に示します。  
   
@@ -83,8 +84,8 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. AdditionalContactInfo 列のすべての電話番号の検索  
- 次のクエリでは、階層全体で <`telephoneNumber`> 要素を検索することによって、特定の顧客の連絡先の追加の電話番号を取得します。 <`telephoneNumber`> 要素は階層内のどこにでも表示できるので、クエリでは検索で子孫と自己演算子 (//) を使用します。  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B: AdditionalContactInfo 列のすべての電話番号の検索  
+ 次のクエリでは、階層全体で <> 要素を検索することによって、特定の顧客の連絡先の追加の電話番号を取得し `telephoneNumber` ます。 <`telephoneNumber`> 要素は階層内のどこにでも表示できるので、クエリでは検索で子孫と自己演算子 (//) を使用します。  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,11 +112,11 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 最上位レベルの電話番号のみを取得するには ( `telephoneNumber`具体的には、<`AdditionalContactInfo`> <> の子要素を取得するには、クエリの FOR 式がに変更されます。  
+ 最上位レベルの電話番号のみを取得するには (具体的には、<`telephoneNumber`> <> の子要素を取得するには、 `AdditionalContactInfo` クエリの FOR 式がに変更されます。  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

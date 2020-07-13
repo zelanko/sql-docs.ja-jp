@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fd01cf78ea5e3284aa51cad7dc848176a5dc9298
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546164"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>変数とパラメーターの使用 (MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、多次元式 (MDX) ステートメントをパラメーター化できます。 ステートメントをパラメーター化すれば、実行時にカスタマイズ可能な汎用ステートメントを作成できます。  
+  では [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、多次元式 (MDX) ステートメントをパラメーター化できます。 ステートメントをパラメーター化すれば、実行時にカスタマイズ可能な汎用ステートメントを作成できます。  
   
- パラメーター化されたステートメントを作成するときには、パラメーター名の前に @ 記号を付けることによってパラメーター名を識別します。 たとえば、 @Yearは有効なパラメーター名です。  
+ パラメーター化されたステートメントを作成するときには、パラメーター名の前に @ 記号を付けることによってパラメーター名を識別します。 たとえば、は @Year 有効なパラメーター名です。  
   
  MDX は、リテラルまたはスカラー値用のパラメーターだけをサポートします。 メンバー、セット、または組を参照するパラメーターを作成するには、 [StrToMember](/sql/mdx/strtomember-mdx) や [StrToSet](/sql/mdx/strtoset-mdx)などの関数を使う必要があります。  
   
- 次の XML for Analysis (XMLA) の例では@CountryName 、顧客データを取得する国がパラメーターに含まれています。  
+ 次の XML for Analysis (XMLA) の例では、 @CountryName 顧客データを取得する国がパラメーターに含まれています。  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097389"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
@@ -31,20 +31,20 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *Value*  
+ *[値]*  
  各組の比較対象となる値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、メジャーを返す多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **TopSum**関数は、指定されたセットに対して評価される指定メジャーの合計を計算し、セットを降順に並べ替えます。 関数は、指定された数値式の合計が指定された値以上になる最大値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  
 >  [BottomSum](../mdx/bottomsum-mdx.md)関数と同様に、 **TopSum**関数は常に階層を解除します。  
   
 ## <a name="example"></a>例  
- 次の例では、自転車カテゴリについて、再販業者の Sales Amount メジャーを使用した累積合計が、少なくとも600万の合計である geography ディメンションの Geography 階層における City レベルの最小のメンバーのセットを返します (このセットのうち、最も多くの売り上げを持つメンバー)。  
+ 次の例では、自転車カテゴリについて、再販業者の Sales Amount メジャーを使用した累積合計が600万の合計値以上である geography ディメンションの Geography 階層における City レベルの最小のメンバーのセットが返されます (このセットのメンバーの数が最も多い sales のメンバーから)。  
   
 ```  
 SELECT [Measures].[Reseller Sales Amount] ON 0,  
@@ -58,6 +58,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

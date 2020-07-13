@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f6d3cae5421f0705b81cf2748c78e5f04447940
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62837002"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438819"
 ---
 # <a name="connection-to-sql-server"></a>SQL Server への接続
   MSXDBCDC データベースに対する書き込み権限を含むデータベース ロール ( **db_owner** ロールなど) を持たないログインが Oracle CDC インスタンスの作成を試みると、[SQL Server への接続] ダイアログ ボックスが表示されます。  

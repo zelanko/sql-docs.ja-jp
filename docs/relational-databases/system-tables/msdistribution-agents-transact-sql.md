@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 04f9019a77638d11572c11a097cd290ed5406ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907411"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889996"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdistribution_agents**テーブルには、ローカルディストリビューターで実行されているディストリビューションエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|ディストリビューションエージェントの ID。|  
+|**id**|**int**|ディストリビューションエージェントの ID。|  
 |**name**|**nvarchar (100)**|ディストリビューションエージェントの名前。|  
 |**publisher_database_id**|**int**|パブリッシャーデータベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
@@ -41,34 +41,34 @@ ms.locfileid: "67907411"
 |**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プル。<br /><br /> **2** = 匿名。|  
 |**local_job**|**bit**|ローカルディストリビューターに SQL Server エージェントジョブがあるかどうかを示します。|  
-|**job_id**|**バイナリ (16)**|ジョブの識別番号を指定します。|  
-|**subscription_guid**|**バイナリ (16)**|エージェントのサブスクリプションの GUID 値。|  
+|**job_id**|**binary(16)**|ジョブの識別番号を指定します。|  
+|**subscription_guid**|**binary(16)**|エージェントのサブスクリプションの GUID 値。|  
 |**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルの構成 ID。|  
-|**anonymous_subid**|**UNIQUEIDENTIFIER**|匿名エージェントの ID。|  
+|**anonymous_subid**|**uniqueidentifier**|匿名エージェントの ID。|  
 |**subscriber_name**|**sysname**|匿名エージェントでのみ使用されるサブスクライバーの名前。|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**creation_date**|**DATETIME**|分布またはマージエージェントが作成された日時。|  
-|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを検索する識別子。 キューに登録されていないサブスクリプションの場合、値は NULL になります。 メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューベースのパブリケーションの場合、この値は、サブスクリプションに使用するキューを一意に識別する GUID です。 SQL Server ベースのキューパブリケーションの場合、列には**SQL**という値が含まれます。<br /><br /> 注: メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューの使用は推奨されておらず、サポートされなくなりました。|  
+|**creation_date**|**datetime**|分布またはマージエージェントが作成された日時。|  
+|**queue_id**|**sysname**|キュー更新サブスクリプションのキューを検索する識別子。 キューに登録されていないサブスクリプションの場合、値は NULL になります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージキューベースのパブリケーションの場合、この値は、サブスクリプションに使用するキューを一意に識別する GUID です。 SQL Server ベースのキューパブリケーションの場合、列には**SQL**という値が含まれます。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|エージェントをリモートからアクティブ化できるかどうかを示します。<br /><br /> **0**は、エージェントをリモートでアクティブ化できないことを示します。<br /><br /> **1**は、エージェントをリモートでアクティブにすること、および*offload_server*プロパティで指定されたリモートコンピューターで実行することを指定します。|  
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化に使用するサーバーのネットワーク名。|  
-|**dts_package_name**|**sysname**|DTS パッケージの名前です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合`@dts_package_name = N'DTSPub_Package'`は、を指定します。|  
+|**dts_package_name**|**sysname**|DTS パッケージの名前です。 たとえば、 **DTSPub_Package**という名前のパッケージの場合は、を指定し `@dts_package_name = N'DTSPub_Package'` ます。|  
 |**dts_package_password**|**nvarchar (524)**|パッケージのパスワード。|  
 |**dts_package_location**|**int**|パッケージの場所です。 パッケージの場所には、**ディストリビューター**または**サブスクライバー**を指定できます。|  
 |**sid**|**varbinary (85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|サブスクライバーへの接続時にエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーへの接続時にエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーへの接続時に使用されるログインです。|  
 |**subscriber_password**|**nvarchar (524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値。|  
 |**reset_partial_snapshot_progress**|**bit**|部分的にダウンロードされたスナップショットを破棄して、スナップショットプロセス全体を再び開始できるかどうかを指定します。|  
-|**job_step_uid**|**UNIQUEIDENTIFIER**|エージェントを開始する SQL Server エージェントジョブステップの一意の ID。|  
+|**job_step_uid**|**uniqueidentifier**|エージェントを開始する SQL Server エージェントジョブステップの一意の ID。|  
 |**subscriptionstreams**|**tinyint**|変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を設定します。 サポートされている値の範囲は 1 ～ 64 です。|  
 |**memory_optimized**|**bit**|1は、サブスクライバーがメモリ最適化テーブルに使用できることを示します。|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>参照  
- [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

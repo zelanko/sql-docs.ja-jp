@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f77fea1d8439ac9ce7374b7dd47db5665686cfbc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897735"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283432"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "67897735"
   
  ドライバーが対応するプールを有効にするには、次の既存の関数も実装する必要があります。  
   
-|Function|追加された機能|  
+|関数|追加された機能|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|新しいハンドルの種類をサポートしています: SQL_HANDLE_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|新しいセットのみの接続属性をサポートする: 接続をリセットするための SQL_ATTR_DBC_INFO_TOKEN ます (以下の説明を参照してください)。|  
@@ -143,7 +143,7 @@ ms.locfileid: "67897735"
 ## <a name="state-diagram"></a>状態ダイアグラム  
  この状態の図は、このトピックで説明する接続情報トークンオブジェクトを示しています。 図には[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のみが表示されますが、 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)のケースは似ています。 ドライバーマネージャーは、いつでもエラーを処理する必要があるため、ドライバーマネージャーは[Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)を任意の状態に対して呼び出すことができます。  
   
- ![状態ダイアグラム](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
+ ![状態の図](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
 ## <a name="see-also"></a>参照  
  [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   

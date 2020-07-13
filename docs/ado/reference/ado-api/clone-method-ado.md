@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920014"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748678"
 ---
 # <a name="clone-method-ado"></a>Clone メソッド (ADO)
 既存の**レコード**セットオブジェクトから、重複する[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを作成します。 必要に応じて、複製が読み取り専用であることを指定します。  
@@ -44,9 +44,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  複製する**レコードセット**オブジェクトを識別するオブジェクト変数です。  
   
  *LockType*  
- 省略可能。 元の**レコードセット**のロックの種類または読み取り専用の**レコードセット**を指定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 有効な値は、 **Adlockunspecified**または**adlockunspecified**です。  
+ 任意。 元の**レコードセット**のロックの種類または読み取り専用の**レコードセット**を指定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 有効な値は、 **Adlockunspecified**または**adlockunspecified**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  複数の重複したレコード**セット**オブジェクトを作成するには、 **Clone**メソッドを使用します。特に、特定のレコードのセットに複数の現在のレコードを保持する場合に使用します。 **Clone**メソッドを使用する方が、元のと同じ定義を使用する新しい**レコードセット**オブジェクトを作成して開くよりも効率的です。  
   
  元の**レコードセット**(存在する場合) の[Filter](../../../ado/reference/ado-api/filter-property.md)プロパティは、複製には適用されません。 新しい**レコードセット**の**filter**プロパティを設定して、結果をフィルター処理します。 既存の**フィルター**値をコピーする最も簡単な方法は、次のように、それを直接割り当てることです。  

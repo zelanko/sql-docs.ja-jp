@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b893108ba79952fe803fceea64387c06f05190ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898015"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 指定されたトレース フラグを無効にします。
   
@@ -37,7 +37,7 @@ ms.locfileid: "69553272"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   

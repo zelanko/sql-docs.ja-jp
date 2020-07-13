@@ -26,16 +26,16 @@ ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805b13301cad748331bc571a70cc77ffe8c8c27e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a4eeff8a2ee64a318931fad63d74bb4cd780c49
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71952347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990356"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]
 > **THROW** ステートメントは **SET XACT_ABORT** に従いますが、 **RAISERROR** は従いません。 新しいアプリケーションでは、**RAISERROR** の代わりに **THROW** を使ってください。
@@ -46,7 +46,7 @@ ms.locfileid: "71952347"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
 

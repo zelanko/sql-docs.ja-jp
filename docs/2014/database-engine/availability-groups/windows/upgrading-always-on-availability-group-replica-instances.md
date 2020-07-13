@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62812944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936319"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
   SQL Server 2012 のサーバー インスタンスをサービス パックで更新するとき、または新しいバージョンにアップグレードするときに、順次更新または順次アップグレードを実行することにより、可用性グループのダウンタイムを手動フェールオーバー 1 回分のみに抑えることができます。 SQL Server のバージョンをアップグレードする場合、この操作をローリング アップグレードと呼びます。現在のバージョンの SQL Server に修正プログラムまたはサービス パックを適用して更新する場合、この操作をローリング アップデートと呼びます。  
@@ -94,7 +93,7 @@ ms.locfileid: "62812944"
 -   プライマリ サイトの SQL Server をアップグレードまたは更新する際に可用性モードを非同期コミットに戻し、プライマリ サイトへの再フェールオーバーの準備が完了したときに、同期コミットに戻す。  
   
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>フェールオーバー クラスター インスタンス ノードを含む可用性グループ  
- 可用性グループにフェールオーバー クラスター インスタンス (FCI) ノードが含まれている場合、非アクティブなノードをアップグレードまたは更新した後で、アクティブなノードをアップグレードまたは更新する必要があります。 次の図では、ローカルでの可用性を高めるために FCI を使用し、リモートの災害復旧のために FCI 間の非同期コミットを使用する、一般的な可用性グループのシナリオを示します。さらに、アップグレード手順も示しています。  
+ 可用性グループにフェールオーバー クラスター インスタンス (FCI) ノードが含まれている場合、非アクティブなノードをアップグレードまたは更新した後で、アクティブなノードをアップグレードまたは更新する必要があります。 次の図では、ローカルでの可用性を高めるために FCI を使用し、リモートのディザスター リカバリーのために FCI 間の非同期コミットを使用する、一般的な可用性グループのシナリオを示します。さらに、アップグレード手順も示しています。  
   
  ![FCI による可用性グループのアップグレード:](../../media/agupgrade-ag-fci-dr.gif "FCI による可用性グループのアップグレード:")  
   

@@ -29,7 +29,7 @@ ms.locfileid: "75257933"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 *の*ジョブ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の *ジョブ* と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server エージェントの利点 
 
@@ -108,14 +108,14 @@ ms.locfileid: "75257933"
 > **net send**を使用して通知を送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが置かれているコンピューターで Windows Messenger サービスを開始する必要があります。  
   
 > [!IMPORTANT]  
-> **の今後のバージョンでは、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]net send[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する必要があります。 詳細については、「[データベース メール](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   
 オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](../../ssms/agent/operators.md)」を参照してください。  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server エージェントのセキュリティ管理  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは **msdb**データベースの固定データベース ロールである **SQLAgentUserRole**、 **SQLAgentReaderRole** 、 **SQLAgentOperatorRole** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**固定サーバー ロールのメンバーではないユーザーの** エージェントへのアクセスを制御します。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは **msdb**データベースの固定データベース ロールである **SQLAgentUserRole**、 **SQLAgentReaderRole** 、 **SQLAgentOperatorRole** を使用して、 **sysadmin** 固定サーバー ロールのメンバーではないユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのアクセスを制御します。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
   
 ### <a name="roles"></a>ロール  
 **msdb**の **SQLAgentUserRole**、 **SQLAgentReaderRole** 、 **SQLAgentOperatorRole**の各固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントにアクセスできます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」を参照してください。  
@@ -127,7 +127,7 @@ ms.locfileid: "75257933"
   
 |サブシステム名|説明|  
 |--------------|-----------|  
-|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br />**警告** ActiveX スクリプティング サブシステムは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] の将来のバージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br />**警告** ActiveX スクリプティング サブシステムは、[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |オペレーティング システム (**CmdExec**)|実行可能なプログラムを実行します。|  
 |PowerShell|PowerShell スクリプティング ジョブ ステップを実行します。|  
 |レプリケーション ディストリビューター|レプリケーション ディストリビューション エージェントをアクティブにするジョブ ステップを実行します。|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_unprepare
 ms.assetid: 14320251-c551-49d8-b933-057406114978
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 715b050bc73816b9b1c7f6841e9c6fbb12fdaf90
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68027659"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820232"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ sp_unprepare handle
  *扱え*  
  Sp_prepare によって返される*ハンドル*値です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  
@@ -54,7 +54,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  

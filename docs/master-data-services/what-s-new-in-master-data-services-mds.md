@@ -1,5 +1,6 @@
 ---
 title: 新機能
+description: マスターデータサービスの SQL Server 2019 リリースの変更点、改善点、および更新プログラムについて説明します。
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,31 +11,28 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73727791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813926"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
   
- 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のデータを整理する方法の概要については、 [マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
   
- **マスターデータサービスのインストール、データベースと Web サイトの設定、サンプルモデルの配置については、「** [マスターデータサービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
+ **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「** [Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
   
  **ダウンロード**  
   
--   
-  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
   
--   Azure アカウントをすでにお持ちですか?  次に**[](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 、が[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]既にインストールされている仮想マシンを起動するには、ここにアクセスします。  
+-   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 ##  <a name="improved-performance"></a>パフォーマンスの向上  
   
@@ -77,18 +75,17 @@ ms.locfileid: "73727791"
   
 ##  <a name="improved-security"></a>セキュリティの強化  
   
- 新しいスーパー ユーザー機能権限により、前リリースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のサーバー管理権限と同じものがユーザーまたはグループに付与されます。 スーパー ユーザー権限は、複数のユーザーとグループに割り当てることができます。 以前のリリースでは、最初に [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールしたユーザーがサーバー管理者になり、その権限を別のユーザーまたはグループに委譲することは困難でした。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+ 新しいスーパー ユーザー機能権限により、前リリースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のサーバー管理権限と同じものがユーザーまたはグループに付与されます。 スーパー ユーザー権限は、複数のユーザーとグループに割り当てることができます。 以前のリリースでは、最初に [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールしたユーザーがサーバー管理者になり、その権限を別のユーザーまたはグループに委譲することは困難でした。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
  このリリースでは、ユーザーに対して管理権限をモデル レベルで明示的に割り当てることができます。 つまり、エンティティ レベルなどのモデル サブツリーで後からユーザーに権限が割り当てられた場合、ユーザーはこの管理権限を保持し続けます。  
   
  この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
   
- 次の表に示すように、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] にアップグレードすると、以前の権限が新しい権限に変換されます。  
+ 次の表に示すように、 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]にアップグレードすると、以前の権限が新しい権限に変換されます。  
   
 |以前のリリースの権限|新しい権限|  
 |------------------------------------|--------------------|  
-|
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を最初にインストールしたユーザーにサーバー管理権限がある。|ユーザーにスーパー ユーザー機能権限がある|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を最初にインストールしたユーザーにサーバー管理権限がある。|ユーザーにスーパー ユーザー機能権限がある|  
 |ユーザーにモデル レベルの更新権限があり、モデル サブツリーの権限はないため、暗黙的にモデル管理者になる。|ユーザーにモデル レベルの明示的な管理権限がある。|  
 |ユーザーに読み取り専用権限がある。|ユーザーに読み取りアクセス権限がある。|  
 |ユーザーに更新権限がある。|ユーザーに 4 つの権限 (作成、更新、削除、読み取り) がすべてある。|  
@@ -116,9 +113,7 @@ ms.locfileid: "73727791"
   
 ## <a name="improved-troubleshooting"></a>トラブルシューティングの向上  
   
- 
-  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、デバッグを改善し、問題のトラブルシューティングをさらに容易にするための機能が追加されました。 詳細については、「[Tracing (Master Data Services) (トレース (マスター データ サービス))](../master-data-services/tracing-master-data-services.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、デバッグを改善し、問題のトラブルシューティングをさらに容易にするための機能が追加されました。 詳細については、「[Tracing (Master Data Services) (トレース (マスター データ サービス))](../master-data-services/tracing-master-data-services.md)」を参照してください。  
   
 ## <a name="improved-manageability"></a>管理の容易性の向上  
   
@@ -128,18 +123,18 @@ ms.locfileid: "73727791"
   
 -   Name 属性と Code 属性の名前変更と非表示  
   
- 詳細については、次の各トピックを参照してください。  
+ 詳しくは、次のトピックをご覧ください。  
   
--   [モデル &#40;マスターデータサービス&#41;](../master-data-services/models-master-data-services.md)  
+-   [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)  
   
--   [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)  
+-   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
--   [トランザクション &#40;マスターデータサービス&#41;](../master-data-services/transactions-master-data-services.md)  
+-   [トランザクション (マスター データ サービス)](../master-data-services/transactions-master-data-services.md)  
   
--   [セキュリティ &#40;マスターデータサービス&#41;](../master-data-services/security-master-data-services.md)  
+-   [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>ビジネス ルールの強化
- **ビジネスルールの管理 (Excel 用 MDS アドイン)**  
+ **ビジネス ルールの管理 (Excel 用 MDS アドイン)**  
   
  Excel 用マスター データ サービス アドインでは、ビジネス ルールの作成、編集など、ビジネス ルールを管理できます。 ビジネス ルールは、データの検証に使用されます。  
  
@@ -147,17 +142,17 @@ ms.locfileid: "73727791"
   
  ユーザー定義の SQL スクリプトを、ビジネス ルールの条件とアクションの拡張機能として適用できます。 SQL 関数を条件として、 SQL ストアド プロシージャをアクションとして使用できます。 詳細については、「[Business Rules Extension (Master Data Services) (ビジネス ルールの拡張機能 (マスター データ サービス))](../master-data-services/business-rules-extension-master-data-services.md)」を参照してください。 
  
- **再設計のビジネスルール管理エクスペリエンス**  
+ **ビジネス ルール管理エクスペリエンスの設計変更**  
   
  MDS のビジネス ルール管理エクスペリエンスの設計が完全に変更され、エクスペリエンスが向上しました。 この機能の詳細については、「[Business Rules (Master Data Services) (ビジネス ルール (マスター データ サービス))](../master-data-services/business-rules-master-data-services.md)」を参照してください。  
   
- **Excel 用 MDS アドインから削除されたビジネスルール管理機能**  
+ **Excel 用 MDS アドインからのビジネス ルール管理機能の削除**  
   
  エクスペリエンスの設計が変更されたため、ビジネス ルール管理機能が Excel 用 MDS アドインから削除されました。    
 
- **新しいビジネスルール条件**  
+ **新しいビジネス ルール条件**  
   
- 完全な条件セットを提供する 7 つのビジネス ルール条件が新しく追加されました。 詳細については、「[ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)」を参照してください。  
+ 完全な条件セットを提供する&7; つのビジネス ルール条件が新しく追加されました。 詳細については、「[ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)」を参照してください。  
 
 ## <a name="derived-hierarchy-improvements"></a>派生階層の強化
 
@@ -171,9 +166,9 @@ ms.locfileid: "73727791"
  
  **派生階層の多対多リレーションシップの編集**  
   
- 多対多リレーションシップを編集するには、マッピング エンティティのメンバーを変更します。 詳細については、「[派生階層 (Master Data Services) の多対多リレーションシップを表示する](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)」を参照してください。  
+ 多対多リレーションシップを編集するには、マッピング エンティティのメンバーを変更します。 詳細については、「[派生階層 &#40;マスターデータサービス&#41;の多対多リレーションシップの表示](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)」を参照してください。  
  
- **派生階層の管理エクスペリエンスが改善されました**  
+ **派生階層管理エクスペリエンスの向上**  
   
  MDS の派生階層管理エクスペリエンスが改善されました。 この機能の詳細については、「[派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)」を参照してください。  
   
@@ -181,7 +176,7 @@ ms.locfileid: "73727791"
  
 ## <a name="attribute-improvements"></a>属性の強化   
     
- **カスタムインデックス**  
+ **カスタム インデックス**  
   
  1つの属性 (単一のインデックス) または属性の一覧 (複合インデックス) で、エンティティ内の非クラスター化インデックスを作成して、クエリのパフォーマンスを向上させることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
  
@@ -195,7 +190,7 @@ ms.locfileid: "73727791"
   
  エンティティの同期関係を作成することで、さまざまなモデル間でエンティティ データを共有できます。 詳細については、「[Entity Sync Relationship (Master Data Service) (エンティティの同期関係 (マスター データ サービス))](../master-data-services/entity-sync-relationship-master-data-services.md)」を参照してください。  
   
- **論理的に削除されたメンバーの削除**  
+ **論理削除されたメンバーのパージ**  
   
  モデル バージョンで論理削除されたすべてのメンバーをパージ (完全に削除) できるようになりました。 メンバーを削除しても、そのメンバーは非アクティブ化 (論理削除) されるだけです。 詳細については、「[Purge Version Members (Master Data Service) (バージョン メンバーのパージ (マスター データ サービス))](../master-data-services/purge-version-members-master-data-services.md)」を参照してください。  
  
@@ -203,16 +198,15 @@ ms.locfileid: "73727791"
   
  **メンバー リビジョン履歴**  
   
- メンバーが変更されると、メンバー リビジョン履歴が記録されます。 リビジョン履歴のロールバックや、リビジョンの表示、注釈設定が可能です。 
-  **ログ保有期間** のプロパティを使用すると、履歴データを保持する期間を指定できます。 詳細については、「[Member Revision History (Master Data Service) (メンバー リビジョン履歴 (マスター データ サービス))](../master-data-services/member-revision-history-master-data-services.md)」を参照してください。  
+ メンバーが変更されると、メンバー リビジョン履歴が記録されます。 リビジョン履歴のロールバックや、リビジョンの表示、注釈設定が可能です。 **ログ保有期間** のプロパティを使用すると、履歴データを保持する期間を指定できます。 詳細については、「[Member Revision History (Master Data Service) (メンバー リビジョン履歴 (マスター データ サービス))](../master-data-services/member-revision-history-master-data-services.md)」を参照してください。  
   
  **競合のマージ**  
   
- 他のユーザーによって変更されているデータをパブリッシュしようとしている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。 詳細については、「[Merge Conflicts (Master Data Service) (競合のマージ (マスター データ サービス)](../master-data-services/merge-conflicts-master-data-services.md)」および「[競合のマージ (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)」を参照してください。  
+ 他のユーザーによって変更されているデータをパブリッシュしようとしている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。 詳細については、「 [Merge Conflicts (Master Data Service) (競合のマージ (マスター データ サービス)](../master-data-services/merge-conflicts-master-data-services.md) 」および「 [競合のマージ (MDS Add-in for Excel)](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)」を参照してください。  
   
  **変更セット**  
   
- 変更セットを使用して、エンティティに対する保留中の変更を保存できます。また、保留中の変更は表示および変更できます。 エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、管理者の承認を受ける必要があります。 詳細については、「[Changesets (Master Data Services) (変更セット (マスター データ サービス))](../master-data-services/changesets-master-data-services.md)」を参照してください。  
+ 変更セットを使用して、エンティティに対する保留中の変更を保存できます。また、保留中の変更は表示および変更できます。 エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、管理者の承認を受ける必要があります。 詳細については、「[変更セット &#40;マスターデータサービス&#41;](../master-data-services/changesets-master-data-services.md)」を参照してください。  
   
  **変更セットの電子メールと管理**  
   
@@ -224,21 +218,21 @@ ms.locfileid: "73727791"
  
 ## <a name="tool-and-sample-improvements"></a>ツールとサンプルの強化 
   
- **Excel 用 MDS アドインでクエリファイルを保存または開く**  
+ **Excel 用 MDS アドインでクエリ ファイルを保存する、または開く**  
   
  エンティティ エクスプローラー ページで **[Excel]** をクリックして、ショートカット クエリ ファイルを保存できます。 または、Excel 用 MDS アドインで、コンピューターに保存されたクエリ ファイルを開くことができます。 保存されているファイルを開くには、QueryOpener アプリケーションを使用します。 詳細については、「[Shortcut Query Files (MDS Add-in for Excel) (ショートカット クエリ ファイル (Excel 用 MDS アドイン))](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)」を参照してください。  
   
  クエリ ファイルには、エクスプローラー ページのフィルターと階層情報が含まれています。  
    
- **サンプルモデルの配置パッケージが更新されました**  
+ **モデル配置パッケージ サンプルの更新**  
   
- 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+ 新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「 [SQL Server サンプル: モデルの配置パッケージ (マスター データ サービス)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>参照  
- [SQL Server 2016 の各エディションがサポートするマスターデータサービスおよび Data Quality Services の機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [非推奨のマスターデータサービス機能](../master-data-services/deprecated-master-data-services-features.md)  
- [廃止されたマスターデータサービスの機能](../master-data-services/discontinued-master-data-services-features.md)
+## <a name="see-also"></a>関連項目  
+ [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
+ [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)

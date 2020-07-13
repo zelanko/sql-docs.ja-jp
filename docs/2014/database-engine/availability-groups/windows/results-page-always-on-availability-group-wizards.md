@@ -14,20 +14,18 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62789013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936513"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
   このヘルプ トピックでは、 **[結果]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページを使用すると、ウィザードの結果を表示できます。  
   
-##  <a name="PageOptions"></a>[結果] ページのオプション  
- 
-  **[概要]** グリッドに含まれる列は、次のとおりです。  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> [結果] ページのオプション  
+ **[概要]** グリッドに含まれる列は、次のとおりです。  
   
  **名前**  
  特定の操作について説明する語句が表示されます。  
@@ -35,22 +33,22 @@ ms.locfileid: "62789013"
  **結果**  
  完了した手順ごとに、次のハイパーリンク テキストのいずれかが表示されます。  
   
-|結果|[説明]|  
+|結果|説明|  
 |------------|-----------------|  
 |**Error**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
-|**成功**|検証手順が正常に完了したことを示します。|  
+|**Success**|検証手順が正常に完了したことを示します。|  
   
 
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [[新しい可用性グループ] ダイアログボックスを使用すると &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [可用性グループへのレプリカ追加ウィザードを使用して &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [可用性グループへのレプリカ追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [可用性グループへのデータベース追加ウィザードを使用して &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
+-   [可用性グループへのデータベース追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
--   [可用性グループのフェールオーバーウィザードを使用して &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 
   

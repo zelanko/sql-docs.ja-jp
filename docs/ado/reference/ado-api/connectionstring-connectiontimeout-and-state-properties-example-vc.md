@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919454"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762643"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)
 この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを使用して[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  

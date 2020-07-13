@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
 ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5203a7216faa008aade21c4e3e1dc54fc794461b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1fd0c0f929ca00b7cf731dc92f07f69b6503f884
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901440"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307143"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの追加
 アプリケーションから Visual FoxPro データにアクセスするには、データソースが必要です。 データソースは次のように作成できます。  

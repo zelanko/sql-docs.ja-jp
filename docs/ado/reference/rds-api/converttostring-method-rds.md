@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6eff6ae54dc5cc0b901cfb1da61244e30d963615
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964572"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764843"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString メソッド (RDS)
 レコードセットを、レコードセットデータを表す MIME[文字列に変換](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -40,7 +40,7 @@ DataFactory.ConvertToString(Recordset)
  *レコードセット*  
  **レコードセット**オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  .Asp ファイルの場合は、 **Converttostring**を使用して、サーバー上で生成された HTML ページに**レコードセット**を埋め込み、クライアントコンピューターに転送します。  
   
  **Converttostring**は、まず**レコードセット**をカーソルサービステーブルに読み込み、次に MIME 形式でストリームを生成します。  

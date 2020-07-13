@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893596"
 ---
 # <a name="expressions-mdx"></a>式 (MDX)
@@ -25,7 +25,7 @@ ms.locfileid: "68893596"
   
  単純式とは、次のような式です。  
   
- 常時  
+ Constant  
  定数は、MDX の単一の特定の値を表す記号です。 文字列、数値、および日付の値は定数として表示できます。 数値定数とは異なり、文字列定数と日付定数は単一引用符 (') で区切る必要があります。  
   
  スカラー関数  
@@ -73,7 +73,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[キューブ式とサブキューブ式の使用](../mdx/using-cube-and-subcube-expressions.md)|キューブ式とサブキューブ式を定義します。|  
 |[ディメンション式の使用](../mdx/using-dimension-expressions.md)|ディメンション式を定義します。|  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLTransact
 - SQLTransact function [ODBC], Access Driver
 ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f4d4b3d8d417591bd72dde22240c81a91d80f990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4f88d3154925ab589a8519cb9205da03e8c3dc08
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948971"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299267"
 ---
 # <a name="sqltransact-access-driver"></a>SQLTransact (Access ドライバー)
 > [!NOTE]  

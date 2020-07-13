@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63151045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066035"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
   カーディナリティ推定ロジックをカーディナリティ推定機能と呼びますが、クエリ プランの品質を向上させ、その結果、クエリのパフォーマンスを向上させる目的で、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でこの機能を再設計しました。 新しいカーディナリティ推定機能には、現在の OLTP ワークロードとデータ ウェアハウス ワークロードで適切に機能する想定とアルゴリズムが組み込まれています。 この機能は、現在のワークロードを対象とするカーディナリティ推定に関する詳細な調査、および SQL Server のカーディナリティ推定機能を向上させるための過去 15 年にわたる研究を土台としています。 お客様からのフィードバックによると、大半のクエリは今回の変更によって性能が向上するか、何も変化しないこと、一方で、少数のクエリは以前のカーディナリティ推定機能と比較すると性能が低下する可能性があることが示されています。  
@@ -45,9 +44,9 @@ ms.locfileid: "63151045"
 ## <a name="new-xevents"></a>新しい XEvent  
  新しいクエリ プランをサポートする、2 つの新しい query_optimizer_estimate_cardinality XEvent が存在します。  
   
--   *query_optimizer_estimate_cardinality*は、クエリオプティマイザーが関係式のカーディナリティを推定したときに発生します。  
+-   *query_optimizer_estimate_cardinality* は、クエリ オプティマイザーが関係式のカーディナリティを推定するときに発生します。  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors は、トレースフラグ2312と9481の両方が有効になっており、新旧両方のカーディナリティ推定動作を同時に強制的に実行しようとした場合に発生します。  
+-   *query_optimizer_force_both_cardinality_estimation*の動作が発生するのは、トレース フラグ 2312 と 9481 の両方が有効になっていて、古いカーディナリティ推定動作と新しいカーディナリティ推定動作の両方を同時に適用しようとする場合です。  
   
 ## <a name="examples"></a>例  
  次の例では、新しいカーディナリティ推定で加えられた変更の一部を示します。 カーディナリティを推定するコードを書き直しました。 ロジックは複雑であり、すべての変更を網羅した完全な一覧をここに示すことはできません。  
@@ -67,7 +66,7 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  この動作は変更されました。 現在は、最後に統計を更新し、その後に追加された最新の昇順データを含む形で統計が更新されていない場合でも、新しいカーディナリティ推定機能はそれらの値が存在することを想定し、カーディナリティ推定を行う際に列内にある各値として平均カーディナリティを使用します。  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>例 B。新しいカーディナリティ推定機能は、同じテーブル内にあるフィルター処理された複数の述語の間に、何かの相関関係があることを想定します。  
- この例では、Cars テーブルに 1,000 の行が存在することを想定します。200 の行では Make (メーカー) は "Honda" になっており、50 の行では Model (車種) は "Civic" になっており、"Civic" の行すべてで Make は "Honda" になっています。 したがって、Make の列では値の 20% が "Honda" になっており、Model の列では値の 5% が "Civic" になっており、"Honda Civic" の実際の数は 50 です。 以前のカーディナリティ推定機能では、Make と Model の各列にある値が互いに独立していることを想定していました。 前のクエリオプティマイザーでは、10個の Honda なっ (. 05 \* * 0.20 1000 行 = 10 行) が推定されています。  
+ この例では、Cars テーブルに 1,000 の行が存在することを想定します。200 の行では Make (メーカー) は "Honda" になっており、50 の行では Model (車種) は "Civic" になっており、"Civic" の行すべてで Make は "Honda" になっています。 したがって、Make の列では値の 20% が "Honda" になっており、Model の列では値の 5% が "Civic" になっており、"Honda Civic" の実際の数は 50 です。 以前のカーディナリティ推定機能では、Make と Model の各列にある値が互いに独立していることを想定していました。 前のクエリオプティマイザーでは、10個の Honda なっ (. 05 * 0.20 \* 1000 行 = 10 行) が推定されています。  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
@@ -75,7 +74,7 @@ SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civi
   
  この動作は変更されました。 現在の新しいカーディナリティ推定機能は、Make 列と Model 列の間に「何かの」 ** 相関関係が存在することを想定します。 クエリ オプティマイザーは、推定式に指数成分を追加することにより、以前の推定を超えるカーディナリティを推定します。 クエリオプティマイザーでは、22.36 行 (0.05 * SQRT (. 20) \* 1000 rows = 22.36 rows) が述語と一致することが推定されるようになりました。 このシナリオと特定のデータ分布の場合は、クエリが返す 22.36 行という値は、実際の値である 50 行に近づきます。  
   
- 新しいカーディナリティ推定機能のロジックは、述語選択度を並べ替え、指数を大きくすることに注意してください。 たとえば、述語選択度が0.05、0.20、および0.25 の場合、カーディナリティの推定は (. 05 * SQRT (. 20 \* ) SQRT (sqrt (0.25))) になります。  
+ 新しいカーディナリティ推定機能のロジックは、述語選択度を並べ替え、指数を大きくすることに注意してください。 たとえば、述語選択度が0.05、0.20、および0.25 の場合、カーディナリティの推定は (. 05 * SQRT (. 20) \* sqrt (sqrt (0.25))) になります。  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>例 C。新しいカーディナリティ推定機能は、異なるテーブル上でフィルター処理された述語の間で、互いに依存関係がないことを想定しています。  
  この例では、以前のカーディナリティ推定機能は、述語フィルター s.type と r.date が相関していることを想定しています。 ただし、最近のワークロードに対するテストの結果は、異なるテーブル上にある列に対する述語フィルターが互いに相関しないことを示しています。  

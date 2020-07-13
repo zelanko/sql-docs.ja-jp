@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71952585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036945"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>サービス アカウントの構成 (SSRS 構成マネージャー)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされた環境では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションが 1 つのサービス内で実行されます。 サービスの実行に使用するアカウントは、セットアップ時に [サービス ID] ページでアカウントを指定するときに定義されますが、使用するアカウントの変更やパスワードの更新を行う場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用できます。  
   
- Sharepoint 統合モードを使用するように構成されているレポートサーバーがあり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールを使用してサービスアカウントを変更する場合は、sharepoint サーバーの全体[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]管理を開き、[**データベースアクセスの許可**] ページを使用してレポートサーバーとインスタンスの設定を再適用する必要もあります。 この手順により、新しいサービスアカウントには、または[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]との統合に必要な SharePoint データベースへのアクセス権が付与されます。  
+ SharePoint 統合モードを使用するように構成されているレポートサーバーがあり、構成ツールを使用してサービスアカウントを変更する場合は、SharePoint サーバーの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 全体管理を開き、[ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **データベースアクセスの許可**] ページを使用してレポートサーバーとインスタンスの設定を再適用する必要もあります。 この手順により、新しいサービスアカウントには、またはとの統合に必要な SharePoint データベースへのアクセス権が付与され [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ます。  
   
  サービス アカウントを更新する際には、そのサービス ID に依存する他の設定も同時に更新できるように、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してください。  
   
@@ -37,8 +35,7 @@ ms.locfileid: "71952585"
   
 ### <a name="to-configure-the-report-server-service-account"></a>レポート サーバー サービス アカウントを構成するには  
   
-1.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバーに接続します。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバーに接続します。  
   
 2.  [サービス アカウント] ページで、使用するアカウントの種類を示すオプションを選択します。 指定するアカウントの種類に関する推奨事項については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーサービスアカウントを構成する](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
@@ -50,9 +47,7 @@ ms.locfileid: "71952585"
   
 5.  対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   
-6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
+6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、**[OK]** をクリックします。  
   
 7.  対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]** をクリックします。  
   

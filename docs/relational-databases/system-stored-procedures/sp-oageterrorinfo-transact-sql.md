@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107914"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893415"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オートメーションのエラー情報を取得します。  
   
@@ -69,24 +69,24 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>結果セット  
  出力パラメーターを指定しない場合、エラー情報は結果セットとしてクライアントに返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データの種類|説明|  
 |------------------|---------------|-----------------|  
-|**Error**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
+|**エラー**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
 |**ソース**|**nvarchar (nn)**|エラーのソース。|  
 |**説明**|**nvarchar (nn)**|エラーの説明。|  
 |**ヘルプ**|**nvarchar (nn)**|ソースのヘルプファイルです。|  
 |**HelpID**|**int**|ヘルプソースファイル内のヘルプコンテキスト ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  OLE オートメーションストアドプロシージャを呼び出すたびに ( **sp_OAGetErrorInfo**を除く)、エラー情報がリセットされます。したがって、 **sp_OAGetErrorInfo**は、最新の OLE オートメーションストアドプロシージャ呼び出しのエラー情報のみを取得します。 **Sp_OAGetErrorInfo**によってエラー情報がリセットされないため、同じエラー情報を取得するために複数回呼び出すことができます。  
   
  次の表は、OLE オートメーション エラーと一般的な原因の一覧です。  
   
 |エラーおよび HRESULT|一般的な原因|  
 |-----------------------|------------------|  
-|**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーターとし[!INCLUDE[tsql](../../includes/tsql-md.md)]て渡された値のデータ型が[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 、メソッドパラメーターのデータ型と一致しなかったか、またはメソッドパラメーターとして NULL 値が渡されました。|  
+|**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーター [!INCLUDE[tsql](../../includes/tsql-md.md)] として渡された値のデータ型が、メソッドパラメーターのデータ型と一致しなかった [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] か、またはメソッドパラメーターとして NULL 値が渡されました。|  
 |**不明な名前です&amp;#x2028;(0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
-|**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32 ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
+|**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32.exe ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
 |**指定されたモジュールが見つかりませんでした&amp;#x2028;(0x8007007e)**|指定された OLE オブジェクトは、インプロセス OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、または読み込めませんでした。|  
 |**型が一致しません&amp;#x2028;(0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  
@@ -121,7 +121,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2bf405d775acc66e2a260625e8de2c38974f70b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770421"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437629"
 ---
 # <a name="merge-transformation"></a>マージ変換
   マージ変換は、並べ替えられた 2 つのデータセットを 1 つのデータセットに結合します。 各データセットの行は、各キー列の値に基づいて出力に挿入されます。  
@@ -56,8 +55,7 @@ ms.locfileid: "62770421"
 ## <a name="configuration-of-the-merge-transformation"></a>マージ変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[マージ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [マージ変換エディター](../../merge-transformation-editor.md)」を参照してください。  
+ **[マージ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [マージ変換エディター](../../merge-transformation-editor.md)」を参照してください。  
   
  プログラムによって設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
@@ -72,7 +70,7 @@ ms.locfileid: "62770421"
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ結合変換](merge-join-transformation.md)   
  [全体結合変換](union-all-transformation.md)   
  [データフロー](../data-flow.md)   

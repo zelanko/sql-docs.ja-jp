@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b3f20da018bcd4e28e8ffca097fb5a4373d7f42
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028427"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308023"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの処理
 > [!IMPORTANT]  
@@ -42,4 +42,4 @@ ms.locfileid: "68028427"
   
 -   ドライバーが1つのアクティブステートメントのみをサポートしている場合、カーソルライブラリは残りの結果セットをフェッチしてから、位置指定の update または delete ステートメントを実行する前に、そのキャッシュから現在の行セットを refetches します。 その後、アプリケーションが、結果セットのメタデータを返す関数 ( **Sqlnumresultcols**や**SQLDescribeCol**など) を呼び出すと、カーソルライブラリがエラーを返します。  
   
--   更新が実行されるたびに自動的に更新されるタイムスタンプ列を含むテーブルの列に対して、位置指定の update または delete ステートメントが実行されると、timestamp 列がである場合、後続のすべての位置指定 update ステートメントまたは delete ステートメントは失敗します。バインディング. これは、カーソルライブラリによって作成される検索された update ステートメントまたは delete ステートメントによって、更新する行が正確に識別されないために発生します。 Timestamp 列の検索ステートメントの値が、timestamp 列の自動更新された値と一致しません。
+-   更新が実行されるたびに自動的に更新されるタイムスタンプ列を含むテーブルの列に対して、位置指定の update または delete ステートメントが実行された場合、タイムスタンプ列がバインドされていると、後続のすべての位置指定更新または delete ステートメントは失敗します。 これは、カーソルライブラリによって作成される検索された update ステートメントまたは delete ステートメントによって、更新する行が正確に識別されないために発生します。 Timestamp 列の検索ステートメントの値が、timestamp 列の自動更新された値と一致しません。

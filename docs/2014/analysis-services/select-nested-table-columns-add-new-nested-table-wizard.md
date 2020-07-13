@@ -11,25 +11,23 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940923"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>[入れ子になったテーブル列の選択] (入れ子になっている新しいテーブルの追加ウィザード)
-  
   **[入れ子になったテーブル列の選択]** ページを使用すると、入れ子になっているテーブルに含める属性とメジャーを選択でき、マイニング モデルでその属性とメジャーを使用する方法を定義できます。  
   
- **詳細について**は、「[マイニングモデル列](data-mining/mining-model-columns.md)」、「[データマイニングウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報: 「** [マイニング モデル列](data-mining/mining-model-columns.md)」、「[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)」  
   
 ## <a name="options"></a>オプション  
  **[列]**  
  使用できる属性とメジャーが一覧表示されます。 すべての属性に階層を設定するか、属性階層を有効にする必要があります。  
   
- **代入**  
+ **入力**  
  メジャーまたは属性をマイニング モデルの入力列として使用するかどうかを指定します。  
   
  **[予測可能]**  

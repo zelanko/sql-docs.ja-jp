@@ -16,18 +16,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 34c1af011a373e2baa221df28184085814747f12
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779542"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010616"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   パラメーターは、ODBC アプリケーションで次の操作を可能にする SQL ステートメント内の変数です。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "73779542"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   **Text**、 **ntext**、および**Image**データおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の C データ型を管理します。  
+-   **Text**、 **ntext**、および**Image**データおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定の C データ型を管理します。  
   
  たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   

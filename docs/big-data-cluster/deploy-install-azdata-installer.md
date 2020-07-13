@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/29/2020
 ms.locfileid: "73594336"
 ---
-# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Windows インストーラーで `azdata`を管理するための [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] をインストールする
+# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Windows インストーラーで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を管理するための `azdata` をインストールする
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -30,7 +30,7 @@ ms.locfileid: "73594336"
 
 Microsoft Windows インストーラーで `azdata` をインストールするには、次のようにします。
 
-1. `azdata` を使用してインストールされた `pip` がある場合は削除します。 Windows インストーラーを使用して `azdata` がインストールされている場合は、次のステップに進みます。
+1. `pip` を使用してインストールされた `azdata` がある場合は削除します。 Windows インストーラーを使用して `azdata` がインストールされている場合は、次のステップに進みます。
 1. Windows インストーラーを使用して `azdata` をインストールします。
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>以前に `pip` で行われたインストールがある場合はアンインストールする

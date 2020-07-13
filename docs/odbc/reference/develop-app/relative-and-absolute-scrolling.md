@@ -13,14 +13,14 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138057"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300102"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対と絶対のスクロール
 **Sqlfetchscroll**のスクロールオプションのほとんどは、カーソルを現在の位置または絶対位置に相対的に配置します。 **Sqlfetchscroll**では、次、前、最初、および最後の行セットのフェッチと、相対フェッチ (現在の行セットの先頭から行セット*n*行をフェッチ) と絶対フェッチ (行*n*で始まる行セットのフェッチ) がサポートされています。 絶対フェッチで*n*が負の値の場合、行は結果セットの末尾からカウントされます。 したがって、行-1 の絶対フェッチは、結果セットの最後の行で始まる行セットをフェッチすることを意味します。  

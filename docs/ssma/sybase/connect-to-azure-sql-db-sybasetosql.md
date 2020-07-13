@@ -10,10 +10,10 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083471"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB への接続 (SybaseToSQL)
@@ -39,9 +39,9 @@ SSMA が Azure SQL DB データベースへの接続に使用するユーザー�
   
 **パスワード**  
   
-入力されたユーザー名のパスワードを入力します。  
+ユーザー名に対応するパスワードを入力します。  
   
-**暗号化**  
+**Encrypt**  
   
 SSMA では、Azure SQL DB への暗号化接続を推奨しています。  
   

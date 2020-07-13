@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070014"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301423"
 ---
 # <a name="using-data-type-identifiers"></a>データ型識別子の使用
 アプリケーションでは、2つの方法でデータ型識別子を使用します。ドライバーにバッファーを記述し、その結果セットに関するメタデータをドライバーから取得して、データの格納に使用する C バッファーの種類を決定できるようにします。 アプリケーションは、次の関数を呼び出してこれらのタスクを実行します。  

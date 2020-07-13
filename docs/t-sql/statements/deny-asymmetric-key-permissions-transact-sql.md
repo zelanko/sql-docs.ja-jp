@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a55cedb9ebae8f16fc7ba35cfb6e72013ab3ff9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68114987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766815"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY (非対称キーの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非対称キーに対する権限を拒否します。  
    
@@ -36,7 +36,7 @@ ms.locfileid: "68114987"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DENY { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   

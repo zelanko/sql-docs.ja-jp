@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93c00a24ee8b5436b3f3b1869c9ea41b633560b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908f4b2ecf6a75e54ccb2752d1d4864192124503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68008937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765757"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内の指定したキーワードのオフセット (ステートメントの先頭からの相対的な位置) を、DB-Library アプリケーションに返します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68008937"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET OFFSETS keyword_list { ON | OFF }  
 ```  

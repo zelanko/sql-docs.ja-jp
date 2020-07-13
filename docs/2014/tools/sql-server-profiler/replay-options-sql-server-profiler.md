@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 068a6aaeba1af8c456c77fd45ecdc2a52719b0f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63025745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063988"
 ---
 # <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、キャプチャされたトレースを再生するには、 **[構成の再生]** ダイアログ ボックスで、以下の再生オプションを指定します。 このダイアログ ボックスを表示するには、再生するトレース ファイルまたはトレース テーブルを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で開き、 **[再生]** メニューの **[開始]** をクリックします。 トレースの再生に必要な権限の詳細については、「 [SQL Server Profiler の実行に必要な権限](sql-server-profiler.md)」を参照してください。  

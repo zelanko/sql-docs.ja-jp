@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138849"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288093"
 ---
 # <a name="is-odbc-the-answer"></a>ODBC が正解ですか?
 相互運用性の問題を調査する前に、アプリケーションで ODBC を使用するかどうかを検討してください。 これは、ODBC のガイドで質問されることもありますが、実際には正当な質問です。 ODBC はネイティブデータベース Api を完全に置き換えるように設計されていません。また、すべての状況でデータベースアクセスを提供するように設計されていませんでした。 これは、データベースに共通のインターフェイスを提供するように設計されており、アプリケーションプログラマが複数のデータベースへのリンクについて学習し、維持する必要がないようにするためのものです。  

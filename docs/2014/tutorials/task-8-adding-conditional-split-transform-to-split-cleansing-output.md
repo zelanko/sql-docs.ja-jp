@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65489672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006342"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8: 条件分割変換を追加してクレンジング出力を分割する
   この変換では、データ フローに条件分割変換を追加します。 条件分割変換では、データの内容に応じて別の出力に行をルートできます。 このチュートリアルでは、DQS クレンジング変換の [**レコードの状態**] 出力列を使用します。 このチュートリアルでは、適切なレコードまたは修正されたレコードのみを MDS サーバーにアップロードします。 そのため、レコードの**状態**が**適切**であるか、**修正**されたかを確認し、レコードを MDS にアップロードする前にレコードを結合します。  
@@ -44,7 +43,7 @@ ms.locfileid: "65489672"
   
 10. [ **OK** ] をクリックして [**条件分割変換エディター** ] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

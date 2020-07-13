@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc52821deeb879022881f838c61823b23c0c10c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62871516"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965876"
 ---
 # <a name="modified-features-contained-database"></a>変更された機能 (包含データベース)
   次の機能は、部分的包含データベースでサポートされるように変更されました。 通常、機能の変更は、データベース境界を越えないように行われます。  

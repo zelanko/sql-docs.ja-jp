@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041026"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829943"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sp_xtp_merge_checkpoint_files (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68041026"
   
 ||  
 |-|  
-|**注**: このストアドプロシージャは、で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]は非推奨とされます。 これは不要になったため、使用できません[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|**注**: このストアドプロシージャは、では非推奨とされ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ます。 これは不要になったため、使用できません [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。|  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  [SQL&#41;&#40;dm_db_xtp_checkpoint_files](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)に示すように、データファイルのトランザクションの (bigint) 上限。 無効な transactonId 値に対してエラーが生成されました。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  なし  

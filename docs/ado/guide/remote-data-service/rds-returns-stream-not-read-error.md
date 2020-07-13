@@ -1,5 +1,5 @@
 ---
-title: RDS は&quot;ストリーム Not Read&quot;エラーを返します。Microsoft Docs
+title: RDS &quot; はストリーム Not Read エラーを返します。 &quot;Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922468"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747736"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS は&quot;ストリームの読み取り&quot;不可エラーを返します
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS &quot; はストリームの読み取り不可エラーを返します &quot;
 "ストリームオブジェクトが空であるか、または現在の位置がストリームの末尾にあるため、読み取ることができませんでした。 空でないストリームの場合は、Position プロパティを使用して現在の位置を設定します。 ストリームが空かどうかを確認するには、Size プロパティを確認します。  
   
  このエラーメッセージが表示された場合は、http を介してパラメーター化された階層クエリを使用しようとした可能性があります。 RDS では、パラメーター化された階層をリモートで使用することはできません。  

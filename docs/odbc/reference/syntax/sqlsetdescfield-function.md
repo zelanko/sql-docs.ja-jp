@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetDescField function [ODBC]
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039740"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299552"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
 
@@ -46,7 +46,7 @@ SQLRETURN SQLSetDescField(
 ```  
   
 ## <a name="arguments"></a>引数  
- *記述子ハンドル*  
+ *DescriptorHandle*  
  代入記述子ハンドル。  
   
  *RecNumber*  
@@ -79,7 +79,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>診断  
  **SQLSetDescField**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_DESC で、*記述子ハンドル*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetDescField**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S02|オプションの値が変更されました|ドライバーは、 * \*valueptr*に指定された値 ( *valueptr*がポインターの場合) または*valueptr*の値 ( *valueptr*が整数値の場合) をサポートしていなかったか* \*、または valueptr が実装*の動作条件により無効だったため、ドライバーは同様の値に置き換えられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -139,7 +139,7 @@ SQLRETURN SQLSetDescField(
   
  ヘッダーフィールドの初期化については、次の表で説明します。  
   
-|ヘッダーフィールド名|種類|R/W|Default|  
+|ヘッダーフィールド名|Type|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|APD: R IRD: R IPD: R|SQL_DESC_ALLOC_AUTO: 暗黙的または SQL_DESC_ALLOC_USER (明示的の場合)<br /><br /> APD: 暗黙的または SQL_DESC_ALLOC_USER を明示的に SQL_DESC_ALLOC_AUTO<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN 向け|APD: r/w IRD: 未使用の IPD: 未使用|APD: [1]: [1] IRD: 未使用の IPD: 使用されていません|  
@@ -153,7 +153,7 @@ SQLRETURN SQLSetDescField(
   
  レコードフィールドの初期化は、次の表に示すようになります。  
   
-|レコードフィールド名|種類|R/W|Default|  
+|レコードフィールド名|Type|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|APD: 未使用の IRD: R IPD: 使用しない|APD: 未使用の IRD: D IPD: 未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR|APD: 未使用の IRD: R IPD: 使用しない|APD: 未使用の IRD: D IPD: 未使用|  
@@ -204,7 +204,7 @@ SQLRETURN SQLSetDescField(
  この読み取り専用の SQLSMALLINT ヘッダーフィールドは、記述子がドライバーによって自動的に割り当てられたか、またはアプリケーションによって明示的に割り当てられたかを指定します。 このフィールドはアプリケーションで取得できますが、変更はできません。 記述子がドライバーによって自動的に割り当てられた場合、このフィールドはドライバーによって SQL_DESC_ALLOC_AUTO するように設定されます。 記述子がアプリケーションによって明示的に割り当てられている場合、ドライバーによって SQL_DESC_ALLOC_USER するように設定されます。  
   
  **SQL_DESC_ARRAY_SIZE [アプリケーション記述子]**  
- ARDs では、この SQLULEN ヘッダーフィールドは、行セット内の行の数を指定します。 Sqlfetch または**Sqlfetchscroll**への呼び出しによって**** 返される行の数、または**Sqlbulkoperations**または**SQLSetPos**の呼び出しによって操作される行数です。  
+ ARDs では、この SQLULEN ヘッダーフィールドは、行セット内の行の数を指定します。 Sqlfetch または**Sqlfetchscroll**への呼び出しによって**SQLFetch**返される行の数、または**Sqlbulkoperations**または**SQLSetPos**の呼び出しによって操作される行数です。  
   
  APDs では、この SQLULEN ヘッダーフィールドは、各パラメーターの値の数を指定します。  
   
@@ -248,7 +248,7 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_PARAM_ERROR: この一連のパラメーターを処理中にエラーが発生しました。 診断データ構造では、追加のエラー情報を利用できます。  
   
--   SQL_PARAM_UNUSED: このパラメーターセットは使用されていませんでした。以前のパラメーターセットによって、後続の処理を中止したエラーが発生したか、によって指定された配列のパラメーターセットに SQL_PARAM_IGNORE が設定されていることが原因である可能性があり SQL_DESC_ARRAY_APD の STATUS_PTR フィールド。  
+-   SQL_PARAM_UNUSED: このパラメーターセットは使用されていませんでした。以前のパラメーターセットによって、処理を中止したエラーが発生したか、または APD の SQL_DESC_ARRAY_STATUS_PTR フィールドで指定された配列内のパラメーターのセットに SQL_PARAM_IGNORE が設定されていることが原因である可能性があります。  
   
 -   SQL_PARAM_DIAG_UNAVAILABLE: 診断情報が使用できません。 この例として、ドライバーがパラメーターの配列をモノリシック単位として扱う場合に、このレベルのエラー情報は生成されません。  
   
@@ -275,7 +275,7 @@ SQLRETURN SQLSetDescField(
  APD のこのフィールドは、SQL_ATTR_PARAM_OPERATION_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
   
  **SQL_DESC_BIND_OFFSET_PTR [アプリケーション記述子]**  
- この SQLLEN * ヘッダーフィールドは、バインドオフセットを指します。 既定では、null ポインターに設定されています。 このフィールドが null ポインターでない場合、ドライバーはポインターを逆参照し、記述子レコード (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR) に null 以外の値を持つ各遅延フィールドに逆参照された値を追加します。フェッチ時に、バインド時に新しいポインター値を使用します。  
+ この SQLLEN * ヘッダーフィールドは、バインドオフセットを指します。 既定では、null ポインターに設定されています。 このフィールドが null ポインターではない場合、ドライバーはポインターを逆参照し、フェッチ時に null 以外の値を持つ各遅延フィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR) に逆参照値を追加し、バインド時に新しいポインター値を使用します。  
   
  バインドオフセットは、常に、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR の各フィールドの値に直接追加されます。 オフセットが別の値に変更された場合でも、新しい値は各記述子フィールドの値に直接追加されます。 新しいオフセットは、フィールド値に前のオフセットと共に追加されることはありません。  
   
@@ -333,7 +333,7 @@ SQLRETURN SQLSetDescField(
  この読み取り専用の SQLCHAR * レコードフィールドには、結果セット列のベーステーブル名が含まれています。 ベーステーブルの名前を定義できない場合、または適用できない場合、この変数には空の文字列が含まれます。  
   
  **SQL_DESC_CASE_SENSITIVE [実装記述子]**  
- 照合順序と比較で列またはパラメーターが大文字と小文字を区別するように処理される場合、この読み取り専用の SQLINTEGER レコードフィールドには SQL_TRUE が含まれます。また、列が照合順序と比較で大文字と小文字を区別して扱われない場合、または非文字である場合は SQL_FALSE ます。項目.  
+ この読み取り専用の SQLINTEGER レコードフィールドには、照合順序と比較のために列またはパラメーターが大文字と小文字を区別するように処理される場合は SQL_TRUE が含まれます。照合順序と比較で列が大文字と小文字を区別して扱われない場合、または列が非文字の列である場合は SQL_FALSE ます。  
   
  **SQL_DESC_CATALOG_NAME [IRDs]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、列を含むベーステーブルのカタログが含まれています。 列が式である場合、または列がビューの一部である場合、戻り値はドライバーに依存します。 データソースでカタログがサポートされていない場合、またはカタログを特定できない場合、この変数には空の文字列が含まれます。  
@@ -447,7 +447,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_OCTET_LENGTH_PTR [アプリケーション記述子]**  
  この SQLLEN * レコードフィールドは、動的引数 (パラメーター記述子の場合) またはバインドされた列の値 (行記述子の場合) の合計長をバイト単位で格納する変数を指します。  
   
- APD の場合、この値は文字列とバイナリを除くすべての引数に対して無視されます。このフィールドが SQL_NTS を指している場合、動的引数は null で終わる必要があります。 バインドされたパラメーターが実行時データパラメーターであることを示すために、アプリケーションは、APD の適切なレコードのこのフィールドを、実行時に SQL_LEN_DATA_AT_EXEC マクロの値 SQL_DATA_AT_EXEC または結果を含む変数に設定します。. このようなフィールドが複数ある場合、SQL_DESC_DATA_PTR は、要求されているパラメーターをアプリケーションが判断できるように、パラメーターを一意に識別する値に設定できます。  
+ APD の場合、この値は文字列とバイナリを除くすべての引数に対して無視されます。このフィールドが SQL_NTS を指している場合、動的引数は null で終わる必要があります。 バインドされたパラメーターが実行時データパラメーターであることを示すために、アプリケーションは、APD の適切なレコードのこのフィールドを、実行時に SQL_LEN_DATA_AT_EXEC マクロの値 SQL_DATA_AT_EXEC または結果を含む変数に設定します。 このようなフィールドが複数ある場合、SQL_DESC_DATA_PTR は、要求されているパラメーターをアプリケーションが判断できるように、パラメーターを一意に識別する値に設定できます。  
   
  の OCTET_LENGTH_PTR フィールドが null ポインターの場合、ドライバーは列の長さの情報を返しません。 APD の SQL_DESC_OCTET_LENGTH_PTR フィールドが null ポインターの場合、ドライバーは、文字列とバイナリ値が null で終わることを前提としています。 (バイナリ値は null で終わることはできませんが、切り捨てを避けるために長さを指定する必要があります)。  
   
@@ -459,7 +459,7 @@ SQLRETURN SQLSetDescField(
  IPD の場合、IPD がドライバーによって自動的に設定されない場合、フィールドは既定で SQL_PARAM_INPUT に設定されます (SQL_ATTR_ENABLE_AUTO_IPD statement 属性は SQL_FALSE)。 アプリケーションでは、入力パラメーターではないパラメーターの IPD にこのフィールドを設定する必要があります。  
   
  **SQL_DESC_PRECISION [すべて]**  
- この SQLSMALLINT レコードフィールドには、正確な数値型の桁数、概数型の場合は仮数部のビット数 (バイナリ精度)、SQL_TYPE_TIME の秒部分の秒部分の桁数が含まれてい SQL_TYPE_TIMESTAMP、または SQL_INTERVAL_SECOND データ型。 このフィールドは、他のすべてのデータ型には定義されていません。  
+ この SQLSMALLINT レコードフィールドには、正確な数値型の数字の数、概数型の仮数部のビット数 (binary precision)、または SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP、または SQL_INTERVAL_SECOND データ型の秒の小数部の桁数が含まれています。 このフィールドは、他のすべてのデータ型には定義されていません。  
   
  このフィールドの値は、ODBC 2.x で定義*されて*いる "有効桁数" の値とは異なる場合があります。 詳細については、「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
   
@@ -538,7 +538,7 @@ SQLRETURN SQLSetDescField(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |列のバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |パラメーターのバインド|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  

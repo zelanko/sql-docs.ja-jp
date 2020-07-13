@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 2c5cec3ba96a9ce4b96ae3b4dd92299e361902b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923969"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69025864"
 ---
 # <a name="using-statements-with-stored-procedures"></a>ストアド プロシージャでのステートメントの使用
 
@@ -37,7 +37,7 @@ ms.locfileid: "80923969"
 > [!NOTE]  
 > ストアド プロシージャは、更新数および複数の結果セットを返すこともできます。 詳細については、「[更新数があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」と「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。  
   
-JDBC ドライバーを使用してパラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) クラスの [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドと一緒に使用する必要があります。 `call` エスケープ シーケンスの完全な構文は次のとおりです。  
+JDBC ドライバーを使用してパラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 `call` エスケープ シーケンスの完全な構文は次のとおりです。  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab32a3bad6b394932ccf5e48200b7da40ee5d32f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010635"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892834"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   エラーが発生した場合にデータのアップロードを試行する回数を設定します。 データのアップロード時にエラーが発生した場合に再試行することで、収集したデータが失われるリスクが軽減されます。  
 
@@ -41,10 +41,10 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cache_window = ]*cache_window*  
+ [ @cache_window =] *cache_window*  
  管理データ ウェアハウスへのデータのアップロード時にエラーが発生した場合、データが失われるのを回避するためにアップロードを再試行する回数を指定します。 *cache_window*は**int**で、既定値は1です。 *cache_window*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |-1|アップロード エラーが発生した場合にそのすべてのアップロード データをキャッシュします。|  
 |0|アップロードエラーのデータをキャッシュしないでください。|  
@@ -59,7 +59,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データコレクターを無効にし、最大3回のアップロードでデータを保持するようにキャッシュウィンドウを構成してから、データコレクターを有効にします。  
   
 ```sql  
@@ -72,8 +72,8 @@ GO
 EXECUTE dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_directory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
+ [sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

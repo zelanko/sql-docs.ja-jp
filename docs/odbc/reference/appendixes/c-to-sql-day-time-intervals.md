@@ -13,14 +13,14 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c3f7efb443b442d44a94cfd43629cdaedd6195b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019369"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291922"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C から SQL へ: 日付と時刻の間隔
 日付と時刻の間隔の ODBC C データ型の識別子は次のとおりです。  
@@ -56,7 +56,7 @@ ms.locfileid: "68019369"
   
  [a] すべての C interval データ型を文字データ型に変換できます。  
   
- [b] interval 構造体の type フィールドが、間隔が1つのフィールド (SQL_DAY、SQL_HOUR、SQL_MINUTE、または SQL_SECOND) である場合、範囲 C の型は任意の正確な数値に変換できます (SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL、または SQL_NUMERIC)。  
+ [b] interval 構造体の type フィールドが、間隔が1つのフィールド (SQL_DAY、SQL_HOUR、SQL_MINUTE、または SQL_SECOND) である場合、C の種類の間隔は任意の正確な数値 (SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_DECIMAL、または SQL_NUMERIC) に変換できます。  
   
  間隔 C 型の既定の変換は、対応する日時間隔の SQL 型になります。  
   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 31bcacc0d001c4759e81380177c84af3ff278e30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211235"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896233"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 トレース フラグの状態を表示します。
   
@@ -40,7 +40,7 @@ ms.locfileid: "70211235"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )   
 [ WITH NO_INFOMSGS ]  
 ```  

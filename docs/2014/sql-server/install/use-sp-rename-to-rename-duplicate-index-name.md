@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058814"
 ---
 # <a name="use-sp_rename-to-rename-duplicate-index-name"></a>sp_rename を使用して重複するインデックス名を変更する
   テーブルまたはビューのインデックス名が重複していることをアップグレード アドバイザーが検出しました。 インデックス名を変更して重複を解消した後、アップグレードしてください。  

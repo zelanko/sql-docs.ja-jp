@@ -12,15 +12,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55474bb9c52acea8c6c3fe091874f46f4e7c61de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769058"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437249"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 式)
   大文字が小文字に変換された状態の文字式を返します。  

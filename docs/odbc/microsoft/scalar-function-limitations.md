@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2466fefd76b4e285ec2df6e79992e8cf3f33e4e7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987922"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292882"
 ---
 # <a name="scalar-function-limitations"></a>スカラー関数の制限事項
 スカラー関数は、ODBC 標準形式を使用する場合にのみサポートされます。

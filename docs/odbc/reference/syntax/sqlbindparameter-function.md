@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBindParameter function [ODBC]
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 02f50862bcfb0295c7f098afc6856c91e0249f66
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036210"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301362"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 
@@ -99,7 +99,7 @@ SQLRETURN SQLBindParameter(
 
  **SQLBindParameter**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLBindParameter**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
 
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|*ValueType*引数によって識別されるデータ型は、 *ParameterType*引数によって識別されるデータ型に変換できません。 このエラーは、 **SQLBindParameter**ではなく、実行時に**SQLExecDirect**、 **Sqlexecute**、または**sqlputdata**によって返される可能性があります。|  
@@ -132,7 +132,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="inputoutputtype-argument"></a>InputOutputType 引数  
  *Inputoutputtype*引数は、パラメーターの型を指定します。 この引数は、IPD の SQL_DESC_PARAMETER_TYPE フィールドを設定します。 **INSERT**ステートメントなど、プロシージャを呼び出さない SQL ステートメントのすべてのパラメーターは、*入力 * * パラメーター*です。 プロシージャ呼び出しのパラメーターには、入力、入力、出力、または出力パラメーターを指定できます。 (アプリケーションは**SQLProcedureColumns**を呼び出して、プロシージャ呼び出しのパラメーターの型を決定します。型を特定できないパラメーターは入力パラメーターと見なされます)。  
   
- *Inputoutputtype*引数は、次のいずれかの値です。  
+ *InputOutputType* 引数は、次にいずれかの値になります。  
   
 -   SQL_PARAM_INPUT。 パラメーターは、 **INSERT**ステートメントなどのプロシージャを呼び出さない SQL ステートメントのパラメーター、またはプロシージャの入力パラメーターとしてマークするパラメーターをマークします。 たとえば、 **INSERT INTO EMPLOYEE VALUES (?,?,?)** のパラメーターは入力パラメーターですが、 **{Call addemp (?,?,?)}** のパラメーターは、必ずしも入力パラメーターであるとは限りません。  
   
@@ -157,7 +157,7 @@ SQLRETURN SQLBindParameter(
   
  次の表に、 *Inputoutputtype*と **StrLen_or_IndPtr*のさまざまな組み合わせを示します。  
   
-|*InputOutputType*|**StrLen_or_IndPtr*|結果|ParameterValuePtr の注釈|  
+|*InputOutputType*|**StrLen_or_IndPtr*|成果|ParameterValuePtr の注釈|  
 |-----------------------|----------------------------|-------------|---------------------------------|  
 |SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*LEN*) または SQL_DATA_AT_EXEC|パーツでの入力|*Parametervalueptr*には、 *parametervalueptr*で値が渡されたユーザー定義トークンとして**sqlparamdata**によって返されるポインター値を指定できます。|  
 |SQL_PARAM_INPUT|Not SQL_LEN_DATA_AT_EXEC (*LEN*) または SQL_DATA_AT_EXEC|入力バインドバッファー|*Parametervalueptr*は、入力バッファーのアドレスです。|  
@@ -220,7 +220,7 @@ SQLRETURN SQLBindParameter(
   
  \* *StrLen_or_IndPtr*が SQL_LEN_DATA_AT_EXEC (*長さ*) マクロまたは SQL_DATA_AT_EXEC の結果である場合、 *parametervalueptr*は、パラメーターに関連付けられたアプリケーション定義のポインター値です。 **Sqlparamdata**を使用してアプリケーションに返されます。 たとえば、 *Parametervalueptr*は、パラメーター番号、データへのポインター、またはアプリケーションが入力パラメーターをバインドするために使用する構造体へのポインターなど、0以外のトークンである場合があります。 ただし、パラメーターが入力/出力パラメーターの場合、 *Parametervalueptr*は出力値が格納されるバッファーへのポインターである必要があることに注意してください。 SQL_ATTR_PARAMSET_SIZE statement 属性の値が1より大きい場合、アプリケーションは、 *Parametervalueptr*引数と共に、SQL_ATTR_PARAMS_PROCESSED_PTR statement 属性が指す値を使用できます。 たとえば、 *Parametervalueptr*は値の配列を指す場合があり、アプリケーションは SQL_ATTR_PARAMS_PROCESSED_PTR が指す値を使用して、配列から正しい値を取得することがあります。 詳細については、このセクションで後述する「パラメーター値の引き渡し」を参照してください。  
   
- *Inputoutputtype*引数が SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT の場合、 *parametervalueptr*は、ドライバーが出力値を返すバッファーをポイントします。 プロシージャが1つ以上の結果セットを返す場合\*、 *parametervalueptr*バッファーは、すべての結果セット/行カウントが処理されるまで設定されることは保証されません。 処理が完了するまでバッファーが設定されていない場合は、 **Sqlmoreresults**が SQL_NO_DATA を返すまで、出力パラメーターと戻り値は使用できません。 SQL_CLOSE オプションを指定して**SqlcloSQLFreeStmt**または**** を呼び出すと、これらの値が破棄されます。  
+ *Inputoutputtype*引数が SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT の場合、 *parametervalueptr*は、ドライバーが出力値を返すバッファーをポイントします。 プロシージャが1つ以上の結果セットを返す場合\*、 *parametervalueptr*バッファーは、すべての結果セット/行カウントが処理されるまで設定されることは保証されません。 処理が完了するまでバッファーが設定されていない場合は、 **Sqlmoreresults**が SQL_NO_DATA を返すまで、出力パラメーターと戻り値は使用できません。 SQL_CLOSE オプションを指定して**SqlcloSQLFreeStmt**または**SQLFreeStmt**を呼び出すと、これらの値が破棄されます。  
   
  SQL_ATTR_PARAMSET_SIZE statement 属性の値が1より大きい場合、 *Parametervalueptr*は配列を指します。 1つの SQL ステートメントは、入力パラメーターまたは入出力パラメーターの入力値の配列全体を処理し、入力/出力パラメーターまたは出力パラメーターの出力値の配列を返します。  
   
@@ -368,7 +368,7 @@ SQLRETURN SQLBindParameter(
     > [!NOTE]  
     >  行方向のバインドを使用するときにアプリケーションが記述子に直接書き込む場合は、長さとインジケーターデータに個別のフィールドを使用できます。  
   
-2.  SQL_ATTR_PARAM_BIND_TYPE ステートメントの属性を、パラメーターの1つのセットを含む構造体のサイズ、またはパラメーターがバインドされるバッファーのインスタンスのサイズに設定します。 長さには、バインドされたすべてのパラメーターの領域と、構造体またはバッファーの埋め込みを含める必要があります。これにより、バインドされたパラメーターのアドレスが指定された長さでインクリメントされた場合、結果は、の同じパラメーターの先頭を指します。次の行。 ANSI C で*sizeof*演算子を使用すると、この動作は保証されます。  
+2.  SQL_ATTR_PARAM_BIND_TYPE ステートメントの属性を、パラメーターの1つのセットを含む構造体のサイズ、またはパラメーターがバインドされるバッファーのインスタンスのサイズに設定します。 長さには、バインドされているすべてのパラメーターの領域と、構造体またはバッファーの埋め込みを含める必要があります。バインドされたパラメーターのアドレスが指定された長さでインクリメントされると、結果は次の行の同じパラメーターの先頭を指します。 ANSI C で*sizeof*演算子を使用すると、この動作は保証されます。  
   
 3.  は、バインドされる各パラメーターに対して次の引数を指定して**SQLBindParameter**を呼び出します。  
   
@@ -399,7 +399,7 @@ SQLRETURN SQLBindParameter(
   
  ドライバーがパラメーターの配列をモノリシック単位として処理するときに SQL_PARAM_DIAG_UNAVAILABLE が入力されるため、この個別のパラメーターレベルのエラー情報は生成されません。  
   
- パラメーターの1つのセットの処理中にエラーが発生すると、配列内の後続のパラメーターセットの処理が停止します。 その他のエラーは、後続のパラメーターの処理には影響しません。 処理を停止するエラーはドライバーで定義されています。 処理が停止されていない場合は、配列内のすべてのパラメーターが処理され、エラーの結果として返さ SQL_SUCCESS_WITH_INFO が返されます。 SQL_ATTR_PARAMS_PROCESSED_PTR によって定義されるバッファーは、処理されたパラメーターのセットの総数 (SQL_ATTR_PARAMSET_SIZE ステートメント属性)。これには、エラーセットが含まれます。  
+ パラメーターの1つのセットの処理中にエラーが発生すると、配列内の後続のパラメーターセットの処理が停止します。 その他のエラーは、後続のパラメーターの処理には影響しません。 処理を停止するエラーはドライバーで定義されています。 処理が停止されていない場合は、配列内のすべてのパラメーターが処理され、エラーの結果として返さ SQL_SUCCESS_WITH_INFO が返されます。 SQL_ATTR_PARAMS_PROCESSED_PTR によって定義されるバッファーは、エラーセットを含む、SQL_ATTR_PARAMSET_SIZE statement 属性で定義されているように処理されたパラメーターのセットの合計数に設定されます。  
   
 > [!CAUTION]  
 >  Odbc 3 では、パラメーターの配列の処理でエラーが発生した場合の ODBC 動作が異なります。*x*は ODBC 2 ではありませんでした。*x*。 ODBC 2 の場合。*x*関数は SQL_ERROR を返し、なったを処理します。 **Sqlparamoptions**の*pirow*引数によってポイントされたバッファーには、エラー行の番号が含まれていました。 ODBC 3 の場合。*x*関数は、SQL_SUCCESS_WITH_INFO を返し、処理を停止するか続行するかを指定します。 続行すると、SQL_ATTR_PARAMS_PROCESSED_PTR によって指定されたバッファーは、エラーの原因となったすべてのパラメーターを含む、処理されたすべてのパラメーターの値に設定されます。 この動作の変更により、既存のアプリケーションで問題が発生する可能性があります。  
@@ -444,7 +444,7 @@ SQLRETURN SQLBindParameter(
 
  パラメーターの再バインドは、多くのパラメーターを含めることができても、 **SQLExecDirect**または**sqlexecute**への呼び出しで使用されるパラメーターの数が少ない場合に、アプリケーションにバッファー領域の設定がある場合に特に便利です。 バッファー領域の残りの領域は、既存のバインドをオフセットによって変更することによって、次のパラメーターのセットに使用できます。  
   
- APD の SQL_DESC_BIND_OFFSET_PTR header フィールドは、バインドオフセットを指します。 フィールドが null 以外の場合、ドライバーはポインターを逆参照し、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR の各フィールドの値が null ポインターでない場合は、逆参照された値を記述子内のフィールドに追加します。実行時に記録します。 新しいポインター値は、SQL ステートメントの実行時に使用されます。 オフセットは再バインド後も有効なままです。 SQL_DESC_BIND_OFFSET_PTR はオフセット自体ではなくオフセットへのポインターであるため、アプリケーションは[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)または[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)を呼び出して記述子フィールドを変更することなく、直接オフセットを変更できます。 既定では、ポインターは null に設定されています。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の SQL_DESC_BIND_OFFSET_PTR フィールドを設定するには、SQLSetStmtAttr を呼び出します。または、 *fattribute*が SQL_ATTR_PARAM_BIND_OFFSET_PTR の[](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を呼び出します。  
+ APD の SQL_DESC_BIND_OFFSET_PTR header フィールドは、バインドオフセットを指します。 フィールドが null 以外の場合、ドライバーはポインターを逆参照し、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR の各フィールドの値が null ポインターでない場合は、実行時に記述子レコードのフィールドに逆参照された値を追加します。 新しいポインター値は、SQL ステートメントの実行時に使用されます。 オフセットは再バインド後も有効なままです。 SQL_DESC_BIND_OFFSET_PTR はオフセット自体ではなくオフセットへのポインターであるため、アプリケーションは[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)または[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)を呼び出して記述子フィールドを変更することなく、直接オフセットを変更できます。 既定では、ポインターは null に設定されています。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の SQL_DESC_BIND_OFFSET_PTR フィールドを設定するには、SQLSetStmtAttr を呼び出します。または、 *fattribute*が SQL_ATTR_PARAM_BIND_OFFSET_PTR の[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を呼び出します。  
   
  バインドオフセットは、常に、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR の各フィールドの値に直接追加されます。 オフセットが別の値に変更された場合でも、新しい値は各記述子フィールドの値に直接追加されます。 新しいオフセットは、フィールド値とそれ以前のオフセットの合計には追加されません。  
   
@@ -598,7 +598,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ステートメント内のパラメーターに関する情報を返す|[SQLDescribeParam 関数](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
 |SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  

@@ -17,20 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c56e80482ef71e8041f8518ae9901691a1809990
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62727698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545334"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>集計と集計デザイン
-  
   <xref:Microsoft.AnalysisServices.AggregationDesign> オブジェクトは、複数のパーティションで共有できる集計定義のセットを定義します。  
   
- 
-  <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、メジャー グループ データの概要を、ディメンションの特定の粒度で表します。  
+ <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、メジャー グループ データの概要を、ディメンションの特定の粒度で表します。  
   
  簡単な <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトは、基本情報およびディメンションで構成されます。 基本情報には、集計の名前、ID、注釈、および説明が含まれます。 ディメンションは、ディメンションの粒度属性の一覧を含む <xref:Microsoft.AnalysisServices.AggregationDimension> オブジェクトのコレクションです。  
   

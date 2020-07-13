@@ -16,29 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7760b7893632f2171edc2b4823f8b87b8313000f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75322112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889824"
 ---
 # <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_generation_partition_mappings**テーブルは、マージパブリケーションのパーティションに対する変更を追跡するために使用されます。 このテーブルは、パブリケーションデータベースおよび scubscription データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|マージ パブリケーションを識別します。|  
 |**generation**|**bigint**|生成値。|  
 |**partition_id**|**int**|パーティションを識別します。|  
 |**changecount**|**int**|パーティションが変更された回数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

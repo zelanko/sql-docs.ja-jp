@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Unique property [ADOX]
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18b2bc4fca3ebd999529b61ac3b7ec1e8254966e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964986"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763233"
 ---
 # <a name="unique-property-adox"></a>Unique プロパティ (ADOX)
 インデックスキーが一意である必要があるかどうかを示します。  

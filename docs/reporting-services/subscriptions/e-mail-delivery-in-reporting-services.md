@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の電子メール配信 | Microsoft Docs
+description: この記事では、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72305044"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632535"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メールでレポートを配信するには、1) 電子メール配信のレポート サーバーを構成し、2) 標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 単一のサブスクリプションでは、1 通の電子メール メッセージで複数のレポートを配信できません。 ただし、複数のサブスクリプションを作成することはできます。  
   
- レポート サーバーは、標準の接続を介して電子メール サーバーに接続します。 SSL (Secure Sockets Layer) を使用して暗号化された通信は使用しません。 電子メール サーバーは、レポート サーバーと同じネットワーク上にあるリモートまたはローカルの簡易メール転送プロトコル (SMTP) サーバーである必要があります。  
+ レポート サーバーは、標準の接続を介して電子メール サーバーに接続します。 トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して暗号化された通信は使用しません。 電子メール サーバーは、レポート サーバーと同じネットワーク上にあるリモートまたはローカルの簡易メール転送プロトコル (SMTP) サーバーである必要があります。  
   
  サブスクリプションを作成する詳細な手順については、次を参照してください。  
   

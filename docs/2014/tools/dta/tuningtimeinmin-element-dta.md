@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8690467f33b53588857747b86771b739f4e406dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63268156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007449"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 要素 (DTA)
   チューニング セッションの最大の長さを分単位で指定します。  
@@ -36,13 +35,11 @@ ms.locfileid: "63268156"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `unsignedInt`、長さは無制限です。|  
+|**データ型と長さ**|`unsignedInt`、長さは無制限です。|  
 |**既定値**|480 分 (8 時間)。|  
-|**個数**|
-  `NumberOfEvents` 要素に値が指定されていない限り、必須です。|  
+|**個数**|`NumberOfEvents` 要素に値が指定されていない限り、必須です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -53,7 +50,7 @@ ms.locfileid: "63268156"
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例は、最大チューニング時間を 12 時間に設定する方法を示します。  
   
 ## <a name="code"></a>コード  

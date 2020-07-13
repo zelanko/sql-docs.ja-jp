@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961542"
 ---
 # <a name="metadata-master-data-services"></a>メタデータ (マスター データ サービス)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] におけるユーザー定義メタデータは、モデル オブジェクトを説明するために使用する情報です。 たとえば、特定のモデルまたはエンティティの所有者を追跡する場合や、エンティティにデータを提供するソース システムを追跡する場合があります。  
   
- ユーザー定義メタデータは、**メタデータ**と呼ばれるモデルによって管理されます。 このモデルは、のインストール[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時に自動的に含まれ、その他のすべての MDS モデルに似ています。ただし、バージョンを作成することはできません。  
+ ユーザー定義メタデータは、**メタデータ**と呼ばれるモデルによって管理されます。 このモデルは、のインストール時に自動的に含まれ、その [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 他のすべての MDS モデルに似ています。ただし、バージョンを作成することはできません。  
   
  メタデータ モデルにユーザー定義のメタデータを投入した後は、それをサブスクリプション ビューに追加することで、サブスクライブ システムから利用できるようになります。  
   
@@ -48,7 +46,7 @@ ms.locfileid: "66054034"
   
 -   Last Review Date という名前の自由形式の属性。所有者によってオブジェクトが最後に確認された日付を追跡するために使用します。  
   
--   ソースという名前のドメインベースの属性。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]インスタンスと対話するソースシステムを追跡および管理するために使用します。  
+-   ソースという名前のドメインベースの属性。インスタンスと対話するソースシステムを追跡および管理するために使用し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

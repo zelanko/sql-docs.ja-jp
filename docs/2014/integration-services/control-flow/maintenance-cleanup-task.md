@@ -13,15 +13,14 @@ helpviewer_keywords:
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8b3c3aa4f63018e91370c4e01dada40c35a5f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7e58181f01718bd4327e05cbfeb4a40b50b9a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830801"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432799"
 ---
 # <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク
   メンテナンス クリーンアップ タスクでは、データベース バックアップ ファイルや、メンテナンス プランによって作成されたレポートなど、メンテナンス プランに関連するファイルを削除します。 詳細については、「 [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md) 」および「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  

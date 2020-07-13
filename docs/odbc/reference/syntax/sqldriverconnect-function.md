@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDriverConnect function [ODBC]
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88ec70d68b46beca97fd6b0d758e21aab5d4f4b2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104706"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302773"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **互換性**  
@@ -97,7 +97,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>診断  
  **SQLDriverConnect**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連する SQLSTATE 値は、 *fhandletype* SQL_HANDLE_DBC と*connectionhandle*の*hhandle*を指定して**SQLGetDiagRec**を呼び出すことによって取得できます。 次の表に、 **SQLDriverConnect**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|バッファー \* *outconnectionstring*は接続文字列全体を返すのに十分な大きさではないため、接続文字列が切り捨てられました。 切り捨てられていない接続文字列の長さは **StringLength2Ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -166,9 +166,9 @@ SQLRETURN SQLDriverConnect(
   
  次の表では、 **DSN**、 **FILEDSN**、 **DRIVER**、 **UID**、 **PWD**、および**SAVEFILE**キーワードの属性値について説明します。  
   
-|Keyword|属性値の説明|  
+|キーワード|属性値の説明|  
 |-------------|---------------------------------|  
-|**ソース**|**SQLDriverConnect**の**sqldatasources**または [データソース] ダイアログボックスによって返されるデータソースの名前。|  
+|**DSN**|**SQLDriverConnect**の**sqldatasources**または [データソース] ダイアログボックスによって返されるデータソースの名前。|  
 |**FILEDSN**|データソース用の接続文字列の作成元となる、dsn ファイルの名前。 これらのデータソースは、ファイルデータソースと呼ばれます。|  
 |**DRIVER**|**Sqldrivers**関数によって返されるドライバーの説明。 たとえば、Rdb や SQL Server などです。|  
 |**UID**|ユーザー ID。|  
@@ -356,7 +356,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |データソースへの接続に必要な値の検出と列挙|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94e70de7d237c2eca9aee81979cb19d5295561b5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106171"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305923"
 ---
 # <a name="descriptor-fields"></a>記述子フィールド
 記述子には、列またはパラメーターを完全に記述する*ヘッダー*フィールドと*レコード*フィールドが含まれています。  

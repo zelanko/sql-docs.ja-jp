@@ -19,22 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185644"
 ---
 # <a name="market-basket-dmx-tutorial"></a>マーケット バスケット DMX のチュートリアル
   このチュートリアルでは、データマイニング拡張機能 (DMX) クエリ言語を使用して、マイニングモデルを作成、トレーニング、および調査する方法について説明します。 その後、このマイニング モデルを使用して、同時に購入される傾向が高い製品を示す予測を作成します。  
   
- マイニング モデルは、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータから作成します。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。 北米、ヨーロッパ、およびアジアの市場向けに、金属製自転車や複合材製自転車の製造および販売を行っています。 企業の拠点は従業員 290 人を擁する米国ワシントン州ボセルで、また各国の市場の拠点として、複数の地域販売チームが配置されています。  
+ マイニング モデルは、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベース内のデータから作成します。このサンプル データベースには、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のデータが格納されています。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、多国籍の大規模な製造企業です。 北米、ヨーロッパ、およびアジアの市場向けに、金属製自転車や複合材製自転車の製造および販売を行っています。 企業の拠点は従業員 290 人を擁する米国ワシントン州ボセルで、また各国の市場の拠点として、複数の地域販売チームが配置されています。  
   
 ## <a name="tutorial-scenario"></a>チュートリアルのシナリオ  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニング機能を用いたカスタム アプリケーションを作成して、同時に購入する傾向が高い製品の種類を予測することにしました。 このカスタム アプリケーションの目標は、一連の製品を指定できるようにし、指定した製品と共に購入される追加製品を予測できるようにすることです。 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はこれらの情報を使用して、企業の Web サイトで "お勧め" の製品を表示すると共に、顧客によりわかりやすく情報を表示したいと考えています。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、データ マイニング機能を用いたカスタム アプリケーションを作成して、同時に購入する傾向が高い製品の種類を予測することにしました。 このカスタム アプリケーションの目標は、一連の製品を指定できるようにし、指定した製品と共に購入される追加製品を予測できるようにすることです。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はこれらの情報を使用して、企業の Web サイトで "お勧め" の製品を表示すると共に、顧客によりわかりやすく情報を表示したいと考えています。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、このタスクを実行するために使用できるいくつかのツールが用意されてい[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ます。  
   
@@ -42,11 +39,9 @@ ms.locfileid: "63185644"
   
 -   [Microsoft アソシエーションアルゴリズム](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディター  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルの作成と作業に使用できるクエリ言語です。 アソシエーション[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズムによって、一緒に購入される可能性のある製品を予測できるモデルが作成されます。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルの作成と作業に使用できるクエリ言語です。 アソシエーション[!INCLUDE[msCoName](../includes/msconame-md.md)]アルゴリズムによって、一緒に購入される可能性のある製品を予測できるモデルが作成されます。  
   
  このチュートリアルの目標は、カスタム アプリケーションで使用する DMX クエリを設定することです。  
   
@@ -103,15 +98,14 @@ ms.locfileid: "63185644"
  [レッスン 4: マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  このレッスンでは、`PREDICTION JOIN` ステートメントを使用して、マイニング モデルに対する予測を作成する方法を学習します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  このチュートリアルを行う前に、次のソフトウェアがインストールされていることを確認してください。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース  
   
  セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公式サンプルデータベースをインストールするには、 [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) 「」の「Microsoft SQL Server のサンプルとコミュニティプロジェクト」のホームページにアクセスして Microsoft SQL Server 製品サンプルを参照してください。 [**データベース**] をクリックし、[**リリース**] タブをクリックして、目的のデータベースを選択します。  
   
@@ -121,6 +115,6 @@ ms.locfileid: "63185644"
 ## <a name="see-also"></a>参照  
  [自転車購入者 DMX チュートリアル](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [レッスン 3: マーケットバスケットシナリオの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

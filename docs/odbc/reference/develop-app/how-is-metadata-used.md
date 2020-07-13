@@ -11,14 +11,14 @@ helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab2efd47ca5b5492c67b88261795cf524c440bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139010"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300172"
 ---
 # <a name="how-is-metadata-used"></a>メタデータの使用方法
 アプリケーションは、ほとんどの結果セット操作にメタデータを必要とします。 たとえば、列のデータ型を使用して、列にバインドされている変数の種類を判断します。 文字型の列のバイト長を使用して、その列のデータを表示するために必要な領域の量を決定します。 アプリケーションが列のメタデータを判断する方法は、アプリケーションの種類によって異なります。  

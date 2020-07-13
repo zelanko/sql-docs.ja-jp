@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb7e75fd1e25d8f4089d14688096afd0aa4dea8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62791906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937047"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性レプリカのプロパティ ([全般] ページ)
   このダイアログ ボックスには、可用性レプリカのプロパティが表示されます。  
@@ -27,23 +26,23 @@ ms.locfileid: "62791906"
   
 -   [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **可用性グループ名**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
  **サーバーインスタンス**  
  このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。  
   
- **果たす**  
+ **ロール**  
  **プライマリ**  
  現在、プライマリ レプリカです。  
   
- **目**  
+ **セカンダリ**  
  現在、セカンダリ レプリカです。  
   
- **修復**  
+ **[解決中]**  
  現在、レプリカのロールは、プライマリ ロールとセカンダリ ロールのどちらかに解決中です。  
   
  **可用性モード**  
@@ -66,13 +65,13 @@ ms.locfileid: "62791906"
  **手動**  
  手動フェールオーバー。 このレプリカには、データベース管理者が手動でのみフェールオーバーできます。  
   
- **プライマリロールでの接続**  
+ **[プライマリ ロールの接続]**  
  レプリカがプライマリ ロールを所有している場合にサポートされるクライアント接続の種類。  
   
  **すべての接続を許可する**  
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
- **読み取り/書き込み接続を許可する**  
+ **[読み取り/書き込みの接続を許可]**  
  Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 "アプリケーションの目的" プロパティが**ReadWrite**に設定されている場合、または "アプリケーションの目的" 接続プロパティが設定されていない場合は、接続が許可されます。  
   
  **読み取り可能なセカンダリ**  
@@ -81,7 +80,7 @@ ms.locfileid: "62791906"
  **いいえ**  
  このレプリカのセカンダリ データベースに対する直接接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
- **読み取りを目的とした場合のみ**  
+ **[読み取り目的のみ]**  
  このレプリカのセカンダリ データベースに対する直接接続は、読み取り専用でのみ許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
  **はい**  
@@ -89,7 +88,7 @@ ms.locfileid: "62791906"
   
  詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリレプリカ (AlwaysOn 可用性グループ)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- **セッションのタイムアウト (秒)**  
+ **[セッションのタイムアウト (秒)]**  
  タイムアウト時間 (秒単位)。 タイムアウト時間は、レプリカが別のレプリカからのメッセージの受信を待機する最大時間です。この時間を過ぎると、プライマリ レプリカとセカンダリ レプリカの間の接続は障害があるものと見なされます。 セッション タイムアウトは、セカンダリ レプリカがプライマリ レプリカに接続されているかどうかを検出します。 セカンダリ レプリカとの接続が確立されていないことを検出すると、プライマリ レプリカはセカンダリ レプリカが NOT_SYNCHRONIZED であるものと判断します。 プライマリ レプリカとの接続が確立されていないことを検出すると、セカンダリ レプリカは単に再接続を試みます。  
   
 > [!NOTE]  

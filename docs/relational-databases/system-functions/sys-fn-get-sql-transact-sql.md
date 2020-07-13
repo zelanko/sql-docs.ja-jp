@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a20cd13526bcee06e4f4ce3aa93c52a9fd156456
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120259"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898334"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>fn_get_sql (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された SQL ハンドルの SQL ステートメントのテキストを返します。  
   
@@ -55,20 +55,20 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|データベース ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |objectid|**int**|データベース オブジェクトの ID。 アドホック SQL ステートメントの場合は NULL になります。|  
 |number|**smallint**|プロシージャがグループ化されている場合は、グループの番号を示します。<br /><br /> 0 = エントリはプロシージャではありません。<br /><br /> NULL = アドホック SQL ステートメント|  
 |encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
-|text|**本文**|SQL ステートメントのテキストを入力します。 暗号化されているオブジェクトの場合は NULL になります。|  
+|text|**text**|SQL ステートメントのテキストを入力します。 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  有効な SQL ハンドルを取得するには、 [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビューの sql_handle 列を使用します。  
   
  キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq**l**は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  
   
- で[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、一括[!INCLUDE[tsql](../../includes/tsql-md.md)]コピーステートメントや、8 KB を超える文字列リテラルを含むステートメントなど、一部のステートメントをキャッシュすることはできません。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
+ では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 一括コピーステートメントや、8 KB を超える文字列リテラルを含むステートメントなど、一部のステートメントをキャッシュすることはできません。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
  結果セットの**テキスト**列は、パスワードを含む可能性のあるテキストに対してフィルター処理されます。 監視されていないセキュリティ関連のストアドプロシージャの詳細については、「[トレースのフィルター選択](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ sys.fn_get_sql ( SqlHandle )
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  データベース管理者は、次の例のように fn_get_sql 関数を使用して、問題があるプロセスを診断できます。 この場合、まず問題があるセッション ID を特定した後、そのセッションに対する SQL ハンドルを取得します。次にそのハンドルで fn_get_sql を呼び出した後、開始オフセットと終了オフセットを使用して、問題があるセッション ID の SQL ステートメントを確認します。  
   
 ```  
@@ -93,9 +93,9 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [Transact-sql&#41;&#40;の SQL-DMO](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [sys.sysプロセス &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

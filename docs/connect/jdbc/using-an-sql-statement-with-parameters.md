@@ -21,7 +21,7 @@ ms.locfileid: "69026655"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-IN パラメーターを含む SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) クラスの [executeQuery](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) メソッドを使用して、要求されたデータを含む [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) を取得することができます。 この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) クラスの [prepareStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) メソッドを使用して、SQLServerPreparedStatement オブジェクトを作成する必要があります。
+IN パラメーターを含む SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する場合は、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスの [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) メソッドを使用して、要求されたデータを含む [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) を取得することができます。 この場合、最初に [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) メソッドを使用して、SQLServerPreparedStatement オブジェクトを作成する必要があります。
 
 SQL ステートメントを作成する場合、IN パラメータは ? (疑問符) 文字で指定します。これはパラメータ値のプレースホルダになり、後で SQL ステートメントに渡されます。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドの 1 つを使用できます。 使用する setter メソッドは、SQL ステートメントに渡す値のデータ型によって決定されます。
 

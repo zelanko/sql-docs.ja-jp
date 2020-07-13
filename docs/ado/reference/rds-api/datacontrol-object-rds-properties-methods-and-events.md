@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataControl object [ADO], members
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf2f7602d1435b4a4075c437ba7f403b93aeed5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b6dc53cd0449576fceb81556e3ae16edc0a85ff7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964395"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746124"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Connect プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)  
   
  [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "67964395"
   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [onError イベント (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
  [onReadyStateChange イベント (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  

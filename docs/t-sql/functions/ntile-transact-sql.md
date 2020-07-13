@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row distribution [SQL Server]
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02da90c14c34dccbc3a195e206d13ba0a371188d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914903"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822413"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67914903"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   

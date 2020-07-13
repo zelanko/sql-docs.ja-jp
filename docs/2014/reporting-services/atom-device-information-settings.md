@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdbac1500063accf868d4b538b82ba9f3b5aebb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109980"
 ---
 # <a name="atom-device-information-settings"></a>ATOM デバイス情報の設定
@@ -30,7 +30,7 @@ ms.locfileid: "66109980"
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [表示拡張機能にデバイス情報設定を渡す](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4fc9b002b57f8118494709f8fe27a8b19ce28d8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74957186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068404"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
@@ -35,7 +34,7 @@ ms.locfileid: "74957186"
  Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
- 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+ 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  既定では、拡張キー管理は無効です。 この機能を有効にするには、次のオプションと値を使用して sp_configure コマンドを実行します。  
   
@@ -87,7 +86,7 @@ GO
  EKM モジュールでは複数の種類の認証をサポートできますが、 各プロバイダーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に公開する認証の種類は 1 つだけです。したがって、モジュールで基本認証とその他の認証方法がサポートされている場合、公開されるのはいずれか一方だけで、両方は公開されません。  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>ユーザー名/パスワードを使用する EKM デバイス固有の基本認証  
- *では、* ユーザー名/パスワード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のペアを使用する基本認証をサポートしている EKM モジュールで、資格情報による透過的な認証を利用できます。 資格情報の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../authentication-access/credentials-database-engine.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、*ユーザー名/パスワード*のペアを使用する基本認証をサポートしている EKM モジュールで、資格情報による透過的な認証を利用できます。 資格情報の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../authentication-access/credentials-database-engine.md)」を参照してください。  
   
  EKM プロバイダーに対して資格情報を作成し、それをログイン (Windows アカウントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントの両方) にマップすることにより、ログインごとに EKM モジュールにアクセスできます。 資格情報の *[識別]* フィールドにユーザー名を含め、 *[シークレット]* フィールドに EKM モジュールに接続するためのパスワードを含めます。  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85e0f9a8bc7015a0ad5b12ce46a6c94ab31ca43c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e8fa6e672b69c7791e66dc3919e6fcd22b7c3de7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915814"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293112"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet エラー メッセージ
 データソースで発生したエラーの場合、odbc ドライバーは ODBC ファイルライブラリによって返されたエラーメッセージを返します。 ODBC ドライバーまたはドライバーマネージャーで発生したエラーの場合、ドライバーは SQLSTATE に関連付けられているテキストに基づいてエラーメッセージを返します。  

@@ -32,7 +32,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-rename-a-type"></a>型名を変更するには  
   
-1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
+1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、**[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
   
 2.  スクリプト内の `[Products]` を右クリックし、 **[リファクター]** をポイントして **[名前の変更]** をクリックします。  
   
@@ -76,7 +76,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-fully-qualify-database-object-names"></a>データベース オブジェクト名を完全修飾するには  
   
-1.  Transact**SQL エディターで** GetProductsBySupplier.sql\- が開いていることを確認します。  
+1.  Transact\-SQL エディターで **GetProductsBySupplier.sql** が開いていることを確認します。  
   
 2.  次に示す行の `Product` の部分にカーソルを置いて、右クリックします。 **[リファクター]** をポイントし、 **[完全修飾名]** をクリックします。  
   

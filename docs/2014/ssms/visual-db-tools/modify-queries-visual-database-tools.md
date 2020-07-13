@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3c61b3e4ae6b88e0479231efbc5c8743b1c15fb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63306027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044352"
 ---
 # <a name="modify-queries-visual-database-tools"></a>クエリの変更 (Visual Database Tools)
   クエリを変更するには、クエリおよびビュー デザイナーでそのクエリを開きます。  

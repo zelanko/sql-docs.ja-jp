@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLTransact
 - SQLTransact function [ODBC], dBASE Driver
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f05be059bc374b7b8236453e7c46feed4b8a6bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1ca3d968dbc175cc06650196e4387a0a42896e1a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948944"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299270"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact (dBASE ドライバー)
 > [!NOTE]  

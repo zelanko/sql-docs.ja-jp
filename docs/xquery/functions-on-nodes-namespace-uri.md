@@ -1,5 +1,6 @@
 ---
 title: 名前空間 uri 関数 (XQuery) |Microsoft Docs
+description: XQuery で名前空間 uri 関数を使用して、指定した QName の名前空間 URI を返す方法について説明します。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67929944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753593"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>ノードの関数 - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*で指定された QName の名前空間 URI を xs: string として返します。  
   
@@ -38,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  名前空間 URI 部分が取得されるノードの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 -   引数が省略された場合、既定値はコンテキスト ノードです。  
   
@@ -48,10 +49,10 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   *$Arg*が、名前空間に含まれていない展開 QName を持つ要素ノードまたは属性ノードの場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 特定のノードの名前空間 URI を取得する  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A: 特定のノードの名前空間 URI を取得する  
  次のクエリは、型指定されていない XML インスタンスに対して指定されています。 クエリ式 `namespace-uri(/ROOT[1])` によって、指定されたのノードの名前空間 URI 部分が取得されます。  
   
 ```  
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  指定された QName には名前空間 URI 部分はなく、ローカル名部分のみが含まれているため、結果は長さ0の文字列になります。  
   
- 次のクエリは、型指定された**xml**列に対して指定されています。 式`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`は、<`Location` `root`> 要素の最初の <> 子要素の名前空間 URI を返します。  
+ 次のクエリは、型指定された**xml**列に対して指定されています。 式は、 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` <> 要素の最初の <> 子要素の名前空間 URI を返し `Location` `root` ます。  
   
 ```  
 SELECT Instructions.query('  
@@ -77,8 +78,8 @@ WHERE ProductModelID=7
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに namespace-uri() を使用する  
- 次のクエリは、CatalogDescription 型指定された xml 列に対して指定されています。 この式は、名前空間 URI がで`https://www.adventure-works.com/schemas/OtherFeatures`あるすべての要素ノードを返します。 名前空間**uri ()** 関数は、引数なしで指定され、コンテキストノードを使用します。  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B: 述語で引数を指定せずに namespace-uri() を使用する  
+ 次のクエリは、CatalogDescription 型指定された xml 列に対して指定されています。 この式は、名前空間 URI がであるすべての要素ノードを返し `https://www.adventure-works.com/schemas/OtherFeatures` ます。 名前空間**uri ()** 関数は、引数なしで指定され、コンテキストノードを使用します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,14 +99,14 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 上のクエリの名前空間 URI は `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` に変更できます。 次に、展開された QName の名前空間 URI `ProductDescription`部分がで`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`ある <> 要素の子要素ノードをすべて受け取ります。  
+ 上のクエリの名前空間 URI は `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` に変更できます。 次に、展開された `ProductDescription` QName の名前空間 URI 部分がである <> 要素の子要素ノードをすべて受け取り `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` ます。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項は次のとおりです。  
   
 -   **名前空間 uri ()** 関数は、Xs: anyURI の代わりに xs: string 型のインスタンスを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [ローカル名関数 &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   

@@ -10,12 +10,12 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73659419"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138243"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
@@ -23,11 +23,9 @@ ms.locfileid: "73659419"
 
   [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 EXPLAIN を使用して、どの操作でデータ移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
   
- クエリ プランの詳細については、[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]にある「Understanding Query Plans」 (クエリ プランについて) を参照してください。  
-  
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  

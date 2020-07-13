@@ -1,5 +1,6 @@
 ---
 title: 文字形式を使用したデータのインポートおよびエクスポート
+description: 文字形式では、すべての列に文字データ形式が使用されます。 これは、他のプログラムを操作したり、別のデータベース ベンダーからインスタンスにコピーしたりする場合に便利です。
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c02704b8d18464ead042769038378acc07177ba8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056334"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998523"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 後で別のプログラムで使われるテキスト ファイルにデータを一括エクスポートする場合や、別のプログラムにより生成されたテキスト ファイルからデータを一括インポートする場合は、文字形式の使用をお勧めします。  
 
 文字形式では、すべての列に文字データ形式が使用されます。 データがスプレッドシートなどの別のプログラムで使用されるとき、または Oracle など別のデータベース ベンダーの製品から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータをコピーする必要があるときは、文字形式で情報を格納すると便利です。  

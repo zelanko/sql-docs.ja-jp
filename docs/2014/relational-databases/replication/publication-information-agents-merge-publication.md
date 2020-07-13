@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44e6f331c2f2aa4bb49db2adc495ec0d5fe178e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63021764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065737"
 ---
 # <a name="publication-information-agents-merge-publication"></a>パブリケーション情報、[エージェント] (マージ パブリケーション)
   **[エージェント]** タブには、選択したパブリケーションのスナップショット エージェントに関する概要情報が表示されます。  

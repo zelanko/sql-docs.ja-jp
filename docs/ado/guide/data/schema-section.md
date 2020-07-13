@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924297"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760898"
 ---
 # <a name="schema-section"></a>スキーマ セクション
 スキーマセクションが必要です。 前の例で示したように、ADO では、各列に関する詳細なメタデータを書き込み、データ値のセマンティクスを更新可能な限り保持します。 ただし、XML に読み込むために必要なのは、列の名前と、それらが属する行セットだけです。 最小スキーマの例を次に示します。  
@@ -95,10 +95,10 @@ ms.locfileid: "67924297"
 </rs:data>  
 ```  
   
- 同様に、前の例でに`CompanyName`定義された別名が`CompanyName`ないため、はドキュメント全体で一貫して使用する必要があります。  
+ 同様に、前の例でに定義された別名がないため `CompanyName` 、は `CompanyName` ドキュメント全体で一貫して使用する必要があります。  
   
 ## <a name="data-types"></a>データ型  
- Dt: type 属性を使用して、列にデータ型を適用できます。 許可される XML 型についての明確なガイドについては、 [W3C XML データ仕様](http://www.w3.org/TR/1998/NOTE-XML-data/)の「データ型」を参照してください。 データ型を指定するには、次の2つの方法があります。列定義に対して dt: type 属性を直接指定するか、または、列定義の入れ子になった要素として、-datatype コンストラクトを使用します。 たとえば、次のように入力します。  
+ Dt: type 属性を使用して、列にデータ型を適用できます。 許可される XML 型についての明確なガイドについては、 [W3C XML データ仕様](http://www.w3.org/TR/1998/NOTE-XML-data/)の「データ型」を参照してください。 データ型を指定するには、次の2つの方法があります。列定義に対して dt: type 属性を直接指定するか、または、列定義の入れ子になった要素として、-datatype コンストラクトを使用します。 たとえば、オブジェクトに適用された  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,7 +106,7 @@ ms.locfileid: "67924297"
 </s:AttributeType>  
 ```  
   
- は次と同等  
+ 上記の式は、次の式と同じです。  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
@@ -152,13 +152,13 @@ ms.locfileid: "67924297"
 </s:AttributeType>  
 ```  
   
- この定義で`CompanyName`は、を null に`ShipperID`することはできますが、null 値を含めることはできません。 Data セクションに次の行が含まれている場合、永続化プロバイダーは、 `CompanyName`列のデータの状態を OLE DB 状態の定数 DBSTATUS_S_ISNULL に設定します。  
+ この定義では、を null にすることはでき `CompanyName` ますが、 `ShipperID` null 値を含めることはできません。 Data セクションに次の行が含まれている場合、永続化プロバイダーは、列のデータの状態 `CompanyName` を OLE DB 状態の定数 DBSTATUS_S_ISNULL に設定します。  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 行が完全に空の場合、次のように永続化プロバイダーは DBSTATUS_E_UNAVAILABLE の OLE DB 状態を`ShipperID`返し、CompanyName に DBSTATUS_S_ISNULL します。  
+ 行が完全に空の場合、次のように永続化プロバイダーは DBSTATUS_E_UNAVAILABLE の OLE DB 状態を返し、 `ShipperID` CompanyName に DBSTATUS_S_ISNULL します。  
   
 ```  
 <z:row/>   

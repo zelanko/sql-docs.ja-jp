@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8feccc5b1d29617193f481569e10648c6ed77242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63035601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025216"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
   インデックスを作成または再構築する際には、SORT_IN_TEMPDB オプションを ON に設定することにより、インデックスの構築に使用する中間の並べ替え結果の格納場所として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が **tempdb** を使用するように指定できます。 このオプションを使用すると、インデックスの作成に使用する一時ディスク領域は増えますが、 **tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成または再構築に必要な時間を短縮できることがあります。 **tempdb**の詳細については、「 [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)」を参照してください。  

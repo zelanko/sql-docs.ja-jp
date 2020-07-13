@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926802"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760498"
 ---
 # <a name="jscript-ado-programming"></a>JScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  

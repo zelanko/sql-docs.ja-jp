@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095857"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892582"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベース内の列または別名データ型のルールをバインド解除します。  
   
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'`ルールのバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると、同じルールを持つデータ型のすべての列もバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
+`[ @objname = ] 'object_name'`ルールのバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると、同じルールを持つデータ型のすべての列もバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
   
 > [!NOTE]  
 >  *object_name*には、区切られた識別子の文字として角かっこ **[]** を含めることができます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
@@ -67,27 +66,27 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="examples"></a>例  
   
 ### <a name="a-unbinding-a-rule-from-a-column"></a>A. 列からのルールのバインド解除  
- 次の例では、 `startdate` `employees`テーブルの列からルールをバインド解除します。  
+ 次の例では、テーブルの列からルールをバインド解除し `startdate` `employees` ます。  
   
 ```  
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. 別名データ型からルールをバインド解除する  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B: 別名データ型からルールをバインド解除する  
  次の例では、別名データ型 `ssn` からルールをバインド解除します。 その型の既存および将来の列からルールをバインド解除します。  
   
 ```  
 EXEC sp_unbindrule ssn;  
 ```  
   
-### <a name="c-using-futureonly_flag"></a>C. Futureonly_flag の使用  
+### <a name="c-using-futureonly_flag"></a>C: Futureonly_flag の使用  
  次の例では、既存の `ssn` 列に影響を与えずに、別名データ型 `ssn` からルールをバインド解除します。  
   
 ```  
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子の使用  
+### <a name="d-using-delimited-identifiers"></a>D: 区切られた識別子の使用  
  次の例では、 *object_name*パラメーターで区切られた識別子を使用しています。  
   
 ```  
@@ -103,13 +102,13 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE RULE &#40;Transact-sql&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_helptext &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

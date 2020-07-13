@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: d2351e5d29f4770486ecc97fb41e0419e32ac2f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547669"
 ---
 # <a name="technical-reference-ssas"></a>テクニカル リファレンス (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用および管理するためのツール、言語、および PowerShell のリファレンス ドキュメントがあります。
 
  ![小さいファイルフォルダーアイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**ストアドプロシージャ参照**[データマイニングストアドプロシージャ &#40;Analysis Services データマイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)
@@ -37,7 +35,7 @@ ms.locfileid: "78175621"
 
  [データ分析式 &#40;DAX&#41; リファレンス](/dax/data-analysis-expressions-dax-reference)
 
- [DMX&#41; リファレンス &#40;データマイニング拡張機能](/sql/dmx/data-mining-extensions-dmx-reference)
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)
 
  ![小さいファイルフォルダーアイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**ユーザーインターフェイスリファレンス**[ユーザーインターフェイスリファレンス &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)
 

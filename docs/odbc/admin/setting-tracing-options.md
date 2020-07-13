@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901629"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307200"
 ---
 # <a name="setting-tracing-options"></a>トレース オプションの設定
 [ **Odbc データソースアドミニストレーター** ] ダイアログボックスの [**トレース**] タブを使用すると、odbc 関数呼び出しをトレースする方法を構成できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "67901629"
   
 6.  ユーザーごとのトレースに戻るには、このチェックボックスをオフにします。  
   
-7.  **[Apply]** をクリックします。  
+7.  **[適用]** をクリックします。  
   
 > [!NOTE]  
 >  1つのモードで既にトレースを開始している場合は、トレースを停止し、モードを正常に変更するために他のモードに切り替える必要があります。  

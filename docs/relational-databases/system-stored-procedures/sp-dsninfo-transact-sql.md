@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124705"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881753"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のサーバーと関連するディストリビューターから ODBC または OLE DB のデータ ソース情報を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`返される情報の種類を示します。 *Info_type*が指定されていない場合、または NULL が指定されている場合は、すべての情報の種類が返されます。 *info_type*は**varchar (128)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**DBMS_NAME**|データソースのベンダ名を指定します。|  
 |**DBMS_VERSION**|データソースのバージョンを指定します。|  
@@ -58,22 +58,22 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`データソースの種類を入力します。 *dso_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**1** (既定値)|ODBC データ ソース (ODBC data source)|  
-|**番**|OLE DB データ ソース|  
+|**3**|OLE DB データ ソース|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**情報の種類**|**nvarchar (64)**|DBMS_NAME、DBMS_VERSION、DATABASE_NAME、SQL_SUBSCRIBER などの情報の種類です。|  
 |**Value**|**nvarchar(512)**|関連付けられている情報の種類の値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dsninfo**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_dsninfo**は、データベースをレプリケーションまたはクエリに使用できるかどうかを示す ODBC または OLE DB データソース情報を取得します。  
@@ -81,8 +81,8 @@ sp_dsninfo [ @dsn =] 'dsn'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dsninfo**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_enumdsn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

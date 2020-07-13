@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b45f716b3924aac37d12268ba16cc05cab1fac9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938293"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>データの処理のトラブルシューティング (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用したモデルの作成時のモデル データの処理 (更新) について説明します。 このトピックでは、Analysis Services サーバー インスタンスに配置されたモデルでのデータの処理については説明しません。 配置済みモデルでのデータ処理の詳細については、「 [Analysis Services の管理タスクのスクリプト作成](script-administrative-tasks-in-analysis-services.md)」を参照してください。  
@@ -26,23 +25,22 @@ ms.locfileid: "66065765"
   
 -   [データ処理の影響](#bkmk_impact_of_df)  
   
--   [データソースの特定](#bkmk_det_source)  
+-   [データ ソースの特定](#bkmk_det_source)  
   
 -   [データが最後に更新された日時の確認](#bkmk_det_last_ref)  
   
--   [更新可能データソースに関する制限事項](#bkmk_restrictions)  
+-   [更新可能なデータ ソースに関する制限](#bkmk_restrictions)  
   
 -   [データソースへの変更に関する制限事項](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a>データ処理のしくみ  
+##  <a name="how-data-processing-works"></a><a name="bkmk_how_df_works"></a> データ処理のしくみ  
  データを処理すると、モデル デザイナーのデータが新しいデータに置き換えられます。 新しいデータ行のみ、または変更されたデータのみをインポートすることはできません。 モデル デザイナーでは、どの行が追加されたかは追跡されません。  
   
  データの処理はトランザクションとして行われます。 つまり、データの更新を開始したら、更新全体が成功するか失敗するかのどちらかになります。データが部分的に正しい状態になることはありません。  
   
- 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ウィンドウから開始する手動によるデータ処理は、ローカルの Analysis Services のメモリ内インスタンスによって処理されます。 したがって、データ処理操作は、コンピューター上の他のタスクのパフォーマンスに影響する可能性があります。 ただし、スクリプトを使用して配置済みモデルでのデータの自動処理をスケジュールする場合は、Analysis Services インスタンスによってインポート処理とそのタイミングが管理されます。  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ウィンドウから開始する手動によるデータ処理は、ローカルの Analysis Services のメモリ内インスタンスによって処理されます。 したがって、データ処理操作は、コンピューター上の他のタスクのパフォーマンスに影響する可能性があります。 ただし、スクリプトを使用して配置済みモデルでのデータの自動処理をスケジュールする場合は、Analysis Services インスタンスによってインポート処理とそのタイミングが管理されます。  
   
-##  <a name="bkmk_impact_of_df"></a>データ処理の影響  
+##  <a name="impact-of-data-processing"></a><a name="bkmk_impact_of_df"></a> データ処理の影響  
  通常、データ処理によりデータの再計算が行われます。  データ処理とは、外部ソースから最新のデータを取得することです。再計算とは、変更されたデータを使用するすべての数式の結果を更新することです。 通常、処理操作により再計算が行われます。  
   
  したがって、データ ソースを変更したり、データ ソースから取得したデータを処理する前に、その影響について常に考慮し、次のような結果への影響を考慮する必要があります。  
@@ -57,42 +55,35 @@ ms.locfileid: "66065765"
   
 -   フィルターを変更する場合、モデル全体を再計算する必要があります。  
   
-##  <a name="bkmk_det_source"></a>データソースの特定  
+##  <a name="determining-the-source-of-data"></a><a name="bkmk_det_source"></a>データソースの特定  
  モデルのデータのソースがわからない場合は、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のツールを使用して、ソース ファイルの名前やパスなどの詳細を確認することができます。  
   
 #### <a name="to-find-the-source-of-existing-data"></a>既存のデータのソースを調べるには  
   
 1.  モデル デザイナーで、ソースを特定するデータを含むテーブルを選択します。  
   
-2.  
-  **[テーブル]** メニューをクリックし、 **[テーブルのプロパティ]** をクリックします。  
+2.  **[テーブル]** メニューをクリックし、 **[テーブルのプロパティ]** をクリックします。  
   
-3.  
-  **[テーブルのプロパティの編集]** ダイアログ ボックスで、 **[接続名]** に表示された値を書き取ります。  
+3.  **[テーブルのプロパティの編集]** ダイアログ ボックスで、 **[接続名]** に表示された値を書き取ります。  
   
-4.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の **[モデル]** メニューで、 **[既存の接続]** をクリックします。  
+4.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の **[モデル]** メニューで、 **[既存の接続]** をクリックします。  
   
-5.  
-  **[既存の接続]** ダイアログ ボックスで、手順 3. で特定した名前のデータ ソースを選択して **[編集]** をクリックします。  
+5.  **[既存の接続]** ダイアログ ボックスで、手順 3. で特定した名前のデータ ソースを選択して **[編集]** をクリックします。  
   
-6.  
-  **[接続の編集]** ダイアログ ボックスで、データベース名、ファイル パス、レポート パスなどの接続情報を確認します。  
+6.  **[接続の編集]** ダイアログ ボックスで、データベース名、ファイル パス、レポート パスなどの接続情報を確認します。  
   
-##  <a name="bkmk_det_last_ref"></a>データが最後に更新された日時の確認  
+##  <a name="determining-when-data-was-last-refreshed"></a><a name="bkmk_det_last_ref"></a> データの最終更新日の特定  
  [テーブルのプロパティ] を使用して、データの最終更新日を調べることができます。  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>テーブルが最後に処理された日時を検索するには  
   
 1.  モデル デザイナーで、更新日を特定するデータを含むテーブルを選択します。  
   
-2.  
-  **[テーブル]** メニューをクリックし、 **[テーブルのプロパティ]** をクリックします。  
+2.  **[テーブル]** メニューをクリックし、 **[テーブルのプロパティ]** をクリックします。  
   
-3.  
-  **[テーブルのプロパティの編集]** ダイアログ ボックスの **[最終更新時刻]** に、テーブルの最終更新日が表示されます。  
+3.  **[テーブルのプロパティの編集]** ダイアログ ボックスの **[最終更新時刻]** に、テーブルの最終更新日が表示されます。  
   
-##  <a name="bkmk_restrictions"></a>更新可能データソースに関する制限事項  
+##  <a name="restrictions-on-refreshable-data-sources"></a><a name="bkmk_restrictions"></a>更新可能データソースに関する制限事項  
  Analysis Services インスタンスの配置済みモデルから自動的に処理できるデータ ソースに、いくつかの制限が適用されます。 次の条件を満たすデータ ソースのみを選択します。  
   
 -   データ ソースは、データ処理時に指定の場所にあり、使用できる必要があります。 元のデータ ソースが、モデルを作成したユーザーのローカル ディスク ドライブにある場合は、そのデータ ソースをデータ処理操作から除外するか、何らかの方法でそのデータ ソースをネットワーク接続経由でアクセス可能な場所にパブリッシュする必要があります。 データ ソースをネットワーク上の場所に移動する場合は、モデル デザイナーでモデルを開いて、データ取得の手順を繰り返します。 この操作は、データ ソース接続プロパティに格納された接続情報を再確立するために必要です。  
@@ -105,7 +96,7 @@ ms.locfileid: "66065765"
   
      外部データ ソースには、テーブルのインポート ウィザードを使用してモデルに元のデータをインポートしたときに指定した、埋め込まれた接続文字列、URL、または UNC パスを通してアクセスします。 データ ソース接続に格納された元の接続情報は、後でデータ更新操作を行うときに再使用されます。 データ処理の目的で作成され管理されている個別の接続情報はありません。既存の接続情報のみが使用されます。  
   
-##  <a name="bkmk_rest_changes"></a>データソースへの変更に関する制限事項  
+##  <a name="restrictions-on-changes-to-a-data-source"></a><a name="bkmk_rest_changes"></a> データ ソースへの変更に関する制限  
  データ ソースへの変更には制限があります。  
   
 -   列のデータ型は互換性のあるデータ型にしか変更できません。 たとえば、列内のデータに小数が含まれている場合は、データ型を整数に変更できません。 ただし、数値データをテキストに変更することはできます。 データ型の詳細については、「[サポートされているデータ型 (SSAS テーブル)](tabular-models/data-types-supported-ssas-tabular.md)」を参照してください。  
@@ -114,6 +105,6 @@ ms.locfileid: "66065765"
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式&#41;&#40;データを手動で処理する](manually-process-data-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;既存のデータソース接続を編集する](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [既存のデータ ソース接続の編集 (SSAS テーブル)](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

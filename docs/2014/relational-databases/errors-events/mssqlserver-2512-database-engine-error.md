@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d41d6973ecd7cd047a0fe071ba4c6361a2b929a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62869212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034579"
 ---
 # <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
     
@@ -33,8 +32,7 @@ ms.locfileid: "62869212"
 |メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
   
 ## <a name="explanation"></a>説明  
- 
-  `uniqueifiers` を含めて、示されている 2 つのスロットのキーが同じです。  
+ `uniqueifiers` を含めて、示されている 2 つのスロットのキーが同じです。  
   
 ## <a name="user-action"></a>ユーザーの操作  
   

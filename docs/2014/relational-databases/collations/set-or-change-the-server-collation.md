@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9c1a941494de632ff286b0ad7007d851a1db5454
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62918578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970540"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
   サーバー照合順序は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと一緒にインストールされているすべてのシステム データベースだけではなく、新しく作成したユーザー データベースの既定の照合順序になります。 サーバー照合順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に指定します。 詳細については、「 [Collation and Unicode Support](collation-and-unicode-support.md)」を参照してください。  
@@ -51,8 +50,8 @@ ms.locfileid: "62918578"
   
 ## <a name="see-also"></a>参照  
  [照合順序と Unicode のサポート](collation-and-unicode-support.md)   
- [データベースの照合順序の設定または変更](set-or-change-the-database-collation.md)   
- [列の照合順序の設定または変更](set-or-change-the-column-collation.md)   
+ [データベースの照合順序を設定または変更する](set-or-change-the-database-collation.md)   
+ [列の照合順序を設定または変更する](set-or-change-the-column-collation.md)   
  [システム データベースの再構築](../databases/system-databases.md)  
   
   

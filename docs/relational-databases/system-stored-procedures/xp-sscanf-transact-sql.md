@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a980f048d6a8f5fae333381f07be3c889ad70366
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091899"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890700"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   文字列からのデータを、それぞれのフォーマット引数によって与えられる引数の位置に読み込みます。  
   
@@ -39,16 +39,16 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **文字列**  
+ **string**  
  引数の値を読み取る文字列を指定します。  
   
  OUTPUT  
  指定した場合、*引数*の値が出力パラメーターに格納されます。  
   
- *形式*  
+ *format*  
  は、C 言語の**sscanf**関数でサポートされているものに類似した書式設定された文字列です。 現在、% s 書式引数のみがサポートされています。  
   
- *引数*  
+ *argument*  
  **Varchar**変数は、対応する*format*引数の値に設定されます。  
   
  *n*  
@@ -63,7 +63,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  `Command(s) completed successfully.`  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、`xp_sscanf` を使用して、ソース文字列のフォーマットにおけるそれぞれの位置に基づいて、ソース文字列から 2 つの値を抽出します。  
@@ -82,7 +82,7 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944844"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305143"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC と標準の CLI
 ODBC は、呼び出しレベルのインターフェイス (CLI) を処理する次の仕様と標準に沿っています。 (ODBC 機能は、これらの各標準のスーパーセットです)。  

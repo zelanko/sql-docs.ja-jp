@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2cb730ab0dacc1f0d62a26076b240f9f104cc730
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014940"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
   この ASP (Active Server Pages) アプリケーションでは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースにある Person.Contact テーブル内の顧客情報を更新できます。 このアプリケーションによって次の処理が行われます。  
@@ -76,8 +75,7 @@ ms.locfileid: "66014629"
 </ROOT>  
 ```  
   
- 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
+ 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
   
 > [!NOTE]  
 >  コードでは、"ServerName" に Microsoft インターネット インフォメーション サービス (IIS) を実行するサーバーの名前を指定する必要があります。  

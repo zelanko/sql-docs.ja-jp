@@ -14,27 +14,23 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3430048a52b3dce5e82d6b7af2d6a8162841d062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63192071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063158"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server のインスタンスからの切断
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを手動で閉じたり切断する処理は必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
   
-## <a name="connection-pooling"></a>接続のプール  
- 
-  <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドが呼び出された場合、接続は自動的には解放されません。 接続プールに接続を解放するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行うには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> プロパティを設定します。  
+## <a name="connection-pooling"></a>接続プール  
+ <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドが呼び出された場合、接続は自動的には解放されません。 接続プールに接続を解放するには、<xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行うには、<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> プロパティの <xref:Microsoft.SqlServer.Management.Common.ServerConnection> プロパティを設定します。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO の SQL Server のインスタンスからの切断  
  RMO を使ったプログラミングでサーバー接続を閉じる方法は、SMO とは若干異なります。  
   
- Rmo オブジェクトのサーバー接続は<xref:Microsoft.SqlServer.Management.Common.ServerConnection>オブジェクトによって維持されるため、rmo を使用してプログラムを作成する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ときに、このオブジェクトはのインスタンスから切断するときにも使用されます。 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用して接続を閉じるには、RMO オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドを呼び出します。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
+ RMO オブジェクトのサーバー接続はオブジェクトによって維持されるため <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rmo を使用してプログラムを作成するときに、このオブジェクトはのインスタンスから切断するときにも使用されます。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトを使用して接続を閉じるには、RMO オブジェクトの <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> メソッドを呼び出します。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

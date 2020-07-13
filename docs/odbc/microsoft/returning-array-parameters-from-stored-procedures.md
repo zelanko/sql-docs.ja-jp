@@ -11,14 +11,14 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987972"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292862"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>ストアド プロシージャから返される配列パラメーター
 > [!IMPORTANT]  

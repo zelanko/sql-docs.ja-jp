@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53b53bcadc90c8c27027f593014ffab204dc78fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752116"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn プロパティ (RDS)
 フィルター条件を評価する列を示します。  
@@ -40,7 +40,7 @@ DataControl.FilterColumn = String
  *String*  
  フィルター条件を評価する列を示す**文字列**値です。 フィルター条件は、 [filtercriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)プロパティで指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [sortcolumn](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [filterfilter、](../../../ado/reference/rds-api/filtercriterion-property-rds.md)および**filtervalue**プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュに保持されます。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
   
 ## <a name="applies-to"></a>適用対象  

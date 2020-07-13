@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26d9a2431b91c1dc081345a06e7fe5a7533cbaa2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 88176f43295fe2ab1f5f5643a46db1ce6132c5f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010895"
 ---
 # <a name="control-the-behavior-of-triggers-and-constraints-during-synchronization-replication-transact-sql-programming"></a>同期中にトリガーと制約の動作を制御する (レプリケーション Transact-SQL プログラミング)
-  レプリケーションエージェントは、同期中に[INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql)を実行し[&#40;Transact-sql&#41;を更新](/sql/t-sql/queries/update-transact-sql)して、レプリケートされたテーブルに対して[transact-sql &#40;](/sql/t-sql/statements/delete-transact-sql)ステートメントを削除します。これにより、これらのテーブルでデータ操作言語 (DML) トリガーが実行される可能性があります。 同期中はこれらのトリガーが起動しないようにしたり、制約が適用されないようにすることが必要になる場合があります。 このときの動作は、トリガーまたは制約がどのように作成されたかによって異なります。  
+  同期中、レプリケートされるテーブルでは、[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)、[UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)、[DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) の各ステートメントがレプリケーション エージェントによって実行され、これらのテーブルに対して設定されていたデータ操作言語 (DML) のトリガーが実行されます。 同期中はこれらのトリガーが起動しないようにしたり、制約が適用されないようにすることが必要になる場合があります。 このときの動作は、トリガーまたは制約がどのように作成されたかによって異なります。  
   
 ### <a name="to-prevent-triggers-from-executing-during-synchronization"></a>同期中にトリガーが実行されないようにするには  
   
@@ -41,6 +40,6 @@ ms.locfileid: "62721522"
 1.  CHECK 制約または FOREIGN KEY 制約を新たに作成する場合は、 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) の制約定義で、CHECK NOT FOR REPLICATION オプションを指定します。  
   
 ## <a name="see-also"></a>参照  
- [テーブルを作成 &#40;データベースエンジン&#41;](../tables/create-tables-database-engine.md)  
+ [テーブルの作成 &#40;データベース エンジン&#41;](../tables/create-tables-database-engine.md)  
   
   

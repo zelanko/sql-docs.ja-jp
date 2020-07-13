@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67947554"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304968"
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は、2つの日付と時刻の差として定義されます。 間隔は、2つの異なる方法のいずれかで表されます。 1つは、年数と整数の月数で間隔を表す*年月*間隔です。 もう1つは、日、分、および秒で間隔を表す*日付と時刻*の間隔です。 この2種類の間隔は異なるため、月ごとに異なる日数を設定できるため、混在させることはできません。  
@@ -41,7 +41,7 @@ ms.locfileid: "67947554"
   
  13の interval SQL データ型と13の interval C データ型があります。 各 interval C データ型では、interval データを格納するために、SQL_INTERVAL_STRUCT と同じ構造体を使用します。 (詳細については、次のセクション「 [C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)」を参照してください)。SQL データ型の詳細については、「 [Sql データ型](../../../odbc/reference/appendixes/sql-data-types.md)」を参照してください。C データ型の詳細については、「 [c データ型](../../../odbc/reference/appendixes/c-data-types.md)」を参照してください。  
   
-|型識別子|クラス|[説明]|  
+|型識別子|クラス|説明|  
 |---------------------|-----------|-----------------|  
 |MONTH|年月|2つの日付の間の月数。|  
 |YEAR|年月|2つの日付間の年数。|  

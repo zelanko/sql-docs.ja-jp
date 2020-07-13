@@ -3,18 +3,18 @@ title: Windows へのインストール
 description: Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1b4de199e96497f32039614a39aabb4b1e8fe5d0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118415"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151894"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -28,7 +28,7 @@ Windows に SQL Server Machine Learning Services をインストールする方�
 
 + ビジネス継続性のために、Machine Learning Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに Machine Learning Services をインストールし、パッケージを構成します。
 
-+ Machine Learning Services のインストールは、SQL Server 2017 のフェールオーバー クラスターでは*サポートされていません*。 SQL Server 2019 ではサポートされています。
++ Machine Learning Services のインストールは、SQL Server 2017 の [Always On フェールオーバー クラスター](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)ではサポート "*されていません*"。 SQL Server 2019 以降ではサポートされています。
  
 + Machine Learning Services をドメイン コントローラーにインストールしないでください。 セットアップの Machine Learning Services の部分が失敗します。
 
@@ -212,7 +212,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 ## <a name="restart-the-service"></a>サービスを再起動します。
 
-インストールが完了したら、次のスクリプトの実行を有効にする前に、データベース エンジンを再起動します。
+インストールが完了したら、データベース エンジンを再起動します。
 
 サービスを再起動すると、関連する [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスも自動的に再起動されます。
 

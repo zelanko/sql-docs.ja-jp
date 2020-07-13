@@ -10,15 +10,14 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5c67470fc9aaaeefe49e5ccb1a8602e082c4054
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68195597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013172"
 ---
 # <a name="modify-xml-indexes"></a>XML インデックスの変更
   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用すると、既存の XML インデックスや XML 以外のインデックスを変更できます。 ただし、一部の ALTER INDEX オプションは XML インデックスに使用できません。 次のオプションは、XML インデックスの変更時には無効です。  

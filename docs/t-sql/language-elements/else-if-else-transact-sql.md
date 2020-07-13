@@ -20,15 +20,15 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce5cd6a457608671ad359ab4bc81423f4441ecbc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075312"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005022"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 *Boolean_expression* が TRUE に評価された場合、*Boolean_expression* に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (*sql_statement*) が実行されます。 オプションの ELSE キーワードは、*Boolean_expression* が FALSE または NULL と評価される場合に、代わりに実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68075312"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. 簡単なブール式を使用する  
  次の例では、簡単なブール式 (`1=1`) があり、これは true であるため、最初のステートメントが出力されます。  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  次の例の簡単なブール式 (`1=2`) は false を返します。したがって、この例では 2 番目のステートメントが出力されます。  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. クエリをブール式の一部として使用する  
  次の例では、クエリをブール式の一部として実行します。 `Product` テーブルには `WHERE` 句を満たす自転車が 10 台あるため、最初の print ステートメントが実行されます。 どのような場合に 2 番目のステートメントが実行されるかを確認するには、`> 5` を `> 15` に変更します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. ステートメント ブロックを使用する  
  次の例では、クエリをブール式の一部として実行してから、ブール式の結果に基づいて若干異なるステートメント ブロックを実行します。 各ステートメント ブロックは `BEGIN` で始まり、`END` で終わります。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. 入れ子になった IF...ELSE ステートメントを使用する  
  次の例では、IF のかを示します。ELSE ステートメントを入れ子にする方法を示します。 各ステートメントをテストするには、`@Number` 変数を `5`、`50`、および `500` に設定します。  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: クエリをブール式の一部として使用する  
  次の例では、`IF...ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

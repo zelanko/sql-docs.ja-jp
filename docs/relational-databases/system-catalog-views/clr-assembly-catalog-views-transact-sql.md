@@ -14,17 +14,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b57221daa18d23d3dd88794e851d67712704f76c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 22984dc8cf9ddc418b094ada5af232adb7f69706
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68050854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753005"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR アセンブリカタログビュー (Transact-sql)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次のカタログビューについて説明します。  
   
@@ -33,8 +33,8 @@ ms.locfileid: "68050854"
 |[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
 |[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

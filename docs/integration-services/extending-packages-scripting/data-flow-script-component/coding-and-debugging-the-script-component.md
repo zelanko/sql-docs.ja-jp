@@ -40,7 +40,7 @@ ms.locfileid: "71286542"
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境  
  スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
   
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "71286542"
   
     -   **Connections** コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。  
   
-    -   **Variables** コレクション クラス。 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
+    -   **Variables** コレクション クラス。**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
   
--   **BufferWrapper** プロジェクト アイテム。<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>[スクリプト変換エディター]**の**[入力および出力] **ページで構成された各入力および出力に対して、** から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
+-   **BufferWrapper** プロジェクト アイテム。**[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
   
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。  
   
@@ -174,8 +174,8 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |変数:|**ComponentWrapper** プロジェクト アイテムの **Variables** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Variables** プロパティを介して公開されています。<br /><br /> **PreExecute** メソッドでは、読み取り専用変数にのみアクセスできます。 **PostExecute** メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|  
 |接続|**ComponentWrapper** プロジェクト アイテムの **Connections** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Connections** プロパティを介して公開されています。|  
-|events|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>ScriptMain**クラスの** プロパティおよび  **インターフェイスの \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用して、イベントを発生させます。|  
-|ログ記録|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>ScriptMain**クラスの** メソッドを使用して、ログ記録を実行します。|  
+|events|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの **Fire\<X>** メソッドを使用して、イベントを発生させます。|  
+|ログ記録|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|  
   
 ## <a name="debugging-the-script-component"></a>スクリプト コンポーネントのデバッグ  
  スクリプト コンポーネントのコードをデバッグするには、コードに少なくとも 1 つのブレークポイントを設定し、VSTA IDE を閉じて [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 パッケージが実行されてスクリプト コンポーネントが開始されると、VSTA IDE が再度開き、読み取り専用モードでコードが表示されます。 実行によりブレークポイントに到達したら、変数の値の検証や、残りのコードのステップ スルーができます。  
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   実行を中断し、**System.Windows.Forms** 名前空間の **MessageBox.Show** メソッドを使って、モーダル メッセージを表示します。 デバッグが完了したら、このコードは削除してください。  
   
--   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが **デザイナーの**[進行状況][!INCLUDE[ssIS](../../../includes/ssis-md.md)] タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)」をご覧ください。  
+-   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)」をご覧ください。  
   
 -   イベントまたはユーザー定義のメッセージを、有効なログ プロバイダーに記録します。 詳しくは、「[スクリプト コンポーネントでのログ記録](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)」をご覧ください。  
   

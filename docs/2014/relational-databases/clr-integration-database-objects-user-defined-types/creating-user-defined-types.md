@@ -14,20 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26ef6e6f2c7b394191a292bd2d92155eb40450c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76939637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970692"
 ---
 # <a name="creating-a-user-defined-type"></a>ユーザー定義型を作成する
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR は、次の `sp_configure` ステートメントに示すように、[!INCLUDE[tsql](../../includes/tsql-md.md)] システム ストアド プロシージャを使用して有効にできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに示すように、`sp_configure` システム ストアド プロシージャを使用して有効にできます。  
   
 ```  
 sp_configure 'clr enabled', 1  

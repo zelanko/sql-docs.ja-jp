@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5e3c54e0e2eb4ad633d35159e1ff010c9388f5d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e94c5524bcde3023bae3298c8dbb6d03347a0b8e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118713"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301269"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 関数
 **互換性**  
@@ -69,7 +69,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength2*  
  代入**SchemaName*の文字数。  
   
- *テーブル*  
+ *TableName*  
  代入テーブル名。 この引数を null ポインターにすることはできません。 *TableName*に文字列検索パターンを含めることはできません。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *TableName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *TableName*は通常の引数です。これは文字どおりに処理され、大文字と小文字が区別されます。  
@@ -77,7 +77,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength3*  
  代入**TableName*の長さ (文字数)。  
   
- *ColumnName*  
+ *[ColumnName]*  
  代入列名の文字列検索パターン。  
   
  SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されている場合、 *ColumnName*は識別子として扱われ、その大文字と小文字は区別されません。 SQL_FALSE の場合、 *ColumnName*はパターン値の引数です。これは文字どおりに処理され、大文字と小文字が区別されます。  
@@ -91,7 +91,7 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="diagnostics"></a>診断  
  **Sqlcolumnprivileges**で SQL_ERROR または SQL_SUCCESS_WITH_INFO が返された場合、関連付けられた SQLSTATE 値は、 *handletype*が SQL_HANDLE_STMT で、*ハンドル*が*StatementHandle*である**SQLGetDiagRec**を呼び出すことによって取得できます。 次の表に、 **Sqlcolumnprivileges**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -134,9 +134,9 @@ SQLRETURN SQLColumnPrivileges(
   
  次の表に、結果セット内の列の一覧を示します。 列 8 (IS_GRANTABLE) 以外の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1 で保護されたプロセスとして起動されました|Varchar|カタログ識別子。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ識別子。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ識別子。データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|テーブル識別子。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|列名。 ドライバーは、名前のない列に対して空の文字列を返します。|  
@@ -150,7 +150,7 @@ SQLRETURN SQLColumnPrivileges(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

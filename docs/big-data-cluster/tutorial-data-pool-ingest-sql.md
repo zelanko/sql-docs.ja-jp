@@ -1,7 +1,7 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のデータ プールにデータを取り込む方法について説明します。
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターのデータ プールにデータを取り込む方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7daf0dab9725320cf674db04cc2e306726810f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75325429"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606464"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む
 

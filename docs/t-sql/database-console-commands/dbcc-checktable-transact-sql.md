@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b882a0f234b6c30b61bc9875bb6b805baeaeb989
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754815"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 テーブルまたはインデックス付きビューを構成するすべてのページおよび構造の整合性チェックを行います。
 
@@ -42,7 +42,7 @@ ms.locfileid: "73982321"
     
 ## <a name="syntax"></a>構文    
     
-```    
+```syntaxsql
 DBCC CHECKTABLE     
 (    
     table_name | view_name    

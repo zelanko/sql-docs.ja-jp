@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760368"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
 2つのブックマークを比較し、それらの相対値を示す値を返します。  
@@ -44,7 +44,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  2番目の行のブックマーク。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ブックマークは、同じ[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または**レコードセット**オブジェクトとその[複製](../../../ado/reference/ado-api/clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる**レコードセット**オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない**レコードセット**オブジェクトのブックマークを比較することもできません。  
   
  ブックマークは、**レコードセット**オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の[bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用します。  

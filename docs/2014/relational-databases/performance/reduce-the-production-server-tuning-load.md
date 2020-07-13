@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44a63e55d6a0868ac8395828e5f386573665fcaa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 0e437b561a44ab84e95b7c1dbef4fe2c2c4ff1bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063874"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>実稼動サーバーのチューニング負荷の軽減
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。
@@ -57,7 +56,7 @@ ms.locfileid: "78175831"
 
  次の図は、テスト サーバーと実稼働サーバーのシナリオを示しています。
 
- ![データベース エンジン チューニング アドバイザーでのテスト サーバーの使用法](../../database-engine/media/testsvr.gif "データベースエンジンチューニングアドバイザーテストサーバーの使用状況")
+ ![データベース エンジン チューニング アドバイザーでのテスト サーバーの使用法](../../database-engine/media/testsvr.gif "データベース エンジン チューニング アドバイザーでのテスト サーバーの使用法")
 
 > [!NOTE]
 >  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) では、テスト サーバーのチューニング機能はサポートされません。

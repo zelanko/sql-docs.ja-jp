@@ -15,20 +15,20 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79428153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776465"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップはに[!INCLUDE[tsql-md](../../includes/tsql-md.md)]統合されており、を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基盤とするデータベース管理システムとしてを使用する利点があります。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップはに統合されて [!INCLUDE[tsql-md](../../includes/tsql-md.md)] おり、を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基盤とするデータベース管理システムとしてを使用する利点があります。
 
 
-## <a name="what-is-a-graph-database"></a>グラフデータベースとは  
+## <a name="what-is-a-graph-database"></a>グラフ データベースとは  
 グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば、個人や組織) を表し、エッジは接続されている 2 つのノード間のリレーションシップ (たとえば、お気に入りや友人) を表します。 ノードとエッジの両方に、プロパティが関連付けられている場合があります。 グラフ データベースを特徴付けるいくつかの特性を次に示します。  
 -    エッジ (リレーションシップ) は、グラフ データベース内のファースト クラスのエンティティであり、属性またはプロパティを関連付けることができます。 
 -    1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ノードとエッジはテーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい`MATCH`句は、グラフを使用したパターンマッチングとマルチホップナビゲーションをサポートするために導入されました。 関数`MATCH`は、パターンマッチングに ASCII アートスタイル構文を使用します。 次に例を示します。  
+新しい `MATCH` 句は、グラフを使用したパターンマッチングとマルチホップナビゲーションをサポートするために導入されました。 関数は、 `MATCH` パターンマッチングに ASCII アートスタイル構文を使用します。 次に例を示します。  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-ssnoversion-engine"></a>エンジンに完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に統合 
-グラフ拡張機能は、エンジン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に完全に統合されています。 同じストレージエンジン、メタデータ、クエリプロセッサなどを使用して、グラフデータを格納し、クエリを実行します。 1つのクエリで、グラフとリレーショナルデータにまたがるクエリを実行します。 グラフ機能と、列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストア、HA、R サービスなどの他のテクノロジとの組み合わせSQL graph データベースでは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用できるすべてのセキュリティ機能とコンプライアンス機能もサポートされています。
+### <a name="fully-integrated-in-ssnoversion-engine"></a>エンジンに完全に統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+グラフ拡張機能は、エンジンに完全に統合されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 同じストレージエンジン、メタデータ、クエリプロセッサなどを使用して、グラフデータを格納し、クエリを実行します。 1つのクエリで、グラフとリレーショナルデータにまたがるクエリを実行します。 グラフ機能と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、列ストア、HA、R サービスなどの他のテクノロジとの組み合わせSQL graph データベースでは、で使用できるすべてのセキュリティ機能とコンプライアンス機能もサポートさ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れています。
  
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム
 
-を提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存のツールとエコシステムを活用できます。 バックアップと復元、インポート、エクスポートなどのツールは、すぐに使用できます。 SSIS、SSRS、Power BI などの他のツールやサービスは、リレーショナルテーブルを操作するのと同じように、グラフテーブルで使用できます。
+を提供する既存のツールとエコシステムを活用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。 バックアップと復元、インポート、エクスポートなどのツールは、すぐに使用できます。 SSIS、SSRS、Power BI などの他のツールやサービスは、リレーショナルテーブルを操作するのと同じように、グラフテーブルで使用できます。
 
 ## <a name="edge-constraints"></a>エッジ制約
 エッジ制約は、グラフエッジテーブルで定義され、特定のエッジタイプが接続できるノードテーブルのペアです。 これにより、ユーザーはグラフスキーマをより適切に制御できるようになります。 エッジ制約を使用すると、特定のエッジが接続を許可されているノードの種類を制限できます。 

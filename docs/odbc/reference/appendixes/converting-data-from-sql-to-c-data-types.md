@@ -18,14 +18,14 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019109"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284752"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型へのデータ変換
 アプリケーションが**Sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**を呼び出すと、ドライバーはデータソースからデータを取得します。 必要に応じて、ドライバーがデータを取得したデータ型から、 **SQLBindCol**または SQLGetData の*TargetType*引数で指定されたデータ型にデータを変換し**ます。** 最後に、 **SQLBindCol**または**SQLGetData**の*targetvalueptr*引数によって示される場所にデータを格納します (との SQL_DESC_DATA_PTR フィールド)。  
@@ -36,7 +36,7 @@ ms.locfileid: "68019109"
   
  変換されたデータの形式は、Windows®の国設定の影響を受けません。  
   
- 次のセクションの表では、ドライバーまたはデータソースがデータソースから取得したデータを変換する方法について説明します。ドライバーは、サポートする ODBC SQL データ型からすべての ODBC C データ型への変換をサポートするために必要です。 特定の ODBC SQL データ型の場合、テーブルの最初の列には、 **SQLBindCol**と**SQLGetData**の*TargetType*引数の有効な入力値が一覧表示されます。 2番目の列には、多くの場合、テストの結果が一覧表示されます。 **SQLBindCol**または**SQLGetData**で指定された*bufferlength*引数を使用して、ドライバーがデータを変換できるかどうかを判断します。 3番目と4番目の列には、 **SQLBindCol**または**SQLGetData**で指定された、 ** *targetvalueptr ptr*によって指定されたバッファーに格納されている値と、ドライバーがデータを変換しようとした後の値が一覧表示されます。 ( *StrLen_or_IndPtr*引数は、の SQL_DESC_OCTET_LENGTH_PTR のフィールドに対応します)。最後の列には、 **Sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**によって結果ごとに返される SQLSTATE が一覧表示されます。  
+ 次のセクションの表では、ドライバーまたはデータソースがデータソースから取得したデータを変換する方法について説明します。ドライバーは、サポートする ODBC SQL データ型からすべての ODBC C データ型への変換をサポートするために必要です。 特定の ODBC SQL データ型の場合、テーブルの最初の列には、 **SQLBindCol**と**SQLGetData**の*TargetType*引数の有効な入力値が一覧表示されます。 2番目の列には、多くの場合、テストの結果が一覧表示されます。 **SQLBindCol**または**SQLGetData**で指定された*bufferlength*引数を使用して、ドライバーがデータを変換できるかどうかを判断します。 3番目と4番目の列には、 **SQLBindCol**または**SQLGetData**で指定された、 *StrLen_or_IndPtr* *targetvalueptr ptr*によって指定されたバッファーに格納されている値と、ドライバーがデータを変換しようとした後の値が一覧表示されます。 ( *StrLen_or_IndPtr*引数は、の SQL_DESC_OCTET_LENGTH_PTR のフィールドに対応します)。最後の列には、 **Sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**によって結果ごとに返される SQLSTATE が一覧表示されます。  
   
  **SQLBindCol**または**SQLGetData**の*TargetType*引数に、特定の odbc SQL データ型のテーブルに示されていない odbc C データ型の識別子が含まれている場合、 **sqlfetch**、 **sqlfetchscroll**、または**SQLGetData**は SQLSTATE 07006 (制限されたデータ型の属性違反) を返します。 *TargetType*引数に、ドライバー固有の SQL データ型から ODBC C データ型への変換を指定する識別子が含まれていて、この変換がドライバーでサポートされていない場合、 **sqlfetch**、 **Sqlfetchscroll**、または**SQLGetData**は SQLSTATE HYC00 を返します (省略可能な機能は実装されていません)。  
   
@@ -56,17 +56,17 @@ ms.locfileid: "68019109"
   
 -   [SQL から C へ: 数値](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL から C へ: ビット](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL から C へ: bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL から C へ: バイナリ](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL から C へ: Binary](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL から C へ: 日付](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL から C へ: Date](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
 -   [SQL から C へ: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL から C へ: 時刻](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL から C へ: Time](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL から C へ: タイムスタンプ](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL から C へ: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
 -   [SQL から C へ: 年月の間隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   

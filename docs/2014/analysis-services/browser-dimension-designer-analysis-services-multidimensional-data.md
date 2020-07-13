@@ -13,27 +13,24 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527768"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ブラウザー]** タブを使用すると、ディメンションのディメンション データとメタデータを参照できます。 現在選択しているディメンションで、ディメンションの書き戻しが可能な場合は、このビューを使用してディメンションのメンバー データを変更します。  
   
 ## <a name="panes"></a>ペイン  
- 
-  **[ブラウザー]** タブには、次のペインがあります。  
+ **[ブラウザー]** タブには、次のペインがあります。  
   
  [ツール バー](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  ツール バーを使用して、ディメンション デザイナーの **[ブラウザー]** タブで一般的なアクションを実行します。  
   
  [レベルとメンバー](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
- 
-  **[レベルとメンバー]** ペインを使用すると、選択した言語で、選択した階層のメンバーを参照および変更できます。  
+ **[レベルとメンバー]** ペインを使用すると、選択した言語で、選択した階層のメンバーを参照および変更できます。  
   
 ## <a name="see-also"></a>参照  
  [ディメンションデザイナー &#40;Analysis Services-多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

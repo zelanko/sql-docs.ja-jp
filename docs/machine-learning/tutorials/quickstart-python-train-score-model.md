@@ -3,24 +3,29 @@ title: クイック スタート:Python でモデルをトレーニングする
 description: このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、SQL Server Machine Learning Services を使用して新しいデータから値を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116295"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606873"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して新しいデータから値を予測します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使用して新しいデータから値を予測します。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して新しいデータから値を予測します。
+::: moniker-end
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初の例では、クラシックなアヤメの花のデータセットを使用して、花の特性に基づいてアヤメの種を推測する Naïve Bayes モデルを生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに Python コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
@@ -33,9 +38,15 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
+
 
 - この演習で使用されるサンプル データは、アヤメのサンプル データです。 [アヤメのデモ データ](demo-data-iris-in-sql.md)の指示に従って、**irissql** サンプル データベースを作成します。
 
@@ -43,7 +54,7 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 この手順では、結果を予測するためのモデルを生成するストアド プロシージャを作成します。
 
-1. SSMS を開き、SQL Server インスタンスに接続し、新しいクエリ ウィンドウを開きます。
+1. Azure Data Studio を開き、SQL Server インスタンスに接続し、新しいクエリ ウィンドウを開きます。
 
 1. irissql データベースに接続するします。
 
@@ -83,7 +94,7 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 1. ストアド プロシージャが存在することを確認します。 
 
-   前の手順の T-SQL スクリプトがエラーなしで実行された場合は、**generate_iris_model** という名前の新しいストアド プロシージャが作成され、**irissql** データベースに追加されます。 ストアド プロシージャは、 **[プログラミング]** の下にある SSMS **[オブジェクト エクスプローラー]** にあります。
+   前の手順の T-SQL スクリプトがエラーなしで実行された場合は、**generate_iris_model** という名前の新しいストアド プロシージャが作成され、**irissql** データベースに追加されます。 ストアド プロシージャは、 **[プログラミング]** の下にある Azure Data Studio **[オブジェクト エクスプローラー]** にあります。
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>手順を実行してモデルを作成およびトレーニングする
 
@@ -174,7 +185,7 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 この演習では、各ストアド プロシージャがシステム ストアド プロシージャ `sp_execute_external_script` を使用して Python プロセスを開始する、さまざまなタスク専用のストアド　プロシージャを作成する方法について学習しました。 Python プロセスへの入力は、パラメーターとして `sp_execute_external` に渡されます。 SQL Server データベースの Python スクリプト自体とデータ変数は両方とも入力として渡されます。
 
-一般的に、SSMS は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ使用すべきです。 ツールとして、SSMS は T-SQL などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどの視覚的な出力を生成する場合は、ストアド プロシージャの外部でイメージをレンダリングできる別のツールまたはエンドユーザー向けアプリケーションが必要です。
+一般的に、Azure Data Studio は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ使用すべきです。 ツールとして、Azure Data Studio は T-SQL などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどの視覚的な出力を生成する場合は、ストアド プロシージャの外部でイメージをレンダリングできる別のツールまたはエンドユーザー向けアプリケーションが必要です。
 
 さまざまな操作を処理する包括的なスクリプトを記述することに慣れた Python 開発者にとって、タスクを個別の手順で整理することに必要性を感じない場合もあります。 しかし、トレーニングとスコアリングには異なるユース ケースがあります。 これらのタスクを分離することにより、各タスクをそれぞれ異なるスケジュールで進め、各操作に異なるスコープのアクセス許可を設定できます。
 
@@ -184,6 +195,6 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server Machine Learning Services の詳細については、次を参照してください。
+SQL 機械学習を使用した Python のチュートリアルの詳細については、以下を参照してください。
 
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+- [Python のチュートリアル](python-tutorials.md)

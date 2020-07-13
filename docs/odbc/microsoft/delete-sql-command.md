@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9757fd57d999815964266c035963de1129eaf5e8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096331"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303553"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL コマンド
 削除対象のレコードをマークします。  
@@ -43,7 +43,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *Filtercondition*は、削除対象としてマークするためにレコードが満たす必要のある条件を指定します。 フィルター条件はいくつでも含めることができ、AND または OR 演算子を使用して接続できます。 また、NOT 演算子を使用して論理式の値を反転させることも、 **empty**() を使用して空のフィールドをチェックすることもできます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [削除の設定] が ON に設定されている場合、削除用にマークされたレコードは、スコープを含むすべてのコマンドで無視されます。  
   
  DELETE-SQL は、共有アクセス用に開かれたテーブルで複数のレコードの削除をマークするときに、レコードロックを使用します。 これにより、マルチユーザー環境でのレコードの競合が減少しますが、パフォーマンスが低下する可能性があります。 パフォーマンスを最大にするには、テーブルを排他的に使用するために開きます。  

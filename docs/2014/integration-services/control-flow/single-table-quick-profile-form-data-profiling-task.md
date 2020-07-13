@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e6626040cfd51a2119a3c1b3b4dfd9203a6b0a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830184"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432659"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "62830184"
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **[接続]**  
+ **Connection**  
  プロファイル対象のテーブルまたはビューを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
  **[テーブルまたはビュー]**  
@@ -36,7 +35,7 @@ ms.locfileid: "62830184"
  **Compute**  
  計算するプロファイルを選択します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**列の NULL 比プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の NULL 比プロファイルを計算します。<br /><br /> このプロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列統計プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列統計プロファイルを計算します。<br /><br /> このプロファイルは、数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計を報告します。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)」を参照してください。|  

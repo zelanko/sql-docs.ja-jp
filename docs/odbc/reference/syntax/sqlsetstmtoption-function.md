@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbbb186176868681c60831db71c4530edd97de4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039570"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287252"
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption 関数
 **互換性**  
@@ -36,7 +36,7 @@ ms.locfileid: "68039570"
 > [!NOTE]
 >  Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの機能をマップする方法の詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

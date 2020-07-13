@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDSNFromIni function [ODBC]
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024532"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301801"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 関数
 **互換性**  
@@ -51,11 +51,11 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="diagnostics"></a>診断  
  **Sqlremovedsnfromini**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn*引数が無効でした。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した要求|インストーラーで、レジストリから DSN 情報を削除できませんでした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーで、レジストリから DSN 情報を削除できませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
 ## <a name="comments"></a>説明  
@@ -65,7 +65,7 @@ BOOL SQLRemoveDSNFromIni(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースの追加、変更、または削除|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
 |データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  

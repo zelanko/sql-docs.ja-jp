@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumResultCols function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bfd6dcec9295f6d0c0874b60c32e8a552b56c065
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c8698545acac0077e78c3f58267ed96ba06a50c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002273"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299482"
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

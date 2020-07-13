@@ -17,28 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes catalog view
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
-ms.translationtype: MT
+ms.openlocfilehash: bfb93efd6495757e284fe5bb3df3cdb1b0c344e4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2020
-ms.locfileid: "77179293"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002734"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テーブル、ビュー、テーブル値関数など、テーブル オブジェクトのインデックスまたはヒープごとに 1 行のデータを格納します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このインデックスが所属するオブジェクトの ID。|  
-|**name**|**sysname**|インデックスの名前。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
+|**name**|**sysname**|インデックス名。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
 |**index_id**|**int**|インデックスの ID。 **index_id**は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
 |**type**|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 3 = XML<br /><br /> 4 = 空間<br /><br /> 5 = クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 6 = 非クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 7 = 非クラスター化ハッシュインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
-|**type_desc**|**nvarchar (60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> クラスター化列ストア: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化列ストア: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys. hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
+|**type_desc**|**nvarchar(60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> クラスター化列ストア: 以降**に適用さ** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] れます。<br /><br /> 非クラスター化列ストア: 以降**に適用さ** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys. hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
 |**is_unique**|**bit**|1 = インデックスは一意です。<br /><br /> 0 = インデックスは一意ではありません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**data_space_id**|**int**|インデックスのデータ領域の ID。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = **object_id**はテーブル値関数またはメモリ内インデックスです。|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY は ON です。<br /><br /> 0 = IGNORE_DUP_KEY はオフです。|  
@@ -59,10 +58,10 @@ ms.locfileid: "77179293"
 > **Optimize_for_sequential_key**ビットは、2019 CTP 3.1 以降のバージョン SQL Server のみでサポートされています。
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `Production.Product` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース内のテーブルのすべてのインデックスを返します。  
+ 次の例では、データベース内のテーブルのすべてのインデックスを返し `Production.Product` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ます。  
   
 ```  
   
@@ -89,9 +88,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. ファイルグループ &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   

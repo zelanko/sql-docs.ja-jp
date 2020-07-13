@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b224868d4d9fc111cdbf9482282767420b6adcc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a2ecd601b1329b3b95f1c3827cd04775c93304f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63205150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061282"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management について
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、構成管理用の WMI プロバイダーが用意されています。 これにより、WMI (Windows Management Instrumentation) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクライアントおよびサーバーのネットワーク設定、およびサーバー別名を管理することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス、ネットワーク設定、およびエイリアスは、コンピューターの root\Microsoft\SqlServer\ComputerManagement*nn*名前空間の WMI オブジェクトによって表されます。 指定されたコンピューター上で WMI プロバイダーを使用して接続が確立された後、サービス、ネットワーク設定、別名は、WQL またはスクリプティング言語を使用してクエリを行うことができます。  
@@ -27,7 +26,7 @@ ms.locfileid: "63205150"
  インスタンスの取得  
  特定のクラス型インスタンスの取得です。  
   
- Enumeration  
+ 列挙  
  クラス型のすべてのインスタンスの列挙です。  
   
  変更  
@@ -43,7 +42,7 @@ ms.locfileid: "63205150"
   
  構成管理用の WMI プロバイダーを使用した管理アプリケーションの例については、「 [Wmi provider For Configuration management での WQL およびスクリプト言語の使用](using-wql-and-scripting-languages-with-the-wmi-provider.md)」を参照してください。  
   
- WMI プロバイダーを使用した管理アプリケーションのプログラミングの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK の wmi のドキュメントを参照してください。  
+ WMI プロバイダーを使用した管理アプリケーションのプログラミングの詳細については、.NET Framework SDK の WMI のドキュメントを参照してください [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="see-also"></a>参照  
  [WMI Provider for Configuration Management の使用](working-with-the-wmi-provider-for-configuration-management.md)   

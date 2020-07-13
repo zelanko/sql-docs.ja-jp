@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7ea3a93c6b1c512583608eb6b27c8a64a41e5c3f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933940"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>データベース ミラーリングの設定 (SQL Server)
   ここでは、データベース ミラーリングを設定するための前提条件、推奨事項、および手順について説明します。 データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)」を参照してください。  
@@ -27,7 +26,7 @@ ms.locfileid: "62754452"
   
  
   
-##  <a name="PrepareInstances"></a> ミラー サーバーをホストするサーバー インスタンスの準備  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> ミラー サーバーをホストするサーバー インスタンスの準備  
  各データベース ミラーリング セッションで、以下を実行します。  
   
 1.  プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバー (存在する場合) は、別々のホスト システムにある別々のサーバー インスタンスによってホストされる必要があります。 サーバー インスタンスは、それぞれがデータベース ミラーリング エンドポイントを必要とします。 データベース ミラーリング エンドポイントを作成する必要がある場合は、他のサーバー インスタンスもそのエンドポイントにアクセス可能であることを確認します。  
@@ -48,7 +47,7 @@ ms.locfileid: "62754452"
   
 3.  ミラー データベースをホストするサーバー インスタンスで、ミラー化されたデータベースで必要な残りの環境を設定します。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
-##  <a name="EstablishUsingWinAuthentication"></a> 概要: データベース ミラーリング セッションの確立  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> 概要: データベース ミラーリング セッションの確立  
  ミラーリング セッションを確立するための基本手順を次に示します。  
   
 1.  次のバックアップを復元することで、ミラー データベースを作成します。すべての復元操作で RESTORE WITH NORECOVERY を使用します。  
@@ -99,7 +98,7 @@ ms.locfileid: "62754452"
   
  
   
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  中断されたセッションを再開する前に、ミラー データベースを作成したりミラー データベースを準備するための手順についてまとめています。 また、操作方法に関するトピックへのリンクも示します。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "62754452"
  [データベースミラーリングまたは AlwaysOn 可用性グループ &#40;SQL Server のログインアカウントを設定&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  ローカル サーバー インスタンスと異なるアカウントを使用しているリモート サーバー インスタンスのログインの作成について説明します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **SQL Server Management Studio**  
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

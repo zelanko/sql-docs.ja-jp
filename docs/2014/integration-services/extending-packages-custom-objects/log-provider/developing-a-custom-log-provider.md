@@ -14,15 +14,14 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bd0daad6090b5ad55144f74d513c7c698783700
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176304"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427419"
 ---
 # <a name="developing-a-custom-log-provider"></a>カスタム ログ プロバイダーの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、パッケージの実行中に発生したイベントをキャプチャできるようにする広範なログ記録機能があります。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、さまざまなログ プロバイダーを使用でき、ログを作成して XML、テキスト、データベースなどの形式で保存したり、Windows イベント ログに格納したりできます。 提供されるログ プロバイダーと出力形式が、要件を必ずしも満たさない場合は、カスタム ログ プロバイダーを作成できます。
@@ -36,23 +35,21 @@ ms.locfileid: "78176304"
 
  [カスタムログプロバイダーのコーディング](coding-a-custom-log-provider.md)基本クラスのメソッドとプロパティをオーバーライドすることによって、カスタムログプロバイダーを実装する方法について説明します。
 
- [カスタムログプロバイダーのユーザーインターフェイスの開発](developing-a-user-interface-for-a-custom-log-provider.md)カスタムログプロバイダーのカスタムユーザーインターフェイスは、で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]はサポートされていません。
+ [カスタムログプロバイダーのユーザーインターフェイスの開発](developing-a-user-interface-for-a-custom-log-provider.md)カスタムログプロバイダーのカスタムユーザーインターフェイスは、ではサポートされていません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
 ## <a name="related-topics"></a>関連トピック
 
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。
 
- [Integration Services 用のカスタムオブジェクトの開発](../developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するため[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]の基本的な手順について説明します。
+ [Integration Services 用のカスタムオブジェクトの開発](../developing-custom-objects-for-integration-services.md)のすべての種類のカスタムオブジェクトを実装するための基本的な手順について説明し [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ます。
 
  [カスタムオブジェクトの永続](../persisting-custom-objects.md)化カスタムの永続性について説明し、必要な場合について説明します。
 
  [カスタムオブジェクトのビルド、配置、およびデバッグ](../building-deploying-and-debugging-custom-objects.md)カスタムオブジェクトのビルド、署名、配置、およびデバッグの手法について説明します。
 
 ### <a name="information-about-other-custom-objects"></a>その他のカスタム オブジェクトに関する情報
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なその他の種類のカスタム オブジェクトについては、次のトピックを参照してください。
 
  [カスタムタスクの開発](../task/developing-a-custom-task.md)カスタムタスクをプログラミングする方法について説明します。
 
@@ -62,6 +59,6 @@ ms.locfileid: "78176304"
 
  [カスタムデータフローコンポーネントの開発](../data-flow/developing-a-custom-data-flow-component.md)カスタムデータフローの変換元、変換、および変換先をプログラミングする方法について説明します。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
 

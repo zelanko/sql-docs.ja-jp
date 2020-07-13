@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d078557186af534f1f489e8fee2e0f803c548f58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d9eb240ffe26a91b59413468f54cf5b2376779e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780926"
 ---
 # <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|17053|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|OS_ERROR|  
-|メッセージ テキスト|%ls: オペレーティング システム エラー %ls が発生しました。|  
+|メッセージ テキスト|%ls:オペレーティング システム エラー %ls が発生しました。|  
   
 ## <a name="explanation"></a>説明  
 一般的なオペレーティング システム エラーが発生しました。  結果の状態については明らかではありません。  

@@ -18,15 +18,14 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030900"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007458"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。  
   
@@ -43,10 +42,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>引数  
- [ @rolename= ]'*role*'  
+ [ @rolename =] '*role*'  
  現在のデータベースのデータベースロールの名前を指定します。 *role*は**sysname**で、既定値はありません。  
   
- [ @membername= ]'*security_account*'  
+ [ @membername =] '*security_account*'  
  ロールに追加するセキュリティアカウントを示します。 *security_account*は**sysname**であり、既定値はありません。 *security_account*には、データベースユーザー、データベースロール、windows ログイン、または windows グループを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -75,12 +74,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-windows-login"></a>A. Windows ログインの追加  
- 次の例では、Windows `Contoso\Mary5`ログインを`AdventureWorks2012`ユーザー `Mary5`としてデータベースに追加します。 その後`Mary5` 、ユーザーが`Production`ロールに追加されます。  
+ 次の例では、Windows ログイン `Contoso\Mary5` を `AdventureWorks2012` ユーザーとしてデータベースに追加し `Mary5` ます。 その後、ユーザー `Mary5` がロールに追加され `Production` ます。  
   
 > [!NOTE]  
->  
-  `Contoso\Mary5` はデータベース `Mary5` のデータベース ユーザー [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] として設定されているので、ユーザー名 `Mary5` を指定する必要があります。 
-  `Contoso\Mary5` のログインが存在しない場合、このステートメントは失敗します。 ドメインからのログインを使用してテストします。  
+>  `Contoso\Mary5` はデータベース [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のデータベース ユーザー `Mary5` として設定されているので、ユーザー名 `Mary5` を指定する必要があります。 `Contoso\Mary5` のログインが存在しない場合、このステートメントは失敗します。 ドメインからのログインを使用してテストします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -90,20 +87,19 @@ GO
 ```  
   
 ### <a name="b-adding-a-database-user"></a>B. データベースユーザーの追加  
- 次の例では、データベース`Mary5`ユーザーを`Production`現在のデータベースのデータベースロールに追加します。  
+ 次の例では、データベースユーザーを `Mary5` 現在のデータベースのデータベースロールに追加し `Production` ます。  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Windows ログインの追加  
- 次の例では、 `LoginMary`ログインを`AdventureWorks2008R2`ユーザー `UserMary`としてデータベースに追加します。 その後`UserMary` 、ユーザーが`Production`ロールに追加されます。  
+ 次の例では、ログインを `LoginMary` `AdventureWorks2008R2` ユーザーとしてデータベースに追加し `UserMary` ます。 その後、ユーザー `UserMary` がロールに追加され `Production` ます。  
   
 > [!NOTE]  
->  ログイン`LoginMary`は`UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースのデータベースユーザーとして知られているので、 `UserMary`ユーザー名を指定する必要があります。 
-  `Mary5` のログインが存在しない場合、このステートメントは失敗します。 通常、ログインとユーザーの名前は同じです。 この例では、ログインとユーザーに影響するアクションを区別するために、異なる名前を使用しています。  
+>  ログイン `LoginMary` はデータベースのデータベースユーザーとして知られているので、 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー名を `UserMary` 指定する必要があります。 `Mary5` のログインが存在しない場合、このステートメントは失敗します。 通常、ログインとユーザーの名前は同じです。 この例では、ログインとユーザーに影響するアクションを区別するために、異なる名前を使用しています。  
   
 ```  
 -- Uses AdventureWorks  
@@ -114,7 +110,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ### <a name="d-adding-a-database-user"></a>D. データベースユーザーの追加  
- 次の例では、データベース`UserMary`ユーザーを`Production`現在のデータベースのデータベースロールに追加します。  
+ 次の例では、データベースユーザーを `UserMary` 現在のデータベースのデータベースロールに追加し `Production` ます。  
   
 ```  
 EXEC sp_addrolemember 'Production', 'UserMary'  
@@ -126,6 +122,6 @@ EXEC sp_addrolemember 'Production', 'UserMary'
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)  
+ [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

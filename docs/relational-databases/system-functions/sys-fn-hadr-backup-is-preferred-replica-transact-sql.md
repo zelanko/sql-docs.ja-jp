@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734346"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>fn_hadr_backup_is_preferred_replica (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のレプリカが推奨されるバックアップ レプリカであるかどうかを決定するために使用されます。  
   
@@ -47,9 +47,9 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  バックアップするデータベースの名前です。 *dbname*の型は sysname です。  
   
 ## <a name="returns"></a>戻り値  
- 現在のインスタンス上のデータベースが優先レプリカに存在する場合は 1 を返します。 それ以外の場合は 0 を返します。  
+ 現在のインスタンス上のデータベースが優先レプリカ上にある場合は、データ型**bool**: 1 を返します。それ以外の場合は0を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  バックアップスクリプトでこの関数を使用して、現在のデータベースがバックアップに適したレプリカに存在するかどうかを確認します。 すべての可用性レプリカでスクリプトを実行できます。 これらの各ジョブは、どのジョブを実行するかを決定するために同じデータを確認するので、スケジュールされたジョブの1つだけがバックアップステージに進みます。 サンプル コードは次のようになります。  
   
 ```  
@@ -71,15 +71,15 @@ SELECT sys.fn_hadr_backup_is_preferred_replica ('TestDB');
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Always On 可用性グループの関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [アクティブなセカンダリ: セカンダリレプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性グループのカタログビュー &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   
   

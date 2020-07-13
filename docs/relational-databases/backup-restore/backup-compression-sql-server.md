@@ -1,5 +1,6 @@
 ---
 title: バックアップの圧縮 (SQL Server) | Microsoft Docs
+description: 制限、パフォーマンスのトレードオフ、バックアップの圧縮の構成、圧縮率など、SQL Server バックアップの圧縮について説明します。
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728537"
 ---
 # <a name="backup-compression-sql-server"></a>バックアップの圧縮 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エディションの Enterprise、Standard、および Developer でサポートされています。  圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、バックアップの圧縮の制限、パフォーマンス面のトレードオフ、バックアップの圧縮の構成、圧縮比率など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの圧縮について説明します。  バックアップの圧縮は、次の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エディションでサポートされています (Enterprise、Standard、Developer)。  圧縮されたバックアップは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の各エディションで復元できます。 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 利点  

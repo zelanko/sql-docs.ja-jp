@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a6f9ba5edd20795d7645b334694e6e80fa57c47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70745468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892544"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新しいメッセージ型を作成します。 メッセージ型によって、メッセージの名前と、その名前を持つメッセージに対し [!INCLUDE[ssSB](../../includes/sssb-md.md)] が実行する検証方法が定義されます。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70745468"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  

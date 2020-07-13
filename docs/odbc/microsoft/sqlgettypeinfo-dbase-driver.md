@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetTypeInfo
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43319f7f23741a1533321c9369077d42a2484395
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 711652e22318d089b02fe8e79cb592f0a42dfff9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898750"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295132"
 ---
 # <a name="sqlgettypeinfo-dbase-driver"></a>SQLGetTypeInfo (dBASE ドライバー)
 > [!NOTE]  

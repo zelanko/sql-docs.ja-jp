@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 972c23b318855f2ac575c4905455c22ddbc02b16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63225807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061864"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
   AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
@@ -38,8 +37,7 @@ ms.locfileid: "63225807"
   
 1.  [抽出条件ペイン](visual-database-tools.md)に検索するデータ列を追加します。 AND で結合された複数の条件を使用して同じ列を検索する場合は、検索する値ごとにデータ列名をグリッドに追加する必要があります。  
   
-2.  
-  **[フィルター]** 列に、AND で結合する条件をすべて入力します。 たとえば、 `hire_date` 列の条件と `job_lvl` 列の条件を AND で結合して検索するには、対応する [フィルター] 列にそれぞれ `< '1/1/91'` および `= 100`と入力します。  
+2.  **[フィルター]** 列に、AND で結合する条件をすべて入力します。 たとえば、 `hire_date` 列の条件と `job_lvl` 列の条件を AND で結合して検索するには、対応する [フィルター] 列にそれぞれ `< '1/1/91'` および `= 100`と入力します。  
   
      上のようにグリッドに値を入力すると、 [SQL ペイン](sql-pane-visual-database-tools.md)でステートメントの WHERE 句が次のように作成されます。  
   
@@ -48,11 +46,9 @@ ms.locfileid: "63225807"
       (job_lvl = 100)  
     ```  
   
-3.  
-  **[または...]** グリッド列に OR で結合する条件を入力します。 たとえば、 `job_lvl` 列の別の値を検索条件として追加するには、 **[または...]** 列に `= 200`などの値を追加入力します。  
+3.  **[または...]** グリッド列に OR で結合する条件を入力します。 たとえば、 `job_lvl` 列の別の値を検索条件として追加するには、 **[または...]** 列に `= 200`などの値を追加入力します。  
   
-     
-  **[または...]** 列に値を追加すると、SQL ペインでは次のようにステートメントの WHERE 句に条件が追加されます。  
+     **[または...]** 列に値を追加すると、SQL ペインでは次のようにステートメントの WHERE 句に条件が追加されます。  
   
     ```  
     WHERE (hire_date < '01/01/91' ) AND  

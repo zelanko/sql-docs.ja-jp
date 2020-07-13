@@ -19,17 +19,17 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c82aae8312d19606853a3a676e98c6ca14c821f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752338"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   インデックス付きの列名を返します。 XML インデックスに対して NULL を返します。  
   

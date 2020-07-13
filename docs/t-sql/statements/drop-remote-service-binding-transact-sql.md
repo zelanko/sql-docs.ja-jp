@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54890859e9ec27ebfb91009632245d4807f6897a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 07338b22d4d0ab36265c5cf97f679b92261e67d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895091"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リモート サービス バインドを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044044"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP REMOTE SERVICE BINDING binding_name  
 [ ; ]  

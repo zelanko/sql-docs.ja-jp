@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d60355e28327d7953d0782782e3ec55950314fe5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067085"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>タスク 17: SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する
   ここでは、DQS クライアントで SSIS パッケージにより作成された DQS プロジェクトを開き、クレンジング プロセスの結果を確認し、必要に応じてインタラクティブなクレンジングを実行し、結果をエクスポートします。  
@@ -54,7 +53,7 @@ ms.locfileid: "65484709"
   
 16. プロジェクトの**IsActive**フィールドの値が [**終了**] になっていることに注意してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [まとめ](../../2014/tutorials/conclusion.md)  
   
   

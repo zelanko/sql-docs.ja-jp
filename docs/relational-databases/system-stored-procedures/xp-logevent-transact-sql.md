@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 08fbf39390a7a81fc3ce3e8563c3699ba77b833c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68116639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890760"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログファイルと Windows イベントビューアーにユーザー定義メッセージを記録します。 xp_logevent を使用すると、クライアントにメッセージを送信せずにアラートを送信できます。  
+  ログファイルと Windows イベントビューアーにユーザー定義メッセージを記録し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 xp_logevent を使用すると、クライアントにメッセージを送信せずにアラートを送信できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>解説  
- プロシージャ、トリガー、バッチ[!INCLUDE[tsql](../../includes/tsql-md.md)]などからメッセージを送信する場合は、xp_logevent ではなく RAISERROR ステートメントを使用します。 xp_logevent は、クライアントのメッセージハンドラーを呼び出さず、@@ERRORを設定します。 のインスタンス内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows イベントビューアーおよびエラーログファイルにメッセージを書き込むには、RAISERROR ステートメントを実行します。  
+## <a name="remarks"></a>Remarks  
+ プロシージャ、トリガー、バッチなどからメッセージを送信する場合は [!INCLUDE[tsql](../../includes/tsql-md.md)] 、xp_logevent ではなく RAISERROR ステートメントを使用します。 xp_logevent は、クライアントのメッセージハンドラーを呼び出さず、@ を設定 @ERROR します。 のインスタンス内の Windows イベントビューアーおよびエラーログファイルにメッセージを書き込むには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、RAISERROR ステートメントを実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  Master データベースの db_owner 固定データベースロールのメンバーシップ、または sysadmin 固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Windows イベントビューアーのメッセージに渡された変数を使用して、メッセージをログに記録します。  
   
 ```  
@@ -76,9 +76,9 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>参照  
- [Transact-sql&#41;の印刷 &#40;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40;Transact-sql&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   

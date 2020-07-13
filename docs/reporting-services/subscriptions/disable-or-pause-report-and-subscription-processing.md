@@ -1,5 +1,6 @@
 ---
 title: レポートとサブスクリプションの処理を無効化または一時停止する | Microsoft Docs
+description: サブスクリプションの管理、共有スケジュールの一時停止、共有データ ソースの無効化、レポートへのアクセスのブロック、サブスクリプションのアクセス許可の管理、配信拡張機能の削除を行います。
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893421"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742088"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する  
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 この記事では、サブスクリプションの無効化からデータ ソース接続の中断までの方法を扱います。 すべての方法をどちらの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードでも使用できるわけではありません。 次の表では、方法とサポートされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードについて概要を示します。  

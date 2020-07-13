@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: caae0e0b81c29454a8d7825e8077690369c76805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f55b1eb7e3ae698053580599e991ec11f9da6c8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75254459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058379"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>登録済みサーバーの削除 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーからサーバーを削除する方法について説明します。  

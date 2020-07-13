@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68140652"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053429"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup。 fn_get_parameter (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   パラメーターと値のペアから成る 0 行、1 行、または複数行を格納したテーブルを返します。  
   
@@ -44,13 +43,13 @@ ms.locfileid: "68140652"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  parameter_name  
  パラメーターの名前。 parameter_name は**NVARCHAR (128)** です。 関数に NULL または空の文字列が引数として指定されている場合は、構成されているすべてのスマート管理パラメーターの名前と値のペアが返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR (128)|パラメーターの名前。 返されるパラメーターの現在の一覧を次に示します。<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR (128)|パラメーターの現在設定されている値。|  

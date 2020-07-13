@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ae09d76c2642e23c56afcdd5ae4e1e468ef5883
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63155795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025765"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために列に関する統計を使用します。 統計はデータベースのテーブルから収集され、データベース メタデータに格納されます。  
@@ -26,11 +25,11 @@ ms.locfileid: "63155795"
   
  メモリ最適化テーブルの統計は、既定では更新されません。 手動で更新する必要があります。 個々の列、インデックス、またはテーブルに対して、 [transact-sql&#41;&#40;UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql)を使用します。 [Sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)を使用して、データベース内のすべてのユーザーと内部テーブルの統計を更新します。  
   
- [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、メモリ最適化テーブル`NORECOMPUTE`の統計の自動更新を無効にするように指定する必要があります。 ディスクベーステーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、最後の[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)以降にテーブルが変更されている場合にのみ統計を更新します。 メモリ最適化テーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は常に更新された統計を生成します。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、メモリ最適化テーブルに適したオプションです。それ以外の場合は、統計を個別に更新できるように、重要な変更が加えられているテーブルを把握しておく必要があります。  
+ [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、 `NORECOMPUTE` メモリ最適化テーブルの統計の自動更新を無効にするように指定する必要があります。 ディスクベーステーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、最後の[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)以降にテーブルが変更されている場合にのみ統計を更新します。 メモリ最適化テーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は常に更新された統計を生成します。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、メモリ最適化テーブルに適したオプションです。それ以外の場合は、統計を個別に更新できるように、重要な変更が加えられているテーブルを把握しておく必要があります。  
   
  統計は、データのサンプリングまたはフルスキャンの実行によって生成できます。 サンプリング統計は、データ分布を推定するためにテーブル データのサンプルのみを使用します。 フルスキャン統計は、データの分布を調べるためにテーブル全体をスキャンします。 通常、フルスキャン統計の方が正確ですが、計算にかかる時間が長くなります。 サンプリング統計はより速く収集できます。  
   
- ディスク ベース テーブルでは、既定ではサンプリング統計が使用されます。 メモリ最適化テーブルでは、フルスキャン統計のみをサポートしています。 [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、メモリ最適化テーブルの`FULLSCAN`オプションを指定する必要があります。  
+ ディスク ベース テーブルでは、既定ではサンプリング統計が使用されます。 メモリ最適化テーブルでは、フルスキャン統計のみをサポートしています。 [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、 `FULLSCAN` メモリ最適化テーブルのオプションを指定する必要があります。  
   
  メモリ最適化テーブルの統計に関するその他の注意点を次に示します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63155795"
   
  統計を更新するには:  
   
--   統計[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の[更新タスク](../maintenance-plans/update-statistics-task-maintenance-plan.md)を使用して[メンテナンスプランを作成](../maintenance-plans/create-a-maintenance-plan.md)するには、を使用します  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][統計の更新タスク](../maintenance-plans/update-statistics-task-maintenance-plan.md)を使用して[メンテナンスプランを作成](../maintenance-plans/create-a-maintenance-plan.md)するには、を使用します  
   
 -   または、後で説明する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを使用して統計を更新します。  
   

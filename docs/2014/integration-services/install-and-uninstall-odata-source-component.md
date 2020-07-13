@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c22c7c88e57c354b92bcb69429a9ab6c06ca368d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058037"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436579"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData ソース コンポーネントのインストールと、アンインストール
   このトピックでは、コンピューターに OData ソース コンポーネントをインストールまたは削除する手順について説明します。  

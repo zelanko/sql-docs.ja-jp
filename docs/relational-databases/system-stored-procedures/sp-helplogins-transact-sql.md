@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122451"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891682"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   各データベース内のログインと、それらに関連付けられているユーザーに関する情報を提供します。  
   
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @LoginNamePattern = ] 'login'`ログイン名を指定します。 *login*は**sysname**,、既定値は NULL です。 指定した場合、*ログイン*が存在する必要があります。 *Login*が指定されていない場合は、すべてのログインに関する情報が返されます。  
+`[ @LoginNamePattern = ] 'login'`ログイン名を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン*が存在する必要があります。 *Login*が指定されていない場合は、すべてのログインに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -47,25 +47,25 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>結果セット  
  最初のレポートには、次の表に示すとおり、指定した各ログインに関する情報が含まれます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ログイン**|**sysname**|ログイン名。|  
 |**SID**|**varbinary (85)**|ログインセキュリティ識別子 (SID)。|  
-|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する既定のデータベースです。|  
+|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
 |**DefLangName**|**sysname**|**ログイン**で使用される既定の言語。|  
 |**Auser**|**char (5)**|はい = データベースにユーザー名が関連付けられ**ています**。<br /><br /> No =**ログイン**には、関連付けられたユーザー名がありません。|  
 |**ARemote**|**char (7)**|はい =**ログイン**に関連付けられているリモートログインです。<br /><br /> No = **loginlogin**には、関連付けられたログインがありません。|  
   
  2 番目のレポートには、次の表に示すとおり、各ログインにマップされているユーザーに関する情報、およびログインのロール メンバーシップが含まれています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ログイン**|**sysname**|ログイン名。|  
-|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する既定のデータベースです。|  
+|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
 |**ユーザー名**|**sysname**|の場合、このユーザーアカウントは、 **dbname**でに**マップされ**、その**ログイン**が**dbname**のメンバーであるロールです。|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName**はロールです。<br /><br /> User = **UserName**はユーザーアカウントです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ログインを削除する前に、 **sp_helplogins**を使用して、ログインにマップされているユーザーアカウントを特定します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -80,7 +80,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
  **Sp_helplogins**がデータベースにアクセスできない場合、 **sp_helplogins**は可能な限り多くの情報を返し、エラーメッセージ15622を表示します。  
   
 ## <a name="examples"></a>例  
- 次の例では、ログイン`John`に関する情報を報告します。  
+ 次の例では、ログインに関する情報を報告し `John` ます。  
   
 ```  
 EXEC sp_helplogins 'John';  
@@ -99,10 +99,10 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

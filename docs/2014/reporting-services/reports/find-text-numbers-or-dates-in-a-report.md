@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102668"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>レポート内のテキスト、数値、または日付を検索する (Reporting Services の SharePoint 統合モード)
@@ -43,6 +43,6 @@ ms.locfileid: "66102668"
 4.  同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビューアー Web パーツを Web ページに追加する &#40;Reporting Services の SharePoint 統合モード&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

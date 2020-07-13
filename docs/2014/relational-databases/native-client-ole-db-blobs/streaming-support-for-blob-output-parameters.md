@@ -1,5 +1,5 @@
 ---
-title: BLOB 出力パラメーターのストリーミングサポート |Microsoft Docs
+title: 出力パラメーターの BLOB のストリーミング サポート | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e21f3e56380ed4ccd96fb6f2ffa9d969c2ad0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62468179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056395"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
   このトピックでは、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  

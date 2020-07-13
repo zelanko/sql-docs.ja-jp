@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], deleting
 - deleting data sources [ODBC], Visual FoxPro
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ba7c1956bc03835131a440bfe9ad37469a7858e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a755a90b87efc94ca5b6446e9ea32bb1a608647d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68112101"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303563"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの削除
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Visual FoxPro データソースを削除するには  

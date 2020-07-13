@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59666e90a47d88762c6fc3bd1fabc0e71ea18f94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1ef5d07fe082d0eeb2c3484d6e99572d8fc80e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62919579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954623"
 ---
 # <a name="clr-user-defined-aggregates"></a>CLR ユーザー定義集計
-  集計関数は、一連の値を計算して 1 つの値を返します。 従来、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で`SUM`は、入力スカラー値のセットに対して演算`MAX`を実行し、そのセットから1つの集計値を生成するやなどの組み込み集計関数のみがサポートされていました。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) と統合されたことにより、開発者はマネージド コードでカスタム集計関数を作成し、[!INCLUDE[tsql](../../includes/tsql-md.md)] や他のマネージド コードから作成した関数にアクセスできるようになりました。  
+  集計関数は、値の集まりに対して計算を実行し、1 つの値を返します。 従来、で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SUM` は、 `MAX` 入力スカラー値のセットに対して演算を実行し、そのセットから1つの集計値を生成するやなどの組み込み集計関数のみがサポートされていました。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) と統合されたことにより、開発者はマネージド コードでカスタム集計関数を作成し、[!INCLUDE[tsql](../../includes/tsql-md.md)] や他のマネージド コードから作成した関数にアクセスできるようになりました。  
   
  次の表に、このセクションの各トピックの一覧を示します。  
   

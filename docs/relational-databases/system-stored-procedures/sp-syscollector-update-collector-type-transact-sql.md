@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010542"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892789"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクション項目のコレクター型を更新します。 コレクター型の名前と GUID を指定すると、によって、コレクションとアップロードパッケージ、パラメータースキーマ、およびパラメーターフォーマッタスキーマを含むコレクター型の構成が更新されます。  
   
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`このコレクター型の XML スキーマです。 *parameter_schema*は**xml**であり、特定のコレクター型で必要になる場合があります。 必須ではない場合、この引数は NULL にすることができます。  
   
-`[ @collection_package_id = ] collection_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @collection_package_id = ] collection_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
   
-`[ @upload_package_id = ] upload_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]アップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @upload_package_id = ] upload_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -100,7 +100,7 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   

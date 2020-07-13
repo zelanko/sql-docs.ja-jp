@@ -12,17 +12,17 @@ helpviewer_keywords:
 - common language runtime [SQL Server], dynamic management views
 - dynamic management objects [SQL Server], common language runtime
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd75656f2fa5d90bace8cfddb4b22da1a8c6db94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc2faece9e109e1bcaa0e6bf99c34c72be9745f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68017940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720341"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>共通言語ランタイム関連の動的管理ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、次の動的管理ビューについて説明します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68017940"
 |[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|[sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|  
 |[sys.dm_clr_properties](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|[sys.dm_clr_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+## <a name="see-also"></a>関連項目  
+ [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

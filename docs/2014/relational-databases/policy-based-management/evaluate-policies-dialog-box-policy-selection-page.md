@@ -11,43 +11,41 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62705128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061750"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ
-  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 
-  **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
+  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
   
 ## <a name="options"></a>オプション  
  **ソース**  
  ポリシーのソースを指定します。 ソースを変更するには、参照ボタン (**[...]**) をクリックして、 **[ソースの選択]** ダイアログ ボックスを開きます。  
   
- **ファイル**  
+ **[ファイル]**  
  ポリシー ベースの管理ポリシーを含むファイルのパスを入力するか、参照ボタン (**[...]**) を使用してファイルを選択します。  
   
- **サーバー**  
+ **[サーバー]**  
  必要なポリシーを含む [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続する場合に選択します。  
   
- **ポリシー: ポリシー**  
+ **[ポリシー: ポリシー]**  
  クリックすると、指定したポリシーの [ポリシー] ダイアログ ボックスが開きます。  
   
- **ポリシー: カテゴリ**  
+ **[ポリシー: カテゴリ]**  
  ポリシーのカテゴリ。 このボックスは読み取り専用です。  
   
- **Policies: ファセット**  
+ **[ポリシー: ファセット]**  
  ポリシーによって実装されるファセット。 このボックスは読み取り専用です。  
   
- **Evaluate**  
+ **評価**  
  ポリシーを評価モードで実行します。 これにより対象セットの準拠レポートが生成されますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再構成されたり、今後の準拠が適用されたりすることはありません。  
   
 ## <a name="possible-errors"></a>発生する可能性のあるエラー  
   
--   **ターゲットが見つかりません**  
+-   **対象が見つかりません**  
   
      対象セットは、次のいずれかの理由により空になっている可能性があります。  
   

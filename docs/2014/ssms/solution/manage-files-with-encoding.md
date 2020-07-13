@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62823801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061178"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
   特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62823801"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>他のエンコードまたは行終端文字の種類を指定してファイルを保存するには  
   
-1.  [**ファイル**] メニューの [ファイル**名を> に保存\<**] をクリックします。  
+1.  **[ファイル]** メニューの **[名前を付けて \<filename> を保存]** をクリックします。  
   
 2.  **[ファイル名を付けて保存]** ダイアログ ボックスで、 **[保存]** ボタンを展開し、 **[エンコード付きで保存]** をクリックします。  
   

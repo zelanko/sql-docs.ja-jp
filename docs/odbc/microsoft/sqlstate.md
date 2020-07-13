@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSTATE
 ms.assetid: 942f53f8-7755-418c-b453-047b3e030156
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71e2fc3c9b7697837575e76d91dfa3ac3a2a5527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ad3b934f02a27f7106b4812b62bcac11f84499c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093071"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299372"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 データソースで発生したエラーの場合、ODBC ドライバーは返されたネイティブエラーを適切な SQLSTATE にマップします。 ドライバーまたはドライバーマネージャーによって検出されたエラーについては、ODBC ドライバーまたはドライバーマネージャーによって、適切な SQLSTATE が生成されます。

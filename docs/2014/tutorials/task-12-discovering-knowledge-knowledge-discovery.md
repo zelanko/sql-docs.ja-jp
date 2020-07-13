@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064783"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>タスク 12: ナレッジを検出する (ナレッジ検出)
   このタスクでは、 **SUPPLIER ID**および**supplier Name**ドメインで**ナレッジ検出**アクティビティを実行します。 このシナリオでは、ナレッジ検出プロセスにより主にこれら 2 つのドメインの値をインポートします。  
@@ -28,7 +27,7 @@ ms.locfileid: "65484683"
   
 2.  **データソース**として**Excel ファイル**を選択します。  
   
-3.  [**参照**] をクリックし、[**仕入先 .xls**] をクリックして、[**開く**] をクリックします。  
+3.  [**参照**] をクリックし、[ **Suppliers.xls**] をクリックして、[**開く**] をクリックします。  
   
 4.  **ワークシート**の**検出のためのサプライヤー**を選択します。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484683"
   
 6.  [**次へ**] をクリックして、[**検出**] ページに移動します。  
   
-7.  [**検出**] ページで、[**開始**] をクリックして検出プロセスを開始します。 検出は、**仕入先 .xls**ファイルの列の**仕入****先名と仕入先名**に対して実行されます。 **SUPPLIER ID**および**supplier Name**ドメインには、検出から得られたナレッジが設定されている必要があります。  
+7.  [**検出**] ページで、[**開始**] をクリックして検出プロセスを開始します。 検出は、 **Suppliers.xls**ファイルの列の**仕入****先名と仕入先名**に対して実行されます。 **SUPPLIER ID**および**supplier Name**ドメインには、検出から得られたナレッジが設定されている必要があります。  
   
      ![検出プロセスの [検出] ページ](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "検出プロセスの [検出] ページ")  
   
@@ -66,7 +65,7 @@ ms.locfileid: "65484683"
   
      これで、チュートリアルの最初のレッスンを完了しました。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

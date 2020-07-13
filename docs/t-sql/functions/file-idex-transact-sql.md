@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895778"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、指定された現在のデータベースのデータ、ログ、フルテキスト ファイルの論理名に対する、ファイル識別 (ID) 番号を返します。 
   

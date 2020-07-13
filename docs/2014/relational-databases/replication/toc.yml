@@ -128,7 +128,7 @@
               href: publish/set-the-expiration-period-for-subscriptions.md
             - name: スキーマ オプションの指定
               href: publish/specify-schema-options.md
-            - name: '[スキーマ変更のレプリケート]'
+            - name: スキーマ変更のレプリケート
               href: publish/replicate-schema-changes.md
             - name: ID 列の管理
               href: publish/manage-identity-columns.md
@@ -362,7 +362,7 @@
         - name: SQL Database へのレプリケーション +
           href: 'https://docs.microsoft.com/azure/sql-database/replication-to-sql-database'
         - name: SQL Database MI でのレプリケーション +
-          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md'
+          href: 'https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance'
         - name: データの再パブリッシュ
           href: republish-data.md
         - name: インターネット経由のレプリケーション
@@ -497,7 +497,7 @@
                       href: publication-information-all-subscriptions-transactional-publication.md
                     - name: 警告
                       href: publication-information-warnings-transactional-publication.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: publication-information-agents-transactional-publication.md
                     - name: トレーサー トークン
                       href: publication-information-tracer-tokens-sql-server-2005-and-later.md
@@ -515,7 +515,7 @@
                       href: publication-information-all-subscriptions-merge-publication.md
                     - name: 警告
                       href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: publication-information-agents-merge-publication.md
                     - name: 同期の履歴
                       href: subscription-synchronization-history.md
@@ -527,7 +527,7 @@
                       href: publication-information-all-subscriptions-snapshot-publication.md
                     - name: 警告
                       href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: publication-information-agents-snapshot-publication.md
                     - name: ディストリビューターからサブスクライバーまでの履歴
                       href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
@@ -540,7 +540,7 @@
               href: snapshot-folder.md
             - name: ディストリビューション データベース
               href: distribution-database.md
-            - name: '[ディストリビューターのプロパティ]'
+            - name: ディストリビューターのプロパティ
               href: publishers.md
             - name: '[ディストリビューター パスワード]'
               href: distributor-password.md

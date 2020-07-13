@@ -12,14 +12,14 @@ helpviewer_keywords:
 - scalar functions [ODBC], escape sequences
 - ODBC escape sequences [ODBC], scalar function
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057067"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305075"
 ---
 # <a name="scalar-function-escape-sequence"></a>スカラー関数のエスケープ シーケンス
 ODBC では、スカラー関数にエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
@@ -28,7 +28,7 @@ ODBC では、スカラー関数にエスケープシーケンスを使用しま
 {fn scalar-function}  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文は次のようになります。  
   
  *ODBC スカラー関数-escape* :: =  

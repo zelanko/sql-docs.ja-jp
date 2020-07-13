@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d36397bbee88bdea60be57d80e68e762a636962f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058062"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>ダイアグラム ペインでの列名の表示 (Visual Database Tools)
   クエリおよびビュー デザイナーの **ダイアグラム ペイン** で、テーブルの列名の表示または非表示を選択できます。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b687131739188c811347aa032c0eb941124eb665
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68000931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891748"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   プライマリ、セカンダリ、または監視サーバーに登録されているプライマリデータベースとセカンダリデータベースの状態などの情報を含む結果セットを返します。  
   
@@ -46,9 +46,9 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**オンライン**|**bit**|ログ配布データベースのエージェントに関する全般的な状態。<br /><br /> **0** = 正常かつエージェントなしのエラー。<br /><br /> **1** = それ以外の場合は。|  
+|**status**|**bit**|ログ配布データベースのエージェントに関する全般的な状態。<br /><br /> **0** = 正常かつエージェントなしのエラー。<br /><br /> **1** = それ以外の場合は。|  
 |**is_primary**|**bit**|この行がプライマリ データベースのものかどうか。<br /><br /> **1** = プライマリデータベースの行です。<br /><br /> **0** = セカンダリデータベースの行です。|  
 |**server**|**sysname**|このデータベースが存在するプライマリまたはセカンダリ サーバーの名前。|  
 |**database_name**|**sysname**|データベース名です。|  
@@ -64,15 +64,14 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。 **restore_threshold**を NULL にすることはできません。|  
 |**is_restore_alert_enabled**|**bit**|**Restore_threshold**を超えたときにアラートを生成するかどうかを指定します。 **1 (既定**値) の値は、警告が発生することを意味します。<br /><br /> NULL = 情報が利用できないか、または関連性がありません。<br /><br /> 復元のしきい値を設定するには、 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)を使用します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_monitor**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

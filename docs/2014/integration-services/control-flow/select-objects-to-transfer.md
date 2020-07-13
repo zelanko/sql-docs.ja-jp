@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e631b902cad9735cafba28b72357be674d6497a7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438169"
 ---
 # <a name="select-objects-to-transfer"></a>[<転送するオブジェクト> の選択]
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の転送タスクを使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の 1 つのインスタンスから別のインスタンスに転送するオブジェクトを選択できます。  

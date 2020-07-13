@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771554"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   2つのドキュメント (ソースドキュメントと一致するドキュメント) に共通するキーフレーズの0行、1行、または複数の行から成るテーブルを返します。このテーブルの内容は意味が似ています。  
   
@@ -46,8 +46,8 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a>数値  
- **一覧**  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
+ **テーブル**  
  フルテキスト インデックスとセマンティック インデックスが有効になっているテーブルの名前を指定します。  
   
  この名前には 1 ~ 4 つの部分名を指定できますが、リモートサーバー名は許可されません。  
@@ -71,7 +71,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>返されるテーブル  
  次の表は、この行セット関数が返すキーフレーズに関する情報を示しています。  
   
-|Column_name|種類|[説明]|  
+|Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**キーフレーズ**|**NVARCHAR**|ソースドキュメントと一致したドキュメントとの類似性に貢献するキーフレーズ。|  
 |**学生**|**本当の**|2つのドキュメント間で類似している他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
@@ -82,17 +82,17 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="metadata"></a>Metadata  
  セマンティック類似性の抽出と作成の詳細と状態については、次の動的管理ビューに対してクエリを実行します。  
   
--   [dm_db_fts_index_physical_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [dm_fts_semantic_similarity_population &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
+-   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、AdventureWorks2012 サンプルデータベースの**humanresources.employee**テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 変数@CandidateIdと@MatchedID変数は、フルテキストインデックスのキー列の値を表します。  
+## <a name="examples"></a>使用例  
+ 次の例では、AdventureWorks2012 サンプルデータベースの**humanresources.employee**テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 @CandidateId変数と @MatchedID 変数は、フルテキストインデックスのキー列の値を表します。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

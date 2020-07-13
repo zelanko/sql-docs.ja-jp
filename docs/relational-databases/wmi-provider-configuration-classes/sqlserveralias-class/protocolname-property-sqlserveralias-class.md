@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8903cae5b92ae4ce4da5771e09ed89d8f827dbab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73660420"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888448"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName プロパティ (SqlServerAlias クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サーバー接続別名によって使用されるプロトコルの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,13 +35,12 @@ ms.locfileid: "73660420"
 object.ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  [の別名を表す](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [の別名を表す](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー接続別名によって使用されるプロトコルの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   

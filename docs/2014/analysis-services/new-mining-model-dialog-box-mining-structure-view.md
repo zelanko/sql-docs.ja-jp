@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c99daa6766aa0fb79c7a7b0dd3e221f73b49f38a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541042"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>[新しいマイニング モデル] ダイアログ ボックス ([マイニング構造] ビュー)
-  
   **[新しいマイニング モデル]** ダイアログ ボックスを使用すると、新しいマイニング モデルをマイニング構造に追加できます。  
   
 ## <a name="options"></a>オプション  

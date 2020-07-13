@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLProcedures function [ODBC]
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bdaf63313a339d2b25ca6648ad25c1b4466b3f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68005733"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306843"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 関数
 **互換性**  
@@ -81,7 +81,7 @@ SQLRETURN SQLProcedures(
 ## <a name="diagnostics"></a>診断  
  **Sqlprocedures**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlprocedures**によって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -125,14 +125,14 @@ SQLRETURN SQLProcedures(
   
  次の表に、結果セット内の列の一覧を示します。 列 8 (PROCEDURE_TYPE) 以外の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列番号|データ型|説明|  
+|列名|列番号|データの種類|説明|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1 で保護されたプロセスとして起動されました|Varchar|プロシージャカタログ識別子。データソースに適用されない場合は NULL です。 ドライバーがいくつかのプロシージャのカタログをサポートしていても、他のプロシージャに対してはサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないプロシージャに対して空の文字列 ("") が返されます。|  
+|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|プロシージャカタログ識別子。データソースに適用されない場合は NULL です。 ドライバーがいくつかのプロシージャのカタログをサポートしていても、他のプロシージャに対してはサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないプロシージャに対して空の文字列 ("") が返されます。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|プロシージャスキーマ識別子。データソースに適用されない場合は NULL です。 ドライバーがいくつかのプロシージャのスキーマをサポートしていて、他のプロシージャに対してはサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、スキーマを持たないプロシージャに対して空の文字列 ("") が返されます。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar not NULL|プロシージャ識別子。|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|該当なし|将来使用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|該当なし|将来使用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|該当なし|将来使用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|なし|将来利用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|なし|将来利用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|なし|将来利用するために予約されています。 アプリケーションは、これらの結果列に返されるデータに依存しないようにする必要があります。|  
 |解説 (ODBC 2.0)|7|Varchar|プロシージャの説明。|  
 |PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|プロシージャの種類を定義します。<br /><br /> SQL_PT_UNKNOWN: プロシージャが値を返すかどうかを判断できません。<br /><br /> SQL_PT_PROCEDURE: 返されたオブジェクトはプロシージャです。つまり、戻り値はありません。<br /><br /> SQL_PT_FUNCTION: 返されたオブジェクトは関数です。つまり、戻り値があります。|  
   
@@ -143,7 +143,7 @@ SQLRETURN SQLProcedures(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

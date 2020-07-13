@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f63630b0aa956f9d6ecbeb87304802a0c6ec4414
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963570"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751124"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset プロパティ (RDS)
 カスタムビジネスオブジェクトから返される**レコードセット**オブジェクトを示します。  

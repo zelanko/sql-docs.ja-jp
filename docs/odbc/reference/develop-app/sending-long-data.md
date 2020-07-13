@@ -11,14 +11,14 @@ helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094337"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304183"
 ---
 # <a name="sending-long-data"></a>長い形式のデータの送信
 Dbms では、254文字など、特定のサイズの文字またはバイナリデータとして*長い形式のデータ*を定義します。 長いテキストドキュメントやビットマップを表す場合など、長いデータのアイテム全体をメモリに格納することはできません。 このようなデータを1つのバッファーに格納することはできないため、データソースは、ステートメントが実行されたときに**Sqlputdata**を使用して部分的にドライバーに送信します。 実行時にデータを送信するパラメーターは、*実行時データパラメーター*と呼ばれます。  

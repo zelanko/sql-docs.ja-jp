@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 15f3c898faf97f5e013fa3665971d55830f0c68d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 804c2f55047a69e75622fbab23a3524a3f082695
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036176"
 ---
 # <a name="setup-and-servicing-installation"></a>セットアップとサービスのインストール
   このセクションには次の内容が含まれます。  

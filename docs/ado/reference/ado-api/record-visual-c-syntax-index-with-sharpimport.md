@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Record collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f39e5802e08fd47f5442cd7d394b6589ce56c597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 243a18e261997bab3491d05f1b65b46020606da5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917357"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754016"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>レコード (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -48,7 +48,7 @@ HRESULT Open( const _variant_t & Source, const _variant_t
     Options, _bstr_t UserName, _bstr_t Password );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _variant_t GetActiveConnection( );  

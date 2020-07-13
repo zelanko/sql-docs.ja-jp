@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d2cfd61efa1ffed78b96f4ef22e01de20f200dfb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920965"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896539"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server のデータ型と ADO.NET
 
@@ -29,7 +29,7 @@ SQL Server 2008 には、ビジネス ニーズを満たすように設計され
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [SqlTypes とデータセット](sqltypes-dataset.md)  
-`SqlTypes` 内の `DataSet` に対する新しい型のサポートについて説明します。  
+`DataSet` 内の `SqlTypes` に対する新しい型のサポートについて説明します。  
   
 [null 値の処理](handle-null-values.md)  
 null 値と 3 値ロジックを操作する方法について説明します。  

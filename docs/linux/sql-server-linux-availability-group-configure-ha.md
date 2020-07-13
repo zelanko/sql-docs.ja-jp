@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892308"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上で、高可用性を実現するために SQL Server の Always On 可用性グループ (AG) を作成する方法について説明します。 AG には 2 種類の構成が存在します。 "*高可用性*" の構成では、クラスター マネージャーを使ってビジネス継続性を提供します。 この構成には、読み取りスケールのレプリカを含めることもできます。 このドキュメントでは、高可用性のための AG を作成する方法について説明します。
 

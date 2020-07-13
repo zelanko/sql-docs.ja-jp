@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Access Driver
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 523f44924858af182e953aa1ce2b72e20cf97a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f75f41bf63cbf224772955effa0f120b5d384111
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047082"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299362"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics (Access ドライバー)
 > [!NOTE]  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd4ec3e05acfd4faaafd38a79e48c67d03d86bd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070169"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302843"
 ---
 # <a name="string-functions"></a>文字列関数
 次の表に、文字列操作関数の一覧を示します。 アプリケーションでは、SQL_STRING_FUNCTIONS の*情報の種類*を指定して**SQLGetInfo**を呼び出すことによって、ドライバーによってサポートされる文字列関数を特定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *String_exp*として示される引数には、列の名前、*文字文字列リテラル*、または別のスカラー関数の結果を指定できます。この場合、基になるデータ型を SQL_CHAR、SQL_VARCHAR、または SQL_LONGVARCHAR として表すことができます。  
   
  *Character_exp*として表される引数は可変長文字列です。  
@@ -34,7 +34,7 @@ ms.locfileid: "68070169"
   
  SQL-92 に合わせて、BIT_LENGTH、CHAR_LENGTH、CHARACTER_LENGTH、OCTET_LENGTH、および位置の文字列スカラー関数が ODBC 3.0 に追加されました。  
   
-|Function|[説明]|  
+|関数|説明|  
 |--------------|-----------------|  
 |**ASCII (** _string_exp_ **)** (ODBC 1.0)|*String_exp*の左端の文字の ASCII コード値を整数として返します。|  
 |**BIT_LENGTH (** _string_exp_ **)** (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> は文字列データ型に対してのみ機能しないため、 *string_exp*を文字列に暗黙的に変換するのではなく、指定されたデータ型の (内部) サイズを返します。|  

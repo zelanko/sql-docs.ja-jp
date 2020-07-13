@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62666967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049394"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーションモニターには、パブリケーションとサブスクリプションの状態情報が表示されます。  

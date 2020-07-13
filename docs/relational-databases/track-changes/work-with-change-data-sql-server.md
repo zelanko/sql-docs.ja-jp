@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889094"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   変更データ キャプチャのコンシューマーは、テーブル値関数 (TVF) を使用することによって変更データを利用できるようになります。 これらの関数のすべてのクエリには、ログ シーケンス番号 (LSN) の範囲を定義する 2 つのパラメーターが必要です。これらのパラメーターは、返される結果セットを開発する際に検討の対象になります。 期間の両端を示す LSN の上限値と下限値は、期間内に含まれると見なされます。  
   
  TVF のクエリで使用する適切な LSN 値を特定するための関数がいくつか用意されています。 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 関数は、キャプチャ インスタンスの有効期間に関連付けられた最小の LSN を返します。 この有効期間は、現在キャプチャ インスタンスが変更データを利用できる期間です。 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 関数は、有効期間内の最大の LSN を返します。 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 関数と [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 関数は、LSN 値を従来のタイムラインに配置する場合に使用できます。 変更データ キャプチャでは両端の値を含む閉区間のクエリ範囲が使用されるため、連続したクエリ ウィンドウで変更が重複しないようにするためにシーケンス内の次の LSN 値を生成することが必要になる場合があります。 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 関数と [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 関数は、LSN 値の増分の調整が必要な場合に役立ちます。  

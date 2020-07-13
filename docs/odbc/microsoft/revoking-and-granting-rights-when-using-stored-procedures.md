@@ -11,14 +11,14 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91fcf722554fe1840465329e707c792a6bbab6db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 469e6f0fdc6794e3bd163844e43821798aa4a617
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987953"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303988"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>ストアド プロシージャ使用時の権限の取り消しと付与
 > [!IMPORTANT]  

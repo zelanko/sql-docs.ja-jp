@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9c72618f52b4a85c7611049a5bff3bedde4074ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066504"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>クライアント側とサーバー側の書式設定 (SQLXML 4.0)
   SQLXML では、次の 2 つの方法で XML ドキュメントの書式設定を行えます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66012307"
   
 -   クライアント側の書式設定  
   
- ここでは、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースに対して実行されるクエリによって生成される行セットから、クライアント側またはサーバー側で XML ドキュメントを書式設定する方法について説明します。  
+ ここでは、のデータベースに対して実行されるクエリによって生成される行セットから、クライアント側またはサーバー側で XML ドキュメントを書式設定する方法について説明 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

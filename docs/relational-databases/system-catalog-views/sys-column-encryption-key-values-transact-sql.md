@@ -20,31 +20,31 @@ ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c9c17ef0384d1b4ef1bc5534ffeffa8b2ba3d598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73593803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718881"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>column_encryption_key_values (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   列の暗号化キー (CEKs) の暗号化された値に関する情報を返します、列の暗号化キーを[作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)するか、 [ALTER column 暗号化キー &#40;transact-sql&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)ステートメントです。 各行は、列マスターキー (CMK) で暗号化された CEK の値を表します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|データベース内の CEK の ID。|  
 |**column_master_key_id**|**int**|CEK 値の暗号化に使用された列マスターキーの ID。|  
-|**encrypted_value**|**varbinary (8000)**|Column_master_key_id で指定された CMK で暗号化された CEK 値。|  
+|**encrypted_value**|**varbinary(8000)**|Column_master_key_id で指定された CMK で暗号化された CEK 値。|  
 |**encryption_algorithm_name**|**sysname**|CEK 値の暗号化に使用されるアルゴリズムの名前。<br /><br /> 値を暗号化するために使用する暗号化アルゴリズムの名前です。 システムプロバイダーのアルゴリズムは**RSA_OAEP**である必要があります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **VIEW ANY COLUMN ENCRYPTION KEY**権限が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [Transact-sql&#41;&#40;列暗号化キーの変更](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [Transact-sql&#41;&#40;列暗号化キーを削除します。](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   

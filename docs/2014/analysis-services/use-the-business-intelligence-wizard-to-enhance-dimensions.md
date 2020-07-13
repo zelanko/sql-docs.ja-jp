@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca8531a42d6e4ee73530ba061759c9ecbd80130c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938178"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>ビジネス インテリジェンス ウィザードを使用したディメンションの拡張
   ビジネス インテリジェンス ウィザードを使用すると、ディメンション プロパティやディメンション オブジェクト プロパティの変更だけでなく、ディメンションの構成および拡張を行うことができます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66065508"
   
 -   [ディメンションの順序の定義](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [[ディメンションの書き戻しの有効化]](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [ディメンションの書き戻しを有効にする](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
 ## <a name="see-also"></a>参照  
  [データベースディメンションの定義](multidimensional-models/define-database-dimensions.md)   

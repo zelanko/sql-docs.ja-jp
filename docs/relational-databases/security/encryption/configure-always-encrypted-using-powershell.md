@@ -20,7 +20,7 @@ ms.locfileid: "73594413"
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell モジュールによって、[ と ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) の両方で、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を構成するためのコマンドレットが提供されます。
+SqlServer PowerShell モジュールによって、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方で、[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するためのコマンドレットが提供されます。
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell を使用して Always Encrypted を構成するときのセキュリティに関する考慮事項
 

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997931"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
@@ -51,7 +50,7 @@ ms.locfileid: "75243002"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|すべての構文。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|すべての構文。|  
 |[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|すべての構文。|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
+|[一連@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|ユーザー定義ストアド プロシージャ、システム ストアド プロシージャ、ユーザー定義関数、およびシステム関数の実行。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|すべての構文。|  
 |[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|すべての構文。|  

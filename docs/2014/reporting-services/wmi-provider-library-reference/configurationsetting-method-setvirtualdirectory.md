@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097917"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>SetVirtualDirectory メソッド (WMI MSReportServer_ConfigurationSetting)
@@ -52,7 +52,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
+ メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
 ## <a name="remarks"></a>解説  
  アプリケーションは、すべての URL 予約に対して仮想ディレクトリの名前を 1 つだけ持つことができます。  
@@ -62,7 +62,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Configuration\URLReservations\Application\VirtualDirectory 要素の値を更新します。 URL 予約が作成されていない場合でも成功します。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

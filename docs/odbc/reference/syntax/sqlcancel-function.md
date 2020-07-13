@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCancel function [ODBC]
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fcc2afce495a1481692ba1f20162a2df5d9a9458
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036117"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301312"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 関数
 **互換性**  
@@ -53,10 +53,10 @@ SQLRETURN SQLCancel(
 ## <a name="diagnostics"></a>診断  
  **SQLCancel**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLCancel**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 *SQLGetDiagRec \** によって返さ[](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)れるエラーメッセージには、エラーとその原因が記述されています。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 *SQLGetDiagRec \** によって返さ[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)れるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLCancel**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) *StatementHandle*に関連付けられている接続ハンドルで非同期操作が進行中のため、操作を取り消すことができませんでした。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLCancel(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Bulk insert または update 操作の実行|[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942032"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052918"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup。 sp_set_parameter (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   指定した Smart Admin システムパラメーターの値を設定します。  
   
@@ -45,7 +44,7 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @parameter_name  
  値を設定するパラメーターの名前。 @parameter_nameNVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**storageoperationdebugxevent**です。  
   

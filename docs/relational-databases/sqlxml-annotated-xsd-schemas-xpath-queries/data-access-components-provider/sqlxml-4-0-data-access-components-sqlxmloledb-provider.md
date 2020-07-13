@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 のデータ アクセス コンポーネント
+description: SQLXML 4.0-SQLXMLOLEDB Provider、SQLXML マネージクラス、および SQL Server Native Client (SQLNCLI11) のデータアクセスコンポーネントについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +19,15 @@ ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e7aead128623f41076034a0fd313fb384038c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19da10f24c26a0f7ebbe42c0fd6d3ed8b28a7ee4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650058"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 のデータ アクセス コンポーネント - SQLXMLOLEDB プロバイダー
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに対して XML データを挿入または取得するときに使用できる、3 種類のデータ プロバイダーが用意されています。  
   
 -   SQLXMLOLEDB プロバイダー  
@@ -36,8 +36,7 @@ ms.locfileid: "75257277"
   
 -   SQLXML マネージド クラス  
   
-     
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、「 [SQLXML マネージクラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、「 [SQLXML マネージクラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

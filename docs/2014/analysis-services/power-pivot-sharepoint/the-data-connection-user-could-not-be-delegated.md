@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9611bc9d922caee25f841b709ee8a743cd539357
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547754"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、SharePoint の PowerPivot サーバー インスタンスに接続できない場合にこのエラーを返します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>詳細情報  
   
 |||  
 |-|-|  
 |適用対象|PowerPivot for SharePoint|  
 |製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|PowerPivot データ プロバイダーを使用しようとしたときに接続が失敗しました。|  
-|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ|  
+|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:PowerPivot データ|  
   
 ## <a name="explanation"></a>説明  
  このエラー メッセージには複数の原因があります。 それらの原因に共通する要因は、Excel Services が SharePoint のクレーム トークンから有効な Windows ユーザー ID を取得できないことです。 PowerPivot データを含む Excel ブックの場合、次のいずれかの条件に当てはまるときは、このエラーが発生します。  
@@ -51,8 +50,7 @@ ms.locfileid: "66071029"
   
 1.  サーバーの全体管理で、[システム設定] の [**サーバーのサービスの管理**] をクリックします。  
   
-2.  
-  **[Windows トークン サービスに対するクレーム]** を選択し、 **[開始]** をクリックします。  
+2.  **[Windows トークン サービスに対するクレーム]** を選択し、 **[開始]** をクリックします。  
   
 3.  [サービス] コンソールでサービスが実行されていることも確認します。  
   

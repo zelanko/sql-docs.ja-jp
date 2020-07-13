@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 566f1065d30a47b2db234ba1f11f877725189fb7
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125752"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292292"
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark C データ型
 ブックマーク C データ型を使用すると、アプリケーションでブックマークを取得できます。 ブックマーク C 型は、長さが可変のブックマーク値を取得するためにのみ使用されます。他のデータ型に変換することはできません。 アプリケーションは、 **Sqlbulkoperations** (操作が SQL_ADD)、 **sqlfetch**、 **Sqlbulkoperations**、または**SQLGetData**を使用して、結果セットの列0からブックマークを取得します。 詳細については、「[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)」を参照してください。  

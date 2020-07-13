@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], Cursor Library
 ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfe5c91a90f874b514abb661ea06631be87e69c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d78075593926c15dbaeb1904603b08e990f64983
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086410"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302023"
 ---
 # <a name="sqlfreestmt-cursor-library"></a>SQLFreeStmt (カーソル ライブラリ)
 > [!IMPORTANT]  

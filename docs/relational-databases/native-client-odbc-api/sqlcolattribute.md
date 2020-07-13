@@ -11,25 +11,24 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1d929f2d514b12050c79c8251cd58cfeadb6b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787421"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012433"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出すと、との間にラウンドトリップが発生します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため **、Sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
+  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び出すと、との間にラウンドトリップが発生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 **sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
   
 > [!NOTE]  
 >  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の結果セットで、ODBC 列の ID 属性は使用できません。  
   
-|フィールド ID|[説明]|  
+|フィールド ID|説明|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
 |SQL_DESC_BASE_COLUMN_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
@@ -56,7 +55,7 @@ ms.locfileid: "73787421"
   
  すべてのバージョンで、準備された SQL ステートメントのバッチによって複数の結果セットが生成されるときは、最初の結果セットのみの列属性が報告されます。  
   
- 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって公開される拡張機能です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 *numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
+ 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーによって公開される拡張機能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 *Numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
   
 |フィールド ID|返される値|  
 |----------------------|--------------------|  
@@ -78,7 +77,7 @@ ms.locfileid: "73787421"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、XML スキーマコレクション名、スキーマ名、およびカタログ名を示す追加情報を提供するために、ドライバー固有の記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込みが可能なフィールドです。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込み可能なフィールドです。|  
@@ -86,7 +85,7 @@ ms.locfileid: "73787421"
   
  また、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、結果セットのユーザー定義型 (UDT) 列に関する追加情報、またはストアド プロシージャやパラメーター化クエリの UDT パラメーターに関する追加情報を提供するために、ドライバー固有の新しい記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT を含むカタログの名前。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT を含むスキーマの名前。|  

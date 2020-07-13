@@ -1,5 +1,5 @@
 ---
-title: 大きなデータを設定する |Microsoft Docs
+title: 大きなデータの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,19 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 8de78c3d4218c3f5ef37e1e2d7a0e197f8c2d1c0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758325"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002854"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
@@ -52,9 +51,7 @@ ms.locfileid: "73758325"
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  
-  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 
-  **GetData** を呼び出して、その行セットからデータを読み取ります。  
+5.  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 **GetData** を呼び出して、その行セットからデータを読み取ります。  
   
 6.  データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して **IRowsetChange::SetData** (または **IRowsetChange::InsertRow**) を呼び出し、データを設定します。  
 

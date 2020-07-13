@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea108a1996facab7549d2bea40e016af39dc29d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 74fdba44ae1b4457b092f9b3439526552ec780a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659013"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888485"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName プロパティ (SqlServerAlias クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サーバー接続別名を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,13 +34,12 @@ ms.locfileid: "73659013"
 object.AliasName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  [の別名を表す](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [の別名を表す](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー接続別名の名前を示す**文字列**値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   

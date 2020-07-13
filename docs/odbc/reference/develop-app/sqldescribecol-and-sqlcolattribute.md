@@ -14,14 +14,14 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d602368475c6f1326cc615453116e898b1c1892f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107444"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299762"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol および SQLColAttribute
 **SQLDescribeCol**および**sqlcolattribute**は、結果セットのメタデータを取得するために使用されます。 これら2つの関数の違いは、 **SQLDescribeCol**は常に同じ5つの情報 (列の名前、データ型、有効桁数、小数点以下桁数、および null 値の許容属性) を返すことです。 **sqlcolattribute**は、アプリケーションによって要求された1つの情報を返します。 ただし、 **Sqlcolattribute**は、列の大文字と小文字の区別、表示サイズ、更新性、および検索性など、より高度なメタデータの選択を返すことができます。  

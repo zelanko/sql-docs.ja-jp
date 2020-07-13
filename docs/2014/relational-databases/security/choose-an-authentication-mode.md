@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6156d149cdd49b8dc80c6c349d5ce923696a835f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63011339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997515"
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
   セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
@@ -67,7 +66,7 @@ ms.locfileid: "63011339"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  [**実行**] ダイアログボックスで、 `secpol.msc`「」と入力し、[ **OK**] をクリックします。  
+2.  [**実行**] ダイアログボックスで、「」と入力し、 `secpol.msc` [ **OK**] をクリックします。  
   
 3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]** 、 **[アカウント ポリシー]** の順に展開して、 **[パスワードのポリシー]** をクリックします。  
   

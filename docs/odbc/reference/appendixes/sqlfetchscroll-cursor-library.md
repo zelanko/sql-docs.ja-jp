@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16e7e4d133fdfafd7a005c19b0a2943b2ea9ef6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e5573b8afc49afec8b7afa4fc52590e7a6a9e2fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086454"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302053"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "68086454"
   
 -   データ行を保持するためにアプリケーションが宣言する構造体のフィールド間に未使用のバイトはありません。  
   
--   **Sqlfetch**または**sqlfetchscroll**が列の長さ/インジケーターを返すフィールドは、その列のバッファーに続き、次の列のバッファーの前に置かれます。 これらのフィールドは省略できます。  
+-   **Sqlfetch**または**sqlfetchscroll**が列の長さ/インジケーターを返すフィールドは、その列のバッファーに続き、次の列のバッファーの前に置かれます。 これらのフィールドは省略可能です。  
   
  アプリケーションが新しい行セットを要求すると、カーソルライブラリは必要に応じてキャッシュとドライバーからデータを取得します。 新しい行セットと古い行セットが重複している場合、カーソルライブラリでは、行セットバッファーの重複するセクションのデータを再利用することにより、パフォーマンスを最適化できます。 したがって、行セットバッファーに対する未保存の変更は、新しい行セットと古い行セットが重なっていて、変更が行セットバッファーの重複セクションにある場合を除き、失われます。 アプリケーションは、変更を保存するために、配置された update ステートメントを送信します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68086454"
 |カーソルの種類|フェッチの種類|  
 |-----------------|-----------------|  
 |順方向専用|SQL_FETCH_NEXT|  
-|静的|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|Static|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
 ## <a name="errors"></a>エラー  
  **Sqlfetchscroll**が呼び出され、 **sqlfetch**の呼び出しの1つが SQL_ERROR を返すと、カーソルライブラリは次のように処理を続行します。 これらの手順が完了すると、カーソルライブラリは処理を続行します。  

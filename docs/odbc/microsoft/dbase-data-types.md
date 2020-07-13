@@ -15,14 +15,14 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096451"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307693"
 ---
 # <a name="dbase-data-types"></a>dBASE データ型
 次の表に、dBASE データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型がサポートされているわけではないことに注意してください。  
@@ -50,7 +50,7 @@ ms.locfileid: "68096451"
   
  次の表は、dBASE データ型に関する制限を示しています。  
   
-|データ型|[説明]|  
+|データ型|説明|  
 |---------------|-----------------|  
 |CHAR|長さが0または指定されていない CHAR 型の列を作成すると、実際には254バイトの列が返されます。|  
 |暗号化データ|DBASE ドライバーは、暗号化された dBASE テーブルをサポートしていません。|  

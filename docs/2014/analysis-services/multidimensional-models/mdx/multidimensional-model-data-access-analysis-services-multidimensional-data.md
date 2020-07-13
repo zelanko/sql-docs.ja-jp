@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: c8cd8da4cc1128d125009c0f3bd9d6e62c468d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79217149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546174"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
   このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
- [クライアントアプリケーション](#bkmk_clientapps)  
+ [クライアント アプリケーション](#bkmk_clientapps)  
   
  [クエリ言語](#bkmk_querylang)  
   
  [プログラムインターフェイス](#bkmk_api)  
   
-##  <a name="bkmk_clientapps"></a>クライアントアプリケーション  
+##  <a name="client-applications"></a><a name="bkmk_clientapps"></a>クライアントアプリケーション  
  Analysis Services は、多次元データベースをプログラムから構築または統合できるインターフェイスを備えていますが、実際には、Analysis Services のデータにアクセスするための機能が組み込まれた既存のクライアント アプリケーションが Microsoft やその他のソフトウェア ベンダーから提供されているため、そちらを利用する方が一般的です。  
   
  次の Microsoft アプリケーションでは、多次元データへのネイティブ接続がサポートされます。  
@@ -60,7 +59,7 @@ ms.locfileid: "79217149"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  データベース管理者にとって SQL Server Management Studio は、多次元データベースや Analysis Services のインスタンスを含む、SQL Server のインスタンスを管理するための統合環境です。 詳細については、「 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 」と「 [Analysis Services への接続](../../instances/connect-to-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_querylang"></a>クエリ言語  
+##  <a name="query-languages"></a><a name="bkmk_querylang"></a>クエリ言語  
  MDX は、OLAP データベースからデータを取得するための業界標準のクエリ/計算言語です。 Analysis Services において、MDX は、データを取得するためのクエリ言語であると共に、データの定義とデータの操作にも対応しています。 SQL Server Management Studio、Reporting Services、および SQL Server データ ツールには MDX エディターが組み込まれています。 使用頻度の高いデータ操作については、MDX エディターを使用して、アドホック クエリや再利用可能なスクリプトを作成することができます。  
   
  Excel をはじめとする一部のツールやアプリケーションでは、Analysis Services データ ソースをクエリする際に MDX の構文が内部的に使用されています。 XMLA の Execute 要求に MDX ステートメントを含めることによって、プログラムから MDX を使用することもできます。  
@@ -69,13 +68,13 @@ ms.locfileid: "79217149"
   
  [MDX による多次元データのクエリ](querying-multidimensional-data-with-mdx.md)  
   
- [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
  [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
-##  <a name="bkmk_api"></a>プログラムインターフェイス  
+##  <a name="programmatic-interfaces"></a><a name="bkmk_api"></a> プログラミング インターフェイス  
  多次元データを使用したカスタム アプリケーションを構築する場合のデータへのアクセス手段は、そのほとんどが、次のいずれかのカテゴリに該当します。  
   
 -   **XMLA**。 広範なオペレーティング システムおよびプロトコルとの互換性を確保する必要がある場合は XMLA を使用します。 柔軟性の点では XMLA に勝る手段はありませんが、その分、パフォーマンスの高さとプログラミングのしやすさが損なわれる場合があります。  

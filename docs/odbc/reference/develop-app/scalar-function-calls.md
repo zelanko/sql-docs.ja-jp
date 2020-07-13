@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67897746"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304263"
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値スカラー関数は、数値列を引数として受け取り、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープシーケンスは、  

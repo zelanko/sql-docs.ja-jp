@@ -1,5 +1,5 @@
 ---
-title: カスタム レポート アイテムを配置する方法 | Microsoft Docs
+title: 方法:カスタム レポート アイテムを配置する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265080"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
+# <a name="how-to-deploy-a-custom-report-item"></a>方法:カスタム レポート アイテムを配置する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム レポート アイテムを配置するには、レポート サーバー構成ファイルを変更し、デザイン時と実行時のコンポーネント アセンブリをレポート デザイナーとレポート サーバーの両方に対する適切なアプリケーション フォルダーにコピーする必要があります。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  
   
-1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 
-  `ReportItemName` エントリは `CustomReportItemAttribute` クラス内で使用される `CustomReportItemDesigner` 属性と一致する必要があることに注意してください。 次に例を示します。  
+1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 `ReportItemName` エントリは `CustomReportItemAttribute` クラス内で使用される `CustomReportItemDesigner` 属性と一致する必要があることに注意してください。 次に例を示します。  
   
     ```  
     <ReportItems>  

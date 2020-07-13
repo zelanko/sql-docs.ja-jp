@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 08da312fa1348266bbc33fafa6b1b3c6b07c64ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539774"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利益チャート (SQL Server データ マイニング アドイン)
   ![[データ マイニング] リボンの [利益チャート] ボタン](media/dmc-profitchart.gif "[データ マイニング] リボンの [利益チャート] ボタン")  
@@ -67,7 +66,7 @@ ms.locfileid: "66070591"
   
 7.  ウィザードによって、モデルのコストとメリットに関する分析のチャートが作成されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  不連続な数値を予測する場合は、予測する正確なターゲット値を選択する必要があります。  
   
 ## <a name="understanding-the-profit-chart"></a>利益チャートについて  

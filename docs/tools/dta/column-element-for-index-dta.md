@@ -1,5 +1,6 @@
 ---
 title: Index の Column 要素 (DTA)
+description: dta ユーティリティでは、Index の Column 要素により、ユーザー指定の構成でインデックスを作成する列を指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307887"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831629"
 ---
 # <a name="column-element-for-index-dta"></a>Index の Column 要素 (DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307887"
   
 ## <a name="element-attributes"></a>要素の属性  
   
- **Type**: 省略可。 インデックスの列の種類を指定します。 この属性を指定するには **string** データ型を使用します。指定できる値は次のいずれかです。  
+ **[種類]** :省略可能。 インデックスの列の種類を指定します。 この属性を指定するには **string** データ型を使用します。指定できる値は次のいずれかです。  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "75307887"
   
      付加列の詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
- **SortOrder**: 省略可。 列の並べ替え順を指定します。 **string** データ型を使用して、 **"Ascending"** または **"Descending"** の並べ替え順のいずれかを以下のように指定します。  
+ **SortOrder**: 省略可能。 列の並べ替え順を指定します。 **string** データ型を使用して、 **"Ascending"** または **"Descending"** の並べ替え順のいずれかを以下のように指定します。  
   
 ```  
 <Column SortOrder="Ascending">  

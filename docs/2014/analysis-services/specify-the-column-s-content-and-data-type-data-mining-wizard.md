@@ -11,19 +11,17 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66068161"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940273"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>[列&#39;s コンテンツおよびデータ型の指定] (データマイニングウィザード)
-  
   **[列のコンテンツおよびデータ型の指定]** ページを使用すると、ウィザードで既に設定されている列型およびコンテンツの種類を変更できます。 ウィザードは、ソース列のデータ型および選択されているアルゴリズムの機能を使用して、各列の既定のデータ型およびコンテンツの種類を決定します。  
   
- **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
+ **詳細情報:** [データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>オプション  
  **[列]**  

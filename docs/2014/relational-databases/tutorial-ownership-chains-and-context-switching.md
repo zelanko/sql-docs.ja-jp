@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002602"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
@@ -48,7 +47,7 @@ ms.locfileid: "62524368"
  以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
- と[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]次のコードを使用して`AdventureWorks2012`データベースを開き、 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と次のコードを使用して `AdventureWorks2012` データベースを開き、ステートメントを使用し `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] て、dbo ユーザーがコンテキストとして表示されていることを確認します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,8 +79,7 @@ GO
   
  CREATE_USER ステートメントの詳細については、「[CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)」を参照してください。 CREATE_LOGIN ステートメントの詳細については、「[CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)」を参照してください。  
   
- 次のコードを実行し、 `Purchasing` スキーマの所有権を `TestManagerUser` アカウントに変更します。 所有権を与えられたアカウントでは、 `SELECT` 権限や `INSERT` 権限などすべてのデータ操作言語 (DML) のアクセス権限を、中のオブジェクトに対し使用できます。 
-  `TestManagerUser` にもストアド プロシージャを作成する権限が付与されます。  
+ 次のコードを実行し、 `Purchasing` スキーマの所有権を `TestManagerUser` アカウントに変更します。 所有権を与えられたアカウントでは、 `SELECT` 権限や `INSERT` 権限などすべてのデータ操作言語 (DML) のアクセス権限を、中のオブジェクトに対し使用できます。 `TestManagerUser` にもストアド プロシージャを作成する権限が付与されます。  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -96,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 すべて[!INCLUDE[ssDE](../includes/ssde-md.md)]のアクセス許可のポスターについ[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)ては、「」を参照してください。  
+ GRANT ステートメントの詳細については、「[GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)」を参照してください。 ストアド プロシージャの詳細については、「[ストアド プロシージャ (データベース エンジン)](stored-procedures/stored-procedures-database-engine.md)」を参照してください。 すべてのアクセス許可のポスターについ [!INCLUDE[ssDE](../includes/ssde-md.md)] ては、「」を参照してください [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.データにアクセスするストアド プロシージャを作成する  
  データベース内でコンテキストを切り替えるには、EXECUTE AS ステートメントを使用します。 EXECUTE AS を使用するには IMPERSONATE 権限が必要です。  
@@ -134,8 +132,7 @@ GRANT EXECUTE
 GO  
 ```  
   
- 
-  `Purchasing` は既定では `TestManagerUser` スキーマに割り当てられるため、スキーマが明示的に指定されていない場合でも、ストアド プロシージャは `Purchasing` スキーマの一部です。 次のコードに示すように、システム カタログ情報を使用してオブジェクトを特定できます。  
+ `Purchasing` は既定では `TestManagerUser` スキーマに割り当てられるため、スキーマが明示的に指定されていない場合でも、ストアド プロシージャは `Purchasing` スキーマの一部です。 次のコードに示すように、システム カタログ情報を使用してオブジェクトを特定できます。  
   
 ```  
 SELECT a.name AS 'Schema'  
@@ -158,9 +155,7 @@ GO
  REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)」 を参照してください。  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.ストアド プロシージャからデータにアクセスする  
- 
-  `TestEmployeeUser` は、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースのオブジェクトに対し、ログイン権限と public データベース ロールに割り当てられた権限だけを持ちます。 
-  `TestEmployeeUser` がベース テーブルにアクセスしようとすると、次のコードによりエラーが返されます。  
+ `TestEmployeeUser` は、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースのオブジェクトに対し、ログイン権限と public データベース ロールに割り当てられた権限だけを持ちます。 `TestEmployeeUser` がベース テーブルにアクセスしようとすると、次のコードによりエラーが返されます。  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -204,12 +199,11 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a>完全な例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>コード例全体  
  次に、完全なサンプル コードを示します。  
   
 > [!NOTE]  
->  
-  `TestEmployeeUser` はベース テーブルから選択することができないため、2 つのエラーが発生することが予測されますが、このコードには含まれていません。  
+>  `TestEmployeeUser` はベース テーブルから選択することができないため、2 つのエラーが発生することが予測されますが、このコードには含まれていません。  
   
 ```  
 /*   

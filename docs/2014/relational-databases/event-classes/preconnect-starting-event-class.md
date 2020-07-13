@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67b642d369c73cc144af31f835786613766045f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63033514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028851"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting イベント クラス
   PreConnect:Starting イベント クラスは、LOGON トリガーまたはリソース ガバナーの分類関数が実行を開始したことを示します。  
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|215|27|いいえ|  
 |SPID|`int`|このイベントを発生させるサーバー プロセスの ID。|12|はい|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d80824ab0dde301a0b96239636cf0f79ca032c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b3551cff36ef6e2c2e9cc6a4d9b7056ae44cb950
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62714740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068301"
 ---
 # <a name="delete-a-trace-transact-sql"></a>トレースの削除 (Transact-SQL)
   このトピックでは、ストアド プロシージャを使用してトレースを削除する方法について説明します。  
@@ -28,13 +27,9 @@ ms.locfileid: "62714740"
   
 ### <a name="to-delete-a-trace"></a>トレースを削除するには  
   
-1.  
-  **
-  ** = 0** を指定して @statussp_trace_setstatus** を実行し、トレースを停止します。  
+1.  **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
-2.  
-  **
-  ** = 2** を指定して @statussp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
+2.  **@status = 2** を指定して **sp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
   
 > [!NOTE]  
 >  トレースを閉じるには、最初にそのトレースを停止する必要があります。  

@@ -9,20 +9,19 @@ ms.topic: reference
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9123834f1c07a61fa0e1c48d29667d4d71ada359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62896118"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469277"
 ---
 # <a name="creating-a-custom-task"></a>カスタム タスクの作成
   カスタム タスクの作成手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
   
--   基本クラスを継承する新しいクラスを作成します。 タスク用の基本クラスは <xref:Microsoft.SqlServer.Dts.Runtime.Task> です。  
+-   基本クラスを継承する新しいクラスを作成します。 タスクの場合、基本クラスは、 [Microsoft. SqlServer. Runtime. task](/dotnet/api/microsoft.sqlserver.dts.runtime.task)です。  
   
 -   クラスに、オブジェクトの種類を識別する属性を適用します。 タスクの属性は <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> です。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62896118"
 ## <a name="getting-started-with-a-custom-task"></a>カスタム タスクの概要  
   
 ### <a name="creating-projects-and-classes"></a>プロジェクトおよびクラスの作成  
- すべてのマネージド タスクは <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスから派生するため、カスタム タスクを作成するには、最初に任意のマネージド プログラミング言語でクラス ライブラリ プロジェクトを作成し、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
+ すべてのマネージタスクは、すべてのマネージタスクが、[実行](/dotnet/api/microsoft.sqlserver.dts.runtime.task)時の基本クラスから派生するため、カスタムタスクを作成するには、まず、任意のマネージプログラミング言語でクラスライブラリプロジェクトを作成し、基本クラスを継承するクラスを作成します。 この派生クラスで、基本クラスのメソッドとプロパティをオーバーライドして、カスタム機能を実装します。  
   
  同じソリューション内に、もう 1 つのクラス ライブラリ プロジェクトをカスタム ユーザー インターフェイス用に作成します。 配置を容易にするため、ユーザー インターフェイス用に別個のアセンブリを使用することをお勧めします。そうすれば、接続マネージャーやそのユーザー インターフェイスの更新や再配置を個別に行うことができます。  
   
@@ -91,9 +90,9 @@ End Class 'MyTask
 ## <a name="building-deploying-and-debugging-a-custom-task"></a>カスタム タスクの作成、配置、およびデバッグ  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] でカスタム タスクを作成、配置、およびデバッグする手順は、その他の種類のカスタム オブジェクトで必要な手順とほとんど同様です。 詳細については、「[カスタム オブジェクトのビルド、配置、デバッグ](../building-deploying-and-debugging-custom-objects.md)」を参照してください。  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタムタスクの作成](creating-a-custom-task.md)   
  [カスタムタスクのコーディング](coding-a-custom-task.md)   
  [カスタム タスク用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-task.md)  

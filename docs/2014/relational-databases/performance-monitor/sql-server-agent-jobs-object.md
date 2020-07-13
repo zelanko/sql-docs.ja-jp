@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 927e5b199d983a1a850f069408dba2156f67a408
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63251029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017100"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server エージェントの Jobs オブジェクト
   SQL Server エージェントの **Jobs** パフォーマンス オブジェクトには、SQL Server エージェントのジョブについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表には **SQLAgent:Jobs** カウンターが含まれています。  
   
-|Name|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Active Jobs**|このカウンターは、現在実行中のジョブの数を報告します。|  
 |**Failed jobs**|このカウンターは、失敗して終了したジョブの数を報告します。|  
@@ -36,7 +35,7 @@ ms.locfileid: "63251029"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|インスタンス|[説明]|  
+|インスタンス|説明|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブの情報です。|  
 |**警告**|警告によって開始されたジョブの情報です。|  

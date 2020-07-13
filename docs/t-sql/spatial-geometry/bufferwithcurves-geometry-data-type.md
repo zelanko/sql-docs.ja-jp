@@ -25,7 +25,7 @@ ms.locfileid: "67929313"
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  呼び出し元の **geometry** インスタンスからの距離が **distance** パラメーターの値以下となる、すべての地点のセットを表す *geometry* インスタンスを返します。  
+  呼び出し元の **geometry** インスタンスからの距離が *distance* パラメーターの値以下となる、すべての地点のセットを表す **geometry** インスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ SQL Server 戻り値の型: **geometry**
   
 -   数値以外のパラメーター (`@g.BufferWithCurves('a')` など) がこのメソッドに渡されます。  
   
--   **のように、** NULL`@g.BufferWithCurves(NULL)` がメソッドに渡された。  
+-   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
 ## <a name="remarks"></a>解説  
  次の図には、このメソッドによって返される geometry インスタンスの例を示しています。  
@@ -154,7 +154,7 @@ SQL Server 戻り値の型: **geometry**
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 最初の 2 つの **SELECT** ステートメントでは、`GeometryCollection`distance *が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、* インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`CurvePolygon` インスタンスが返されます。  
+ 最初の 2 つの **SELECT** ステートメントでは、*distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`GeometryCollection` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`CurvePolygon` インスタンスが返されます。  
   
 ## <a name="see-also"></a>参照  
  [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23141b6d377333837e3416978d67424352075e75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63137607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050824"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>拡張ストアドプロシージャプログラマー&#39;s リファレンス
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
- 拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)]ストアドプロシージャ api は、既に Open Data Services に含まれており、機能を拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するためのサーバーベースのアプリケーションプログラミングインターフェイス (API) を提供します。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]拡張ストアドプロシージャ api は、既に Open Data Services に含まれており、機能を拡張するためのサーバーベースのアプリケーションプログラミングインターフェイス (API) を提供し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
   
  拡張ストアド プロシージャへのニーズは、現在は CLR 統合などの強力な新しいテクノロジにほとんど移行しています。  
   
@@ -39,7 +37,7 @@ ms.locfileid: "63137607"
   
 |||  
 |-|-|  
-|[データ型](srv-pfield-extended-stored-procedure-api.md)|  
+|[データの種類](srv-pfield-extended-stored-procedure-api.md)|  
 |[srv_alloc](srv-alloc-extended-stored-procedure-api.md)||  
 |[srv_convert](srv-pfieldex-extended-stored-procedure-api.md)|  
 |[srv_describe](srv-rpcdb-extended-stored-procedure-api.md)|  

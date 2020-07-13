@@ -15,17 +15,17 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], stored procedures
 - system stored procedures [SQL Server], full-text search
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c0bf121cdb6007783cca682125dad04c01ab59ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5029929c9e355c34d3e1937eb3f5f15eb5c8ab84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898130"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>フルテキスト検索およびセマンティック検索ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、フルテキストインデックスおよびセマンティックインデックスの実装とクエリに使用される、次のシステムストアドプロシージャがサポートされています。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67942208"
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 [ALTER フルテキストインデックス](../../t-sql/statements/alter-fulltext-index-transact-sql.md)を使用してください。  
   
  [sp_fulltext_database](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)  
- 以降のバージョンの[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]フルテキストカタログには影響しません。旧バージョンとの互換性のためにのみサポートされています。  
+ 以降のバージョンのフルテキストカタログには影響しません [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。旧バージョンとの互換性のためにのみサポートされています。  
   
  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
@@ -99,14 +99,13 @@ ms.locfileid: "67942208"
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)カタログビューを使用してください。  
   
 ## <a name="semantic-search-stored-procedures"></a>セマンティック検索ストアド プロシージャ  
- [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスで、事前にデータが設定されているセマンティック言語統計データベースを登録します。  
+ [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスで、事前にデータが設定されているセマンティック言語統計データベースを登録します。  
   
- [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)  
- の現在のインスタンスから既存のセマンティック言語統計データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登録を解除し、関連付けられているメタデータを削除します。  
+ [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)  
+ の現在のインスタンスから既存のセマンティック言語統計データベースの登録 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を解除し、関連付けられているメタデータを削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

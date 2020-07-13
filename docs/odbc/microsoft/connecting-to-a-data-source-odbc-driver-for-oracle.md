@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e9e62c8e03166ec2f76b1c6bcb5000a062bac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6ef567c9e3c7b63e7f5044de699750de856f3e52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68082037"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281302"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>データ ソース (ODBC Driver for Oracle) への接続
 > [!IMPORTANT]  

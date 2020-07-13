@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bcb30a49cb9f11ddd4c61621116aa4bd8ddcf186
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019467"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300032"
 ---
 # <a name="index-command"></a>INDEX コマンド
 テーブルレコードを論理的な順序で表示し、アクセスするためのインデックスファイルを作成します。  
@@ -90,7 +90,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  結合  
  以前に開いたインデックスファイルを開いたままにします。 インデックスを持つテーブルのインデックスファイルを作成するときに加法句を省略した場合、以前に開いていたインデックスファイル (構造の複合インデックスを除く) は閉じられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  インデックスファイルがあるテーブル内のレコードは、インデックス式で指定された順序で表示され、アクセスされます。 テーブル内のレコードの物理的な順序は、インデックスファイルによって変更されることはありません。  
   
 ## <a name="index-types"></a>インデックスの種類  

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e19b845d5a4ebddb7b859afced7d93c75d4b56d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048979"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
   次に、XML 一括読み込みを使用する場合のセキュリティに関するガイドラインを示します。  
@@ -54,6 +53,6 @@ ms.locfileid: "66010556"
 -   ユーザーが、エラーを書き込む SQLXML のエラー ログ ファイルを設定した場合は、一括読み込みが実行されるたびに、最新の一括読み込み処理のデータでファイルの内容が上書きされます。  
   
 ## <a name="see-also"></a>参照  
- [XML データの一括読み込みを実行する &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -17,21 +17,17 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: afeb7605c544ee1442a7f7ace91cdd91ad97db95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62912136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013879"
 ---
 # <a name="sqlservice-class"></a>SqlService クラス
-  
   [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのインスタンスを表します。  
   
- 
-  [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 
-  [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
+ [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
   
 -   サービスに接続します。  
   

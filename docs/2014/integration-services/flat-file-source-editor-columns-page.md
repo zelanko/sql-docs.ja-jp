@@ -11,22 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0a62bdbfc427605a89d7241d6246cf2caaa33dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425529"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
-  
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  
->  フラット`FileNameColumnName`ファイルソースのプロパティおよびその出力列`FastParse`のプロパティは、[**フラットファイルソースエディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
+>  フラットファイル `FileNameColumnName` ソースのプロパティおよび `FastParse` その出力列のプロパティは、[**フラットファイルソースエディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
   
  フラット ファイル ソースの詳細については、「 [Flat File Source](data-flow/flat-file-source.md)」を参照してください。  
   
@@ -34,13 +32,13 @@ ms.locfileid: "66058612"
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
- **[外部列]**  
+ **外部列**  
  タスクで外部 (変換元) 列を読み取る順序を表示します。 この順序を変更するには、テーブルで選択した列を消去してから、別の順序で一覧から外部列を選択します。  
   
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラットファイルソースエディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [フラットファイルソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   

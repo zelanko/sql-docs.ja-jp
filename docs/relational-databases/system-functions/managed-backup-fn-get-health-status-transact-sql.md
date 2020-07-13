@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70155813"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053438"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup。 fn_get_health_status (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   指定した期間内に拡張イベントによって報告されたエラーの集計数を示す0行のテーブルを返します。  
   
- 関数は、Smart Admin でサービスの正常性状態を報告するために使用されます。 現在[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、Smart Admin の包括的な環境でサポートされています。 したがって、返されるエラーは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連しています。  
+ 関数は、Smart Admin でサービスの正常性状態を報告するために使用されます。 現在 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、Smart Admin の包括的な環境でサポートされています。 したがって、返されるエラーはに関連してい [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ます。  
   
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,23 +42,23 @@ ms.locfileid: "70155813"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  [@begin_time]  
  エラーの集計数を計算する期間の開始時刻。  @begin_timeパラメーターは DATETIME です。 既定値は NULL です。 値が NULL の場合、この関数は現在の時刻の 30 分前に報告されたイベントから処理します。  
   
  [ @end_time]  
- エラーの集計数を計算する期間の終了時刻。 パラメーター @end_timeは DATETIME で、既定値は NULL です。 値が NULL の場合、関数は現在の時刻まで拡張イベントを処理します。  
+ エラーの集計数を計算する期間の終了時刻。 @end_timeパラメーターは DATETIME で、既定値は NULL です。 値が NULL の場合、関数は現在の時刻まで拡張イベントを処理します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|INT|プログラムが Azure ストレージアカウントに接続するときの接続エラーの数。|  
 |number_of_sql_errors|INT|プログラムが SQL Server エンジンに接続したときに返されたエラーの数。|  
 |number_of_invalid_credential_errors|INT|プログラムが SQL 資格情報を使用して認証しようとしたときに返されたエラーの数。|  
 |number_of_other_errors|INT|接続、SQL、資格情報以外のカテゴリに関するエラーの数。|  
 |number_of_corrupted_or_deleted_backups|INT|削除または破損したバックアップファイルの数。|  
-|number_of_backup_loops|INT|で[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成されたすべてのデータベースをバックアップエージェントがスキャンする回数。|  
+|number_of_backup_loops|INT|で構成されたすべてのデータベースをバックアップエージェントがスキャンする回数 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。|  
 |number_of_retention_loops|INT|保有期間を評価するためにデータベースがスキャンされた回数。|  
   
 ## <a name="best-practices"></a>ベスト プラクティス  

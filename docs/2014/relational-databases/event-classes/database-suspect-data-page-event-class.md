@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: da01e5e701948bcc5bd8d8e16ee151ef788a8a7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62662994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053065"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page イベント クラス
   **Database Suspect Data Page** イベント クラスは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) の [suspect_pages](../databases/msdb-database.md)テーブルにページがいつ追加されたかを示します。 このイベント クラスは、問題があると思われるページの発生を監視するトレースに含めます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62662994"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Database Suspect Data Page イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|問題があると思われるページのイベントが発生したデータベースの ID。 これは **suspect_pages** テーブルの **database_id** 列と同じです。|3|はい|  
 |**EventClass**|**int**|イベントの種類は 213 です。|27|いいえ|  

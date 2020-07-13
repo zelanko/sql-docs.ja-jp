@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b4a28c6be2c956636f303ccc561936f799c63b64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008253"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669194"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,12 +34,12 @@ NOT Expression1
 ## <a name="return-value"></a>戻り値  
  引数の結果が TRUE の場合は FALSE を返し、そうでない場合は TRUE を返すブール値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  引数は、演算子が論理否定を実行する前に、ブール値 (FALSE の場合は0、それ以外の場合は TRUE) として処理されます。 *Expression1*が TRUE の場合、演算子は FALSE を返します。 *Expression1*が FALSE の場合、演算子は TRUE を返します。 次の表は、論理積の実行方法を示しています。  
   
 |Expression1|戻り値はです。|  
 |-----------------------|---------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>参照  

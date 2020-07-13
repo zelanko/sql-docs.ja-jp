@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8892fb92e9cbb2e2cbf3b8d9f47137af3a10fb90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760275"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 可用性グループの動的管理ビュー-関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]に関連する動的管理ビューおよび関数について説明します。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "68018039"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

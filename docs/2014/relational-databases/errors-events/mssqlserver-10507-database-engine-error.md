@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a80e48948c03b370c07742fabbb3cf8eb3e74315
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62916301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969822"
 ---
 # <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
@@ -40,7 +39,7 @@ ms.locfileid: "62916301"
   
 ## <a name="see-also"></a>参照  
  [プランガイド](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

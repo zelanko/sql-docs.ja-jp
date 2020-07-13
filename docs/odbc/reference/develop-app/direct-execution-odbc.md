@@ -12,14 +12,14 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039797"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305163"
 ---
 # <a name="direct-execution-odbc"></a>直接実行 (ODBC)
 直接実行は、ステートメントを実行する最も簡単な方法です。 ステートメントが実行のために送信されると、データソースはそれをアクセスプランにコンパイルしてから、そのアクセスプランを実行します。  

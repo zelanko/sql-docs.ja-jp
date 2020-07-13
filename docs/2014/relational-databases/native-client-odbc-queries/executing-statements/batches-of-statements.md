@@ -14,18 +14,17 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4818b67766dafe851035041c8fd5137a0dfade73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999204"
 ---
 # <a name="batches-of-statements"></a>ステートメントのバッチ
-  ステートメントの[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチには、2つ以上のステートメントが含まれています。セミコロン (;) は、 **SQLExecDirect**または[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)に渡される1つの文字列に組み込まれています。 次に例を示します。  
+  ステートメントのバッチには [!INCLUDE[tsql](../../../includes/tsql-md.md)] 、2つ以上のステートメントが含まれています。セミコロン (;) は、 **SQLExecDirect**または[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)に渡される1つの文字列に組み込まれています。 次に例を示します。  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -37,8 +36,7 @@ SQLExecDirect(hstmt,
   
  行セットのサイズが 1 になっている、順方向専用かつ読み取り専用のカーソルの既定値に ODBC カーソル属性が設定されている場合は、常にバッチを使用できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対してサーバー カーソルを使用しているときにバッチを実行すると、サーバー カーソルが暗黙的に既定の結果セットに変換されます。 **SQLExecDirect**または**sqlexecute**は SQL_SUCCESS_WITH_INFO を返し、 **SQLGetDiagRec**を呼び出すと次のように返されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対してサーバー カーソルを使用しているときにバッチを実行すると、サーバー カーソルが暗黙的に既定の結果セットに変換されます。 **SQLExecDirect**または**sqlexecute**は SQL_SUCCESS_WITH_INFO を返し、 **SQLGetDiagRec**を呼び出すと次のように返されます。  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  

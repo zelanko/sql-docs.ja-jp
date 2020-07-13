@@ -10,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75623259"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488360"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "75623259"
  Stretch Database 用のデータベースとテーブルを特定するには、SQL Server 2016 Upgrade Advisor の機能、Stretch Database Advisor を使用してください。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。 潜在的なブロッキングの問題の詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。  
 
 ## <a name="test-drive-stretch-database"></a>Stretch Database の試用  
- **AdventureWorks サンプル データベースでの Stretch Database の試用。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 サンプル データベースを SQL Server 2016 のインスタンスに復元した後に、サンプル ファイルを解凍し、Stretch DB フォルダーの Stretch DB Samples ファイルを開きます。 このファイルのスクリプトを実行し、Stretch Database を有効にする前と後にデータで使用する領域を確認したり、データ移行の進行状況を追跡したり、引き続き既存のデータにクエリを実行し、データの移行中と移行後の両方で新しいデータを挿入できることを確認します。  
+ **AdventureWorks サンプル データベースでの Stretch Database の試用。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 サンプル データベースを SQL Server 2016 のインスタンスに復元した後に、サンプル ファイルを解凍し、Stretch DB フォルダーの Stretch DB Samples ファイルを開きます。 このファイルのスクリプトを実行し、Stretch Database を有効にする前と後にデータで使用する領域を確認したり、データ移行の進行状況を追跡したり、引き続き既存のデータにクエリを実行し、データの移行中と移行後の両方で新しいデータを挿入できることを確認します。  
   
 ## <a name="next-step"></a>次のステップ  
  **Stretch Database の候補となるデータベースとテーブルを特定する。** Data Migration Assistant をダウンロードし、評価を実行することで、Stretch Database の候補になるデータベースとテーブルを特定します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。  

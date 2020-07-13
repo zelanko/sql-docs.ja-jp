@@ -1,6 +1,6 @@
 ---
 title: データ型 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: この記事では、SQL Server で使用できるさまざまなデータ型についてまとめてあります。
 ms.date: 09/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,15 +17,15 @@ ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2050627a712c705ad15711a147eb78da65569ddc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113740"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008080"
 ---
 # <a name="data-types-transact-sql"></a>データ型 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、列、ローカル変数、式、パラメーターのそれぞれに、関連するデータ型があります。 データ型は、整数データ、文字データ、通貨データ、日時データ、バイナリ文字列など、オブジェクトが保持できるデータの種類を示す属性です。
   
@@ -98,7 +98,7 @@ ms.locfileid: "68113740"
 |||  
 |-|-|  
 |[[バイナリ]](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
-|[画像](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>その他のデータ型
   
@@ -110,7 +110,7 @@ ms.locfileid: "68113740"
 |[空間 geometry 型](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[空間 geography 型](../../t-sql/spatial-geography/spatial-types-geography.md)|  
 |[テーブル](../../t-sql/data-types/table-transact-sql.md) | |
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

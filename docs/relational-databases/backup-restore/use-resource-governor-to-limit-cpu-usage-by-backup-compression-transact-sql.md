@@ -1,5 +1,6 @@
 ---
 title: CPU 負荷を制限する:バックアップの圧縮にリソース ガバナーを使用する
+description: SQL Server ユーザーのセッションは、圧縮を使用したバックアップの CPU 使用率を制限する、Resource Governor のワークロード グループにマップすることによって分類できます。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730880"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既定の設定では、圧縮を使用してバックアップを行うと CPU 使用率が著しく増加し、圧縮処理に CPU が追加で消費されるために、同時に実行中の操作が悪影響を受ける可能性があります。 このため、CPU の競合が発生したときは、[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) によって CPU 使用率が制限されるセッションで、優先度の低い圧縮されたバックアップを作成することが必要になる場合もあります。 このトピックでは、このような場合に CPU 使用率を制限するリソース ガバナー ワークロード グループに、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのセッションをマップしてそれらのセッションを分類するシナリオを示します。  
   
@@ -97,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [&#91;先頭に戻る&#93;](#Top)  
@@ -136,35 +136,33 @@ GO
   
 1.  [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) ステートメントを実行してリソース プールを作成します。 この手順の例では、次の構文を使用します。  
   
-     *CREATE RESOURCE POOL pool_name* WITH ( MAX_CPU_PERCENT = *value* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* は、最大平均 CPU 帯域幅の割合を示す 1 ～ 100 の整数です。 適切な値は環境によって異なります。 わかりやすいように、このトピックの例では 20% (MAX_CPU_PERCENT = 20) を使用します。  
+    *Value* は、最大平均 CPU 帯域幅の割合を示す 1 ～ 100 の整数です。 適切な値は環境によって異なります。 わかりやすいように、このトピックの例では 20% (MAX_CPU_PERCENT = 20) を使用します。  
   
 2.  [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) ステートメントを実行して、CPU 使用率を制限する優先度の低い操作用にワークロード グループを作成します。 この手順の例では、次の構文を使用します。  
   
-     CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) ステートメントを実行して、前の手順で作成したワークロード グループを優先度の低いログインのユーザーにマップする分類子関数を作成します。 この手順の例では、次の構文を使用します。  
   
-     CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*user_of_low_priority_login*')  
-  
-     SET @workload_group_name = '*workload_group_name*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     この CREATE FUNCTION ステートメントのコンポーネントの詳細については、次のトピックを参照してください。  
+    この `CREATE FUNCTION` ステートメントのコンポーネントの詳細については、次を参照してください。  
   
     -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -174,14 +172,16 @@ GO
         >  SUSER_NAME は、分類子関数で使用できるシステム関数の 1 つです。 詳細については、「 [ユーザー定義の分類子関数の作成とテスト](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)」を参照してください。  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
-  
+      
 4.  [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) ステートメントを実行して、分類子関数をリソース ガバナーに登録します。 この手順の例では、次の構文を使用します。  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *schema_name*.*function_name*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  次のように 2 回目の ALTER RESOURCE GOVERNOR ステートメントを実行して、リソース ガバナーのメモリ内の構成に変更を適用します。  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -203,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -232,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [&#91;先頭に戻る&#93;](#Top)  

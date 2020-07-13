@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924966"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588235"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "75924966"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
@@ -101,7 +101,6 @@ ALTER INDEX { index_name | ALL } ON <object>
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
     | MAXDOP = max_degree_of_parallelism  
-    | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]  
 }  
@@ -112,7 +111,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAXDOP = max_degree_of_parallelism  
     | RESUMABLE = { ON | OFF } 
     | MAX_DURATION = <time> [MINUTES}     
-    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE} }  
+    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }  
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }  
 }  
   
@@ -126,10 +125,10 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
-    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
-    | COMPRESSION_DELAY= {0 | delay [Minutes]}  
+    | COMPRESSION_DELAY= { 0 | delay [Minutes] }  
 }  
 
 <resumable_index_option> ::=
@@ -147,7 +146,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
@@ -258,10 +257,13 @@ PARTITION
  REORGANIZE (**行ストア** インデックスの再構成)  
  行ストア インデックスの場合、REORGANIZE ではインデックス リーフ レベルを再構成するように指定します。 REORGANIZE 操作は次のとおりです。  
   
--   常にオンラインで実行されます。 つまり、ALTER INDEX REORGANIZE トランザクション中は、長期にわたって他をブロックするテーブル ロックは保持されず、基になるテーブルへのクエリまたは更新を続行できます。  
--   無効なインデックスに対しては指定できません。  
--   ALLOW_PAGE_LOCKS が OFF に設定されている場合は指定できません。  
--   トランザクション内で実行されている場合、トランザクションがロールバックされても、REORGANIZE はロールバックされません。  
+-   常にオンラインで実行されます。 つまり、ALTER INDEX REORGANIZE トランザクション中は、長期にわたって他をブロックするテーブル ロックは保持されず、基になるテーブルへのクエリまたは更新を続行できます。
+-   無効なインデックスに対しては指定できません。
+-   ALLOW_PAGE_LOCKS が OFF に設定されている場合は指定できません。
+-   トランザクション内で実行されている場合、トランザクションがロールバックされても、REORGANIZE はロールバックされません。
+
+> [!NOTE]
+> ALTER INDEX REORGANIZE で既定の暗黙のトランザクション モードの代わりに、明示的なトランザクションが使用されている場合 (たとえば、BEGIN TRAN ...COMMIT/ROLLBACK 内の ALTER INDEX)、REORGANIZE のロック動作がより制限の厳しいものになり、ブロッキングが発生する可能性があります。 暗黙のトランザクションの詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。
 
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。 
 
@@ -288,11 +290,11 @@ LOB_COMPACTION = OFF
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における列ストア インデックスの場合、REORGANIZE では、次の追加のデフラグ最適化がオンラインで実行されます。  
   
--   行の 10% 以上が論理的に削除されたとき、行グループから行を物理的に削除します。 削除されたバイトは、物理メディア上で解放されます。 たとえば、100 万行から成る圧縮された行グループで 10 万行が論理的に削除された場合、SQL Server は、削除された行を物理的に削除し、90 万行を含む行グループを圧縮し直します。 削除された行を解放することで、記憶域が節約されます。  
+-   行の 10% 以上が論理的に削除されたとき、行グループから行を物理的に削除します。 削除されたバイトは、物理メディア上で解放されます。 たとえば、100 万行から成る圧縮された行グループで 10 万行が論理的に削除された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、削除された行を物理的に削除し、90 万行を含む行グループを圧縮し直します。 削除された行を解放することで、記憶域が節約されます。  
   
--   1 つまたは複数の圧縮された行グループを結合して、行グループあたりの行数を最大で 1,024,576 行まで増やすことができます。 たとえば、102,400 行のバッチを 5 つ一括でインポートした場合は、5 つの圧縮された行グループが得られます。 REORGANIZE を実行すると、これらの行グループは圧縮された 1 つの行グループにマージされ、そのサイズは 512,000 行となります。 この処理は、ディクショナリ サイズまたはメモリに関する制限が存在していないことを前提としています。  
+-   1 つまたは複数の圧縮された行グループを結合して、行グループあたりの行数を最大で 1,048,576 行まで増やすことができます。 たとえば、102,400 行のバッチを 5 つ一括でインポートした場合は、5 つの圧縮された行グループが得られます。 REORGANIZE を実行すると、これらの行グループは圧縮された 1 つの行グループにマージされ、そのサイズは 512,000 行となります。 この処理は、ディクショナリ サイズまたはメモリに関する制限が存在していないことを前提としています。  
   
--   行グループの 10% 以上の行が論理的に削除された場合、SQL Server ではこのような行グループを 1 つまたは複数の行グループと結合することを試みます。 たとえば、行グループ 1 は 500,000 行の圧縮された行グループであり、行グループ 21 は最大 1,048, 576 行の圧縮された行グループであるとします。  行グループ 21 は行の 60% が削除され、残りが 409,830 行になっています。 SQL Server では、優先的にこの 2 つの行グループを結合して、909,830 行の新しい行グループを圧縮します。  
+-   行グループの 10% 以上の行が論理的に削除された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのような行グループを 1 つまたは複数の行グループと結合することが試みられます。 たとえば、行グループ 1 は 500,000 行の圧縮された行グループであり、行グループ 21 は最大 1,048, 576 行の圧縮された行グループであるとします。 行グループ 21 は行の 60% が削除され、残りが 409,830 行になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、優先的にこの 2 つの行グループが結合されて、909,830 行の新しい行グループが圧縮されます。  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  列ストア インデックスに適用されます。 
@@ -507,8 +509,7 @@ COMPRESSION_DELAY **=** { **0** |*期間 [分]* }
 
 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)  
   
- ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が遅延によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間および更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
-既定値は、0 分です。  
+ ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が遅延によって指定され、その時間が経過すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間と更新時間が追跡されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLOSED 状態のデルタ行グループに遅延を適用します。  
   
  既定値は、0 分です。  
   

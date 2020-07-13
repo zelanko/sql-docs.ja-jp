@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440589"
 ---
-# <a name="lesson-2-adding-looping"></a>レッスン 2 : ループの追加
+# <a name="lesson-2-adding-looping"></a>レッスン 2: ループの追加
   「[レッスン 1: プロジェクトと基本パッケージの作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラットファイルソースからデータを抽出し、参照変換を使用してデータを変換した後、最後にデータを**AdventureWorksDW2012**サンプルデータベースの**FactCurrency**ファクトテーブルに読み込むパッケージを作成しました。  
   
- しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]最も期待される機能の1つは、繰り返しまたはループをパッケージに簡単に追加できることです。  
+ しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 の最も期待される機能の1つ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、繰り返しまたはループをパッケージに簡単に追加できることです。  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージ全体をループさせる 2 種類のコンテナーがあります。1 つは Foreach ループ コンテナー、もう 1 つは For ループ コンテナーです。 Foreach ループ コンテナーが列挙子を使用してループを実行するのに対し、For ループ コンテナーは、通常、変数式を使用します。 このレッスンでは Foreach ループ コンテナーを使用します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージ全体をループさせる 2 種類のコンテナーがあります。1 つは Foreach ループ コンテナー、もう 1 つは For ループ コンテナーです。 Foreach ループ コンテナーが列挙子を使用してループを実行するのに対し、For ループ コンテナーは、通常、変数式を使用します。 このレッスンでは Foreach ループ コンテナーを使用します。  
   
  パッケージで Foreach ループ コンテナーを使用すれば、指定した列挙子の各メンバーについて、制御フローを繰り返すことができます。 Foreach ループ コンテナーでは、次のものを列挙できます。  
   
@@ -41,32 +39,30 @@ ms.locfileid: "62767554"
   
 -   XML パス言語 (XPath) 式内のノード  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO)  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO)  
   
  このレッスンでは、レッスン 1 で作成した単純な ETL パッケージを修正し、Foreach ループ コンテナーの機能を活用します。 また、ユーザー定義のパッケージ変数を設定し、フォルダー内のすべてのフラット ファイルに対し、チュートリアル パッケージが反復処理を実行できるようにします。 前のレッスンを完了していない場合は、チュートリアルに含まれている、レッスン 1 を完了した状態のパッケージをコピーすることもできます。  
   
  このレッスンでは、データ フローは変更せずに、制御フローのみを変更します。  
   
 > [!IMPORTANT]  
->  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 
-  **AdventureWorksDW2012**をインストールして配置する方法の詳細については、 [CodePlex での Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/p/?LinkID=526910)を参照してください。  
+>  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールして配置する方法の詳細については、 [CodePlex での Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/p/?LinkID=526910)を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
   
--   [手順 1: レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [手順 1:レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [手順 2: Foreach ループ コンテナーの追加と構成](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [手順 2:Foreach ループ コンテナーの追加と構成](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [手順 3: フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [手順 4: レッスン 2 のチュートリアル パッケージのテスト](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [手順 4:レッスン 2 のチュートリアル パッケージのテスト](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [手順 1: レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
+ [手順 1:レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [For ループ コンテナー](control-flow/for-loop-container.md)  
   
   

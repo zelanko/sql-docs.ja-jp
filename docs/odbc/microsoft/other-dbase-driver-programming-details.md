@@ -12,14 +12,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d47915f9a8b38e450fb8ca9bc9797b748400d82c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135748"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291022"
 ---
 # <a name="other-dbase-driver-programming-details"></a>その他の dBASE ドライバーのプログラミングの詳細
 > [!NOTE]  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108530"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869738"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   sp_cursorprepare によって作成された実行プランに基づいてカーソルを作成してデータを格納します。 このプロシージャは、sp_cursorprepare と組み合わせて sp_cursoropen と同じ機能を持ちますが、2つのフェーズに分割されています。 sp_cursorexecute は、ID = 4 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -45,7 +45,7 @@ sp_cursorexecute prepared_handle, cursor
  *prepared_handle*  
  Sp_cursorprepare によって返される、準備されたステートメント*ハンドル*の値を指定します。 *prepared_handle*は、 **int**入力値を必要とする必須パラメーターです。  
   
- *g*  
+ *cursor*  
  SQL Server 生成されたカーソル識別子を示します。 *cursor*は、カーソルに対して動作する後続のすべてのプロシージャ (など) で指定する必要がある必須のパラメーターです sp_cursorfetch  
   
  *scrollopt*  
@@ -79,12 +79,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>コードの戻り値  
  *rowcount*は次の値を返す場合があります。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |-1|不明な行の数。|  
 |-n|非同期設定が有効になっています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt パラメーターと ccopt パラメーター  
  *scrollopt*と*ccopt*は、キャッシュされたプランがサーバーキャッシュに対して割り込まれる場合に役立ちます。つまり、ステートメントを識別する準備済みハンドルを再コンパイルする必要があります。 *Scrollopt*および*ccopt*パラメーターの値は、元の要求で sp_cursorprepare に送信された値と一致している必要があります。  
@@ -97,9 +97,9 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="rpc-and-tds-considerations"></a>RPC と TDS に関する考慮事項  
  RPC の RETURN_METADATA 入力フラグを 1 に設定すると、カーソル選択リストのメタデータを TDS ストリームで返すように要求できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

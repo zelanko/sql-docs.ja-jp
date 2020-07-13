@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758508"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 用 Microsoft Cursor Service の概要
 Microsoft Cursor Service for OLE DB は、データプロバイダーのカーソルサポート機能を補足します。 その結果、ユーザーは、すべてのデータプロバイダーの比較的一様な機能を認識します。
@@ -56,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  動的プロパティ DBPROP_SERVERDATAONINSERT は、基になるデータプロバイダーでサポートされている場合でも、cursor service ではサポートされていません。
 
-|プロパティ名|[説明]|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |自動再計算 (DBPROP_ADC_AUTORECALC)|データシェイプサービスで作成されたレコードセットの場合、この値は計算列および集計列を計算する頻度を示します。 既定値 (値 = 1) は、データ整形サービスによって値が変更されたと判断されるたびに再計算されます。 値が0の場合、計算列または集計列は、階層が最初に構築されたときにのみ計算されます。|
 |バッチサイズ (DBPROP_ADC_BATCHSIZE)|データストアに送信される前にバッチ処理できる update ステートメントの数を示します。 バッチ内のステートメントが多くなるほど、データストアへのラウンドトリップが減少します。|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>組み込みプロパティの動作
  OLE DB 用の Cursor Service は、特定の組み込みプロパティの動作にも影響します。
 
-|プロパティ名|[説明]|
+|プロパティ名|説明|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|**レコードセット**で使用できるカーソルの種類を補足します。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|**レコードセット**で使用可能なロックの種類を補足します。 バッチ更新を有効にします。|

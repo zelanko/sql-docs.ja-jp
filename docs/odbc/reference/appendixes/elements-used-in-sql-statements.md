@@ -12,14 +12,14 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129957"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307023"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前に示した SQL ステートメントで使用されています。  

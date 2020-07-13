@@ -32,7 +32,7 @@ ms.locfileid: "71295684"
   
  数行のコードを記述するだけで、クライアント アプリケーションから既存のパッケージを読み込んで実行することができます。  
   
- ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プログラムによるパッケージの作成[」トピックの説明に従い、1 行ずつプログラムを指定して ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) パッケージを作成できます。  
+ ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)」トピックの説明に従い、1 行ずつプログラムを指定して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成できます。  
   
  また、保存されているパッケージ、実行中のパッケージ、およびパッケージ ロールを管理するためにプログラムによって実行できる他の管理タスクについても説明します。  
   

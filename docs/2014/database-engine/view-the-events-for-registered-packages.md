@@ -12,16 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5e3665a695bd3f40407a8680872c9b0dc79fbc53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927405"
 ---
 # <a name="view-the-events-for-registered-packages"></a>登録パッケージのイベントの表示
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、登録パッケージで提供されているイベントを確認すると役立つことがあります。 詳細については、「 [SQL Server 拡張イベント パッケージ](../relational-databases/extended-events/sql-server-extended-events-packages.md)」を参照してください。  
   
  この作業には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  

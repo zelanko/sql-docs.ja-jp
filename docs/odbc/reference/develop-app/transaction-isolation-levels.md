@@ -19,14 +19,14 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e11a0d76fc4a2daece7b6f4f50761d40933792be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 622b4cd7f0db259b5ecfd5be63b27df64be965e7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637216"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298035"
 ---
 # <a name="transaction-isolation-levels-odbc"></a>トランザクション分離レベル (ODBC)
 *トランザクション分離レベル*は、トランザクションの分離が成功する範囲の尺度です。 特に、トランザクション分離レベルは、次のような場合に存在するかどうかによって定義されます。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107767"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66107767"
   
 1.  レポートを開きます。  
   
-2.  [ホーム] タブで **[実行]** をクリックします。  
+2.  [ホーム] タブで、[**実行**] をクリックします。  
   
 3.  (省略可) 印刷するレポートの外観を確認するには、 **[印刷レイアウト]** をクリックします。  
   

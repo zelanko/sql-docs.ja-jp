@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a38140e32f594e78e047c83eb1b4d6a495483e21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930687"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759618"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -57,7 +57,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetCharset( );  

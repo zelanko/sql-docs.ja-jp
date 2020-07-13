@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036800"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
@@ -31,7 +31,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  メンバーを直接または間接的に指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Strtomember**関数は、文字列式で指定されたメンバーを返します。 **Strtomember**関数は、通常、メンバーの指定を外部関数から mdx ステートメントに返す場合、または mdx クエリがパラメーター化される場合に、ユーザー定義関数と共に使用されます。  
   
 -   CONSTRAINED フラグを使用するときは、メンバー名には修飾されているメンバー名または修飾されていないメンバー名に直接解決できる文字列を指定する必要があります。 このフラグは、指定された文字列を使用してインジェクション攻撃のリスクを軽減するために使用されます。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列を指定すると、"STRTOMEMBER 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
@@ -40,7 +40,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
   
 -   セットとメンバーの違いについて理解を深めるには、「Set 式の使用」および「メンバー式の使用」を参照してください。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **Strtomember**関数を使用して州州属性階層の Bayern メンバーの再販業者 Sales Amount メジャーを返します。 文字列の指定により、修飾されているメンバー名が指定されています。  
   
 ```  
@@ -80,6 +80,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

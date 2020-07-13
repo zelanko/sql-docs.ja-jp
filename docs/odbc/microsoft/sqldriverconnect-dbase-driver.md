@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 238931112d55214c239dab732f951a197d359615
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39d3d062ef8371ce37f812216cbb642d103eff98
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053918"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302923"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE ドライバー)
 > [!NOTE]  
@@ -35,6 +35,6 @@ ms.locfileid: "68053918"
 > [!NOTE]  
 >  DBASEdriver に DBQ または DefaultDir が指定されていない場合、ドライバーは現在のディレクトリに接続します。  
   
-|Driver|キーワードが必要です|例|  
+|ドライバー|キーワードが必要です|使用例|  
 |------------|-----------------------|--------------|  
 |dBASE|ドライバー、DriverID|Driver = {Microsoft dBASE Driver (* .dbf)};DBQ = c:\temp;DriverID = 277|

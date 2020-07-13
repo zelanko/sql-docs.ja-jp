@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSarticles system table
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6272b8370b461db0a7a2259be3de4d584ea8498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890054"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msarticles**テーブルには、パブリッシャーによってレプリケートされるアーティクルごとに1行の情報が格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
@@ -39,11 +39,11 @@ ms.locfileid: "68132096"
 |**destination_object**|**sysname**|サブスクライバーで作成されたテーブルの名前です。|  
 |**source_owner**|**sysname**|パブリッシャー上の元のテーブルのスキーマの名前です。|  
 |**source_object**|**sysname**|アーティクルを追加するソースオブジェクトの名前です。|  
-|**記述**|**nvarchar(255)**|アーティクルの説明です。|  
+|**description**|**nvarchar(255)**|アーティクルの説明です。|  
 |**destination_owner**|**sysname**|サブスクライバーで作成されたテーブルのスキーマの名前です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

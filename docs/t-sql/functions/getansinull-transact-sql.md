@@ -18,17 +18,17 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631600"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このセッションで使用するデータベースで NULL 値を許容するかどうかの既定の設定を返します。  
   

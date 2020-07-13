@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergefilter
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68769178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716573"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   別のテーブルとの結合に基づいてパーティションを作成するために、新しいマージ フィルターを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -74,19 +74,18 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`追加するフィルターの種類を指定します。 *filter_type*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**1**|結合フィルターのみです。 
-  [!INCLUDE[ssEW](../../includes/ssew-md.md)] のサブスクライバーをサポートするために必要です。|  
+|**1**|結合フィルターのみです。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] のサブスクライバーをサポートするために必要です。|  
 |**2**|論理レコードリレーションシップのみ。|  
-|**番**|結合フィルターと論理レコードリレーションシップの両方。|  
+|**3**|結合フィルターと論理レコードリレーションシップの両方。|  
   
  詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergefilter**は、マージレプリケーションで使用します。  
   
  **sp_addmergefilter**はテーブルアーティクルでのみ使用できます。 ビューおよびインデックス付きビューアーティクルはサポートされていません。  
@@ -107,13 +106,13 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addmergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
  [マージアーティクル間の結合フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

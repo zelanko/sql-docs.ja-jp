@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ca2b73fc6498d6cdf1d0addd11225d2ce2c0cb81
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899328"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのプロパティ値を取得します。  
   
@@ -87,11 +87,11 @@ sp_OAGetProperty objecttoken , propertyname
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
-|**DATETIME**|**varchar**|**varchar**|**varchar**|**DATETIME**|**varchar**|**nvarchar**|  
+|**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -100,7 +100,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-a-local-variable"></a>A. ローカル変数を使用する  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -113,8 +113,8 @@ END
 PRINT @property;  
 ```  
   
-### <a name="b-using-a-result-set"></a>B. 結果セットの使用  
- 次の例では`HostName` 、(以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、結果セットとしてクライアントに返します。  
+### <a name="b-using-a-result-set"></a>B: 結果セットの使用  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、結果セットとしてクライアントに返します。  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -125,7 +125,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

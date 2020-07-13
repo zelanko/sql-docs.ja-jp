@@ -11,22 +11,21 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor header field
 - table-valued parameters (ODBC), statement attribute
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56c8edb4aca4cad37c74e074bf9a1bd1dd8d36ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 71f43396dee59a62b68c774533340d86da0fe9f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246379"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998370"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>テーブル値パラメーターに影響を与えるステートメント属性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   次の表では、記述子フィールド内の属性について説明します。  
   
-|属性名|種類|[説明]|  
+|属性名|Type|説明|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPE の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。|  

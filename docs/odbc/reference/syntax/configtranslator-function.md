@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConfigTranslator [ODBC]
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fb2f26f87854d74a217885010014633963472787
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68016702"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306033"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 関数
 **互換性**  
@@ -55,7 +55,7 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>診断  
  **Configtranslator**から FALSE が返された場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効であるか、NULL でした。|  
 |ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error**関数の呼び出しの*szerror*引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
@@ -66,7 +66,7 @@ BOOL ConfigTranslator(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |翻訳オプションを取得する|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |トランスレーターの選択|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  

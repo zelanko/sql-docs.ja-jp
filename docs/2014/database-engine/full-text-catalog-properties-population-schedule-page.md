@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62778824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933003"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>[フルテキスト カタログのプロパティ] ([作成スケジュール] ページ)
   このダイアログ ボックスを使用すると、フルテキスト カタログをいつ作成または再作成するかを決定するスケジュールを追加または変更できます。  
@@ -43,10 +42,10 @@ ms.locfileid: "62778824"
  **[編集]**  
  選択されている作成スケジュールを編集するには、このボタンをクリックします。  
   
- **デリート**  
+ **削除**  
  選択されている作成スケジュールを削除するには、このボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

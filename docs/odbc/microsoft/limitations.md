@@ -11,14 +11,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5912bf4b09a3acd50ae148f642360642fce23277
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054110"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302696"
 ---
 # <a name="limitations"></a>制限事項
 ここでは、ODBC デスクトップデータベースドライバーの制限事項について、次のトピックについて説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "68054110"
 |||[ORDER BY 句](../../odbc/microsoft/order-by-clause-limitations.md)|  
 |||[テーブル名](../../odbc/microsoft/table-name-limitations.md)|  
 |||[テーブル参照](../../odbc/microsoft/table-references-limitations.md)|  
-|||[表示モード](../../odbc/microsoft/views-limitations.md)|  
+|||[ビュー](../../odbc/microsoft/views-limitations.md)|  
 |||[WHERE 句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[WHERE CURRENT OF 句](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[String](../../odbc/microsoft/string-limitations.md)|

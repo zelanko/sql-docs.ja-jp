@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918339"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765473"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
 この例では、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  

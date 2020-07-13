@@ -9,22 +9,20 @@ ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5edbd0ab8f713d227e4ef06307090b6079390869
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076689"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537134"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベルの設定 (Analysis Services)
-  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース互換性レベル プロパティによって、データベースの機能レベルが決定されます。 互換性レベルは、各モデルの種類に固有です。 たとえば、の`1100`互換性レベルは、データベースが多次元か表形式かによって異なる意味を持ちます。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース互換性レベル プロパティによって、データベースの機能レベルが決定されます。 互換性レベルは、各モデルの種類に固有です。 たとえば、の互換性レベルは、 `1100` データベースが多次元か表形式かによって異なる意味を持ちます。  
   
  このトピックでは、多次元データベースの互換性レベルについてのみ説明します。 表形式ソリューションの詳細については、「[互換性レベル &#40;SSAS 表形式 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。  
   
 > [!NOTE]  
->  表形式モデルには、多次元モデルに適用できないデータベース互換性レベルが存在します。 互換性レベル `1103` は、多次元モデルには存在しません。 表形式ソリューション`1103`の詳細について[は、SQL Server 2012 SP1 および互換性レベルの表形式モデルの新機能](https://go.microsoft.com/fwlink/?LinkId=301727)を参照してください。  
+>  表形式モデルには、多次元モデルに適用できないデータベース互換性レベルが存在します。 互換性レベル `1103` は、多次元モデルには存在しません。 表形式ソリューションの詳細について[は、SQL Server 2012 SP1 および互換性レベルの表形式モデルの新機能](https://go.microsoft.com/fwlink/?LinkId=301727)を参照してください `1103` 。  
   
  **多次元データベースの互換性レベル**  
   
@@ -32,14 +30,13 @@ ms.locfileid: "66076689"
   
  多次元データベースの `CompatibilityLevel` プロパティの有効値を以下に示します。  
   
-|設定|[説明]|  
+|設定|説明|  
 |-------------|-----------------|  
-|`1050`|この値はスクリプトやツールには表示されませんが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で作成されたデータベースを表します。 
-  `CompatibilityLevel` が明示的に設定されていないデータベースはすべて、暗黙的に `1050` レベルで実行されます。|  
-|`1100`|これは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で作成した新しいデータベースの既定値です。 また、この値を以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースに指定すると、この互換性レベルでのみサポートされている機能 (つまり、文字列データを含むディメンション属性や個別のカウント メジャーの大きくなった文字列ストレージ) を使用できるようになります。<br /><br /> データベースに`CompatibilityLevel` `1100`は、追加のプロパティ`StringStoresCompatibilityLevel`が設定されています。これにより、パーティションおよびディメンションの代替文字列ストレージを選択できます。|  
+|`1050`|この値はスクリプトやツールには表示されませんが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で作成されたデータベースを表します。 `CompatibilityLevel` が明示的に設定されていないデータベースはすべて、暗黙的に `1050` レベルで実行されます。|  
+|`1100`|これは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で作成した新しいデータベースの既定値です。 また、この値を以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースに指定すると、この互換性レベルでのみサポートされている機能 (つまり、文字列データを含むディメンション属性や個別のカウント メジャーの大きくなった文字列ストレージ) を使用できるようになります。<br /><br /> データベースには、 `CompatibilityLevel` 追加のプロパティが設定されてい `1100` `StringStoresCompatibilityLevel` ます。これにより、パーティションおよびディメンションの代替文字列ストレージを選択できます。|  
   
 > [!WARNING]  
->  高いレベルに設定したデータベース互換性は元に戻せません。 互換性レベルをに`1100`上げた後は、データベースを新しいサーバーで実行し続ける必要があります。 に`1050`ロールバックすることはできません。 または`1100` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]より前のサーバーのバージョンでは、データベースをアタッチまたは復元することはできません。  
+>  高いレベルに設定したデータベース互換性は元に戻せません。 互換性レベルをに上げた後は `1100` 、データベースを新しいサーバーで実行し続ける必要があります。 にロールバックすることはできません `1050` 。 `1100`またはより前のサーバーのバージョンでは、データベースをアタッチまたは復元することはできません [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
 ## <a name="prerequisites"></a>前提条件  
  データベース互換性レベルは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入されました。 データベース互換性レベルを表示または設定するには、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以降が必要です。  
@@ -86,14 +83,14 @@ ms.locfileid: "66076689"
   
 1.  異なるデータベースのパーティションのマージは、両方のデータベースで同じ互換性レベルを共有している場合にのみサポートされます。  
   
-2.  別のデータベースのリンク ディメンションを使用するには、同じ互換性レベルが必要です。 たとえば、データベース[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のデータベースから[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]リンクディメンションを使用する場合は、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]データベースを[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]サーバーに移植し、互換性レベルをに`1100`設定する必要があります。  
+2.  別のデータベースのリンク ディメンションを使用するには、同じ互換性レベルが必要です。 たとえば、データベースのデータベースからリンクディメンションを使用する場合は、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] データベースを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] サーバーに移植 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] し、互換性レベルをに設定する必要があり `1100` ます。  
   
 3.  サーバーの同期は、サーバーで同じバージョンとデータベース互換性レベルを共有している場合にのみサポートされます。  
   
 ## <a name="next-steps"></a>次の手順  
- データベース互換性レベルを上げると、`StringStoresCompatibilityLevel` で [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
+ データベース互換性レベルを上げると、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で `StringStoresCompatibilityLevel` プロパティを設定できるようになります。 これにより、メジャーとディメンションの文字列ストレージが大きくなります。 この機能の詳細については、「 [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XMLA&#41;&#40;のデータベースのバックアップ、復元、および同期](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

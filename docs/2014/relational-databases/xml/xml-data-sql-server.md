@@ -10,24 +10,21 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48ddec1de8492c86aecfd80ea960c4a01673c24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63232369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012874"
 ---
 # <a name="xml-data-sql-server"></a>XML データ (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、半構造化されたデータを管理する多機能アプリケーションを開発するための強力なプラットフォームを提供します。 XML のサポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのコンポーネントに統合されており、次の機能を提供します。  
   
--   
-  `xml` データ型です。 XML 値は XML スキーマ コレクションに従って型指定できる `xml` データ型の列にネイティブに保存できます。また、型指定しない状態でも保存できます。 XML 列のインデックスを作成できます。  
+-   `xml` データ型です。 XML 値は XML スキーマ コレクションに従って型指定できる `xml` データ型の列にネイティブに保存できます。また、型指定しない状態でも保存できます。 XML 列のインデックスを作成できます。  
   
--   
-  `xml` 型の列や変数に格納されている XML データに対して XQuery クエリを指定する機能  
+-   `xml` 型の列や変数に格納されている XML データに対して XQuery クエリを指定する機能  
   
 -   OPENROWSET で XML データを一括読み込みできる拡張機能。  
   

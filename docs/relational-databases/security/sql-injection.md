@@ -98,7 +98,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   
 ### <a name="use-type-safe-sql-parameters"></a>Type-Safe SQL パラメーターの使用  
- **の**Parameters[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Parameters** コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
   
 ```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  

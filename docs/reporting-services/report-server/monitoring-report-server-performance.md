@@ -68,7 +68,7 @@ SQL Server Reporting Services (SSRS) 2016 以降には、次のパフォーマ�
  1 台のコンピューターに複数のレポート サーバー インスタンスが存在する場合、インスタンスをまとめて監視することも個別に監視することもできます。 カウンターを追加する場合は、監視対象に含めるインスタンスを選択してください。 パフォーマンス コンソール (perfmon.msc) の使用およびカウンターの追加に関する詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の製品マニュアルを参照してください。  
   
 ## <a name="other-performance-counters"></a>その他のパフォーマンス カウンター  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]MSRS 2008 Web Service **、** MSRS 2008 Windows Service **、および** ReportServer サービス**専用に、カスタムの**  パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
+ **MSRS 2008 Web Service**、**MSRS 2008 Windows Service**、および **ReportServer サービス**専用に、カスタムの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
   
 |パフォーマンス オブジェクト|メモ|  
 |------------------------|-----------|  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076280"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280522"
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによって SQL を使用する方法について説明する前に、SQL ステートメントの処理方法について説明する必要があります。 ここで説明する手順は、3つの方法すべてに共通するものですが、それぞれの方法で異なるタイミングで実行されます。 次の図は、SQL ステートメントの処理に必要な手順を示しています。これについては、このセクションの残りの部分で説明します。  

@@ -1,8 +1,7 @@
 ---
 title: SQL Server での JSON に関する一般的な問題を解決する
-ms.date: 07/07/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0e5a115c8ba86553954ab325651a1bb89cf6c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730375"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  SQL Server での組み込み JSON サポートに関する一般的な質問に対する回答をこちらで見つけることができます。  
  
@@ -85,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON クエリによって返された文字列は、プレーン テキストとしてエスケープされているようです。 これは、WITHOUT_ARRAY_WRAPPER が指定されている場合にのみ発生します。 どうして JSON オブジェクトとして扱われず、エスケープされないで結果に含まれないのですか?  
   
- **回答** 内側の `WITHOUT_ARRAY_WRAPPER` で `FOR JSON` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれをラップし、正しく書式設定された JSON に昇格させます。  
+ **回答** 内側の `FOR JSON` で `WITHOUT_ARRAY_WRAPPER` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれをラップし、正しく書式設定された JSON に昇格させます。  
   
 ```sql  
 SELECT 'Text' as myText,  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926265"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761398"
 ---
 # <a name="adding-records-to-a-recordset"></a>レコードをレコードセットに追加する
 **AddNew**メソッドを使用して、既存のレコード**セット**内の新しいレコードを作成して初期化します。 **サポート**メソッドと**カーソルオプションの列挙**値**adaddnew**を使用すると、現在の**レコードセット**オブジェクトにレコードを追加できるかどうかを確認できます。

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b014e68bce1e0fbcbabb9c8ee314ee7a9d6e7311
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925420"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761008"
 ---
 # <a name="errors-ado"></a>エラー (ADO)
 ADO オブジェクトに関連する操作では、1つ以上のプロバイダーエラーが発生することがあります。 各エラーが発生すると、**接続**オブジェクトの**エラー**コレクションに1つまたは複数の**エラー**オブジェクトが配置されます。 ADO アプリケーションでの警告とエラーの処理の詳細については、「[エラー処理](../../../ado/guide/data/error-handling.md)」を参照してください。  

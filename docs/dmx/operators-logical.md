@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f6fef2cd36f5d6cceb01fc4971090fb7afe1151c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008149"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669674"
 ---
 # <a name="operators---logical"></a>演算子 - 論理
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) 式で論理演算子を使用すると、値を評価し、で[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ブール値を返すことができます。  
+  データマイニング拡張機能 (DMX) 式で論理演算子を使用すると、値を評価し、でブール値を返すことができ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
  次の表は、DMX がサポートする論理演算子について示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[および &#40;DMX&#41;](../dmx/and-dmx.md)|2つの数値式の論理積を実行します。|  
 |[DMX&#41;&#40;ません](../dmx/not-dmx.md)|数値式の論理否定を実行します。|  

@@ -57,7 +57,7 @@ ms.locfileid: "68262791"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、 **[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
   
--   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]コマンド プロンプトからの SQL Server 2016 のインストール[」の「](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) のインストール スクリプト」セクションを参照してください。  
+-   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   

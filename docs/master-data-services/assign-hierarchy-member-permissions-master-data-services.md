@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73729776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812465"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限を割り当てる (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   階層メンバーに権限を割り当てて、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にあるデータを表示するためのアクセス権をユーザーまたはグループに付与します。  
   
@@ -31,35 +31,27 @@ ms.locfileid: "73729776"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   
-  **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
+-   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>階層メンバーの権限を割り当てるには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  
-  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
+2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  
-  **[選択したユーザーの編集]** をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
-4.  
-  **[階層メンバー]** タブをクリックします。  
+4.  **[階層メンバー]** タブをクリックします。  
   
-5.  
-  **[モデル]** ボックスの一覧からモデルを選択します。  
+5.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-6.  
-  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+6.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-7.  
-  **[階層]** ボックスの一覧から階層を選択します。  
+7.  **[階層]** ボックスの一覧から階層を選択します。  
   
-8.  [**編集**] をクリックします。  
+8.  **[編集]** をクリックします。  
   
 9. ツリーを展開して、権限を割り当てる階層ノードをクリックします。  
   
@@ -70,9 +62,9 @@ ms.locfileid: "73729776"
     > [!NOTE]  
     >  階層メンバーの権限は、すぐには有効になりません。 詳細については、「[メンバー権限を直ちに適用する (マスター データ サービス)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスターデータサービス &#40;階層メンバーの権限を削除&#41;](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 &#40;マスターデータサービス&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
 - sql11.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2e0d73034bc131b0cc65d475f00efd4f54612b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "69028631"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433919"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 **Azure HDInsight Create Cluster Task** を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで作成できます。
@@ -27,8 +26,7 @@ ms.locfileid: "69028631"
 > - 新しい HDInsight クラスターの作成には 10 分から 20 分かかる場合があります。  
 > - Azure HDInsight クラスターの作成と実行には、料金がかかります。 詳細については、「[HDInsight の価格](https://azure.microsoft.com/pricing/details/hdinsight/)」を参照してください。  
   
-
-  **Azure HDInsight Create Cluster Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Create Cluster Task エディター]** ダイアログ ボックスが表示されます。  
+**Azure HDInsight Create Cluster Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Create Cluster Task エディター]** ダイアログ ボックスが表示されます。  
   
 次の表で、このダイアログ ボックスの各フィールドについて説明します。  
   
@@ -39,7 +37,7 @@ ms.locfileid: "69028631"
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを選ぶか、HDInsight クラスターに関連付けられている Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。|
 |SubscriptionId|HDInsight クラスターが作成されるサブスクリプションの ID を指定します。|
 |ResourceGroup|HDInsight クラスターが作成される Azure リソース グループを指定します。|
-|Location|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
+|場所|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
 |ClusterName|作成する HDInsight クラスターの名前を指定します。|  
 |ClusterSize|クラスターに作成するノードの数を指定します。|  
 |BlobContainer|HDInsight クラスターに関連付けられる既定のストレージ コンテナーの名前を指定します。|  

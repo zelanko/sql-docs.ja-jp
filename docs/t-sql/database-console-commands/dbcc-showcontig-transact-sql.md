@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3e177015f1d17ff28fe702a4c5998f97999b66ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039062"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882033"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定されたテーブルまたはビューのデータとインデックスの断片化に関する情報を表示します。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68039062"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC SHOWCONTIG   
 [ (   
     { table_name | table_id | view_name | view_id }   

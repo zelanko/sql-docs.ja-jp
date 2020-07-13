@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34808ef5647512e7e17d5c9a04dc99ea89cd5637
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899264"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   問題のあるデータベースの状態をリセットします。  
   
@@ -42,7 +42,7 @@ sp_resetstatus [ @dbname = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @dbname= ]'*データベース*'  
+ [ @dbname =] '*データベース*'  
  リセットするデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -57,13 +57,13 @@ sp_resetstatus [ @dbname = ] 'database'
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `AdventureWorks2012`データベースの状態をリセットします。  
+ 次の例では、データベースの状態をリセットし `AdventureWorks2012` ます。  
   
 ```  
 EXEC sp_resetstatus 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

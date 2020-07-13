@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949430"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765127"
 ---
 # <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
 レベルまたは軸に沿った位置からの[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **メンバー**コレクションは、次の種類のメンバーを格納するために使用されます。  
   
 -   キューブ内のレベルを構成するメンバー。 これらは、 [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトの**Members**コレクションに含まれています。 たとえば、[多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)からサンプルを使用すると、国レベルの4つのメンバーがカナダ、USA、英国、およびドイツになります。  

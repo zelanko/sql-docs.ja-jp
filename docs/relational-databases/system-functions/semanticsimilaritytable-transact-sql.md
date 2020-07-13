@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68140547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764278"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した列の内容が、指定したドキュメントと意味的に似ているドキュメントについて、0行、1行、または複数の行から成るテーブルを返します。  
   
@@ -44,8 +44,8 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a>数値  
- **一覧**  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
+ **テーブル**  
  フルテキスト インデックスとセマンティック インデックスが有効になっているテーブルの名前を指定します。  
   
  この名前には 1 ~ 4 つの部分名を指定できますが、リモートサーバー名は許可されません。  
@@ -69,7 +69,7 @@ SEMANTICSIMILARITYTABLE
   
  結果が複数の列から要求された場合、一致したドキュメントが列ごとに返されます。  
   
-|Column_name|種類|[説明]|  
+|Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ソース ドキュメントを使用して類似したドキュメントを検出したときの、検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_column_id**|**int**|類似したドキュメントが見つかった列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
@@ -85,16 +85,16 @@ SEMANTICSIMILARITYTABLE
 ## <a name="metadata"></a>Metadata  
  セマンティック類似性の抽出と作成の詳細と状態については、次の動的管理ビューに対してクエリを実行します。  
   
--   [dm_db_fts_index_physical_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
--   [dm_fts_semantic_similarity_population &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
+-   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  

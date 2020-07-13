@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266963"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザーインターフェイスリファレンス (ユーザーインターフェイスリファレンス) (ユーザーインターフェイスリファレンス)
@@ -25,7 +25,7 @@ ms.locfileid: "68266963"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[拡張オブジェクトの選択 &#40;、&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|[**オブジェクト選択の詳細設定**] ダイアログボックスを使用すると、フィルター条件を使用してデータベースオブジェクトを検索し、それらのオブジェクトをオンまたはオフにできます。|  
 |[&#41;&#40;評価レポート](../../ssma/access/assessment-report-accesstosql.md)|[**評価レポート**] ダイアログボックスを使用すると、Access データベースオブジェクトの変換を分析し、移行にかかる時間を見積もることができます。|  
@@ -50,7 +50,7 @@ ms.locfileid: "68266963"
 |[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|[**プロジェクトの設定**] ダイアログボックスの [SQL Azure] ページを使用すると、データベースのサフィックスとハートビートのタイムアウト間隔を指定できます。|  
 |[メタデータを保存して &#40;&#41;](../../ssma/access/save-metadata-accesstosql.md)|メタデータを保存していないプロジェクトを保存すると、[**メタデータの保存**] ダイアログボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [アクセスのための SQL Server Migration Assistant を使用したはじめに &#40;アクセス許可 SQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

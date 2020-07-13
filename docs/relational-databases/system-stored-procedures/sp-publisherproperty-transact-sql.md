@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73962379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715147"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーのパブリッシャーのプロパティを表示または変更します。 このストアドプロシージャは、ディストリビューター側で実行されます。  
+  以外のパブリッシャーのパブリッシャーのプロパティを表示または変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 このストアドプロシージャは、ディストリビューター側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|設定可能な次のパブリケーションプロパティを返します。<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|**Propertyname**列のプロパティの現在の設定です。|  
@@ -64,8 +64,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_publisherproperty**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリッシャーのトランザクションレプリケーションで使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_publisherproperty**は、以外のパブリッシャーのトランザクションレプリケーションで使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  *パブリッシャー*だけを指定した場合、結果セットには、設定可能なすべてのプロパティの現在の設定が含まれます。  
   
@@ -78,8 +78,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_publisherproperty**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Oracle パブリッシャー &#40;レプリケーション Transact-sql プログラミングのトランザクションセットジョブの構成&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021320"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでサポートされている一括コピー関数は db-library の一括コピー関数に似ているため、db-library 一括コピープログラムを ODBC に変換するのは簡単です。ただし、次のような例外があります。  
+  Native Client ODBC ドライバーでサポートされている一括コピー関数は DB-LIBRARY の一括コピー関数に似ているため、DB-LIBRARY 一括コピープログラムを ODBC に変換するのは簡単です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。ただし、次のような例外があります。  
   
 -   DB-Library アプリケーションでは、DBPROCESS 構造体を指すポインターを一括コピー関数の最初のパラメーターに渡します。 ODBC アプリケーションでは、DBPROCESS ポインターが ODBC 接続ハンドルに置き換わります。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "63067628"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。ODBC 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。 odbc 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
   
 -   DB-LIBRARY [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の*varlen*パラメーターに指定された値は、ODBC **bcp_bind**の_cbdata_パラメーターとは異なる解釈になります。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63067628"
   
      DB-LIBRARY では、 *varlen*値-1 は、可変長データが指定されていることを示します。これは、ODBC *CBDATA*で、NULL 値のみが指定されていることを意味します。 DB-LIBRARY のすべての*varlen*仕様 (-1) を SQL_VARLEN_DATA に、および0のすべての*varlen*仕様を SQL_NULL_DATA に変更します。  
   
--   DB-LIBRARY **\_bcp colfmt**_\_file collen_と ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata*には、上記の**bcp_bind**の_varlen_および*cbdata*パラメーターと同じ問題があります。 -1 の DB-LIBRARY *file_collen*仕様をすべて SQL_VARLEN_DATA に変更*file_collen*し、0を SQL_NULL_DATA に設定します。  
+-   DB-LIBRARY **bcp \_ colfmt**_file \_ collen_と ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata*には、上記の**bcp_bind**の_varlen_および*cbdata*パラメーターと同じ問題があります。 -1 の DB-LIBRARY *file_collen*仕様をすべて SQL_VARLEN_DATA に変更*file_collen*し、0を SQL_NULL_DATA に設定します。  
   
 -   ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)関数の*ivalue*パラメーターは void ポインターです。 DB-LIBRARY では、 *Ivalue*は整数でした。 ODBC *Ivalue*の値を void * にキャストします。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "63067628"
   
     -   DB-LIBRARY **dbconvert**関数でサポートされている任意の形式の**datetime**文字列および**smalldatetime**文字列。  
   
-    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   クライアントネットワークユーティリティの [DB-LIBRARY**オプション**] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。  
   
      DB-LIBRARY 一括コピー関数では、ODBC **datetime**および**smalldatetime**形式は使用できません。  
   

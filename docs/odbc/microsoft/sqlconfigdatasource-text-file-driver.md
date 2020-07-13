@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d2809f9b15dd6843e4404c7cf1887c3caa015a3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054085"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283922"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (テキスト ファイル ドライバー)
 > [!NOTE]  
@@ -26,12 +26,12 @@ ms.locfileid: "68054085"
   
  データソースを動的に追加、変更、または削除するために使用される**Sqlconfigdatasource**関数は、次のキーワードを動的に使用します。  
   
-|Keyword|[説明]|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |CHARACTERSET|テキストドライバーの場合は、OEM または ANSI。|  
 |COLNAMEHEADER|テキストドライバーの場合、データの最初のレコードで列名を指定するかどうかを示します。 TRUE または FALSE のいずれかです。|  
 |DEFAULTDIR|ディレクトリへのパス指定。|  
-|説明|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
+|Description|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
 |DRIVER|ドライバー DLL へのパス指定。|  
 |DRIVERID|ドライバーの整数 ID。 27 (テキスト)|  
 |補助|データソース上のテキストファイルのファイル名拡張子を一覧表示します。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**拡張機能**] の一覧と同じオプションが設定されます。|  

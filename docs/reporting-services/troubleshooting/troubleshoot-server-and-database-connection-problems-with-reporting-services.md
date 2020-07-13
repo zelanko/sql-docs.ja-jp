@@ -1,6 +1,6 @@
 ---
-title: サーバーとデータベースの接続に関する問題のトラブルシューティング | Microsoft Docs
-description: このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。
+title: サーバーとデータベースの接続に関する問題のトラブルシューティング
+description: この記事では、レポート サーバーへの接続時に発生する問題を診断して修正します。 また、"予期しないエラー" メッセージについても説明します。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243628"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662793"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "75243628"
 複数のコンピューター接続を通じて資格情報が渡されたときに発生するエラーです。 Kerberos Version 5 プロトコルが有効でない環境で Windows 認証を使用している場合、複数のコンピューター接続を通じて資格情報が渡されると、このエラーが発生します。 このエラーを回避するには、保存された資格情報または要求された資格情報を使用することを検討してください。 この問題を回避する方法については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>サーバーへの接続を確立中にエラーが発生しました。  
-SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (プロバイダー: 名前付きパイプ プロバイダー、エラー: 40 - SQL Server への接続を開けませんでした)。 このエラーは、レポート サーバー データベースをホストするデータベース エンジンのインスタンスによって返されます。 ほとんどの場合、このエラーが発生すると SQL Server サービスが停止します。 また、SQL Server Express with Advanced Services または名前付きインスタンスを使用している場合、レポート サーバーの URL かレポート サーバー データベースの接続文字列に誤りがあるとこのエラーが発生します。 これらの問題を解決するには、次のことを行います。  
+SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (プロバイダー:名前付きパイプ プロバイダー、エラー:40 - SQL Server への接続を開けませんでした)。 このエラーは、レポート サーバー データベースをホストするデータベース エンジンのインスタンスによって返されます。 ほとんどの場合、このエラーが発生すると SQL Server サービスが停止します。 また、SQL Server Express with Advanced Services または名前付きインスタンスを使用している場合、レポート サーバーの URL かレポート サーバー データベースの接続文字列に誤りがあるとこのエラーが発生します。 これらの問題を解決するには、次のことを行います。  
   
 * SQL Server (**MSSQLSERVER**) サービスが開始されていることを確認します。 データベース エンジンのインスタンスをホストするコンピューターで、[スタート] ボタンをクリックします。次に、[管理ツール] をクリックして、[サービス] をクリックし、[SQL Server (**MSSQLSERVER**)] までスクロールします。 まだ開始していなかった場合は、サービスを右クリックして [プロパティ] を選択し、[スタートアップの種類] で [自動] をクリックして、[適用]、[開始]、[OK] の順にクリックします。   
 * レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、Web ポータルの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
@@ -67,17 +67,17 @@ Management Studio がレポート サーバーとの接続を確立する際、�
 ## <a name="connection-error-where-login-failed-due-to-unknown-user-name-or-bad-password"></a>不明なユーザー名または不正なパスワードが原因のログイン失敗による接続エラー  
 レポート サーバーからレポート サーバー データベースへの接続にドメイン アカウントを使用しているときに、ドメイン アカウントのパスワードが変更された場合、 **rsReportServerDatabaseLogonFailed** エラーが発生することがあります。   
   
-エラーのフルテキストは、"レポート サーバーでレポート サーバー データベースへの接続を開始できません。 ログオンに失敗しました (**rsReportServerDatabaseLogonFailed**)。 ファイル共有へのアクセス中にログオン エラーが発生しました。ユーザー アカウントまたはパスワードが無効です" です。  
+エラーのフル テキストは "レポート サーバーでレポート サーバー データベースへの接続を開始できません。 ログオンに失敗しました (**rsReportServerDatabaseLogonFailed**)。 ファイル共有へのアクセス中にログオン エラーが発生しました。ユーザー アカウントまたはパスワードが無効です" です。  
   
 パスワードを再設定する場合、接続を更新する必要があります。 詳細については、「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>レポート サーバーでレポート サーバー データベースへの接続を開始できません。 (rsReportServerDatabaseUnavailable)。  
-エラーの全文: レポート サーバーでレポート サーバー データベースへの接続を開始できません。 すべての要求および処理でデータベースに接続する必要があります (rsReportServerDatabaseUnavailable)  
+メッセージ全文: レポート サーバーでレポート サーバー データベースへの接続を開始できません。 すべての要求および処理でデータベースに接続する必要があります (rsReportServerDatabaseUnavailable)  
 サーバーの内部ストレージである SQL Server リレーショナル データベースにレポート サーバーから接続できないときに発生するエラーです。 レポート サーバー データベースへの接続は、Reporting Services 構成ツールを使用して管理します。 このツールを実行し、[データベースのセットアップ] ページで接続情報を修正できます。 接続情報の更新には、このツールを使用することをお勧めします。このツールを使用すると、依存する設定の更新とサービスの再起動を確実に行えます。 詳細については、「 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 」と「 [レポート サーバー サービス アカウントの構成](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 このエラーは、レポート サーバー データベースをホストしているデータベース エンジン インスタンスがリモート接続用に構成されていない場合にも発生します。 SQL Server の一部のエディションでは、リモート接続が既定で有効になります。 使用している SQL Server データベース エンジン インスタンスで有効かどうかを確認するには、SQL Server 構成マネージャー ツールを実行します。 TCP/IP および名前付きパイプの両方を有効にする必要があります。 レポート サーバーでは両方のプロトコルを使用します。 リモート接続を有効にする方法については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」の「レポート サーバー データベースへのリモート接続を構成する方法」を参照してください。  
   
-データベース エンジン インスタンスの実行に使用したアカウントのパスワードの有効期限が切れている場合、エラーには "サーバーへの接続を確立中にエラーが発生しました。 SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (**provider: SQL Server Network Interfaces, error: 26 - Error Locating Server/Instance Specified (プロバイダー: SQL Server ネットワーク インターフェイス、エラー: 26 - 指定されたサーバー/インスタンスの特定エラー))** "。 このエラーを解決するには、パスワードを再設定してください。   
+データベース エンジン インスタンスの実行に使用したアカウントのパスワードの有効期限が切れている場合、エラーには次の追加テキストが示されます: "サーバーへの接続を確立中にエラーが発生しました。 SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (**プロバイダー: SQL Server Network Interfaces、エラー: 26 - 指定されたサーバーまたはインスタンスの位置を特定しているときにエラーが発生しました)** 。" このエラーを解決するには、パスワードを再設定してください。   
   
 ## <a name="rpc-server-is-not-listening"></a>"RPC サーバーが受信待ちしていない"  
 レポート サーバー サービスでは、いくつかの操作にリモート プロシージャ コール (RPC) サーバーを使用します。 "RPC サーバーが受信待ちしていない" エラーが発生した場合、レポート サーバー サービスが実行されていることを確認してください。  
@@ -86,7 +86,7 @@ Management Studio がレポート サーバーとの接続を確立する際、�
 データ ソースの接続エラーを示すエラーです。 接続文字列をチェックし、データ ソースにアクセスするための権限があることを確認してください。 Windows 認証を使用してデータ ソースにアクセスしている場合、データ ソースをホストするコンピューターにアクセスするための権限が必要です。  
   
 ## <a name="unable-to-grant-database-access-in-sharepoint-central-administration"></a>SharePoint サーバーの全体管理でデータベースへのアクセスを許可できない  
-Windows Vista または Windows Server 2008 上の SharePoint 製品やテクノロジと連携するように Reporting Services を構成した場合、SharePoint サーバーの全体管理の **[データベース アクセスの許可]** ページでアクセス権を付与しようとすると、"コンピューターへの接続を確立できません。" というエラー メッセージが表示されることがあります。  
+Windows Vista または Windows Server 2008 上の SharePoint 製品やテクノロジと連携するように Reporting Services を構成した場合、SharePoint サーバーの全体管理の **[データベース アクセスの許可]** ページでアクセス権を付与しようとすると、次のエラー メッセージが表示されることがあります: "コンピューターへの接続を確立できません。"  
   
 これは、Windows Vista と Windows Server 2008 のユーザー アカウント制御 (UAC) が原因です。管理者権限が要求される作業では、管理者からの明示的な許可を得て権限を昇格し、管理者トークンを使用する必要があります。 ただしこの場合、Reporting Services サービス アカウントに SharePoint の構成データベースとコンテンツ データベースに対するアクセス権を付与するために、Windows SharePoint Services Administration サービスの権限を昇格させることはできません。  
   

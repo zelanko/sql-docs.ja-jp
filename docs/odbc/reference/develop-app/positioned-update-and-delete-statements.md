@@ -13,14 +13,14 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023296"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282363"
 ---
 # <a name="positioned-update-and-delete-statements"></a>位置指定の UPDATE および DELETE ステートメント
 アプリケーションでは、位置指定の update または delete ステートメントを使用して、結果セット内の現在の行を更新または削除できます。 位置指定の update および delete ステートメントは一部のデータソースではサポートされていますが、一部のデータソースではサポートされていません。 アプリケーションでは、位置指定の update および delete ステートメントがサポートされているかどうかを判断するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (カーソルの種類によって異なります) を使用して**SQLGetInfo**を呼び出します。 ODBC カーソルライブラリは、位置指定の update および delete ステートメントをシミュレートすることに注意してください。  
@@ -31,15 +31,15 @@ ms.locfileid: "68023296"
   
  **FROM** *table-list*  
   
- [**** *検索条件*]  
+ [**WHERE** *検索条件*]  
   
  **更新する場合**は、[*列名*[**,、** *列名*]...]  
   
  次に、アプリケーションは、更新または削除する行にカーソルを置きます。 これを行うには、 **Sqlfetchscroll**を呼び出して、必要な行を含む行セットを取得し、 **SQLSetPos**を呼び出して行セットカーソルをその行に配置します。 その後、アプリケーションは、結果セットで使用されているステートメントとは別のステートメントで、配置された update ステートメントまたは delete ステートメントを実行します。 これらのステートメントの構文は次のとおりです。  
   
- **** *テーブル名の*更新  
+ **UPDATE** *テーブル名の*更新  
   
- **** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
+ **SET** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
   
  [**,** *列識別子* **=** {*式*&#124; **NULL**}]...  
   

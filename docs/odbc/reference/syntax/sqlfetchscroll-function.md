@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFetchScroll function [ODBC]
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb75ebceb1f70ddc8b517a3dc94af97a18965939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345193"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285882"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **互換性**  
@@ -82,9 +82,9 @@ SQLRETURN SQLFetchScroll(
 ## <a name="diagnostics"></a>診断  
  **Sqlfetchscroll**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、handletype を SQL_HANDLE_STMT、StatementHandle のハンドルを指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlfetchscroll**によって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。 1つの列でエラーが発生した場合は、エラーが発生した列を特定するために、SQL_DIAG_COLUMN_NUMBER の DiagIdentifier を使用して**SQLGetDiagField**を呼び出すことができます。および**SQLGetDiagField**は、その列を含む行を判断するために、SQL_DIAG_ROW_NUMBER の DiagIdentifier を使用して呼び出すことができます。  
   
- SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、エラーが発生した場合は SQL_ERROR が返されます。単一行演算。  
+ SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、単一行操作でエラーが発生した場合は SQL_ERROR が返されます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|列に対して返された文字列またはバイナリデータにより、空白以外の文字または NULL 以外のバイナリデータが切り捨てられました。 文字列値の場合は、右側が切り捨てられました。|  
@@ -111,7 +111,7 @@ SQLRETURN SQLFetchScroll(
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
 |HY090|文字列またはバッファーの長さが無効です|SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_VARIABLE に設定されました。列0は、長さがこの結果セットのブックマークの最大長と等しくないバッファーにバインドされています。 (この長さは IRD の [SQL_DESC_OCTET_LENGTH] フィールドで使用でき、 **SQLDescribeCol**、 **sqlcolattribute**、または**SQLGetDescField**を呼び出すことによって取得できます)。|  
 |HY106|フェッチの型が範囲を超えています|DM) 引数 FetchOrientation に指定された値が無効でした。<br /><br /> (DM) 引数 FetchOrientation が SQL_FETCH_BOOKMARK、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されました。<br /><br /> SQL_ATTR_CURSOR_TYPE statement 属性の値が SQL_CURSOR_FORWARD_ONLY ましたが、引数 FetchOrientation の値が SQL_FETCH_NEXT いませんでした。<br /><br /> SQL_ATTR_CURSOR_SCROLLABLE statement 属性の値が SQL_NONSCROLLABLE ましたが、引数 FetchOrientation の値が SQL_FETCH_NEXT いませんでした。|  
-|HY107|行の値が有効範囲にありません|SQL_ATTR_CURSOR_TYPE statement 属性で指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_ATTR_KEYSET_SIZE statement 属性で指定された値は、0より大きく、で指定された値よりも小さくなってい SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性。|  
+|HY107|行の値が有効範囲にありません|SQL_ATTR_CURSOR_TYPE statement 属性で指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_ATTR_KEYSET_SIZE statement 属性で指定された値が0より大きく、SQL_ATTR_ROW_ARRAY_SIZE statement 属性で指定された値を下回っています。|  
 |HY111|ブックマークの値が無効です|引数 FetchOrientation が SQL_FETCH_BOOKMARK、SQL_ATTR_FETCH_BOOKMARK_PTR statement 属性の値が指すブックマークが無効であるか、null ポインターでした。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
 |HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースが、 **SQLBindCol**の*TargetType*と対応する列の SQL データ型の組み合わせによって指定された変換をサポートしていません。|  
@@ -129,7 +129,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="positioning-the-cursor"></a>カーソルの位置を指定する  
  結果セットが作成されると、カーソルが結果セットの先頭の前に配置されます。 **Sqlfetchscroll**は、次の表に示すように、 *Fetchorientation*および*fetchoffset*引数の値に基づいてブロックカーソルを位置付けます。 次のセクションでは、新しい行セットの開始を決定するための正確なルールを示します。  
   
-|FetchOrientation|意味|  
+|FetchOrientation|説明|  
 |----------------------|-------------|  
 |SQL_FETCH_NEXT|次の行セットを返します。 これは、 **Sqlfetch**を呼び出すことと同じです。<br /><br /> **Sqlfetchscroll**は、 *fetchoffset*の値を無視します。|  
 |SQL_FETCH_PRIOR|前の行セットを返します。<br /><br /> **Sqlfetchscroll**は、 *fetchoffset*の値を無視します。|  
@@ -148,7 +148,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>カーソルの配置ルール  
  次のセクションでは、FetchOrientation の各値の正確な規則について説明します。 これらの規則では、次の表記を使用します。  
   
-|表し|意味|  
+|Notation|説明|  
 |--------------|-------------|  
 |*開始前*|ブロックカーソルは、結果セットの先頭の前に配置されます。 新しい行セットの最初の行が結果セットの先頭より前にある場合、 **Sqlfetchscroll**は SQL_NO_DATA を返します。|  
 |*終了後*|ブロックカーソルは、結果セットの末尾の後に配置されます。 新しい行セットの最初の行が結果セットの末尾より後にある場合、 **Sqlfetchscroll**は SQL_NO_DATA を返します。|  
@@ -163,7 +163,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|*開始前*|1 で保護されたプロセスとして起動されました|  
+|*開始前*|1|  
 |*CurrRowsetStart + RowsetSize*[1] * \<= lastresultrow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> lastresultrow*|*終了後*|  
 |*終了後*|*終了後*|  
@@ -229,7 +229,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|*いつ*|*1*|  
+|*[任意]*|*1*|  
   
 ## <a name="sql_fetch_last"></a>SQL_FETCH_LAST  
  次の規則が適用されます。  
@@ -277,7 +277,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  たとえば、現在の行セットが 21 ~ 30 行で構成され、行セットのサイズが10である場合、カーソルが結果セットから削除された行を削除し、カーソルが結果セットに追加された行を検出したとします。 次の表は、さまざまな状況で**Sqlfetchscroll**が返す行を示しています。  
   
-|Change|フェッチの種類|FetchOffset|新しい行セット [1]|  
+|変更|フェッチの種類|FetchOffset|新しい行セット [1]|  
 |------------|----------------|-----------------|---------------------|  
 |行21の削除|NEXT|0|31 ~ 40|  
 |行31の削除|NEXT|0|32 ~ 41|  
@@ -288,9 +288,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |21行と22行の間に行を挿入する|PRIOR|0|11 ~ 20|  
 |20 ~ 21 行の行を挿入|PRIOR|0|12 ~ 20、挿入された行|  
 |行21の削除|RELATIVE|0|22 ~ 31<sup>[2]</sup>|  
-|行21の削除|RELATIVE|1 で保護されたプロセスとして起動されました|22 ~ 31|  
+|行21の削除|RELATIVE|1|22 ~ 31|  
 |21行と22行の間に行を挿入する|RELATIVE|0|21、挿入された行、22 ~ 29|  
-|21行と22行の間に行を挿入する|RELATIVE|1 で保護されたプロセスとして起動されました|22 ~ 31|  
+|21行と22行の間に行を挿入する|RELATIVE|1|22 ~ 31|  
 |行21の削除|ABSOLUTE|21|22 ~ 31<sup>[2]</sup>|  
 |行22の削除|ABSOLUTE|21|21、23 ~ 31|  
 |21行と22行の間に行を挿入する|ABSOLUTE|22|挿入された行、22 ~ 29|  
@@ -332,7 +332,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll および ODBC 2.x ドライバー  
  アプリケーションが ODBC 2.x ドライバーで**Sqlfetchscroll**を呼び出すと、ドライバーマネージャーはこの呼び出しを**SQLExtendedFetch**にマップします。 **SQLExtendedFetch**の引数には、次の値を渡します。  
   
-|SQLExtendedFetch 引数|Value|  
+|SQLExtendedFetch 引数|値|  
 |-------------------------------|-----------|  
 |StatementHandle|**Sqlfetchscroll**で StatementHandle。|  
 |FetchOrientation|**Sqlfetchscroll**での fetchorientation。|  
@@ -350,7 +350,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |一括挿入、更新、または削除操作の実行|[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  

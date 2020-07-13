@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f109567b670ee0af73ded5c2a9d6442e3b342ec
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770870"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431259"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
   SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換先コンポーネントです。 SAP BW 変換先は、SAP Netweaver BW Version 7 システムに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのデータを読み込みます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62770870"
   
 -   [SAP BW 変換先の構成](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 変換先に必要な SAP Netweaver BW オブジェクトの準備  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> 変換先に必要な SAP Netweaver BW オブジェクトの準備  
  SAP BW 変換先を使用する前に、特定のオブジェクトを SAP Netweaver BW システムに含める必要があります。 これらのオブジェクトがまだ存在しない場合は、これらの手順に従って SAP Netweaver BW システムで作成および構成する必要があります。  
   
 > [!NOTE]  
@@ -55,20 +54,19 @@ ms.locfileid: "62770870"
   
  また、SAP Netweaver BW システムにデータの読み込みをサポートするために必要な、追加のインフォオブジェクト、インフォキューブ、インフォソース、およびインフォパッケージを作成できます。  
   
-##  <a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
  SAP Netweaver BW Version 7 システムに接続するため、SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部である SAP BW 接続マネージャーを使用します。 SAP BW 接続マネージャーは、SAP BW 変換先が使用できる唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーです。  
   
  SAP BW 接続マネージャーの詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
-##  <a name="bkmk_Configure_Destination"></a> SAP BW 変換先の構成  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> SAP BW 変換先の構成  
  SAP BW 変換先は、次の方法で構成できます。  
   
 -   データの読み込みに使用するインフォパッケージを探して参照します。  
   
 -   インフォパッケージの適切なインフォオブジェクトへのデータ フロー内の各列をマップします。  
   
--   
-  `PackageSize` プロパティを構成して、一度に転送するデータの行数を指定します。  
+-   `PackageSize` プロパティを構成して、一度に転送するデータの行数を指定します。  
   
 -   データの読み込みが SAP Netweaver BW システムで完了するまで待機することを選択します。  
   

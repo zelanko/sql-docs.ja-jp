@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7824f1ff326c7f5714da10f9448b41e7bf0e130b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835744"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438589"
 ---
 # <a name="manage-a-cdc-service"></a>CDC サービスの管理
   CDC デザイナー コンソールを使用して、CDC Service 構成コンソールで作成したサービスを表示し、Oracle CDC Service 内のすべてのインスタンスを管理することができます。  

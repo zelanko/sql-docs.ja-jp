@@ -1,5 +1,6 @@
 ---
 title: マークされたトランザクションを含む関連データベースの復旧
+description: SQL Server では、特定のマークの時点に復旧できるように、トランザクション ログの名前付きマークをサポートします。 マークは、特定の作業に関連付けることができます。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75238890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669814"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックは、マークされたトランザクションが含まれており、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
   
  特定の復旧ポイントまでの復元するための要件については、「 [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  

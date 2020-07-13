@@ -1,5 +1,6 @@
 ---
-title: LocalDB | の SQL Server Native Client サポートMicrosoft Docs
+title: LocalDB のサポート
+description: LocalDB インスタンス内のデータベースに接続する方法について説明します。これは SQL Server Native Client でサポートされている SQL Server の軽量バージョンです。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -7,20 +8,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57fe6bd159be275e9a183c1598b5cde5a82a44dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: bc043b9e26f9a940575689b9392efef5b7ee1a4a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761300"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009891"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client における LocalDB のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降、SQLServer の簡易バージョンである LocalDB を使用できるようになります。 ここでは、LocalDB インスタンス内のデータベースに接続する方法について説明します。  
   
 ## <a name="remarks"></a>解説  
@@ -32,11 +31,9 @@ ms.locfileid: "73761300"
   
  要約すると、LocalDB では次の操作を実行できます。  
   
--   **Sqllocaldb i**を使用して、既定のインスタンスの名前を検出します。  
+-   **sqllocaldb.exe i** を使用して既定のインスタンスの名前を検出できます。  
   
--   
-  **AttachDBFilename** 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 
-  **AttachDBFilename** を使用するときに、**Database** 接続文字列キーワードを使用してデータベース名を指定しなかった場合、データベースはアプリケーションの終了時に LocalDB インスタンスから削除されます。  
+-   **AttachDBFilename** 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 **AttachDBFilename** を使用するときに、**Database** 接続文字列キーワードを使用してデータベース名を指定しなかった場合、データベースはアプリケーションの終了時に LocalDB インスタンスから削除されます。  
   
 -   接続文字列では、次のように LocalDB インスタンスを指定します。  
   
@@ -44,7 +41,7 @@ ms.locfileid: "73761300"
 SERVER=(localdb)\v11.0  
 ```  
   
- 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、 **sqlcmd-S (localdb) \ v11.0**のようになります。  
+ 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、**sqlcmd -S (localdb)\v11.0** のようにします。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

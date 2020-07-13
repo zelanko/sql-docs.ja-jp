@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b21ee398eade4878d4f2273f17314dd184af2310
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176868"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: アプリケーションをビルドして実行する
@@ -30,11 +30,9 @@ ms.locfileid: "78176868"
 
 2.  **[名前]** 列の任意の行にマウス カーソルを合わせます。 手の形のマウス カーソルが表示されます。
 
-3.  
-  **[名前]** 列の値をクリックします。 対応するフィルター選択されたデータを含む子レポートが表示されます。
+3.  **[名前]** 列の値をクリックします。 対応するフィルター選択されたデータを含む子レポートが表示されます。
 
-4.  
-  **ReportViewer**ツール バーの **[親レポートに戻る]** アイコンをクリックして、 **親** レポートに戻ります。
+4.  **ReportViewer**ツール バーの **[親レポートに戻る]** アイコンをクリックして、 **親** レポートに戻ります。
 
      ![ReportViewer を使用した ssrs ドリルスルー](../../2014/tutorials/media/ssrs-drillthrough-report.png "ReportViewer を使用した ssrs ドリルスルー")
 

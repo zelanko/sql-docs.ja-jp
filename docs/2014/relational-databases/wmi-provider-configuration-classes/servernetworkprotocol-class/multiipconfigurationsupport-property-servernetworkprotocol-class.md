@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 80401a607c9155451a869082162affcca401ebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62470059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059906"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol クラス)
   複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされるかどうかを指定するブール型のプロパティを取得します。  
@@ -36,14 +35,14 @@ object
 .MultiIpConfigurationSupport [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](servernetworkprotocol-class.md) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](servernetworkprotocol-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされるかどうかを指定するブール値。複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされる場合は `true`、複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされない場合は `false` です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

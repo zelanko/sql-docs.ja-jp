@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915790"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293153"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle User&#39;s ガイド
 > [!IMPORTANT]  

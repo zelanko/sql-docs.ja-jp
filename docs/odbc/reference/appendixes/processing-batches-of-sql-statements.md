@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], processing batches of SQL statements
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f952b21267b73c7ae508f46d896dbfdbb4160e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec0e4b67d75b1ff1b14eb11682869041717a4055
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100567"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308033"
 ---
 # <a name="processing-batches-of-sql-statements"></a>SQL ステートメントのバッチ処理
 > [!IMPORTANT]  

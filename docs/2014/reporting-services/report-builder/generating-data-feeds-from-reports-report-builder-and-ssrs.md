@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107836"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 表示拡張機能は、レポートから利用できるデータ フィードおよびレポート内のデータ領域からのデータ フィードを一覧表示する Atom サービス ドキュメントを生成します。 この拡張機能を使用すると、レポートから生成されたデータ フィードを使用できるアプリケーションで読み取りおよび交換が可能な、Atom に準拠したデータ フィードを生成できます。 たとえば、Atom 表示拡張機能を使用して、生成されたデータフィードを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]クライアントで使用できます。  
   
  Atom サービス ドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 データ領域の種類およびデータ領域に表示されるデータによっては、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、1 つのデータ領域から複数のデータ フィードを生成することがあります。 たとえば、マトリックスまたはグラフでは、複数のデータ フィードを提供できます。 Atom 表示拡張機能によって Atom サービス ドキュメントが作成されると、各データ フィードに対して一意な識別子が作成されます。URL 内でこの識別子を使用することで、データ フィードの内容にアクセスできます。  
@@ -33,16 +32,16 @@ ms.locfileid: "66107836"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a>データフィードとしてのレポート  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a>データフィードとしてのレポート  
  運用レポートをデータ フィードとしてエクスポートすることも、データ フィードの形式でアプリケーションにデータを提供することを第 1 の目的とするレポートを作成することもできます。 データ フィードとしてのレポートは、クライアント データ プロバイダーを介してデータにアクセスするのが困難な場合や、データ ソースの複雑さを隠してデータをより簡単に使用できるようにする場合に、データをアプリケーションに提供するための方法の 1 つです。 レポート データをデータ フィードとして使用するもう 1 つのメリットは、レポート マネージャー、セキュリティ、スケジュール設定、レポート スナップショットなどの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 機能を使用して、データ フィードを提供するレポートを管理できることです。  
   
  Atom 表示拡張機能を有効に利用するためには、レポートがどのようにデータ フィードに表示されるかを理解する必要があります。 既存のレポートを使用している場合は、レポートからどのようなデータ フィードが生成されるかを予測できることが必要です。データ フィードとして使用する専用のレポートを作成している場合は、データ フィードの有用性を最大限に高めるために、データを組み込んでレポート レイアウトを微調整できることが重要です。  
   
- 詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;からのデータフィードの生成](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
-##  <a name="AtomServiceDocument"></a>Atom サービスドキュメント (.atomsvc ファイル)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a>Atom サービスドキュメント (.atomsvc ファイル)  
  Atom サービス ドキュメントは、1 つまたは複数のデータ フィードへの接続を指定します。 接続は、少なくとも、フィードを生成するデータ サービスへの単純な URL です。  
   
  Atom 表示拡張機能を使用してレポート データを表示すると、Atom サービス ドキュメントによってレポートで利用できるデータ フィードが一覧表示されます。 このドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 テーブルおよびゲージから生成されるデータ フィードはそれぞれ 1 つのみです。これに対し、マトリックス、リスト、およびグラフの場合、表示するデータによっては複数のデータ フィードが生成される場合があります。  
@@ -63,9 +62,8 @@ ms.locfileid: "66107836"
   
 
   
-##  <a name="DataFeeds"></a>データフィード  
- データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって生成されるデータ フィードは、ADO.NET Data Services によって生成されるデータ フィードと同じ形式です。  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> データ フィード  
+ データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって生成されるデータ フィードは、ADO.NET Data Services によって生成されるデータ フィードと同じ形式です。  
   
  データ フィードには、ヘッダー セクションとデータ セクションの 2 つのセクションが含まれます。 Atom 仕様には、各セクションの要素が定義されています。 ヘッダーには、データ フィードで使用する文字エンコード スキーマなどの情報が含まれています。  
   
@@ -128,7 +126,7 @@ ms.locfileid: "66107836"
   
 
   
-##  <a name="FlatteningReportData"></a>レポートデータのフラット化  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a>レポートデータのフラット化  
  Atom レンダラーは、XML 形式のフラット化された行セットとしてレポート データを提供します。 データ テーブルをフラット化する場合のルールは、いくつかの例外を除き、CSV レンダラーに適用されるルールと同じです。  
   
 -   スコープ内のアイテムは、詳細レベルにフラット化されます。 CSV レンダラーとは異なり、最上位レベルにあるテキスト ボックスは、データ フィードに書き込まれるすべてのエントリに含められます。  
@@ -151,7 +149,7 @@ ms.locfileid: "66107836"
   
 
   
-##  <a name="AtomRendering"></a>Atom 表示規則  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a>Atom 表示規則  
  Atom 表示拡張機能は、データ フィードを表示するときに次の情報を無視します。  
   
 -   書式設定およびレイアウト  
@@ -174,7 +172,7 @@ ms.locfileid: "66107836"
   
  次の表では、表示した際のレポート アイテムの外観について説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
 |Matrix|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
@@ -189,7 +187,7 @@ ms.locfileid: "66107836"
   
 
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  使用するエンコード スキーマなど、このレンダラーのいくつかの既定の設定は変更することができます。 詳細については、「 [ATOM Device Information Settings](../atom-device-information-settings.md)」を参照してください。  
   
 

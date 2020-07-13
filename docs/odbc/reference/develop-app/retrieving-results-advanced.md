@@ -12,14 +12,14 @@ helpviewer_keywords:
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22a88a96b856ba0976dcb8600d26f78b772654bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020504"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294642"
 ---
 # <a name="retrieving-results-advanced"></a>結果の取得 (詳細)
 アプリケーションでは、バインドされたデータバッファーアドレスにオフセットを追加するように指定できます。また、 **Sqlbulkoperations**、 **sqlfetch**、 **Sqlbulkoperations**、または**SQLSetPos**が呼び出されたときに、対応する長さ/インジケーターバッファーアドレスを指定することもできます。 これらの追加の結果によって、これらの操作で使用されるアドレスが決まります。  

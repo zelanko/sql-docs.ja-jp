@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e7ce6db35817fdfc9bb4169a69e5f959b40f268
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63158173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050150"
 ---
 # <a name="implementing-an-outer-join"></a>外部結合の実装
   外部結合は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 次のサンプルは、ネイティブ コンパイル ストアド プロシージャに左外部結合の機能を実装する方法を示しています。  
   
  このサンプルでは、テーブル変数を使用して結合の左側でカーソルをシミュレートし、テーブル変数を使用して単一の結果セットを構築します。これは、データ行のコピーを 1 つ作成するなど、限定された数行分のデータを処理する場合にのみ適しています。  
   
- T1_type 型の@outer変数 () を使用して、t1 から行を反復処理し、while ループを使用してカーソルをシミュレートします。 次に@result 、t1t2_join_type 型の変数を使用して結果セットを作成します。  
+ @outerT1_type 型の変数 () を使用して、t1 から行を反復処理し、while ループを使用してカーソルをシミュレートします。 @result次に、t1t2_join_type 型の変数を使用して結果セットを作成します。  
   
  この回避策のパフォーマンスをテストして、アプリケーションで予想どおりに実行されるかどうかを確認する必要があります。  
   
@@ -113,7 +112,7 @@ exec dbo.usp_left_join
 ```  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
- [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [ネイティブコンパイルストアドプロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [インメモリ OLTP でサポートされていない transact-sql の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

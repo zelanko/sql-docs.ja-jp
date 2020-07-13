@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63021945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068551"
 ---
 # <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
-  で[!INCLUDE[msCoName](../../../includes/msconame-md.md)]サポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外のサブスクライバーの一覧については、「 [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
+  でサポートされている以外のサブスクライバーの一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ては、「 [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
  ODBC ドライバーは、以下の要件を満たす必要があります。  
@@ -35,21 +34,20 @@ ms.locfileid: "63021945"
   
 -   読み取り専用にはできない  
   
--   
-  **MSreplication_subscriptions**などの長いテーブル名をサポートしている  
+-   **MSreplication_subscriptions**などの長いテーブル名をサポートしている  
   
 ## <a name="replicating-using-ole-db-interfaces"></a>OLE DB インターフェイスを使用するレプリケーション  
  トランザクション レプリケーションを行うには、OLE DB プロバイダーが以下のオブジェクトをサポートする必要があります。  
   
--   **DataSource**オブジェクト  
+-   **DataSource** オブジェクト  
   
--   **Session**オブジェクト  
+-   **Session** オブジェクト  
   
--   **Command**オブジェクト  
+-   **Command** オブジェクト  
   
--   **Rowset**オブジェクト  
+-   **Rowset** オブジェクト  
   
--   **Error**オブジェクト  
+-   **Error** オブジェクト  
   
 ### <a name="datasource-object-interfaces"></a>DataSource オブジェクト インターフェイス  
  データ ソースに接続するためには、以下のインターフェイスが必要です。  
@@ -60,7 +58,7 @@ ms.locfileid: "63021945"
   
 -   `IDBProperties`  
   
- プロバイダーが **IDBInfo** インターフェイスをサポートしている場合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して、引用符で囲まれた識別子、SQL ステートメントの最大長、テーブル名と列名の最大文字数などの情報を取得します。  
+ プロバイダーが **IDBInfo** インターフェイスをサポートしている場合、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して、引用符で囲まれた識別子の文字、SQL ステートメントの最大長、テーブル名と列名の最大文字数などの情報を取得します。  
   
 ### <a name="session-object-interfaces"></a>Session オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
@@ -90,7 +88,7 @@ ms.locfileid: "63021945"
   
 -   **ICommandWithParameters**  
   
- **IAccessor**は、パラメーターアクセサーを作成するために必要です。 プロバイダーが**IColumnRowset**をサポートし[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ている場合、はそのインターフェイスを使用して、列が id 列であるかどうかを判断します。  
+ **IAccessor** は、パラメーター アクセサーを作成するために必要です。 プロバイダーが**IColumnRowset**をサポートしている場合、は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] そのインターフェイスを使用して、列が id 列であるかどうかを判断します。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
@@ -101,7 +99,7 @@ ms.locfileid: "63021945"
   
 -   **IColumnsInfo**  
   
- アプリケーションは、サブスクリプション データベース内に作成された、レプリケートされるテーブル上の行セットを開く必要があります。 **IColumnsInfo**と**IAccessor**は、行セット内のデータにアクセスするために必要です。  
+ アプリケーションは、サブスクリプション データベース内に作成された、レプリケートされるテーブル上の行セットを開く必要があります。 **IColumnsInfo** と **IAccessor** は、その行セット内のデータにアクセスするために必要です。  
   
 ### <a name="error-object-interfaces"></a>Error オブジェクト インターフェイス  
  エラーの管理には、以下のインターフェイスを使用します。  
@@ -110,12 +108,11 @@ ms.locfileid: "63021945"
   
 -   **IErrorInfo**  
   
- 
-  **ISQLErrorInfo** は、OLE DB プロバイダーが ISQLErrorInfo をサポートしている場合に使用します。  
+ **ISQLErrorInfo** は、OLE DB プロバイダーが ISQLErrorInfo をサポートしている場合に使用します。  
   
  OLE DB プロバイダーの詳細については、OLE DB プロバイダー付属のマニュアルを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

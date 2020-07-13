@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2c3d3e75117996f088cff96b2b7a8d4cd504127
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176902"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure の接続の種類 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は、ホストされているクラウドベースのリレーショナル データベースで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジを利用して構築されています。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]は、テクノロジに基づいて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構築されたクラウドベースのホスト型リレーショナルデータベースです。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の種類のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] データ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]からのデータに接続し、そのデータを取得します。
 
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。
 
@@ -31,9 +31,8 @@ ms.locfileid: "78176902"
 
  このトピックの情報を使用して、データ ソースを構築してください。 詳細な手順については、「[データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;の追加と検証](add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。
 
-##  <a name="Connection"></a> 接続文字列
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続する場合、クラウド内のデータベース オブジェクトに接続します。 オンサイトのデータベースと同様に、ホストされているデータベースには、複数のテーブル、ビュー、およびストアド プロシージャを含むスキーマが複数存在している場合があります。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。
+##  <a name="connection-string"></a><a name="Connection"></a>接続文字列
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続する場合、クラウド内のデータベース オブジェクトに接続します。 オンサイトのデータベースと同様に、ホストされているデータベースには、複数のテーブル、ビュー、およびストアド プロシージャを含むスキーマが複数存在している場合があります。 クエリ デザイナーで、使用するデータベース オブジェクトを指定します。 接続文字列でデータベースを指定しない場合は、管理者によって割り当てられた既定のデータベースに接続されます。
 
  データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 AdventureWorks というホストされているサンプル データベースを指定する接続文字列の例を次に示します。
 
@@ -41,12 +40,11 @@ ms.locfileid: "78176902"
 Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 ```
 
- また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 
-  `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。
+ また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。
 
  詳細および接続文字列の例については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。
 
-##  <a name="Credentials"></a> [資格情報]
+##  <a name="credentials"></a><a name="Credentials"></a>認証
  Windows 認証 (統合セキュリティ) はサポートされていません。 Windows 認証を使用して [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続しようとすると、エラーが発生します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でサポートされているのが SQL Server 認証 (ユーザー名とパスワード) のみであるため、ユーザーは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に接続するたびに資格情報 (ログインとパスワード) を入力する必要があります。
 
  データベースにアクセスするには、十分な資格情報が必要です。 クエリによっては、他の権限 (ストアド プロシージャを実行したり、テーブルやビューにアクセスしたりするために必要な権限) が必要な場合があります。 外部データ ソースの所有者は、十分な資格情報を構成して、ユーザーが必要とするデータベース オブジェクトに対する読み取り専用アクセスを提供する必要があります。
@@ -55,15 +53,14 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
 -   保存されているユーザー名とパスワードを使用する。 レポート データを格納するデータベースがレポート サーバーとは別のサーバーに存在する場合に発生するダブル ホップに対処するには、資格情報を Windows 資格情報として使用するオプションを選択します。 データ ソースに接続した後に、認証されているユーザーの権限を借用するオプションもあります。
 
--   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳しくは、msdn.microsoft.com で [Reporting Services に関するドキュメント](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](https://go.microsoft.com/fwlink/?linkid=121312)」をご覧ください。
+-   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。
 
  詳細については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または「[レポートビルダーで資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。
 
  
 
-##  <a name="Query"></a> クエリ
- クエリでは、レポート データセット用に取得するデータを指定します。 クエリの結果セットの列には、データセットのフィールド コレクションが設定されます。 クエリで複数の結果セットが返された場合にレポートによって処理されるのは、クエリから取得された最初の結果セットだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の間には、サポートされるデータベースのサイズなど、いくつか違いがありますが、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に対するクエリの作成方法と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対するクエリの作成方法はほぼ同じです。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] では、BACKUP などの一部の [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ステートメントがサポートされていませんが、これらはレポート クエリで使用するステートメントではありません。 詳細については、「[SQL Server の接続の種類 (SSRS)](sql-server-connection-type-ssrs.md)」を参照してください。
+##  <a name="queries"></a><a name="Query"></a>問い合わせ
+ クエリでは、レポート データセット用に取得するデータを指定します。 クエリの結果セットの列には、データセットのフィールド コレクションが設定されます。 クエリで複数の結果セットが返された場合にレポートによって処理されるのは、クエリから取得された最初の結果セットだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の間には、サポートされるデータベースのサイズなど、いくつか違いがありますが、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に対するクエリの作成方法と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対するクエリの作成方法はほぼ同じです。 [!INCLUDE[tsql](../../includes/tsql-md.md)] では、BACKUP などの一部の [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ステートメントがサポートされていませんが、これらはレポート クエリで使用するステートメントではありません。 詳細については、「[SQL Server の接続の種類 (SSRS)](sql-server-connection-type-ssrs.md)」を参照してください。
 
  新しいクエリを作成するか、グラフィカル クエリ デザイナーで表示できる既存のクエリを開く場合、既定でリレーショナル クエリ デザイナーを使用できます。 クエリは、次の方法で指定できます。
 
@@ -81,10 +78,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  詳細については、「[リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](relational-query-designer-user-interface-report-builder.md)」および「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](text-based-query-designer-user-interface-report-builder.md)」を参照してください。
 
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語が完全にサポートされています。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [](/sql/t-sql/language-reference)オンライン ブックにある「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Transact-SQL リファレンス (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=141687)」を参照してください。
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語が完全にサポートされています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。
 
-###  <a name="QueryText"></a> Text の種類のクエリの使用
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text の種類のクエリの使用
  テキスト ベースのクエリ デザイナーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを入力して、データセット内のデータを定義します。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリでは、マーケティング アシスタントであるすべての従業員の名前を選択します。
 
 ```
@@ -100,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant' 
 ```
 
- ツール バーの **[実行]** ボタン ( **!** ) をクリックすると、クエリが実行され、結果セットが表示されます。
+ ツール バーの **[実行]** ボタン (**!**) をクリックすると、クエリが実行され、結果セットが表示されます。
 
  このクエリをパラメーター化するには、クエリ パラメーターを追加します。 たとえば、WHERE 句を次の構文に変更します。
 
@@ -112,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-###  <a name="QueryStoredProcedure"></a> StoredProcedure の種類のクエリの使用
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a>クエリ型 StoredProcedure の使用
  データセット クエリのストアド プロシージャは、次のいずれかの方法で指定できます。
 
 -   **[データセットのプロパティ]** ダイアログ ボックスで、 **[ストアド プロシージャ]** オプションを設定します。 ドロップダウン リストからストアド プロシージャまたはテーブル値関数を選択します。
@@ -131,7 +127,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-##  <a name="Parameters"></a> パラメーター
+##  <a name="parameters"></a><a name="Parameters"></a>パラメータ
  入力パラメーターを含むクエリ変数またはストアド プロシージャがクエリ テキストに含まれている場合、対応するデータセットのクエリ パラメーターとレポートのレポート パラメーターが自動的に生成されます。 クエリ テキストには、各クエリ変数の DECLARE ステートメントを含めないでください。
 
  たとえば、次の SQL クエリでは、`EmpID` という名前のレポート パラメーターが作成されます。
@@ -146,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Remarks"></a> 解説
+##  <a name="remarks"></a><a name="Remarks"></a> 解説
 
 ###### <a name="alternate-data-extensions"></a>代替データ拡張機能
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからのデータの取得は、ODBC のデータ ソースの種類を使用して行うこともできます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。
@@ -154,11 +150,11 @@ WHERE EmployeeID = (@EmpID)
  詳細については、「[ODBC 接続の種類 &#40;SSRS&#41;](odbc-connection-type-ssrs.md)」を参照してください。
 
 ###### <a name="platform-and-version-information"></a>プラットフォームおよびバージョン情報
- プラットフォームおよびバージョン サポートの詳細については、[](../create-deploy-and-manage-mobile-and-paginated-reports.md)オンライン ブック[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]にある  ドキュメントの「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services でサポートされるデータ ソース (SSRS)](https://go.microsoft.com/fwlink/?linkid=121312)」を参照してください。
+ プラットフォームおよびバージョン サポートの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ドキュメントの「[Reporting Services でサポートされるデータ ソース (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。
 
 
 
-##  <a name="HowTo"></a> 操作方法に関するトピック
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作方法に関するトピック
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。
 
  [データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;に追加して検証する](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -169,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Related"></a> 関連項目
+##  <a name="related-sections"></a><a name="Related"></a> 関連セクション
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義しカスタマイズし使用する手順が説明されています。
 
  [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)レポートのデータへのアクセスの概要について説明します。
@@ -180,7 +176,7 @@ WHERE EmployeeID = (@EmpID)
 
  [データセットフィールドコレクション &#40;レポートビルダーと SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)クエリによって生成されるデータセットフィールドコレクションに関する情報を提供します。
 
- [Reporting Services によってサポートされるデータソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?linkid=121312)の[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ドキュメントを参照してください。
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。
 各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。
 
 

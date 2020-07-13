@@ -13,14 +13,14 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - C data types [ODBC], buffers
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067414"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305248"
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
 バッファーの C データ型は、アプリケーションによって指定されます。 1つの変数を使用すると、アプリケーションによって変数が割り当てられたときに発生します。 汎用メモリ (つまり、void 型のポインターによって参照されるメモリ) では、アプリケーションがメモリを特定の型にキャストするときに、この処理が行われます。 ドライバーは、次の2つの方法でこの型を検出します。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107531"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301993"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>位置指定の UPDATE および DELETE ステートメントのシミュレート
 データソースが位置指定の update および delete ステートメントをサポートしていない場合、ドライバーはこれらをシミュレートできます。 たとえば、ODBC カーソルライブラリは、位置指定の update および delete ステートメントをシミュレートします。 位置指定の update ステートメントと delete ステートメントをシミュレートするための一般的な方法は、配置されたステートメントを検索対象に変換することです。 この操作を行うには、 **WHERE current OF**句を、現在の行を識別する検索対象の**where**句に置き換えます。  

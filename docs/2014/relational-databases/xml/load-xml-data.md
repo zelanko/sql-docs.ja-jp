@@ -10,15 +10,14 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2150d4b65cdd4da67f495fda251f1913c411053a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63241288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013529"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 次に例を示します。  

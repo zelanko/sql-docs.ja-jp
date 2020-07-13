@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Cursor Library
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1497a7d2ec5951feedb36831ab541413e57152f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f993a08aae1656b8d373911299e75852de855419
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073934"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307823"
 ---
 # <a name="sqlgetfunctions-cursor-library"></a>SQLGetFunctions (カーソル ライブラリ)
 > [!IMPORTANT]  

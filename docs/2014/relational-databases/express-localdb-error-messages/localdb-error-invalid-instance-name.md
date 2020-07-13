@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adbdae062c0c69816cf57a7c7a6d73906fbd8d7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8fcd5cee2e8a9955739e59f18fc02ab1e407e3cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62990476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051130"
 ---
 # <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
     

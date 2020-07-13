@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - IHindextypes system table
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6bb1a749b5bc293c306136f806cd6558b1192688
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890298"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **IHindextypes**システムテーブルには、非 SQL Server パブリッシャーに対してサポートされている非 SQL Server インデックスの種類ごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|サポートされている非 SQL&#xA0;Server インデックスの種類の名前です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

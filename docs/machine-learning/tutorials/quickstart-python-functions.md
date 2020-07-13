@@ -3,24 +3,31 @@ title: クイック スタート:Python 関数
 description: このクイックスタートでは、SQL Server Machine Learning Services で Python の数学関数とユーティリティ関数を使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116345"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606707"
 ---
 # <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services での Python 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、SQL Server Machine Learning Services で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)上の [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
+::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -28,7 +35,7 @@ ms.locfileid: "81116345"
 
   あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用します。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>乱数を生成するストアド プロシージャを作成する
 
@@ -119,4 +126,4 @@ SQL Server で Python を使用して機械学習モデルを作成するには�
 
 SQL Server Machine Learning Services の詳細については、次を参照してください。
 
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../sql-server-machine-learning-services.md)

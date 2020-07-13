@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 35dd2da7f6cf6598918cd9d109b97f3d314556d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d1649582f97e9e08691726745e4ba14b2f8226bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061076"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>タスク 16: マスター データ マネージャーを確認する
   ここでは、マスター データ マネージャーを使用して、SSIS パッケージによって送信されたバッチ ジョブの状態をチェックし、データが MDS サーバーにアップロードされたことを確認します。  
   
-1.  **マスターデータマネージャー** ([http://localhost/MDS](http://localhost/MDS)) を起動します。 既に開いている場合は、上部にある [ **Microsoft SQL Server マスターデータサービス**をクリックして、**ホームページ**に移動します。  
+1.  **マスターデータマネージャー** ( `http://localhost/MDS` ) を起動します。 既に開いている場合は、上部にある [ **Microsoft SQL Server マスターデータサービス**をクリックして、**ホームページ**に移動します。  
   
 2.  [**統合管理**] をクリックします。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "65484688"
   
 6.  MDS にインポートされたデータの SSIS パッケージが表示されます。 データはクレンジングされ、重複する**コード**値はありません (注: Excel の [**仕入**先] 列は、MDS の Supplier エンティティの**code**属性に対応しています)。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 17: SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

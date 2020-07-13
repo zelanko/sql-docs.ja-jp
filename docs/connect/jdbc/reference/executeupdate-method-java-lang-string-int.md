@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 10c248841bae87ba76834dd7bbee17ba38cf6647
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924317"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67954755"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された SQL ステートメントを実行し、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して ](../../../connect/jdbc/reference/sqlserverstatement-class.md) に通知します。  
+  渡された SQL ステートメントを実行し、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。  
   
 ## <a name="syntax"></a>構文  
   

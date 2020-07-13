@@ -22,15 +22,16 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: caa5127a1721d63d86c8f854e630d6b94a81f016
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998554"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
 
   実行コンテキストを、最後の EXECUTE AS ステートメントの呼び出し元に戻します。  
   
@@ -72,7 +73,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- この場合、`REVERT` 内で定義された `usp_myproc` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストは `login1` のままです。  
+ この場合、`usp_myproc` 内で定義された `REVERT` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストは `login1` のままです。  
   
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   
@@ -131,7 +132,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`@cookie` ステートメントの `EXECUTE AS` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(100);  

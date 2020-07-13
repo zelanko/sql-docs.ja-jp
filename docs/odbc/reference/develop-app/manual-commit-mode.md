@@ -15,14 +15,14 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a00ff373e374d0940b3e7259eeb01e26b620cae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036402"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287876"
 ---
 # <a name="manual-commit-mode"></a>手動コミット モード
 *手動コミットモードでは、* アプリケーションは、 **SQLEndTran**を呼び出してコミットまたはロールバックすることにより、トランザクションを明示的に完了する必要があります。 これは、ほとんどのリレーショナルデータベースの通常のトランザクションモードです。  

@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Levels collection [ADO MD], members
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81603a2a8ab558d0f574e08c90992ea68afffc80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ab039aaaf03d3121a46eaa9789b72a89693cc59
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949516"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753268"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "67949516"
 ## <a name="methods"></a>メソッド  
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

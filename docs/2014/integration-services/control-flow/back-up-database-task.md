@@ -15,15 +15,14 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4b6aabb1f44c2a25704b7079074a5600c4d52d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0980d89cc915121414dd7d3c89be6f4d72eb715
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833130"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433999"
 ---
 # <a name="back-up-database-task"></a>データベースのバックアップ タスク
   データベースのバックアップ タスクは、さまざまな種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップを実行します。 詳しくは、「[SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108520"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2 : 接続情報の指定 (Reporting Services)
@@ -27,20 +27,15 @@ ms.locfileid: "66108520"
 1.  **レポートデータ**ペインで、[**新規作成**] をクリックし、[**データソース...**] をクリックします。  
   
     > [!NOTE]  
-    >  
-  **レポート データ** ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
+    >  **レポート データ** ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
   
-2.  
-  **[名前]** に「 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]」と入力します。  
+2.  **[名前]** に「 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]」と入力します。  
   
-3.  
-  **[埋め込み接続]** が選択されていることを確認します。  
+3.  **[埋め込み接続]** が選択されていることを確認します。  
   
-4.  
-  **[種類]** で **[Microsoft SQL Server]** を選択します。  
+4.  **[種類]** で **[Microsoft SQL Server]** を選択します。  
   
-5.  
-  **[接続文字列]** に次を入力します。  
+5.  **[接続文字列]** に次を入力します。  
   
     ```  
     Data source=localhost; initial catalog=AdventureWorks2012  
@@ -49,8 +44,7 @@ ms.locfileid: "66108520"
      この接続文字列は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、レポート サーバー、および [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースがすべてローカル コンピューターにインストールされていることと、ユーザーが [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースにログオンする権限を持っていることが前提となります。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services または名前付きインスタンスを使用している場合は、接続文字列にインスタンス情報を含める必要があります。  
+    >  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services または名前付きインスタンスを使用している場合は、接続文字列にインスタンス情報を含める必要があります。  
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
@@ -61,8 +55,7 @@ ms.locfileid: "66108520"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]データソース[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]が**レポートデータ**ペインに追加されます。  
   
 ## <a name="next-task"></a>次の作業  
- 
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 「[レッスン 3: テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」を参照してください。  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 「[レッスン 3: テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

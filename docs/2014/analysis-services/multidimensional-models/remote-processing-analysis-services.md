@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545772"
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
   あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
@@ -26,22 +25,18 @@ ms.locfileid: "66073213"
   
 -   リモート サーバーでは、 **[このコンピューターへのリモート接続を許可する]** が有効になっている必要があり、処理要求を発行するアカウントは許可されたユーザーとして一覧に表示されている必要があります。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への着信接続を許可するように Windows ファイアウォール ルールを構成する必要があります。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用してリモートの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]インスタンスに接続できることを確認します。 「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への着信接続を許可するように Windows ファイアウォール ルールを構成する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用してリモートの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]インスタンスに接続できることを確認します。 「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
   
 -   リモート処理を試みる前に、既存のローカル処理エラーを解決します。 処理要求がローカルの場合、外部リレーショナル データ ソースからデータを正常に取得できることを確認します。 データの取得に使用する資格情報を指定する手順については、「[権限借用オプションの設定 &#40;SSAS - 多次元&#41;](set-impersonation-options-ssas-multidimensional.md)」をご覧ください。  
   
 ## <a name="on-demand-remote-processing"></a>オンデマンドのリモート処理  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザー アカウントまたはアプリケーション アカウントからの処理要求を受け入れます。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザー アカウントまたはアプリケーション アカウントからの処理要求を受け入れます。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
   
 1.  処理のスケジュールを設定する際に使用するコンピューターで、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動し、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
   
 2.  データベースを右クリックして **[処理]** を選択し、 **[スクリプト]** をポイントして **[スクリプト操作を新規クエリ ウィンドウに保存]** を選択します。 処理の呼び出しに使用するコマンドがクエリ ウィンドウに表示されます。  
   
-3.  
-  **[OK]** をクリックして、処理を開始します。  
+3.  **[OK]** をクリックして、処理を開始します。  
   
      このタスクが正常に完了すると、スケジュールされたジョブに組み込むことができる XMLA クエリが提供されます。 また、接続の問題が発生していないことも確認されます。  
   
@@ -54,26 +49,23 @@ ms.locfileid: "66073213"
   
 -   [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)  
   
--   **Sysadmin**アクセス許可を付与できない場合は、 [SQL Server エージェントコンポーネント](../../ssms/agent/sql-server-agent.md#Components)によって代替の固定サーバーロールが提案されます。  
+-   [sysadmin](../../ssms/agent/sql-server-agent.md#Components) 権限を付与することができない場合、 **SQL Server エージェントのコンポーネント** は代替の固定サーバー ロールを提示します。  
   
  アカウントの権限を構成したら、以下の手順を続行します。  
   
 #### <a name="grant-the-sql-server-agent-account-administrator-permission-on-ssas"></a>SSAS に対する管理者権限を SQL Server エージェント アカウントに付与する  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
   
 2.  サーバー名を右クリックして **[プロパティ]** をクリックし、 **[セキュリティ]** をクリックします。  
   
-3.  
-  **[追加]** をクリックして、SQL Server エージェント アカウントを追加します。  
+3.  **[追加]** をクリックして、SQL Server エージェント アカウントを追加します。  
   
 #### <a name="create-the-job"></a>ジョブの作成  
   
 1.  Management Studio で、ローカルのデータベース エンジン インスタンスに接続します。 SQL Server エージェントは、オブジェクト エクスプローラー内の最後のアイテムです。 必要に応じて、サービスを開始します。  
   
-2.  
-  **[ジョブ]** を右クリックして **[新しいジョブ]** をクリックし、名前を入力します。  
+2.  **[ジョブ]** を右クリックして **[新しいジョブ]** をクリックし、名前を入力します。  
   
 3.  [ステップ] で **[新規作成]** をクリックし、名前を入力します。  
   
@@ -81,19 +73,17 @@ ms.locfileid: "66073213"
   
 5.  [サーバー] で、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を入力します。  
   
-6.  [コマンド] でデータベースを処理する XMLA コマンドを貼り付けます。 これは、オンデマンドのリモート処理の検証手順で生成した XMLA スクリプトです。 
-  **[OK]** をクリックしてジョブを保存します。  
+6.  [コマンド] でデータベースを処理する XMLA コマンドを貼り付けます。 これは、オンデマンドのリモート処理の検証手順で生成した XMLA スクリプトです。 **[OK]** をクリックしてジョブを保存します。  
   
 #### <a name="start-sql-server-profiler"></a>SQL Server Profiler の起動  
   
-1.  リモート コンピューターで SQL Server Profiler を起動します。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続し、 **[実行]** をクリックして、既定のイベントを使用してトレースを開始します。  
+1.  リモート コンピューターで SQL Server Profiler を起動します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続し、 **[実行]** をクリックして、既定のイベントを使用してトレースを開始します。  
   
      SQL Server Profiler を使用して、発生した処理イベントを監視します。  
   
 2.  必要に応じて、データベース内のファイルまたはテーブルにトレースを送信するようにトレースのプロパティを設定することもできます。  
   
-#### <a name="run-the-job"></a>ジョブを実行する  
+#### <a name="run-the-job"></a>ジョブの実行  
   
 1.  ジョブの実行に使用するコンピューターで、ジョブが基本操作を実行できることを確認します。 オブジェクト エクスプローラーで、SQL Server エージェントの下の **[ジョブ]** を展開し、作成したジョブを右クリックして **[ステップでジョブを開始]** をクリックします。 ジョブがすぐに開始されます。 SQL Server Profiler で進行状況を監視できます。  
   
@@ -104,6 +94,6 @@ ms.locfileid: "66073213"
  [SQL Server エージェントで SSAS 管理タスクのスケジュールを設定する](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
- [XMLA&#41;&#40;のオブジェクトの処理](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [オブジェクトの処理 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

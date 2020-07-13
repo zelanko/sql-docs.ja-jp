@@ -2,9 +2,8 @@
 title: 可用性グループのフェールオーバーの強化
 description: Always On 可用性グループ内のデータベースがトランザクションを書き込むことができなくなった場合にフェールオーバーをトリガーする、拡張データベース フェールオーバーを有効にする手順です。
 ms.custom: seodec18
-ms.date: 09/25/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: mikeray
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
 author: MashaMSFT
+ms.reviewer: mikeray
 ms.author: mathoma
-ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822247"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894434"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースの拡張データベース フェールオーバーの有効化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 および 2014 で、プライマリ レプリカ上の可用性グループに参加しているデータベースがトランザクションを記述できなくなった場合、レプリカが同期され、自動的にフェールオーバーされるよう構成されている場合でも、フェールオーバーはトリガーされません。
 

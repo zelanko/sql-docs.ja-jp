@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718600"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters データ生成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 リリースされたバージョンの WideWorldImporters および WideWorldImportersDW データベースには、2013年1月1日から、データベースが生成された日までのデータが含まれています。
 
 これらのサンプルデータベースを使用する場合は、より新しいサンプルデータを含めることをお勧めします。
@@ -41,7 +41,7 @@ ms.locfileid: "79112315"
 
     このステートメントは、現在の日付までのサンプルの売上および購入データをデータベースに追加します。 日単位のデータ生成の進行状況が表示されます。 データの生成には、データを必要とする年ごとに約10分かかることがあります。 データ生成にはランダムな要因があるため、実行の間に生成されるデータにはいくつかの違いがあります。
 
-    1日あたりの注文に対して生成されるデータの量を増減するには、 `@AverageNumberOfCustomerOrdersPerDay`パラメーターの値を変更します。 パラメーター `@SaturdayPercentageOfNormalWorkDay`と`@SundayPercentageOfNormalWorkDay`を使用して、週末の日付の注文量を決定します。
+    1日あたりの注文に対して生成されるデータの量を増減するには、パラメーターの値を変更し `@AverageNumberOfCustomerOrdersPerDay` ます。 パラメーターとを使用して、 `@SaturdayPercentageOfNormalWorkDay` `@SundayPercentageOfNormalWorkDay` 週末の日付の注文量を決定します。
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW で生成されたデータをインポートする
 
@@ -63,7 +63,7 @@ WideWorldImportersDW は、パフォーマンステストのためにデータ�
 
 課題の1つとして、ダウンロードのサイズを小さくして、簡単にダウンロードできるようにすることができます。ただし、SQL Server のパフォーマンス機能を示すのに十分な大きさです。 たとえば、列ストアインデックスの大きな利点は、大量の行を処理する場合にのみ実現されます。 
 
-この`Application.Configuration_PopulateLargeSaleTable`プロシージャを使用すると、 `Fact.Sale`テーブル内の行の数を増やすことができます。 2013年1月1日からの既存のワールドワイドインポーターデータとの衝突を避けるために、行は2012暦年に挿入されます。
+このプロシージャを使用すると、 `Application.Configuration_PopulateLargeSaleTable` テーブル内の行の数を増やすことができ `Fact.Sale` ます。 2013年1月1日からの既存のワールドワイドインポーターデータとの衝突を避けるために、行は2012暦年に挿入されます。
 
 ### <a name="procedure-details"></a>プロシージャの詳細
 
@@ -77,6 +77,6 @@ WideWorldImportersDW は、パフォーマンステストのためにデータ�
 
 #### <a name="result"></a>結果
 
-必要な数の行が、2012年の`Fact.Sale`テーブルに挿入されます。 この手順では、行数が1日あたり5万に人為的に制限されます。 この制限を変更することはできますが、この制限は、テーブルの偶発的な overinflations を回避するのに役立ちます。
+必要な数の行が、2012年のテーブルに挿入され `Fact.Sale` ます。 この手順では、行数が1日あたり5万に人為的に制限されます。 この制限を変更することはできますが、この制限は、テーブルの偶発的な overinflations を回避するのに役立ちます。
 
 また、クラスター化列ストアインデックスがまだ適用されていない場合は、この手順も適用されます。

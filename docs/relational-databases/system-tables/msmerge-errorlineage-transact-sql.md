@@ -15,28 +15,28 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6502c32f47668cbd2ce78ec91296ce61767a95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889805"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_errorlineage**テーブルには、サブスクライバーで削除された行が含まれていますが、その削除はパブリッシャーに反映されていません。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|マージレプリケーション用にパブリッシュされたテーブルに割り当てられた整数値。 **Sysmergearticles**テーブルの [ニックネーム] フィールドに対応します。|  
-|**rowguid**|**UNIQUEIDENTIFIER**|行識別子。|  
+|**rowguid**|**uniqueidentifier**|行識別子。|  
 |**継承**|**varbinary (501)**|行の更新を行ったサブスクライバーとパブリッシャーの履歴リストを格納します。 競合の状況を検出して解決するために使用されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

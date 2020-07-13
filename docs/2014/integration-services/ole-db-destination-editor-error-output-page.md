@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86da6b855756fa6aca7d8423623638615eb7a981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66057122"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424129"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
-  
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  OLE DB 変換先の詳細については、「 [OLE DB Destination](data-flow/ole-db-destination.md)」を参照してください。  
@@ -32,15 +30,15 @@ ms.locfileid: "66057122"
  入力の名前を表示します。  
   
  **列**  
- 使用されません。  
+ 使用されていません。  
   
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
- 使用されません。  
+ 使用されていません。  
   
  **説明**  
  操作の説明を表示します。  
@@ -48,10 +46,10 @@ ms.locfileid: "66057122"
  **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルに対して障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **[適用]**  
+ 適用****  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [OLE DB 変換先エディター &#40;マッピング] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   

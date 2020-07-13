@@ -12,17 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
-ms.sourcegitcommit: df21fd156cc833f107d22413c76991b67f3715c8
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80216502"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052722"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   スケールアウト計算用に PolyBase グループから SQL Server インスタンスを削除します。 
  
@@ -44,7 +43,7 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  コンピューティングノードはグループからのみ削除できます。  
   
  ストアドプロシージャを実行した後、コンピューターで PolyBase エンジンと PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
@@ -58,6 +57,6 @@ EXEC sp_polybase_leave_group ;
   
 ## <a name="see-also"></a>参照  
  [PolyBase を使ってみる](../../relational-databases/polybase/get-started-with-polybase.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

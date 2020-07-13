@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925335"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758268"
 ---
 # <a name="filtering-for-updated-records"></a>更新されたレコードのフィルター処理
 UpdateBatch を呼び出す前に、レコードセットフィルタープロパティを使用して、レコードセットが開かれた後、または UpdateBatch を最後に呼び出した後に変更されたレコードのみを表示することができます。 これを行うには、次のセクションのコード例に示すように、フィルターを adFilterPendingRecords に設定して、更新するレコードの数を決定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この例では、以前の UpdateBatch の例を拡張します。この例では、UpdateBatch を呼び出す直前にレコードセットをフィルター処理して、レコードが変更されるユーザーを表示し、ユーザーが更新をキャンセルできるようにします (CancelBatch メソッドを使用)。  
   
 ```  

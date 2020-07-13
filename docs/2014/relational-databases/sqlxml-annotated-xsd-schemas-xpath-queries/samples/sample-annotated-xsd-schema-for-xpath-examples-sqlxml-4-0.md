@@ -11,15 +11,14 @@ helpviewer_keywords:
 - annotated XSD schemas, samples
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe8b6dbeb50d289a1774d78bf4d2b214711b24c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015090"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath の例で使用する注釈付き XSD スキーマのサンプル (SQLXML 4.0)
   ここで説明するサンプル XPath クエリは、マッピング スキーマを参照します。 マッピング スキーマは注釈付き XML スキーマ (XSD) ファイルです。 スキーマのマッピングの詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。  

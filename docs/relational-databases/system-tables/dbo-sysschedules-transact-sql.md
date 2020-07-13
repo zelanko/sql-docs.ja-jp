@@ -1,5 +1,5 @@
 ---
-title: dbo. sysschedules (Transact-sql) |Microsoft Docs
+title: dbo.sysのスケジュール (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79090577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890389"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブスケジュールの ID。|  
 |**schedule_uid**|**uniqueidentifier**|ジョブスケジュールの一意識別子。 この値は、分散ジョブのスケジュールを識別するために使用されます。|  
@@ -45,7 +44,7 @@ ms.locfileid: "79090577"
 |**freq_interval**|**int**|ジョブが実行された日。 **Freq_type**の値によって異なります。 既定値は**0**で、 **freq_interval**が使用されていないことを示します。 有効な値とその影響については、次の表を参照してください。|  
 |**freq_subday_type**|**int**|**Freq_subday_interval**の単位です。 使用可能な値とその説明を次に示します。<br /><br /> <br /><br /> **1** : 指定した時間に実行されます。<br /><br /> **2** : 秒<br /><br /> **4** : 分<br /><br /> **8** : 時間|  
 |**freq_subday_interval**|**int**|ジョブの各実行間に発生する**freq_subday_type**期間の数。|  
-|**freq_relative_interval**|**int**|各月に**freq_interval**が発生した場合、 **freq_type**が**32** (月単位) になります。 次のいずれかの値を指定できます。<br /><br /> **0** = **freq_relative_interval**使用されていません<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
+|**freq_relative_interval**|**int**|各月に**freq_interval**が発生した場合、 **freq_type**が**32** (月単位) になります。 次の値のいずれかです。<br /><br /> **0**  = **freq_relative_interval**が使用されていません<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
 |**freq_recurrence_**<br /><br /> **段階**|**int**|ジョブのスケジュールされた実行の間隔を週または月単位で指定します。 **freq_recurrence_factor**は**freq_type**が**8**、 **16**、または**32**の場合にのみ使用されます。 この列に**0**が含まれている場合、 **freq_recurrence_factor**は使用されません。|  
 |**active_start_date**|**int**|ジョブの実行を開始できる日付。 日付の形式は YYYYMMDD です。 NULL は今日の日付を示します。|  
 |**active_end_date**|**int**|ジョブの実行を停止できる日付。 日付の形式は YYYYMMDD です。|  
@@ -66,6 +65,6 @@ ms.locfileid: "79090577"
 |**128** (コンピューターがアイドル状態のときに実行されます)|**freq_interval**が使用されていません (**0**)|  
   
 ## <a name="see-also"></a>関連項目  
- [&#40;Transact-sql&#41;の dbo の sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

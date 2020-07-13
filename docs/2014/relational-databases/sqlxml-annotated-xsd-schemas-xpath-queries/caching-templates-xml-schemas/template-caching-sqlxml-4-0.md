@@ -11,15 +11,14 @@ helpviewer_keywords:
 - cache [SQLXML]
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a9e3025046dbb301ad192b02657db5e288cdaf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015812"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
   テンプレートをキャッシュすると、パフォーマンスが大幅に向上します。 テンプレートのキャッシュを設定している場合、テンプレートは初回実行時にメモリに残るので、 以降のテンプレート実行でパフォーマンスが向上します。  

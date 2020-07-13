@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002241"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282519"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>相互運用可能な SQL ステートメントの構築
 前のセクションで説明したように、相互運用可能なアプリケーションでは ODBC SQL 文法を使用する必要があります。 ただし、この文法を使用する場合を除き、相互運用可能なアプリケーションでは多くの追加の問題が発生します。 たとえば、外部結合など、すべてのデータソースでサポートされていない機能を使用する場合、アプリケーションはどうなりますか。  

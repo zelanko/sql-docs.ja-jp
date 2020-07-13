@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401568"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85977852"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 テンポラル テーブルがシステム バージョン管理されているとき、履歴データによりデータベースのサイズが通常のテーブルより増えることがあります。特に、次の条件下で当てはまります。
 
@@ -258,7 +258,7 @@ BEGIN TRANSACTION
             DATA_COMPRESSION = PAGE
         )
 /*(2) Create index on the same filegroups as the partition that will be switched out*/
-    CREATE CLUSTERED INDEX [ox_staging_DepartmentHistory_September_2015]
+    CREATE CLUSTERED INDEX [ix_staging_DepartmentHistory_September_2015]
         ON [dbo].[staging_DepartmentHistory_September_2015]
         (
             [SysEndTime] ASC

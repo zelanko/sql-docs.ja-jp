@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882357"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング:可用性グループ接続の超過 RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   非同期コミット セカンダリ レプリカへの可用性グループの強制手動フェールオーバーを実行した後に、データ損失が回復ポイントの目標 (RPO) を超えていることが判明する場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して非同期コミット セカンダリ レプリカの予想されるデータ損失を計算したときに RTO を超過していることが判明します。  
   
  同期コミット セカンダリ レプリカは、データ損失がないことを保証しますが、非同期コミット セカンダリ レプリカのデータ損失の可能性は、セカンダリ レプリカ上で書き込まれるのを待機しているログの量に依存します。  

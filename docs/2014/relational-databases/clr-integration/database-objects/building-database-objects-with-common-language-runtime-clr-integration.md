@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dd5717b545913bd9e5ee98debe670a1af616fc61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62919253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953609"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合によるデータベース オブジェクトの構築
-  "CLR ルーチン" と呼ばれる[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用してデータベースオブジェクトを構築できます。 CLR ルーチンには、次のものがあります。  
+  [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)]"CLR ルーチン" と呼ばれるを使用してデータベースオブジェクトを構築でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 CLR ルーチンには、次のものがあります。  
   
 -   スカラー UDF (ユーザー定義スカラー値関数)  
   
@@ -37,17 +36,15 @@ ms.locfileid: "62919253"
   
  CLR ルーチンは、マネージド コード内ではそれぞれ同じ構造になります。 CLR ルーチンは、クラスの public static ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET では shared) メソッドにマップされます。 ルーチン以外に、.NET Framework を使用して UDT (ユーザー定義型) やユーザー定義集計関数を定義することもできます。 UDT とユーザー定義集計は、.NET Framework クラス全体にマップされます。  
   
- .NET Framework ルーチンの各型には[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] 、同等[!INCLUDE[tsql](../../../includes/tsql-md.md)]のを使用できるがあります。 たとえば、スカラー UDF は任意のスカラー式で使用できます。 また、TVF は任意の FROM 句で使用できます。 プロシージャは、EXEC ステートメントやクライアント アプリケーションから呼び出すことができます。  
+ .NET Framework ルーチンの各型には、同等のを使用できるがあり [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。 たとえば、スカラー UDF は任意のスカラー式で使用できます。 また、TVF は任意の FROM 句で使用できます。 プロシージャは、EXEC ステートメントやクライアント アプリケーションから呼び出すことができます。  
   
 > [!NOTE]  
->  効果的であるとクエリ オプティマイザーで判断された場合は、共通言語ランタイムでの CLR オブジェクト (ユーザー定義関数、ユーザー定義型、またはトリガー) の実行を複数のスレッドで行うことができます (並列プラン)。 ただし、ユーザー定義関数がデータにアクセスする場合は、直列プランで実行されます。 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] よりも前のサーバー バージョンで実行したときに、ユーザー定義関数に LOB パラメーターが含まれていたり、ユーザー定義関数から値が返される場合も、直列プランで実行する必要があります。  
+>  効果的であるとクエリ オプティマイザーで判断された場合は、共通言語ランタイムでの CLR オブジェクト (ユーザー定義関数、ユーザー定義型、またはトリガー) の実行を複数のスレッドで行うことができます (並列プラン)。 ただし、ユーザー定義関数がデータにアクセスする場合は、直列プランで実行されます。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] よりも前のサーバー バージョンで実行したときに、ユーザー定義関数に LOB パラメーターが含まれていたり、ユーザー定義関数から値が返される場合も、直列プランで実行する必要があります。  
   
  次の表に、このセクションで説明するトピックの一覧を示します。  
   
  [CLR 統合の概要](getting-started-with-clr-integration.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR との統合を使用したオブジェクトのコンパイルに必要なライブラリと名前空間の概要について説明します。 また、例として "Hello World" CLR ストアド プロシージャを紹介します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR との統合を使用したオブジェクトのコンパイルに必要なライブラリと名前空間の概要について説明します。 また、例として "Hello World" CLR ストアド プロシージャを紹介します。  
   
  [サポートされている .NET Framework ライブラリ](supported-net-framework-libraries.md)  
  CLR 統合でサポートされる .NET Framework ライブラリに関する情報を提供します。  
@@ -56,8 +53,7 @@ ms.locfileid: "62919253"
  CLR 統合プログラミング モデルの制限事項に関する情報を提供します。  
   
  [.NET Framework での SQL Server データ型](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と、.NET Framework での同等のデータ型の概要について説明します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と、.NET Framework での同等のデータ型の概要について説明します。  
   
  [CLR 統合のカスタム属性の概要](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  CLR 統合のカスタム属性に関する情報を提供します。  
@@ -66,13 +62,13 @@ ms.locfileid: "62919253"
  テーブル値関数、スカラー関数、ユーザー定義集計関数など、さまざまな種類の CLR 関数の実装方法と使用方法について説明します。  
   
  [CLR ユーザー定義型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
- CLR ユーザー定義型の実装方法と使用方法について説明します。  
+ CLR のユーザー定義型を実装して使用する方法について説明します。  
   
  [CLR ストアド プロシージャ](../../../database-engine/dev-guide/clr-stored-procedures.md)  
- CLR ストアド プロシージャの実装方法と使用方法について説明します。  
+ CLR のストアド プロシージャを実装して使用する方法について説明します。  
   
  [CLR トリガー](../../../database-engine/dev-guide/clr-triggers.md)  
- CLR トリガーの実装方法と使用方法について説明します。  
+ CLR のトリガーを実装して使用する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
  [CLR&#41; 統合の概要 &#40;共通言語ランタイム](../common-language-runtime-integration-overview.md)  

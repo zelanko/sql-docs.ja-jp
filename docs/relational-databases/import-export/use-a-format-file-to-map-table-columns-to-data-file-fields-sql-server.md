@@ -1,5 +1,6 @@
 ---
 title: フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング
+description: SQL Server では、XML 以外のフォーマット ファイルと XML フォーマット ファイルに、テーブル列とは異なる順序にフィールドを並べ替えたデータ ファイルを格納できます。
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056339"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529232"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "74056339"
 |[テスト条件の例](#etc)<br />&emsp;&#9679;&emsp;[サンプル テーブル](#sample_table)<br />&emsp;&#9679;&emsp;[サンプル データ ファイル](#sample_data_file)<br />[フォーマット ファイルの作成](#create_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの作成](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 以外のフォーマット ファイルの変更](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの作成](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML フォーマット ファイルの変更](#modify_xml_format_file)<br />[フォーマット ファイルを使用してデータをインポートして、テーブル列をデータ ファイル フィールドにマッピングする](#import_data)<br />&emsp;&#9679;&emsp;[bcp と XML 以外のフォーマット ファイルの使用](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp と XML フォーマット ファイルの使用](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML 以外のフォーマット ファイルの使用](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT と XML フォーマット ファイルの使用](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML 以外のフォーマット ファイルの使用](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) と XML フォーマット ファイルの使用](#openrowset_xml)|
 
 > [!NOTE]  
->  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、 [bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
+>  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、[bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
 
 ## <a name="example-test-conditions"></a>テスト条件の例<a name="etc"></a>  
 このトピックの変更するフォーマット ファイルの例は、以下に定義されたテーブルとデータ ファイルに基づいています。
@@ -84,20 +85,20 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **変更後**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 変更されたフォーマット ファイルは次のように反映されます。
@@ -115,7 +116,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 用語については、「 [XML フォーマット ファイルのスキーマ構文](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 」を参照してください。  メモ帳で `D:\BCP\myRemap.xml` を開き、次のように変更します。
 1. フォーマット ファイルで \<FIELD> 要素が宣言される順序は、データ ファイルでフィールドが表示される順序と同じです。したがって、ID 属性 2 と 3 を使用して \<FIELD> 要素の順序を逆にします。
 2. \<FIELD> ID 属性値が順番になっていることを確認します。
-3. \<ROW> 要素内の \<COLUMN> 要素の順序により、一括操作で返される順序が決定されます。  XML フォーマット ファイルでは、一括インポート操作の対象になるテーブルの列とのリレーションシップがない各 \<COLUMN> 要素にローカル名が割り当てられます。  \<COLUMN> 要素の順序は、\<RECORD> 定義の \<FIELD> 要素の順序とは関係ありません。  各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  このため、\<COLUMN> SOURCE の値は、リビジョンを必要とする属性のみとなります。  順序を反転 \<COLUMN> SOURCE 属性 2 および 3 の順番を逆にします。
+3. \<ROW> 要素内の \<COLUMN> 要素の順序により、一括操作でそれらがターゲットに送信される順序が決まります。  XML フォーマット ファイルでは、一括インポート操作の対象になるテーブルの列とのリレーションシップがない各 \<COLUMN> 要素にローカル名が割り当てられます。  \<COLUMN> 要素の順序は、\<RECORD> 定義の \<FIELD> 要素の順序とは関係ありません。  各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  このため、\<COLUMN> SOURCE の値は、リビジョンを必要とする属性のみとなります。  順序を反転 \<COLUMN> SOURCE 属性 2 および 3 の順番を逆にします。
 
 変更内容を比較します。  
 **変更前**

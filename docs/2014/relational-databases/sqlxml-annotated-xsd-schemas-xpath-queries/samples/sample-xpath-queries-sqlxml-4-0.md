@@ -13,15 +13,14 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 96cc8bb406af4ce18eed8f078296fa1dcf69299e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014995"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath クエリの例 (SQLXML 4.0)
   ここでは、SQLXML 4.0 の XPath クエリの例を挙げます。 わかりやすくするため、サンプルの XPath クエリはテンプレート内に指定しています。このテンプレートは ADO を使用して実行します。 これには、マッピング スキーマ ファイルを使用する必要がありますが、このファイルもここで SampleSchema1.xml として提供します。 このファイルは、テンプレートと同じディレクトリに保存してください。  

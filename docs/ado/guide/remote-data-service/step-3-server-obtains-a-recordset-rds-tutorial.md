@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bd510ae09bf4c4d3cdc684925823381e40235c4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922082"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764673"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>手順 3: サーバーがレコード セットを取得する (RDS チュートリアル)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>手順 3:サーバーがレコード セットを取得する (RDS チュートリアル)
 サーバープログラムは、接続文字列とコマンドテキストを使用して、目的の行のデータソースを照会します。 ADO は通常、この**レコードセット**を取得するために使用されますが、その他の Microsoft データアクセスインターフェイス (OLE DB など) を使用することもできます。  
   
 > [!IMPORTANT]

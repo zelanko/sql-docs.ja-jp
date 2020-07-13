@@ -1,5 +1,6 @@
 ---
 title: トランザクション ログをバックアップする | Microsoft Docs
+description: この記事では、SQL Server Management Studio、Transact-SQL、または PowerShell を使用して、SQL Server のトランザクション ログをバックアップする方法について説明します。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719966"
 ---
 # <a name="back-up-a-transaction-log"></a>トランザクション ログをバックアップする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、トランザクション ログをバックアップする方法について説明します。  
 
 ## <a name="before-you-begin"></a>はじめに
@@ -168,7 +169,7 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
   
 - [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

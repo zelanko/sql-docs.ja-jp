@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931477"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754007"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount プロパティ (ADO)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67931477"
 
 **レコードセット**内のレコードの数を示す**Long 型**の値を返します。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 レコード**セット**オブジェクト内のレコードの数を調べるには、 **RecordCount**プロパティを使用します。 ADO がレコードの数を特定できない場合、またはプロバイダーまたはカーソルの種類が**RecordCount**をサポートしていない場合、プロパティは-1 を返します。 閉じた**レコードセット**の**RecordCount**プロパティを読み取ると、エラーが発生します。
 

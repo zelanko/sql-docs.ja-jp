@@ -1,5 +1,5 @@
 ---
-title: エスケープシーケンス |Microsoft Docs
+title: エスケープ シーケンス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - escape sequences [ODBC], determining if supported
 - interoperability of SQL statements [ODBC], escape sequences
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001373"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298712"
 ---
 # <a name="escape-sequences"></a>エスケープ シーケンス
 ODBC では、日付、時刻、タイムスタンプ、および日時間隔リテラルの標準文法、スカラー関数呼び出し (**述語エスケープ**文字、外部結合、プロシージャ呼び出しなど) を含むエスケープシーケンスが定義されています。 相互運用可能なアプリケーションでは、可能な限りこれらのシーケンスを使用する必要があります。  

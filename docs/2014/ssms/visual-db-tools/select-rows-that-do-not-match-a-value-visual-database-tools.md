@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 412ec93cbfedc87e92da9e86c7e4c7455919722a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058059"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>値の一致しない行を選択する方法 (Visual Database Tools)
   値の一致しない行を検索するには、NOT 演算子を使用します。  
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>値の一致しない行を検索するには  
   
-1.  検索条件内で使用する列または式をまだ作成していない場合は、[抽出条件ペイン](visual-database-tools.md)に追加します。  
+1.  検索条件で使用する列または式を追加していない場合は、列または式を [抽出条件ペイン](visual-database-tools.md)に追加します。  
   
 2.  検索するデータ列または式を含む行を見つけ、 **[フィルター]** グリッド列に NOT 演算子とそれに続く検索値を入力します。  
   

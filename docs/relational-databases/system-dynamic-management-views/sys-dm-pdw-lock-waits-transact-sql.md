@@ -12,32 +12,32 @@ ms.assetid: 8ef966f8-d14e-40d3-9626-3508ada9b8fb
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a82daa2857177200bd76b738f92d65f6b26668
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 14ce0e2aa5b99878ccf9a704defe6ed305ec04a2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899373"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197059"
 ---
 # <a name="sysdm_pdw_lock_waits-transact-sql"></a>dm_pdw_lock_waits (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   ロックを待機している要求に関する情報を保持します。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|待機リスト内の要求の位置。|0から始まる序数。 これは、すべての待機エントリで一意ではありません。|  
-|session_id|**nvarchar (32)**|待機状態が発生したセッションの ID。|『 [Transact-sql&#41;&#40;dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)の session_id を参照してください。|  
-|型|**nvarchar(255)**|このエントリが表す待機の種類。|指定できる値<br /><br /> 共有<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> 排他的|  
+|session_id|**nvarchar(32)**|待機状態が発生したセッションの ID。|『 [Transact-sql&#41;&#40;dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)の session_id を参照してください。|  
+|型|**nvarchar(255)**|このエントリが表す待機の種類。|指定できる値<br /><br /> Shared<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> 排他的|  
 |object_type|**nvarchar(255)**|待機の影響を受けるオブジェクトの種類。|指定できる値<br /><br /> OBJECT<br /><br /> DATABASE<br /><br /> SYSTEM<br /><br /> SCHEMA<br /><br /> APPLICATION|  
 |object_name|**nvarchar (386)**|待機の影響を受けた、指定したオブジェクトの名前または GUID。|テーブルとビューは、3つの部分で構成される名前で表示されます。<br /><br /> インデックスと統計情報は、4つの部分で構成される名前で表示されます。<br /><br /> 名前、プリンシパル、およびデータベースは、文字列名です。|  
-|request_id|**nvarchar (32)**|待機状態が発生した要求の ID。|要求の ID。<br /><br /> これは、読み込み要求の GUID です。|  
-|request_time|**DATETIME**|ロックまたはリソースが要求された時刻。||  
-|acquire_time|**DATETIME**|ロックまたはリソースが取得された時刻。||  
-|state|**nvarchar(50)**|待機状態の状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|request_id|**nvarchar(32)**|待機状態が発生した要求の ID。|要求の ID。<br /><br /> これは、読み込み要求の GUID です。|  
+|request_time|**datetime**|ロックまたはリソースが要求された時刻。||  
+|acquire_time|**datetime**|ロックまたはリソースが取得された時刻。||  
+|state|**nvarchar (50)**|待機状態の状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|待機中の項目の優先順位。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

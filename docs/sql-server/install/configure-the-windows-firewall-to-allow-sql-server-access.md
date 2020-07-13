@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253473"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528876"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "75253473"
 |専用管理者接続|TCP ポート 1434 (既定のインスタンスに使用)。 その他のポートは名前付きインスタンスに使用されます。 ポート番号については、エラー ログを確認してください。|既定では、専用管理者接続 (DAC) へのリモート接続は有効になっていません。 リモート DAC を有効にするには、セキュリティ構成ファセットを使用します。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス|UDP ポート 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、名前付きインスタンスへの着信接続をリッスンし、その名前付きインスタンスに対応する TCP ポート番号をクライアントに提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスが使用されている場合は、通常 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser サービスを開始します。 名前付きインスタンスの特定のポートに接続するようにクライアントが構成されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを開始する必要はありません。|  
 |HTTP エンドポイントを持つインスタンス|HTTP エンドポイントの作成時に指定できます。 既定の TCP ポートは、CLEAR_PORT トラフィックでは 80、SSL_PORT トラフィックでは 443 です。|URL を使用した HTTP 接続に使用されます。|  
-|HTTPS エンドポイントを持つ既定のインスタンス |TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。|  
+|HTTPS エンドポイントを持つ既定のインスタンス |TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用する HTTP 接続です。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP ポート 4022。 使用されるポートを確認するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]の既定のポートはありませんが、これがオンライン ブックの例で使用される通常の構成です。|  
 |データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリングに既定のポートはありませんが、オンライン ブックの例では、TCP ポート 5022 または 7022 を使用しています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることが重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。|  
 |レプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
@@ -155,7 +155,7 @@ ms.locfileid: "75253473"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP ポート 2383 (既定のインスタンスに使用)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスに使用される標準ポートです。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス|TCP ポート 2382 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の名前付きインスタンスにのみ必要)|ポート番号を指定せずに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の名前付きインスタンスに対してクライアントが接続要求を行うと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser がリッスンするポート 2382 が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、名前付きインスタンスが使用するポートに要求をリダイレクトします。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] IIS/HTTP 経由で使用するように構成された<br /><br /> (PivotTable® サービスでは HTTP または HTTPS が使用されます)|TCP ポート 80|URL を使用した HTTP 接続に使用されます。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] IIS/HTTPS 経由で使用するように構成された<br /><br /> (PivotTable® サービスでは HTTP または HTTPS が使用されます)|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] IIS/HTTPS 経由で使用するように構成された<br /><br /> (PivotTable® サービスでは HTTP または HTTPS が使用されます)|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、TLS を使用する HTTP 接続です。|  
   
  ユーザーが IIS やインターネットを経由して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にアクセスする場合は、IIS がリッスンするポートを開き、クライアントの接続文字列にそのポートを指定する必要があります。 この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に直接アクセスするためのポートを開く必要はありません。 必要のない他のすべてのポートと共に、既定のポート 2389 およびポート 2382 を制限する必要があります。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "75253473"
 |機能|Port|説明|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービス|TCP ポート 80|URL を使用した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] への HTTP 接続に使用されます。 **[World Wide Web サービス (HTTP)]** のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTPS 経由で使用するように構成された|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。 **[セキュア World Wide Web サービス (HTTPS)]** のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTPS 経由で使用するように構成された|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、TLS を使用する HTTP 接続です。 **[セキュア World Wide Web サービス (HTTPS)]** のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
   
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、そのサービス用の適切なポートを開く必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   

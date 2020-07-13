@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68021951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767787"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB リファレンス - インスタンス API
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   従来のサービスベースの SQL Server 環境で、単一のコンピューターにインストールされた個々の SQL Server インスタンスは、物理的に独立しています。つまり、各インスタンスは独立したバイナリ セットを持っており、独立したサービス プロセスの下で実行されます。インストールと削除も個別に行われる必要があります。 ユーザーが接続する先の SQL Server インスタンスは、SQL Server インスタンス名を使用して指定されます。  
   
  SQL Server Express LocalDB インスタンス API は、簡略化された "軽量な" インスタンスモデルを使用します。 個々の LocalDB インスタンスは、ディスク上とレジストリ内で独立していますが、同じ 1 組の共有 LocalDB バイナリを使用します。 また、LocalDB ではサービスが使用されません。LocalDB インスタンスは、LocalDB インスタンス API 呼び出しを介して要求時に起動されます。 LocalDB では、ユーザーが使用する LocalDB インスタンスを指定するために、インスタンス名が使用されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "68021951"
 ### <a name="named-instance-naming-rules"></a>名前付きインスタンスの名前付け規則  
  LocalDB インスタンス名の最大文字数は128文字です ( **sysname**データ型によって制限されています)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この違いの理由は、LocalDB ではデータベースがファイルとして扱われるため、ファイルベースのセマンティクスを意味するので、ユーザーはより自由にインスタンス名を選択できます。  
   
- LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名コンポーネント内の無効な文字には、通常次の文字が含まれます: ASCII/Unicode 文字 1 ~ 31、引用符 ("\<)、小なり ()、大なり (>)、パイプ (|)、バックスペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)、疑問符 (\\?)、円記号 ()、スラッシュ (/) の順に移動します。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
+ LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名コンポーネント内の無効な文字には、通常、ASCII/Unicode 文字 1 ~ 31 の文字、引用符 (")、小なり ( \<), greater than (> )、パイプ (|)、バックスペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)、疑問符 (?)、円記号 ( \\ )、およびスラッシュ (/) が含まれます。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
   
 > [!NOTE]  
 >  無効な文字はオペレーティング システムによって異なり、今後のリリースで変わることもあります。  
@@ -78,7 +78,7 @@ ms.locfileid: "68021951"
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
  LocalDB インスタンス API を見つけるためのヘッダー ファイル情報とレジストリ キーを提供します。  
   
- [コマンド ライン管理ツール: SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
+ [コマンドライン管理ツール:SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
  コマンド ラインから LocalDB インスタンスを管理するツールである SqlLocalDB.exe について説明します。  
   
  [LocalDBCreateInstance 関数](../../relational-databases/express-localdb-instance-apis/localdbcreateinstance-function.md)  

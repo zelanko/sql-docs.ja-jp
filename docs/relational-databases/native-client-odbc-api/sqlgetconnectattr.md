@@ -11,23 +11,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e302fe1c5a1f4bcf5f51728a866a72b993076f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 3881a7c5004e4141124b5440a74812decbd014e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786725"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003497"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 一部の属性は**Sqlgetconnectattr**で使用でき、関数は現在の設定をレポートするために使用されます。 これらの属性について報告される値は、接続が確立されるか、または[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を使用して属性が設定されるまでは保証されません。  
   
- ここでは、読み取り専用の属性を示します。 Native Client ODBC ドライバー固有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のその他の接続属性の詳細については、「 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
+ ここでは、読み取り専用の属性を示します。 Native Client ODBC ドライバー固有のその他の接続属性の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
   
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 属性では、サーバーへの接続状態が報告されます。 ドライバーは、接続の現在の状態をネットワークにクエリします。  
@@ -35,7 +33,7 @@ ms.locfileid: "73786725"
 > [!NOTE]  
 >  標準の ODBC 接続属性 SQL_ATTR_CONNECTION_DEAD は、接続の最新の状態を返します。 これは現在の接続状態と異なる場合があります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|サーバーへの接続が失われました。|  
 |SQL_CD_FALSE|接続が開かれており、ステートメントの処理に使用できます。|  
@@ -51,7 +49,7 @@ ms.locfileid: "73786725"
   
  詳細については、「[拡張イベントログの診断情報へのアクセス](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_ERROR|接続に失敗しました。|  
 |SQL_SUCCESS|接続に成功しました。 クライアント接続 ID は出力バッファーで見つかります。|  
@@ -59,7 +57,7 @@ ms.locfileid: "73786725"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性は、現在のドライバーのパフォーマンス統計情報を保持する SQLPERF 構造体へのポインターを返します。 パフォーマンスログが有効になっていない場合、 **Sqlgetconnectattr**は NULL を返します。 SQLPERF 構造体内の統計情報がドライバーで動的に更新されることはありません。 パフォーマンス統計を更新する必要があるたびに、 **Sqlgetconnectattr**を呼び出します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |NULL|パフォーマンスのログ記録が無効です。|  
 |その他の値|SQLPERF 構造体へのポインター。|  
@@ -70,7 +68,7 @@ ms.locfileid: "73786725"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データ ポインターを取得します。 ユーザー データはクライアントのメモリに格納され、接続ごとに記録されます。 ユーザー データ ポインターが設定されていない場合、SQL_UD_NOTSET という NULL ポインターが返されます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|ユーザー データ ポインターが設定されていません。|  
 |その他の値|ユーザー データへのポインターです。|  
@@ -90,6 +88,6 @@ ms.locfileid: "73786725"
  [SET QUOTED_IDENTIFIER &#40;Transact-sql&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

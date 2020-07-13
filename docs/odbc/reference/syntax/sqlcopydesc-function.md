@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8aec6dc776f5fdd84932be089e9503f0083a49c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef1fa5b319e8d72d5b70e6f2010e493eec6f844a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345487"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301229"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 関数
 **互換性**  
@@ -60,7 +60,7 @@ SQLRETURN SQLCopyDesc(
   
  **Sqlcopydesc**は**SQLGetDescField**と**SQLSetDescField**を呼び出すことによって実装される可能性があるため、 **SQLGetDescField**または**SQLSetDescField**によって返される sqlstates を**sqlcopydesc**が返す可能性があります。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -189,7 +189,7 @@ while (SQL_SUCCEEDED(rc)) {
   
 ### <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |複数の記述子フィールドの取得|[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |1つの記述子フィールドの設定|[SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  

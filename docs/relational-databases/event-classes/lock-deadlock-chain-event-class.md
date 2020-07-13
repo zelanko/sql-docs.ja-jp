@@ -12,15 +12,15 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717925"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain イベント クラス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Deadlock Chain イベント クラスは、デッドロックに関係するオブジェクトごとに生成されます。  
   
  Lock:Deadlock Chain イベント クラスを使用すると、いつデッドロックの状態が発生したかを監視できます。 この情報は、デッドロックがアプリケーションのパフォーマンスに重大な影響を与えているかどうかや、デッドロックに関係しているオブジェクトを特定する際に役立ちます。 これらのオブジェクトを変更するアプリケーション コードを調べて、デッドロックを最小限に抑える変更を行うことができるかどうかを判断できます。  

@@ -1,10 +1,10 @@
 ---
 title: データベースの完全バックアップを作成する | Microsoft Docs
+description: この記事では、SQL Server Management Studio、Transact-SQL、または PowerShell を使用して SQL Server でデータベースの完全バックアップを作成する方法について説明します。
 ms.custom: sqlfreshmay19
 ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: carlrab
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: carlrab
+ms.openlocfilehash: d2da7198c2eee8bbbd98ae0951a57fc877d0e367
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748462"
 ---
 # <a name="create-a-full-database-backup"></a>データベースの完全バックアップの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。
 
@@ -204,7 +205,7 @@ GO
 
 ![暗号化されたバックアップ](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
-#### <a name="d-back-up-to-the-azure-blob-storage-service"></a>D. Azure BLOB ストレージ サービスへのバックアップ
+#### <a name="d-back-up-to-the-azure-blob-storage-service"></a>D.  Azure BLOB ストレージ サービスへのバックアップ
 
 以下の例では、Azure Blob Storage サービスへの `SQLTestDB` のデータベースの完全バックアップを実行します。 この例では、BLOB コンテナーを含むストレージ アカウントを既に用意していることを前提としています。 この例では、共有アクセス署名が自動的に作成されます。この例では、既存の共有アクセス署名のあるコンテナーがないからです。
 
@@ -312,7 +313,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-back-up-to-a-disk-device"></a>A. ディスク デバイスへのバックアップ
+#### <a name="a-back-up-to-a-disk-device"></a>A.  ディスク デバイスへのバックアップ
 
 次の例では、新しいメディア セットを作成する `SQLTestDB` を使用して、 `FORMAT` データベース全体をディスクにバックアップします。
 
@@ -327,7 +328,7 @@ TO DISK = 'c:\tmp\SQLTestDB.bak'
 GO
 ```
 
-#### <a name="b-back-up-to-a-tape-device"></a>B. テープ デバイスへのバックアップ
+#### <a name="b-back-up-to-a-tape-device"></a>B.  テープ デバイスへのバックアップ
 
  次の例では、 `SQLTestDB` データベース全体をテープにバックアップし、以前のバックアップに追加します。
 
@@ -341,7 +342,7 @@ BACKUP DATABASE SQLTestDB
 GO
 ```
 
-#### <a name="c-back-up-to-a-logical-tape-device"></a>C. 論理テープ デバイスへのバックアップ
+#### <a name="c-back-up-to-a-logical-tape-device"></a>C.  論理テープ デバイスへのバックアップ
 
 次の例では、テープ ドライブ用の論理バックアップ デバイスを作成した後、 そのデバイスに SQLTestDB データベース全体をバックアップします。
 

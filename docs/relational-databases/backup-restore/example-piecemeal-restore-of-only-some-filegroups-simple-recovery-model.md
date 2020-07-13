@@ -1,5 +1,6 @@
 ---
 title: '段階的な部分復元: 一部のファイル グループのみ (単純復旧モデル)'
+description: この例では、単純復旧モデルを使用して、SQL Server のデータベースの一部のファイル グループのみを復元する段階的な部分復元を示します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be53416c5e9bb259338b30dae36b27bc420cf4ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67d0cf696f149b0105dfe53c15a80fc81bced1f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75256042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737750"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル) の例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、読み取り専用のファイル グループを含む、単純復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   

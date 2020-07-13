@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_maintenance_plan_job
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009210"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862732"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたジョブから、指定されたメンテナンスプランの関連付けを解除します。  
   
@@ -60,15 +60,15 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="permissions"></a>アクセス許可  
  **Sp_delete_maintenance_plan_job**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この例では、メンテナンスプランからジョブ "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" を削除します。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>参照  
- [メンテナンスプラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
+## <a name="see-also"></a>関連項目  
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

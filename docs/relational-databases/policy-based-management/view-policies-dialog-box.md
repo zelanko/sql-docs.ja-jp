@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c63b9efc61e18c5b5bc52dcdcbd93af0d9fbbfa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93106e092c6f0b78f54a24af97ce5b0aa4101880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774094"
 ---
 # <a name="view-policies-dialog-box"></a>[ポリシーの表示] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、この対象に対して有効なポリシーを表示できます。 このダイアログ ボックスには、関連するポリシー、それらのポリシー カテゴリ、およびポリシーに関する情報が表示されます。  
   
 ## <a name="options"></a>オプション  

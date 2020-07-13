@@ -9,28 +9,25 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 69ce04217f2913214bbdd9de631c1ac339a39ce7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65478494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971015"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
-  
   **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
 ## <a name="action"></a>アクション  
- これは、ウィザードの最初のページです。 
-  **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
+ これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
   
 ## <a name="upgrade-review"></a>[アップグレードの確認]  
  このページで指定した情報を確認します。 問題がなければ、 **[次へ]** をクリックして、指定したデータベースをアップグレードします。  
   
-|コントロール名|[説明]|  
+|コントロール名|説明|  
 |------------------|-----------------|  
-|**SQL Server インスタンス**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
+|**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
 |**マスターデータサービスデータベース**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
   
 ## <a name="progress-and-finish"></a>[続行して完了する]  

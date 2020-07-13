@@ -12,14 +12,14 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC], address
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7cd157edd6111dec29ae238a1c383879e66ac0b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 578e4e37a78818cb640d9f32e2480cec5951df63
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067432"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305273"
 ---
 # <a name="data-buffer-address"></a>データ バッファーのアドレス
 アプリケーションは、データバッファーのアドレスを引数の中でドライバーに渡します。多くの場合、 *Valueptr*または類似した名前という名前が付けられます。 たとえば、次の**SQLBindCol**への呼び出しでは、アプリケーションは*Date*変数のアドレスを指定します。  

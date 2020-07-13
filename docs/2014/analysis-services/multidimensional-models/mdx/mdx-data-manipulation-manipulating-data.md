@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1a1de8b9a3431d79573cd916fa7273b6d8fa7f0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074354"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546378"
 ---
 # <a name="manipulating-data-mdx"></a>データの操作 (MDX)
 
@@ -27,11 +26,11 @@ ms.locfileid: "66074354"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[ドリルスルーを使用して MDX&#41;&#40;ソースデータを取得する](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|MDX の [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) ステートメントを使用して、多次元データ ソースのセルに適用できる変換元データの行セットを取得する方法を説明します。|  
-|[MDX&#41;&#40;RollupChildren 関数の操作](mdx-data-manipulation-rollupchildren-function.md)|MDX [Rollupchildren](/sql/mdx/rollupchildren-mdx)の影響について説明します。
-|[MDX&#41;&#40;パス順序と解決順序について](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|解決順序の概念を詳しく説明し、その機能がどのように MDX 式、ステートメント、およびスクリプトに影響するかについても説明します。|  
+|[DRILLTHROUGH を使用したソース データの取得 (MDX)](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|MDX の [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) ステートメントを使用して、多次元データ ソースのセルに適用できる変換元データの行セットを取得する方法を説明します。|  
+|[RollupChildren 関数の操作 (MDX)](mdx-data-manipulation-rollupchildren-function.md)|MDX [Rollupchildren](/sql/mdx/rollupchildren-mdx)の影響について説明します。
+|[パス順序と解決順序の概要 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|解決順序の概念を詳しく説明し、その機能がどのように MDX 式、ステートメント、およびスクリプトに影響するかについても説明します。|  
 
 <!-- ??
 

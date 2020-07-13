@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 80b5775d3b6f7a3f47ab75c5348b556c17b6e676
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62873272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970362"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を無効にする方法について説明します。  
@@ -36,9 +35,9 @@ ms.locfileid: "62873272"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   テーブルがヒープの場合、ONLINE モードでは、再構築操作がシングル スレッドになります。 マルチスレッドのヒープの再構築操作では、OFFLINE モードを使用してください。 データ圧縮の詳細については、「 [データの圧縮](data-compression.md)」を参照してください。  
   
@@ -46,12 +45,12 @@ ms.locfileid: "62873272"
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはインデックスに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-disable-compression-on-a-table"></a>テーブルで圧縮を無効にするには  
   
@@ -187,7 +186,7 @@ ms.locfileid: "62873272"
   
      完了したら、 **[閉じる]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-disable-compression-on-a-table"></a>テーブルで圧縮を無効にするには  
   

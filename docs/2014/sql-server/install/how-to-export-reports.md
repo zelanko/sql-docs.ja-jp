@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059301"
 ---
 # <a name="how-to-export-reports"></a>レポートをエクスポートする方法
   アップグレード アドバイザー レポート ビューアーを使用して、フラット ファイル形式のレポートをエクスポートできます。 エクスポートしたレポートは、スプレッドシートやワード プロセッシング ドキュメントとして処理したり、他のユーザーへ電子メールで送信したりできます。  

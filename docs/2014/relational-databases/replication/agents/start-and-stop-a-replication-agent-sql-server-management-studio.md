@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b9074ab3ac56f3457f4ab5ffb877e63a66a1c783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63192469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068710"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
-  の [**ジョブ**] フォルダーと **[レプリケーション] フォルダー** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]およびレプリケーションモニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーと **[レプリケーション]** フォルダーから、およびレプリケーション モニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
   
 -   すべてのパブリケーションで使用されるスナップショット エージェント  
   
@@ -41,40 +40,33 @@ ms.locfileid: "63192469"
   
 ### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>Management Studio からスナップショット エージェントまたはログ リーダー エージェントを開始および停止するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でパブリッシャーに接続して、サーバー ノードと **[レプリケーション]** フォルダーを展開します。  
+1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でパブリッシャーに接続して、サーバー ノードと **[レプリケーション]** フォルダーを展開します。  
   
-2.  
-  **[ローカル パブリケーション]** フォルダーを展開し、パブリケーションを右クリックします。  
+2.  **[ローカル パブリケーション]** フォルダーを展開し、パブリケーションを右クリックします。  
   
-3.  
-  **[スナップショット エージェントの状態の表示]** または **[ログ リーダー エージェントの状態の表示]** をクリックします。  
+3.  **[スナップショット エージェントの状態の表示]** または **[ログ リーダー エージェントの状態の表示]** をクリックします。  
   
-4.  
-  **[開始]** または **[停止]** をクリックします。  
+4.  **[開始]** または **[停止]** をクリックします。  
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Management Studio からキュー リーダー エージェントを開始および停止するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
+1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
   
-2.  
-  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
+2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キューリーダーエージェントのジョブの名前は **[\<ディストリビューター>] の形式になります。\<整数>**。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キューリーダーエージェントのジョブの名前は **[ \<Distributor> ]. \<integer> **という形式になっています。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   
 1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
-2.  
-  **[エージェント]** タブをクリックします。  
+2.  **[エージェント]** タブをクリックします。  
   
 3.  エージェントを右クリックして **[エージェントの開始]** または **[エージェントの停止]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)   
  [レプリケーションエージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)   
- [レプリケーションエージェントの概要](replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](replication-agents-overview.md)  
   
   

@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68048218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719272"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースにある、指定したテーブルに定義されている DML トリガーの種類を返します。 sp_helptrigger は DDL トリガーでは使用できません。 代わりに、[システムストアドプロシージャ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)カタログビューに対してクエリを実行します。  
   
@@ -57,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>結果セット  
  次の表に、結果セットに含まれる情報を示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|トリガーの名前。|  
 |**trigger_owner**|**sysname**|トリガーが定義されたテーブルの所有者の名前。|  
@@ -71,8 +71,8 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>アクセス許可  
  テーブルに対する[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)権限が必要です。  
   
-## <a name="examples"></a>例  
- 次の例で`sp_helptrigger`は、を実行して、 `Person.Person`テーブルのトリガーに関する情報を生成します。  
+## <a name="examples"></a>使用例  
+ 次の例では、を実行し `sp_helptrigger` て、テーブルのトリガーに関する情報を生成し `Person.Person` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,11 +80,11 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER TRIGGER &#40;Transact-sql&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
+ [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [DROP TRIGGER &#40;Transact-sql&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

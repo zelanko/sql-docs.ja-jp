@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Recordset]
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d91c3e92be7679ad6fbbb4a4ee7bd1bb6a48422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3ba9ad977fe02a712a675b8a9e4bae4b3d038b1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67916839"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759738"
 ---
 # <a name="status-property-ado-recordset"></a>Status プロパティ (ADO Recordset)
 バッチ更新やその他の一括操作に関して、現在のレコードの状態を示します。  

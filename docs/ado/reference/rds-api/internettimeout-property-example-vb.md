@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - InternetTimeout property [ADO], Visual Basic example
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ae038b3c4b438dfaed1f627c8f257e61a22f782
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963983"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751953"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout プロパティの例 (VB)
 > [!IMPORTANT]

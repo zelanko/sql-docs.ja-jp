@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963492"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750990"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 指定された並べ替えとフィルターのプロパティに基づいて、クライアント側の**レコードセット**に対して並べ替えまたはフィルター処理を実行します。  
@@ -37,10 +37,10 @@ DataControl.Reset(value)
  *DataControl*  
  RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *数値*  
- 省略可能。 現在の "フィルター処理された" 行セットをフィルター処理する場合は**True** (**既定値)** です。 **False**は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
+ *value*  
+ 任意。 現在の "フィルター処理された" 行セットをフィルター処理する場合は**True** (**既定値)** です。 **False**は、前のフィルターオプションを削除して、元の行セットに対してフィルター処理を行うことを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [sortcolumn](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md)、 [filterfilter、](../../../ado/reference/rds-api/filtercriterion-property-rds.md)および[filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能は、1つの列の値でレコードを並べ替えます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)はキャッシュ内に保持されます。 **Reset**メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
   
  送信されていない元のデータに変更があった場合、 **Reset**メソッドは失敗します。 まず、 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)メソッドを使用して、読み取り/書き込み**レコードセット**への変更を保存した後、 **Reset**メソッドを使用してレコードの並べ替えまたはフィルター処理を行います。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65489625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006241"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8: 複合ドメイン ルールを作成する
   このタスクでは、 **Address Validation**複合ドメインのルールを作成します。 クロスドメインルールを定義する: **city**が**ロサンゼルス**の場合、 **state**は**CA**である必要があります。**市区町村**と**州**は2つのドメインです。  
@@ -34,7 +33,7 @@ ms.locfileid: "65489625"
   
 6.  ページの下部にある [**閉じる**] ボタンをクリックして、DQS クライアントのメインページに切り替えます。 次のレッスンでナレッジ ベースをパブリッシュします。 ナレッジ ベースがロック状態 (ロック アイコン) にあることに注意してください。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 9: 参照データ サービスを構成する](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

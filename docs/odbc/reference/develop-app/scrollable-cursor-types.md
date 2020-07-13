@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061635"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304233"
 ---
 # <a name="scrollable-cursor-types"></a>スクロール可能なカーソルの種類
 スクロール可能なカーソルの4種類は、静的、動的、キーセットドリブン、および混合です。 静的カーソルは、変更の数が少ないかどうかを検出しますが、実装するには比較的安価です。 動的カーソルはすべての変更を検出しますが、実装にはコストがかかります。 キーセットドリブンカーソルと混合カーソルは、ほとんどの変更を検出しますが、動的カーソルよりも低コストです。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d60474b5d72ab9745500325dfd523f83f155343c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62875631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956845"
 ---
 # <a name="restore-database-options-page"></a>データベースの復元 ([オプション] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
@@ -31,7 +30,7 @@ ms.locfileid: "62875631"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して復元タスクを指定するときに、この復元操作の RESTORE ステートメントを含む、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成できます。 このスクリプトを生成するには、 **[スクリプト]** をクリックし、スクリプトの保存先を選択します。 RESTORE 構文については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="restore-options"></a>復元オプション  
  復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  

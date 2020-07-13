@@ -1,6 +1,7 @@
 ---
 title: インストール後の手順の実行
 titleSuffix: SQL Server Distributed Replay
+description: 分散再生をインストールした後、分散再生コントローラー サービスおよび分散再生クライアント サービスのアカウントを変更する必要があります。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: fade888b904b6be436e78cc38f9fc77bc8ee734d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e38755c65e457123c732035a2874f9904644e0d5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307072"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001172"
 ---
 # <a name="complete-the-post-installation-steps"></a>インストール後の手順の実行
 
@@ -26,7 +27,7 @@ ms.locfileid: "75307072"
   
 ## <a name="to-complete-the-post-installation-steps"></a>インストール後の手順を実行するには  
   
-1. **ファイアウォール ルールを作成する**: コントローラー コンピューターとクライアント コンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
+1. **ファイアウォール規則を作成する**:コントローラー コンピューターとクライアント コンピューターで、対応するサービスのファイアウォール経由の受信トラフィックを許可する必要があります。 インストール フォルダーに配置されているサービス実行可能ファイルのファイアウォール ルールを指定します。  
   
     1. コントローラー サービスの場合は、インストール フォルダーにある **DReplayController.exe**のルールを作成します。 たとえば、次のコマンドを実行すると、このルールが有効になります ( `%InstallPath%` はサービスのインストール フォルダーです)。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75307072"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2. **ターゲット サーバーで各クライアントの権限を与える**: クライアント コンピューターへのクライアント サービスのインストールが完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンスの sysadmin ロールにクライアント サービス アカウントを手動で追加する必要があります。  
+2. **ターゲット サーバーで各クライアントの権限を与える**:クライアント コンピューターへのクライアント サービスのインストールが完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のターゲット インスタンスの sysadmin ロールにクライアント サービス アカウントを手動で追加する必要があります。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 

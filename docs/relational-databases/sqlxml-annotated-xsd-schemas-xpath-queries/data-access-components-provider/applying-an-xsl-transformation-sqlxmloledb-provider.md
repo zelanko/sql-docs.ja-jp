@@ -1,5 +1,6 @@
 ---
 title: XSL 変換の適用 (SQLXMLOLEDB)
+description: SQLXMLOLEDB プロバイダーの ClientSideXML プロパティと xsl プロパティを使用して、ADO アプリケーションで XSL 変換を適用する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3040c337853a33748fe24a72892739664f8e8304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650418"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 変換の適用 (SQLXMLOLEDB プロバイダー)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が強制されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティは、変換の適用に使用する XSL ファイルを指定します。 [基本パスプロパティの値は、XSL ファイルを検索するために使用されます。 Xsl プロパティの値にパスを指定した場合、パスは、[ベースパス] プロパティで指定したパスに対する相対パスになります。  
   
  この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティについて、使用法を示します。  

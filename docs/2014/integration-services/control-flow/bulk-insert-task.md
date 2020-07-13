@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f82c2ca9e541981adee1eea129d86dcb645b59aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62832874"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438259"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
@@ -34,8 +33,7 @@ ms.locfileid: "62832874"
   
 -   コピー先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルまたはビューである必要があります。 コピー先のテーブルまたはビューに既にデータがある場合、一括挿入タスクが実行されると新しいデータが既存のデータに追加されます。 データを置換する場合は、一括挿入タスクを実行する前に、DELETE または TRUNCATE ステートメントを実行する SQL 実行タスクを実行します。 詳細については、「 [SQL 実行タスク](execute-sql-task.md)」を参照してください。  
   
--   一括挿入タスク オブジェクトではフォーマット ファイルを使用できます。 
-  **bcp** ユーティリティを使用して作成したフォーマット ファイルを使用する場合、一括挿入タスクでフォーマット ファイルのパスを指定できます。 一括挿入タスクでは、XML および XML 以外のフォーマット ファイルの両方がサポートされます。 フォーマット ファイルの使用方法の詳細は、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
+-   一括挿入タスク オブジェクトではフォーマット ファイルを使用できます。 **bcp** ユーティリティを使用して作成したフォーマット ファイルを使用する場合、一括挿入タスクでフォーマット ファイルのパスを指定できます。 一括挿入タスクでは、XML および XML 以外のフォーマット ファイルの両方がサポートされます。 フォーマット ファイルの使用方法の詳細は、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
 -   一括挿入タスクが含まれるパッケージを実行できるのは、固定サーバー ロール sysadmin のメンバーのみです。  
   
@@ -63,9 +61,9 @@ ms.locfileid: "62832874"
 -   一括挿入タスクでは、エラーが発生した行はログに記録されません。 この情報を取得する必要がある場合は、データ フロー コンポーネントのエラー出力を使用すれば、エラーが発生した行を例外ファイルにキャプチャできます。  
   
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>一括挿入タスクで使用できるカスタム ログ エントリ  
- 次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|一括挿入が開始されたことを示します。|  
 |`BulkInsertTaskEnd`|一括挿入が終了したことを示します。|  
@@ -88,19 +86,17 @@ ms.locfileid: "62832874"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [一括挿入タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [一括挿入タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[一括挿入タスクエディター] &#40;接続ページ&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [一括挿入タスク エディター &#40;[接続] ページ&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [一括挿入タスクエディター &#40;オプションページ&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [一括挿入タスク エディター &#40;[オプション] ページ&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
@@ -114,9 +110,9 @@ ms.locfileid: "62832874"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   support.microsoft.com の技術記事「 [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)」  
+-   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)  
   
--   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)」  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
   
 -   simple-talk.com の技術記事: [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)  
   

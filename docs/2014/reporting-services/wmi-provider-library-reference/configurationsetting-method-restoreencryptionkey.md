@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098124"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>RestoreEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
@@ -42,10 +42,10 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *キーキー []*  
+ *KeyFile[]*  
  [out] 暗号化された暗号化キーを含む配列。  
   
- *数*  
+ *[データ型]*  
  [out] メソッドによって返される配列の長さ。  
   
  *パスワード*  
@@ -54,11 +54,11 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
- *ExtendedErrors []*  
+ *ExtendedErrors[]*  
  [out] 呼び出しによって返されたその他のエラーを含む文字列の配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
 ## <a name="remarks"></a>解説  
  レポート サーバー データベースのレポート サーバーに既にエントリが存在する場合、そのエントリは削除されます。 その後、指定した暗号化キーとレポート サーバーの公開キーを使用して、新しいエントリが作成されます。  
@@ -66,7 +66,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  このメソッドが最も効果的なのは、暗号化キーの一覧を消去する [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) メソッドの後に呼び出した場合です。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

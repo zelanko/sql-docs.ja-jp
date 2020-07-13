@@ -1,12 +1,12 @@
-- name: SQL Server Machine Learning Services のドキュメント
+- name: SQL の機械学習のドキュメント
   href: ../machine-learning/index.yml
-- name: SQL Server のドキュメント >
-  href: ../sql-server/index.yml
+- name: Microsoft SQL ドキュメント >
+  href: ../index.yml
 - name: 概要
   expanded: true
   items:
     - name: Machine Learning Services (Python と R) とは?
-      href: ../machine-learning/what-is-sql-server-machine-learning.md
+      href: ../machine-learning/sql-server-machine-learning-services.md
     - name: R Services とは?
       href: ../machine-learning/r/sql-server-r-services.md
     - name: スタンドアロン サーバー
@@ -61,7 +61,7 @@
           href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: R スクリプトの作成
+        - name: R スクリプトの実行
           href: ../machine-learning/tutorials/quickstart-r-create-script.md
         - name: データ型とオブジェクト
           href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
@@ -74,7 +74,7 @@
     - name: Python
       items:
         - name: Python のチュートリアル
-          href: ../machine-learning/tutorials/sql-server-python-tutorials.md
+          href: ../machine-learning/tutorials/python-tutorials.md
         - name: スキー レンタル (線形回帰)
           items:
             - name: 1 - 概要
@@ -112,7 +112,27 @@
     - name: R
       items:
         - name: R のチュートリアル
-          href: ../machine-learning/tutorials/sql-server-r-tutorials.md
+          href: ../machine-learning/tutorials/r-tutorials.md
+        - name: スキー レンタル (デシジョン ツリー)
+          items:
+            - name: 1 - 概要
+              href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+            - name: 2 - データを準備する
+              href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+            - name: 3 - モデルをトレーニングする
+              href: ../machine-learning/tutorials/r-predictive-model-train.md
+            - name: 4 - モデルをデプロイする
+              href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+        - name: 顧客を分類する (K-Means クラスタリング)
+          items:
+            - name: 1 - 概要
+              href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+            - name: 2 - データを準備する
+              href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+            - name: 3 - モデルを作成する
+              href: ../machine-learning/tutorials/r-clustering-model-build.md
+            - name: 4 - モデルをデプロイする
+              href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: パーティション ベースのモデルの作成
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: T-SQL での R の使用

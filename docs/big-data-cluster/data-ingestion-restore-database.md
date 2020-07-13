@@ -1,7 +1,7 @@
 ---
 title: データベースを復元する
 titleSuffix: SQL Server big data clusters
-description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のマスター インスタンスにデータベースを復元する方法について説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターのマスター インスタンスにデータベースを復元する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652234"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606774"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する
 
@@ -29,7 +29,7 @@ ms.locfileid: "69652234"
 この記事では、AdventureWorks データベースを復元する方法について説明しますが、どのようなデータベース バックアップでも使用できます。 
 
 > [!TIP]
-> AdventureWorks のバックアップは[こちら](https://www.microsoft.com/download/details.aspx?id=49502)からダウンロードできます。
+> [AdventureWorks のバックアップ](../samples/adventureworks-install-configure.md)をダウンロードします。
 
 ## <a name="copy-the-backup-file"></a>バックアップ ファイルをコピーする
 

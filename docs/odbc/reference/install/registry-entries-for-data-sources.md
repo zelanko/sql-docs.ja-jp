@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70009354"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296272"
 ---
 # <a name="registry-entries-for-data-sources"></a>データ ソースのレジストリ エントリ
 > [!NOTE]  

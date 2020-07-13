@@ -9,22 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5aea14840dd92c0fa6fb571081044e2d84e0f27b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018709"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  
-  [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) を SQL_HANDLE_STMT として *SQLAllocHandle* を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
@@ -36,11 +34,11 @@ ms.locfileid: "63200329"
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- - または -  
+     \- または  
   
      ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- - または -  
+     \- または  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -48,14 +46,13 @@ ms.locfileid: "63200329"
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- - または -  
+     \- または  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- - または -  
+     \- または  
   
-     
-  [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
+     [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   
      SQL ステートメントに複数の結果セットが含まれている可能性がある場合は、各結果セットの最後に [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出して、処理する追加の結果セットがあるかどうかを確認します。  
   
@@ -63,14 +60,13 @@ ms.locfileid: "63200329"
   
     -   SQL_NO_DATA が返されるまで [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) を呼び出さなかった場合は、[SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) を呼び出してカーソルを閉じます。  
   
-    -   パラメーター マーカーをプログラム変数にバインドした場合は、[Option](../../native-client-odbc-api/sqlfreestmt.md) を SQL_RESET_PARAMS に設定して *SQLFreeStmt* を呼び出し、バインドされたパラメーターを解放します。  
+    -   パラメーター マーカーをプログラム変数にバインドした場合は、*Option* を SQL_RESET_PARAMS に設定して [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md) を呼び出し、バインドされたパラメーターを解放します。  
   
-    -   結果セット列をプログラム変数にバインドした場合は、[Option](../../native-client-odbc-api/sqlfreestmt.md) を SQL_UNBIND に設定して *SQLFreeStmt* を呼び出し、バインドされた列を解放します。  
+    -   結果セット列をプログラム変数にバインドした場合は、*Option* を SQL_UNBIND に設定して [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md) を呼び出し、バインドされた列を解放します。  
   
     -   ステートメント ハンドルを再利用するには、手順 2. に進みます。  
   
-8.  
-  [HandleType](../../native-client-odbc-api/sqlfreehandle.md) を SQL_HANDLE_STMT として *SQLFreeHandle* を呼び出し、ステートメント ハンドルを解放します。  
+8.  *HandleType* を SQL_HANDLE_STMT として [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) を呼び出し、ステートメント ハンドルを解放します。  
   
 ## <a name="see-also"></a>参照  
  [クエリの実行方法に関するトピック &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

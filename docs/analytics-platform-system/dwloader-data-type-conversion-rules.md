@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401180"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Dwloader のデータ型変換規則-Parallel Data Warehouse
 このトピックでは、入力データ形式と、 [Dwloader コマンドラインローダー](dwloader.md)が PDW にデータを読み込むときにサポートする暗黙のデータ型変換について説明します。 暗黙的なデータ変換は、入力データが SQL Server PDW 対象テーブルのデータ型と一致しない場合に発生します。 読み込みプロセスを設計するときにこの情報を使用して、データが正常に SQL Server PDW に読み込まれるようにします。  
    
   
-## <a name="InsertBinaryTypes"></a>バイナリ型へのリテラルの挿入  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>バイナリ型へのリテラルの挿入  
 次の表では、 **binary** (*n*) または**varbinary**(*n*) 型の SQL Server PDW 列にリテラル値を読み込むための、許可されているリテラルの型、書式、および変換規則を定義しています。  
   
 |入力データ型|入力データの例|Binary データ型または varbinary データ型への変換|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |バイナリリテラル|60*hexidecimal_string*<br /><br />例: 12Ef または0x12Ef|0x プレフィックスは省略可能です。<br /><br />データソースの長さは、データ型に指定されたバイト数を超えることはできません。<br /><br />データソースの長さが**バイナリ**データ型のサイズよりも小さい場合、データは、データ型のサイズに合わせてゼロで右側に埋め込まれます。|  
   
-## <a name="InsertDateTimeTypes"></a>日付/時刻型へのリテラルの挿入  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>日付/時刻型へのリテラルの挿入  
 日付と時刻のリテラルは、単一引用符で囲まれた特定の形式の文字列リテラルを使用して表されます。 次の表は、日付または時刻のリテラルを**datetime**、 **smalldatetime**、 **date**、 **time**、 **datetimeoffset**、または**datetime2**型の列に読み込むために許可されているリテラルの種類、形式、および変換規則を定義しています。 テーブルは、指定されたデータ型の既定の形式を定義します。 指定できるその他の形式は、 [Datetime 形式](#DateFormats)のセクションで定義されています。 日付と時刻のリテラルには、先頭または末尾のスペースを含めることはできません。 **date**、 **smalldatetime**、および null 値を固定幅モードで読み込むことはできません。  
   
 ### <a name="datetime-data-type"></a>datetime データ型  
@@ -83,7 +83,7 @@ ms.locfileid: "74401180"
 |**日付**形式の文字列リテラル|' yyyy-MM-dd '<br /><br />例: ' 2007-05-08 '|値が挿入されると、時刻値 (時間、分、秒、および分数) が0に設定されます。 たとえば、リテラル ' 2007-05-08 ' は ' 2007-05-08 12:00: 00.0000000 ' として挿入されます。|  
 |**Datetime2**形式の文字列リテラル|' yyyy-MM-dd hh: MM: ss: fffffff '<br /><br />例: ' 2007-05-08 12:35: 29.1234567 '|データソースに**datetime2**(*n*) で指定された値以下のデータおよび時間コンポーネントが含まれている場合は、データが挿入されます。それ以外の場合は、エラーが生成されます。|  
   
-### <a name="DateFormats"></a>Datetime 形式  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Datetime 形式  
 Dwloader は、SQL Server PDW に読み込む入力データに対して、次のデータ形式をサポートしています。 詳細については、表の後に示します。  
   
 |DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Dwloader は、SQL Server PDW に読み込む入力データに対して、次�
   
 -   文字 'zzz' では、システムの現在のタイム ゾーンに対するオフセットが {+|-}HH:ss] の形式で指定されます。  
   
-## <a name="InsertNumerictypes"></a>数値型へのリテラルの挿入  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>数値型へのリテラルの挿入  
 次の表は、数値型を使用する SQL Server PDW 列にリテラル値を読み込むための既定の書式と変換規則を定義しています。  
   
 ### <a name="bit-data-type"></a>bit データ型  
@@ -124,7 +124,7 @@ Dwloader は、SQL Server PDW に読み込む入力データに対して、次�
 |入力データ型|入力データの例|Bit データ型への変換|  
 |-------------------|-----------------------|-------------------------------|  
 |**整数**形式の文字列リテラル|' ffffffffff '<br /><br />例: ' 1 ' または ' 321 '|文字列リテラルとして書式設定された整数値には、負の値を含めることはできません。 たとえば、値 "-123" によってエラーが生成されます。<br /><br />1より大きい値は1に変換されます。 たとえば、値 ' 123 ' は1に変換されます。|  
-|文字列リテラル|' TRUE ' または ' FALSE '<br /><br />例: ' true '|値 ' TRUE ' は1に変換されます。値 ' FALSE ' は0に変換されます。|  
+|リテラル文字列|' TRUE ' または ' FALSE '<br /><br />例: ' true '|値 ' TRUE ' は1に変換されます。値 ' FALSE ' は0に変換されます。|  
 |整数リテラル|fffffffn<br /><br />例: 1 または321|1より大きい値、または0より小さい値が1に変換されます。 たとえば、値123と-123 は1に変換されます。|  
 |Decimal リテラル|fffnn. fffn<br /><br />例: 1234.5678|1より大きい値、または0より小さい値が1に変換されます。 たとえば、値123.45 と-123.45 は1に変換されます。|  
   
@@ -162,7 +162,7 @@ Dwloader は、SQL Server PDW に読み込む入力データに対して、次�
 |Decimal リテラル|123344.34455|小数点の後の桁数が4を超える場合、値は最も近い値に切り上げられます。 たとえば、値123344.34455 は123344.3446 として挿入されます。|  
 |Money リテラル|$123456.7890|通貨記号は、値と共に挿入されません。<br /><br />小数点の後の桁数が4を超える場合、値は最も近い値に切り上げられます。|  
   
-## <a name="InsertStringTypes"></a>文字列型へのリテラルの挿入  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>文字列型へのリテラルの挿入  
 次の表では、文字列型を使用する SQL Server PDW 列にリテラル値を読み込むための既定の書式と変換規則を定義します。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、varchar、nchar、および nvarchar データ型  
@@ -170,10 +170,10 @@ Dwloader は、SQL Server PDW に読み込む入力データに対して、次�
   
 |入力データ型|入力データの例|文字データ型への変換|  
 |---------------|-------------------|----------------------------------|  
-|文字列リテラル|形式: ' 文字列 '<br /><br />例: ' abc '| NA |  
-|Unicode 文字列リテラル|形式: N'character string '<br /><br />例: N'abc '| NA |  
-|整数リテラル|形式: ffffffffffn<br /><br />例: 321312313123| NA |  
-|Decimal リテラル|形式: ffffff. fffffff<br /><br />例: 12344.34455| NA |  
+|リテラル文字列|形式: ' 文字列 '<br /><br />例: ' abc '| N/A |  
+|Unicode 文字列リテラル|形式: N'character string '<br /><br />例: N'abc '| N/A |  
+|整数リテラル|形式: ffffffffffn<br /><br />例: 321312313123| N/A |  
+|Decimal リテラル|形式: ffffff. fffffff<br /><br />例: 12344.34455| N/A |  
 |Money リテラル|形式: $ffffff。 fffnn<br /><br />例: $123456.99|省略可能な通貨記号は、値と共に挿入されません。 通貨記号を挿入するには、値を文字列リテラルとして挿入します。 これは、すべてのリテラルを文字列リテラルとして扱うローダーの形式と一致します。<br /><br />コンマは使用できません。<br /><br />小数点の後の桁数が2を超える場合、値は最も近い値に切り上げられます。 たとえば、値123.946789 は123.95 として挿入されます。<br /><br />CONVERT 関数を使用して通貨リテラルを挿入する場合、既定のスタイル 0 (コンマと小数点の後の2桁の数字) のみが許可されます。|  
   
 ### <a name="general-remarks"></a>全般的な解説  

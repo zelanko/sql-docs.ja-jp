@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d7f7af7d70cb136b530cfb761cb402ecf0dc6b58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62873410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970418"
 ---
 # <a name="system-data-collection-set-reports"></a>システム データ コレクション セット レポート
   データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62873410"
   
  これらのレポートを使用すると、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得できます。  
   
-##  <a name="Disk"></a> ディスク使用量の概要レポート  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> ディスク使用量の概要レポート  
  ディスク使用量の概要レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。 このレポートに表示されるデータは、ジェネリック T-SQL Query コレクター型を使用するディスク使用量コレクション セットを使用して取得されます。  
   
  ディスク使用量の概要レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]** 、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
@@ -71,7 +70,7 @@ ms.locfileid: "62873410"
   
  データベースの各データ ファイルによって使用されているディスク領域がレポートされます。 予約済みの領域としてレポートされる領域は、使用済みの領域と、ファイルに割り当てられた未使用の領域の合計になります。 使用済みの領域としてレポートされる領域は、割り当て済みの領域を除く、ファイルで現在使用されている実際の領域です。  
   
-##  <a name="Query"></a> クエリ統計の履歴レポート  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> クエリ統計の履歴レポート  
  クエリ統計の履歴レポートには、クエリ実行の統計が示されます。 このレポートで使用されるデータは、Query Activity コレクター型を使用するクエリ統計情報コレクション セットを使用して取得されます。  
   
  クエリ統計の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]** 、 **[管理データ ウェアハウス]** の順にポイントし、 **[クエリ統計の履歴]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
@@ -118,7 +117,7 @@ ms.locfileid: "62873410"
   
  カレンダー ボタンを使用すると、レポート対象にするデータの開始日、開始時刻、および実行時間を指定できます。  
   
-###  <a name="Server"></a> サーバーの利用状況の履歴レポート  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> サーバーの利用状況の履歴レポート  
  サーバーの利用状況の履歴レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとホスト オペレーティング システムのサーバー利用状況の初期表示が示されます。  
   
  次の表に、レポートに表示される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とシステムの利用状況を示すグラフ、およびグラフからアクセスできる詳細なサブレポートを示します。  
@@ -126,18 +125,14 @@ ms.locfileid: "62873410"
 |グラフ|レポートの説明|  
 |-----------|------------------------|  
 |CPU 使用率|CPU 使用率のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> クエリ統計の履歴レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内の最も負荷の高いクエリのグラフが表示されます。 グラフの下にあるテーブルには、クエリの一覧が表示され、各クエリの統計データも表示されます。 クエリをクリックすると、詳細情報を取得できます。<br /><br /> システム<br /> システムの CPU 使用率レポートには、プロセッサごとの CPU 時間 (%) のグラフが表示され、さらに各プロセスの統計データが表形式で示されます。|  
-|メモリ使用量|メモリ使用量のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリの使用量レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス メモリの使用量、メモリ カウンター、および内部メモリの種類別消費量のグラフと、コンポーネントの種類別のメモリ平均使用量に関するデータを含むテーブルが表示されます。<br /><br /> システム<br /> システムのメモリ使用量レポートには、メモリ使用量およびキャッシュとページのヒット率のグラフと、各プロセスのワーキング セットとプライベート バイトに関する情報を含むテーブルが表示されます。|  
-|ディスク I/O の使用量|ディスク I/O の使用量のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク I/O の使用量レポートには、ディスクの応答時間およびディスクの転送速度のグラフが表示されます。 また、ディスク、データベース、およびファイル別の仮想ファイルの統計を含むテーブルも表示されます。<br /><br /> システム<br /> システムのディスク使用量レポートには、ディスクの応答時間、ディスク キューの平均の長さ、ディスクの転送速度、および各プロセスの I/O の書き込みと読み取りに関する情報を含むテーブルが表示されます。|  
+|メモリ使用量|メモリ使用量のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリの使用量レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス メモリの使用量、メモリ カウンター、および内部メモリの種類別消費量のグラフと、コンポーネントの種類別のメモリ平均使用量に関するデータを含むテーブルが表示されます。<br /><br /> システム<br /> システムのメモリ使用量レポートには、メモリ使用量およびキャッシュとページのヒット率のグラフと、各プロセスのワーキング セットとプライベート バイトに関する情報を含むテーブルが表示されます。|  
+|ディスク I/O の使用量|ディスク I/O の使用量のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク I/O の使用量レポートには、ディスクの応答時間およびディスクの転送速度のグラフが表示されます。 また、ディスク、データベース、およびファイル別の仮想ファイルの統計を含むテーブルも表示されます。<br /><br /> システム<br /> システムのディスク使用量レポートには、ディスクの応答時間、ディスク キューの平均の長さ、ディスクの転送速度、および各プロセスの I/O の書き込みと読み取りに関する情報を含むテーブルが表示されます。|  
 |ネットワーク使用量|追加のレポートはありません。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時間|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機のグラフには、実行されたスレッドにより検出された待機が待機のカテゴリ別に表示されます。 グラフで任意のセグメントをクリックすると、詳細なレポートにアクセスできます。 このレポートでは、限られたタイムフレームの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機統計グラフに加えて、待機のカテゴリに関する情報が表形式で示されます。 このテーブルには、CPU やそのサブカテゴリなどのカテゴリごとに、待機の数、待機時間、および合計待機時間に対する割合が示されます。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]演習|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のグラフから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のさまざまな側面にアクセスできます。 1 秒あたりの SQL コンパイル数を示すグラフ線をクリックすることで取得できるレポートを次に示します。<br /><br /> 接続とセッション<br /><br /> Requests<br /><br /> プラン キャッシュのヒット率<br /><br /> tempdb の特性|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機のグラフには、実行されたスレッドにより検出された待機が待機のカテゴリ別に表示されます。 グラフで任意のセグメントをクリックすると、詳細なレポートにアクセスできます。 このレポートでは、限られたタイムフレームの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機統計グラフに加えて、待機のカテゴリに関する情報が表形式で示されます。 このテーブルには、CPU やそのサブカテゴリなどのカテゴリごとに、待機の数、待機時間、および合計待機時間に対する割合が示されます。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のグラフから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のさまざまな側面にアクセスできます。 1 秒あたりの SQL コンパイル数を示すグラフ線をクリックすることで取得できるレポートを次に示します。<br /><br /> 接続とセッション<br /><br /> Requests<br /><br /> プラン キャッシュのヒット率<br /><br /> tempdb の特性|  
   
 ## <a name="see-also"></a>参照  
  [データコレクション](data-collection.md)   
- [コレクションセットのレポート &#40;SQL Server Management Studio の表示&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
+ [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

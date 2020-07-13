@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68b9c0b698156af480db322ce349986e8936d7a0
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68002251"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81299502"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

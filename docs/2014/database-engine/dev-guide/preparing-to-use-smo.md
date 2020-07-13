@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05018a4d-2339-4ecf-8769-414ec781c535
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57dbecc278a3ddb0d544510873d9b40f29702451
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62780833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933443"
 ---
 # <a name="preparing-to-use-smo"></a>SMO の使用の準備
   このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]&#xA0;管理オブジェクト (SMO) の使用を開始するための情報を示します。 次のリストは、このドキュメントでの構文表記規則、SMO でプログラミングを行うためのシステム要件、ファイルとバージョン番号、SMO の新機能の説明、およびインストール ガイドに関する情報の記載場所を示しています。  

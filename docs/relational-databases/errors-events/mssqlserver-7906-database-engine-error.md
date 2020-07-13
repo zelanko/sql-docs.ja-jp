@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25966577f568b6b807e6039a951300368b0ad971
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637230"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7906|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|メッセージ テキスト|データベース エラー : ファイル 'FILE' は有効な FileStream ファイルではありません。|  
+|メッセージ テキスト|データベース エラー:ファイル 'FILE' は有効な Filestream ファイルではありません。|  
   
 ## <a name="explanation"></a>説明  
 'filestream.hdr' などの特殊なファイルを除き、Filestream データ領域にファイルを直接置くことはできません。  

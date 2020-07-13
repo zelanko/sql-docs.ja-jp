@@ -18,15 +18,15 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 701893d6f3f1ded5b3d66684a66b8640b876242b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072281"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005004"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DECLARE @ を使用して、以前に作成した、指定のローカル変数を設定する *local_variable* ステートメントは、指定された値にします。  
   
@@ -35,7 +35,7 @@ DECLARE @ を使用して、以前に作成した、指定のローカル変数�
 ## <a name="syntax"></a>構文  
 SQL Server と Azure SQL Database の構文:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -61,7 +61,7 @@ SET
 }   
 ```  
 Azure SQL Data Warehouse と Parallel Data Warehouse の構文:  
-```sql  
+```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   

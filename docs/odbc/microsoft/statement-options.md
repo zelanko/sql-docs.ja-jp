@@ -12,14 +12,14 @@ helpviewer_keywords:
 - statement options [ODBC]
 - ODBC driver for Oracle [ODBC], statement options
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca40765dff98e9102fbe36e88c7e79535f311d97
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948833"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299212"
 ---
 # <a name="statement-options"></a>ステートメントのオプション
 > [!IMPORTANT]  

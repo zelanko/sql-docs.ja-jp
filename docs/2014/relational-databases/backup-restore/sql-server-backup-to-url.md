@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956352"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、Azure Blob ストレージサービスをバックアップ先として使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  
@@ -33,7 +32,7 @@ ms.locfileid: "79289230"
   
 -   [制限事項](#limitations)  
   
--   [BACKUP/RESTORE ステートメントのサポート](#Support)  
+-   [Backup/Restore ステートメントのサポート](#Support)  
   
 -   [SQL Server Management Studio でのバックアップ タスクの使用](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
@@ -41,30 +40,29 @@ ms.locfileid: "79289230"
   
 -   [SQL Server Management Studio を使用した Azure ストレージからの復元](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> セキュリティ  
+###  <a name="security"></a><a name="security"></a> セキュリティ  
  次に、Azure Blob ストレージサービスとの間でバックアップまたは復元を行う際のセキュリティに関する考慮事項と要件を示します。  
   
 -   Azure Blob ストレージサービスのコンテナーを作成するときは、アクセス権を**private**に設定することをお勧めします。 アクセス権を private に設定すると、Azure アカウントの認証に必要な情報を指定できるユーザーまたはアカウントだけがアクセスできるようになります。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Azure アカウント名とアクセスキー認証が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報に格納されている必要があります。 この情報は、バックアップ操作または復元操作の実行時に Azure アカウントに対して認証を行うために使用されます。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Azure アカウント名とアクセスキー認証が資格情報に格納されている必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この情報は、バックアップ操作または復元操作の実行時に Azure アカウントに対して認証を行うために使用されます。  
   
 -   BACKUP コマンドまたは RESTORE コマンドの発行に使用するユーザー アカウントは、 **資格情報の変更** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。  
   
-###  <a name="intorkeyconcepts"></a> 主なコンポーネントと概念の概要  
- 次の2つのセクションでは、azure Blob ストレージサービス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と、azure blob ストレージサービスとの間でバックアップまたは復元を行うときに使用するコンポーネントについて説明します。 Azure Blob ストレージサービスとの間でバックアップまたは復元を実行するには、コンポーネントと、コンポーネント間のやり取りを理解しておくことが重要です。  
+###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>主要なコンポーネントと概念の概要  
+ 次の2つのセクションでは、azure Blob ストレージサービスと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure blob ストレージサービスとの間でバックアップまたは復元を行うときに使用するコンポーネントについて説明します。 Azure Blob ストレージサービスとの間でバックアップまたは復元を実行するには、コンポーネントと、コンポーネント間のやり取りを理解しておくことが重要です。  
   
  このプロセスの最初の手順として、Azure アカウントを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 **Azure ストレージアカウント名**とその**アクセスキー**値を使用して、ストレージサービスに対して認証および blob の読み書きを行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報はこの認証情報を格納するため、バックアップ操作または復元操作中に使用されます。 ストレージアカウントを作成し、単純な復元を実行する完全なチュートリアルについては、「 [Azure Storage サービスを使用した SQL Server のバックアップと復元のチュートリアル](https://go.microsoft.com/fwlink/?LinkId=271615)」を参照してください。  
   
  ![sql 資格情報へのストレージ アカウントのマッピング](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 資格情報へのストレージ アカウントのマッピング")  
   
-###  <a name="Blob"></a>Azure Blob Storage サービス  
+###  <a name="azure-blob-storage-service"></a><a name="Blob"></a>Azure Blob Storage サービス  
  **ストレージ アカウント:** ストレージ アカウントは、すべてのストレージ サービスの開始点となります。 Azure Blob Storage サービスにアクセスするには、まず Azure ストレージアカウントを作成します。 **ストレージアカウント名**とその**アクセスキー**プロパティは、Azure Blob Storage サービスとそのコンポーネントに対して認証を行うために必要です。  
   
- **コンテナー:** コンテナーは一連の Blob をグループ化したもので、無制限の数の Blob を格納できます。 Azure Blob service に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップを書き込むには、少なくともルートコンテナーが作成されている必要があります。  
+ **コンテナー:** コンテナーは一連の Blob をグループ化したもので、無制限の数の Blob を格納できます。 Azure Blob service にバックアップを書き込むには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 少なくともルートコンテナーが作成されている必要があります。  
   
- **BLOB:** 任意の種類とサイズのファイルです。 Azure Blob ストレージサービスに格納できる blob には、ブロック blob とページ blob の2種類があります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用し\<てアドレス指定できます\<: https://ストレージ\<アカウント> blob.core.windows.net/container>/blob>  
+ **BLOB:** 任意の種類とサイズのファイルです。 Azure Blob ストレージサービスに格納できる blob には、ブロック blob とページ blob の2種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用してアドレス指定できます。 https:// \<storage account> . blob.core.windows.net/\<container>/\<blob>  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -72,23 +70,23 @@ ms.locfileid: "79289230"
   
  ページ BLOB の詳細については、「[ブロック BLOB およびページ BLOB について](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」をご覧ください。  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント  
+###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント  
  **URL:** 一意なバックアップ ファイルの Uniform Resource Identifier (URI) を示します。 URL は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ ファイルの場所と名前を指定するために使用されます。 この実装では、有効な URL は、Azure ストレージアカウント内のページ Blob を指す URL のみです。 URL は、コンテナーだけでなく、実際の BLOB を指している必要があります。 BLOB が存在しない場合は作成されます。 既存の Blob が指定されている場合、"WITH FORMAT" オプションが指定されていない限り、BACKUP は失敗します。  
   
 > [!WARNING]  
 >  バックアップファイルをコピーして Azure Blob ストレージサービスにアップロードする場合は、ストレージオプションとしてページ Blob を使用します。 ブロック BLOB からの復元はサポートされていません。 ブロック BLOB から RESTORE ステートメントを実行すると、エラーが発生して失敗します。  
   
- URL 値の例を次に示します。 http [s\<]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/FILENAME .bak>。 HTTPS は必須ではありませんが、推奨されています。  
+ URL 値の例を次に示します: http [s]://ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> 。 HTTPS は必須ではありませんが、推奨されています。  
   
- **資格情報:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
+ **資格情報:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
   
- 資格情報を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成する方法の詳細な手順については、このトピックの「[資格情報の作成の](#credential)例」を参照してください。  
+ 資格情報を作成する方法の詳細な手順については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このトピックの「[資格情報の作成の](#credential)例」を参照してください。  
   
  資格情報の全般的な情報については、「 [資格情報](../security/authentication-access/credentials-database-engine.md)」をご覧ください。  
   
  資格情報が使用されるその他の例については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
-###  <a name="limitations"></a> 制限事項  
+###  <a name="limitations"></a><a name="limitations"></a> 制限事項  
   
 -   Premium Storage へのバックアップはサポートされていません。  
   
@@ -111,17 +109,15 @@ ms.locfileid: "79289230"
     GO
     ```  
   
--   
-  `BACKUP` ステートメントでブロック サイズを指定することはサポートされていません。  
+-   `BACKUP` ステートメントでブロック サイズを指定することはサポートされていません。  
   
--   
-  `MAXTRANSFERSIZE` を指定することはサポートされていません。  
+-   `MAXTRANSFERSIZE` を指定することはサポートされていません。  
   
 -   バックアップセットのオプション (`RETAINDAYS` および `EXPIREDATE`) を指定することはサポートされていません。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、バックアップ デバイス名に最大 259 文字の制限があります。 BACKUP TO URL では、URL の指定に使用する必須要素に 'https://.blob.core.windows.net//.bak ' の 36 文字が使用されるため、アカウント、コンテナー、および BLOB の名前は残りの 223 文字で構成します。  
   
-###  <a name="Support"></a> BACKUP/RESTORE ステートメントのサポート  
+###  <a name="support-for-backuprestore-statements"></a><a name="Support"></a> BACKUP/RESTORE ステートメントのサポート  
   
 |||||  
 |-|-|-|-|  
@@ -191,7 +187,7 @@ ms.locfileid: "79289230"
 |REPLACE|&#x2713;|||  
 |RESTART|&#x2713;|||  
 |RESTRICTED_USER|&#x2713;|||  
-|FILE|&#x2713;|||  
+|ファイル|&#x2713;|||  
 |PASSWORD|&#x2713;|||  
 |MEDIANAME|&#x2713;|||  
 |MEDIAPASSWORD|&#x2713;|||  
@@ -211,7 +207,7 @@ ms.locfileid: "79289230"
   
  RESTORE の引数の詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)」をご覧ください。  
   
-##  <a name="BackupTaskSSMS"></a>SQL Server Management Studio でのバックアップタスクの使用  
+##  <a name="using-backup-task-in-sql-server-management-studio"></a><a name="BackupTaskSSMS"></a>SQL Server Management Studio でのバックアップタスクの使用  
  SQL Server Management Studio のバックアップタスクが拡張され、ターゲットオプションの1つとして URL が含められるようになりました。また、SQL 資格情報などの Azure storage へのバックアップに必要なその他のサポートオブジェクトも追加されました。  
   
  次の手順では、Azure storage へのバックアップを許可するためにデータベースのバックアップタスクに加えられた変更について説明します。  
@@ -220,9 +216,9 @@ ms.locfileid: "79289230"
   
 2.  [全般] ページの [ **URL** ] オプションを使用して、Azure storage へのバックアップを作成します。 このオプションを選択すると、このページの他のオプションも有効になります。  
   
-    1.  **ファイル名:** バックアップファイルの名前。  
+    1.  **[ファイル名]:** バックアップ ファイルの名前。  
   
-    2.  **SQL 資格情報:** 既存の SQL Server 資格情報を指定することも、[SQL 資格情報] ボックスの横にある [**作成**] をクリックして新しい資格情報を作成することもできます。  
+    2.  **[SQL 資格情報]:** 既存の SQL Server 資格情報を指定することも、[SQL 資格情報] の横にある **[作成]** をクリックして新しい資格情報を作成することもできます。  
   
         > [!IMPORTANT]  
         >  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](https://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
@@ -231,7 +227,7 @@ ms.locfileid: "79289230"
   
     3.  **Azure ストレージコンテナー:** バックアップファイルを格納する Azure storage コンテナーの名前。  
   
-    4.  **URL プレフィックス:** これは、前の手順で説明したフィールドで指定された情報を使用して自動的に作成されます。 この値を手動で編集する場合は、前に入力した他の情報と一致することを確認してください。 たとえばストレージの URL を変更する場合は、[SQL 資格情報] も、同じストレージ アカウントに対する認証を行うように設定されていることを確認します。  
+    4.  **[URL プレフィックス]:** 前の手順で説明したフィールドで指定された情報を使用して、自動的に作成されます。 この値を手動で編集する場合は、前に入力した他の情報と一致することを確認してください。 たとえばストレージの URL を変更する場合は、[SQL 資格情報] も、同じストレージ アカウントに対する認証を行うように設定されていることを確認します。  
   
  バックアップ先として [URL] を選択すると、 **[メディア オプション]** ページの一部のオプションが無効になります。  [データベースのバックアップ] ダイアログの詳細については、次のトピックを参照してください。  
   
@@ -243,16 +239,15 @@ ms.locfileid: "79289230"
   
  [資格情報の作成 - Azure ストレージに対する認証](create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a> メンテナンス プラン ウィザードを使用した SQL Server Backup to URL  
+##  <a name="sql-server-backup-to-url-using-maintenance-plan-wizard"></a><a name="MaintenanceWiz"></a>メンテナンスプランウィザードを使用した URL へのバックアップの SQL Server  
  前に説明したバックアップタスクと同様に、SQL Server Management Studio のメンテナンスプランウィザードが拡張され、ターゲットオプションの1つとして**URL**が含められるようになりました。また、SQL 資格情報などの Azure storage へのバックアップに必要なその他のサポートオブジェクトも追加されました。 詳細については、「 **Using Maintenance Plan Wizard** 」の「 [バックアップ タスクを定義する](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)」を参照してください。  
   
-##  <a name="RestoreSSMS"></a>SQL Server Management Studio を使用した Azure storage からの復元  
+##  <a name="restoring-from-azure-storage-using-sql-server-management-studio"></a><a name="RestoreSSMS"></a>SQL Server Management Studio を使用した Azure storage からの復元  
  データベースを復元する場合、復元元のデバイスとして **[URL]** が用意されています。 次の手順では、Azure storage からの復元を可能にする復元タスクの変更について説明します。  
   
 1.  SQL Server Management Studio の復元タスクの **[全般]** ページで **[デバイス]** を選択すると、 **[バックアップ デバイスの選択]** ダイアログ ボックスが表示されます。このダイアログ ボックスでは、バックアップ メディアの種類として **[URL]** を選択できます。  
   
-2.  
-  **[URL]** を選択し、 **[追加]** をクリックすると、 **[Azure ストレージへの接続]** ダイアログが開きます。 Azure storage に対して認証する SQL 資格情報を指定します。  
+2.  **[URL]** を選択し、 **[追加]** をクリックすると、 **[Azure ストレージへの接続]** ダイアログが開きます。 Azure storage に対して認証する SQL 資格情報を指定します。  
   
 3.  SQL Server、指定した SQL 資格情報を使用して Azure storage に接続し、[ **azure でのバックアップファイルの検索**] ダイアログボックスを開きます。 このページには、ストレージに存在するバックアップ ファイルが表示されます。 復元に使用するファイルを選択して **[OK]** をクリックします。 これにより、 **[バックアップデバイスの選択**] ダイアログボックスが表示されます。このダイアログボックスで [ **OK]** をクリックすると、メインの [**復元**] ダイアログに戻り、復元を完了できるようになります。  詳細については、次のトピックを参照してください。  
   
@@ -262,24 +257,24 @@ ms.locfileid: "79289230"
   
      [[データベースの復元] &#40;[オプション] ページ&#41;](restore-database-options-page.md)  
   
-##  <a name="Examples"></a> コード例  
+##  <a name="code-examples"></a><a name="Examples"></a> コード例  
  ここでは、次の例について説明します。  
   
 -   [Shared Access Signature の作成](#credential)  
   
 -   [データベース全体をバックアップする](#complete)  
   
--   [データベースとログのバックアップ](#databaselog)  
+-   [データベースおよびログをバックアップする](#databaselog)  
   
 -   [プライマリ ファイル グループのファイル全体のバックアップを作成する](#filebackup)  
   
 -   [プライマリ ファイル グループのファイルの差分バックアップを作成する](#differential)  
   
--   [データベースを復元し、ファイルを移動する](#restoredbwithmove)  
+-   [データベースを復元しファイルを移動する](#restoredbwithmove)  
   
 -   [STOPAT を使って特定の時点の状態に復元する](#PITR)  
   
-###  <a name="credential"></a> Shared Access Signature の作成  
+###  <a name="create-a-credential"></a><a name="credential"></a> Shared Access Signature の作成  
  次の例では、Azure Storage 認証情報を格納する資格情報を作成します。  
 
    ```sql
@@ -316,7 +311,7 @@ ms.locfileid: "79289230"
    New-SqlCredential -Name $credentialName -Path $srvpath -Identity $storageAccount -Secret $secureString
    ```  
   
-###  <a name="complete"></a>データベース全体のバックアップ  
+###  <a name="backing-up-a-complete-database"></a><a name="complete"></a>データベース全体のバックアップ  
  次の例では、AdventureWorks2012 データベースを Azure Blob ストレージサービスにバックアップします。
   
    ```sql
@@ -366,7 +361,7 @@ ms.locfileid: "79289230"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On
    ```  
   
-###  <a name="databaselog"></a>データベースとログのバックアップ  
+###  <a name="backing-up-the-database-and-log"></a><a name="databaselog"></a>データベースとログのバックアップ  
  次の例では、AdventureWorks2012 サンプル データベースをバックアップします。このデータベースでは、既定で単純復旧モデルが使用されています。 ここではまず、ログをバックアップするため、完全復旧モデルを使用するよう AdventureWorks2012 データベースを変更します。 この例では、Azure Blob へのデータベースの完全バックアップを作成し、更新操作の期間後に、ログをバックアップします。 この例では、日付と時刻のタイム スタンプを含むバックアップ ファイル名を作成します。  
   
    ```sql
@@ -466,7 +461,7 @@ ms.locfileid: "79289230"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Log
    ```  
   
-###  <a name="filebackup"></a>プライマリファイルグループの完全ファイルバックアップを作成する  
+###  <a name="creating-a-full-file-backup-of-the-primary-filegroup"></a><a name="filebackup"></a>プライマリファイルグループの完全ファイルバックアップを作成する  
  次の例では、プライマリ ファイル グループのファイル全体のバックアップを作成します。
   
    ```sql
@@ -524,7 +519,7 @@ ms.locfileid: "79289230"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary
    ```  
   
-###  <a name="differential"></a>プライマリファイルグループのファイルの差分バックアップを作成する  
+###  <a name="creating-a-differential-file-backup-of-the-primary-filegroup"></a><a name="differential"></a>プライマリファイルグループのファイルの差分バックアップを作成する  
  次の例では、プライマリ ファイル グループのファイルの差分バックアップを作成します。  
   
    ```sql
@@ -584,7 +579,7 @@ ms.locfileid: "79289230"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary -Incremental
    ```  
   
-###  <a name="restoredbwithmove"></a>データベースを復元してファイルを移動する  
+###  <a name="restore-a-database-and-move-files"></a><a name="restoredbwithmove"></a>データベースを復元してファイルを移動する  
  データベースの完全バックアップを復元し、復元したデータベースを C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data ディレクトリに移動するには、次の手順を実行します。
   
    ```sql
@@ -687,7 +682,7 @@ ms.locfileid: "79289230"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
    ```  
   
-###  <a name="PITR"></a> STOPAT を使って特定の時点の状態に復元する  
+###  <a name="restoring-to-a-point-in-time-using-stopat"></a><a name="PITR"></a> STOPAT を使って特定の時点の状態に復元する  
  次の例では、データベースを特定の時点の状態に復元し、復元操作を示します。  
   
    ```sql

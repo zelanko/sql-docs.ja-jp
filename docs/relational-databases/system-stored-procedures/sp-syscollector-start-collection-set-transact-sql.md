@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68010601"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892839"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクターが既に有効になっており、コレクションセットが実行されていない場合は、コレクションセットを開始します。 コレクターが有効になっていない場合は、 [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)を実行してコレクターを有効にした後、このストアドプロシージャを使用してコレクションセットを開始します。  
 
@@ -50,7 +50,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  sp_syscollector_create_collection_set を msdb システム データベースのコンテキストで実行し、SQL Server エージェントを有効にする必要があります。  
   
  このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 コレクションセットにスケジュールがない場合 (コレクションモードが非キャッシュに設定されている場合など)、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)ストアドプロシージャを使用してコレクションセットを開始します。  
@@ -71,9 +71,9 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

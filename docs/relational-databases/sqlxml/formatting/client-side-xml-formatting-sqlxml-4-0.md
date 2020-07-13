@@ -1,5 +1,6 @@
 ---
 title: クライアント側の XML 書式設定 (SQLXML)
+description: FOR XML 句を使用して、SQLXML 4.0 でのクライアント側の XML 書式設定について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 526f47678e09f10bdd412bb35287d6363c41cabc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75247022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666151"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>クライアント側の XML 書式設定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、クライアント側の XML 書式設定に関する情報を提供します。 クライアント側の書式設定とは、中間層での XML の書式設定を指します。  
   
 > [!NOTE]  
 >  ここでは、クライアント側での FOR XML 句の使用に関する追加情報を提供します。ここでは、FOR XML 句について理解していることを前提としています。 FOR XML の詳細については、「 [for Xml を使用した xml の構築](../../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
   
- **重要**新しい**xml**データ型でクライアント側の FOR XML 機能を使用するには、クライアントが SQLOLEDB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロバイダーではなく Native client (SQLNCLI11) データプロバイダーを常に使用する必要があります。 SQLNCLI11 は、最新バージョンの SQL Server プロバイダーであり、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型を完全に認識します。 SQLOLEDB プロバイダーを使用したクライアント側の FOR XML の動作では、 **xml**データ型が文字列として扱われます。  
+ **重要**新しい**xml**データ型でクライアント側の FOR XML 機能を使用するには、クライアントが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB プロバイダーではなく NATIVE client (SQLNCLI11) データプロバイダーを常に使用する必要があります。 SQLNCLI11 は、最新バージョンの SQL Server プロバイダーであり、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型を完全に認識します。 SQLOLEDB プロバイダーを使用したクライアント側の FOR XML の動作では、 **xml**データ型が文字列として扱われます。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>クライアント側での XML ドキュメントの書式設定  
  クライアント アプリケーションで次のクエリを実行するとします。  
@@ -54,7 +55,7 @@ FROM   Person.Contact
   
  次の表は、クライアント側の FOR XML で指定できるモードです。  
   
-|クライアント側の FOR XML のモード|解説|  
+|クライアント側の FOR XML のモード|コメント|  
 |-------------------------------|-------------|  
 |RAW|クライアント側とサーバー側のどちらの FOR XML で指定しても、同じ結果が生成されます。|  
 |NESTED|サーバー側で FOR XML AUTO モードを指定した場合と同様です。|  
@@ -119,12 +120,12 @@ AS
      SQLXML マネージド クラスのこのプロパティを true に設定すると、クライアント側の書式設定を指定できます。  
   
 ## <a name="enhanced-xml-template-support"></a>拡張 XML テンプレートのサポート  
- 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、の xml テンプレートは、**クライアント側の xml**属性を追加して拡張されています。 この属性を true に設定すると、XML がクライアント側で書式設定されます。 このテンプレート属性は、SQLXMLOLEDB プロバイダー固有の ClientSideXML プロパティと同じ機能であることに注意してください。  
+ 以降で [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、の xml テンプレートは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **クライアント側の xml**属性を追加して拡張されています。 この属性を true に設定すると、XML がクライアント側で書式設定されます。 このテンプレート属性は、SQLXMLOLEDB プロバイダー固有の ClientSideXML プロパティと同じ機能であることに注意してください。  
   
 > [!NOTE]  
 >  SQLXMLOLEDB プロバイダーを使用する ADO アプリケーションで XML テンプレートを実行し、テンプレートと Provider ClientSideXML プロパティの両方で**クライアント側の xml**属性を指定すると、テンプレートで指定された値が優先されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [XML のセキュリティに関する考慮事項 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68137660"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881527"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したマージ パブリケーションのパーティション情報を返します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。  
   
@@ -53,25 +53,25 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**partition**|**int**|サブスクライバーパーティションを識別します。|  
 |**host_name**|**sysname**|サブスクライバー側の[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数の値によってフィルター処理されるサブスクリプションのパーティションを作成するときに使用される値です。|  
 |**suser_sname**|**sysname**|サブスクライバー側の[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)関数の値によってフィルター処理されるサブスクリプションのパーティションを作成するときに使用される値です。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|サブスクライバーのパーティションに対してフィルター選択されたデータスナップショットの場所です。|  
-|**date_refreshed**|**DATETIME**|前回スナップショット ジョブが実行され、パーティションのフィルター選択されたデータ スナップショットが生成された日付です。|  
-|**dynamic_snapshot_jobid**|**UNIQUEIDENTIFIER**|パーティションのフィルター選択されたデータスナップショットを作成するジョブを識別します。|  
+|**date_refreshed**|**datetime**|前回スナップショット ジョブが実行され、パーティションのフィルター選択されたデータ スナップショットが生成された日付です。|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|パーティションのフィルター選択されたデータスナップショットを作成するジョブを識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergepartition**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergepartition**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addmergepartition &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_dropmergepartition &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   

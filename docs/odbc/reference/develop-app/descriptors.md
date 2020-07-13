@@ -13,14 +13,14 @@ helpviewer_keywords:
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2138a5f8417fc9156c916719e96d707b9a29de9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca8299daae744fb9398ed6ffc99c838ce8edff48
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68040011"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305903"
 ---
 # <a name="descriptors"></a>記述子
 記述子ハンドルは、列または動的パラメーターに関する情報を保持するデータ構造を参照します。  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0294f0ddea80ce956b5ddf6a6a97e0de62ecf2cd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173739"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>警告デザイナーでのデータ警告の編集
@@ -42,12 +42,12 @@ ms.locfileid: "78173739"
     > [!NOTE]
     >  別のデータ フィードを選択することはできません。 異なるデータ フィードを使用するには、新しいデータ警告定義を作成する必要があります。
 
-3.  **[保存]** をクリックします。
+3.  **[Save]** (保存) をクリックします。
 
     > [!NOTE]
     >  レポートが変更され、レポートから生成されたデータ フィードが変更されている場合、警告の定義が無効になっている可能性があります。 この状況が生じるのは、警告定義のルールで参照される列がレポートから削除された場合、列のデータ型が変更された場合、またはレポートが削除または移動された場合です。 無効な警告定義は開くことはできますが、基になるレポート データ フィードの現行バージョンに基づいて有効になるまでは再保存できません。 レポートからデータ フィードが生成される方法の詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
- [警告管理者がデータ警告を Reporting Services するためのデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) [](../ssms/agent/alerts.md)
+ [警告管理者がデータ警告を Reporting Services するためのデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) [Reporting Services Data Alerts](../ssms/agent/alerts.md)
 
 

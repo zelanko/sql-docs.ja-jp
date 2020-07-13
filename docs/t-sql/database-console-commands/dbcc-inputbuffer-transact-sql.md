@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0560bee16adc28205e5f05250c477ccea6a9683d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757247"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 クライアントから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに最後に送信されたステートメントを表示します。
   
@@ -39,7 +39,7 @@ ms.locfileid: "68039099"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC INPUTBUFFER ( session_id [ , request_id ])  
 [WITH NO_INFOMSGS ]  
 ```  

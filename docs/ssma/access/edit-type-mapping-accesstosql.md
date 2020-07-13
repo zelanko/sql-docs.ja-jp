@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006574"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>型のマッピングの編集 (には、()
@@ -33,13 +33,13 @@ ms.locfileid: "68006574"
   
 データ型が可変長の場合、[**ソースの種類**] の下に次のフィールドが表示されます。  
   
-**差出人**  
+**From**  
 このマッピングの最小の長さを指定します。 たとえば、 **text**データ型の場合は、「10」と入力すると、このマッピングが**テキスト (10)** から始まる範囲に対して指定されます。  
   
-**宛先**  
+**To**  
 このマッピングの最大長を指定します。 たとえば、 **text**データ型の場合は、20を入力して、このマッピングが**テキスト (20)** で終わる範囲に対して行うことを指定できます。  
   
-**ターゲットの種類**  
+**変換後の型**  
 変換元[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型がマップされるデータ型を選択します。 SSMA に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よってテーブルまたはストアドプロシージャが作成されると、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[**対象の型**] の下に次のフィールドが表示されます。  

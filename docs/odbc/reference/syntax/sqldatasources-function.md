@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b56a6c25e54897e67beaf39d3b7797ac45391d7b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68121378"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301182"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 関数
 **互換性**  
@@ -52,14 +52,14 @@ SQLRETURN SQLDataSources(
  *EnvironmentHandle*  
  代入環境ハンドル。  
   
- *横書き*  
+ *方向*  
  代入ドライバーマネージャーが情報を返すデータソースを決定します。 次の値をとります。  
   
  SQL_FETCH_NEXT (一覧内の次のデータソース名を取得するため)、SQL_FETCH_FIRST (リストの先頭からフェッチ)、SQL_FETCH_FIRST_USER (最初のユーザー DSN をフェッチする場合)、または SQL_FETCH_FIRST_SYSTEM (最初のシステム DSN をフェッチする場合) です。  
   
  *Direction*が SQL_FETCH_FIRST に設定されている場合、その後、 *direction*をに設定して**sqldatasources ソース**を呼び出すと、ユーザーとシステムの両方の dsn が返さ SQL_FETCH_NEXT 返されます。 *Direction*が SQL_FETCH_FIRST_USER に設定されている場合、後続の**sqldatasources ソース**への呼び出しでは、*方向*がに設定され SQL_FETCH_NEXT ユーザー dsn のみが返されます。 *Direction*が SQL_FETCH_FIRST_SYSTEM に設定されている場合、後続の**sqldatasources ソース**への呼び出しでは、*方向*がに設定され SQL_FETCH_NEXT はシステム dsn のみを返します。  
   
- *Server*  
+ *ServerName*  
  Outputデータソース名を返すバッファーへのポインター。  
   
  *Servername*が NULL の場合でも、 *NameLength1Ptr*は、 *servername*が指すバッファー内で返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
@@ -85,9 +85,9 @@ SQLRETURN SQLDataSources(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqldatasources**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_ENV と*EnvironmentHandle*の*ハンドル*を指定して**** を呼び出します。 次の表に、 **Sqldatasources ソース**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **Sqldatasources**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_ENV と*EnvironmentHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqldatasources ソース**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) Driver Manager 固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|(DM) バッファー \* *ServerName*は、完全なデータソース名を返すのに十分な大きさではありませんでした。 そのため、名前が切り詰められました。 データソース名全体の長さは、 \* *NameLength1Ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \*の*説明*が完全なドライバーの説明を返すのに十分な大きさではありませんでした。 このため、説明は切り捨てられました。 切り捨てられていないデータソースの説明の長さは、**NameLength2Ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -110,7 +110,7 @@ SQLRETURN SQLDataSources(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースへの接続に必要な値を検出して一覧表示する|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  

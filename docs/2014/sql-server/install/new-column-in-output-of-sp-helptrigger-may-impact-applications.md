@@ -11,20 +11,18 @@ helpviewer_keywords:
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0b1f5e936843ed84a5c6b88e2f3685e7a4272bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012170"
 ---
 # <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>sp_helptrigger 出力の新しい列がアプリケーションに影響を与える可能性がある
   sp_helptrigger システムストアドプロシージャによって返される結果セットの最後の列を trigger_schemaias します。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]特定のテーブルで定義されるトリガーに関する情報を入手するには、sys.triggers カタログ ビューをクエリしてください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]特定のテーブルで定義されるトリガーに関する情報を入手するには、sys.triggers カタログ ビューをクエリしてください。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

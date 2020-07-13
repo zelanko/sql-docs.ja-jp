@@ -7,28 +7,23 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 053b34add45354d0df71fa73a72f8786cc706d15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059906"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432439"
 ---
 # <a name="data-flow-taps"></a>データ フロー タップ
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] の新機能を使用して、ランタイム時にパッケージのデータ フロー パスのデータ タップを追加し、データ タップから外部ファイルに出力できます。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  
   
-1.  
-  [catalog.create_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) ストアド プロシージャを使用してパッケージ実行インスタンスを作成します。  
+1.  [catalog.create_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) ストアド プロシージャを使用してパッケージ実行インスタンスを作成します。  
   
-2.  
-  [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) または [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) ストアド プロシージャを使用してデータ タップを追加します。  
+2.  [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) または [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) ストアド プロシージャを使用してデータ タップを追加します。  
   
-3.  
-  [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) を使用してパッケージ実行インスタンスを開始します。  
+3.  [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) を使用してパッケージ実行インスタンスを開始します。  
   
  前のシナリオで説明されているステップを実行するサンプル SQL スクリプトを次に示します:  
   
@@ -45,11 +40,9 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  SQL ステートメントを入力する代わりに、次のステップを実行し、実行パッケージのスクリプトを生成することができます:  
   
-1.  
-  **Package.dtsx** を右クリックし、 **[実行]** をクリックします。  
+1.  **Package.dtsx** を右クリックし、 **[実行]** をクリックします。  
   
-2.  
-  **[スクリプト]** ツール バー ボタンをクリックしてスクリプトを生成します。  
+2.  **[スクリプト]** ツール バー ボタンをクリックしてスクリプトを生成します。  
   
 3.  ここで、add_data_tap ステートメントを start_execution 呼び出しの前に追加します。  
   
@@ -57,13 +50,12 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap ストアド プロシージャの dataflow_path_id_string パラメーターは、データ タップを追加するデータ フロー パスの IdentificationString プロパティに対応しています。 dataflow_path_id_string を取得するには、データ フロー パス (データ フローのタスク間の矢印) をクリックし、[プロパティ] ウィンドウで **IdentificationString** プロパティの値を確認します。  
   
- スクリプトを実行すると、出力ファイルは \<Program Files>\Microsoft の SQL Server\110\DTS\DataDumps に格納されます。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
+ このスクリプトを実行すると、出力ファイルは \Microsoft SQL server に格納され \<Program Files> ます。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
   
  既に説明したように、add_data_tap ストアド プロシージャを使用する代わりに、 [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)ストアド プロシージャを使用することもできます。 このストアド プロシージャは、task_package_path の代わりにデータ フロー タスクの ID をパラメーターとして取得します。 Visual Studio プロパティ ウィンドウからデータ フロー タスクの ID を取得できます。  
   
 ## <a name="removing-a-data-tap"></a>データ タップの削除  
- 
-  [catalog.remove_data_tap](/sql/integration-services/system-stored-procedures/catalog-remove-data-tap) ストアド プロシージャを使用して、実行開始前にデータ タップを削除できます。 このストアド プロシージャは、add_data_tap ストアド プロシージャの出力として取得できるデータ タップの ID を、パラメーターとして取得します。  
+ [catalog.remove_data_tap](/sql/integration-services/system-stored-procedures/catalog-remove-data-tap) ストアド プロシージャを使用して、実行開始前にデータ タップを削除できます。 このストアド プロシージャは、add_data_tap ストアド プロシージャの出力として取得できるデータ タップの ID を、パラメーターとして取得します。  
   
 ```  
   

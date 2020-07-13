@@ -16,31 +16,31 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896748"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクション アイテムのコレクターの種類に関する情報を提供します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|コレクション型の GUID。 NULL 値は許可されません。|  
 |**name**|**sysname**|コレクション型の名前。 NULL 値は許可されません。|  
 |**parameter_schema**|**xml**|指定されたコレクターの種類の構成を記述する XML スキーマ。 この XML スキーマは、特定のコレクションアイテムインスタンスに関連付けられた実際の XML 構成を検証するために使用されます。 NULL 値が許可されます。|  
 |**parameter_formatter**|**xml**|コレクションセットのプロパティページで使用する XML を変換するために使用するテンプレートを指定します。 NULL 値が許可されます。|  
 |**collection_package_id**|**uniqueidentifer**|コレクションパッケージの GUID。 NULL 値は許可されません。|  
-|**collection_package_path**|**nvarchar(4000)**|コレクションパッケージへのパスを提供します。 NULL 値が許可されます。|  
+|**collection_package_path**|**nvarchar (4000)**|コレクションパッケージへのパスを提供します。 NULL 値が許可されます。|  
 |**collection_package_name**|**sysname**|コレクションパッケージの名前です。 NULL 値は許可されません。|  
 |**upload_package_id**|**uniqueidentifer**|アップロード パッケージの GUID。 NULL 値は許可されません。|  
-|**upload_package_path**|**nvarchar(4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
+|**upload_package_path**|**nvarchar (4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
 |**upload_package_name**|**sysname**|アップロードパッケージの名前です。 NULL 値は許可されません。|  
 |**is_system**|**bit**|コレクター型がデータコレクターに付属しているかどうか、または後で**dc_admin**によって追加されたかどうかを示すには、(1) または off (0) をオンにします。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68124919"
 |**Collection_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
 |**Upload_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  

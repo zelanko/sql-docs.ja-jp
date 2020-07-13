@@ -1,5 +1,6 @@
 ---
 title: モデル
+description: モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルは、マスターデータサービスで最も高いレベルのデータ編成です。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 072228f2a0538915b8ad1a657a205a676b159ca2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73727947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813236"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  
   
--   [エンティティ]  
+-   エンティティ  
   
 -   属性と属性グループ  
   
@@ -34,8 +35,7 @@ ms.locfileid: "73727947"
   
 -   コレクション  
   
- モデルは、マスター データの構造を整理します。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の実装は 1 つまたは多くのモデルを保持し、各モデルが類似のデータをグループ化します マスター データは通常、4 つのカテゴリ (人、場所、物、概念) のうちの 1 つに分類されます。 たとえば、製品関連のデータを含む Product モデルや、顧客関連のデータを含む Customer モデルを作成できます。  
+ モデルは、マスター データの構造を整理します。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の実装は 1 つまたは多くのモデルを保持し、各モデルが類似のデータをグループ化します マスター データは通常、4 つのカテゴリ (人、場所、物、概念) のうちの 1 つに分類されます。 たとえば、製品関連のデータを含む Product モデルや、顧客関連のデータを含む Customer モデルを作成できます。  
   
  ユーザーとグループには、モデル内のオブジェクトを表示および更新する権限を割り当てることができます。 モデルに権限を与えない場合、モデルは表示されません。  
   
@@ -53,8 +53,7 @@ ms.locfileid: "73727947"
 > [!NOTE]  
 >  派生階層はモデル オブジェクトでもありますが、図には示されていません。 派生階層は、エンティティ間に存在するドメイン ベースの属性リレーションシップから派生します。 詳細については、「[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
   
- マスター データは、モデル オブジェクトに含まれるデータです。 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、マスター データはエンティティのメンバーとして格納されます。  
+ マスター データは、モデル オブジェクトに含まれるデータです。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、マスター データはエンティティのメンバーとして格納されます。  
   
  モデル オブジェクトは、 **のユーザー インターフェイスの** [システム管理] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 機能領域で管理されます。  
   
@@ -75,20 +74,20 @@ ms.locfileid: "73727947"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|モデルを作成してマスター データを整理する。|[モデル &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|既存のモデルの名前を変更する。|[モデルの編集 &#40;マスターデータサービス&#41;](../master-data-services/edit-model-master-data-services.md)|  
-|既存のモデルを削除する。|[モデル &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|モデルを作成してマスター データを整理する。|[モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)|  
+|既存のモデルの名前を変更する。|[モデルを編集する (マスター データ サービス)](../master-data-services/edit-model-master-data-services.md)|  
+|既存のモデルを削除する。|[モデルを削除する (マスター データ サービス)](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [マスターデータサービス概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)  
+-   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
--   [モデルの配置 &#40;マスターデータサービス&#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
--   [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

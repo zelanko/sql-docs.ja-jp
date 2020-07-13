@@ -12,15 +12,14 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc8ac157a3bdfa240414fe4055cc322370bac019
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769018"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427089"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  
@@ -32,7 +31,7 @@ ms.locfileid: "62769018"
 > [!NOTE]  
 >  複数のデータ フロー タスクおよび複数のパッケージでより簡単に再利用できるコンポーネントを作成する場合は、このスクリプト コンポーネント サンプルのコードを基にした、カスタム データ フロー コンポーネントの作成を検討してください。 詳細については、「 [カスタム データ フロー コンポーネントの開発](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)」を参照してください。  
   
-##  <a name="example1"></a> 例 1: 行区切りのレコードの解析  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> 例 1: 行区切りのレコードの解析  
  この例では、データの各列が個別の行に表示されるテキスト ファイルを取得し、スクリプト コンポーネントを使用して解析し、変換先テーブルに入れる方法を示します。  
   
  データフローで変換として使用するスクリプトコンポーネントを構成する方法の詳細については、「[スクリプトコンポーネントによる同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」および「[スクリプトコンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)」を参照してください。  
@@ -94,7 +93,7 @@ ms.locfileid: "62769018"
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、[出力 0] `SynchronousInputID`を選択し、を [なし] に設定します。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
+12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、[出力 0] を選択し、を [なし] に設定し `SynchronousInputID` ます。 次の 5 つの出力列を、すべて文字列型 [DT_STR]、長さ 32 で作成します。  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769018"
   
     -   StateProvince  
   
-13. [**スクリプト変換エディター**] の [**スクリプト**] ページで、[**スクリプトの編集**] をクリックし`ScriptMain` 、例のクラスに示されているコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+13. [**スクリプト変換エディター**] の [**スクリプト**] ページで、[**スクリプトの編集**] をクリックし、例のクラスに示されているコードを入力し `ScriptMain` ます。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -187,7 +186,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 例 2: 親レコードと子レコードの分割  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> 例 2: 親レコードと子レコードの分割  
  この例では、親レコードの前に区切り行があり、親レコードの後に行数不定の子レコード行が続くテキスト ファイルを取得し、スクリプト コンポーネントを使用して解析し、適切に正規化された親変換先テーブルと子変換先テーブルに入れる方法を示します。 この簡単な例は、なんらかの方法で各レコードの先頭と末尾を識別できれば、各親レコードおよび子レコードで複数の行または列を使用するソース ファイルに容易に適用できます。  
   
 > [!CAUTION]  
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
-12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、出力0を選択し、parentrecords に名前を`SynchronousInputID`変更して、を None に設定します。 次の 2 つの出力列を作成します。  
+12. [**スクリプト変換エディター**] の [**入力および出力**] ページで、出力0を選択し、parentrecords に名前を変更して、 `SynchronousInputID` を None に設定します。 次の 2 つの出力列を作成します。  
   
     -   ParentID (主キー)、4 バイト符号付き整数型 [DT_I4]  
   
@@ -267,8 +266,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord、文字列型 [DT_STR]、長さ 50  
   
-14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 
-  `ScriptMain` クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 `ScriptMain` クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 15. SQL Server 変換先をデータ フローに追加します。 スクリプト コンポーネントの ParentRecords 出力をこの変換先に接続します。OLE DB 接続マネージャーと Parents テーブルを使用するように構成します。  
   
@@ -347,9 +345,9 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプト コンポーネントによる同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [スクリプト コンポーネントによる非同期変換の作成](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   

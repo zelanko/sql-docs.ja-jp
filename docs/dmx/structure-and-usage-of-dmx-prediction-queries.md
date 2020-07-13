@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938068"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669990"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、データマイニング拡張機能 (DMX) の予測クエリを使用して、マイニングモデルの結果に基づいて、新しいデータセット内の不明な列の値を予測できます。  
+  で [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、データマイニング拡張機能 (DMX) の予測クエリを使用して、マイニングモデルの結果に基づいて、新しいデータセット内の不明な列の値を予測できます。  
   
  使用するクエリの型は、モデルから取得する情報の種類によって異なります。 リアルタイムで簡単な予測を作成する場合、たとえば、Web サイトの潜在顧客が自転車購入者のペルソナに適合するかどうかを知るには、単一クエリを使用します。 データ ソース内に含まれているケースのセットから予測のバッチを作成する場合は、通常の予測クエリを使用します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67938068"
   
 -   **TOP**  
   
--   *****\<モデル>***予測結合**から      
+-   **FROM*** \< モデル>***予測結合**から      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938068"
   
 -   データ列を返す関数。  
   
- **** *FROM \<model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
+ **FROM** * \< model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
   
  **ON**要素は、マイニングモデルで定義されている列を外部データセットの列にマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   

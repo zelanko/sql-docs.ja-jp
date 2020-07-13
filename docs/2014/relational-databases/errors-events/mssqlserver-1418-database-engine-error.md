@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7abc0b4dea4df1637b4ba9456dee6a897184f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1fcac03f044aacce5e907824862eb589c97a07d2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62915768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967962"
 ---
 # <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
     
@@ -93,7 +92,7 @@ ms.locfileid: "62915768"
      **netstat -ano**  
   
 ## <a name="see-also"></a>参照  
- [ALTER ENDPOINT &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
+ [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [データベースミラーリングエンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [ミラーリング &#40;SQL Server のミラーデータベースを準備する&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

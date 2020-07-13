@@ -10,15 +10,14 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5edad70330a5745f9d150cf8a0ad0d540132c029
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897335"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437109"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 式)
   指定された長さまたは有効桁数に丸めた数値式を返します。 length パラメーターは整数に評価される必要があります。  

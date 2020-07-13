@@ -1,5 +1,5 @@
 ---
-title: sysalerts (Transact-sql) |Microsoft Docs
+title: dbo.sysの警告 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -17,29 +17,29 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68084685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890535"
 ---
-# <a name="dbosysalerts-transact-sql"></a>sysalerts (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysalerts-transact-sql"></a>dbo.sysの警告 (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   警告 1 件につき 1 行のデータを格納します。 アラートは、イベントへの応答として送信されるメッセージです。 警告メッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の外に転送でき、電子メールやポケットベルのメッセージとして送信することもできます。 また、警告でタスクを生成することもできます。  このテーブルは、 **msdb**データベースに格納されます。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|警告 ID。|  
+|**id**|**int**|警告 ID。|  
 |**name**|**sysname**|アラート名。|  
 |**event_source**|**nvarchar (100)**|イベントのソース ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|  
-|**event_category_id**|**int**|将来使用するために予約されています。|  
-|**event_id**|**int**|将来使用するために予約されています。|  
+|**event_category_id**|**int**|将来利用するために予約されています。|  
+|**event_id**|**int**|将来利用するために予約されています。|  
 |**message_id**|**int**|この警告をトリガーするユーザー定義のメッセージ ID または**sysmessages**メッセージへの参照。|  
-|**順**|**int**|このアラートをトリガーする重要度。|  
+|**severity**|**int**|このアラートをトリガーする重要度。|  
 |**enabled**|**tinyint**|アラートの状態:<br /><br /> **0** = 無効です。<br /><br /> **1** = 有効。|  
 |**delay_between_responses**|**int**|このアラートの通知間の待機時間 (秒単位)。|  
 |**last_occurrence_date**|**int**|アラートの最終発生日 (日付)。|  
@@ -53,22 +53,22 @@ ms.locfileid: "68084685"
 |**occurrence_count**|**int**|警告の発生回数。|  
 |**count_reset_date**|**int**|日 (日付) のカウントは**0**にリセットされます。|  
 |**count_reset_time**|**int**|時刻のカウントは**0**にリセットされます。|  
-|**job_id**|**UNIQUEIDENTIFIER**|警告が発生したときに実行するタスクの ID。|  
+|**job_id**|**uniqueidentifier**|警告が発生したときに実行するタスクの ID。|  
 |**has_notification**|**int**|アラートが発生したときに電子メール通知を受信するオペレーターの数。|  
-|**示す**|**int**|予約済み。|  
+|**flags**|**int**|予約済み。|  
 |**performance_condition**|**nvarchar(512)**|予約済み。|  
 |**category_id**|**int**|予約済み。|  
   
- ## <a name="remarks"></a>解説
+ ## <a name="remarks"></a>Remarks
 
-次の表は、include_event_description ビットマスクの値を示しています。 10進値は、sysalerts によって返されます。 
+次の表は、include_event_description ビットマスクの値を示しています。 dbo.sysの警告によって、10進値が返されます。 
 
-|decimal | binary | 意味 |
+|decimal | バイナリ | 意味 |
 |------|------|------|
 |0 |0000 |メッセージがありません |
-|1 で保護されたプロセスとして起動されました |0001 |電子メール |
-|2 |mylnxstorage02 |pager |
-|3 |myhpccn-0011 |ポケットベルと電子メール |
+|1 |0001 |email |
+|2 |0010 |pager |
+|3 |0011 |ポケットベルと電子メール |
 |4 |0100 |[Net Send] |
 |5 |0101 |Net send と電子メール |
 |6 |0110 |Net send とポケットベル |

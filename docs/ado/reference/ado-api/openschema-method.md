@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931860"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762103"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベーススキーマ情報を取得します。  
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  実行するスキーマクエリの種類を表す[Schemaenum](../../../ado/reference/ado-api/schemaenum.md)値。  
   
  *条件*  
- 省略可能。 [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)に記載されているように、各*QueryType*オプションのクエリ制約の配列。  
+ 任意。 [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)に記載されているように、各*QueryType*オプションのクエリ制約の配列。  
   
  *SchemaID*  
  OLE DB 仕様で定義されていないプロバイダースキーマクエリの GUID。 *QueryType*が**Adschemaproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
@@ -55,7 +55,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
   
  プロバイダーが、前に示した以外の非標準のスキーマクエリを定義している場合は、 *QueryType*引数に定数**Adschemaproviderspecific**が使用されます。 この定数を使用する場合は、実行するスキーマクエリの GUID を渡すために*Schemaid*引数が必要です。 *QueryType*が**Adschemaproviderspecific**に設定されていても、 *schemaid*が指定されていない場合、エラーが発生します。  
   
- プロバイダーは、すべての OLE DB 標準スキーマクエリをサポートする必要はありません。 具体的には、OLE DB の仕様で**** は、 **adschematables**、 **adschematables**だけが必要です。 ただし、これらのスキーマクエリに対して前述した*条件*制約をサポートするために、プロバイダーは必要ありません。  
+ プロバイダーは、すべての OLE DB 標準スキーマクエリをサポートする必要はありません。 具体的には、OLE DB の仕様で**adSchemaColumns**は、 **adschematables**、 **adschematables**だけが必要です。 ただし、これらのスキーマクエリに対して前述した*条件*制約をサポートするために、プロバイダーは必要ありません。  
   
 > [!NOTE]
 >  **リモートデータサービスの使用状況****OpenSchema**メソッドは、クライアント側の[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトでは使用できません。  

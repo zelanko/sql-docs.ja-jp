@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 917b6aa6dc76a949d5880c14a5c4bb9498f3ae44
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898076"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899814"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つまたは複数のユーザー定義の既定値を現在のデータベースから削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67898076"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]  
 ```  
   

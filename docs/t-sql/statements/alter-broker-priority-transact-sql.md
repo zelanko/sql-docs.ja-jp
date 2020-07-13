@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ccaa708ec41319c8eaf17c1f917d940a086fb62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066001"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895713"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の優先度のプロパティを変更します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68066001"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  

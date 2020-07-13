@@ -13,41 +13,35 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544764"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>属性の KeyColumns プロパティの変更
   属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
   
 ### <a name="to-modify-the-keycolumns-property-of-an-attribute"></a>属性の KeyColumns プロパティを変更するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **KeyColumns** プロパティを変更するプロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **KeyColumns** プロパティを変更するプロジェクトを開きます。  
   
 2.  次のいずれかの手順を実行して、ディメンション デザイナーを開きます。  
   
-    -   
-  **ソリューション エクスプローラー**では、 **[ディメンション]** フォルダー内のディメンションを右クリックし、 **[開く]** または **[デザイナーの表示]** をクリックします。  
+    -   **ソリューション エクスプローラー**では、 **[ディメンション]** フォルダー内のディメンションを右クリックし、 **[開く]** または **[デザイナーの表示]** をクリックします。  
   
-         または  
+         \- または -  
   
-    -   キューブデザイナーの [**キューブ構造**] タブで、[**ディメンション**] ペインのキューブディメンションを展開し、[ ** \<ディメンション>の編集**] をクリックします。  
+    -   キューブデザイナーの [**キューブ構造**] タブで、[**ディメンション**] ペインのキューブディメンションを展開し、[**編集 \<dimension> **] をクリックします。  
   
-3.  
-  **[ディメンション構造]** タブの **[属性]** ペインで、変更する **KeyColumns** プロパティを含む属性をクリックします。  
+3.  **[ディメンション構造]** タブの **[属性]** ペインで、変更する **KeyColumns** プロパティを含む属性をクリックします。  
   
-4.  
-  **[プロパティ]** ウィンドウで、 **KeyColumns** プロパティの値をクリックします。  
+4.  **[プロパティ]** ウィンドウで、 **KeyColumns** プロパティの値をクリックします。  
   
 5.  プロパティ ボックスの値のセルに表示される参照ボタン ( **[...]** ) をクリックします。  
   
-     
-  **[キー列]** ダイアログ ボックスが表示されます。  
+     **[キー列]** ダイアログ ボックスが表示されます。  
   
 6.  既存のキー列を削除するには、**[キー列]** の一覧で列を選択し、**[\<]** をクリックします。  
   

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 49c06ac45a91014199caa75c5893971f6f3de715
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6801079c3d16871712e5ba4494ca2c3dbf5bb662
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751659"
 ---
 # <a name="sp_removedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューター側の特定のパブリケーションに属するパブリッシュ メタデータを削除します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -45,7 +45,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_removedistpublisherdbreplication**は、トランザクションレプリケーションとスナップショットレプリケーションで使用されます。  
   
  **sp_removedistpublisherdbreplication**は、ディストリビューションデータベースを削除せずにパブリッシュされたデータベースを再作成する必要がある場合に使用します。 次のメタデータが削除されます。  
@@ -61,7 +61,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_removedistpublisherdbreplication**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベース内の**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

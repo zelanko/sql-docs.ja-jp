@@ -28,13 +28,13 @@ ms.locfileid: "75321722"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   バックアップからトランザクション パブリケーションに対してサブスクリプションを初期化するには、パブリケーションを有効にしてバックアップからの初期化を許可し、サブスクリプションの作成時にバックアップ情報を指定します。  
   
--   パブリケーションは、 **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで有効にします。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+-   パブリケーションは、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効にします。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 -   バックアップ情報は、ストアド プロシージャ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を使用して指定します。 **sp_addsubscription** で必要とされるパラメーターに関する詳細については、「[トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)」を参照してください。  
   
 ### <a name="to-enable-initialization-with-a-backup"></a>バックアップを使用した初期化を有効にするには  
   
-1.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、 **[バックアップ ファイルからの初期化を許可]** オプションに対して **[True]** の値を選択します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、**[バックアップ ファイルからの初期化を許可]** オプションに対して **[True]** の値を選択します。  
   
 ## <a name="see-also"></a>参照  
  [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  

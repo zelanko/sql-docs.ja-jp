@@ -10,15 +10,14 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d51e9674a15377a62a8e116b2b4d1f60e2322de3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769068"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437279"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
   数値式の常用対数を返します。  

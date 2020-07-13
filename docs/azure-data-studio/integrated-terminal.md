@@ -24,7 +24,7 @@ ms.locfileid: "67959535"
 ターミナルを開くには:
 
 * **Ctrl + '** キーボード ショートカットとバッククォート文字を使用します。
-* **[表示** | **Integrated Terminal]\(統合端末\)** メニュー コマンドを使用します。
+* **[表示** | **Integrated Terminal]\(統合ターミナル\)** メニュー コマンドを使用します。
 * **コマンド パレット** (**Ctrl + Shift + P**) から、 **[View:Toggle Integrated Terminal]\(表示:統合ターミナルの切り替え\)** コマンドを使用します。
 
 ![ターミナル](media/integrated-terminal/terminal-screen.png)

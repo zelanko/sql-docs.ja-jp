@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108042"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>[処理オプション] プロパティ ページ (レポート マネージャー)
@@ -34,8 +34,7 @@ ms.locfileid: "66108042"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。  
   
-4.  
-  **[処理オプション]** タブをクリックします。  
+4.  **[処理オプション]** タブをクリックします。  
   
 ## <a name="options"></a>オプション  
  **[常に最新データを使用して、このレポートを実行する]**  

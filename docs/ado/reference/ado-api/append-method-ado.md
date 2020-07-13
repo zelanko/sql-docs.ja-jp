@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920670"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746909"
 ---
 # <a name="append-method-ado"></a>Append メソッド (ADO)
 オブジェクトをコレクションに追加します。 コレクションが[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)の場合は、コレクションに追加する前に新しい[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトを作成できます。  
@@ -37,10 +37,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *表す*  
  コレクションオブジェクト。  
   
- *フィールド*  
+ *fields*  
  **フィールド**コレクション。  
   
- *素材*  
+ *object*  
  追加するオブジェクトを表すオブジェクト変数。  
   
  *名前*  
@@ -50,15 +50,15 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  新しいフィールドのデータ型を指定する[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)値 (既定値は**adEmpty**)。 次のデータ型は ADO ではサポートされていません。また、[レコードセットオブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)に新しいフィールドを追加するときには使用しないでください。この**ようなデータ**型は、実行**ディスパッチ**、指定されていない、 **advariant**です。  
   
  *DefinedSize*  
- 省略可能。 新しいフィールドの定義されたサイズ (文字数またはバイト数) を表す**Long 型**の値。 このパラメーターの既定値は、*型*から派生します。 255*バイトを超える値が*設定されているフィールドは、可変長列として扱われます。 既定値は、*指定されてい*ません。  
+ 任意。 新しいフィールドの定義されたサイズ (文字数またはバイト数) を表す**Long 型**の値。 このパラメーターの既定値は、*型*から派生します。 255*バイトを超える値が*設定されているフィールドは、可変長列として扱われます。 既定値は、*指定されてい*ません。  
   
- *Attrib (英語の可能性あり)*  
- 省略可能。 新しいフィールドの属性を指定する[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)値 (既定値は**Adflddefault**)。 この値が指定されていない場合、フィールドには*型*から派生した属性が格納されます。  
+ *Attrib*  
+ 任意。 新しいフィールドの属性を指定する[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)値 (既定値は**Adflddefault**)。 この値が指定されていない場合、フィールドには*型*から派生した属性が格納されます。  
   
  *FieldValue*  
- 省略可能。 新しいフィールドの値を表す**バリアント**。 指定しない場合、フィールドには null 値が付加されます。  
+ 任意。 新しいフィールドの値を表す**バリアント**。 指定しない場合、フィールドには null 値が付加されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Parameters コレクション  
  [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションに追加する前に、 [Parameter](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを設定する必要があります。 可変長データ型を選択する場合は、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)プロパティも0より大きい値に設定する必要があります。  

@@ -42,13 +42,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fddd9efeea8d0cb00bbe421e5638b60cc508d832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060645"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   ここでは、パブリケーションの新規作成ウィザードの以下のページについて説明します。  

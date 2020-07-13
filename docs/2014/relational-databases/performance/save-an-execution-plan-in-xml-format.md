@@ -15,25 +15,21 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047887"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 形式での実行プランの保存
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、実行プランを XML ファイルとして保存し、開いて参照することができます。  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の実行プラン機能または XML プラン表示 SET オプションを使用するには、実行プランを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行するための適切な権限と、クエリが参照するすべてのデータベースに対する SHOWPLAN 権限が必要です。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の実行プラン機能または XML プラン表示 SET オプションを使用するには、実行プランを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行するための適切な権限と、クエリが参照するすべてのデータベースに対する SHOWPLAN 権限が必要です。  
   
 ### <a name="to-save-a-query-plan-by-using-the-xml-showplan-set-options"></a>XML 表示プラン SET オプションを使用してクエリ プランを表示するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でクエリ エディターを開き、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でクエリ エディターを開き、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
 2.  次のステートメントを使用して、SHOWPLAN_XML を有効にします。  
   
@@ -66,37 +62,29 @@ ms.locfileid: "63150863"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  
-  **[結果]** ペインで、クエリ プランを含む **[Microsoft SQL Server XML Showplan]** を右クリックし、 **[結果に名前を付けて保存]** をクリックします。  
+4.  **[結果]** ペインで、クエリ プランを含む **[Microsoft SQL Server XML Showplan]** を右クリックし、 **[結果に名前を付けて保存]** をクリックします。  
   
-5.  
-  **[** \<グリッドまたはテキスト> **の結果を保存]** ダイアログ ボックスで、**[保存の種類]** ボックスの **[すべてのファイル (\*.\*)]** をクリックします。  
+5.  [結果の**保存** \<Grid or Text> **Results** ] ダイアログボックスの [**保存の種類**] ボックスで、[**すべてのファイル ( \* . \* )**] をクリックします。  
   
-6.  
-  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、**[保存]** をクリックします。  
+6.  [**ファイル名**] ボックスに、名前として「 \<name**> sqlplan * *」と入力し、[**保存**] をクリックします。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio のオプションを使用して実行プランを保存するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、推定実行プランまたは実際の実行プランを生成します。 詳細については、「 [推定実行プランの表示](display-the-estimated-execution-plan.md) 」または「 [実際の実行プランの表示](display-an-actual-execution-plan.md)」を参照してください。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、推定実行プランまたは実際の実行プランを生成します。 詳細については、「 [推定実行プランの表示](display-the-estimated-execution-plan.md) 」または「 [実際の実行プランの表示](display-an-actual-execution-plan.md)」を参照してください。  
   
 2.  結果ペインの **[実行プラン]** タブで、グラフィカルな実行プランを右クリックし、 **[実行プランに名前を付けて保存]** をクリックします。  
   
      代わりに、 **[ファイル]** メニューの **[実行プランに名前を付けて保存]** をクリックしてもかまいません。  
   
-3.  
-  **[名前を付けて保存]** ダイアログ ボックスで、**[ファイルの種類]** が **[実行プラン ファイル (\*.sqlplan)]** に設定されていることを確認します。  
+3.  **[名前を付けて保存]** ダイアログ ボックスで、**[ファイルの種類]** が **[実行プラン ファイル (\*.sqlplan)]** に設定されていることを確認します。  
   
-4.  
-  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、**[保存]** をクリックします。  
+4.  [**ファイル名**] ボックスに、名前として「 \<name**> sqlplan * *」と入力し、[**保存**] をクリックします。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>保存した XML クエリ プランを SQL Server Management Studio で開くには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
-2.  
-  **[ファイルを開く]** ダイアログ ボックスで **[ファイルの種類]** を **[実行プラン ファイル (\*.sqlplan)]** に設定し、保存済みの XML クエリ プラン ファイルだけを表示します。  
+2.  **[ファイルを開く]** ダイアログ ボックスで **[ファイルの種類]** を **[実行プラン ファイル (\*.sqlplan)]** に設定し、保存済みの XML クエリ プラン ファイルだけを表示します。  
   
 3.  表示する XML クエリ プラン ファイルを選択し、 **[開く]** をクリックします。  
   
@@ -104,6 +92,6 @@ ms.locfileid: "63150863"
   
 ## <a name="see-also"></a>参照  
  [SET SHOWPLAN_XML &#40;Transact-sql&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML &#40;Transact-sql&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

@@ -22,15 +22,16 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086775"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008054"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 24 時間形式の時刻と組み合わせた日付を定義します。 **datetime2** は、既存の **datetime** 型を拡張して、日付範囲と既定の有効桁数を増やし、ユーザーが必要に応じて有効桁数を指定できるようにしたものと考えることができます。
   
@@ -71,7 +72,7 @@ ms.locfileid: "68086775"
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 から 7 (100 ナノ秒) の範囲で指定できます。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
-[datetime2](../../t-sql/data-types/date-transact-sql.md) の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/time-transact-sql.md) 型および **time** 型と同じです。
+**datetime2** の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/date-transact-sql.md) 型および [time](../../t-sql/data-types/time-transact-sql.md) 型と同じです。
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>下位クライアントの下位互換性  
 一部の下位レベル クライアントは、**time**、**date**、**datetime2**、**datetimeoffset** データ型をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の上位インスタンスと下位クライアントの間のデータ型マッピングを次の表に示します。

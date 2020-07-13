@@ -21,15 +21,15 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc6fe69e56ebddfcdf55c0311755a8002c829791
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086141"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091616"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   データベース コンテキストを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定したデータベースまたはデータベース スナップショットに変更します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68086141"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 USE { database_name }   
 [;]  
 ```  

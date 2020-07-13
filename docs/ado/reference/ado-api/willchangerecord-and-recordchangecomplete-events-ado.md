@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764483"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
 この**イベントは、** [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の1つ以上のレコード (行) が変更される前に呼び出されます。 **RecordChangeComplete**イベントは、1つ以上のレコードが変更された後に呼び出されます。  
@@ -60,7 +60,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [Update](../../../ado/reference/ado-api/update-method.md)、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)の各**レコードセット**操作により、行の最初に変更されたフィールドに対して、 **RecordChangeComplete**イベントが**発生する可能性**があります。 **レコードセット** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)の値によって、イベントを発生させる操作が決定されます。  
   
  このイベントでは、**レコードセット**[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティが**adFilterAffectedRecords**に設定さ**れてい**ます。 イベントの処理中にこのプロパティを変更することはできません。  

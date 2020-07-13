@@ -11,14 +11,14 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057009"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304993"
 ---
 # <a name="sql-minimum-grammar"></a>SQL の最小限の文法
 このセクションでは、ODBC ドライバーがサポートする必要がある最小 SQL 構文について説明します。 このセクションで説明する構文は、SQL-92 のエントリレベルの構文のサブセットです。  
@@ -35,7 +35,7 @@ ms.locfileid: "68057009"
  (*列識別子データ型*[*, 列識別子データ型*]...)  
   
 > [!IMPORTANT]  
->  アプリケーションで*は*、 **SQLGetTypeInfo**によっ** て返される結果セットの TYPE_NAME 列のデータ型を使用する必要があります。  
+>  アプリケーションで*は*、 **SQLGetTypeInfo**によっ*create-table-statement*て返される結果セットの TYPE_NAME 列のデータ型を使用する必要があります。  
   
  *delete-ステートメント-検索*:: =  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68057009"
   
  INSERT INTO *table-name* [(*列識別子*[,*列識別子*]...)]     値 (*挿入値*[,*挿入値*]...)  
   
- *select-ステートメント*:: =  
+ *select-statement* ::=  
   
  [すべて &#124; 個別] 選択*リスト*を選択します。  
   

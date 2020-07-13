@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b512a795c3b9e2d1c6aa1c7c9e92fbc42a8c7862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 757b50c7e18133e02b4cf6addaa327b2053f5439
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125589"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287472"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption のマッピング
 ODBC 2 の場合。*x*アプリケーションは、ODBC 3 *. x*ドライバーを介して**SQLSetConnectOption**を呼び出します。  

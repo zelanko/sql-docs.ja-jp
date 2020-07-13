@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8c6a1963045e74c888fbcc1ef851869493f39048
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018766"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>クエリを実行する方法に関するトピック (ODBC)
   ODBC アプリケーションで SQL ステートメントを実行するには、ステートメント ハンドルを割り当て、ステートメント属性を設定し、SQL ステートメントを準備して実行する必要があります。  

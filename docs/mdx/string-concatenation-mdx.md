@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4d5f2316e3af5ce3c925ef71e1da5baf5bab868d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036851"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (文字列連結) (MDX)
@@ -34,7 +34,7 @@ String_Expression + String_Expression
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値に評価される場合、この演算子は、もう一方の式の結果を返します。  
   
 ## <a name="see-also"></a>参照  

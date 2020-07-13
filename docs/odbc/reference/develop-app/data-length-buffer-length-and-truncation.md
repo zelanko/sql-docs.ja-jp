@@ -14,14 +14,14 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081467"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305233"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>データの長さ、バッファー長、および切り捨て
 データ*長*は、データソースに格納されているのではなく、アプリケーションのデータバッファーに格納されるデータのバイト長です。 この区別は、データがデータソースよりもデータバッファー内のさまざまな型に格納されることが多いため、重要です。 データソースに送信されるデータについては、これはデータソースの型に変換する前のデータのバイト長です。 データソースからデータを取得する場合は、データバッファーの型に変換した後、切り捨てが行われる前に、データのバイト長が返されます。  

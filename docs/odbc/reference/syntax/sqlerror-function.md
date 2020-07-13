@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLError function [ODBC]
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c61b9bad08f06760b67df43b7c7a62e804c7c07
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003112"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302724"
 ---
 # <a name="sqlerror-function"></a>SQLError 関数
 **互換性**  

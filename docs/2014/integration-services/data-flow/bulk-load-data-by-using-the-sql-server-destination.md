@@ -13,15 +13,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 202582f45fbf3230a07328b6b108ec31c76ef7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62828134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432409"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つのデータ ソースがあらかじめ含まれている必要があります。  

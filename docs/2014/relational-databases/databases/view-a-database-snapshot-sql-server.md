@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92c5c557656e87be562e9d5477f14f66b2c39e7b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62871159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969992"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>データベース スナップショットの表示 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベース スナップショットを表示する方法について説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "62871159"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **データベース スナップショットを確認するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -44,7 +43,7 @@ ms.locfileid: "62871159"
   
 3.  **[データベース スナップショット]** を展開し、表示するスナップショットを選択します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **データベース スナップショットを確認するには**  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
@@ -53,7 +52,7 @@ ms.locfileid: "62871159"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのデータベース スナップショットの一覧を表示するには、 **sys.databases** カタログ ビューの [source_database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列で NULL 以外の値に対してクエリを実行します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   

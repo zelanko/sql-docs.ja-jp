@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b642d60da57192bc0c6bf842a16b0d12d529d5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ed1fe8447064bf224ea3f0e0a576d4e73fb07203
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938113"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>What-If シナリオ (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールの [What If シナリオ] ボタン](media/tat-whatif.gif "テーブル分析ツールの [What If シナリオ] ボタン")
@@ -48,7 +47,7 @@ ms.locfileid: "78175551"
 
 8.  [**テーブル全体**] を選択すると、ダイアログボックスにステータスメッセージが表示され、元のデータテーブルに2つの新しい列が追加されます。 ワークシート内の完全な結果を表示するには、[**閉じる**] をクリックします。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
  このツールでは、数値または不連続値の予測をサポートする Microsoft ロジスティック回帰アルゴリズムが使用されます。 ただし、最適な結果を得るために、次のベスト プラクティスに従うことをお勧めします。
 
 -   有用な情報を含む列を分析対象として選択します。

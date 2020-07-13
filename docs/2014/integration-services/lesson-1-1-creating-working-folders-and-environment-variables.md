@@ -7,17 +7,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27ce934ae2ad13c55a331fd03f76cccd6f4a5c4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767654"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436199"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>手順 1: 作業フォルダーと環境変数の作成
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>手順 1:作業フォルダーと環境変数の作成
   このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
   
  作業フォルダーは、C ドライブのルートにあります。 別のドライブまたは場所を使用する必要がある場合は、変更してかまいません。 ただし、この場所を書き留めておいて、チュートリアルで DeploymentTutorial 作業フォルダーの場所が参照されたときに、該当する場所を使用する必要があります。  
@@ -36,7 +35,7 @@ ms.locfileid: "62767654"
   
 3.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[フォルダー]** をクリックします。  
   
-4.  新しいフォルダーの名前`DeploymentTutorial`をに変更します。  
+4.  新しいフォルダーの名前をに変更 `DeploymentTutorial` します。  
   
 ### <a name="to-create-local-environment-variables"></a>ローカルの環境変数を作成するには  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767654"
   
 4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
-5.  [**新しいシステム変数**] ダイアログボックスで、 `DataTransfer` [**変数名**] ボックスに「 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` 」と入力し、[**変数の値**] ボックスに「」と入力します。  
+5.  [**新しいシステム変数**] ダイアログボックスで、[ `DataTransfer` **変数名**] ボックスに「」と入力し、[変数の `C:\DeploymentTutorial\datatransferconfig.dtsconfig` **値**] ボックスに「」と入力します。  
   
 6.  **[OK]** をクリックします。  
   
-7.  もう一度 [**新規**] を`LoadXMLData`クリックし、[**変数名**] `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`ボックスに「」と入力し、[**変数の値**] ボックスに「」と入力します。  
+7.  もう一度 [**新規**] をクリックし、[ `LoadXMLData` **変数名**] ボックスに「」と入力し、[ `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` 変数の**値**] ボックスに「」と入力します。  
   
 8.  **[OK]** をクリックして **[環境変数]** ダイアログ ボックスを閉じます。  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767654"
   
 4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
-5.  [**新しいシステム変数**] ダイアログボックスで、 `DataTransfer` [**変数名**] ボックスに「 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` 」と入力し、[**変数の値**] ボックスに「」と入力します。  
+5.  [**新しいシステム変数**] ダイアログボックスで、[ `DataTransfer` **変数名**] ボックスに「」と入力し、[変数の `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` **値**] ボックスに「」と入力します。  
   
 6.  **[OK]** をクリックします。  
   
-7.  もう一度 [**新規**] を`LoadXMLData`クリックし、[**変数名**] `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`ボックスに「」と入力し、[**変数の値**] ボックスに「」と入力します。  
+7.  もう一度 [**新規**] をクリックし、[ `LoadXMLData` **変数名**] ボックスに「」と入力し、[ `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` 変数の**値**] ボックスに「」と入力します。  
   
 8.  **[OK]** をクリックして **[環境変数]** ダイアログ ボックスを閉じます。  
   
@@ -85,6 +84,6 @@ ms.locfileid: "62767654"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 2: 配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveTranslator function [ODBC]
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 348d2c5da0731ba88ccd4dd6406d3754890f7906
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024524"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301789"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 関数
 **互換性**  
@@ -55,7 +55,7 @@ BOOL SQLRemoveTranslator(
 ## <a name="diagnostics"></a>診断  
  **Sqlremovetranslator**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|コンポーネントがレジストリに見つかりません|インストーラーで、トランスレーター情報を削除できませんでした。この情報はレジストリに存在しないか、レジストリに見つかりませんでした。|  
@@ -82,6 +82,6 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |トランスレーターのインストール|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|

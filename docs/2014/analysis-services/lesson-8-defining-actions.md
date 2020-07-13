@@ -9,22 +9,20 @@ ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5299599a2431d68e3ea13370f51aceef58efaf14
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66078227"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542234"
 ---
-# <a name="lesson-8-defining-actions"></a>レッスン 8 : アクションの定義
+# <a name="lesson-8-defining-actions"></a>レッスン 8: アクションの定義
   このレッスンでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでアクションを定義する方法を学習します。 アクションは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に格納される多次元式 (MDX) ステートメントです。アクションはクライアント アプリケーションに統合することができ、ユーザーによって開始可能です。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルで使用するサンプルプロジェクトをダウンロードするには、[ここをクリックし](https://go.microsoft.com/fwlink/?LinkID=221866)てください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、次の表に示されている種類のアクションをサポートします。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、次の表に示されている種類のアクションをサポートします。  
   
 |||  
 |-|-|  
@@ -49,12 +47,12 @@ ms.locfileid: "66078227"
  この作業では、このチュートリアルで以前に定義したファクト ディメンションのリレーションシップによって、ドリルスルー アクションの定義、使用、変更を行います。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 9 : パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
+ [レッスン 9: パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
  [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [アクション &#40;Analysis Services-多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [多次元モデルでのアクション](multidimensional-models/actions-in-multidimensional-models.md)  
+ [多次元モデルのアクション](multidimensional-models/actions-in-multidimensional-models.md)  
   
   

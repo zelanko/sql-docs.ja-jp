@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75831763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755525"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   文字列の出力パラメーターに一連の文字および値を書式設定して格納します。 各フォーマット引数は対応する引数に置き換えられます。  
   
@@ -40,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>引数  
- *文字列*  
+ *string*  
  出力を受け取る**varchar**変数を示します。  
   
  OUTPUT  
  指定すると、変数の値が出力パラメーターに格納されます。  
   
- *形式*  
+ *format*  
  は、C 言語の**sprintf**関数でサポートされているものと同様に、*引数*の値のプレースホルダーを含む書式指定文字列です。 現在、% s 書式引数のみがサポートされています。  
   
- *引数*  
+ *argument*  
  対応するフォーマット引数の値を表す文字列。  
   
  *n*  
@@ -64,9 +64,9 @@ xp_sprintf { string OUTPUT , format }
  `The command(s) completed successfully.`  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  

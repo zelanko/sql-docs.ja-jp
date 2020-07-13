@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104308"
 ---
 # <a name="report-sections-dialog-box"></a>[レポート セクション] ダイアログ ボックス
@@ -24,7 +24,6 @@ ms.locfileid: "66104308"
   
  レポート、レポート サーバー、プロジェクト、またはレポート作成環境の現在のレポート定義形式を特定する場合は、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
- 
-  **[OK]** をクリックして続行します。  
+ **[OK]** をクリックして続行します。  
   
   

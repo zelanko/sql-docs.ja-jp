@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Microsoft Docs
+title: sqlsrv_query
+description: sqlsrv_query 関数により、最小限のコードでクエリを実行する方法が提供されます。これはパラメーター化されたクエリの実行に使用できます。
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928561"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728407"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,11 +38,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$conn*: 準備済みステートメントに関連付けられた接続リソースです。  
+*$conn*:準備済みステートメントに関連付けられた接続リソースです。  
   
 *$tsql*: 準備済みステートメントに対応する Transact-SQL 式です。  
   
-*$params* (省略可能): パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
+*$params* [省略可能]: パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
   
 -   リテラル値。  
   
@@ -58,11 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |要素|説明|  
     |-----------|---------------|  
     |*$value*|リテラル値、PHP 変数、または PHP by-reference 変数。|  
-    |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$direction*[オプション]|パラメーターの方向を示すために使用する次の **SQLSRV_PARAM_\*** 定数のいずれか: **SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
     |*$phpType*[オプション]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
     |*$sqlType*[オプション]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
   
-*$options* (省略可能): クエリのプロパティを設定する連想配列。 それは、[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) でサポートされるキーの一覧と同じです。
+*$options* [省略可能]: クエリのプロパティを設定する連想配列。 それは、[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) でサポートされるキーの一覧と同じです。
   
 ## <a name="return-value"></a>戻り値  
 ステートメント リソースです。 ステートメントを作成または実行できない場合、**false** が返されます。  
@@ -70,7 +71,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="remarks"></a>解説  
 **sqlsrv_query** 関数は 1 回限りのクエリに最適であり、特殊な状況を除き、クエリを実行するための既定の選択となります。 この関数は、最小限のコードでクエリを実行するための簡素化されたメソッドを提供します。 **sqlsrv_query** 関数はステートメントの準備と実行の両方を行い、パラメーター化されたクエリの実行に使用できます。  
   
-詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「[SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
@@ -243,7 +244,7 @@ Second field:  test_data
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)  
+[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)」を参照してください。  
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
 

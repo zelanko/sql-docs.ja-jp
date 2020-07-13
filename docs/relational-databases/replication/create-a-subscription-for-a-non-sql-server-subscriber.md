@@ -47,7 +47,7 @@ ms.locfileid: "75322019"
   
          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションが有効になったら、スナップショットを作成し、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに適したスナップショットおよび初期化スクリプトを生成することを確認します。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][パブリケーションのプロパティ - **PublicationName>]\< ダイアログ ボックスを使用して、** 以外のサブスクライバーのパブリケーションを有効にします。 この手順の詳細については、「 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 」を参照してください。  
+3.  **[パブリケーションのプロパティ - \<PublicationName>]** ダイアログ ボックスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーのパブリケーションを有効にします。 この手順の詳細については、「 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 」を参照してください。  
   
 4.  サブスクリプションの新規作成ウィザードを使用して、サブスクリプションを作成します。 この手順の詳細については、このトピック内で説明します。  
   
@@ -153,31 +153,31 @@ ms.locfileid: "75322019"
   
 1.  パブリッシャーとディストリビューターの両方に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの最新の OLE DB プロバイダーをインストールします。 OLE DB プロバイダーのレプリケーションの要件については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」、 [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)」、「 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)」を参照してください。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ を実行して、パブリケーションが ](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) 以外のサブスクライバ―をサポートしていることを確認します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) を実行して、パブリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバ―をサポートしていることを確認します。  
   
     -   **enabled_for_het_sub** の値が 1 の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされます。  
   
-    -   **enabled_for_het_sub** の値が 0 の場合、[ に ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)enabled_for_het_sub **を指定し、** に `@property`true **を指定して、** sp_changepublication &#40;Transact-SQL&#41;`@value` を実行します。  
+    -   **enabled_for_het_sub** の値が 0 の場合、`@property` に **enabled_for_het_sub** を指定し、`@value` に **true** を指定して、[sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
         > [!NOTE]  
         >  **enabled_for_het_sub** を **true**に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、 **enabled_for_het_sub** を **true** に設定することはできません。 **enabled_for_het_sub** を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行します。 `@publication`、`@subscriber`、`(default destination)` に対して値 `@destination_db`、**に対して値**push`@subscription_type`、`@subscriber_type` に対して値 3 (OLE DB プロバイダーを指定) を指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行します。 `@publication`、`@subscriber`、`@destination_db` に対して値 `(default destination)`、`@subscription_type` に対して値 **push**、`@subscriber_type` に対して値 3 (OLE DB プロバイダーを指定) を指定します。  
   
 4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 次の指定を行います。  
   
     -   `@subscriber` および `@publication` パラメーター。  
   
-    -   **に対して**(既定の転送先)`@subscriber_db` の値。  
+    -   `@subscriber_db` に対して **(既定の転送先)** の値。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location`、`@subscriber_provider_string` に対して、`@subscriber_catalog` 以外のデータ ソースのプロパティ。  
+    -   `@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location`、`@subscriber_provider_string`、`@subscriber_catalog` に対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソースのプロパティ。  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] および `@job_login` に対して、ディストリビューターでのディストリビューション エージェントの実行に使用される `@job_password` Windows 資格情報。  
+    -   `@job_login` および `@job_password` に対して、ディストリビューターでのディストリビューション エージェントの実行に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。  
   
        > [!NOTE]  
        > Windows 統合認証を使用して行われる接続では、常に `@job_login` および `@job_password` で指定した Windows 資格情報が使用されます。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   **に対して値**0`@subscriber_security_mode`、`@subscriber_login` および `@subscriber_password` に対して OLE DB プロバイダーのログイン情報。  
+    -   `@subscriber_security_mode` に対して値 **0**、`@subscriber_login` および `@subscriber_password` に対して OLE DB プロバイダーのログイン情報。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   

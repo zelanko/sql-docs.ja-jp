@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b2164c617bae69264dce2a237ca48a125b096765
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544544"
 ---
 # <a name="enable-dimension-writeback"></a>[ディメンションの書き戻しの有効化]
   キューブまたはディメンションにディメンション書き戻し拡張機能を追加すると、ユーザーはディメンション構造とメンバーを手動で変更できます。 書き込みが可能なディメンションに加えた更新は、ディメンション テーブルに直接記録されます。 この拡張機能により、ディメンションの `WriteEnabled` プロパティ設定が変更されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "66076848"
 ## <a name="setting-dimension-writeback-capability"></a>ディメンションの書き戻し機能の設定  
  ウィザードの **[ディメンションの書き戻しの有効化]** の 2 ページ目で、実際に **[ディメンションへの書き戻しを有効にする]** オプションを設定します。 このオプションを選択すると、ディメンションの `WriteEnabled` プロパティが自動的に `True` に設定されます。 このオプションの選択を解除すると、このプロパティは自動的に `False` に設定されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  新しいメンバーを作成するときは、ディメンションにすべての属性を含める必要があります。 ディメンションのキー属性値を指定せずにメンバーを挿入することはできません。 このため、メンバーの作成は、ディメンション テーブルに定義されている制約 (NULL 以外のキー値など) に拘束されます。 必要に応じて、ディメンション プロパティで指定された列 (`CustomRollupColumn`、`CustomRollupPropertiesColumn`、または `UnaryOperatorColumn` ディメンション プロパティで指定した列など) についても考慮する必要があります。  
   
 > [!WARNING]  

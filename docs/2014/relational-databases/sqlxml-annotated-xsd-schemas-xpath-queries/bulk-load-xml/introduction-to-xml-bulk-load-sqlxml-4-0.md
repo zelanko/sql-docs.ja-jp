@@ -13,18 +13,17 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f3e0e78edd967e5fcb7377312c1811d34cb1ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068174"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みの概要 (SQLXML 4.0)
-  XML 一括読み込みは、半構造化 XML データを Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルに読み込むことができるスタンドアロンの COM オブジェクトです。  
+  XML 一括読み込みは、半構造化 XML データを Microsoft テーブルに読み込むことができるスタンドアロンの COM オブジェクトです [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  INSERT ステートメントと OPENXML 関数を使用すれば、XML データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに挿入できますが、大量の XML データを挿入する必要があるときには、一括読み込みユーティリティを使用すると効率的です。  
   
@@ -40,13 +39,12 @@ ms.locfileid: "66013388"
   
 -   注釈付き XSD および XDR スキーマ。 注釈付き XSD スキーマの詳細については、「[注釈付き Xsd スキーマの概要 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 注釈付き XDR スキーマの詳細については、「 [SQLXML 4.0&#41;で非推奨とされた注釈付き Xdr スキーマ &#40;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)」を参照してください。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の BULK INSERT ステートメント、bcp ユーティリティなどの [!INCLUDE[tsql](../../../includes/tsql-md.md)] 一括挿入メカニズム。 詳細については、「 [BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)および[bcp ユーティリティ](../../../tools/bcp-utility.md)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の BULK INSERT ステートメント、bcp ユーティリティなどの [!INCLUDE[tsql](../../../includes/tsql-md.md)] 一括挿入メカニズム。 詳細については、「 [BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)および[bcp ユーティリティ](../../../tools/bcp-utility.md)」を参照してください。  
   
 ## <a name="streaming-of-xml-data"></a>XML データのストリーミング  
  ソースの XML ドキュメントは大きい可能性があるため、一括読み込み処理では、メモリにドキュメント全体は読み込まれません。 代わりに、XML 一括読み込みでは XML データがストリームとして解釈され読み取られます。 データが読み取られるとき、このユーティリティではデータベース テーブルが特定され、XML データ ソースを基に適切なレコードが生成された後、そのレコードが挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  
   
- たとえば、次のソース XML ドキュメントは、 ** \<Customer>** の要素と** \<順序>** 子要素で構成されています。  
+ たとえば、次のソース XML ドキュメントは、 **\<Customer>** 要素と子要素で構成されてい **\<Order>** ます。  
   
 ```  
 <Customer ...>  
@@ -57,7 +55,7 @@ ms.locfileid: "66013388"
 ...  
 ```  
   
- XML 一括読み込みでは、 ** \<Customer>** 要素が読み取られ、ユーザーテーブルのレコードが生成されます。 /Customer>終了タグを読み取ると、XML 一括読み込みでは、そのレコードがの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルに挿入されます。 ** \<** 同様に、 ** \<Order>** 要素を読み取ると、XML 一括読み込みでは ordertable のレコードが生成されます。その後、 ** \</order>** 終了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]タグの読み取り時に、そのレコードがテーブルに挿入されます。  
+ XML 一括読み込みで要素が読み取られると、 **\<Customer>** 顧客テーブルのレコードが生成されます。 **\</Customer>** XML 一括読み込みで終了タグを読み取ると、そのレコードがのテーブルに挿入さ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] れます。 同様に、要素を読み取るときに **\<Order>** 、XML 一括読み込みでは Ordertable のレコードが生成され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 終了タグの読み取り時にそのレコードがテーブルに挿入され **\</Order>** ます。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>トランザクション モードとトランザクション以外のモードでの XML 一括読み込みの操作  
  XML 一括読み込みは、トランザクション モードまたはトランザクション以外のモードで操作できます。 トランザクション以外のモードで一括読み込みを行う場合は、通常、次のいずれかの条件に該当する場合に、パフォーマンスが最適です。  

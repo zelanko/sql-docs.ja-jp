@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939695"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81279842"
 ---
 # <a name="text-file-driver-programming-considerations"></a>テキスト ファイル ドライバーのプログラミングに関する考慮事項
 このセクションのトピックは次のとおりです。  

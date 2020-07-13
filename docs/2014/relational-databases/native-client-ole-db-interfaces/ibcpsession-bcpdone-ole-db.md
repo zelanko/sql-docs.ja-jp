@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPDone (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,16 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c90e9214830060e37e8d3427a2e4f8797a943003
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62743198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048016"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,9 +32,8 @@ ms.locfileid: "62743198"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>解説  
- 
-  [BCPDone](ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
+## <a name="remarks"></a>Remarks  
+ **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -64,7 +61,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp マスター..\n-T-S サーバーでの fltest** **  
+ **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
   
  このサンプルをコンパイルする際には、sqlncli11.lib を指定する必要があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: 大きな CLR ユーザー定義型 (OLE DB) |Microsoft Docs
+title: 大きな CLR ユーザー定義型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,30 +10,28 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760045"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010500"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB に対する変更について説明します。  
   
- Native Client で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の大きな clr udt のサポートの詳細については、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。 サンプルについては、「 [OLE DB&#41;&#40;大きな CLR udt の使用](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
+ Native Client での大きな CLR Udt のサポートの詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。 サンプルについては、「[大きな CLR UDT の使用 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)」を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、大きなオブジェクト (LOB) の型についてサイズが無制限である値の長さを表す場合に、~0 が使用されます。 8,000 バイトを超える CLR UDT のサイズも ~0 で表されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、大きなオブジェクト (LOB) の型についてサイズが無制限である値の長さを表す場合に、~0 が使用されます。 8,000 バイトを超える CLR UDT のサイズも ~0 で表されます。  
   
  次の表に、パラメーターおよび行セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|OLE DB データ型|メモリ レイアウト|Value|  
+|SQL Server のデータ型|OLE DB データ型|メモリ レイアウト|値|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[](バイト配列\)|132 (oledb.h)|  
   
@@ -48,23 +46,22 @@ ms.locfileid: "73760045"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  UDT 列が必要な場合は、ITableDefinition::CreateTable で使用される **DBCOLUMNDESC** 構造体で、以下の情報が使用されます。  
   
-|OLE DB データ型 (*Wtype*)|*pwszTypeName*|SQL Server のデータ型|*rgPropertySets*|  
+|OLE DB データ型 (*wType*)|*pwszTypeName*|SQL Server のデータ型|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|無視|UDT|DBPROPSET_SQLSERVERCOLUMN プロパティ セットを含める必要があります。|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 
-  **prgParamInfo** を介して DBPARAMINFO 構造体に返される情報は、次のとおりです。  
+ **prgParamInfo** を介して DBPARAMINFO 構造体に返される情報は、次のとおりです。  
   
-|パラメーターのタイプ|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
+|パラメーターのタイプ|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|"DBTYPE_UDT"|*n*|undefined|undefined|clear|  
+|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|"DBTYPE_UDT"|*n*|undefined|undefined|オフ|  
 |DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|"DBTYPE_UDT"|~0|undefined|undefined|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  DBPARAMBINDINFO 構造体で提供される情報は、次の表に準拠する必要があります。  
   
-|パラメーターのタイプ|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*DBPARAMFLAGS_ISLONG|  
+|パラメーターのタイプ|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|無視|無視|パラメーターが DBTYPE_IUNKNOWN を使用して渡される場合に設定する必要があります。|  
 |DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|無視|無視|無視|  
@@ -82,7 +79,7 @@ ms.locfileid: "73760045"
   
  UDT には次の列も定義されています。  
   
-|列識別子|種類|[説明]|  
+|列識別子|Type|説明|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  
@@ -107,7 +104,7 @@ ms.locfileid: "73760045"
   
  UDT には、次の追加の列が定義されています。  
   
-|列識別子|種類|[説明]|  
+|列識別子|Type|説明|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているカタログの名前。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 列の場合は、UDT が定義されているスキーマの名前。|  
@@ -135,18 +132,16 @@ ms.locfileid: "73760045"
   
 |Symbol|意味|  
 |------------|-------------|  
-|1 で保護されたプロセスとして起動されました|
-  **ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合は、ステートメントの実行時にエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
+|1|**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合は、ステートメントの実行時にエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
 |2|データが 16 進数文字列からバイナリ データに変換されます。|  
 |3|データがバイナリ データから 16 進文字列に変換されます。|  
-|4|
-  **CreateAccessor** または **GetNextRows** を使用したときに、検証が行われる場合があります。 このエラーは DB_E_ERRORSOCCURRED です。 バインドの状態は、DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定されます。|  
+|4|**CreateAccessor** または **GetNextRows** を使用したときに、検証が行われる場合があります。 このエラーは DB_E_ERRORSOCCURRED です。 バインドの状態は、DBBINDSTATUS_UNSUPPORTEDCONVERSION に設定されます。|  
 |5|BY_REF を使用できます。|  
-|6|UDT パラメーターを、DBBINDING で DBTYPE_IUNKNOWN としてバインドできます。 DBTYPE_IUNKNOWN へのバインドは、アプリケーションで ISequentialStream インターフェイスを使用してデータをストリームとして処理する必要があることを示します。 コンシューマーが DBTYPE_IUNKNOWN 型としてバインドで*Wtype*を指定し、ストアドプロシージャの対応する列または出力パラメーターが UDT の場合、SQL Server Native Client は ISequentialStream を返します。 入力パラメーターの場合、SQL Server Native Client は ISequentialStream インターフェイスのを照会します。<br /><br /> UDT が大きい場合は、DBTYPE_IUNKNOWN バインドを使用しながら UDT データの長さをバインドしないようにすることができます。 ただし、小さな UDT の場合は長さをバインドする必要があります。 次の条件が 1 つ以上当てはまる場合は、DBTYPE_UDT パラメーターを大きな UDT として指定できます。<br />*Ulparamparamsize*は ~ 0 です。<br />DBPARAMBINDINFO 構造体で DBPARAMFLAGS_ISLONG が設定されている。<br /><br /> 行データの場合は、DBTYPE_IUNKNOWN バインドを大きな UDT だけに使用できます。 列が大きな UDT 型であるかどうかを確認するには、行セットまたはコマンドオブジェクトの IColumnsInfo インターフェイスで IColumnsInfo:: GetColumnInfo メソッドを使用します。 次の条件が 1 つ以上当てはまる場合、DBTYPE_UDT 列は大きな UDT 列です。<br />DBCOLUMNINFO 構造体の *dwFlags* メンバーで、DBCOLUMNFLAGS_ISLONG フラグが設定されている。 <br />DBCOLUMNINFO の*Ulcolumnsize*メンバーは ~ 0 です。|  
+|6|UDT パラメーターを、DBBINDING で DBTYPE_IUNKNOWN としてバインドできます。 DBTYPE_IUNKNOWN へのバインドは、アプリケーションで ISequentialStream インターフェイスを使用してデータをストリームとして処理する必要があることを示します。 コンシューマーが DBTYPE_IUNKNOWN 型としてバインドで*Wtype*を指定し、ストアドプロシージャの対応する列または出力パラメーターが UDT の場合、SQL Server Native Client は ISequentialStream を返します。 入力パラメーターの場合、SQL Server Native Client は ISequentialStream インターフェイスのを照会します。<br /><br /> UDT が大きい場合は、DBTYPE_IUNKNOWN バインドを使用しながら UDT データの長さをバインドしないようにすることができます。 ただし、小さな UDT の場合は長さをバインドする必要があります。 次の条件が 1 つ以上当てはまる場合は、DBTYPE_UDT パラメーターを大きな UDT として指定できます。<br />*ulParamParamSize* は ~0 です。<br />DBPARAMBINDINFO 構造体で DBPARAMFLAGS_ISLONG が設定されている。<br /><br /> 行データの場合は、DBTYPE_IUNKNOWN バインドを大きな UDT だけに使用できます。 列が大きな UDT 型であるかどうかを確認するには、行セットまたはコマンド オブジェクトの IColumnsInfo インターフェイス上で IColumnsInfo::GetColumnInfo メソッドを使用します。 次の条件が 1 つ以上当てはまる場合、DBTYPE_UDT 列は大きな UDT 列です。<br />DBCOLUMNINFO 構造体の *dwFlags* メンバーで、DBCOLUMNFLAGS_ISLONG フラグが設定されている。 <br />DBCOLUMNINFO の *ulColumnSize* メンバーは ~0 です。|  
   
  DBTYPE_NULL と DBTYPE_EMPTY は入力パラメーターにバインドできますが、出力パラメーターや結果にはバインドできません。 入力パラメーターにバインドした場合は、状態を DBSTATUS_S_ISNULL (DBTYPE_NULL の場合) または DBSTATUS_S_DEFAULT (DBTYPE_EMPTY の場合) に設定する必要があります。 DBTYPE_BYREF を、DBTYPE_NULL または DBTYPE_EMPTY と共に使用することはできません。  
   
- DBTYPE_UDT は、DBTYPE_EMPTY および DBTYPE_NULL に変換することもできます。 ただし、DBTYPE_NULL および DBTYPE_EMPTY を DBTYPE_UDT に変換することはできません。 この動作は、DBTYPE_BYTES 型と一貫性があります。 **Isscommandwithparameters**は、udt をパラメーターとして処理するために使用されます。  
+ DBTYPE_UDT は、DBTYPE_EMPTY および DBTYPE_NULL に変換することもできます。 ただし、DBTYPE_NULL および DBTYPE_EMPTY を DBTYPE_UDT に変換することはできません。 この動作は、DBTYPE_BYTES 型と一貫性があります。 UDT をパラメーターとして処理する場合には、**ISSCommandWithParameters** が使用されます。  
   
  OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_UDT 型には適用できません。  
   
@@ -174,8 +169,7 @@ ms.locfileid: "73760045"
 |SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 以降|UDT|UDT|  
   
- 
-  **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) を "80" に設定すると、大きな UDT 型が、下位クライアントで表示されるときと同じようにクライアントで表示されます。  
+ **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) を "80" に設定すると、大きな UDT 型が、下位クライアントで表示されるときと同じようにクライアントで表示されます。  
   
 ## <a name="see-also"></a>参照  
  [大きな CLR ユーザー定義型](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  

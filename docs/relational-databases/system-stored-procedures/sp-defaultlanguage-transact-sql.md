@@ -15,19 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc4a45ab8a2241e719fd71598461fa6deb43814c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864997"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの既定の言語を変更します。  
   
 > [!IMPORTANT]  
@@ -44,7 +43,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'`ログイン名を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のログインまたは Windows ユーザーまたはグループを指定できます。  
+`[ @loginame = ] 'login'`ログイン名を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ユーザーまたはグループを指定できます。  
   
 `[ @language = ] 'language'`ログインの既定の言語を設定します。 *language*は**sysname**,、既定値は NULL です。 *言語*は、サーバーで有効な言語である必要があります。 *Language*が指定されていない場合、 *language*はサーバーの既定の言語に設定されます。既定の言語は、 **sp_configure**構成変数の**既定の言語**によって定義されます。 サーバーの既定の言語を変更しても、既存のログインの既定の言語は変更されません。  
   
@@ -54,16 +53,16 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="remarks"></a>解説  
  **sp_defaultlanguage**は ALTER LOGIN を呼び出します。この場合、追加のオプションがサポートされます。 他のログインの既定値の変更については、「 [ALTER login &#40;transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)」を参照してください。  
   
- SET LANGUAGE ステートメントを使用して、現在のセッションの言語を変更します。 現在の言語@LANGUAGE設定を表示するには、@ 関数を使用します。  
+ SET LANGUAGE ステートメントを使用して、現在のセッションの言語を変更します。 @LANGUAGE現在の言語設定を表示するには、@ 関数を使用します。  
   
  ログインの既定の言語がサーバーから削除された場合、ログインはサーバーの既定の言語を取得します。 **sp_defaultlanguage**は、ユーザー定義のトランザクション内では実行できません。  
   
- サーバーにインストールされている言語に関する情報は、 **sys.syslanguages**カタログビューに表示されます。  
+ サーバーにインストールされている言語に関する情報は、 **sys.sys言語**カタログビューに表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`ALTER LOGIN` を使用して、ログイン `Fathima` の既定の言語をアラビア語に変更します。 可能であればこの方法の使用をお勧めします。  
   
 ```  
@@ -71,12 +70,12 @@ ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [@@LANGUAGE &#40;transact-sql&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET ステートメント &#40;Transact-sql&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
+ [sys.sys言語 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

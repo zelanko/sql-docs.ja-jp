@@ -1,5 +1,6 @@
 ---
 title: シーケンス式 (XQuery) |Microsoft Docs
+description: 項目のシーケンスを作成、フィルター処理、および結合する XQuery シーケンス式について説明します。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 31402792c4e2a203c7894753612485409d5eaf1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759470"
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、アイテムのシーケンスの構築、フィルター処理、および組み合わせに使用される、XQuery 演算子がサポートされます。 アイテムには、アトミック値またはノードを指定できます。  
   
 ## <a name="constructing-sequences"></a>シーケンスの構築  
@@ -100,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>例 C  
- 次のクエリは、Contact テーブルの**xml**型の AdditionalContactInfo 列に対して指定されています。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 TelephoneNumber \<>、 \<ページャー>、およびその他のノードは、ドキュメント内のどこにでも表示できます。 このクエリでは、コンテキストノードのすべて\<の telephoneNumber> 子を含むシーケンスが作成され\<、その後に、子> 子が続きます。 Return 式では、コンマシーケンス演算子が使用されて`($a//act:telephoneNumber, $a//act:pager)`いることに注意してください。  
+ 次のクエリは、Contact テーブルの**xml**型の AdditionalContactInfo 列に対して指定されています。 この列には、1 つ以上の追加の電話番号、ポケットベル番号、住所などの追加の連絡先情報が格納されます。 \<telephoneNumber>、 \<pager> 、およびその他のノードは、ドキュメント内のどこにでも表示できます。 このクエリは、コンテキストノードのすべての子を含むシーケンスを作成し、その \<telephoneNumber> 後に子を作成し \<pager> ます。 Return 式では、コンマシーケンス演算子が使用されていることに注意して `($a//act:telephoneNumber, $a//act:pager)` ください。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -132,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>シーケンスのフィルター処理  
- 式に述語を追加することで、式によって返されるシーケンスをフィルター処理できます。 詳細については、「[パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。 たとえば、次のクエリでは、3つの <`a`> 要素ノードのシーケンスが返されます。  
+ 式に述語を追加することで、式によって返されるシーケンスをフィルター処理できます。 詳細については、「[パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)」を参照してください。 たとえば、次のクエリでは、3つの <> 要素ノードのシーケンスが返され `a` ます。  
   
 ```  
 declare @x xml  
@@ -152,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 属性 attrA を`a`持つ <> 要素だけを取得するには、述語でフィルターを指定します。 結果のシーケンスには、<`a`> 要素が1つだけ含まれます。  
+ `a`属性 attrA を持つ <> 要素だけを取得するには、述語でフィルターを指定します。 結果のシーケンスには、<> 要素が1つだけ含まれ `a` ます。  
   
 ```  
 declare @x xml  
@@ -188,7 +188,7 @@ set @x = '
 '  
 ```  
   
- の`(/a, /b)`式は、サブツリー `/a`と`/b` 、結果のシーケンスから expression filters 要素`<c>`を含むシーケンスを構築します。  
+ の式は、サブ `(/a, /b)` ツリーと、 `/a` `/b` 結果のシーケンスから expression filters 要素を含むシーケンスを構築し `<c>` ます。  
   
 ```  
 SELECT @x.query('  
@@ -203,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 次の例では、述語フィルターを適用します。 式は、要素 <`a` `c`> を含む`b`> <> <要素を検索します。  
+ 次の例では、述語フィルターを適用します。 式は、要素 <> を `a` 含む> <> <要素を検索し `b` `c` ます。  
   
 ```  
 declare @x xml  
@@ -243,7 +243,7 @@ SELECT @x.query('
   
 -   Union、intersect、または except 演算子を使用したノードシーケンスの結合はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

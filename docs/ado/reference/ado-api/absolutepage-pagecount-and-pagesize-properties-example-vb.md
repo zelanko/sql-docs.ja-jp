@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], Visual Basic example
 - PageSize property [ADO], Visual Basic example
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad832a1e0028005ff1893df43fbadcd078bc2859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7516023fe006caa9761d9547e995007047c6f382
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921850"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747564"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (VB)
 ```  

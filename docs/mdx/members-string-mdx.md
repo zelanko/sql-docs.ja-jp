@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001491"
 ---
 # <a name="members-string-mdx"></a>Members (String) (MDX)
@@ -31,7 +31,7 @@ Members(Member_Name)
  *Member_Name*  
  メンバー名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Members (String)** 関数は、名前が指定された1つのメンバーを返します。 通常、members **(** string) 関数を外部関数と共に使用し、 **members (string)** 関数にメンバーを識別する文字列を指定します。また、 **members (string)** 関数は、この指定されたメンバーの値を返します。  
   
 ## <a name="example"></a>例  
@@ -43,6 +43,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

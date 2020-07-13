@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67dad84ff115607894e29776deec9c23add83969
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066793"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server コンポーネントの監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では動的な環境でサービスを提供しているため、監視することは重要です。 アプリケーションのデータは変化します。 ユーザーが必要とするアクセスの種類は変化します。 ユーザーの接続方法も変化します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスするアプリケーションの種類が変わる可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、手動によるシステム レベルのチューニングを必要最低限に抑えるために、メモリやディスク領域などシステム レベルのリソースが自動的に管理されています。 管理者は、SQL Server を監視することにより、パフォーマンスの傾向を特定して、変更が必要かどうかを判断することができます。  
@@ -82,10 +81,9 @@ ms.locfileid: "63150751"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]利用状況モニター  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 利用状況モニター  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] グラフィカルなプラン表示  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] グラフィカルなプラン表示  
   
 -   ストアド プロシージャ  
   
@@ -95,12 +93,10 @@ ms.locfileid: "63150751"
   
 -   トレース フラグ  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視ツールを使用する方法の詳細については、「 [パフォーマンス監視およびチューニング ツール](performance-monitoring-and-tuning-tools.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視ツールを使用する方法の詳細については、「 [パフォーマンス監視およびチューニング ツール](performance-monitoring-and-tuning-tools.md)」を参照してください。  
   
 ## <a name="identify-the-components-to-monitor"></a>監視するコンポーネントの決定  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス監視の 3 つ目の手順は、監視するコンポーネントを決定することです。 たとえば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してサーバーをトレースする場合、特定のイベントに関するデータを収集するようにトレースを定義することができます。 また、状況に適用しないイベントをトレースの対象から除外することもできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス監視の 3 つ目の手順は、監視するコンポーネントを決定することです。 たとえば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してサーバーをトレースする場合、特定のイベントに関するデータを収集するようにトレースを定義することができます。 また、状況に適用しないイベントをトレースの対象から除外することもできます。  
   
 ## <a name="select-metrics-for-monitored-components"></a>監視するコンポーネントのメトリックの選択  
  監視するコンポーネントが決定したら、監視するコンポーネントのメトリックを決めます。 たとえば、トレースに含めるイベントを選択したら、それらのイベントの特定のデータのみを含めるように選択することができます。 トレースに関連のあるデータのみに制限すると、トレースを実行するのに必要なシステム リソースを最小限に抑えられます。  
@@ -123,13 +119,11 @@ ms.locfileid: "63150751"
   
 3.  キャプチャしたイベント データを保存します。  
   
-     キャプチャしたイベント データを保存すると、後で、そのデータを解析したり、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して再生することができます。 キャプチャしたイベント データは、データの生成元ツールで、再度読み込んで解析することができるファイルに保存されます。 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにイベント データを保存することができます。 パフォーマンス ベースラインを作成する際は、キャプチャしたイベント データを保存することが重要です。 最近キャプチャしたイベント データを比較して、パフォーマンスが最適かどうかを判断する場合、保存したパフォーマンス ベースライン データを使用します。 詳細については、「 [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)」を参照してください。  
+     キャプチャしたイベント データを保存すると、後で、そのデータを解析したり、Distributed Replay Utility または [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して再生することができます。 キャプチャしたイベント データは、データの生成元ツールで、再度読み込んで解析することができるファイルに保存されます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにイベント データを保存することができます。 パフォーマンス ベースラインを作成する際は、キャプチャしたイベント データを保存することが重要です。 最近キャプチャしたイベント データを比較して、パフォーマンスが最適かどうかを判断する場合、保存したパフォーマンス ベースライン データを使用します。 詳細については、「 [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)」を参照してください。  
   
 4.  イベントをキャプチャするように指定された設定を含むトレース テンプレートを作成します。  
   
-     トレース テンプレートには、データをキャプチャするときに使用するイベント自体、イベント データ、およびフィルターに関する指定が含まれます。 このテンプレートを使用すると、イベント、イベント データ、およびフィルターを再定義することなく、後で特定のイベント セットを監視することができます。 たとえば、デッドロックの数やこれらのデッドロックに関係するユーザーの数を頻繁に監視する場合、これらのイベント、イベント データ、およびイベント フィルターを定義するテンプレートを作成して、その定義を保存しておくと、次にデッドロックを監視するときにフィルターを再適用できます。 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、この処理にトレース テンプレートが使用されます。 詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)」および「[トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)」を参照してください。  
+     トレース テンプレートには、データをキャプチャするときに使用するイベント自体、イベント データ、およびフィルターに関する指定が含まれます。 このテンプレートを使用すると、イベント、イベント データ、およびフィルターを再定義することなく、後で特定のイベント セットを監視することができます。 たとえば、デッドロックの数やこれらのデッドロックに関係するユーザーの数を頻繁に監視する場合、これらのイベント、イベント データ、およびイベント フィルターを定義するテンプレートを作成して、その定義を保存しておくと、次にデッドロックを監視するときにフィルターを再適用できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、この処理にトレース テンプレートが使用されます。 詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)」および「[トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)」を参照してください。  
   
 5.  キャプチャしたイベント データを分析します。  
   

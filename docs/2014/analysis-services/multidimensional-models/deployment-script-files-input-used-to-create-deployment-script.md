@@ -17,32 +17,28 @@ helpviewer_keywords:
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2eb377b29ef798b4cbdd02666b866c52eb8f8599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66075412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546878"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>配置スクリプトを作成するための入力ファイルについて
-  プロジェクトを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ビルドすると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]によってプロジェクトの XML ファイルが生成されます。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、これらの XML ファイルは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの出力フォルダーに保存されます。 既定では、出力は \Bin フォルダーに対して行われます。 次の表は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成される XML ファイルを示しています。  
+  プロジェクトをビルドすると [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] よってプロジェクトの XML ファイルが生成されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、これらの XML ファイルは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの出力フォルダーに保存されます。 既定では、出力は \Bin フォルダーに対して行われます。 次の表は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成される XML ファイルを示しています。  
   
-|XMLA ファイル|[説明]|  
+|XMLA ファイル|説明|  
 |---------------|-----------------|  
-|\<*プロジェクト名*> asdatabase|プロジェクト内のすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの宣言定義が含まれています。|  
-|\<*プロジェクト名*> deploymenttargets|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースの名前が含まれています。|  
-|\<*プロジェクト名*>. configsettings|データ ソース接続情報やオブジェクト格納場所など、環境に固有の設定が含まれています。 このファイルの設定は、 \<*プロジェクト名*>. asdatabase ファイルの設定よりも優先されます。|  
-|\<*プロジェクト名*> deploymentoptions|配置がトランザクションであるかどうかや、配置したオブジェクトを配置後に処理するかどうかなどの配置オプションが含まれています。|  
+|\<*project name*>. asdatabase|プロジェクト内のすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの宣言定義が含まれています。|  
+|\<*project name*>。 deploymenttargets|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースの名前が含まれています。|  
+|\<*project name*>. configsettings|データ ソース接続情報やオブジェクト格納場所など、環境に固有の設定が含まれています。 このファイルの設定は、. asdatabase ファイルの設定よりも優先され \<*project name*> ます。|  
+|\<*project name*>. deploymentoptions|配置がトランザクションであるかどうかや、配置したオブジェクトを配置後に処理するかどうかなどの配置オプションが含まれています。|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、プロジェクト ファイルにパスワードは保存されません。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、プロジェクト ファイルにパスワードは保存されません。  
   
 ## <a name="modifying-the-input-files"></a>入力ファイルの変更  
- 入力ファイル内の値または入力ファイルから取得された値を変更すると、 \<*プロジェクト名*> asdatabase ファイル (または、既存[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のデータベースからスクリプトを生成する場合は XMLA スクリプトファイル全体) を編集しなくても、配置先、構成設定、および配置オプションを変更できるようになります。 個々のファイルを変更できると、さまざまな目的に合わせてさまざまな配置スクリプトを簡単に作成できます。  
+ 入力ファイル内の値または入力ファイルから取得された値を変更することにより、配置先、構成設定、および配置オプションを変更できます。このとき、 \<*project name*> asdatabase ファイル全体 (または、既存のデータベースからスクリプトを生成する場合は、XMLA スクリプトファイル全体) を編集する必要がありません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 個々のファイルを変更できると、さまざまな目的に合わせてさまざまな配置スクリプトを簡単に作成できます。  
   
  次のトピックでは、さまざまな入力ファイル内の値を変更する方法について説明します。  
   

@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059491"
 ---
 # <a name="examples-using-auto-mode"></a>例 : AUTO モードの使用
   次の例では、AUTO モードの使用方法を示します。 クエリの多くは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
@@ -167,8 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>例 : バイナリ データを返す  
- 次のクエリでは、 `ProductPhoto` テーブルから製品の写真が返されます。 
-  `ThumbNailPhoto` は、`varbinary(max)` テーブルの `ProductPhoto` 列です。 既定では、 `AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、 `ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、 `SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
+ 次のクエリでは、 `ProductPhoto` テーブルから製品の写真が返されます。 `ThumbNailPhoto` は、`ProductPhoto` テーブルの `varbinary(max)` 列です。 既定では、 `AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、 `ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、 `SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -266,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   クエリ結果で、返された要素名と属性名に特殊な XML 文字や URL 文字が含まれている場合、それらの文字は対応する Unicode 文字の 16 進数値を使用してエンコードされます。 上記の結果では、要素名 <`Special Chars`> が <`Special_x0020_Chars`> として返されています。 属性名 <`Col#&2`> は <`Col_x0023__x0026_2`> として返されています。 XML と URL の両方の特殊文字がエンコードされます。  
   
--   要素や属性の値に 5 つの標準 XML 文字エンティティ ('、""、\<、>、および &) のいずれかが含まれている場合、これらの特殊な XML 文字は必ず XML 文字エンコードを使用してエンコードされます。 上記の結果では、属性 <`&`> の値の `Col1` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
+-   要素または属性の値に5つの標準 XML 文字エンティティ ('、""、、および &) のいずれかが含まれている場合 \<, > 、これらの特殊な xml 文字は常に xml 文字エンコーディングを使用してエンコードされます。 上記の結果では、属性 <`&`> の値の `Col1` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
   
 -   要素や属性の値に URL で特別な意味を持つ任意の特殊な URL 文字が含まれている場合、それらの文字は、DBOBJECT URL 値であるとき、および特殊文字がテーブル名や列名の一部であるときにのみエンコードされます。 この結果、テーブル名 `#` の一部である文字 `Col#&2` は、 `_x0023_ in the DBOJBECT URL`としてエンコードされます。  
   

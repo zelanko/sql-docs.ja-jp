@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62873340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970419"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
@@ -72,7 +71,7 @@ ms.locfileid: "62873340"
   
     1.  フィルター一覧で、 **[実行時間]** をクリックします。  
   
-    2.  ブール演算子ウィンドウで、[次の**値以上] ノードを**展開し`80` 、値として「」と入力して、[ **OK]** をクリックします。  
+    2.  ブール演算子ウィンドウで、[次の値**以上] ノードを**展開し、 `80` 値として「」と入力して、[ **OK]** をクリックします。  
   
 9. **[実行]** をクリックしてトレースを開始します。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62873340"
   
     2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
   
-     コレクション`SPROC_CollectionSet`セットは、[**システムデータコレクションセット**ノードと同じレベルで表示されます。 既定では、このコレクション セットは無効になっています。  
+     `SPROC_CollectionSet`コレクションセットは、[**システムデータコレクションセット**ノードと同じレベルで表示されます。 既定では、このコレクション セットは無効になっています。  
   
 6.  オブジェクト エクスプローラーを使用して、コレクション モードやアップロード スケジュールなどの SPROC_CollectionSet のプロパティを編集します。 編集方法は、データ コレクターで用意されているシステム データ コレクション セットの場合と同じです。  
   

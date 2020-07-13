@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 546f001ac4809a4fb8c455e37bf10f975d84dce8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db526bd1d5b9cab6a4e204d068827ff29b9dfa06
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771508"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438919"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC へのテーブルの追加
   [テーブル選択] ダイアログ ボックスを使用すると、Oracle ソースから CDC インスタンスに追加のテーブルを追加できます。 選択したテーブルは、プロパティ エディターの **[テーブル]** タブの一覧に追加されます。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fd09d5d20b2a84050390c3e131265feddc09a409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 414f1a03ea87f6cc6b0916a0122ca2a66d5855a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63285602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060190"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定されたウィンドウ フレームを表示するかどうかを示すプロパティです。 ヘルパー メソッドは、マネージド コードから使用されます。  

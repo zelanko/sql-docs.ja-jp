@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102639"
 ---
 # <a name="limit-report-history-report-manager"></a>レポート履歴を制限する (レポート マネージャー)
@@ -34,21 +34,20 @@ ms.locfileid: "66102639"
   
 2.  すべてのレポート履歴を制限なく保持する場合は、 **[レポート履歴に無制限の数のスナップショットを保持する]** を選択します。 それ以外の場合は、 **[レポート履歴のコピーの数を制限する]** を選択し、特定のレポートに対して保持できるスナップショットの最大数を指定します。  
   
-3.  **[Apply]** をクリックします。  
+3.  **[適用]** をクリックします。  
   
 ### <a name="to-configure-report-history-for-a-specific-report"></a>特定のレポートのレポート履歴を構成するには  
   
 1.  レポート マネージャーで、履歴を構成するレポートに移動し、そのレポートをクリックして開きます。  
   
-2.  
-  **[プロパティ]** タブをクリックします。  
+2.  **[プロパティ]** タブをクリックします。  
   
 3.  [**履歴**] タブをクリックします。  
   
 4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../snapshot-options-properties-page-report-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポートマネージャー&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

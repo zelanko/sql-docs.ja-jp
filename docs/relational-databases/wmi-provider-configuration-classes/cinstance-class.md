@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce0b050ac8b9224f8739c85e5f51208661e65ca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3b4504b3e014a5d23dd20ae72ebec6768e06058e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881202"
 ---
 # <a name="cinstance-class"></a>CInstance クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [CInstance クラス](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスを表します。  
   
  このクラスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスに関連付けられたプロトコルおよびネットワーク ライブラリを管理することができます。  

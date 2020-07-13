@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLValidDSN [ODBC]
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039485"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286972"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 関数
 **互換性**  
@@ -51,7 +51,7 @@ BOOL SQLValidDSN(
 ## <a name="diagnostics"></a>診断  
  **Sqlvaliddsn**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 データソース名が無効であるために FALSE が返された場合にのみ、関数呼び出しが失敗した場合にのみ、 * \*pferrorcode*が返されます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
@@ -63,7 +63,7 @@ BOOL SQLValidDSN(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースの追加、変更、または削除|[Configdsn](../../../odbc/reference/syntax/configdsn-function.md) (セットアップ DLL 内)|  
 |データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  

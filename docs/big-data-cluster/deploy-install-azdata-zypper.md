@@ -62,7 +62,7 @@ ms.locfileid: "75728573"
 
 ## <a name="update"></a>更新
 
-`azdata-cli` コマンドで `zypper update` を更新します。
+`zypper update` コマンドで `azdata-cli` を更新します。
 
    ```bash
    sudo zypper refresh

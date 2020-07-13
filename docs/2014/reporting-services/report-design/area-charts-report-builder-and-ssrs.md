@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106483"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面グラフ (レポート ビルダーおよび SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66106483"
   
 ## <a name="variations"></a>バリエーション  
   
--   **積み上げ面**。 複数の系列が垂直方向に積み上げられた面グラフ。 グラフに系列が 1 つしかない場合、積み上げ面グラフでも、面グラフと同じように表示されます。  
+-   **積み上げ面**: 複数の系列が垂直方向に積み上げられた面グラフ。 グラフに系列が 1 つしかない場合、積み上げ面グラフでも、面グラフと同じように表示されます。  
   
--   **パーセント積み上げ面**。 複数の系列がグラフ領域全体を占めるように垂直方向に積み上げられた面グラフ。 グラフに系列が 1 つしかない場合、積み上げ面グラフでも、面グラフと同じように表示されます。  
+-   **100% 積み上げ面**: 複数の系列がグラフ領域全体を占めるように垂直方向に積み上げられた面グラフ。 グラフに系列が 1 つしかない場合、積み上げ面グラフでも、面グラフと同じように表示されます。  
   
--   **Smooth area**。 データ ポイントが直線ではなく平滑線で結ばれている面グラフ。 個々のデータ ポイントの値を表示するよりも傾向を表示することに関心がある場合は、面グラフではなく平滑面グラフを使用します。  
+-   **平滑面**: データ ポイントが直線ではなく平滑線で結ばれている面グラフ。 個々のデータ ポイントの値を表示するよりも傾向を表示することに関心がある場合は、面グラフではなく平滑面グラフを使用します。  
   
 ## <a name="data-considerations-for-area-charts"></a>面グラフのデータに関する注意点  
   
@@ -52,8 +52,8 @@ ms.locfileid: "66106483"
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [折れ線グラフ &#40;レポートビルダーと SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [グラフの種類 &#40;レポートビルダーと SSRS に変更&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
+ [折れ線グラフ &#40;レポート ビルダーおよび SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [グラフの種類の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

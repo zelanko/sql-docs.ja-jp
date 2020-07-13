@@ -1,5 +1,6 @@
 ---
 title: 小文字関数 (XQuery) |Microsoft Docs
+description: 指定された文字列内の各文字を等価の小文字に変換する XQuery 関数の小文字 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720069"
 ---
 # <a name="functions-on-string-values---lower-case"></a>文字列値に使用する関数 - lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   小文字関数は、 *$arg*内の各文字をそれと等価な小文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を小文字に変換する方法を指定します。 この標準は、Unicode コードポイント標準のマッピングと同じではありません。  
   
@@ -38,16 +39,16 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|期間|定義|  
+|用語|定義|  
 |*$arg*|小文字に変換する文字列値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
- 次の例では、入力文字列 ' abcDEF! を変更します。@4小文字にします。  
+ 次の例では、入力文字列 ' abcDEF! ' を変更します。 @4小文字にします。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -58,7 +59,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字列を検索する  
+### <a name="b-search-for-a-specific-character-string"></a>B: 特定の文字列を検索する  
  この例では、lower-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  
@@ -122,7 +123,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085212"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893593"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   スケジュールに関する情報を一覧表示します。  
   
@@ -57,10 +57,10 @@ sp_help_schedule
 ## <a name="result-sets"></a>結果セット  
  このプロシージャは、次の結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|スケジュールの識別子番号。|  
-|**schedule_uid**|**UNIQUEIDENTIFIER**|スケジュールの識別子。|  
+|**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**schedule_name**|**sysname**|スケジュールの名前。|  
 |**enabled**|**int**|スケジュールが有効になっている (**1**) か、有効でない (**0**) かを指定します。|  
 |**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = SQLServerAgent サービスの開始時に実行します。|  
@@ -73,11 +73,11 @@ sp_help_schedule
 |**active_end_date**|**int**|スケジュールの終了日。|  
 |**active_start_time**|**int**|スケジュールの開始時刻。|  
 |**active_end_time**|**int**|スケジュールを終了する時刻。|  
-|**date_created**|**DATETIME**|スケジュールが作成された日付。|  
-|**schedule_description**|**nvarchar(4000)**|スケジュールの英語の説明 (要求された場合)。|  
+|**date_created**|**datetime**|スケジュールが作成された日付。|  
+|**schedule_description**|**nvarchar (4000)**|スケジュールの英語の説明 (要求された場合)。|  
 |**job_count**|**int**|このスケジュールを参照するジョブの数を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パラメーターを指定しない場合、 **sp_help_schedule**インスタンス内のすべてのスケジュールに関する情報が一覧表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -106,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>B. 特定のスケジュールの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-schedule"></a>B: 特定のスケジュールの情報を一覧表示する  
  次の例では、`NightlyJobs` というスケジュールに関する情報を一覧表示します。  
   
 ```  
@@ -118,7 +118,7 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

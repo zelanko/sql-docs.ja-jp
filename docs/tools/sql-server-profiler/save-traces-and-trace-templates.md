@@ -1,6 +1,7 @@
 ---
 title: トレースとトレース テンプレートの保存
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler で、キャプチャされたイベント データをトレース ファイルまたはデータベース テーブルに保存する方法と、ユーザー定義のトレース テンプレートを保存する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307424"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151694"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
 

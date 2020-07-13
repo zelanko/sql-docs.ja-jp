@@ -13,23 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 301642f2e9ca7e1542a60c45f352bae6fe59712c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66072273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541058"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>[新しいメジャー グループ] ダイアログ ボックス (キューブ デザイナー)
-  
-  **の** [新しいメジャー グループ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブ デザイナーでキューブに新しいメジャー グループを追加できます。 
-  **[新しいメジャー グループ]** ダイアログ ボックスは次の方法で表示します。  
+  **の** [新しいメジャー グループ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブ デザイナーでキューブに新しいメジャー グループを追加できます。 **[新しいメジャー グループ]** ダイアログ ボックスは次の方法で表示します。  
   
 -   キューブ デザイナーの **[キューブ構造]** タブの **[ツール バー]** ペインで **[新しいメジャー グループ]** をクリックします。  
   
--   
-  **[キューブ構造]** タブの **[メジャー]** ペインでメジャー グループまたはメジャーを右クリックし、ショートカット メニューの **[新しいメジャー グループ]** をクリックします。  
+-   **[キューブ構造]** タブの **[メジャー]** ペインでメジャー グループまたはメジャーを右クリックし、ショートカット メニューの **[新しいメジャー グループ]** をクリックします。  
   
 ## <a name="options"></a>オプション  
  **[データ ソース ビューからテーブルを選択]**  

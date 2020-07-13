@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c29909a96f147a0f5ebc2140a68072dfe544255
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68064975"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305473"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (カーソル ライブラリ)
 > [!IMPORTANT]  

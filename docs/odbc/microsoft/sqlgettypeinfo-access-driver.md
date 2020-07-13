@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Access driver [ODBC], SQLGetTypeInfo
 - SQLGetTypeInfo function [ODBC], Access Driver
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 788f0b8c69636ad9bf93de73632abc911a0fb0e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddfa9bd29f0834adf1c211f9b8a111db0b94d3fe
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898759"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295152"
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo (Access ドライバー)
 > [!NOTE]  

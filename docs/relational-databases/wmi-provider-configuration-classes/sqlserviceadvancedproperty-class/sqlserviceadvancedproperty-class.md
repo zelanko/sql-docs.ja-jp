@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 601cb2d42848d91258de22db6db0648ad7030596
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73658996"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888275"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [Sqlserviceadvanced プロパティクラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)は、 [sqlservice クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)オブジェクトによって参照されるサービスの詳細プロパティを表します。  
   
  [Advanced Properties プロパティ (Sqlservice クラス)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md)は、 [Sqlserviceadvanced property クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクトの配列を参照します。  
   
  [開始および停止サービス](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)クラスは、サービスに固有のプロパティを表します。 これらのプロパティは、 [Sqlservice クラス](https://technet.microsoft.com/library/ms186497.aspx)クラスに関連付けられているプロパティの一覧に含まれていません。 [Sqlserviceadvanced Property クラス](https://technet.microsoft.com/library/ms182447.aspx)では、文字列、数値、またはブール型のプロパティを表現できます。 このクラスを使用すると、指定したサービスに固有のプロパティを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始、停止、および一時停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

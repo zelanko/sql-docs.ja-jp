@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 252415c6bf4ef2dfdfb7ae5c0858b661df546aa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780185"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7905|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|メッセージ テキスト|データベース エラー : ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
+|メッセージ テキスト|データベース エラー:ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
 'ghost' などの特殊な行セット ディレクトリ名を除いて、行セット ディレクトリの名前はパーティションのパーティション ID です。 行セット ディレクトリ名をパーティション ID に変換できない場合、このディレクトリは有効な行セット ディレクトリではありません。  

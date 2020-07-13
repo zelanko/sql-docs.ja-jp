@@ -1,5 +1,6 @@
 ---
 title: ファイルの完全バックアップ (SQL Server) | Microsoft Docs
+description: SQL Server では、各ファイルを個別に指定する代わりにファイル グループ全体をバックアップし、復元することができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 500abb4eca30e502d7a32e23e3b14300258453b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67939610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718034"
 ---
 # <a name="full-file-backups-sql-server"></a>ファイルの完全バックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックは、複数のファイルまたはファイル グループが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のファイルは、個別にバックアップおよび復元できます。 また、構成する各ファイルを個別に指定する代わりにファイル グループ全体を指定できます。 ファイル グループにオフラインのファイルが含まれている場合 (たとえば、ファイルが復元中である場合)、ファイル グループ全体がオフラインになり、バックアップできないことに注意してください。  

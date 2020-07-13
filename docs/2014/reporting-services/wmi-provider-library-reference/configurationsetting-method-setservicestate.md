@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097949"
 ---
 # <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting)
@@ -46,8 +46,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  Windows サービスの状態を示す `Boolean` 値。 値が `true` の場合はレポート サーバー Windows サービスを開始し、`false` の場合はレポート サーバー Windows サービスを停止します。  
   
  *EnableWebService*  
- 
-  `Boolean` Web サービスの状態を示す [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 値。 値が `true` の場合はレポート サーバー Web サービスを開始し、`false` の場合はレポート サーバー Web サービスを停止します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービスの状態を示す `Boolean` 値。 値が `true` の場合はレポート サーバー Web サービスを開始し、`false` の場合はレポート サーバー Web サービスを停止します。  
   
  *EnableReportManager*  
  レポート マネージャーの目的の状態を示す `Boolean` 値。  
@@ -56,12 +55,12 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098408"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName メソッド (WMI)
@@ -45,30 +45,23 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="remarks"></a>解説  
  次の表に、データベース バージョンと表示文字列のマッピングを示します。  
   
-|**Release**|`Version`|**表示名**|  
+|**リリース**|`Version`|**表示名**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|
-  @DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|
-  @DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|
-  @DBVersion = 'C.0.8.40'|SQL Server 2005|  
-|RS 2000 SP2|
-  @DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|
-  @DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|
-  @DBVersion = 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修正プログラム||最も近い適用可能なバージョン|  
   
- 
-  *2000 より前の* Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、HRESULT として ACT_E_BAD_VERSION が返されます。  
+ *2000 より前の* Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、HRESULT として ACT_E_BAD_VERSION が返されます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

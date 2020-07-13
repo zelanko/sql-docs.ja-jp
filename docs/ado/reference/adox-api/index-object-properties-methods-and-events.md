@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Index object [ADOX], members
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ffd5987d79ce539baf536a3221ebc1bb5b470a15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966066"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762733"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Index オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -38,7 +38,7 @@ ms.locfileid: "67966066"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

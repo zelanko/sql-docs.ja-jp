@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67936658"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765333"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
 この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Employee テーブルのフィールド:**  
- **名前: emp_id**  
+ **Name: emp_id**  
  **種類: adChar**  
  **名前: fname**  
  **型: adVarChar**  
@@ -163,9 +163,9 @@ void PrintComError(_com_error &e) {
  **名前: lname**  
  **型: adVarChar**  
  **名前: job_id**  
- **型: adSmallInt**  
+ **Type: adSmallInt**  
  **名前: job_lvl**  
- **型: adUnsignedTinyInt**  
+ **Type: adUnsignedTinyInt**  
  **名前: pub_id**  
  **種類: adChar**  
  **名前: hire_date**  

@@ -1,5 +1,6 @@
 ---
 title: profiler ユーティリティ
+description: profiler ユーティリティによって、SQL Server Profiler ツールが起動されます。 省略可能な引数を使用して、アプリケーションの起動方法を制御できます。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08c37d53b0ab9bd9d02ca3574edfcc6061cf8218
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307393"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151302"
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ profiler
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に使用するユーザー ログイン ID を指定します。 ログイン ID では大文字と小文字は区別されます。  
   
 > [!NOTE]  
->  [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)])  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で必要なユーザーのパスワードを指定します。  

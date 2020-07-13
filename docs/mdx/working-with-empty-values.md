@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125845"
 ---
 # <a name="working-with-empty-values"></a>空の値の操作
@@ -122,7 +122,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**本来**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**指定**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
@@ -130,7 +130,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |OR|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**本来**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**指定**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   

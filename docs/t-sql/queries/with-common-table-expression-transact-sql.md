@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: クエリで共通テーブル式 (CTE) を使用する方法に関する Transact-SQL リファレンス。
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c4d512136ef0ecee8550d27b95acce0d91c3749
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287306"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632862"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "79287306"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
   
 <common_table_expression>::=  

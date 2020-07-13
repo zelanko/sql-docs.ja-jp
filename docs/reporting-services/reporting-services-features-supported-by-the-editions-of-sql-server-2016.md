@@ -73,7 +73,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 > SQL Server Express with Tools および SQL Server Express では、SQL Server Reporting Services はサポートされていません。
   
 ## <a name="edition-requirements-for-the-report-server-database"></a>レポート サーバー データベースのエディションの要件
- レポート サーバー データベースを作成するときは、SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のエディションを示します。  
+ レポート サーバー データベースを作成するときは、SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の特定のエディションで使用できる [!INCLUDE[ssDE](../includes/ssde-md.md)] のエディションを示します。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services のエディション|データベースをホストするために使用するデータベース エンジン インスタンスのエディション|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  

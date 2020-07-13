@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f115ded8392ddc3dcac32c2477794c007d5eb81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9067fd8b33cb2408f1ef6f0e58603eb4f1f7eb09
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68073924"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307813"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (カーソル ライブラリ)
 > [!IMPORTANT]  

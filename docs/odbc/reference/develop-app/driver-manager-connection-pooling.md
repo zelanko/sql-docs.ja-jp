@@ -13,14 +13,14 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92aab28274d3709047e46c55192b437449e252ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 84ccc0db8f9a54eecc8337ca5efbc7b4c4baa239
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68047013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305823"
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用すると、アプリケーションは、使用するたびに再確立する必要のない接続のプールからの接続を使用できます。 接続が作成され、プールに配置されると、アプリケーションは、完全な接続プロセスを実行することなく、その接続を再利用できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "68047013"
   
  ドライバーはこのオプションを効率的に実装する必要があります。そうしないと、接続プールのパフォーマンスが低下します。 具体的には、この接続属性の取得を呼び出すと、サーバーへのラウンドトリップが発生しません。 代わりに、ドライバーは接続の最後の既知の状態を返すだけです。 最後のトリップが成功した場合、サーバーへの最後のトリップが失敗した場合、接続は停止していません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  接続が失われた (SQL_ATTR_CONNECTION_DEAD によって報告された) 場合、ODBC ドライバーマネージャーはドライバーで SQLDisconnect を呼び出してその接続を破棄します。 新しい接続要求で、プール内の使用可能な接続が検出されない可能性があります。 最終的には、ドライバーマネージャーはプールが空であると仮定して、新しい接続を作成する可能性があります。  
   
  接続プールを使用するために、アプリケーションは次の手順を実行します。  

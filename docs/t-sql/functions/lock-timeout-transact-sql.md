@@ -18,17 +18,17 @@ helpviewer_keywords:
 - current lock time-out setting
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd99b8be28b8b637a1d4128a83a359af7fea05f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732230"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のセッションの現在のロック タイムアウト設定をミリ秒単位で返します。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetParam
 - SQLSetParam function [ODBC], mapping
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d8e632412965664e5cdd9c87dc1e26787dcdab2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125552"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300532"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam のマッピング
 **SQLSetParam**は、ODBC 2 の場合と同様に、 **SQLBindParameter**の上で引き続きマップされます。*x*。 概念的には**SQLBindParam**と似ていますが、ドライバーマネージャーは**SQLSetParam**を**SQLBindParam**にマップしません。 これは、特定の既存の ODBC 2 が原因です。*x*ドライバーは、 **SQLBindParameter**の上に**SQLSetParam**をマップするときにドライバーマネージャーによって生成される*bufferlength* (SQL_SETPARAM_VALUE_MAX) の特殊な値を使用して、1によっていつ呼び出されるかを判断します。*x* ODBC アプリケーション。  

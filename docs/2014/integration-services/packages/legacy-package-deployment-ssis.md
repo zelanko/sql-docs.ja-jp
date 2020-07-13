@@ -14,18 +14,17 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c912d4417842bc332262549cc604b97eaa50a44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 32627eddf5e7a696decd549e9b87ebb5c3b9d031
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62767092"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423759"
 ---
 # <a name="package-deployment-ssis"></a>パッケージの配置 (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡単にするツールとウィザードが用意されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
   
  パッケージ配置プロセスは、次の 4 段階で行います。  
   

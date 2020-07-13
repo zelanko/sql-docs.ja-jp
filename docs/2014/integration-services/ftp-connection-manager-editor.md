@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5aebb659db6eabd79c6e707b8b47abf21909a88
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058486"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425339"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 接続マネージャー エディター
-  
   **[FTP 接続マネージャー エディター]** ダイアログ ボックスを使用すると、FTP サーバーに接続するためのプロパティを指定できます。  
   
 > [!IMPORTANT]  
@@ -35,7 +33,7 @@ ms.locfileid: "66058486"
  FTP サーバーの名前を指定します。  
   
  **サーバーポート**  
- 接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は**21**です。  
+ 接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21**です。  
   
  **ユーザー名**  
  FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
@@ -43,22 +41,22 @@ ms.locfileid: "66058486"
  **パスワード**  
  FTP サーバーにアクセスするために使用するパスワードを指定します。  
   
- **タイムアウト (秒)**  
+ **[タイムアウト (秒)]**  
  タスクがタイムアウトするまでの秒数を指定します。値**0**は、時間が無制限であることを示します。 このプロパティの既定値は **60**です。  
   
- **パッシブモードを使用する**  
+ **[パッシブ モードを使用する]**  
  サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード**です。  
   
- **試行**  
+ **再試行**  
  接続を試行する回数を指定します。 値 **0** は、無制限に再試行を行うことを示します。  
   
- **[チャンクサイズ (KB)]**  
+ **[チャンク サイズ (KB)]**  
  データを転送するためのチャンク サイズを KB 単位で指定します。  
   
- **接続のテスト**  
+ **接続をテスト**  
  FTP 接続マネージャーを構成した後に、 **[接続テスト]** をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

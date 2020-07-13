@@ -9,18 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63288335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059547"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
-  
   `xml` データ型は ALTER TABLE ステートメントでサポートされています。 たとえば、文字列型の列を `xml` データ型に変更できます。 このような場合、列に格納されるドキュメントは正しい形式でなければなりません。 また、列の型を文字列から型指定された xml に変更する場合、列内のドキュメントは指定した XSD スキーマに対して検証されます。  
   
 ```  

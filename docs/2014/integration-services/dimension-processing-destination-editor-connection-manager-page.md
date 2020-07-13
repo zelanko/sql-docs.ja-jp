@@ -11,45 +11,42 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c34da1807f405c25ec071bb94232c3647b7efecd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059435"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429469"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
-  
-  **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
+  **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスへの接続を指定できます。  
   
  ディメンション処理変換先の詳細については、「 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
- **Connection manager**  
+ **接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
- 
-  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
+ **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
- **使用可能なディメンションの一覧**  
+ **利用可能なディメンションの一覧**  
  処理するディメンションを選択します。  
   
- **処理方法**  
+ **[処理方法]**  
  一覧で選択したディメンションに適用する処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**[追加 (増分)]**|ディメンションの増分処理を実行します。|  
-|**全角**|ディメンションの完全処理を実行します。|  
+|**完全**|ディメンションの完全処理を実行します。|  
 |**Update**|ディメンションの更新処理を実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [ディメンション処理変換先エディター &#40;マッピングページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [ディメンション処理変換先エディター &#40;詳細設定ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [ディメンション処理変換先エディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

@@ -13,15 +13,15 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e10255a62d5d0988ce838d968f7e40215d5dcffe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716749"
 ---
 # <a name="replication-monitor-main-page"></a>レプリケーション モニター、メイン ページ
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーション モニターを使用すると、レプリケーション トポロジにおけるパブリケーションとサブスクリプションの状態およびパフォーマンスを追跡できます。 以降のトピックで詳しく説明します。  
   
 -   レプリケーション モニターの概要については、「[レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)」を参照してください。  

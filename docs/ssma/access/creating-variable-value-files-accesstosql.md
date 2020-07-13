@@ -10,10 +10,10 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006593"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイルの作成 (「に」)
@@ -93,6 +93,6 @@ ms.locfileid: "68006593"
 ## <a name="next-step"></a>次のステップ  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;作成して、sql&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [サーバー接続ファイルの作成 (アクセス)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

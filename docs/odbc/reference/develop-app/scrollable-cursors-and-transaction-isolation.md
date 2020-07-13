@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061599"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304223"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクション分離
 次の表に、変更の可視性を制御する要因を示します。  
@@ -37,9 +37,9 @@ ms.locfileid: "68061599"
   
  次の表は、それぞれのカーソルの種類が、それ自体、他のトランザクション内の他の操作、および他のトランザクションによって行われた変更を検出する機能をまとめたものです。 後者の変更の可視性は、カーソルの種類と、カーソルを含むトランザクションの分離レベルによって異なります。  
   
-|カーソルのタイプ \ アクション|自身|独自<br /><br /> Txn|他<br /><br /> Txn<br /><br /> (RU [a])|他<br /><br /> Txn<br /><br /> (RC [a])|他<br /><br /> Txn<br /><br /> (RR [a])|他<br /><br /> Txn<br /><br /> (S [a])|  
+|カーソルのタイプ \ アクション|セルフ|独自<br /><br /> Txn|他<br /><br /> Txn<br /><br /> (RU [a])|他<br /><br /> Txn<br /><br /> (RC [a])|他<br /><br /> Txn<br /><br /> (RR [a])|他<br /><br /> Txn<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|静的|||||||  
+|Static|||||||  
 |挿入|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |更新|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |削除|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  

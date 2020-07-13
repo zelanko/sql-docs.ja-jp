@@ -21,23 +21,22 @@ helpviewer_keywords:
 - server scoped dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server]
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab6b2c35bb3507dbf7debc4b2e0d5f3a27df937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 7fd0b89d8e892418f30ed1b7d5f183972181fd47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043131"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007468"
 ---
 # <a name="system-dynamic-management-views"></a>システム動的管理ビュー
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。  
   
 > [!IMPORTANT]  
->  動的管理ビューおよび関数は、実装固有の内部状態データを返します。 これらのスキーマおよび返されるデータは、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リリースで変更される可能性があります。 そのため、今後のリリースの動的管理ビューおよび関数は、このリリースの動的管理ビューおよび関数と互換性がない可能性があります。 たとえば、の将来の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リリースでは、列リストの末尾に列を追加することにより、動的管理ビューの定義が拡張される可能性があります。 返される列の数が`SELECT * FROM dynamic_management_view_name`変更され、アプリケーションが中断される可能性があるため、実稼働コードでは構文を使用しないことをお勧めします。  
+>  動的管理ビューおよび関数は、実装固有の内部状態データを返します。 これらのスキーマおよび返されるデータは、の将来のリリースで変更される可能性があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 そのため、今後のリリースの動的管理ビューおよび関数は、このリリースの動的管理ビューおよび関数と互換性がない可能性があります。 たとえば、の将来のリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列リストの末尾に列を追加することにより、動的管理ビューの定義が拡張される可能性があります。 `SELECT * FROM dynamic_management_view_name`返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードでは構文を使用しないことをお勧めします。  
   
  動的管理ビューと関数には、次の2種類があります。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "68043131"
 -   データベース スコープの動的管理ビューと動的管理関数。 そのためには、データベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="querying-dynamic-management-views"></a>動的管理ビューのクエリ  
- 動的管理ビューは、ステートメントで[!INCLUDE[tsql](../../includes/tsql-md.md)] 2 部構成、3部構成、または4部構成の名前を使用して参照できます。 一方、動的管理関数は、ステートメントで[!INCLUDE[tsql](../../includes/tsql-md.md)] 2 部構成または3部構成の名前を使用して参照できます。 動的管理ビューおよび関数は、ステートメント内[!INCLUDE[tsql](../../includes/tsql-md.md)]で1つの部分で構成される名前を使用して参照することはできません。  
+ 動的管理ビューは、ステートメントで2部構成、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 3 部構成、または4部構成の名前を使用して参照できます。 一方、動的管理関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで2部構成または3部構成の名前を使用して参照できます。 動的管理ビューおよび関数は、ステートメント内で [!INCLUDE[tsql](../../includes/tsql-md.md)] 1 つの部分で構成される名前を使用して参照することはできません。  
   
  すべての動的管理ビューと動的管理関数は sys スキーマに含まれ、dm_* という名前付け規則に従います。 動的管理ビューまたは動的管理関数を使用するときには、sys スキーマを使用して、ビューまたは関数の名前にプレフィックスを付ける必要があります。 たとえば、動的管理ビュー dm_os_wait_stats をクエリするには、次のクエリを実行します。  
   
@@ -66,19 +65,19 @@ FROM sys.dm_os_wait_stats;
   
 |||  
 |-|-|  
-|[Always On 可用性グループの動的管理ビューおよび関数 (Transact-sql)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
-|[変更データキャプチャに関連する動的管理ビュー &#40;Transact-sql&#41;](change-data-capture-sys-dm-cdc-errors.md)|[オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[Always On 可用性グループの動的管理ビューおよび関数 (Transact-sql)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
+|[変更データ キャプチャに関連した動的管理ビュー &#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-errors.md)|[オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)|  
 |[関連する動的管理ビューの Change Tracking](change-tracking-sys-dm-tran-commit-table.md)|[クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](query-notifications-sys-dm-qn-subscriptions.md)|  
 |[Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)|[レプリケーション関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)|  
-|[データベースミラーリング関連の動的管理ビュー &#40;Transact-sql&#41;](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)|[Resource Governor 関連する動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)|  
-|[Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)|[Transact-sql&#41;&#40;セキュリティ関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
-|[実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|[Transact-sql&#41;&#40;サーバー関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)|  
-|[拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)|[Service Broker 関連する動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)|  
+|[データベースミラーリング関連の動的管理ビュー &#40;Transact-sql&#41;](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)|[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)|  
+|[Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)|[セキュリティ関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|[サーバー関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)|[Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)|  
 |[Transact-sql&#41;&#40;の Filestream および FileTable の動的管理ビュー](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)|[空間データ関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)|  
 |[Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)|[SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)|  
 |[Geo レプリケーションの動的管理ビューおよび関数 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)|[SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)|  
-|[Transact-sql&#41;&#40;インデックス関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)|[Transact-sql&#41;&#40;の動的管理ビューの Stretch Database](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)|  
-|[I O 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)|[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)|[Transact-sql&#41;&#40;の動的管理ビューの Stretch Database](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)|  
+|[I O 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)|[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)|  
 
   
 ## <a name="see-also"></a>参照  

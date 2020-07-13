@@ -9,16 +9,16 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a9cd5efaf70a915b6a31dced0f79498a01dd7ef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783600"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sp_cleanup_temporal_history (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -44,7 +44,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 削除された行の数を返す出力パラメーター。 履歴テーブルにクラスター化列ストアインデックスがある場合、このパラメーターは常に0を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 このストアドプロシージャは、有限の保有期間が指定されているテンポラルテーブルでのみ使用できます。
 このストアドプロシージャは、履歴テーブルからすべての期限切れの行を直ちに消去する必要がある場合にのみ使用してください。 同じトランザクション内で対象となるすべての行が削除されるため、データベースログと i/o サブシステムに大きな影響を与える可能性があります。

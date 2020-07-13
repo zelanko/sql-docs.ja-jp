@@ -11,28 +11,27 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ece1e3a161b03598ebc40ce9022780387b47e5c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 748e5df362231c4871b3777436d755227d2ec1b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785958"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011157"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLProcedureColumns**は、すべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のストアドプロシージャの戻り値の属性を報告する1行を返します。  
+  **SQLProcedureColumns**は、すべてのストアドプロシージャの戻り値の属性を報告する1行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **SQLProcedureColumns**は、 *CatalogName*、 *SchemaName*、 *ProcName*、または*ColumnName*パラメーターの値が存在するかどうか SQL_SUCCESS 返します。 これらのパラメーターで無効な値が使用されている場合、 **Sqlfetch**は SQL_NO_DATA を返します。  
   
  **SQLProcedureColumns**は、静的サーバーカーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセットカーソル) で**SQLProcedureColumns**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- 次の表に、結果セットによって返される列と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーを使用して**udt**および**xml**データ型を処理するように拡張された列を示します。  
+ 次の表に、結果セットによって返される列と、Native Client ODBC ドライバーを使用して**udt**および**xml**データ型を処理するように拡張された列を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT (ユーザー定義型) を含むカタログの名前を返します。|  
 |SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前を返します。|  
@@ -53,7 +52,7 @@ ms.locfileid: "73785958"
 |DECIMAL_DIGITS|テーブル値パラメーターの列数。|  
 |NUM_PREC_RADIX|NULL|  
 |NULLABLE|SQL_NULLABLE|  
-|備考|NULL|  
+|REMARKS|NULL|  
 |COLUMN_DEF|NULL。 テーブル型には既定値がない場合があります。|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATEIME_SUB|NULL|  

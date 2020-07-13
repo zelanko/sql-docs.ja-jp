@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLBindParameter
 - SQLBindParameter function [ODBC], Excel Driver
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3a2d0a03bded3ec909cd158b36f52ee9007647e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063250"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300632"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter (Excel ドライバー)
 > [!NOTE]  

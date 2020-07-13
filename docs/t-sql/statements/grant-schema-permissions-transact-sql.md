@@ -18,15 +18,15 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379d903a312c79f35aaab09ed1e599c978f76056
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74762657"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004706"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (スキーマ権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマの権限を許可します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "74762657"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  

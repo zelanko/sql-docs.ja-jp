@@ -14,15 +14,15 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727110"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
@@ -85,7 +85,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、`1` ステートメントは成功します。  
+ `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
 ##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
   

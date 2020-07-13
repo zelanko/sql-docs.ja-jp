@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1ca592afe12adb5dbf79c045352f3591ea87127a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62868964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054140"
 ---
 # <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
@@ -39,7 +38,6 @@ ms.locfileid: "62868964"
  ストアド プロシージャ `sp_changedistpublisher` を実行し、新しいパブリッシャーのディストリビューション データベースを元のパブリッシャーによって使用されるデータベースに変更します。  
   
 > [!NOTE]  
->  
-  `sp_changedistpublisher` を実行すると、パブリッシャーのディストリビューターで `sp_adddistpublisher` を実行したときに間違ったディストリビューション データベースを入力した場合の問題が解決されます。 ただし、識別されたディストリビューション データベースを使用する別のパブリッシング データベースからの既存のパブリケーションがリモート パブリッシャーにある場合、この変更は適切ではありません。 指定されたディストリビューション データベースを使用するレプリケーションは、新しいパブリッシャーが適切なホストとして機能するために、体系的に削除してから元のパブリッシャーのディストリビューション データベースを使用して再確立する必要があります。  
+>  `sp_changedistpublisher` を実行すると、パブリッシャーのディストリビューターで `sp_adddistpublisher` を実行したときに間違ったディストリビューション データベースを入力した場合の問題が解決されます。 ただし、識別されたディストリビューション データベースを使用する別のパブリッシング データベースからの既存のパブリケーションがリモート パブリッシャーにある場合、この変更は適切ではありません。 指定されたディストリビューション データベースを使用するレプリケーションは、新しいパブリッシャーが適切なホストとして機能するために、体系的に削除してから元のパブリッシャーのディストリビューション データベースを使用して再確立する必要があります。  
   
   

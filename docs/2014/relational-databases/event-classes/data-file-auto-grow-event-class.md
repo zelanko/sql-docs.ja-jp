@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a144918bc1d146857fb25bf44892239157270ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029930"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow イベント クラス
   **Data File Auto Grow** イベント クラスは、データ ファイルが自動的に拡張されたことを示します。 データ ファイルが ALTER DATABASE ステートメントを使用して明示的に拡張された場合は、このイベントは発生しません。  
@@ -30,7 +29,7 @@ ms.locfileid: "62663184"
   
 ## <a name="data-file-auto-grow-event-class-data-columns"></a>Data File Auto Grow イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

@@ -17,70 +17,66 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063182"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 このトピックでは次の情報について説明します。  
   
--   [アクセス許可の名前付け規則](#_conventions)  
+-   [権限の名前付け規則](#_conventions)  
   
 -   [特定のセキュリティ保護可能リソースに関連する権限](#_securables)  
   
--   [SQL Server のアクセス許可](#_permissions)  
+-   [SQL Server 権限](#_permissions)  
   
 -   [権限チェック アルゴリズム](#_algorithm)  
   
 -   [使用例](#_examples)  
   
-##  <a name="_conventions"></a>アクセス許可の名前付け規則  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>アクセス許可の名前付け規則  
  ここでは、権限に名前を付ける際に従う一般的な規則について説明します。  
   
 -   CONTROL  
   
-     権限を与えられたユーザーに所有権のような権限を与えます。 権限を与えられたユーザーは、事実上、セキュリティ保護可能なリソースに対する定義済みのすべての権限を持っています。 CONTROL を許可されたプリンシパルには、セキュリティ保護可能なリソースに対する権限も許可できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ モデルは階層構造であるため、特定のスコープの CONTROL には、そのスコープ下のセキュリティ保護可能なすべてのリソースに対する CONTROL が暗黙的に含まれます。 たとえば、データベースに対する CONTROL は、データベースに対するすべての権限、データベース内のすべてのアセンブリに対するすべての権限、データベース内のすべてのスキーマに対するすべての権限、およびデータベース内のすべてのスキーマに含まれているオブジェクトに対するすべての権限を意味します。  
+     権限を与えられたユーザーに所有権のような権限を与えます。 権限を与えられたユーザーは、事実上、セキュリティ保護可能なリソースに対する定義済みのすべての権限を持っています。 CONTROL を許可されたプリンシパルには、セキュリティ保護可能なリソースに対する権限も許可できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ モデルは階層構造であるため、特定のスコープの CONTROL には、そのスコープ下のセキュリティ保護可能なすべてのリソースに対する CONTROL が暗黙的に含まれます。 たとえば、データベースに対する CONTROL は、データベースに対するすべての権限、データベース内のすべてのアセンブリに対するすべての権限、データベース内のすべてのスキーマに対するすべての権限、およびデータベース内のすべてのスキーマに含まれているオブジェクトに対するすべての権限を意味します。  
   
 -   ALTER  
   
      セキュリティ保護可能な特定のリソースのプロパティを変更できるようにします。ただし、所有権は変更できません。 スコープに対して許可された場合、ALTER では、そのスコープに含まれているセキュリティ保護可能なすべてのリソースの変更、作成、または削除も行えるようになります。 たとえば、スキーマに対する ALTER 権限には、スキーマのオブジェクトを作成、変更、および削除する権限が含まれています。  
   
--   ALTER ANY \<*Server Securable*>。ここで、*Server Securable* には、任意のセキュリティ保護可能なサーバーを指定できます。  
+-   ALTER ANY \<*Server Securable*> 。ここで、 *Server セキュリティ保護*可能なサーバーには任意のセキュリティ保護可能なサーバーを指定できます。  
   
-     
-  *Server Securable*の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
+     *Server Securable*の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
   
--   ALTER ANY \<*Database Securable*>。ここで、*Database Securable* には、データベース レベルの任意のセキュリティ保護可能なリソースを指定できます。  
+-   ALTER ANY \<*Database Securable*> 。*データベースセキュリティ保護*可能なリソースには、データベースレベルでセキュリティ保護可能なリソースを指定できます。  
   
-     
-  *Database Securable*の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
+     *Database Securable*の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
   
 -   TAKE OWNERSHIP  
   
      権限を与えられたユーザーが、許可されたセキュリティ保護可能なリソースの所有権を使用できるようにします。  
   
--   \<*ログイン*の権限の借用>  
+-   装う\<*Login*>  
   
      権限を与えられたユーザーが、Login の権限を借用できるようにします。  
   
--   \<*ユーザー*の権限の借用>  
+-   装う\<*User*>  
   
      権限を与えられたユーザーが、User の権限を借用できるようにします。  
   
--   \<*サーバーのセキュリティ保護*可能なサーバーの作成>  
+-   生成\<*Server Securable*>  
   
      権限を与えられたユーザーが *Server Securable*を作成できるようにします。  
   
--   データベース\<の作成 (*セキュリティ保護*可能)>  
+-   生成\<*Database Securable*>  
   
      権限を与えられたユーザーが *Database Securable*を作成できるようにします。  
   
--   \<*スキーマに含まれるセキュリティ保護可能なリソースの*作成>  
+-   生成\<*Schema-contained Securable*>  
   
      スキーマに含まれているセキュリティ保護可能なリソースを作成できるようにします。 ただし、特定のスキーマ内でセキュリティ保護可能なリソースを作成するには、そのスキーマに対する ALTER 権限が必要です。  
   
@@ -95,9 +91,9 @@ ms.locfileid: "63128762"
      オブジェクトを参照する `WITH SCHEMABINDING` 句を含む関数またはビューを作成するには、そのオブジェクトに対する REFERENCES 権限が必要です。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- Pdf 形式のすべて[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアクセス許可のポスターサイズのグラフに[https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)ついては、「」を参照してください。  
+ Pdf 形式のすべてのアクセス許可のポスターサイズのグラフについ [!INCLUDE[ssDE](../../includes/ssde-md.md)] ては、「」を参照してください [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
-##  <a name="_securables"></a>特定の Securables に適用できる権限  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>特定の Securables に適用できる権限  
  次の表に、主な権限のクラスおよび各権限を適用できるセキュリティ保護可能なリソースの種類を示します。  
   
 |権限|適用対象|  
@@ -105,24 +101,22 @@ ms.locfileid: "63128762"
 |SELECT|シノニム<br /><br /> テーブル、列<br /><br /> テーブル値関数、 [!INCLUDE[tsql](../../includes/tsql-md.md)] と共通言語ランタイム (CLR)、列<br /><br /> ビュー、列|  
 |VIEW CHANGE TRACKING|テーブル<br /><br /> スキーマ|  
 |UPDATE|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
-|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]行列<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、列<br /><br /> 型<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
+|REFERENCES|スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル、列<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、列<br /><br /> 種類<br /><br /> ビュー、列<br /><br /> シーケンス オブジェクト|  
 |INSERT|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |DELETE|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |EXECUTE|プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シノニム<br /><br /> CLR 型|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)]行列|  
-|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]行列<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
-|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]行列<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー|  
-|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバー ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
-|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]行列<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
+|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー|  
+|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバーの役割<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> Synonyms<br /><br /> [テーブル]<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
 |IMPERSONATE|ログインとユーザー|  
   
 > [!CAUTION]  
 >  セットアップ時にシステム オブジェクトに付与された既定のアクセス許可は、発生する可能性のある脅威に対して慎重に評価されているため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの際、セキュリティ強化の一部として変更する必要はありません。 システム オブジェクトのアクセス許可の変更はどのようなものであっても、機能を制限または中断する可能性があり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがサポートされていない状態のままになる場合があります。  
   
-##  <a name="_permissions"></a>SQL Server と SQL Database のアクセス許可  
- 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての権限の一覧を示します。 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可は、サポートされている基本のセキュリティ保護可能なリソースにのみ使用できます。 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ではサーバー レベルのアクセス許可を付与することはできませんが、代わりにデータベースのアクセス許可を付与できる場合があります。  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server と SQL Database のアクセス許可  
+ 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての権限の一覧を示します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可は、サポートされている基本のセキュリティ保護可能なリソースにのみ使用できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ではサーバー レベルのアクセス許可を付与することはできませんが、代わりにデータベースのアクセス許可を付与できる場合があります。  
   
 |セキュリティ保護可能な基本リソース|セキュリティ保護可能な基本リソースに対する粒度の細かい権限|権限の種類のコード|基本リソースを含んでいる別のセキュリティ保護可能なリソース|セキュリティ保護可能なコンテナーに対する権限 (基本リソースに対する粒度の細かい権限を暗示)|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -162,7 +156,7 @@ ms.locfileid: "63128762"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -170,7 +164,7 @@ ms.locfileid: "63128762"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。|SERVER|CONTROL SERVER|  
+|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -209,8 +203,7 @@ ms.locfileid: "63128762"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注: に[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみ適用されます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注: にのみ適用さ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -284,40 +277,40 @@ ms.locfileid: "63128762"
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|SERVER|ADMINISTER BULK OPERATIONS|ADBO|適用不可|適用不可|  
-|SERVER|ALTER ANY CONNECTION|ALCO|適用不可|適用不可|  
-|SERVER|ALTER ANY CREDENTIAL|ALCD|適用不可|適用不可|  
-|SERVER|ALTER ANY DATABASE|ALDB|適用不可|適用不可|  
-|SERVER|ALTER ANY ENDPOINT|ALHE|適用不可|適用不可|  
-|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|適用不可|適用不可|  
-|SERVER|ALTER ANY EVENT SESSION|AAES|適用不可|適用不可|  
-|SERVER|ALTER ANY LINKED SERVER|ALLS|適用不可|適用不可|  
-|SERVER|ALTER ANY LOGIN|ALLG|適用不可|適用不可|  
-|SERVER|ALTER ANY SERVER AUDIT|ALAA|適用不可|適用不可|  
-|SERVER|ALTER ANY SERVER ROLE|ALSR|適用不可|適用不可|  
-|SERVER|ALTER AVAILABILITY GROUP|ALAG|適用不可|適用不可|  
-|SERVER|ALTER RESOURCES|ALRS|適用不可|適用不可|  
-|SERVER|ALTER SERVER STATE|ALSS|適用不可|適用不可|  
-|SERVER|ALTER SETTINGS|ALST|適用不可|適用不可|  
-|SERVER|ALTER TRACE|ALTR|適用不可|適用不可|  
-|SERVER|AUTHENTICATE SERVER|AUTH|適用不可|適用不可|  
-|SERVER|CONNECT ANY DATABASE|CADB|適用不可|適用不可|  
-|SERVER|CONNECT SQL|COSQ|適用不可|適用不可|  
-|SERVER|CONTROL SERVER|CL|適用不可|適用不可|  
-|SERVER|CREATE ANY DATABASE|CRDB|適用不可|適用不可|  
-|SERVER|CREATE AVAILABILTITY GROUP|CRAC|適用なし|適用不可|  
-|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|適用なし|適用不可|  
-|SERVER|CREATE ENDPOINT|CRHE|適用なし|適用不可|  
-|SERVER|CREATE SERVER ROLE|CRSR|適用なし|適用不可|  
-|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|適用なし|適用不可|  
-|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|適用なし|適用不可|  
-|SERVER|IMPERSONATE ANY LOGIN|IAL|適用なし|適用不可|  
-|SERVER|SELECT ALL USER SECURABLES|SUS|適用なし|適用不可|  
-|SERVER|SHUTDOWN|SHDN|適用なし|適用不可|  
-|SERVER|UNSAFE ASSEMBLY|XU|適用なし|適用不可|  
-|SERVER|VIEW ANY DATABASE|VWDB|適用なし|適用不可|  
-|SERVER|VIEW ANY DEFINITION|VWAD|適用なし|適用不可|  
-|SERVER|VIEW SERVER STATE|VWSS|適用なし|適用不可|  
+|SERVER|ADMINISTER BULK OPERATIONS|ADBO|適用なし|適用なし|  
+|SERVER|ALTER ANY CONNECTION|ALCO|適用なし|適用なし|  
+|SERVER|ALTER ANY CREDENTIAL|ALCD|適用なし|適用なし|  
+|SERVER|ALTER ANY DATABASE|ALDB|適用なし|適用なし|  
+|SERVER|ALTER ANY ENDPOINT|ALHE|適用なし|適用なし|  
+|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|適用なし|適用なし|  
+|SERVER|ALTER ANY EVENT SESSION|AAES|適用なし|適用なし|  
+|SERVER|ALTER ANY LINKED SERVER|ALLS|適用なし|適用なし|  
+|SERVER|ALTER ANY LOGIN|ALLG|適用なし|適用なし|  
+|SERVER|ALTER ANY SERVER AUDIT|ALAA|適用なし|適用なし|  
+|SERVER|ALTER ANY SERVER ROLE|ALSR|適用なし|適用なし|  
+|SERVER|ALTER AVAILABILITY GROUP|ALAG|適用なし|適用なし|  
+|SERVER|ALTER RESOURCES|ALRS|適用なし|適用なし|  
+|SERVER|ALTER SERVER STATE|ALSS|適用なし|適用なし|  
+|SERVER|ALTER SETTINGS|ALST|適用なし|適用なし|  
+|SERVER|ALTER TRACE|ALTR|適用なし|適用なし|  
+|SERVER|AUTHENTICATE SERVER|AUTH|適用なし|適用なし|  
+|SERVER|CONNECT ANY DATABASE|CADB|適用なし|適用なし|  
+|SERVER|CONNECT SQL|COSQ|適用なし|適用なし|  
+|SERVER|CONTROL SERVER|CL|適用なし|適用なし|  
+|SERVER|CREATE ANY DATABASE|CRDB|適用なし|適用なし|  
+|SERVER|CREATE AVAILABILTITY GROUP|CRAC|適用なし|適用なし|  
+|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|適用なし|適用なし|  
+|SERVER|CREATE ENDPOINT|CRHE|適用なし|適用なし|  
+|SERVER|CREATE SERVER ROLE|CRSR|適用なし|適用なし|  
+|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|適用なし|適用なし|  
+|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|適用なし|適用なし|  
+|SERVER|IMPERSONATE ANY LOGIN|IAL|適用なし|適用なし|  
+|SERVER|SELECT ALL USER SECURABLES|SUS|適用なし|適用なし|  
+|SERVER|SHUTDOWN|SHDN|適用なし|適用なし|  
+|SERVER|UNSAFE ASSEMBLY|XU|適用なし|適用なし|  
+|SERVER|VIEW ANY DATABASE|VWDB|適用なし|適用なし|  
+|SERVER|VIEW ANY DEFINITION|VWAD|適用なし|適用なし|  
+|SERVER|VIEW SERVER STATE|VWSS|適用なし|適用なし|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
@@ -348,13 +341,13 @@ ms.locfileid: "63128762"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a>権限チェックアルゴリズムの概要  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>権限チェックアルゴリズムの概要  
  権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト**、 **権限領域**、および **必要な権限**です。  
   
 > [!NOTE]  
 >  sa、dbo、エンティティ所有者、information_schema、sys、または自分自身に対する権限を許可、拒否、または取り消すことはできません。  
   
--   **セキュリティコンテキスト**  
+-   **セキュリティ コンテキスト**  
   
      これは、アクセス チェックに対して権限を与えるプリンシパルのグループです。 EXECUTE AS ステートメントを使用してセキュリティ コンテキストが別のログインまたはユーザーに変更されていない限り、現在のログインまたはユーザーに関連した権限です。 セキュリティ コンテキストには次のプリンシパルが含まれます。  
   
@@ -368,7 +361,7 @@ ms.locfileid: "63128762"
   
     -   モジュール署名が使用されている場合、ユーザーが現在実行しているモジュールの署名に使用された証明書のログインまたはユーザー アカウント、およびそのプリンシパルに関連付けられたロールのメンバーシップ  
   
--   **アクセス許可の領域**  
+-   **権限領域**  
   
      これは、セキュリティ保護可能なエンティティと、それを含むすべてのセキュリティ保護可能なクラスです。 たとえば、あるテーブル (セキュリティ保護可能なエンティティ) が、セキュリティ保護可能なクラスであるスキーマとデータベースに含まれているとします。 この場合のアクセスは、テーブル、スキーマ、データベース、サーバーの各レベルの権限による影響を受けます。 詳細については、「[権限の階層 &#40;データベース エンジン&#41;](permissions-hierarchy-database-engine.md)」を参照してください。  
   
@@ -396,16 +389,13 @@ ms.locfileid: "63128762"
     > [!NOTE]  
     >  列レベルの権限の GRANT により、オブジェクト レベルの DENY がオーバーライドされます。  
   
-5.  
-  **必要な権限**を識別します。  
+5.  **必要な権限**を識別します。  
   
-6.  
-  **権限領域** 内のオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト**の任意の ID に対し直接または暗黙的に拒否されている場合は、権限チェックが不合格となります。  
+6.  **権限領域** 内のオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト**の任意の ID に対し直接または暗黙的に拒否されている場合は、権限チェックが不合格となります。  
   
-7.  
-  **権限領域** 内のすべてのオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** のいずれの ID に対しても直接または暗黙的に拒否されておらず、 **必要な権限**に GRANT 権限または GRANT WITH GRANT 権限が含まれている場合は、権限チェックが合格となります。  
+7.  **権限領域** 内のすべてのオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** のいずれの ID に対しても直接または暗黙的に拒否されておらず、 **必要な権限**に GRANT 権限または GRANT WITH GRANT 権限が含まれている場合は、権限チェックが合格となります。  
   
-##  <a name="_examples"></a> 使用例  
+##  <a name="examples"></a><a name="_examples"></a> 使用例  
  このセクションでは、権限に関する情報を取得する例を示します。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 許可できる権限の完全な一覧を返す  
@@ -425,7 +415,7 @@ GO
 ```  
   
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. オブジェクトに対する実行中のプリンシパルに許可された権限を返す  
- 次の例では、 `fn_my_permissions` を使用して、指定したセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧を返します。 この例では、 `Orders55`という名前のオブジェクトに対する権限を返します。 詳細については、「[sys.fn_my_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql)」を参照してください。  
+ 次の例では、 `fn_my_permissions` を使用して、指定したセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧を返します。 この例では、`Orders55` という名前のオブジェクトに対する権限を返します。 詳細については、「[sys.fn_my_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql)」を参照してください。  
   
 ```  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
@@ -443,6 +433,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [権限の階層 &#40;データベースエンジン&#41;](permissions-hierarchy-database-engine.md)   
- [database_permissions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
+ [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

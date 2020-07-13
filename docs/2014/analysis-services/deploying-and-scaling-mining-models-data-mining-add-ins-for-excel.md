@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081927"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528728"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルの配置とスケーリング (Excel 用データ マイニング アドイン)
   **モデルの使用状況**と**管理**グループに含まれるツールは、既存のマイニングモデルの管理と参照に役立ちます。 これらのツールを使用して、アドインを使用して作成したモデルに加え、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに格納されているモデルを表示することができます。  

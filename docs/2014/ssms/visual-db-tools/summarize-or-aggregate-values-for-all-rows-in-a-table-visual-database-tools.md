@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057948"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
   集計関数を使用すると、テーブルのすべての値の要約を作成できます。 たとえば、 `titles` テーブルの本の総額を表示するには、次のようなクエリを作成できます。  
@@ -51,13 +50,13 @@ FROM titles
   
 1.  集計するテーブルが既にダイアグラム ペインに存在していることを確認します。  
   
-2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 [クエリおよびビュー デザイナー](query-and-view-designer-tools-visual-database-tools.md) により、抽出条件ペインのグリッドに **[グループ化]** 列が追加されます。  
+2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 [クエリおよびビューデザイナー](query-and-view-designer-tools-visual-database-tools.md)により、抽出条件ペインのグリッドに [**グループ化]** 列が追加されます。  
   
 3.  集計する列を抽出条件ペインに追加します。 この列の [出力] 列がマークされていることを確認します。  
   
      集計する列に別名が自動的に割り当てられます。 この別名は、わかりやすい名前に変更することができます。 詳しくは、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」をご覧ください。  
   
-4.  **[グループ化]** グリッド列で、 **[合計]** 、 **[平均]** 、 **[最小]** 、 **[最大]** 、 **[カウント]** などの該当する集計関数を選択します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]** 、 **[式]** 、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
+4.  **[グループ化]** グリッド列で、**[合計]**、**[平均]**、**[最小]**、**[最大]**、**[カウント]** などの該当する集計関数を選択します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]**、 **[式]**、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
   
      クエリおよびビュー デザイナーにより、 [SQL ペイン](sql-pane-visual-database-tools.md) のステートメントの列名は、指定した集計関数に置き換えられます。 たとえば、SQL ステートメントは次のようになります。  
   

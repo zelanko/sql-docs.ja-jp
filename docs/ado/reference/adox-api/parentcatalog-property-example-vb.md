@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965590"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763753"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog プロパティの例 (VB)
 次のコードは、カタログにテーブルを追加する前に、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティを使用してプロバイダー固有のプロパティにアクセスする方法を示しています。 プロパティは**autoincrement**で、Microsoft Jet データベースに autoincrement フィールドが作成されます。  

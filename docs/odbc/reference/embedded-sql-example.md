@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39ec504c423817c6a3e11bc954555b201b8b09c6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068657"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294173"
 ---
 # <a name="embedded-sql-example"></a>埋め込み SQL の例
 次のコードは、C で記述された単純な embedded SQL プログラムです。このプログラムは、埋め込まれている SQL 手法の多くを示していますが、すべてではありません。 このプログラムは、注文番号の入力をユーザーに求め、顧客番号、販売員、および注文の状態を取得し、取得した情報を画面に表示します。  

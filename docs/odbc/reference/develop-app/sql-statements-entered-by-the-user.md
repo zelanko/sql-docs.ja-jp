@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086072"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301963"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>ユーザーが入力した SQL ステートメント
 アドホック分析を実行するアプリケーションでは、通常、ユーザーが直接 SQL ステートメントを入力できるようにすることもできます。 次に例を示します。  

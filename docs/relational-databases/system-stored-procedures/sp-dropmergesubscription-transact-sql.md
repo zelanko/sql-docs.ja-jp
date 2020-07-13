@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6e2a01f60f982d3803fbad72cfbad6202b90315
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67933873"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881814"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -50,11 +50,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscription_type = ] 'subscription_type'`サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**すべての**|プッシュサブスクリプション、プルサブスクリプション、および匿名サブスクリプション|  
 |**非同期**|匿名サブスクリプションです。|  
-|**押し付け**|プッシュサブスクリプション。|  
+|**push**|プッシュサブスクリプション。|  
 |**だとすると**|プル サブスクリプションです。|  
 |**both** (既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
@@ -65,7 +65,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergesubscription**は、マージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
@@ -74,7 +74,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

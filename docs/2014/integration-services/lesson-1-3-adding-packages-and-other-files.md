@@ -7,17 +7,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3543b07d0a89c3de87034a8b0f5f80719775111e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62892134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436019"
 ---
-# <a name="step-3-adding-packages-and-other-files"></a>手順 3: パッケージとその他のファイルの追加
+# <a name="step-3-adding-packages-and-other-files"></a>手順 3:パッケージとその他のファイルの追加
   このタスクでは、既存のパッケージ、個々のパッケージをサポートする補助ファイル、および Readme を、前のタスクで作成した Deployment Tutorial プロジェクトに追加します。 たとえば、パッケージのデータを含んでいる XML データ ファイルや、プロジェクトのすべてのパッケージに関する Readme 情報を提供するテキスト ファイルを追加します。  
   
  パッケージをテスト環境または運用環境に配置するとき、通常はデータ ファイルを配置に含めるのではなく、テスト バージョンまたは運用バージョンのデータ ファイルまたはデータベースにアクセスできるように、構成ファイルでデータ ソースへのパスを更新します。 このチュートリアルでは、手順を説明する目的で、データ ファイルをパッケージの配置に含めます。  
@@ -70,6 +69,6 @@ ms.locfileid: "62892134"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 4: パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
-![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
   

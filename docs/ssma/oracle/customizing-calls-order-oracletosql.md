@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266096"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>呼び出し順序のカスタマイズ (OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68266096"
 ## <a name="customizing-order"></a>カスタマイズ (順序を)  
 オブジェクトの一覧があるグリッドの上部にあるボタンを使用して、オブジェクトを適切な順序で配置します。 または、行が選択されたときに右側に表示されるボタンを使用することもできます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 [テストケースの準備 &#40;OracleToSQL&#41;を終了しています](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

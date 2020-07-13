@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1318da5285ba2384dd23e4c235e698aa72c7658e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68056860"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296472"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL から C へ: 日付と時刻の間隔
 
@@ -41,11 +41,11 @@ ms.locfileid: "68056860"
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|すべての日付と時刻の C の間隔の種類|末尾のフィールド部分が切り捨てられていません<br /><br /> 末尾のフィールドの一部が切り捨てられました<br /><br /> ターゲットの先頭の有効桁数が、ソースからのデータを保持するのに十分な大きさではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|データの長さ<br /><br /> データの長さ<br /><br /> 未定義|該当なし<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|間隔の有効桁数が1つのフィールドであり、切り捨てずにデータが変換されました<br /><br /> 間隔の有効桁数は1つのフィールドと切り捨てられた小数部です<br /><br /> 間隔の精度は1つのフィールドで、全体が切り捨てられました<br /><br /> 間隔の有効桁数が1つのフィールドではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> データの長さ<br /><br /> データの長さ<br /><br /> C データ型のサイズ|該当なし<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義|データの長さ<br /><br /> 未定義|該当なし<br /><br /> 22003|  
-|SQL_C_CHAR|文字のバイト長 < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|文字の長さ < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|すべての日付と時刻の C の間隔の種類|末尾のフィールド部分が切り捨てられていません<br /><br /> 末尾のフィールドの一部が切り捨てられました<br /><br /> ターゲットの先頭の有効桁数が、ソースからのデータを保持するのに十分な大きさではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ<br /><br /> データの長さ<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|間隔の有効桁数が1つのフィールドであり、切り捨てずにデータが変換されました<br /><br /> 間隔の有効桁数は1つのフィールドと切り捨てられた小数部です<br /><br /> 間隔の精度は1つのフィールドで、全体が切り捨てられました<br /><br /> 間隔の有効桁数が1つのフィールドではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> データの長さ<br /><br /> データの長さ<br /><br /> C データ型のサイズ|該当なし<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_CHAR|文字のバイト長 < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|文字の長さ < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
   
  [a] 日付と時刻の間隔の SQL 型は、任意の日時の間隔 C 型に変換できます。  
   

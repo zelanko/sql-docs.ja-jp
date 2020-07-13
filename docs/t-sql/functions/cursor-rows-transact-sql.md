@@ -18,17 +18,17 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451050c2cb74431600913b250ffd1fb0974f1fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784594"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 接続で開いた最後のカーソルで現在登録されている行数を返します。 パフォーマンスを向上させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、大きなキーセットと静的カーソルを非同期に作成できます。 あるカーソルに登録されている行数が @`@@CURSOR_ROWS` の呼び出し時に取得されることは、@CURSOR_ROWS を呼び出すことで決定できます。
   

@@ -1,5 +1,6 @@
 ---
 title: CLR ユーザー定義集計関数の呼び出し |Microsoft Docs
+description: SQL Server CLR 統合では、Transact-sql SELECT を使用して CLR ユーザー定義集計を呼び出します。これは、システム集計関数に適用されるルールに従います。
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727895"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR ユーザー定義集計 - 関数の呼び出し
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
   
  さらに、次の規則も適用されます。  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- コードを**Myagg .dll**にコンパイルしたら、次のようにの集計を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に登録できます。  
+ コードをコンパイルして**MyAgg.dll**にすると、次のようにの集計をに登録でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -237,7 +237,7 @@ GROUP BY BookID;
   
 |BookID|AuthorName|  
 |------------|------------------|  
-|1 で保護されたプロセスとして起動されました|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
@@ -442,7 +442,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

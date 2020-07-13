@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d95ca6c63903adff866ce0e6c25146b8e77d6b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928583"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - [構成の再生] ([再生オプションの基本設定])
-  
   **[構成の再生]** ダイアログ ボックスの **[再生オプションの基本設定]** ページを使用すると、トレース ファイルまたはテーブルの再生方法を指定できます。  
   
  このウィンドウを表示するには、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を使用して、再生するイベントを含むトレース ファイルまたはテーブルを開きます。 詳細については、「 [再生を実行するための必要条件](../tools/sql-server-profiler/replay-requirements.md)」を参照してください。 トレース ファイルまたはテーブルが開いている状態で、 **[再生]** メニューの **[開始]** をクリックした後、トレースを再生する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。  
@@ -32,16 +30,13 @@ ms.locfileid: "66089718"
  再生のために接続する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを表示します。  
   
  **変更...**  
- 
-  **[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
+ **[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
   
  **[ファイルに保存]**  
- 再生結果をファイルに保存します。 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、ファイルを保存する場所を指定するための標準ファイル ダイアログが表示されます。  
+ 再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、ファイルを保存する場所を指定するための標準ファイル ダイアログが表示されます。  
   
  **[テーブルに保存]**  
- 再生結果をテーブルに保存します。 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、テーブルを保存する場所を指定するためのテーブル選択ダイアログが表示されます。  
+ 再生結果をテーブルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、テーブルを保存する場所を指定するためのテーブル選択ダイアログが表示されます。  
   
  **[再生スレッドの数]**  
  同時に使用する再生スレッドの数を指定します。 値を大きくするほど、再生時にはより多くのリソースが消費されますが、再生が高速になり、同時実行性が高くなります。  
@@ -53,8 +48,7 @@ ms.locfileid: "66089718"
  イベントを同時に再生します。 このオプションを選択した場合は、イベントを順番に再生するよりも処理が高速になりますが、デバッグができなくなります。 イベントは、システム プロセス識別子 (SPID) 内で順序付けられます。  
   
  **[再生結果を表示する]**  
- 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]に再生結果を表示します。  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]に再生結果を表示します。  
   
 ## <a name="see-also"></a>参照  
  [トレーステーブル &#40;SQL Server プロファイラーの再生&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   

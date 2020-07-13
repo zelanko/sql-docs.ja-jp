@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 39c5dda7122cf6d4020a5d2977553f43c7cd5d2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63015932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053174"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission イベント クラス
   **Audit Object Derived Permission** イベント クラスにより、指定されたオブジェクトに対して CREATE コマンド、ALTER コマンド、または DROP コマンドが実行された時点が記録されます。 このイベントは、オブジェクトに権限または直接関連付けられた所有者がない場合にのみ発生します。  
@@ -28,7 +27,7 @@ ms.locfileid: "63015932"
   
 ## <a name="audit-object-derived-permission-event-class-data-columns"></a>Audit Object Derived Permission イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

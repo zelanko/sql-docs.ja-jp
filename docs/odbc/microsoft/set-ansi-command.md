@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97269642b4147b966fdd71003f5f81ebe7905282
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67997768"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300912"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
 Visual FoxPro SQL コマンドで、= 演算子を使用して長さが異なる文字列間の比較を行う方法を決定します。  
@@ -50,7 +50,7 @@ SET ANSI ON | OFF
   
  結果は True (.T.) SET ANSI が off の場合、比較は ' Tom ' の後で停止するためです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SQL 文字列比較の実行時に、2つの文字列の短い方に空白が埋め込まれるかどうかを設定します。 SET ANSI は、= = 演算子には影響しません。= = 演算子を使用すると、比較のために短い文字列には常に空白が埋め込まれます。  
   
 ## <a name="string-order"></a>文字列の順序  

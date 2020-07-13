@@ -13,14 +13,14 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093791"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296022"
 ---
 # <a name="usage-counting"></a>使用状況のカウント
 > [!NOTE]  
@@ -59,7 +59,7 @@ ms.locfileid: "68093791"
   
  次の表に、[ファイルの使用状況のカウント] の値の形式を示します。  
   
-|Name|データ型|データ|  
+|名前|データの種類|データ|  
 |----------|---------------|----------|  
 |*完全パス*|REG_DWORD|*count*|  
   

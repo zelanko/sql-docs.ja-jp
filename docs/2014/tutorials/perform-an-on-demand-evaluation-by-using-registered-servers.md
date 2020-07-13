@@ -9,22 +9,19 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66822374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035578"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>登録済みサーバーを使用した要求時評価の実行
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して登録済みサーバーを使用して、ベスト プラクティス ポリシーの要求時評価を実行できます。 使用できるのは、ローカル サーバー グループまたは中央管理サーバーのいずれかです。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているサーバー グループ メンバーに対して、ベスト プラクティス ポリシーの要求時評価を実行できます。 ただし、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] でサポートされていない一部のプロパティがポリシーによって参照される場合は、例外エラーが発生することがあります。  
+>  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているサーバー グループ メンバーに対して、ベスト プラクティス ポリシーの要求時評価を実行できます。 ただし、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] または [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] でサポートされていない一部のプロパティがポリシーによって参照される場合は、例外エラーが発生することがあります。  
   
 ## <a name="prerequisites"></a>前提条件  
  この作業を実行するには、登録済みサーバーでサーバー登録を 1 つ以上構成しておく必要があります。 詳細については、次のトピックを参照してください。  
@@ -37,12 +34,11 @@ ms.locfileid: "66822374"
   
 ### <a name="to-evaluate-best-practices-policies-against-a-server-group"></a>サーバー グループに対してベスト プラクティス ポリシーを評価するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
 2.  構成に応じて [**データベースエンジン**] を展開し、[**ローカルサーバーグループ**] または [**中央管理サーバー**] を展開します。  
   
-3.  以下のいずれかを実行します。  
+3.  次のいずれかの操作を行います。  
   
     -   ローカルサーバーグループまたは中央管理サーバーで管理されているすべてのサーバーに対してポリシーを評価するには、ローカルサーバーグループ名または中央管理サーバー名を右クリックし、[**ポリシーの評価**] をクリックします。  
   
@@ -74,12 +70,12 @@ ms.locfileid: "66822374"
 7.  一部のポリシー エラーでは、ポリシー ベースの管理機能によってポリシーへの準拠を対象に直ちに適用できます。 このようなエラーの場合、エラーが発生したポリシーの横にチェック ボックスが表示されます。 チェックボックスをオンにした場合、または失敗したポリシーが含まれている行をクリックすると、評価に失敗したターゲットインスタンスの横にある [**対象の詳細**] ペインにチェックボックスが表示されます。 いずれかのチェックボックスをオンにすると、[**適用**] ボタンが使用できるようになります。 [**適用**] をクリックすると、選択したターゲットインスタンスの準拠していない設定が自動的に更新されます。  
   
     > [!CAUTION]  
-    >  ポリシー設定を十分に理解してから、対象インスタンスを自動更新してください。 1つ以上のチェックボックスをオンにした後、[**スクリプト**] をクリックし、出力場所を選択して、変更[!INCLUDE[tsql](../includes/tsql-md.md)]を適用する前に基になるコードを確認できるようにすることをお勧めします。  
+    >  ポリシー設定を十分に理解してから、対象インスタンスを自動更新してください。 1つ以上のチェックボックスをオンにした後、[**スクリプト**] をクリックし、出力場所を選択して、変更を適用する前に基になるコードを確認できるようにすることをお勧めし [!INCLUDE[tsql](../includes/tsql-md.md)] ます。  
   
 8.  ポリシーの詳細な結果を表示するには、[**結果**] テーブルでポリシーをクリックします。 [**対象の詳細**テーブルには、各インスタンスの詳細が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2 : スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [レッスン 2: スケジュールに基づくベスト プラクティス ポリシーの評価](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>参照  
  [ポリシーベースの管理を使用したベストプラクティスの監視と実施](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

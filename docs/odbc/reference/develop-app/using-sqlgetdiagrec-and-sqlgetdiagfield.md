@@ -14,14 +14,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022153"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306753"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の使用
 アプリケーションは、診断情報を取得するために**SQLGetDiagRec**または**SQLGetDiagField**を呼び出します。 これらの関数は、環境、接続、ステートメント、または記述子ハンドルを受け取り、そのハンドルを最後に使用した関数から診断を返します。 特定のハンドルに記録された診断は、そのハンドルを使用して新しい関数が呼び出されると破棄されます。 関数が複数の診断レコードを返した場合、アプリケーションはこれらの関数を複数回呼び出します。ステータスレコードの合計数は、SQL_DIAG_NUMBER オプションを使用して、ヘッダーレコード (レコード 0) に対して**SQLGetDiagField**を呼び出すことによって取得されます。  

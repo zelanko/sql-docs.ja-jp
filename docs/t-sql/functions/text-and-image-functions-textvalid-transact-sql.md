@@ -20,17 +20,17 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: b70bba03159f652945f4919e02d89e452153cafc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881981"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>テキスト関数とイメージ関数 - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定のテキスト ポインターが有効であるかどうかを確認する、**text**、**ntext**、または **image** 型の関数です。  
   

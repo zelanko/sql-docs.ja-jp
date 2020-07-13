@@ -11,18 +11,15 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ade30369ecdc7f5350503cc0e676a8158bb466
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061530"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (トランザクション パブリケーション、SQL Server 2005 以降)
-  
-  **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 
-  **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターでは、**[警告]** タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   レプリケーション モニターに警告を表示します。  
   
@@ -41,15 +38,15 @@ ms.locfileid: "63022009"
   
      これは、 **[待機時間がしきい値を超えた場合に警告します。]** オプションに対応します。 指定したしきい値に到達するか、しきい値を超過すると、(より優先度が高い問題を表示する必要がない限り) **[パフォーマンス クリティカル]** というサブスクリプション状態が表示されます。 しきい値は、サブスクリプション情報を含むページの **[パフォーマンス]** 列に表示されるパフォーマンス評価にも使用されます。 パフォーマンス評価は、次のいずれかの値になります。  
   
-    -   [非常に良い]  
+    -   非常に良い  
   
-    -   [良い]  
+    -   良い  
   
-    -   [普通]  
+    -   普通  
   
     -   悪い  
   
-    -   Critical  
+    -   重要  
   
  警告を有効にする場合は、しきい値も設定します。 たとえば、 **[待機時間がしきい値を超えた場合に警告します。]** 警告を有効にした場合は、パブリッシャー側でトランザクションをコミットしたときからサブスクライバー側でトランザクションをコミットするまでに許容する時間を選択します。  
   
@@ -62,28 +59,26 @@ ms.locfileid: "63022009"
  **警告**  
  しきい値に関連付けられている警告の説明です。  
   
- **進入**  
+ **しきい値**  
  しきい値の値を指定します。  
   
  **アラートの構成**  
- 
-  **[警告]** グリッドの行を選択し、 **[警告の構成]** をクリックすると、 **[レプリケーションの警告の構成]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、選択したしきい値および警告に関連付けた通知を定義できます。  
+ **[警告]** グリッドの行を選択し、 **[警告の構成]** をクリックすると、 **[レプリケーションの警告の構成]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、選択したしきい値および警告に関連付けた通知を定義できます。  
   
- **変更の破棄**  
+ **[変更の破棄]**  
  クリックすると、警告およびしきい値に対する変更が破棄されます。  
   
 > [!NOTE]  
->  
-  **[変更の破棄]** をクリックしても、 **[レプリケーションの警告の構成]** ダイアログ ボックスに定義されている通知は影響を受けません。  
+>  **[変更の破棄]** をクリックしても、 **[レプリケーションの警告の構成]** ダイアログ ボックスに定義されている通知は影響を受けません。  
   
  **[変更の保存]**  
  クリックすると、警告およびしきい値に対する変更が保存されます。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
+ [レプリケーションモニターを開始する](monitor/start-the-replication-monitor.md)   
  [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
+ [レプリケーションモニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
- [レプリケーションモニターでのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

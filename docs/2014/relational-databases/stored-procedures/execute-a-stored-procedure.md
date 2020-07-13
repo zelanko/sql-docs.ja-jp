@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c679ba7af3ac9f60d312b33c0346e50687387476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63016061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064568"
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
@@ -47,9 +46,9 @@ ms.locfileid: "63016061"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム プロシージャ名を照合するときに、呼び出し元のデータベースの照合順序が使用されます。 そのため、プロシージャの呼び出しでは、システム プロシージャ名の大文字と小文字を常に区別する必要があります。 たとえば、次のコードは、大文字と小文字を区別する照合順序が指定されたデータベースのコンテキストで実行された場合は失敗します。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "63016061"
   
 -   システム プロシージャと同じ名前を持つユーザー定義プロシージャは、実行されない可能性があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   システム ストアド プロシージャの実行  
   
@@ -119,13 +118,13 @@ ms.locfileid: "63016061"
   
     2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタートアップ時にプロシージャが実行されないようにする。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「[EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)」および「[EXECUTE AS 句 &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)」を参照してください。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)でストアド プロシージャを実行する方法について説明します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-execute-a-stored-procedure"></a>ストアド プロシージャを実行するには  
   
@@ -154,7 +153,7 @@ ms.locfileid: "63016061"
   
 5.  ストアド プロシージャを実行するには、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-execute-a-stored-procedure"></a>ストアド プロシージャを実行するには  
   
@@ -202,7 +201,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
   
 ## <a name="see-also"></a>参照  
  [パラメーターの指定](specify-parameters.md)   

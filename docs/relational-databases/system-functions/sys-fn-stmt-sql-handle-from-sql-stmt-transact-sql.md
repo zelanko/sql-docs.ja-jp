@@ -13,17 +13,16 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68059269"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002989"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  指定さ**** れたパラメーター [!INCLUDE[tsql](../../includes/tsql-md.md)]化の型 (simple または forced) の下のステートメントの stmt_sql_handle を取得します。 これにより、テキストがわかっている場合に**stmt_sql_handle**を使用して、クエリストアに格納されているクエリを参照できます。  
+  **stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定されたパラメーター化の型 (simple または forced) の下のステートメントの stmt_sql_handle を取得します。 これにより、テキストがわかっている場合に**stmt_sql_handle**を使用して、クエリストアに格納されているクエリを参照できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  クエリストア内でハンドルを作成するクエリのテキストを指定します。 *query_sql_text*は**nvarchar (max)**,、既定値はありません。  
   
  *query_param_type*  
- クエリのパラメーターの型です。 *query_param_type*は**tinyint**です。 設定可能な値は、次のとおりです。  
+ クエリのパラメーターの型です。 *query_param_type*は**tinyint**です。 次のいずれかの値になります。  
   
 -   NULL-既定値は0です。  
   
@@ -57,10 +56,10 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>返される列  
  次の表に、sys fn_stmt_sql_handle_from_sql_stmt が返す列を示します。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary (64)**|SQL ハンドル。|  
-|**query_sql_text**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントのテキスト。|  
+|**statement_sql_handle**|**varbinary(64)**|SQL ハンドル。|  
+|**query_sql_text**|**nvarchar(max)**|ステートメントのテキスト [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
 |**query_parameterization_type**|**tinyint**|クエリのパラメーター化の種類。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -72,14 +71,14 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  では、データベースに対する**EXECUTE**権限と、クエリストアのカタログビューに対する**DELETE**権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、ステートメントを実行し`sys.fn_stmt_sql_handle_from_sql_stmt` 、を使用してそのステートメントの SQL ハンドルを返します。  
+ 次の例では、ステートメントを実行し、を使用し `sys.fn_stmt_sql_handle_from_sql_stmt` てそのステートメントの SQL ハンドルを返します。  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 関数を使用すると、クエリストアデータを他の動的管理ビューと関連付けることができます。 次に例を示します。  
+ 関数を使用すると、クエリストアデータを他の動的管理ビューと関連付けることができます。 次のような例です。  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

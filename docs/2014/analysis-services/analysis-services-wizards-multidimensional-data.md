@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ed0c5c3317d628c4202b09a56d810830523969d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062387"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528018"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services のウィザード (多次元データ)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]は、および[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で使用するウィザードを提供します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の表に、使用できるウィザードを示します。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、およびで使用するウィザードを提供し [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ます。 次の表に、使用できるウィザードを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[集計のデザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)|集計のデザイン ウィザードを使用すると、メジャー グループ内のパーティションの集計インスタンスを作成するための、集計デザインの集計を定義できます。|  
 |[ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)|ビジネス インテリジェンス ウィザードを使用すると、勘定科目インテリジェンスや通貨の換算などの高度なビジネス インテリジェンス機能をキューブまたはディメンションに追加できます。|  

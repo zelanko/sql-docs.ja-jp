@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079012"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303493"
 ---
 # <a name="determining-installed-oracle-components"></a>インストールされる Oracle コンポーネントの決定
 > [!IMPORTANT]  

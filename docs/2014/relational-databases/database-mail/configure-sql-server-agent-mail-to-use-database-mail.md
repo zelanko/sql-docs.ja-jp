@@ -12,28 +12,27 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 59e3ababcebaf07ee953b3faedc0590db8b9bfec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952722"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の通知と警告をデータベース メールを使用して送信するように [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェントを構成する方法について説明します。  
   
--   **作業を開始する前に、次の操作を行います。**  
+-   **作業を開始する準備:**  
   
 -   [前提条件](#Prerequisites)  
   
--   [セキュリティ](#Security)  
+-   [Security](#Security)  
   
 -   [SQL Server Management Studio でデータベース メールを使用するように SQL Server エージェントを構成するには](#SSMSProcedure)  
   
 -   [フォローアップタスク](#Follow_Up)  
   
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>始める前に  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
@@ -45,12 +44,12 @@ ms.locfileid: "79289210"
   
 -   作成したプロファイルを **msdb** データベースの既定のプロファイルに設定します。  
   
-###  <a name="security"></a><a name="Security"></a>セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="permissions"></a><a name="Permissions"></a> アクセス許可  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL サーバー管理スタジオの使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **データベース メールを使用するように SQL Server エージェントを構成するには**  
   
 -   オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを展開します。  
@@ -70,11 +69,11 @@ ms.locfileid: "79289210"
 ##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> フォロー アップ タスク  
  警告および通知を送信できるようにエージェントを構成するには、次のタスクが必要となります。  
   
--   [アラート](../../ssms/agent/alerts.md)  
+-   [警告](../../ssms/agent/alerts.md)  
   
      特定のデータベース イベントまたはオペレーティング システムの状態がオペレーターに通知されるように、警告を構成できます。  
   
--   [演算子](../../ssms/agent/operators.md)  
+-   [オペレーター](../../ssms/agent/operators.md)  
   
      オペレーターとは、電子通知を受け取ることのできる人またはグループの別名です。  
   

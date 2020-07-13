@@ -17,15 +17,15 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b62d43302c4727f52f674a0e6769a70d36fbcd34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627625"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   ![常に暗号化](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75254833"
 
  Always Encrypted は、アプリケーションに対して暗号化を透過的に実行します。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機微なデータを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]にデータを渡す前に機微な列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 また、暗号化されたデータベース列に格納され、クエリ結果に含まれているデータを、同じように透過的に暗号化解除します。  
   
- Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ( [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
+ Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ([!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
 
   
 ## <a name="typical-scenarios"></a>標準のシナリオ  
@@ -115,7 +115,7 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 |選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
 
 > [!NOTE]
-> [ で導入された](always-encrypted-enclaves.md)セキュリティで保護されたエンクレーブが設定された Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] を使うと、Trasact-SQL を使用した既存データの暗号化がサポートされます。 また、暗号化操作対象のデータの外部にあるデータを移動する必要もなくなります。
+> [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) ([!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] で導入) では、Trasact-SQL を使用した既存データの暗号化がサポートされます。 また、暗号化操作対象のデータの外部にあるデータを移動する必要もなくなります。
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -148,7 +148,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
   
 -   ランダム化された暗号化を使用して暗号化された列に対するクエリでは、これらの列に対していずれの操作も実行できません。 ランダム化された暗号化を使用して暗号化された列のインデックス作成はサポートされていません。  
  > [!NOTE] 
- > [ で導入された](always-encrypted-enclaves.md)セキュリティで保護されたエンクレーブが設定された Always Encrypted[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] を使うと、ランダム化された暗号化を使用する列に対するパターン マッチング、比較演算子、インデックス作成が有効になり、上記の制限に対処できます。
+ > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] で導入された[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、ランダム化された暗号化を使用する列に対するパターン マッチング、比較演算子、インデックス作成が有効になり、上記の制限に対処できます。
 
 -   列の暗号化キーには、それぞれ異なる列のマスター キーで暗号化された値を最大で 2 つ設定できます。 2 つ設定すると、列マスター キーの交換が容易になります。  
   
@@ -156,7 +156,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 
 -   暗号化されたオブジェクトの定義を変更した後、[sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) を実行して、オブジェクトに対する Always Encrypted のメタデータを更新します。
   
-以下の特性を持つ列に対しては、Always Encrypted はサポートされていません。 たとえば、次の条件のいずれかが列に適用される場合、列に対する `ENCRYPTED WITH` で `CREATE TABLE/ALTER TABLE` 句を使用することはできません。  
+以下の特性を持つ列に対しては、Always Encrypted はサポートされていません。 たとえば、次の条件のいずれかが列に適用される場合、列に対する `CREATE TABLE/ALTER TABLE` で `ENCRYPTED WITH` 句を使用することはできません。  
   
 -   `xml`、`timestamp`/`rowversion`、`image`、`ntext`、`text`、`sql_variant`、`hierarchyid`、`geography`、`geometry`、別名型、ユーザー定義型のいずれかのデータ型が使用されている列。  
 - `FILESTREAM` 列  
@@ -226,7 +226,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、 *固定データベース ロールに対して、両方の* VIEW `public` アクセス許可が既定で付与されます。 データベース管理者は、 *ロールに対する* VIEW `public` アクセス許可を失効 (または拒否) し、特定のロールまたはユーザーに付与して、より制限が大きい制御を実装することができます。  
   
--   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] では、 *固定データベース ロールに対して、* VIEW`public` アクセス許可が既定で付与されません。 これによって、(旧バージョンの DacFx を使用する) 一部の既存のレガシ ツールが正常に動作するようになります。 最終的に、暗号化された列を操作する場合 (復号化しない場合でも)、データベース管理者は 2 つの *VIEW* アクセス許可を明示的に付与する必要があります。  
+-   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] では、`public` 固定データベース ロールに対して、*VIEW* アクセス許可が既定で付与されません。 これによって、(旧バージョンの DacFx を使用する) 一部の既存のレガシ ツールが正常に動作するようになります。 最終的に、暗号化された列を操作する場合 (復号化しない場合でも)、データベース管理者は 2 つの *VIEW* アクセス許可を明示的に付与する必要があります。  
 
   
 ## <a name="example"></a>例  

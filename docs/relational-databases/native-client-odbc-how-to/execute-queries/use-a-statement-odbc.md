@@ -10,24 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009423"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  
-  [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) を SQL_HANDLE_STMT として *SQLAllocHandle* を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
@@ -39,11 +37,11 @@ ms.locfileid: "73781177"
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- - または -  
+     \- または  
   
      ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- - または -  
+     \- または  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -51,14 +49,13 @@ ms.locfileid: "73781177"
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- - または -  
+     \- または  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- - または -  
+     \- または  
   
-     
-  [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
+     [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   
      SQL ステートメントに複数の結果セットが含まれている可能性がある場合は、各結果セットの最後に [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、処理する追加の結果セットがあるかどうかを確認します。  
   
@@ -66,14 +63,13 @@ ms.locfileid: "73781177"
   
     -   SQL_NO_DATA が返されるまで [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出さなかった場合は、[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出してカーソルを閉じます。  
   
-    -   パラメーター マーカーをプログラム変数にバインドした場合は、[Option](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) を SQL_RESET_PARAMS に設定して *SQLFreeStmt* を呼び出し、バインドされたパラメーターを解放します。  
+    -   パラメーター マーカーをプログラム変数にバインドした場合は、*Option* を SQL_RESET_PARAMS に設定して [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) を呼び出し、バインドされたパラメーターを解放します。  
   
-    -   結果セット列をプログラム変数にバインドした場合は、[Option](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) を SQL_UNBIND に設定して *SQLFreeStmt* を呼び出し、バインドされた列を解放します。  
+    -   結果セット列をプログラム変数にバインドした場合は、*Option* を SQL_UNBIND に設定して [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) を呼び出し、バインドされた列を解放します。  
   
     -   ステートメント ハンドルを再利用するには、手順 2. に進みます。  
   
-8.  
-  [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) を SQL_HANDLE_STMT として *SQLFreeHandle* を呼び出し、ステートメント ハンドルを解放します。  
+8.  *HandleType* を SQL_HANDLE_STMT として [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) を呼び出し、ステートメント ハンドルを解放します。  
   
 ## <a name="see-also"></a>参照  
  [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  

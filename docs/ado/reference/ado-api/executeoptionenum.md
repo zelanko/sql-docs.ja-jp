@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932844"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757138"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 プロバイダーがコマンドを実行する方法を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値は、 [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値**Adcmdtabledirect**と組み合わせることはできません。|  
 |**adAsyncFetch**|0x20|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティで指定された初期数量の後の残りの行を非同期に取得することを示します。|  
@@ -38,7 +38,7 @@ ms.locfileid: "67932844"
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
   
-|常時|  
+|定数|  
 |--------------|  
 |AdoEnums を実行します。|  
 |AdoEnums (ASYNCFETCH)|  

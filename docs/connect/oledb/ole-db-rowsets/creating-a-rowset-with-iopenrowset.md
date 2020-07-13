@@ -35,7 +35,7 @@ ms.locfileid: "67994311"
   
 -   DBID の *uName* メンバーには、既存のベース テーブルまたはビューの名前を Unicode 文字列で指定する必要があります。  
   
--   *OpenRowset* の **pIndexID** パラメーターには NULL を指定する必要があります。  
+-   **OpenRowset** の *pIndexID* パラメーターには NULL を指定する必要があります。  
   
  **IOpenRowset::OpenRowset** の結果セットには、1 つの行セットが含まれます。 1 つの行セットが含まれる結果セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルでサポートできます。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンカレンシー メカニズムを使用できます。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036431"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299022"
 ---
 # <a name="connection-handles"></a>接続ハンドル
 *接続*は、ドライバーとデータソースで構成されます。 接続ハンドルは、各接続を識別します。 接続ハンドルは、使用するドライバーだけでなく、そのドライバーと共に使用するデータソースを定義します。 ODBC (ドライバーマネージャーまたはドライバー) を実装するコードのセグメント内では、接続ハンドルは、次のような接続情報を含む構造体を識別します。  

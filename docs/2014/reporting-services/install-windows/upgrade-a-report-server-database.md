@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108638"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
@@ -31,16 +31,13 @@ ms.locfileid: "66108638"
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースをアップグレードする方法  
  次に、レポート サーバー データベースのアップグレード条件を示します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、レポート サーバーの単一のインスタンスをアップグレードします。 サービスが開始され、レポート サーバーによってデータベース スキーマのバージョンがサーバーのバージョンと一致しないことが検出されると、レポート サーバー データベース スキーマが自動的にアップグレードされます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、レポート サーバーの単一のインスタンスをアップグレードします。 サービスが開始され、レポート サーバーによってデータベース スキーマのバージョンがサーバーのバージョンと一致しないことが検出されると、レポート サーバー データベース スキーマが自動的にアップグレードされます。  
   
      レポート サーバーは、サービスの開始時に、データベース スキーマのバージョンとサーバーのバージョンが一致しているかどうかを確認します。 データベース スキーマのバージョンが古い場合、レポート サーバーで必要なバージョンのスキーマに自動的にアップグレードされます。 自動アップグレードは、古いレポート サーバー データベースを復元またはアタッチした場合に特に役立ちます。 データベース スキーマのバージョンがアップグレードされたことを示すメッセージが、レポート サーバーのトレース ログ ファイルに入力されます。  
   
 -   新しいバージョンのレポート サーバー インスタンスで古いバージョンのレポート サーバー データベースを使用するように選択した場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、ローカルまたはリモートのレポート サーバー データベースをアップグレードします。 この場合、アップグレード操作を事前に確認する必要があります。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、個別の [アップグレード] ボタンまたはアップグレード スクリプトが用意されていません。 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、レポート サーバー サービスの自動アップグレード機能の導入に伴って、これらの機能が廃止されました。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、個別の [アップグレード] ボタンまたはアップグレード スクリプトが用意されていません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、レポート サーバー サービスの自動アップグレード機能の導入に伴って、これらの機能が廃止されました。  
   
  スキーマを更新した後で、アップグレードを以前のバージョンにロールバックすることはできません。 以前のインストールを再作成する必要が生じる場合に備えて、必ずレポート サーバー データベースをバックアップしてください。  
   
@@ -69,9 +66,9 @@ ms.locfileid: "66108638"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベースを作成&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [データベースの変更ウィザード &#40;SSRS ネイティブモード&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
- [Reporting Services インストール &#40;ネイティブモードに移行する&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077193"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288402"
 ---
 # <a name="allocating-and-freeing-buffers"></a>バッファーの割り当てと解放
 すべてのバッファーが割り当てられ、アプリケーションによって解放されます。 バッファーが遅延されていない場合は、関数の呼び出しの間のみ存在する必要があります。 たとえば、 **SQLGetInfo**は、 *infovalueptr*引数が指すバッファー内の特定のオプションに関連付けられている値を返します。 このバッファーは、次のコード例に示すように、 **SQLGetInfo**の呼び出しの直後に解放できます。  

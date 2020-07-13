@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89d125cd100d380f7d20c64ed23a2087cf4e949
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917328"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761860"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Recordset オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -120,7 +120,7 @@ ms.locfileid: "67917328"
   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [EndOfRecordset イベント](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete イベント](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  

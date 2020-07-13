@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 72fd78120a099da64a175f85fef64286be7aec76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fbbad615b2b4f18e9e46ad931a00e7a2d8bee804
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67995876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756913"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

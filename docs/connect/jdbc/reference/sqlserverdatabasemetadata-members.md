@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 78f1eb2d2e395566cc01161c46737923e56e21fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a250cac94cdba3c4f71ce359b964ed5ef50e895f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928658"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67971551"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "80928658"
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|自動コミットが有効である場合に例外が発生したとき、保持可能な結果セットも含め、開いているすべての結果セットを JDBC ドライバーで閉じるかどうかを示します。|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|トランザクション内のデータ定義ステートメントがトランザクションを強制的にコミットさせるかどうかを取得します。|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|データベースがトランザクション内のデータ定義ステートメントを無視するかどうかを取得します。|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) クラスの [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドを呼び出すことで可視の行が削除されたことを検出できるかどうかを取得します。|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) メソッドの戻り値に SQL データ型 LONGVARCHAR と LONGVARBINARY が含まれるかどうかを取得します。|  
 |[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|渡されたスキーマおよびカタログで使用できる、ユーザー定義型である渡された型の渡された属性の記述を取得します。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|行を一意に識別する、テーブルの最適な列のセットの記述を取得します。|  
@@ -118,7 +118,7 @@ ms.locfileid: "80928658"
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|データベースの URL を取得します。|  
 |[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|データベースに対する既知のユーザー名を取得します。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|行の任意の値が更新された場合に自動的に更新されるテーブルの列の記述を取得します。|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) クラスの [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) メソッドを呼び出すことで、可視の行が挿入されたことを検出できるかどうかが取得されます。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|カタログが完全修飾テーブル名の先頭に現れるかどうかを取得します。|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|データベースが読み取り専用モードであるかどうかを取得します。|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|LOB に対する更新が、コピーに対して行われたか、LOB に直接行われたかを示します。|  
@@ -170,8 +170,8 @@ ms.locfileid: "80928658"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|データベースが ODBC Minimum SQL 文法をサポートするかどうかを取得します。|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|引用符で囲まれていない大文字と小文字が混在する SQL 識別子を、データベースが大文字と小文字を区別しないで扱うかどうか、およびそれらの識別子を大文字小文字混在で格納するかどうかを取得します。|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|引用符で囲まれた大文字と小文字が混在する SQL 識別子を、データベースが大文字と小文字を区別しないで扱うかどうか、およびそれらの識別子を大文字小文字混在で格納するかどうかを取得します。|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトから同時に返された複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを持つことが可能かどうかを取得します。|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [execute](../../../connect/jdbc/reference/execute-method.md) メソッドへの 1 回の呼び出しから複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトを取得することを、データベースがサポートするかどうかを取得します。|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトから同時に返された複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを持つことが可能かどうかを取得します。|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの [execute](../../../connect/jdbc/reference/execute-method.md) メソッドへの 1 回の呼び出しから複数の [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを取得することを、データベースがサポートするかどうかを取得します。|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|データベースが、異なる接続で複数のトランザクションを同時に開くことができるかどうかを取得します。|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|データベースが呼び出し可能ステートメントで名前付きパラメーターをサポートするかどうかを取得します。|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|データベースの列を null を許容しない列として定義できるかどうかを取得します。|  
@@ -205,7 +205,7 @@ ms.locfileid: "80928658"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|データベースがトランザクションをサポートするかどうかを取得します。|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|データベースが SQL UNION をサポートするかどうかを取得します。|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|データベースが SQL UNION ALL をサポートするかどうかを取得します。|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) クラスの [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) メソッドを呼び出すことで表示されている行が更新されたことを検出できるかどうかを取得します。|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|データベースがテーブルごとにファイルを使用するかどうかを取得します。|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|データベースがテーブルをローカル ファイルに格納するかどうかを取得します。|  
   

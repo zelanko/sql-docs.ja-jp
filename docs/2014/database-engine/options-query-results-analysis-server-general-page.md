@@ -11,19 +11,17 @@ f1_keywords:
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 599b73a97e55204a808aa4e35a085cc5be9f785c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930099"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>[オプション] ([クエリ結果]-分析サーバー-[全般] ページ)
-  このページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリに対するクエリ結果ウィンドウの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 
-  **[クエリ結果]** フォルダー内で **[分析サーバー]** サブフォルダーを展開し、**[全般]** を選択します。  
+  このページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリに対するクエリ結果ウィンドウの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[クエリ結果]** フォルダー内で **[分析サーバー]** サブフォルダーを展開し、**[全般]** を選択します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[グリッドを個別のタブに表示する]**  
  複数の結果セットを、結果ペインの順序ではなく、ドキュメント ウィンドウのタブを使用してアクセスされる個別のドキュメントとして表示します。  
   

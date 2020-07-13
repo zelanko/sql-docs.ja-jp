@@ -24,7 +24,7 @@ ms.locfileid: "76286966"
 ---
 # <a name="bidirectional-transactional-replication"></a>双方向トランザクション レプリケーション
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  双方向トランザクション レプリケーションとは、トランザクション レプリケーションの中でも特に、2 台のサーバーが互いに変更内容を交換し合うことのできるトポロジのことです。各サーバーはデータをパブリッシュすると共に、同じデータを含んだパブリケーションをもう一方のサーバーからサブスクライブします。 変更が確実にサブスクライバーに対してのみ送信され、サブスクライバーからパブリッシャーには送信されないようにするには、`@loopback_detection`sp_addsubscription &#40;Transact-SQL&#41;[ の ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) パラメーターを TRUE に設定します。  
+  双方向トランザクション レプリケーションとは、トランザクション レプリケーションの中でも特に、2 台のサーバーが互いに変更内容を交換し合うことのできるトポロジのことです。各サーバーはデータをパブリッシュすると共に、同じデータを含んだパブリケーションをもう一方のサーバーからサブスクライブします。 変更が確実にサブスクライバーに対してのみ送信され、サブスクライバーからパブリッシャーには送信されないようにするには、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@loopback_detection` パラメーターを TRUE に設定します。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、ピア ツー ピア トランザクション レプリケーションでもこのトポロジがサポートされますが、双方向レプリケーションを使用するとパフォーマンスが向上します。  
   

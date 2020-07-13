@@ -9,25 +9,24 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63233080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056298"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
-  このトピックでは、強化された日付と時刻を使用するクライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アプリケーションがより[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンのと通信する場合、およびより[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンの Native client でコンパイルされたクライアントが、機能強化された日付と時刻をサポートするサーバーにコマンドを送信する場合の想定される動作について説明します。  
+  このトピックでは、強化された日付と時刻を使用するクライアントアプリケーションがより前のバージョンのと通信する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] およびより前のバージョンの Native client でコンパイルされたクライアントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能強化された日付と時刻をサポートするサーバーにコマンドを送信する場合の想定される動作について説明します。  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
- より[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンの Native client を使用するクライアントアプリケーションでは、新しい日付/時刻`nvarchar`型が列として表示されます。 列のコンテンツはリテラル表現になります。 詳細については、「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の改善に関するデータ型のサポートに関する](data-type-support-for-ole-db-date-and-time-improvements.md)セクションを参照してください。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
+ より前のバージョンの Native Client を使用するクライアントアプリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] は、新しい日付/時刻型が列として表示され `nvarchar` ます。 列のコンテンツはリテラル表現になります。 詳細については、「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の改善に関するデータ型のサポートに関する](data-type-support-for-ole-db-date-and-time-improvements.md)セクションを参照してください。 列のサイズは、列に指定された有効桁数に対するリテラルの最大長です。  
   
  カタログ API によって、クライアントに返される下位データ型のコード (`nvarchar` など) および関連する下位の表現 (適切なリテラル形式など) と一貫性のあるメタデータが返されます。 ただし、返されるデータ型名は、実際の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の型名です。  
   
- 日付型または時刻型へのスキーマ変更[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]日付型または時刻型へのスキーマ変更が行われた (以降の) サーバーに対して下位クライアントアプリケーションを実行する場合、想定される動作は次のようになります。  
   
 |OLE DB クライアントの型|SQL Server 2005 の型|SQL Server 2008 (またはそれ以降) の型|結果の変換 (サーバーからクライアントへ)|パラメーターの変換 (クライアントからサーバーへ)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -55,10 +54,10 @@ ms.locfileid: "63233080"
   
 -   日付と時刻に推奨されるデータ型なので `datetime2` に切り替えます。  
   
- ICommandWithParameters:: GetParameterInfo またはスキーマ行セットを通じて取得されたサーバーメタデータを使用するアプリケーションでは、ICommandWithParameters:: SetParameterInfo を介してパラメーターの型情報を設定しようとすると、クライアント変換中に、文字列変換元の型の表現が、変換先の型の文字列表現よりも大きくなっています。 たとえば、クライアントバインドが DBTYPE_DBTIMESTAMP を使用し、サーバー列が date の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native client は値を "yyyy-mm-dd-mm hh: mm: ss" に変換しますが、サーバーメタデータはとして`nvarchar(10)`返されます。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 行セットのメタデータは resultset メタデータから設定されるため、IRowsetChange によるデータ変換でも同様の問題が発生します。  
+ ICommandWithParameters:: GetParameterInfo またはスキーマ行セットを通じて取得されたサーバーメタデータを使用するアプリケーションは、クライアントの変換中に、ソース型の文字列形式が変換先の型の文字列表現よりも大きい場合に失敗します。 たとえば、クライアントバインドが DBTYPE_DBTIMESTAMP を使用し、サーバー列が date の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client は値を "yyyy-mm-dd-mm hh: mm: ss" に変換しますが、サーバーメタデータはとして返され `nvarchar(10)` ます。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 行セットのメタデータは resultset メタデータから設定されるため、IRowsetChange によるデータ変換でも同様の問題が発生します。  
   
 ### <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ  
- ここでは、より[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンの Native Client でコンパイルされたクライアントのパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。  
+ ここでは、より前のバージョンの Native Client でコンパイルされたクライアントのパラメーター、結果列、およびスキーマ行セットのメタデータについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ます。  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  DBPARAMINFO 構造体は、 *prgParamInfo*パラメーターを通じて次の情報を返します。  
@@ -66,7 +65,7 @@ ms.locfileid: "63233080"
 |パラメーターのタイプ|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
-|time|DBTYPE_WSTR|8、10..16|~0|~0|  
+|時間|DBTYPE_WSTR|8、10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|~0|~0|  
@@ -80,7 +79,7 @@ ms.locfileid: "63233080"
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
 |date|DBTYPE_WSTR|10|NULL|NULL|  
-|time|DBTYPE_WSTR|8、10..16|NULL|NULL|  
+|時間|DBTYPE_WSTR|8、10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|NULL|NULL|  
@@ -89,7 +88,7 @@ ms.locfileid: "63233080"
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 構造体は、次の情報を返します。  
   
-|パラメーターのタイプ|wType|ulColumnSize|bPrecision|bScale|  
+|パラメーターの型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8、10..16|~0|~0|  
@@ -99,7 +98,7 @@ ms.locfileid: "63233080"
 |datetimeoffset|DBTYPE_WSTR|26、28.. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>スキーマ行セット  
- このセクションでは、新しいデータ型のパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。 この情報は、Native client より[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]前のツールを使用して開発されたクライアントプロバイダーがある場合に役立ちます。  
+ このセクションでは、新しいデータ型のパラメーター、結果列、およびスキーマ行セットのメタデータについて説明します。 この情報は、Native Client より前のツールを使用して開発されたクライアントプロバイダーがある場合に役立ち [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 #### <a name="columns-rowset"></a>COLUMNS 行セット  
  日付型または時刻型に対して返される列の値を次に示します。  
@@ -107,7 +106,7 @@ ms.locfileid: "63233080"
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8、10..16|16、20.. 32|NULL|  
+|時間|DBTYPE_WSTR|8、10..16|16、20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|NULL|  
@@ -119,7 +118,7 @@ ms.locfileid: "63233080"
 |列の型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8、10..16|16、20.. 32|time|  
+|time|DBTYPE_WSTR|8、10..16|16、20.. 32|時間|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
 |datetime2|DBTYPE_WSTR|19、21.. 27|38, 42.. 54|datetime2|  
@@ -153,7 +152,7 @@ ms.locfileid: "63233080"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>下位サーバーの動作  
- 以前のバージョンのサーバーに接続している[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]場合、新しいサーバーの種類の名前 (たとえば、ICommandWithParameters:: setparameterinfo や ITableDefinition:: CreateTable) を使用しようとすると、DB_E_BADTYPENAME になります。  
+ 以前のバージョンのサーバーに接続している場合 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、新しいサーバーの種類の名前 (たとえば、ICommandWithParameters:: SetParameterInfo や ITableDefinition:: CreateTable) を使用しようとすると、DB_E_BADTYPENAME になります。  
   
  型名を使用せずに新しい型がパラメーターまたは結果にバインドされている場合に、新しい型を使用してサーバーの型を暗黙的に指定するか、サーバーの型からクライアントの型への有効な変換がないと、DB_E_ERRORSOCCURRED が返されます。また、実行時に使用されるアクセサーのバインドの状態に DBBINDSTATUS_UNSUPPORTED_CONVERSION が設定されます。  
   
@@ -166,6 +165,6 @@ ms.locfileid: "63233080"
  新しい日付型または時刻型に対しては、すべての比較演算子を使用できます。これは、日付型または時刻型ではなく文字列型と見なされるためです。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB &#40;の日付と時刻の改善&#41;](date-and-time-improvements-ole-db.md)  
+ [日付と時刻の強化機能 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

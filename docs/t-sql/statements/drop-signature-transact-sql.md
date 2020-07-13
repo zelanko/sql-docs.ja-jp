@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b6b39adb0239730b9a53b5d4ac53059bf78a10c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766099"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ストアド プロシージャ、関数、トリガー、またはアセンブリからデジタル署名を削除します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67929204"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  

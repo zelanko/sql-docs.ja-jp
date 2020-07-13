@@ -27,7 +27,7 @@ ms.locfileid: "71298970"
 
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**データベースをホストする** のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、**SSISDB** データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  
   
  **SSISDB** データベース内のオブジェクト情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、データベースには、オブジェクトを管理するために呼び出すことができるストアド プロシージャも用意されています。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "71298970"
  SSIS と Always On 可用性グループを利用して SSISDB とそのコンテンツの高可用性を実現することもできます。 詳しくは、「[Always On for SSIS Catalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)」をご覧ください。 また、Matt Masson による blogs.msdn.com のブログ記事「[SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873)」(SSIS と Always On) もご覧ください。  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio の Integration Services サーバー  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**データベースをホストする**のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
+ **SSISDB** データベースをホストする [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続している場合、オブジェクト エクスプローラーに、次のオブジェクトが表示されます。  
   
 -   **SSISDB データベース**  
   

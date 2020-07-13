@@ -16,19 +16,19 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61b77197c46025974391b39dcf8114ec5a51eaef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878614"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たエージェントプロキシを追加します。  
+  指定されたエージェントプロキシを追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,16 +67,15 @@ sp_add_proxy
 ## <a name="remarks"></a>解説  
  このストアドプロシージャは、 **msdb**データベースで実行する必要があります。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステム以外のサブシステムが含まれるジョブ ステップのセキュリティを管理します。 各プロキシには対応するセキュリティ資格情報が 1 つあります。 プロキシは、任意の数のサブシステムにアクセスする可能性があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステム以外のサブシステムが含まれるジョブ ステップのセキュリティを管理します。 各プロキシには対応するセキュリティ資格情報が 1 つあります。 プロキシは、任意の数のサブシステムにアクセスする可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定セキュリティロールのメンバーだけです。  
   
  **Sysadmin**固定セキュリティロールのメンバーは、任意のプロキシを使用するジョブステップを作成できます。 ストアドプロシージャ sp_grant_login_to_proxy 使用して、 [transact-sql&#41;&#40;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)し、他のログインにプロキシへのアクセスを許可します。  
   
-## <a name="examples"></a>例  
- この例では、資格情報`CatalogApplicationCredential`のプロキシを作成します。 このコードは、資格情報が既に存在することを前提としています。 資格情報の詳細については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)」を参照してください。  
+## <a name="examples"></a>使用例  
+ この例では、資格情報のプロキシを作成し `CatalogApplicationCredential` ます。 このコードは、資格情報が既に存在することを前提としています。 資格情報の詳細については、「 [CREATE CREDENTIAL &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)」を参照してください。  
   
 ```  
 USE msdb ;  
@@ -90,8 +89,8 @@ EXEC dbo.sp_add_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

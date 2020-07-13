@@ -1,5 +1,6 @@
 ---
 title: リモート BLOB ストア (RBS) [SQL Server] | Microsoft Docs
+description: SQL Server リモート BLOB ストア (RBS) では、バイナリ ラージ オブジェクトを、主なデータベース サーバーではなく、汎用的なストレージに格納します。 このアドオン コンポーネントについて学習します。
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765484"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート BLOB ストア (RBS) はオプションのアドオン コンポーネントです。これを使用すると、データベース管理者は、バイナリ ラージ オブジェクトを、主なデータベース サーバーに直接格納するのではなく、汎用的なストレージ ソリューションに格納できます。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "75258181"
   
 ### <a name="rotating-the-symmetric-key"></a>対称キーのローテーション  
  RBS を使用する場合、資格情報ストアの対称キーを定期的にローテーションする必要があります。 これは、組織のセキュリティ ポリシーを満たすための一般的なセキュリティに関するベスト プラクティスです。  RBS 資格情報ストアの対称キーをローテーションする 1 つの方法は、RBS データベースで [後述のスクリプト](#Key_rotation) を使用することです。  このスクリプトを使用して、アルゴリズムやキーの長さなど、より強力な暗号化強度プロパティに移行することもできます。 キー ローテーションを行う前に、データベースをバックアップしておいてください。  スクリプトの最後に、確認手順がいくつかあります。  
-セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 その場合、1) 一時キーの作成場所と 2) 永続キーの作成場所の 2 か所でキー プロパティを変更します。  
+セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 次の 2 つの場所でキー プロパティを変更します。1) 一時キーの作成 2) 永続キーの作成。  
   
 ##  <a name="rbs-resources"></a><a name="rbsresources"></a> RBS リソース  
   

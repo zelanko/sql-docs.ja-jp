@@ -14,14 +14,14 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae047fe8014b806d3bda8b0513521b4ddda072a7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086016"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280532"
 ---
 # <a name="other-driver-architectures"></a>その他のドライバーのアーキテクチャ
 一部の ODBC ドライバーは、前に説明したアーキテクチャに厳密に準拠していません。 これは、ドライバーが従来の ODBC ドライバー以外の職務を実行しているか、通常の意味ではドライバーではないことが原因である可能性があります。  

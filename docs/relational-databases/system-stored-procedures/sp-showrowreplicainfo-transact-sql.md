@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68032895"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893041"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージレプリケーションのアーティクルとして使用されているテーブル内の行に関する情報を表示します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -50,38 +50,38 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>行情報の結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|行バージョンエントリを作成したデータベースをホストしているサーバーの名前。|  
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
-|**db_nickname**|**バイナリ (6)**|このエントリを作成したデータベースのニックネーム。|  
-|**バージョン**|**int**|エントリのバージョン。|  
-|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> n/a>-適用されません。 ** \<**<br /><br /> 不明な>-現在の状態を特定できません。 ** \<**|  
+|**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネーム。|  
+|**version**|**int**|エントリのバージョン。|  
+|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y**行のデータは、行の現在の状態を表します。<br /><br /> **n**行のデータは、行の現在の状態を表していません。<br /><br /> **\<n/a>**-適用できません。<br /><br /> **\<unknown>**-現在の状態を特定できません。|  
 |**rowversion_table**|**nchar (17)**|行のバージョンが[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルと[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブルのどちらに格納されているかを示します。|  
-|**関する**|**nvarchar(255)**|この行バージョンエントリに関する追加情報。 通常、このフィールドは空です。|  
+|**comment**|**nvarchar(255)**|この行バージョンエントリに関する追加情報。 通常、このフィールドは空です。|  
   
 ## <a name="result-sets-for-column-information"></a>列情報の結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|列バージョン エントリを作成したデータベースを処理するサーバーの名前です。|  
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
-|**db_nickname**|**バイナリ (6)**|このエントリを作成したデータベースのニックネーム。|  
-|**バージョン**|**int**|エントリのバージョン。|  
+|**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネーム。|  
+|**version**|**int**|エントリのバージョン。|  
 |**colname**|**sysname**|列バージョンエントリが表すアーティクル列の名前。|  
-|**関する**|**nvarchar(255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
+|**comment**|**nvarchar(255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
   
 ## <a name="result-set-for-both"></a>両方の結果セット  
  **両方**の値が*show*に選択されている場合、行と列の両方の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **sp_showrowreplicainfo**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sp_showrowreplicainfo**を実行できるのは、パブリケーションデータベースの**db_owner**固定データベースロールのメンバー、またはパブリケーションデータベースのパブリケーションアクセスリスト (PAL) のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージレプリケーションの競合の検出と解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

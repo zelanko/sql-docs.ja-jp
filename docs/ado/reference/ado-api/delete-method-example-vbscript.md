@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919114"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765583"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete メソッドの例 (VBScript)
 この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドを使用して、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
   
- Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があることを確認するか、コード例のパスを編集して反映させる必要があります。このファイルの実際の場所です。 これは、Microsoft Access データベースファイルです。  
+ Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
  [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **DeleteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   

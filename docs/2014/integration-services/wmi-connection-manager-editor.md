@@ -11,23 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33effc06f6ef63e4e6f8946fd7db0179e506e998
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66054478"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439829"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
-  
   **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  
   
  WMI 接続マネージャーの詳細については、「 [WMI Connection Manager](connection-manager/wmi-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **名前**  
  接続マネージャーの一意な名前を指定します。  
   
@@ -49,10 +47,10 @@ ms.locfileid: "66054478"
  **パスワード**  
  Windows 認証を使用しない場合、接続に使用するパスワードを入力する必要があります。  
   
- **Test**  
+ **テスト**  
  接続マネージャーの設定をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [構成管理のための WMI プロバイダーの概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [WMI Provider for Server Events の概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_current_partition_mappings system table
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a0297b8af4e5cba9fe96df935d6d1b43a8e2d5f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68244a9fe6933d4bffe79591d4f6c043c5d18658
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907228"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889850"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_current_partition_mappings**テーブルには、特定の変更された行が属しているパーティション id ごとに1つの行が格納されます。 このテーブルは、パブリケーションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|**Sysmergepublications**に格納されているパブリケーション番号。|  
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
-|**rowguid**|**UNIQUEIDENTIFIER**|指定された行の行識別子。|  
+|**rowguid**|**uniqueidentifier**|指定された行の行識別子。|  
 |**partition_id**|**int**|行が属するパーティションの ID。 行の変更がすべてのサブスクライバーに関連する場合、値は-1 です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df662a1ecfe70b9a28eff3947dee4aa769ef2506
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097310"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
@@ -33,14 +33,14 @@ ms.locfileid: "66097310"
   
 |||  
 |-|-|  
-|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|レポートサーバーデータベースをホストする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスとの通信にレポートサーバーが使用する接続プールサイズを返します。 読み取り専用です。|  
-|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|レポートサーバーデータベースをホストする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスに接続するためにレポートサーバーが使用するログインアカウントを指定します。 読み取り専用です。|  
+|[ConnectionPoolSize](configurationsetting-property-connectionpoolsize.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスとの通信にレポート サーバーが使用する接続プール サイズを返します。 読み取り専用です。|  
+|[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するためにレポート サーバーが使用するログイン アカウントを指定します。 読み取り専用です。|  
 |[DatabaseLogonTimeout](configurationsetting-property-databaselogontimeout.md)|レポート サーバー データベースへのログインを失敗と判断するまでの待機時間を秒数で指定します。 読み取り専用です。|  
 |[DatabaseLogonType](configurationsetting-property-databaselogontype.md)|レポート サーバーが Window サービス アカウント、Windows ユーザー アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのいずれを使用してレポート サーバー データベースにアクセスするかを指定します。 読み取り専用です。|  
 |[DatabaseName](configurationsetting-property-databasename.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。|  
-|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|コマンドが失敗またはタイムアウトするまでに経過する必要がある秒数を指定します。レポートサーバーは、レポートのデータソースではなく、レポートサーバーデータベースに対してプロセスを実行します。|  
+|[DatabaseQueryTimeout](configurationsetting-property-databasequerytimeout.md)|コマンドが失敗またはタイムアウトするまでに経過する必要がある秒数を指定します。レポート サーバーは、レポートのデータ ソースではなく、レポート サーバー データベースに対する処理時間を計測します。|  
 |[DatabaseServerName](configurationsetting-property-databaseservername.md)|レポート サーバー データベースがインストールされるサーバーの名前を指定します。|  
-|[InstallationID プロパティ](configurationsetting-property-installationid.md)|特定のレポート サーバー インスタンスの一意な識別子を返します。|  
+|[InstallationID Property](configurationsetting-property-installationid.md)|特定のレポート サーバー インスタンスの一意な識別子を返します。|  
 |[InstanceName](configurationsetting-property-instancename.md)|特定のコンピューターのレポート サーバー インスタンスの名前を指定します。|  
 |[IsInitialized](configurationsetting-property-isinitialized.md)|レポート サーバー インスタンスが初期化されているかどうかを示します。 読み取り専用です。|  
 |[IsSharePointIntegrated](configurationsetting-property-issharepointintegrated.md)|レポート サーバーが SharePoint 統合モード用に構成されているかどうかを示します。|  
@@ -53,7 +53,7 @@ ms.locfileid: "66097310"
 |[SendUsingSMTPServer](configurationsetting-property-sendusingsmtpserver.md)|電子メール構成の SendUsing プロパティを TRUE に設定するかどうかを示します。|  
 |[SMTPServer](configurationsetting-property-smtpserver.md)|RSReportServer.config ファイルから SMTP サーバー プロパティを取得します。 読み取り専用です。|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|レポートを自動実行するときにレポート サーバーで権限を借用するログイン ユーザー アカウントを指定します。 読み取り専用です。|  
-|[バージョン](configurationsetting-property-version.md)|レポート サーバーのバージョンを返します。|  
+|[Version](configurationsetting-property-version.md)|レポート サーバーのバージョンを返します。|  
 |[VirtualDirectoryReportManager プロパティ &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|レポート マネージャー アプリケーションの仮想ディレクトリを返します。|  
 |[VirtualDirectoryReportServer プロパティ &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|レポート サーバー Web サービス アプリケーションの仮想ディレクトリを返します。|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|レポート サーバー Windows サービスが実際に実行されている ID を返します。 読み取り専用です。|  
@@ -73,12 +73,12 @@ ms.locfileid: "66097310"
 |[GetAdminSiteUrl メソッド &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|サーバーの管理 Web サイトの絶対 URL を取得します。|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|指定したレポート サーバー データベースのバージョン文字列の表示名を取得します。|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|指定されたレポート サーバー インスタンスを初期化します。|  
-|[ListInstalledSharePointVersions メソッド &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|レポートサーバーと同じコンピューターにインストールされて[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]いる[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]またはのバージョンを表すトークンのセットを返します。|  
+|[ListInstalledSharePointVersions メソッド &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|レポート サーバーと同じコンピューターにインストールされている [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。|  
 |[ListIPAddresses メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|コンピューターの IP アドレスを一覧表示します。|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバーの一覧を返します。|  
 |[ListReservedURLs メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。|  
 |[ListSSLCertificateBindings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificatebindings.md)|HTTP.SYS に存在する SSL 証明書のバインドと rsreportserver.config から予測される SSL 証明書のバインドを一覧表示します。|  
-|[ListSSLCertificates メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|コンピューターにインストールされている SSL 証明書を一覧表示します。|  
+|[ListSSLCertificate メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|コンピューターにインストールされている SSL 証明書を一覧表示します。|  
 |[ReencryptSecureInformation](configurationsetting-method-reencryptsecureinformation.md)|新しい暗号化キーを生成し、その新しいキーを使用してレポート サーバー データベース内のセキュリティで保護されたすべての情報を再度暗号化します。|  
 |[RemoveSSLCertificateBindings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removesslcertificatebinding.md)|SSL 証明書のバインドを削除します。|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|レポート サーバー構成から自動実行用アカウント エントリを削除します。|  

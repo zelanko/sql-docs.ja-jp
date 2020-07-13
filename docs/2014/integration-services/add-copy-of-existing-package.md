@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c30e5127bea29ecf1cd0d280adf0f5b1f2a6d766
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62772248"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439699"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
   **[既存のパッケージのコピーを追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のファイル システムまたは SSIS パッケージ ストアに格納されたパッケージのコピーを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加できます。  
@@ -48,6 +47,6 @@ ms.locfileid: "62772248"
  [[パッケージのインポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージの保存](save-packages.md)   
- [SSIS サービス&#41;&#40;パッケージをインポートおよびエクスポートする](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [パッケージをインポートおよびエクスポートする &#40;SSIS サービス&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

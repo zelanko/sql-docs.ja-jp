@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8eaed22600fe2c5c548d2e40b3e496ee81c92faf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106352"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889718"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSmerge_sessions**テーブルには、前のマージエージェントジョブセッションの結果を含む履歴行が含まれています。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|マージエージェントジョブセッションの ID です。|  
 |**agent_id**|**int**|マージエージェントの ID。|  
-|**start_time**|**DATETIME**|ジョブの実行が開始された時刻。|  
-|**end_time**|**DATETIME**|ジョブの実行完了時刻。|  
-|**全**|**int**|このジョブセッションの累積時間 (秒単位)。|  
+|**start_time**|**datetime**|ジョブの実行が開始された時刻。|  
+|**end_time**|**datetime**|ジョブの実行完了時刻。|  
+|**duration**|**int**|このジョブセッションの累積時間 (秒単位)。|  
 |**delivery_time**|**int**|変更のバッチを適用するために要した秒数。|  
 |**upload_time**|**int**|パブリッシャーに変更をアップロードするのにかかった時間 (秒数)。|  
 |**download_time**|**int**|サブスクライバーへの変更のダウンロードに要した秒数。|  
@@ -62,8 +62,8 @@ ms.locfileid: "68106352"
 |**connection_type**|**int**|アップロード中に使用される接続:<br /><br /> **1** = ローカルエリアネットワーク (LAN)。<br /><br /> **2** = ダイヤルアップネットワーク接続。<br /><br /> **3** = Web 同期。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

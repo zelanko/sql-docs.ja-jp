@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864047"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したターゲット サーバーを削除します。  
   
@@ -58,11 +58,11 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
   
-## <a name="examples"></a>例  
- 次の例では、 `SEATTLE2`ジョブの`Weekly Sales Backups`処理からサーバーを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、 `SEATTLE2` ジョブの処理からサーバーを削除し `Weekly Sales Backups` ます。  
   
 > [!NOTE]  
->  この例では、 `Weekly Sales Backups`ジョブが既に作成されていることを前提としています。  
+>  この例では、ジョブが既に作成されていることを前提としてい `Weekly Sales Backups` ます。  
   
 ```  
 USE msdb ;  
@@ -74,9 +74,9 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_help_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d0807dc58b9e51b593a3ac9ea1375c47b585fce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76910512"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759348"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns および Tables Append メソッド、Name プロパティの例 (VC++)
 次のコードは、新しいテーブルを作成する方法を示しています。  

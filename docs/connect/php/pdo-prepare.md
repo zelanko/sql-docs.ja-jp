@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: e8765718829f3df3bca5fd289ec326f9d7aad861
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919199"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76941204"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -244,7 +244,7 @@ PDO_SQLSRV ドライバーでは最初に `PDO::bindParam()` に指定された�
 
 見つからない場合、`PDO::prepare()` または `PDOStatement::setAttribute()` にエンコーディングが設定されているかどうかドライバーによりチェックされます。 それ以外の場合、ドライバーでは `PDO::__construct()` または `PDO::setAttribute()` に指定されたエンコーディングが使用されます。
 
-さらに、バージョン5.8.0 以降では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::p repare を使用する場合には、[ プレフィックスが確実に使用されるように、ユーザーは ](https://wiki.php.net/rfc/extended-string-types-for-pdo)PHP 7.2 で導入された拡張文字列型`N`を使用できます。 以下のスニペットでは、さまざまな代替方法を示しています。
+さらに、バージョン5.8.0 以降では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::p repare を使用する場合には、`N` プレフィックスが確実に使用されるように、ユーザーは [PHP 7.2 で導入された拡張文字列型](https://wiki.php.net/rfc/extended-string-types-for-pdo)を使用できます。 以下のスニペットでは、さまざまな代替方法を示しています。
 
 > [!NOTE]
 > 既定では、emulate prepare が false に設定されます。この場合、拡張された PDO 文字列定数は無視されます。
@@ -295,7 +295,7 @@ $stmt->execute([':value' => $p]);
 ご覧のように、バインディングはドライバーによって内部的に行われます。 有効なクエリが実行のためにパラメーターなしでサーバーに送信されます。 通常のケースと比較すると、パラメーター化クエリ機能が使用されていない場合にいくつかの制限事項が発生します。
 
 - `PDO::PARAM_INPUT_OUTPUT` としてバインドされたパラメーターの場合は機能しません。
-    - ユーザーが `PDO::PARAM_INPUT_OUTPUT` で `PDO::bindParam()` を指定すると、PDO 例外がスローされます。
+    - ユーザーが `PDO::bindParam()` で `PDO::PARAM_INPUT_OUTPUT` を指定すると、PDO 例外がスローされます。
 - 出力パラメーターとしてバインドされたパラメーターの場合は機能しません。
     - ユーザーが準備されたステートメントを出力パラメーター用のプレースホルダーを使用して作成した場合 (つまり、`SELECT ? = COUNT(*) FROM Table1` のようにプレースホルダーのすぐ後に等号が指定されている場合)、PDO 例外がスローされます。
     - 準備されたステートメントにより、出力パラメーター用の引数としてプレースホルダーを使用してストアド プロシージャが呼び出された場合、ドライバーでは出力パラメーターを検出できないため、例外はスローされません。 一方で、ユーザーが出力パラメーター用に指定した変数は変更されません。

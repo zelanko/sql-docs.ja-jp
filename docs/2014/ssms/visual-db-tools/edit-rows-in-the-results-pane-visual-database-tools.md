@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a6afca189318d4c004c4d9bfeb1bf29b0a9b3284
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63028358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054614"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>結果ペイン内の行の編集 (Visual Database Tools)
   多くの場合、 [結果ペイン](visual-database-tools.md)のデータは編集できます。 データの変更の詳細については、「 [結果更新の規則 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md) 」および「 [結果ペインのデータの操作 (Visual Database Tools)](work-with-data-in-the-results-pane-visual-database-tools.md)のデータは編集できます。  

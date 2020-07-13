@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4baab44b81ff3e2a2b4a4c6a653527190140f24b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68054332"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892184"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   拡張ストアドプロシージャであるオブジェクトごとに1行の値を格納**し**ます。型 = X。拡張ストアドプロシージャは、 **master**データベースにインストールされるので、データベースコンテキストからのみ表示されます。 他のデータベースコンテキストの**extended_procedures**ビューからを選択すると、空の結果セットが返されます。  
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. オブジェクトから継承された列>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
-|**dll_name**|**nvarchar (260)**|この拡張ストアドプロシージャの DLL の名前 (パスを含む)。|  
+|**\<Columns inherited from sys.objects>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
+|**dll_name**|**nvarchar(260)**|この拡張ストアドプロシージャの DLL の名前 (パスを含む)。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

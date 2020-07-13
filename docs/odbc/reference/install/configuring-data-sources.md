@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068619"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300352"
 ---
 # <a name="configuring-data-sources"></a>データ ソースの構成
 データソースに関する情報は、システムレジストリに格納されます。 ユーザーは、管理プログラムを使用してデータソース情報を変更します。 これには、ODBC 管理者、ODBC コントロールパネルデバイス、またはアプリケーションまたはドライバー開発者が作成した管理プログラムを使用できます。  

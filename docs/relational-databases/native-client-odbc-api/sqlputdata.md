@@ -11,35 +11,33 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e694b18dc27a739a7e1f4d1e0950ef08a01570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 8a9648fac10c5bc6d5e893bad123bbe02c38bc29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785747"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009906"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SQLPutData を使用して、SQL_LONGVARCHAR (**テキスト**)、SQL_WLONGVARCHAR (**ntext**)、また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL_LONGVARBINARY (**イメージ**) 列に対して65535バイトを超えるデータ 400 (SQL Server バージョン6.0 以降) を送信する場合は、次の制限が適用されます。  
+  SQLPutData を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR (**テキスト**)、SQL_WLONGVARCHAR (**ntext**)、または SQL_LONGVARBINARY (**イメージ**) 列に対して65535バイトを超えるデータ 400 (SQL Server バージョン6.0 以降) を送信する場合は、次の制限が適用されます。  
   
 -   参照されるパラメーターには、INSERT ステートメント内の*insert_value*を指定できます。  
   
 -   参照されるパラメーターは、UPDATE ステートメントの SET 句の*式*にすることができます。  
   
- を実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているサーバーにブロック内のデータを提供する sqlputdata 呼び出しのシーケンスをキャンセルすると、バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 SQLCancel が呼び出されたときに参照された**text**、 **ntext**、または**image**列は、中間プレースホルダー値に設定されます。  
+ を実行しているサーバーにブロック内のデータを提供する SQLPutData 呼び出しのシーケンスをキャンセルすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 SQLCancel が呼び出されたときに参照された**text**、 **ntext**、または**image**列は、中間プレースホルダー値に設定されます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
   
 ## <a name="diagnostics"></a>診断  
- SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、Native Client 固有の SQLSTATE が1つあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData には、Native Client 固有の SQLSTATE が1つあります。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|Error|説明|  
 |--------------|-----------|-----------------|  
 |22026|文字列データの長さが合致しません|たとえば SQL_LEN_DATA_AT_EXEC (*n*) を使用して、送信されるデータの長さ (バイト単位) がアプリケーションによって指定されている場合 ( *n*が0を超える場合)、sqlputdata を使用してアプリケーションで指定されたバイト数の合計が、指定された長さと一致している必要があります。|  
   

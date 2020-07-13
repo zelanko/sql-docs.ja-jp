@@ -1,5 +1,6 @@
 ---
 title: 暗号化されたバックアップの作成 | Microsoft Docs
+description: この記事では、暗号化されたバックアップを SQL Server で Transact-SQL を使用して作成する方法について説明します。 ディスクまたは Azure Storage にバックアップできます。
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70280808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748428"
 ---
 # <a name="create-an-encrypted-backup"></a>暗号化されたバックアップの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、暗号化されたバックアップを Transact-SQL で作成するために必要な手順について説明します。  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の使用例については、「 [データベースの完全バックアップの作成 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。 
   
 ## <a name="backup-to-disk-with-encryption"></a>暗号化の使用によるディスクへのバックアップ  

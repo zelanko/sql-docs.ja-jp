@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104512"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872382"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マージ アーティクルのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -52,44 +52,44 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|値|[説明]|  
+|プロパティ|値|説明|  
 |--------------|------------|-----------------|  
-|**allow_interactive_resolver**|**本来**|アーティクルに対してインタラクティブ競合回避モジュールの使用を有効にします。|  
+|**allow_interactive_resolver**|**true**|アーティクルに対してインタラクティブ競合回避モジュールの使用を有効にします。|  
 ||**false**|アーティクルに対してインタラクティブ競合回避モジュールの使用を無効にします。|  
 |**article_resolver**||アーティクルのカスタム競合回避モジュール。 テーブルアーティクルにのみ適用されます。|  
 |**check_permissions** (ビットマップ)|**0x00**|テーブルレベルの権限は確認されません。|  
 ||**0x10**|サブスクライバーで実行された INSERT ステートメントをパブリッシャーで適用する前に、テーブルレベルの権限がパブリッシャーで確認されます。|  
 ||**0x20**|サブスクライバーで作成された UPDATE ステートメントがパブリッシャーで適用される前に、パブリッシャー側でテーブルレベルの権限がチェックされます。|  
 ||**0x40**|サブスクライバーでの DELETE ステートメントがパブリッシャーで適用される前に、パブリッシャー側でテーブルレベルの権限がチェックされます。|  
-|**column_tracking**|**本来**|列レベルの追跡をオンにします。 テーブルアーティクルにのみ適用されます。<br /><br /> 注: 列レベルの追跡は、246列を超えるテーブルをパブリッシュする場合は使用できません。|  
+|**column_tracking**|**true**|列レベルの追跡をオンにします。 テーブルアーティクルにのみ適用されます。<br /><br /> 注: 列レベルの追跡は、246列を超えるテーブルをパブリッシュする場合は使用できません。|  
 ||**false**|列レベルの追跡をオフにし、競合の検出を行レベルで行います。 テーブルアーティクルにのみ適用されます。|  
-|**compensate_for_errors**|**本来**|同期中にエラーが発生したときに、補正操作が実行されます。 詳細については、「 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。|  
-||**false**|補正アクションは実行されません。これは既定の動作です。 詳細については、「 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。<br /><br /> ** \*重要\* \* **影響を受ける行のデータは収束していないように見えることがありますが、エラーに対処するとすぐに、変更を適用してデータを集約することができます。 アーティクルのソーステーブルが別のパブリケーションで既にパブリッシュされている場合、 *compensate_for_errors*の値は両方のアーティクルで同じである必要があります。|  
+|**compensate_for_errors**|**true**|同期中にエラーが発生したときに、補正操作が実行されます。 詳細については、「 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。|  
+||**false**|補正アクションは実行されません。これは既定の動作です。 詳細については、「 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。<br /><br /> 重要影響を受ける行のデータは収束していないように見えることがありますが、エラーに対処するとすぐに、変更を適用してデータを集約することができます。 ** \* \* \* \* ** アーティクルのソーステーブルが別のパブリケーションで既にパブリッシュされている場合、 *compensate_for_errors*の値は両方のアーティクルで同じである必要があります。|  
 |**creation_script**||サブスクリプションデータベースでアーティクルを作成するために使用される、オプションのアーティクルスキーマスクリプトのパスと名前です。|  
-|**delete_tracking**|**本来**|DELETE ステートメントがレプリケートされます。これは既定の動作です。|  
-||**false**|DELETE ステートメントはレプリケートされません。<br /><br /> ** \*重要\* \* ****Delete_tracking**を**false**に設定すると、非収束になり、削除された行を手動で削除する必要があります。|  
-|**記述**||記事の内容を示すエントリ。|  
+|**delete_tracking**|**true**|DELETE ステートメントがレプリケートされます。これは既定の動作です。|  
+||**false**|DELETE ステートメントはレプリケートされません。<br /><br /> ** \* \* 重要 \* delete_tracking \* ** **false**に設定すると、非収束になり、削除された行は手動で削除する必要があります。 **delete_tracking**|  
+|**description**||記事の内容を示すエントリ。|  
 |**destination_owner**||サブスクリプションデータベース内のオブジェクトの所有者の名前 ( **dbo**以外の場合)。|  
 |**identity_range**||アーティクルの**identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に、新しい id 値を割り当てるときに使用する範囲のサイズを指定する**bigint**です。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**identityrangemanagementoption**|**手動**|自動での ID 範囲の管理を無効にします。 NOT FOR REPLICATION を使用して id 列にマークを付け、手動による id 範囲処理を有効にします。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。|  
-||**存在**|すべての ID 範囲の管理を無効にします。|  
-|**logical_record_level_conflict_detection**|**本来**|論理レコード内の任意の場所で変更が行われると、競合が検出されます。 **Logical_record_level_conflict_resolution**を**true**に設定する必要があります。|  
+||"**なし**"|すべての ID 範囲の管理を無効にします。|  
+|**logical_record_level_conflict_detection**|**true**|論理レコード内の任意の場所で変更が行われると、競合が検出されます。 **Logical_record_level_conflict_resolution**を**true**に設定する必要があります。|  
 ||**false**|既定の競合検出は、 **column_tracking**によって指定されたとおりに使用されます。|  
-|**logical_record_level_conflict_resolution**|**本来**|優先される論理レコード全体が、失われた論理レコードを上書きします。|  
+|**logical_record_level_conflict_resolution**|**true**|優先される論理レコード全体が、失われた論理レコードを上書きします。|  
 ||**false**|優先される行は、論理レコードに制約されません。|  
 |**partition_options**|**0**|アーティクルのフィルター選択は静的であるか、またはパーティションごとに一意のデータのサブセットを生成しません。つまり、"重複する" パーティションになります。|  
 ||**1**|パーティションは重複しています。サブスクライバーで実行された DML 更新では、行が属するパーティションを変更できません。|  
 ||**2**|アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。|  
-||**番**|アーティクルのフィルター選択により、各サブスクリプションに一意の重複しないパーティションが生成されます。<br /><br /> 注: **partition_options**に**3**を指定した場合、そのアーティクル内のデータの各パーティションに対して1つのサブスクリプションのみを使用できます。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。|  
-|**pre_creation_command**|**存在**|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
-||**デリート**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
+||**3**|アーティクルのフィルター選択により、各サブスクリプションに一意の重複しないパーティションが生成されます。<br /><br /> 注: **partition_options**に**3**を指定した場合、そのアーティクル内のデータの各パーティションに対して1つのサブスクリプションのみを使用できます。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。|  
+|**pre_creation_command**|"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
+||**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
 ||**」**|テーブルを再作成する前に削除します。|  
 ||**切捨て**|変換先テーブルを切り捨てます。|  
 |**processing_order**||マージパブリケーション内のアーティクルの処理順序を示す**int**です。|  
 |**pub_identity_range**||アーティクルの**identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に、サーバーサブスクリプションを使用してサブスクライバーに割り当てられた範囲のサイズを指定する**bigint**です。 この ID 範囲は、再パブリッシュ元のサブスクライバーが自らのサブスクライバーに割り当てるために予約されています。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
-|**published_in_tran_pub**|**本来**|アーティクルはトランザクションパブリケーションでもパブリッシュされます。|  
+|**published_in_tran_pub**|**true**|アーティクルはトランザクションパブリケーションでもパブリッシュされます。|  
 ||**false**|アーティクルはトランザクション パブリケーションではパブリッシュされません。|  
-|**resolver_info**||は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の[!INCLUDE[msCoName](../../includes/msconame-md.md)]競合回避モジュールには、入力として指定された列が必要です。 **resolver_info**は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。|  
+|**resolver_info**||は、カスタム競合回避モジュールに必要な追加情報を指定するために使用されます。 一部の [!INCLUDE[msCoName](../../includes/msconame-md.md)] 競合回避モジュールには、入力として指定された列が必要です。 **resolver_info**は**nvarchar (255)**,、既定値は NULL です。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。|  
 |**schema_option** (ビットマップ)||詳細については、このトピックで後述する「解説」を参照してください。|  
 ||**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 **creation_script**で提供されているスクリプトを使用します。|  
 ||**0x01**|オブジェクト作成スクリプト (CREATE TABLE、CREATE PROCEDURE など) を生成します。|  
@@ -118,28 +118,28 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|**Xml**列のインデックスをレプリケートします。|  
 ||**0x8000000**|サブスクライバーにまだ存在しないスキーマを作成します。|  
 ||**0x10000000**|サブスクライバーで**xml**列を**ntext**に変換します。|  
-||**0x20000000**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたラージオブジェクトデータ型 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar (max)**、 **varchar (max**)、 **varbinary (max)**) を、でサポートされているデータ型に変換します。|  
+||**0x20000000**|で導入されたラージオブジェクトデータ型 (**nvarchar (max)**、 **varchar (max**)、 **varbinary (max)**) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を、でサポートされているデータ型に変換 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] します。|  
 ||**0x40000000**|権限をレプリケートします。|  
 ||**0x80000000**|パブリケーションに含まれていないオブジェクトへの依存関係を削除しようとしています。|  
-||**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]レプリケートする場合は、このオプションを指定しないでください。 このスキーマオプションを設定する方法[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすることはサポートされていません。 関連オプション**0x800000000**を参照してください。|  
-||**0x200000000**|で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]導入された日付と時刻のデータ型 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**、 **time**、 **datetimeoffset**、および**datetime2**) を、以前のバージョンのでサポートされているデータ型に変換します。|  
+||**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーにレプリケートする場合は、このオプションを指定しないでください [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 このスキーマオプションを設定する方法に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすること [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] はサポートされていません。 関連オプション**0x800000000**を参照してください。|  
+||**0x200000000**|で導入された日付と時刻のデータ型 (**date**、 **time**、 **datetimeoffset**、および**datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を、以前のバージョンのでサポートされているデータ型に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 ||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション**0x100000000**を参照してください。|  
-||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。|  
-||**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
+||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
+||**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
 ||**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「[フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
-||**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]しているサブスクライバーにレプリケートできるようにします。|  
+||**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行しているサブスクライバーにレプリケートできるようにし [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
 ||**0x10000000000**|**Geography**型および**geometry**型の列のインデックスをレプリケートします。|  
 ||NULL|システムは、アーティクルに対して有効なスキーマオプションを自動生成します。|  
-|**オンライン**|**能動的**|テーブルをパブリッシュする初期処理スクリプトが実行されます。|  
+|**status**|**active**|テーブルをパブリッシュする初期処理スクリプトが実行されます。|  
 ||**unsynced**|テーブルをパブリッシュする初期処理スクリプトは、次にスナップショットエージェントを実行するときに実行されます。|  
-|**stream_blob_columns**|**本来**|バイナリ ラージ オブジェクトの列をレプリケートするときに、データ ストリームの最適化が使用されます。 ただし、論理レコードなどの特定のマージレプリケーション機能によって、ストリームの最適化が使用されない場合もあります。 FILESTREAM が有効になっている場合、 *stream_blob_columns*は true に設定されます。 これにより、FILESTREAM データのレプリケーションを最適な方法で実行し、メモリ使用量を減らすことができます。 FILESTREAM テーブルアーティクルで blob ストリーミングを使用しないように強制するには、 *stream_blob_columns*を false に設定します。<br /><br /> ** \*重要\* \* **このメモリ最適化を有効にすると、同期中にマージエージェントのパフォーマンスが低下する可能性があります。 このオプションは、mb 単位のデータを含む列をレプリケートする場合にのみ使用してください。|  
+|**stream_blob_columns**|**true**|バイナリ ラージ オブジェクトの列をレプリケートするときに、データ ストリームの最適化が使用されます。 ただし、論理レコードなどの特定のマージレプリケーション機能によって、ストリームの最適化が使用されない場合もあります。 FILESTREAM が有効になっている場合、 *stream_blob_columns*は true に設定されます。 これにより、FILESTREAM データのレプリケーションを最適な方法で実行し、メモリ使用量を減らすことができます。 FILESTREAM テーブルアーティクルで blob ストリーミングを使用しないように強制するには、 *stream_blob_columns*を false に設定します。<br /><br /> 重要このメモリ最適化を有効にすると、同期中にマージエージェントのパフォーマンスが低下する可能性があります。 ** \* \* \* \* ** このオプションは、mb 単位のデータを含む列をレプリケートする場合にのみ使用してください。|  
 ||**false**|バイナリラージオブジェクトの列をレプリケートする場合、最適化は使用されません。|  
 |**subscriber_upload_options**|**0**|クライアントサブスクリプションを使用して、サブスクライバーで行われる更新に制限はありません。変更はパブリッシャーにアップロードされます。 このプロパティを変更する場合は、既存のサブスクライバーを再初期化する必要があります。|  
 ||**1**|変更は、クライアントサブスクリプションを使用するサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。|  
 ||**2**|クライアントサブスクリプションを使用したサブスクライバーでの変更は許可されていません。|  
-|**subset_filterclause**||行方向のフィルター選択を指定する WHERE 句。 テーブルアーティクルにのみ適用されます。<br /><br /> ** \*重要\* \* **パフォーマンス上の理由から、パラメーター化された行フィルター句 (など) では列名に`LEFT([MyColumn]) = SUSER_SNAME()`関数を適用しないことをお勧めします。 フィルター句で[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)を使用し、HOST_NAME の値をオーバーライドする場合は、 [convert](../../t-sql/functions/cast-and-convert-transact-sql.md)を使用してデータ型を変換する必要がある場合があります。 この場合のベストプラクティスの詳細については、「パラメーター化された[行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME () 値のオーバーライド」を参照してください。|  
-|**進入**||以前のバージョンのを実行[!INCLUDE[ssEW](../../includes/ssew-md.md)]しているサブスクライバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用される割合の値。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 **Identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に使用します。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
+|**subset_filterclause**||行方向のフィルター選択を指定する WHERE 句。 テーブルアーティクルにのみ適用されます。<br /><br /> 重要パフォーマンス上の理由から、パラメーター化された行フィルター句 (など) では列名に関数を適用しないことをお勧めします。 ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` フィルター句で[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)を使用し、HOST_NAME の値をオーバーライドする場合は、 [convert](../../t-sql/functions/cast-and-convert-transact-sql.md)を使用してデータ型を変換する必要がある場合があります。 この場合のベストプラクティスの詳細については、「パラメーター化された[行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME () 値のオーバーライド」を参照してください。|  
+|**threshold**||以前のバージョンのを実行しているサブスクライバーで使用される割合 [!INCLUDE[ssEW](../../includes/ssew-md.md)] の値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **しきい値**は、マージエージェントが新しい id 範囲を割り当てるタイミングを制御します。 [しきい値] で指定した値のパーセンテージが使用されると、マージエージェントによって新しい id 範囲が作成されます。 **Identityrangemanagementoption**が**auto**に設定されている場合、または**auto_identity_range**が**true**に設定されている場合に使用します。 テーブルアーティクルにのみ適用されます。 詳細については、「 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)」の「マージレプリケーション」セクションを参照してください。|  
 |**verify_resolver_signature**|**1**|カスタム競合回避モジュールのデジタル署名を検証して、信頼できるソースからのものかどうかを確認します。|  
 ||**0**|カスタム競合回避モジュールのデジタル署名について、信頼されるソースからの署名であるかを判断するための検証を行いません。|  
 |NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
@@ -163,7 +163,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changemergearticle**は、マージレプリケーションで使用します。  
   
  [Sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を使用して最初に指定されたアーティクルのプロパティを変更するには**sp_changemergearticle**を使用します。これらのプロパティの詳細については、 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を参照してください。  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func スキーマのみ**|**0x01**と**0x2000**|  
 |**インデックス付きビュースキーマのみ**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
 |**proc スキーマのみ**|**0x01**と**0x2000**|  
-|**一覧**|すべてのオプション。|  
+|**テーブル**|すべてのオプション。|  
 |**view schema only**|**0x01**、 **0x040,**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**、および**0x200000**|  
   
 ## <a name="example"></a>例  
@@ -236,12 +236,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

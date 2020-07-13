@@ -12,15 +12,15 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7cd3bb6fd625b588624d38b777788a2f84c814f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629254"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>セマンティクス検索の管理および監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   セマンティック インデックス作成プロセスと、インデックスの管理および監視に関連するタスクについて説明します。  
   
 ##  <a name="check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a> セマンティック インデックス作成の状態の確認  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスとセマンティック インデックスの合計サイズは?  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **IndexSize** プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>フルテキスト カタログのフルテキスト インデックスおよびセマンティック インデックスでインデックス化されているアイテム数は?  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) プロパティに対してクエリを実行します。  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) メタデータ関数の **ItemCount** プロパティに対してクエリを実行します。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

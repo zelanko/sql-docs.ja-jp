@@ -1,5 +1,6 @@
 ---
 title: カーソルの使用 (ODBC) |Microsoft Docs
+description: ODBC では、複数の種類のカーソル、カーソル内でのスクロール/配置、複数の同時実行オプション、および位置指定更新を可能にするカーソルモデルがサポートされています。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +15,17 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59a7e18c69ffa8d928dc38eaefcaf89249c18b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d07ce69238db57d0e4480769121d2c6d6c741906
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784080"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006498"
 ---
 # <a name="using-cursors-odbc"></a>カーソルの使用 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC では、次のことを可能にするカーソル モデルがサポートされます。  
   
@@ -39,8 +39,7 @@ ms.locfileid: "73784080"
   
  ODBC アプリケーションでは、カーソルを宣言して開いたり、カーソル関連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することはほとんどありません。 ODBC では、SQL ステートメントから返されたすべての結果セットに対して自動的にカーソルを開きます。 カーソルの特性は、SQL ステートメントが実行される前に、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)で設定されたステートメント属性によって制御されます。 結果セットの処理に使用する ODBC API 関数では、フェッチ、スクロール、位置指定更新など、すべてのカーソル機能がサポートされます。  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
   
 |アクション|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
@@ -50,9 +49,7 @@ ms.locfileid: "73784080"
 |位置指定更新を行う|UPDATE または DELETE の WHERE CURRENT OF 句|**SQLSetPos**|  
 |カーソルを閉じる|割り当て解除*CURSOR_NAME*終了|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -77,6 +74,6 @@ ms.locfileid: "73784080"
  [Transact-sql&#41;の割り当てを解除 &#40;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [Transact-sql&#41;&#40;カーソルの宣言](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Transact-sql&#41;をフェッチ &#40;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [Transact-sql&#41;を開く &#40;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077022"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305232"
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
 各カタログ関数は、結果セットとしてデータを返します。 この結果セットは、他の結果セットと同じではありません。 通常は、ドライバーにハードコーディングされているか、データソースのプロシージャに格納されている、定義済みのパラメーター化された**SELECT**ステートメントによって生成されます。 結果セットからデータを取得する方法については、「[結果セットが作成されましたか](../../../odbc/reference/develop-app/was-a-result-set-created.md)」を参照してください。  

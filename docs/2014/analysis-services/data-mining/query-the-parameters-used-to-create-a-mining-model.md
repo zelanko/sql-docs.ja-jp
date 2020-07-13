@@ -11,24 +11,21 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083035"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520588"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>マイニング モデルの作成に使用されたパラメーターのクエリ
   マイニング モデルの構成は、トレーニング ケースだけでなく、モデルの作成時に設定されたパラメーターの影響も受けます。 したがって、既存のモデルのパラメーター設定を取得すると、モデルの動作をよりよく理解できる可能性があります。 そのモデルの特定のバージョンのドキュメントを作成する場合にも便利です。  
   
- モデルの作成時に使用されたパラメーターを確認するには、いずれかのマイニング モデル スキーマ行セットに対するクエリを作成します。 
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]では、それらのスキーマ行セットが、Transact-SQL 構文を使用して簡単にクエリできる一連のシステム ビューとして公開されます。 この手順では、指定したマイニング モデルの作成に使用されたパラメーターを返すクエリを作成する方法について説明します。  
+ モデルの作成時に使用されたパラメーターを確認するには、いずれかのマイニング モデル スキーマ行セットに対するクエリを作成します。 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]では、それらのスキーマ行セットが、Transact-SQL 構文を使用して簡単にクエリできる一連のシステム ビューとして公開されます。 この手順では、指定したマイニング モデルの作成に使用されたパラメーターを返すクエリを作成する方法について説明します。  
   
 ### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>スキーマ行セットのクエリのためのクエリ ウィンドウを開くには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするモデルが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを開きます。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするモデルが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを開きます。  
   
 2.  インスタンス名を右クリックし、 **[新しいクエリ]** をポイントして **[DMX]** をクリックします。  
   
@@ -70,6 +67,6 @@ WHERE MODEL_NAME = 'TM Clustering'
   
 ## <a name="see-also"></a>参照  
  [データマイニングのクエリタスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
- [データ マイニング クエリ](data-mining-queries.md)  
+ [データマイニングクエリ](data-mining-queries.md)  
   
   

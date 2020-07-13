@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071804"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303423"
 ---
 # <a name="drop-table-command"></a>DROP TABLE コマンド
 データソースで指定されたデータベースからテーブルを削除し、ディスクから削除します。  
@@ -31,17 +31,17 @@ ms.locfileid: "68071804"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>設定  
- *テーブル*  
+## <a name="settings"></a>Settings  
+ *TableName*  
  データソースで指定されたデータベースから削除するテーブルと、ディスクから削除するテーブルを指定します。  
   
- */Db*  
+ *FileName*  
  ディスクから削除するフリーテーブルを指定します。  
   
  ?  
  [削除] ダイアログを表示します。このダイアログボックスでは、データソースで指定されたデータベースから削除するテーブルを選択したり、ディスクから削除したりできます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  DROP TABLE が発行されると、テーブルに関連付けられているすべてのプライマリインデックス、既定値、および検証ルールも削除されます。 DROP TABLE は、削除するテーブルに関連付けられたルールまたはリレーションがテーブルにある場合に、データソースで指定されたデータベース内の他のテーブルにも影響します。 テーブルがデータベースから削除されても、ルールとリレーションは無効になります。  
   
 ## <a name="driver-remarks"></a>ドライバーの解説  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100613"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303593"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>数値データ型での既定の有効桁数と小数点以下桁数のオーバーライド
 **SQLBindCol**または**SQLSetDescField**のいずれかを呼び出すことによって、の SQL_DESC_TYPE フィールドが SQL_C_NUMERIC に設定されている場合、の SQL_DESC_SCALE フィールドは0に設定され、SQL_DESC_PRECISION フィールドはドライバーで定義された既定の有効桁数に設定されます。 これは、 **SQLBindParameter**または**SQLSetDescField**のいずれかを呼び出すことによって、APD の SQL_DESC_TYPE フィールドが SQL_C_NUMERIC に設定されている場合にも当てはまります。 これは、入力、入出力、または出力パラメーターの場合に当てはまります。  

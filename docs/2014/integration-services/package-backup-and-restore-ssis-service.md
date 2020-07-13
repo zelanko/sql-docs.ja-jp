@@ -14,31 +14,29 @@ helpviewer_keywords:
 - restoring packages [Integration Services]
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4cd6f3856b69485c01e4b38d89e2f7e2ec56f74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66056929"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424039"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>パッケージのバックアップと復元 (SSIS サービス)
     
 > [!IMPORTANT]  
->  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]では、以前のリリースの[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との下位互換性を維持するためにサービスがサポートされています。 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
+>  このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは、ファイルシステムまたは msdb ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]システムデータベース) に保存できます。 msdb に保存されたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元機能を使用してバックアップおよび復元できます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージは、ファイルシステムまたは msdb (システムデータベース) に保存でき [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ます。 msdb に保存されたパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元機能を使用してバックアップおよび復元できます。  
   
  msdb データベースのバックアップおよび復元の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [SQL Server データベースのバックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
--   [システムデータベースのバックアップと復元 &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+-   [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]には、パッケージの管理に使用できる**dtutil**コマンドプロンプトユーティリティ (dtutil) が含まれています。 詳細については、「 [dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージの管理に使用する **dtutil** コマンド プロンプト ユーティリティ (dtutil.exec) が付属しています。 詳細については、「 [dtutil ユーティリティ](dtutil-utility.md)」を参照してください。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  パッケージに含まれるすべての構成ファイルはファイル システムに格納されています。 msdb データベースをバックアップするとき、これらのファイルはバックアップされません。したがって、msdb に保存されたパッケージの安全を確保するための計画の一部として、構成ファイルを定期的にバックアップする必要があります。 msdb データベースのバックアップに構成を含めるには、ファイル ベースの構成の代わりに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の構成の種類の使用を検討してください。  

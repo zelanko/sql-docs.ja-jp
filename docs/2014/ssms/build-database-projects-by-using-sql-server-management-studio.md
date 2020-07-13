@@ -14,27 +14,22 @@ helpviewer_keywords:
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a2df1214de60627f755538ab1340abd5b9ab0ffd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211265"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001525"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio によるデータベース プロジェクトのビルド
-  データベース スクリプト プロジェクトは、データベースやデータベースの一部に関連付けられているスクリプト、接続情報、およびテンプレートを組織的にまとめたものです。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 、スクリプトプロジェクトの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コンテキスト内でデータベースを管理および設計するためのが用意されています。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、データベースの開発、配置、管理に役立つ、デザイナー、エディター、ガイド、およびウィザードが含まれています。  
+  データベース スクリプト プロジェクトは、データベースやデータベースの一部に関連付けられているスクリプト、接続情報、およびテンプレートを組織的にまとめたものです。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、スクリプト プロジェクトのコンテキスト内の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] データベースの管理やデザインに使用できる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を提供しています。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、データベースの開発、配置、管理に役立つ、デザイナー、エディター、ガイド、およびウィザードが含まれています。  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のコンポーネントの管理に使用する管理ツールのセットです。 この統合環境を使用すると、データのバックアップやクエリの編集、共通関数の自動化など、さまざまな作業を 1 つのインターフェイスから実行できます。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のコンポーネントの管理に使用する管理ツールのセットです。 この統合環境を使用すると、データのバックアップやクエリの編集、共通関数の自動化など、さまざまな作業を 1 つのインターフェイスから実行できます。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には以下のツールが含まれています。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には以下のツールが含まれています。  
   
--   コード エディター。豊富な機能を持つスクリプト エディターで、スクリプトの作成や編集に使用します。 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のコード エディターには、 [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディター ( [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト用)、DMX クエリ エディター、MDX クエリ エディター、および XML/A クエリ エディターの 4 種類のバージョンがあります。  
+-   コード エディター。豊富な機能を持つスクリプト エディターで、スクリプトの作成や編集に使用します。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のコード エディターには、 [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディター ( [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト用)、DMX クエリ エディター、MDX クエリ エディター、および XML/A クエリ エディターの 4 種類のバージョンがあります。  
   
 -   オブジェクト エクスプローラー。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに所属するオブジェクトの検索、変更、スクリプト作成、実行に使用します。  
   
@@ -44,11 +39,9 @@ ms.locfileid: "68211265"
   
 -   プロパティ ウィンドウ。選択したオブジェクトの現在のプロパティの表示に使用します。  
   
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、以下の機能を提供して効率的な作業プロセスをサポートします。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、以下の機能を提供して効率的な作業プロセスをサポートします。  
   
--   非接続アクセス。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに接続しないで、スクリプトを作成および編集できます。  
+-   非接続アクセス。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに接続しないで、スクリプトを作成および編集できます。  
   
 -   すべてのダイアログ ボックスからのスクリプト作成。 どのダイアログ ボックスからでもスクリプトを作成できるので、スクリプト作成後に、これを読み取り、編集、格納、再利用できます。  
   
@@ -65,7 +58,7 @@ ms.locfileid: "68211265"
   
 -   スクリプトを使用した接続情報の保存。  
   
- ソリューション エクスプローラーは、同じプロジェクトに関連するスクリプトの作成および再利用を支援するツールです。 同じような作業が後で必要になった場合、プロジェクトに保存されている一連のスクリプトを使用できます。 を使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]してアプリケーションを作成した場合は、ソリューションエクスプローラー非常になじみがあります。  
+ ソリューション エクスプローラーは、同じプロジェクトに関連するスクリプトの作成および再利用を支援するツールです。 同じような作業が後で必要になった場合、プロジェクトに保存されている一連のスクリプトを使用できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を使用してアプリケーションを作成したことがあるユーザーにとって、ソリューション エクスプローラーはとてもなじみやすいものです。  
   
  ソリューションは、1 つ以上のスクリプト プロジェクトで構成されています。 プロジェクトは、1 つ以上のスクリプトまたは接続で構成されています。 プロジェクトには、スクリプト以外のファイルも含まれる場合があります。  
   

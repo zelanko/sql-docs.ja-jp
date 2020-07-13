@@ -10,10 +10,10 @@ ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028885"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>メニュー コマンドやその他のショートカット キー (SybaseToSQL)
@@ -113,7 +113,7 @@ ms.locfileid: "68028885"
 |[カスタマーフィードバックのオプション] ダイアログボックスを表示します。|ALT + H + C|  
 |ヘルプウィンドウを表示します。|ALT + H + H または F1|  
   
-## <a name="context-menu-commands"></a>ショートカットメニューのコマンド  
+## <a name="context-menu-commands"></a>コンテキスト メニュー コマンド  
 オブジェクトエクスプローラーで選択されているオブジェクトのコンテキストメニューにアクセスするために使用されるショートカットキーは SHIFT + F10 または Apps キーです。  
   
 ## <a name="global-settings-dialog-box"></a>[グローバル設定] ダイアログボックス  

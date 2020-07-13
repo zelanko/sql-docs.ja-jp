@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 587205c3c3d25b8d513792aee58bf15b845df2ef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080061"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543974"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services インスタンスのサーバー モードの決定
   Analysis Services は、多次元およびデータ マイニング (既定)、PowerPivot for SharePoint、テーブルの 3 つのサーバー モードのいずれかでインストールできます。 Analysis Services インスタンスのサーバー モードは、セットアップ時にサーバーのインストール オプションを選択するときに決定します。  
@@ -33,19 +32,17 @@ ms.locfileid: "66080061"
  すべての Analysis Services インスタンスに含まれる msmdsrv.ini ファイルで `DeploymentMode` プロパティをチェックすることもできます。 このプロパティの値によってサーバー モードが示されます。 有効な値は、0 (多次元)、1 (SharePoint)、または 2 (テーブル) です。 msmdsrv.ini ファイルを開くには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者 (つまり、サーバー ロールのメンバー) である必要があります。 このファイルには、構造化された XML が含まれています。 メモ帳または他のテキスト エディターでファイルを閲覧できます。  
   
 > [!CAUTION]  
->  
-  `DeploymentMode` プロパティの値は変更しないでください。 サーバーのインストール後の手動でのプロパティ変更はサポートされていません。  
+>  `DeploymentMode` プロパティの値は変更しないでください。 サーバーのインストール後の手動でのプロパティ変更はサポートされていません。  
   
 ## <a name="about-the-deploymentmode-property"></a>DeploymentMode プロパティについて  
- 
-  `DeploymentMode` プロパティは、Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログボックス、メッセージ、およびドキュメントでは "サーバーモード" と呼ばれます。 このプロパティは、Analysis Services のインストール方法に基づいてセットアップによって初期化されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
+ `DeploymentMode` プロパティは、Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログボックス、メッセージ、およびドキュメントでは "サーバーモード" と呼ばれます。 このプロパティは、Analysis Services のインストール方法に基づいてセットアップによって初期化されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
   
  このプロパティの有効値を以下に示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |0|これが既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
-|1 で保護されたプロセスとして起動されました|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  
+|1|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  
 |2|インメモリ ストレージまたは DirectQuery ストレージを使用するテーブル モデル データベースをホストするために使用するテーブル モードを指定します。|  
   
  各モードは、他のモードと相互に排他的です。 テーブル モード用に構成されたサーバーでは、キューブおよびディメンションを含む Analysis Services データベースを実行できません。 基になるコンピューターのハードウェアでサポートできる場合は、Analysis Services の複数のインスタンスを同じコンピューターにインストールし、さまざまな配置モードを使用するように各インスタンスを構成できます。 Analysis Services はリソースを大量に消費するアプリケーションであることに注意してください。 同じシステム上に複数のインスタンスを配置する構成は、ハイエンド サーバーの場合のみお勧めします。  
@@ -57,6 +54,6 @@ ms.locfileid: "66080061"
  [Analysis Services への接続](connect-to-analysis-services.md)   
  [SSAS 表形式&#41;の表形式モデルソリューション &#40;](../tabular-model-solutions-ssas-tabular.md)   
  [SSAS&#41;&#40;の多次元モデルソリューション](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [マイニングモデル &#40;Analysis Services-データマイニング&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデル (Analysis Services - データ マイニング)](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

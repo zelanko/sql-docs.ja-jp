@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049038"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c96c903b68dee2d1d215804d318d47b4c39a7a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a4f1da36a7c233e9a1b5832ee83e86a5c1f77d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039499"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287082"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 関数
 **互換性**  

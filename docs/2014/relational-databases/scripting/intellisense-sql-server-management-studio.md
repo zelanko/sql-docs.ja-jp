@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a3d31af206653ee5dbbaaf1e1b54b8c05d79027
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58c1c769d8120dc0be08508e3595d98c092ff116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063424"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のエディターは [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションをサポートしているので、入力操作を減らし、構文情報をすばやく提示し、複合式の区切りをわかりやすく表示できます。  

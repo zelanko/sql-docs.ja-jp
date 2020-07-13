@@ -20,18 +20,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: e83a9c039a5da06a63261f8d062d0f4da5ddf8a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779142"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007476"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC アプリケーションでは、結果データのフェッチを 3 つの方法で実行できます。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "73779142"
   
  SQL_C_DEFAULT を使用して C 変数のデータ型を指定する場合は注意が必要です。 SQL_C_DEFAULT は、C 変数のデータ型と、列やパラメーターの SQL データ型を一致させることを指定します。 SQL_C_DEFAULT が**ntext**、 **nchar**、または**nvarchar**列に対して指定されている場合、Unicode データがアプリケーションに返されます。 そのため、アプリケーションが Unicode データを処理するようにコーディングされていないと、さまざまな問題が発生する可能性があります。 **Uniqueidentifier** (SQL_GUID) データ型でも、同じ種類の問題が発生する可能性があります。  
   
- 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
+ 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
   
  この最適化をアプリケーションに適用すると、ユーザーがカーソルを上下にスクロールしている間に**text**、 **ntext**、または**image**データが表示されないようにすることができます。 ユーザーが行を選択すると、アプリケーションは**SQLGetData**を呼び出して、 **text**、 **ntext**、または**image**型のデータを取得できます。 これにより、ユーザーが選択していない行の**text**型、 **ntext**型、または**image**型のデータが送信され、大量のデータの転送を保存できるようになります。  
   

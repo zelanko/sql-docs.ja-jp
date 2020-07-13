@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003278"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298582"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "68003278"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|ドライバー|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  

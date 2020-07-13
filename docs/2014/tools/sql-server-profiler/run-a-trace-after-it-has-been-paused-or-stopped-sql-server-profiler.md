@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fabb6cd5d089ba39c413ee12427b18f1bbee8bf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 31f123adda9a49a490855bcae4a3a08fcf9bf561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62688587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007227"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>一時停止または停止したトレースの再開 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、一時停止または停止した後でトレースを再開する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "62688587"
 2.  **[ファイル]** メニューの **[トレースの実行]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[SQL Server Profiler]](sql-server-profiler.md)   
+ [SQL Server プロファイラー](sql-server-profiler.md)   
  [トレースを開始する](start-a-trace.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f648cd5fd08ed47c6670491ad5b7f3d75b7ead47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000649"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>データベース ダイアグラムでのテーブルの操作 (Visual Database Tools)
   テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用すると、データベース テーブルを変更および作成できます。  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cdcf36f26ce7dbba0e6a9de77faf286d2ccb00b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66067909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940143"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>テーブルのインポート ウィザードのリファレンス (SSAS)
   ここでは、 **テーブルのインポート ウィザード**について紹介します。 このウィザードを使用すると、さまざまなデータ ソースからデータをインポートできます。 モデル デザイナーからウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>Pages  
   
 -   [SSAS&#41;&#40;詳細設定](advanced-settings-ssas.md)  
   
@@ -85,6 +84,6 @@ ms.locfileid: "66067909"
 -   [SSAS&#41;&#40;SQL または MDX クエリを指定する](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>参照  
- [SSAS 表形式&#41;&#40;データをインポートする](import-data-ssas-tabular.md)  
+ [データのインポート &#40;SSAS テーブル&#41;](import-data-ssas-tabular.md)  
   
   

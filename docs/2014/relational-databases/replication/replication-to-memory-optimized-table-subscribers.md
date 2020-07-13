@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056904"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
   トランザクション レプリケーションのサブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。  
@@ -27,8 +26,7 @@ ms.locfileid: "68811229"
   
 1.  パブリケーションの作成。  
   
-2.  パブリケーションにアーティクルを追加します。 
-  `@upd_cmd` パラメーターには、SCALL または SQL 規約を使用します。  
+2.  パブリケーションにアーティクルを追加します。 `@upd_cmd` パラメーターには、SCALL または SQL 規約を使用します。  
   
     ```  
     EXEC sp_addarticle  
@@ -60,7 +58,7 @@ ms.locfileid: "68811229"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  スナップショット フォルダーに移動します。 既定の場所は "C:\Program Server\MSSQL12. SQL\<インスタンス> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\"。  
+2.  スナップショット フォルダーに移動します。 既定の場所は "C:\Program Server\MSSQL12. \<INSTANCE> SQL\MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ "。  
   
 3.  を見つけ**ます。** テーブルの sch-m ファイルを開き、Management Studio で開きます。 次に説明するように、テーブル スキーマを変更し、ストアド プロシージャを更新します。  
   
@@ -87,8 +85,7 @@ ms.locfileid: "68811229"
     GO  
     ```  
   
-4.  
-  `@upd_cmd` パラメーターに SCALL 規約を使用するときは、スキーマ (.SCH) ファイルに移動し、`create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]` でテーブル更新ステートメントを変更して、主キー列を削除します。  
+4.  `@upd_cmd` パラメーターに SCALL 規約を使用するときは、スキーマ (.SCH) ファイルに移動し、`create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]` でテーブル更新ステートメントを変更して、主キー列を削除します。  
   
      主キーの更新をサポートするには、次のように、カスタムの更新ストアド プロシージャを使用して主キーの更新ステートメントを置き換えます。  
   
@@ -284,7 +281,7 @@ GO
   
  これでメモリ最適化テーブルはパブリッシャーから更新を受け取り始めます。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  一方向トランザクション レプリケーションのみがサポートされています。 ピア ツー ピア トランザクション レプリケーションはサポートされていません。  
   
  メモリ最適化テーブルをパブリッシュすることはできません。  
@@ -305,7 +302,7 @@ GO
   
 -   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 詳細については、「 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 」を参照してください。  
   
-##  <a name="Schema"></a>スキーマファイルの変更  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>スキーマファイルの変更  
   
 -   クラスター化インデックスはサポートされていません。 クラスター化インデックスを非クラスター化インデックスに変更します。  
   
@@ -315,10 +312,10 @@ GO
   
 -   ANSI_PADDING は ON にする必要があります。  
   
-##  <a name="PrimaryKey"></a>主キーへの変更のレプリケート  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>主キーへの変更のレプリケート  
  メモリ最適化テーブルの主キーを更新することはできません。 サブスクライバーの主キーの更新をレプリケートするには、DELETE/INSERT ペアとして更新を渡すように更新ストアド プロシージャを変更します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server レプリケーション](sql-server-replication.md)  
+ [SQL Server のレプリケーション](sql-server-replication.md)  
   
   

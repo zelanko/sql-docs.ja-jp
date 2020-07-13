@@ -11,19 +11,19 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e475abb699c7fa7240ca6eb39b1b32f1730d33c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e21654f183946675c63cee10a3c08754e1508f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125735"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291992"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C から SQL へのデータ変換の例
 次の例は、ドライバーが C データを SQL データに変換する方法を示しています。  
   
-|C 型識別子|C データ値|SQL 型<br /><br /> 識別子 (identifier)|列<br /><br /> length|SQL データ<br /><br /> value|SQLSTATE|  
+|C 型識別子|C データ値|SQL 型<br /><br /> identifier|列<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|該当なし|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde...z|22001|  

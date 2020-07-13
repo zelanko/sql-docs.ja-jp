@@ -1,5 +1,6 @@
 ---
 title: 算術式 (XQuery) |Microsoft Docs
+description: XQuery の算術式とサポートされる算術演算子について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ccbeda01726a3473f8e955676c3ebd62a93fd630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 548fde62cf6f07d2e31a68b7f702baa4bd9f916a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643653"
 ---
 # <a name="arithmetic-expressions-xquery"></a>算術式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   **Idiv**を除き、すべての算術演算子がサポートされています。 次の例は、算術演算子の基本的な使用方法を示しています。  
   

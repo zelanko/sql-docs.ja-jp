@@ -12,15 +12,14 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing SQL queries
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f8410a4a0ecc8d522a38e22315746cb45295e6bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015816"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL クエリの実行 (SQLXMLOLEDB プロバイダー)
   この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティの使用方法を示します。  

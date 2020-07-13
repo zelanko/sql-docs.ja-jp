@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff0ae9555fcd17ccb79fc239f3ef1e125706dc75
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292413"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921928"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
 
@@ -257,7 +257,7 @@ ms.locfileid: "71292413"
  データ フローでのデータのマッピングついては、「 [データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://go.microsoft.com/fwlink/?LinkId=220823)」  
+ blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)」  
   
 ## <a name="see-also"></a>参照  
  [データ フロー内のデータ](../../integration-services/data-flow/data-in-data-flows.md)  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5133cd72de0f5b812b8425b6fb1b7f8ae82d8241
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861402"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   テーブルまたはビューに依存するビューやプロシージャ、ビューまたはプロシージャに依存しているテーブルやビューなど、データベースオブジェクトの依存関係に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
@@ -63,30 +63,30 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends**には、2つの結果セットが表示されます。  
   
- 次の結果セットは、 * \<オブジェクト>* が依存するオブジェクトを示しています。  
+ 次の結果セットは、が依存するオブジェクトを示して *\<object>* います。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|依存関係が存在するアイテムの名前。|  
 |**type**|**nvarchar (16)**|項目の種類。|  
-|**まし**|**nvarchar (7)**|項目が更新されているかどうか。|  
-|**オフ**|**nvarchar (8)**|項目が SELECT ステートメントで使用されているかどうか。|  
+|**更新済み**|**nvarchar (7)**|項目が更新されているかどうか。|  
+|**オフ**|**nvarchar(8)**|項目が SELECT ステートメントで使用されているかどうか。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットは、 * \<オブジェクト>* に依存するオブジェクトを示しています。  
+ 次の結果セットは、に依存するオブジェクトを示して *\<object>* います。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|依存関係が存在するアイテムの名前。|  
 |**type**|**nvarchar (16)**|項目の種類。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**ロールのメンバーシップが必要です。  
+ ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. テーブルの従属性を一覧表示する  
- 次の例では、 `Sales.Customer` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース内のテーブルに依存するデータベースオブジェクトを一覧表示します。 ここではスキーマ名とテーブル名の両方を指定します。  
+ 次の例では、データベース内のテーブルに依存するデータベースオブジェクトを一覧表示し `Sales.Customer` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。 ここではスキーマ名とテーブル名の両方を指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -94,17 +94,17 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>B. トリガーの従属性を一覧表示する  
- 次の例では、トリガー `iWorkOrder`が依存しているデータベースオブジェクトを一覧表示します。  
+### <a name="b-listing-dependencies-on-a-trigger"></a>B: トリガーの従属性を一覧表示する  
+ 次の例では、トリガーが依存しているデータベースオブジェクトを一覧表示し `iWorkOrder` ます。  
   
 ```  
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   

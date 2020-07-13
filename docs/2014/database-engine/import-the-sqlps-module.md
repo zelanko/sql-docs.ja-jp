@@ -9,53 +9,46 @@ ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eddaa0e00f1ee81fd62ccda2fd9b9d000a190363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932823"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
   PowerShell から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を管理する方法としては、`sqlps` モジュールを Windows PowerShell 2.0 環境にインポートする方法を推奨します。 このモジュールによって、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  
   
-1.  **作業を開始する準備:**  [セキュリティ](#Security)  
+1.  **はじめに:**  [セキュリティ](#Security)  
   
-2.  **モジュールを読み込むには:**  [sqlps モジュールを読み込む](#LoadSqlps)  
+2.  **モジュールを読み込むには:**  [sqlps モジュールの読み込み](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>はじめに  
- 
-  `sqlps` モジュールを Windows PowerShell にインポートした後は、次のことができます。  
+ `sqlps` モジュールを Windows PowerShell にインポートした後は、次のことができます。  
   
 -   Windows PowerShell コマンドを対話的に実行する。  
   
 -   Windows PowerShell スクリプト ファイルを実行する。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットを実行する。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットを実行する。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダー パスを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層内を移動する。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダー パスを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層内を移動する。  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の管理オブジェクト モデル (Microsoft.SqlServer.Management.Smo など) を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトを管理する。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の管理オブジェクト モデル (Microsoft.SqlServer.Management.Smo など) を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトを管理する。  
   
 > [!NOTE]  
 >  2 つの SQL Server コマンドレット (`Encode-Sqlname` および `Decode-Sqlname`) の名前で使用されている動詞は、Windows PowerShell 2.0 で承認されている動詞と一致しません。 このことは、コマンドレットの操作には影響しませんが、`sqlps` モジュールがセッションにインポートされるときに、Windows PowerShell による警告が発生します。  
   
-###  <a name="Security"></a> セキュリティ  
- 既定では、Windows PowerShell 実行時のスクリプト実行ポリシーは **[Restricted]** に設定されます。これにより、Windows PowerShell スクリプトの実行が防止されます。 
-  `sqlps` モジュールを読み込む際は、`Set-ExecutionPolicy` コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効化できます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 Windows PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)」を参照してください。  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
+ 既定では、Windows PowerShell 実行時のスクリプト実行ポリシーは **[Restricted]** に設定されます。これにより、Windows PowerShell スクリプトの実行が防止されます。 `sqlps` モジュールを読み込む際は、`Set-ExecutionPolicy` コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効化できます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 Windows PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)」を参照してください。  
   
-##  <a name="LoadSqlps"></a>Sqlps モジュールを読み込む  
+##  <a name="load-the-sqlps-module"></a><a name="LoadSqlps"></a>Sqlps モジュールを読み込む  
 
 ### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>Windows PowerShell に sqlps モジュールを読み込むには
   
 1.  適切なスクリプト実行ポリシーを設定するには、`Set-ExecutionPolicy` コマンドレットを使用します。  
   
-2.  sqlps モジュールをインポートするには、`Import-Module` コマンドレットを使用します。 
-  `DisableNameChecking` および `Encode-Sqlname` についての警告を抑制する場合は、`Decode-Sqlname` パラメーターを指定します。  
+2.  sqlps モジュールをインポートするには、`Import-Module` コマンドレットを使用します。 `DisableNameChecking` および `Encode-Sqlname` についての警告を抑制する場合は、`Decode-Sqlname` パラメーターを指定します。  
   
 ### <a name="example-powershell"></a>例 (PowerShell)  
  この例は `sqlps` モジュールを読み込み、名前のチェックを無効にします。  

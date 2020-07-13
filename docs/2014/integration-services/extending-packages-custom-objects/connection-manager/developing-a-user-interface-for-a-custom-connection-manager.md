@@ -10,15 +10,14 @@ helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2efbc60cae881eec2bebda7655a533a7334ccc19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62896043"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427719"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>カスタム接続マネージャー用ユーザー インターフェイスの開発
   基本クラスのプロパティとメソッドをオーバーライドしてカスタム機能を提供したら、接続マネージャー用のカスタム ユーザー インターフェイスを作成します。 カスタム ユーザー インターフェイスを作成しない場合、ユーザーは [プロパティ] ウィンドウを使用して接続マネージャーを構成することしかできません。  
@@ -26,7 +25,7 @@ ms.locfileid: "62896043"
  1 つのカスタム ユーザー インターフェイスのプロジェクトまたはアセンブリには、通常 2 つのクラスがあります。<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> を実装するクラスと、このクラスによって表示される、ユーザーから情報を収集するための Windows フォームです。  
   
 > [!IMPORTANT]  
->  「[カスタム接続マネージャーのコーディング](../building-deploying-and-debugging-custom-objects.md)」で説明されているようにカスタム ユーザー インターフェイスに署名してビルドし、グローバル アセンブリ キャッシュにインストールしたら、このクラスの完全修飾名を <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> プロパティで忘れずに指定してください。  
+>  「[カスタム接続マネージャーのコーディング](../building-deploying-and-debugging-custom-objects.md)」で説明されているようにカスタム ユーザー インターフェイスに署名してビルドし、グローバル アセンブリ キャッシュにインストールしたら、このクラスの完全修飾名を <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> プロパティで忘れずに指定してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に組み込まれているタスク、変換元、および変換先の多くは、組み込みの接続マネージャーの特定の種類でのみ機能します。 そのため、これらのサンプルは組み込みのタスクおよびコンポーネントではテストできません。  
@@ -284,9 +283,9 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム接続マネージャーの作成](creating-a-custom-connection-manager.md)   
  [カスタム接続マネージャーのコーディング](coding-a-custom-connection-manager.md)  
   

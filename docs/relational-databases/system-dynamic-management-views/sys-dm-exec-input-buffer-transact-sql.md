@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74097873"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821073"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>dm_exec_input_buffer (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに送信されたステートメントに関する情報を返します。
+のインスタンスに送信されたステートメントに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。
 
 ## <a name="syntax"></a>構文
 
@@ -51,20 +51,20 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>返されるテーブル
 
-|列名|データ型|[説明]|
+|列名|データ型|説明|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|指定された spid の入力バッファー内のイベントの種類。|
-|**パラメータ**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
+|**parameters**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
 |**event_info**|**nvarchar(max)**|指定された spid の入力バッファー内のステートメントのテキスト。|
 
 ## <a name="permissions"></a>アクセス許可
 
-で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ユーザーが VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。
+では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ユーザーが VIEW SERVER STATE 権限を持っている場合、のインスタンスで実行中のすべてのセッションが表示されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。それ以外の場合、ユーザーには現在のセッションのみが表示されます。
 
 > [!IMPORTANT]
 > VIEW SERVER STATE 権限を持たない SQL Server (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
 
-で[!INCLUDE[ssSDS](../../includes/sssds-md.md)]は、ユーザーがデータベースの所有者である場合、ユーザーには、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。
+では、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ユーザーがデータベースの所有者である場合、ユーザーに対して実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 現在のセッションのみが表示されます。
 
 > [!IMPORTANT]
 > 所有者権限を持たない Azure SQL Database (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
@@ -98,7 +98,7 @@ GO
 
 ## <a name="see-also"></a>参照
 
-- [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
-- [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)
+- [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

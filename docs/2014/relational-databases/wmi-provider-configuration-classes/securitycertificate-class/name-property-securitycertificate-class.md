@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09886571f98fcb36218c0dcb7a40e06b6b34b34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8383cbf5b6d0661449c2d184bcfa995b2758accc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63270674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060001"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name プロパティ (SecurityCertificate クラス)
   セキュリティ証明書の名前を取得します。  
@@ -36,14 +35,14 @@ object
 .Name [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書の名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

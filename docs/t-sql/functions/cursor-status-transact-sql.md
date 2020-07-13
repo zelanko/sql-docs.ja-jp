@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2519c31b56f9f4509485db5d5dcd59b81d2eee7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732433"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 与えられたパラメーターに対して、`CURSOR_STATUS` はカーソル宣言でカーソルと結果のセットが返されているかどうかを示します。
   

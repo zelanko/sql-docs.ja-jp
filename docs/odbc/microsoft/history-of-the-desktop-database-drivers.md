@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d225bac273558b928e3e8fd2f41bd121a723f6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 89434b397c07fdee751ca4272b65ac2eada94cf3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952369"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304983"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーの履歴
 次の表は、デスクトップデータベースドライバーのバージョン履歴を示しています。  
   
-|Version|リリース日|[説明]|  
+|Version|リリース日|説明|  
 |-------------|------------------|-----------------|  
 |1.0|1993年8月|PageAhead ソフトウェアによって生成された SIMBA クエリプロセッサを使用しました。 SIMBA は、ODBC 呼び出しと SQL ステートメントを受信し、それらを Microsoft Jet インストール可能な ISAM 呼び出しに処理した後、Microsoft Jet ISAM ディスパッチレイヤーを呼び出して適切なインストール可能な ISAM ドライバーを読み込んで呼び出します。|  
 |2.0|1994年12月|Odbc 2.0 で使用します。 ODBC の機能が大幅に拡張されています。 バージョン2.0 の主な変更は、Microsoft Jet データベースエンジンによって SIMBA クエリプロセッサが置き換えられたことでした。 Microsoft Jet データベースエンジンを使用すると、デスクトップデータベースドライバーは、Microsoft Jet のインストール可能な ISAM ドライバーおよび Microsoft Access テクノロジと密接に統合されています。 大幅な機能強化は次のとおりです。<br /><br /> -スクロール可能なカーソルのネイティブサポート。<br />-外部結合、更新可能な異種結合、およびトランザクションのネイティブサポート。<br />-32-Microsoft Windows NT 用ドライバーのビット版。|  

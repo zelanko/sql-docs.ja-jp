@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 393f30252d2689deb63d1bd540d6db3673f84f73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62662064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052416"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile イベント クラス
-  Showplan Statistics Profile イベントクラスは、に[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって SQL ステートメントが実行されたときに発生します。 含まれる情報は、Showplan XML Statistics Profile イベント クラスで使用できる情報のサブセットです。  
+  Showplan Statistics Profile イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 含まれる情報は、Showplan XML Statistics Profile イベント クラスで使用できる情報のサブセットです。  
   
  Showplan Statistics Profile イベント クラスでは、コンパイル時のデータがすべて表示されます。そのため、トレースに Showplan Statistics Profile が含まれていると、パフォーマンスのオーバーヘッドが大幅に増加する場合があります。 このパフォーマンスの低下を最小限に抑えるには、このイベント クラスの使用を、短期間だけ特定の問題を監視するトレースに制限します。  
   
@@ -30,13 +29,12 @@ ms.locfileid: "62662064"
   
 ## <a name="showplan-statistics-profile-event-class-data-columns"></a>Showplan Statistics Profile イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|`image`|クエリのコストの推定値。|2|いいえ|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、ServerName データ列がトレースにキャプチャされ、そのサーバーが使用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 98。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  

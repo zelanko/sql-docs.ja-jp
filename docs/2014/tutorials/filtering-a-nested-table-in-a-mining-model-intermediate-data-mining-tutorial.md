@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267477"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>マイニング モデルでの入れ子になったテーブルのフィルター処理 (中級者向けデータ マイニング チュートリアル)
   モデルの作成と検証が完了したら、顧客データのサブセットに焦点を絞ります。 たとえば、特定の品目が入っているバスケットのみを分析したり、一定期間に何も購入しなかった顧客の人口統計を分析したりすることができます。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を使用すると、マイニング モデルで使用されるデータをフィルター処理できます。 この機能は、別のデータを使用するために新しいデータソースビューを設定する必要がないため、便利です。 「基本的なデータ マイニング チュートリアル」では、ケース テーブルに条件を適用することでフラット テーブルのデータをフィルター処理する方法について学習しました。 ここでは、入れ子になったテーブルに適用するフィルターを作成します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を使用すると、マイニング モデルで使用されるデータをフィルター処理できます。 この機能は、別のデータを使用するために新しいデータソースビューを設定する必要がないため、便利です。 「基本的なデータ マイニング チュートリアル」では、ケース テーブルに条件を適用することでフラット テーブルのデータをフィルター処理する方法について学習しました。 ここでは、入れ子になったテーブルに適用するフィルターを作成します。  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>入れ子になったテーブルとケース テーブルでのフィルターの違い  
  データ ソース ビューにケース テーブルと入れ子になったテーブルが含まれている場合は、アソシエーション モデルで使用されているデータ ソース ビューと同様に、ケース テーブルの値、入れ子になったテーブルでの値の有無、または両方の組み合わせをフィルター処理できます。  
@@ -42,8 +41,7 @@ ms.locfileid: "63267477"
   
 1.  [**マイニングモデル**] タブで、フィルター処理されたモデルの関連付けを右クリックし、[**モデルフィルターの設定**] をクリックします。  
   
-2.  
-  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
+2.  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
   
 3.  [**マイニング構造列**] ボックスで、[IncomeGroup] を選択します。  
   
@@ -93,7 +91,7 @@ ms.locfileid: "63267477"
   
  Microsoft 汎用コンテンツ ツリー ビューアーで NODE_SUPPORT の値を参照すると、フィルター選択されたモデルに含まれているケースの数が元のモデルよりも少ないことを確認できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ここで作成した入れ子になったテーブルのフィルターでは、そのテーブルに少なくとも 1 つの行があるかどうかのみがチェックされますが、特定の製品の有無を確認するフィルター条件を作成することもできます。  たとえば、次のようなフィルターを作成できます。  
   
 ```  
@@ -113,6 +111,6 @@ ms.locfileid: "63267477"
   
 ## <a name="see-also"></a>参照  
  [モデルフィルターの構文と例 &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [マイニングモデルのフィルター &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895284"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 以下の手順では、Linux に [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) をインストールします。 フルテキスト検索を使うと、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行できます。 このリリースの既知の問題については、[リリース ノート](sql-server-linux-release-notes.md)をご覧ください。
 

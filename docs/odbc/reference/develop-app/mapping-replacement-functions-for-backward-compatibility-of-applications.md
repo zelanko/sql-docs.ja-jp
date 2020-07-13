@@ -16,14 +16,14 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036392"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301092"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のためのマッピング置換関数
 *Odbc 3.X ドライバーマネージャー*を使用して動作する odbc 3.x アプリケーションは、新しい機能が使用されていない限り *、odbc 2.x*ドライバーに対して動作*します。* ただし、重複した機能と動作の変更の両方が、odbc 2.x*ドライバーで odbc* *3.x アプリケーションを*動作させる方法に影響します。 ODBC 2.x ドライバーを使用する場合、ドライバーマネージャーは、1つ以上*の odbc 2.x 関数を*、対応*する odbc 2.x 関数に*置き換えた次の odbc *3 .x*関数をマップ*します。*  
@@ -416,7 +416,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  *Odbc 2.x アプリケーションで*odbc *2.x ドライバーを*使用する場合、 *columnnumber*引数を0に設定して**Sqlcolattribute**を呼び出すと、ドライバーマネージャーは、次の表に示す*FieldIdentifier*値を返します。  
   
-|*FieldIdentifier*|Value|  
+|*FieldIdentifier*|値|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -448,7 +448,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  *Odbc 2.x アプリケーションが*odbc *2.x ドライバーを*操作するときに、 *columnnumber*引数を0に設定して**SQLDescribeCol**を呼び出すと、ドライバーマネージャーは次の表に示す値を返します。  
   
-|Buffer|Value|  
+|バッファー|値|  
 |------------|-----------|  
 |ColumnName|"" (空の文字列)|  
 |*NameLengthPtr|0|  

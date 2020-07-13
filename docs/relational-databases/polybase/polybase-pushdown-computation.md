@@ -65,7 +65,7 @@ SQL Server では、述語のプッシュダウンに次の基本的な式と演
 
 演算子 BETWEEN、NOT、IN、LIKE はプッシュダウンできる場合があります。 実際の動作は、クエリ オプティマイザーが演算子式をどのように基本的な関係演算子を使用する一連のステートメントとして書き換えるかに依存します。
 
-この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 and 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 **内の論理**積`customer.account_balance and customer.zipcode`が最後の式です。
+この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 and 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 `customer.account_balance and customer.zipcode` 内の論理**積**が最後の式です。
 
 この述語の組み合わせで、map-reduce ジョブですべての WHERE 句を実行できます。 SELECT 条件を満たすデータのみが SQL Server PDW にコピーされます。
 

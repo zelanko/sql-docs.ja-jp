@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91179cb194bbfb79e8e7a8476e9725877b88afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68196467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067975"
 ---
 # <a name="create-user-defined-aggregates"></a>ユーザー定義集計の作成
   CLR アセンブリでプログラミングされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部にデータベース オブジェクトを作成できます。 CLR が提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、トリガー、ストアド プロシージャ、関数、集計関数、型などがあります。  

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085814"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864369"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたデータベースに関する情報をバックアップ履歴テーブルと復元履歴テーブルから削除します。  
   
@@ -69,11 +69,10 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
 ## <a name="permissions"></a>アクセス許可  
- 
-  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例では、バックアップと[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]復元の履歴テーブルで、データベースのすべてのエントリを削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] バックアップと復元の履歴テーブルで、データベースのすべてのエントリを削除します。  
   
 ```  
 USE msdb;  
@@ -82,8 +81,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_backuphistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
- [SQL Server&#41;&#40;のバックアップ履歴とヘッダー情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+ [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

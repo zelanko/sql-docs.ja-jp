@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 957609573c206b7c3492789c369d0fb2be2398a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038163"
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX データ操作 - REFRESH CUBE
@@ -31,7 +31,7 @@ REFRESH CUBECube_Name
  *Cube_Name*  
  キューブ名を提供する有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに接続されているクライアントアプリケーションの場合、このステートメントによって、クライアントアプリケーションでキャッシュされたメモリがサーバーと同期されます。 この検出および更新は日常的かつ自動的に行われますが、同期が行われるまでの時間はクライアント接続文字列の設定によって異なります。 REFRESH CUBE ステートメントは、すぐにデータを更新します。  
   
  ローカルキューブに接続されているクライアントアプリケーションの場合、REFRESH CUBE ステートメントを使用すると、ローカルキューブファイルが再構築されます。  

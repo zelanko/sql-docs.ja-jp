@@ -1,5 +1,6 @@
 ---
 title: SQL Server のエディション別の計算容量制限 | Microsoft Docs
+description: この記事では、SQL Server 2019 の計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。
 ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a3be2f37257195edb6c3305a79237c39ea930bf
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68067575"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000423"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server のエディション別の計算容量制限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

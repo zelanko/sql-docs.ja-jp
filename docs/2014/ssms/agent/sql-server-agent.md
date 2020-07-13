@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058699"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、スケジュールされた管理タスクを実行する Microsoft Windows*サービスです。* [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の*ジョブ*と呼ばれる、スケジュールされた管理タスクを実行する Microsoft Windows サービスです [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
- **このトピックでは**  
+ **このトピックの内容**  
   
 -   [SQL Server エージェントの利点](#Benefits)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "79289630"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされるときに、サービスを自動起動することをユーザーが明示的に選択しない限り、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] エージェント サービスは既定で無効になります。  
   
-##  <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server エージェント コンポーネント  
+##  <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server エージェントコンポーネント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、次のコンポーネントを使用して、実行するタスク、タスクを実行する時期、タスクの成功/失敗の報告方法を定義します。  
   
 ### <a name="jobs"></a>ジョブ  
@@ -61,7 +60,7 @@ ms.locfileid: "79289630"
  各ジョブ ステップは、特定のセキュリティ コンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用するジョブ ステップでは、EXECUTE AS ステートメントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。 その他のジョブ ステップでは、プロキシ アカウントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。  
   
 ### <a name="schedules"></a>スケジュール  
- *スケジュール* では、ジョブを実行する時期を指定します。 同じスケジュールで複数のジョブを実行できるほか、同じジョブに複数のスケジュールを適用することもできます。 ジョブが実行されるタイミングに関して、次の条件をスケジュールで定義できます。  
+ *スケジュール*では、ジョブをいつ実行するかを指定します。 同じスケジュールで複数のジョブを実行できるほか、同じジョブに複数のスケジュールを適用することもできます。 ジョブが実行されるタイミングに関して、次の条件をスケジュールで定義できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが開始されるたびに、ジョブを実行する。  
   
@@ -111,13 +110,13 @@ ms.locfileid: "79289630"
   
  電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する必要があります。 詳細については、「[データベース メール](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   
- オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「 [オペレーター](operators.md)」を参照してください。  
+ オペレーターは、個人のグループを表す別名として定義できます。 その場合、その別名のすべてのメンバーが同時に通知を受け取ることになります。 詳細については、「[演算子](operators.md)」を参照してください。  
   
 ##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server エージェント管理のセキュリティ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは **、msdb**データベース内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`sysadmin`**SQLAgentUserRole** **、SQLAgentReaderRole、** および**SQLAgentOperatorRole**固定データベース ロールを使用して、固定サーバー ロールのメンバーではないユーザーのエージェントへのアクセスを制御します。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、 **msdb**データベースの**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバーロールのメンバーではないユーザーのエージェントへのアクセスを制御し `sysadmin` ます。 これらの固定データベース ロールに加え、サブシステムとプロキシを使用することで、タスクの実行に最低限必要な権限で各ジョブ ステップを実行できるようになります。  
   
 ### <a name="roles"></a>ロール  
- **MSDB**の**SQLAgentUserRole** **、SQLAgentReaderRole**、および**SQLAgentOperatorRole**固定データベース ロールの`sysadmin`メンバーと固定サーバー ロール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーは、エージェントにアクセスできます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
+ **Msdb**の**SQLAgentUserRole**、 **SQLAgentReaderRole**、および**sqlagentoperatorrole**固定データベースロールのメンバーと、 `sysadmin` 固定サーバーロールのメンバーは、エージェントにアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」を参照してください。  
   
 ### <a name="subsystems"></a>サブシステム  
  サブシステムは事前に定義されたオブジェクトで、任意のジョブ ステップで使用できる機能を表します。 各プロキシは 1 つ以上のサブシステムにアクセスできます。 サブシステムはプロキシで使用できる機能へのアクセスを制限することによりセキュリティを提供します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ以外の各ジョブ ステップは、プロキシのコンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは、EXECUTE AS コマンドを使用してセキュリティ コンテキストが設定されます。  
@@ -126,8 +125,8 @@ ms.locfileid: "79289630"
   
 |サブシステム名|説明|  
 |--------------------|-----------------|  
-|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br /> **\*重要\*\*** ActiveX スクリプト サブシステムは、今後の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの でエージェントから[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
-|オペレーティング システム (**CmdExec**)|実行可能なプログラムを実行します。|  
+|Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|オペレーティングシステム (**CmdExec**)|実行可能なプログラムを実行します。|  
 |PowerShell|PowerShell スクリプティング ジョブ ステップを実行します。|  
 |レプリケーション ディストリビューター|レプリケーション ディストリビューション エージェントをアクティブにするジョブ ステップを実行します。|  
 |レプリケーション マージ|レプリケーション マージ エージェントをアクティブにするジョブ ステップを実行します。|  
@@ -135,7 +134,7 @@ ms.locfileid: "79289630"
 |レプリケーション スナップショット|レプリケーション スナップショット エージェントをアクティブにするジョブ ステップを実行します。|  
 |レプリケーション トランザクション ログ リーダー|レプリケーション ログ リーダー エージェントをアクティブにするジョブ ステップを実行します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コマンド|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コマンドを実行します。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Query|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリを実行します。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリ|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリを実行します。|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを実行します。|  
   
 > [!NOTE]  
@@ -144,9 +143,9 @@ ms.locfileid: "79289630"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステム制約が強制的に適用されます。 たとえば、sysadmin 固定サーバー ロールのメンバーであるユーザーのプロキシが [!INCLUDE[ssIS](../../includes/ssis-md.md)] サブシステムにアクセスできなければ、そのユーザーが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージを実行できる場合でも、そのプロキシは [!INCLUDE[ssIS](../../includes/ssis-md.md)] ジョブ ステップを実行できません。  
   
 ### <a name="proxies"></a>プロキシ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 固定サーバー`sysadmin`ロールのメンバは、プロキシを作成できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 `sysadmin`固定サーバーロールのメンバーは、プロキシを作成できます。  
   
- 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 固定サーバー`sysadmin`ロールのメンバは、プロキシへの無制限のアクセス権を持ちます。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
+ 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 `sysadmin`固定サーバーロールのメンバーは、プロキシに無制限にアクセスできます。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理を自動化するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成するには、次の手順に従ってください。  
@@ -176,7 +175,7 @@ ms.locfileid: "79289630"
 |メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[管理タスクの自動化 &#40;SQL Server エージェント&#41;](automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)  
   
   

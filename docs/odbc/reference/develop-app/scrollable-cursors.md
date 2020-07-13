@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061614"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304213"
 ---
 # <a name="scrollable-cursors"></a>スクロール可能なカーソル
 最新の画面ベースのアプリケーションでは、ユーザーはデータを前後にスクロールします。 このようなアプリケーションでは、以前にフェッチされた行に戻ることが問題になります。 1つの方法として、カーソルを閉じて再度開き、カーソルが必要な行に到達するまで行をフェッチすることができます。 別の方法として、結果セットを読み取り、ローカルでキャッシュして、アプリケーションにスクロールを実装することもできます。 どちらの場合も、小さい結果セットを使用した場合にのみ機能します。後者の可能性は実装が困難です。 より良い解決策は、スクロール可能な*カーソル*を使用することです。これは、結果セット内で前後に移動できます。  

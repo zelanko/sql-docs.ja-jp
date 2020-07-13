@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760220"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。 このストアドプロシージャを使用する前に、transact-sql [&#41;&#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)ストアドプロシージャを sp_adddistributor し、 [transact-sql &#40;を sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)する必要があることに注意してください。  
   
@@ -48,26 +48,29 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>引数  
 `[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
   
 `[ @distribution_db = ] 'distribution_db'`ディストリビューションデータベースの名前を指定します。 *distributor_db*は**sysname**であり、既定値はありません。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
   
-`[ @security_mode = ] security_mode`実装されているセキュリティモードです。 このパラメーターは、キュー更新サブスクリプションのパブリッシャーまたは以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するために、レプリケーションエージェントによってのみ使用されます。 *security_mode*は**int**,、これらの値のいずれかを指定できます。  
+`[ @security_mode = ] security_mode`実装されているセキュリティモードです。 このパラメーターは、キュー更新サブスクリプションのパブリッシャーまたは以外のパブリッシャーに接続するために、レプリケーションエージェントによってのみ使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *security_mode*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|ディストリビューター側のレプリケーションエージェントは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用してパブリッシャーに接続します。|  
+|**0**|ディストリビューター側のレプリケーションエージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用してパブリッシャーに接続します。|  
 |**1** (既定値)|ディストリビューター側のレプリケーション エージェントは Windows 認証を使用してパブリッシャーに接続します。|  
   
-`[ @login = ] 'login'`ログインを示します。 *Security_mode*が**0**の場合、このパラメーターは必須です。 *login*は**sysname**,、既定値は NULL です。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
+`[ @login = ] 'login'`ログインを示します。 *Security_mode*が**0**の場合、このパラメーターは必須です。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
   
 `[ @password = ] 'password']`パスワードを入力します。 *パスワード*は**sysname**,、既定値は NULL です。 このパラメーターは、レプリケーションエージェントがパブリッシャーに接続するために使用されます。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
-`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** で、既定値は、のこのインスタンスの ReplData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フォルダーです。 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`たとえば、のようになります。 名前は UNC 形式で指定する必要があります。  
+`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** で、既定値は、のこのインスタンスの ReplData フォルダー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。たとえば、のように `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` なります。 名前は UNC 形式で指定する必要があります。  
 
- Azure SQL Database には、 `\\<storage_account>.file.core.windows.net\<share>`を使用します。
+ Azure SQL Database には、を使用 `\\<storage_account>.file.core.windows.net\<share>` します。
 
 `[ @storage_connection_string = ] 'storage_connection_string'`は SQL Database に必要です。 Azure Portal からアクセスキーを使用して、[ストレージ > 設定] を表示します。
 
@@ -77,19 +80,18 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`*Encrypted_password*の設定はサポートされなくなりました。 この**ビット**パラメーターを**1**に設定しようとすると、エラーが発生します。  
   
-`[ @thirdparty_flag = ] thirdparty_flag`パブリッシャーが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合。 *thirdparty_flag*は**ビット**で、次のいずれかの値を指定できます。  
+`[ @thirdparty_flag = ] thirdparty_flag`パブリッシャーがの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *thirdparty_flag*は**ビット**で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース.|  
-|**1**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
+|**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
-`[ @publisher_type = ] 'publisher_type'`パブリッシャーがでない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合に、パブリッシャーの種類を指定します。 *publisher_type*は sysname で、次のいずれかの値を指定できます。  
+`[ @publisher_type = ] 'publisher_type'`パブリッシャーがでない場合に、パブリッシャーの種類を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher_type*は sysname で、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**MS**<br /><br /> (既定値)。|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
+|**MSSQLSERVER**<br /><br /> (既定値)。|パブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE GATEWAY **|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
@@ -107,12 +109,12 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_adddistpublisher**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
+ [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

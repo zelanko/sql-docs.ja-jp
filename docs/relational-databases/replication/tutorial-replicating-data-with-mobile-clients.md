@@ -14,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720693"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 マージ レプリケーションは、中央のサーバーと、常時接続でないモバイル クライアントの間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、マージ レプリケーション トポロジを簡単に設定し、管理できます。 
 
 このチュートリアルでは、モバイル クライアント用のレプリケーション トポロジを設定する方法を学習します。 マージ レプリケーションの詳細については、[マージ レプリケーションの概要](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)に関するページを参照してください

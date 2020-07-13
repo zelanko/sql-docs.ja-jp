@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288306"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925386"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -88,7 +88,7 @@ ms.locfileid: "79288306"
 
 ## <a name="syntax-for-disk-based-tables"></a>ディスク ベース テーブルの構文
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -245,9 +245,18 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> 追加情報については、次を参照してください。
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>メモリ最適化テーブルの構文
 
-```
+```syntaxsql
 ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
@@ -340,9 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ ALTER COLUMN
 - **timestamp** データ型の列。
 - テーブルの ROWGUIDCOL。
 - 計算列、または計算列の中で使用される列。
-- CREATE STATISTICS ステートメントで作成した統計内で使用する。 列が **varchar**、**nvarchar**、または**varbinary** データ型でない限り、データ型は変更されません。 また、新しいサイズは古いサイズと同じか、それより大きくなります。 または、列が null 値以外から null 値に変更された場合です。 最初に、DROP STATISTICS ステートメントを使用して統計を削除する。
+- CREATE STATISTICS ステートメントで作成した統計内で使用する。 ALTER COLUMN を成功させるには、ユーザーは DROP STATISTICS を実行して統計を削除する必要があります。  このクエリを実行して、ユーザーがテーブルに対して作成したすべての統計と統計の列を取得します。
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > クエリ オプティマイザーによって自動的に生成された統計は、ALTER COLUMN によって自動的に削除されます。
 
@@ -627,7 +652,7 @@ COLUMN *column_name*
 - ルールにバインドされます。
 
 > [!NOTE]
-> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)を参照してください。
+> 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)を参照してください。
 
 FOR SYSTEM_TIME の期間  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -847,7 +872,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 Windows と互換性のある FileTable ディレクトリ名を指定します。 この名前は、データベース内のすべての FileTable ディレクトリ名の中で一意である必要があります。 一意性の比較では、SQL 照合順序の設定とは関係なく、大文字と小文字は区別されません。 FileTable のみで使用できます。
 
-```sql
+```syntaxsql
  SET (
         REMOTE_DATA_ARCHIVE
         {
@@ -1058,11 +1083,11 @@ ALTER TABLE ステートメント内の任意の列を、共通言語ランタ�
 
 |カテゴリ|主な構文要素|
 |--------------|------------------------------|
-|[列と制約を追加する](#add)|ADD • PRIMARY KEY とインデックス オプション • スパース列と列セット •|
+|[列と制約を追加する](#add)|ADD * PRIMARY KEY とインデックス オプション * スパース列と列セット *|
 |[列と制約を削除する](#Drop)|DROP|
-|[列定義を変更する](#alter_column)|データ型の変更 • 列のサイズの変更 • 照合順序|
-|[テーブル定義を変更する](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 変更の追跡|
-|[制約およびトリガーを無効および有効にする](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[列定義を変更する](#alter_column)|データ型の変更 * 列のサイズの変更 * 照合順序|
+|[テーブル定義を変更する](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * 変更の追跡|
+|[制約およびトリガーを無効および有効にする](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>列と制約を追加する

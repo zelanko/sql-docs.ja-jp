@@ -1,7 +1,7 @@
 ---
 title: XML データ (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,18 +11,17 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: MightyPen
-ms.author: genemi
-monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0365bed92a23b3261d3e45232369c32bbdbf521e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 8fed086b5553e8c8f4368f7ef671c074fe342362
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77125269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729806"
 ---
 # <a name="xml-data-sql-server"></a>XML データ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、半構造化されたデータを管理する多機能アプリケーションを開発するための強力なプラットフォームを提供します。 XML のサポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのコンポーネントに統合されており、次の機能を提供します。  
   
 -   **xml** データ型。 XML 値は XML スキーマ コレクションに従って型指定できる **xml** データ型の列にネイティブに保存できます。また、型指定しない状態でも保存できます。 XML 列のインデックスを作成できます。  

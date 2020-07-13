@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d049434b53fee9f90d02a35e9e0284a4a266812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 28921c2d11dad248eb497258ec3c3aa9a47654e3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659131"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889063"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)は、ネットワーク経由でのインスタンスとの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)は、ネットワーク経由でのインスタンスとの通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)を使用すると、次のタスクを実行できます。  
   

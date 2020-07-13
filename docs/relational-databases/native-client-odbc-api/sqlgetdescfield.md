@@ -11,23 +11,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: e0871674e4c3af03f59ae0363480ce29879ece94
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786527"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003461"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、実装行記述子 (IRD) に対してのみドライバー固有の記述子フィールドが公開されます。 IRD 内では[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ドライバー固有の列属性を介して記述子フィールドが参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、「 [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、実装行記述子 (IRD) に対してのみドライバー固有の記述子フィールドが公開されます。 IRD 内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ドライバー固有の列属性を介して記述子フィールドが参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、「 [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)」を参照してください。  
   
- 列 ID 文字列を含む記述子フィールドは、多くの場合、長さが 0 の文字列になります。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のすべての記述子フィールドの値は読み取り専用です。  
+ 列 ID 文字列を含む記述子フィールドは、多くの場合、長さが 0 の文字列になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のすべての記述子フィールドの値は読み取り専用です。  
   
  SQLColAttribute で取得される属性と同様に、行レベルの属性 (SQL_CA_SS_COMPUTE_ID など) を報告する記述子フィールドは、結果セットのすべての列について報告されます。  
   
@@ -39,7 +37,7 @@ ms.locfileid: "73786527"
   
  詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
- 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、アプリケーションで ODBC 3.8 が使用されている場合、SQLGetDescField は**SQL_C_BINARY**ではなく**SQL_C_SS_TIME2** ( **time**型の場合) または**SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**の場合) を返すことができます。  
+ 以降で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、アプリケーションで ODBC 3.8 が使用されている場合、SQLGetDescField は**SQL_C_BINARY**ではなく**SQL_C_SS_TIME2** ( **time**型の場合) または**SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**の場合) を返すことができます。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField による大きな CLR UDT のサポート  
  **SQLGetDescField**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  

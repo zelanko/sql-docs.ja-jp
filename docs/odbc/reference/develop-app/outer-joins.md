@@ -11,14 +11,14 @@ helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81988d34dca38d5c041ff9f87e9674d7c97d76cc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987814"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282449"
 ---
 # <a name="outer-joins"></a>外部結合
 ODBC では、SQL-92 の left、right、および full outer join 構文がサポートされています。 外部結合のエスケープシーケンスは、  

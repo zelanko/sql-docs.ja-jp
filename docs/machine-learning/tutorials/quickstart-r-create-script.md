@@ -1,41 +1,57 @@
 ---
 title: クイック スタート:R スクリプトの実行
-description: SQL Server Machine Learning Services を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+titleSuffix: SQL machine learning
+description: SQL 機械学習を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、スクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116245"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606754"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services で単純な R スクリプトを実行する
+# <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して単純な R スクリプトを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server R Services](../r/sql-server-r-services.md) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-  あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 R Services をインストールする方法については、[Windows インストール ガイド](../install/sql-r-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
 
-- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
 ## <a name="run-a-simple-script"></a>単純なスクリプトを実行する
 
-R スクリプトを実行するには、それをシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に引数として渡します。
-このシステムのストアド プロシージャは、SQL Server のコンテキストで、R ランタイムを起動します。このランタイムは、R にデータを渡し、R ユーザー セッションを安全に管理し、結果をクライアントに返します。
+R スクリプトを実行するには、それをシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に引数として渡します。 このシステム ストアド プロシージャは、R ランタイムを起動し、R にデータを渡し、R ユーザー セッションを安全に管理し、結果をクライアントに返します。
 
-次の手順では、このサンプル R スクリプトを SQL Server インスタンスで実行します。
+以降の手順では、次のサンプル R スクリプトを実行します。
 
 ```r
 a <- 1
@@ -45,7 +61,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. **SQL Server Management Studio** を開き、SQL Server インスタンスに接続します。
+1. **Azure Data Studio** を開き、ご自身のサーバーに接続します。
 
 1. 完全な R スクリプトを `sp_execute_external_script` ストアド プロシージャに渡します。
 
@@ -91,8 +107,8 @@ GO
 |-|-|
 | @language | 呼び出す言語拡張機能 (この例では R) を定義します |
 | @script | R ランタイムに渡されるコマンドを定義します この引数には R スクリプト全体を Unicode テキストとして含める必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
-| @input_data_1 | クエリによって返されるデータは R ランタイムに渡され、そこからデータがデータ フレームとして SQL Server に返されます。 |
-| WITH RESULT SETS | 句では、SQL Server に対して返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
+| @input_data_1 | クエリによって返されるデータ。R ランタイムに渡され、そこからデータがデータ フレームとして返されます |
+| WITH RESULT SETS | 句では、返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
 
 このコマンドは、次のテキストを出力します。
 
@@ -182,7 +198,12 @@ GO
 
 ## <a name="check-r-version"></a>R バージョンの確認
 
-SQL Server インスタンスにインストールされている R のバージョンを確認するには、次のスクリプトを実行します。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server Machine Learning Services と共にインストールされている R のバージョンを確認するには、次のスクリプトを実行します。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 2016 R Services と共にインストールされている R のバージョンを確認するには、次のスクリプトを実行します。
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -214,8 +235,12 @@ nickname       Someone to Lean On
 ```
 
 ## <a name="list-r-packages"></a>R パッケージの一覧表示
-
-Microsoft では、SQL Server インスタンスに SQL Server Machine Learning Services に R が予めインストールされたパッケージを多数提供しています。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Microsoft では、Machine Learning Services と共にプレインストールされる R パッケージを多数提供しています。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Microsoft では、R Servicesと共にプレインストールされる R パッケージを多数提供しています。
+::: moniker-end
 
 バージョン、依存関係、ライセンス、ライブラリパスの情報など、インストールされている R パッケージの一覧を表示するには、次のスクリプトを実行します。
 
@@ -240,13 +265,7 @@ WITH result sets((
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server Machine Learning Services で R を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
+SQL 機械学習で R を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services での R を使用したデータ型とオブジェクトの処理](quickstart-r-data-types-and-objects.md)
-
-SQL Server Machine Learning Services での R の使用に関する詳細は、次の記事を参照してください。
-
-- [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
-- [SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+> [SQL 機械学習での R を使用したデータ型とオブジェクトの処理](quickstart-r-data-types-and-objects.md)

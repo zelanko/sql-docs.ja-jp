@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399433"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS フォワーダーを使用して、Analytics Platform System のアプライアンス以外の DNS 名を解決する
 スクリプトおよびソフトウェアアプリケーションが外部サーバーにアクセスできるようにするには、Analytics Platform システムアプライアンスの Active Directory Domain Services ノード (**_アプライアンス\_ドメイン_-AD01**および**_アプライアンス\_ドメイン_-AD02**) で DNS フォワーダーを構成することができます。  
   
-## <a name="ResolveDNS"></a>DNS フォワーダーの使用  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>DNS フォワーダーの使用  
 Analytics Platform System アプライアンスは、アプライアンスにないサーバーの DNS 名を解決しないように構成されています。 Windows ソフトウェア更新サービス (WSUS) などの一部のプロセスでは、アプライアンスの外部のサーバーにアクセスする必要があります。 この使用シナリオをサポートするために、Analytics platform system の DNS を構成して、Analytics Platform システムホストと Virtual Machines (Vm) が外部 DNS サーバーを使用してアプライアンスの外部にある名前を解決できるようにすることができます。 DNS サフィックスのカスタム構成はサポートされていません。つまり、アプライアンス以外のサーバー名を解決するには完全修飾ドメイン名を使用する必要があります。  
   
 **Dns GUI を使用して DNS フォワーダーを作成するには**  
@@ -66,8 +66,7 @@ Microsoft パブリック WSUS リポジトリで更新プログラムを検索�
   
 3.  [接続] ボックスの一覧の [ **Vmseruncommand**] をクリックし、[**プロパティ**] をクリックします。  
   
-4.  
-  **[インターネット プロトコル バージョン 4 (TCP/IPv4)]** を選択し、**[プロパティ]** をクリックします。  
+4.  **[インターネット プロトコル バージョン 4 (TCP/IPv4)]** を選択し、**[プロパティ]** をクリックします。  
   
 5.  [**代替 DNS サーバー** ] ボックスに、顧客のネットワーク管理者から提供された IP アドレスを追加します。  
   

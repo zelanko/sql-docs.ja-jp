@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2986749f21982e5eee75772e794a9461545b967
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68044442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890833"
 ---
 # <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  外部プログラムが使用する[!INCLUDE[ssSB](../../includes/sssb-md.md)]オブジェクトを起動することによってデータベースメールを開始します。  
+  外部プログラムが使用するオブジェクトを起動することによってデータベースメールを開始 [!INCLUDE[ssSB](../../includes/sssb-md.md)] します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,7 +60,7 @@ sysmail_start_sp
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、 **msdb**データベースのデータベースメールを開始します。 この例では、データベースメールが有効になっていることを前提としています。  
   
 ```  
@@ -71,7 +71,7 @@ EXECUTE dbo.sysmail_start_sp ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール XPs サーバー構成オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [sysmail_stop_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   

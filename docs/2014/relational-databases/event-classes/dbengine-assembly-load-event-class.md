@@ -10,13 +10,12 @@ topic_type:
 - apiref
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184d08a213dfe796421b379fbb1e3deccd0c56e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c418ac40d8155ad3f5bcd32848b2f7818676b76d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66090872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053038"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load イベント クラス
   「[アセンブリ-読み込みイベントクラス](../../database-engine/assembly-load-event-class.md)」を参照してください。  

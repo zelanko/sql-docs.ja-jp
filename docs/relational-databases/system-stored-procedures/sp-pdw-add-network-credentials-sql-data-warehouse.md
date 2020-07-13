@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,19 +11,20 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73844408"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197340"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  これにより、に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ネットワーク資格情報が格納され、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、対象サーバーでデータベースのバックアップと復元操作を実行したり、tde に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限を付与します。  
+  これにより、にネットワーク資格情報が格納さ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] れ、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 対象サーバーでデータベースのバックアップと復元操作を実行したり、TDE に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限を付与します。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")Transact-sql[構文表記規則 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -60,9 +60,9 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  [制御] ノードおよびすべての計算ノードで資格情報を追加できない場合、エラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- このストアドプロシージャは、の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService アカウントにネットワーク資格情報を追加します。 NetworkService アカウントは、制御ノードとコンピューティング[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ノードで SMP の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは NetworkService アカウントの資格情報を使用して、対象サーバーに対する読み取りと書き込みのアクセス許可を取得します。  
+ このストアドプロシージャは、の NetworkService アカウントにネットワーク資格情報を追加し [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。 NetworkService アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノードとコンピューティングノードで SMP の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは NetworkService アカウントの資格情報を使用して、対象サーバーに対する読み取りと書き込みのアクセス許可を取得します。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. データベースバックアップを実行するための資格情報を追加する  
  次の例では、ドメインユーザーのユーザー名とパスワードの資格情報を、10.172.63.255 という IP アドレスを持つ対象サーバーに関連付けます。 ユーザーは、対象サーバーに対する読み取り/書き込み権限を持っています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]は、これらの資格情報を格納し、バックアップ操作と復元操作に必要な場合に、対象サーバーとの間での読み書きに使用します。  
@@ -76,7 +76,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  InfiniBand でデータベースのバックアップを実行するには、必ずバックアップサーバーの InfiniBand IP アドレスを使用してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   

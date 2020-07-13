@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53b138b33ce0375d16b908622f6fb3af2b6608c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054024"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
@@ -37,7 +36,7 @@ ms.locfileid: "67046771"
   
  次の表に、再コンパイルの理由を示します。  
   
-|理由コード|[説明]|  
+|理由コード|説明|  
 |-----------------|-----------------|  
 |1|スキーマの変更|  
 |2|統計の変更|  
@@ -53,8 +52,7 @@ ms.locfileid: "67046771"
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 
-  **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL になることに注意してください。  
+1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL になることに注意してください。  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   

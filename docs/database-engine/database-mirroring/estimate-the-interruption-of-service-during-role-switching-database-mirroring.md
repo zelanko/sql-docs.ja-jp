@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754678"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   役割の交代中、データベース ミラーリングを使用できない時間の長さは、役割の交代の形式、および原因によって異なります。  
   
 -   自動フェールオーバーの場合、サービスが中断される時間には 2 つの要因が影響します。ミラー サーバーがプリンシパル サーバー インスタンスに障害が発生したことを認識するのに必要な時間 (エラー検出)、およびデータベースのフェールオーバーに必要な時間 (フェールオーバー時間) です。  

@@ -1,7 +1,7 @@
 ---
 title: システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cea12f4415cc99519ae8a5119cf5952a89dc2d27
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165449"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007079"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 一時的または永続的に、テンポラル テーブルでバージョン管理を停止する場合があります。 その場合は、 **SYSTEM_VERSIONING** 句を **OFF**に設定します。
 
@@ -39,6 +39,7 @@ ms.locfileid: "74165449"
 - **SYSTEM_VERSIONING = OFF** を設定し、 **SYSTEM_TIME** 期間を削除しない場合、システムでは挿入および更新操作ごとに期間列が引き続き更新されます。 現在のテーブルでの削除は永続的なものになります。
 - 期間列を完全に削除するには、 **SYSTEM_TIME** 期間を削除します。
 - **SYSTEM_VERSIONING = OFF**を設定すると、十分な権限を持つすべてのユーザーが、履歴テーブルのスキーマおよび内容を変更したり、履歴テーブルを完全に削除したりできます。
+- **SYSTEM_TIME** の参照など、テンポラル クエリ拡張を使用して SCHEMABINDING で作成された他のオブジェクトがある場合、**SYSTEM_VERSIONING = OFF** を設定することはできません。 この制限により、**SYSTEM_VERSIONING = OFF**を設定した場合にこれらのオブジェクトが失敗するのを防ぐことができます。
 
 ### <a name="permanently-remove-system_versioning"></a>SYSTEM_VERSIONING を完全に削除する
 

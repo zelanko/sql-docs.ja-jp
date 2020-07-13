@@ -14,14 +14,14 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0b7ad515661cce4c5b1d407be768cc3da131bb4
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041611"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304933"
 ---
 # <a name="length-of-column-data"></a>列データの長さ
 > [!IMPORTANT]  

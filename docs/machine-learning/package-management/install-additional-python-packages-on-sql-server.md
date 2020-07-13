@@ -3,18 +3,18 @@ title: sqlmlutils を使用した Python パッケージのインストール
 description: Python pip を使用して SQL Server Machine Learning Services のインスタンスに新しい Python パッケージをインストールする方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119115"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606491"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -25,7 +25,7 @@ ms.locfileid: "81119115"
 パッケージの場所とインストール パスの詳細については、「[Get Python package information](../package-management/python-package-information.md)」(Python パッケージ情報の取得) を参照してください。
 
 > [!NOTE]
-> SQL Server 2019 に Python パッケージを追加する際は、標準の Python `pip install` コマンドは推奨されません。 代わりに、この記事で説明するように **sqlmlutils** を使用します。
+> この記事で説明されている **sqlmlutils** パッケージは SQL Server 2019 以降で Python パッケージを追加するために使用されます。 SQL Server 2017 以前の場合は、[Python ツールを使用したパッケージのインストール](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)に関する記事を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -33,11 +33,11 @@ ms.locfileid: "81119115"
 
 + SQL Server への接続に使用するクライアント コンピューターに [python](https://www.python.org/) をインストールします。 また、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python)と共に [Visual Studio Code](https://code.visualstudio.com/download) などの Python 開発環境も必要になる場合があります。 
 
-+ [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) または [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) を、SQL Server への接続に使用するクライアント コンピューターにインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio または SSMS を想定しています。
++ SQL Server への接続に使用するクライアント コンピューターに [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) をインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio を想定しています。
 
 ### <a name="other-considerations"></a>その他の考慮事項
 
-+ パッケージは、使用している Python のバージョンに準拠している必要があります。 各 SQL Server バージョンに含まれている Python のバージョンの詳細については、[「SQL Server Machine Learning Services とは (Python と R)」の「Python と R のバージョン」](../what-is-sql-server-machine-learning.md#versions)を参照してください。
++ パッケージは、使用している Python のバージョンに準拠している必要があります。 SQL Server バージョンごとに含まれている Python のバージョンの詳細については、「[Python および R のバージョン](../sql-server-machine-learning-services.md#versions)」を参照してください。
 
 + Python パッケージ ライブラリは SQL Server インスタンスの Program Files フォルダー内にあります。既定では、このフォルダーにインストールするには管理者権限が必要です。 詳細については、[パッケージ ライブラリの場所](../package-management/python-package-information.md#default-python-library-location)に関するページを参照してください。
 
@@ -63,7 +63,6 @@ ms.locfileid: "81119115"
 1. **コマンド プロンプト**を開き、次のコマンドを実行して **sqlmlutils** パッケージをインストールします。 ダウンロードした **sqlmlutils** zip ファイルの完全なパスに置き換えます。この例では、ダウンロードしたファイルが `c:\temp\sqlmlutils-1.0.0.zip` であることを想定しています。
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 
@@ -135,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>SQL Server でのパッケージの使用
+## <a name="use-the-package"></a>パッケージを使用する
 
 これで、SQL Server の Python スクリプトでパッケージを使用できるようになりました。 次に例を示します。
 
@@ -159,8 +158,8 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次のステップ
 
-+ SQL Server Machine Learning Services にインストールされている Python パッケージに関する情報を表示するには、「[Get Python package information](../package-management/python-package-information.md)」(Python パッケージ情報の取得) を参照してください。
++ SQL Server Machine Learning Services にインストールされている Python パッケージに関する情報については、「[Python パッケージ情報の取得](../package-management/python-package-information.md)」を参照してください。
 
 + SQL Server Machine Learning Services への R パッケージのインストールについては、[SQL Server への新しい R パッケージのインストール](install-additional-r-packages-on-sql-server.md)に関するページを参照してください。

@@ -21,15 +21,15 @@ ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7aff4c7bdc1ec9edb93f8a207bd2166bcb3b084
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a29eade691530ad9b2bdcc7b007df5decbdaa84
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075306"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005015"
 ---
 # <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   グループとして実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを囲みます。 BEGIN...END ブロックは入れ子にできます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68075306"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 BEGIN   
      { sql_statement | statement_block }   
 END   

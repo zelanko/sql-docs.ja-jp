@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ODBC literals [ODBC]
 - literals [ODBC], about literals
 ms.assetid: e66e9ab8-6dcc-47e2-bcb6-efdb324a1d3b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a36c390d21cb51f024ce7bdfce1039372a4b57c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6992cb4948e6d20a8d158d731098a0c677e2d4d1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041587"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288712"
 ---
 # <a name="literals-in-odbc"></a>ODBC のリテラル
 次のセクションの構文は、ODBC の間隔と数値リテラルに使用されます。 この構文は、文字文字列型から数値または間隔の型、または数値または間隔の型から文字列型への変換が実行される場合のドライバーの作成者を対象として、ここで提供されています。 詳細については、「付録 D: データ型」の「[間隔リテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)」を参照してください。  

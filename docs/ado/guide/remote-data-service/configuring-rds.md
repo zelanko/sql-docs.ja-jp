@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f916a78d9a61bcfa7b0896301a46eb3a52874043
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750032"
 ---
 # <a name="configuring-rds"></a>RDS の構成
 > [!IMPORTANT]

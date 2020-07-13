@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62702043"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544954"
 ---
 # <a name="merging-partitions-xmla"></a>パーティションのマージ (XMLA)
   パーティションの集計デザインと構造が同じである場合は、XML for Analysis (XMLA) の[Mergepartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンドを使用してパーティションをマージできます。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
@@ -34,21 +33,19 @@ ms.locfileid: "62702043"
  2 つのパーティションは異なるストレージ設定を使用しますが、集計デザインは同じものを使用します。 年の終わりに複数年にわたる履歴データについてキューブを処理する代わりに、`MergePartitions` コマンドを使用して、現在の年のパーティションを過去の年のパーティションにマージできます。 こうすれば、多くの時間をかけてキューブを詳細に処理しなくても、集計データを保持できます。  
   
 ## <a name="specifying-partitions-to-merge"></a>マージするパーティションの指定  
- コマンドを実行すると、 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティで指定されたソースパーティションに格納されている集計データが、ターゲットプロパティで指定された対象パーティションに追加されます。 [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) `MergePartitions`  
+ コマンドを `MergePartitions` 実行すると、 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティで指定されたソースパーティションに格納されている集計データが、[ターゲット](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)プロパティで指定された対象パーティションに追加されます。  
   
 > [!NOTE]  
->  
-  `Source` プロパティには複数のパーティション オブジェクト参照を含めることができます。 しかし、`Target` プロパティには複数を含めることができません。  
+>  `Source` プロパティには複数のパーティション オブジェクト参照を含めることができます。 しかし、`Target` プロパティには複数を含めることができません。  
   
- 正常にマージするためには、`Source` と `Target` で指定されるパーティションが同じメジャー グループに含まれ、同じ集計デザインを使用する必要があります。 一致しないと、エラーが発生します。  
+ 正常にマージするためには、`Source` と `Target` で指定されるパーティションが同じメジャー グループに含まれ、同じ集計デザインを使用する必要があります。 そうでない場合、エラーが発生します。  
   
- 
-  `Source` で指定されたパーティションは、`MergePartitions` コマンドが正常に完了した後に削除されます。  
+ `Source` で指定されたパーティションは、`MergePartitions` コマンドが正常に完了した後に削除されます。  
   
 ## <a name="examples"></a>例  
   
-### <a name="description"></a>[説明]  
- 次の例では、 **adventure works DW** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サンプルデータベースの**adventure works**キューブの**Customer カウント**メジャーグループに含まれるすべてのパーティションを、 **Customers_2004**パーティションにマージします。  
+### <a name="description"></a>説明  
+ 次の例では、 **adventure works DW**サンプルデータベースの**adventure works**キューブの**Customer カウント**メジャーグループに含まれるすべてのパーティション [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を、 **Customers_2004**パーティションにマージします。  
   
 ### <a name="code"></a>コード  
   

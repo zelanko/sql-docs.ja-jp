@@ -1,5 +1,6 @@
 ---
 title: SQL Server に接続しています (MySQLToSQL) |Microsoft Docs
+description: SQL Server のターゲットインスタンスに接続して MySQL データベースを移行する方法について説明します。 SSMA は SQL Server のデータベースに関するメタデータを取得します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103128"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293959"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
 MySQL データベースを SQL Server に移行するには、SQL Server のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Server インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Server メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA は、接続している SQL Server のインスタンスの情報を格納しますが、パスワードは保存しません。  
@@ -29,7 +30,7 @@ SQL Server のインスタンスに関するメタデータは、自動的には
 ## <a name="required-sql-server-permissions"></a>必要な SQL Server アクセス許可  
 SQL Server に接続するために使用するアカウントには、アカウントが実行するアクションに応じて、異なるアクセス許可が必要です。  
   
--   MySQL オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、SQL Server からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Server のインスタンスにログオンする権限が必要です。  
+-   MySQL オブジェクトを構文に変換し [!INCLUDE[tsql](../../includes/tsql-md.md)] たり、SQL Server からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Server のインスタンスにログオンする権限が必要です。  
   
 -   データベースオブジェクトを SQL Server に読み込むには、ターゲットデータベースの**db_owner**データベースロールのメンバーシップである最低限の権限が必要です。  
   
@@ -67,28 +68,28 @@ MySQL データベースオブジェクトを SQL Server 構文に変換する�
   
 新しいバージョンの SQL Server に接続したり、再接続したりすることができます。  
   
-1.  作成されたプロジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "2005" の場合は、2008、2012、または2014または2016に接続できます。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが "2005" の場合は、2008、2012、または2014または2016に接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-2.  作成されたプロジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 の場合、2012または2014または2016に接続することはできますが、それより下位バージョン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続は許可されていません (例: 2005)。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成されたプロジェクトが2008の場合、2012または2014または2016に接続することはできますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] それより下位バージョンへの接続は許可されていません (例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005)。  
   
-3.  作成され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たプロジェクトが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 の場合、2012または2014または2016に接続できます。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作成されたプロジェクトが2012の場合、2012または2014または2016に接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-4.  作成されたプロジェクトが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 の場合、2014または2016にのみ接続できます。  
+4.  作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが2014の場合、2014または2016にのみ接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 5.  "SQL Azure" に対して、より高いバージョンの互換性は無効です。  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016<br />(バージョン:13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||はい|はい|はい||  
+|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(バージョン:13. x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||  
 |SQL Azure||||||はい|  
   
 > [!IMPORTANT]  
-> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続されているのバージョンによっては実行されません。 2005プロジェクトの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、より上位の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) に接続している場合でも、変換は2005に従って実行されます。  
+> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続されているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 プロジェクトの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より上位のバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) に接続している場合でも、変換は2005に従って実行されます。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server メタデータの同期  
 SQL Server データベースに関するメタデータは自動的に更新されません。 SQL Server メタデータエクスプローラーのメタデータは、最初に SQL Server に接続したとき、またはメタデータを手動で更新したときにメタデータのスナップショットになります。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
@@ -103,7 +104,7 @@ SQL Server データベースに関するメタデータは自動的に更新さ
   
 3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   MySQL スキーマと SQL Server データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [Mysql データベースを SQL Server スキーマ &#40;MySQLToSQL にマッピング](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)する」を参照してください&#41;  

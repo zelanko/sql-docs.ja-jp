@@ -16,30 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 40e8457a4f31e0961560c1c48cc5885fa3cfd053
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898641"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  によって生成されたメモリダンプファイルごと[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に1行の値を返します。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
+  によって生成されたメモリダンプファイルごとに1行の値を返し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 この動的管理ビューを使用して、潜在的な問題のトラブルシューティングを行います。  
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**/db**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
+|**filename**|**nvarchar(256)**|メモリダンプファイルのパスと名前。 null にすることはできません。|  
 |**creation_time**|**datetimeoffset(7)**|ファイルが作成された日付と時刻。 null にすることはできません。|  
 |**size_in_bytes**|**bigint**|ファイルのサイズ (バイト単位)。 NULL 値が許可されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  ダンプの種類として、ミニダンプ、すべてのスレッドのダンプ、または完全なダンプを使用できます。 ファイルの拡張子は mdmp です。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ダンプ ファイルには機密情報が含まれている場合があります。 機密情報を保護するには、アクセス制御リスト (ACL) を使用してこのファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーすることができます。 たとえば、デバッグファイルを Microsoft サポートサービスに送信する前に、機密情報または機密情報をすべて削除することをお勧めします。  
   
 ### <a name="permissions"></a>アクセス許可  

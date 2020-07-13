@@ -9,24 +9,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce439e81cf87e97b4afe6e25a201e1ab0cb2a458
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62679972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059473"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 要素
-  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスが低下する可能性があり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再定義された`xml`スキーマに関連付けられているデータ型のすべてのインスタンスを再検証する必要もあります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
+  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスが低下する可能性があり、再定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` スキーマに関連付けられているデータ型のすべてのインスタンスを再検証する必要もあります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 要素を含む XML スキーマ **\<xsd:redefine>** はサーバーによって拒否されます。  
   
  スキーマまたはスキーマ コンポーネントを更新するには、代わりに次の方法を使用できます。  
   
 1.  変更されたスキーマ コンポーネントを使用して新しい XML スキーマ コレクションを作成します。  
   
-2.  新しい XML `xml`スキーマコレクションを使用するように、再定義する xml スキーマコレクションを使用するすべてのデータ型 (xml DT) を再入力します。 そのためには、ALTER TABLE コマンドの ALTER COLUMN オプションを使用して列の型を再指定するか、変数やパラメーターの XML スキーマ コレクション制約を変更します。  
+2.  `xml`新しい Xml スキーマコレクションを使用するように、再定義する Xml スキーマコレクションを使用するすべてのデータ型 (XML DT) を再入力します。 そのためには、ALTER TABLE コマンドの ALTER COLUMN オプションを使用して列の型を再指定するか、変数やパラメーターの XML スキーマ コレクション制約を変更します。  
   
 3.  古いバージョンの XML スキーマ コレクションを削除します。  
   

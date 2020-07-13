@@ -14,15 +14,14 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a609147a58a426ac89708b36d1e098f170c8b530
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900204"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430299"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  
@@ -64,7 +63,7 @@ ms.locfileid: "62900204"
   
  次の表では、変換出力および後続のデータ フローの要件について説明します。 要件では、緩やかに変化するディメンション ウィザードが作成するデータ フローについて説明します。  
   
-|Output|[説明]|データ フロー要件|  
+|Output|説明|データ フロー要件|  
 |------------|-----------------|----------------------------|  
 |**[変化する属性更新の出力]**|参照テーブル内のレコードが更新されます。 この出力は、変化する属性の行に使用されます。|OLE DB コマンド変換は、UPDATE ステートメントを使用してレコードを更新します。|  
 |**[固定属性の出力]**|変更できない行の値と、参照テーブルの値が一致しない場合の出力です。 この出力は、固定属性の行に使用されます。|既定のデータ フローは作成されません。 この変換が、固定属性の列への変更を検出した後も続行するように構成されている場合、これらの行をキャプチャするデータ フローを作成する必要があります。|  

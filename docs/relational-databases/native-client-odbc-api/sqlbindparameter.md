@@ -11,30 +11,28 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aec817b4ea5ada840ce7fe843a42f636b7494219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 85f7de9aee1bfdb5f906f796fcd108621e62cd47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787772"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012130"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLBindParameter**を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーにデータを提供する際にデータ変換の負荷が軽減されるため、アプリケーションのクライアントコンポーネントとサーバーコンポーネントの両方でパフォーマンスが大幅に向上します。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  
+  **SQLBindParameter**を使用すると、NATIVE Client ODBC ドライバーにデータを提供する際にデータ変換の負荷が軽減されるため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、アプリケーションのクライアントコンポーネントとサーバーコンポーネントの両方でパフォーマンスが大幅に向上します。 その他に、概数データ型を挿入または更新するときに有効桁数を失うことが少なくなるという利点もあります。  
   
 > [!NOTE]  
 >  **Char**型と**wchar**型のデータを image 型の列に挿入する場合は、バイナリ形式に変換した後のデータサイズではなく、渡されるデータのサイズが使用されます。  
   
  パラメーター配列の配列要素の 1 つで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー エラーが発生しても、残りの配列要素に対しては引き続きステートメントが実行されます。 アプリケーションがこのステートメントのパラメーター状態要素の配列をバインドした場合は、その配列を基にして、エラーが発生したパラメーター行を特定できます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用する場合は、入力パラメーターのバインド時に SQL_PARAM_INPUT を指定します。 OUTPUT キーワードで定義されたストアド プロシージャ パラメーターをバインドするときは、SQL_PARAM_OUTPUT または SQL_PARAM_INPUT_OUTPUT のみを指定してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用する場合は、入力パラメーターのバインド時に SQL_PARAM_INPUT を指定します。 OUTPUT キーワードで定義されたストアド プロシージャ パラメーターをバインドするときは、SQL_PARAM_OUTPUT または SQL_PARAM_INPUT_OUTPUT のみを指定してください。  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)は、バインドさ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたパラメーター配列の配列要素によってステートメントの実行でエラーが発生した場合に、Native Client ODBC ドライバーと互換性がありません。 また、ODBC ステートメント属性 SQL_ATTR_PARAMS_PROCESSED_PTR は、エラーが発生する前に処理された行数を報告します。 その後、必要に応じてパラメーター状態配列全体をアプリケーションで調査することにより、正常に実行されたステートメント数を検出できます。  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)は、バインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーター配列の配列要素によってステートメントの実行でエラーが発生した場合に、Native Client ODBC ドライバーと互換性がありません。 また、ODBC ステートメント属性 SQL_ATTR_PARAMS_PROCESSED_PTR は、エラーが発生する前に処理された行数を報告します。 その後、必要に応じてパラメーター状態配列全体をアプリケーションで調査することにより、正常に実行されたステートメント数を検出できます。  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 文字型のパラメーターのバインド  
  渡された SQL データ型が文字型の場合、 *Columnsize*は文字数 (バイト数ではない) のサイズになります。 データ文字列の長さが8000を超える場合、 *Columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定し、SQL 型のサイズに制限がないことを示します。  

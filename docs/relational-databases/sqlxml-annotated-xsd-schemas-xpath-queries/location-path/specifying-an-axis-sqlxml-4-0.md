@@ -1,5 +1,6 @@
 ---
 title: 軸の指定 (SQLXML)
+description: SQLXML 4.0 XPath クエリで軸を指定する方法について説明します。これにより、location ステップで選択したノードとコンテキストノードの間のツリーリレーションシップが指定されます。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,43 +22,41 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75253063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649728"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
 -   軸によって、ロケーション ステップで選択されるノードと、コンテキスト ノードの間のツリー リレーションシップが指定されます。 次の軸がサポートされています: **child**  
   
      コンテキスト ノードの子を含みます。  
   
-     次の XPath 式 (ロケーションパス) は、現在のコンテキストノードからすべての** \<顧客>** 子を選択します。  
+     次の XPath 式 (ロケーションパス) では、現在のコンテキストノードからすべての子が選択され **\<Customer>** ます。  
   
     ```  
     child::Customer  
     ```  
   
-     この XPath クエリでは、`child` は軸で、 
-  `Customer` はノード テストです。  
+     この XPath クエリでは、`child` は軸で、 `Customer` はノード テストです。  
   
 -   **所属**  
   
      コンテキスト ノードの親を含みます。  
   
-     次の XPath 式では、すべての** \<顧客>** 子** \<>順序**の親を選択します。  
+     次の XPath 式は、子のすべての親を選択し **\<Customer>** **\<Order>** ます。  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 
-  `Customer` と `Order` はノード テストです。  
+     これは、`child::Customer` を指定した場合と同じです。 この XPath クエリでは、`child` と `parent` は軸で、 `Customer` と `Order` はノード テストです。  
   
--   **属性**  
+-   **attribute**  
   
      コンテキスト ノードの属性を含みます。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "75253063"
   
      コンテキスト ノードそのものを含みます。  
   
-     次の XPath 式は、現在のノードが** \<Order>** ノードである場合、そのノードを選択します。  
+     次の XPath 式は、ノードの場合、現在のノードを選択し **\<Order>** ます。  
   
     ```  
     self::Order  

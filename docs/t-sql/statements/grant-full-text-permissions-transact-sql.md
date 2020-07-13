@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 130476df4dd952a3c64be85392fd91a733dc734e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735572"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (フルテキストの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキスト カタログまたはフルテキスト ストップリストに対する権限を許可します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68050833"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ] ON  
     FULLTEXT   
         {  

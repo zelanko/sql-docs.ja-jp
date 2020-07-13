@@ -9,20 +9,19 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 915f449a11278f3ef7503caf0a588cc48d6cf23e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018722"
 ---
 # <a name="set-cursor-options-odbc"></a>カーソル オプションの設定 (ODBC)
   カーソルオプションを設定するには、 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、カーソルの動作を制御するステートメントオプションを設定または[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)に取得します。  
   
-|*属性*|指定対象|  
+|*属性*|指定内容|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|カーソルの種類。順方向専用、静的、動的、キーセット ドリブンのいずれか|  
 |SQL_ATTR_CONCURRENCY|コンカレンシー制御オプション。読み取り専用、ロック、タイムスタンプを使用するオプティミスティック、値を使用するオプティミスティックのいずれか|  

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a70942ca364e3d49dc26f9856587f9402b1ec07
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438129"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
@@ -63,12 +62,11 @@ ms.locfileid: "62830128"
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>エラー メッセージ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[エラーメッセージ転送タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[エラー メッセージ転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[エラーメッセージ転送タスクエディター &#40;メッセージ] ページ&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -77,12 +75,11 @@ ms.locfileid: "62830128"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

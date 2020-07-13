@@ -13,14 +13,14 @@ helpviewer_keywords:
 - allocating statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077200"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288432"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>ステートメント ハンドルの割り当て (ODBC)
 アプリケーションでステートメントを実行するには、ステートメントハンドルを次のように割り当てておく必要があります。  

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117345"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486711"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ SQL Server の利点の 1 つは、大量の行を並列で処理できること
 
 また、入力データを 1 つのクエリとして送信し、その後で SQL Server でクエリを分析することもできます。 入力データに対して並列クエリ プランを作成できる場合は、ノードに割り当てられたデータが自動的にパーティション分割され、必要な結合と集計も並列で実行されます。
 
-スコアリングに使用するストアド プロシージャを定義する方法の詳細については、[GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) のサンプル プロジェクトを参照し、"step5_score_for_matching .sql" というファイルを探してください。 このサンプル スクリプトでは、クエリの開始時刻と終了時刻を追跡し、SQL コンソールに時間を出力するので、パフォーマンスを評価することもできます。
+スコアリングに使用するストアド プロシージャを定義する方法の詳細については、[GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) のサンプル プロジェクトを参照し、"step5_score_for_matching .sql" というファイルを探してください。 このサンプル スクリプトでは、クエリの開始時刻と終了時刻を追跡し、SQL コンソールに時間を出力するので、パフォーマンスを評価することもできます。
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>リソース グループを使用した同時スコアリング
 
@@ -214,7 +214,7 @@ SQL Server の利点の 1 つは、大量の行を並列で処理できること
 
 - 各ワークロード グループは、2 つのスコアリング タスクを処理する必要があります。 1 つのタスクのデータの読み取りが終了し、スコアリングが開始されるとすぐに、他のタスクがデータベースからのデータの読み取りを開始することができます。
 
-このシナリオの PowerShell スクリプトを表示するには、[Github プロジェクト](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)の experiment.ps1 ファイルを開きます。
+このシナリオの PowerShell スクリプトを表示するには、[Github プロジェクト](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)の experiment.ps1 ファイルを開きます。
 
 ### <a name="storing-models-for-prediction"></a>予測のためのモデルの格納
 

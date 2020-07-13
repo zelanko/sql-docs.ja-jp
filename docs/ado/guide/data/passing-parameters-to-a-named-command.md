@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764773"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
 コマンドの結果が名前付きコマンドの*out*変数として渡されるのと同じように、パラメーター化されたコマンドのパラメーターを *、変数と*して名前付きコマンドに渡すことができます。  

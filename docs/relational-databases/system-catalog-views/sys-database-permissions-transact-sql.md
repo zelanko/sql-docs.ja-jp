@@ -20,33 +20,32 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011977"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>database_permissions (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベースに含まれている、権限ごとまたは列例外の権限ごとに 1 行のデータを返します。 列権限が、対応するオブジェクトレベルの権限とは異なる場合、列権限ごとに行が存在します。 列権限が対応するオブジェクト権限と同じ場合、その行は存在せず、適用されている権限はオブジェクトの権限です。  
   
 > [!IMPORTANT]  
 >  列レベルの権限は、同じエンティティに対するオブジェクトレベルの権限をオーバーライドします。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**講義**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />16 = サービスコントラクト-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />17 = サービス-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />18 = リモートサービスバインド-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />19 = ルート: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />23 = フルテキストカタログ: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />24 = 対称キー-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />25 = 証明書-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />26 = 非対称キー-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。|  
-|**class_desc**|**nvarchar (60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
+|**class**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />16 = サービスコントラクト-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />17 = サービス-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />18 = リモートサービスバインド-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />19 = ルート: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />23 = フルテキストカタログ: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />24 = 対称キー-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />25 = 証明書-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />26 = 非対称キー-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id**は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> >0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
 |**minor_id**|**int**|権限が存在することを示すセカンダリ ID。クラスに従って解釈されます。 多くの場合、オブジェクトのクラスに使用できるサブカテゴリがないため、 **minor_id**は0になります。 それ以外の場合は、テーブルの列 ID です。|  
 |**grantee_principal_id**|**int**|権限が許可されるデータベースプリンシパル ID。|  
 |**grantor_principal_id**|**int**|これらのアクセス許可の権限の許可のあるデータベースプリンシパル ID。|  
 |**type**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
-|**permission_name**|**nvarchar(128**|アクセス許可の名前。|  
+|**permission_name**|**nvarchar(128)**|アクセス許可の名前。|  
 |**状態**|**char (1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
-|**state_desc**|**nvarchar (60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>データベース権限   
 次の種類のアクセス許可が可能です。
@@ -131,7 +130,7 @@ ms.locfileid: "73982728"
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のユーザーの権限を表示するには、VIEW DEFINITION、ALTER ANY USER、またはユーザーに対する権限が必要です。 ユーザー定義ロールを表示するには、ALTER ANY ROLE、またはロールのメンバーシップ (public など) が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   

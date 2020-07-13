@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760138"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete イベント (ADO)
 **ExecuteComplete**イベントは、コマンドの実行が完了した後に呼び出されます。  
@@ -54,7 +54,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトです。 操作が実行された接続です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  接続が原因で**ExecuteComplete**イベントが発生する可能性があり**ます。** コマンドを[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)**します。**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)、 **Recordset。** レコードセットを[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)**ます。**[Requery](../../../ado/reference/ado-api/requery-method.md)、または**レコードセット。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッド。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,6 @@
 ---
 title: サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション) | Microsoft Docs
+description: 動的なデータ ドリブン サブスクリプションに対して外部データ ソースを使用する方法について説明します。 データ処理、クエリ、配信オプション、パラメーターの受け渡しについて説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d071905e9efe6c084cafaeeb8304a37b03fbbb5
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578091"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742218"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
   データ ドリブン サブスクリプションでは、外部データ ソースからデータを取得するクエリまたはコマンドによって、動的サブスクリプション データが提供されます。 サブスクリプション データは、データ ドリブン サブスクリプション処理の要件を満たす、サポートされているデータ ソースから取得できます。 クエリまたはコマンドの構文は、レポート サーバーと一緒にインストールされたデータ処理拡張機能に対して有効である必要があります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 14e3bdd491d30b2afe8ac943a36dc9b6f8964d30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63254742"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064928"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーを開く (Visual Database Tools)
   データベース ダイアグラム デザイナーは、接続しているデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  

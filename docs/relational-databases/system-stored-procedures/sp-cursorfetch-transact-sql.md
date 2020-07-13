@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868961"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースから1つ以上の行のバッファーをフェッチします。 このバッファー内の行のグループを、カーソルの*フェッチバッファー*と呼びます。 sp_cursorfetch は、ID = 7 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -40,13 +40,13 @@ sp_cursorfetch cursor
 ```  
   
 ## <a name="arguments"></a>引数  
- *g*  
- によっ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て生成され、sp_cursoropen によって返されるハンドル値です。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
+ *cursor*  
+ によっ*handle*て生成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_cursoropen によって返されるハンドル値です。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *fetchtype*  
  フェッチするカーソル バッファーを指定します。 *fetchtype*は省略可能なパラメーターで、次のいずれかの整数入力値を必要とします。  
   
-|Value|Name|[説明]|  
+|値|名前|説明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|*Nrows* rows の最初のバッファーをフェッチします。 *Nrows*が0の場合、カーソルは結果セットの前に配置され、行は返されません。|  
 |0x0002|NEXT|*Nrows* rows の次のバッファーをフェッチします。|  
@@ -54,7 +54,7 @@ sp_cursorfetch cursor
 |0x0008|LAST|*Nrows*行の最後のバッファーをフェッチします。 *Nrows*が0の場合、カーソルは結果セットの後に配置され、行は返されません。<br /><br /> 注: FORWARD_ONLY カーソルに対して LAST を使用するとエラーメッセージが返されます。 FORWARD_ONLY では、1方向のスクロールしかサポートされていないためです。|  
 |0x10|ABSOLUTE|*Rownum*行から始まる*nrows*行のバッファーをフェッチします。<br /><br /> 注: FORWARD_ONLY では、動的カーソルまたは FORWARD_ONLY カーソルに対して ABSOLUTE を使用するとエラーメッセージが返されます。これは、1方向でのスクロールのみがサポートされるためです。|  
 |0x20|RELATIVE|現在のブロックの最初の行の行の*rownum*値として指定された行で始まる*nrows*行のバッファーをフェッチします。 この場合、 *rownum*には負の数を指定できます。<br /><br /> 注: FORWARD_ONLY カーソルに対して相対を使用するとエラーメッセージが返されます。 FORWARD_ONLY では、1方向でのスクロールのみがサポートされているためです。|  
-|0x80|[最新の情報に更新]|基になるテーブルのデータをバッファーに再読み込みします。|  
+|0x80|REFRESH|基になるテーブルのデータをバッファーに再読み込みします。|  
 |0x100|INFO|カーソルに関する情報を取得します。 この情報は、 *rownum*および*nrows*パラメーターを使用して返されます。 したがって、INFO を指定した場合、 *rownum*と*nrows*は出力パラメーターになります。|  
 |0x200|PREV_NOADJUST|PREV と同じように使用されます。 ただし、途中で結果セットの先頭に到達した場合に結果が変わる可能性があります。|  
 |0x400|SKIP_UPDT_CNCY|INFO 以外の*fetchtype*値のいずれかで使用する必要があります。|  
@@ -81,22 +81,22 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >     行が返されない場合、バッファーの内容は元のままになります。  
   
-|*\<rownum>*|に設定|  
+|*\<rownum>*|設定値|  
 |------------------|------------|  
 |開いていない場合|0|  
 |結果セットより前の場合|0|  
 |結果セットの後に配置されている場合|-1|  
 |キーセットと静的カーソルの場合|結果セット内の現在位置の絶対行番号|  
-|動的カーソルの場合|1 で保護されたプロセスとして起動されました|  
+|動的カーソルの場合|1|  
 |絶対|-1 は、セット内の最後の行を返します。<br /><br /> -2 を指定すると、セット内の最後から 2 番目の行が返されます (以降、同様に続きます)。<br /><br /> 注: この場合、複数の行をフェッチするように要求すると、結果セットの最後の2行が返されます。|  
   
-|*\<nrows>*|に設定|  
+|*\<nrows>*|設定値|  
 |-----------------|------------|  
 |開いていない場合|0|  
 |キーセットと静的カーソルの場合|通常、現在のキーセットのサイズ。<br /><br /> カーソルが非同期に作成され、この時点までに見つかっ*た行がある場合*は **、-m** 。|  
 |動的カーソルの場合|-1|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="cursor-parameter"></a>cursor パラメーター  
  フェッチ操作が行われる前は、カーソルの既定の位置が結果セットの最初の行の前になります。  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状態パラメーターは、次の表に示すいずれかの値に設定されています。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャが失敗しました。|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  行は、通常の結果セットとして返されます。つまり、列形式 (0x2a)、rows (0xd1)、done (0xfd) の順に続きます。 メタデータトークンは sp_cursoropen に対して指定されたものと同じ形式で送信されます。これは、SQL Server 7.0 ユーザーの場合は0x81、0xa5、および0xa5 です。 行の状態インジケーターは、ブラウズ モードのように、各行の末尾の非表示の列として送信されます (列名は rowstat、データ型は INT4)。 この rowstat 列には、次のいずれかの値が含まれます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -172,7 +172,7 @@ row 6 contents
 > [!NOTE]  
 >  これは、RPC 状態パラメーターが2に設定されている完全なケースです。  
   
-### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>B. PREV_NOADJUST を使用して、PREV よりも小さい行数を返す  
+### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>B: PREV_NOADJUST を使用して、PREV よりも小さい行数を返す  
  PREV_NOADJUST は、返された行のブロック内の現在のカーソル位置の行またはその後の行は一切含まれません。 PREV が現在の位置より後の行を返す場合、PREV_NOADJUST は*nrows*で要求された数よりも多くの行を返します。 たとえば、前の例 A の現在位置で PREV を適用した場合、sp_cursorfetch(h2, 4, 1, 5) で次の行がフェッチされます。  
   
 ```  
@@ -191,8 +191,8 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

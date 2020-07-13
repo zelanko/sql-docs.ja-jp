@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f8c71be97286a18f9b0befea66211916c3a3670e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030334"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose イベント クラス
   カーソルを閉じるイベントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がカーソルを閉じて割り当てを解除したときに発生します。 **CursorClose** イベント クラスは、アプリケーション プログラミング インターフェイス (API) カーソルで発生する、カーソルを閉じるイベントを記述しています。 このイベント クラスは、ODBC、OLE DB、または DB-Library によって実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル ステートメントが終了したときに発生します。  
@@ -28,7 +27,7 @@ ms.locfileid: "62663788"
   
 ## <a name="cursorclose-event-class-data-columns"></a>CursorClose イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

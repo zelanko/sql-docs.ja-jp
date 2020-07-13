@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e507d650d34ea08e8bd53fb8d3cd0860242a4feb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706451"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   実行の流れを指定のラベルに分岐します。 GOTO の後の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはスキップされ、処理はそのラベルから続行されます。 GOTO ステートメントとラベルは、プロシージャ、バッチ、またはステートメント ブロック内のどこででも使用できます。 GOTO ステートメントは入れ子にすることができます。  
   

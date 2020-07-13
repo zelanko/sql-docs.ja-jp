@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f11e2c1aaf4747d8e0edaf6fd44b62ec93ee4896
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096211"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876211"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   すべての種類の更新可能なサブスクリプション (即時更新、キュー更新、およびフェールオーバーとしてキュー更新を使用する即時更新) で使用されるトリガーを、サブスクライバー側で作成します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -91,20 +91,20 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`ディストリビューターの名前を指定します。 *ディストリビューター*は**sysname**,、既定値はありません。  
   
-`[ @pubversion = ] pubversion`パブリッシャーのバージョンを示します。 *pubversion*は**int**,、既定値は1です。 **1**は、パブリッシャーのバージョンが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前であることを示します。**2**は、パブリッシャーが[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SERVICE Pack 3 (SP3) 以降であることを意味します。 パブリッシャーのバージョンが[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 以降の場合は、 *pubversion*を明示的に**2**に設定する必要があります。  
+`[ @pubversion = ] pubversion`パブリッシャーのバージョンを示します。 *pubversion*は**int**,、既定値は1です。 **1**は、パブリッシャーのバージョンが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前であることを示します。**2**は、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service PACK 3 (SP3) 以降であることを意味します。 パブリッシャーのバージョンが SP3 以降の場合は、 *pubversion*を明示的に**2**に設定する必要があり [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addsynctriggers**は、サブスクリプションの初期化の一部としてディストリビューションエージェントによって使用されます。 このストアドプロシージャは、一般にユーザーによって実行されるのではなく、ユーザーが同期なしのサブスクリプションを手動で設定する必要がある場合に便利です。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addsynctriggers**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

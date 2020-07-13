@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082071"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488259"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -33,7 +33,7 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 |DisplayName|Scale Out Worker の表示名。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|コンピューター名|
 |説明|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|Empty|
 |MasterEndpoint|Scale Out Master に接続するエンドポイント。|Scale Out Worker のインストール時に設定されるエンドポイント|
-|MasterHttpsCertThumbprint|Scale Out Master の認証に使用されるクライアント SSL 証明書のサムプリント|Scale Out Worker のインストール時に指定されるクライアント証明書のサムプリント。|
+|MasterHttpsCertThumbprint|Scale Out Master の認証に使用されるクライアント TLS/SSL 証明書のサムプリント|Scale Out Worker のインストール時に指定されるクライアント証明書のサムプリント。|
 |WorkerHttpsCertThumbprint|Scale Out Master の認証に使用される Scale Out Master 証明書のサムプリント。|Scale Out Worker のインストール時に自動的に作成され、インストールされる証明書のサムプリント|
 |StoreLocation|ワーカー証明書ストアの場所。|LocalMachine|
 |StoreName|ワーカー証明書ストアの名前。|My|
@@ -59,7 +59,7 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 ## <a name="view-the-scale-out-worker-log"></a>Scale Out Worker ログの表示
 Scale Out Worker サービスのログ ファイルは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` フォルダーにあります。
 
-個別タスクのログの場所は `WorkerSettings.config` の `TasksRootFolder` ファイルで構成されます。 値を指定しない場合、ログは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` フォルダーに置かれます。 
+個別タスクのログの場所は `TasksRootFolder` の `WorkerSettings.config` ファイルで構成されます。 値を指定しない場合、ログは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` フォルダーに置かれます。 
 
 *[account]* パラメーターは、Scale Out Worker サービスを実行するアカウントです。 既定では、アカウントは `SSISScaleOutWorker140` です。
 

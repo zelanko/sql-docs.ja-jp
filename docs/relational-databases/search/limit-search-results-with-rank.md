@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629448"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数と [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 関数は、0 ～ 1000 の序数値 (順位値) を含む "RANK" 列を返します。 これらの値を使用すれば、選択基準への適合度合いに応じて、返された行に順位を付けることができます。 この順位値が示しているのは、結果セット内の各行の単なる相対順位であり、値が小さいほど関連性は低くなります。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。  
   
 > [!NOTE]  

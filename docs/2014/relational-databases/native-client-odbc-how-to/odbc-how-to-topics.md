@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043936"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC の使用法に関するトピック
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Odbc ドライバーを使用するには、odbc データソースを作成し、サーバーに正しいバージョンのカタログストアドプロシージャがあることを確認できる必要があります。 SQL Server を使用する ODBC アプリケーションをコーディングするには、ODBC ハンドルの割り当て方法、属性の設定方法、SQL Server インスタンスへの接続方法、クエリの実行方法、および結果の処理方法を理解しておく必要があります。  
+  Odbc ドライバーを使用するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、odbc データソースを作成し、サーバーに正しいバージョンのカタログストアドプロシージャがあることを確認できる必要があります。 SQL Server を使用する ODBC アプリケーションをコーディングするには、ODBC ハンドルの割り当て方法、属性の設定方法、SQL Server インスタンスへの接続方法、クエリの実行方法、および結果の処理方法を理解しておく必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

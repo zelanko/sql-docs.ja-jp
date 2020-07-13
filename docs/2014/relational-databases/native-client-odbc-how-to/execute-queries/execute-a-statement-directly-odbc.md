@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 85a86527c027ea73524fa993c6ecdd125d200ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63200401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018811"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>ステートメントの直接実行 (ODBC)
     

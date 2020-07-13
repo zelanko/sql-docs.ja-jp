@@ -18,30 +18,30 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dfb1a973e9c86fa67b4e3495f77dff42273d8bc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67900648"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783919"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>dm_hadr_cluster_networks (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   可用性グループのサブネット構成に参加している WSFC クラスター メンバーごとに 1 行のデータを返します。 この動的管理ビューを使用して、可用性レプリカごとに構成されているネットワーク仮想 IP を検証できます。  
   
- 主キー: **member_name** + **network_subnet_IP** + **network_subnet_prefix_length**  
+ 主キー: **member_name**  +  **network_subnet_IP**  +  **network_subnet_prefix_length**  
   
  > [!TIP]
- > 以降で[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
+ > 以降で [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、この動的管理ビューは Always On 可用性グループに加えて Always On フェールオーバークラスターインスタンスをサポートしています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128**|WSFC クラスター内のノードのコンピューター名。|  
+|**member_name**|**nvarchar(128)**|WSFC クラスター内のノードのコンピューター名。|  
 |**network_subnet_ip**|**nvarchar (48)**|コンピューターが属するサブネットのネットワーク IP アドレス。 IPv4 または IPv6 アドレスを指定できます。|  
-|**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットを指定するネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER availability group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask**します。<br /><br /> NULL = IPv6 サブネット。|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|IP アドレスが属するサブネットを指定するネットワークサブネットマスク。 [CREATE AVAILABILITY group](../../t-sql/statements/create-availability-group-transact-sql.md)または[ALTER availability GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの WITH dhcp 句で dhcp <network_subnet_option> オプションを指定するには、 **network_subnet_ipv4_mask**し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br /> NULL = IPv6 サブネット。|  
 ||||  
 |**network_subnet_prefix_length**|**int**|コンピューターが属するサブネットを指定するネットワーク IP プレフィックス長。|  
 |**is_public**|**bit**|ネットワークが WSFC クラスターでプライベートかパブリックかを示します。次のいずれかになります。<br /><br /> 0 = プライベート<br /><br /> 1 = パブリック|  
@@ -52,8 +52,8 @@ ms.locfileid: "67900648"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
- [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>関連項目  
+ [フェールオーバークラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

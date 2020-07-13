@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931905"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762180"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのカーソルを開きます。  
@@ -35,19 +35,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- 省略可能。 有効な[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアドプロシージャ呼び出し、URL、または永続的に格納された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を含むファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの名前に評価される**バリアント**。  
+ 任意。 有効な[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、SQL ステートメント、テーブル名、ストアドプロシージャ呼び出し、URL、または永続的に格納された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を含むファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの名前に評価される**バリアント**。  
   
  *ActiveConnection*  
- 省略可能。 有効な[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名に評価される**Variant** 、または[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)パラメーターを含む**文字列**。  
+ 任意。 有効な[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト変数名に評価される**Variant** 、または[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)パラメーターを含む**文字列**。  
   
  *CursorType*  
- 省略可能。 **レコードセット**を開くときにプロバイダーが使用する必要があるカーソルの種類を決定する[cursor typeenum](../../../ado/reference/ado-api/cursortypeenum.md)値。 既定値は**adOpenForwardOnly**です。  
+ 任意。 **レコードセット**を開くときにプロバイダーが使用する必要があるカーソルの種類を決定する[cursor typeenum](../../../ado/reference/ado-api/cursortypeenum.md)値。 既定値は**adOpenForwardOnly**です。  
   
  *LockType*  
- 省略可能。 **レコードセット**を開くときにプロバイダーが使用するロックの種類 (同時実行) を決定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 既定値は**Adlockreadonly**です。  
+ 任意。 **レコードセット**を開くときにプロバイダーが使用するロックの種類 (同時実行) を決定する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md)値。 既定値は**Adlockreadonly**です。  
   
- *オプション*  
- 省略可能。 プロバイダーが**Command**オブジェクト以外の値を表す場合に*ソース*引数を評価する方法、または**レコードセット**を以前に保存したファイルから復元する必要があるかどうかを示す**Long**値。 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値を指定できます。この値は、ビットごとの or 演算子と組み合わせることができます。  
+ *[オプション]*  
+ 任意。 プロバイダーが**Command**オブジェクト以外の値を表す場合に*ソース*引数を評価する方法、または**レコードセット**を以前に保存したファイルから復元する必要があるかどうかを示す**Long**値。 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値を指定できます。この値は、ビットごとの or 演算子と組み合わせることができます。  
   
 > [!NOTE]
 >  永続化された**レコードセット**を含む**ストリーム**から**レコードセット**を開いた場合、 [executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値**adasyncfetchunusing**を使用しても効果はありません。フェッチは同期およびブロックされます。  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  **Recordset**オブジェクトで**Open**メソッドを使用すると、ベーステーブル、クエリの結果、または以前に保存した**レコードセット**のレコードを表すカーソルが開きます。  
   
- オプションの*source*引数を使用して、次のいずれかを使用してデータソースを指定します:**コマンド**オブジェクト変数、SQL ステートメント、ストアドプロシージャ、テーブル名、URL、または完全なファイルパス名。 *Source*がファイルパス名の場合は、完全なパス ("c:\dir\file.rst")、相対パス ("..\file.rst ")、または URL ("<https://files/file.rst>")。  
+ オプションの*source*引数を使用して、次のいずれかを使用してデータソースを指定します:**コマンド**オブジェクト変数、SQL ステートメント、ストアドプロシージャ、テーブル名、URL、または完全なファイルパス名。 *Source*がファイルパス名の場合は、完全なパス ("c:\dir\file.rst")、相対パス ("..\file.rst ")、または URL (" <https://files/file.rst> ")。  
   
  **Open**メソッドの*Source*引数を使用して、レコードを返さないアクションクエリを実行することはお勧めできません。これは、呼び出しが成功したかどうかを判断する簡単な方法がないためです。 このようなクエリによって返された**レコードセット**は閉じられます。 SQL INSERT ステートメントなど、レコードを返さないクエリを実行するには、 **Command**オブジェクトの[execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド、または[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッドを呼び出します。  
   

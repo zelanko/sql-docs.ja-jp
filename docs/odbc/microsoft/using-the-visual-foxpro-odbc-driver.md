@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b6c0aa518e1471e0b316dcf9ffd8e5a668851fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ce3cb5e16aca2587a7dc892763f194f54e085ad
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68087990"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292552"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの使用
 このセクションでは、次のトピックでは、Microsoft® Visual FoxPro® ODBC ドライバーの使用方法について説明します。  

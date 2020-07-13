@@ -8,13 +8,12 @@ ms.technology: table-view-index
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39bf7c9bb07fc048e2bf40a0e6ac93b02e9dfe64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: df38a91e8fbd97cc6ece532a351ed37732a58c75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63161817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025479"
 ---
 # <a name="columnstore-indexes"></a>列ストア インデックス 
 「[非クラスター化列ストアインデックス](../../database-engine/using-nonclustered-columnstore-indexes.md)と[クラスター化列ストアインデックス](../../database-engine/using-clustered-columnstore-indexes.md)の使用」を参照してください。

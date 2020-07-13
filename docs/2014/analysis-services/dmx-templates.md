@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081559"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528515"
 ---
 # <a name="dmx-templates"></a>[DMX テンプレート]
   データ マイニング テンプレートは、高度なクエリをすばやく作成するのに役立ちます。 DMX クエリの一般的な構文は詳しく解説されており、テンプレートを使用すると、引数とデータ ソースをクリックおよびポイントする方法でクエリを簡単に作成できます。  
@@ -52,7 +51,7 @@ ms.locfileid: "66081559"
 ## <a name="list-of-dmx-templates"></a>DMX テンプレートの一覧  
  次の DMX テンプレートは、Excel 用のデータ マイニング クライアントに含まれています。  
   
- **高まり**  
+ **予測**  
   
  入れ子になったテーブルや外部データ ソースを使用するクエリなど、アドイン内のウィザードでサポートされていないクエリを含め、高度な予測クエリを作成するには、次のテンプレートを使用します。  
   
@@ -72,9 +71,9 @@ ms.locfileid: "66081559"
   
 -   入れ子になったテーブルでの TOP 予測クエリ  
   
- **生成**  
+ **作成**  
   
- カスタム モデルおよびデータ構造を作成するには、これらのテンプレートを使用します。 ウィザードでサポートされているモデルに限定されません。接続先のの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスでサポートされているデータマイニングアルゴリズム (プラグインアルゴリズムを含む) を使用できます。  
+ カスタム モデルおよびデータ構造を作成するには、これらのテンプレートを使用します。 ウィザードでサポートされているモデルに限定されません。接続先ののインスタンスでサポートされているデータマイニングアルゴリズム [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (プラグインアルゴリズムを含む) を使用できます。  
   
 -   マイニングモデル  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66081559"
   
 -   マイニング構造のトレーニング  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  使用するテンプレートによっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーにアクセスしてクエリを実行するために管理権限が必要になります。  
   
 ## <a name="see-also"></a>参照  

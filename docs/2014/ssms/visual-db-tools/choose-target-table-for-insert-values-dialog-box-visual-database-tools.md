@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e4635a4d4cee0afa5b9b10d091ef14f7de60ef87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63255751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066195"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>[値の挿入先のテーブル選択] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、INSERT VALUES クエリを使用して更新するテーブルを指定できます。 クエリのタイプを INSERT VALUES クエリに変更するときに、 **[ダイアグラム]** ペインに複数のテーブルが表示される場合、このダイアログ ボックスが表示されます。  

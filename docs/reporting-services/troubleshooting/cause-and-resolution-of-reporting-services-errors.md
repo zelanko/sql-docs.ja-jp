@@ -1,5 +1,6 @@
 ---
-title: Reporting Services エラーの原因と解決方法 | Microsoft Docs
+title: Reporting Services エラーの原因と解決方法
+description: Reporting Services に関連するエラー メッセージの記事の一覧を表示します。 各記事では、エラー メッセージ、考えられる原因、問題の解決方法について説明しています。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a07487083c645679001435ae14fd6befd618b4d
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575580"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664261"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  

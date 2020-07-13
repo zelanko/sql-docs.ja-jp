@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920361"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762663"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (VC + +)
 この例の最初の関数は、ユーザーが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティと[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
@@ -197,7 +197,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Authors with 25 percent royalty  

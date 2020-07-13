@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce7b42b1c97964108797c58948216aaed0ad5431
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105739"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>グループ式の例 (レポート ビルダーおよび SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105739"
 ## <a name="examples-of-group-expressions"></a>グループ式の例  
  次の表に、グループの定義に使用できるグループ式の例を挙げます。  
   
-|[説明]|式|  
+|説明|式|  
 |-----------------|----------------|  
 |`Region` フィールドでグループ化します。|`=Fields!Region.Value`|  
 |姓と名でグループ化します。|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

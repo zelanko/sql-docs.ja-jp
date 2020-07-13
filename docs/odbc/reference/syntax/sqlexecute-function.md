@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLExecute function [ODBC]
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12dffe315485aadc839654996f6af3a561161246
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5306567aebc229a8bc9d1d3c91bcbd8e79391752
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003126"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286072"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 関数
 **互換性**  
@@ -51,7 +51,7 @@ SQLRETURN SQLExecute(
 ## <a name="diagnostics"></a>診断  
  **Sqlexecute**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表は、 **Sqlexecute**によって一般的に返される SQLSTATE 値の一覧を示しています。この関数のコンテキストでは、それぞれについて説明しています。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01001|カーソル操作の競合|*StatementHandle*に関連付けられた準備されたステートメントに、位置指定の update または delete ステートメントが含まれており、行または複数の行が更新または削除されていません。 (複数の行の更新の詳細については、 **SQLSetStmtAttr**の SQL_ATTR_SIMULATE_CURSOR*属性*の説明を参照してください)。<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -126,7 +126,7 @@ SQLRETURN SQLExecute(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

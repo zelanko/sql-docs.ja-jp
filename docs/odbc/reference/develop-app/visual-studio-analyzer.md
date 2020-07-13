@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ce9a18f37b8a1e47dcb7c7557a4d8af2318e93
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078987"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306700"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  

@@ -11,28 +11,27 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLDescribeParam function
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa74f982a5ff1894651d68f06689cba476a16452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: ba04422ef9763202701dfa147ff5da4bfc214018
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787107"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011872"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SQL ステートメントのパラメーターを記述するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーは、準備さ[!INCLUDE[tsql](../../includes/tsql-md.md)]れた Odbc ステートメントハンドルで SQLDescribeParam が呼び出されたときに、SELECT ステートメントを構築して実行します。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute または SQLExecDirect が返す可能性のあるエラーコードを返すことができます。  
+  SQL ステートメントのパラメーターを記述するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc ドライバーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 準備された odbc ステートメントハンドルで SQLDescribeParam が呼び出されたときに、SELECT ステートメントを構築して実行します。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute または SQLExecDirect が返す可能性のあるエラーコードを返すことができます。  
   
- で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]始まるデータベースエンジンの機能強化により、SQLDescribeParam は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で SQLDescribeParam によって返された値とは異なる場合があります。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
+ で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLDescribeParam は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンので SQLDescribeParam によって返された値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
- また、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] *parametersizeptr*は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズ (文字数) の定義に合わせて値を返すようになりました。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *parametersizeptr*は、型の**SQL_DESC_OCTET_LENGTH**の対応する値、または型の SQLBindParameter に指定された関係のない列のサイズの値になる可能性があります。この値は無視する必要があります (**SQL_INTEGER**など)。  
+ また [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 *parametersizeptr*は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズ (文字数) の定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr*は、型の**SQL_DESC_OCTET_LENGTH**の対応する値、または型の SQLBindParameter に指定された関係のない列のサイズの値になる可能性があります。この値は無視する必要があります (**SQL_INTEGER**など)。  
   
  ドライバーは、次の状況での SQLDescribeParam の呼び出しをサポートしていません。  
   
--   SQLExecDirect の後に[!INCLUDE[tsql](../../includes/tsql-md.md)] 、from 句を含む UPDATE または DELETE ステートメントを実行します。  
+-   SQLExecDirect の後に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] from 句を含む UPDATE または DELETE ステートメントを実行します。  
   
 -   ODBC ステートメントまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが HAVING 句にパラメーターを含んでいる場合、または SUM 関数の結果と比較される場合。  
   
@@ -42,9 +41,9 @@ ms.locfileid: "73787107"
   
 -   クエリのいずれかのパラメーターが関数に対するパラメーターである場合。  
   
--   コマンドにコメント (/* \*/) がある場合。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+-   コマンドにコメント (/* \* /) がある場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
- ステートメントの[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチを処理する場合、ドライバーはバッチ内の最初のステートメントの後にあるステートメント内のパラメーターマーカーに対して SQLDescribeParam を呼び出すこともサポートしていません。  
+ ステートメントのバッチを処理する場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、ドライバーはバッチ内の最初のステートメントの後にあるステートメント内のパラメーターマーカーに対して SQLDescribeParam を呼び出すこともサポートしていません。  
   
  SQLDescribeParam では、準備されたストアドプロシージャのパラメーターを記述するときに、システムストアドプロシージャ[sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md)を使用してパラメーターの特性を取得します。 sp_sproc_columns は、現在のユーザーデータベース内のストアドプロシージャのデータをレポートできます。 完全に修飾されたストアドプロシージャ名を準備すると、データベース間で SQLDescribeParam を実行できるようになります。 たとえば、システムストアドプロシージャ[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)を準備し、任意のデータベースで次のように実行できます。  
   
@@ -58,7 +57,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- 大きな値のデータ型の場合、 *DataTypePtr*で返される値は SQL_VARCHAR、SQL_VARBINARY、または SQL_NVARCHAR です。 大きな値のデータ型パラメーターのサイズが "無制限" であることを示すため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、NATIVE Client ODBC ドライバーは*parametersizeptr*を0に設定します。 実際のサイズ値は、標準の**varchar**パラメーターに対して返されます。  
+ 大きな値のデータ型の場合、 *DataTypePtr*で返される値は SQL_VARCHAR、SQL_VARBINARY、または SQL_NVARCHAR です。 大きな値のデータ型パラメーターのサイズが "無制限" であることを示すために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは*Parametersizeptr*を0に設定します。 実際のサイズ値は、標準の**varchar**パラメーターに対して返されます。  
   
 > [!NOTE]  
 >  パラメーターが SQL_VARCHAR、SQL_VARBINARY、SQL_WVARCHAR のいずれかのパラメーターの最大サイズに既にバインドされている場合は、"無制限" ではなく、バインドされたパラメーターのサイズが返されます。  

@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC]
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edb58ebff212e494b84aed12397def2876d3728d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15537b28ff2bae8a4fcd3e7be82426eb53aa83a8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345605"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285332"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **互換性**  
@@ -56,7 +56,7 @@ SQLRETURN SQLGetFunctions(
  *SupportedPtr*  
  Output *FunctionId*が単一の ODBC 関数を識別する場合、 *supportedptr*は、指定された関数がドライバーによってサポートされている場合に SQL_TRUE される単一の sqlus悪意のある値を指し、サポートされていない場合は SQL_FALSE します。  
   
- *FunctionId*が SQL_API_ODBC3_ALL_FUNCTIONS 場合、 *supportedptr*は、SQL_API_ODBC3_ALL_FUNCTIONS_SIZE と同じ数の要素を持つ sqlsmallint 配列を指します。 この配列は、ドライバーマネージャーによって、4000ビットのビットマップとして扱われます。このビットマップを使用して、ODBC 3.x*以前の機能*がサポートされているかどうかを判断できます。 関数のサポートを決定するために SQL_FUNC_EXISTS マクロが呼び出されます。 (「コメント」を参照してください)。ODBC*3.x アプリケーションは*、odbc 3.x または odbc 2.x*ドライバーのいずれ*かに対して SQL_API_ODBC3_ALL_FUNCTIONS を持つ**sqlgetfunctions**を呼び出すことができます。**  
+ *FunctionId*が SQL_API_ODBC3_ALL_FUNCTIONS 場合、 *supportedptr*は、SQL_API_ODBC3_ALL_FUNCTIONS_SIZE と同じ数の要素を持つ sqlsmallint 配列を指します。 この配列は、ドライバーマネージャーによって、4000ビットのビットマップとして扱われます。このビットマップを使用して、ODBC 3.x*以前の機能*がサポートされているかどうかを判断できます。 関数のサポートを決定するために SQL_FUNC_EXISTS マクロが呼び出されます。 (「コメント」を参照してください)。ODBC*3.x アプリケーションは*、odbc 3.x または odbc 2.x*ドライバーのいずれ*かに対して SQL_API_ODBC3_ALL_FUNCTIONS を持つ**sqlgetfunctions**を呼び出すことができます。*.x*  
   
  *FunctionId*が SQL_API_ALL_FUNCTIONS 場合、 *supportedptr*は100要素の sqlus悪意のある配列を指します。 配列には、各 ODBC 関数を識別するために、 *FunctionId*によって使用される **#define**値によってインデックスが付けられます。配列の一部の要素は使用されておらず、将来使用するために予約されています。 ドライバーでサポートされている ODBC*2.x またはそれ以前の関数*を識別する場合、要素は SQL_TRUE ます。 ドライバーでサポートされていない ODBC 関数が識別された場合、または ODBC 関数が識別されない場合は、SQL_FALSE ます。  
   
@@ -68,7 +68,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>診断  
  **Sqlgetfunctions**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値は、 *handletype*が SQL_HANDLE_DBC で、 *connectionhandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって取得できます。 次の表に、 **Sqlgetfunctions**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------|-----|-----------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
@@ -217,7 +217,7 @@ SQLDisconnect(hdbc);
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |接続属性の設定を返す|[SQLGetConnectAttr 関数](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |ドライバーまたはデータソースに関する情報を返す|[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  

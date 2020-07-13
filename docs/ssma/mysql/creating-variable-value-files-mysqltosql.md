@@ -13,10 +13,10 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103021"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>変数値ファイルの作成 (MySQLToSQL)
@@ -89,7 +89,7 @@ ms.locfileid: "68103021"
 ## <a name="variable-value-file-validation"></a>変数値ファイルの検証  
 ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル **' ConsoleScriptVariablesSchema '** に対して、変数の値ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;MySQLToSQL&#41;作成し](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)ます。  
   
 ## <a name="see-also"></a>参照  

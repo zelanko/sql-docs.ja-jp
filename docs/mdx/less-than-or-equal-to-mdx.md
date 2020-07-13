@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905683"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (以下) (MDX)
@@ -40,7 +40,7 @@ MDX_Expression <= MDX_Expression
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

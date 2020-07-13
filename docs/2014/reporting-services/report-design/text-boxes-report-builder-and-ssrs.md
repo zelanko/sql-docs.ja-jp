@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104629"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104629"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>テキストボックスの拡大と縮小  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> テキスト ボックスの拡張と圧縮  
  既定では、テキスト ボックスのサイズは固定されています。 テキスト ボックスをその内容に応じて縦に縮小または拡張されるようにすることができます。 詳細については、「 [テキスト ボックスの拡大または縮小 &#40;レポート ビルダーおよび SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="orienting-a-text-box"></a>テキスト ボックスの向きの調整  
@@ -55,17 +55,17 @@ ms.locfileid: "66104629"
   
  テキストの向きを変更する方法の詳細については、「[チュートリアル: テキストの書式設定 &#40;レポートビルダー&#41;](../tutorial-format-text-report-builder.md)」のテキストの回転に関するセクションを参照してください。 詳細については、「[テキストボックスの向きの設定 &#40;レポートビルダーと SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
- [レポートビルダーおよび SSRS &#40;テキストボックスを追加、移動、または削除&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作方法に関するトピック  
+ [テキスト ボックスの追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [テキストボックスの方向 &#40;レポートビルダーと SSRS に設定&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [テキスト ボックスの方向の設定 &#40;レポート ビルダーおよび SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [テキストボックスの &#40;レポートビルダーと SSRS を拡大または縮小できるように&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [テキスト ボックスの拡大または縮小 &#40;レポート ビルダーおよび SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
- [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;のテキストとプレースホルダーの書式設定](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

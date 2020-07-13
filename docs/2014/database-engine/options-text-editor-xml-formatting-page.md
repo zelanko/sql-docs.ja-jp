@@ -7,27 +7,25 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4ba863207c367e15f72e68885c6011ef485f6201
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66089851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929621"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>[オプション] ([テキスト エディター]/[XML]/[書式設定] ページ)
 
-このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 
-  **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
+このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
   
 > [!NOTE]  
 > 次の設定は、**[テキスト エディター]** フォルダーを展開し、**[XML]** フォルダーを展開して、**[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
   
 ## <a name="attributes"></a>属性  
  **[手動による属性の書式設定を保持する]**  
- 属性の書式設定を変更しません。 これが既定値です。  
+ 属性の書式設定を変更しません。 既定値です。  
   
 > [!NOTE]  
 >  属性が複数行にある場合、エディターは属性の各行にインデントを設定して、親要素のインデントに一致させます。  
@@ -49,9 +47,9 @@ ms.locfileid: "66089851"
  **[終了タグの完了時]**  
  終了タグが完了するときに、要素の書式設定を変更します。  
   
-## <a name="mixed-content"></a>[混合コンテンツ]  
+## <a name="mixed-content"></a>混合コンテンツ  
  **[混合したコンテンツを既定でフォーマットする]**  
- コンテンツが `xml:space="preserve"` 範囲内で検出された場合以外は、混合コンテンツの書式設定を変更します。 これが既定値です。  
+ コンテンツが `xml:space="preserve"` 範囲内で検出された場合以外は、混合コンテンツの書式設定を変更します。 既定値です。  
   
  要素にテキストとマークアップが混在している場合、コンテンツは混合コンテンツと見なされます。 次に、混合コンテンツを含む要素の例を示します。  
   
@@ -61,7 +59,7 @@ ms.locfileid: "66089851"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</ディレクトリ>  
+ \</dir>  
   
 ## <a name="see-also"></a>参照  
  [XML エディター &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

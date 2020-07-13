@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61115113b3f710b9853f66e4437783755b886d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63061960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013808"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode メソッド (SqlService クラス)
   サービス インスタンスの開始モードを変更します。  
@@ -39,12 +38,12 @@ StartMode
   
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
- *開始モード*  
+ *StartMode*  
  サービス インスタンスの開始モードを指定する `uint32` 値。  
   
  有効な値は次のとおりです。  
@@ -60,10 +59,9 @@ StartMode
  値 = 4。 (Disabled)。サービスを開始できません。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。 それ以外の数値はエラーを示します。  
+ `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

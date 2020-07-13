@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731250"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
   グラフの検索条件を指定します。 MATCH は、WHERE 句の一部として、SELECT ステートメントでグラフ ノードとエッジのテーブルでのみ使用できます。 
   
@@ -35,7 +35,7 @@ ms.locfileid: "67901952"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
@@ -50,7 +50,7 @@ MATCH (<graph_search_pattern>)
       LAST_NODE(<node_alias>) | <node_alias>   { 
           { <-( <edge_alias> )- } 
         | { -( <edge_alias> )-> }
-        <node_alias> | LAST(<node_alias>)
+        <node_alias> | LAST_NODE(<node_alias>)
         } 
   }
   [ { AND } { ( <simple_match_pattern> ) } ]

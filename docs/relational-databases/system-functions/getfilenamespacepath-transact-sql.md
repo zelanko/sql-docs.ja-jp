@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72278333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760267"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable 内のファイルまたはディレクトリの UNC パスを返します。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "72278333"
  *is_full_path*  
  相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは、既定値です。|  
-|**1**|で始まる完全な UNC パスを返し`\\computer_name`ます。|  
+|**1**|で始まる完全な UNC パスを返し `\\computer_name` ます。|  
   
  *\@オプション*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 オプションには、次のいずれかの値を指定できます。 * \@*  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 * \@ オプション*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -86,9 +86,9 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、 **GetFileNamespacePath**関数を呼び出して、FileTable 内のファイルまたはディレクトリの UNC パスを取得する方法を示しています。  
   
 ```  
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

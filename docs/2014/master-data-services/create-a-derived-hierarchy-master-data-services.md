@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7c831ab360f2cbe4b32834ae2a280b961d2bac1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65479967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971872"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>派生階層を作成する (マスター データ サービス)
   正しいレベルにメンバーが確実に存在するレベル ベースの階層が必要な場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、派生階層を作成します。 派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップに基づきます。  
@@ -31,39 +30,34 @@ ms.locfileid: "65479967"
   
 -   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-derived-hierarchy"></a>派生階層を作成するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
 2.  [**モデルビュー** ] ページのメニューバーから [**管理**] をポイントし、[**派生階層**] をクリックします。  
   
-3.  
-  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
+3.  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
 4.  [**派生階層の追加**] をクリックします。  
   
-5.  
-  **[派生階層の追加]** ページの **[派生階層名]** ボックスに階層の名前を入力します。  
+5.  **[派生階層の追加]** ページの **[派生階層名]** ボックスに階層の名前を入力します。  
   
     > [!TIP]  
     >  名前は、たとえば **"カテゴリに含まれるサブカテゴリに含まれる製品"** のように、階層のレベルがわかる形式にします。  
   
-6.  
-  **[派生階層の保存]** をクリックします。  
+6.  **[派生階層の保存]** をクリックします。  
   
 7.  [**派生階層の編集**] ページの [**使用できるエンティティと階層**] ペインで、エンティティまたは階層をクリックし、[**現在のレベル**] ペインにドラッグします。  
   
 8.  その他のエンティティまたは階層をドラッグして、階層を完成させます。  
   
-9. 
-  **[戻る]** をクリックします。  
+9. **[戻る]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [ドメインベースの属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+ [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
   

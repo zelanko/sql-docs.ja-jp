@@ -14,15 +14,14 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6670d832c9a62fd2c9496a531dc2d80a72b1fb2f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62902464"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437729"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -42,16 +41,13 @@ ms.locfileid: "62902464"
 ## <a name="configuration-of-the-flat-file-destination"></a>フラット ファイル変換先の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[フラット ファイル ソース エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[フラットファイル変換先エディター] &#40;[接続マネージャー] ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [[フラット ファイル変換先エディター] &#40;[接続マネージャー] ページ&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [[フラットファイル変換先エディター] &#40;[マッピング] ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [[フラット ファイル変換先エディター] &#40;[マッピング] ページ&#41;](../flat-file-destination-editor-mappings-page.md)  
   
- 
-  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
-  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   
@@ -60,8 +56,8 @@ ms.locfileid: "62902464"
 ## <a name="related-tasks"></a>Related Tasks  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フラットファイルソース](flat-file-source.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

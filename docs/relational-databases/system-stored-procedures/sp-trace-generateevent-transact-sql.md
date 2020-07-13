@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096026"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891426"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義イベントを作成します。  
+  でユーザー定義イベントを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 >**注:** このストアドプロシージャは**非推奨とされます**。 他のすべてのトレース関連のストアド プロシージャの使用は非推奨とされます。  
   
@@ -53,25 +53,24 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
   
-|リターンコード|[説明]|  
+|リターン コード|説明|  
 |-----------------|-----------------|  
 |**0**|エラーなし。|  
 |**1**|不明なエラー。|  
-|**番**|指定されたイベントは無効です。 イベントが存在しないか、またはストアドプロシージャに対して適切ではありません。|  
-|**第**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
+|**3**|指定されたイベントは無効です。 イベントが存在しないか、またはストアドプロシージャに対して適切ではありません。|  
+|**13**|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
   
-## <a name="remarks"></a>解説  
- **sp_trace_generateevent**は、 **xp_trace_\* **の拡張ストアドプロシージャによって以前に実行された多くの操作を実行します。 **Xp_trace_generate_event**ではなく**sp_trace_generateevent**を使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_trace_generateevent**は、 **xp_trace_ \* **の拡張ストアドプロシージャによって以前に実行された多くの操作を実行します。 **Xp_trace_generate_event**ではなく**sp_trace_generateevent**を使用します。  
   
- **Sp_trace_generateevent**では、ユーザー定義イベントの ID 番号のみを使用できます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で他のイベント ID 番号を使用すると、エラーが発生します。  
+ **Sp_trace_generateevent**では、ユーザー定義イベントの ID 番号のみを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で他のイベント ID 番号を使用すると、エラーが発生します。  
   
  すべての SQL トレースストアドプロシージャ (**sp_trace_xx**) のパラメーターは厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは ALTER TRACE 権限を持っている必要があります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、サンプルテーブルにユーザーが構成可能なイベントを作成します。  
   
 ```  
@@ -95,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  

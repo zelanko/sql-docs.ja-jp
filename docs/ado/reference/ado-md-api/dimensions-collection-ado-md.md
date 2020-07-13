@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949773"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764273"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions コレクション (ADO MD)
 キューブを構成する[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ディメンション**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
 -   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  

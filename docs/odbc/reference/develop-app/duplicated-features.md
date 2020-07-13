@@ -14,17 +14,17 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 00f5529cfbfacebcad78a0a4433e84f34034694a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046903"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300482"
 ---
 # <a name="duplicated-features"></a>重複する機能
-Odbc 3.x 関数によって、次*の odbc 2.x*関数** が複製されました。 その結果 *、odbc 2.x 関数は*odbc 3.x では非推奨とされ*ます。* ODBC *3. x*関数は、置換関数と呼ばれます。  
+Odbc 3.x 関数によって、次*の odbc 2.x*関数*3.x*が複製されました。 その結果 *、odbc 2.x 関数は*odbc 3.x では非推奨とされ*ます。* ODBC *3. x*関数は、置換関数と呼ばれます。  
   
  アプリケーションが非推奨の ODBC 2.x*関数を*使用し、基になるドライバー*が odbc 3.x*ドライバーである場合、ドライバーマネージャーは関数呼び出しを対応する置換関数にマップします。 この規則の唯一の例外は**SQLExtendedFetch**です。 (次の表の最後にある脚注を参照してください)。これらのマッピングの詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   

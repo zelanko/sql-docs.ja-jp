@@ -18,14 +18,14 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079063"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282085"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>接続情報をユーザーに確認する
 アプリケーションが**SQLConnect**を使用していて、ユーザー名やパスワードなどの接続情報の入力をユーザーに求める必要がある場合は、それ自体を行う必要があります。 これにより、アプリケーションは "ルックアンドフィール" を制御できるようになりますが、アプリケーションにドライバー固有のコードが含まれている可能性があります。 これは、アプリケーションがユーザーにドライバー固有の接続情報を要求する必要がある場合に発生します。 これにより、アプリケーションの作成時に存在しないドライバーを含め、すべてのドライバーを使用するように設計された汎用アプリケーションの場合、不可能な状況が発生します。  

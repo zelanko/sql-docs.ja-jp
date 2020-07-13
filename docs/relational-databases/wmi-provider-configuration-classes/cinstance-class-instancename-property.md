@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5541dffc9f590f9caf69ac5feba637dc4cb0605e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73659624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889072"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance クラス - InstanceName プロパティ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントの[!INCLUDE[msCoName](../../includes/msconame-md.md)]インスタンスの名前を取得します。  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  クライアントのインスタンスの名前を取得し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,16 @@ ms.locfileid: "73659624"
 object.InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- 
-  [クライアント インスタンスを表す](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance クラス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ [クライアント インスタンスを表す](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance クラス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

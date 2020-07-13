@@ -18,41 +18,36 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5628f0ef6a130d5f0fc88c78236a0352bc5f4b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003251"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
-  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 
-  `sql:key-fields` 注釈の指定は、適切な階層を確実に生成するための 1 つの方法です。  
+  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 `sql:key-fields` 注釈の指定は、適切な階層を確実に生成するための 1 つの方法です。  
   
 > [!NOTE]  
->  適切な入れ子を生成するには、テーブルにマップする要素に `sql:key-fields` を指定することをお勧めします。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 
-  `sql:key-fields` を指定しない場合、適切な XML が作成されない可能性があります。  
+>  適切な入れ子を生成するには、テーブルにマップする要素に `sql:key-fields` を指定することをお勧めします。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 `sql:key-fields` を指定しない場合、適切な XML が作成されない可能性があります。  
   
- 
-  `sql:key-fields` の値で、リレーションの行を一意に識別する列を指定します。 行を一意に識別するために複数の列が必要な場合、列の値はスペースで区切られます。  
+ `sql:key-fields` の値で、リレーションの行を一意に識別する列を指定します。 行を一意に識別するために複数の列が必要な場合、列の値はスペースで区切られます。  
   
- 要素に、要素`sql:key-fields`と子要素の間に定義されている** \<sql: relationship>** が含まれていても、親要素で指定されているテーブルの主キーが提供されていない場合は、注釈を使用する必要があります。  
+ 要素に `sql:key-fields` 要素と子要素の間に定義されているが含まれていて **\<sql:relationship>** も、親要素で指定されているテーブルの主キーを提供していない場合は、注釈を使用する必要があります。  
   
 ## <a name="examples"></a>例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Sql: relationship> が\<十分な情報を提供しない場合に適切な入れ子を生成する  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. \<sql:relationship>が十分な情報を提供しない場合に適切な入れ子を生成する  
  この例では、`sql:key-fields` をどこに指定すればよいかを示します。  
   
- 次のスキーマについて考えてみます。 このスキーマでは、order ** \<>** 要素が親で、 ** \<customer>** 要素が子である、 ** \<order>** と** \<customer>** 要素の間の階層を指定します。  
+ 次のスキーマについて考えてみます。 スキーマでは、要素と要素の間の階層を指定します。この要素は、 **\<Order>** **\<Customer>** **\<Order>** 要素が親で **\<Customer>** あり、要素が子です。  
   
- ** \<Sql: relationship>** タグは、親子のリレーションシップを指定するために使用されます。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 ** \<Sql: relationship>** で提供される情報は、親テーブル (SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 
-  `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
+ この **\<sql:relationship>** タグは、親子関係を指定するために使用されます。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 に指定された情報 **\<sql:relationship>** は、親テーブル (SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
   
- `sql:key-fields` ** \<>順序**で指定した場合、注釈は親 (SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素はその親の下に表示されます。  
+ でが指定されている `sql:key-fields` **\<Order>** 場合、注釈は親 (SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素はその親の下に表示されます。  
   
  スキーマは次のようになります。  
   
@@ -91,7 +86,7 @@ ms.locfileid: "66013818"
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml として保存します。  
   
-2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml を保存したディレクトリに KeyFields1T.xml として保存します。 このテンプレートの XPath クエリでは、CustomerID が3未満のすべての** \<注文>** 要素が返されます。  
+2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml を保存したディレクトリに KeyFields1T.xml として保存します。 このテンプレートの XPath クエリでは、CustomerID が3未満のすべての要素が返され **\<Order>** ます。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -129,8 +124,7 @@ ms.locfileid: "66013818"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields を指定して結果内に適切な入れ子を生成する  
- 次のスキーマでは、 ** \<sql: relationship>** を使用して階層が指定されていません。 
-  `sql:key-fields` 注釈を指定して、HumanResources.Employee テーブルの従業員を一意に識別する必要があります。  
+ 次のスキーマでは、を使用して階層が指定されていません **\<sql:relationship>** 。 `sql:key-fields` 注釈を指定して、HumanResources.Employee テーブルの従業員を一意に識別する必要があります。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -157,7 +151,7 @@ ms.locfileid: "66013818"
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml として保存します。  
   
-2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 このテンプレートの XPath クエリは、すべての** \<humanresources.employee>** 要素を返します。  
+2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 このテンプレートの XPath クエリでは、すべての要素が返され **\<HumanResources.Employee>** ます。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

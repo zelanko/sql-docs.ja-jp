@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cursors [ODBC], capabilities
 - cursors [ODBC], scrollable
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 984ad8302f2e1695c8df84a64a18042f4cc9e364
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68039997"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305883"
 ---
 # <a name="determining-cursor-capabilities"></a>カーソル機能の決定
 **SQLGetInfo**の次の4つのオプションでは、サポートされているカーソルの種類とその機能について説明しています。  

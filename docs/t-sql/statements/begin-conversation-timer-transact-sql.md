@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7b84efd22c7d5d240d041f7da408e6d84604448
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70211218"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895523"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   タイマーを開始します。 タイムアウトになると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] はメッセージ交換のローカル キューに型 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` のメッセージを入れます。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70211218"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: db979203f45897644fa22f011000b6d4d7e3b712
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63297861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044520"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>クエリへのテーブルの追加 (Visual Database Tools)
   クエリを作成するとき、データを取得する基となるのは、テーブルまたはテーブル構造オブジェクト (ビューおよび特定のユーザー定義関数など) です。 クエリでこれらのオブジェクトを処理するには、 **ダイアグラム ペイン**にオブジェクトを追加します。  

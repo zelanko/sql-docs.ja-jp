@@ -1,7 +1,7 @@
 ---
 title: max worker threads サーバー構成オプションの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776421"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488331"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "75776421"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   実際のクエリ要求数が **max worker threads**に設定した値を下回る場合、1 つのスレッドで 1 つのクエリ要求が処理されます。 一方、実際のクエリ要求数が **max worker threads**に設定した値を超える場合は、ワーカー スレッド プールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって作成され、次に使用可能なワーカー スレッドで要求を処理できるようになります。  
+-   実際のクエリ要求数が **max worker threads**に設定した値を下回る場合、1 つのスレッドで 1 つのクエリ要求が処理されます。 一方、実際のクエリ要求数が **max worker threads** に設定されている値を超えた場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッドがプールされ、次に使用可能なワーカー スレッドで要求を処理できるようになります。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
@@ -55,30 +55,38 @@ ms.locfileid: "75776421"
   
 -   スレッド プールは、多数のクライアントがサーバーに接続されている場合のパフォーマンスの最適化に役立ちます。 通常、クエリ要求ごとに個別のオペレーティング システム スレッドが作成されます。 ただし、サーバーへの接続が数百にもなる場合、クエリ要求ごとに 1 つのスレッドを使用すると大量のシステム リソースが消費されることがあります。 **max worker threads** オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッド プールが作成され多数のクエリ要求を処理できるようになります。その結果、パフォーマンスが向上します。  
   
--   次の表に、CPU および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各バージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数を示します。  
+-   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数を示します。"* **既定の最大ワーカー数* + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
   
-    |CPU の数|32 ビット コンピューター|64 ビット コンピューター|  
-    |------------|------------|------------|  
-    |\<= 4 個のプロセッサ|256|512|  
-    |8 個のプロセッサ|288|576|  
-    |16 個のプロセッサ|352|704|  
-    |32 個のプロセッサ|480|960|  
-    |64 個のプロセッサ|736|1472|  
-    |128 個のプロセッサ|4224|4480|  
-    |256 個のプロセッサ|8320|8576| 
+    |CPU の数|32 ビット コンピューター ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)|   
+    |------------|------------|------------|------------|  
+    |\<= 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    次の式を使用します。
+    [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以前の "*CPU あたりのワーカー数*" は、アーキテクチャ (32 ビットまたは 64 ビット) にのみ依存します。
     
-    |CPU の数|32 ビット コンピューター|64 ビット コンピューター|  
-    |------------|------------|------------| 
-    |\<= 4 個のプロセッサ|256|512|
-    |\> 4 個を超えるプロセッサと \<= 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
-    |\> 64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
+    |CPU の数|32 ビット コンピューター <sup>1</sup>|64 ビット コンピューター|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4|256 + ((論理 CPU - 4) * 8)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 16)|   
+    
+    [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降の "*CPU あたりのワーカー数*" は、アーキテクチャとプロセッサの数 (4 から 64 の間か、64 を超えるか) に依存します。
+    
+    |CPU の数|32 ビット コンピューター <sup>1</sup>|64 ビット コンピューター|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4 かつ \<= 64|256 + ((論理 CPU - 4) * 8)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 16)|   
+    |\> 64|256 + ((論理 CPU - 4) * 32)|512 <sup>2</sup> + ((論理 CPU 数 - 4) * 32)|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることができません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。  
+    <sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることはできません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。
+    
+    <sup>2</sup> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降の "*既定の最大ワーカー数*" の値は、メモリが 2 GB 未満のコンピューターの場合は 2 で除算されます。
   
-    > [!NOTE]  
+    > [!TIP]  
     > 64 個を超える CPU を使用する場合の推奨事項については、「 [64 個を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)」を参照してください。  
   
 -   クエリの実行が長時間にわたり、すべてのスレッドがアクティブになっている場合、いずれかのワーカー スレッドが処理を完了し使用できるようになるまで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が応答していないように見えることがあります。 これは欠陥ではありませんが、望ましくない場合があります。 プロセスが応答せず新しいクエリを処理できない場合は、専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、プロセスを終了します。 このような状態を回避するには、ワーカー スレッド数を増やします。  

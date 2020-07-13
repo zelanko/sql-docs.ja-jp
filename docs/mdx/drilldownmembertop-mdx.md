@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68031242"
 ---
 # <a name="drilldownmembertop-mdx"></a>ドリルダウンメンバートップ (MDX)
@@ -34,7 +34,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *数*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
@@ -49,7 +49,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式が指定されている場合、**ドリルダウン Membertop**関数は、1番目のセット内の各メンバーの子を、子メンバーのセットに対して評価される数値式の値に基づいて降順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を降順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す TopCount および Head (MDX) 関数に似ています。  
   
  並べ替えの後、**ドリルダウン Membertop**関数は、親メンバーと子メンバーの数を含むセットを返します。これは、最大値で、 *Count*で指定したもので、両方のセットに含まれています。  
@@ -79,6 +79,6 @@ WHERE [Measures].[Reseller Order Quantity]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

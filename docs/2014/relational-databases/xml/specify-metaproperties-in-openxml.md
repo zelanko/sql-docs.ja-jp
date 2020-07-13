@@ -13,15 +13,14 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c52d1162aa495deff8a0fde314fdcde0735d9c2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62679503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046507"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
@@ -37,7 +36,7 @@ ms.locfileid: "62679503"
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|[説明]|  
+|メタプロパティ属性|説明|  
 |----------------------------|-----------------|  
 |**\@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
 |**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
@@ -48,7 +47,7 @@ ms.locfileid: "62679503"
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
   
-|親メタプロパティ属性|[説明]|  
+|親メタプロパティ属性|説明|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|**../\@mp:id** と対応します。|  
 |**\@mp:parentlocalname**|**../\@mp:localname** と対応します。|  

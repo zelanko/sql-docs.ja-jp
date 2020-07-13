@@ -1,18 +1,18 @@
 ---
 title: SQL Server Reporting Services のインストール | Microsoft Docs
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429053"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693800"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -32,6 +32,8 @@ Microsoft ダウンロード センターから [SQL Server 2017 Reporting Servi
 
 > [!NOTE]
 > Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
+> 
+> SQL Server 2016 以前のバージョンの Reporting Services からのアップグレードまたは移行については、 「[Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)」を参照してください。
 
 ## <a name="before-you-begin"></a>開始する前に
 
@@ -95,7 +97,7 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 
 |要素|説明|
 |----------|-----------------|
-|Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
+|Prefix|既定のプレフィックスは HTTP です。 以前にトランスポート層セキュリティ(TLS) (旧称 Secure Sockets Layer (SSL)) 証明書をインストールした場合は、セットアップによって、HTTPS プレフィックスを使用する URL 予約の作成が試みられます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
 |Port|既定のポートは 80 です。 ポート 80 以外のポートを使用する場合は、Web ポータルをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があります。|
 |仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|

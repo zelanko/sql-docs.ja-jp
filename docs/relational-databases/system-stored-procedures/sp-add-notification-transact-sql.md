@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68115063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879393"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   警告の通知を設定します。  
   
@@ -46,7 +46,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 `[ @notification_method = ] notification_method`オペレーターに通知する方法。 *notification_method*は**tinyint**,、既定値はありません。 *Notification_method*は、これらの値の1つ以上を**or**論理演算子と組み合わせて使用できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
@@ -61,8 +61,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="remarks"></a>解説  
  **sp_add_notification**は、 **msdb**データベースから実行する必要があります。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。 警告システムを構成するときには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用することをお勧めします。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。 警告システムを構成するときには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用することをお勧めします。  
   
  警告に対応して通知を送るには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがメールを送れるようにあらかじめ構成しておく必要があります。  
   
@@ -71,10 +70,10 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_notification**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、指定された警告 (`Test Alert`) に対応する電子メールでの通知を追加します。  
   
-> **注:** この例で`François Ajenstat`は`Test Alert` 、が既に存在し、有効な演算子名であることを前提としています。  
+> **注:** この例では、が `Test Alert` 既に存在し、有効な演算子名であることを前提としてい `François Ajenstat` ます。  
   
 ```  
 USE msdb ;  
@@ -87,11 +86,11 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

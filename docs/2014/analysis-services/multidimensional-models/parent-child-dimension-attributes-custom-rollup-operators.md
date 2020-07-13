@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: db12ccc6703ee4863dd3b6bd598d2317b54fce6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073463"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545864"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>親子ディメンションのカスタム ロールアップ演算子
   カスタム ロールアップ演算子を使用すると、親子階層でメンバーの値を親の値にロール アップする方法を簡単に制御できます。 親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーのロールアップを指定する単項演算子を含んでいる列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。  

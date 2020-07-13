@@ -11,28 +11,24 @@ f1_keywords:
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92ad2dfbe51f97a84b443ae531bd11b0531f055e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062270"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527888"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップ] ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
-  
   **[属性リレーションシップ]** の一覧を使用すると、属性リレーションシップ ダイアグラム内の特定の属性リレーションシップを探したり、そのリレーションシップを管理したりできます。 このペインは、属性リレーションシップ ダイアグラムを含むペインのすぐ下に表示されます。  
   
  **[属性リレーションシップ] ペインを表示するには**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、ディメンションをダブルクリックしてディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、ディメンションをダブルクリックしてディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
   
 2.  ツール バーの **[リスト ビューの表示]** をクリックします。  
   
 ## <a name="using-the-attribute-relationships-list"></a>[属性リレーションシップ] の一覧の使用  
- 
-  **[属性リレーションシップ]** の一覧には、ディメンション内のすべての属性リレーションシップが表示されます。  
+ **[属性リレーションシップ]** の一覧には、ディメンション内のすべての属性リレーションシップが表示されます。  
   
  属性リレーションシップ ダイアグラム内の特定の属性リレーションシップを探すには、一覧にある属性をダブルクリックします。 属性リレーションシップは属性リレーションシップ ダイアグラムで強調表示され、そのプロパティは [プロパティ] ウィンドウに表示されます。  
   
@@ -47,15 +43,15 @@ ms.locfileid: "66062270"
  **[属性リレーションシップの編集]**  
  属性リレーションシップを変更できる、**[属性リレーションシップの編集]** ダイアログ ボックスを開きます。  
   
- 詳細については、[[属性リレーションシップの作成] ダイアログ ボックスと [属性リレーションシップの編集] ダイアログ ボックス ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) と [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) を参照してください。  
+ 詳細については、[[属性リレーションシップの作成] ダイアログ ボックスと [属性リレーションシップの編集] ダイアログ ボックス &#40;[属性リレーションシップ] タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) と [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) を参照してください。  
   
- **リレーションシップの種類**  
+ **[リレーションシップの種類]**  
  リレーションシップの種類を **[可変]** または **[固定]** に設定します。 可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   
- **デリート**  
+ **削除**  
  選択した属性リレーションシップを削除します。  
   
- **Properties**  
+ **プロパティ**  
  属性のプロパティを **[プロパティ]** ウィンドウに表示します。  
   
 ## <a name="see-also"></a>参照  

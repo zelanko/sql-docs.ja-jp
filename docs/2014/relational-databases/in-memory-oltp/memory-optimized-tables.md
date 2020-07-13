@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63566d7759c3a88f6c088707d6c7724cb4087f05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63158750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050071"
 ---
 # <a name="memory-optimized-tables"></a>メモリ最適化テーブル
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインメモリ OLTP は、メモリ最適化された効率的なデータ アクセス、ビジネス ロジックのネイティブ コンパイル、ロック フリーおよびラッチ フリーのアルゴリズムによって OLTP アプリケーションのパフォーマンスを高めます。 インメモリ OLTP 機能には、メモリ最適化テーブルおよびテーブル型と、これらのテーブルに効率的にアクセスするための [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャのネイティブ コンパイルが含まれます。  
   
  メモリ最適化テーブルの詳細については、以下を参照してください。  

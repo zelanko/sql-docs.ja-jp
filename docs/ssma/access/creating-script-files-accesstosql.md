@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259837"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプトファイルの作成 (Sql server)
@@ -45,7 +45,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   -メッセージの非表示: コンソールでメッセージを表示しません。 既定では ' false ' です。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -62,7 +62,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -88,7 +88,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     - target-last-used = "true" (既定値) または target-server = "target_servername"  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -99,7 +99,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -123,7 +123,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     既定のモードは**error**です。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -132,7 +132,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -154,7 +154,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     既定のモードでは、**エラー**が発生します。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -165,7 +165,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -176,7 +176,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </synchronize-target>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -202,7 +202,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   ask-ユーザー: 入力を求めるメッセージを表示します (' yes '/' no ')  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -211,7 +211,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -223,7 +223,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
 6.  **失敗した前提条件プロバイダー:** これにより、コマンドの処理に必要なすべての前提条件をユーザーが処理できるようになります。 既定では、strict モードは ' false ' です。 "True" に設定されている場合は、前提条件を満たすためにエラーが発生した場合に例外が生成されます。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -251,7 +251,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   -20% ごと  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -264,7 +264,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -297,7 +297,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
     > [!NOTE]  
     > 必須のメッセージは、任意のレベルでログに記録されます。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -306,7 +306,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -324,7 +324,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル&gt;サーバー接続ファイルの&gt;プロンプトユーザーになります。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -348,7 +348,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
 スクリプトファイル内のすべてのコマンドが正常に実行されると、SSMA コンソールアプリケーションが終了し、コントロールがユーザーに返されます。 スクリプトファイルの内容は、変数の[値のファイル](creating-variable-value-files-accesstosql.md)に含まれる変数情報、または変数の値をスクリプトファイル内の別のセクションに格納することにより、静的なものになります。  
   
-**よう**  
+**例:**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -393,6 +393,6 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ## <a name="next-step"></a>次のステップ
 コンソールを操作する次の手順では、[変数値のファイル &#40;作成](../../ssma/access/creating-variable-value-files-accesstosql.md)して、sql&#41;にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [&#41;&#40;変数値ファイルの作成](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9727c2b27cd49817bbc3876603fed67e76450de2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65489147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061063"
 ---
 # <a name="task-5-adding-data-flow-task"></a>タスク 5: データ フロー タスクを追加する
   ここでは、SSIS パッケージの制御フローにデータ フロー タスクを追加します。  
@@ -30,7 +29,7 @@ ms.locfileid: "65489147"
   
 4.  [データ**フロータスク**] をダブルクリックして、[**データフロー** ] タブに切り替えます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 6: Excel ソースをデータ フローに追加する](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

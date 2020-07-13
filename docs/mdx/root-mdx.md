@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: be687d5cbfd4fdbb706ef5c10778a4f3e3f93197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037041"
 ---
 # <a name="root-mdx"></a>ルート (MDX)
@@ -42,7 +42,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ディメンション名も組式も指定されていない場合、**ルート**関数は、キューブ内の各属性階層から**all**メンバー (または、**すべて**のメンバーが存在しない場合は既定のメンバー) を含む組を返します。 組の中のメンバーの順序は、キューブ内で属性階層が定義されている順序に基づきます。  
   
  ディメンション名が指定されている場合、**ルート**関数は、現在のメンバーのコンテキストに基づいて、指定されたディメンションの各属性階層から、 **all**メンバー (または、**すべて**のメンバーが存在しない場合は既定のメンバー) を含む組を返します。 組のメンバーの順序は、ディメンション内で属性階層が定義されている順序に基づいています。  
@@ -52,7 +52,7 @@ Root( Tuple_Expression )
   
  組式が指定されている場合、**ルート**関数は、指定された組と、指定された組に明示的に含まれていない他のすべてのディメンション属性の**すべて**のメンバーの交差部分を含む組を返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Adventure Works キューブ内の各階層から、 **all**メンバー (または**all**メンバーが存在しない場合は既定値) を含む組を返します。  
   
 ```  
@@ -68,7 +68,7 @@ FROM [Adventure Works]
 WHERE [Measures].[Order Count]  
 ```  
   
- 次の例では、指定された組メンバーを含むタプルを返します (1, 2001,、日付ディメンション Adventure **** works キューブ内の指定されていない各階層**から、これら**のメンバーと交差するメジャーディメンションの指定されたメンバーの値)。  
+ 次の例では、指定された組メンバーを含むタプルを返します (1, 2001,、日付ディメンション Adventure **All** works キューブ内の指定されていない各階層**から、これら**のメンバーと交差するメジャーディメンションの指定されたメンバーの値)。  
   
 ```  
 SELECT Root([Date].[July 1, 2001]) ON 0  
@@ -77,6 +77,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f224afd100c0869e8e8683cc3bea39498a342ad0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543600"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1 : Analysis Services プロジェクト内でのデータ ソース ビューの定義
-  
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1:Analysis Services プロジェクト内でのデータ ソース ビューの定義
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でビジネス インテリジェンス アプリケーションを設計するには、まず、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成します。 このプロジェクト内で、ソリューションに必要なすべての要素を定義します。最初に定義するのはデータ ソース ビューです。  
   
  このレッスンの内容は次のとおりです。  
@@ -38,13 +36,13 @@ ms.locfileid: "66079209"
  結果を、このレッスン用にビルドされたサンプル プロジェクト ファイルと比較してください。 このチュートリアルのサンプル プロジェクトのダウンロードの詳細については、CodePlex の製品サンプル ページで「 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) 」を参照してください。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2 : キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
+ [レッスン 2: キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
  [SSDT&#41;&#40;Analysis Services プロジェクトを作成する](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [SSAS 多次元&#41;&#40;サポートされるデータソース](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多次元モデルのデータソースビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
- [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

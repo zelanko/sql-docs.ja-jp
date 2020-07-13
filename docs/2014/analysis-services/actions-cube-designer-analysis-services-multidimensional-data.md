@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3da39338fd5f5e86de083ec30cd0ce4bbe531f30
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062902"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528208"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>[アクション] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション]** タブを使用すると、選択されているキューブの、ドリルスルー アクションやレポート アクションなどのアクションを表示したり編集したりできます。  
@@ -36,12 +35,10 @@ ms.locfileid: "66062902"
  フォーム ビューの **アクション フォーム エディター** ペインでは、キューブに含まれる標準アクションを編集できます。 このペインの詳細については、「[アクションフォームエディター &#40;アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **ドリルスルー アクション フォーム エディター**  
- 
-  **ドリルスルー アクション フォーム エディター** ペインでは、キューブに含まれるドリルスルー アクションを編集できます。 このペインの詳細については、「[ドリルスルーアクションフォームエディター &#40;アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ **ドリルスルー アクション フォーム エディター** ペインでは、キューブに含まれるドリルスルー アクションを編集できます。 このペインの詳細については、「[ドリルスルーアクションフォームエディター &#40;アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **レポート アクション フォーム エディター**  
- 
-  **レポート アクション フォーム エディター** ペインでは、キューブに含まれるレポート アクションを編集できます。 このペインの詳細については、「[レポートアクションフォームエディター &#40;操作] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ **レポート アクション フォーム エディター** ペインでは、キューブに含まれるレポート アクションを編集できます。 このペインの詳細については、「[レポートアクションフォームエディター &#40;操作] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [アクション &#40;Analysis Services-多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

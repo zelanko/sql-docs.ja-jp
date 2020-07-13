@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544894"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
   アクションにはさまざまな種類があり、適切に作成する必要があります。 アクションの種類は次のとおりです。  
@@ -40,10 +39,9 @@ ms.locfileid: "66077589"
   
  条件は、アクション イベント時に評価される、`Boolean` 型の MDX 式です。 条件が `true` と評価された場合に、アクションが実行されます。 それ以外の場合、アクションは実行されません。  
   
- 種類は、実行されるアクションの種類です。 
-  <xref:Microsoft.AnalysisServices.Action> は抽象クラスであるため、これを使用するにはその派生クラスのいずれかを使用する必要があります。 2 種類のアクションが事前定義されています。ドリルスルーおよびレポートです。 これらのアクションには次の対応する派生クラスがあります: <xref:Microsoft.AnalysisServices.DrillThroughAction> と <xref:Microsoft.AnalysisServices.ReportAction>」を参照してください。 その他のアクションは、 <xref:Microsoft.AnalysisServices.StandardAction> クラスに含まれます。  
+ 種類は、実行されるアクションの種類です。 <xref:Microsoft.AnalysisServices.Action> は抽象クラスであるため、これを使用するにはその派生クラスのいずれかを使用する必要があります。 2 種類のアクションが事前定義されています。ドリルスルーおよびレポートです。 これらのアクションには次の対応する派生クラスがあります: <xref:Microsoft.AnalysisServices.DrillThroughAction> と <xref:Microsoft.AnalysisServices.ReportAction>」を参照してください。 その他のアクションは、 <xref:Microsoft.AnalysisServices.StandardAction> クラスに含まれます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、アクションは、クライアントアプリケーションによって提供および使用されるストアド MDX ステートメントです。 つまり、アクションとは、サーバーで定義され格納されたクライアント コマンドです。 また、クライアント アプリケーションによって MDX ステートメントを表示および処理するタイミングと方法を指定する情報も含まれています。 アクションで指定される操作では、アクションに含まれる情報をパラメーターとして使用してアプリケーションを起動したり、アクションで指定される条件に基づいて情報を取得することができます。  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、アクションは、クライアントアプリケーションによって提供および使用されるストアド MDX ステートメントです。 つまり、アクションとは、サーバーで定義され格納されたクライアント コマンドです。 また、クライアント アプリケーションによって MDX ステートメントを表示および処理するタイミングと方法を指定する情報も含まれています。 アクションで指定される操作では、アクションに含まれる情報をパラメーターとして使用してアプリケーションを起動したり、アクションで指定される条件に基づいて情報を取得することができます。  
   
  アクションを使用すると、ビジネス ユーザーは分析結果に従った操作を実行できます。 従来の分析は、データの表示で終わることが普通でしたが、アクションを保存および再利用することで、エンド ユーザーはそれ以上の効果を得ることができます。問題と欠陥を検出するソリューションを開始できるので、キューブの範囲を超えてビジネス インテリジェンス アプリケーションを拡張できます。 アクションの利用により、クライアント アプリケーションを高度なデータ表示ツールから企業の運用システムの不可欠部分へと変えることができます。 エンド ユーザーは、運用アプリケーションへの入力としてのデータ送信に終始せず、むしろ意思決定プロセスの "環を閉じる (Closing the Loop)" ことができるのです。 分析データを意思決定に変えることのできる能力は、成功をもたらすビジネス インテリジェンス アプリケーションにとって不可欠です。  
   
@@ -57,7 +55,7 @@ ms.locfileid: "66077589"
 ## <a name="types-of-actions"></a>アクションの種類  
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に含まれているアクションの種類を示します。  
   
-|アクションの種類|[説明]|  
+|アクションの種類|説明|  
 |-----------------|-----------------|  
 |CommandLine|コマンド プロンプトでコマンドを実行します。|  
 |データセット|データセットをクライアント アプリケーションに返します。|  
@@ -73,6 +71,6 @@ ms.locfileid: "66077589"
  コマンド オブジェクトが定義されているオブジェクトにビジネス ユーザーがアクセスすると、アクションに関連付けられているステートメントが自動的に解決されます。このため、クライアント アプリケーションでそのステートメントを利用できるようになりますが、アクションが自動的に実行されるわけではありません。 アクションは、ビジネス ユーザーがそのアクションを開始するクライアント固有の操作をしたときにのみ実行されます。 たとえば、クライアント アプリケーションでは、ビジネス ユーザーが特定のメンバーまたはセルを右クリックしたときに、ポップアップ メニューとしてアクションの一覧を表示できます。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルでのアクション](actions-in-multidimensional-models.md)  
+ [多次元モデルのアクション](actions-in-multidimensional-models.md)  
   
   

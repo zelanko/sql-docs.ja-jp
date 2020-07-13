@@ -5,16 +5,16 @@ description: SQL Server ビッグ データ クラスターでは、Spark ソリ
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283477"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220147"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>ビッグ データ クラスターで Apache Spark と Apache Hadoop を構成する
 
@@ -41,6 +41,10 @@ ms.locfileid: "77283477"
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox ゲートウェイ: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+これらの構成に加えて、Spark ジョブをストレージ プールで実行できるかどうかを構成する機能も用意されています。 
+
+このブール値 `includeSpark`は、`spec.resources.storage-0.spec.settings.spark` にある `bdc.json` 構成ファイル内にあります。
 
 ## <a name="unsupported-configurations"></a>サポートされていない構成
 

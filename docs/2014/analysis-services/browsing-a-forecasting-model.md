@@ -15,27 +15,26 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088489"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527708"
 ---
 # <a name="browsing-a-forecasting-model"></a>予測モデルの参照
-  [**参照**] を使用して予測モデルを開くと、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]タイムシリーズモデルビューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
+  [**参照**] を使用して予測モデルを開くと、のタイムシリーズモデルビューアーに似た対話型ビューアーにモデルが表示され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
   
-##  <a name="bkmk_Top"></a>モデルの調査  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>モデルの調査  
  予測モデルの**参照**ビューアーには、時間の経過に伴う傾向を示すグラフビューが用意されています。また、予測を作成できます。また、時系列をデシジョンツリーまたは回帰ツリーとして表すモデルビューが表示されます。  
   
--   [グラフビュー](#bkmk_charts)  
+-   [グラフ ビュー](#bkmk_charts)  
   
 -   [モデル ビュー](#bkmk_Model)  
   
  予測モデルを試してみるには、サンプルデータブックの [予測] タブにあるサンプルデータを使用し、[**データマイニング**] リボンの [ [Excel 用データマイニングアドイン] &#40;](forecast-wizard-data-mining-add-ins-for-excel.md) [予測ウィザード] を使用してタイムシリーズモデルを作成するか、または [**分析**] リボンの [ [&#41;excel 用テーブル分析ツールを予測 &#40;](forecast-table-analysis-tools-for-excel.md)&#41;ます。  
   
-###  <a name="bkmk_charts"></a>グラフ  
+###  <a name="chart"></a><a name="bkmk_charts"></a>グラフ  
  [**グラフ**] タブには、データ系列の傾向が予測値と共に時系列で表示されます。 グラフの縦軸は時系列の値を表し、横軸は時間を表します。  
   
 ##### <a name="explore-the-forecasting-chart"></a>予測チャートの調査  
@@ -66,7 +65,7 @@ ms.locfileid: "66088489"
   
      誤差範囲により、予測のばらつきを視覚的に評価できます。 予測の品質は、ソース データによって異なりますが、予測期間の数が増えるにつれて、偏差が徐々に大きくなることがわかります。  
   
- **テクニック**  
+ **ヒント**  
   
 -   [**マイニング凡例**] の表示を切り替えるには、グラフ内の任意のポイントを右クリックします。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66088489"
   
  [モデルの調査](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>型  
+###  <a name="model"></a><a name="bkmk_Model"></a>型  
  予測モデルはデシジョン ツリーとして表すこともできます。また、系列がほぼ直線状の場合は、回帰モデルとして表すことができます。  
   
  たとえば、このモデルでは、特定の条件に基づく回帰式に違いがあるため、ツリーは、それぞれ回帰式が異なる 2 つの分岐に分かれます。  

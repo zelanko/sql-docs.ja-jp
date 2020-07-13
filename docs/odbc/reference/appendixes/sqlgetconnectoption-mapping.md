@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d2905bd6793d032e485183c8f553cef2cdefda3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086405"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302003"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption のマッピング
 アプリケーションが ODBC *3. x*ドライバーを介して**SQLGetConnectOption**を呼び出すとき、  

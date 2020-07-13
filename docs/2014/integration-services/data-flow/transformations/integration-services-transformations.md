@@ -18,23 +18,22 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dbaa8ae33bb299cf524589e1e883577950d7c294
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62900294"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430429"
 ---
 # <a name="integration-services-transformations"></a>Integration Services の変換
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]変換とは、パッケージのデータフロー内のコンポーネントで、データの集計、マージ、配信、および変更を行います。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  
   
 ## <a name="business-intelligence-transformations"></a>ビジネス インテリジェンス変換  
  次の変換は、データのクリーンアップ、テキストのマイニング、データ マイニング予測クエリの実行などのビジネス インテリジェンス操作を実行します。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[緩やかに変化するディメンション変換](slowly-changing-dimension-transformation.md)|緩やかに変化するディメンションの更新を構成する変換です。|  
 |[あいまいグループ化変換](fuzzy-grouping-transformation.md)|列データの値を標準化する変換です。|  
@@ -47,7 +46,7 @@ ms.locfileid: "62900294"
 ## <a name="row-transformations"></a>行の変換  
  次の変換は、列の値を更新して新しい列を作成します。 この変換は、変換入力の各行に適用されます。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[文字マップ変換](character-map-transformation.md)|文字列関数を文字データに適用する変換です。|  
 |[列コピー変換](copy-column-transformation.md)|入力列のコピーを変換出力に追加する変換です。|  
@@ -61,7 +60,7 @@ ms.locfileid: "62900294"
 ## <a name="rowset-transformations"></a>行セットの変換  
  次の変換は、新しい行セットを作成します。 行セットには、集計された値や並べ替えた値、サンプル行セット、またはピボットされた行セットとピボットされていない行セットを含めることができます。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[集計変換](aggregate-transformation.md)|AVERAGE、SUM、COUNT などの集計を実行する変換です。|  
 |[並べ替え変換](sort-transformation.md)|データを並べ替える変換です。|  
@@ -73,22 +72,21 @@ ms.locfileid: "62900294"
 ## <a name="split-and-join-transformations"></a>分割および結合変換  
  次の変換は、別の出力への行の配信、変換入力のコピーの作成、1 つの出力への複数入力の結合、および参照操作の実行を行います。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[条件分割変換](conditional-split-transformation.md)|データ行を別の出力にルーティングする変換です。|  
 |[マルチキャスト変換](multicast-transformation.md)|データセットを複数の出力に配信する変換です。|  
 |[全体結合変換](union-all-transformation.md)|複数のデータセットをマージする変換です。|  
 |[マージ変換](merge-transformation.md)|並べ替えた 2 つのデータセットをマージする変換です。|  
-|[Merge Join Transformation](merge-join-transformation.md)|FULL、LEFT、または INNER 結合を使用して、2 つのデータセットを結合する変換です。|  
+|[マージ結合変換](merge-join-transformation.md)|FULL、LEFT、または INNER 結合を使用して、2 つのデータセットを結合する変換です。|  
 |[参照変換](lookup-transformation.md)|完全一致を使用して、参照テーブル内の値を参照する変換です。|  
 |[キャッシュ変換](cache-transform.md)|データ フロー内で接続中のデータ ソースからキャッシュ接続マネージャーにデータを書き込み、データをキャッシュ ファイルに保存する変換です。 参照変換は、キャッシュ ファイル内のデータに対する参照を実行します。|  
 |[Balanced Data Distributor (BDD) 変換](balanced-data-distributor-transformation.md)|この変換は、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配することにより、マルチコアおよびマルチプロセッサのサーバーで実行されている SSIS パッケージのパフォーマンスを向上させます。|  
   
 ## <a name="auditing-transformations"></a>監査変換  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、監査情報の追加や行のカウントを行う、次のような変換が含まれています。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、監査情報の追加や行のカウントを行う、次のような変換が含まれています。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[監査変換](audit-transformation.md)|環境に関する情報を、パッケージ内のデータ フローで利用可能にする変換です。|  
 |[行数変換](row-count-transformation.md)|変換の処理を行うときに行をカウントし、最終的なカウントを変数に格納する変換です。|  

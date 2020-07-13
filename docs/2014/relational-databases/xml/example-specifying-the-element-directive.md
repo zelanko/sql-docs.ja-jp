@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d91c0ddc4bd9c15a033e728d450abd153cac2756
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067810"
 ---
 # <a name="example-specifying-the-element-directive"></a>例 : ELEMENT ディレクティブの指定
   この例では、次に示すように従業員情報を取得し、要素中心の XML を生成します。  

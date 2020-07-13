@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79ee9c4402971807263284d10e31db702abeee86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68195732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059673"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events の操作
   このトピックでは、WMI Provider for Server Events を使用したプログラミングを行う前に、検討する必要があるガイドラインを示します。  
@@ -43,10 +42,10 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  msdb の Service Broker GUID はプロバイダーの対象サービスの拠点であり、特別な意味を持っています。  
   
- データベースで[!INCLUDE[ssSB](../../includes/sssb-md.md)]を有効にするには、 [ALTER database](/sql/t-sql/statements/alter-database-transact-sql)ステートメントの ENABLE_BROKER SET オプションを使用します。  
+ データベースでを有効にするには [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、 [ALTER database](/sql/t-sql/statements/alter-database-transact-sql)ステートメントの ENABLE_BROKER SET オプションを使用します。  
   
 ## <a name="specifying-a-connection-string"></a>接続文字列の指定  
- アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 の各インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には独自の WMI 名前空間があり、 \\ \\既定ではに設定されています。\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 ** の既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールでは、INSTANCE_NAME 既定値は MSSQLSERVER です。  
+ アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 の各インスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には独自の WMI 名前空間があり、既定ではに設定さ \\ \\ れています。 \\*ルート*\Microsoft\SqlServer\ServerEvents \\ *instance_name*。 の既定のインストールでは、 *instance_name*既定値は MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Server Events にアクセスするには、WMI 管理アプリケーションの起動元クライアントが、アプリケーションのアプリケーション接続文字列で指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の Windows 認証ログインまたはグループに対応している必要があります。  
@@ -109,7 +108,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY または REVOKE (ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION、または CREATE TRACE EVENT NOTIFICATION 権限のみに適用されます)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>クライアント側のイベント データの使用  
- WMI Provider for Server Events によって、ターゲットデータベースに必要なイベント通知が作成された後、イベント通知は、 **SQL/notification/Processを Eventprovidernotification/** v1.0 という名前の msdb 内の対象サービスにイベントデータを送信します。 発信先サービスは、このイベントを、" `msdb` **Wmi eventprovidernotificationqueue**" という名前のキューに格納します。 (サービスとキューの両方が、に最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続するときにプロバイダーによって動的に作成されます)。プロバイダーは、このキューから XML イベントデータを読み取り、それを管理オブジェクト形式 (MOF) に変換してから、クライアントアプリケーションに返します。 MOF データは、CIM (Common Information Model) クラス定義として WQL クエリから要求されるイベントのプロパティで構成されています。 各プロパティには、対応する CIM 型があります。 たとえば、`SPID` プロパティは CIM 型 `Sint32` として返されます。 各プロパティの CIM 型については、「 [WMI Provider For Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)」の各イベントクラスに記載されています。  
+ WMI Provider for Server Events によって、ターゲットデータベースに必要なイベント通知が作成された後、イベント通知は、 **SQL/notification/Processを Eventprovidernotification/** v1.0 という名前の msdb 内の対象サービスにイベントデータを送信します。 発信先サービスは、このイベントを、 `msdb` " **Wmi Eventprovidernotificationqueue**" という名前のキューに格納します。 (サービスとキューの両方が、に最初に接続するときにプロバイダーによって動的に作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます)。プロバイダーは、このキューから XML イベントデータを読み取り、それを管理オブジェクト形式 (MOF) に変換してから、クライアントアプリケーションに返します。 MOF データは、CIM (Common Information Model) クラス定義として WQL クエリから要求されるイベントのプロパティで構成されています。 各プロパティには、対応する CIM 型があります。 たとえば、`SPID` プロパティは CIM 型 `Sint32` として返されます。 各プロパティの CIM 型については、「 [WMI Provider For Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)」の各イベントクラスに記載されています。  
   
 ## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](https://technet.microsoft.com/library/ms180560.aspx)  

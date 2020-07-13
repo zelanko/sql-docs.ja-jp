@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2 (OLE DB) |Microsoft Docs
+title: IBCPSession2 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 219a82b7b4254c4416df1e56ff8c18a393315d43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62691852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056225"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-  IBCPSession2 インターフェイスは、IBCPSession の拡張機能であり、各列に対して IBCPSession:: BCPColFmt を呼び出す代わりに、メンバー関数を提供します。  IBCPSession2 は IBCPSession から継承し、新しいメソッドを[IBCPSession2:: BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md)1 つ追加します。  
+  IBCPSession2 インターフェイスは、IBCPSession の拡張機能です。この機能は、各列に対して IBCPSession::BCPColFmt を呼び出す代わりに使用できるメンバー関数を提供します。  IBCPSession2 は IBCPSession から継承し、新しいメソッドを[IBCPSession2:: BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md)1 つ追加します。  
   
 ## <a name="see-also"></a>参照  
  [インターフェイス &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  

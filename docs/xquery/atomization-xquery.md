@@ -1,5 +1,6 @@
 ---
 title: アトミック化 (XQuery) |Microsoft Docs
+description: 項目の型指定された値を抽出する XQuery のアトミック化プロセスについて説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643599"
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   アトミック化とは、アイテムの型指定された値を抽出するプロセスです。 このプロセスは、特定の状況では暗黙的に実行されます。 算術演算子や比較演算子などの一部の XQuery 演算子は、このプロセスに依存します。 たとえば、算術演算子を直接ノードに適用する場合、ノードの型指定された値は、[データ関数](../xquery/data-accessor-functions-data-xquery.md)を暗黙的に呼び出すことによって最初に取得されます。 これにより、アトミック値がオペランドとして算術演算子に渡されます。  
   
@@ -45,11 +46,11 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 暗黙のアトミック化のもう1つの例は、算術演算子を使用する場合です。 演算子**+** にはアトミック値が必要です。また、LaborHours 属性のアトミック値を取得するために、**データ ()** が暗黙的に適用されます。 このクエリは、ProductModel テーブルの**xml**型の命令列に対して指定されています。 次のクエリでは、LaborHours 属性が3回返されます。 クエリでは、次の点に注意してください。  
+ 暗黙のアトミック化のもう1つの例は、算術演算子を使用する場合です。 演算子には **+** アトミック値が必要です。また、LaborHours 属性のアトミック値を取得するために、**データ ()** が暗黙的に適用されます。 このクエリは、ProductModel テーブルの**xml**型の命令列に対して指定されています。 次のクエリでは、LaborHours 属性が3回返されます。 クエリでは、次の点に注意してください。  
   
 -   OrignialLaborHours 属性の構築では、(`$WC/@LaborHours`) によって返される単一シーケンスにアトミック化が暗黙的に適用されます。 LaborHours 属性の型指定された値は、OrignialLaborHours に割り当てられます。  
   
--   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、(`$WC/@LaborHours`) によって返される LaborHours 属性には、**データ ()** が暗黙的に適用されます。 次に、atomic 値1が追加されます。 属性 UpdatedLaborHoursV2 の構築には、明示的な**データ ()** の適用が示されていますが、必須ではありません。  
+-   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、() によって返される LaborHours 属性には、**データ ()** が暗黙的に適用され `$WC/@LaborHours` ます。 次に、atomic 値1が追加されます。 属性 UpdatedLaborHoursV2 の構築には、明示的な**データ ()** の適用が示されていますが、必須ではありません。  
   
 ```  
 SELECT Instructions.query('  
@@ -76,7 +77,7 @@ where ProductModelID=7
   
  アトミック化は、関数に渡される比較式のパラメーター、関数によって返される値、 **cast ()** 式、および order by 句で渡される順序付け式でも発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [XQuery&#41;&#40;比較式](../xquery/comparison-expressions-xquery.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  

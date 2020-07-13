@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07200d48f439c97003da7062fc218cd2f3081d1b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086383"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307843"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (カーソル ライブラリ)
 > [!IMPORTANT]  

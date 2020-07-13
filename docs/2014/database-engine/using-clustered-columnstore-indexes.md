@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: afc7da4e28ef7f32ca4a2b4ea762e5a5af442471
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175361"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891968"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。
 
  列ストアインデックスの概要については、「[列ストアインデックス](../relational-databases/indexes/columnstore-indexes-described.md)の概要」を参照してください。
@@ -39,7 +37,7 @@ ms.locfileid: "78175361"
 
 -   [クラスター化列ストアインデックスの再編成](#reorganize)
 
-##  <a name="create"></a>クラスター化列ストアインデックスを作成する
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>クラスター化列ストアインデックスを作成する
  クラスター化列ストアインデックスを作成するには、まずヒープまたはクラスター化インデックスとして行ストアテーブルを作成し、次に[CREATE CLUSTERED 列ストアインデックス &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)ステートメントを使用して、テーブルをクラスター化列ストアインデックスに変換します。 クラスター化 columnstore インデックスにクラスター化インデックスと同じ名前を付ける場合は、DROP_EXISTING オプションを使用します。
 
  この例では、テーブルをヒープとして作成してから、cci_Simple という名前のクラスター化 columnstore インデックスに変換します。 こうすることで、テーブル全体のストレージが行ストアから列ストアに変更されます。
@@ -57,10 +55,10 @@ GO
 
  詳細については、「 [CREATE CLUSTERED INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)」の「例」を参照してください。
 
-##  <a name="drop"></a>クラスター化列ストアインデックスを削除する
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>クラスター化列ストアインデックスを削除する
  [DROP INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/drop-index-transact-sql)ステートメントを使用して、クラスター化列ストアインデックスを削除します。 この操作は、インデックスを削除し、列ストア テーブルを行ストア ヒープに変換します。
 
-##  <a name="load"></a>クラスター化列ストアインデックスへのデータの読み込み
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>クラスター化列ストアインデックスへのデータの読み込み
  標準的な読み込み方法を使用して既存のクラスター化列ストア インデックスにデータを追加できます。  たとえば、bcp 一括読み込みツール、Integration Services、挿入...[すべてのデータをクラスター化列ストアインデックスに読み込むことができる] を選択します。
 
  クラスター化 columnstore インデックスでは、columnstore の列セグメントの断片化を防ぐためにデルタストアを活用します。
@@ -69,7 +67,7 @@ GO
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタストアがあります。
 
 ### <a name="deltastore-loading-scenarios"></a>デルタストアの読み込みのシナリオ
- デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアに行グループあたりの最大行数が含まれている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]場合は、行グループを "CLOSED" としてマークします。 "組ムーバー" と呼ばれるバックグラウンドプロセスは、閉じられた行グループを検索し、列ストアに移動します。ここでは、行グループが列セグメントに圧縮され、列セグメントが列ストアに格納されます。
+ デルタストアの行は、行グループに許容されている最大行数になるまで蓄積されます。 デルタストアに行グループあたりの最大行数が含まれている場合は、行グループを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "CLOSED" としてマークします。 "組ムーバー" と呼ばれるバックグラウンドプロセスは、閉じられた行グループを検索し、列ストアに移動します。ここでは、行グループが列セグメントに圧縮され、列セグメントが列ストアに格納されます。
 
  各クラスター化 columnstore インデックスに対して複数のデルタストアが許容されます。
 
@@ -84,40 +82,38 @@ GO
 |一括読み込みを行う行|列ストアに追加される行|デルタストアに追加される行|
 |-----------------------|-----------------------------------|----------------------------------|
 |102,000|0|102,000|
-|145,000|145,000<br /><br /> 行グループのサイズ: 145,000|0|
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ: 1,048,576|1 で保護されたプロセスとして起動されました|
-|2,252,152|2,252,152<br /><br /> 行グループのサイズ: 1,048,576、1,048,576、155,000|0|
+|145,000|145,000<br /><br /> 行グループのサイズ:145,000|0|
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048,576|1|
+|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048,576、1,048,576、155,000|0|
 
  次の例は、1,048,577 個の行をパーティションに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。
 
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
-SELECT * FROM sys.column_store_row_groups
-```
 
- ![バッチ読み込みの rowgroup と deltastore](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "バッチ読み込みの rowgroup と deltastore")
+ ![バッチ読み込みの行グループとデルタストア](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "バッチ読み込みの行グループとデルタストア")
 
 
 
-##  <a name="change"></a>クラスター化列ストアインデックスのデータの変更
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>クラスター化列ストアインデックスのデータの変更
  クラスター化 columnstore インデックスでは挿入、更新、および DML 削除操作がサポートされます。
 
  [Insert &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql)を使用して行を挿入します。 行はデルタストアに追加されます。
 
- 
-  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。
+ [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。
 
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークしますが、インデックスが再構築されるまで行の物理ストレージを再確保することはありません。
 
 -   行がデルタストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は論理的および物理的に行を削除します。
 
- 
-  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。
+ [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。
 
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークし、更新された行をデルタストアに挿入します。
 
 -   行がデルタストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、デルタストアの行を更新します。
 
-##  <a name="rebuild"></a>クラスター化列ストアインデックスを再構築する
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>クラスター化列ストアインデックスを再構築する
  [CREATE CLUSTERED 列ストアインデックス &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)または[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)を使用して、既存のクラスター化列ストアインデックスの完全な再構築を実行します。 また、ALTER INDEX...再構築して特定のパーティションを再構築します。
 
 ### <a name="rebuild-process"></a>再構築プロセス
@@ -148,7 +144,7 @@ SELECT * FROM sys.column_store_row_groups
 
      これにより、すべてデータが columnstore に格納されます。 複数の負荷が同時に発生した場合は、各パーティションは複数のデルタストアを持つ可能性があります。 再構築すると、すべてのデルタストア行が columnstore に移動されます。
 
-##  <a name="reorganize"></a>クラスター化列ストアインデックスの再編成
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>クラスター化列ストアインデックスの再編成
  クラスター化 columnstore インデックスを再構成すると、すべての CLOSED 行グループが columnstore に移動されます。 再編成を実行するには、 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)を再構成オプションと共に使用します。
 
  再構成は、CLOSED 行グループを columnstore に移動するためには必要はありません。 組ムーバープロセスは、最終的にすべての閉じた行グループを検索して移動します。 ただし、組ムーバーはシングルスレッドであり、ワークロードに対して十分な速度で行グループを移動することはできません。

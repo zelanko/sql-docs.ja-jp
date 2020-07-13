@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedTable property [ADOX]
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 885d643bd6d75bfd20310dd450e09d772a105f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43fa9707f4bda0974211fbba5f74ec10c14cf961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965344"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762825"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable プロパティ (ADOX)
 関連テーブルの名前を示します。  

@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a71a43eaced5100d48a386c60d39254b1266aaef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66080016"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543924"
 ---
 # <a name="features-off-by-default-analysis-services"></a>既定でオフになっている機能 (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、既定でセキュリティ保護されるようにデザインされています。 したがって、セキュリティを損なう可能性のある機能は既定では無効になっています。 次の機能は、無効状態でインストールされ、使用するときに明示的に有効にする必要があります。  
   
 ## <a name="feature-list"></a>機能一覧  
@@ -34,10 +32,8 @@ ms.locfileid: "66080016"
   
 -   ユーザー定義関数  
   
-## <a name="server-properties"></a>サーバー プロパティ  
- 既定でオフになっている追加の機能はサーバー プロパティを通して有効にすることができます。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続します。 インスタンス名を右クリックして、 **[プロパティ]** を選択します。 
-  **[全般]** をクリックしてから、 **[詳細の表示]** をクリックして、より大きなプロパティ一覧を表示します。  
+## <a name="server-properties"></a>サーバーのプロパティ  
+ 既定でオフになっている追加の機能はサーバー プロパティを通して有効にすることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続します。 インスタンス名を右クリックして、 **[プロパティ]** を選択します。 **[全般]** をクリックしてから、 **[詳細の表示]** をクリックして、より大きなプロパティ一覧を表示します。  
   
 -   アドホック データ マイニング (OpenRowset) クエリ  
   

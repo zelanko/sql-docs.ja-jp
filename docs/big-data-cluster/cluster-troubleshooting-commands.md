@@ -1,7 +1,7 @@
 ---
-title: 監視とトラブルシューティング
+title: Kubernetes のトラブルシューティング
 titleSuffix: SQL Server big data clusters
-description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに役立つコマンドについて説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターの監視とトラブルシューティングに役立つコマンドについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153633"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606404"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes のトラブルシューティング
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに使用できる、いくつかの便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
 
 > [!TIP]
-> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている[トラブルシューティングのノートブック](manage-notebooks.md)を使用します。
+> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている[トラブルシューティングのノートブック](notebooks-manage-bdc.md)を使用します。
 
 > [!TIP]
 > Windows (cmd または PS) または Linux (bash) のクライアント コンピューターで、次の **kubectl** コマンドを実行します。 それらには、クラスターでの以前の認証と、実行対象のクラスター コンテキストが必要です。 たとえば、以前に作成された AKS クラスターでは、`az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` を実行して Kubernetes クラスター構成ファイルをダウンロードし、クラスター コンテキストを設定できます。

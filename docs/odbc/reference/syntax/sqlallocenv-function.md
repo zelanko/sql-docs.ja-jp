@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocEnv function [ODBC]
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a14b1ba846956b13cf65fa969c649d18ecc2b4e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4384ccb3bb16ec564f5eb180d91db2f23dad5c8e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036240"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290437"
 ---
 # <a name="sqlallocenv-function"></a>SQLAllocEnv 関数
 **互換性**  

@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72252060"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053032"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   特定の時点への復元が必要な場合に、リモートの Azure データベースの完全な復元を確実に行うために、ステージングテーブルに保持 SQL Server れる、移行されたデータの時間数を取得します。 
   
@@ -47,7 +46,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>アクセス許可    
  Db_owner のアクセス許可が必要です。    
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>注釈    
  [Transact-sql&#41;&#40;sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
     
 ## <a name="see-also"></a>参照    

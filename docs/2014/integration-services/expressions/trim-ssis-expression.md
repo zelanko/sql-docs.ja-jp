@@ -11,15 +11,14 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59d7eb92d79aa77da3faded36036de4b14142c93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 756d9bd066f4ecbcb1cfb7e43cec8ca7ea2713a6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62896521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437069"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 式)
   先頭および末尾のスペースを削除した後の文字式を返します。  

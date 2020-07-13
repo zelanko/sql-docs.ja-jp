@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 72169654b878f404950788b468bb6603035fd540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63311938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044453"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>クエリへの派生テーブルの追加 (Visual Database Tools)
   派生テーブルは、クエリのソース テーブルとして使用される結果セットです。 **ダイアグラム ペイン**でクエリに派生テーブルを追加できます。  

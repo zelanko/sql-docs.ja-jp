@@ -1,5 +1,6 @@
 ---
 title: SQL Server スキーマ (OracleToSQL) への Oracle スキーマのマッピング |Microsoft Docs
+description: SSMA for Oracle スキーマと SQL Server 間のマッピングをカスタマイズする方法、または既定値をそのまま使用する方法について説明します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,25 +11,25 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68262910"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293832"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>SQL Server スキーマへの Oracle スキーマのマッピング (OracleToSQL)
-Oracle では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、Oracle スキーマ内のすべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトを、スキーマのという名前のデータベースに移行します。 ただし、Oracle スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間のマッピングをカスタマイズすることはできます。  
+Oracle では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、Oracle スキーマ内のすべてのオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、スキーマのという名前のデータベースに移行します。 ただし、Oracle スキーマとデータベース間のマッピングをカスタマイズすることはでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="oracle-and-sql-server-schemas"></a>Oracle スキーマと SQL Server スキーマ  
-Oracle データベースには、スキーマが含まれています。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスには複数のデータベースが含まれており、それぞれが複数のスキーマを持つことができます。  
+Oracle データベースには、スキーマが含まれています。 のインスタンスには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複数のデータベースが含まれており、それぞれが複数のスキーマを持つことができます。  
   
-スキーマの Oracle の概念は、データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]概念とそのスキーマの1つにマップされます。 たとえば、Oracle には**HR**という名前のスキーマが存在する場合があります。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスには、 **HR**という名前のデータベースがあり、そのデータベース内にはスキーマがあります。 1つのスキーマは、 **dbo** (またはデータベース所有者) スキーマです。 既定では、Oracle スキーマの**hr**はデータベースとスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**hr. dbo**にマップされます。 SSMA とは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマとしてのデータベースとスキーマの組み合わせを意味します。  
+スキーマの Oracle の概念は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの概念とそのスキーマの1つにマップされます。 たとえば、Oracle には**HR**という名前のスキーマが存在する場合があります。 のインスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **HR**という名前のデータベースがあり、そのデータベース内にはスキーマがあります。 1つのスキーマは、 **dbo** (またはデータベース所有者) スキーマです。 既定では、Oracle スキーマの**hr**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースとスキーマの**hr. dbo**にマップされます。 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは、スキーマとしてのデータベースとスキーマの組み合わせを意味します。  
   
-Oracle と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマ間のマッピングを変更できます。  
+Oracle とスキーマ間のマッピングを変更でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>ターゲットデータベースとスキーマの変更  
-SSMA では、Oracle スキーマを任意の使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマにマップできます。  
+SSMA では、Oracle スキーマを任意の使用可能なスキーマにマップでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 **データベースとスキーマを変更するには**  
   
@@ -38,7 +39,7 @@ SSMA では、Oracle スキーマを任意の使用可能な[!INCLUDE[ssNoVersio
   
 2.  右ペインで、[**スキーママッピング**] タブをクリックします。  
   
-    すべての Oracle スキーマの一覧が表示され、その後にターゲット値が表示されます。 このターゲットは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトとデータを移行する2つの部分表記 (*データベーススキーマ*) で示されています。  
+    すべての Oracle スキーマの一覧が表示され、その後にターゲット値が表示されます。 このターゲットは、のオブジェクトとデータを移行する2つの部分表記 (*データベーススキーマ*) で示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ています。  
   
 3.  変更するマッピングを含む行を選択し、[**変更**] をクリックします。  
   
@@ -50,17 +51,17 @@ SSMA では、Oracle スキーマを任意の使用可能な[!INCLUDE[ssNoVersio
   
 -   SQL Server へのマッピング  
   
-ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースにマップされます。 マップされているターゲットデータベースがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存在しない場合は、 **"データベースまたはスキーマがターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、同期中に作成される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットデータベース下に存在しないスキーマにマップすることもできます。  
+ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲットデータベースにマップされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 マップされているターゲットデータベースがに存在しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"データベースまたはスキーマがターゲットメタデータに存在しません" というメッセージが表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同期中に作成されるターゲットデータベース下に存在しないスキーマにマップすることもできます。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマに戻す  
-Oracle スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマ間のマッピングをカスタマイズする場合は、マッピングを既定値に戻すことができます。  
+Oracle スキーマとスキーマ間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マッピングを既定値に戻すことができます。  
   
 **既定のデータベースとスキーマに戻すには**  
   
 1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
 ## <a name="next-steps"></a>次の手順  
-Oracle オブジェクトからオブジェクトへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変換を分析する場合は、[変換レポートを作成](assessing-oracle-schemas-for-conversion-oracletosql.md)できます。 それ以外の場合は[、Oracle データベースオブジェクト定義](converting-oracle-schemas-oracletosql.md)をオブジェクト定義に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換できます。  
+Oracle オブジェクトからオブジェクトへの変換を分析する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[変換レポートを作成](assessing-oracle-schemas-for-conversion-oracletosql.md)できます。 それ以外の場合は[、Oracle データベースオブジェクト定義](converting-oracle-schemas-oracletosql.md)をオブジェクト定義に変換でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server &#40;OracleToSQL&#41;に接続しています](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

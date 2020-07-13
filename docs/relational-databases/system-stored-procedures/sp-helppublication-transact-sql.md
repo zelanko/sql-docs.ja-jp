@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72689046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729221"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  パブリケーションに関する情報を返します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]パブリケーションの場合、このストアドプロシージャはパブリッシャー側でパブリケーションデータベースに対して実行され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ます。 Oracle パブリケーションの場合、このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
+  パブリケーションに関する情報を返します。 パブリケーションの場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このストアドプロシージャはパブリッシャー側でパブリケーションデータベースに対して実行されます。 Oracle パブリケーションの場合、このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,18 +39,18 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`表示するパブリケーションの名前を指定します。 *publication*のデータ型は sysname で、 **%** 既定値はで、すべてのパブリケーションに関する情報を返します。  
+`[ @publication = ] 'publication'`表示するパブリケーションの名前を指定します。 *publication*のデータ型は sysname で、既定値は **%** で、すべてのパブリケーションに関する情報を返します。  
   
 `[ @found = ] 'found' OUTPUT`は、行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーターで、既定値は**23456**です。 **1**は、パブリケーションが見つかったことを示します。 **0**は、パブリケーションが見つからないことを示します。  
   
-`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は sysname で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は sysname で、既定値は NULL です。  
   
 > [!NOTE]  
->  ** パブリッシャーからパブリケーション情報を要求するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定することはできません。  
+>  パブリッシャーからパブリケーション情報を要求するときに、*パブリッシャー*を指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|パブリケーションの ID。|  
 |name|**sysname**|パブリケーションの名前。|  
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|スナップショット エージェントが、新しいサブスクリプションでそのまま使用できるスナップショットを作成するかどうかを示します。 このパラメーターは、パブリケーションが、新規または再初期化されたサブスクリプションで常にスナップショットを使用できるように設定されている場合にのみ定義されます。|  
 |allow_sync_tran|**bit**|パブリケーションで即時更新サブスクリプションが許可されているかどうか。|  
 |autogen_sync_procs|**bit**|サブスクリプションの即時更新をサポートするストアド プロシージャを自動的に生成するかどうかを示します。|  
-|snapshot_jobid|**バイナリ (16)**|スケジュールされたタスク ID。|  
+|snapshot_jobid|**binary(16)**|スケジュールされたタスク ID。|  
 |retention|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
 |has subscription|**bit**|パブリケーションにアクティブなサブスクリプションがあるかどうかを示します。 **1**はパブリケーションにアクティブなサブスクリプションがあることを示し、 **0**はパブリケーションにサブスクリプションがないことを示します。|  
 |allow_queued_tran|**bit**|パブリッシャーで適用できるようになるまで、サブスクライバーでの変更のキューを無効にするかどうかを指定します。 **0**の場合、サブスクライバーでの変更はキューに登録されません。|  
@@ -77,7 +77,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |alt_snapshot_folder|**nvarchar(255)**|スナップショットの代替フォルダーの場所を指定します。|  
 |pre_snapshot_script|**nvarchar(255)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクトスクリプトを実行する前に、プリスナップショットスクリプトを実行します。|  
 |post_snapshot_script|**nvarchar(255)**|**.Sql**ファイルの場所へのポインターを指定します。 このディストリビューションエージェントでは、すべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトが実行されます。|  
-|compress_snapshot|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式で圧縮することを指定します。 **0**を指定すると、スナップショットは圧縮されません。|  
+|compress_snapshot|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **0**を指定すると、スナップショットは圧縮されません。|  
 |ftp_address|**sysname**|ディストリビューター用の FTP サービスのネットワークアドレス。 ここでは、サブスクライバーのディストリビューション エージェントまたはマージ エージェントがパブリケーション スナップショット ファイルを取得する場所を指定します。|  
 |ftp_port|**int**|ディストリビューターの FTP サービスのポート番号。|  
 |ftp_subdirectory|**nvarchar(255)**|パブリケーションで FTP を使用したスナップショットの配布がサポートされている場合に、サブスクライバーのディストリビューションエージェントまたはマージエージェントでスナップショットファイルを取得できる場所を指定します。|  
@@ -86,25 +86,25 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**bit**|このパブリケーションをサブスクライブするサブスクリプションデータベースをコピーする機能が有効になっているかどうかを指定します。 **0**は、コピーが許可されていないことを示します。|  
 |centralized_conflicts|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、競合の原因となったパブリッシャーとサブスクライバーの両方に格納されます。<br /><br /> **1** = 競合レコードはパブリッシャーに格納されます。|  
 |conflict_retention|**int**|競合の保有期間を日数で指定します。|  
-|conflict_policy|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定できます。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
-|queue_type||使用されるキューの種類。 次のいずれかの値を指定できます。<br /><br /> **msmq** = メッセージ[!INCLUDE[msCoName](../../includes/msconame-md.md)]キューを使用してトランザクションを格納します。<br /><br /> **sql** = トランザクション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の格納に使用します。<br /><br /> 注: メッセージキューのサポートは廃止されました。|  
-|backward_comp_level||データベースの互換性レベルは、次のいずれかになります。<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|パブリケーションが[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory でパブリッシュされるかどうかを指定します。 値**1**は公開されていることを示し、値**0**は発行されていないことを示します。|  
+|conflict_policy|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
+|queue_type||使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **msmq** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **sql** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションの格納に使用します。<br /><br /> 注: メッセージキューのサポートは廃止されました。|  
+|backward_comp_level||データベースの互換性レベルは、次のいずれかになります。<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|publish_to_AD|**bit**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 値**1**は公開されていることを示し、値**0**は発行されていないことを示します。|  
 |allow_initialize_from_backup|**bit**|サブスクライバーでは、最初のスナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できるかどうかを示します。 **1**は、サブスクリプションをバックアップから初期化できることを意味します。 **0**は、サブスクリプションが使用できないことを意味します。 詳細については、「スナップショットを使用しない[トランザクションサブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)スナップショットを使用しないトランザクションサブスクライバー」を参照してください。|  
 |replicate_ddl|**int**|パブリケーションでスキーマレプリケーションがサポートされているかどうかを示します。 **1**は、パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示し、 **0**は ddl ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。|  
 |enabled_for_p2p|**int**|ピア ツー ピア レプリケーション トポロジでパブリケーションを使用できるかどうかを示します。 **1**は、パブリケーションがピアツーピアレプリケーションをサポートしていることを示します。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|enabled_for_het_sub|**int**|パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるかどうかを示します。 値**1**は、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーがサポートされていることを意味します。 値が**0**の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーのみがサポートされます。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。|  
+|enabled_for_het_sub|**int**|パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるかどうかを示します。 値**1**は、以外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーがサポートされていることを意味します。 値が**0**の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみがサポートされます。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。|  
 |enabled_for_p2p_conflictdetection|**int**|ピア ツー ピア レプリケーションが有効になっているパブリケーションでの競合をディストリビューション エージェントが検出するかどうかを指定します。 値**1**は、競合が検出されたことを意味します。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
 |originator_id|**int**|ピア ツー ピア トポロジ内のノードの ID を指定します。 **Enabled_for_p2p_conflictdetection**が**1**に設定されている場合、この ID は競合の検出に使用されます。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。|  
-|p2p_continue_onconflict|**int**|競合が検出された場合に、ディストリビューションエージェントが変更の処理を続行するかどうかを指定します。 値**1**は、エージェントが変更を処理し続けることを意味します。<br /><br /> ** \*注意\* \* **既定値の**0**を使用することをお勧めします。 このオプションが**1**に設定されている場合、ディストリビューションエージェントは、発信元 ID が最も大きいノードから競合する行を適用してトポロジ内のデータを収束しようとします。 この方法では、収束は保証されません。 競合が検出された後、トポロジが一貫していることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|p2p_continue_onconflict|**int**|競合が検出された場合に、ディストリビューションエージェントが変更の処理を続行するかどうかを指定します。 値**1**は、エージェントが変更を処理し続けることを意味します。<br /><br /> ** \* \* 注意 \* 既定 \* **値の**0**を使用することをお勧めします。 このオプションが**1**に設定されている場合、ディストリビューションエージェントは、発信元 ID が最も大きいノードから競合する行を適用してトポロジ内のデータを収束しようとします。 この方法では、収束は保証されません。 競合が検出された後、トポロジが一貫していることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 |allow_partition_switch|**int**|ALTER TABLE...パブリッシュされたデータベースに対して SWITCH ステートメントを実行できます。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 |replicate_partition_switch|**int**|ALTER TABLE...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch*が**1**に設定されている場合にのみ有効です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_helppublication は、スナップショットおよびトランザクション レプリケーションで使用します。  
   
  sp_helppublication では、このプロシージャを実行するユーザーが所有しているすべてのパブリケーションに関する情報が返されます。  
@@ -115,13 +115,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  sp_helppublication を実行できるのは、パブリッシャーの sysadmin 固定サーバー ロールのメンバー、パブリケーション データベースの db_owner 固定データベース ロールのメンバー、またはパブリケーション アクセス リスト (PAL) のユーザーだけです。  
   
- 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合は、ディストリビューターの sysadmin 固定サーバーロールのメンバー、またはディストリビューションデータベースの db_owner 固定データベースロールのメンバー、または PAL のユーザーだけが sp_helppublication を実行できます。  
+ 以外のパブリッシャーの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ディストリビューターの sysadmin 固定サーバーロールのメンバー、またはディストリビューションデータベースの db_owner 固定データベースロールのメンバー、または PAL のユーザーだけが sp_helppublication を実行できます。  
   
-## <a name="see-also"></a>参照  
- [パブリケーションのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>関連項目  
+ [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

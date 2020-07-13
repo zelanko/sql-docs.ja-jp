@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLTransact
 - SQLTransact function [ODBC], mapping
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6aaa056fca860a70f81ad7c3a4cd8539512bc25d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070109"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304883"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact のマッピング
 **Sqltransact**は**SQLEndTran**に置き換えられました。 2つの関数の大きな違いは、 **SQLEndTran**には、実行する作業のスコープを指定する引数*handletype*が含まれていることです。 *Handletype*引数は、環境または接続ハンドルを指定できます。 **Sqltransact**の次の呼び出し:  

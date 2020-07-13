@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba9b3094b9349288abc7849a38ac5baf0cb6b55c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967148"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763993"
 ---
 # <a name="attributes-property-adox"></a>Attributes プロパティ (ADOX)
 列の特性について説明します。  

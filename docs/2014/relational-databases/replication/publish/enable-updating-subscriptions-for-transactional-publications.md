@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8f432b1e402c51646efba54ed4aacba3287b0c2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68199424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060593"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>トランザクション パブリケーションの更新可能なサブスクリプションの有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。  
@@ -29,12 +28,12 @@ ms.locfileid: "68199424"
   
 
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで、トランザクション パブリケーションの更新サブスクリプションを有効にします。 このウィザードの使用の詳細については、「[パブリケーションの作成](create-a-publication.md)」を参照してください。 パブリケーションの作成後は、更新サブスクリプションを有効にすることはできません。  
   
  更新サブスクリプションを使用するには、サブスクリプションの新規作成ウィザードでオプションも構成する必要があります。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
@@ -43,13 +42,12 @@ ms.locfileid: "68199424"
   
 1.  パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで、 **[更新可能なサブスクリプションを含むトランザクション パブリケーション]** を選択します。  
   
-2.  
-  **[エージェント セキュリティ]** ページで、スナップショット エージェントおよびログ リーダー エージェントの他に、キュー リーダー エージェントのセキュリティ設定を指定します。 キュー リーダー エージェントが実行されるアカウントに必要な権限の詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+2.  **[エージェント セキュリティ]** ページで、スナップショット エージェントおよびログ リーダー エージェントの他に、キュー リーダー エージェントのセキュリティ設定を指定します。 キュー リーダー エージェントが実行されるアカウントに必要な権限の詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
   
     > [!NOTE]  
     >  即時更新サブスクリプションのみを使用する場合でも、キュー リーダー エージェントは構成されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用してプログラムからトランザクション パブリケーションを作成するときに、即時更新サブスクリプションまたはキュー更新サブスクリプションを有効にできます。  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>即時更新サブスクリプションをサポートするパブリケーションを作成するには  
@@ -60,11 +58,11 @@ ms.locfileid: "68199424"
   
     -   パブリッシュされたデータベース用のログ リーダー エージェント ジョブが存在するかどうかわからない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) を実行します。 結果セットが空の場合、ログ リーダー エージェント ジョブを作成する必要があります。  
   
-    -   パブリッシャーで[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)を実行します。 エージェントの[!INCLUDE[msCoName](../../../includes/msconame-md.md)]実行に使用する Windows 資格情報を**@job_name**および**@password**に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password**」を参照してください。  
+    -   パブリッシャーで[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)を実行します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]エージェントの実行に使用する Windows 資格情報をおよびに指定し **@job_name** **@password** ます。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。  
   
-2.  パラメーター [](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)** に **true** を指定し、@allow_sync_transp_addpublication &#40;Transact-SQL&#41;** を実行します。  
+2.  パラメーター **@allow_sync_tran** に **true** を指定し、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。  
   
-3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2. で使用したパブリケーション名**@publication**をに指定し、スナップショットエージェントの実行に使用**@job_name**する**@password**Windows 資格情報をとに指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password**」を参照してください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2. で使用したパブリケーション名をに指定し、 **@publication** スナップショットエージェントの実行に使用する Windows 資格情報をとに指定し **@job_name** **@password** ます。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
@@ -78,7 +76,7 @@ ms.locfileid: "68199424"
   
     -   パブリッシュされたデータベース用のログ リーダー エージェント ジョブが存在するかどうかわからない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) を実行します。 結果セットが空の場合、ログ リーダー エージェント ジョブを作成する必要があります。  
   
-    -   パブリッシャーで[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)を実行します。 エージェントの実行に使用する Windows 資格情報を**@job_name**および**@password**に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password**」を参照してください。  
+    -   パブリッシャーで[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)を実行します。 エージェントの実行に使用する Windows 資格情報をおよびに指定し **@job_name** **@password** ます。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。  
   
 2.  必要に応じて、ディストリビューター用のキュー リーダー エージェント ジョブを作成します。  
   
@@ -86,11 +84,11 @@ ms.locfileid: "68199424"
   
     -   ディストリビューション データベース用のキュー リーダー エージェント ジョブが存在するかどうかわからない場合は、ディストリビューター側のディストリビューション データベースに対して [sp_helpqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql) を実行します。 結果セットが空の場合、キュー リーダー エージェント ジョブを作成する必要があります。  
   
-    -   ディストリビューターで、[sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) を実行します。 エージェントの実行に使用する Windows 資格情報を**@job_name**および**@password**に指定します。 これらの資格情報は、キュー リーダー エージェントがパブリッシャーとサブスクライバーに接続するときに使用されます。 詳細については、「[レプリケーションエージェントのセキュリティモデル](../security/replication-agent-security-model.md)」を参照してください。  
+    -   ディストリビューターで、[sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) を実行します。 エージェントの実行に使用する Windows 資格情報をおよびに指定し **@job_name** **@password** ます。 これらの資格情報は、キュー リーダー エージェントがパブリッシャーとサブスクライバーに接続するときに使用されます。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
   
-3.  パラメーター [](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)** に **true** を指定し、@allow_queued_tran**** に **pub wins **、** sub reinit **、または **sub wins** を指定して、@conflict_policysp_addpublication &#40;Transact-SQL&#41;** を実行します。  
+3.  パラメーター **@allow_queued_tran** に **true** を指定し、**@conflict_policy** に **pub wins**、**sub reinit**、または **sub wins** を指定して、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。  
   
-4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3. で使用したパブリケーション名**@publication**をに指定し、スナップショットエージェントの実行に使用**@snapshot_job_name**する**@password**Windows 資格情報をとに指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password**」を参照してください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3. で使用したパブリケーション名をに指定し、 **@publication** スナップショットエージェントの実行に使用する Windows 資格情報をとに指定し **@snapshot_job_name** **@password** ます。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
@@ -98,12 +96,9 @@ ms.locfileid: "68199424"
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>キュー更新サブスクリプションが可能なパブリケーションの競合ポリシーを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 
-  **
-  **
-  ** に @propertyconflict_policy** を指定し、**pub wins**、**sub reinit**、または **sub wins** のいずれかの競合ポリシー モードを **@value** に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 **@property** に **conflict_policy** を指定し、**pub wins**、**sub reinit**、または **sub wins** のいずれかの競合ポリシー モードを **@value** に指定します。  
   
-###  <a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、即時更新プル サブスクリプションとキュー更新プル サブスクリプションの両方がサポートされるパブリケーションを作成します。  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
@@ -112,7 +107,7 @@ ms.locfileid: "68199424"
  [キュー更新の競合解決オプションを設定 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [トランザクションレプリケーションのパブリケーションの種類](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
- [パブリケーションを作成する](create-a-publication.md)   
+ [Create a Publication](create-a-publication.md)   
  [トランザクションパブリケーションに対する更新可能なサブスクリプションの作成](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [トランザクションレプリケーションの更新可能なサブスクリプション](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sqlcmd でのスクリプト変数の使用](../../scripting/sqlcmd-use-with-scripting-variables.md)  

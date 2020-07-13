@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006719"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662968"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>例 : ELEMENTXSINIL ディレクティブの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   ELEMENT ディレクティブを指定して要素中心の XML を生成する際、列に NULL 値が格納されていると、EXPLICIT モードでは対応する要素が生成されません。 必要に応じて ELEMENTXSINIL ディレクティブを指定し、NULL 値の列に対して要素を生成するように要求することができます。このとき、 **xsi:nil** 属性に値 TRUE が設定されます。  
   
  次のクエリは、従業員の住所を含む XML を生成します。 `AddressLine2` 列と `City` 列には、列名に `ELEMENTXSINIL` ディレクティブが指定されています。 この設定により、NULL 値が格納されている `AddressLine2` 列と `City` 列に対して行セットに要素が生成されます。  

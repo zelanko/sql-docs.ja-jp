@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e5f68a89ef0579df0de314c3215ade147d62d0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704362"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスの凸包を表すオブジェクトを返します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68042467"
  CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>解説  
- エンベロープの角度が 90°より大きい `FullGlobe`geography**インスタンスに対して** オブジェクトを返します。  
+ エンベロープの角度が 90°より大きい **geography** インスタンスに対して `FullGlobe` オブジェクトを返します。  
   
  空の **geography** インスタンスに対して空の **geography** コレクションを返します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68042467"
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 初期化されていない geography インスタンスに STConvexHull() を使用する  
- 次の例では、初期化されていない `STConvexHull()`geography**インスタンスに** を使用します。  
+ 次の例では、初期化されていない **geography** インスタンスに `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography;  
@@ -56,7 +56,7 @@ ms.locfileid: "68042467"
  ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>B. 空の geography インスタンスに STConvexHull を使用する  
- 次の例では、空の `STConvexHull()` インスタンスに `Polygon` を使用します。  
+ 次の例では、空の `Polygon` インスタンスに `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography = 'POLYGON EMPTY';  
@@ -73,7 +73,7 @@ ms.locfileid: "68042467"
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. エンベロープの角度が 90 度より大きい geography インスタンスで凸包を見つける  
- 次の例では、エンベロープの角度が 90 度より大きい `STConvexHull()`geography**インスタンスで** を使用します。  
+ 次の例では、エンベロープの角度が 90 度より大きい **geography** インスタンスで `STConvexHull()` を使用します。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

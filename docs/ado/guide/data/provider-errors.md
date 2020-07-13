@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924546"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760998"
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダーエラーが発生すると、-2147467259 の実行時エラーが返されます。 このエラーが発生した場合は、アクティブな**接続**オブジェクトの**エラー**コレクションを確認します。これには、発生した問題を説明する1つ以上のエラーが含まれます。  
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>Error オブジェクト  
  **エラーオブジェクトを**調べることによって、発生したエラーと、そのエラーの原因となったアプリケーションまたはオブジェクトを特定できます。 **Error**オブジェクトには、次のプロパティがあります。  
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |**説明**|発生したエラーの説明テキスト。|  
 |**HelpContext、HelpFile**|発生したエラーの説明を含むヘルプトピックおよびヘルプファイルを参照します。|  
 |**NativeError**|プロバイダー固有のエラー番号。|  
-|**少数**|発生したエラーの数値 ( **Errorvalueenum**に示されている) を表す長整数。|  
+|**数値**|発生したエラーの数値 ( **Errorvalueenum**に示されている) を表す長整数。|  
 |**ソース**|エラーを生成したオブジェクトまたはアプリケーションの名前を示します。|  
 |**SQLState**|SQL ステートメントの処理中にプロバイダーが返す5文字のエラーコード。|  
   

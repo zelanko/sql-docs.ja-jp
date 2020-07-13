@@ -1,5 +1,6 @@
 ---
 title: master データベースの復元 (Transact-SQL) | Microsoft Docs
+description: この記事では、Transact-SQL を使用して、SQL Server でデータベースの完全バックアップから master データベースを復元する方法について示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8bfaa8ffee65be6c0c5693420c89032c9b83763
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041474"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180730"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master データベースの復元 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

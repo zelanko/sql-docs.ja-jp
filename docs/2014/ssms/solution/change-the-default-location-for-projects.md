@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 330dc8ae1746a4fe7be8291cf1032a12bc62e948
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62956136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066359"
 ---
 # <a name="change-the-default-location-for-projects"></a>プロジェクトの既定の場所の変更
   ファイルとプロジェクトの既定の場所は、[マイ ドキュメント] フォルダー内の [[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクト] フォルダーです。  
   
 ### <a name="to-change-the-default-location-for-projects"></a>プロジェクトの既定の場所を変更するには  
   
-1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、以前に開いたプロジェクトの場所を格納し、次にプロジェクトを開くときまたは保存するときに使用します。  
+1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は前回開いたプロジェクトの場所を記憶し、次回プロジェクトを開いたり保存したりする際に使用します。  
   
 ## <a name="see-also"></a>参照  
  [ソリューション エクスプローラー](solution-explorer.md)  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c6e4de16c4a1a80be893acbc7a1993b375f2fee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077115"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298826"
 ---
 # <a name="argument-value-checks"></a>引数の値のチェック
 ドライバーマネージャーは、次の種類の引数を確認します。 特に明記されていない限り、ドライバーマネージャーは引数値のエラーに対して SQL_ERROR を返します。  

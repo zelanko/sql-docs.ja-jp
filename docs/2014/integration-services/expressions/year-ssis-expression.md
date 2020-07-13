@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90aec5f7dbf3d3c69a7faa6a98e98232069f9513
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768698"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436999"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 式)
   ある日付の、年の日付要素を表す整数値を返します。  

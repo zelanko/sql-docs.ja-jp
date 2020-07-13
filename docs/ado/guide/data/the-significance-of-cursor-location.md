@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923898"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759068"
 ---
 # <a name="the-significance-of-cursor-location"></a>カーソル位置の有意性
 すべてのカーソルは、一時リソースを使用してデータを保持します。 これらのリソースには、メモリ、ディスクページングファイル、一時ディスクファイル、またはデータベース内の一時的なストレージを使用できます。 これらのリソースがクライアントコンピューターに配置されている場合、カーソルは*クライアント側*カーソルと呼ばれます。 これらのリソースがサーバーに配置されている場合、カーソルは*サーバー側*カーソルと呼ばれます。  

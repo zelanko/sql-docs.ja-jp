@@ -18,18 +18,17 @@ helpviewer_keywords:
 - sp_query_store_reset_exec_stats
 - sys.sp_query_store_reset_exec_stats
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 8d818d6ebf8c00d788f422c19b0bf32edaff0c24
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68418927"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012624"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリストアから特定のクエリプランのランタイム統計を消去します。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62843668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929473"
 ---
 # <a name="retrieve-files"></a>ファイルの取得
   ソース管理の対象プロジェクトを開いた後、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理の格納場所からプロジェクトがあるローカル ディレクトリに、プロジェクト ファイルのローカル コピーを取得できます。  

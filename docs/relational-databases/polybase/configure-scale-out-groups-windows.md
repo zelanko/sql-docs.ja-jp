@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892054"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、Windows 上で [PolyBase スケールアウト グループ](polybase-scale-out-groups.md)を設定する方法について説明します。 これにより、Hadoop や Azure Blob Storage などの外部データ ソースからの大量のデータ セットを、クエリ パフォーマンスの向上のためにスケールアウト形式で処理するために、SQL Server インスタンス クラスターが作成されます。
 
@@ -87,7 +87,10 @@ ms.locfileid: "80216081"
 3. コンピューティング ノード (PQTH4A-CMP02) で、services.msc を実行します。
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
-  
+
+> [!NOTE] 
+> Polybase Engine サービスが再起動したか、ヘッド ノードで停止した場合、Data Movement Service (DMS) と Polybase Engine サービス (DW) の間で通信チャネルが閉じられた直後、DMS サービスが停止します。 DW エンジンが 2 回以上再起動した場合、DMS は 90 分間沈黙します。次回の自動起動試行まで 90 分待機する必要があります。 そのような状況では、すべてのノードで、このサービスを手動で開始してください。
+
 ## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。

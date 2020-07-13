@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0f5d0261bd1968eb01ce8c394de4aeda1a02a22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62642913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056788"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty クラス
   [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) は、サーバーネットワークプロトコルのプロパティを表します。  

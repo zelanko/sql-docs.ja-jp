@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d587a860ad402c8a7458bb148741b753f3aeb2ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62897529"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437229"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 式)
   ある日付の、月の日付要素を表す整数値を返します。  

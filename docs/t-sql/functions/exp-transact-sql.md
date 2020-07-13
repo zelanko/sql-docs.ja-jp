@@ -16,18 +16,18 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aefe95893f9fc352b4c4b1909b849679fd302ab8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071591"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010340"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定した指数値を返します **float** 式です。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68071591"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 EXP ( float_expression )  
 ```  
   
@@ -59,9 +59,9 @@ EXP ( float_expression )
  次の例では、変数を宣言し、指定した変数 (`10`) の指数値とテキストの説明を返します。  
   
 ```  
-DECLARE @var float  
+DECLARE @var FLOAT  
 SET @var = 10  
-SELECT 'The EXP of the variable is: ' + CONVERT(varchar,EXP(@var))  
+SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
 GO  
 ```  
   
@@ -77,7 +77,7 @@ The EXP of the variable is: 22026.5
  次の例では、`20` の自然対数の指数値と、`20` の指数の自然対数を返します。 これらの関数は互いの逆関数なので、どちらの場合も戻り値は `20` です。  
   
 ```  
-SELECT EXP( LOG(20)), LOG( EXP(20))  
+SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
   

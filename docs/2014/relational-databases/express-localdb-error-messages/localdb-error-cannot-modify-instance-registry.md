@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cf44d6a2bda0b9828fec0c3b6e71f08bda20d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6185350a3348f23a39d733ca864ac325f7df3583
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62519336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051249"
 ---
 # <a name="localdb_error_cannot_modify_instance_registry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
     

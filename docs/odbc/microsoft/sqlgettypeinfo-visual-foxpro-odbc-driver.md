@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 23db0350f0f7271f85e2bc5c6a9e6c8767443a85
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67898628"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81299522"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -29,26 +29,26 @@ ms.locfileid: "67898628"
   
  データソースでサポートされているデータ型に関する情報を返します。 ドライバーは、SQL 結果セットの情報を返します。 次の表に、ODBC データ型と、対応する Visual FoxPro データ型の一覧を示します。  
   
-|ODBC の種類|Visual FoxPro の種類|  
+|ODBC 型|Visual FoxPro の種類|  
 |---------------|------------------------|  
 |SQL_BIGINT|サポートされていません。 64ビットの Visual FoxPro の種類がありません。|  
 |SQL_BIT|論理|  
-|SQL_CHAR|Character|  
-|SQL_DATE|Date|  
+|SQL_CHAR|文字|  
+|SQL_DATE|日付|  
 |SQL_DECIMAL|数値|  
-|SQL_DOUBLE|DOUBLE|  
-|SQL_FLOAT|DOUBLE|  
-|SQL_INTEGER|整数|  
+|SQL_DOUBLE|Double|  
+|SQL_FLOAT|Double|  
+|SQL_INTEGER|Integer|  
 |SQL_LONGVARBINARY|メモ (バイナリ)|  
 |SQL_LONGVARCHAR|メモ|  
 |SQL_NUMERIC|Numeric *、Currency、Float|  
-|SQL_REAL|DOUBLE|  
-|SQL_SMALLINT|整数|  
+|SQL_REAL|Double|  
+|SQL_SMALLINT|Integer|  
 |SQL_TIME|サポートされていません。 Visual FoxPro の*時刻*型はありません。|  
 |SQL_TIMESTAMP|DateTime|  
-|SQL_TINYINT|整数|  
+|SQL_TINYINT|Integer|  
 |SQL_VARBINARY|メモ (バイナリ) *、全般|  
-|SQL_VARCHAR|Character|  
+|SQL_VARCHAR|文字|  
   
  * 既定の型  
   

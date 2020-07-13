@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 45972029fdb06f447492ec75e1ab64a54f4adce5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050963"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
   指定した SQL Server Express LocalDB インスタンスの共有を停止します。  
@@ -66,7 +65,7 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  

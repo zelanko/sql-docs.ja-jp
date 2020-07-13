@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5198dc4ba4e81bc1d7a8dd2411da59da81596102
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63187930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060223"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
   メタデータの表示は、ユーザーが所有するセキュリティ保護可能なリソース、またはそのユーザーが権限を許可されているセキュリティ保護可能なリソースに制限されています。 たとえば、次のクエリを実行すると、ユーザーがテーブル `myTable`に対する SELECT または INSERT 権限を許可されている場合は、1 行が返されます。  
@@ -43,7 +42,7 @@ GO
   
 |||  
 |-|-|  
-|カタログ ビュー|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ストアドプロシージャの**sp_help**|  
+|カタログ ビュー|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャ|  
 |メタデータ公開組み込み関数|情報スキーマ ビュー|  
 |互換性ビュー|拡張プロパティ|  
   
@@ -51,8 +50,7 @@ GO
   
 |||  
 |-|-|  
-|ログ配布システム テーブル|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント システム テーブル|  
+|ログ配布システム テーブル|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント システム テーブル|  
 |データベース メンテナンス プラン システム テーブル|バックアップ システム テーブル|  
 |レプリケーション システム テーブル|レプリケーション ストアド プロシージャと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sp_help** ストアド プロシージャ|  
   
@@ -64,9 +62,7 @@ GO
   
 -   OBJECTPROPERTYEX などのメタデータ生成組み込み関数を実行すると、NULL 値が返されることがあります。  
   
--   
-  
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャを実行しても、行のサブセットまたは NULL 値しか返されないことがあります。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャを実行しても、行のサブセットまたは NULL 値しか返されないことがあります。  
   
  ストアド プロシージャやトリガーなどの SQL モジュールは、呼び出し元のセキュリティ コンテキストで実行されるので、メタデータへのアクセスが制限されます。 たとえば次のコードでは、ストアド プロシージャから、呼び出し元に権限のないテーブル `myTable` のメタデータへのアクセスが試行されると、空の結果セットが返されます。 以前のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では行が返されます。  
   
@@ -109,8 +105,7 @@ GO
   
  次のメタデータは公開を強制されません。  
   
--   
-  **sys.servers** の **provider_string**列に格納されている値。 ALTER ANY LINKED SERVER 権限が許可されていないユーザーには、この列に NULL 値が表示されます。  
+-   **sys.servers** の **provider_string**列に格納されている値。 ALTER ANY LINKED SERVER 権限が許可されていないユーザーには、この列に NULL 値が表示されます。  
   
 -   ストアド プロシージャやトリガーなどのユーザー定義オブジェクトのソース定義。 ソース コードは、次のいずれかの条件を満たしている場合のみ表示されます。  
   
@@ -127,11 +122,9 @@ GO
     |**sys.default_constraints**|**sys.computed_columns**|  
     |**sys.numbered_procedures**||  
   
--   
-  **syscomments** 互換性ビューの **ctext** 列。  
+-   **syscomments** 互換性ビューの **ctext** 列。  
   
--   
-  **sp_helptext** プロシージャの出力。  
+-   **sp_helptext** プロシージャの出力。  
   
 -   情報スキーマ ビューの次の列。  
   
@@ -143,8 +136,7 @@ GO
   
 -   OBJECT_DEFINITION() 関数  
   
--   
-  **sys.sql_logins**の password_hash 列に格納された値。  CONTROL SERVER 権限が許可されていないユーザーには、この列に NULL 値が表示されます。  
+-   **sys.sql_logins**の password_hash 列に格納された値。  CONTROL SERVER 権限が許可されていないユーザーには、この列に NULL 値が表示されます。  
   
 > [!NOTE]  
 >  組み込みシステム プロシージャと組み込みシステム関数の SQL 定義は、 **sys.system_sql_modules** カタログ ビュー、 **sp_helptext** ストアド プロシージャ、および OBJECT_DEFINITION() 関数を使用すると公開されます。  
@@ -189,17 +181,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**システムメッセージ**|  
+|**sys.partitions**|**sys.messages**|  
 |**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>参照  
- [GRANT &#40;Transact-sql&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [Transact-sql&#41;の拒否 &#40;](/sql/t-sql/statements/deny-transact-sql)   
- [&#40;Transact-sql&#41;を取り消す](/sql/t-sql/statements/revoke-transact-sql)   
- [Transact-sql&#41;&#40;の EXECUTE AS 句](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [EXECUTE AS 句 &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [互換性ビュー &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [互換性ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

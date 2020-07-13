@@ -11,18 +11,15 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070720"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540074"
 ---
 # <a name="preview-selected-table-ssas"></a>[選択したテーブルのプレビュー] (SSAS)
-  
-  **テーブルのインポート ウィザード** のこのページを使用すると、選択したテーブルのデータのプレビュー、データ インポートに含める列の選択、および選択した列のデータのフィルター処理を行うことができます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、選択したテーブルのデータのプレビュー、データ インポートに含める列の選択、および選択した列のデータのフィルター処理を行うことができます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
  テーブルのすべての行が表示されるわけではありません。 ただし、設定したフィルターはインポート時にテーブルのすべてのデータに適用されます。  
   
@@ -30,14 +27,14 @@ ms.locfileid: "66070720"
   
  このページに表示されるデータは、インポートの成功を保証するものではありません。 [権限借用情報] ページで指定されたユーザー名に、選択したデータベースの読み取り権限がないと、インポートは失敗します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **列ヘッダーのチェック ボックス**  
  列をデータ インポートの対象にする場合は、チェック ボックスをオンにします。 列をデータ インポートの対象から除外する場合は、チェック ボックスをオフにします。  
   
  **列ヘッダーの下矢印ボタン**  
  列のデータをフィルター処理します。  
   
- **行フィルターのクリア**  
+ **[行フィルターのクリア]**  
  列のデータに適用されているすべてのフィルターを削除します。  
   
   

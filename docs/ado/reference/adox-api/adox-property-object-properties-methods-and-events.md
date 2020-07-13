@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Property object [ADOX], members
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d17bb9ac5e443606b54f2f9c606083397e4f0583
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930352"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764093"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX Property オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "67930352"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

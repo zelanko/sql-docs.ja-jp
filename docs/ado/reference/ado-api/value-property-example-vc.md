@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b124dc502df261972621b554cb2992d0e6014737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758638"
 ---
 # <a name="value-property-example-vc"></a>Value プロパティの例 (VC++)
 この例では、 ***Employees***テーブルのフィールドとプロパティの値を表示することにより、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトと[property](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトを含む[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを示します。  

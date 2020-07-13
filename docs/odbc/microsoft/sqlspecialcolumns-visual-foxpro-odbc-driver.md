@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSpecialColumns function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b690cceecb6c9980f5d84e96bccb1b02f014c026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96b439674c8bda3494b4cefd0c1118602b537cd0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093096"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299382"
 ---
 # <a name="sqlspecialcolumns-visual-foxpro-odbc-driver"></a>SQLSpecialColumns (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70874725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004070"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "70874725"
   
  ワード ブレーカーとステマーの全般的な情報については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
-##  <a name="overview"></a> ワード ブレーカーとステマーの切り替えと復元の概要  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> ワード ブレーカーとステマーの切り替えと復元の概要  
  ワード ブレーカーとステマーの切り替えと復元の手順は、言語によって異なります。 次の表は、以前のバージョンのコンポーネントに戻す場合に必要な 3 組の操作をまとめたものです。  
   
 |現在のファイル|以前のファイル|影響を受ける言語の数|ファイルに対する操作|レジストリ エントリに対する操作|  
@@ -48,7 +47,7 @@ ms.locfileid: "70874725"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> 現在と以前のワード ブレーカーのファイル名が NaturalLanguage6.dll である言語  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> 現在と以前のワード ブレーカーのファイル名が NaturalLanguage6.dll である言語  
  次の表に示す言語では、現在と以前のワード ブレーカーのファイル名が NaturalLanguage6.dll です。 これらのコンポーネントの切り替えまたは復元を行うには、NaturalLanguage6.dll を同じファイルの別のバージョンで上書きする必要があります。 このリリースではレジストリ エントリは変更されていないため、レジストリ エントリを変更する必要はありません。  
   
 > [!WARNING]  
@@ -79,7 +78,7 @@ ms.locfileid: "70874725"
 |中立|中立|0000|  
 |ノルウェー語 (ボークモール)|nor|1044|  
 |パンジャーブ語|pan|1094|  
-|ポルトガル語|ptg|2070|  
+|Portuguese|ptg|2070|  
 |ポルトガル語 (ブラジル) |ptb|1046|  
 |Romanian|rom|1048|  
 |Slovak|sky|1051|  
@@ -95,7 +94,7 @@ ms.locfileid: "70874725"
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
   
-###  <a name="nl6nl6revert"></a> 以前のコンポーネントに戻すには  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> 以前のコンポーネントに戻すには  
   
 1.  上で説明した Binn フォルダーに移動します。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "70874725"
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-###  <a name="nl6nl6restore"></a> 現在のコンポーネントを復元するには  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 現在のコンポーネントを復元するには  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "70874725"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-##  <a name="newnl6"></a> 以前のワード ブレーカーのファイル名のみが NaturalLanguage6.dll である言語  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> 以前のワード ブレーカーのファイル名のみが NaturalLanguage6.dll である言語  
  次の表に示す言語では、以前のワード ブレーカーのファイル名が新しいバージョンのファイル名とは異なります。 以前のファイル名は NaturalLanguage6.dll です。 以前のバージョンに戻すには、現在のバージョンの NaturalLanguage6.dll を同じファイルの以前のバージョンで上書きする必要があります。 また、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
   
 > [!WARNING]  
@@ -139,7 +138,7 @@ ms.locfileid: "70874725"
   
  次の手順は、「 [ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値](#newnl6values)」に示す値の一覧と共に使用してください。  
   
-###  <a name="newnl6revert"></a> 以前のコンポーネントに戻すには  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> 以前のコンポーネントに戻すには  
   
 1.  上で説明した Binn フォルダーに移動します。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 6.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -164,7 +163,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-7.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+7.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 8.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "70874725"
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-###  <a name="newnl6restore"></a> 現在のコンポーネントを復元するには  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 現在のコンポーネントを復元するには  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの NaturalLanguage6.dll をバックアップした場所に移動します。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-3.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+3.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 4.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -193,7 +192,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 6.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70874725"
   
 8.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-###  <a name="newnl6values"></a> ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値  
  次に示すファイル名とレジストリ エントリの一覧は、前のセクションの手順と共に使用してください。 以前のバージョンに戻す場合は以前の値を使用し、現在のバージョンのコンポーネントを復元する場合は現在の値を使用します。  
   
  次の一覧は、各言語に使用される省略形を基準としてアルファベット順に並べられています。  
@@ -251,7 +250,7 @@ ms.locfileid: "70874725"
 |現在の CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
  次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
   
  **影響を受ける言語の一覧**  
@@ -269,11 +268,11 @@ ms.locfileid: "70874725"
   
  次の手順は、「 [ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値](#newnewvalues)」に示す値の一覧と共に使用してください。  
   
-###  <a name="newnewrevert"></a> 以前のコンポーネントに戻すには  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> 以前のコンポーネントに戻すには  
   
 1.  現在のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 3.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -285,7 +284,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-4.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -293,11 +292,11 @@ ms.locfileid: "70874725"
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-###  <a name="newnewrestore"></a> 以前のコンポーネントを復元するには  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> 以前のコンポーネントを復元するには  
   
 1.  以前のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<\> InstanceRoot**。  
   
 3.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -309,7 +308,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-4.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -317,7 +316,7 @@ ms.locfileid: "70874725"
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
-###  <a name="newnewvalues"></a> ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> ワード ブレーカーとステマーの切り替えと復元のためのファイル名とレジストリ値  
  次に示すファイル名とレジストリ エントリの一覧は、前のセクションの手順と共に使用してください。 以前のバージョンに戻す場合は以前の値を使用し、現在のバージョンのコンポーネントを復元する場合は現在の値を使用します。  
   
  次の一覧は、各言語に使用される省略形を基準としてアルファベット順に並べられています。  

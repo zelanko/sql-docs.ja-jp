@@ -11,15 +11,14 @@ helpviewer_keywords:
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 110dfa19f9251b1cd43fc7ad0d6f7b4ce894dfa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66058062"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424779"
 ---
 # <a name="inherited-transactions"></a>トランザクションの継承
   パッケージでパッケージ実行タスクを使用して、別のパッケージを実行できます。 パッケージ実行タスクで実行される子パッケージでは、独自のパッケージ トランザクションを作成する場合もあれば、親パッケージのトランザクションを継承する場合もあります。  
@@ -37,11 +36,11 @@ ms.locfileid: "66058062"
   
  パッケージとタスクのトランザクション属性は次のとおりです。  
   
--   パッケージ A および C の**Transactionoption**は**Required**に設定されています  
+-   パッケージ A および C の**TransactionOption** は **Required** に設定されています。  
   
--   **Transactionoption**は、パッケージ b と D、およびパッケージ実行タスク b、パッケージ実行タスク d、およびパッケージ実行タスク F で**サポートさ**れるように設定されています。  
+-   パッケージ B と D、およびパッケージ実行タスク B、パッケージ実行タスク D、パッケージ実行タスク F の**TransactionOption** は **Supported** に設定されています。  
   
--   **Transactionoption**は、パッケージ e の場合は**NotSupported**に設定され、パッケージ実行タスク C と実行パッケージ e に設定されます。  
+-   パッケージ E、およびパッケージ実行タスク C、パッケージ実行タスク E の**TransactionOption** は **NotSupported** に設定されています。  
   
  ![トランザクションの継承フロー](media/mw-dts-executepack.gif "トランザクションの継承フロー")  
   

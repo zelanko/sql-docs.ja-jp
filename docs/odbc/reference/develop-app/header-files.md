@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139029"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300192"
 ---
 # <a name="header-files"></a>ヘッダー ファイル
 Sql .h ヘッダーファイルには、コア ODBC インターフェイス準拠レベルの関数と機能のプロトタイプが含まれています。 Sqlext .h ヘッダーファイルには、レベル1およびレベル2の API 準拠レベルの関数と機能のプロトタイプが含まれています。 Sqltypes ヘッダーファイルには、SQL データ型の型定義とインジケーターが含まれています。  

@@ -12,18 +12,16 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4601b1f7f73b513eea94de2206f68b5d58053b35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67316663"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437859"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
   
  カスタム ログ エントリとは、パッケージ、すべてのコンテナー、およびタスクに使用できる一連の標準的なログ記録イベントとは異なるエントリのセットです。 カスタム ログ エントリは、パッケージ内の特定のタスクに関する有益な情報を取得するように調整されます。 たとえば、SQL 実行タスクのカスタム ログ エントリの 1 つに、そのタスクで実行される SQL ステートメントをログに記録するものがあります。  
@@ -32,11 +30,11 @@ ms.locfileid: "67316663"
   
  次の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトには、カスタム ログ エントリがあります。  
   
- [Package](#Package)  
+ [パッケージ](#Package)  
   
  [一括挿入タスク](#BulkInsert)  
   
- [[データ フロー タスク]](#DataFlow)  
+ [データ フロー タスク](#DataFlow)  
   
  [DTS 2000 タスクの実行](#ExecuteDTS200)  
   
@@ -48,7 +46,7 @@ ms.locfileid: "67316663"
   
  [FTP タスク](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [メッセージ キュー タスク](#MessageQueue)  
   
  [スクリプト タスク](#Script)  
   
@@ -76,87 +74,84 @@ ms.locfileid: "67316663"
   
 ## <a name="log-entries"></a>ログ エントリ  
   
-###  <a name="Package"></a>パック  
+###  <a name="package"></a><a name="Package"></a>パック  
  次の表は、パッケージのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`PackageStart`|パッケージの実行が開始されたことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |`PackageEnd`|パッケージが完了したことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> 
-  `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「 [トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
+|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「 [トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
   
-###  <a name="BulkInsert"></a>一括挿入タスク  
+###  <a name="bulk-insert-task"></a><a name="BulkInsert"></a>一括挿入タスク  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`DTSBulkInsertTaskBegin`|一括挿入が開始されたことを示します。|  
 |`DTSBulkInsertTaskEnd`|一括挿入が終了したことを示します。|  
 |`DTSBulkInsertTaskInfos`|タスクに関する説明情報を提供します。|  
   
-###  <a name="DataFlow"></a>データフロータスク  
+###  <a name="data-flow-task"></a><a name="DataFlow"></a>データフロータスク  
  次の表は、データ フロー タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
-|`OnPipelinePostEndOfRowset`|
-  `ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、コンポーネントが行の処理を完了したことを意味します。|  
-|`OnPipelinePreEndOfRowset`|コンポーネントが最後に`ProcessInput`メソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePreEndOfRowset`|コンポーネントが最後にメソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示し `ProcessInput` ます。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
-|`OnPipelineRowsSent`|
-  `ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
+|`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |`PipelineBufferLeak`|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 つまり、バッファー リソースが解放されていないため、メモリ リークの原因になる可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  
 |`PipelineExecutionPlan`|データ フローの実行プランを報告します。 バッファーをコンポーネントに送信する方法に関する情報を提供します。 この情報は、PipelineExecutionTrees エントリと組み合わせて、タスク内での実行内容を示します。|  
 |`PipelineExecutionTrees`|データ フロー内のレイアウトの実行ツリーを報告します。 データ フロー エンジンのスケジューラは、このツリーを使用して、データ フローの実行プランを構築します。|  
 |`PipelineInitialization`|タスクに関する初期化情報を提供します。 この情報には、BLOB データの一時的な保存に使用するディレクトリ、既定のバッファー サイズ、およびバッファー内の行数が含まれます。 データ フロー タスクの構成によっては、複数のログ エントリが書き込まれる場合があります。|  
   
-###  <a name="ExecuteDTS200"></a>DTS 2000 タスクの実行  
+###  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> DTS 2000 実行タスク  
  次の表は、DTS 2000 実行タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|タスクが DTS 2000 パッケージの実行を開始したことを示します。|  
 |`ExecuteDTS80PackageTaskEnd`|タスクが終了したことを示します。<br /><br /> 注: DTS 2000 パッケージは、タスク終了後も引き続き実行される場合があります。|  
 |`ExecuteDTS80PackageTaskTaskInfo`|タスクに関する説明情報を提供します。|  
 |`ExecuteDTS80PackageTaskTaskResult`|タスクで実行された DTS 2000 パッケージの実行結果を報告します。|  
   
-###  <a name="ExecuteProcess"></a>プロセス実行タスク  
+###  <a name="execute-process-task"></a><a name="ExecuteProcess"></a>プロセス実行タスク  
  次の表は、プロセス実行タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|タスクで実行するように構成されている実行可能ファイルの実行プロセスに関する情報を提供します。<br /><br /> 2 つのログ エントリが書き込まれます。 1 つのエントリには、タスクで実行される実行可能ファイルの名前と場所が含まれ、もう 1 つのエントリは、実行可能ファイルの終了を記録します。|  
 |`ExecuteProcessVariableRouting`|実行可能ファイルの入力と出力にルーティングされる変数に関する情報を提供します。 ログ エントリは、stdin (入力)、stdout (出力)、および stderr (エラー出力) に書き込まれます。|  
   
-###  <a name="ExecuteSQL"></a>SQL 実行タスク  
+###  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a>SQL 実行タスク  
  次の表では、SQL 実行タスクのカスタム ログ エントリを説明します。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|SQL ステートメントの実行フェーズに関する情報を提供します。 タスクがデータベースへの接続を取得したとき、SQL ステートメントの準備が開始されたとき、および SQL ステートメントの実行が完了した後に、ログ エントリが書き込まれます。 準備フェーズのログ エントリには、タスクで使用される SQL ステートメントが含まれます。|  
   
-###  <a name="FileSystem"></a>ファイルシステムタスク  
+###  <a name="file-system-task"></a><a name="FileSystem"></a>ファイルシステムタスク  
  次の表では、ファイル システム タスクのカスタム ログ エントリを説明します。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`FileSystemOperation`|タスクで実行される操作を報告します。 ログ エントリは、ファイル システム操作の開始時に書き込まれます。これには、操作の基になるファイルと操作対象のファイルに関する情報が含まれます。|  
   
-###  <a name="FTP"></a>FTP タスク  
+###  <a name="ftp-task"></a><a name="FTP"></a>FTP タスク  
  次の表は、FTP タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|タスクで FTP サーバーへの接続が開始されたことを示します。|  
 |`FTPOperation`|タスクで実行された FTP 操作の開始および種類を報告します。|  
   
-###  <a name="MessageQueue"></a>メッセージキュータスク  
+###  <a name="message-queue-task"></a><a name="MessageQueue"></a>メッセージキュータスク  
  次の表は、メッセージ キュー タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|タスクで開いていたメッセージ キューを終了したことを示します。|  
 |`MSMQBeforeOpen`|タスクがメッセージ キューを開く操作を開始したことを示します。|  
@@ -167,105 +162,103 @@ ms.locfileid: "67316663"
 |`MSMQTaskInfo`|タスクに関する説明情報を提供します。|  
 |`MSMQTaskTimeOut`|タスクがタイムアウトしたことを示します。|  
   
-###  <a name="Script"></a>スクリプトタスク  
+###  <a name="script-task"></a><a name="Script"></a>スクリプトタスク  
  次の表では、スクリプト タスクのカスタム ログ エントリを説明します。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|スクリプト内でのログ記録の実装結果を報告します。 ログ エントリは、`Log` オブジェクトの `Dts` メソッドを呼び出すたびに書き込まれます。 このエントリは、コードの実行時に書き込まれます。 詳細については、「 [スクリプト タスクでのログ記録](extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
-###  <a name="SendMail"></a>メール送信タスク  
+###  <a name="send-mail-task"></a><a name="SendMail"></a>メール送信タスク  
  次の表は、メール送信タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|タスクが電子メール メッセージの送信を開始したことを示します。|  
 |`SendMailTaskEnd`|タスクが電子メール メッセージの送信を終了したことを示します。|  
 |`SendMailTaskInfo`|タスクに関する説明情報を提供します。|  
   
-###  <a name="TransferDatabase"></a>データベース転送タスク  
+###  <a name="transfer-database-task"></a><a name="TransferDatabase"></a>データベース転送タスク  
  次の表は、データベース転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`SourceDB`|タスクでコピーされたデータベースを示します。|  
 |`SourceSQLServer`|データベースのコピー元のコンピューターを示します。|  
   
-###  <a name="TransferErrorMessages"></a>エラーメッセージ転送タスク  
+###  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a>エラーメッセージ転送タスク  
  次の表は、エラー メッセージ転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|タスクがエラー メッセージの転送を終了したことを示します。|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|タスクがエラー メッセージの転送を開始したことを示します。|  
   
-###  <a name="TransferJobs"></a>ジョブ転送タスク  
+###  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a>ジョブ転送タスク  
  次の表は、ジョブ転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|タスクが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブの転送を終了したことを示します。|  
 |`TransferJobsTaskStartTransferringObjects`|タスクが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブの転送を開始したことを示します。|  
   
-###  <a name="TransferLogins"></a>ログイン転送タスク  
+###  <a name="transfer-logins-task"></a><a name="TransferLogins"></a>ログイン転送タスク  
  次の表は、ログイン転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`TransferLoginsTaskFinishedTransferringObjects`|タスクがログインの転送を終了したことを示します。|  
 |`TransferLoginsTaskStartTransferringObjects`|タスクがログインの転送を開始したことを示します。|  
   
-###  <a name="TransferMasterStoredProcedures"></a>Master ストアドプロシージャ転送タスク  
+###  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a>Master ストアドプロシージャ転送タスク  
  次の表は、Master ストアド プロシージャ転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
-|`TransferStoredProceduresTaskFinishedTransferringObjects`|
-  **master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが完了したことを示します。|  
-|`TransferStoredProceduresTaskStartTransferringObjects`|
-  **master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが開始したことを示します。|  
+|`TransferStoredProceduresTaskFinishedTransferringObjects`|**master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが完了したことを示します。|  
+|`TransferStoredProceduresTaskStartTransferringObjects`|**master** データベースに格納されている、ユーザー定義ストアド プロシージャの転送をタスクが開始したことを示します。|  
   
-###  <a name="TransferSQLServerObjects"></a>SQL Server オブジェクトの転送タスク  
+###  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a>SQL Server オブジェクトの転送タスク  
  次の表は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|タスクが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース オブジェクトの転送を終了したことを示します。|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|タスクが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース オブジェクトの転送を開始したことを示します。|  
   
-###  <a name="WebServices"></a>Web サービスタスク  
+###  <a name="web-services-task"></a><a name="WebServices"></a> Web サービス タスク  
  次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`WSTaskBegin`|タスクが Web サービスへのアクセスを開始しました。|  
 |`WSTaskEnd`|タスクが Web サービス メソッドを完了しました。|  
 |`WSTaskInfo`|タスクに関する説明情報を提供します。|  
   
-###  <a name="WMIDataReader"></a>WMI データリーダータスク  
+###  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a>WMI データリーダータスク  
  次の表は、WMI データ リーダー タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|タスクが WMI データの読み取りを開始したことを示します。|  
 |`WMIDataReaderOperation`|タスクで実行された WQL クエリを報告します。|  
   
-###  <a name="WMIEventWatcher"></a>WMI イベント監視タスク  
+###  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a>WMI イベント監視タスク  
  次の表は、WMI イベント監視タスクのカスタム ログ エントリの一覧です。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|タスクが監視しているイベントが発生したことを示します。|  
 |`WMIEventWatcherTimedout`|タスクがタイムアウトしたことを示します。|  
 |`WMIEventWatcherWatchingForWMIEvents`|タスクが WQL クエリの実行を開始したことを示します。 このエントリには、クエリが含まれています。|  
   
-###  <a name="XML"></a>XML タスク  
+###  <a name="xml-task"></a><a name="XML"></a>XML タスク  
  次の表では、XML タスクのカスタム ログ エントリを説明します。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |`XMLOperation`|タスクで実行される操作に関する情報を提供します。|   
   
 ## <a name="see-also"></a>参照  
- [SSIS&#41; ログ &#40;Integration Services](performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd54eb65c4d4136f9fb37e229b88fbdb660f0e8b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056890"
 ---
 # <a name="code-outlining"></a>コードのアウトライン表示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターのアウトライン機能を使用して、クエリの編集時にコードを選択して非表示にすることができます。 これにより、特に大きなクエリ ファイルでは、作業中のコードを見やすくすることができます。
@@ -36,7 +35,7 @@ ms.locfileid: "78176802"
 
  ![アウトラインを示す XML コード](../../database-engine/media/editoutlinexmlfull.gif "アウトラインを示す XML コード")
 
- \<InnerTag> 行の負符号をクリックすると、次の図に示すように InnerTag だけが折りたたまれます。
+ 行の負符号をクリックすると、 \<InnerTag> 次の図に示すように、InnerTag だけが折りたたまれます。
 
  ![内部ノードが非表示になっている XML コード](../../database-engine/media/editoutlinexmlinnercol.gif "内部ノードが非表示になっている XML コード")
 
@@ -44,11 +43,11 @@ ms.locfileid: "78176802"
 
  ![非表示コードを示すツールヒント付きの XML コード](../../database-engine/media/editoutlinexmlmouse.gif "非表示コードを示すツールヒント付きの XML コード")
 
- \<MiddleTag> 行の負符号をクリックすると、次の図に示すように MiddleTag と InnerTag の両方が折りたたまれます。
+ 行の負符号をクリックすると、 \<MiddleTag> 次の図に示すように、MiddleTag と InnerTag の両方が折りたたまれます。
 
  ![内部および中間タグが非表示になっている XML コード](../../database-engine/media/editoutlinexmlmiddlecol.gif "内部および中間タグが非表示になっている XML コード")
 
- \<OuterTag> 行の負符号をクリックすると、次の図に示すように 3 行すべてが折りたたまれます。
+ 行の負符号をクリックすると、 \<OuterTag> 次の図に示すように、3行すべてが折りたたまれます。
 
  ![3 つのすべての非表示タグを示す XML コード](../../database-engine/media/editoutlinexmloutercol.gif "3 つのすべての非表示タグを示す XML コード")
 

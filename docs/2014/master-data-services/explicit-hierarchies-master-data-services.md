@@ -13,16 +13,14 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85e2c4a1fda84a8575509a863de6e5f2e6fd5dce
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: c83528f45c6c4174f7714a5f22d8757de4e4fda2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971492"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。
 
 ## <a name="consolidated-members-group-other-members"></a>他のメンバーをグループ化する統合メンバー
@@ -83,15 +81,15 @@ ms.locfileid: "78176051"
 |タスクの説明|トピック|
 |----------------------|-----------|
 |明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする &#40;マスターデータサービス&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|
-|新しく明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|既存の明示的階層の名前を変更する。|[明示的階層名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
-|既存の明示的階層を削除する。|[明示的階層 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|
+|新しく明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|既存の明示的階層の名前を変更する。|[明示的階層名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
+|既存の明示的階層を削除する。|[明示的階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|
 |||
 
 ## <a name="related-content"></a>関連コンテンツ
 
--   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)
+-   [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)
 
 

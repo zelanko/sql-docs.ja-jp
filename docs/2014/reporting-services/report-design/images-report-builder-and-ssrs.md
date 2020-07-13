@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5b7a8add7f890dcd6e273597f1a43d612d6c5af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105700"
 ---
 # <a name="images-report-builder-and-ssrs"></a>画像 (レポート ビルダーおよび SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105700"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a>外部画像、埋め込み画像、およびデータバインド画像の比較  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> 外部の画像、埋め込み画像、およびデータバインド画像の比較  
  サーバーベースの画像やその他の外部の画像をレポートで使用している場合は、この画像アイテムにはレポート サーバー上または Web 上の任意の場所にある画像を指すパスが含まれます。 ただし、埋め込み画像を使用する場合は、画像データをレポート定義内に格納し、別ファイルとしては保持しません。  
   
  サーバーベースの画像は、複数のレポートや Web ページで共有されるロゴや静的ピクチャに適しています。 埋め込み画像を使用した場合は、常に確実に画像がレポートで利用できるようになりますが、共有はできません。 外部の画像を使用しているレポート定義の方が、埋め込み画像を使用しているレポート定義よりもサイズが小さくなります。  
@@ -36,19 +36,19 @@ ms.locfileid: "66105700"
   
 
   
-##  <a name="ImagesReportParts"></a>レポートパーツとしての画像  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> レポート パーツとしての画像  
  画像は、レポート パーツとしてレポートとは別に保存できます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  
   
-##  <a name="EmbedImages"></a>画像の埋め込み  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> 埋め込み画像  
  レポートに画像を埋め込み、すべての画像データがレポート定義内に格納されるようにすることができます。 画像を埋め込む場合は、画像が MIME でエンコードされ、テキストとしてレポート定義に格納されます。 埋め込み画像を使用すると、常に確実に画像がレポートで利用できるようになりますが、レポート定義のサイズが大きくなります。  
   
  画像の埋め込みの詳細については、「 [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
-##  <a name="ExternalImages"></a>外部画像  
+##  <a name="external-images"></a><a name="ExternalImages"></a> 外部の画像  
  画像に URL を指定することにより、レポートに格納された画像を含めることができます。 レポートで外部の画像を使用する場合、画像ソースは `External` に設定され、この画像の値は画像の URL アドレスまたはパスになります。  
   
  詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
@@ -59,7 +59,7 @@ ms.locfileid: "66105700"
   
  
   
-##  <a name="BackgroundImages"></a>背景画像  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> 背景画像  
  画像は、レポート本文や四角形、テキスト ボックス、一覧、マトリックス、テーブルの背景画像としても使用できます。 背景画像と画像には、同じようなプロパティがあります。 アイテムの背景を埋めるために、画像を繰り返す方法も指定できます。  
   
 > [!NOTE]  
@@ -69,24 +69,24 @@ ms.locfileid: "66105700"
   
  
   
-##  <a name="DataboundImages"></a>データバインド画像  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> データバインド画像  
  データベースに格納されている画像をレポートに追加することができます。 静的画像に使用したものと同じ画像レポート アイテムを使用しますが、画像がデータベースに格納されていることを示すプロパティ セットと共に使用します。 データバインド画像の処理については、「 [データバインド画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
-##  <a name="HowTo"></a>操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  [外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
  [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [レポートビルダーと SSRS に &#40;背景画像を追加&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [背景画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
  [データバインド画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>参照  
- [レポートビルダーおよび SSRS&#41;&#40;のイメージファイルへのエクスポート](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [画像ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

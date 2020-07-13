@@ -12,16 +12,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118843"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296352"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL から C へ: タイムスタンプ
+# <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
 
 Timestamp ODBC SQL データ型の識別子は次のとおりです。
 
@@ -31,9 +31,9 @@ Timestamp ODBC SQL データ型の識別子は次のとおりです。
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*Bufferlength* > 文字のバイト長<br /><br /> 20 <= *bufferlength* <= 文字バイト長<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Bufferlength* > 文字長<br /><br /> 20 <= *bufferlength* <= 文字の長さ<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義|データの長さ (バイト単位)<br /><br /> 未定義|該当なし<br /><br /> 22003|  
+|SQL_C_CHAR|*Bufferlength* > 文字のバイト長<br /><br /> 20 <= *bufferlength* <= 文字バイト長<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*Bufferlength* > 文字長<br /><br /> 20 <= *bufferlength* <= 文字の長さ<br /><br /> *Bufferlength* < 20|データ<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_TYPE_DATE|タイムスタンプの時刻部分がゼロ [a]<br /><br /> タイムスタンプの時刻部分が0以外の場合 [a]|データ<br /><br /> 切り捨てられたデータ [c]|6 [f]<br /><br /> 6 [f]|該当なし<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|タイムスタンプの秒部分の小数部がゼロ [a]<br /><br /> タイムスタンプの秒の小数部が0以外の場合 [a]|データ [d]<br /><br /> 切り捨てられたデータ [d], [e]|6 [f]<br /><br /> 6 [f]|該当なし<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|タイムスタンプの秒の小数部が切り捨てられない [a]<br /><br /> タイムスタンプの秒部分の小数部が切り捨てられる [a]|データ [e]<br /><br /> 切り捨てられたデータ [e]|16 [f]<br /><br /> 16 [f]|該当なし<br /><br /> 01S07|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ce4f96928e0d914837762af760fce9d5b6973fce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63282113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066304"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
   プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  

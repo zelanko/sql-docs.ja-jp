@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1c870e23f30c4281367087b514081181a6c1baa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62771308"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435729"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>ローカルの CDC Service を管理する方法
   この手順では、CDC Service 構成コンソールを使用して特定の CDC サービスを管理する方法について説明します。  

@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 728eb088f02d338d5ac9d22f2b0cb5f2127450e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095379"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898618"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>dm_server_services (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  の現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの SQL Server、フルテキスト、SQL Server Launchpad サービス (SQL Server 2017 +)、および SQL Server エージェントの各サービスに関する情報を返します。 これらのサービスに関するステータス情報を報告するには、この動的管理ビューを使用します。  
+  の現在のインスタンスの SQL Server、フルテキスト、SQL Server Launchpad サービス (SQL Server 2017 +)、および SQL Server エージェントの各サービスに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのサービスに関するステータス情報を報告するには、この動的管理ビューを使用します。  
   
  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、フルテキスト、または SQL Server エージェントサービスの名前。 null にすることはできません。|  
 |startup_type|**int**|サービスの開始モードを示します。 有効な値とそれに対応する説明を次に示します。<br /><br /> 0: その他<br />1: その他<br />2: 自動<br />3: 手動<br />4: 無効<br /><br /> NULL 値が許可されます。|  
@@ -44,13 +44,13 @@ ms.locfileid: "74095379"
 |filename|**nvarchar(256)**|サービスの実行可能ファイルのパスとファイル名。 null にすることはできません。|  
 |is_clustered|**nvarchar (1)**|サービスがクラスターサーバーのリソースとしてインストールされているかどうかを示します。 null にすることはできません。|  
 |cluster_nodename|**nvarchar(256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
-|instant_file_initialization_enabled|**nvarchar (1)**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスに対してファイルの瞬時初期化を有効にするかどうかを指定します。<br /><br />Y = サービスに対してファイルの瞬時初期化が有効になっています。<br /><br />N = サービスに対してファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** は、SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 以降、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)。|  
+|instant_file_initialization_enabled|**nvarchar (1)**|サービスに対してファイルの瞬時初期化を有効にするかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。<br /><br />Y = サービスに対してファイルの瞬時初期化が有効になっています。<br /><br />N = サービスに対してファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** は、SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) をインストールします。|  
 
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

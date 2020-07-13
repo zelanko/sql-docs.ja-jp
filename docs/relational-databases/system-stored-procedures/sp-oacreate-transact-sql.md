@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 74daa037fab18fc2ddb4126f8cf5f33e9d4e5159
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107932"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893437"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのインスタンスを作成します。  
   
@@ -40,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引数  
  *progid*  
- 作成する OLE オブジェクトのプログラム識別子 (ProgID) を示します。 この文字列は、OLE オブジェクトのクラスについて説明し、" ****_OLEComponent_" という形式になってい**ます**。_オブジェクト_**'**  
+ 作成する OLE オブジェクトのプログラム識別子 (ProgID) を示します。 この文字列は、OLE オブジェクトのクラスについて説明し、" **'**_OLEComponent_" という形式になってい**ます**。_オブジェクト_**'**  
   
  *OLEComponent*は ole オートメーションサーバーのコンポーネント名で、 *object*は ole オブジェクトの名前です。 指定された OLE オブジェクトは有効である必要があり、 **IDispatch**インターフェイスをサポートしている必要があります。  
   
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  指定しない場合、既定値は**5**です。 この値は、 **CoCreateInstance**への呼び出しの*dwclscontext*パラメーターとして渡されます。  
   
- インプロセス OLE サーバーが許可されている場合 (コンテキスト値が**1**または**5**の場合、またはコンテキスト値が指定されていない場合)、それはに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって所有されているメモリおよびその他のリソースにアクセスできます。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
+ インプロセス OLE サーバーが許可されている場合 (コンテキスト値が**1**または**5**の場合、またはコンテキスト値が指定されていない場合)、それはによって所有されているメモリおよびその他のリソースにアクセスでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 組み込み OLE サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリやリソースに損傷を与え、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス違反など予期しない結果を招く場合があります。  
   
- コンテキスト値を**4**に指定すると、ローカルの OLE サーバーは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソースにアクセスできず、メモリやリソースに損傷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を与えることはありません。  
+ コンテキスト値を**4**に指定すると、ローカルの OLE サーバーはリソースにアクセスできず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリやリソースに損傷を与えることはありません。  
   
 > [!NOTE]  
 >  このストアドプロシージャのパラメーターは、名前ではなく位置によって指定されます。  
@@ -77,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  OLE オートメーションプロシージャが有効になっている場合、 **sp_OACreate**を呼び出すと、ole オートメーションの共有実行環境が開始されます。 OLE オートメーションを有効にする方法の詳細については、「 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)」を参照してください。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
@@ -104,7 +104,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>B. CLSID の使用  
+### <a name="b-using-clsid"></a>B: CLSID の使用  
  次の例では、CLSID を使用して、SQL-DMO **SQLServer**オブジェクトを作成します。  
   
 ```  
@@ -122,7 +122,7 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  

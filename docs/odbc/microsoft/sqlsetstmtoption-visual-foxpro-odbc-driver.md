@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a026922cb98fdb520c9eeab223c8b34a231a179e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb9677a9ccf307be847089c657964d96904eb20b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905337"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299402"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

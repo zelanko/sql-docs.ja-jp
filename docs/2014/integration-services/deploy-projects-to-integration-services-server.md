@@ -7,19 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 186a0633b168c551514705a0494b63f080884373
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059577"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437489"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
-  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
+  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
   
  環境の詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
@@ -30,19 +28,16 @@ ms.locfileid: "66059577"
   
 1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
-2.  
-  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、「 [プロジェクトをプロジェクトの配置モデルに変換するには](#convert)」の手順を参照してください。  
+2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、「 [プロジェクトをプロジェクトの配置モデルに変換するには](#convert)」の手順を参照してください。  
   
-    -   
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
+    -   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
     -   以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
         > [!NOTE]  
         >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)」 を参照してください。  
   
-         
-  **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
+         **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
   
         -   ウィザードを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]から実行した場合、プロジェクトに含まれるパッケージは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 2005、2008、または 2008 R2 から現在のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で使用されている形式に変換されます。 元のプロジェクト (.dtproj) ファイルおよびパッケージ (.dtsx) ファイルはアップグレードされます。  
   
@@ -58,40 +53,34 @@ ms.locfileid: "66059577"
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
-##  <a name="convert"></a>プロジェクトをプロジェクト配置モデルに変換するには  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>プロジェクトをプロジェクト配置モデルに変換するには  
   
-1.  
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
-     または  
+     \- または -  
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
-2.  ウィザードを終了します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](../../2014/integration-services/integration-services-project-conversion-wizard.md)」を参照してください。  
+2.  ウィザードを完了します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](../../2014/integration-services/integration-services-project-conversion-wizard.md)」を参照してください。  
   
-##  <a name="deploy"></a>Integration Services サーバーにプロジェクトを配置するには  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>Integration Services サーバーにプロジェクトを配置するには  
   
-1.  
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
   
-     または  
+     \- または -  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** ノードの順に展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 
-  **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
+     で、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  オブジェクトエクスプローラーの [ **SSISDB** ] ノードを展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
   
-     または  
+     \- または -  
   
      コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   
-2.  
-  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
+2.  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
   
      - または -  
   
-     
-  **[Integration Services カタログ]** をクリックし、SSISDB カタログに既に配置されているプロジェクトを選択します。  
+     **[Integration Services カタログ]** をクリックし、SSISDB カタログに既に配置されているプロジェクトを選択します。  
   
-3.  ウィザードを終了します。 詳細については、「 [Integration Services 配置ウィザード](../../2014/integration-services/integration-services-deployment-wizard.md)」を参照してください。  
+3.  ウィザードを完了します。 詳細については、「 [Integration Services 配置ウィザード](../../2014/integration-services/integration-services-deployment-wizard.md)」を参照してください。  
   
   

@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b090f7e630082fa93951db56deb16d8842f977ea
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118605"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487571"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services を使用して Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ノートブックで Python スクリプトと R スクリプトを実行する方法について説明します。 Azure Data Studio は、クロスプラットフォームのデータベース ツールです。
+[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ノートブックで Python スクリプトと R スクリプトを実行する方法について説明します。 Azure Data Studio は、クロスプラットフォームのデータベース ツールです。
 
 ## <a name="prerequisites"></a>前提条件
 

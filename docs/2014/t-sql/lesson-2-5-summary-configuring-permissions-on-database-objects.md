@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62642711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054608"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>概要 : データベース オブジェクトに対する権限の構成
   ユーザーはログインすることで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に接続する権限を与えられます。 このログインで、ユーザーは特定のデータベースにアクセスできます。 データの読み取り、アクセス、および変更を行う権限をユーザーに与えるには、GRANT ステートメントを使用します。  

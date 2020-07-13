@@ -11,22 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 060933ad5e7be5d55ba0d44de1343668e9bd66e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66059989"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432489"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>[データ フロー パス エディター] ([メタデータ] ページ)
-  
   **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
 ## <a name="options"></a>オプション  
- **パスメタデータ**  
+ **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
  **名前**  
@@ -35,34 +33,34 @@ ms.locfileid: "66059989"
  **[データ型]**  
  列のデータ型が一覧表示されます。  
   
- **精度**  
+ **[精度]**  
  数値の桁数が一覧表示されます。  
   
- **段階**  
+ **スケール**  
  数値の中で小数点より右側の桁数が一覧表示されます。  
   
- **数**  
+ **[データ型]**  
  列の現在の長さが一覧表示されます。  
   
  **コードページ**  
  列のコード ページが一覧表示されます。 値 **0** は、その列でコード ページが使用されないことを示します。 これは、データが Unicode であるか、数値、日付、または時刻のデータ型である場合です。  
   
- **並べ替えキーの位置**  
+ **[並べ替えキーの位置]**  
  列の並べ替えキーの位置が一覧表示されます。 値 **0** は、その列が並べ替えられないことを示します。  
   
 > [!NOTE]  
 >  マイナス記号 (-) のプレフィックスは、列が降順で並べ替えられていることを示します。  
   
- **比較フラグ**  
+ **[比較フラグ]**  
  列に適用されている比較フラグが一覧表示されます。  
   
- **変換元コンポーネント**  
+ **[基になるコンポーネント]**  
  列の基になるデータ フロー コンポーネントが一覧表示されます。  
   
- **クリップボードにコピー**  
+ **[クリップボードにコピー]**  
  列のメタデータをクリップボードにコピーします。 既定では、すべてのメタデータ行が現在表示されている順序でコピーされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データフローパスエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [データフローパスエディターの [データビューアー] ページ &#40;&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [データフロー](data-flow/data-flow.md)   

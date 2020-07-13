@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a8d3d3f24bcbd2b94dd8d4c0c84eff9d513e6cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790031"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 指定したデータベース用のディスク領域の割り当て構造について一貫性をチェックします。
   
@@ -42,7 +42,7 @@ ms.locfileid: "74056349"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   

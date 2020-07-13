@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 35d43ca7cf6e603d7dabca9eacf1e026daa753b7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67912303"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306960"
 ---
 # <a name="procedure-parameters"></a>プロシージャのパラメーター
 プロシージャ呼び出しのパラメーターには、入力、入力、出力、または出力パラメーターを指定できます。 これは、常に入力パラメーターである他のすべての SQL ステートメントのパラメーターとは異なります。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dec8b316b3bf9c59c32cad8bd73a9aba369e6521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7098b43bd9b1c2bbe4008fa0d44e5562d00443d8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019492"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286452"
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>エラー メッセージ (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -10,10 +10,10 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028645"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA for Sybase コンポーネントの削除 (SybaseToSQL)
@@ -24,7 +24,7 @@ SSMA をアンインストールするには、[**プログラムの追加と削
   
 **SSMA をアンインストールするには**  
   
-1.  [コントロール パネル] で **[プログラムの追加と削除]** を開きます。  
+1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
 2.  **Sybase の Microsoft SQL Server Migration Assistant**を選択し、[**削除**] をクリックします。  
   
@@ -35,7 +35,7 @@ SSMA をアンインストールするには、[**プログラムの追加と削
   
 拡張機能パックをアンインストールするには  
   
-1.  [コントロール パネル] で **[プログラムの追加と削除]** を開きます。  
+1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
 2.  **Sybase 拡張パックの Microsoft SQL Server Migration Assistant**を選択し、[**削除**] をクリックします。  
   

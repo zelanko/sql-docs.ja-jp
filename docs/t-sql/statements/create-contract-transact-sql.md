@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064639"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895479"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   新しいコントラクトを作成します。 コントラクトは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で使用されるメッセージ型を定義し、またメッセージ交換のどちら側がその型のメッセージを送信できるかを決定するものです。 各メッセージ交換は、コントラクトに従います。 発信側サービスでは、メッセージ交換の開始時に、そのメッセージ交換用のコントラクトを指定します。 ターゲット サービスでは、メッセージ交換を受け入れるコントラクトを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73064639"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE CONTRACT contract_name  
    [ AUTHORIZATION owner_name ]  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932035"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762393"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 一連のコマンドを進めて、現在の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトをクリアし、次の**レコードセット**を返します。  
@@ -39,7 +39,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- 省略可能。 プロバイダーが、現在の操作によって影響を受けたレコードの数を返す**Long 型**の変数。  
+ 任意。 プロバイダーが、現在の操作によって影響を受けたレコードの数を返す**Long 型**の変数。  
   
 > [!NOTE]
 >  このパラメーターは、操作によって影響を受けたレコードの数のみを返します。レコード**セット**の生成に使用される select ステートメントからは、レコードの数は返されません。  

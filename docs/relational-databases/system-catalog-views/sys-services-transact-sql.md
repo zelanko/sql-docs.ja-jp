@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.services catalog view
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6372f1073bbcb4746aafce78048e4af7c05f7158
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901729"
 ---
 # <a name="sysservices-transact-sql"></a>sys. services (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このカタログビューには、データベース内のサービスごとに1行のデータが含まれています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サービスの名前。大文字と小文字が区別されます。データベース内で一意です。 NULL 値は許容されません。|  
 |**service_id**|**int**|サービスの識別子。 NULL 値は許容されません。|  
@@ -39,6 +39,6 @@ ms.locfileid: "68078663"
 |**service_queue_id**|**int**|このサービスが使用するキューのオブジェクト id。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
   

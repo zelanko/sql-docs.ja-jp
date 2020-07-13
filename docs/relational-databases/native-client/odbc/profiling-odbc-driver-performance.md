@@ -17,20 +17,18 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 35d920f13329b336969dbfd91da2265917f2fbe4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760706"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009721"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
   
 -   実行時間の長いクエリ。  
@@ -62,14 +60,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
    the log file, logging disabled.  
 ```  
   
- ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
+ ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
   
  ドライバーのパフォーマンス データは、SQLPERF データ構造体に保存するか、タブ区切り形式ファイルに記録できます。 このデータには、次の種類の統計情報が含まれます。  
   
 -   アプリケーション プロファイル  
   
--   接続  
+-   Connection  
   
 -   ネットワーク  
   
@@ -79,7 +76,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>アプリケーション プロファイル統計情報  
   
-|SQLPERF のフィールド|[説明]|  
+|SQLPERF のフィールド|説明|  
 |-------------------|-----------------|  
 |TimerResolution|ミリ秒単位で表されたサーバーのクロック時間の最小単位。 通常は 0 (ゼロ) が報告されます。大きな値が報告される場合のみ考慮する必要があります。 サーバー クロックの最小単位が、タイマベースの一部の統計で予想される間隔よりも大きい場合は、統計値が増加する可能性があります。|  
 |SQLidu|SQL_PERF_START 以降に処理された INSERT、DELETE、または UPDATE ステートメントの数。|  
@@ -117,7 +114,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計情報  
   
-|SQLPERF フィールド|[説明]|  
+|SQLPERF フィールド|説明|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 以降、ドライバーが処理に要した累積時間。サーバーからの応答の待ち時間も含まれます。|  
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  

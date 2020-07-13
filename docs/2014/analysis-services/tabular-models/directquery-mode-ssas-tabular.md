@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284871"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938933"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery モード (SSAS テーブル)
   Analysis Services を使用すると、 *DirectQuery モード*を使用してリレーショナルデータベースシステムからデータを直接取得し、集計することによって、テーブルモデルからデータを取得し、レポートを作成できます。 ここでは、メモリにのみ存在する標準テーブル モデルと、リレーショナル データ ソースにクエリを実行できるテーブル モデルの違いを紹介し、DirectQuery モードで使用するモデルを作成および配置する方法について説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "67284871"
   
 -   [関連項目およびタスク](#bkmk_related_tasks)  
   
-##  <a name="bkmk_Benefits"></a>DirectQuery モードの利点  
+##  <a name="benefits-of-directquery-mode"></a><a name="bkmk_Benefits"></a>DirectQuery モードの利点  
  既定では、テーブル モデルでは、インメモリ キャッシュを使用してデータを格納およびデータにクエリを実行します。 テーブル モデルではメモリ内のデータを使用するため、複雑なクエリでも非常に高速に実行できます。 ただし、キャッシュされたデータの使用にはいくつかの欠点があります。  
   
 -   ソース データが変更された場合、データは更新されません。 データを更新するには、モデルを処理する必要があります。  
@@ -63,7 +62,7 @@ ms.locfileid: "67284871"
   
 -   複数のクエリを必要とする可能性のある複雑な数式がモデルに含まれる場合、Analysis Services は最適化を実行して、バックエンド データベースに対して実行されるクエリのクエリ プランができるだけ効率的になることを保証できます。  
   
-##  <a name="bkmk_Design"></a>DirectQuery モードで使用するためのモデルの作成  
+##  <a name="authoring-models-for-use-with-directquery-mode"></a><a name="bkmk_Design"></a>DirectQuery モードで使用するためのモデルの作成  
  テーブル モデルは、モデル デザイナー [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して作成されます。 モデル デザイナーはすべてのモデルをメモリに作成します。これは、モデリング時にデータが大きすぎてメモリに収まらない場合に、ワークスペース データベースで使用するキャッシュにデータのサブセットのみをインポートする必要があることを意味します。  
   
  DirectQuery モードに切り替える準備ができたら、DirectQuery モードを有効にするプロパティを変更できます。 詳細については、「 [Enable DirectQuery Design Mode &#40;SSAS 表形式&#41;](enable-directquery-mode-in-ssdt.md)」を参照してください。  
@@ -82,7 +81,7 @@ ms.locfileid: "67284871"
   
 -   **クライアントの制限:** モデルが DirectQuery モードの場合は、DAX を使用してのみクエリを実行できます。 MDX を使用してクエリを作成することはできません。 つまり、Excel では MDX を使用するため Excel PivotClient を使用できません。  
   
-     ただし、では、DAX テーブルクエリを XMLA Execute [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ステートメントの一部として使用する場合に、DirectQuery モデルに対するクエリを作成できます。詳細については、[Dax クエリ構文リファレンス] (/dax/dax-syntax-reference を参照してください。
+     ただし、では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dax テーブルクエリを XMLA Execute ステートメントの一部として使用する場合に、DirectQuery モデルに対するクエリを作成できます。詳細については、[Dax クエリ構文リファレンス] (/dax/dax-syntax-reference を参照してください。
   
  デザインの問題をすべて解決し、モデルをテストすると、配置の準備ができます。 この時点で、モデルに対するクエリへの応答に優先する方法を設定できます。 ユーザーがキャッシュにアクセスできるようにしますか。または常にリレーショナル データ ソースのみ使用するようにしますか。  
   
@@ -94,12 +93,12 @@ ms.locfileid: "67284871"
   
 -   モデルが配置された後、優先される接続方法を変更できます。 たとえば、テストにはハイブリッド モードを使用し、モデルを使用するレポートまたはクエリを完全にテストした後でのみ **DirectQuery のみ** のモードに切り替えることができます。 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](../set-or-change-the-preferred-connection-method-for-directquery.md)」をご覧ください。  
   
-###  <a name="bkmk_DataSources"></a>DirectQuery モデルのデータソース  
+###  <a name="data-sources-for-directquery-models"></a><a name="bkmk_DataSources"></a>DirectQuery モデルのデータソース  
  デザイン環境を変更して DirectQuery モードを有効にするとすぐに、ワークスペース データベースのデータ ソースが検証されて、データ ソースが単一の SQL Server データ ソースから取得されたことが確認されます。 コピー貼り付けデータなど他のソースからのデータは、DirectQuery モデルでは許可されていません。  
   
  DirectQuery モードでモデルを使用する場合は、レポートに必要なすべてのデータが指定した SQL Server データベースに格納されていることを確認する必要があります。 モデリングに必要なデータがそのソースで使用可能でない場合は、Integration Services またはその他のデータ ウェアハウジング ツールを使用して、DirectQuery データ ソースとして使用する SQL Server データベースにデータをインポートすることを検討してください。  
   
-###  <a name="bkmk_Validation"></a>DirectQuery モードの検証と設計の制限  
+###  <a name="validation-and-design-restrictions-for-directquery-mode"></a><a name="bkmk_Validation"></a>DirectQuery モードの検証と設計の制限  
  DirectQuery モードで使用するモデルを作成する場合は、最初にデータの一部をキャッシュに読み込む必要があります。 最終的に使用するデータが大きすぎてメモリに収まりきらない場合は、テーブルのインポートウィザードの [**プレビュー & フィルター** ] オプションを使用してデータのサブセットを選択するか、必要なデータを取得するための SQL スクリプトを記述します。  
   
 > [!WARNING]  
@@ -109,30 +108,27 @@ ms.locfileid: "67284871"
   
  DirectQuery アクセス用のモデルの作成時に考慮するその他の事項を次の一覧で説明します。  
   
--   
-  *DirectQuery のみ* のモードでは、レポートの結果は結果を表示するユーザーのセキュリティ コンテキストによって異なる可能性があります。 ユーザーが期待どおりの結果を得られるように、さまざまな資格情報でモデルをテストする必要があります。  
+-   *DirectQuery のみ* のモードでは、レポートの結果は結果を表示するユーザーのセキュリティ コンテキストによって異なる可能性があります。 ユーザーが期待どおりの結果を得られるように、さまざまな資格情報でモデルをテストする必要があります。  
   
 -   ハイブリッド モードで動作するようにモデルを構成して、SQL Server のキャッシュまたはデータを使用できるようにするには、各ソースに接続するクライアントが異なる結果を参照する可能性がある (接続文字列に指定されたモードによって異なる) ことを認識する必要があります。 レポートを表示するユーザーに SQL Server のデータのみ表示されるようにする必要がある場合は、キャッシュをクリアするかモデルを DirectQueryOnly に変更する必要があります。  
   
-###  <a name="bkmk_FormulaCompat"></a>DirectQuery モデルの数式の互換性  
+###  <a name="formula-compatibility-for-directquery-models"></a><a name="bkmk_FormulaCompat"></a>DirectQuery モデルの数式の互換性  
  一部のモデルには DirectQuery モードではサポートされない数式が含まれており、検証エラーを防ぐためにモデルを再デザインする必要があります。 DirectQuery モードでサポートされている数式の制限を次に示します。  
   
 -   計算列は、ハイブリッド モデルの場合でも、DirectQuery モードが有効になっているテーブル モデルではサポートされません。 モデルに計算列が必要な場合は、インポート定義で Transact-SQL を使用して派生列に変換することを検討してください。  
   
 -   DirectQuery モデルでは、メジャーで使用する DAX 数式の使用がサポートされます。これらの数式は、リレーショナル データ ストアに対するセットベースの操作に変換されます。 暗黙的なメジャーを使用して作成するすべてのメジャーがサポートされます。  
   
--   すべての関数がサポートされるわけではありません。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モデルにクエリを実行するときにすべての DAX 数式およびメジャー定義を SQL ステートメントに変換するため、Transact-SQL に変換できない要素を含む数式はモデルで検証エラーをトリガーします。 たとえば、タイム インテリジェンス関数はサポートされていません。 統計関数などのサポートされている関数も、動作が異なる可能性があります。 互換性の問題の完全な一覧については、「 [DirectQuery モードでの数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)」を参照してください。  
+-   すべての関数がサポートされるわけではありません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、DirectQuery モデルにクエリを実行するときにすべての DAX 数式およびメジャー定義を SQL ステートメントに変換するため、Transact-SQL に変換できない要素を含む数式はモデルで検証エラーをトリガーします。 たとえば、タイム インテリジェンス関数はサポートされていません。 統計関数などのサポートされている関数も、動作が異なる可能性があります。 互換性の問題の完全な一覧については、「 [DirectQuery モードでの数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)」を参照してください。  
   
 -   モデル内の一部の数式は、モデルを DirectQuery モードに切り替えるときに検証できますが、キャッシュとリレーショナル データ ストアに対して実行したときに異なる結果を返します。 これは、キャッシュに対する計算では Excel の動作をエミュレートすることを意図した多くの機能を含む xVelocity メモリ内分析 (VertiPaq) エンジンのセマンティクスが使用され、リレーショナル データ ストアに格納されているデータに対するクエリでは SQL Server のセマンティクスを使用する必要があるためです。 モデルがリアルタイムに配置されるときに異なる結果を返す可能性のある DAX 関数の一覧については、「 [DirectQuery モードでの数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)」を参照してください。  
   
-###  <a name="bkmk_Connecting"></a>DirectQuery モデルへの接続  
- クエリ言語として MDX を使用するクライアントは、DirectQuery モードを使用するモデルに接続できません。 たとえば、DirectQuery モデルに対して MDX クエリを作成しようとした場合は、キューブが見つからない、または処理されていないことを示すエラーが発生します。 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、DAX 数式、または XMLA クエリを使用して、DirectQuery モデルに対するクエリを作成できます。 テーブルモデルに対してアドホッククエリを実行する方法の詳細については、「[テーブルモデルデータアクセス](tabular-model-data-access.md)」を参照してください。  
+###  <a name="connecting-to-directquery-models"></a><a name="bkmk_Connecting"></a>DirectQuery モデルへの接続  
+ クエリ言語として MDX を使用するクライアントは、DirectQuery モードを使用するモデルに接続できません。 たとえば、DirectQuery モデルに対して MDX クエリを作成しようとした場合は、キューブが見つからない、または処理されていないことを示すエラーが発生します。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、DAX 数式、または XMLA クエリを使用して、DirectQuery モデルに対するクエリを作成できます。 テーブルモデルに対してアドホッククエリを実行する方法の詳細については、「[テーブルモデルデータアクセス](tabular-model-data-access.md)」を参照してください。  
   
  ハイブリッド モデルを使用している場合は、接続文字列プロパティ DirectQueryMode を指定して、ユーザーがキャッシュに接続するか、それとも DirectQuery データを使用するかを指定できます。  
   
-###  <a name="bkmk_Security"></a>DirectQuery モードでのセキュリティ  
+###  <a name="security-in-directquery-mode"></a><a name="bkmk_Security"></a>DirectQuery モードでのセキュリティ  
  モデル作成時に、ソース データの取得に使用するアクセス許可を指定します。 これは、多くの場合、自分の資格情報か、開発に使用されるアカウントになります。 ただし、DirectQuery モードを使用するようにモデルを切り替えると、セキュリティ コンテキストはより複雑になります。  
   
 -   ユーザーに、リレーショナル データ ストアのデータに必要なアクセス レベルがあるかどうかを検討します。  
@@ -147,7 +143,7 @@ ms.locfileid: "67284871"
   
  DirectQuery のみのモデルでも、DirectQuery を使用してクエリに応答するハイブリッド モデルでも、権限借用設定プロパティによって、DirectQuery を使用してモデルに接続するときに使用される資格情報が指定されます。 プロパティの値は次のとおりです。  
   
- **標準**  
+ **default**  
  インポート ウィザードで指定した資格情報を使用して、データ ソースに接続します。 これには、特定の Windows ユーザーまたはサービス アカウントを指定できます。  
   
  `ImpersonateCurrentUser`  
@@ -155,21 +151,21 @@ ms.locfileid: "67284871"
   
  これらのプロパティを設定する方法の詳細については、「 [SSAS のデプロイシナリオ &#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)」を参照してください。  
   
-##  <a name="bkmk_PropertyList"></a>DirectQuery のプロパティ  
+##  <a name="directquery-properties"></a><a name="bkmk_PropertyList"></a>DirectQuery のプロパティ  
  DirectQuery を有効にし、モデルに対するクエリに使用されるデータのソースを制御するために [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で設定できるプロパティの一覧を次の表に示します。  
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |**DirectQueryMode プロパティ**|このプロパティにより、モデル デザイナーで DirectQuery モードを使用できるようになります。 他の DirectQuery プロパティを変更するには、このプロパティを `On` に設定する必要があります。<br /><br /> 詳細については、「 [Enable DirectQuery Design Mode &#40;SSAS 表形式&#41;](enable-directquery-mode-in-ssdt.md)」を参照してください。|  
-|**QueryMode プロパティ**|このプロパティでは、DirectQuery モデルの既定のクエリ メソッドを指定します。このプロパティは、モデルの配置時にモデル デザイナーで設定しますが、後でオーバーライドできます。 プロパティの値は次のとおりです。<br /><br /> [ **DirectQuery** ]: この設定では、モデルに対するすべてのクエリでリレーショナルデータソースのみを使用する必要があることを指定します。<br /><br /> **[DirectQuery** (インメモリ)]-クライアントから接続文字列で特に指定されていない限り、既定ではリレーショナルソースを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ**]-キャッシュのみを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ (DirectQuery**あり)]-既定では、この設定によって指定されます。 クライアントから接続文字列で指定されていない限り、キャッシュを使用してクエリに応答する必要があります。<br /><br /> <br /><br /> 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](../set-or-change-the-preferred-connection-method-for-directquery.md)」をご覧ください。|  
+|**QueryMode プロパティ**|このプロパティでは、DirectQuery モデルの既定のクエリ メソッドを指定します。このプロパティは、モデルの配置時にモデル デザイナーで設定しますが、後でオーバーライドできます。 プロパティの値は次のとおりです。<br /><br /> [ **DirectQuery** ]: この設定では、モデルに対するすべてのクエリでリレーショナルデータソースのみを使用する必要があることを指定します。<br /><br /> **[DirectQuery (およびインメモリ)]** - クライアントから接続文字列で特に指定されていない限り、既定ではリレーショナル ソースを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ]** - キャッシュのみを使用してクエリに応答する必要があることを指定します。<br /><br /> **[インメモリ (および DirectQuery)]** - 既定で次のように指定します。 クライアントから接続文字列で指定されていない限り、キャッシュを使用してクエリに応答する必要があります。<br /><br /> <br /><br /> 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](../set-or-change-the-preferred-connection-method-for-directquery.md)」をご覧ください。|  
 |**DirectQueryMode プロパティ**|モデルが配置された後、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でこのプロパティを変更して、DirectQuery モデルで優先されるクエリ データ ソースを変更できます。<br /><br /> 前のプロパティと同様に、このプロパティではモデルの既定のデータ ソースを指定します。値は次のとおりです。<br /><br /> **InMemory**: クエリでキャッシュのみを使用できます。<br /><br /> **Directquerywithinmemory**: クライアントからの接続文字列で特に指定されていない限り、既定ではクエリでリレーショナルデータソースが使用されます。<br /><br /> **Inmemorywithdirectquery**: クライアントから接続文字列で特に指定されていない限り、既定ではクエリでキャッシュが使用されます。<br /><br /> (**DirectQuery**: クエリはリレーショナルデータソースのみを使用します。<br /><br /> <br /><br /> 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](../set-or-change-the-preferred-connection-method-for-directquery.md)」をご覧ください。|  
 |**権限借用設定プロパティ**|このプロパティでは、クエリ時に SQL Server データ ソースへの接続に使用される資格情報を定義します。 このプロパティはモデル デザイナーで設定でき、モデルの配置後に値を変更できます。<br /><br /> これらの資格情報は、リレーショナル データ ストアに対するクエリの応答にのみ使用されます。これらはハイブリッド モデルのキャッシュの処理に使用される資格情報と同じではありません。<br /><br /> モデルをメモリ内でのみ使用する場合は、権限借用を使用できません。 モデルで DirectQuery モードを使用していない限り、`ImpersonateCurrentUser` 設定は無効です。|  
   
  また、モデルにパーティションが含まれる場合は、DirectQuery モードでクエリのソースとして使用するパーティションを 1 つ選択する必要があります。 詳細については、「 [&#40;SSAS 表形式&#41;」の「パーティションと DirectQuery モード](define-partitions-in-directquery-models-ssas-tabular.md)」を参照してください。  
   
-##  <a name="bkmk_related_tasks"></a>関連トピックとタスク  
+##  <a name="related-topics-and-tasks"></a><a name="bkmk_related_tasks"></a>関連トピックとタスク  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SSAS 表形式&#41;&#40;パーティションと DirectQuery モード](define-partitions-in-directquery-models-ssas-tabular.md)|DirectQuery モード用に構成されたモデルでのパーティションの使用方法について説明します。|  
 |[DirectQuery モードでの DAX 数式の互換性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|DirectQuery モード用に構成されたモデルで使用できる数式の制限と互換性の要件について説明します。|  
@@ -183,4 +179,4 @@ ms.locfileid: "67284871"
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のパーティション &#40;&#41;](partitions-ssas-tabular.md)   
  [SSAS 表形式&#41;&#40;テーブルモデルプロジェクト](tabular-model-projects-ssas-tabular.md)   
- [Excel での分析 &#40;SSAS 表形式&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)  

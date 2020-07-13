@@ -13,17 +13,17 @@ helpviewer_keywords:
 - system functions [SQL Server]
 - functions [SQL Server], system
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7c7c2f167924c6a733b459e95d8320e762bfe44a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 98ae9820b44cf3598d957ac01699e6722f781345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714706"
 ---
 # <a name="system-functions-transact-sql"></a>システム関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   次のシステム関数は、値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の設定値に対して操作を行い、それについての情報を返します。  
   

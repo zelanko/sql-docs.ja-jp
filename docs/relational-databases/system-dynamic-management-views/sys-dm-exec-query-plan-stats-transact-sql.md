@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75656994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734755"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>dm_exec_query_plan_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 以前にキャッシュされたクエリプランの前回の既知の実際の実行プランに相当するものを返します。
 
@@ -41,11 +41,11 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 *Plan_handle*は、次の動的管理オブジェクトから取得できます。  
   
--   [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -53,7 +53,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="table-returned"></a>返されるテーブル
 
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|
 |**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> NULL 値は許可されます。|  
 |**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホック バッチおよび準備されたバッチの場合、この列の値は **NULL** です。<br /><br /> NULL 値は許可されます。|  
@@ -61,11 +61,10 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**xml**|*Plan_handle*で指定された実際のクエリ実行プランの最後に認識されたランタイム Showplan 表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。| 
 
-## <a name="remarks"></a>解説
-このシステム関数は、 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 以降で使用できます。
+## <a name="remarks"></a>Remarks
+このシステム関数は、CTP 2.4 以降で使用でき [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ます。
 
-これはオプトイン機能であり、有効にするには[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。 
-  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降でデータベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の LAST_QUERY_PLAN_STATS オプションをご覧ください。
+これはオプトイン機能であり、有効にするには[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降でデータベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の LAST_QUERY_PLAN_STATS オプションをご覧ください。
 
 このシステム関数は、**ライトウェイト**クエリ実行統計のプロファイルインフラストラクチャで動作します。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
 
@@ -85,7 +84,7 @@ Dm_exec_query_plan_stats によるプラン表示出力には、次の情報が�
     **AND**    
 -   クエリは単純であり、通常は OLTP ワークロードの一部として分類されます。
 
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降では、ルートノード演算子 (SELECT) のみを含む Showplan が参照されます。 CTP [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.4 では、これはによっ`sys.dm_exec_cached_plans`て使用可能なキャッシュされたプランを参照します。
+<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 以降では、ルートノード演算子 (SELECT) のみを含む Showplan が参照されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4 では、これはによって使用可能なキャッシュされたプランを参照し `sys.dm_exec_cached_plans` ます。
 
 次の条件下では、 **dm_exec_query_plan_stats**からの**出力は返されません**。
 
@@ -94,7 +93,7 @@ Dm_exec_query_plan_stats によるプラン表示出力には、次の情報が�
 -   最初の場所では、クエリプランをキャッシュできませんでした。 詳細については、「[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)」を参照してください。
   
 > [!NOTE] 
-> **Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_plan**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、この条件が原因でクエリプランが返されず、[エラー 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)が生成されます。 Service [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。  
+> **Xml**データ型で許可されている入れ子になったレベルの数に制限があるため、 **dm_exec_query_plan**は入れ子になった要素の128レベル以上のクエリプランを返すことができません。 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この条件が原因でクエリプランが返されず、[エラー 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999)が生成されます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 以降のバージョンでは、 **query_plan**列には NULL が返されます。  
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
@@ -102,21 +101,21 @@ Dm_exec_query_plan_stats によるプラン表示出力には、次の情報が�
 ## <a name="examples"></a>例  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. 特定のキャッシュされたプランに対する前回の既知の実際のクエリ実行プランの確認  
- 次の例では、 **dm_exec_cached_plans**クエリを使用して、興味深い`plan_handle`計画を見つけ、そのプランを出力からコピーします。  
+ 次の例では、 **dm_exec_cached_plans**クエリを使用して、興味深い計画を見つけ、そのプランを出力からコピーします。 `plan_handle`  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-次に、最後に確認した実際のクエリ実行プランを取得`plan_handle`するには、システム関数**sys. dm_exec_query_plan_stats**でコピーしたを使用します。  
+次に、最後に確認した実際のクエリ実行プランを取得するには、 `plan_handle` システム関数**sys. dm_exec_query_plan_stats**でコピーしたを使用します。  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  
 GO  
 ```   
 
-### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>B. キャッシュされたすべてのプランについて、最後に確認された実際のクエリ実行プランを確認する
+### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>B: キャッシュされたすべてのプランについて、最後に確認された実際のクエリ実行プランを確認する
   
 ```sql  
 SELECT *   
@@ -126,7 +125,7 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps;
 GO  
 ```   
 
-### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>C. 特定のキャッシュされたプランとクエリテキストに対する前回の既知の実際のクエリ実行プランの確認
+### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>C: 特定のキャッシュされたプランとクエリテキストに対する前回の既知の実際のクエリ実行プランの確認
 
 ```sql  
 SELECT *   
@@ -137,7 +136,7 @@ WHERE st.text LIKE 'SELECT * FROM Person.Person%';
 GO  
 ```   
 
-### <a name="d-look-at-cached-events-for-trigger"></a>D. トリガーのキャッシュされたイベントを確認する
+### <a name="d-look-at-cached-events-for-trigger"></a>D: トリガーのキャッシュされたイベントを確認する
 
 ```sql
 SELECT *
@@ -147,8 +146,8 @@ WHERE objtype ='Trigger';
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   [トレースフラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

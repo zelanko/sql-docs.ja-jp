@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923131"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747992"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 *セルセット*は、多次元データに対するクエリの結果です。 これは、軸のコレクションで構成されており、通常は4つの軸を超えていません。通常は2つまたは3つです。 *軸*は、1つまたは複数のディメンションのメンバーのコレクションであり、キューブ内の特定の値を検索またはフィルター処理するために使用されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "67923131"
   
  たとえば、キューブには次の6つのディメンションがあります (このキューブスキーマは、 [「多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)」で説明した例と若干異なることに注意してください)。  
   
--   売上高  
+-   営業担当者  
   
 -   Geography (自然階層)-大陸、国、州など  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67923131"
   
 -   メジャー-Sales、PercentChange、BudgetedSales  
   
--   成果物  
+-   製品  
   
  次のセルセットは、すべての製品の1991の売上を表します。  
   

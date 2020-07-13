@@ -10,40 +10,38 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 9266133a7594c2703e0c8671710034c5d85dc9ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73783844"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004368"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime データ型の SQL から C への変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C の型に変換する際に考慮する問題を示します。  
   
-## <a name="conversions"></a>コンバージョン  
+## <a name="conversions"></a>変換  
   
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|  
-|SQL_TYPE_DATE|OK|12|13|12|13、23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10、23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7、8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|OK|21|16|16|  
+|SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_TYPE_DATE|[OK]|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[OK]|10、23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|[OK]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|[OK]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
-|OK|変換の問題は発生しません。|  
-|1 で保護されたプロセスとして起動されました|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
+|[OK]|変換の問題は発生しません。|  
+|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
 |2|先頭および末尾にあるスペースは無視されます。|  
 |3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合、"Datetime field overflow" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
 |4|値が日付、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  

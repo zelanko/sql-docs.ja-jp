@@ -15,38 +15,37 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_function_stats dynamic management view
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68742829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821244"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>dm_exec_function_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   キャッシュされた関数の集計パフォーマンス統計を返します。 ビューは、キャッシュされた関数プランごとに1行の値を返します。行の有効期間は、関数がキャッシュされたままである限り保持されます。 関数がキャッシュから削除されると、対応する行がこのビューから削除されます。 その時点で、**sys.dm_exec_query_stats** と同様にパフォーマンス統計 SQL トレース イベントが発生します。 メモリ内の関数や CLR スカラー関数など、スカラー関数に関する情報を返します。 テーブル値関数に関する情報は返しません。  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
 > [!NOTE]
 > データには完了したクエリだけが反映され、まだ処理中ではないため、dm_exec_function_stats の結果は実行ごとに異なる場合があります **。** 
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|関数が存在するデータベース ID。|  
 |**object_id**|**int**|関数のオブジェクト id 番号。|  
-|**type**|**char (2)**|オブジェクトの型: FN = スカラー値関数|  
-|**type_desc**|**nvarchar (60)**|オブジェクトの種類の説明: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary (64)**|これを使用すると、この関数内から実行された**dm_exec_query_stats**のクエリと関連付けることができます。|  
-|**plan_handle**|**varbinary (64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブコンパイル関数がメモリ最適化テーブルに対してクエリを実行する場合、は常に0x000 になります。|  
-|**cached_time**|**DATETIME**|関数がキャッシュに追加された時刻。|  
-|**last_execution_time**|**DATETIME**|関数が最後に実行された時刻。|  
+|**type**|**char(2)**|オブジェクトの型: FN = スカラー値関数|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明: SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary(64)**|これを使用すると、この関数内から実行された**dm_exec_query_stats**のクエリと関連付けることができます。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブコンパイル関数がメモリ最適化テーブルに対してクエリを実行する場合、は常に0x000 になります。|  
+|**cached_time**|**datetime**|関数がキャッシュに追加された時刻。|  
+|**last_execution_time**|**datetime**|関数が最後に実行された時刻。|  
 |**execution_count**|**bigint**|関数が最後にコンパイルされてから実行された回数。|  
 |**total_worker_time**|**bigint**|コンパイル後にこの関数の実行で消費された CPU 時間の合計 (マイクロ秒単位)。<br /><br /> ネイティブコンパイル関数の場合、多くの実行に1ミリ秒未満の時間がかかると、 **total_worker_time**が正確ではない可能性があります。|  
 |**last_worker_time**|**bigint**|関数が最後に実行されたときに消費された CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
@@ -75,10 +74,10 @@ ms.locfileid: "68742829"
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、平均経過時間で識別される上位10個の関数に関する情報を返します。  
   
 ```  
@@ -93,7 +92,7 @@ ORDER BY [total_worker_time] DESC;
 ## <a name="see-also"></a>参照  
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
  [dm_exec_trigger_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
  [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  

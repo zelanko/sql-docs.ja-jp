@@ -16,23 +16,21 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 3e94692f52c6507122df0e35a55f13555315021f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70911115"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008919"
 ---
 # <a name="using-table-and-index-partitioning"></a>テーブルおよびインデックスのパーティション分割の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   データは、 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)によって提供される格納アルゴリズムを使用して格納することができます。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
   
 ## <a name="index-and-table-partitioning"></a>インデックスとテーブルのパーティション分割  
  この機能によって、インデックス データおよびテーブル データを、パーティション内の複数のファイル グループに分散させることができます。 パーティション関数は、パーティション分割列と呼ばれる特定の列の値に基づいて、テーブルまたはインデックスの行を一連のパーティションにどのようにマップするかを定義します。 パーティション構成は、パーティション関数によって指定された各パーティションをファイル グループにマップします。 これにより、複数のファイル グループにまたがってテーブルを拡張できるような、したがって物理デバイスもまたがって拡張できるような、アーカイブ戦略を開発することができます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、実装されたパーティション関数を表す <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> オブジェクトのコレクション、およびファイル グループへのデータのマップ方法を記述する <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> オブジェクトのコレクションが含まれています。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、実装されたパーティション関数を表す <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> オブジェクトのコレクション、およびファイル グループへのデータのマップ方法を記述する <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> オブジェクトのコレクションが含まれています。  
   
  各 <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトは、どのパーティション構成を使用するかを <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> プロパティで指定し、列を <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> で指定します。  
   
@@ -134,6 +132,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>参照  
- [パーティションテーブルとパーティションインデックス](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [パーティション テーブルとパーティション インデックス](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

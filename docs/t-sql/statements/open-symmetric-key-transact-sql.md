@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c4adbad4a3775ddd0f6af97dbea2c1afdba76c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897087"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   対称キーの暗号化を解除し、対称キーを使用可能にします。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129392"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   

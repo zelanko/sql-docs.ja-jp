@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138325"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
@@ -65,11 +65,11 @@ ms.locfileid: "68138325"
 |bit [49.. 56]|バイナリ [7]|  
 |bit [57.. 64]|バイナリ [8]|  
 |bit [9.. 16]|バイナリ [2]|  
-|BLOB|varbinary(max)|  
+|blob (blob)|varbinary(max)|  
 |blob [0 ..1]|varbinary [1]|  
 |blob [2.. 8000]|varbinary [*]|  
 |blob [8001.. *]|varbinary(max)|  
-|ブール|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char byte|バイナリ [1]|  
@@ -100,14 +100,14 @@ ms.locfileid: "68138325"
 |float [*..255] [\*..?|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
 |INT|INT|  
-|int [*..255]|INT|  
-|整数 (integer)|INT|  
-|integer [*..255]|INT|  
+|int [*..255]|int|  
+|整数|int|  
+|integer [*..255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|INT|  
-|mediumint[*..255]|INT|  
+|mediumint|int|  
+|mediumint[*..255]|int|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0 ..1]|nchar [1]|  
@@ -146,7 +146,7 @@ ms.locfileid: "68138325"
 |テキスト [0 ..1]|nvarchar [1]|  
 |テキスト [2.. 4000]|nvarchar [*]|  
 |テキスト [4001.. *]|nvarchar(max)|  
-|time|time|  
+|時間|time|  
 |timestamp|DATETIME|  
 |tinyblob|varbinary [255]|  
 |tinyint|smallint|  
@@ -173,15 +173,15 @@ ms.locfileid: "68138325"
 |unsigned int [*..255]|bigint|  
 |符号なし整数|bigint|  
 |符号なし整数 [*..255]|bigint|  
-|署名されていない mediumint|INT|  
-|署名されていない mediumint [*..255]|INT|  
+|署名されていない mediumint|int|  
+|署名されていない mediumint [*..255]|int|  
 |符号なし数値|numeric|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
 |符号なし数値 [*..65] [\*..?|数値 [*] [\*]|  
 |符号なし実数|float [53]|  
 |unsigned real [*..255 [[\*..?|数値 [*] [\*]|  
-|unsigned smallint|INT|  
-|unsigned smallint [*..255]|INT|  
+|unsigned smallint|int|  
+|unsigned smallint [*..255]|int|  
 |unsigned tinyint|tinyint|  
 |unsigned tinyint [*..255]|tinyint|  
 |varbinary [0 ..1]|varbinary [1]|  

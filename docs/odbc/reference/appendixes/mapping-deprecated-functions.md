@@ -15,14 +15,14 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990716"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299882"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
 このセクションでは、odbc 2.x アプリケーションで使用される ODBC *3.x ドライバーの*旧バージョンとの互換性を保証するために、非推奨の関数*が Odbc* *3.x ドライバーマネージャー*によってどのようにマップされるかについて説明します。 ドライバーマネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 次の一覧に示す*odbc 2.x 関数は*それぞれ *、odbc 3.x ドライバーで*呼び出された場合に対応する odbc 3.x 関数にマップされるため *、ODBC 3.x ドライバーで**は odbc* *2.x 関数を*実装する必要はありません。  

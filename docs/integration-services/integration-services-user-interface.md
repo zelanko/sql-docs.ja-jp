@@ -51,7 +51,7 @@ ms.locfileid: "71284169"
 |**[デジタル署名]**|パッケージに署名したり、またはパッケージから署名を削除します。|**[SSIS]** メニューの **[デジタル署名]** をクリックします。<br /><br /> または<br /><br /> **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[デジタル署名]** をクリックします。|  
 |**ブレークポイントを設定する**|タスク上のブレークポイントを有効にし、ブレークポイントのプロパティを設定します。|**[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、 **[ブレークポイントの設定]** をクリックします。 パッケージ上のブレークポイントを設定するには、 **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[ブレークポイントの設定]** をクリックします。|  
   
- **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 RSS フィードの URL を指定する \<GettingStartedSamples> 要素値は変更しないでください。 このファイルは、 *\<ドライブ*>:\Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。 64 ビット コンピューターでは、このファイルは、 *\<ドライブ*>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。  
+ **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 RSS フィードの URL を指定する \<GettingStartedSamples> 要素値は変更しないでください。 このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。 64 ビット コンピューターでは、このファイルは、\<*ドライブ*>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。  
   
  SamplesSites.xml ファイルが破損した場合は、ファイルの XML を次の既定の XML で置き換えてください。  
   

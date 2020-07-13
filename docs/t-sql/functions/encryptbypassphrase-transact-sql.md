@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 390e604c2b2583a6d1bc262ad116649d46b955ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682044"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   128 キービット長の TRIPLE DES アルゴリズムを使用して、パスフレーズでデータを暗号化します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67904359"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 EncryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'cleartext' | @cleartext }  
@@ -95,7 +95,7 @@ SET @PassphraseEnteredByUser
 -- In this case, the record is number 3681.  
 UPDATE Sales.CreditCard  
 SET CardNumber_EncryptedbyPassphrase = EncryptByPassPhrase(@PassphraseEnteredByUser  
-    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  
+    , CardNumber, 1, CONVERT(varbinary, CreditCardID))  
 WHERE CreditCardID = '3681';  
 GO  
 ```  

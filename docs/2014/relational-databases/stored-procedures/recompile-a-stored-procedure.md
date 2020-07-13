@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062775"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 この操作を行うには、プロシージャ`WITH RECOMPILE`の定義でオプションを使用するか、プロシージャを呼び出すとき`RECOMPILE`に、個々のステートメントに対してクエリヒント`sp_recompile`を使用するか、またはシステムストアドプロシージャを使用します。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 この操作を行うには、 `WITH RECOMPILE` プロシージャの定義でオプションを使用するか、プロシージャを呼び出すときに、 `RECOMPILE` 個々のステートメントに対してクエリヒントを使用するか、または `sp_recompile` システムストアドプロシージャを使用します。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
   
  **このトピックの内容**  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62721037"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   プロシージャを初めてコンパイルするときや再コンパイルするとき、データベースおよびそのオブジェクトの現在の状態に合わせてプロシージャのクエリ プランが最適化されます。 データベースのデータまたは構造に大きな変更が加えられた場合、プロシージャを再コンパイルすることにより、その変更に合わせてプロシージャのクエリ プランが更新され、最適化されます。 これにより、プロシージャの処理パフォーマンスが向上します。  
   
@@ -51,9 +50,9 @@ ms.locfileid: "62721037"
   
 -   プロシージャの特定のクエリで通常使用される値が非定型の値や一時的な値である場合は、それらのクエリ内で RECOMPILE クエリ ヒントを使用することにより、プロシージャのパフォーマンスを向上させることができます。 再コンパイルされるのは、プロシージャ全体ではなく、クエリ ヒントを使用したクエリのみであるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のステートメント レベルの再コンパイル動作を模倣できます。 ただし、RECOMPILE クエリ ヒントを使用した場合、ステートメントをコンパイルするときに、プロシージャの現在のパラメーター値に加えてストアド プロシージャ内の任意のローカル変数の値も使用されます。 詳細については、「 [クエリ ヒント (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  `WITH RECOMPILE`オプション  
  プロシージャ定義を作成するときにこのオプションを使用する場合、データベースの CREATE PROCEDURE 権限とプロシージャが作成されるスキーマに対する ALTER 権限が必要です。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62721037"
  `sp_recompile`システムストアドプロシージャ  
  指定したプロシージャに対する ALTER 権限が必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE オプションを使用してストアド プロシージャを実行するには  
   
@@ -137,6 +136,6 @@ GO
  [ストアドプロシージャの名前の変更](rename-a-stored-procedure.md)   
  [ストアドプロシージャの定義を表示する](view-the-definition-of-a-stored-procedure.md)   
  [ストアドプロシージャの依存関係の表示](view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

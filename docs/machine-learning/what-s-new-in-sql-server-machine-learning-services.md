@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6042621491bfd26cb175b1a50d5a68374be41aa9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115705"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487041"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能
 
@@ -43,7 +43,7 @@ SQL Server Machine Learning Services の新機能を次に示します。
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 
-このリリースでは [Python サポートと業界をリードする機械学習アルゴリズム](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)が追加されています。 SQL Server 2017 は、新しいスコープを反映するように名前が変更され、[SQL Server Machine Learning Services (データベース内)](what-is-sql-server-machine-learning.md) の導入と、Python と R の両方の言語サポートが示されています。 
+このリリースでは [Python サポートと業界をリードする機械学習アルゴリズム](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)が追加されています。 SQL Server 2017 は、新しいスコープを反映するように名前が変更され、[SQL Server Machine Learning Services (データベース内)](sql-server-machine-learning-services.md) の導入と、Python と R の両方の言語サポートが示されています。 
 
 すべての機能に関する発表については、[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)に関するページを参照してください。
 
@@ -112,12 +112,6 @@ SQL Server 2019 では、データベース エンジンのインスタンスを
 
 Linux では、SQL Server 2017 に R または Python の統合はありませんが、Linux で[ネイティブ スコアリング](sql-native-scoring.md)を使用することができます。これは、この機能が Linux で実行される T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) を通じて使用できるためです。 ネイティブ スコアリングにより、事前トレーニング済みモデルの高パフォーマンスなスコア付けが可能になりします。R ランタイムを呼び出すことも、必要になることもありません。
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database の Machine Learning Services
-
-Azure SQL Database の Machine Learning Services はパブリック プレビューの段階にあります。 詳細については、[Azure SQL Database Machine Learning Services (プレビュー)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

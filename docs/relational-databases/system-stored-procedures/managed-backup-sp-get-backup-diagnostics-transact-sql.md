@@ -18,17 +18,16 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942043"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053498"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup。 sp_get_backup_diagnostics (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Smart Admin によってログに記録された拡張イベントを返します。  
   
@@ -42,27 +41,27 @@ ms.locfileid: "67942043"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @xevent_channel  
  拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効になっている拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 完全なイベント名を指定するか、部分文字列 ( **' admin**'、' analytics **'**、 **' Operational '**、 **' Debug '** など) を指定することができます。 @event_channelは**VARCHAR (255)** です。  
   
  現在有効になっているイベントの種類の一覧を取得するには、 **managed_backup. fn_get_current_xevent_settings**関数を使用します。  
   
  [@begin_time  
- イベントが表示対象となる期間の開始時刻。 パラメーター @begin_timeは DATETIME で、既定値は NULL です。 これが指定されていない場合は、過去30分間のイベントが表示されます。  
+ イベントが表示対象となる期間の開始時刻。 @begin_timeパラメーターは DATETIME で、既定値は NULL です。 これが指定されていない場合は、過去30分間のイベントが表示されます。  
   
  @end_time  
- イベントが表示対象となる期間の終了時刻。 パラメーター @end_timeは DATATIME で、既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
+ イベントが表示対象となる期間の終了時刻。 @end_timeパラメーターは DATATIME で、既定値は NULL です。  これを指定しない場合は、現在までのイベントが表示されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
  このストアドプロシージャは、次の情報を含むテーブルを返します。  
   
 ||||  
 |-|-|-|  
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |event_type|NVARCHAR (512)|拡張イベントの種類。|  
-|イベント|NVARCHAR (512)|イベント ログの概要|  
-|Timestamp|TIMESTAMP|イベントの発生時刻を示す、イベントのタイムスタンプ|  
+|Event|NVARCHAR (512)|イベント ログの概要|  
+|Timestamp|timestamp|イベントの発生時刻を示す、イベントのタイムスタンプ|  
   
 ## <a name="security"></a>Security  
   

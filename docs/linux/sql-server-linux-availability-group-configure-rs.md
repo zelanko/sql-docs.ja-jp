@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892290"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux で読み取りスケールの SQL Server 可用性グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性向けのアーキテクチャでは、クラスター マネージャーを使用して、向上した事業継続性が提供されます。 また、このアーキテクチャには、読み取りスケールのレプリカを含めることもできます。 高可用性アーキテクチャを作成するには、「[Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)」をご覧ください。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
 

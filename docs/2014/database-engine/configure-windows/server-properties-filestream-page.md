@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70531800a43b0c8680dac3b0c5bd2633e5c09bce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca13877a195a0f829c3fd0a628c446626819e14a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62809151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934943"
 ---
 # <a name="sql-server-properties-filestream-page"></a>[SQL Server のプロパティ] ([FILESTREAM] ページ)
   このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[Transact-SQL アクセスに対して FILESTREAM を有効にする]**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする場合にオンにします。 他のコントロール オプションを使用できるようにするには、先にこのコントロールをオンにする必要があります。  
   

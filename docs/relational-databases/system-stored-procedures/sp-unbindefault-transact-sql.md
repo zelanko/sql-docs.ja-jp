@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68095880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891412"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの列または別名データ型から、デフォルトをバインド解除 (削除) します。  
   
@@ -43,8 +43,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'`既定値のバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
+`[ @objname = ] 'object_name'`既定値のバインドを解除するテーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**,、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
   
  別名データ型から既定値をバインド解除すると、同じ既定値を持つそのデータ型の列もバインド解除されます。 ただし、同じデータ型でも、デフォルトが直接バインドされている列は影響を受けません。  
   
@@ -71,21 +70,21 @@ sp_unbindefault [ @objname = ] 'object_name'
 EXEC sp_unbindefault 'employees.hiredate';  
 ```  
   
-### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>B. 別名データ型からデフォルトをバインド解除する  
+### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>B: 別名データ型からデフォルトをバインド解除する  
  次の例では、別名データ型の `ssn` からデフォルトをバインド解除します。 この型の既存の列と将来の列をバインド解除します。  
   
 ```  
 EXEC sp_unbindefault 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonly_flag"></a>C. Futureonly_flag の使用  
- 次の例では、既存`ssn` `ssn`の列に影響を与えずに別名データ型の将来の使用をバインド解除します。  
+### <a name="c-using-the-futureonly_flag"></a>C: Futureonly_flag の使用  
+ 次の例では、既存の列に影響を与えずに別名データ型の将来の使用をバインド解除し `ssn` `ssn` ます。  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子の使用  
+### <a name="d-using-delimited-identifiers"></a>D: 区切られた識別子の使用  
  次の例では、 *object_name*パラメーターで区切られた識別子を使用しています。  
   
 ```  
@@ -100,13 +99,13 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_helptext &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

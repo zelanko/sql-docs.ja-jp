@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966914"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759398"
 ---
 # <a name="column-object-adox"></a>Column オブジェクト (ADOX)
 テーブル、インデックス、またはキーからの列を表します。  

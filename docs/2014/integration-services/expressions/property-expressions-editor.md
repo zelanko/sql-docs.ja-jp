@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f6aa4baeb6252c3f57400cfaf94604f6ac1fefd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768788"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437139"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
   **[プロパティ式エディター]** ダイアログ ボックスを使用すると、プロパティ値を更新するプロパティ式の作成、編集、または削除ができます。  

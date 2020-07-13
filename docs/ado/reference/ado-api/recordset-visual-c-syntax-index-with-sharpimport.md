@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931279"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761850"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>レコードセット (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -88,7 +88,7 @@ HRESULT Seek( const _variant_t & KeyValues, enum SeekEnum
 VARIANT_BOOL Supports( enum CursorOptionEnum CursorOptions );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 enum PositionEnum GetAbsolutePage( );  

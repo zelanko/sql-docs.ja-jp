@@ -1,5 +1,6 @@
 ---
 title: number 関数 (XQuery) |Microsoft Docs
+description: 指定された引数の数値を返す XQuery 関数の数値 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67930115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753584"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって示されるノードの数値を返します。  
   
@@ -39,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  値が数値として返されるノード。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  *$Arg*が指定されていない場合、double に変換されたコンテキストノードの数値が返されます。 SQL Server では、引数のない**fn: number ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。 たとえば、次の式は、<`ROOT`> 要素を返します。  
   
 ```  
@@ -50,10 +51,10 @@ select @x.query('/ROOT[number()=111]')
   
  ノードの値が、 **XML スキーマパート 2: データ型、W3C 勧告**で定義されているように、数値単純型の有効な字句表現でない場合、関数は空のシーケンスを返します。 NaN はサポートされません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number () XQuery 関数を使用して属性の数値を取得する  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A: Number () XQuery 関数を使用して属性の数値を取得する  
  次のクエリでは、製品モデル7の製造プロセスの最初のワークセンターの場所から、大量のサイズの属性の数値を取得します。  
   
 ```  
@@ -98,7 +99,7 @@ ProductModelID   Result
   
 -   値を数値として返すことができない場合、 **number ()** 関数は、NaN ではなく空のシーケンスを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

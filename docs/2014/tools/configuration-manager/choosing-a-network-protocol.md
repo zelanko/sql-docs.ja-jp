@@ -1,5 +1,6 @@
 ---
 title: ネットワークプロトコルの選択 |Microsoft Docs
+description: 共有メモリ、TCP/IP、名前付きパイプなどの SQL Server データベースエンジンへの接続に使用できるネットワークプロトコルを比較対照します。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +21,17 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63035289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008197"
 ---
 # <a name="choosing-a-network-protocol"></a>ネットワーク プロトコルの選択
-  
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数のプロトコルに対して同時に要求を処理できます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数のプロトコルに対して同時に要求を処理できます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  
   
 ## <a name="shared-memory"></a>共有メモリ  
  共有メモリは、使用できる最も単純なプロトコルであり、構成可能な設定はありません。 共有メモリ プロトコルを使用するクライアントは、同じコンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにしか接続できないため、ほとんどのデータベース操作にとって実用的ではありません。 共有メモリ プロトコルは、他のプロトコルが正しく構成されていない可能性がある場合に、トラブルシューティングを行うために使用できます。  
@@ -42,8 +40,7 @@ ms.locfileid: "63035289"
 >  MDAC 2.8 以前を使用しているクライアントでは、共有メモリ プロトコルを使用できません。 このようなクライアントで共有メモリ プロトコルの使用を試みた場合は、自動的に名前付きパイプ プロトコルに切り替わります。  
   
 ## <a name="tcpip"></a>TCP/IP  
- TCP/IP は、インターネットで広く使われている一般的なプロトコルです。 このプロトコルは、多様なハードウェア アーキテクチャやオペレーティング システムを備えたコンピューターが相互に接続されているネットワーク上の通信を実現します。 TCP/IP には、ネットワーク トラフィックをルーティングするための標準や、高度なセキュリティ機能も含まれています。 TCP/IP は、今日の業務で最も一般的に使用されているプロトコルです。 TCP/IP を使用するためにコンピューターを構成する作業は複雑になることもありますが、ほとんどのネットワーク コンピューターには適切な構成が既に適用されています。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで表示されない TCP/IP 設定を構成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のドキュメントを参照してください。  
+ TCP/IP は、インターネットで広く使われている一般的なプロトコルです。 このプロトコルは、多様なハードウェア アーキテクチャやオペレーティング システムを備えたコンピューターが相互に接続されているネットワーク上の通信を実現します。 TCP/IP には、ネットワーク トラフィックをルーティングするための標準や、高度なセキュリティ機能も含まれています。 TCP/IP は、今日の業務で最も一般的に使用されているプロトコルです。 TCP/IP を使用するためにコンピューターを構成する作業は複雑になることもありますが、ほとんどのネットワーク コンピューターには適切な構成が既に適用されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで表示されない TCP/IP 設定を構成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のドキュメントを参照してください。  
   
 ## <a name="named-pipes"></a>名前付きパイプ  
  名前付きパイプは、ローカル エリア ネットワークのために開発されたプロトコルです。 このプロトコルでは、1 つのプロセスが、メモリの一部を使用して別のプロセスに情報を渡します。このとき、1 つ目のプロセスの出力が 2 つ目のプロセスの入力になります。 2 つ目のプロセスは、ローカル (1 つ目のプロセスと同じコンピューター上にある) またはリモート (ネットワーク コンピューター上にある) のどちらでもかまいません。  

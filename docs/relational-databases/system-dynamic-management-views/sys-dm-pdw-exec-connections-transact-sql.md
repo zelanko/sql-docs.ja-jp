@@ -12,26 +12,26 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899418"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197111"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>dm_pdw_exec_connections (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   このインスタンスの [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] との間に確立された接続に関する情報と各接続の詳細を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|この接続に関連付けられたセッションの識別子。 現在`SESSION_ID()`の接続の`session_id`を返すには、を使用します。|  
-|connect_time|**DATETIME**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|encrypt_option|**nvarchar (40)**|TRUE (接続が暗号化されている) または FALSE (接続が暗号化されていない赤) を示します。|  
-|auth_scheme|**nvarchar (40)**|この[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続で使用される/Windows 認証スキームを指定します。 NULL 値は許可されません。|  
-|client_id|**varchar (48)**|このサーバーに接続しているクライアントの IP アドレス。 NULL 値が許可されます。|  
-|sql_spid|**int**|接続のサーバープロセス ID。 現在`@@SPID`の接続の`sql_spid`を返すには、を使用します。ほとんどの遂行では`session_id` 、代わりにを使用します。|  
+|session_id|**int**|この接続に関連付けられたセッションの識別子。 `SESSION_ID()`現在の接続のを返すには、を使用し `session_id` ます。|  
+|connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
+|encrypt_option|**nvarchar(40)**|TRUE (接続が暗号化されている) または FALSE (接続が暗号化されていない赤) を示します。|  
+|auth_scheme|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この接続で使用される/Windows 認証スキームを指定します。 NULL 値は許可されません。|  
+|client_id|**varchar(48)**|このサーバーに接続しているクライアントの IP アドレス。 NULL 値が許可されます。|  
+|sql_spid|**int**|接続のサーバープロセス ID。 `@@SPID`現在の接続のを返すには、を使用し `sql_spid` ます。ほとんどの遂行では、代わりにを使用し `session_id` ます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する**VIEW SERVER STATE**権限が必要です。  
@@ -43,7 +43,7 @@ ms.locfileid: "67899418"
 |dm_pdw_exec_sessions。 session_id|dm_pdw_exec_connections。 session_id|一対一|  
 |dm_pdw_exec_requests。 connection_id|dm_pdw_exec_connections。 connection_id|多対一|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  クエリ所有の接続に関する情報を収集するための一般的なクエリ。  
   
 ```  
@@ -57,7 +57,7 @@ JOIN sys.dm_pdw_exec_sessions AS s
 WHERE c.session_id = SESSION_ID();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b987f15fd7108027b5038858be2cd875b1e5b473
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62829898"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438109"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
   ジョブ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブを転送します。  
@@ -60,12 +59,11 @@ ms.locfileid: "62829898"
 ## <a name="configuration-of-the-transfer-jobs-task"></a>ジョブ転送タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[ジョブ転送タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[ジョブ転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [ジョブ転送タスクエディター &#40;ジョブページ&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [[ジョブ転送タスク エディター] ([ジョブ] ページ)](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -74,12 +72,11 @@ ms.locfileid: "62829898"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

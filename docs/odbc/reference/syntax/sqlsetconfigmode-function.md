@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c36da48fa1493f61131d23a07f7a820b67ebac82
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018919"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293282"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 関数
 **互換性**  
@@ -57,7 +57,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>診断  
  **SQLSetConfigMode**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|無効なパラメーターシーケンス|*Wconfigmode*引数に ODBC_USER_DSN、ODBC_SYSTEM_DSN、または ODBC_BOTH_DSN が含まれていませんでした。|  
   
@@ -73,7 +73,7 @@ BOOL SQLSetConfigMode(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |データソースの作成|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |接続文字列またはダイアログボックスを使用したデータソースへの接続|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  

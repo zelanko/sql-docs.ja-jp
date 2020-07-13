@@ -13,17 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Error collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c118bcc524aefb03f1f34f66cd595a83e21f72d9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918910"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758788"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>エラー (構文インデックスが #import で Visual C++)
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetDescription( );  

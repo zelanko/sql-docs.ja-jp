@@ -11,18 +11,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676e2cc86a6b41a1bc778160611a9a967336390f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 662b275e01223726bac7605fdf18fab123dd6231
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785691"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002382"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   パラメーター値の配列がステートメントの実行にバインドされている場合、 **SQLRowCount**は、ステートメントの実行時にパラメーター値のいずれかの行でエラー状態が発生した場合に SQL_ERROR を返します。 関数の*Rowcountptr*引数によって値が返されることはありません。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "73785691"
   
  また、SQL_ATTR_PARAM_STATUS_PTR ステートメント属性を使用してバインドされた状態値の配列を使用して、問題のあるパラメーター行の配列オフセットをキャプチャできます。 アプリケーションは、状態配列をすべて確認し、実際に処理された行数を判断できます。  
   
- OUTPUT 句[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して INSERT、UPDATE、DELETE、または MERGE ステートメントを実行すると、SQLRowCount は、output 句によって生成された結果セット内のすべての行が使用されるまで、影響を受ける行の数を返しません。 これらの行を使用するには、SQLFetch または SQLFetchScroll を呼び出します。 SQLResultCols は、すべての結果行が使用されるまで-1 を返します。 SQLFetch または SQLFetchScroll が SQL_NO_DATA を返すと、アプリケーションは SQLRowCount を呼び出して、次の結果に移動するために SQLMoreResults を呼び出す前に、影響を受けた行の数を確認する必要があります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]Output 句を使用して INSERT、UPDATE、DELETE、または MERGE ステートメントを実行すると、SQLRowCount は、output 句によって生成された結果セット内のすべての行が使用されるまで、影響を受ける行の数を返しません。 これらの行を使用するには、SQLFetch または SQLFetchScroll を呼び出します。 SQLResultCols は、すべての結果行が使用されるまで-1 を返します。 SQLFetch または SQLFetchScroll が SQL_NO_DATA を返すと、アプリケーションは SQLRowCount を呼び出して、次の結果に移動するために SQLMoreResults を呼び出す前に、影響を受けた行の数を確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQLRowCount 関数](https://go.microsoft.com/fwlink/?LinkId=59367)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109087"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>[全般] プロパティ ページ、レポート パーツ (レポート マネージャー)
@@ -61,13 +61,13 @@ ms.locfileid: "66109087"
  **Type**  
  レポート パーツの種類です。 読み取り専用です。  
   
- **[適用]**  
+ 適用****  
  変更を保存します。  
   
- **デリート**  
+ **削除**  
  レポート サーバー データベースからレポート パーツを削除します。 サーバーからレポート パーツを削除しても、そのレポート パーツが追加された既存のレポートは表示されます。  
   
- **[詳細ビュー]**  
+ **合わせ**  
  [移動] をクリックすると、[アイテムの移動] ページが開き、レポート サーバーのフォルダー階層内でレポート パーツを移動できます。 詳細については、「[[アイテムの移動] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)」を参照してください。  
   
  **ダウンロード**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109087"
  [レポートパーツの管理](report-design/managing-report-parts.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)  
   

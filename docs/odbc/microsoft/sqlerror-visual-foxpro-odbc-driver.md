@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLError function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7e8a60030e9c5c7666ce3b25488cfc6adf00783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d1247217905187cfb2dbaca6d7b7b562d0175bd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053859"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298682"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

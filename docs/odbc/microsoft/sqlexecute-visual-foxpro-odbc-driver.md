@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9151ed5bbd02cce20ebd0c817197b8921a391c16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20622abf67780afbc69a8933657110507af9c83e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053831"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298662"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

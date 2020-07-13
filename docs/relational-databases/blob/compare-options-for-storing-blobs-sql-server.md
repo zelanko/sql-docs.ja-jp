@@ -1,5 +1,6 @@
 ---
 title: Blob (SQL Server) を保存するオプションの比較 | Microsoft Docs
+description: SQL Server では、Windows アプリケーションで使用されるバイナリ ラージ オブジェクト (BLOB) データを格納できます。 非構造化データを格納するために、このリレーショナル データベースのオプションを比較します。
 ms.custom: ''
 ms.date: 03/04/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b0faae244963957eadb1bd894f90a88736427b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768054"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ファイルおよびドキュメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納するために使用できるオプションを説明して比較します。
 

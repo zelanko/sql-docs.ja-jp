@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057031"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305006"
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS は、独自の SQL 型を定義します。 各 ODBC ドライバーは、関連付けられている DBMS が定義する SQL データ型のみを公開します。 ドライバーが DBMS SQL 型を ODBC 定義の SQL 型識別子にマップする方法と、ドライバーが DBMS SQL 型を独自のドライバー固有の SQL 型識別子にマップする方法については、 **SQLGetTypeInfo**を呼び出すことによって返されます。 また、ドライバーは、 **Sqlcolattribute**、 **sqlcolumns**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLProcedureColumns**、および**sql 列**の呼び出しを通じて、列およびパラメーターのデータ型を記述するときに、SQL データ型を返します。  
@@ -41,20 +41,20 @@ ms.locfileid: "68057031"
 |SQL_LONGVARCHAR|LONG VARCHAR|可変長文字データ。 最大長は、データソースに依存します。ませ|  
 |SQL_WCHAR|WCHAR (*n*)|固定長文字列の Unicode 文字列の長さ*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|最大文字列長を持つ Unicode 可変長文字列*n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode の可変長文字データ。 最大長はデータソースに依存します|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可変長文字データ。 最大長はデータソースに依存します|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|少なくとも*p*と scale s の有効桁数を持つ符号付きの正確な数値 *。* (最大有効桁数はドライバーで定義されています)。(1 <= *p* <= 15;*s* <= *p*)。4/4|  
 |SQL_NUMERIC|NUMERIC (*p*,*s*)|精度が*p*で小数点以下桁数が*s*の符号付きの正確な数値 (1 <= *p* <= 15;*s* <= *p*)。4/4|  
 |SQL_SMALLINT|SMALLINT|精度が5および小数点以下桁数が0の numeric 値 (符号付き:-32768 <= *n* <= 32767、unsigned: 0 <= *n* <= 65535) [3]。|  
 |SQL_INTEGER|INTEGER|有効桁数が10および小数点以下桁数が0の正確な数値 (符号付き:-2 [31] <= *n* <= 2 [31]-1、符号なし: 0 <= *n* <= 2 [32]-1) [3]。|  
-|SQL_REAL|REAL|バイナリ精度 24 (0 または絶対値が 10 [-38] ~ 10 [38]) の符号付き概数値。|  
+|SQL_REAL|real|バイナリ精度 24 (0 または絶対値が 10 [-38] ~ 10 [38]) の符号付き概数値。|  
 |SQL_FLOAT|FLOAT (*p*)|少なくとも*p*のバイナリ有効桁数を持つ、符号付きの概数型の数値。 (最大有効桁数はドライバーで定義されています)。5/5|  
 |SQL_DOUBLE|DOUBLE PRECISION|バイナリ精度 53 (0 または絶対値が 10 [-308] ~ 10 [308]) の符号付き概数。数値。|  
 |SQL_BIT|BIT|1ビットのバイナリデータ。8|  
 |SQL_TINYINT|TINYINT|精度3および小数点以下桁数が0の正確な数値 (符号付き:-128 <= *n* <= 127、符号なし: 0 <= *n* <= 255) [3]。|  
-|SQL_BIGINT|BIGINT|精度が 19 (符号付きの場合) または 20 (符号なしの場合) および小数点以下桁数 0 (符号付きの場合) およびスケール 0 (符号付き:-2 [63] <= *n* <= 2 [63]-1、符号なし: 0 <= *n* <= 2 [64]-1) [3]、[9]|  
+|SQL_BIGINT|bigint|精度が 19 (符号付きの場合) または 20 (符号なしの場合) および小数点以下桁数 0 (符号付きの場合) およびスケール 0 (符号付き:-2 [63] <= *n* <= 2 [63]-1、符号なし: 0 <= *n* <= 2 [64]-1) [3]、[9]|  
 |SQL_BINARY|バイナリ (*n*)|固定長*n*のバイナリデータ。ませ|  
 |SQL_VARBINARY|VARBINARY (*n*)|最大長*n*の可変長バイナリデータ。 最大値は、ユーザーによって設定されます。ませ|  
-|SQL_LONGVARBINARY|LONG VARBINARY|可変長のバイナリデータ。 最大長は、データソースに依存します。ませ|  
+|SQL_LONGVARBINARY|LONG VARBINARY|可変長バイナリ データ。 最大長は、データソースに依存します。ませ|  
 |SQL_TYPE_DATE [6]|DATE|グレゴリオ暦の規則に準拠した年、月、日の各フィールド。 (この付録の後半の「[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)」を参照してください)。|  
 |SQL_TYPE_TIME [6]|時間 (*p*)|時間、分、および秒のフィールド。有効な値は 00 ~ 23 の時間、00 ~ 59 の有効な値、および 00 ~ 61 の秒の有効な値です。 有効桁数*p*秒の有効桁数を示します。|  
 |SQL_TYPE_TIMESTAMP [6]|タイムスタンプ (*p*)|日付と時刻のデータ型に対して定義されている有効な値を持つ、年、月、日、時、分、および秒の各フィールド。|  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 18e7a0fd-cc5d-4109-b542-cac6893a29c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28b6487b725a5579cc966399f8e76c7cf897df8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76f679a007800ecf4f1c889d7cfe2b9746deb708
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68071741"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300852"
 ---
 # <a name="set-functions-limitations"></a>集合関数の制限事項
 Set 関数 (AVG、MAX、MIN、および SUM) では、DISTINCT キーワードはサポートされていません。

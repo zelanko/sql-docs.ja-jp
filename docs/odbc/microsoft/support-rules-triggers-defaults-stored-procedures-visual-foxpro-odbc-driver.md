@@ -26,14 +26,14 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fcf8e7c80b2712313cba81199489dc7cb06dce0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68080774"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301139"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャのサポート (Visual FoxPro ODBC ドライバー)
 Visual foxpro ODBC ドライバーを使用して、Visual FoxPro の規則、トリガー、既定値、またはストアドプロシージャを作成することはできません。 ただし、アプリケーションは、データベースに格納されている Visual FoxPro データを挿入、更新、または削除するときに、既存のルール、トリガー、既定値、またはストアドプロシージャと対話する場合があります。  

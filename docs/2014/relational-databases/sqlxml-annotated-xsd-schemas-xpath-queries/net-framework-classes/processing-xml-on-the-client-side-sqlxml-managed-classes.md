@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQLXML Managed Classes, client-side XML formatting
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22c8b5e11ced4cdff95a6cc2d8aeeaa7e25a4d90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010806"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015312"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージド クラス)
   この例は、ClientSideXml プロパティの使用方法を示しています。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  

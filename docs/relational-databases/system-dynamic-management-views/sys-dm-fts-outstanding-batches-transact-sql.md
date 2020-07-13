@@ -21,19 +21,19 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f0e03483ab0e2470df24fa2a00e6b7965b2199f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f7736cf95e1e846ef38b16b253548aa36210da44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68265886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734490"
 ---
 # <a name="sysdm_fts_outstanding_batches-transact-sql"></a>dm_fts_outstanding_batches (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   各フルテキストインデックスバッチに関する情報を返します。  
   
-  |列名|データ型|[説明]|  
+  |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベースの ID|  
 |catalog_id|**int**|フルテキストカタログの ID|  
@@ -41,20 +41,20 @@ ms.locfileid: "68265886"
 |batch_id|**int**|バッチ ID|  
 |memory_address|**varbinary (8)**|バッチ オブジェクトのメモリ アドレス。|  
 |crawl_memory_address|**varbinary (8)**|クロールオブジェクトのメモリアドレス (親オブジェクト)|  
-|memregion_memory_address|**varbinary (8)**|フィルターデーモンホストの送信共有メモリのメモリ領域のメモリアドレス (fdhost)|  
+|memregion_memory_address|**varbinary (8)**|フィルターデーモンホストの送信共有メモリのメモリ領域のメモリアドレス (fdhost.exe)|  
 |hr_batch|**int**|バッチの最新のエラーコード|  
 |is_retry_batch|**bit**|これが再試行バッチであるかどうかを示します。<br /><br /> 0 = いいえ<br /><br /> 1 = はい|  
 |retry_hints|**int**|バッチに必要な再試行の種類。<br /><br /> 0 = 再試行なし<br /><br /> 1 = マルチスレッドでの再試行<br /><br /> 2 = シングルスレッドの再試行<br /><br /> 3 = シングルスレッドおよびマルチスレッドでの再試行<br /><br /> 5 = マルチスレッドでの最終再試行<br /><br /> 6 = シングルスレッドでの最終再試行<br /><br /> 7 = シングルスレッドおよびマルチスレッドでの最終再試行|  
-|retry_hints_description|**nvarchar (120)**|必要な再試行の種類の説明。<br /><br /> 再試行なし<br /><br /> MULTI THREAD RETRY<br /><br /> シングルスレッドの再試行<br /><br /> シングルスレッドとマルチスレッドの再試行<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> シングルスレッドの最終再試行<br /><br /> 単一およびマルチスレッドの最終再試行|  
+|retry_hints_description|**nvarchar(120)**|必要な再試行の種類の説明。<br /><br /> 再試行なし<br /><br /> MULTI THREAD RETRY<br /><br /> シングルスレッドの再試行<br /><br /> シングルスレッドとマルチスレッドの再試行<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> シングルスレッドの最終再試行<br /><br /> 単一およびマルチスレッドの最終再試行|  
 |doc_failed|**bigint**|バッチ内の失敗したドキュメントの数。|  
 |batch_timestamp|**timestamp**|バッチの作成時に取得されたタイムスタンプ値|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、サーバーインスタンス内の各テーブルに対して現在処理されているバッチの数を調べます。  
   
 ```  
@@ -62,7 +62,7 @@ SELECT database_id, table_id, COUNT(*) AS batch_count FROM sys.dm_fts_outstandin
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   

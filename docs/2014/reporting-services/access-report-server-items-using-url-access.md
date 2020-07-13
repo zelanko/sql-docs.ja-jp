@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110094"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
-  このトピックでは、 *rs: Command*=*Value*を使用して、レポートサーバーデータベースまたは SharePoint サイト内のさまざまな種類のカタログアイテムにアクセスする方法について説明します。  
+  このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。  
   
- このパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL で*rs: Command*=*Value*文字列を使用すると、レポートサーバーのパフォーマンスが向上します。  
+ このパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
   
  以下の例では、 `_vti_bin` プロキシ構文に注意してください。 プロキシ構文の詳細については、「 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)」を参照してください。  
   
@@ -65,8 +65,7 @@ ms.locfileid: "66110094"
 </DataSourceDefinition>  
 ```  
   
- 接続文字列は、レポート サーバーの **SecureConnectionLevel** 設定に基づいて返されます。 
-  **SecureConnectionLevel** 設定の詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。  
+ 接続文字列は、レポート サーバーの **SecureConnectionLevel** 設定に基づいて返されます。 **SecureConnectionLevel** 設定の詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。  
   
 ## <a name="access-the-contents-of-a-folder"></a>フォルダーのコンテンツへのアクセス  
  フォルダーの内容にアクセスするには、 *rs: Command*=*getchildren*パラメーターを使用します。 要求されたフォルダーのサブフォルダー、レポート、データ ソース、およびリソースへのリンクを含む汎用フォルダー ナビゲーション ページが返されます。 次に例を示します。  
@@ -78,7 +77,7 @@ ms.locfileid: "66110094"
  表示されるユーザー インターフェイスは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) で使用されるディレクトリ参照モードと似ています。 ビルド番号を含むレポート サーバーのバージョン番号もフォルダー一覧の下に表示されます。  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス (SSRS)](url-access-ssrs.md)   
- [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
+ [SSRS&#41;&#40;URL アクセス](url-access-ssrs.md)   
+ [URL Access Parameter Reference](url-access-parameter-reference.md)  
   
   

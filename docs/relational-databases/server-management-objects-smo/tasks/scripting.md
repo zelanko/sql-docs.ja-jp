@@ -1,5 +1,5 @@
 ---
-title: スクリプト |Microsoft Docs
+title: スクリプト | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,22 +14,20 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: c6da1b1cb2188d96f6e9bf733d83ecb3e394a78d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72909041"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005968"
 ---
-# <a name="scripting"></a>スクリプトの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+# <a name="scripting"></a>スクリプト
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  SMO でのスクリプト作成は、 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 オブジェクト<xref:Microsoft.SqlServer.Management.Smo.Scripter>は、の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトに対する依存関係からのマッピングを制御します。  
+  SMO でのスクリプト作成は、 <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Scripter> のインスタンス上のオブジェクトに対する依存関係からのマッピングを制御し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
+ <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
-1.  探索  
+1.  検出  
   
 2.  リスト生成  
   
@@ -39,8 +37,7 @@ ms.locfileid: "72909041"
   
  リスト生成フェーズでは、このツリーが渡され、結果リストが返されます。 このオブジェクト リストは記述順であり、変更することもできます。  
   
- リスト生成フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> メソッドを使用して <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> を返します。 
-  <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> はこの段階で変更することができます。  
+ リスト生成フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> メソッドを使用して <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> を返します。 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> はこの段階で変更することができます。  
   
  3 番目の最後のフェーズでは、指定されたリストとスクリプティング オプションを使用してスクリプトが生成されます。 結果は <xref:System.Collections.Specialized.StringCollection> システム オブジェクトとして返されます。 このフェーズで、<xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトの Items コレクションおよび <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> や <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> などのプロパティから、依存オブジェクト名が抽出されます。  
   

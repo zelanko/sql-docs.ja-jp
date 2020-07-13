@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63130527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027770"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
   指定した SQL Server Express LocalDB インスタンスの情報を返します。たとえば、存在するかどうか、使用する LocalDB バージョン、実行中かどうかなどです。  
   
- この情報は、次の`struct`定義を持つ**Localdbinstanceinfo**という名前で返されます。  
+ この情報は、 `struct` 次の定義を持つ**Localdbinstanceinfo**という名前で返されます。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -127,9 +126,9 @@ HRESULT LocalDBGetInstanceInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- `struct`サイズ引数 (*Lpinstanceinfosize*) の導入の背後にある原理は、API が異なるバージョンの**localdbinstanceinfostruct**を返すことができるようにすることです。これにより、上位互換性と下位互換性が効果的に有効になります。  
+ `struct`サイズ引数 (*Lpinstanceinfosize*) の導入の背後にある原理は、API が異なるバージョンの**Localdbinstanceinfostruct**を返すことができるようにすることです。これにより、上位互換性と下位互換性が効果的に有効になります。  
   
- サイズ引数 (*Lpinstanceinfosize*) が既知のバージョンの**Localdbinstanceinfostruct**のサイズと一致する場合、そのバージョンの`struct`が返されます。 `struct` それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ `struct`サイズ引数 (*Lpinstanceinfosize*) が既知のバージョンの**Localdbinstanceinfostruct**のサイズと一致する場合、そのバージョンの `struct` が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
  **Localdbgetinstanceinfo** API の一般的な使用例は次のようになります。  
   

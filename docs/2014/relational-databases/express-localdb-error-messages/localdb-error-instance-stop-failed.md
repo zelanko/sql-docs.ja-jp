@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd8ddaef29cb41e7a503b3558629e6bc5e16557e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9b862b4c76ce6f77ab2d979a5996bc0556b75d3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62990626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051174"
 ---
 # <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
     

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105222"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 関数 (レポート ビルダーおよび SSRS)
@@ -44,14 +44,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  レポート内のデータセットの名前を指定する定数。 たとえば、"Products" などです。  
   
 ## <a name="return"></a>戻り値  
- 
-  `Variant` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
+ `Variant` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
   
 ## <a name="remarks"></a>解説  
  指定したデータセットで、名前と値のペアについて 1 対 1 のリレーションシップが存在する場合、`Lookup` を使用して値を取得します。 たとえば、テーブル内の ID フィールドに対して `Lookup` を使用して、データ領域にバインドされていないデータセットから対応する Name フィールドを取得することができます。  
   
- 
-  `Lookup` を実行すると、次の処理が行われます。  
+ `Lookup` を実行すると、次の処理が行われます。  
   
 -   ソースの式を現在のスコープ内で評価します。  
   
@@ -73,8 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   
-  `Lookup` は、次のレポート アイテムを求める式として使用することはできません。  
+-   `Lookup` は、次のレポート アイテムを求める式として使用することはできません。  
   
     -   データ ソースの動的な接続文字列。  
   

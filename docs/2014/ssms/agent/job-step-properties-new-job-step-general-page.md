@@ -11,37 +11,36 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62510956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062245"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>ジョブ ステップのプロパティ: [新しいジョブ ステップ] ([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブステップのプロパティを表示および変更したり、新しいジョブステップを定義したりできます。  
+# <a name="job-step-properties-new-job-step-general-page"></a>[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([全般] ページ)
+  このページを使用すると、エージェントジョブステップのプロパティを表示および変更し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] たり、新しいジョブステップを定義したりできます。  
   
  このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **ステップ名**  
+ **[ステップ名]**  
  ジョブ ステップの名前を設定します。  
   
  **Type**  
  ジョブ ステップが使用するサブシステムを設定します。 選択したサブシステムに基づいて、ジョブ ステップを定義するために表示されるオプションが変更されます。  
   
- **実行する方法**  
+ **[実行するアカウント名]**  
  ジョブ ステップのプロキシ アカウントを設定します。 sysadmin 固定サーバー ロールのメンバーは、 **[SQL Server エージェント サービスのアカウント]** を指定することもできます。  
   
  **[データベース]**  
  ジョブ ステップを実行するデータベースを設定します。 このオプションは、すべてのジョブ ステップの種類で使用できるとは限りません。  
   
- **command**  
+ **コマンド**  
  ジョブ ステップが実行するコマンドを設定します。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL ジョブ ステップのオプション  
- **開き**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
  **[すべて選択]**  
@@ -53,7 +52,7 @@ ms.locfileid: "62510956"
  **貼り付け**  
  クリップボードの内容を貼り付けます。  
   
- **分解**  
+ **Parse**  
  コマンドの構文をチェックします。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX スクリプト ジョブ ステップのオプション  
@@ -61,9 +60,8 @@ ms.locfileid: "62510956"
 > [!IMPORTANT]  
 >  ActiveX スクリプティング サブシステムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  
   
- **Items**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic Scripting Edition をジョブ ステップの言語として指定します。  
+ **[VBScript]**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic Scripting Edition をジョブ ステップの言語として指定します。  
   
  **JScript**  
  JScript をジョブ ステップの言語として指定します。  
@@ -71,7 +69,7 @@ ms.locfileid: "62510956"
  **その他**  
  別のスクリプト言語で記述されたジョブ ステップの言語の名前を入力します。  
   
- **開き**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
  **[すべて選択]**  
@@ -84,10 +82,10 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>オペレーティング システム (CmdExec) ジョブ ステップのオプション  
- **成功したコマンドのプロセス終了コード**  
+ **[コマンド成功時のプロセス終了コード]**  
  成功を示すためにコマンドが返す終了コードを入力します。  
   
- **開き**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
  **[すべて選択]**  
@@ -100,7 +98,7 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell ジョブ ステップのオプション  
- **開き**  
+ **[ファイル]**  
  ファイルからスクリプトを読み込みます。  
   
  **[すべて選択]**  
@@ -166,10 +164,10 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-sql-server-analysis-services-command-job-steps"></a>SQL Server Analysis Services コマンド ジョブ ステップのオプション  
- **サーバー**  
+ **[サーバー]**  
  ジョブ ステップを実行するサーバーを選択します。  
   
- **開き**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
  **[すべて選択]**  
@@ -182,13 +180,13 @@ ms.locfileid: "62510956"
  クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-sql-server-analysis-services-query-job-steps"></a>SQL Server Analysis Services クエリ ジョブ ステップのオプション  
- **サーバー**  
+ **[サーバー]**  
  ジョブ ステップを実行するサーバーを選択します。  
   
  **[データベース]**  
  ジョブ ステップに使用するデータベースです。  
   
- **開き**  
+ **[ファイル]**  
  コマンドをファイルから読み込みます。  
   
  **[すべて選択]**  
@@ -203,76 +201,69 @@ ms.locfileid: "62510956"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services パッケージ実行ジョブ ステップのオプション  
   
 ### <a name="general-tab"></a>全般タブ  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) パッケージの場所と、使用する認証方法を指定します。 このタブを選択するとき、次のオプションを利用できます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) パッケージの場所と、使用する認証方法を指定します。 このタブを選択するとき、次のオプションを利用できます。  
   
- **パッケージソース**  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージが格納されている場所を指定します。 次のいずれかを選択します。  
+ **[パッケージ ソース]**  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージが格納されている場所を指定します。 次のいずれかを選択します。  
   
 -   **SQL Server**  
   
--   **ファイルシステム**  
+-   **ファイル システム**  
   
 -   **SSIS パッケージストア**  
   
- **サーバー**  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]** が指定されている場合のみ使用できます。  
+ **[サーバー]**  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]** が指定されている場合のみ使用できます。  
   
- **Windows 認証を使用する**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用します。  
+ **[Windows 認証を使用する]**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用します。  
   
  **SQL Server 認証を使用する**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]** を入力してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]** を入力してください。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
   
- **Package**  
+ **パッケージ**  
  パッケージの場所を入力します。  
   
 > [!IMPORTANT]  
 >  パスワードで保護された [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージについては、 **[構成]** タブをクリックし、 **[パッケージ パスワード]** ダイアログ ボックスにパスワードを入力します。 入力しないと、パスワードで保護されたパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは失敗します。  
   
 ### <a name="configurations-tab"></a>[構成] タブ  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
  **構成ファイル**  
  パッケージの構成ファイルを一覧表示します。  
   
- **追加**  
+ **[追加]**  
  パッケージの構成ファイルを追加します。  
   
- **Remove**  
+ **[削除]**  
  パッケージの構成ファイルを削除します。  
   
- **上へ移動**  
+ **[上へ移動]**  
  選択された構成ファイルを上へ移動します。  
   
- **下へ移動**  
+ **[上へ移動]**  
  選択された構成ファイルを下へ移動します。  
   
 ### <a name="command-files-tab"></a>[コマンド ファイル] タブ  
  パッケージのコマンド ファイルを選択します。 コマンド ファイルは、一覧に表示されている順番で処理されます。 このタブを選択するとき、次のオプションを利用できます。  
   
- **コマンドファイル**  
+ **[コマンド ファイル]**  
  パッケージのコマンド ファイルを一覧表示します。  
   
- **追加**  
+ **[追加]**  
  コマンド ファイルを追加します。  
   
- **Remove**  
+ **[削除]**  
  選択されたコマンド ファイルを削除します。  
   
- **上へ移動**  
+ **[上へ移動]**  
  選択されたコマンド ファイルを上へ移動します。  
   
- **下へ移動**  
+ **[上へ移動]**  
  選択されたコマンド ファイルを下へ移動します。  
   
 ### <a name="data-sources-tab"></a>[データ ソース] タブ  
@@ -290,28 +281,28 @@ ms.locfileid: "62510956"
 ### <a name="execution-options-tab"></a>[実行オプション] タブ  
  パッケージの実行オプションを表示または変更します。  
   
- **検証の警告時にパッケージを失敗とする**  
+ **[検証時に警告が発生したらパッケージを失敗とする]**  
  このオプションをオンにした場合、検証時に警告が発生するとパッケージの実行は失敗となります。  
   
- **パッケージを実行せずに検証する**  
+ **[パッケージを実行せずに検証する]**  
  このオプションをジョブ ステップに設定すると、パッケージは検証されますが実行されません。  
   
- **同時実行可能ファイルの最大数**  
+ **[同時実行するファイルの最大数]**  
  一度に実行できる実行ファイルの最大数です。  
   
- **パッケージのチェックポイントを有効にする**  
+ **[パッケージのチェックポイントを有効にする]**  
  このオプションをジョブ ステップに設定すると、パッケージのチェックポイントが使用されます。  
   
- **チェックポイントファイル**  
+ **[チェックポイント ファイル]**  
  パッケージ チェックポイント ファイルの名前を入力します。  
   
  **...**  
  パッケージ チェックポイント ファイルを参照して指定します。  
   
- **再起動オプションのオーバーライド**  
+ **[再開オプションをオーバーライドする]**  
  このオプションをオンにすると、このジョブ ステップに対して、パッケージに指定された再開オプションと異なる再開オプションを指定できます。  
   
- **Restart オプション**  
+ **[再開オプション]**  
  パッケージを再開するときに実行するアクションを選択します。  
   
 ### <a name="logging-tab"></a>[ログ記録] タブ  
@@ -323,40 +314,40 @@ ms.locfileid: "62510956"
  **構成文字列**  
  ログ プロバイダーの構成文字列を入力します。  
   
- **Remove**  
+ **[削除]**  
  ログ プロバイダーを削除します。  
   
 ### <a name="set-values-tab"></a>[値の設定] タブ  
  パッケージのプロパティ値を表示または変更します。  
   
- **プロパティのパス**  
+ **[プロパティのパス]**  
  プロパティのパスを表示または変更します。  
   
  **Value**  
  プロパティの値を表示または変更します。  
   
- **Remove**  
+ **[削除]**  
  プロパティを削除します。  
   
 ### <a name="verification-tab"></a>[検証] タブ  
  ジョブ ステップの検証オプションを選択します。  
   
- **署名付きパッケージのみ実行する**  
+ **[署名付きパッケージのみ実行する]**  
  署名されたパッケージのみ実行します。 このオプションがオンになっていると、パッケージが署名されていない場合はジョブ ステップが失敗します。  
   
- **パッケージのビルドを検証する**  
+ **[パッケージのビルドを検証する]**  
  特定のビルド番号のパッケージのみを実行します。 このオプションがオンになっていると、パッケージのビルド番号が指定された番号と異なる場合は、ジョブ ステップが失敗します。  
   
- **Build**  
+ **ビルド**  
  パッケージのビルド番号を入力します。  
   
- **パッケージ ID の確認**  
+ **[パッケージ ID を確認する]**  
  特定の ID を持つパッケージのみ実行します。 このオプションがオンになっていると、パッケージの ID が指定の ID と異なる場合は、ジョブ ステップが失敗します。  
   
- **パッケージ ID**  
+ **[パッケージ ID]**  
  パッケージ ID を入力します。  
   
- **バージョン ID の確認**  
+ **[バージョン ID を確認する]**  
  特定のバージョン ID を持つパッケージのみ実行します。 このオプションがオンになっていると、パッケージのバージョン ID が指定の ID と異なる場合は、ジョブ ステップが失敗します。  
   
  **バージョン ID**  
@@ -365,18 +356,18 @@ ms.locfileid: "62510956"
 ### <a name="command-line-tab"></a>[コマンド ライン] タブ  
  パッケージのコマンド ライン オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
- **元のオプションを復元する**  
+ **[元のオプションを復元する]**  
  このダイアログで設定したコマンド ライン オプションを指定します。  
   
- **コマンドラインを手動で編集する**  
+ **[コマンド ラインを手動で編集する]**  
  コマンド ライン ウィンドウでオプションを指定します。  
   
  **コマンド ライン**  
  このパッケージに使用するコマンド ライン オプションを入力します。  
   
 ## <a name="see-also"></a>参照  
- [ジョブステップの管理](manage-job-steps.md)   
+ [ジョブ ステップの管理](manage-job-steps.md)   
  [パッケージの SQL Server エージェントジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
- [レプリケーションエージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
+ [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

@@ -1,5 +1,7 @@
 ---
 title: Sybase への接続 (SybaseToSQL) |Microsoft Docs
+description: SSMA for Sybase (SAP ASE) を使用して移行を開始するには、SAP ASE インスタンスに接続します。 [Sybase への接続] ダイアログボックスを使用します。
+author: nahk-ivanov
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -7,92 +9,96 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: alexiva
+ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083392"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779414"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase への接続 (SybaseToSQL)
-[ **Sybase への接続**] ダイアログボックスを使用して、移行する Sybase Adaptive Server ENTERPRISE (ASE) インスタンスに接続します。  
-  
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **Sybase に接続**] を選択します。 以前に接続している場合は、コマンドが**Sybase に再接続**されます。  
-  
-## <a name="options"></a>オプション  
+
+[ **Sybase への接続**] ダイアログボックスを使用して、移行する Sybase Adaptive Server ENTERPRISE (ASE) インスタンスに接続します。
+
+このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **Sybase に接続**] を選択します。 以前に接続している場合は、コマンドが**Sybase に再接続**されます。
+
+## <a name="options"></a>オプション
+
 **プロバイダー**  
-Sybase サーバーに接続するコンピューター上のインストールされている任意のプロバイダーを選択します。  
-  
+Sybase サーバーに接続するコンピューター上のインストールされている任意のプロバイダーを選択します。
+
 **モード**  
-[標準] または [高度な接続モード] を選択します。 標準モードでは、サーバー名、ポート、ユーザー名、およびパスワードの値を入力または選択します。 詳細設定モードでは、接続文字列を指定します。  
-  
+[標準] または [高度な接続モード] を選択します。 標準モードでは、サーバー名、ポート、ユーザー名、およびパスワードの値を入力または選択します。 詳細設定モードでは、接続文字列を指定します。
+
 **サーバー名**  
-アダプティブサーバーの名前または IP アドレスを入力または選択します。 既定のサーバー名は、コンピューター名と同じです。 これは標準モードオプションです。  
-  
+アダプティブサーバーの名前または IP アドレスを入力または選択します。 既定のサーバー名は、コンピューター名と同じです。 これは標準モードオプションです。
+
 **サーバーポート**  
-ASE への接続に既定以外のポートを使用している場合は、ポート番号を入力します。 既定のポート番号は5000です。 これは標準モードオプションです。  
+ASE への接続に既定以外のポートを使用している場合は、ポート番号を入力します。 既定のポート番号は5000です。 これは標準モードオプションです。
   
 **ユーザー名**  
-ASE への接続に使用するユーザー名を入力します。 これは標準モードオプションです。  
-  
+ASE への接続に使用するユーザー名を入力します。 これは標準モードオプションです。
+
 **パスワード**  
-入力されたユーザー名のパスワードを入力します。 これは標準モードオプションです。  
-  
+ユーザー名に対応するパスワードを入力します。 これは標準モードオプションです。
+
 **接続文字列**  
-ASE への接続に使用する完全な接続文字列を入力します。  
-  
-接続文字列は、パラメーターの名前と値のペアで構成されます。 パラメーターの名前は、使用されているプロバイダーによって異なります。  
-  
-**さまざまなプロバイダーの接続パラメーターは次のとおりです。**  
-  
-1.  **OLE DB プロバイダー**の接続パラメーター  
-  
-    |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|  
-    |-----------|-------------------------|-----------------------|  
-    |サーバー名|サーバー名|サーバー|  
-    |Port|サーバーポートアドレス|Port|  
-    |ユーザー名|User ID|User ID|  
-    |Password|Password|Password|  
-    |プロバイダー|プロバイダー|プロバイダー|  
-  
-    Sybase ASE 12.5 の場合、接続文字列の例は次のようになります。  
-  
-    `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
-  
-    Sybase ASE 15 の場合、接続文字列の例は次のようになります。  
-  
-    `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`  
-  
-2.  **ODBC プロバイダー**の接続パラメーター  
-  
-    |設定|Sybase 12.5/15 パラメーター|  
-    |-----------|-----------------------------|  
-    |ドライバー名|ドライバー●どらいば○|  
-    |サーバー名|サーバー|  
-    |ユーザー名|Uid|  
-    |Password|Pwd|  
-    |ポート番号|Port|  
-  
-    Sybase ASE 12.5 または15の場合、接続文字列の例は次のようになります。  
-  
-    `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
-  
-3.  **ADO.NET Provider**の接続パラメーター  
-  
-    |設定|Sybase 12.5/15 パラメーター|  
-    |-----------|-----------------------------|  
-    |サーバー名|サーバー|  
-    |ユーザー名|Uid|  
-    |Password|Pwd|  
-    |ポート番号|Port|  
-  
-    ADO.NET Provider の接続文字列の例を次に示します。  
-  
-    `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
-  
-詳細については、ASE のドキュメントを参照してください。  
-  
-これは高度なモードオプションです。  
-  
+ASE への接続に使用する完全な接続文字列を入力します。
+
+接続文字列は、パラメーターの名前と値のペアで構成されます。 パラメーターの名前は、使用されているプロバイダーによって異なります。
+
+**さまざまなプロバイダーの接続パラメーターは次のとおりです。**
+
+1. **OLE DB プロバイダー**の接続パラメーター
+
+   |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|
+   |-----------|-------------------------|-----------------------|
+   |サーバー名|サーバー名|サーバー|
+   |Port|サーバーポートアドレス|Port|
+   |ユーザー名|User ID|User ID|
+   |Password|Password|Password|
+   |プロバイダー|プロバイダー|プロバイダー|
+
+   Sybase ASE 12.5 の場合、接続文字列の例は次のようになります。
+
+   `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`
+
+   Sybase ASE 15 の場合、接続文字列の例は次のようになります。
+
+   `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`
+
+2. **ODBC プロバイダー**の接続パラメーター
+
+   |設定|Sybase 12.5/15 パラメーター|
+   |-----------|-----------------------------|
+   |ドライバ名|ドライバー|
+   |サーバー名|サーバー|
+   |[ユーザー名]|Uid|
+   |Password|Pwd|
+   |ポート番号|Port|
+
+   Sybase ASE 12.5 または15の場合、接続文字列の例は次のようになります。
+
+   `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`
+
+3. **ADO.NET Provider**の接続パラメーター
+
+   |設定|Sybase 12.5/15 パラメーター|
+   |-----------|-----------------------------|
+   |サーバー名|サーバー|
+   |[ユーザー名]|Uid|
+   |Password|Pwd|
+   |ポート番号|Port|
+
+   ADO.NET Provider の接続文字列の例を次に示します。
+
+   `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`
+
+   詳細については、ASE のドキュメントを参照してください。
+
+   これは高度なモードオプションです。
+
+## <a name="next-steps"></a>次の手順
+
+移行プロセスの次の手順では、 [SQL Server に接続](connect-to-sql-server-sybasetosql.md)します。

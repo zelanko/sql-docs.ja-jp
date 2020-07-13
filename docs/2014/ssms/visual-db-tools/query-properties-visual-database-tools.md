@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a1f0074aa7937e10589327bae51c24a0a903a38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63011477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064960"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
   クエリおよびビュー デザイナーでクエリを開くと、これらのプロパティが [プロパティ] ウィンドウに表示されます。 特に断りのない限り、このプロパティを [プロパティ] ウィンドウで編集できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "63011477"
  **[IDENTITY] カテゴリ**  
  展開して **[オブジェクト名]** プロパティを表示します。  
   
- **名前**  
+ **Name**  
  現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
  **データベース名**  

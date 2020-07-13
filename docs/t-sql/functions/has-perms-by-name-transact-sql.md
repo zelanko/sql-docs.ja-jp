@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 944b3e02894e86de9ff5c0f2254b71de7b76bd2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752364"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   セキュリティ保護可能なリソースに対して現在のユーザーが持つ有効な権限を評価します。 関連する関数は [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) です。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73982949"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  

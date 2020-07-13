@@ -12,14 +12,14 @@ helpviewer_keywords:
 - INSERT statement limitations [ODBC]
 - truncation of data [ODBC]
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1676af6216ac703e9a8976951ec2888b9e940b67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f903f15ec13baa28a789891c1527dc742daa68ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68085523"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300008"
 ---
 # <a name="insert-statement-limitations"></a>INSERT ステートメントの制限事項
 挿入されたデータは、列に収まりきらない場合、警告なしで右側に切り捨てられます。  

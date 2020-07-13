@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63313018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001080"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
   **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  
   
 ## <a name="printer"></a>[プリンター]  
- **名前**  
+ **Name**  
  プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
  **状態**  
@@ -39,7 +38,7 @@ ms.locfileid: "63313018"
  選択したプリンターに関する追加情報が含まれます。  
   
  **Properties**  
- クリックすると、[\<*プリンター名のプロパティ*>] ダイアログ ボックスが開きます。  
+ クリックすると、 \<*printer name properties*> ダイアログボックスが開きます。  
   
  **[ファイルへ出力]**  
  プリンターではなくファイルにドキュメントを出力します。  

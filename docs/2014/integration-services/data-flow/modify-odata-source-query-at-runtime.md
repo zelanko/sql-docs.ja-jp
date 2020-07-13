@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51f92ddc8903a5c9dea9982866a22a19b013f41a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901189"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431979"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの変更
-  データ フロー タスクの [OData ソース].[クエリ] プロパティに**式**を追加すると、OData ソースのクエリを実行時に変更できます。  
+  データ フロー タスクの **[OData ソース].[クエリ]** プロパティに式を追加すると、OData ソースのクエリを実行時に変更できます。  
   
  列が、デザイン時に使用したのと同じ状態にとどまっている必要があることに注意してください。それ以外の場合は、パッケージの実行時にエラーが発生します。 $select クエリ オプションを使用する場合は、同じ列を (同じ順序で) 指定してください。 $select オプションを使用するより安全な代替手段は、ソース コンポーネント UI で、直接使用することを希望しない列を選択解除することです。  
   
@@ -29,12 +28,11 @@ ms.locfileid: "62901189"
   
 1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、 **[プロパティ]\< に対して** [**OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  [**パラメーター**化] ダイアログで [] を選択し** \<Name of the OData Source Component> ます。 [Query]** **プロパティ**を使用します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   
-4.  
-  **[新しいパラメーターを作成する]** を選択した場合は、次の作業を実行します。  
+4.  **[新しいパラメーターを作成する]** を選択した場合は、次の作業を実行します。  
   
     1.  パラメーターの **[名前]** と **[説明]** を入力します。  
   
@@ -51,17 +49,15 @@ ms.locfileid: "62901189"
   
 1.  使用中の **[OData ソース]** を含む **[データ フロー タスク]** を選択します。  
   
-2.  
-  **[プロパティ]** ウィンドウで、 **[Expressions]** プロパティを強調表示します。  
+2.  **[プロパティ]** ウィンドウで、 **[Expressions]** プロパティを強調表示します。  
   
 3.  [...](省略記号) ボタンをクリックして、[**プロパティ式エディター**] を表示します。  
   
-4.  
-  **[OData ソース].[クエリ]** プロパティを選択します。  
+4.  **[OData ソース].[クエリ]** プロパティを選択します。  
   
 5.  [...][**式**] の (省略記号) ボタン。  
   
-6.  **式**を入力します。  
+6.  **[式]** を入力します。  
   
 7.  **[OK]** をクリックします。  
   

@@ -9,26 +9,22 @@ ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f81c3b90dc8ef20f7e66bb22c960cd9fd8a7c01a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63217946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064169"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-  
-  **のプロパティ]** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
+  [ **の**プロパティ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]] ダイアログ ボックスの **[ログオン]** タブでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスで使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
 ## <a name="options"></a>オプション  
- **ローカルシステムアカウント**  
+ **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
- **このアカウント**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するローカル ユーザー アカウントまたはドメイン ユーザー アカウントを指定します。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、サービスを実行できる必要最小限の権限が設定されたドメイン ユーザー アカウントを使用することをお勧めします。 アカウントの選択の詳細については、オンライン ブックの「Windows サービス アカウントの設定」を検索してください。  
+ **[このアカウント]**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するローカル ユーザー アカウントまたはドメイン ユーザー アカウントを指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、サービスを実行できる必要最小限の権限が設定されたドメイン ユーザー アカウントを使用することをお勧めします。 アカウントの選択の詳細については、オンライン ブックの「Windows サービス アカウントの設定」を検索してください。  
   
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
@@ -42,13 +38,13 @@ ms.locfileid: "63217946"
  **[開始]**  
  サービスを開始します。  
   
- **停止**  
+ **Stop**  
  サービスを停止します。  
   
- **停止**  
+ **[一時停止]**  
  サービスを一時停止します。  
   
- **よる**  
+ **[再開]**  
  一時停止したサービスを再開します。  
   
   

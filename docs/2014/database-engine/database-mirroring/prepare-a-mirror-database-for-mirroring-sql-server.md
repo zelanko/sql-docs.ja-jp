@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cf46b4f6fd8e7af55e1930ef6063c4754673fa79
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934093"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
   データベース ミラーリング セッションを開始する前に、データベース所有者またはシステム管理者は、ミラー データベースを作成し、ミラーリング用に準備しておく必要があります。 新しいミラー データベースを作成するには、少なくとも、プリンシパル データベースの完全バックアップとそれ以降のログ バックアップを作成し、その両方をミラー サーバーのインスタンスに (WITH NORECOVERY を使用して) 復元する必要があります。  
@@ -27,14 +26,13 @@ ms.locfileid: "62754784"
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でミラー データベースを準備する方法について説明します。  
   
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Requirements"></a>必要性  
+###  <a name="requirements"></a><a name="Requirements"></a> 要件  
   
 -   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 ミラー サーバーで SQL Server の新しいバージョンを実行することはできますが、この構成は慎重に計画されたアップグレード プロセスにおいてのみ推奨されます。 そのような構成では、自動フェールオーバーが発生したときに SQL Server の古いバージョンにデータを移動できず、データの移動が自動的に保留される可能性があります。 詳しくは、「 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)」をご覧ください。  
   
--   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でのデータベース ミラーリングのサポートについては、「[SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
+-   プリンシパル サーバー インスタンスとミラー サーバー インスタンスは、同じエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でのデータベース ミラーリングのサポートについては、「[SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 -   このデータベースは、完全復旧モデルを使用する必要があります。  
   
@@ -46,14 +44,13 @@ ms.locfileid: "62754784"
   
 -   ミラー データベースを作成するシステムのディスク ドライブに、ミラー データベースを保持するのに十分な空き領域を確保する必要があります。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   
-  **master**、 **msdb**、 **temp**、および **model** の各システム データベースはミラー化できません。  
+-   **master**、 **msdb**、 **temp**、および **model** の各システム データベースはミラー化できません。  
   
 -   [AlwaysOn 可用性グループ (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)に属しているデータベースをミラー化することはできません。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   プリンシパル データベースの最新の完全データベース バックアップまたは差分データベース バックアップを使用します。  
   
@@ -70,23 +67,23 @@ ms.locfileid: "62754784"
   
 -   運用データベースを使用する場合は、必ず別のデバイスにバックアップしてください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  データベースがバックアップされている場合、TRUSTWORTHY は OFF に設定されます。 したがって、新しいミラー データベースでは TRUSTWORTHY は常に OFF です。 フェールオーバー後にデータベースを信頼可能にする必要がある場合は、追加の設定作業が必要です。 詳細については、「 [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)でミラー データベースを準備する方法について説明します。  
   
  データベース マスター キーの自動暗号化解除を有効にする方法については、「 [暗号化されたミラー データベースの設定](set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベース所有者またはシステム管理者。  
   
-##  <a name="PrepareToRestartMirroring"></a>ミラーリングを再開するために既存のミラーデータベースを準備するには  
+##  <a name="to-prepare-an-existing-mirror-database-to-restart-mirroring"></a><a name="PrepareToRestartMirroring"></a>ミラーリングを再開するために既存のミラーデータベースを準備するには  
  ミラーリングを削除してもミラー データベースが RECOVERING 状態のままである場合、ミラーリングを再開することができます。  
   
 1.  プリンシパル データベースで 1 つ以上のログ バックアップを作成します。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
 2.  ミラー データベースで、RESTORE WITH NORECOVERY を使用して、ミラーリングの削除後にプリンシパル データベースで作成されたすべてのログ バックアップを復元します。 詳細については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="CombinedProcedure"></a>新しいミラーデータベースを準備するには  
- **ミラーデータベースを準備するには**  
+##  <a name="to-prepare-a-new-mirror-database"></a><a name="CombinedProcedure"></a>新しいミラーデータベースを準備するには  
+ **ミラー データベースを準備するには**  
   
 > [!NOTE]  
 >  この手順の [!INCLUDE[tsql](../../includes/tsql-md.md)] の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
@@ -95,13 +92,13 @@ ms.locfileid: "62754784"
   
 2.  プリンシパル データベースの完全バックアップまたは差分バックアップのいずれかを作成します。  
   
-    -   [データベースの完全バックアップを作成する &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+    -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
     -   [SQL Server&#41;&#40;データベースの差分バックアップを作成](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)します。  
   
 3.  通常、プリンシパル データベースで 1 つ以上のログ バックアップを作成する必要があります。 ただし、データベースを作成したばかりでログ バックアップがまだ作成されていない場合や、復旧モデルを SIMPLE から FULL に変更したばかりの場合など、ログ バックアップが不要な場合もあります。  
   
-    -   [トランザクションログ &#40;SQL Server のバックアップ&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+    -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 4.  両方のシステムからアクセスできるネットワーク ドライブにバックアップがある場合を除いて、データベース バックアップとログ バックアップは、ミラー サーバー インスタンスをホストするシステムにコピーします。  
   
@@ -114,19 +111,18 @@ ms.locfileid: "62754784"
   
     -   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   Transact-sql [&#41;を復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql) transact-sql [&#41;&#40;引数を復元](/sql/t-sql/statements/restore-statements-arguments-transact-sql)します。  
+    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) 」と「 [RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)でミラー データベースを準備する方法について説明します。  
   
 7.  RESTORE WITH NORECOVERY を使用して、未処理のログ バックアップをミラー データベースに適用します。  
   
-    -   [トランザクションログバックアップを復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+    -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a>例 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  データベース ミラーリング セッションを開始する前に、ミラー データベースを作成する必要があります。 ミラー データベースは、ミラーリング セッションを開始する直前に作成してください。  
   
  この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
   
-1.  
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでデータベース ミラーリングを使用するには、完全復旧モデルが使用されるように変更します。  
+1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでデータベース ミラーリングを使用するには、完全復旧モデルが使用されるように変更します。  
   
     ```  
     USE master;  
@@ -154,7 +150,7 @@ ms.locfileid: "62754784"
   
 4.  RESTORE WITH NORECOVERY を使用して、ミラー サーバー インスタンスに完全バックアップを復元します。 復元コマンドは、プリンシパル データベースとミラー データベースのパスが同じかどうかによって変わります。  
   
-    -   **パスが同じ場合は、次のようになります。**  
+    -   **パスが同じ場合は、次のようにします。**  
   
          ミラー サーバー インスタンス ( `PARTNERHOST5`) で、次のように完全バックアップを復元します。  
   
@@ -165,7 +161,7 @@ ms.locfileid: "62754784"
         GO  
         ```  
   
-    -   **パスが異なる場合は、次のようになります。**  
+    -   **パスが異なる場合は、次のようにします。**  
   
          ミラー データベースのパスがプリンシパル データベースのパスと異なる (たとえば、ドライブ文字が異なる) 場合、ミラー データベースを作成するには、復元操作に MOVE 句が必要です。  
   
@@ -221,7 +217,7 @@ ms.locfileid: "62754784"
   
  データベース ミラーリングの設定、セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](database-mirroring-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="FollowUp"></a>補足情報: ミラーデータベースを準備した後  
+##  <a name="follow-up-after-preparing-a-mirror-database"></a><a name="FollowUp"></a> 補足情報: ミラー データベースを準備した後  
   
 1.  最新の RESTORE LOG 操作の後、ログ バックアップを採取している場合は、ミラーリングを開始する前に、採取したすべてのログ バックアップを手動で適用する必要があります (WITH NORECOVERY を使用します。  
   
@@ -231,29 +227,29 @@ ms.locfileid: "62754784"
   
 4.  フェールオーバー後にデータベースを信頼可能にする必要がある場合は、ミラーリングを開始した後で追加の設定が必要です。 詳細については、「 [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [データベースの完全バックアップを作成する &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [トランザクションログバックアップを復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Windows 認証 &#40;使用してデータベースミラーリングセッションを確立する Transact-sql&#41;](database-mirroring-establish-session-windows-authentication.md)  
+-   [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
 -   [暗号化されたミラー データベースの設定](set-up-an-encrypted-mirror-database.md)  
   
--   [信頼できるプロパティを使用するようにミラーデータベースを設定する Transact-sql&#41;&#40;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベースミラーリングと AlwaysOn 可用性グループ &#40;SQL Server のトランスポートセキュリティ&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [データベースミラーリングの設定 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [フルテキストカタログとフルテキストインデックスのバックアップと復元](../../relational-databases/indexes/indexes.md)   
+ [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/indexes/indexes.md)   
  [データベースミラーリングとフルテキストカタログの &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
  [データベースミラーリングとレプリケーションの &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
- [Transact-sql&#41;のバックアップ &#40;](/sql/t-sql/statements/backup-transact-sql)   
- [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE の引数 &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)  
   
   

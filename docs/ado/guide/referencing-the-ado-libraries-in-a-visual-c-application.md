@@ -14,17 +14,17 @@ helpviewer_keywords:
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a790ace40aa31324ce8b22127d8f6948ae86e059
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764763"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ アプリケーションで ADO ライブラリを参照する
-Visual C++ アプリケーションで最新バージョンの ADO を使用するには、次`#import`のディレクティブを使用します。  
+Visual C++ アプリケーションで最新バージョンの ADO を使用するには、次のディレクティブを使用し `#import` ます。  
   
 ```cpp
 #import "msado15.dll" \  

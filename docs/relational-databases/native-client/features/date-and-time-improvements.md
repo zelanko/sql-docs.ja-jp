@@ -1,5 +1,5 @@
 ---
-title: 日付と時刻の機能強化 |Microsoft Docs
+title: 日付と時刻の機能強化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -7,18 +7,17 @@ ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1bfa218a32d6cc4697fb0f7eef1748e117c0d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: ed08d716dda8007fbd6ae7d7d39d7e20e60950b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73788246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009065"
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に追加された日付と時刻のデータ型の [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client サポートについて説明します。  
   
@@ -30,14 +29,12 @@ ms.locfileid: "73788246"
  ここでは、新しい日付型と時刻型のさまざまな使用方法について説明します。  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>個別のデータ型として日付を使用する  
- 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降、日付型と時刻型のサポートの強化により、SQL_TYPE_DATE ODBC 型 (ODBC 2.0 アプリケーションの場合は SQL_DATE) と DBTYPE_DBDATE OLE DB 型をより効果的に使用できるようになります。  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降、日付型と時刻型のサポートの強化により、SQL_TYPE_DATE ODBC 型 (ODBC 2.0 アプリケーションの場合は SQL_DATE) と DBTYPE_DBDATE OLE DB 型をより効果的に使用できるようになります。  
   
 ### <a name="use-time-as-a-distinct-data-type"></a>個別のデータ型として時刻を使用する  
  OLE DB には既に、有効桁数が 1 秒のデータ型として DBTYPE_DBTIME があります。このデータ型には時刻のみが含まれます。 この型は、ODBC の SQL_TYPE_TIME (ODBC 2.0 アプリケーションの場合は SQL_TIME) に相当します。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい時刻データ型では、秒の小数部の精度が 100 ナノ秒です。 これには、Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client の新しい型 (DBTYPE_DBTIME2 (OLE DB) と SQL_SS_TIME2 (ODBC) が必要です。 秒の小数部を含まない時刻を使用するように記述された既存のアプリケーションでは、time(0) 列を使用できます。 アプリケーションがメタデータに返される型に依存しない場合は、既存の OLE DB DBTYPE_TIME 型と ODBC SQL_TYPE_TIME 型、およびそれに対応する構造体が正常に動作します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい時刻データ型では、秒の小数部の精度が 100 ナノ秒です。 これに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Native Client の新しい型 (DBTYPE_DBTIME2 (OLE DB) と SQL_SS_TIME2 (ODBC) が必要です。 秒の小数部を含まない時刻を使用するように記述された既存のアプリケーションでは、time(0) 列を使用できます。 アプリケーションがメタデータに返される型に依存しない場合は、既存の OLE DB DBTYPE_TIME 型と ODBC SQL_TYPE_TIME 型、およびそれに対応する構造体が正常に動作します。  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>秒の有効桁数が拡張された個別のデータ型として時刻を使用する  
  プロセス制御や製造アプリケーションなど、アプリケーションによっては、有効桁数が 100 ナノ秒までの時刻データを処理できる必要があります。 このための新しい型が DBTYPE_DBTIME2 (OLE DB) と SQL_SS_TIME2 (ODBC) です。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 814fca7d48f50aab51b6b4f7e34835be8c412e9c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138839"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306207"
 ---
 # <a name="keyset-driven-cursors"></a>キーセット ドリブン カーソル
 キーセットドリブンカーソルは、静的カーソルと動的カーソルの間に変更を検出する機能があります。 静的カーソルと同様に、結果セットのメンバーシップと順序に対する変更は常に検出されません。 動的カーソルと同様に、結果セット内の行の値に対する変更を検出します (SQL_ATTR_TXN_ISOLATION 接続属性によって設定された、トランザクションの分離レベルに従います)。  

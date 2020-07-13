@@ -1,5 +1,5 @@
 ---
-title: system_columns (Transact-sql) |Microsoft Docs
+title: sys.system_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_columns catalog view
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdb28d10d04c21f0d377777b41c332eb20d1ee9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4e7f9cf8cb5b7dfc0aba7858e3a042d9793e26c6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73981917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999148"
 ---
-# <a name="syssystem_columns-transact-sql"></a>system_columns (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   列を持つシステム オブジェクトの列ごとに 1 行のデータを保持します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|この列が所属するオブジェクトの ID。|  
 |**name**|**sysname**|列の名前です。 は、オブジェクト内で一意です。|  
@@ -40,7 +39,7 @@ ms.locfileid: "73981917"
 |**system_type_id**|**tinyint**|列のシステム型の ID|  
 |**user_type_id**|**int**|ユーザーが定義した列の型の ID。<br /><br /> 型の名前を返すには、この列の[型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)のカタログビューに結合します。|  
 |**max_length**|**smallint**|列の最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16か**sp_tableoption** ' text in row ' によって設定された値になります。|  
-|**精度**|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、0 です。|  
+|**有効桁数 (precision)**|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、0 です。|  
 |**scale**|**tinyint**|数値ベースの場合は、列の小数点以下桁数です。それ以外の場合は、0 です。|  
 |**collation_name**|**sysname**|文字ベースの場合は、列の照合順序の名前です。それ以外の場合は、NULL です。|  
 |**is_nullable**|**bit**|1 = 列で NULL 値を使用できます。|  
@@ -50,9 +49,9 @@ ms.locfileid: "73981917"
 |**is_computed**|**bit**|1 = 列は計算列です。|  
 |**is_filestream**|**bit**|1 = 列は、filestream ストレージを使用するように宣言されています。|  
 |**is_replicated**|**bit**|1 = 列はレプリケートされています。|  
-|**is_non_sql_subscribed**|**bit**|1 = 列には、以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサブスクライバーがあります。|  
+|**is_non_sql_subscribed**|**bit**|1 = 列には、以外のサブスクライバーがあり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**is_merge_published**|**bit**|1 = 列はマージパブリッシュされています。|  
-|**is_dts_replicated**|**bit**|1 = 列は、を使用[!INCLUDE[ssIS](../../includes/ssis-md.md)]してレプリケートされます。|  
+|**is_dts_replicated**|**bit**|1 = 列は、を使用してレプリケートされ [!INCLUDE[ssIS](../../includes/ssis-md.md)] ます。|  
 |**is_xml_document**|**bit**|1 = コンテンツは完全な XML ドキュメントです。<br /><br /> 0 = コンテンツがドキュメントフラグメントであるか、または列のデータ型が**xml**ではありません。|  
 |**xml_collection_id**|**int**|列のデータ型が**xml**で xml が型指定されている場合は0以外の値。 この値は、列の検証 XML スキーマ名前空間を含むコレクションの ID になります。<br /><br /> 0 = XML スキーマコレクションがありません。|  
 |**default_object_id**|**int**|スタンドアロンの[sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)であるか、インラインの列レベルの既定の制約であるかに関係なく、既定のオブジェクトの ID。 インライン列レベルの既定のオブジェクトの**parent_object_id**列は、テーブル自体への参照です。 既定値がない場合は 0 です。|  
@@ -60,14 +59,14 @@ ms.locfileid: "73981917"
 |is_sparse|**bit**|1 = 列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 |is_column_set|**bit**|1 = 列は列セットです。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
 |generated_always_type|**tinyint**|列の型を表す数値。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
-|generated_always_type_desc|**nvarchar (60)**|列の型の説明テキスト。<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
+|generated_always_type_desc|**nvarchar(60)**|列の型の説明テキスト。<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   

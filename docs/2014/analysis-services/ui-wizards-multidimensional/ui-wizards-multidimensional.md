@@ -10,13 +10,12 @@ helpviewer_keywords:
 - Analysis Services wizards
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62f475b38931f46789ea464f3002a891fc33236c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eda1425656ffb0d63b7db2fc8158ffcd443793ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938193"
 ---
 # <a name="ui-wizards-for-multidimensional-analysis"></a>多次元分析用の UI ウィザード
 

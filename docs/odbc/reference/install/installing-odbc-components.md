@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], about installing
 - ODBC [ODBC], component installation
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf2ef856d8970bf60b3f1f329c57a2379eb528dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbd0a6aeba8073ce14b08b8635396b1f231895fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094019"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298982"
 ---
 # <a name="installing-odbc-components"></a>ODBC コンポーネントのインストール
 > [!NOTE]  

@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d4357c3ca7290484d1dc38e54f677a8cd987fd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63287781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054923"
 ---
 # <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -200,7 +199,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 次に結果の一部を示します。 クエリでは列名として ManuInstr が指定されている`query()`ため、メソッドによって`ManuInstr`返される XML は、次に示すように <> タグでラップされます。  
+ 次に結果の一部を示します。 クエリでは列名として ManuInstr が指定されているため、メソッドによって返される XML `query()` は、 `ManuInstr` 次に示すように <> タグでラップされます。  
   
  `<Root>`  
   

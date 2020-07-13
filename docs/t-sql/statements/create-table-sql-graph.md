@@ -32,15 +32,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3941db45a3c667ac2b273323096b6e14bdc0e93f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766936"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 `NODE` または `EDGE` テーブルで新しい SQL グラフ テーブルを作成します。 
   
@@ -51,7 +51,7 @@ ms.locfileid: "70846722"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } 

@@ -9,24 +9,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f74a564bf3cc3f70ef685c3adf23fd5a117711cc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62831632"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433029"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
-  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]は、通常、データプロファイルタスクの出力では、報告された違反が意味があるか過剰であるかを判断するために、視覚的な分析と人間による判断が必要になります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
+  データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
   
  ただし、データ品質の基準が確立された後に、データ ソースの定期的な分析とクリーンアップを自動化することが必要になる場合があります。 次のシナリオを考えてみます。  
   
 -   **増分読み込みの前にデータ品質を確認する**。 データ プロファイル タスクを使用して、Customers テーブルの CustomerName 列のために、新しいデータの列の NULL 比プロファイルを計算します。 NULL 値の比率が 20% を超える場合は、プロファイル出力を含む電子メールをオペレーターに送信します。 それ以外の場合は、増分読み込みを続行します。  
   
--   **指定された条件が満たされたときのクリーンアップの自動化**。 データ プロファイル タスクを使用し、州の参照テーブルに対して State 列、および郵便番号の参照テーブルに対して ZIP Code/Postal Code 列の値包含プロファイルを計算します。 州の値の包含の強さが 80% 未満でも、郵便番号の値の包含の強さが 99% を超える場合は、2 つのことを示しています。 1 つは州のデータが適切ではないこと、 もう 1 つは郵便番号のデータは適切であることです。 現在の郵便番号の値から正しい州の値の参照を実行することで州のデータをクリーンアップするデータ フロー タスクを起動します。  
+-   **指定した条件が満たされる場合にクリーンアップを自動化する**。 データ プロファイル タスクを使用し、州の参照テーブルに対して State 列、および郵便番号の参照テーブルに対して ZIP Code/Postal Code 列の値包含プロファイルを計算します。 州の値の包含の強さが 80% 未満でも、郵便番号の値の包含の強さが 99% を超える場合は、2 つのことを示しています。 1 つは州のデータが適切ではないこと、 もう 1 つは郵便番号のデータは適切であることです。 現在の郵便番号の値から正しい州の値の参照を実行することで州のデータをクリーンアップするデータ フロー タスクを起動します。  
   
  データ フロー タスクを組み込むことのできるワークフローを用意したら、このタスクを追加するために必要な手順を理解する必要があります。 次のセクションでは、データ フロー タスクを組み込む一般的な手順について説明します。 最後の 2 つのセクションでは、データ フロー タスクを直接データ ソースに接続する方法、またはデータ フローから変換されたデータに接続する方法について説明します。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62831632"
   
  データ プロファイル タスクをパッケージのワークフローに組み込む場合は、このタスクの次の 2 つの機能に注意してください。  
   
--   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]別の XML エディター、またはメモ帳などのテキストエディターを使用できます。  
+-   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
   
     > [!NOTE]  
     >  Data Profile Viewer に表示されるプロファイルの結果には、出力で直接見つからない、計算された値もあります。 たとえば、列の NULL 比プロファイルの出力には、行の総数と、NULL 値を含む行の総数が含まれます。 列の NULL 比を取得するには、この 2 つの値に対してクエリを実行してから、NULL 値を含む行の比率を計算します。  
@@ -75,20 +74,17 @@ ms.locfileid: "62831632"
 ### <a name="configure-the-connection-managers"></a>接続マネージャーの構成  
  この例では、次の 2 つの接続マネージャーがあります。  
   
--   
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 接続マネージャー。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 接続マネージャー。  
   
 -   データ プロファイル タスクの結果を格納する出力ファイルを作成するファイル接続マネージャー。  
   
 ##### <a name="to-configure-the-connection-managers"></a>接続マネージャーを構成するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。  
   
-2.  
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加します。 この接続マネージャーを、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの使用可能なインスタンスに接続するように構成します。  
+2.  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加します。 この接続マネージャーを、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの使用可能なインスタンスに接続するように構成します。  
   
-     既定では、接続マネージャーの名前は \<server name>.AdventureWorks1 となります。  
+     既定では、接続マネージャーにはという名前が付いてい \<server name> ます。AdventureWorks1.  
   
 3.  ファイル接続マネージャーをパッケージに追加します。 この接続マネージャーを、データ プロファイル タスクの出力ファイルを作成するように構成します。  
   
@@ -103,18 +99,16 @@ ms.locfileid: "62831632"
   
 ##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>プロファイルの結果を保持するパッケージ変数を構成するには  
   
--   
-  **[変数]** ウィンドウで、次の 2 つのパッケージ変数を追加して構成します。  
+-   **[変数]** ウィンドウで、次の 2 つのパッケージ変数を追加して構成します。  
   
-    -   変数の1つ`ProfileConnectionName`に名前として「」を入力し、この変数の型を**String**に設定します。  
+    -   変数の1つに名前として「」を入力 `ProfileConnectionName` し、この変数の型を**String**に設定します。  
   
-    -   他の変数の`AddressLine2NullRatio`名前として「」を入力し、この変数の型を**Double**に設定します。  
+    -   他の変数の名前として「」を入力 `AddressLine2NullRatio` し、この変数の型を**Double**に設定します。  
   
 ### <a name="configure-the-data-profiling-task"></a>データ プロファイル タスクの構成  
  データ プロファイル タスクは、次のように構成する必要があります。  
   
--   
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーが提供するデータを入力として使用します。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーが提供するデータを入力として使用します。  
   
 -   入力データに対して列の NULL 比プロファイルを実行します。  
   
@@ -124,15 +118,13 @@ ms.locfileid: "62831632"
   
 1.  制御フローにデータ プロファイル タスクを追加します。  
   
-2.  
-  **[データ プロファイル タスク エディター]** を開き、タスクを構成します。  
+2.  **[データ プロファイル タスク エディター]** を開き、タスクを構成します。  
   
 3.  エディターの **[全般]** ページの **[変換先]** で、既に構成済みのファイル接続マネージャーの名前を選択します。  
   
 4.  エディターの **[プロファイル要求]** ページで、列の NULL 比プロファイルを新しく作成します。  
   
-5.  
-  **[要求プロパティ]** ペインの **[接続マネージャー]** で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、 **[TableOrView]** で Person.Address を選択します。  
+5.  **[要求プロパティ]** ペインの **[接続マネージャー]** で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、 **[TableOrView]** で Person.Address を選択します。  
   
 6.  データ プロファイル タスク エディターを閉じます。  
   
@@ -145,18 +137,15 @@ ms.locfileid: "62831632"
   
 2.  スクリプト タスクをデータ プロファイル タスクに接続します。  
   
-3.  
-  **スクリプト タスク エディター** を開いて、タスクを構成します。  
+3.  **スクリプト タスク エディター** を開いて、タスクを構成します。  
   
-4.  
-  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
+4.  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
   
-    1.  `ReadOnlyVariables`では、 `ProfileConnectionName`を選択します。  
+    1.  `ReadOnlyVariables`では、を選択し `ProfileConnectionName` ます。  
   
-    2.  **ReadWriteVariables**の場合は`AddressLine2NullRatio`、を選択します。  
+    2.  **ReadWriteVariables**の場合は、を選択し `AddressLine2NullRatio` ます。  
   
-5.  
-  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
+5.  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
   
 6.  System.Xml 名前空間への参照を追加します。  
   
@@ -276,8 +265,7 @@ ms.locfileid: "62831632"
 #### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>変数からプロファイル出力を読み込むコード  
  上記の手順は、データ プロファイル タスクの出力をファイルから読み込む方法を示していますが、 この出力をパッケージ変数から読み込む方法もあります。 出力を変数から読み込むには、サンプル コードを次のように変更する必要があります。  
   
--   
-  `LoadXml` メソッドではなく、`XmlDocument` クラスの `Load` メソッドを呼び出します。  
+-   `LoadXml` メソッドではなく、`XmlDocument` クラスの `Load` メソッドを呼び出します。  
   
 -   スクリプト タスク エディターで、プロファイル出力を格納するパッケージ変数の名前を、タスクの `ReadOnlyVariables` リストに追加します。  
   
@@ -324,8 +312,7 @@ ms.locfileid: "62831632"
   
 #### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>データ フローでデータ プロファイル タスクを使用するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを作成します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを作成します。  
   
 2.  データ フローで、適切な変換元と変換を追加、構成、および接続します。  
   
@@ -340,7 +327,7 @@ ms.locfileid: "62831632"
 7.  スクリプト タスクをワークフロー内の下流の分岐に接続する優先順位制約では、変数の値を使用してワークフローを分ける式を作成します。  
   
 ## <a name="see-also"></a>参照  
- [データプロファイルタスクのセットアップ](data-profiling-task.md)   
- [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)  
+ [データ プロファイル タスクのセットアップ](data-profiling-task.md)   
+ [Data Profile Viewer](data-profile-viewer.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 日付と時刻およびスキーマ行セット |Microsoft Docs
+title: 日付、時刻、スキーマ行セット | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab953952de1c288bcac31548c9562e9ae570bee6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63238010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043584"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日付と時刻およびスキーマ行セット
   このトピックでは、COLUMNS 行セットおよび PROCEDURE_PARAMETERS 行セットについて説明します。 この情報は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で導入された OLE DB の日付と時刻の機能強化に関連しています。  
@@ -27,10 +26,10 @@ ms.locfileid: "63238010"
   
 |列の型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|クリア|0|  
-|time|DBTYPE_DBTIME2|オン|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|クリア|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|クリア|3|  
+|date|DBTYPE_DBDATE|Clear|0|  
+|時間|DBTYPE_DBTIME2|オン|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|オン|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|オン|0..7|  
   

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087347"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527238"
 ---
 # <a name="connect-to-a-data-mining-server"></a>データ マイニング サーバーへの接続
   ![[接続] ボタン](media/misc-connection.gif "[接続] ボタン")  
   
- [**接続**] ボタンをクリックして既存の接続を選択するか、のインスタンスへの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新しい接続を作成します。  
+ [**接続**] ボタンをクリックして既存の接続を選択するか、のインスタンスへの新しい接続を作成し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
  **サーバーへの接続が必要な理由**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087347"
   
  **"接続が見つかりませんでした" というメッセージが表示できます。**  
   
- ボタンの下部のテキストが [**接続なし**] と表示されている場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースへの接続が作成されていないか、接続に失敗したことを意味します。 Access など他のソースからの Excel 内のデータの作業は継続できますが、データ マイニング モデルの作成や予測クエリの実行のためにはアクティブな接続が必要です。  
+ ボタンの下部のテキストが [**接続なし**] と表示されている場合は、データベースへの接続が作成されていないか、接続に失敗したことを意味 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] します。 Access など他のソースからの Excel 内のデータの作業は継続できますが、データ マイニング モデルの作成や予測クエリの実行のためにはアクティブな接続が必要です。  
   
  **サーバーを使用するためのアクセス許可がないとします。**  
   
@@ -94,8 +93,7 @@ ms.locfileid: "66087347"
   
  Excel 用データ マイニング クライアントのウィザードを完了する際は、既定でモデルがサーバーに保存されます。ただし、各ウィザードの最終ページには、一時的なモデルを使用するためのオプションがあります。 このオプションを選択した場合は、作成したデータ マイニング構造とモデルが一時ファイルに格納されます。 Excel を開いている限り、構造およびモデルを参照、管理、および変更できます。 ただし、Excel を終了すると、構造とすべての関連モデルが削除されます。  
   
- また、**データマイニング詳細クエリエディター**を使用し、DMX テンプレートの1つを選択して、一時的な構造またはモデルを明示的に作成することもできます。 
-  `USE SESSION MODELS` 句を追加すると、これらのオブジェクトが一時的なものとして指定されます。   
+ また、**データマイニング詳細クエリエディター**を使用し、DMX テンプレートの1つを選択して、一時的な構造またはモデルを明示的に作成することもできます。 `USE SESSION MODELS` 句を追加すると、これらのオブジェクトが一時的なものとして指定されます。   
   
 ### <a name="creating-backups-of-mining-models-and-structures"></a>マイニング モデルおよび構造のバックアップの作成  
  モデルまたは構造のバックアップを作成するには、Excel 用のデータマイニングクライアントで、[[モデルの管理 &#40;SQL Server データマイニングアドイン&#41;](manage-models-sql-server-data-mining-add-ins.md)を使用してエクスポートします。  

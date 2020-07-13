@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLBulkOperations function [ODBC], deleting rows
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a34f96dd7f5c2f0e2ac4bbb3feae06ea4856a248
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6b6a4c1b24ee276c86175392eb45ac5ce0aa45e5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076816"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305963"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の削除
 ブックマークを使用して行を削除すると、 **Sqlbulkoperations**によって、テーブルの選択した1つ以上の行がデータソースによって削除されます。 行は、バインドされたブックマーク列のブックマークによって識別されます。  

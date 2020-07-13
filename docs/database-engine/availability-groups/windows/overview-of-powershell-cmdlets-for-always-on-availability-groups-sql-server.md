@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 135dfc2463b853c182275246b82b9f24c46ba88c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75236092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894040"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性グループの PowerShell コマンドレットの概要
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell は、特にシステム管理用に設計されている、タスク ベースのコマンド ライン シェルとスクリプト言語です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で一連の PowerShell コマンドレットを提供しており、それらを使用すると可用性グループ、可用性レプリカ、および可用性データベースの配置、管理、および監視ができます。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75236092"
 >  PowerShell コマンドレットは、アクションを正常に開始した時点で完了できます。 つまり、目的の操作 (可用性グループのフェールオーバーなど) の完了を示すわけではありません。 一連の操作をスクリプト化している場合は、アクションの状態を確認し、完了するまで待機しなければならないことがあります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
   
 ##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Always On 可用性グループのサーバー インスタンスの構成  
   

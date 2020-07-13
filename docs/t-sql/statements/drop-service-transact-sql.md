@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b97fc2b789387babcb05d7b0dfe2e39049a317a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73791311"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899725"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のサービスを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73791311"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP SERVICE service_name  
 [ ; ]  

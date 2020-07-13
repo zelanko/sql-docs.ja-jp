@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68188506546e7b4a5dd4c05bc9a94cbf34300001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63067512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022571"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が0でない場合、SQLExecDirect は SQL_ERROR を返し、SQLSTATE = HY024 の診断レコードと、"無効な属性値、SQL_SOPT_SS_PARAM_FOCUS (実行時にはゼロでなければなりません)" というメッセージを生成します。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](sqlsetstmtattr.md)」を参照してください。  

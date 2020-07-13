@@ -11,18 +11,17 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760592"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009750"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "73760592"
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server のデータ型|SQL データ型|Value|  
+|SQL Server のデータ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -45,7 +44,7 @@ ms.locfileid: "73760592"
   
 |SQL データ型|メモリ レイアウト|C データ型|値 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>パラメーターの記述子フィールド  
  IPD フィールドに返される情報は次のとおりです。  
@@ -213,7 +212,7 @@ ms.locfileid: "73760592"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT に対して返される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|Type|SubType|長さ|有効桁数|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +232,7 @@ ms.locfileid: "73760592"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT に対して許可される値は次のとおりです。  
   
-|SQL データ型|種類|SubType|Length|Precision|スケール|  
+|SQL データ型|Type|SubType|長さ|有効桁数|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

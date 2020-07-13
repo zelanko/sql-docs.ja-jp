@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761480"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL は、ローカルまたはネットワーク上のコンピューターに格納されているターゲットの場所を指定します。 ターゲットには、ファイル、ディレクトリ、HTML ページ、イメージ、プログラムなどがあります。  
@@ -32,16 +32,16 @@ URL は、ローカルまたはネットワーク上のコンピューターに�
   
  相対 URL は、通常、*パス*と、必要に応じて*リソース*だけで構成されますが、*スキーム*や*サーバー*は含まれません。 次の表は、完全な URL 形式の個々の部分を定義しています。  
   
- *体系*  
+ *scheme*  
  *リソース*へのアクセス方法を指定します。  
   
  *server*  
  *リソース*が配置されているコンピューターの名前を指定します。  
   
- *道*  
+ *path*  
  ターゲットにつながる一連のディレクトリを指定します。 *リソース*を省略した場合、ターゲットは*path*の最後のディレクトリになります。  
   
- *センター*  
+ *resource*  
  含まれている場合、*リソース*はターゲットであり、通常はファイルの名前です。 これは、1つのバイナリストリーム (バイト) を含む*単純なファイル*であるか、または1つ以上のストレージとバイトのバイナリストリームを含む*構造化ドキュメント*である可能性があります。  
   
 ## <a name="url-scheme-registration"></a>URL スキームの登録  
@@ -70,13 +70,13 @@ URL は、ローカルまたはネットワーク上のコンピューターに�
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- 接続文字列の絶対 URL は、サーバー (`YourServer`) とパス (`Winnt`) を指定します。 この URL は、コンテキストも定義します。  
+ 接続文字列の絶対 URL は、サーバー ( `YourServer` ) とパス () を指定し `Winnt` ます。 この URL は、コンテキストも定義します。  
   
- コマンドテキストの相対 URL は、絶対 URL を開始点として使用し、パスの残りの部分`system32`() と開くファイル (`Readme25.txt`) を指定します。  
+ コマンドテキストの相対 URL は、絶対 URL を開始点として使用し、パスの残りの部分 ( `system32` ) と開くファイル () を指定し `Readme25.txt` ます。  
   
- Options フィールド (`adCmdTableDirect`) は、コマンドの種類が相対 URL であることを示します。  
+ Options フィールド () は、 `adCmdTableDirect` コマンドの種類が相対 URL であることを示します。  
   
- もう1つの例として、次のコードでは、 `Winnt`ディレクトリの内容に対して**レコードセット**を開きます。  
+ もう1つの例として、次のコードでは、ディレクトリの内容に対して**レコードセット**を開き `Winnt` ます。  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da644e6be773b96855e5e6fb4090ab84d822992d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762138"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが別の **geometry** インスタンスに空間的に接している場合は、1 を返します。 そうでない場合は 0 を返します。
   
@@ -38,7 +38,7 @@ ms.locfileid: "68066241"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- **を呼び出したインスタンスと比較される、別の**geometry`STTouches()` インスタンスです。  
+ `STTouches()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  

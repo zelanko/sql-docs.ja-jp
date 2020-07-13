@@ -15,14 +15,14 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c49e83e12463665f86f8cc15dc595e6ba2c506f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118744"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306287"
 ---
 # <a name="buffers"></a>バッファー
 バッファーは、アプリケーションとドライバーの間でデータを渡すために使用されるアプリケーションメモリの一部です。 たとえば、アプリケーションバッファーは、 **SQLBindCol**を使用して結果セット列に関連付けたり、*バインド*したりすることができます。 各行がフェッチされると、これらのバッファー内の各列に対してデータが返されます。 *入力バッファー*は、アプリケーションからドライバーにデータを渡すために使用されます。*出力バッファー*は、ドライバーからアプリケーションにデータを返すために使用されます。  

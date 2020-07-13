@@ -18,15 +18,14 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b44319856c2604791290768516ab1eb4c190a66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b392042d29b900760294bdd95a99ee656553bc00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009645"
 ---
 # <a name="navigate-code-and-text"></a>コード内とテキスト内の移動
   以下の方法で、テキスト内を移動することができます。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079567"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81289133"
 ---
 # <a name="using-scrollable-cursors"></a>スクロール可能なカーソルの使用
 スクロール可能なカーソルを使用するには、次の3つの手順が必要です。  

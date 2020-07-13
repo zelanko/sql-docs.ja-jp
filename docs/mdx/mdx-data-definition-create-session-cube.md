@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038362"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ操作 - CREATE SESSION CUBE
@@ -110,7 +110,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<レベルの種類>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  サーバー キューブやローカル キューブと異なり、セッション キューブは、それを作成したセッションの期間を超えて保持されません。 セッションキューブは、それを定義するメジャーと定義に基づいて定義されます。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  

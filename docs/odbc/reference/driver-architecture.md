@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd9bbb74d77a0b56b6b1f1aa5d8f1a6b5e97f5aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ffe2023f028357468700b9bd995d22129ba06817
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915470"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294222"
 ---
 # <a name="driver-architecture"></a>ドライバーのアーキテクチャ
 ドライバーアーキテクチャは、どのソフトウェアが SQL ステートメントを処理するかに応じて、2つのカテゴリに分類されます。  

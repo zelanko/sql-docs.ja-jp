@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14ca7d3675242a16c8b1952aecc324ff2f7f67a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706527"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルの属性を定義します。これには、スクロール動作や、カーソルが操作する結果セットを作成するクエリなどが含まれます。 `DECLARE CURSOR` は、ISO 標準に基づく構文と、[!INCLUDE[tsql](../../includes/tsql-md.md)] の拡張機能のセットを使用する構文の両方で指定できます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67894787"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   

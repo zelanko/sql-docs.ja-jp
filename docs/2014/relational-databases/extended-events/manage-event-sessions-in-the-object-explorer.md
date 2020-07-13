@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62705518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027566"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
   このトピックでは、拡張イベントに影響する **オブジェクト エクスプローラー** で実行できる操作について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62705518"
  拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](../../database-engine/create-an-extended-events-session.md)」を参照してください。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>拡張イベント セッションの開始または停止  
- 拡張イベントセッションを開始または停止するには、**クエリエディター**で`ALTER EVENT SESSION`ステートメントを使用するか、**オブジェクトエクスプローラー**の [**拡張イベント**] ノードを使用します。  
+ 拡張イベントセッションを開始または停止するには、**クエリエディター**でステートメントを使用する `ALTER EVENT SESSION` か、**オブジェクトエクスプローラー**の [**拡張イベント**] ノードを使用します。  
   
  イベント セッションを停止すると、以後そのセッションは、sys.dm_xe_sessions 動的管理ビュー (DMV) にアクティブなセッションとして表示されません。 ただし、セッションの定義は一切変更されず、セッションを再開することもできます。 セッションの定義を完全に削除するには、セッションを削除する必要があります。  
   
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  **[テンプレート]** ボックスを展開します。  
   
-5.  **[\<File From ...>Open]** をクリックし、インポートするセッション (XML ファイル) を参照します。  
+5.  [ ** \<File From ...> 開く**] をクリックし、インポートするセッション (XML ファイル) を参照します。  
   
  **[セッション]** ノードにセッションが表示されます。 既定では、セッションは開始されていません。  
   
@@ -113,28 +112,28 @@ STATE = STOP
   
 4.  イベント セッションの編集が終了したら、 **[OK]** をクリックします。  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  新規セッション ウィザードおよび [新しいセッション] ダイアログの両方に、拡張イベント セッションを定義する [!INCLUDE[tsql](../../includes/tsql-md.md)] を生成するスクリプト オプションがあります。  
   
- セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、** [CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
+ セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、**[CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
   
 ## <a name="delete-an-extended-events-session"></a>拡張イベント セッションの削除  
  次の方法で拡張イベント セッションを削除できます。  
   
 -   クエリ エディターで、`DROP EVENT SESSION` を使用します。  
   
--   **オブジェクト エクスプローラー**を使用します。  
+-   **オブジェクトエクスプローラー**。  
   
  イベント セッションを削除すると、すべての構成情報が削除され、以後、セッションの定義は sys.server_event_sessions カタログ ビューに表示されません。  
   
 > [!NOTE]  
->  system_health と AlwaysOn_health は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含まれています。削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 既定では、AlwaysOn_health はオフになっています。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
+>  system_health と AlwaysOn_health はに含まれています。削除しないで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 既定では、AlwaysOn_health はオフになっています。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
   
  拡張イベント セッションを削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
  **オブジェクト エクスプローラー**で拡張イベント セッションを削除するには  
   
-1.  **[管理]** ノード、 **[拡張イベント]** ノード、および **[セッション]** ノードの順に展開します。  
+1.  [**管理**]、[**拡張イベント**]、[**セッション**] ノードの順に展開します。  
   
 2.  セッションを右クリックし、 **[削除]** をクリックします。  
   

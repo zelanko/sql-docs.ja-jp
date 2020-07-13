@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92d07c0c4525c08960f8e36c551852ff501648af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66110116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068039"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>hierarchyid データ型を使用したテーブルの作成
   EmployeeOrg という名前のテーブルを作成する例を次に示します。このテーブルには、従業員データと、それらの従業員のレポート階層が含まれています。 この例では、テーブルを [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに作成しますが、これは任意です。 例をわかりやすくするために、このテーブルには 5 つの列のみ含まれています。  
@@ -34,8 +33,7 @@ ms.locfileid: "66110116"
   
 ### <a name="to-create-the-employeeorg-table"></a>EmployeeOrg テーブルを作成するには  
   
-1.  クエリ エディター ウィンドウで、次のコードを実行し、 `EmployeeOrg` テーブルを作成します。 
-  `OrgNode` 列を、クラスター化インデックスのある主キーとして指定すると、深さ優先のインデックスが作成されます。  
+1.  クエリ エディター ウィンドウで、次のコードを実行し、 `EmployeeOrg` テーブルを作成します。 `OrgNode` 列を、クラスター化インデックスのある主キーとして指定すると、深さ優先のインデックスが作成されます。  
   
     ```  
     USE AdventureWorks2012 ;  

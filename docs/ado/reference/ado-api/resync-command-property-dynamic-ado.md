@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917144"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756478"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command プロパティ - 動的 (ADO)
 [一意のテーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的プロパティに指定されたテーブル内のデータを更新するために再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドによって発行される、ユーザーが指定したコマンド文字列を指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "67917144"
   
  SQL に基づく2つの例を次に示します。  
   
- 1\) **レコードセット**はコマンドによって定義されます。  
+ 1 \) **レコードセット**はコマンドによって定義されます。  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  **一意のテーブル**は*Orders*で、その主キーである*OrderID*がパラメーター化されます。 サブ選択を使用すると、元のコマンドと同じ数および順序の列が返されるようにプログラムで簡単に確認できます。  
   
- 2\) **レコードセット**は、ストアドプロシージャによって定義されます。  
+ 2 \) **レコードセット**は、ストアドプロシージャによって定義されます。  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

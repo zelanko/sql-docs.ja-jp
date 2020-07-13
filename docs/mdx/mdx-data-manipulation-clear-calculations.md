@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938021"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX データ操作 - CLEAR CALCULATIONS
@@ -31,7 +31,7 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  有効な多次元式 (MDX) キューブ式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  MDX スクリプトなど、キューブのコンテキストがわかっている場合は、 **from**句を省略できます。  
   
 > [!NOTE]  

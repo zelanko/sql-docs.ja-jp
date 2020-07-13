@@ -14,19 +14,19 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], affected components
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08997f610b00f22d436a5c91d34beb2a8fc2cc1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67944855"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306476"
 ---
 # <a name="affected-odbc-components"></a>影響を受ける ODBC コンポーネント
 旧バージョンとの互換性については、新しいバージョンのドライバーマネージャーの導入によって、アプリケーション、ドライバーマネージャー、およびドライバーがどのように影響を受けるかについて説明します。 これは、アプリケーションとドライバーのいずれかまたは両方が古いバージョンのままである場合に影響します。 したがって、次の表に示すように、3種類の下位互換性が考慮されます。  
   
-|種類|DM のバージョン|アプリケーションのバージョン|ドライバーのバージョン|  
+|Type|DM のバージョン|アプリケーションのバージョン|ドライバーのバージョン|  
 |----------|-------------------|----------------------------|-----------------------|  
 |ドライバーマネージャーの旧バージョンとの互換性|*3.x*|*2.x*|*2.x*|  
 |ドライバー [1] の旧バージョンとの互換性|*3.x*|*2.x*|*3.x*|  

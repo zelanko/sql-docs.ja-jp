@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065858"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938305"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻訳の詳細 (キューブ デザイナーの [翻訳] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択されているキューブを翻訳したり定義したりできます。  
@@ -31,49 +30,45 @@ ms.locfileid: "66065858"
   
 -   [メジャー グループ]  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
 -   Measure  
   
-     
-  `Caption` プロパティと `DisplayFolder` プロパティ  
+     `Caption` プロパティと `DisplayFolder` プロパティ  
   
 -   Dimension  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
 -   パースペクティブ  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
 -   主要業績評価指標 (KPI)  
   
-     
-  `Caption`、`Description`、および `DisplayFolder` プロパティ  
+     `Caption`、`Description`、および `DisplayFolder` プロパティ  
   
 -   アクション  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
 -   名前付きセット  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
 -   計算されるメンバー  
   
-     `Caption`"  
+     `Caption` プロパティ  
   
- **\<言語>**  
+ **\<Language>**  
  選択した言語でキューブ オブジェクトのプロパティの値を入力します。  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  
- 
-  **[翻訳の詳細]** ペインで翻訳を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
+ **[翻訳の詳細]** ペインで翻訳を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
   
 |期間|定義|  
 |----------|----------------|  
-|**新しい翻訳**|
-  **[言語の選択]** ダイアログ ボックスを表示して、新しい翻訳を作成します。 翻訳は、 **翻訳の詳細** グリッド内に新しい列として表示されます。|  
-|**翻訳の削除**|選択された翻訳を削除します。|  
+|**[新しい翻訳]**|**[言語の選択]** ダイアログ ボックスを表示して、新しい翻訳を作成します。 翻訳は、 **翻訳の詳細** グリッド内に新しい列として表示されます。|  
+|**[翻訳の削除]**|選択された翻訳を削除します。|  
   
   

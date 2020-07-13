@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fea58e679e11ac068189ad622b3dce627fc8a63
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919727"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760438"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
 プロバイダーに対して発行されるコマンドのテキストを示します。  

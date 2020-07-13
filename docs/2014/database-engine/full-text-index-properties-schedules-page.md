@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932953"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>[フルテキスト インデックスのプロパティ] ([スケジュール] ページ)
   このページでは、フルテキスト インデックスのベース テーブルに対する更新の増分作成を開始する SQL Server エージェント ジョブの実行スケジュールを表示および作成できます。 ベース テーブルまたはビューに `timestamp` データ型の列が含まれていない場合は、完全作成が実行されます。  
@@ -26,7 +25,7 @@ ms.locfileid: "62779032"
   
 -   [フルテキスト インデックスの管理](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **スケジュール**  
  フルテキスト インデックスのベース テーブルに対するスケジュールされた増分作成を一覧表示します (スケジュールされた増分作成が存在する場合)。  
   

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c727f6b36930b0d2ad0d5a61592b83bcd4995426
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104789"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301172"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **互換性**  
@@ -56,7 +56,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  代入列の順序の昇順で並べ替えられた結果データの列数。1から始まります。 *Columnnumber*引数を0に設定して、ブックマーク列を記述することもできます。  
   
- *ColumnName*  
+ *[ColumnName]*  
  Output列名を返す null で終わるバッファーへのポインター。 この値は、IRD の SQL_DESC_NAME フィールドから読み取られます。 列に名前が付いていない場合、または列名を特定できない場合、ドライバーは空の文字列を返します。  
   
  *Columnname*が NULL の場合でも、 *NameLengthPtr*は、 *columnname*が指すバッファーで返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
@@ -97,7 +97,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>診断  
  **SQLDescribeCol**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLDescribeCol**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|バッファー \* *ColumnName*が列名全体を返すのに十分な大きさではないため、列名が切り捨てられました。 切り捨てられた列名の長さは **NameLengthPtr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -130,7 +130,7 @@ SQLRETURN SQLDescribeCol(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  

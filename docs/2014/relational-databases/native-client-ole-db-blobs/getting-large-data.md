@@ -1,5 +1,5 @@
 ---
-title: 大きなデータを取得する |Microsoft Docs
+title: 大きなデータの取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b54e8abc817c35b120966b551d8b01a546052a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63195228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049665"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
-  一般に、コンシューマーは、 **ISequentialStream**インターフェイスポインターに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
+  一般に、コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream**インターフェイスポインターによって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "63195228"
   
  DBPROP_ACCESSORDER プロパティ (行セットプロパティグループ) が DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかの値に設定されている場合、コンシューマーは**GetNextRows**メソッドの呼び出しで1行のデータのみをフェッチする必要があります。これは、BLOB データがバッファリングされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コンシューマーによって要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されるまで、から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンシューマーによって要求されるまで、から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  

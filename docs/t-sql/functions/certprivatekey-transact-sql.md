@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6a042dd6fcdfc0ebdbda447697d095e9195b60b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "65948828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732726"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、証明書の秘密キーをバイナリ形式で返します。 この関数は 3 つの引数を受け取ります。
 -   証明書 ID。  
@@ -36,7 +36,7 @@ ms.locfileid: "65948828"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CERTPRIVATEKEY   
     (  
           cert_ID   

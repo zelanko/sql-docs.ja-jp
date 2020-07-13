@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098522"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
@@ -113,7 +113,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  メンバー名またはメンバーキーを指定する有効な文字列式です。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>Remarks  
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH 子孫句が使用されている場合は、ディメンションテーブル内のすべての子孫とその行も削除されます。  
   
 > [!NOTE]  
@@ -129,7 +129,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  1つのメンバーを返す有効な MDX 式です。  
   
-### <a name="remarks"></a>解説  
+### <a name="remarks"></a>Remarks  
  指定された MDX 式は、静的または動的にすることができます。  
   
 ## <a name="moving-a-dimension-member"></a>ディメンション メンバーの移動  

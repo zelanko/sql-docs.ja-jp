@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920534"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762920"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributes と Name プロパティの例 (VC + +)
 この例では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの値を表示します。 [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  

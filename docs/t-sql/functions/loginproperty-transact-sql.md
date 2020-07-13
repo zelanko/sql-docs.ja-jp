@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ded0a1ea68f150d1e2f55e4d032394203d0ad5e4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68059763"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896595"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログインのポリシー設定に関する情報を返します。  
   
@@ -65,7 +65,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**BadPasswordCount**|正しくないパスワードで連続してログインが試行された回数を返します。|  
 |**BadPasswordTime**|正しくないパスワードで最後にログインが試行された時刻を返します。|  
 |**DaysUntilExpiration**|パスワードの有効期限が切れるまでの日数を返します。|  
-|**DefaultDatabase**|データベースが指定されていない場合に、メタデータまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master**に格納されている** ログインの既定のデータベースを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
+|**DefaultDatabase**|データベースが指定されていない場合に、メタデータまたは **master** に格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの既定のデータベースを返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
 |**DefaultLanguage**|メタデータに格納されているログインの既定の言語を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外でプロビジョニングされているユーザーの場合は NULL を返します (Windows 認証ユーザーなど)。|  
 |**HistoryLength**|パスワード ポリシーの適用メカニズムを使用して、追跡されたログインのパスワードの数を返します。 パスワード ポリシーが適用されていない場合は 0 です。 パスワード ポリシーの適用は 1 から再開されます。|  
 |**IsExpired**|ログインの期限が切れているかどうかを示します。|  

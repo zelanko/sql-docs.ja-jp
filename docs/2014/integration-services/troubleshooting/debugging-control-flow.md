@@ -14,15 +14,14 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa3d140efdd1de643c4bc0534a93c56e90144a57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176608"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439919"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。
@@ -50,7 +49,7 @@ ms.locfileid: "78176608"
 |タスクまたはコンテナーが `OnTaskFailed` イベントを受け取ったとき|タスク ホストが失敗したとき、タスク ホストによって呼び出されます。|
 |タスクまたはコンテナーが `OnProgress` イベントを受け取ったとき|タスクの実行の進行状況を更新するために呼び出されます。|
 |タスクまたはコンテナーが `OnQueryCancel` イベントを受け取ったとき|タスク処理の実行をキャンセルできる場合、任意のタイミングで呼び出されます。|
-|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを発生させるには、 `true`変数の RaiseChangeEvent をに設定する必要があります。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|
+|タスクまたはコンテナーが `OnVariableValueChanged` イベントを受け取ったとき|変数の値が変更されたとき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムによって呼び出されます。 このイベントを発生させるには、変数の RaiseChangeEvent をに設定する必要があり `true` ます。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** このブレークポイントに関連付けられている変数は、**コンテナー** スコープで定義する必要があります。 この変数がパッケージ スコープで定義されると、ブレークポイントにヒットしません。|
 |タスクまたはコンテナーが `OnCustomEvent` イベントを受け取ったとき|タスクによって定義されたカスタム イベントを起動するため、タスクによって呼び出されます。|
 
  一部のタスクとコンテナーには、すべてのタスクとコンテナーで使用できるブレークの条件以外に、ブレークポイントを設定するための特殊なブレーク条件が含まれています。 たとえば、For ループ コンテナーでは、ループの各反復処理の開始点で実行を中断するブレークポイントを設定するための、ブレークの条件を有効にできます。
@@ -97,7 +96,7 @@ ms.locfileid: "78176608"
 
  次の図は、 **[進行状況]** タブを示しています。
 
- ![SSIS デザイナーの [進行状況] タブ](../media/mw-dtsflow04.gif "SSIS デザイナーの [進捗状況] タブ")
+ ![SSIS デザイナーの [進行状況] タブ](../media/mw-dtsflow04.gif "SSIS デザイナーの [進行状況] タブ")
 
 ## <a name="debug-windows"></a>デバッグ ウィンドウ
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。
@@ -109,10 +108,10 @@ ms.locfileid: "78176608"
 |ウィンドウ|説明|
 |------------|-----------------|
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|
-|Output|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|
+|出力|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|
 |即時|式をデバッグして評価し、変数の値を出力するのに使用されます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)
 
 

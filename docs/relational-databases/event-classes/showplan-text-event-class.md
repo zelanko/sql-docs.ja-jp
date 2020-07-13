@@ -12,15 +12,15 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f41511d90850670ae4d5325ce4db200bb65a9d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20ad4337407a46d91adbbeb080b662a2e4e99f28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726171"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Showplan Text イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 含まれる情報は、Showplan All、Showplan XML Statistics Profile、または Showplan XML イベント クラスで利用できる情報のサブセットです。  
   
  Showplan Text イベント クラスをトレースに含めると、オーバーヘッドの量によって、パフォーマンスが著しく低下します。 これを最小限に抑えるには、特定の問題を短い期間監視するトレース以外に、このイベント クラスを使用しないようにします。 Showplan Text のオーバーヘッドは、他の Showplan イベント クラスのオーバーヘッドよりは多くありません。  

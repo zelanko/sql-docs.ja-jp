@@ -11,14 +11,14 @@ helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 926ee91fae207d50248df4c82d1b82bb6424e239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9c52e72512c8b81c6872461207f235ea2731ac5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023256"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282232"
 ---
 # <a name="procedure-calls"></a>プロシージャ呼び出し
 *プロシージャ*は、データソースに格納されている実行可能オブジェクトです。 これは通常、プリコンパイルされた 1 つ以上の SQL ステートメントです。 プロシージャを呼び出すためのエスケープシーケンスはです。  

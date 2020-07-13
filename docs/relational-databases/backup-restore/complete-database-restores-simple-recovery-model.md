@@ -1,5 +1,6 @@
 ---
 title: データベースの復元 - 単純復旧モデル
+description: すべてのデータがバックアップが作成された時点に復元される、SQL Server でのデータベースの全体復元について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748494"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>データベースの全体復元 (単純復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの全体復元の目的は、データベース全体を復元することです。 復元の実行中は、データベース全体がオフラインになります。 データベースの各部がオンラインになる前に、すべてのデータが一貫性のある状態に復旧されます。一貫性のある状態とは、データベースのすべての部分が同じ時点にあり、コミットされていないトランザクションが存在しない状態を示します。  
   
@@ -45,11 +46,11 @@ ms.locfileid: "75242576"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 単純復旧モデルでのデータベース復元の概要  
  単純復旧モデルでのデータベース全体の復元は、データベースの差分バックアップを復元する必要があるかどうかに応じて 1 つまたは 2 つの [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで行われます。 次の図に示すように、データベースの完全バックアップのみを使用する場合は、最新のバックアップを復元するだけで完了します。  
   
- ![データベースの完全バックアップのみの復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "データベースの完全バックアップのみの復元")  
+ ![データベースの完全バックアップのみの復元](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "データベースの完全バックアップのみの復元")  
   
  データベースの差分バックアップも使用する場合は、データベースを復旧しないで最新の完全バックアップを復元してから、最新の差分バックアップを復元してデータベースを復旧します。 次の図に、このプロセスを示します。  
   
- ![データベースの完全および差分バックアップを復元する](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "データベースの完全および差分バックアップの復元")  
+ ![データベースの完全および差分バックアップを復元する](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "データベースの完全および差分バックアップの復元")  
   
 > [!NOTE]  
 >  データベースのバックアップを別のサーバー インスタンスに復元する予定の場合は、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  

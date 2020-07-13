@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca8a66d3134748fd524dc0c6b524d944213533e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940083"
 ---
 # <a name="perspective-representation-tabular"></a>パースペクティブ表現 (テーブル)
   パースペクティブは、クライアント アプリケーション向けに、テーブル モデルをより小さな部分に簡素化したり絞りこんだりするメカニズムです。  

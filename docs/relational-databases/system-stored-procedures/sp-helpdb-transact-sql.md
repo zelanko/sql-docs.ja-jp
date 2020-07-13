@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67903017"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899578"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたデータベースまたはすべてのデータベースに関する情報をレポートします。  
   
@@ -46,30 +46,30 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|データベース名。|  
 |**db_size**|**nvarchar (13)**|データベースの合計サイズ。|  
 |**責任**|**sysname**|**Sa**などのデータベース所有者。|  
 |**dbid**|**smallint**|データベース ID。|  
-|**作成**|**nvarchar(11)**|データベースの作成日です。|  
-|**オンライン**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name*=*値*の形式で対応する値と共に一覧表示されます。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|**created**|**nvarchar(11)**|データベースの作成日です。|  
+|**status**|**nvarchar (600)**|データベースで現在設定されているデータベースオプションの値のコンマ区切りの一覧です。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 ブール型以外のオプションは、 *option_name*値の形式で対応する値と共に一覧表示され = *value*ます。<br /><br /> 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
   
  *Name*を指定した場合は、指定されたデータベースのファイル割り当てを示す追加の結果セットが存在します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nchar (128)**|論理ファイル名です。|  
+|**name**|**nchar(128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
-|**/db**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
-|**ファイル グループ (filegroup)**|**nvarchar(128**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
-|**幅**|**nvarchar (18)**|ファイルサイズ (mb)。|  
+|**filename**|**nchar (260)**|オペレーティングシステムのファイル名 (物理ファイル名)。|  
+|**ファイル グループ (filegroup)**|**nvarchar(128)**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
+|**size**|**nvarchar (18)**|ファイルサイズ (mb)。|  
 |**maxsize**|**nvarchar (18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**成長**|**nvarchar (18)**|ファイルの拡張増分値。 これは、新しい領域が必要になるたびにファイルに追加される領域の量を示します。|  
 |**ユーセジリンク**|**varchar (9)**|ファイルの使用方法。 データファイルの場合、値は **' data only '** で、ログファイルの値は **' log only '** です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  結果セットの**status**列は、データベースで ON に設定されているオプションを報告します。 [**状態**] 列には、すべてのデータベースオプションがレポートされません。 現在のデータベースオプションの設定の完全な一覧を表示するに**は、データベースカタログビュー**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -86,7 +86,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
-### <a name="b-returning-information-about-all-databases"></a>B. すべてのデータベースに関する情報を返す  
+### <a name="b-returning-information-about-all-databases"></a>B: すべてのデータベースに関する情報を返す  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するサーバー上のすべてのデータベースに関する情報を表示します。  
   
 ```sql  
@@ -94,14 +94,14 @@ EXEC sp_helpdb;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [データベース &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. ファイルグループ &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

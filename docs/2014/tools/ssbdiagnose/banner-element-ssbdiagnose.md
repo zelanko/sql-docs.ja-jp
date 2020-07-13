@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63186871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006791"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
   **ssbdiagnose** の出力 XML ファイルを生成したユーティリティを示します。  
@@ -36,22 +35,19 @@ ms.locfileid: "63186871"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|Attribute|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
-|`title`|
-  **ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
-|`product`|
-  **ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
+|`title`|**ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
+|`product`|**ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
 |`version`|XML 出力ファイルを生成したユーティリティのバージョンを示します。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|
-  **ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
+|**個数**|**ssbdiagnose** の出力 XML ファイルにつき 1 個。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

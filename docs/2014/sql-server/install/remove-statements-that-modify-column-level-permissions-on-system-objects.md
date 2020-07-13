@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b377ac0b9baacdab6461a0e62174538902939bd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e55af3dca0c55c2babd09bc6cfc48ed0ddf3ad7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059168"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>システム オブジェクトの列レベル権限を変更するステートメントを削除する
   アップグレード アドバイザーがシステム オブジェクトに対する標準以外の列レベル権限を検出しました。 これらの権限の変更は、アップグレードすると維持されません。 また、システム オブジェクトに対する列レベル権限はサポートされません。 アプリケーションから、システム オブジェクトに対する列レベル権限を設定するステートメントを削除してください。  

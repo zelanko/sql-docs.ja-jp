@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - CAST function [ODBC]
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09d2a2de710dafd4e744166c4219f4c903fd3321
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057061"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305063"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 関数
 SQL-92 で定義されている**CAST**関数は、ODBC で定義されている**CONVERT**関数に相当します。 同等の関数の構文は次のとおりです。  

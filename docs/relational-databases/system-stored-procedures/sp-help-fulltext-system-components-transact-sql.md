@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72304886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827656"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,9 +49,9 @@ sp_help_fulltext_system_components
   
 -   **wordbreaker**  
   
--   **フィルター**  
+-   **filter**  
   
--   **protocol handler**  
+-   **プロトコルハンドラー**  
   
 -   **fullpath**  
   
@@ -65,18 +65,18 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>結果セット  
  システム コンポーネントについて、次の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれか:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**componentname**|**sysname**|コンポーネントの名前。|  
-|**clsid**|**UNIQUEIDENTIFIER**|コンポーネントのクラス ID。|  
+|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれかです。<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componentname**|**sysname**|コンポーネント名。|  
+|**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar(256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin**固定サーバーロールのメンバーではありません。|  
-|**バージョン**|**nvarchar (30)**|コンポーネントのバージョン。|  
+|**version**|**nvarchar(30)**|コンポーネントのバージョン。|  
 |**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
  *Component_type*を使用するフルテキストカタログが1つ以上存在する場合にのみ、次の結果セットが返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|データベースの ID です。|  
 |**ftcatid**|**int**|フルテキストカタログの ID。|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>アクセス許可  
  **Public**ロールのメンバーシップが必要です。ただし、ユーザーは、VIEW DEFINITION 権限を持つフルテキストカタログに関する情報のみを表示できます。 **Serveradmin**固定サーバーロールのメンバーだけが、 **fullpath**列の値を参照できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この方法は、アップグレードを準備するときに特に重要です。 特定のデータベース内でストアドプロシージャを実行し、その出力を使用して、アップグレードによって特定のカタログが影響を受けるかどうかを判断します。  
   
 ## <a name="examples"></a>例  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 特定のワード ブレーカーが登録されているかどうかを確認する  
- 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例では、パラメーター名、 ** \@component_type**および** \@param**を指定します。  
+ 次の例では、トルコ語 (LCID = 1055) がシステムにインストールされ、サービス インスタンスに登録されている場合のトルコ語のワード ブレーカーを一覧表示します。 この例では、パラメーター名、 ** \@ component_type**および** \@ param**を指定します。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

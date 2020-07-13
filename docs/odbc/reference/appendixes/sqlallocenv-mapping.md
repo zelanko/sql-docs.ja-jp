@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLAllocEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocEnv
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb26e3443fabda2d6490c071b1f2668895e66b8d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68065014"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304043"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv のマッピング
 アプリケーションが ODBC *3. x*ドライバーを使用して**sqlallocenv**を呼び出すと **、sqlallocenv**(*phenv*) への呼び出しは次のように**SQLAllocHandle**にマップされます。  

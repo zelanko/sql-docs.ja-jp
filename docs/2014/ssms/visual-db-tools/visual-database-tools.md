@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cf3d7a7451f057977e9764ac4acad5e3d41856a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011727"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]には、クエリ、 [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル、ダイアグラムデータベースを構築するためのビジュアルデザイナーが含まれています。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリやテーブルを構築したり、データベース ダイアグラムを作成したりするためのビジュアル デザイナーが備わっています。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Visual Database Tools に関連したタスクを次に示します。  

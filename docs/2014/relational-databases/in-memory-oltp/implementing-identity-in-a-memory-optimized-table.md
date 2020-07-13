@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63157820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050132"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの IDENTITY の実装
   メモリ最適化テーブルでは、IDENTITY(1, 1) がサポートされています。 ただし、IDENTITY(x, y) という定義を持つ ID 列で、x != 1 または y != 1 の場合は、メモリ最適化テーブルでサポートされません。 ID 値の回避策では、シーケンスオブジェクト ([シーケンス番号](../sequence-numbers/sequence-numbers.md)) を使用します。  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - system tables [SQL Server], restore tables
 - restore system tables [SQL Server]
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750389"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>テーブルのバックアップと復元 (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このセクションのトピックでは、データベースのバックアップ操作と復元操作で使用される情報を格納するシステムテーブルについて説明します。  
   

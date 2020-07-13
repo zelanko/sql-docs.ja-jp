@@ -8,13 +8,12 @@ ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c862f61f6fb5caabfb171ca145e351d8a07c76c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: acb5e9bfc76afba146dad2e957217ccdecde890c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938213"
 ---
 # <a name="ui-designers-and-dialogs-for-tabular-analysis"></a>表形式分析用の UI デザイナーとダイアログ
 

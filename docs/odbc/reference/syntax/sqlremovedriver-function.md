@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDriver function [ODBC]
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a86d958114a0755d8aead4470936115902f9c57a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 205c5b46e5f6cea195094f7a50e81d7509927d1a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68024554"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303933"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 関数
 **互換性**  
@@ -61,13 +61,13 @@ BOOL SQLRemoveDriver(
 ## <a name="diagnostics"></a>診断  
  **Sqlremovedriver**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|コンポーネントがレジストリに見つかりません|インストーラーはレジストリに存在しないか、レジストリに見つからなかったため、ドライバー情報を削除できませんでした。|  
 |ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|コンポーネントの使用状況カウントをインクリメントまたはデクリメントできませんでした|インストーラーはドライバーの使用状況カウントを減らすことができませんでした。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した要求|*Fremovedsn*引数が TRUE でした。ただし、1つまたは複数の Dsn を削除できませんでした。 ODBC_REMOVE_DRIVER 要求で**Sqlconfigdriver**を呼び出すことができませんでした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|*Fremovedsn*引数が TRUE でした。ただし、1つまたは複数の Dsn を削除できませんでした。 ODBC_REMOVE_DRIVER 要求で**Sqlconfigdriver**を呼び出すことができませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
 ## <a name="comments"></a>説明  
@@ -93,7 +93,7 @@ BOOL SQLRemoveDriver(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバーの追加、変更、または削除|[Configdriver](../../../odbc/reference/syntax/configdriver-function.md) (セットアップ DLL 内)|  
 |ドライバーの追加、変更、または削除|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  

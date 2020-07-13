@@ -13,14 +13,14 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139040"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300212"
 ---
 # <a name="handles"></a>ハンドル
 ハンドルは、特定の項目を識別する非透過の32ビット値です。ODBC では、このアイテムは環境、接続、ステートメント、または記述子にすることができます。 アプリケーションが**SQLAllocHandle**を呼び出すと、ドライバーマネージャーまたはドライバーは、指定された種類の新しい項目を作成し、そのハンドルをアプリケーションに返します。 後で、アプリケーションは、このハンドルを使用して、ODBC 関数を呼び出すときにその項目を識別します。 ドライバーマネージャーとドライバーは、ハンドルを使用して項目に関する情報を検索します。  

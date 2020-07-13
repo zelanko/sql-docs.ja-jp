@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62524266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014345"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
   DDL トリガーを起動するイベントに関する情報は、EVENTDATA 関数を使用してキャプチャされます。 この関数は、`xml` 値を返します。 XML スキーマには、次の項目に関する情報が含まれています。  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL トリガーの `EVENTDATA()` ステートメントにより、 `CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 これを実現するには、EVENTDATA によっ`xml`て生成されるデータに対して XQuery \<ステートメントを使用し、CommandText> 要素を取得します。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
+ DDL トリガーの `EVENTDATA()` ステートメントにより、 `CREATE TABLE` ステートメントでは許可されないテキストがキャプチャされます。 これは、 `xml` EVENTDATA によって生成されたデータに対して XQuery ステートメントを使用し、要素を取得することで実現され \<CommandText> ます。 詳細については、「[XQuery 言語リファレンス &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)」を参照してください。  
   
 > [!CAUTION]  
 >  EVENTDATA は、CREATE_SCHEMA イベントのデータをキャプチャします。対応する CREATE SCHEMA 定義の <schema_element> がある場合にはそれもキャプチャします。 さらに、EVENTDATA は <schema_element> 定義を別のイベントとして認識します。 したがって、CREATE_SCHEMA イベント、および CREATE SCHEMA 定義の <schema_element> によって表されるイベントの両方で作成される DDL トリガーは、`TSQLCommand` データのように同じイベント データを 2 回返す場合があります。 たとえば、CREATE_SCHEMA イベントと CREATE_TABLE イベントの両方で DDL トリガーが作成され、次のバッチを実行するとします。  
@@ -125,8 +124,7 @@ GO
 ```  
   
 > [!NOTE]  
->  イベント データを返す場合は、`value()` メソッドの代わりに XQuery の `query()` メソッドを使用してください。 
-  `query()` メソッドでは、出力として XML の他に、アンパサンド記号でエスケープされたキャリッジ リターンとライン フィード (CRLF) の組み合わせが返されます。それに対して `value()` メソッドの出力には、CRLF の組み合わせが表示されません。  
+>  イベント データを返す場合は、`value()` メソッドの代わりに XQuery の `query()` メソッドを使用してください。 `query()` メソッドでは、出力として XML の他に、アンパサンド記号でエスケープされたキャリッジ リターンとライン フィード (CRLF) の組み合わせが返されます。それに対して `value()` メソッドの出力には、CRLF の組み合わせが表示されません。  
   
  同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabaseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** を選択します。 既定では、DDL トリガー **ddlDatabaseTriggerLog** は無効になっています。  
   

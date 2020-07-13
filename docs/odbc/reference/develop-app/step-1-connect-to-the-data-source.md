@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data sources [ODBC], connections
 - connecting to data source [ODBC], steps
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80f2dfc05d9d27f60aca414ee0abd13e13b3ea65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a104733c0e5ec5acc87eeabd00c4e51d4bfd000
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114269"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301352"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>ステップ 1: データ ソースへの接続
+# <a name="step-1-connect-to-the-data-source"></a>手順 1:データ ソースに接続する
 アプリケーションの最初の手順は、データソースに接続することです。 このフェーズ (必要な関数を含む) を次の図に示します。  
   
  ![ODBC アプリケーションのデータ ソースへの接続](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  

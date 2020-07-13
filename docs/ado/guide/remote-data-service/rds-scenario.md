@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 665afeb4be263ae0772557d2d2f30e112596f289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922448"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763583"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]

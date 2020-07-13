@@ -17,19 +17,17 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66076042"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547184"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多次元モデルのデータ ソース
   多次元モデルにインポートするデータまたは読み込むデータは、すべて外部データ ソースから取得されます。 通常、ソース データはレポート生成用に設計されたデータ ウェアハウスから取得されますが、直接的または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージなどを介して間接的にアクセスされるリレーショナル データベースから取得される場合もあります。  
   
- 
-  **の** データ ソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトでは、外部データ ソースへの直接接続を指定します。 物理的な場所だけでなく、接続文字列、データ プロバイダー、資格情報、および接続動作を制御する他のプロパティも指定します。  
+ **の** データ ソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトでは、外部データ ソースへの直接接続を指定します。 物理的な場所だけでなく、接続文字列、データ プロバイダー、資格情報、および接続動作を制御する他のプロパティも指定します。  
   
  データ ソース オブジェクトによって提供される情報は、次の操作で使用されます。  
   
@@ -53,18 +51,18 @@ ms.locfileid: "66076042"
   
 ## <a name="related-topics-and-tasks"></a>関連項目およびタスク  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)|多次元モデルで使用できるデータ ソースの種類について説明します。|  
-|[SSAS 多次元&#41;&#40;データソースを作成する](create-a-data-source-ssas-multidimensional.md)|多次元モデルにデータ ソース オブジェクトを追加する方法について説明します。|  
-|[ソリューションエクスプローラー &#40;SSAS 多次元&#41;のデータソースを削除する](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|この手順で、多次元モデルからデータ ソース オブジェクトを削除します。|  
-|[SSAS 多次元&#41;&#40;データソースプロパティを設定する](set-data-source-properties-ssas-multidimensional.md)|各プロパティとその設定方法について説明します。|  
-|[SSAS-多次元&#41;&#40;権限借用オプションを設定する](set-impersonation-options-ssas-multidimensional.md)|[権限借用情報] ダイアログ ボックスのオプションを構成する方法について説明します。|  
+|[データ ソースの作成 &#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)|多次元モデルにデータ ソース オブジェクトを追加する方法について説明します。|  
+|[ソリューション エクスプローラーでのデータ ソースの削除 &#40;SSAS 多次元&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|この手順で、多次元モデルからデータ ソース オブジェクトを削除します。|  
+|[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)|各プロパティとその設定方法について説明します。|  
+|[権限借用オプションの設定 &#40;SSAS - 多次元&#41;](set-impersonation-options-ssas-multidimensional.md)|[権限借用情報] ダイアログ ボックスのオプションを構成する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
  [データベースオブジェクト &#40;Analysis Services-多次元データ&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [論理アーキテクチャ &#40;Analysis Services-多次元データ&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
- [SSAS 多次元&#41;&#40;データソースとバインド](data-sources-and-bindings-ssas-multidimensional.md)  
+ [データ ソースとバインド &#40;SSAS 多次元&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

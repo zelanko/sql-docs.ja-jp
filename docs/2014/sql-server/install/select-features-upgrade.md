@@ -11,24 +11,21 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058926"
 ---
 # <a name="select-features-upgrade"></a>機能の選択 (アップグレード)
-  
   **インストール ウィザードの** [機能の選択] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ページを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする機能を表示できます。  
   
- このリリースでは、アップグレードする機能を変更することはできません。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスに機能を追加するには、アップグレード プロセスを完了し、セットアップを再起動して、インストール センターの **[新規インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
+ このリリースでは、アップグレードする機能を変更することはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスに機能を追加するには、アップグレード プロセスを完了し、セットアップを再起動して、インストール センターの **[新規インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [アップグレードアドバイザーを使用してアップグレードを準備する](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

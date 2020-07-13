@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125788"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -38,14 +38,14 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>戻り値  
  1つの引数だけが**true**と評価される場合に**True**を返すブール値です。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **XOR**演算子は、両方のパラメーターをブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理的な除外を実行します。 次の表は、 **XOR**演算子が論理的な除外を実行する方法を示しています。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  
-|**本来**|**本来**|**false**|  
-|**本来**|**false**|**本来**|  
-|**false**|**本来**|**本来**|  
+|**true**|**true**|**false**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
 |**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>参照  

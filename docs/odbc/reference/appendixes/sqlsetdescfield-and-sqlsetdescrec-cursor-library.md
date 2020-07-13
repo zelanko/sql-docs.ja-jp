@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b85eb84cdf48a1c2a441b8994076a9023d254f2d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68125571"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300552"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField および SQLSetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -62,6 +62,6 @@ ms.locfileid: "68125571"
   
  カーソルライブラリでは、アプリケーションの行記述子の任意の行の SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドを動的に変更できます ( **SQLExtendedFetch**、 **sqlfetch**、または**sqlfetchscroll**を呼び出した後)。 SQL_DESC_OCTET_LENGTH_PTR フィールドは、列の長さバッファーのバインドを解除するためにのみ null ポインターに変更できます。  
   
- カーソルライブラリでは、カーソルが開いているときに APD 内の SQL_DESC_BIND_TYPE フィールドを変更することはサポートされていません。 SQL_DESC_BIND_TYPE フィールドは、カーソルが閉じられてから新しいカーソルが開かれるまでの間のみ変更できます。 カーソルライブラリが開いているときに変更をサポートする記述子フィールドは、SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_ROWS_PROCESSED_ポインター.  
+ カーソルライブラリでは、カーソルが開いているときに APD 内の SQL_DESC_BIND_TYPE フィールドを変更することはサポートされていません。 SQL_DESC_BIND_TYPE フィールドは、カーソルが閉じられてから新しいカーソルが開かれるまでの間のみ変更できます。 カーソルが開いているときにカーソルライブラリが変更できる記述子フィールドは、SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_ROWS_PROCESSED_PTR だけです。  
   
  カーソルライブラリでは、 **SQLExtendedFetch**または**sqlfetchscroll**が呼び出された後、カーソルが閉じられる前に、そのフィールドの SQL_DESC_COUNT 変更がサポートされていません。

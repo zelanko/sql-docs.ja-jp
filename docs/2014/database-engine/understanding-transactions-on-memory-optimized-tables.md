@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c50ad866b9c658b54107e5f8e3da45c15dae231c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62773381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927871"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>メモリ最適化テーブルを対象にするトランザクションについて
   トランザクションでは、複数のバージョンから成るオプティミスティック コンカレンシーを使用して、メモリ最適化テーブルにアクセスします。 これは、データに異なるバージョンがあることを意味します。 各トランザクションでは、他の同時実行トランザクションから独立して、トランザクション上の一貫性のある固有のバージョンのデータベースを処理します。 また、トランザクションは、他の同時実行トランザクションとの競合がないというオプティミスティックな仮定の下で行われます。 これにより、ロックを使用する必要はなくなりますが、システムで競合を検出して競合状態のトランザクションの一方を終了する必要があります。 競合は書き込み - 書き込みトランザクションおよび読み取り - 書き込みトランザクションのみで発生する可能性があります。 書き込み - 書き込みが競合する場合、1 つの書き込みトランザクションが終了します。  

@@ -9,26 +9,25 @@ ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2502b65b1b13f8ed819c138fdfe429390a905a56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939760"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
   このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
   
- この記事の内容は次のとおりです。  
+ この記事は、次のセクションで構成されています。  
   
--   [テーブルモデルで使用されるデータ型](#bkmk_data_types)  
+-   [テーブル モデルで使用されるデータ型](#bkmk_data_types)  
   
 -   [DAX 数式での暗黙的および明示的なデータ型の変換](#bkmk_implicit)  
   
 -   [空白、空の文字列、およびゼロ値の処理](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a>テーブルモデルで使用されるデータ型  
+##  <a name="data-types-used-in-tabular-models"></a><a name="bkmk_data_types"></a>テーブルモデルで使用されるデータ型  
  以下のデータ型がサポートされています。 データをインポートする場合や数式で値を使用する場合は、元のデータ ソースに別のデータ型が含まれていても、そのデータは次のデータ型のいずれかに変換されます。 数式で得られる結果の値にも、これらのデータ型が使用されます。  
   
  通常、これらのデータ型は、計算列で正確な計算を実行するために実装されます。一貫性を確保するために、同じ制限がモデルのその他のデータにも適用されます。  
@@ -37,26 +36,26 @@ ms.locfileid: "67284935"
   
 ||||  
 |-|-|-|  
-|モデルでのデータ型|DAX のデータ型|[説明]|  
+|モデルでのデータ型|DAX のデータ型|説明|  
 |整数|64 ビット (8 バイト) の整数値 <sup>1、2</sup>|小数点以下を含まない数値。 整数は正の数値または負の数値のどちらも有効ですが、-9,223,372,036,854,775,808 (-2^63) ～ 9,223,372,036,854,775,807 (2^63-1) の範囲の整数でなければなりません。|  
 |10 進数|64 ビット (8 バイト) の実数 <sup>1、2</sup>|小数点以下を含む数値。 実数では次のような幅広い値が有効です。<br /><br /> 負の値 (-1.79E +308 ～ -2.23E -308 の範囲)<br /><br /> ゼロ<br /><br /> 正の値 (2.23E -308 ～ 1.79E + 308 の範囲)<br /><br /> ただし、有効桁数は小数点以下が 17 桁に制限されます。|  
 |Boolean|Boolean|True または False の値。|  
-|Text|String|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
-|Date|Date/time|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
-|Currency|Currency|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
-|該当なし|空白|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
+|テキスト|String|Unicode 文字データ文字列。 文字列、数字、またはテキスト形式で表現される日付を使用できます。|  
+|Date|日付/時刻|許容された日付時刻表現による日付および時刻。<br /><br /> 1900 年 3 月 1 日より後のすべての日付が有効です。|  
+|通貨|通貨|通貨データ型では、-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 の範囲の値 (小数点以下が 4 桁で有効桁数が固定長) が有効です。|  
+|該当なし|新規|空白は、DAX では SQL の NULL に相当するデータ型です。 空白を作成するには BLANK 関数を使用し、空白かどうかをテストするには論理関数の ISBLANK を使用します。|  
   
  <sup>1</sup> DAX 数式では、表に記載されているデータ型よりも小さいデータ型はサポートされていません。  
   
  <sup>2</sup>非常に大きな数値を含むデータをインポートしようとすると、次のエラーが発生してインポートが失敗する可能性があります。  
   
- メモリ内データベースエラー: '\<\<テーブル名> ' テーブルの ' 列名> ' 列には、サポートされていない値 ' 1.7976931348623157 e + 308 ' が含まれています。 操作は取り消されました。  
+ インメモリデータベースエラー: ' ' テーブルの ' ' 列には、サポートされて \<column name> \<table name> いない値 ' 1.7976931348623157 e + 308 ' が含まれています。 操作は取り消されました。  
   
  このエラーは、モデル デザイナーがこの値を使用して NULL を表すために発生します。 次の一覧の値は、上で説明した NULL 値のシノニムです。  
   
 ||  
 |-|  
-|Value|  
+|値|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -68,53 +67,53 @@ ms.locfileid: "67284935"
 >  131,072 文字を超える文字列を含む **varchar(max)** 列からインポートすることはできません。  
   
 ### <a name="table-data-type"></a>table データ型  
- また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」を参照してください。  
+ また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を必要とします。また、関数からテーブルが返され、そのテーブルを他の関数への入力として使用できる場合もあります。 入力としてテーブルを必要とするいくつかの関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を必要とする関数もあります。 特定の関数の要件については、「[DAX 関数リファレンス](/dax/dax-function-reference)」をご覧ください。  
   
-##  <a name="bkmk_implicit"></a>DAX 数式での暗黙的および明示的なデータ型の変換  
- 各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
+##  <a name="implicit-and-explicit-data-type-conversion-in-dax-formulas"></a><a name="bkmk_implicit"></a>DAX 数式での暗黙的および明示的なデータ型の変換  
+ 各 DAX 関数には、入力と出力として使用するデータの型について特定の要件があります。 たとえば、引数としていつかの整数といくつかの日付を必要とする関数があります。テキストやテーブルを必要とする関数もあります。  
   
- 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 次に例を示します。  
+ 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、可能な場合には、必要なデータ型への変換が DAX によって暗黙的に行われます。 例:  
   
 -   たとえば、"123" などの数値を文字列として入力できます。 DAX はこの文字列を解析し、数値データ型として指定しようとします。  
   
--   TRUE + 1 では 2 が返されます。これは、TRUE が数値の 1 に暗黙的に変換され、1 + 1 という演算が実行されるためです。  
+-   TRUE に 1 を加算することができます。その結果は 2 です。TRUE は暗黙的に数値 1 に変換され、1+1 という演算が行われます。  
   
--   2 つの列内の値を加算する場合に、1 つの値がテキスト ("12") で表現され、他の値が数値 (12) で表現されているとき、DAX では文字列を数値に暗黙的に変換してから加算が実行され、数値の結果が得られます。 次の式では、44: = "22" + 22 が返されます。  
+-   2 つの列に含まれる値を加算する場合に、1 つの値がテキスト ("12")、もう 1 つの値が数値 (12) として表現されている場合、DAX によって文字列が数値に暗黙的に変換され、数値の結果に対して加算が行われます。 次の式では、44: = "22" + 22 が返されます。  
   
 -   2 つの数値を連結する場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アドインにより数値が文字列として表現されてから、連結されます。 次の式では、"1234": = 12 & 34 が返されます。  
   
  次の表に、数式で実行される暗黙的なデータ型変換をまとめました。 通常、セマンティック モデル デザイナーの動作は Microsoft Excel と似ていますが、指定された演算に必要な場合は可能な限り暗黙的な変換を実行します。  
   
 ### <a name="table-of-implicit-data-conversions"></a>暗黙的なデータ型変換の表  
- 実行される変換のタイプは演算子によって決定され、要求された演算を実行する前に必要な値がキャストされます。 これらの表には演算子とデータ型が記載されていますが、列と行が交差するセルには、各データ型を組み合わせた場合に実行される変換が示されています。  
+ 実行される変換の種類は、演算子によって決まります。要求された演算を実行する前に、演算子に必要な値へのキャストが行われます。 以下の表に、演算子の一覧と、各列のデータ型を交差する行のデータ型と組み合わせた場合に実行される変換を示します。  
   
 > [!NOTE]  
->  テキスト データ型はこれらの表には含まれていません。 数値がテキスト形式で表現されている場合、モデル デザイナーが数値型を決定して数値として表現しようとすることがあります。  
+>  テキスト データ型は、これらの表に含まれていません。 数値がテキスト形式で表現されている場合、モデル デザイナーが数値型を決定して数値として表現しようとすることがあります。  
   
 #### <a name="addition-"></a>加算 (+)  
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (+)|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|INTEGER|Currency|REAL|Date/time|  
-|Currency|Currency|Currency|REAL|Date/time|  
-|REAL|REAL|REAL|REAL|Date/time|  
-|Date/time|Date/time|Date/time|Date/time|Date/time|  
+|演算子 (+)|INTEGER|通貨|実数|日付/時刻|  
+|整数|整数|通貨|実数|日付/時刻|  
+|CURRENCY|CURRENCY|通貨|real|日付/時刻|  
+|real|real|real|real|日付/時刻|  
+|日付/時刻|日付/時刻|日付/時刻|日付/時刻|日付/時刻|  
   
- たとえば、加算演算で実数を通貨データと組み合わせて使用する場合、両方の値が実数に変換され、結果が実数として返されます。  
+ たとえば、通貨値と組み合わせる加算演算で実数を使用した場合であれば、両方の値が実数に変換され、結果は実数として返されます。  
   
 #### <a name="subtraction--"></a>減算 (-)  
  次の表では、行ヘッダーが被減数 (左側) で、列ヘッダーが減数 (右側) です。  
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (-)|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|INTEGER|Currency|REAL|REAL|  
-|Currency|Currency|Currency|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|Date/time|Date/time|Date/time|Date/time|Date/time|  
+|演算子 (-)|INTEGER|通貨|real|日付/時刻|  
+|INTEGER|INTEGER|通貨|real|real|  
+|CURRENCY|通貨|通貨|real|real|  
+|real|real|real|real|real|  
+|日付/時刻|日付/時刻|日付/時刻|日付/時刻|日付/時刻|  
   
- たとえば、減算演算で日付を他のデータ型と共に使用する場合、両方の値が日付に変換され、戻り値も日付になります。  
+ たとえば、日付と他のデータ型で減算を行う場合、両方の値が日付に変換され、返される値も日付です。  
   
 > [!NOTE]  
 >  テーブル モデルでは、単項演算子の - (負号) もサポートされますが、この演算子はオペランドのデータ型を変更しません。  
@@ -123,54 +122,51 @@ ms.locfileid: "67284935"
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (*)|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|INTEGER|Currency|REAL|INTEGER|  
-|Currency|Currency|REAL|Currency|Currency|  
-|REAL|REAL|Currency|REAL|REAL|  
+|演算子 (*)|INTEGER|通貨|real|日付/時刻|  
+|INTEGER|INTEGER|通貨|real|整数|  
+|CURRENCY|通貨|real|CURRENCY|通貨|  
+|real|real|通貨|real|real|  
   
- たとえば、乗算演算で整数を実数と組み合わせて使用する場合、両方の数値が実数に変換され、戻り値も実数になります。  
+ たとえば、乗算演算で整数を実数と組み合わせると、両方の数値が実数に変換され、返される値も実数です。  
   
 #### <a name="division-"></a>除算 (/)  
  次の表では、行ヘッダーが分子で、列ヘッダーが分母です。  
   
 ||||||  
 |-|-|-|-|-|  
-|演算子 (/)<br /><br /> 行/列|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|REAL|Currency|REAL|REAL|  
-|Currency|Currency|REAL|Currency|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|Date/time|REAL|REAL|REAL|REAL|  
+|演算子 (/)<br /><br /> 行/列|INTEGER|通貨|real|日付/時刻|  
+|整数|実数|通貨|real|real|  
+|CURRENCY|通貨|real|通貨|real|  
+|real|real|real|real|real|  
+|日付/時刻|real|real|real|実数|  
   
- たとえば、除算演算で整数を通貨値と組み合わせて使用する場合、両方の値が実数に変換され、結果も実数になります。  
+ たとえば、除算演算で整数を通貨値と組み合わせると、両方の値が実数に変換され、結果も実数になります。  
   
 #### <a name="comparison-operators"></a>比較演算子  
- 比較式では、ブール値は文字列値よりも大きいと見なされ、文字列値は数値または日付/時刻値よりも大きいと見なされます。また、数値と日付/時刻値は同じランクであると見なされます。 ブール値または文字列値については、暗黙的な変換は実行されません。BLANK、つまり空白値は、他方の比較値のデータ型に応じて 0/""/false に変換されます。  
+ 比較式では、ブール値は文字列値よりも大きいと見なされ、文字列値は数値または日付/時刻値よりも大きいと見なされます。また、数値と日付/時刻値は同じランクであると見なされます。 ブール値または文字列値については暗黙的な変換は実行されません。BLANK または空白値は、他方の比較値のデータ型に応じて 0 /""/false に変換されます。  
   
- 次の DAX 式はこの動作を示しています。  
+ 次の DAX 式に、この動作の例を示します。  
   
- 
-  `=IF(FALSE()>"true","Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
   
- 
-  `=IF("12">12,"Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
+ `=IF("12">12,"Expression is true", "Expression is false")` では `"Expression is true"` が返されます。  
   
- 
-  `=IF("12"=12,"Expression is true", "Expression is false")` では `"Expression is false"` が返されます。  
+ `=IF("12"=12,"Expression is true", "Expression is false")` では `"Expression is false"` が返されます。  
   
- 次の表に示すように、数値型または日付/時刻型については、変換は暗黙的に実行されます。  
+ 数値型または日付/時刻型については、次の表に示すように暗黙的に変換されます。  
   
 ||||||  
 |-|-|-|-|-|  
-|比較演算子|INTEGER|Currency|REAL|Date/time|  
-|INTEGER|INTEGER|Currency|REAL|REAL|  
-|Currency|Currency|Currency|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|Date/time|REAL|REAL|REAL|Date/time|  
+|比較演算子|整数|通貨|real|日付/時刻|  
+|整数|INTEGER|通貨|real|実数|  
+|CURRENCY|通貨|通貨|real|実数|  
+|実数|実数|実数|実数|実数|  
+|日付/時刻|real|実数|実数|日付/時刻|  
   
-##  <a name="bkmk_hand_blanks"></a>空白、空の文字列、およびゼロ値の処理  
+##  <a name="handling-of-blanks-empty-strings-and-zero-values"></a><a name="bkmk_hand_blanks"></a>空白、空の文字列、およびゼロ値の処理  
  DAX でゼロ値、NULL 値、および空の文字列が処理される方法は、Microsoft Excel および SQL Server とは異なります。 このセクションではその違いについて説明し、これらのデータ型を処理する方法を示します。  
   
- 重要な点は、空白値、空のセル、または不足値がすべて同じ新しい値型の BLANK で表されることです。 加算や連結などの演算で空白が処理される方法は、関数ごとに異なります。 空白は BLANK 関数を使用して作成することもでき、空白かどうかをテストするには ISBLANK 関数を使用します。 セマンティック モデルではデータベースの NULL 値はサポートされていません。DAX の数式で NULL 値を含む列が参照されている場合、NULL 値は暗黙的に空白に変換されます。  
+ 重要な点は、空白値、空のセル、または不足値がすべて同じ新しい値型の BLANK で表されることです。 加算や連結などの演算で空白が処理される方法は、関数ごとに異なります。 BLANK 関数を使用すると、空白を生成することもできます。空白かどうかをテストするには、ISBLANK 関数を使用します。 セマンティック モデルではデータベースの NULL 値はサポートされていません。DAX の数式で NULL 値を含む列が参照されている場合、NULL 値は暗黙的に空白に変換されます。  
   
 ### <a name="defining-blanks-nulls-and-empty-strings"></a>空白、NULL 値、および空の文字列を定義する  
  次の表は、DAX と Microsoft Excel における空白の処理方法の違いを示しています。  
@@ -178,23 +174,23 @@ ms.locfileid: "67284935"
 ||||  
 |-|-|-|  
 |式|DAX|Excel|  
-|BLANK + BLANK|空白|0 (ゼロ)|  
+|BLANK + BLANK|BLANK|0 (ゼロ)|  
 |BLANK + 5|5|5|  
-|BLANK * 5|空白|0 (ゼロ)|  
-|5/BLANK|Infinity|エラー|  
-|0 / BLANK|(NaN)|エラー|  
-|BLANK / BLANK|空白|エラー|  
-|FALSE OR BLANK|FALSE|FALSE|  
-|FALSE AND BLANK|FALSE|FALSE|  
-|TRUE OR BLANK|TRUE|TRUE|  
+|BLANK * 5|BLANK|0 (ゼロ)|  
+|5/BLANK|無限大|エラー|  
+|0/BLANK|NaN|エラー|  
+|BLANK/BLANK|BLANK|Error|  
+|FALSE OR BLANK|false|false|  
+|FALSE AND BLANK|false|false|  
+|TRUE OR BLANK|true|true|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|空白|エラー|  
-|BLANK AND BLANK|空白|エラー|  
+|BLANK OR BLANK|BLANK|Error|  
+|BLANK AND BLANK|BLANK|Error|  
   
  特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」セクションの各 DAX 関数のトピックを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SSAS 表形式のデータソース &#40;&#41;](../data-sources-ssas-tabular.md)   
- [SSAS 表形式&#41;&#40;データをインポートする](../import-data-ssas-tabular.md)  
+ [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   
   

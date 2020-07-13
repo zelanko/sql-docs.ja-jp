@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a697cff22257c49774c91dc0b5c646034e34fba1
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68140644"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053418"
 ---
 # <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup。 fn_is_master_switch_on (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   SQL Server のインスタンスにおける [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]操作の状態を返します。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "68140644"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  なし  
   
 ## <a name="return-type"></a>戻り値の型  

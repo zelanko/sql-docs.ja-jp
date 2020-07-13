@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967285"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764073"
 ---
 # <a name="append-method-adox-procedures"></a>Append メソッド (ADOX Procedures)
 [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクションに新しい[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを追加します。  
@@ -37,10 +37,10 @@ Procedures.Append Name, Command
  *名前*  
  作成および追加するプロシージャの名前を示す**文字列**値です。  
   
- *command*  
+ *コマンド*  
  作成および追加するプロシージャを表す ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **コマンド**オブジェクトで指定された名前と属性を使用して、データソースに新しいプロシージャを作成します。  
   
  ユーザーが指定したコマンドテキストがプロシージャではなくビューを表している場合、その動作は使用されているプロバイダーによって異なります。 プロバイダーがコマンドの永続化をサポートしていない場合、 **Append**は失敗します。  

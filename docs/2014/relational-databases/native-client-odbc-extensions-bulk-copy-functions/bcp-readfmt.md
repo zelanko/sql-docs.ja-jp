@@ -15,15 +15,14 @@ topic_type:
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55800012b84cf33908d9feddfdac63d85536e97d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62688671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019400"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
@@ -52,14 +51,14 @@ szFormatFile
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
- は`bcp_readfmt` 、書式設定値を読み取った後、 [bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)に対する適切な呼び出しを行います。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
+## <a name="remarks"></a>Remarks  
+ は、 `bcp_readfmt` 書式設定値を読み取った後、 [bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)に対する適切な呼び出しを行います。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマットファイルを永続化するには、 [bcp_writefmt](bcp-writefmt.md)を呼び出します。 の呼び出し`bcp_readfmt`では、保存された形式を参照できます。 詳細については、「 [bcp_init](bcp-init.md)」を参照してください。  
+ フォーマットファイルを永続化するには、 [bcp_writefmt](bcp-writefmt.md)を呼び出します。 の呼び出しで `bcp_readfmt` は、保存された形式を参照できます。 詳細については、「 [bcp_init](bcp-init.md)」を参照してください。  
   
- また、一括コピーユーティリティ (**bcp**) では、で`bcp_readfmt`参照できるファイルにユーザー定義データ形式を保存することもできます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](../import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
+ また、一括コピーユーティリティ (**bcp**) では、で参照できるファイルにユーザー定義データ形式を保存することもでき `bcp_readfmt` ます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](../import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
   
- Bcp_control `BCPDELAYREADFMT`の*eOption*パラメーターの値に[](bcp-control.md)よって、bcp_readfmt の動作が変更されます。  
+ `BCPDELAYREADFMT` [Bcp_control](bcp-control.md)の*eOption*パラメーターの値によって、bcp_readfmt の動作が変更されます。  
   
 > [!NOTE]  
 >  フォーマットファイルは、 **bcp**ユーティリティのバージョン4.2 以降で作成されている必要があります。  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001395"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303373"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>データ ソースまたはドライバーの選択
 アプリケーションで使用されるデータソースまたはドライバーは、アプリケーションでハードコーディングされることがあります。 たとえば、MIS 部門によって作成されたカスタムアプリケーションは、データソース間でデータを転送するために、これらのデータソースの名前を格納します。アプリケーションは、他のデータソースでは機能しません。 もう1つの例としては、注文の入力に使用されるアプリケーションなど、垂直方向のアプリケーションがあります。 このようなアプリケーションでは、常に同じデータソースを使用します。このデータソースには、アプリケーションによって認識される定義済みのスキーマがあります。  

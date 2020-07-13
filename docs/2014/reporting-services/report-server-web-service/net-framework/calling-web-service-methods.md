@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 87f1485b4e3c0ed064e42bb3b411fece96eba8d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261985"
 ---
 # <a name="calling-web-service-methods"></a>Web サービス メソッドの呼び出し
-  プロキシクラスを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]して Web サービス操作を呼び出す場合は、そのクラスのメソッドを使用します。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] これらのメソッドは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラス ライブラリにあるクラスの他のメソッドと同じように応答します。 すべての Web サービス メソッドにはパブリック アクセスがあり、適切な数の引数および引数の型を指定する必要があります。 プロジェクトにプロキシ クラスのインスタンスを作成した後は、メソッドを呼び出し、レポート サーバー経由でレポートの操作を実行できます。 次の C# コードは、<xref:ReportService2010.ReportingService2010.ListChildren%2A> プロキシ クラスの <xref:ReportService2010.ReportingService2010> メソッドの使用方法を表しています。 このコードは、Web サービスの再帰呼び出しに使用します。Web サービスでは、レポート サーバー データベースのすべてのアイテムの一覧が入った <xref:ReportService2010.CatalogItem> オブジェクトの配列を返します。  
+  プロキシクラスを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]して Web サービス操作を呼び出す場合は、そのクラスのメソッドを使用します。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] これらのメソッドは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラス ライブラリにあるクラスの他のメソッドと同じように応答します。 すべての Web サービス メソッドにはパブリック アクセスがあり、適切な数の引数および引数の型を指定する必要があります。 プロジェクトにプロキシ クラスのインスタンスを作成した後は、メソッドを呼び出し、レポート サーバー経由でレポートの操作を実行できます。 次の C# コードは、<xref:ReportService2010.ReportingService2010> プロキシ クラスの <xref:ReportService2010.ReportingService2010.ListChildren%2A> メソッドの使用方法を表しています。 このコードは、Web サービスの再帰呼び出しに使用します。Web サービスでは、レポート サーバー データベースのすべてのアイテムの一覧が入った <xref:ReportService2010.CatalogItem> オブジェクトの配列を返します。  
   
 ```vb  
 Dim rs As New ReportingService2010()  

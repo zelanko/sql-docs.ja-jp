@@ -13,10 +13,10 @@ ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075423"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソール入門 (MySQLToSQL)
@@ -55,7 +55,7 @@ SSMA スクリプトコマンドとオプションを実行すると、コンソ
   
 次の表に示すコンソール出力の色の解釈:  
   
-|Color|[説明]|  
+|Color|説明|  
 |---------|---------------|  
 |[赤]|実行中に致命的なエラーが発生した|  
 |グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  

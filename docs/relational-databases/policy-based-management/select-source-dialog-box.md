@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760466"
 ---
 # <a name="select-source-dialog-box"></a>[ソースの選択] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、実行するポリシーのソースを選択できます。 ポリシーを含む 1 つ以上の XML ファイルを選択するには、 **[ファイル]** を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上にあるポリシーを実行するには、 **[サーバー]** を選択します。  
   
  このダイアログ ボックスは、複数の方法で開くことができます。  

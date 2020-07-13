@@ -116,7 +116,7 @@ DBCC SHRINKDATABASE では、データ ファイルはファイルごとに圧�
   
 いくつかのログ ファイルと 1 つのデータ ファイルがあり、**mydb** というデータベースがあるとします。 各データ ファイルとログ ファイルのサイズは 10 MB で、データ ファイルに 6 MB のデータが含まれているとします。 それぞれのファイルについて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって目標サイズが計算されます。 この値はファイルの圧縮後のサイズです。 DBCC SHRINKDATABASE を _target\_percent_ と共に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、圧縮後にファイル内の空き領域が _target\_percent_ の量になるように目標サイズが計算されます。 
 
-たとえば、_mydb\_ を圧縮する場合に_ target**percent** を 25 に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではデータ ファイルの目標サイズが 8 MB (6 MB のデータに 2 MB の空き領域を加えたもの) と計算されます。 したがって、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、データ ファイルの末尾 2 MB にあるすべてのデータがデータ ファイルの先頭 8 MB にある空き領域に移動されてから、ファイルが圧縮されます。
+たとえば、**mydb** を圧縮する場合に _target\_percent_ を 25 に指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではデータ ファイルの目標サイズが 8 MB (6 MB のデータに 2 MB の空き領域を加えたもの) と計算されます。 したがって、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、データ ファイルの末尾 2 MB にあるすべてのデータがデータ ファイルの先頭 8 MB にある空き領域に移動されてから、ファイルが圧縮されます。
   
 次に、**mydb** のデータ ファイルに 7 MB のデータが含まれているとします。 _target\_percent_ を 30 に指定した場合、このデータ ファイルは空き領域のパーセンテージが 30 になるように圧縮されます。 ただし、_target\_percent_ を 40 に指定した場合、データ ファイルは圧縮されません。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、圧縮後のファイル サイズが現在のデータ占有領域よりも小さくなる場合、ファイルは圧縮されません。 
 
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-このエラーは、109 より前のタイムスタンプが存在するスナップショット トランザクションによって、圧縮操作がブロックされることを意味します。 そのトランザクションは、圧縮操作によって完了した最後のトランザクションです。 また、**sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 動的管理ビューの **transaction_sequence_num** 列または [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 列に、値 15 が含まれることも示しています。 そのビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、圧縮操作により完了した最後のトランザクション (109) より低い番号が含まれている場合があります。 その場合は、それらのトランザクションが終了するまで圧縮操作は待機状態となります。
+このエラーは、109 より前のタイムスタンプが存在するスナップショット トランザクションによって、圧縮操作がブロックされることを意味します。 そのトランザクションは、圧縮操作によって完了した最後のトランザクションです。 また、[sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 動的管理ビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、値 15 が含まれることも示しています。 そのビューの **transaction_sequence_num** 列または **first_snapshot_sequence_num** 列に、圧縮操作により完了した最後のトランザクション (109) より低い番号が含まれている場合があります。 その場合は、それらのトランザクションが終了するまで圧縮操作は待機状態となります。
   
 この問題を解決するために、次のいずれかの作業を実行できます。
 -   圧縮操作をブロックしているトランザクションを終了します。  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049191"
 ---
 # <a name="drillupmember-mdx"></a>ドリルスルーメンバー (MDX)
@@ -34,7 +34,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **ドリルダウンメンバー**関数は、最初のセットで指定されたメンバーに基づいて、2番目のセットのメンバーの子孫であるメンバーのセットを返します。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 順序は、最初のセットの元のメンバーの間で保持されます。 関数は、2番目のセット内のメンバーの直接の子孫である最初のセット内のメンバーのみを含めることによって、セットを構築します。 最初のセット内のメンバーの直接の先祖が2番目のセットに存在しない場合は、この関数によって返されるセットに1番目のセットのメンバーが含まれます。 2番目のセット内の先祖メンバーの前にある最初のセットの子孫も含まれます。  
   
  1番目のセットには、メンバーではなく組を含めることができます。 組のドリルダウンは OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
@@ -94,6 +94,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

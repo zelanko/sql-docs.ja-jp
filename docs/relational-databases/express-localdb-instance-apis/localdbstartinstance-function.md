@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765224"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   指定した名前の SQL Server Express LocalDB インスタンスを起動します。  
   
  **ヘッダーファイル:** sqlncli  
@@ -107,16 +107,16 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>詳細  
  接続バッファー引数 (*wszSqlConnection*) と接続バッファーサイズ引数 (*lpcchSqlConnection*) はどちらも省略可能です。 次の表は、これらの引数を使用するためのオプションとその結果を示しています。  
   
-|Buffer|バッファーサイズ|理論的根拠|アクション|  
+|バッファー|バッファーサイズ|理由|アクション|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|ユーザーはインスタンスを起動しようとしますが、パイプ名は必要ありません。|インスタンスを起動します (パイプの戻り値と必要なバッファー サイズの戻り値なし)。|  
-|NULL|台数|ユーザーが出力バッファー サイズを要求します  (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
-|台数|NULL|許可されていません。入力に誤りがあります。|返される結果は、LOCALDB_ERROR_INVALID_PARAMETER です。|  
-|台数|台数|ユーザーはインスタンスを起動する必要があり、起動後に接続するパイプ名が必要です。|バッファー サイズを確認し、インスタンスを起動し、バッファーにあるパイプ名を返します。 <br />バッファーサイズ引数は、"server =" 文字列の長さを返します。終端の null は含まれません。|  
+|NULL|存在|ユーザーが出力バッファー サイズを要求します  (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
+|存在|NULL|許可されていません。入力に誤りがあります。|返される結果は、LOCALDB_ERROR_INVALID_PARAMETER です。|  
+|存在|存在|ユーザーはインスタンスを起動する必要があり、起動後に接続するパイプ名が必要です。|バッファー サイズを確認し、インスタンスを起動し、バッファーにあるパイプ名を返します。 <br />バッファーサイズ引数は、"server =" 文字列の長さを返します。終端の null は含まれません。|  
   
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

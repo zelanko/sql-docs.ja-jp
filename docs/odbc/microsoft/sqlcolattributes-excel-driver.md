@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], Excel Driver
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cd3076ba19b9f5372074a9256e20d73858f69c09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 218c442af6292b665764ed60dc5586710d820de6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132671"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307943"
 ---
 # <a name="sqlcolattributes-excel-driver"></a>SQLColAttributes (Excel ドライバー)
 > [!NOTE]  
 >  このトピックでは、Excel ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|LONGVARBINARY データの場合、SQL_COLUMN_DISPLAY_SIZE は列の最大長であり、列の最大長では2ではありません。|  
 |SQL_OWNER_NAME|この列には、所有者名がサポートされていないため、空の文字列 ("") が返されます。|  

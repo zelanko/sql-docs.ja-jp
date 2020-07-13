@@ -12,14 +12,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 117f43548d2b57233dea6f7423e6bad67b6233b0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076891"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304353"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS ベースのドライバー診断の例
 DBMS ベースのドライバーは、DBMS に要求を送信し、ドライバーマネージャーを使用してアプリケーションに情報を返します。 ドライバーはドライバーマネージャーとのインターフェイスを持つコンポーネントであるため、 **SQLGetDiagRec**の引数を書式設定して返します。  

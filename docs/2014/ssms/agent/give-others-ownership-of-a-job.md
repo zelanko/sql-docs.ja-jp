@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2cf03fdc9031ce9761125d95619438837f2959bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067776"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  このトピックでは、エージェントジョブの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有権を別のユーザーに再割り当てする方法について説明します。  
+  このトピックでは、エージェントジョブの所有権を [!INCLUDE[msCoName](../../includes/msconame-md.md)] 別のユーザーに再割り当てする方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
   
--   **ジョブの所有権を他のユーザーに与えるために使用するもの:**  
+-   **ジョブの所有権を他のユーザーに割り当てる方法:**  
   
      [SQL Server Management Studio](#SSMSProc2)  
   
@@ -34,41 +33,37 @@ ms.locfileid: "72798233"
   
      [SQL Server 管理オブジェクト](#SMOProc2)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
- ジョブを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールか **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ジョブの編集は、ジョブの所有者または **sysadmin** ロールのメンバーのみが行うことができます。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールの詳細については、「 [SQL Server エージェントの固定データベース ロール](sql-server-agent-fixed-database-roles.md)」を参照してください。  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
+ ジョブを作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールか **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ジョブの編集は、ジョブの所有者または **sysadmin** ロールのメンバーのみが行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールの詳細については、「 [SQL Server エージェントの固定データベース ロール](sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
  ジョブの所有者を変更するには、システム管理者でなければなりません。  
   
  別のログインにジョブを割り当てた場合に、新しい所有者がそのジョブを正常に実行できる十分な権限を持っていないこともあります。  
   
-###  <a name="Security"></a> セキュリティ  
- セキュリティを確保するため、ジョブの所有者または **sysadmin** ロールのメンバーだけがジョブの定義を変更できます。 
-  **sysadmin** 固定サーバー ロールのメンバーのみが別のユーザーにジョブの所有権を割り当てることができ、ジョブの所有者とは無関係にジョブを実行できます。  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
+ セキュリティを確保するため、ジョブの所有者または **sysadmin** ロールのメンバーだけがジョブの定義を変更できます。 **sysadmin** 固定サーバー ロールのメンバーのみが別のユーザーにジョブの所有権を割り当てることができ、ジョブの所有者とは無関係にジョブを実行できます。  
   
 > [!NOTE]  
 >  ジョブの所有権を **sysadmin** 固定サーバー ロールのメンバーでないユーザーに変更し、そのジョブがプロキシ アカウントを必要とするジョブ ステップを実行する ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行など) 場合は、ユーザーがそのプロキシ アカウントにアクセスできることを確認してください。アクセスできない場合、ジョブは失敗します。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMSProc2"></a> SQL Server Management Studio の使用  
- **ジョブの所有権を他のユーザーに付与するには**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProc2"></a> SQL Server Management Studio の使用  
+ **ジョブの所有権を他のユーザーに割り当てるには**  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  
-  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、ジョブを右クリックして **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、ジョブを右クリックして **[プロパティ]** をクリックします。  
   
-3.  
-  **[所有者]** ボックスの一覧で、ログインを選択します。 ジョブの所有者を変更するには、システム管理者でなければなりません。  
+3.  **[所有者]** ボックスの一覧で、ログインを選択します。 ジョブの所有者を変更するには、システム管理者でなければなりません。  
   
      別のログインにジョブを割り当てた場合に、新しい所有者がそのジョブを正常に実行できる十分な権限を持っていないこともあります。  
   
-##  <a name="TsqlProc2"></a> Transact-SQL の使用  
- **ジョブの所有権を他のユーザーに付与するには**  
+##  <a name="using-transact-sql"></a><a name="TsqlProc2"></a> Transact-SQL の使用  
+ **ジョブの所有権を他のユーザーに割り当てるには**  
   
 1.  オブジェクト エクスプローラーで、データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -87,7 +82,7 @@ ms.locfileid: "72798233"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a>SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMOProc2"></a>SQL Server 管理オブジェクトの使用  
 
 ### <a name="to-give-others-ownership-of-a-job"></a>ジョブの所有権を他のユーザーに割り当てるには
   

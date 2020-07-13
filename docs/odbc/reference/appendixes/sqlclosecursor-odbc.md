@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLCloseCursor function [ODBC], ODBC
 ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4d0f88d2d9eaba7d95ba887ffbe11e728320b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e1b61267d093e11bf7ea25158f5dc6a29ccba6a1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68123378"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296302"
 ---
 # <a name="sqlclosecursor_odbc"></a>SQLCloseCursor_ODBC
 > [!IMPORTANT]  

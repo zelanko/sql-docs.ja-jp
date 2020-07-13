@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFetch function [ODBC]
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c5d2d14786080f665e488acf2bfa888f09a5df4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc7e2da6996d8d6b2ee66befdc90794efec5617b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68345199"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285972"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **互換性**  
@@ -52,9 +52,9 @@ SQLRETURN SQLFetch(
 ## <a name="diagnostics"></a>診断  
  **Sqlfetch**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT*と StatementHandle*の*ハンドル*を指定して[SQLGetDiagRec 関数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)を呼び出します。 次の表に、 **Sqlfetch**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。 1つの列でエラーが発生した場合は、エラーが発生した列を特定するために、SQL_DIAG_COLUMN_NUMBER の*DiagIdentifier*を使用して[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)を呼び出すことができます。および**SQLGetDiagField**は、その列を含む行を決定するために、SQL_DIAG_ROW_NUMBER の*DiagIdentifier*を使用して呼び出すことができます。  
   
- SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、エラーが発生した場合は SQL_ERROR が返されます。単一行演算。  
+ SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、単一行操作でエラーが発生した場合は SQL_ERROR が返されます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|列に対して返された文字列またはバイナリデータにより、空白以外の文字または NULL 以外のバイナリデータが切り捨てられました。 文字列値の場合は、右側が切り捨てられました。|  
@@ -79,7 +79,7 @@ SQLRETURN SQLFetch(
 |HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlfetch**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 指定された*StatementHandle*は実行状態ではありませんでした。 最初に**SQLExecDirect**、 **sqlexecute** 、または catalog 関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) **SQLExtendedFetch**が呼び出された後、SQL_CLOSE**オプションが呼び出された前に**、 *StatementHandle*に対して**sqlfetch**が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
 |HY090|文字列またはバッファーの長さが無効です|SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_VARIABLE に設定されました。列0は、長さがこの結果セットのブックマークの最大長と等しくないバッファーにバインドされています。 (この長さは IRD の [SQL_DESC_OCTET_LENGTH] フィールドで使用でき、 **SQLDescribeCol**、 **sqlcolattribute**、または**SQLGetDescField**を呼び出すことによって取得できます)。|  
-|HY107|行の値が有効範囲にありません|SQL_ATTR_CURSOR_TYPE statement 属性で指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_ATTR_KEYSET_SIZE statement 属性で指定された値は、0より大きく、で指定された値よりも小さくなってい SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性。|  
+|HY107|行の値が有効範囲にありません|SQL_ATTR_CURSOR_TYPE statement 属性で指定された値が SQL_CURSOR_KEYSET_DRIVEN ましたが、SQL_ATTR_KEYSET_SIZE statement 属性で指定された値が0より大きく、SQL_ATTR_ROW_ARRAY_SIZE statement 属性で指定された値を下回っています。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
 |HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースが、 **SQLBindCol**の*TargetType*と対応する列の SQL データ型の組み合わせによって指定された変換をサポートしていません。|  
 |HYT00|タイムアウトに達しました|データソースが要求された結果セットを返す前に、クエリのタイムアウト期間が経過しました。 タイムアウト期間は、SQLSetStmtAttr、SQL_ATTR_QUERY_TIMEOUT によって設定されます。|  
@@ -106,8 +106,8 @@ SQLRETURN SQLFetch(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|開始前|1 で保護されたプロセスとして起動されました|  
-|** \<CurrRowsetStart =  *lastresultrow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|開始前|1|  
+|*CurrRowsetStart* \<CurrRowsetStart =  *lastresultrow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *lastresultrow-RowsetSize*[1]|終了後|  
 |終了後|終了後|  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLFetch(
   
  [2] フェッチ間で行セットのサイズが変更された場合、これは新しいフェッチで使用された行セットのサイズです。  
   
-|表し|意味|  
+|Notation|説明|  
 |--------------|-------------|  
 |開始前|ブロックカーソルは、結果セットの先頭の前に配置されます。 新しい行セットの最初の行が結果セットの先頭より前にある場合、 **Sqlfetch**は SQL_NO_DATA を返します。|  
 |終了後|ブロックカーソルは、結果セットの末尾の後に配置されます。 新しい行セットの最初の行が結果セットの末尾の後にある場合、 **Sqlfetch**は SQL_NO_DATA を返します。|  
@@ -125,16 +125,16 @@ SQLRETURN SQLFetch(
   
  たとえば、結果セットの行数が100で、行セットのサイズが5であるとします。 次の表は、さまざまな開始位置に対して**Sqlfetch**によって返される行セットとリターンコードを示しています。  
   
-|現在の行セット|リターンコード|新しい行セット|フェッチされる行の数|  
+|現在の行セット|リターン コード|新しい行セット|フェッチされる行の数|  
 |--------------------|-----------------|----------------|------------------------|  
 |開始前|SQL_SUCCESS|1 ~ 5|5|  
 |1 ~ 5|SQL_SUCCESS|6 ~ 10|5|  
 |52 ~ 56|SQL_SUCCESS|57 ~ 61|5|  
 |91 ~ 95|SQL_SUCCESS|96 ~ 100|5|  
 |93 ~ 97|SQL_SUCCESS|98 ~ 100。 行の状態配列の行4および5は SQL_ROW_NOROW に設定されます。|3|  
-|96 ~ 100|SQL_NO_DATA|[なし] :|0|  
-|99 ~ 100|SQL_NO_DATA|[なし] :|0|  
-|終了後|SQL_NO_DATA|[なし] :|0|  
+|96 ~ 100|SQL_NO_DATA|なし。|0|  
+|99 ~ 100|SQL_NO_DATA|なし。|0|  
+|終了後|SQL_NO_DATA|なし。|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>バインドされた列のデータを返す  
  **Sqlfetch**は各行を返すため、その列にバインドされている各列のデータをバッファーに格納します。 列がバインドされていない場合、 **Sqlfetch**はデータを返しませんが、ブロックカーソルを前方に移動します。 **SQLGetData**を使用してデータを取得することもできます。 カーソルが複数行のカーソルの場合 (つまり、SQL_ATTR_ROW_ARRAY_SIZE が1より大きい)、SQL_GETDATA_EXTENSIONS *InfoType*を使用して**SQLGetInfo**が呼び出されたときに SQL_GD_BLOCK が返された場合にのみ、 **SQLGetData**を呼び出すことができます。 (詳細については、「 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)」を参照してください)。  
@@ -177,7 +177,7 @@ SQLRETURN SQLFetch(
   
  次の値が行の状態配列に返されます。  
   
-|行の状態の配列値|[説明]|  
+|行の状態の配列値|説明|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|行は正常にフェッチされました。この行は、この結果セットから最後にフェッチされてから変更されていません。|  
 |SQL_ROW_SUCCESS_WITH_INFO|行は正常にフェッチされました。この行は、この結果セットから最後にフェッチされてから変更されていません。 ただし、行に関する警告が返されました。|  
@@ -256,7 +256,7 @@ SQLRETURN SQLFetch(
   
 ### <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  

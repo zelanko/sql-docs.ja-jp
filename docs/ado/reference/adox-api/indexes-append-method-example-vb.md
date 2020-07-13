@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0702fa4580cadce688591b976102b25118f7a189
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966057"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746843"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append メソッドの例 (VB)
 次のコードは、新しいインデックスを作成する方法を示しています。 インデックスは、テーブル内の2つの列にあります。  

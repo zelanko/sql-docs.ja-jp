@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Fields collection [ADO], members
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0bd304bd86631ae143070f8bbf109fd9b9df8056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8c3b2c2ab04bc5b552c9854c4aa2bed1ac57896a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932678"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762553"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Fields コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "67932678"
   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

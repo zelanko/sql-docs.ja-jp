@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79525443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940133"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
   BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
@@ -29,18 +28,15 @@ ms.locfileid: "79525443"
   
  モデルは名前空間として定義されます。主なエンティティ、アソシエーション、およびプロパティを次に示します。  
   
--   
-  `EntityContainer` は、モデルのテーブルの一覧を示します。  
+-   `EntityContainer` は、モデルのテーブルの一覧を示します。  
   
 -   各テーブルは、`EntityContainer` で  `EntitySet` として示されます。  
   
 -   2 つのテーブル間の各リレーションシップは、リレーションシップのエンド ポイントとロールを定義する `AssociationSet` として記述されます。  
   
--   
-  `EntityType` 要素は、BISM 向けに拡張されており、テーブルやその列に関する追加情報を提供できるようになっています。これには、並べ替えや表示の目的で使用されるプロパティが含まれます。  
+-   `EntityType` 要素は、BISM 向けに拡張されており、テーブルやその列に関する追加情報を提供できるようになっています。これには、並べ替えや表示の目的で使用されるプロパティが含まれます。  
   
--   
-  `Measure` 要素は、モデルで使用できる計算を定義します。 新しい `KPI` 要素を使用すると、一連の特殊な表示属性を追加することでメジャーを KPI に変換できます。  
+-   `Measure` 要素は、モデルで使用できる計算を定義します。 新しい `KPI` 要素を使用すると、一連の特殊な表示属性を追加することでメジャーを KPI に変換できます。  
   
 -   パースペクティブの表現はありません。 パースペクティブに含まれていない列やテーブルが CSDL にある場合、`Hidden` 属性のフラグが設定されます。  
   
@@ -61,8 +57,7 @@ ms.locfileid: "79525443"
   
 ```  
   
- 
-  `EntitySet` には、テーブルの列やデータに関する情報はありません。 列とそのプロパティの詳細な記述は、EntityType 要素で提供されます。  
+ `EntitySet` には、テーブルの列やデータに関する情報はありません。 列とそのプロパティの詳細な記述は、EntityType 要素で提供されます。  
   
  各エンティティ (テーブル) の `EntitySet` 要素には、キー列、列のデータ型と長さ、NULL 値を許容するかどうか、並べ替えの動作など、詳細を定義する一連のプロパティが含まれます。 たとえば、次の CSDL は、Customer テーブルの 3 つの列の記述部分を抜粋したものです。 最初の列は、モデルの内部で使用される特殊な非表示の列です。  
   
@@ -112,11 +107,9 @@ ms.locfileid: "79525443"
 ### <a name="name-properties-and-naming-conventions"></a>名前のプロパティと名前付け規則  
  CSDLBI スキーマでは、キーとして使用できる一意の名前と識別子を各エンティティに割り当てるように規定されています。 また、一部のエンティティには、表示目的で使用されるキャプションや、エンティティの使用場所によって変化するコンテキスト名を指定できます。  
   
- 
-  `Documentation` 要素を使用すると、レポートの設計者は、ビジネス ユーザーがデータの意味を理解できるようにエンティティの説明を記述することができます。 また、一部のエンティティでは、1 つ以上の `Annotation` 属性を使用して、アプリケーションやクライアントで使用できる追加のメタデータを提供できます。  
+ `Documentation` 要素を使用すると、レポートの設計者は、ビジネス ユーザーがデータの意味を理解できるようにエンティティの説明を記述することができます。 また、一部のエンティティでは、1 つ以上の `Annotation` 属性を使用して、アプリケーションやクライアントで使用できる追加のメタデータを提供できます。  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ツールでモデルを生成すると、オブジェクトの名前付けと名前の一意性に関する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の規則に従ってオブジェクトの名前が作成されます。 ただし、CSDLBI は Entity Data Framework (EDF) に基づくため、C# の識別子に関する規則に従って名前を付ける必要があります。そのため、モデルの CSDLBI 出力をサーバーで作成するときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のスキーマ内で使用されている名前が取得され、EDF の要件を満たす新しいオブジェクト名が自動的に作成されます。 次の表に、新しい名前が生成されるときの処理を示します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ツールでモデルを生成すると、オブジェクトの名前付けと名前の一意性に関する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の規則に従ってオブジェクトの名前が作成されます。 ただし、CSDLBI は Entity Data Framework (EDF) に基づくため、C# の識別子に関する規則に従って名前を付ける必要があります。そのため、モデルの CSDLBI 出力をサーバーで作成するときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のスキーマ内で使用されている名前が取得され、EDF の要件を満たす新しいオブジェクト名が自動的に作成されます。 次の表に、新しい名前が生成されるときの処理を示します。  
   
 |ルール|アクション|  
 |----------|------------|  
@@ -129,7 +122,7 @@ ms.locfileid: "79525443"
 ## <a name="additions-to-support-multidimensional-models"></a>多次元モデルをサポートするための追加事項  
  CSDLBI 注釈の Version 1.0 ではテーブル モデルのみがサポートされていました。 Version 1.1 では、従来の BI 開発ツールを使用して作成された多次元モデル (OLAP キューブ) もサポートされます。 その結果、多次元モデルに XML 要求を実行して、レポートで使用するためのモデルの CSDLBI 定義を受信できます。  
   
- **キューブ:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表形式データベースには、1つのモードのみを含めることができます。 一方、多次元データベースには複数のキューブを含めることができ、各データベースは既定のキューブに関連付けられます。 したがって、XML 要求を多次元サーバーに対して実行する場合は、キューブを指定する必要があり、キューブを指定しないと、既定のキューブに対する XML が返されます。  
+ **キューブ:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表形式データベースには、1つのモードのみを含めることができます。 一方、多次元データベースには複数のキューブを含めることができ、各データベースは既定のキューブに関連付けられます。 したがって、XML 要求を多次元サーバーに対して実行する場合は、キューブを指定する必要があり、キューブを指定しないと、既定のキューブに対する XML が返されます。  
   
  その場合、キューブの表現はテーブル モデル データベースによく似ています。 キューブ名とキューブが、表形式のデータベース名とデータベース識別子に対応します。  
   
@@ -152,6 +145,6 @@ ms.locfileid: "79525443"
  **制限事項:** セルのセキュリティはサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [ビジネスインテリジェンス &#40;CSDLBI&#41;の CSDL 注釈](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

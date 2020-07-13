@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 43106b52fdfcf166af3601c7ba82ddd03bd3d8b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b3c63e625fa31e1ea21e243c28cec8b7551f66b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714782"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定されたログイン名のセキュリティ ID 番号 (SID) を返します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "79486567"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPDone (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,18 @@ apitype: COM
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: b0cc1e4bc3c9ab0a2e5cadf7efcc32da99c555bd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73789614"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008481"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
   
 ## <a name="syntax"></a>構文  
@@ -36,9 +34,8 @@ ms.locfileid: "73789614"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>解説  
- 
-  [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
+## <a name="remarks"></a>Remarks  
+ **BCPDone** メソッドを呼び出すと、それ以後は [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -66,7 +63,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp マスター..\n-T-S サーバーでの fltest** **  
+ **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
   
  このサンプルをコンパイルする際には、sqlncli11.lib を指定する必要があります。  
   

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 899ca6d278a3117989f2e2371020e98589d67c4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770859"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431619"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
@@ -53,7 +52,7 @@ ms.locfileid: "62770859"
   
  次の表では、WriteOption プロパティで使用できるオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |Append|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
 |常に作成する|常に新しいファイルを作成します。|  
@@ -113,7 +112,7 @@ ms.locfileid: "62770859"
   
 1.  WriteOption プロパティを **CreateOnce** または **CreateAlways**に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
   
-2.  WriteOption プロパティ**をにリセットし、** ValidateExternalMetadata プロパティをに`False`設定します。  
+2.  WriteOption プロパティ**をにリセットし、** ValidateExternalMetadata プロパティをに設定し `False` ます。  
   
  **Append** オプションの代わりに **TruncateAppend** オプションを使用すると、以前の実行で追加された行が切り捨てられ、新しい行が追加されます。 また **TruncateAppend** オプションを使用するには、データがファイル形式に一致している必要があります。  
   
@@ -130,10 +129,10 @@ ms.locfileid: "62770859"
  コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+ sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Raw ファイルソース](raw-file-source.md)   
- [Data Flow](data-flow.md)  
+ [データ フロー](data-flow.md)  
   
   

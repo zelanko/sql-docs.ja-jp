@@ -12,15 +12,14 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2d9c9470364c13380751e3e7aca1fef13973a76
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901634"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432009"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>クエリ パラメーターをデータ フロー コンポーネントの変数にマップする
   パラメーター化クエリを使用するように OLE DB ソースを構成すると、パラメーターを変数にマップすることができます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62901634"
   
 7.  **[パラメーター]** をクリックします。  
   
-8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、 **[パラメーター]** 一覧にある各パラメーターを、 **[変数]** 一覧の変数にマップするか、 **[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
+8.  [**クエリパラメーターの設定**] ダイアログボックスで、[**パラメーター** ] ボックスの各パラメーターを [**変数**] 一覧の変数にマップするか、をクリックして新しい変数を作成し **\<New variable>** ます。 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  マッピングで使用できる変数は、パッケージのスコープ内、Foreach ループなどの親コンテナーのスコープ内、またはデータ フロー コンポーネントが含まれるデータ フロー タスクのスコープ内にある、システム変数およびユーザー定義変数だけです。 変数のデータ型は、パラメーターが割り当てられる WHERE 句の列と互換性がある必要があります。  

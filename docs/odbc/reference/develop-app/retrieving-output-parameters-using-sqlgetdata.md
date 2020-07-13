@@ -12,14 +12,14 @@ helpviewer_keywords:
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68020513"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294592"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用した出力パラメーターの取得
 ODBC 3.8 より前のアプリケーションでは、バインドされた出力バッファーを持つクエリの出力パラメーターのみを取得できました。 ただし、パラメーター値のサイズが非常に大きい場合 (たとえば、大きなイメージ)、非常に大きなバッファーを割り当てることは困難です。 ODBC 3.8 では、部分的に出力パラメーターを取得する新しい方法が導入されています。 アプリケーションでは、小さなバッファーを使用して**SQLGetData**を複数回呼び出して、大きなパラメーター値を取得できるようになりました。 これは、大きな列データを取得する場合と似ています。  
@@ -65,7 +65,7 @@ ODBC 3.8 より前のアプリケーションでは、バインドされた出�
   
  次の表では、サーバーに送信される1つのコマンドのさまざまなシナリオと、アプリケーションの動作について説明します。  
   
-|シナリオ|SQLExecute または SQLExecDirect からの戻り値|次に行う操作|  
+|シナリオ|SQLExecute または SQLExecDirect からの戻り値|次の作業|  
 |--------------|---------------------------------------------------|---------------------|  
 |データにはストリーム出力パラメーターのみが含まれます|SQL_PARAM_DATA_AVAILABLE|**Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  
 |データには、結果セットとストリーム出力パラメーターが含まれます。|SQL_SUCCESS|**SQLBindCol**と**SQLGetData**を使用して結果セットを取得します。<br /><br /> **Sqlmoreresults**を呼び出して、ストリーミングされた出力パラメーターの処理を開始します。 SQL_PARAM_DATA_AVAILABLE が返されます。<br /><br /> **Sqlparamdata**と**SQLGetData**を使用して、ストリーム出力パラメーターを取得します。|  

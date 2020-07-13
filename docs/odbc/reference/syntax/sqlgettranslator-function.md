@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030650"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303273"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 関数
 **互換性**  
@@ -79,7 +79,7 @@ BOOL SQLGetTranslator(
 ## <a name="diagnostics"></a>診断  
  **Sqlgettranslator**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*CbNameMax*または*cbpathmax*引数が0以下でした。|  
@@ -102,7 +102,7 @@ BOOL SQLGetTranslator(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |変換プログラムの構成|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |変換属性の取得|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  

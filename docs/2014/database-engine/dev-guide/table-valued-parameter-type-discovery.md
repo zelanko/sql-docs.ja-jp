@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターの型の検出 |Microsoft Docs
+title: テーブル値パラメーターの型探索 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ab8d837e4ddf74256e4bae70f772557ec8ff67f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62780321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933253"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>テーブル値パラメーターの型の検出
-  コンシューマー (つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するクライアントアプリケーション) は、コマンドテキストが OLE DB プロバイダーに与えられていれば、各コマンドパラメーターの型を検出できます。 テーブル値パラメーターの型がわかったら、コンシューマーはテーブル値パラメーターの個別の列ごとにメタデータ情報を検出できます。  
+  コンシューマー (つまり、Native Client OLE DB プロバイダーを使用するクライアントアプリケーション) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドテキストが OLE DB プロバイダーに与えられていれば、各コマンドパラメーターの型を検出できます。 テーブル値パラメーターの型がわかったら、コンシューマーはテーブル値パラメーターの個別の列ごとにメタデータ情報を検出できます。  
   
- プロシージャパラメーターの型情報は、ほとんどのパラメーターの型に対して ICommandWithParameters:: GetParameterInfo でサポートされています。 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、ユーザー定義型と`xml`データ型の導入により、Getparameterinfo メソッドは、ICommandWithParameters を介してユーザー定義型情報 (名前、スキーマ、およびカタログ) を提供できなかったため、この目的には不十分でした。 拡張型情報を提供するために、ISSCommandWithParameters という新しいインターフェイスが定義されました。  
+ プロシージャ パラメーターの型情報は、ほとんどのパラメーター型について ICommandWithParameters::GetParameterInfo でサポートされます。 以降では [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、ユーザー定義型とデータ型の導入により、 `xml` getparameterinfo メソッドは、ICommandWithParameters を介してユーザー定義型情報 (名前、スキーマ、およびカタログ) を提供できなかったため、この目的には不十分でした。 拡張された型情報を提供するために、新しいインターフェイス ISSCommandWithParameters が定義されました。  
   
- テーブル値パラメーターの場合は、ISSCommandWithParameters インターフェイスを使用して詳細情報を検出することもできます。 クライアントは、コマンドオブジェクトを準備した後で ISSCommandWithParameters:: GetParameterInfo を呼び出します。 テーブル値パラメーターでは、DBPARAMINFO 構造体の *wType* メンバーが、プロバイダーによって DBTYPE_TABLE に設定されます。 DBPARAMINFO 構造体の *ulParamSize* フィールドの値は ~0 です。  
+ テーブル値パラメーターの場合は、ISSCommandWithParameters インターフェイスを使用して、詳細情報も検出します。 クライアントは、コマンド オブジェクトを準備した後、ISSCommandWithParameters::GetParameterInfo を呼び出します。 テーブル値パラメーターでは、DBPARAMINFO 構造体の *wType* メンバーが、プロバイダーによって DBTYPE_TABLE に設定されます。 DBPARAMINFO 構造体の *ulParamSize* フィールドの値は ~0 です。  
   
  コンシューマーは、次に ISSCommandWithParameters::GetParameterProperties を使用して、追加のプロパティ (テーブル値パラメーターの型のカタログ名、テーブル値パラメーターの型のスキーマ名、テーブル値パラメーターの型名、列の順序、および既定の列) を要求します。  
   

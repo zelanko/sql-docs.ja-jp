@@ -11,29 +11,28 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537364"
 ---
 # <a name="model-tab-mining-model-viewers"></a>[モデル] タブ (マイニング モデル ビューアー)
   Microsoft タイム シリーズ ビューアーの **[モデル]** タブは、タイム シリーズの表現をグラフのノードとして表示します。これは、デシジョン ツリー モデルで使用されるものに似ています。  
   
  時系列分析に関する有用な情報を抽出するには、グラフの式、ARIMA 期間、および係数を含むタイム シリーズ モデルのこのビューを使用します。  
   
- **詳細情報:** microsoft タイムシリーズ[アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、microsoft タイムシリーズ[ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [microsoft タイムシリーズアルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
+ **詳細情報:** [Microsoft Time Series アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft Time Series アルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>オプション  
  **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
- **マイニングモデル**  
+ **[マイニング モデル]**  
  表示するマイニング モデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **[ビューアー]**  
+ **Viewer**  
  選択したマイニング モデルを調べるために使用するビューアーを選択します。 このモデルの種類用のカスタム ビューアーまたは **Microsoft 汎用コンテンツ ツリー** ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
  **拡大**  
@@ -60,10 +59,10 @@ ms.locfileid: "66077622"
   
  ドロップダウン リストに表示されるツリーの色分けされたバーが長い場合は、モデルのツリーに多数の分岐が存在します。 分岐は、回帰がより複雑であり、各ノードで異なる式 (または式のペア) を使用してモデルを複数のセグメントに分割する必要があることを意味します。  
   
- **バックグラウンド**  
+ **背景**  
  このコントロールを使用して、各ノードの背景色によって表される状態を選択します。  
   
- **[既定の展開]**  
+ **既定の展開**  
  モデル内のすべてのツリーに対して表示される、レベルの既定の数を調整します。  
   
  **[表示レベル]**  

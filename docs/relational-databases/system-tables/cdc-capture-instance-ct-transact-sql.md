@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT (transact-sql) |Microsoft Docs
+title: cdc。 &lt;capture_instance &gt; _CT (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce584b558be168a81e21da0762f6ea26ed798b05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908396"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890653"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT (transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ソース テーブルに対して変更データ キャプチャを有効にすると作成される変更テーブルです。 ソース テーブルに対して実行された操作が挿入や削除の場合は、各操作について 1 行を返します。ソース テーブルに対して実行された操作が更新の場合は、各操作について 2 行を返します。 ソーステーブルが有効になっているときに変更テーブルの名前が指定されていない場合は、その名前が派生します。 名前の形式は cdc です。*capture_instance*_CT。 *capture_instance*は、ソーステーブルのスキーマ名と*schema_table*形式のソーステーブル名です。 たとえば、 **AdventureWorks**サンプルデータベースのテーブルの**ユーザー**が変更データキャプチャを有効にした場合、派生した変更テーブル名は cdc になり**ます。Person_Address_CT**。  
   
@@ -33,19 +33,19 @@ ms.locfileid: "72908396"
   
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary (10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルに対する削除操作によって2つの行が削除された場合、変更テーブルには、同じ **__ $ start_lsn**値を持つ2つの行が含まれます。|  
-|**__ $ end_lsn**|**binary (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、この列は常に NULL です。|  
-|**__ $ seqval**|**binary (10)**|トランザクション内の行の変更を並べ替えるために使用されるシーケンス値。|  
-|**__ $ 操作**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
+|**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソーステーブルに対する削除操作によって2つの行が削除された場合、変更テーブルには、同じ **__ $ start_lsn**値を持つ2つの行が含まれます。|  
+|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、この列は常に NULL です。|  
+|**__$seqval**|**binary(10)**|トランザクション内の行の変更を並べ替えるために使用されるシーケンス値。|  
+|**__ $ 操作**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 次のいずれかの値を指定します。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
 |**__ $ update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。|  
-|*\<キャプチャされたソーステーブルの列>*|多様|変更テーブルの残りの列は、キャプチャインスタンスの作成時にキャプチャされた列として識別された、ソーステーブルの列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
+|*\<captured source table columns>*|多様|変更テーブルの残りの列は、キャプチャインスタンスの作成時にキャプチャされた列として識別された、ソーステーブルの列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
 |**__ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 
-列`__$command_id`の列は、バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)ます。
+列の列は、 `__$command_id` バージョン2012から2016の累積的な更新プログラムで導入されました。 バージョンおよびダウンロードの情報については、 [Microsoft SQL Server データベースに対して変更データキャプチャを有効にした後に、更新された行の変更テーブルの順序が正しく設定さ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)れ3030352ていないことを確認してください。  詳細については、 [SQL Server 2012、2014、2016の最新の CU にアップグレードした後に、CDC の機能が停止する場合があり](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)ます。
 
 ## <a name="captured-column-data-types"></a>キャプチャされた列のデータ型  
  このテーブルに含まれるキャプチャ対象の列のデータ型と値は、対応するソース列と同じですが、次の例外があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "72908396"
  ただし、これらの列の値は、基になる列の値と同じです。  
   
 ### <a name="large-object-data-types"></a>ラージ オブジェクト データ型  
- __ $ Operation = 1 また\_ \_は $operation = 3 の場合、データ型**image**、 **text**、および**ntext**の列には常に**NULL**値が割り当てられます。 データ型**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** の列には、更新中\_ \_に列が変更されていない限り、$operation が3の場合、 **NULL**値が割り当てられます。 $Operation \_ \_= 1 の場合、これらの列には削除時に値が割り当てられます。 キャプチャインスタンスに含まれる計算列の値は、常に**NULL**になります。  
+ __ $ Operation = 1 また**text**は**image** **ntext** **NULL** \_ \_ $operation = 3 の場合、データ型 image、Text、および ntext の列には常に NULL 値が割り当てられます。 データ型**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** の列には、 **NULL** \_ \_ 更新中に列が変更されていない限り、$operation が3の場合、NULL 値が割り当てられます。 \_ \_ $Operation = 1 の場合、これらの列には削除時に値が割り当てられます。 キャプチャインスタンスに含まれる計算列の値は、常に**NULL**になります。  
   
  既定では、INSERT、UPDATE、WRITETEXT、または UPDATETEXT の 1 回のステートメントでキャプチャ対象列に追加できる最大サイズは、65,536 バイト (64 KB) です。 大きな LOB データをサポートするためにこのサイズを大きくするには、 [max text repl Size サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)を使用して、より大きな最大サイズを指定します。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72908396"
   
  挿入操作と削除操作については、更新マスクのすべてのビットが設定されます。 更新操作の場合、更新中に変更された列を反映するように、update old 行と update new 行の両方の更新マスクが変更されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

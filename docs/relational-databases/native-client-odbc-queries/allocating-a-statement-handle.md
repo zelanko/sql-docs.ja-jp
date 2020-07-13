@@ -18,18 +18,17 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: f3ff0249ecbe1193a67014dc5c2ad28e79cae7d4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779994"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001465"
 ---
 # <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当て
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   アプリケーションでステートメントを実行する前に、ステートメント ハンドルを割り当てる必要があります。 これを行うには、 *Handletype*パラメーターを SQL_HANDLE_STMT に設定し、 *InputHandle*をポイントするように**SQLAllocHandle**を呼び出します。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "73779994"
   
  *Foption*を SQL_ATTR_QUERY_TIMEOUT に設定して**SQLSetStmtAttr**を呼び出すと、クエリのタイムアウト間隔が設定され、実行時間の長いクエリからサーバーとユーザーを保護できます。  
   
- *Foption*を SQL_ATTR_MAX_LENGTH に設定して**SQLSetStmtAttr**を呼び出すと、個々のステートメントが取得できる**テキスト**と**画像**データの量が制限されます。 *Foption*を SQL_ATTR_MAX_ROWS に設定して**SQLSetStmtAttr**を呼び出すと、すべてのアプリケーションが必要とする場合に、行セットが最初の*n*行に制限されます。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 これは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トリガーや更新プログラムを含むすべてのステートメントに影響します。  
+ *Foption*を SQL_ATTR_MAX_LENGTH に設定して**SQLSetStmtAttr**を呼び出すと、個々のステートメントが取得できる**テキスト**と**画像**データの量が制限されます。 *Foption*を SQL_ATTR_MAX_ROWS に設定して**SQLSetStmtAttr**を呼び出すと、すべてのアプリケーションが必要とする場合に、行セットが最初の*n*行に制限されます。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 これ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、トリガーや更新プログラムを含むすべてのステートメントに影響します。  
   
  上記のオプションを設定するときは注意が必要です。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS の場合、接続ハンドルのすべてのステートメント ハンドルが同じ設定になるようにすることをお勧めします。 ドライバーが、あるステートメント ハンドルから、これらのオプションに異なる値を持つ別のステートメント ハンドルに切り替える場合、適切な SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを生成して、設定を変更する必要があります。 ユーザー SQL ステートメントには、バッチ内では先頭に含めなければならないステートメントを含めることができるので、ドライバーはユーザー SQL ステートメントと同じバッチ内にこれらのステートメントを配置することはできません。 ドライバーは SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを別のバッチで送信する必要があります。その結果、サーバーに対する追加のラウンドトリップが自動的に生成されます。  
   

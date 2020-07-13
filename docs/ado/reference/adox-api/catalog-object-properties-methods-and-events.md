@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aedafb6e8753838c9911c0ff961b0c9181fd181c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967047"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763933"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -40,7 +40,7 @@ ms.locfileid: "67967047"
   
  [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73880171493555a7d30e5c0c5419d02338961e9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3ca6c729cfa988e2560192d705bc24e9e7b4fa1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096529"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280802"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Visual FoxPro データを使用した Microsoft Word での宛名ラベルの作成
 Visual FoxPro データは、Microsoft Word for Windows 95 または Windows 98 ドキュメントで使用できます。 たとえば、Visual FoxPro テーブルに格納されている顧客情報から宛名ラベルを作成することができます。  

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68032831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893014"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  直[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ちにジョブを実行するようにエージェントに指示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直ちにジョブを実行するようにエージェントに指示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ sp_start_job
  **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを開始できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを開始できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを開始できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、と`Weekly Sales Data Backup`いう名前のジョブを開始します。  
+ 次の例では、という名前のジョブを開始し `Weekly Sales Data Backup` ます。  
   
 ```  
 USE msdb ;  
@@ -90,11 +90,11 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

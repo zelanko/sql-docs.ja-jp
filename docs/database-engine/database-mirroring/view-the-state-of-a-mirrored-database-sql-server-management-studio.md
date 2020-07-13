@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbac0c31618e419c7d67c3feba861e5e69008ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758202"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>ミラー化されたデータベースの状態の確認 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッション中に、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで状態を確認できます。  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>データベース ミラーリング セッションの状態を確認するには  
@@ -37,7 +37,7 @@ ms.locfileid: "75245450"
   
     |状態|説明|  
     |------------|-----------------|  
-    |\<空白>|データベース ミラーリング セッションが存在せず、 **[ミラーリング]** ページに表示する動作情報がありません。|  
+    |\<blank>|データベース ミラーリング セッションが存在せず、 **[ミラーリング]** ページに表示する動作情報がありません。|  
     |一時停止|プリンシパル データベースは実行中ですが、ミラー サーバーにログを送信していません。 データベースのミラー コピーは使用できない状態です。|  
     |[接続なし]|プリンシパル サーバー インスタンスから、パートナーまたはミラーリング監視サーバー インスタンス (ある場合) に接続できません。|  
     |[同期中]|ミラー データベースの内容が、プリンシパル データベースの内容に遅れています。 プリンシパル サーバー インスタンスからミラー サーバー インスタンスにログ レコードを送信して、ミラー データベースを更新するための変更を適用しています。<br /><br /> データベース ミラーリング セッションの開始時点では、ミラー データベースとプリンシパル データベースが同期中の状態です。|  

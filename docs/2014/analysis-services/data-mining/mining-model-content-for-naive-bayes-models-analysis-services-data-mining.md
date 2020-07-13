@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b32f122933e03992afdc287fa064f78d5d22c0e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521458"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -49,15 +48,15 @@ ms.locfileid: "66083646"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前です。  
   
- **モデルルート**予測可能な属性の名前。  
+ **モデル ルート** 予測可能な属性の名前。  
   
- **統計の限界**該当なし  
+ **マージナル統計** 適用なし。  
   
- **予測可能な属性**予測可能な属性の名前。  
+ **予測可能な属性** 予測可能な属性の名前。  
   
- **入力属性**入力属性の名前。  
+ **入力属性** 入力属性の名前。  
   
- **入力属性の状態**入力属性の名前のみ。 状態を取得するには、MSOLAP_NODE_SHORT_CAPTION を使用します。  
+ **入力属性の状態** 入力属性の名前のみ。 状態を取得するには、MSOLAP_NODE_SHORT_CAPTION を使用します。  
   
  NODE_NAME  
  ノード名。  
@@ -72,7 +71,7 @@ ms.locfileid: "66083646"
  NODE_TYPE  
  Naive Bayes モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|[説明]|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
 |26 (マージナル統計ノード)|モデルのトレーニング ケースのセット全体を表す統計が含まれます。|  
 |9 (予測可能な属性)|予測可能な属性の名前が含まれます。|  
@@ -82,32 +81,32 @@ ms.locfileid: "66083646"
  NODE_CAPTION  
  ノードに関連付けられたラベルまたはキャプション。 このプロパティは、主に表示を目的としています。  
   
- **モデルルート**空白  
+ **モデル ルート** 空白。  
   
  **統計の限界**なし  
   
- **予測可能な属性**予測可能な属性の名前。  
+ **予測可能な属性** 予測可能な属性の名前。  
   
- **入力属性**予測可能な属性と現在の入力属性の名前。 例:  
+ **入力属性** 予測可能な属性と現在の入力属性の名前。 例:  
   
  Bike Buyer -> Age  
   
- **入力属性の状態**予測可能な属性の名前と現在の入力属性の名前、および入力値。 例:  
+ **入力属性の状態** 予測可能な属性と現在の入力属性の名前、および入力値。 例:  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  ノードが持つ子の数です。  
   
- **モデルルート**モデル内の予測可能な属性の数に1を加えた統計ノードの数。  
+ **モデル ルート** モデル内の予測可能な属性の数に 1 (マージナル統計ノードの分) を加算した数。  
   
- **統計の限界**定義上、子はありません。  
+ **マージナル統計** 定義上、子はありません。  
   
- **予測可能な属性** 現在の予測可能な属性に関連付けられた入力属性の数。  
+ **予測可能な属性**  現在の予測可能な属性に関連付けられた入力属性の数。  
   
- **入力属性**現在の入力属性の不連続値または分離された値の数。  
+ **入力属性** 現在の入力属性の不連続値または分離された値の数。  
   
- **入力属性の状態**常に0です。  
+ **入力属性の状態** 常に 0 です。  
   
  PARENT_UNIQUE_NAME  
  親ノードの一意の名前。 親ノードと子ノードの関連付けの詳細については、「 [ノードの名前と ID の使用](#bkmk_nodenames)」を参照してください。  
@@ -124,15 +123,15 @@ ms.locfileid: "66083646"
  NODE_PROBABILITY  
  このノードに関連付けられている確率。  
   
- **モデルルート**常に0です。  
+ **モデル ルート** 常に 0 です。  
   
- **統計の限界**常に0です。  
+ **マージナル統計** 常に 0 です。  
   
- **予測可能な属性** 常に1です。  
+ **予測可能な属性**  常に 1 です。  
   
- **入力属性**常に1です。  
+ **入力属性** 常に 1 です。  
   
- **入力属性の状態**現在の値の確率を表す10進数。 親入力属性ノードの下にあるすべての入力属性の状態の値を合計すると 1 になります。  
+ **入力属性の状態** 現在の値の確率を表す小数値。 親入力属性ノードの下にあるすべての入力属性の状態の値を合計すると 1 になります。  
   
  MARGINAL_PROBABILITY  
  ノードの確率と同じです。  
@@ -143,15 +142,15 @@ ms.locfileid: "66083646"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **モデルルート**トレーニングデータ内のすべてのケースの数。  
+ **モデル ルート** トレーニング データ内のすべてのケースの数。  
   
- **統計の限界**常に0です。  
+ **マージナル統計** 常に 0 です。  
   
- **予測可能な属性**トレーニングデータ内のすべてのケースの数。  
+ **予測可能な属性** トレーニング データ内のすべてのケースの数。  
   
- **入力属性**トレーニングデータ内のすべてのケースの数。  
+ **入力属性** トレーニング データ内のすべてのケースの数。  
   
- **入力属性の状態**この特定の値のみを含むトレーニングデータ内のケースの数。  
+ **入力属性の状態** トレーニング データ内のケースのうち、この特定の値のみを含むケースの数。  
   
  MSOLAP_MODEL_COLUMN  
  表示目的で使用されるラベル。 通常、ATTRIBUTE_NAME と同じです。  
@@ -159,30 +158,30 @@ ms.locfileid: "66083646"
  MSOLAP_NODE_SCORE  
  モデル内の属性または値の重要度を表します。  
   
- **モデルルート**常に0です。  
+ **モデル ルート** 常に 0 です。  
   
- **統計の限界**常に0です。  
+ **マージナル統計** 常に 0 です。  
   
- **予測可能な属性** 常に0です。  
+ **予測可能な属性**  常に 0 です。  
   
- **入力属性**現在の予測可能な属性に対する現在の入力属性の興味深さスコア。  
+ **入力属性** 現在の予測可能な属性との関連における現在の入力属性の興味深さのスコア。  
   
- **入力属性の状態**常に0です。  
+ **入力属性の状態** 常に 0 です。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  列の名前または値を表すテキスト文字列。  
   
  **モデルルート**省略  
   
- **統計の限界**省略  
+ **マージナル統計** 空白。  
   
  **予測可能な属性** 予測可能な属性の名前。  
   
- **入力属性**入力属性の名前。  
+ **入力属性** 入力属性の名前。  
   
- **入力属性の状態**入力属性の値または分離された値。  
+ **入力属性の状態** 入力属性の値または分離された値。  
   
-##  <a name="bkmk_nodenames"></a>ノード名と Id の使用  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>ノード名と Id の使用  
  Naive Bayes モデルのノードの名前付けでは、モデル内の情報間のリレーションシップをわかりやすくするために、ノードの種類に関する追加情報が提供されます。 次の表に、さまざまなノードの種類に割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  
@@ -233,7 +232,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION テーブル  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION テーブル  
  入れ子になったテーブル列である NODE_DISTRIBUTION には、通常、ノード内の値の分布に関する統計が含まれます。 Naive Bayes モデルでは、このテーブルは次のノードに対してのみ作成されます。  
   
 |ノードの種類|入れ子になったテーブルの内容|  
@@ -259,27 +258,27 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1 で保護されたプロセスとして起動されました|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|1 で保護されたプロセスとして起動されました|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
  これらの結果の SUPPORT 列の値は、指定した結婚歴に当てはまる顧客のうち、自転車を購入した顧客の数を示します。 PROBABILITY 列には、このノードのみについて計算された各属性値の確率が格納されます。 NODE_DISTRIBUTION テーブルで使用される用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_margstats"></a>[最低限の統計情報ノードの情報を参照してください。  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a>[最低限の統計情報ノードの情報を参照してください。  
  Naive Bayes モデルでは、マージナル統計ノードの入れ子になったテーブルに、トレーニング データのセット全体の値の分布が含まれます。 たとえば、次の表は、 `TM_NaiveBayes`モデルの入れ子になった NODE_DISTRIBUTION テーブルに含まれる統計の一部を示しています。  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|サポート|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|1 で保護されたプロセスとして起動されました|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1 で保護されたプロセスとして起動されました|8615|0.492736216|0|4|  
-|Marital Status|Missing|0|0|0|1 で保護されたプロセスとして起動されました|  
+|Bike Buyer|1|8615|0.492736216|0|4|  
+|Marital Status|Missing|0|0|0|1|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|Missing|0|0|0|1 で保護されたプロセスとして起動されました|  
+|Total Children|Missing|0|0|0|1|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|1 で保護されたプロセスとして起動されました|3406|0.19480668|0|4|  
+|Total Children|1|3406|0.19480668|0|4|  
   
  マージナル統計ノードには常に予測可能な属性とその取り得る値の説明が含まれるため、`Bike Buyer` 列が含まれます。 表中のその他の列はすべて入力属性を表し、モデルで使用された値と共に表示されています。 値は不足値、不連続値、または分離された値のみになります。  
   

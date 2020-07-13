@@ -11,19 +11,17 @@ f1_keywords:
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09b1750081198a258d1b49231324dd296084f6cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66069204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940793"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>[定義方法の選択] (データ マイニング ウィザード)
-  
   **[定義方法の選択]** ページを使用すると、新しいマイニング モデルの作成に使用するソースを選択できます。 キューブに基づくマイニング構造は、リレーショナル データ ソースに基づくマイニング構造とは異なる手順で構築されるため、ウィザードでは選択に応じて手順が変化します。  
   
- **詳細について**は、「[リレーショナルマイニング構造の作成](data-mining/create-a-relational-mining-structure.md)」、「[データマイニングウィザード &#40;Analysis Services データマイニング」](data-mining/data-mining-wizard-analysis-services-data-mining.md)を参照してください&#41;  
+ **詳細情報:** [リレーショナル マイニング構造の作成 (Analysis Services - データ マイニング)](data-mining/create-a-relational-mining-structure.md)、[データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>オプション  
  **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]**  

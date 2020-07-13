@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translator setup DLL [ODBC]
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b6c99dffc94f2675efdbbc3d5c1d142a5ae9b7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28c354fddb36b9e035361fa4ba03fbde34b7d399
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093837"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296052"
 ---
 # <a name="translator-setup-dlls"></a>トランスレーター セットアップ DLL
 > [!NOTE]  

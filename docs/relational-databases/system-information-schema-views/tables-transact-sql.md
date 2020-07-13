@@ -19,26 +19,25 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52416d954660aac6981ced8e2407672f04bc0bb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: f15899e19f6bf578e3a4c1c9cd5db7ee40af289b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078411"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999031"
 ---
 # <a name="tables-transact-sql"></a>テーブル (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のユーザーが権限を持っている現在のデータベース内のテーブルまたはビューごとに1行のデータを返します。  
   
  これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|テーブル修飾子。|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> <strong> \*重要\* \* </strong>オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを検索する唯一の信頼性のある方法は、のカタログビューに対してクエリを実行することです。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|テーブルを含むスキーマの名前。<br /><br /> <strong> \* \* 重要 \* : \* </strong>オブジェクトのスキーマを検索する信頼できる方法は、sys. objects カタログビューに対してクエリを実行することだけです。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
 |**TABLE_NAME**|**sysname**|テーブルまたはビューの名前。|  
-|**TABLE_TYPE**|**varchar (** 10 **)**|テーブルの型。 VIEW または BASE TABLE です。|  
+|**TABLE_TYPE**|**varchar (** 10 **)**|テーブルの型。 VIEW または BASE TABLE のいずれかです。|  
   
 ## <a name="see-also"></a>参照  
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

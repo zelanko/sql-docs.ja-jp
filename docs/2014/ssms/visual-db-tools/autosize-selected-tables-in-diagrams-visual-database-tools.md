@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1acc36c3e8054d4e3555401bc4ba5f4f62196f83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63297571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066269"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>ダイアグラムで選択したテーブルのサイズの自動変更 (Visual Database Tools)
   すべてのフィールドを表示できる最小のサイズに合うように、ダイアグラム内のテーブルのサイズを簡単に変更できます。  

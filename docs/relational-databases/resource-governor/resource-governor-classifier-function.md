@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b96e494e10bb99fa316fa417c16e2f4a7034855
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729269"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーの分類プロセスにより、着信セッションがセッションの特性に基づいてワークロード グループに割り当てられます。 分類ロジックは、分類子関数と呼ばれるユーザー定義関数を記述することで調整できます。  
   
 ## <a name="classification"></a>分類  
@@ -70,7 +70,7 @@ ms.locfileid: "72903913"
   
 1.  ログイン認証  
   
-2.  LOGON トリガー実行  
+2.  LOGON トリガーの実行 (インスタンス内にログオン トリガーがある場合のみ発生します)。
   
 3.  分類  
 

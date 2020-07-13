@@ -11,15 +11,14 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3597f70682b346dc0c2ae5e2bbfa4bef5cc14412
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769371"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428989"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (連結) (SSIS 式)
   2 つの式を連結して 1 つの式にします。  

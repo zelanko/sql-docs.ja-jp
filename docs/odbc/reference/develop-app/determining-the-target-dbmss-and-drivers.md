@@ -11,14 +11,14 @@ helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7065aa88d60a508df9946d38d0dded220c4bb7a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106138"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305873"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>ターゲット DBMS とドライバーの決定
 次に考慮すべき事項は、アプリケーションの対象となる Dbms と、それらの Dbms をサポートする利用可能なドライバーは何ですか。 汎用アプリケーションは相互運用性が高い傾向があるため、ターゲット Dbms の問題は、カスタムアプリケーションと垂直アプリケーションに最も適しています。 ただし、ドライバーは、速度、品質、機能サポート、および可用性に大きく異なるため、ターゲットドライバーの問題はすべてのアプリケーションに適用されます。 また、ドライバーをアプリケーションと共に再配布する場合は、ライセンスプランのコストと可用性を考慮する必要があります。  

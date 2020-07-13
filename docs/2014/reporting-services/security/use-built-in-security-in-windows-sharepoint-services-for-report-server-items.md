@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 622fbdf67d33972500a5047c3886830ba802796a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101444"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
@@ -27,7 +27,7 @@ ms.locfileid: "66101444"
 ## <a name="securable-items"></a>セキュリティ保護可能なアイテム  
  サイトやライブラリに対して定義する権限は、レポート サーバー アイテムへのアクセスを許可するために使用できます。 ただし、個々のアイテムのセキュリティを保護する場合は、次のコンテンツ タイプに対する権限を設定できます。  
   
-|ファイルの種類|[説明]|  
+|ファイルの種類|説明|  
 |---------------|-----------------|  
 |.rdl|レポート レイアウトおよびデータの取得に使用するコマンドを定義するレポート定義ファイルです。 レポートが処理されると、レポート定義はデータ ソース接続情報を使用してデータを取得します。 レポート定義がレポート ビルダーで作成されたアドホック レポートである場合、表示されたレポートに対するデータ探索スコープを設定するレポート モデル (.smdl) ファイルがレポートに付属しています。|  
 |.smdl|データ構造およびデータ構造の関連付けを記述するレポート モデル ファイルです。 このファイルは、レポート ビルダーのレポートの作成および実行に使用します。|  

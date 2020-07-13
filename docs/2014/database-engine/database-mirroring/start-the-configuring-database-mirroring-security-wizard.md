@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fab3a0a48633f70a91d4e65bd31b7d3f9c314ca3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62754442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933863"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>データベース ミラーリング セキュリティ構成ウィザードの起動 (SQL Server Management Studio)
   データベース ミラーリング セキュリティ構成ウィザードを使用して、ミラーリングで使用されるすべてまたは一部のサーバー インスタンスでセキュリティ設定を初期構成できます。 このウィザードは、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページから開きます。  
@@ -27,17 +26,15 @@ ms.locfileid: "62754442"
   
 1.  プリンシパル サーバー インスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-2.  
-  **[データベース]** を展開し、ミラー化するデータベースを選択します。  
+2.  **[データベース]** を展開し、ミラー化するデータベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 [**データベースのプロパティ**] ダイアログボックスの [[ミラーリング] ページ](../../relational-databases/databases/database-properties-mirroring-page.md)が開きます。  
+3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 [**データベースのプロパティ**] ダイアログボックスの [[ミラーリング] ページ](../../relational-databases/databases/database-properties-mirroring-page.md)が開きます。  
   
-4.  
-  **[セキュリティの構成]** をクリックします。  
+4.  **[セキュリティの構成]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
+ [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
   

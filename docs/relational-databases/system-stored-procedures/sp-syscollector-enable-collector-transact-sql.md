@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_enable_collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49ba4abf13978e16dc4a868843d23348dd38e64f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68000806"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892890"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データコレクターを有効にします。 サーバーごとにデータコレクターが1つしかないため、パラメーターは必要ありません。  
   
@@ -40,18 +40,18 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定値は、サーバー上のデータコレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、データ コレクターを有効にします。  
   
 ```sql  
@@ -60,7 +60,7 @@ GO
 EXEC dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   

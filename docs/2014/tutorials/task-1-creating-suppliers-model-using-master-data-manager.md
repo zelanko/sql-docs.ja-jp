@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: afa2f8009a3cb6cb0b60a671e94fc80892f640aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65481344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064853"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する
   このタスクでは、**マスターデータマネージャー**を使用して、MDS で**仕入先**という名前のモデルを作成します。  
   
-1.  に[http://localhost/mds](http://localhost/mds)移動して**マスターデータマネージャー**を起動します。 別の名前または別の Web サイトで Web アプリケーションを構成した場合は、URL を置き換えてください。  
+1.  に移動して `http://localhost/MDS` **マスターデータマネージャー**を起動します。 別の名前または別の Web サイトで Web アプリケーションを構成した場合は、URL を置き換えてください。  
   
      ![マスター データ マネージャー - システム管理](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "マスター データ マネージャー - システム管理")  
   
@@ -40,7 +39,7 @@ ms.locfileid: "65481344"
   
 6.  ツールバーの [**モデルの保存**] ボタンをクリックします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

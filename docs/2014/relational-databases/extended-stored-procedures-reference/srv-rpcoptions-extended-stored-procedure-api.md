@@ -19,19 +19,17 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 861c27e94d3717a4dbeba1fe5f2633c2604ee7c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62745821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050608"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  現在のリモート ストアド プロシージャの実行時オプションを返します。  
   
@@ -52,12 +50,12 @@ srvproc
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャの実行時フラグを論理 OR で結合して格納したビットマップを返します。 リモート ストアド プロシージャがない場合は、0 を返し、メッセージを生成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  次の表では、各実行時フラグについて説明します。  
   
-|実行時フラグ|[説明]|  
+|実行時フラグ|説明|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|クライアントがメタデータ情報なしの結果を要求したことを示します。 このフラグは、クライアントがの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスと通信している場合にのみ使用されます。 拡張ストアド プロシージャ API アプリケーションではメタデータ情報を省略できません。|  
+|SRV_NOMETADATA|クライアントがメタデータ情報なしの結果を要求したことを示します。 このフラグは、クライアントがのインスタンスと通信している場合にのみ使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 拡張ストアド プロシージャ API アプリケーションではメタデータ情報を省略できません。|  
 |SRV_RECOMPILE|クライアントがリモート ストアド プロシージャの実行前に再コンパイルを要求していることを示します。 このフラグは、拡張ストアド プロシージャ API アプリケーションには適用できません。|  
   
 > [!IMPORTANT]  

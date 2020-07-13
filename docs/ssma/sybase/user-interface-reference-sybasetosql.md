@@ -10,10 +10,10 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020860"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>ユーザー インターフェイス リファレンス (SybaseToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68020860"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[SybaseToSQL&#41;&#40;高度なオブジェクトの選択](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|[**オブジェクト選択の詳細設定**] ダイアログボックスを使用すると、フィルター条件を使用してデータベースオブジェクトを検索し、それらのオブジェクトをオンまたはオフにできます。|  
 |[評価レポート &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|評価レポートを使用して、Sybase Adaptive Server Enterprise (ASE) オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換した結果を表示したり、または SQL Azure へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の移行の時間と複雑さを見積もることができます。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68020860"
 |[新しいプロジェクト &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|新しい SSMA for Sybase プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。|  
 |[プロジェクト設定 &#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|[**プロジェクトの設定**] ダイアログボックスの [変換] ページを使用すると、ssma for Sybase が関数とグローバル変数を変換する方法を指定できます。|  
 |[プロジェクト設定 &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|[**プロジェクトの設定**] ダイアログボックスの [GUI] ページを使用すると、[**データ**] タブに表示されるデータの量を指定できます。|  
-|[プロジェクト設定 &#40;移行&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|SSMA for Sybase が ASE **** からまたは SQL Azure にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [移行] ページを使用します。|  
+|[プロジェクト設定 &#40;移行&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|SSMA for Sybase が ASE **Project Settings**からまたは SQL Azure にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する方法をカスタマイズするには、[プロジェクトの設定] ダイアログボックスの [移行] ページを使用します。|  
 |[プロジェクト設定 &#40;同期&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|[**プロジェクトの設定**] ダイアログボックスの [同期] ページを使用すると、ssma for Sybase がまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure で移行されたデータベースオブジェクトを作成または変更する方法をカスタマイズできます。|  
 |[プロジェクト設定 &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|[**プロジェクトの設定**] ダイアログボックスの [SQL Azure] ページを使用すると、Sybase から SQL Azure にデータを移行するための接続設定をカスタマイズできます。|  
 |[プロジェクト設定 &#40;型マッピング&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|SSMA for Sybase プロジェクトのすべてのデータベースとデータベースオブジェクトの既定の型マッピングを指定するには、の [**プロジェクトの設定**] ダイアログボックスの [型マッピング] ページを使用します。|  

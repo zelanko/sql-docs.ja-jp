@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653785"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>レッスン 3 : Web サービスへのアクセス
@@ -23,14 +23,13 @@ ms.locfileid: "62653785"
  まず、Web サービスのプロキシ クラス <xref:ReportService2010.ReportingService2010> のインスタンスを作成します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 次に例を示します。  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 次に例を示します。  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
 ### <a name="to-access-the-web-service"></a>Web サービスにアクセスするには  
   
-1.  まず、コード ファイルに [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (`using` の場合は `Imports`) ディレクティブを追加することで、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) ファイルに名前空間を追加する必要があります。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。  
+1.  まず、コード ファイルに `using` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は `Imports`) ディレクティブを追加することで、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) ファイルに名前空間を追加する必要があります。 このディレクティブを使用すると、型を名前空間で完全修飾する必要がありません。  
   
 2.  この操作を行うには、次のコードをコード ファイルの先頭に追加します。  
   

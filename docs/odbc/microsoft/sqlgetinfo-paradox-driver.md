@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Paradox Driver
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a35f3bdbd68b674736ac22f447a8be45c1342682
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 354fa7f08797ee1fbfb057bfc2f2c192a8c5eddc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003247"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298572"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (Paradox ドライバー)
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "68003247"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|Version|バージョン番号の形式|  
+|ドライバー|バージョン|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Paradox|3.x|03.00.0000|  
 ||4.x|04.00.0000|  

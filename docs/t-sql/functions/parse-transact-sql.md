@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 412099db82b2b16e538b1b2f742dde6548b93ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738003"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で要求されたデータ型に変換された式の結果を返します。  
   

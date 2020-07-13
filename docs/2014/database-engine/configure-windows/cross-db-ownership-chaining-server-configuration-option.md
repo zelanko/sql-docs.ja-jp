@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5630579e787a3bfcb5d64ee3bcf0ec5bee368611
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cfb768065cc0aa2aaa7aed0f996b18e46f1da7ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62782397"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935428"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining サーバー構成オプション
-  
-  **cross db ownership chaining** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対して、複数データベースの組み合わせ所有権を構成するために使用します。  
+  **cross db ownership chaining** オプションは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対して、複数データベースの組み合わせ所有権を構成するために使用します。  
   
  このサーバー オプションを使用すると、次に示すように、データベース レベルで複数データベースの組み合わせ所有権を制御したり、すべてのデータベースに複数データベースの組み合わせ所有権を許可できるようになります。  
   
@@ -33,8 +31,7 @@ ms.locfileid: "62782397"
   
 -   ALTER DATABASE ステートメントの SET 句を使用すると、個別のデータベースに複数データベースの組み合わせ所有権を設定できます。 新しいデータベースを作成する場合、CREATE DATABASE ステートメントを使用すると、新しいデータベースに複数データベースの組み合わせ所有権オプションを設定できます。  
   
-     
-  **cross db ownership chaining** を 1 に設定することはお勧めしません。この設定を行う場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスによってホストされているすべてのデータベースが複数データベースの組み合わせ所有権に参加する必要があります。また、この設定がセキュリティに与える影響も理解しておく必要があります。  
+     **cross db ownership chaining** を 1 に設定することはお勧めしません。この設定を行う場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスによってホストされているすべてのデータベースが複数データベースの組み合わせ所有権に参加する必要があります。また、この設定がセキュリティに与える影響も理解しておく必要があります。  
   
 ## <a name="controlling-cross-database-ownership-chaining"></a>複数データベースの組み合わせ所有権の制御  
  複数データベースの組み合わせ所有権のオンとオフを切り替える前に、次の項目について検討する必要があります。  
@@ -43,14 +40,13 @@ ms.locfileid: "62782397"
   
 -   実稼動サーバーで複数データベースの組み合わせ所有権をオフにするには、サード パーティのアプリケーションを含むすべてのアプリケーションを十分にテストし、この変更がアプリケーションの機能に影響を与えないことを確認します。  
   
--   
-  **sp_configure** で RECONFIGURE を指定すると、サーバーの実行中に **cross db ownership chaining**オプションを変更できます。  
+-   **sp_configure** で RECONFIGURE を指定すると、サーバーの実行中に **cross db ownership chaining**オプションを変更できます。  
   
 -   複数データベースの組み合わせ所有権が必要なデータベースがある場合、推奨される操作としては、まず **sp_configure** を使用してインスタンスの **cross db ownership chaining**オプションをオフにします。次に、ALTER DATABASE ステートメントを使用し、個別のデータベースの複数データベースの組み合わせ所有権をオンにします。  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  

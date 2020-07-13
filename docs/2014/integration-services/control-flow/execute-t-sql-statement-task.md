@@ -13,15 +13,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ebc73ad843ac7fcf1dfbe7699ecd8ea53edcdad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62831737"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433179"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL ステートメントの実行タスク
   T-SQL ステートメントの実行タスクは、Transact-SQL ステートメントを実行します。 詳細については、「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」および「[Integration Services (SSIS) のクエリ](../integration-services-ssis-queries.md)」を参照してください。  

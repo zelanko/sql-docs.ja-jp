@@ -10,15 +10,14 @@ helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53d9bfbb7418a3bc6727ccc7160a5364bac39f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1f42da39dfeea3e135e2f7b432c0f4009c08c4a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768778"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428189"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 式)
   末尾のスペースを削除した後の文字式を返します。  

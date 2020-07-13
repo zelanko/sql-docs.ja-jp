@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5f2537dcae126252f75cb90aa41a85ea55674d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62657266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011491"
 ---
 # <a name="name-element-for-server-dta"></a>Server の Name 要素 (DTA)
   チューニングするデータベースが置かれているサーバーの名前が含まれます。  
@@ -35,10 +34,9 @@ ms.locfileid: "62657266"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|
-  `string`、1 ～ 255 文字。|  
+|**データ型と長さ**|`string`、1 ～ 255 文字。|  
 |**既定値**|[なし] :|  
 |**個数**|**Server** 要素につき 1 回の出現が必要です。|  
   

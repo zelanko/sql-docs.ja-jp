@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923262"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748173"
 ---
 # <a name="adox-fundamentals"></a>ADOX の基礎
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) は、ADO オブジェクトとプログラミングモデルの拡張機能です。 ADOX には、スキーマの作成と変更、およびセキュリティのためのオブジェクトが含まれています。 スキーマ操作に対するオブジェクトベースのアプローチであるため、ネイティブ構文の違いに関係なく、さまざまなデータソースに対して機能するコードを記述できます。  

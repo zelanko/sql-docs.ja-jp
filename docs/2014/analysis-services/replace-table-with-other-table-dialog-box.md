@@ -13,35 +13,31 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66070272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539297"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>[テーブルと他のテーブルとの置換] ダイアログ ボックス
-  
-  **の** [テーブルと他のテーブルとの置換] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビュー内の既存のテーブルを、まだデータ ソース ビューに含まれていない、基になるデータ ソース内のテーブルで置き換えることができます。 
-  **[テーブルと他のテーブルとの置換]** ダイアログ ボックスを表示するには、 **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインまたは **[テーブル]** ペインでテーブル名を右クリックし、 **[テーブルの置換]** の **[他のテーブルを使用]** をクリックします。  
+  **の** [テーブルと他のテーブルとの置換] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビュー内の既存のテーブルを、まだデータ ソース ビューに含まれていない、基になるデータ ソース内のテーブルで置き換えることができます。 **[テーブルと他のテーブルとの置換]** ダイアログ ボックスを表示するには、 **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインまたは **[テーブル]** ペインでテーブル名を右クリックし、 **[テーブルの置換]** の **[他のテーブルを使用]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **データソース**  
+ **データ ソース**  
  テーブルを取得するデータ ソースを選択します。  
   
- **行列**  
+ **グリッド**  
  データ ソース ビューにまだ含まれていない、選択されたデータ ソースで使用できるオブジェクトとその種類を表示します。  
   
  **Assert**  
- 
-  **[グリッド]** に表示されるオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、表示されるテーブルがフィルター選択されます。  
+ **[グリッド]** に表示されるオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、表示されるテーブルがフィルター選択されます。  
   
  **Show system objects**  
  選択されたデータ ソースのシステム オブジェクトが **[グリッド]** に表示されます。  
   
 ## <a name="see-also"></a>参照  
  [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データソースビューデザイナー &#40;Analysis Services-多次元データ&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

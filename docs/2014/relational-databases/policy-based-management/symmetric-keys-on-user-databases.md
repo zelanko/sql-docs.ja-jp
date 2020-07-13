@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d080cfc68ebab00a7b699d427be064ef4a49ecaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca0fb62ccb32ce244e1087281997dcd9929df89c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63253412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066609"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>ユーザー データベースの対称キー
   このルールでは、長さが 128 バイト未満のキーが RC2 または RC4 暗号化アルゴリズムを使用していないかどうかを確認します。  

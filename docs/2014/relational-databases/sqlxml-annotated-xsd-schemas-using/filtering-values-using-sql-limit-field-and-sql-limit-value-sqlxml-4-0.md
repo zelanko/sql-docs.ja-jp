@@ -15,25 +15,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062998"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
   
- 
-  `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
+ `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
   
- 
-  `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 
-  `sql:limit-value` 注釈は省略可能です。 を`sql:limit-value`指定しない場合は、NULL 値が想定されます。  
+ `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 `sql:limit-value`を指定しない場合は、NULL 値が想定されます。  
   
 > [!NOTE]  
 >  マップされる SQL 列が `sql:limit-field` 型の場合に `real` を指定すると、SQLXML 4.0 では XML スキーマで指定されているとおり、`sql:limit-value` 指定値として `nvarchar` が変換されます。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
@@ -56,7 +52,7 @@ ms.locfileid: "66013808"
   
  顧客には、発送先住所と請求先住所のいずれかまたは両方が設定されています。 AddressType 列の値は Shipping と Billing です。  
   
- これは、 **ShipTo** schema 属性が Addresses 関係の StreetAddress 列にマップされるマッピングスキーマです。 この属性に対して返される値は、注釈`sql:limit-field`と`sql:limit-value`注釈を指定することによって、出荷先住所に限定されます。 同様に、 **BillTo** schema 属性では、顧客の請求先住所のみが返されます。  
+ これは、 **ShipTo** schema 属性が Addresses 関係の StreetAddress 列にマップされるマッピングスキーマです。 この属性に対して返される値は、注釈と注釈を指定することによって、出荷先住所に限定され `sql:limit-field` `sql:limit-value` ます。 同様に、 **BillTo** schema 属性では、顧客の請求先住所のみが返されます。  
   
  スキーマは次のようになります。  
   
@@ -173,7 +169,7 @@ ms.locfileid: "66013808"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- これは、注文の詳細の**orderid**属性が orders リレーションシップの orderid 列にマップされるマッピングスキーマです。 この属性に対して返される値は、 `sql:limit-field`および`sql:limit-value`注釈を使用して、**割引**属性に対して指定されている 2.0000000 e-001 (0.2) の値のみに制限されます。  
+ これは、注文の詳細の**orderid**属性が orders リレーションシップの orderid 列にマップされるマッピングスキーマです。 この属性に対して返される値は、および注釈を使用して、**割引**属性に対して指定されている 2.0000000 e-001 (0.2) の値のみに制限され `sql:limit-field` `sql:limit-value` ます。  
   
  スキーマは次のようになります。  
   

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65c29338e713eab7650722b2b3801398379c0dac
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62829411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438039"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62829411"
  Web サービス メソッドの結果は、変数またはファイルに書き込むことができます。 結果を書き込むファイルを指定するか、変数の名前を指定するには、ファイル接続マネージャーを使用します。 詳細については、「[ファイル接続マネージャー](../connection-manager/file-connection-manager.md)」および「[Integration Services (SSIS) の変数](../integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web サービス タスクで使用できるカスタム ログ メッセージ  
- 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -62,14 +61,13 @@ ms.locfileid: "62829411"
 ## <a name="configuration-of-the-web-service-task"></a>Web サービス タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Web サービスタスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Web サービス タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[Web サービスタスクエディター] &#40;入力ページ&#41;](../web-service-task-editor-input-page.md)  
+-   [Web サービス タスク エディター &#40;[入力] ページ&#41;](../web-service-task-editor-input-page.md)  
   
--   [Web サービスタスクエディター &#40;出力ページ&#41;](../web-service-task-editor-output-page.md)  
+-   [Web サービス タスク エディター &#40;[出力] ページ&#41;](../web-service-task-editor-output-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

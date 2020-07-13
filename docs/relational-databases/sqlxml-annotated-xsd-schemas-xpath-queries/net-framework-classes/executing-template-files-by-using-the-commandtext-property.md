@@ -1,5 +1,6 @@
 ---
 title: CommandText プロパティを使用してテンプレートファイルを実行する
+description: SQLXML CommandText プロパティを使用して、SQL または XPath クエリを含むテンプレートファイルの名前を指定する方法の例を示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a05f0d974a6e88b82a654c7c9aab1159544b6839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649423"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandTextproperty を使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandText プロパティを使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  
   
  サンプル アプリケーションでは、次のテンプレートが実行されます。  
   
@@ -93,7 +94,7 @@ class Test
   
 5.  コマンド プロンプトで、DocSample.exe を実行します。  
 
- テンプレートにパラメーターを渡す場合、パラメーター名はアットマーク (@) で始める必要があります。たとえば、p.Name = "\@ContactID" のように指定します。ここで、p は SqlXmlParameter オブジェクトです。  
+ テンプレートにパラメーターを渡す場合、パラメーター名はアットマーク (@) で始める必要があります。たとえば、p.Name = "ContactID" のように指定し \@ ます。ここで、p は SqlXmlParameter オブジェクトです。  
   
  次は、1 つのパラメーターをとるように変更したテンプレートです。  
   

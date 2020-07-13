@@ -18,15 +18,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6a7f8f920b143d18712764e67f8b60fcb994935f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176229"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426429"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。
@@ -36,7 +35,7 @@ ms.locfileid: "78176229"
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境
  スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。
 
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。
 
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。
 
@@ -49,27 +48,23 @@ ms.locfileid: "78176229"
  スクリプト コンポーネントの威力は、インフラストラクチャ コードを生成して、記述する必要のあるコード量を減らす機能にあります。 この機能を実現するには、入力と出力、およびその列とプロパティが固定され、既知である必要があります。 したがって、コンポーネントのメタデータに後で変更を加えた場合、記述したコードが無効になり、 パッケージの実行中にコンパイル エラーが発生する可能性があります。
 
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>スクリプト コンポーネント プロジェクトのプロジェクト アイテムおよびクラス
- コード デザイン モードに切り替えると、VSTA IDE が開き、`ScriptMain` プロジェクト アイテムが表示されます。 
-  `ScriptMain` プロジェクト アイテムには、編集可能な `ScriptMain` クラスが含まれています。このクラスは、スクリプトのエントリ ポイントとしての役割を果たし、ここにコードを記述します。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
+ コード デザイン モードに切り替えると、VSTA IDE が開き、`ScriptMain` プロジェクト アイテムが表示されます。 `ScriptMain` プロジェクト アイテムには、編集可能な `ScriptMain` クラスが含まれています。このクラスは、スクリプトのエントリ ポイントとしての役割を果たし、ここにコードを記述します。 このクラスのコード要素は、スクリプト タスクに対して選択したプログラミング言語に応じて異なります。
 
  スクリプト プロジェクトには、次の 2 つの読み取り専用のプロジェクト アイテムが自動生成され、追加されます。
 
 -   次の 3 つのクラスを含む `ComponentWrapper` プロジェクト アイテム。
 
-    -   
-  `UserComponent` クラス。<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から継承され、データの処理およびパッケージとのやり取りに使用するメソッドおよびプロパティが含まれています。 
-  `ScriptMain` クラスは `UserComponent` クラスから継承されます。
+    -   `UserComponent` クラス。<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から継承され、データの処理およびパッケージとのやり取りに使用するメソッドおよびプロパティが含まれています。 `ScriptMain` クラスは `UserComponent` クラスから継承されます。
 
-    -   
-  `Connections` コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。
+    -   `Connections` コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。
 
-    -   [ `Variables` **スクリプト変換エディター**] の [**スクリプト**] ページにある`ReadOnlyVariable`プロパティ`ReadWriteVariables`およびプロパティに入力された変数への参照を含むコレクションクラス。
+    -   [ `Variables` `ReadOnlyVariable` `ReadWriteVariables` **スクリプト変換エディター**] の [**スクリプト**] ページにあるプロパティおよびプロパティに入力された変数への参照を含むコレクションクラス。
 
--   プロジェクト`BufferWrapper`アイテムには、[ <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **スクリプト変換エディター**] の [**入力および出力**] ページで構成された各入力および出力に対して、から継承されるクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。
+-   プロジェクトアイテムには、[ `BufferWrapper` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **スクリプト変換エディター**] の [**入力および出力**] ページで構成された各入力および出力に対して、から継承されるクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。
 
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。
 
- スクリプトコンポーネントを変換として構成すると、 `ScriptMain`プロジェクトアイテムには次の自動生成されたコードが含まれます。 コード テンプレートでも、スクリプト コンポーネントの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。
+ スクリプトコンポーネントを変換として構成すると、 `ScriptMain` プロジェクトアイテムには次の自動生成されたコードが含まれます。 コード テンプレートでも、スクリプト コンポーネントの概要、および、変数、イベント、接続など、SSIS オブジェクトを取得および操作する方法に関する追加情報を提供します。
 
 ```vb
 ' Microsoft SQL Server Integration Services Script Component
@@ -172,15 +167,10 @@ public class ScriptMain : UserComponent
 
 |パッケージの機能|アクセス方法|
 |---------------------|-------------------|
-|変数:|
-  `Variables` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Variables` クラスの `ScriptMain` プロパティを介して公開されています。<br /><br /> 
-  `PreExecute` メソッドでは、読み取り専用変数にのみアクセスできます。 
-  `PostExecute` メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|
-|接続|
-  `Connections` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Connections` クラスの `ScriptMain` プロパティを介して公開されています。|
-|events|クラスの<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>プロパティとインターフェイスの**\<Fire X>** メソッドを使用して、イベントを発生させます。 `ScriptMain`|
-|ログ記録|
-  <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> クラスの `ScriptMain` メソッドを使用して、ログ記録を実行します。|
+|変数:|`Variables` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Variables` クラスの `ScriptMain` プロパティを介して公開されています。<br /><br /> `PreExecute` メソッドでは、読み取り専用変数にのみアクセスできます。 `PostExecute` メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|
+|接続|`Connections` プロジェクト アイテムの `ComponentWrapper` コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは `Connections` クラスの `ScriptMain` プロパティを介して公開されています。|
+|events|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>クラスのプロパティ `ScriptMain` とインターフェイスの**Fire \<X> **メソッドを使用して、イベントを発生させ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> ます。|
+|ログ記録|`ScriptMain` クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|
 
 ## <a name="debugging-the-script-component"></a>スクリプト コンポーネントのデバッグ
  スクリプト コンポーネントのコードをデバッグするには、コードに少なくとも 1 つのブレークポイントを設定し、VSTA IDE を閉じて [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージを実行します。 パッケージが実行されてスクリプト コンポーネントが開始されると、VSTA IDE が再度開き、読み取り専用モードでコードが表示されます。 実行によりブレークポイントに到達したら、変数の値の検証や、残りのコードのステップ スルーができます。
@@ -193,7 +183,7 @@ public class ScriptMain : UserComponent
 
  ただし、次の方法を使用することにより、スクリプト コンポーネントの実行を監視することもできます。
 
--   実行を中断**し、system.string 名前空間**の`MessageBox.Show`メソッドを使用してモーダルメッセージを表示します。 デバッグが完了したら、このコードは削除してください。
+-   実行を中断し、system.string 名前空間のメソッドを使用してモーダルメッセージを表示し `MessageBox.Show` ます**System.Windows.Forms** 。 デバッグが完了したら、このコードは削除してください。
 
 -   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../data-flow/transformations/script-component.md)」をご覧ください。
 
@@ -206,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [スクリプトコンポーネントのオブジェクトモデルについて](understanding-the-script-component-object-model.md)スクリプトコンポーネントで使用できるオブジェクト、メソッド、およびプロパティの使用方法について説明します。
 
- [スクリプトソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)スクリプトコンポーネントの[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]クラスライブラリからオブジェクトを参照する方法について説明します。
+ [スクリプトソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)スクリプトコンポーネントのクラスライブラリからオブジェクトを参照する方法について説明 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] します。
 
  [スクリプトコンポーネントに対するエラー出力のシミュレート](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)スクリプトコンポーネントによる処理中にエラーが発生する行のエラー出力をシミュレートする方法について説明します。
 
@@ -214,9 +204,9 @@ public class ScriptMain : UserComponent
 
 -   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。
 
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)
 
 

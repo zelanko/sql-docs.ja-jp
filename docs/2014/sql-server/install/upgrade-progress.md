@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: d963904c-3f69-4530-a0c1-cf8bcb9e3b3c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8d3ab415fbeedd26fa0c560c10eeff809787bca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f82aeda2923f3d96739885babbd9474e15462829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058874"
 ---
 # <a name="upgrade-progress"></a>[アップグレードの進行状況]
-  
   **のアップグレード状況を監視するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [アップグレードの進行状況] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用します。  
   
 ## <a name="see-also"></a>参照  

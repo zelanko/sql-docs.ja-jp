@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901344"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305743"
 ---
 # <a name="executing-a-statement"></a>ステートメントの実行
 ステートメントを実行するには、データベースエンジンによってコンパイル (準備) された日時に応じて、次の4つの方法を実行します。  
@@ -86,7 +86,7 @@ while ((OrderID = GetOrderID()) != 0) {
   
 -   [準備実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)  
   
--   [手順](../../../odbc/reference/develop-app/procedures-odbc.md)  
+-   [プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)  
   
 -   [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)  
   

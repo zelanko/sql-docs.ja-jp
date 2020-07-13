@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784648"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822405"
   
 -   セカンダリ レプリカで引き続き必要なゴースト レコードがファイルに含まれている場合、プライマリ レプリカでのディスク ベース テーブルが含まれているファイルに対する DBCC SHRINKFILE 操作は失敗する可能性があります。  
   
--   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]以降では、ユーザー操作または障害のためにプライマリ レプリカがオフラインになっても、読み取り可能なセカンダリ レプリカをオンラインのままにすることができます。 ただし、この場合、可用性グループ リスナーもオフラインになるため、読み取り専用ルーティング機能しません。 読み取り専用ワークロードにアクセスするには、クライアントは読み取り専用セカンダリ レプリカに直接接続する必要があります。  
+-   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 以降では、ユーザー操作やエラーが原因でプライマリ レプリカがオフラインになっても、読み取り可能なセカンダリ レプリカをオンラインのままにすることができます。たとえば、ユーザー コマンドやエラーが原因で同期が中断された場合や、WSFC がオフラインになっているためにレプリカで状態を解決している場合などです。 ただし、この場合、可用性グループ リスナーもオフラインになるため、読み取り専用ルーティング機能しません。 読み取り専用ワークロードにアクセスするには、クライアントは読み取り専用セカンダリ レプリカに直接接続する必要があります。  
   
 > [!NOTE]  
 >  読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスで、 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理ビューに対してクエリを実行すると、再実行のブロックという問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

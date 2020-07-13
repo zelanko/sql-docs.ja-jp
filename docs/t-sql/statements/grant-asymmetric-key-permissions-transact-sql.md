@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d9682f27a4218fc1b50c5eef4ebc975fcbbb874
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735660"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (非対称キーの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非対称キーに対する権限を許可します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68065603"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   
        TO database_principal [ ,...n ]  

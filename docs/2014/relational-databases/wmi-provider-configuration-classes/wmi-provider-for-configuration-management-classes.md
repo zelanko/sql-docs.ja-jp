@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b64042d7ee28d8e30b6823010b1612cf3ed2010
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63288422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061272"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>WMI Provider for Configuration Management のクラス
   WMI (Windows Management Instrumentation) Provider for Configuration Management は、次のクラスに対して機能を提供します。  

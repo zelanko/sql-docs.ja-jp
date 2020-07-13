@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401003"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>並列データウェアハウスでのロック動作
 並列データウェアハウスがロックを使用してトランザクションの整合性を確保する方法と、複数のユーザーが同時にデータにアクセスする場合のデータベースの一貫性を維持する方法について説明します。  
   
-## <a name="Basics"></a>ロックの基本  
+## <a name="locking-basics"></a><a name="Basics"></a>ロックの基本  
 **モード**  
   
 SQL Server PDW は、次の4つのロックモードをサポートします。  
@@ -27,7 +27,7 @@ SQL Server PDW は、次の4つのロックモードをサポートします。
 排他的  
 排他ロックは、排他ロックを保持しているトランザクションが完了するまで、ロックされたオブジェクトへの書き込みまたは読み取りを禁止します。 排他ロックが有効になっている間は、どのモードでも他のロックは許可されません。 たとえば、DROP TABLE と CREATE DATABASE は排他ロックを使用します。  
   
-共有  
+Shared  
 共有ロックでは、影響を受けるオブジェクトの排他ロックの開始は禁止されていますが、他のすべてのロックモードは許可されています。 たとえば、SELECT ステートメントを実行すると、共有ロックが開始されるため、複数のクエリで選択したデータに同時にアクセスできますが、読み取り中のレコードに対する更新は、SELECT ステートメントが完了するまで行われません。  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ SharedUpdate ロックでは、排他的ロックモードと ExclusiveUpdate �
   
 **リソースクラス**  
   
-ロックは、データベース、スキーマ、オブジェクト (テーブル、ビュー、またはプロシージャ)、アプリケーション (内部で使用)、EXTERNALDATASOURCE、EXTERNALFILEFORMAT、および SCHEMARESOLUTION (作成、変更、または作成中に取得されたデータベースレベルのロック) によって保持されます。スキーマオブジェクトまたはデータベースユーザーを削除しています。 これらのオブジェクトクラスは、 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)の object_type 列に表示されます。  
+ロックは、データベース、スキーマ、オブジェクト (テーブル、ビュー、またはプロシージャ)、アプリケーション (内部で使用)、EXTERNALDATASOURCE、EXTERNALFILEFORMAT、および SCHEMARESOLUTION (スキーマオブジェクトまたはデータベースユーザーの作成、変更、または削除中に取得されたデータベースレベルのロック) によって保持されます。 これらのオブジェクトクラスは、 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)の object_type 列に表示されます。  
   
-## <a name="Remarks"></a>全般的な解説  
+## <a name="general-remarks"></a><a name="Remarks"></a>全般的な解説  
 ロックは、データベース、テーブル、またはビューに適用できます。  
   
 SQL Server PDW は、構成可能な分離レベルを実装していません。 ANSI 規格で定義されている READ_UNCOMMITTED 分離レベルをサポートしています。 ただし、読み取り操作は READ_UNCOMMITTED で実行されるため、実際に発生するブロッキング操作はほとんどなく、システム内で競合が発生する可能性があります。  

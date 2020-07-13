@@ -1,6 +1,6 @@
 ---
 title: フルテキスト検索に使用する類義語辞典ファイルの構成と管理
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,18 +14,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897991"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索クエリでは、フルテキスト検索の*類義語辞典*を使用して、ユーザーが指定した用語のシノニムを検索できます。 各々の類義語辞典では、特定の言語の一連のシノニムを定義します。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。
 
-類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と [ 句を指定する ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ クエリと ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` クエリの場合に行われます。
+類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と `FORMSOF THESAURUS` 句を指定する [CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリと [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリの場合に行われます。
   
 フルテキスト検索の類義語辞典は、XML テキスト ファイルです。
   
@@ -52,30 +52,30 @@ ms.locfileid: "74056201"
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- この既定の場所には、次のファイルが格納されています。  
+この既定の場所には、次のファイルが格納されています。  
   
 -   **言語固有の**類義語辞典ファイル  
 
     セットアップでは、空の類義語辞典ファイルが前述の場所にインストールされます。 サポートされている言語ごとに個別のファイルが用意されています。 システム管理者は、これらのファイルをカスタマイズできます。  
   
-     類義語辞典ファイルの既定のファイル名には、次の形式が使用されます。  
+    類義語辞典ファイルの既定のファイル名には、次の形式が使用されます。  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     指定した言語の類義語辞典ファイルの名前は、レジストリで次のように指定されます。
+    指定した言語の類義語辞典ファイルの名前は、レジストリで次のように指定されます。
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   **グローバル**類義語辞典ファイル  
   
-     tsGlobal.xml は空のグローバル類義語辞典ファイルです。  
+    tsGlobal.xml は空のグローバル類義語辞典ファイルです。  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>類義語辞典ファイルの場所を変更する 
 類義語辞典ファイルの場所および名前を変更するには、そのレジストリ キーを変更します。 各言語の類義語辞典ファイルの場所は、レジストリで次のように指定されています。  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  グローバル類義語辞典ファイルは、LCID 0 のニュートラル言語に対応します。 この値は、管理者のみが変更できます。  
 

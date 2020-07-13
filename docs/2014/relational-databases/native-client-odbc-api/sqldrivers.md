@@ -11,15 +11,14 @@ topic_type:
 helpviewer_keywords:
 - SQLDrivers function
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac1a6d543945f445dcdfc3bf5f54a9a700ea7762
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63192336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022584"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   ODBC ドライバーマネージャーは、すべての**Sqldrivers**属性の指定文字列を返します。 属性文字列と値の定義の詳細については、「[データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=4173)」を参照するか、 [ODBC プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)をオンラインで参照してください。  

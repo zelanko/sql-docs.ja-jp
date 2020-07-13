@@ -10,24 +10,22 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811727"
 ---
 # <a name="manage-changesets-master-data-services"></a>変更セットの管理 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、すべての変更をモデルとバージョンごとに管理できます。  
   
 ## <a name="prerequisites"></a>前提条件  
   
--   
-  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 -   少なくとも、エンティティまたはその属性のいずれかに対する読み取りアクセス権が必要です。  
   
@@ -37,11 +35,9 @@ ms.locfileid: "73728036"
   
 ## <a name="to-manage-the-changesets"></a>変更セットを管理するには  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、モデルとバージョンを選択し、 **[エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、モデルとバージョンを選択し、 **[エクスプローラー]** をクリックします。  
   
-2.  
-  **[変更セット]** をクリックします。 選択したモデルとバージョンで管理できるすべての変更セットが表示されます。  
+2.  **[変更セット]** をクリックします。 選択したモデルとバージョンで管理できるすべての変更セットが表示されます。  
   
 3.  変更セットの詳細を表示するには、 **[適用]** をクリックします。  
   

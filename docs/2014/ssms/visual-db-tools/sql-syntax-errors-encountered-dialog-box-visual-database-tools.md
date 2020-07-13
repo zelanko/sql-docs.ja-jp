@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d42495c4c2acaa9abe513a4f8198612f60b0636e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63204566"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057975"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>[SQL 構文エラーが発生] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、デザイナーが SQL ペインの SQL ステートメントを解析できないことを通知します。  

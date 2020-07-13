@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3dad12bcd71434c1013b4fde5b4bd0231e56016f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086033"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81297947"
 ---
 # <a name="translation-dlls"></a>トランザクション DLL
 多くの場合、アプリケーションとデータソースは異なる文字セットにデータを格納します。 ODBC では、ドライバーが文字セット間でデータを変換できるようにするための汎用的なメカニズムが用意されています。 これは、変換関数**SQLDriverToDataSource**と**sqldatasourcetodriver**を実装する DLL で構成されます。これは、データソースとドライバー間のすべてのデータフローを変換するためにドライバーによって呼び出されます。 この DLL は、アプリケーション開発者、ドライバー開発者、またはサードパーティが記述できます。  

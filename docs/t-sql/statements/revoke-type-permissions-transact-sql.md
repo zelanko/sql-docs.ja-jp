@@ -128,7 +128,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  型に対する CONTROL 権限が必要です。 AS 句を使用する場合は、指定したプリンシパルが型を所有している必要があります。  
   
 ## <a name="examples"></a>例  
- 次の例では、ユーザー定義型 `VIEW DEFINITION` に対する `PhoneNumber` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`VIEW DEFINITION` が `KhalidR` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
+ 次の例では、ユーザー定義型 `PhoneNumber` に対する `VIEW DEFINITION` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`KhalidR` が `VIEW DEFINITION` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC]
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a3bcd07a39401d49be04d141e50c671179efb16
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68092989"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287342"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 関数
 **互換性**  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="diagnostics"></a>診断  
  **SQLSetCursorName**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetCursorName**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|カーソル名が最大値を超えているため、使用可能な最大文字数のみが使用されました。|  
@@ -132,7 +132,7 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  

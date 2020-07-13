@@ -11,14 +11,14 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e798a9c7fa3365082a2e6dab562596d56649ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d3758aeb954427f333c5a22298d6675c04acdb5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088021"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292762"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>ストアド プロシージャでのシノニムの使用
 > [!IMPORTANT]  

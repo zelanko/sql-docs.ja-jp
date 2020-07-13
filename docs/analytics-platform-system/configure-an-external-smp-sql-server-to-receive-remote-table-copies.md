@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401324"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>リモートテーブルコピーを受信するための外部 SMP SQL Server の構成-並列データウェアハウス
@@ -30,7 +30,7 @@ ms.locfileid: "74401324"
   
 -   SQL Server ログインアカウント (SQL Server が既にインストールされている場合)。ログインを作成し、転送先データベースに対する権限を付与する機能があります。  
   
-## <a name="HowToSQLServer"></a>リモートテーブルコピーを受信するための外部 SMP SQL Server の構成  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>リモートテーブルコピーを受信するための外部 SMP SQL Server の構成  
 リモートテーブルのコピー機能では、SQL Server PDW アプライアンスから、Windows システムで実行されている外部 SMP SQL Server データベースにテーブルをコピーします。 リモートテーブルのコピーを受信するように外部 Windows システムを構成した後、次の手順では SQL Server を Windows システムにインストールして構成します。  
   
 SQL Server を構成するには、次の手順に従います。  
@@ -45,7 +45,7 @@ SQL Server を構成するには、次の手順に従います。
   
 5.  認証に使用される SMP SQL Server の SQL Server アカウントを決定します。 並列データエクスポート操作のために、対象のデータベースのテーブルにデータを作成、削除、および挿入する権限をそのアカウントに付与します。  
   
-## <a name="BPSQLConfig"></a>リモートテーブルコピー用の SMP SQL Server 構成のベストプラクティス  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>リモートテーブルコピー用の SMP SQL Server 構成のベストプラクティス  
 リモートテーブルのコピーを受信するように SMP SQL Server を構成する場合は、次のベストプラクティスに従ってパフォーマンスを向上させてください。  
   
 1.  SQL Server の製品ドキュメントに記載されているベストプラクティスに従ってください。 たとえば、データの暗号化を有効にします。 SQL Server のセキュリティ保護の詳細については、MSDN の「 [SQL Server のセキュリティ保護](../relational-databases/security/securing-sql-server.md)」を参照してください。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8f24fe59da1377ea42900a8f1f0b89eb97125f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b8b9a27aa9fc84aadc6659993de3e12e269631d2
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019167"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284742"
 ---
 # <a name="constructing-searched-statements"></a>検索ステートメントの構築
 > [!IMPORTANT]  

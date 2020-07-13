@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc222c1c8669769060de4fc0a1390a9bf02e3f31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091695"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300492"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  

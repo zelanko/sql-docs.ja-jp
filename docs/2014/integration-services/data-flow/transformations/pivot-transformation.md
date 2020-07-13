@@ -15,15 +15,14 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30564343b6d43bbb9ec861f90b22cd799eb98038
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770345"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437579"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
   ピボット変換は、入力データを列の値でピボットすることにより、正規化されたデータセットを、正規化の度合は低いがより圧縮された形に設定します。 たとえば、顧客名、製品、購入した数量を一覧表示する、正規化された **Orders** データセットには、通常、複数の製品を購入した顧客に対して複数の行があり、その顧客に対する各行には製品ごとに注文の詳細が示されています。 ピボット変換では、データセットを製品列でピボットすることにより、各顧客のデータセットを単一行で出力できます。 その行では顧客のすべての購入情報が一覧となり、列名に製品名が表示され、製品列の値には購入した数量が表示されます。 すべての顧客がすべての製品を購入するわけではないので、多くの列に NULL 値が含まれることがあります。  
@@ -45,7 +44,7 @@ ms.locfileid: "62770345"
   
  入力データには重複する行が含まれる場合があります。重複する行があると、ピボット変換は失敗します。 "重複する行" とは、設定キー列およびピボット列に同じ値を持つ行のことです。 エラーを回避するには、エラー行をエラー出力にリダイレクトするように変換を構成するか、重複する行が存在しないように値を事前に集計しておくことができます。  
   
-##  <a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
  ピボット操作を構成するには、 **[ピボット]** ダイアログ ボックスのオプションを設定します。 **[ピボット]** ダイアログ ボックスを開くには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でパッケージにピボット変換を追加し、コンポーネントを右クリックして **[編集]** をクリックします。  
   
  **[ピボット]** ダイアログ ボックスのオプションは次のとおりです。  
@@ -62,8 +61,7 @@ ms.locfileid: "62770345"
  **一致しないピボット キー値を無視して DataFlow の実行後に報告する**  
  パッケージが実行されるときに、 **[ピボット キー]** 列に不明な値が含まれている行を無視して、ピボット キーの値をすべてログ メッセージに出力するようにピボット変換を構成するには、このオプションを選択します。  
   
- 
-  `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
+ `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
   
  **値からピボット出力列を生成**  
  ピボット変換によって出力列が値ごとに作成されるようにするには、このボックスにピボット キーの値を入力します。 パッケージを実行する前に値を入力するか、または次の操作を実行できます。  

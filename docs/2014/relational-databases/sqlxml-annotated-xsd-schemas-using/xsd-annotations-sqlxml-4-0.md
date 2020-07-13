@@ -10,26 +10,25 @@ helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d693217a264388f39fa18859c47b9e7aabdd45aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66013545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003221"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 注釈 (SQLXML 4.0)
   次の表では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入された XSD 注釈の一覧を示し、これらを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] で導入された XDR 注釈と比較します。  
   
-|XSD 注釈|[説明]|トピックリンク|XDR 注釈|  
+|XSD 注釈|説明|トピックリンク|XDR 注釈|  
 |--------------------|-----------------|----------------|--------------------|  
 |`sql:encode`|XML 要素または属性を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BLOB 列にマップするときに、参照 URI を要求します。 この URI は、後で BLOB データを返すために使用できます。|[Sql: encode &#40;SQLXML 4.0&#41;を使用した BLOB データへの URL 参照の要求](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|`url-encode`|  
 |`sql:guid`|列に対し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により生成される GUID 値を使用するか、アップデートグラムで提供される値を使用するかを指定します。|[sql:identity 注釈と sql:guid 注釈の使用](using-the-sql-identity-and-sql-guid-annotations.md)|サポートされていません|  
-|`sql:hide`|スキーマで指定されている要素または属性を、結果の XML ドキュメントで表示しないようにします。|[sql:hide による要素と属性の非表示](hiding-elements-and-attributes-by-using-sql-hide.md)|サポートされていません|  
+|`sql:hide`|スキーマで指定されている要素または属性を、結果の XML ドキュメントで表示しないようにします。|[sql:hide を使用した要素と属性の非表示](hiding-elements-and-attributes-by-using-sql-hide.md)|サポートされていません|  
 |`sql:identity`|IDENTITY 型のデータベース列にマップされる任意のノードに指定できます。 この注釈に指定した値によって、データベース内の対応する IDENTITY 型列の更新方法が決まります。|[sql:identity 注釈と sql:guid 注釈の使用](using-the-sql-identity-and-sql-guid-annotations.md)|サポートされていません|  
-|`sql:inverse`|アップデートグラムロジックに対して、 ** \<sql: relationship>** を使用して指定されている親子リレーションシップの解釈を逆に指示します。|[Sql: relationship での sql: 逆属性の指定 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|サポートされていません|  
+|`sql:inverse`|アップデートグラムロジックに対して、を使用して指定されている親子リレーションシップの解釈を逆に指示し **\<sql:relationship>** ます。|[Sql: relationship での sql: 逆属性の指定 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|サポートされていません|  
 |`sql:is-constant`|どのテーブルにもマップされない XML 要素を作成します。 要素は、クエリ出力に表示されます。|[Sql を使用した定数要素の作成: &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|同じ|  
 |`sql:key-fields`|テーブル内の行を一意に識別する列を指定します。|[Sql: キーフィールド &#40;SQLXML 4.0&#41;を使用したキー列の識別](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|同じ|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|制限値に基づいて、返される値を制限します。|[Sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター処理](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|同じ|  
@@ -41,7 +40,7 @@ ms.locfileid: "66013545"
 |`sql:use-cdata`|XML ドキュメント内の特定の要素に、CDATA セクションを使用するよう指定します。|[Sql を使用した CDATA セクションの作成: &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|同じ|  
   
 > [!NOTE]  
->  XSD ネイティブの `targetNamespace` 属性は、`target-namespace` の XDR マッピング スキーマで導入された [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 注釈に代わるものです。  
+>  XSD ネイティブの `targetNamespace` 属性は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の XDR マッピング スキーマで導入された `target-namespace` 注釈に代わるものです。  
   
 ## <a name="see-also"></a>参照  
  [TargetNamespace 属性を使用してターゲットの名前空間を指定する &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  

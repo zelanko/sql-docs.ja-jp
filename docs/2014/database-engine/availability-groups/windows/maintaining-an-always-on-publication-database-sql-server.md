@@ -12,37 +12,36 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cfe3ca671dd333db50d232cd07dda86ffdd6d9fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62791991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936753"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
   
  
   
-##  <a name="MaintainPublDb"></a> 可用性グループでのパブリッシュされたデータベースのメンテナンス  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>可用性グループでのパブリッシュされたデータベースのメンテナンス  
  AlwaysOn パブリケーション データベースのメンテナンスは、通常のパブリケーション データベースのメンテナンスと基本的に同じです。ただし、次の点を考慮する必要があります。  
   
 -   管理は、プライマリ レプリカ ホストで行う必要があります。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]では、プライマリ レプリカ ホストと読み取り可能なセカンダリ レプリカの **[ローカル パブリケーション]** フォルダーにパブリケーションが表示されます。 フェールオーバー後、プライマリに昇格したセカンダリが読み取り不可である場合は、変更を反映させるために [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を手動で更新する必要がある場合があります。  
   
 -   レプリケーション モニターは、常に元のパブリッシャーの下でパブリケーション情報を表示します。 ただし、元のパブリッシャーをサーバーとして追加することで、この情報を任意のレプリカからレプリケーション モニターで表示することができます。  
   
--   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後にセカンダリでストアドプロシージャを使用してレプリケーションを構成していて、別のレプリカで有効にされたパブリケーションデータベースに対するプルサブスクリプションが必要な場合、またはの*@publisher* `sp_addpullsubscription`パラメーターとして、現在のパブリッシャーで`sp_addmergepulllsubscription`はなく元のパブリッシャーの名前を指定する必要があります。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合は、 *@publisher*パラメーターに現在のプライマリレプリカのホスト名を使用します。  
+-   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後にセカンダリでストアドプロシージャを使用してレプリケーションを構成していて、別のレプリカで有効にされたパブリケーションデータベースに対するプルサブスクリプションが必要な場合、またはのパラメーターとして、現在のパブリッシャーではなく元のパブリッシャーの名前を指定する必要があり *@publisher* `sp_addpullsubscription` `sp_addmergepulllsubscription` ます。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合は、パラメーターに現在のプライマリレプリカのホスト名を使用し *@publisher* ます。  
   
     > [!NOTE]  
-    >  などの一部のプロシージャ`sp_addpublication`では、 *@publisher*パラメーターはの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスではないパブリッシャーに対してのみサポートされます。このような場合、AlwaysOn に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は関係ありません。  
+    >  などの一部のプロシージャでは、 `sp_addpublication` *@publisher* パラメーターはのインスタンスではないパブリッシャーに対してのみサポートされます [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。このような場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn には関係ありません。  
   
 -   フェールオーバー後に [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
-##  <a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
  パブリッシュされたデータベースを可用性グループから削除する場合、またはパブリッシュされたメンバー データベースを含む可用性グループを削除する場合、次の点を考慮します。  
   
--   元のパブリッシャーのパブリケーションデータベースを可用性グループのプライマリレプリカから削除する場合は、パブリッシャー/ `sp_redirect_publisher`データベースペアのリダイレクトを削除*@redirected_publisher*するために、パラメーターの値を指定せずにを実行する必要があります。  
+-   元のパブリッシャーのパブリケーションデータベースを可用性グループのプライマリレプリカから削除する場合は、 `sp_redirect_publisher` *@redirected_publisher* パブリッシャー/データベースペアのリダイレクトを削除するために、パラメーターの値を指定せずにを実行する必要があります。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,8 +67,7 @@ ms.locfileid: "62791991"
     > [!NOTE]  
     >  メンバー データベースをパブリッシュした可用性グループを削除した場合、またはパブリッシュされたデータベースを可用性グループから削除した場合、パブリッシュされたデータベースのすべてのコピーは復旧中の状態のままとなります。 それぞれを復元すると、パブリッシュされたデータベースとして表示されます。 1 つのコピーだけをパブリケーション メタデータで保持する必要があります。 パブリッシュされたデータベース コピーのレプリケーションを無効にするには、最初にすべてのサブスクリプションとパブリケーションをデータベースから削除します。  
   
-     
-  `sp_dropsubscription` を実行してパブリケーション サブスクリプションを削除します。 ディストリビューターでアクティブなパブリッシングデータベース*@ignore_distributributor*のメタデータを保持するには、パラメーターを1に設定してください。  
+     `sp_dropsubscription` を実行してパブリケーション サブスクリプションを削除します。 *@ignore_distributributor*ディストリビューターでアクティブなパブリッシングデータベースのメタデータを保持するには、パラメーターを1に設定してください。  
   
     ```  
     USE MyDBName;  
@@ -82,8 +80,7 @@ ms.locfileid: "62791991"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_droppublication` を実行してすべてのパブリケーションを削除します。 ここでも、パラメーター *@ignore_distributor*を1に設定して、アクティブなパブリッシングデータベースのメタデータをディストリビューターで保持します。  
+     `sp_droppublication` を実行してすべてのパブリケーションを削除します。 ここでも、パラメーターを1に設定して、 *@ignore_distributor* アクティブなパブリッシングデータベースのメタデータをディストリビューターで保持します。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -91,8 +88,7 @@ ms.locfileid: "62791991"
         @ignore_distributor = 1;  
     ```  
   
-     
-  `sp_replicationdboption` を実行してデータベースのレプリケーションを無効にします。  
+     `sp_replicationdboption` を実行してデータベースのレプリケーションを無効にします。  
   
     ```  
     EXEC sys.sp_replicationdboption  
@@ -103,7 +99,7 @@ ms.locfileid: "62791991"
   
      この時点で、パブリッシュされたデータベースのコピーを保持または削除できます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)](always-on-availability-groups-sql-server.md)  
   
@@ -117,6 +113,6 @@ ms.locfileid: "62791991"
  [AlwaysOn 可用性グループ &#40;SQL Server の前提条件、制限事項、推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
+ [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   
   

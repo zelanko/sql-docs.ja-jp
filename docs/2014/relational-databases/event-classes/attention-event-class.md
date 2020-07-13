@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c7f032d4e58dd0539d2bbe05d0d5ceebec800edd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62912320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031112"
 ---
 # <a name="attention-event-class"></a>Attention イベント クラス
   **Attention** イベント クラスでは、キャンセル、クライアントからの割り込み要求、クライアント接続の破棄など、アテンション イベントが発生したことを示します。 操作のキャンセルも、データ アクセス ドライバーのタイムアウト実装の一部と考えることができます。  
   
 ## <a name="attention-event-class-data-columns"></a>Attention イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  

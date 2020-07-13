@@ -3,9 +3,9 @@ title: dm_user_db_resource_governance (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,20 +20,20 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627399"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>dm_user_db_resource_governance (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-現在のデータベースまたはエラスティックプールのリソースガバナンスメカニズムによって使用される実際の構成と容量の設定を返します。
+現在のデータベースまたはエラスティック プールのリソース ガバナンス メカニズムによって使用されている実際の構成と容量の設定が返されます。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|INT|データベースの ID。 Azure SQL Database サーバー内で一意です。|
 |**logical_database_guid**|UNIQUEIDENTIFIER|ユーザーデータベースの有効期間を経ているユーザーデータベースの論理 GUID。  データベースの名前を変更したり、サービスレベル目標を変更しても、この値は変わりません。|
@@ -61,7 +61,7 @@ ms.locfileid: "74165921"
 |**initial_db_file_size_in_mb**|bigint|新しいデータファイルの既定のサイズ (MB 単位)。 「 [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)」を参照してください。|
 |**log_size_in_mb**|bigint|新しいログファイルの既定のサイズ (MB 単位)。 「 [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)」を参照してください。|
 |**instance_cap_cpu**|INT|内部使用のみです。|
-|**instance_max_log_rate**|bigint|SQL Server インスタンスのログ生成率の制限 (バイト/秒)。 などのシステムデータベースを含め`tempdb` 、インスタンスによって生成されたすべてのログに適用されます。 エラスティックプールでは、はプール内のすべてのデータベースによって生成されるログに適用されます。|
+|**instance_max_log_rate**|bigint|SQL Server インスタンスのログ生成率の制限 (バイト/秒)。 などのシステムデータベースを含め、インスタンスによって生成されたすべてのログに適用され `tempdb` ます。 エラスティックプールでは、はプール内のすべてのデータベースによって生成されるログに適用されます。|
 |**instance_max_worker_threads**|INT|SQL Server インスタンスのワーカースレッドの制限。|
 |**replica_type**|INT|レプリカの種類。ここで、0はプライマリ、1はセカンダリです。|
 |**max_transaction_size**|bigint|任意のトランザクションで使用される最大ログ領域 (KB 単位)。|
@@ -94,7 +94,7 @@ ms.locfileid: "74165921"
 
 このビューには、VIEW DATABASE STATE 権限が必要です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 Azure SQL Database でのリソースガバナンスの詳細については、「 [SQL Database リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)」を参照してください。
 
@@ -122,6 +122,6 @@ ORDER BY database_name;
 - [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
 - [dm_resource_governor_resource_pools_history_ex (Transact-sql)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
 - [sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [トランザクションログレートガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [トランザクション ログ速度ガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [単一データベースの DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
-- [単一データベースの仮想コアリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [単一データベースの仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

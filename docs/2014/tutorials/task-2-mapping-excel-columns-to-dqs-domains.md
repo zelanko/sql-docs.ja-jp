@@ -9,20 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006654"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>タスク 2: DQS ドメインに Excel 列をマップする
     
-1.  
-  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。  
+1.  **[マップ]** ページの **[データ ソース]** で **[Excel ファイル]** を選択します。  
   
-2.  [**参照**] をクリックし、[**仕入先 .xlsx**] を選択して、[**開く**] をクリックします。  
+2.  [**参照**] をクリックし、[ **Suppliers.xlsx**] を選択して、[**開く**] をクリックします。  
   
 3.  **ワークシート**の [ **IncomingSuppliers $** ] を選択します。  
   
@@ -38,7 +36,7 @@ ms.locfileid: "65484703"
     |Address Line|Address Line|  
     |City|City|  
     |State|State|  
-    |国 ([ **+ (列マッピングの追加)** ] ツールバーをクリックして行を追加します)|Country|  
+    |国 ([ **+ (列マッピングの追加)** ] ツールバーをクリックして行を追加します)|国|  
     |Zip Code|Zip|  
   
      ![ドメインへの Excel 列のマッピング](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "ドメインへの Excel 列のマッピング")  
@@ -49,7 +47,7 @@ ms.locfileid: "65484703"
   
 6.  [**次へ**] をクリックして、[**クレンジング**] ページに移動します。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

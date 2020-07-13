@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributor system table
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: aa171f268fc6e39d584461dd0c2a4d69345706a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79e27a2f5aad4a8b3bba722d0e6cedebaa5a4c60
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889960"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Msdistributor**テーブルには、ディストリビューターのプロパティが含まれています。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**"**|**sysname**|プロパティの名前|  
-|**数値**|**nvarchar (3000)**|プロパティの値。|  
+|**プロパティ**|**sysname**|プロパティの名前|  
+|**value**|**nvarchar (3000)**|プロパティの値。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

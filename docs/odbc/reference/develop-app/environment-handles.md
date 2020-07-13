@@ -11,14 +11,14 @@ helpviewer_keywords:
 - environment handles [ODBC]
 - handles [ODBC], environment
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114319"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300442"
 ---
 # <a name="environment-handles"></a>環境ハンドル
 *環境*とは、データにアクセスするためのグローバルなコンテキストです。環境に関連付けられている情報は、次のように、本質的にグローバルな情報です。  

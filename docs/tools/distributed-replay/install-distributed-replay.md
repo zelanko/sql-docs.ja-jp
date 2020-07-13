@@ -1,6 +1,7 @@
 ---
 title: 分散再生のインストール
 titleSuffix: SQL Server Distributed Replay
+description: この記事では、インストール ウィザード、コマンド プロンプト ウィンドウ、または構成ファイルを使用して、分散再生をインストールする方法について説明します。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992184"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999392"
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
 
@@ -98,7 +99,7 @@ ms.locfileid: "74992184"
   
     -   クライアント サービスをインストールするには、 **[分散再生クライアント]** を選択します。  
   
-     **重要**: 分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+     **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
     -   ドメイン ユーザー アカウント  
   
@@ -161,7 +162,7 @@ ms.locfileid: "74992184"
 |/CTLRSVCACCOUNT<br /><br /> **省略可能**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CTLRSVCPASSWORD<br /><br /> **省略可能**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
 |/CTLRSTARTUPTYPE<br /><br /> **省略可能**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
-|/CTLRUSERS<br /><br /> **省略可能**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> 注: グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
+|/CTLRUSERS<br /><br /> **省略可能**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**:分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つまたは複数のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> 注:グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
 |/CLTSVCACCOUNT<br /><br /> **省略可能**|分散再生クライアント サービスのサービス アカウント。|アカウントとパスワードのチェック|  
 |/CLTSVCPASSWORD<br /><br /> **省略可能**|分散再生クライアント のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
 |/CLTSTARTUPTYPE<br /><br /> **省略可能**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
@@ -210,18 +211,17 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  次の例では、コマンド プロンプトで構成ファイルを指定する方法を示しています。  
   
-```  
+```
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
-```  
-  
-> [!NOTE]  
->  構成ファイルでパスワードを構成することはできないため、コマンドラインで両方のパスワードを指定する必要があります。  
-  
-## <a name="see-also"></a>参照  
- [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+```
+
+> [!NOTE]
+> 構成ファイルでパスワードを構成することはできないため、コマンドラインで両方のパスワードを指定する必要があります。  
+
+## <a name="see-also"></a>参照
+
+- [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 83d688a72efaaf75305e5077634f70b016bad818
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62865101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039978"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>単一インスタンスへのポリシーのインポート
   ここでは、スケジュールするベスト プラクティス ポリシーを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の単一インスタンス上のポリシー ベースの管理にインポートします。  
@@ -25,7 +24,7 @@ ms.locfileid: "62865101"
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>データベース エンジンのベスト プラクティス ポリシーのインポート  
   
-1.  を[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起動し、に接続し[!INCLUDE[ssDE](../includes/ssde-md.md)]ます。  
+1.  を起動 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] し、に接続し [!INCLUDE[ssDE](../includes/ssde-md.md)] ます。  
   
 2.  オブジェクトエクスプローラーで、[**管理**]、[**ポリシー管理**] の順に展開します。  
   

@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67928644"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761770"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたは他のセルセットから選択されたセルのコレクションです。  
   
 ## <a name="remarks"></a>解説  
- **セルセット**内のデータは、配列に似た直接アクセスを使用して取得されます。 特定のメンバーにドリルダウンして、そのメンバーに関するデータを取得することができます。 たとえば、次のコードは、という名前`cst`のセルセットの最初の軸の最初の位置にある最初のメンバーのキャプションを返します。  
+ **セルセット**内のデータは、配列に似た直接アクセスを使用して取得されます。 特定のメンバーにドリルダウンして、そのメンバーに関するデータを取得することができます。 たとえば、次のコードは、という名前のセルセットの最初の軸の最初の位置にある最初のメンバーのキャプションを返し `cst` ます。  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

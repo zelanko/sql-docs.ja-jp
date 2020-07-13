@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CommandText property [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1dace0f436d748ca3ab6d482a9eda4920f2f866d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 35e43b2e9aaba281334af135a44510295f4179e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76910528"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759308"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command プロパティおよび CommandText プロパティの例 (VC++)
 次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してプロシージャのテキストを更新する方法を示しています。  

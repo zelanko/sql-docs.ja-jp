@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a2bbb889bc0277ab01f29896d4f60eebd8236cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67966226"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759168"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions メソッド (ADOX)
 オブジェクトまたはオブジェクトコンテナーに対する[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の権限を返します。  
@@ -46,7 +46,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する**Long 型**の値です。  
   
  *ObjectTypeId*  
- 省略可能。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
 ## <a name="applies-to"></a>適用対象  
   

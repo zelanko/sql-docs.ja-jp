@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a9ca32627b9703465dcfca554fdc32ae01442e7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111191"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280512"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマー&#39;s リファレンス
 *ODBC プログラマーズリファレンス*には、次のセクションが含まれています。  
@@ -39,7 +39,7 @@ ms.locfileid: "68111191"
 -   [Odbc](../../odbc/reference/appendixes/odbc-appendixes.md)の各付録には、odbc エラーコード、データ型、および SQL 文法の技術的な詳細と参照テーブルが含まれています。  
   
 ## <a name="working-with-the-odbc-documentation"></a>ODBC ドキュメントの操作  
- ODBC インターフェイスは、C プログラミング言語で使用できるように設計されています。 ODBC インターフェイスの使用は、SQL ステートメント、ODBC 関数呼び出し、および C プログラミングの3つの領域にまたがります。 このドキュメントでは、次のことを前提としています。  
+ ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスは、SQL ステートメント、ODBC 関数呼び出し、C プログラミングという 3 つの領域で使用されます。 このドキュメントでは、次のことを前提としています。  
   
 -   C プログラミング言語に関する実用的な知識。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "68111191"
   
  次の表記規則が使用されます。  
   
-|Format|使用目的|  
+|フォーマット|使用目的|  
 |------------|--------------|  
 |SELECT * FROM|大文字は、SQL ステートメント、マクロ名、およびオペレーティングシステムのコマンドレベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|サンプルのコマンドラインとプログラムコードでは、等幅フォントが使用されます。|  
-|*引数*|斜体の単語は、プログラムの引数、ユーザーまたはアプリケーションが提供する必要がある情報、または単語の強調を示します。|  
+|*argument*|斜体の単語は、プログラムの引数、ユーザーまたはアプリケーションが提供する必要がある情報、または単語の強調を示します。|  
 |**SQLEndTran**|太字で表示されているように、関数名を含む構文を正確に入力する必要があることを示します。|  
 |&#124;|垂直バーは、構文行で相互に排他的な2つの選択肢を区切ります。|  
 |...|省略記号は、引数を複数回繰り返すことができることを示します。|  

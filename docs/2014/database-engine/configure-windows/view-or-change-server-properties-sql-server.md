@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72783126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934750"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 構成マネージャーを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインスタンスのプロパティを表示または変更する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "72783126"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **サーバーのプロパティを表示または変更するために使用するもの:**  
   
@@ -43,9 +42,9 @@ ms.locfileid: "72783126"
   
 -   **補足情報:** [サーバーのプロパティを変更した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   sp_configure を使用する場合は、構成オプションを設定した後、RECONFIGURE または RECONFIGURE WITH OVERRIDE のいずれかを実行する必要があります。 通常、RECONFIGURE WITH OVERRIDE ステートメントは、十分注意して使用する必要がある構成オプション用に予約されています。 ただし、RECONFIGURE WITH OVERRIDE はどの構成オプションでも機能します。また、RECONFIGURE WITH OVERRIDE を RECONFIGURE の代わりに使用することもできます。  
   
@@ -54,14 +53,14 @@ ms.locfileid: "72783126"
   
 -   一部のプロパティ ページには、Windows Management Instrumentation (WMI) から取得した情報が表示されます。 これらのページを表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を実行しているコンピューターに WMI をインストールする必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
   
- 既定では`sp_configure` 、パラメーターを指定しない、または最初のパラメーターだけを指定して、の実行権限をすべてのユーザーに付与します。 両方の`sp_configure`パラメーターを使用してを実行し、構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ `sp_configure`既定では、パラメーターを指定しない、または最初のパラメーターだけを指定して、の実行権限をすべてのユーザーに付与します。 両方のパラメーターを使用してを実行し、 `sp_configure` 構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-or-change-server-properties"></a>サーバーのプロパティを表示または変更するには  
   
@@ -69,7 +68,7 @@ ms.locfileid: "72783126"
   
 2.  **[サーバーのプロパティ]** ダイアログ ボックスで、ページをクリックし、そのページに関するサーバーの情報を表示または変更します。 いくつかのプロパティは読み取り専用です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>SERVERPROPERTY 組み込み関数を使用してサーバーのプロパティを表示するには  
   
@@ -139,7 +138,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> SQL Server 構成マネージャーの使用  
  いくつかのサーバー プロパティは、SQL Server 構成マネージャーを使用して表示または変更できます。 たとえば、SQL Server のインスタンスのバージョンおよびエディションを表示したり、エラー ログ ファイルの格納場所を変更したりできます。 これらのプロパティは、 [サーバー関連の動的管理ビューおよび関数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)をクエリして表示することもできます。  
   
 #### <a name="to-view-or-change-server-properties"></a>サーバーのプロパティを表示または変更するには  
@@ -148,12 +147,11 @@ GO
   
 2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
   
-3.  詳細ウィンドウで **[SQL Server (\<***instancename***>)]** を右クリックし、**[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで、[ **SQL Server ( \<***instancename***> )**] を右クリックし、[**プロパティ**] をクリックします。  
   
-4.  
-  **[SQL Server (\<***instancename***>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、**[OK]** をクリックします。  
+4.  [ **SQL Server ( \<***instancename***> ) のプロパティ**] ダイアログボックスの [**サービス**] タブまたは [**詳細設定**] タブで、サーバーのプロパティを変更し、[ **OK**] をクリックします。  
   
-##  <a name="FollowUp"></a>補足情報: サーバーのプロパティを変更した後  
+##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a>補足情報: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

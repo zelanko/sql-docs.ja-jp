@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67967131"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763973"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes プロパティの例 (VB)
 この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティを示します。 **Adcolnullable**に設定すると、ユーザーは[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)の値を空の文字列に設定できます。 この場合、ユーザーは、データが不明なレコードと、データが適用されないレコードを区別できます。  

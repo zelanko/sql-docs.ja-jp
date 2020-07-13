@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbe9620620e8895fa831e269edcd2fba2f4421de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735717"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースから、別名データ型または共通言語ランタイム (CLR) ユーザー定義型を削除します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68072111"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]  
 ```  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fe91495b5e73bad0687b675ab73a8c49ad538170
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66065297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937303"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Analysis Services クエリ実行オプション ([全般] ページ)
   このページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のクエリ結果を表示するためのオプションを指定できます。  
   
- **実行タイムアウト**  
+ **[実行タイムアウト]**  
  クエリを取り消すまで待機する秒数を示します。 値 0 は、待ち時間が無限 (タイムアウトなし) であることを示します。  
   
  **既定値にリセット**  

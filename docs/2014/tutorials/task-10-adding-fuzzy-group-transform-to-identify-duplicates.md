@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7091c4dbb8244476357afba18e973535def8baa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65481250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064808"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>タスク 10: あいまいグループ化変換を追加して重複を識別する
   ここでは、あいまいグループ化変換をデータ フローに追加します。 あいまいグループ化変換は、変換元データの重複を識別する際に役立ちます。 詳細については、「[あいまいグループ化変換](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
@@ -54,7 +53,7 @@ ms.locfileid: "65481250"
   
 15. [ **OK]** をクリックして、[**あいまいグループ化変換エディター**] を閉じます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 11: 条件分割変換を追加して重複をフィルターする](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

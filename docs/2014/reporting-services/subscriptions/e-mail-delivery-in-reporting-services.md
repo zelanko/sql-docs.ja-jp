@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100886"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
@@ -28,7 +28,7 @@ ms.locfileid: "66100886"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint モード &#124; sharepoint 2010 および SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint モード &#124; sharepoint 2010 および SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
   
 ## <a name="e-mail-delivery-options"></a>電子メール配信のオプション  
  レポート サーバーの電子メール配信では、以下の方法でレポートを配信できます。  
@@ -47,8 +47,7 @@ ms.locfileid: "66100886"
   
      ブラウザーが HTML 4.0 および MHTML をサポートする場合、Web アーカイブ表示形式を選択すると、レポートがメッセージの一部として埋め込まれます。 その他すべての表示形式 (CSV、PDF など) では、添付ファイルとしてレポートを配信します。 RSReportServer 構成ファイルでこの機能を無効にすることができます。  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートを送信する前に、添付ファイルまたはメッセージのサイズを確認しません。 添付ファイルまたはメッセージがメール サーバーで許可された最大サイズを超えると、レポートは配信されません。 レポートが大きい場合は、他の配信オプション (URL や通知など) のいずれかを選択します。  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートを送信する前に、添付ファイルまたはメッセージのサイズを確認しません。 添付ファイルまたはメッセージがメール サーバーで許可された最大サイズを超えると、レポートは配信されません。 レポートが大きい場合は、他の配信オプション (URL や通知など) のいずれかを選択します。  
   
  サブスクリプションを作成したときにレポートをどのように配信するかを決定する配信オプションを設定します。 たとえば、サブスクリプションで **[リンクを含める]** を選択すると、電子メール メッセージには、レポートへのハイパーリンクが含まれます。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66100886"
   
  SharePoint モード レポート サーバーの構成方法については、次のトピックを参照してください。  
   
--   [SharePoint 2010 および SharePoint 2013 &#40;Reporting Services サービスアプリケーションの電子メールを構成&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>参照  
  [タスクと権限](../security/tasks-and-permissions.md)   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 446dfc15159cad3d418b00afe36e9ae6563ee084
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67922010"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764623"
 ---
 # <a name="troubleshooting-rds"></a>RDS のトラブルシューティング
 > [!IMPORTANT]

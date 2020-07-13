@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd8288fa9f39593cb1f5fb91818925d36d731b9f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921426"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760687"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize プロパティ (ADO)
 フィールドの値の実際の長さをバイト単位で示します。  

@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: d7b894919a4149d37181d543b8d58fc820aad10b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68120238"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053028"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>fn_hadr_distributed_ag_database_replica (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   分散型可用性グループ内のデータベースを、ローカル可用性グループ内のデータベースにマップするために使用します。  
    
@@ -50,9 +49,9 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_database_id**|**UNIQUEIDENTIFIER**|ローカル可用性グループ内のデータベースの ID。|  
+|**group_database_id**|**uniqueidentifier**|ローカル可用性グループ内のデータベースの ID。|  
   
 ## <a name="examples"></a>例  
   

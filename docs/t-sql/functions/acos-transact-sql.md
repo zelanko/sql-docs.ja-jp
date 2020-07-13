@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ACOS function
 - arccosine
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65f4db24d081dc8ceb85201eee088005662e9146
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faf7bdc41d4f6eefdf217447ae9bf0b552b6cfc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040441"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007960"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 角度 (ラジアン) を返す関数。コサインは、指定された float 式です。 これは、アークコサイン (逆余弦) とも呼ばれます。
   
@@ -36,7 +36,7 @@ ms.locfileid: "68040441"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ACOS ( float_expression )  
 ```  
   

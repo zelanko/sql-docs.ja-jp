@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0266318c73c9bb912da4251f2988f00e1c588a62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077532"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898041"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf を使用して Linux で SQL Server Integration Services を構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services (SSIS) をインストールするときは、`ssis-conf` 構成スクリプトを実行します。 SSIS のインストールについて詳しくは、「[SQL Server Integration Services (SSIS) を Linux にインストールする](sql-server-linux-setup-ssis.md)」をご覧ください。
 
@@ -32,9 +32,9 @@ Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services
 
 ## <a name="run-ssis-conf"></a>ssis-conf を実行する
 
-この記事の例では、完全なパス `ssis-conf` を指定して `/opt/ssis/bin/ssis-conf` を実行します。 その場所に異動してから `ssis-conf` を実行する場合は、このユーティリティを現在のディレクトリのコンテキストで実行できます (`./ssis-conf`)。
+この記事の例では、完全なパス `/opt/ssis/bin/ssis-conf` を指定して `ssis-conf` を実行します。 その場所に異動してから `ssis-conf` を実行する場合は、このユーティリティを現在のディレクトリのコンテキストで実行できます (`./ssis-conf`)。
 
-この記事で説明されているコマンドは必ずルート特権を付けて使用してください。 たとえば、`sudo /opt/ssis/bin/ssis-conf setup` ではなく、`/opt/ssis/bin/ssis-conf setup` を実行します。
+この記事で説明されているコマンドは必ずルート特権を付けて使用してください。 たとえば、`/opt/ssis/bin/ssis-conf setup` ではなく、`sudo /opt/ssis/bin/ssis-conf setup` を実行します。
 
 希望の言語のプロンプトでこれらのコマンドを実行するには、ロケールを指定できます。 たとえば、中国語のプロンプトを受け取るには、コマンド `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup` を実行します。
 
@@ -116,7 +116,7 @@ SSIS をインストールするたびに `setup` コマンドを使用します
 
 次の `/var/opt/ssis/ssis.conf` ファイルで各設定の例を示します。
 
-SQL Server では、`mssql.conf` ファイルの値を変更することによってシステム設定を変更できます。 SSIS では、 *ファイルの値を変更してシステム設定を変更 "* できません`ssis.conf`"。 `ssis.conf` ファイルには、セットアップの結果のみが表示されます。 SSIS の設定を変更する場合は、`ssis.conf` ファイルを削除し、`setup` コマンドを再度実行します。
+SQL Server では、`mssql.conf` ファイルの値を変更することによってシステム設定を変更できます。 SSIS では、`ssis.conf` ファイルの値を変更してシステム設定を変更 "*できません*"。 `ssis.conf` ファイルには、セットアップの結果のみが表示されます。 SSIS の設定を変更する場合は、`ssis.conf` ファイルを削除し、`setup` コマンドを再度実行します。
 
 次に、サンプルの `ssis.conf` ファイルを示します。 各フィールドが 1 つのセットアップ手順の結果に対応しています。
 

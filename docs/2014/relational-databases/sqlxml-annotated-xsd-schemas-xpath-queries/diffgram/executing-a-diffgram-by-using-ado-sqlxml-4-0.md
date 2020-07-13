@@ -13,15 +13,14 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLOLEDB Provider
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 304cba3b913e9eb16d25af58f303945ec882266c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66012478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062976"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO を使用した、DiffGram の実行 (SQLXML 4.0)
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、DiffGram を実行します。 このアプリケーションでは、DiffGram と XSD スキーマは 1 つのファイルに格納されており、 ファイルを指定して DiffGram を読み込みます。 [Diffgram の例](diffgram-examples-sqlxml-4-0.md)に記載されている、すべての diffgram (および関連する XSD スキーマ) を使用できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "66012478"
   
 -   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
--   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用するには、SQLOLEDB プロバイダー**接続**オブジェクトで**sqlxml Version**プロパティが**sqlxml. 4.0**に設定されている必要があります。  
+-   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用するには、SQLOLEDB プロバイダー**接続**オブジェクトで**sqlxml Version**プロパティを**sqlxml. 4.0**に設定する必要があります。  
   
 -   コマンド (DiffGram) が実行されます。  
   

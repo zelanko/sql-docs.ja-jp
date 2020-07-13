@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62a6f9e016abf24f28660b04e7a6242fdd6606ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 357c729e6d53cc17f2e4c169dd66613b6cfd2f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065262"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>互換性モード 90 以上では外部結合演算子 \*= および =\* がサポートされない
-  アップグレードアドバイザーによって、外部結合演算子\*= および =\*が使用されたことが検出されました。 このような演算子は互換性モード 90 以上ではサポートされません。 アップグレードすると、ユーザー データベースでは互換性モードが維持されます。 これらの演算子を使用するステートメントは失敗します。  
+  アップグレードアドバイザーによって、外部結合演算子 = および = が使用されたことが検出されました \* \* 。 このような演算子は互換性モード 90 以上ではサポートされません。 アップグレードすると、ユーザー データベースでは互換性モードが維持されます。 これらの演算子を使用するステートメントは失敗します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>修正措置  
- データベース互換性モードを90以降に変更する前に、外部結合演算子\*= および =\*を使用するステートメントを、同等の外部結合キーワードを使用するように変更します。 次の例では、`\*=` 演算子を使用するクエリと、`LEFT OUTER JOIN` キーワードを使用する同等のクエリを示しています。  
+ データベース互換性モードを90以降に変更する前に、外部結合演算子 = および = を使用するステートメントを、 \* \* 同等の外部結合キーワードを使用するように変更します。 次の例では、`\*=` 演算子を使用するクエリと、`LEFT OUTER JOIN` キーワードを使用する同等のクエリを示しています。  
   
 ```  
 -- This query uses an old-style outer join operator.  

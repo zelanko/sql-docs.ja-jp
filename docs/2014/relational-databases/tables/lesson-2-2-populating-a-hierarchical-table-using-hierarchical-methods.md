@@ -13,32 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66110058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068053"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルの作成
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]マーケティング部門には8人の従業員が勤務しています。 従業員の階層は、次のようになります。  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のマーケティング部門には 8 人の従業員が勤務しています。 従業員の階層は、次のようになります。  
   
- **David**、 **EmployeeID** 6 は、マーケティングマネージャーです。 
-  **David**には、次の 3 人の Marketing Specialist が直属します。  
+ **David**( **EmployeeID 6** ) は Marketing Manager です。 **David**には、次の 3 人の Marketing Specialist が直属します。  
   
--   **Sariya**、 **EmployeeID** 46  
+-   **Sariya**( **EmployeeID 46** )  
   
--   **John**、 **EmployeeID** 271  
+-   **John**( **EmployeeID 271** )  
   
--   **Jill**、 **EmployeeID** 119  
+-   **Jill**( **EmployeeID 119** )  
   
  Marketing Assistant の **Wanida** (**EmployeeID** 269) は **Sariya**に直属し、Marketing Assistant の **Mary** (**EmployeeID** 272) は **John**に直属します。  
   
 ### <a name="to-insert-the-root-of-the-hierarchy-tree"></a>階層ツリーのルートを挿入するには  
   
-1.  次の例では、Marketing Manager である **David** を、階層のルートに位置するテーブルに挿入します。 
-  **OrdLevel** 列は計算列です。 したがって、INSERT ステートメントの一部ではありません。 この最初のレコードでは、 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) メソッドを使用して、この最初のレコードを階層のルートとして挿入します。  
+1.  次の例では、Marketing Manager である **David** を、階層のルートに位置するテーブルに挿入します。 **OrdLevel** 列は計算列です。 したがって、INSERT ステートメントの一部ではありません。 この最初のレコードでは、 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) メソッドを使用して、この最初のレコードを階層のルートとして挿入します。  
   
     ```  
     INSERT HumanResources.EmployeeOrg (OrgNode, EmployeeID, EmpName, Title)  
@@ -66,8 +63,7 @@ ms.locfileid: "66110058"
   
 ### <a name="to-insert-a-subordinate-employee"></a>部下を挿入するには  
   
-1.  **Sariya**は**David**にレポートします。 **Sariya の**ノードを挿入するには、データ型`hierarchyid`の適切な**orgnode**値を作成する必要があります。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 
-  `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
+1.  **Sariya** は **David**に直属します。 **Sariya の**ノードを挿入するには、データ型の適切な**orgnode**値を作成する必要があり `hierarchyid` ます。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
   
     -   parent が NULL の場合、 `GetDescendant` は NULL を返します。  
   
@@ -79,8 +75,7 @@ ms.locfileid: "66110058"
   
     -   parent、child1、child2 のすべてが NULL でない場合、 `GetDescendant` は child1 より大きく child2 より小さい parent の子を返します。  
   
-     テーブルにはルート以外にまだ 1 行もないため、次のコードではルートの `(NULL, NULL)` 引数を使用します。 
-  **Sariya**を挿入するには、次のコードを実行します。  
+     テーブルにはルート以外にまだ 1 行もないため、次のコードではルートの `(NULL, NULL)` 引数を使用します。 **Sariya**を挿入するには、次のコードを実行します。  
   
     ```  
     DECLARE @Manager hierarchyid   
@@ -144,8 +139,7 @@ ms.locfileid: "66110058"
     EXEC AddEmp 271, 272, 'Mary', 'Marketing Assistant' ;  
     ```  
   
-3.  
-  **EmployeeOrg** テーブルの行を調べるには、再び次のクエリを実行します。  
+3.  **EmployeeOrg** テーブルの行を調べるには、再び次のクエリを実行します。  
   
     ```  
     SELECT OrgNode.ToString() AS Text_OrgNode,   

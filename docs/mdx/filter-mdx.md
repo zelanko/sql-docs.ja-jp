@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132693"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
@@ -34,12 +34,12 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  true または false に評価される有効な多次元式 (MDX) 論理式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Filter**関数は、指定されたセット内の各組に対して指定された論理式を評価します。 関数は、論理式が**true**と評価される、指定されたセット内の各組で構成されるセットを返します。 **True**と評価される組がない場合は、空のセットが返されます。  
   
  **フィルター**関数は、 [IIf](../mdx/iif-mdx.md)関数と同様の方法で動作します。 **IIf**関数は、MDX 論理式の評価に基づいて2つのオプションのうち1つだけを返します。一方、**フィルター**関数は、指定された検索条件を満たす組のセットを返します。 実際には、**フィルター**関数は`IIf(Logical_Expression, Set_Expression.Current, NULL)`セット内の各組に対してを実行し、結果のセットを返します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、クエリの Rows 軸で Filter 関数を使用して、Internet Sales Amount が $1万より大きい日付のみを返す方法を示します。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
@@ -84,6 +84,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762941"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリデータ[フィールド](../../../ado/reference/ado-api/field-object.md)、または[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトにデータを追加します。  
@@ -34,7 +34,7 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *素材*  
+ *object*  
  **フィールド**または**パラメーター**オブジェクト。  
   
  *データ*  

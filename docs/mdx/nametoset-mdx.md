@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 77731495eb058da05f6c61be391591a40725e579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088395"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
@@ -31,7 +31,7 @@ NameToSet(Member_Name)
  *Member_Name*  
  メンバーの名前を表す有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定されたメンバー名が存在する場合、 **NameToSet**関数はそのメンバーを含むセットを返します。 それ以外の場合、関数は空のセットを返します。  
   
 > [!NOTE]  
@@ -46,6 +46,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

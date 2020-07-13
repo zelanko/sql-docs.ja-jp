@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645643"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   レプリケーション用にマークされたトランザクションのコマンドを返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -44,12 +44,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**アーティクル id**|**int**|アーティクルの ID です。|  
 |**partial_command**|**bit**|これが部分コマンドであるかどうかを示します。|  
-|**メニュー**|**varbinary (1024)**|コマンドの値。|  
-|**xactid**|**binary (10)**|トランザクション ID。|  
+|**command**|**varbinary (1024)**|コマンドの値。|  
+|**xactid**|**binary(10)**|トランザクション ID。|  
 |**xact_seqno**|**varbinary(16)**|トランザクションのシーケンス番号。|  
 |**publication_id**|**int**|パブリケーションの ID です。|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)内のコマンドの ID。|  
@@ -61,7 +61,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_replcmds**は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
   
  レプリケーションでは、指定されたデータベース内の**sp_replcmds**を実行する最初のクライアントがログリーダーとして扱われます。  
@@ -73,16 +73,16 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  クライアントが同じデータベース内で**sp_replcmds**を実行しようとすると、最初のクライアントが切断されるまで、エラー18752が発生します。 最初のクライアントが切断されると、別のクライアントが**sp_replcmds**を実行し、新しいログリーダーになります。  
   
- テキストポインターが同じトランザクションで取得されなかっ[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たために[!INCLUDE[msCoName](../../includes/msconame-md.md)] **sp_replcmds**がテキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの両方に警告メッセージ番号18759が追加されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] テキストポインターが同じトランザクションで取得されなかったために**sp_replcmds**がテキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの両方に警告メッセージ番号18759が追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replcmds**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーメッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

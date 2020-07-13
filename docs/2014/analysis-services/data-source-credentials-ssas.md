@@ -11,20 +11,17 @@ f1_keywords:
 ms.assetid: c1089021-20d9-4d73-820f-819a0bfd66fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88f33a6e2ae78efbe64d7a84af676812df743e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c8ea205d13a9f626e39dad8a1ca0a6e406a8f8fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082574"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529029"
 ---
 # <a name="data-source-credentials-ssas"></a>[データ ソースの資格情報] (SSAS)
+  **テーブルのインポート ウィザード** のこのページを使用すると、選択した既存のデータ ソース接続のユーザー名とパスワードを入力できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
-  **テーブルのインポート ウィザード** のこのページを使用すると、選択した既存のデータ ソース接続のユーザー名とパスワードを入力できます。 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
-  
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **ユーザー名**  
  データ ソース接続のユーザー名を入力します。  
   

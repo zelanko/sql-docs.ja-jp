@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67919253"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763503"
 ---
 # <a name="cursortype-property-ado"></a>CursorType プロパティ (ADO)
 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトで使用されるカーソルの種類を示します。  

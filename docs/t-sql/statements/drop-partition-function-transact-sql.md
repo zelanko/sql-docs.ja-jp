@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e4bf75384f880fb42172462f9505d5ab9ab238
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766280"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースからパーティション関数を削除します。 パーティション構成を作成するには CREATE PARTITION FUNCTION を、変更するには ALTER PARTITION FUNCTION を使用します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044109"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  

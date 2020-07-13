@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 97d52ba1e5167c988b89421ff784428725ccec37
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086363"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525608"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>マイニング構造への入れ子になったテーブルの追加
   データ マイニング ウィザードによって作成されたマイニング構造に入れ子になったテーブルを追加するには、データ マイニング デザイナーを使用します。  
@@ -31,17 +30,13 @@ ms.locfileid: "66086363"
   
 2.  テーブル列の追加先となるマイニング構造を右クリックします。  
   
-3.  
-  **[入れ子になっているテーブルの追加]** を選択します。  
+3.  **[入れ子になっているテーブルの追加]** を選択します。  
   
-     
-  **[入れ子になったテーブル キー列の選択]** ダイアログ ボックスが開きます。  
+     **[入れ子になったテーブル キー列の選択]** ダイアログ ボックスが開きます。  
   
-4.  
-  **[入れ子になったテーブル]** で、マイニング構造で入れ子にするテーブルを選択します。  
+4.  **[入れ子になったテーブル]** で、マイニング構造で入れ子にするテーブルを選択します。  
   
-5.  
-  **[基になる列]** で、入れ子になったテーブルのキー列を選択します。  
+5.  **[基になる列]** で、入れ子になったテーブルのキー列を選択します。  
   
 6.  **[OK]** をクリックします。  
   

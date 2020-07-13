@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3b31ff8ccb9c662a2f0ea54adc9cd2d466103be2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029974"
 ---
 # <a name="cursors-event-category"></a>Cursors イベント カテゴリ
   **Cursors** イベント カテゴリには、カーソルの動作の監視に使用するイベント クラスが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CursorClose イベント クラス](cursorclose-event-class.md)|アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを閉じるイベントについて説明します。|  
 |[CursorExecute イベント クラス](cursorexecute-event-class.md)|API のカーソルで発生する、カーソルを実行するイベントについて説明します。|  

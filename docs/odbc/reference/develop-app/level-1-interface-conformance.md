@@ -12,14 +12,14 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135011"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306183"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
 レベル1のインターフェイスの準拠レベルには、コアインターフェイスの準拠レベルの機能に加え、OLTP リレーショナル DBMS で通常使用できるトランザクションなどの追加機能が含まれています。 レベル1のインターフェイスに準拠したドライバーを使用すると、アプリケーションは、コアインターフェイスの準拠レベルの機能に加えて、次の操作を実行できます。  

@@ -1,5 +1,6 @@
 ---
 title: SqlXmlCommand オブジェクト (SQLXML)
+description: SqlXmlCommand オブジェクトのメソッドとプロパティについて説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,22 +32,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767541"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージド クラス - SqlXmlCommand オブジェクト
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SqlXmlCommand オブジェクトのコンストラクターを次に示します。  
   
 ```  
 public SqlXmlCommand(string cnString)  
 ```  
   
- ここ`cnString`で、は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`(例:)。  
+ ここで、 `cnString` は、サーバー、データベース、およびログイン情報を識別する ADO または OLEDB の接続文字列です (例:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  接続文字列では、`Provider` に SQLOLEDB を指定する必要があります。プロバイダーの文字列に `Data Provider` は使用できません。  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  クエリ結果を既存のストリームに書き込みます。 このメソッドは、結果を追加する必要があるストリームがある場合に便利です (たとえば、クエリ結果が Httpresponse.cache に書き込まれるようにする場合など)。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)」を参照してください。  
   
  XmlReader ExecuteXmlReader ()  
- XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
+ XmlReader オブジェクトを返します。 このメソッドを使用すると、XmlReader オブジェクトのデータを直接操作したり、System.Xml の chainable アーキテクチャにプラグインしたりすることができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 実際のサンプルについては、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
   
  また、次の追加メソッドもサポートしています。  
   
@@ -108,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  コマンドの種類を指定します。 このプロパティは、実行するコマンドの種類を指定するときに使用します。 コマンドの種類の値を、次の表に示します。 実際のサンプルについては、「 [.Net 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL コマンド (`SELECT * FROM Employees FOR XML AUTO` など) を実行します。|  
 |SqlXmlCommandType. XPath|XPath コマンド (`Employees[@EmployeeID=1]` など) を実行します。|  
@@ -117,7 +118,7 @@ public SqlXmlCommand(string cnString)
 |SqlXmlCommandType. アップデートグラム|アップデートグラムを実行します。|  
 |SqlXmlCommandType. Diffgram|DiffGram を実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlXmlParameter オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [SqlXmlAdapter オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
   

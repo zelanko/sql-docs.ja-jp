@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965278"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762813"
 ---
 # <a name="rightsenum"></a>RightsEnum
 オブジェクトのグループまたはユーザーの権限または権限を指定します。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**Adall の作成**|16384 (&H4000)|このユーザーまたはグループには、この種類の新しいオブジェクトを作成する権限があります。|  
 |**Adall の削除**|65536 (&H10000)|ユーザーまたはグループには、オブジェクトからデータを削除する権限が与えられています。 **テーブル**などのオブジェクトの場合、ユーザーはレコードからデータ値を削除する権限を持っています。|  

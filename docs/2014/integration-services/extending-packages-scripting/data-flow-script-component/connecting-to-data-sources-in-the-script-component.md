@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5618c83e680ba01a477d553dd13b1bb2571eea9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768458"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426269"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -31,8 +30,7 @@ ms.locfileid: "62768458"
  `Me.Connections.MyADONETConnection`  
   
 > [!NOTE]  
->  
-  `AcquireConnection` を呼び出す前に、接続マネージャーによって返される接続のデータ型を知っておく必要があります。 スクリプト タスクでは `Option Strict` が有効なので、`Object` 型として返される接続は、使用する前に適切な種類の接続にキャストする必要があります。  
+>  `AcquireConnection` を呼び出す前に、接続マネージャーによって返される接続のデータ型を知っておく必要があります。 スクリプト タスクでは `Option Strict` が有効なので、`Object` 型として返される接続は、使用する前に適切な種類の接続にキャストする必要があります。  
   
  次に、特定の接続マネージャーの `AcquireConnection` メソッドを呼び出して、基になる接続、またはデータ ソースへの接続に必要な情報を取得します。 たとえば、次のコードを使用すると、ADO.NET 接続マネージャーによってラップされた **System.Data.SqlConnection** への参照を取得できます。  
   
@@ -51,13 +49,13 @@ ms.locfileid: "62768458"
 > [!IMPORTANT]  
 >  スクリプト コンポーネントでマネージド コードを記述する場合、OLE DB 接続マネージャーや Excel 接続マネージャーなど、アンマネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出すことはできません。 ただし、これらの接続マネージャーの ConnectionString プロパティを読み取り、**System.Data.OleDb** 名前空間の OLEDB **接続**の接続文字列を使用することにより、コード内でデータ ソースに直接接続することができます。  
 >   
->  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、ADO.NET 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように ADO.NET 接続マネージャーを設定すると、接続には .NET Framework Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、アンマネージ`System.Data.OleDb.OleDbConnection`オブジェクトではなくを返します。 ADO.NET 接続マネージャーで Excel データ ソースを使用するように設定するには、Microsoft OLE DB Provider for Jet を選択して Excel ワークブックを指定し、`Excel 8.0`[接続マネージャー]**ダイアログ ボックスの**[すべて]**ページにある**[拡張プロパティ] **の値に「** 」(Excel 97 以降の場合) と入力します。  
+>  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、ADO.NET 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように ADO.NET 接続マネージャーを設定すると、接続には .NET Framework Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、 `System.Data.OleDb.OleDbConnection` アンマネージオブジェクトではなくを返します。 ADO.NET 接続マネージャーで Excel データ ソースを使用するように設定するには、Microsoft OLE DB Provider for Jet を選択して Excel ワークブックを指定し、 **[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにある **[拡張プロパティ]** の値に「`Excel 8.0`」(Excel 97 以降の場合) と入力します。  
   
  スクリプト コンポーネントを使用して接続マネージャーを使用する方法の詳細については、「[スクリプト コンポーネントによる変換元の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)」および「[スクリプト コンポーネントによる変換先の作成](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)」を参照してください。  
   
-![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS&#41; 接続の Integration Services &#40;](../../connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーを作成する](../../create-connection-managers.md)  
   

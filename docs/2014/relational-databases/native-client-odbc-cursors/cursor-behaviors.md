@@ -17,19 +17,17 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 89c7c4e9a8dcffe03dd12f8013d5ed43810547f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63188564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021071"
 ---
 # <a name="cursor-behaviors"></a>カーソル動作
-  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)の呼び出しで SQL_ATTR_CURSOR_SCROLLABLE オプションと SQL_ATTR_CURSOR_SENSITIVITY オプションを設定することによって指定します。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
+  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)の呼び出しで SQL_ATTR_CURSOR_SCROLLABLE オプションと SQL_ATTR_CURSOR_SENSITIVITY オプションを設定することによって指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
   
 |カーソル動作の設定|要求されるサーバー カーソルの特性|  
 |------------------------------|---------------------------------------------|  

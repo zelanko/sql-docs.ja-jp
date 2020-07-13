@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 597abe268979852d754e2e3e86ae81daa8f3fed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5686bf0c3e261b1df947c02e2edaa419da498ecb
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019067"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284692"
 ---
 # <a name="cursor-library-cache"></a>カーソル ライブラリのキャッシュ
 > [!IMPORTANT]  

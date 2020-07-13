@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643858"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 カタログ ビューのページと行数の情報に不一致がある場合、それらをレポートおよび修正します。 情報に不一致があると、sp_spaceused システム ストアド プロシージャによって間違った領域使用状況レポートが返される原因となります。
   
@@ -49,7 +49,7 @@ ms.locfileid: "68040466"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   

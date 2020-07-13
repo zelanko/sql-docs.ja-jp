@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088033"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527588"
 ---
 # <a name="choosing-data-for-data-mining"></a>データ マイニングで使用するデータの選択
   データマイニングを開始するときに、「必要なデータ量」とたずねられる場合があります。 または、データのクリーニングや書式設定を行うときに、特別な要件はありますか。  
@@ -38,7 +37,7 @@ ms.locfileid: "66088033"
   
  [データのその他の要件](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>データの選択  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>データの選択  
  分析に使用するデータを選択する作業は、データ マイニング プロセスで非常に重要な部分であり、場合によってはアルゴリズムの選択より重要なことがあります。 その理由は、データ マイニングは一般的に仮説中心ではなく、データ ドリブンであるためです。 従来型の統計的なモデリングでは変数の選択とテストを事前に実施するのが一般的ですが、これとは対照的に、データ マイニングではデータを使用して新しい相関関係を見つけることができます (またはパターンが何も見つからないこともあります)。 データの品質と量は、結果に対して大きな影響を及ぼすことがあります。  
   
  目安として、次の規則に従ってください。  
@@ -109,7 +108,7 @@ ms.locfileid: "66088033"
   
 -   値を中間値または代表値で近似します。  
   
-##  <a name="bkmk_CommonDataProblems"></a>一般的なデータの問題  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>一般的なデータの問題  
   
 ### <a name="excel-number-formats"></a>Excel の数値形式  
  Excel は使いやすいツールであり、あらゆる種類のデータをどこにでも配置できます。 ただし、パターンの検出と相関関係の分析を開始する前に、データに対して一定の構造または制約を設定する必要があります。  
@@ -145,15 +144,14 @@ ms.locfileid: "66088033"
   
  日付の操作が難しく、月または日などの一般的なグループ化を使用して日付の分析を行いたい場合は、Excel の DATE 関数を使用して年、月、または日を別々の列に抽出し、この列を使用して分類できます。  
   
-##  <a name="bkmk_OtherRequirements"></a>その他のデータ要件  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>その他のデータ要件  
   
 ### <a name="requirements-by-algorithm-type"></a>アルゴリズムの種類による要件  
  アドインで使用される一部のアルゴリズムでは、モデルを作成するために、特定のデータ型、または特定のコンテンツの種類が必要です。  
   
  **Naïve Bayes モデル**  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、入力として連続列を使用することができません。 これは、数値をビン分割する必要が生じることを意味しますが、または値の種類が十分少ない場合は、不連続値として扱うことができます。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、入力として連続列を使用することができません。 これは、数値をビン分割する必要が生じることを意味しますが、または値の種類が十分少ない場合は、不連続値として扱うことができます。  
   
 -   このような種類のモデルでは、連続値を予測することもできません。 したがって、収入のように連続する数値を予測する場合は、最初に数値を、意味のある複数の範囲にビン分割する必要があります。 どのような範囲が適切なのか自信がない場合は、クラスタリング アルゴリズムを使用して、データ内に存在する数値のグループを識別することができます。  
   
@@ -161,7 +159,7 @@ ms.locfileid: "66088033"
   
 -   [[Excel 用 &#40;データマイニングアドイン&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) ] オプションを使用して Naive Bayes モデルを作成した場合、数値列はモデルから削除されます。 これを回避するには、[[データマイニングアドインのラベル付け &#40;SQL Server]&#41;](relabel-sql-server-data-mining-add-ins.md)ツールを使用して、ビン分割された値を持つ新しい列を作成します。  
   
- **クラスターモデル**  
+ **クラスター モデル**  
   
 -   クラスター化ツール ([クラスターウィザード &#40;excel 用のデータマイニングアドイン&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)および[検出カテゴリ &#40;&#41;Excel 用のテーブル分析ツール](detect-categories-table-analysis-tools-for-excel.md)) では、連続する数値を使用することはできませんが、これらのツールはどちらも数値列を自動的にビン分割します。  
   
@@ -178,7 +176,7 @@ ms.locfileid: "66088033"
 ### <a name="using-content-types-to-make-better-models"></a>より適切なモデルを作成するコンテンツの種類の使用  
  *コンテンツタイプ*は、列に適用するプロパティであり、モデルでの列データの使用方法を指定します。 アルゴリズムは、分析を実行するときに、コンテンツの種類を説明またはヒントとして使用することができます。  
   
- たとえば、ある曜日を示すために特定の間隔で繰り返される数値が列に含まれている場合は、その列のコンテンツの種類を`Cyclical`として指定できます。  
+ たとえば、ある曜日を示すために特定の間隔で繰り返される数値が列に含まれている場合は、その列のコンテンツの種類をとして指定でき `Cyclical` ます。  
   
  このアドインに用意されているウィザードやツールを使用する場合、コンテンツの種類について心配する必要はありません。ただし、[[構造にモデルを追加 &#40;、Excel 用データマイニングアドイン]&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)モデリングオプションを使用して新しいモデルを既存のデータに追加すると、コンテンツの種類に関連するエラーが表示されることがあります。  
   
@@ -194,19 +192,19 @@ ms.locfileid: "66088033"
  `Continuous`  
  この列には、小数点以下桁数で中間値を示すことができる数値データの値が格納されます。 連続列は無限の小数部が含まれる可能性のある計測可能な測定値を表します。 連続した属性列の例としては気温の列があります。  
   
- コンテンツ`Continuous`の種類は`Date`、 `Double`、、および`Long`の各データ型で使用できます。  
+ `Continuous`コンテンツの種類は、、 `Date` 、およびの各データ型で使用できます `Double` `Long` 。  
   
  `Discretized`  
  列には、連続列から派生した値のグループを表す値が格納されます。 バケットは、**順序付き**の不連続値として扱われます。  
   
  コンテンツの種類 `Discretized` は、`Date`、`Double`、および `Long` データ型で使用できます。  
   
- **[キー]**  
+ **キー**  
  この列は行を一意に識別します。  
   
  一般的に、key 列には、分析には使用できない、レコードを追跡するためだけに使用される数値またはテキストの識別子が格納されます。 タイム シリーズ キーとシーケンス キーは例外です。  
   
- **入れ子になったテーブルキー**は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データソースビューとして定義されている外部データソースからデータを取得する場合にのみ使用されます。 入れ子になったテーブルの詳細に[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)ついては、以下を参照してください。  
+ **入れ子になったテーブルキー**は、データソースビューとして定義されている外部データソースからデータを取得する場合にのみ使用され [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 入れ子になったテーブルの詳細については、以下を参照してください [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) 。  
   
  このコンテンツの種類は、`Date`、`Double`、`Long`、および `Text` データ型で使用できます。  
   
@@ -220,7 +218,7 @@ ms.locfileid: "66088033"
   
  このコンテンツの種類は、`Double`、`Long`、および `Date` の各データ型によってサポートされています。  
   
- **Table**  
+ **テーブル**  
  このコンテンツの種類も、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソース ビューとして定義されている外部データ ソースからデータを取得するときにのみ使用されます。  
   
  これは、実際には 1 つ以上の列と 1 つ以上の行で構成される入れ子になったデータ テーブルが各データ行に含まれていることを意味します。  

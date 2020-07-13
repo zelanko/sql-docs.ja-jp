@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054277"
 ---
 # <a name="task-6-setting-synonyms"></a>タスク 6: シノニムを設定する
   このタスクでは、 **Country**ドメインの2つのドメイン値 ( **USA**と**米国**) を、**米国**を先頭の値としてシノニムとして設定します。 **Country**ドメインの作成時に [**先頭の値を使用する**] オプションが選択されているため、 **country**ドメインの**米国**の値は**米国**として出力されます (米国は先頭の値になります)。 詳細については、「[ドメイン値の変更](https://msdn.microsoft.com/library/hh510408.aspx)」を参照してください。
@@ -36,7 +35,7 @@ ms.locfileid: "78177230"
 
      ![シノニムとしての米国と USA](../../2014/tutorials/media/et-settingsynonyms-02.jpg "シノニムとしての米国と USA")
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
  [タスク 7: 複合ドメインを作成する](../../2014/tutorials/task-7-creating-a-composite-domain.md)
 
 

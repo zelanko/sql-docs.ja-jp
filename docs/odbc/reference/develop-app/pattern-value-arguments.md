@@ -12,14 +12,14 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b8e7b7de64d8051118089a54cf14eb45dc96f74
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68023341"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282382"
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 **Sqltables**の*TableName*引数など、カタログ関数の引数の中には、検索パターンを受け入れるものがあります。 SQL_ATTR_METADATA_ID statement 属性が SQL_FALSE に設定されている場合、これらの引数は検索パターンを受け取ります。この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  
@@ -34,7 +34,7 @@ ms.locfileid: "68023341"
   
  このエスケープ文字は、 **SQLGetInfo**の SQL_SEARCH_PATTERN_ESCAPE オプションを使用して取得されます。 検索パターンを受け取る引数内のアンダースコア、パーセント記号、またはエスケープ文字の前に、その文字をリテラルとして含める必要があります。 次の表に例を示します。  
   
-|検索パターン|[説明]|  
+|検索パターン|説明|  
 |--------------------|-----------------|  
 |ある|A という文字を含むすべての識別子|  
 |ABC_|ABC で始まる4文字のすべての識別子|  

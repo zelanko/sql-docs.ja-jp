@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef670f0a8a857c59ee990d9c7e1f1939794af9ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762025"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非対称キーのプロパティを変更します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68066072"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>  
   
 <alter_option> ::=  

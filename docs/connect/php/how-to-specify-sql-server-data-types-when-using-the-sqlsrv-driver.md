@@ -11,14 +11,14 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b9ddb359c34e929247357713c5c48035a3eed9a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922876"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67993356"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  目的の SQL Server データ型を指定するには、 **$params** 配列の各サブ配列の 4 番目のパラメーターとして、適切な *SQLSRV_SQLTYPE_&#42;* 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  目的の SQL Server データ型を指定するには、 *$params* 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV_SQLTYPE_&#42;** 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  

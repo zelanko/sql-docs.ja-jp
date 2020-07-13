@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1ba4b2f081047f25fa775e0c8754caa4ce643e70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66011169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004171"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
   サーバー インスタンスのフルテキスト検索の管理には次の作業があります。  
@@ -29,7 +28,7 @@ ms.locfileid: "66011169"
   
 -   フルテキスト検索を行うためのユーザー データベースの構成。 データベース用のフルテキスト カタログを 1 つ以上作成し、フルテキスト クエリを実行する各テーブルまたは各インデックス付きビューにフルテキスト インデックスを定義します。  
   
-##  <a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのフルテキスト プロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で表示できます。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>フルテキスト検索のサーバー プロパティを表示および変更するには  
@@ -67,46 +66,46 @@ ms.locfileid: "66011169"
         > [!NOTE]  
         >  フルテキスト アップグレード オプションは、[sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade_option** 操作を使用して設定することもできます。  
   
-##  <a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用すると、フルテキスト検索のさまざまなサーバー レベルのプロパティの値を取得できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー インスタンスのフルテキスト プロパティと各プロパティに関連する [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の一覧を次の表に示します。  
   
-|プロパティ|[説明]|Function|  
+|プロパティ|説明|Function|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|フルテキスト コンポーネントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のインスタンスと共にインストールされているかどうかを示します。|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|オペレーティング システムのワード ブレーカーやフィルターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに登録され、使用されているかどうかを示します。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Full-Text Engine に署名付きバイナリのみを読み込むかどうかを指定します。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>フルテキスト検索の利用状況の監視  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a>フルテキスト検索の利用状況の監視  
  サーバー インスタンスでのフルテキスト検索の実行状況を監視する場合は、以下の動的管理ビューと関数が役立ちます。  
   
- **実行中の作成アクティビティを含むフルテキストカタログに関する情報を表示するには**  
+ **作成操作が進行中のフルテキスト カタログに関する情報を表示するには**  
   
--   [dm_fts_active_catalogs &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
+-   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **フィルターデーモンホストプロセスの現在の利用状況を表示するには**  
+ **フィルター デーモン ホスト プロセスの現在の実行状況を表示するには**  
   
--   [dm_fts_fdhosts &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
+-   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
  **進行中のインデックス作成に関する情報を表示するには**  
   
--   [dm_fts_index_population &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
+-   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **クロールまたはクロール範囲の一部として使用されるメモリプールのメモリバッファーを表示します。**  
+ **クロールまたはクロール範囲の一部として使用される、メモリ プールのメモリ バッファーを表示するには**  
   
--   [dm_fts_memory_buffers &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
+-   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **フルテキストクロールまたはフルテキストクロールの範囲でフルテキスト gatherer コンポーネントで使用できる共有メモリプールを表示するには**  
+ **フルテキスト クロールまたはフルテキスト クロール範囲でフルテキスト Gatherer コンポーネントに使用できる共有メモリ プールを表示するには**  
   
--   [dm_fts_memory_pools &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
+-   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **各フルテキストインデックスバッチに関する情報を表示するには**  
+ **各フルテキスト インデックス バッチに関する情報を表示するには**  
   
--   [dm_fts_outstanding_batches &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
+-   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **進行中の作成に関連する特定の範囲に関する情報を表示するには**  
+ **進行中の作成に関連する特定の範囲についての情報を表示するには**  
   
--   [dm_fts_population_ranges &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
+-   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   
   

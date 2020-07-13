@@ -12,21 +12,21 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091661"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298486"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations によるデータの更新
 アプリケーションでは、 **Sqlbulkoperations**を呼び出すことにより、データソースの基になるテーブルに対して一括更新、削除、フェッチ、挿入などの操作を実行できます。 **Sqlbulkoperations**の呼び出しは、SQL ステートメントの構築と実行に代わる便利な方法です。 データソースで位置指定 SQL ステートメントがサポートされていない場合でも、ODBC ドライバーで位置指定更新をサポートできます。 これは、関数呼び出しを使用してデータベースへの完全アクセスを実現するパラダイムの一部です。  
   
  **Sqlbulkoperations**は現在の行セットに対して動作し、 **sqlfetch**または**sqlbulkoperations**の呼び出しの後にのみ使用できます。 アプリケーションでは、ブックマークをキャッシュすることによって、更新、削除、または更新する行を指定します。 ドライバーは、更新する行の新しいデータ、または基になるテーブルに挿入する新しいデータを行セットバッファーから取得します。  
   
- **Sqlbulkoperations**によって使用される行セットのサイズは、SQL_ATTR_ROW_ARRAY_SIZE の*属性*引数を指定して**SQLSetStmtAttr**を呼び出すことによって設定されます。 Sqlfetch または**Sqlfetchscroll**の呼び出しの後に新しい行**** セットサイズを使用する**SQLSetPos**とは異なり、 **sqlbulkoperations**は**SQLSetStmtAttr**の呼び出し後に新しい行セットサイズを使用します。  
+ **Sqlbulkoperations**によって使用される行セットのサイズは、SQL_ATTR_ROW_ARRAY_SIZE の*属性*引数を指定して**SQLSetStmtAttr**を呼び出すことによって設定されます。 Sqlfetch または**Sqlfetchscroll**の呼び出しの後に新しい行**SQLFetch**セットサイズを使用する**SQLSetPos**とは異なり、 **sqlbulkoperations**は**SQLSetStmtAttr**の呼び出し後に新しい行セットサイズを使用します。  
   
  リレーショナルデータベースとのほとんどのやり取りは SQL を通じて行われるため、 **Sqlbulkoperations**は広くサポートされていません。 ただし、ドライバーは、 **UPDATE**、 **DELETE**、または**INSERT**ステートメントを構築して実行することで、簡単にエミュレートできます。  
   

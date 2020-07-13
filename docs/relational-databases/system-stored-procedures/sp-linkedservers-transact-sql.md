@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f289fa0d82c9174fc31d6e08888ab0da97912f0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899421"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ローカル サーバーに定義されているリンク サーバーの一覧を返します。  
   
@@ -43,7 +43,7 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|リンク サーバーの名前|  
 |**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|指定されたリンクサーバーへのアクセスを管理している OLE DB プロバイダーのフレンドリ名。|  
@@ -56,7 +56,7 @@ sp_linkedservers
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_columns_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   

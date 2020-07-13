@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe68a2179659a3e5d9cd941d613deb954dbf4726
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731217"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   インスタンスに格納されている **Z** (標高) 値および **M** (メジャー) 値で補完された **geography** インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68066600"
 ## <a name="remarks"></a>解説  
   
 ## <a name="examples"></a>例  
- `Point`Z **(標高) 値および**M **(メジャー) 値を含む** インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (-122.34900 47.65100) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(-122.34900 47.65100 10.3 12) が出力されます。  
+ **Z** (標高) 値および **M** (メジャー) 値を含む `Point` インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (-122.34900 47.65100) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(-122.34900 47.65100 10.3 12) が出力されます。  
   
 ```  
 DECLARE @g geography;  

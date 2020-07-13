@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adafa9fcbb8bb3130fc4d52c6c9ca49a5e638a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 572936a187f4331744ead22ec7790c57bcd0e32d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040300"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002278"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 角度 (ラジアン) を返す関数。サインは、指定された **float** 式です。 これは、**アークサイン** (逆正弦) とも呼ばれます。
   
@@ -36,7 +36,7 @@ ms.locfileid: "68040300"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ASIN ( float_expression )  
 ```  
   

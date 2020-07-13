@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68017849"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814483"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value=*値*  
  プロシージャレベルの統計コレクションが on (1) か off (0) かを指定します。  
   
- @new_collection_valueは、の起動時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0 に設定されます。  
+ @new_collection_valueは、の起動時に0に設定され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  @database_id= = *database_id*、 @xtp_object_id = *procedure_id*  
  ネイティブ コンパイル ストアド プロシージャのデータベース ID とオブジェクト ID。 インスタンスに対して統計コレクションが有効になっている場合 ([sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))、ネイティブコンパイルストアドプロシージャの統計情報が収集されます。 インスタンスの統計情報の収集をオフにしても、個々のネイティブコンパイルストアドプロシージャの統計コレクションは無効になりません。  
@@ -62,7 +62,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
   
-## <a name="code-sample"></a>サンプル コード  
+## <a name="code-sample"></a>コード サンプル  
  次のコードサンプルは、インスタンスのすべてのネイティブコンパイルストアドプロシージャの統計コレクションと、特定のネイティブコンパイルストアドプロシージャの統計コレクションを有効にする方法を示しています。  
   
 ```sql   

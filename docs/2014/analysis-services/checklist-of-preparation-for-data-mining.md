@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66088146"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527558"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>データ マイニングの準備のチェック リスト
   データ マイニング アドインを使うと、モデルの作成およびテストをかなり容易に楽しく行うことができますが、反復可能で実用的な結果を得る必要がある場合は、十分な時間をかけて基本的なビジネス要件を明確にし、データの取得と準備を実行する必要があります。 ここでは、調査を計画するために役立つチェックリストを提供し、一般的な問題について説明します。  

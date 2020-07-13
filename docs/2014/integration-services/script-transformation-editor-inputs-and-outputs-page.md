@@ -11,18 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 124f9ad43d9e03beb666df678b4956fea53f419e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66056055"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422099"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター] ([入力および出力] ページ)
-  
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
   
 > [!NOTE]  
@@ -44,13 +42,13 @@ ms.locfileid: "66056055"
  **列の追加**  
  新しい出力列を格納するフォルダーを選択して **[列の追加]** をクリックすると、列が追加されます。  
   
- **出力の削除**  
+ **[出力の削除]**  
  出力を選択した後、 **[出力の削除]** をクリックするとその出力が削除されます。  
   
  **列の削除**  
  列を選択した後、 **[列の削除]** をクリックするとその列が削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [スクリプトコンポーネントの種類を選択](../../2014/integration-services/select-script-component-type.md)   
  [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   

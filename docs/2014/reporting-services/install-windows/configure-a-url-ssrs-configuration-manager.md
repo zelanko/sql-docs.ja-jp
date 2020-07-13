@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380703"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
@@ -34,7 +34,7 @@ ms.locfileid: "80380703"
   
 -   URL の詳細プロパティを設定して追加の URL を定義する。  
   
- URL の保存および管理または相互運用性の問題の詳細については[、「Url 予約と登録&#40;SSRS 構成マネージャー&#41;について](about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「オンライン ブックの[レポート サービスとインターネット インフォメーション サービスのインストール」&#40;SSRS ネイティブ モード&#41;](install-reporting-and-internet-information-services-side-by-side.md)を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
+ Url の格納と管理の方法、または相互運用性の問題の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「&#40;の Url の[予約と登録につい](about-url-reservations-and-registration-ssrs-configuration-manager.md)て」を参照してください。 ssrs Configuration Manager&#41;および Reporting Services サイドバイ[サイドインターネットインフォメーションサービス Ssrs ネイティブモード &#40;をインストール](install-reporting-and-internet-information-services-side-by-side.md)してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  URL の作成や変更を行う前に、次の点を確認してください。  
@@ -71,7 +71,7 @@ ms.locfileid: "80380703"
   
     -   **[::1]** は、IPv6 形式のループバック アドレスです。  
   
-    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスは 128 ビットで、コロンで区切られた 8 つの\<4*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*バイト・フィールド>があります。  
+    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスは、コロンで区切られた 8 つの 4 バイト フィールドから成る 128 ビットのアドレスです \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*。  
   
          複数のカードがある場合や、ネットワークで IPv4 と IPv6 の両方のアドレスがサポートされている場合は、複数の IP アドレスが表示されます。 1 つの IP アドレスのみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。 通常、この値を選択するのは、明確な IP アドレスやホスト名を指定する複数の URL 予約 (イントラネット接続に使用するネットワーク アダプター カード用と外部接続に使用するネットワーク アダプター カード用など) を構成する場合です。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "80380703"
   
 10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
   
-11. さらに、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合は、SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を構成します。 SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を更新する方法の詳細については、「レポート サーバー &#40;レポート サービスの構成[&#41;&#40;](../reporting-services-report-server-sharepoint-mode.md)[と管理&#41;」を](../configure-administer-report-server-reporting-services-sharepoint-mode.md)参照してください。  
+11. さらに、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合は、SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を構成します。 SharePoint サーバーの全体管理でレポートサーバー Web サービスの URL を更新する方法の詳細については、「[レポートサーバーの構成と管理](../configure-administer-report-server-reporting-services-sharepoint-mode.md)」を参照してください。 &#40;Reporting Services sharepoint モード&#41;および[Reporting Services レポートサーバー &#40;sharepoint モード&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>レポート マネージャーの URL 予約を作成するには  
   
@@ -103,7 +103,7 @@ ms.locfileid: "80380703"
   
 2.  **[レポート マネージャー URL]** をクリックします。  
   
-3.  仮想ディレクトリを指定します。 レポート マネージャーは、レポート サーバー Web サービスと同じ IP アドレスとポートでリッスンします。 別のレポート サーバー Web サービスを指すようにレポート マネージャーを構成した場合は、RSReportServer.config ファイルでレポート マネージャーの URL 設定を変更する必要があります。 手順については、「オンライン ブックの[レポート マネージャー&#40;ネイティブ モード&#41;を構成](../report-server/configure-web-portal.md)する」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください。  
+3.  仮想ディレクトリを指定します。 レポート マネージャーは、レポート サーバー Web サービスと同じ IP アドレスとポートでリッスンします。 別のレポート サーバー Web サービスを指すようにレポート マネージャーを構成した場合は、RSReportServer.config ファイルでレポート マネージャーの URL 設定を変更する必要があります。 手順については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「[レポートマネージャー &#40;ネイティブモード&#41;を構成する](../report-server/configure-web-portal.md)」を参照してください。  
   
 4.  SSL 証明書がインストールされている場合は、その証明書を選択して、レポート マネージャーへの要求をすべて HTTPS でルーティングするように指定できます。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "80380703"
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>URL の詳細プロパティを設定するには  
   
-1.  [Web**サービス URL]** ページまたは **[レポート マネージャの URL]** ページで、[**詳細設定**] をクリックします。  
+1.  [ **Web サービスの url**または**レポートマネージャー url** ] ページで、[**詳細設定**] をクリックします。  
   
 2.  **[追加]** をクリックします。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "80380703"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の複数のインスタンスの URL を予約する場合は、名前の競合が発生しないように名前付け規則に従う必要があります。 詳細については、「[レポート サーバーの複数インスタンス配置における URL 予約 &#40;SSRS 構成マネージャー&#41;](url-reservations-for-multi-instance-report-server-deployments.md)」を参照してください。  
   
-##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a>URL 構成の例  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL の構成の例  
  レポート サーバーの URL の具体例を次に示します。  
   
 -   http://localhost/reportserver  
@@ -168,8 +168,8 @@ ms.locfileid: "80380703"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>関連項目  
- [レポート サービス構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

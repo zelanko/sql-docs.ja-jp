@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68124082"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881650"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パラメーター化された形式のクエリを返します。 返される結果は、強制パラメーター化の使用によるパラメーター化形式のクエリに似ています。 sp_get_query_template は、主にテンプレートプランガイドを作成するときに使用されます。  
   
@@ -43,27 +43,27 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引数  
  '*query_text*'  
- パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、 @querytextパラメーターに割り当てられた値です。 **Nvarchar (max)** 型です。  
+ パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、パラメーターに割り当てられた値です @querytext 。 **Nvarchar (max)** 型です。  
   
  @templatetext  
  パラメーター化された形式の*query_text*を文字列リテラルとして受け取る、 **nvarchar (max)** 型の出力パラメーターを指定します。  
   
  @parameters  
- は、に@templatetextよってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです。  
+ は、によってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです @templatetext 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
 -   *Query_text*の定数リテラル値をパラメーター化しません。  
   
 -   *query_text*が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
   
- Sp_get_query_template がエラーを返す場合、 @templatetextと@parametersの出力パラメーターの値は変更されません。  
+ Sp_get_query_template がエラーを返す場合、との出力パラメーターの値は変更されません @templatetext @parameters 。  
   
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、2 つの定数リテラル値が含まれたパラメーター化形式のクエリが返されます。  
   
 ```  
@@ -85,7 +85,7 @@ SELECT @my_templatetext;
 SELECT @my_parameters;  
 ```  
   
- `@my_templatetext``OUTPUT`パラメーターのパラメーター化された結果を次に示します。  
+ パラメーターのパラメーター化された結果を次に示し `@my_templatetext``OUTPUT` ます。  
   
  `select pi . ProductID , SUM ( pi . Quantity ) as Total`  
   
@@ -101,9 +101,9 @@ SELECT @my_parameters;
   
  `having SUM ( pi . Quantity ) > 400`  
   
- 最初の定数リテラル`2`のは、パラメーターに変換されることに注意してください。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
+ 最初の定数リテラルのは、パラメーターに変換されることに注意して `2` ください。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
   
- `@my_parameters OUTPUT`パラメーターのパラメーター化された結果を次に示します。  
+ パラメーターのパラメーター化された結果を次に示し `@my_parameters OUTPUT` ます。  
   
 ```  
 @0 int  
@@ -112,7 +112,7 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 また、アップグレードによって、同じクエリに対して異なる定数リテラルのセットがパラメーター化され、両方の出力パラメーターの結果に適用される間隔が異なる場合もあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  

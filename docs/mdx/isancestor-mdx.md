@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105262"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
@@ -34,7 +34,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Isancestor**関数は、指定された最初のメンバーが2番目に指定されたメンバーの先祖である場合に**true**を返します。 それ以外の場合、関数は**false**を返します。  
   
 ## <a name="example"></a>例  
@@ -52,6 +52,6 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
 ## <a name="see-also"></a>参照  
  [先祖 &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

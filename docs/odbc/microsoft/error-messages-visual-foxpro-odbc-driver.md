@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6072a6e317ab87118376b08790fc0fb49c495e3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952514"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286402"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>エラー メッセージ (Visual FoxPro ODBC ドライバー)
 エラーが発生すると、Visual FoxPro ドライバーは次の情報を返します。  
@@ -46,10 +46,10 @@ ms.locfileid: "67952514"
   
  次の表で定義されているように、角かっこ ([]) で囲まれたプレフィックスによってエラーの原因が特定されます。  
   
-|データ ソース|Prefix|Value|  
+|データ ソース|Prefix|値|  
 |-----------------|------------|-----------|  
-|ドライバー マネージャー|業者<br />[ODBC_component]<br />[data_source]|エクスプローラー<br />[ODBC ドライバーマネージャー]<br />該当なし|  
-|Visual FoxPro ドライバー|業者<br />[ODBC_component]<br />[data_source]|エクスプローラー<br />[ODBC Visual FoxPro ドライバー]<br />該当なし|  
+|ドライバー マネージャー|業者<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC ドライバーマネージャー]<br />なし|  
+|Visual FoxPro ドライバー|業者<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro ドライバー]<br />なし|  
   
  たとえば、Visual FoxPro ODBC ドライバーがファイルの .dbf を見つけられなかった場合、次のエラーメッセージが返されることがあります。  
   

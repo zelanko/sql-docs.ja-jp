@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262662"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>dm_tran_version_store_space_usage (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "68262662"
   
 バージョン付きのレコードはバイナリとして格納されるため、異なるデータベースからの異なる照合順序に関する問題はありません。 SQL Server インスタンス内のデータベースのバージョンストアの使用領域に基づいて、tempdb のサイズを監視および計画するには、 **dm_tran_version_store_space_usage**を使用します。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|データベースのデータベース ID。|  
 |**reserved_page_count**|**bigint**|データベースのバージョンストアレコードの tempdb に予約されているページの合計数。|  
@@ -45,7 +45,7 @@ ms.locfileid: "68262662"
 ## <a name="permissions"></a>アクセス許可  
 で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
 次のクエリを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内の各データベースのバージョンストアによって、tempdb で消費された領域を調べることができます。 
   
 ```sql  
@@ -68,6 +68,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

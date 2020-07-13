@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6c65b4df915a85cf0ec7c7c0c8c0ff9f6607ad96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63184409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055308"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
   シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。 ID 列とは異なり、シーケンスはテーブルには関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行およびテーブルにわたって値キーを調整できます。  
@@ -54,9 +53,9 @@ ms.locfileid: "63184409"
   
  シーケンス オブジェクトは、定義に従って番号を生成しますが、その番号がどのように使用されるかについては制御しません。 トランザクションがロールバックされたとき、シーケンス オブジェクトが複数のテーブルで共有されているとき、またはテーブルのシーケンス番号を使用することなくシーケンス番号が割り当てられたときは、非連続的なシーケンス番号がテーブルに挿入される可能性があります。 CACHE オプションを使用してシーケンス番号を作成する際に予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
   
- 1 つの `NEXT VALUE FOR` ステートメント内で同じシーケンス ジェネレーターを指定する [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
+ 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント内で同じシーケンス ジェネレーターを指定する `NEXT VALUE FOR` 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
   
-## <a name="typical-use"></a>一般的な使用方法  
+## <a name="typical-use"></a>一般的な用途  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
   
 ```  
@@ -387,16 +386,15 @@ GO
   
 ```  
   
- 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用する `SELECT *` ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
+ `SELECT *` を使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql)  
   
- [ALTER SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql)  
   
- [DROP SEQUENCE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [ID &#40;プロパティ&#41; &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

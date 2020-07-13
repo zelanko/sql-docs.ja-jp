@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68033019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878243"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したターゲット サーバーを、指定したターゲット サーバー グループに追加します。  
    
@@ -55,8 +55,8 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>例  
- 次の例では、 `Servers Maintaining Customer Information`グループを追加`LONDON1`し、そのグループにサーバーを追加します。  
+## <a name="examples"></a>使用例  
+ 次の例では、グループを追加 `Servers Maintaining Customer Information` し、 `LONDON1` そのグループにサーバーを追加します。  
   
 ```  
 USE msdb ;  
@@ -68,8 +68,8 @@ EXEC dbo.sp_add_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_targetsvrgrp_member &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

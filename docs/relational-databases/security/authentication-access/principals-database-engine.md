@@ -84,7 +84,7 @@ ms.locfileid: "68344600"
  これらのプリンシパル アカウントのパスワードは、Microsoft に発行された証明書に基づくので、管理者は変更できません。
   
 ## <a name="the-guest-user"></a>guest ユーザー  
- 各データベースには、 `guest`の動作から変更されています。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 `guest` ユーザーに許可された権限を継承します。 `guest` ユーザーを削除することはできませんが、 CONNECT 権限を取り消すことで無効にすることはできます。 CONNECT 権限を取り消すには、`REVOKE CONNECT FROM GUEST;` または `master` 以外のデータベース内で `tempdb` を実行します。  
+ 各データベースには、 `guest`の動作から変更されています。 データベースにはアクセスできるが、データベース内のユーザー アカウントは持っていないユーザーは、 `guest` ユーザーに許可された権限を継承します。 `guest` ユーザーを削除することはできませんが、 CONNECT 権限を取り消すことで無効にすることはできます。 CONNECT 権限を取り消すには、`master` または `tempdb` 以外のデータベース内で `REVOKE CONNECT FROM GUEST;` を実行します。  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

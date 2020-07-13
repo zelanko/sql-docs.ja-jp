@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d632da029905c4ce914c843a2ea1319e780ac735
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62667238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060768"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>レプリケーション モニターのデータの更新
   レプリケーション モニターでは、メイン ウィンドウと詳細ウィンドウ (メイン ウィンドウから起動するウィンドウ) を自動または手動で最新の情報に更新できます。 ウィンドウを手動で最新の情報に更新する場合は、F5 キーを押します。 既定では、メイン ウィンドウは 5 秒ごとに自動で最新の情報に更新されます。この更新頻度は、パブリッシャーごとにカスタマイズできます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62667238"
   
     3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、 **[アクション]** をクリックし、 **[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
+2.  [**サブスクリプション \<SubscriptionName> **の詳細] ウィンドウで、[**アクション**] をクリックし、[**自動更新**] をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)  

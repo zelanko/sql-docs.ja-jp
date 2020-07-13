@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938735"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758608"
 ---
 # <a name="version-property-ado"></a>Version プロパティ (ADO)
 ADO のバージョン番号を示します。  

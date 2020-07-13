@@ -14,15 +14,14 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 14c874cace96bddb95fbc650e3d4193800b5b8d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70911262"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008613"
 ---
 # <a name="getting-started-in-smo"></a>SMO の概要
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 このページには、SQL Server 管理オブジェクト (SMO) の使用を開始する際に役立つトピックへのリンクが記載されています。 これらのトピックでは、SMO オブジェクト階層について説明し、smo、smo、およびさまざまなプログラミング言語、および特定のプログラミングタスクについて説明します。  
  

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4551cc4f86f962c3f715398468a7d9a2ce17fbb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438119"
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
   ログイン転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で 1 つ以上のログインを転送します。  
@@ -66,17 +65,15 @@ ms.locfileid: "62830013"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[ログイン転送タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[ログイン転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [ログイン転送タスクエディター &#40;ログインページ&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [[ログイン転送タスク エディター] ([ログイン] ページ)](../transfer-logins-task-editor-logins-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   

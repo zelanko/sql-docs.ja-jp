@@ -8,16 +8,15 @@ helpviewer_keywords:
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c1c7a5084f3525c88a08b3fb45b5b29e693ea86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "71118125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034877"
 ---
 # <a name="query-options-pages-f1-help"></a>[クエリ オプション] ページの F1 ヘルプ
 

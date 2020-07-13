@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], components
 - ODBC architecture [ODBC]
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 781a214d3ca059a442680c332d79aad48914976c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07435dc1a5fbe800f2260e914f315cfe93dd8d1b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111222"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305133"
 ---
 # <a name="odbc-architecture"></a>ODBC アーキテクチャ
 ODBC アーキテクチャには、次の4つのコンポーネントがあります。  
@@ -35,10 +35,10 @@ ODBC アーキテクチャには、次の4つのコンポーネントがあり�
   
  このセクションでは、次のトピックを扱います。  
   
--   [[アプリケーション]](../../odbc/reference/applications.md)  
+-   [アプリケーション](../../odbc/reference/applications.md)  
   
 -   [ドライバー マネージャー](../../odbc/reference/the-driver-manager.md)  
   
 -   [ドライバー](../../odbc/reference/drivers.md)  
   
--   [ソリューション エクスプローラー](../../odbc/reference/data-sources.md)
+-   [データ ソース](../../odbc/reference/data-sources.md)

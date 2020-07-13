@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4951954bb9f6336c2c984a8d74c2224eab4dfbb0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73532942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821092"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>dm_exec_dms_workers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73532942"
   
  このビューには、最後の1000要求とアクティブな要求のデータが表示されます。アクティブな要求には、常にこのビュー内のデータが含まれます。  
   
-|列名|データ型|[説明]|Range|  
+|列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|この DMS ワーカーが含まれているクエリ。 request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
 |step_index|`int`|この DMS ワーカーが含まれているクエリステップ。|「 [Transact-sql&#41;&#40;dm_exec_distributed_request_steps](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)のステップインデックス」を参照してください。|  
@@ -59,12 +59,12 @@ ms.locfileid: "73532942"
 |error_id|`nvarchar(36)`|||  
 |source_info|`nvarchar(4000)`|||  
 |destination_info|`nvarchar(4000)`|||  
-|command|`nvarchar(4000)`|||
+|コマンドを使用します|`nvarchar(4000)`|||
 |compute_pool_id|`int`|プールの一意の識別子。|
 
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

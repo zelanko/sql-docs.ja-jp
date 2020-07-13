@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dfc80a56a021b1bfeda38115e79f7086632900c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096599"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298692"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
 指定されたフィールドを含むテーブルを作成します。  
@@ -54,7 +54,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  長い名前には、最大128文字を含めることができ、データベース内の短いファイル名の代わりに使用できます。  
   
- 無料  
+ FREE  
  開いているデータベースにテーブルが追加されないように指定します。 データベースが開いていない場合、FREE は不要です。  
   
  *(FieldName1 FieldType* [( *nfieldwidth* [, *nprecision*])]  
@@ -133,7 +133,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  配列*Arrayname*から  
  テーブル内の各フィールドの名前、型、有効桁数、および小数点以下桁数を内容とする既存の配列の名前を指定します。 配列の内容は、 **Afields**() 関数を使用して定義できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  新しいテーブルは、使用可能な最も低い作業領域で開かれ、そのエイリアスによってアクセスできます。 新しいテーブルは、SET EXCLUSIVE の現在の設定に関係なく、排他的に開かれます。  
   
  データベースが開いていて、FREE 句が含まれていない場合は、新しいテーブルがデータベースに追加されます。 データベース内のテーブルと同じ名前の新しいテーブルを作成することはできません。  

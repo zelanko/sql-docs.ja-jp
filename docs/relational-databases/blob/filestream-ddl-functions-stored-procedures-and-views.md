@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM、関数、ストアド プロシージャ、およびビュー | Microsoft Docs
+description: FILESTREAM は、特定の Transact-SQL ステートメント、API、関数、ストアド プロシージャ、ビューで動作します。 FILESTREAM をサポートするステートメントとオブジェクトについて学習します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe2ed55cd68ee6852ab071a7ff8ca428150737d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642689"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM、関数、ストアド プロシージャ、およびビュー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FILESTREAM をサポートする Transact-SQL ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
  FileTable 機能をサポートするデータベース オブジェクトの一覧については、「 [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)」を参照してください。  

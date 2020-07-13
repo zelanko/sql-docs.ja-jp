@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bb703e42edcbf128ff78ca294e08fc487f06d8f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0680e09548e38760f6ac317fec63152486a4e5fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66092255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036510"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>ドメイン コントローラーで SQL Server 2008 へのアップグレードを実行するためのサービス アカウント要件
-  アップグレードアドバイザーによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ドメインコントローラー上のネットワークサービスまたはローカルサービスアカウントで実行されているのインスタンスが検出されました。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメイン コントローラーに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] がインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを Local Service アカウントまたは Network Service アカウントの特権を使用して実行することはできません。  
+  アップグレードアドバイザーによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメインコントローラー上のネットワークサービスまたはローカルサービスアカウントで実行されているのインスタンスが検出されました [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ドメイン コントローラーに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] がインストールされている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを Local Service アカウントまたは Network Service アカウントの特権を使用して実行することはできません。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

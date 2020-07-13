@@ -1,5 +1,5 @@
 ---
-title: OLE DB のプロパティについて |Microsoft Docs
+title: OLE DB プロパティについて | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - property values [SQL Server Native Client]
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7336a8076a8e6550e3b36d7ba43545f19f61921
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62638074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056053"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて
   コンシューマーは、プロパティ値を設定することで、特定のオブジェクトの動作を要求します。 たとえば、プロパティを使用して、行セットによって公開されるインターフェイスを指定します。 コンシューマーは、プロパティ値を取得して、行セット、セッション、データ ソース オブジェクトなど、オブジェクトの機能を判断します。  
@@ -47,6 +46,6 @@ ms.locfileid: "62638074"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client OLE DB プロバイダーアプリケーションの作成](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [プロパティ (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
+ [プロパティ [OLE DB]](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

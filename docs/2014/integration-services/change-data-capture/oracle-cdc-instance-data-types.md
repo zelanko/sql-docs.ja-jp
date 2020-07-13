@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c76fcbf2beaee458284297c522948c11a42fdef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62835454"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438569"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
   Oracle CDC インスタンスでは、ほとんどの Oracle データ型がサポートされます。 次のセクションでは、サポートされるデータ型とサポートされないデータ型について説明します。  

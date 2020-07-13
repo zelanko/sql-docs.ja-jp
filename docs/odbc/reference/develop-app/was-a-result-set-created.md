@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68078969"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294550"
 ---
 # <a name="was-a-result-set-created"></a>結果セットは作成されましたか?
 ほとんどの場合、アプリケーションのプログラマは、アプリケーションが実行するステートメントによって結果セットが作成されるかどうかを判断します。 これは、アプリケーションがプログラマによって記述されたハードコーディングされた SQL ステートメントを使用する場合に当てはまります。 アプリケーションが実行時に SQL ステートメントを構築する場合は、通常、 **SELECT**ステートメントまたは**INSERT**ステートメントが構築されているかどうかを示すコードをプログラマが簡単に含めることができます。 場合によっては、プログラマがステートメントで結果セットを作成するかどうかを判断できないことがあります。 これは、ユーザーが SQL ステートメントを入力して実行するための方法をアプリケーションが提供する場合に当てはまります。 これは、アプリケーションが実行時にプロシージャを実行するステートメントを構築する場合にも当てはまります。  

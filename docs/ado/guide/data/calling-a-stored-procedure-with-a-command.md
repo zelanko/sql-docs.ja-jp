@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761218"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Command を使用してストアド プロシージャを呼び出す
 コマンドを使用してストアドプロシージャを呼び出すことができます。 このトピックの最後にあるコードサンプルでは、次のように定義された、Northwind のサンプルデータベースのストアドプロシージャを参照しています。 CustOrdersOrders 例を次に示します。  
@@ -40,7 +40,7 @@ ORDER BY OrderID
   
  その他の重要な違いは、次のコードサンプルと[Command オブジェクトパラメーター](../../../ado/guide/data/command-object-parameters.md)のコードの間にあり、これらのパラメーターは手動で入力されています。 まず、このコードでは、**準備**されたプロパティが SQL Server ストアドプロシージャであり、定義によってプリコンパイルされているため、このプロパティは**True**に設定されません。 次に、コマンドオブジェクトの**CommandType**プロパティを2番目の例で**adCmdStoredProc**に変更し **、コマンドが**ストアドプロシージャであったことを ADO に通知します。  
   
- 最後に、2番目の例では、値を設定するときにパラメーターをインデックスで参照する必要があります。これは、デザイン時にパラメーターの名前がわからない場合があるためです。 パラメーターの名前がわかっている場合は、 **Command**オブジェクトの新しい[Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)プロパティを True に設定し、プロパティの名前を参照することができます。 ストアドプロシージャに記述されている最初のパラメーターの位置 (@CustomerID) が 0 (`objCmd(1) = "ALFKI"`) ではなく1であることがわかります。 これは、パラメーター0に SQL Server ストアドプロシージャからの戻り値が含まれているためです。  
+ 最後に、2番目の例では、値を設定するときにパラメーターをインデックスで参照する必要があります。これは、デザイン時にパラメーターの名前がわからない場合があるためです。 パラメーターの名前がわかっている場合は、 **Command**オブジェクトの新しい[Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)プロパティを True に設定し、プロパティの名前を参照することができます。 ストアドプロシージャに記述されている最初のパラメーターの位置 ( @CustomerID ) が 0 () ではなく1であることがわかり `objCmd(1) = "ALFKI"` ます。 これは、パラメーター0に SQL Server ストアドプロシージャからの戻り値が含まれているためです。  
   
 ```  
 'BeginAutoParamCmd  

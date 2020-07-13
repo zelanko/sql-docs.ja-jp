@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932884"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
   多くのシナリオでは、トランザクション分離レベルを指定する必要があります。 メモリ最適化テーブルのトランザクション分離は、ディスク ベース テーブルとは異なります。  
@@ -37,11 +36,9 @@ ms.locfileid: "62779157"
  ディスク ベース テーブルでは、SNAPSHOT および READ_COMMITTED_SNAPSHOT の 2 つの分離レベルによる複数バージョン管理が可能です。 メモリ最適化テーブルでは、REPEATABLE READ と SERIALIZABLE も含め、すべての分離レベルが複数バージョン ベースになっています。  
   
 ## <a name="types-of-transactions"></a>トランザクションの種類  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリはいずれも、トランザクションのコンテキストで実行されます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリはいずれも、トランザクションのコンテキストで実行されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクションの種類は、3 つに分けることができます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクションの種類は、3 つに分けることができます。  
   
 -   自動コミット トランザクション。 アクティブなトランザクション コンテキストがなく、暗黙のトランザクションがセッションで ON に設定されていない場合には、各クエリに独自のトランザクション コンテキストがあります。 トランザクションは、ステートメントの実行が開始されると開始となり、ステートメントが終了すると終了します。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "62779157"
   
  SNAPSHOT 分離レベル (メモリ最適化テーブルでサポートされる分離レベルのうち、最も低いレベル) による保証には、READ COMMITTED の保証が含まれています。 トランザクションの各ステートメントでは、同一で一貫性のあるバージョンのデータベースを読み取ります。 トランザクションによって読み取られる行がいずれもデータベースにコミットされるだけでなく、すべての読み取り操作で同じトランザクションによって変更が実行されます。  
   
- **ガイドライン**: READ COMMITTED 分離保証のみが必要な場合は、ネイティブコンパイルストアドプロシージャでスナップショット分離を使用し、解釈[!INCLUDE[tsql](../includes/tsql-md.md)]されたを通じてメモリ最適化テーブルにアクセスします。  
+ **ガイドライン**: READ COMMITTED 分離保証のみが必要な場合は、ネイティブコンパイルストアドプロシージャでスナップショット分離を使用し、解釈されたを通じてメモリ最適化テーブルにアクセスし [!INCLUDE[tsql](../includes/tsql-md.md)] ます。  
   
  自動コミット トランザクションでは、分離レベル READ COMMITTED が暗黙的にメモリ最適化テーブルの SNAPSHOT にマッピングされています。 このため、TRANSACTION ISOLATION LEVEL セッションの設定が READ COMMITTED に設定されている場合には、メモリ最適化テーブルにアクセスするときにテーブル ヒントを使用して分離レベルを指定する必要はありません。  
   
@@ -125,12 +122,11 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>ロックに関するテーブル ヒント  
- ディスクベーステーブルでは、XLOCK などのロックヒント[&#40;(transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)) を使用して、指定された分離[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]レベルで必要とされるよりも多くのロックを取得できます。  
+ ディスクベーステーブルでは、XLOCK などのロックヒント[&#40;(transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)) を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、指定された分離レベルで必要とされるよりも多くのロックを取得できます。  
   
  メモリ最適化テーブルではロックは使用しません。 REPEATABLE READ や SERIALIZABLE など、高度な分離レベルを使用して必要な保証を宣言できます。  
   
- ロック ヒントはサポートされていません。 代わりに、トランザクション分離レベルを使用して必要な保証を宣言します。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではメモリ最適化テーブルにロックを使用しないため、NOLOCK がサポートされます。 ディスク ベース テーブルとは異なり、NOLOCK は、メモリ最適化テーブルに対する READ UNCOMMITTED 動作を示すわけではないことに注意してください。  
+ ロック ヒントはサポートされていません。 代わりに、トランザクション分離レベルを使用して必要な保証を宣言します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではメモリ最適化テーブルにロックを使用しないため、NOLOCK がサポートされます。 ディスク ベース テーブルとは異なり、NOLOCK は、メモリ最適化テーブルに対する READ UNCOMMITTED 動作を示すわけではないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルのトランザクションについて](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   

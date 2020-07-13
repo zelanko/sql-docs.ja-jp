@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784511"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、指定したサーバー ロールのメンバーであるかどうかを示します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73983260"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  

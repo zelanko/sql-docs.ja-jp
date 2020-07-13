@@ -12,14 +12,14 @@ helpviewer_keywords:
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022194"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306783"
 ---
 # <a name="using-concise-functions"></a>簡潔な関数の使用
 一部の ODBC 関数は、記述子への暗黙的なアクセスを取得します。 アプリケーションの作成者は、 **SQLSetDescField**または**SQLGetDescField**を呼び出すよりも便利です。 これらの関数は、記述子フィールドの設定や取得など、さまざまな関数を実行するため、*簡潔*な関数と呼ばれます。 一部の簡潔な関数は、アプリケーションが1つの関数呼び出しで複数の関連する記述子フィールドを設定または取得できるようにします。  

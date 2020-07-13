@@ -13,21 +13,21 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 979bfe85e1e78b55718e1f12fdcfcc7583097bb4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037771"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292302"
 ---
 # <a name="c-data-types"></a>C データ型
 ODBC C データ型は、アプリケーションにデータを格納するために使用される C バッファーのデータ型を示します。  
   
  すべてのドライバーは、すべての C データ型をサポートしている必要があります。 すべてのドライバーは、サポートされる SQL 型を変換できるすべての C 型をサポートする必要があり、すべてのドライバーが少なくとも1文字の SQL 型をサポートしているため、このことが必要です。 文字の SQL 型はすべての C 型に変換できるので、すべてのドライバーがすべての c 型をサポートしている必要があります。  
   
- C データ型は、 **SQLBindCol**関数と**SQLGetData**関数で、 *TargetType*引数と**SQLBindParameter**関数の*ValueType*引数を使用して指定されます。 また、 **SQLSetDescField**を呼び出して、SQLSetDescRec または APD の SQL_DESC_CONCISE_TYPE フィールドを設定するか、または*型*引数 (および必要に応じて*SubType*引数) を指定してを呼び出すことによって、または、 **** または APD のハンドルに設定された*記述子ハンドル*引数を指定することもできます。  
+ C データ型は、 **SQLBindCol**関数と**SQLGetData**関数で、 *TargetType*引数と**SQLBindParameter**関数の*ValueType*引数を使用して指定されます。 また、 **SQLSetDescField**を呼び出して、SQLSetDescRec または APD の SQL_DESC_CONCISE_TYPE フィールドを設定するか、または*型*引数 (および必要に応じて*SubType*引数) を指定してを呼び出すことによって、または、 **SQLSetDescRec**または APD のハンドルに設定された*記述子ハンドル*引数を指定することもできます。  
   
  次の表に、C データ型の有効な型識別子を示します。 この表には、各識別子とこのデータ型の定義に対応する ODBC C データ型も一覧表示されています。  
   
@@ -42,7 +42,7 @@ ODBC C データ型は、アプリケーションにデータを格納するた�
 |SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE、SQLDOUBLE|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT [j]|SQL・ AR|signedchar|  
+|SQL_C_STINYINT [j]|SQL・ AR|signed char|  
 |SQL_C_UTINYINT [j]|SQLCHAR|unsigned char|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|署名されていない _int64 [h]|  

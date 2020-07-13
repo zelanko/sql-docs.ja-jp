@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68090095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648023"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>dm_xtp_system_memory_consumers (Transact-sql)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  のシステムレベルのメモリコンシューマー [!INCLUDE[hek_2](../../includes/hek-2-md.md)]を報告します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザースレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステムスレッドのコンテキスト内にある場合) から取得されます。  
+  のシステムレベルのメモリコンシューマーを報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザースレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステムスレッドのコンテキスト内にある場合) から取得されます。  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|種類|[説明]|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリコンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次のいずれかの値を持つメモリコンシューマーの種類を表す整数。<br /><br /> 0: 表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルックアサイド: システムルックアサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP: 可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページプール: IO 操作に使用されるシステムページプールのメモリ使用量を追跡します。|  
@@ -104,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

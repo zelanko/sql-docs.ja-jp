@@ -10,15 +10,14 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c6b28d311a3330bff063aa88f5a353186a9d1c1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769618"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437309"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 式)
   数値式の正の絶対値を返します。  

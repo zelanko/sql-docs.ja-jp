@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8703641b25f7e5956fe4204db9775b0ada90cba1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53bc8926ea400f2ba73a2bbe412c284aec2273c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964136"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752130"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、Filtercolumn、Filtercolumn、SortColumn、および Sortcolumn プロパティと Reset メソッドの例 (VBScript)
 > [!IMPORTANT]

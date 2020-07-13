@@ -12,14 +12,14 @@ helpviewer_keywords:
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041713"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304923"
 ---
 # <a name="like-escape-sequence"></a>LIKE エスケープ シーケンス
 ODBC では、LIKE 句にエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
@@ -28,7 +28,7 @@ ODBC では、LIKE 句にエスケープシーケンスを使用します。 こ
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文は次のようになります。  
   
  *ODBC のような-escape* :: =  

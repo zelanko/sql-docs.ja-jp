@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed0595c97f3f4ad92d976c89327a01e25cb5b753
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106161"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305913"
 ---
 # <a name="descriptor-handles"></a>記述子ハンドル
 *記述子*は、アプリケーションまたはドライバー (*実装*とも呼ばれます) に示されているように、SQL ステートメントまたは結果セットの列のパラメーターを記述するメタデータのコレクションです。 このため、記述子は次の4つのロールのいずれかを満たすことができます。  

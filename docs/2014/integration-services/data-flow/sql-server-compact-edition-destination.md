@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQL Server Compact, destination
 - inserting data
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c59157c8d6beccdbb2d3e853cb6e035f9f89f61c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09b4e23d6d31ff580d7b8515c0604d06efb41c02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62901080"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437709"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 変換先
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先では、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに書き込まれます。  

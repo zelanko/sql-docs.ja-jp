@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d58d7885eed1a8ed0611470f29cb24e8072afcb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ecff538198a2b517f980cc63acfc97d29a9f162
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053802"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298652"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

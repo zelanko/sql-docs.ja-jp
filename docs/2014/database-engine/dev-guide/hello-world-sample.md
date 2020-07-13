@@ -9,28 +9,24 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933570"
 ---
 # <a name="hello-world-sample"></a>Hello World サンプル
   Hello World サンプルでは、共通言語ランタイム (CLR) 統合ベースの単純なストアド プロシージャの作成、展開、およびテストにかかわる基本的な操作について示します。 また、このサンプルでは、ストアド プロシージャによって動的に構築されて呼び出し元に返されるレコードを使用してデータを返す方法についても示します。  
   
- この`HelloWorld`ストアドプロシージャは、文字列 "Hello world!" を返します。 1つの行で構成される結果セット。 この例では、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)および[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571). sqlserver. サーバーのクラスのいくつかの使用[方法を示し](https://go.microsoft.com/fwlink/?LinkID=193572)ています。この例を次に示します。  
+ この `HelloWorld` ストアドプロシージャは、文字列 "Hello world!" を返します。 1つの行で構成される結果セット。 この例では、 [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573)および[microsoft](https://go.microsoft.com/fwlink/?LinkID=193571). sqlserver. サーバーのクラスのいくつかの使用[方法を示し](https://go.microsoft.com/fwlink/?LinkID=193572)ています。この例を次に示します。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -53,11 +49,11 @@ ms.locfileid: "73637764"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
--   使用している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの管理者ではない場合、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
+-   使用しているインスタンスの管理者ではない場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、インストールを完了するには、 **createassembly**アクセス許可を管理者に付与する必要があります。  
   
 ## <a name="building-the-sample"></a>サンプルのビルド  
   
@@ -75,21 +71,19 @@ ms.locfileid: "73637764"
   
     -   `csc /target:library HelloWorld.cs`  
   
-5.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
+5.  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
   
 6.  次のコマンドを実行して、アセンブリとストアド プロシージャを配置します。  
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  テスト[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドスクリプトをファイルにコピーし、とし`test.sql`てサンプルディレクトリに保存します。  
+7.  [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 8.  次のコマンドを使用してテスト スクリプトを実行します。  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-9. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
+9. [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
   
 10. 次のコマンドを使用してこのスクリプトを実行します。  
   
@@ -200,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e7b7b153d0b0cb0a3e6a3d738908b0039b95679
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68111249"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306488"
 ---
 # <a name="dbms-based-drivers"></a>DBMS ベースのドライバー
 DBMS ベースのドライバーは、ドライバーが使用するスタンドアロンデータベースエンジンを提供する Oracle や SQL Server などのデータソースと共に使用されます。 これらのドライバーは、スタンドアロンエンジンを使用して物理データにアクセスします。つまり、エンジンに対して SQL ステートメントを送信し、結果を取得します。  

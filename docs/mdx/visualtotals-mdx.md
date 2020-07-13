@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125840"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
@@ -31,10 +31,10 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *種類*  
+ *パターン*  
  親の名前を置き換える文字のアスタリスク (*) を格納した、セットの親メンバーを表す有効な文字列式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定されたセット式では、1つのディメンション内の任意のレベルのメンバーを含むセットを指定できます。通常は、先祖と子孫のリレーションシップを持つメンバーです。 **Visualtotals**関数は、指定されたセット内の子メンバーの値の合計を計算し、結果の合計を計算する際にセットに含まれていない子メンバーを無視します。 階層の順序で並べ替えられたセットの合計は視覚的に合計されます。 セット内のメンバーの順序と階層の順序が一致しない場合、結果は表示部分の合計になりません。 たとえば、VisualTotals (USA, WA, CA, Seattle) は WA を Seattle として返すのではなく、WA、CA、および Seattle の値を返してから、これらの値の合計を USA の表示部分の合計として算出します。このため、Seattle の売上は 2 回加算されることになります。  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ VisualTotals(Set_Expression[,Pattern])
   
  *パターン*(省略可能) は、合計ラベルの形式を指定します。 *パターン*では、親メンバーの代替文字としてアスタリスク (*) が必要で、文字列内の残りのテキストは、親の名前と連結された結果に示されます。 リテラルのアスタリスクを表示するには、2\*\*つのアスタリスク () を使用します。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、指定された1つの子孫 (7 月) に基づいて、2001年の第3四半期の売上合計が返されます。  
   
 ```  
@@ -67,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

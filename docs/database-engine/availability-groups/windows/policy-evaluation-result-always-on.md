@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 333ff3e79bc92d82a224caf8af24fb9dc76a6082
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897010"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>ポリシー評価の結果ページ (Always On ダッシュボード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
     

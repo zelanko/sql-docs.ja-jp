@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.assetid: 64d55acc-b164-4796-a3a0-ea84b812181d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e25553d57aabf32713e1369c75602ea7e12818db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e24ba1e080d087ec63742307a4c15f1c9c0fd25d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66096138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037056"
 ---
 # <a name="complete---repair"></a>[完了 - 修復]
-  
   **[完了 - 修復]** ページを使用して、修復が完了したことを確認します。  
   
 ## <a name="options"></a>オプション  

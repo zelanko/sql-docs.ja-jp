@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755815"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  行内の列について、ユーザー定義データ型を設定します。  
   
@@ -64,16 +63,15 @@ user_type
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。 列が存在しない場合は FAIL を返します。  
   
-## <a name="remarks"></a>解説  
- 列には、実際のデータ型とユーザー定義データ型の 2 つのデータ型があります。 では、このユーザー定義データ型を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、列の実際のユーザー定義データ型 (存在する場合) と、列の null 値の許容と更新などの列の説明情報を格納します。  
+## <a name="remarks"></a>Remarks  
+ 列には、実際のデータ型とユーザー定義データ型の 2 つのデータ型があります。 では、このユーザー定義データ型を使用して、列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の実際のユーザー定義データ型 (存在する場合) と、列の null 値の許容と更新などの列の説明情報を格納します。  
   
- 
-  **srv_setutype** 関数は、*srv_describe* で **column** が定義されいれば、最後の行を送信する前のどの時点でも呼び出すことができます。  
+ **srv_setutype** 関数は、**srv_describe** で *column* が定義されいれば、最後の行を送信する前のどの時点でも呼び出すことができます。  
   
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://www.microsoft.com/msrc?rtc=1)をご覧ください。  
   
-## <a name="see-also"></a>参照  
- [srv_describe &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>関連項目  
+ [srv_describe &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

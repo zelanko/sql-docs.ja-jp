@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], authentication
 - authentication [ODBC]
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 56f09a82c2e67ee74ce140f4742bfaf0bcce247f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6520202bdbc31baf1156531457cb70a98656e88
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68088125"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292842"
 ---
 # <a name="using-operating-system-authentication"></a>オペレーティング システムの認証の使用
 > [!IMPORTANT]  

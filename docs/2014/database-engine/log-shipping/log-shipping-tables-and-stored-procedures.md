@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f10a6555ed3a0c27a72c3d097cc200f21d901274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931173"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   このトピックでは、ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについて説明します。 すべてのログ配布テーブルは、各サーバーの **msdb** に保存されます。 次の表は、ログ配布構成にあるどのサーバーで、どのテーブルおよびストアド プロシージャが使用されるかを示しています。  
   
 ## <a name="primary-server-tables"></a>プライマリ サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|警告ジョブ ID を格納します。 リモート監視サーバーが構成されていない場合のみ、このテーブルがプライマリ サーバーで使用されます。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|このプライマリ サーバーに関連付けられているログ配布ジョブのエラー詳細を格納します。|  
@@ -39,7 +38,7 @@ ms.locfileid: "62774501"
   
 ## <a name="primary-server-stored-procedures"></a>プライマリ サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql)|バックアップ ジョブ、ローカル監視レコード、リモート監視レコードを含め、ログ配布構成のプライマリ データベースを設定します。|  
 |[sp_add_log_shipping_primary_secondary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql)|既存のプライマリ データベースにセカンダリ データベース名を追加します。|  
@@ -53,7 +52,7 @@ ms.locfileid: "62774501"
   
 ## <a name="secondary-server-tables"></a>セカンダリ サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|警告ジョブ ID を格納します。 リモート監視サーバーが構成されていない場合のみ、このテーブルがセカンダリ サーバーで使用されます。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|このセカンダリ サーバーに関連付けられているログ配布ジョブのエラー詳細を格納します。|  
@@ -67,7 +66,7 @@ ms.locfileid: "62774501"
   
 ## <a name="secondary-server-stored-procedures"></a>セカンダリ サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql)|ログ配布についてセカンダリ データベースを設定します。|  
 |[sp_add_log_shipping_secondary_primary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql)|指定したプライマリ データベースのセカンダリ サーバーに対して、プライマリ情報の設定、ローカルおよびリモート監視リンクの追加、コピー ジョブと復元ジョブの作成を行います。|  
@@ -82,7 +81,7 @@ ms.locfileid: "62774501"
   
 ## <a name="monitor-server-tables"></a>監視サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|警告ジョブ ID を格納します。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|ログ配布ジョブのエラーの詳細を格納します。|  
@@ -92,7 +91,7 @@ ms.locfileid: "62774501"
   
 ## <a name="monitor-server-stored-procedures"></a>監視サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql)|ログ配布警告ジョブがまだ作成されていない場合は、作成します。|  
 |[sp_delete_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql)|プライマリ データベースが関連付けられていない場合は、ログ配布警告ジョブを削除します。|  

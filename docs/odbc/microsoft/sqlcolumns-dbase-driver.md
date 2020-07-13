@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLColumns function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLColumns
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5afad2cc08910e036a571e3f32b144bc0b922dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 242e4c2c95340aaf8bd4a8d8d41959b388a1cf70
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132601"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307893"
 ---
 # <a name="sqlcolumns-dbase-driver"></a>SQLColumns (dBASE ドライバー)
 > [!NOTE]  

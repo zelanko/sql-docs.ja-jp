@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67917160"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756310"
 ---
 # <a name="resync-method"></a>Resync メソッド
 基になるデータベースから、現在の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションのデータを更新します。  
@@ -36,13 +36,13 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *影響のあるレコード*  
- 省略可能。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は**adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
+ *AffectRecords*  
+ 任意。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は**adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
   
  *ResyncValues*  
- 省略可能。 基になる値が上書きされるかどうかを指定する[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)値です。 既定値は**adResyncAllValues**です。  
+ 任意。 基になる値が上書きされるかどうかを指定する[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)値です。 既定値は**adResyncAllValues**です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>レコードセット  
  現在の**レコードセット**内のレコードを基になるデータベースと再同期するには、 **Resync**メソッドを使用します。 これは、静的カーソルまたは順方向専用カーソルを使用していても、基になるデータベースの変更を確認する場合に便利です。  

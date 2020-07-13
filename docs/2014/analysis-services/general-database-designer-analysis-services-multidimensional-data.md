@@ -13,29 +13,24 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66081082"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544479"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>[全般] (データベース デザイナー) (Analysis Services - 多次元データ)
-  
   **[全般]** タブを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
   
  **[全般] タブを表示するには**  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開きます。  
   
-2.  
-  **ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを右クリックし、 **[データベースの編集]** をクリックして、 **[全般]** タブをクリックします。  
+2.  **ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを右クリックし、 **[データベースの編集]** をクリックして、 **[全般]** タブをクリックします。  
   
 ## <a name="basic-options"></a>[基本] オプション  
- 
-  **[基本]** セクションを拡張して、データベースに関する基本情報を変更します。 ここでは、次のオプションについて説明します。  
+ **[基本]** セクションを拡張して、データベースに関する基本情報を変更します。 ここでは、次のオプションについて説明します。  
   
  **データベース名**  
  データベースの名前が表示されます。  
@@ -47,35 +42,33 @@ ms.locfileid: "66081082"
  データベースの説明を入力します。  
   
 ## <a name="translations-options"></a>[翻訳] オプション  
- 
-  **[翻訳]** セクションを拡張して、データベースのキャプションと説明の翻訳を作成、変更します。 ここでは、次の列を持つグリッドについて説明します。  
+ **[翻訳]** セクションを拡張して、データベースのキャプションと説明の翻訳を作成、変更します。 ここでは、次の列を持つグリッドについて説明します。  
   
- **Language**  
+ **言語**  
  指定したトランザクションの言語を選択します。  
   
- 新しい翻訳をグリッドに追加するには、[ ** \<新しい翻訳>の追加**] をクリックします。  
+ 新しい翻訳をグリッドに追加するには、[] をクリックし **\<Add new translation>** ます。  
   
- **[キャプションの翻訳]**  
+ **キャプションの翻訳**  
  データベースのキャプションを適切な翻訳言語で入力します。 空白の場合は、データベースの既定のキャプションが使用されます。  
   
  **[説明の翻訳]**  
  データベースの説明を適切な翻訳言語で入力します。 空白の場合は、データベースの既定の説明が使用されます。  
   
 ## <a name="account-type-mapping-options"></a>[勘定科目の種類のマッピング] オプション  
- 
-  **[勘定科目の種類のマッピング]** セクションを拡張して、選択されたデータベースで各勘定科目の **種類** に関連付けられた既定の集計関数を変更します。  
+ **[勘定科目の種類のマッピング]** セクションを拡張して、選択されたデータベースで各勘定科目の **種類** に関連付けられた既定の集計関数を変更します。  
   
 > [!NOTE]  
->  このオプションは、1 つまたは複数のメジャーが *ByAccount* 集計関数を使用するキューブに対してのみ適用可能です。  
+>   このオプションは、1 つまたは複数のメジャーが *ByAccount* 集計関数を使用するキューブに対してのみ適用可能です。  
   
  ここでは、次の列を持つグリッドについて説明します。  
   
  **名前**  
  勘定科目の種類の名前を入力します。  
   
- 新しいアカウントの種類を追加するには、[ ** \<新しいアカウントの種類の追加**] をクリックし>ます。  
+ 新しい勘定科目の種類を追加するには、をクリックし **\<Add new account type>** ます。  
   
- **エイリアス**  
+ **Alias**  
  ビジネス インテリジェンス ウィザードで使用するための、勘定科目の種類の既定名を設定します。 この列を空にすると、 **[名前]** 列での既定の設定が使用されます。  
   
  **集計関数**  

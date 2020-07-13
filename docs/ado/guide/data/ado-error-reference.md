@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926244"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761388"
 ---
 # <a name="ado-errors"></a>ADO エラー
 **Errorvalueenum**定数は、ADO エラー値を記述します。 これらの列挙定数 (値を含む) の完全な一覧については、「[付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)」を参照してください。 このセクションでは、さらに興味深いエラーをいくつか確認し、それを引き起こす可能性のある特定の状況や、問題を解決するための解決策について説明します。 **Errorvalueenum**定数と short 正の10進数の両方が一覧表示されます。
 
-|番号|ErrorValueEnum 定数|説明/考えられる原因|
+|Number|ErrorValueEnum 定数|説明/考えられる原因|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|プロバイダーが要求された操作を実行できませんでした。|
 |**3001**|**adErrInvalidArgument**|引数の型が正しくないか、許容範囲外であるか、または競合しています。 このエラーは、多くの場合、SQL SELECT ステートメントでのタイポグラフィエラーが原因で発生します。 たとえば、フィールド名またはテーブル名のスペルが間違っていると、このエラーが発生することがあります。 このエラーは、SELECT ステートメントでという名前のフィールドまたはテーブルがデータストアに存在しない場合にも発生する可能性があります。|
@@ -63,7 +63,7 @@ ms.locfileid: "67926244"
 |**3724**|**adErrCantConvertvalue**|符号の不一致またはデータのオーバーフロー以外の理由により、データ値を変換できません。 たとえば、変換によってデータが切り捨てられる場合があります。|
 |**3725**|**adErrCantCreate**|フィールドのデータ型が不明であるか、プロバイダーの操作に必要なリソースが不足しているため、データ値を設定または取得できません。|
 |**3726**|**Aderrcolumnnotonこの行**|レコードにこのフィールドが含まれていません。 無効なフィールド名が指定されたか、現在のレコードの**フィールド**コレクションに含まれていないフィールドが参照されました。|
-|**3727**|**adErrURLDoesNotExist**|送信先 URL のソース URL または親が存在しません。 送信元または送信先の URL に誤字があります。 `https://mysite/photos/myphoto.jpg`代わりに、実際`https://mysite/photo/myphoto.jpg`にを使用する必要がある場合があります。 親 URL (この場合は*写真*ではなく*写真*) のタイポグラフィエラーにより、エラーが発生しました。|
+|**3727**|**adErrURLDoesNotExist**|送信先 URL のソース URL または親が存在しません。 送信元または送信先の URL に誤字があります。 代わりに、実際にを使用する必要がある場合があり `https://mysite/photo/myphoto.jpg` `https://mysite/photos/myphoto.jpg` ます。 親 URL (この場合は*写真*ではなく*写真*) のタイポグラフィエラーにより、エラーが発生しました。|
 |**3728**|**adErrTreePermissionDenied**|ツリーまたはサブツリーにアクセスするのに十分なアクセス許可がありません。 接続文字列に指定されたユーザーには、適切なアクセス許可がありません。|
 |**3729**|**adErrInvalidURL**|URL に無効な文字が含まれています。 URL が正しく入力されていることを確認します。 URL は、現在のプロバイダーに登録されているスキームに従っています (たとえば、インターネット発行プロバイダーは http 用に登録されています)。|
 |**3730**|**adErrResourceLocked**|指定された URL によって表されるオブジェクトが、他の1つ以上のプロセスによってロックされています。 プロセスが終了するまで待ってから、操作を再試行してください。 アクセスしようとしているオブジェクトは、他のユーザーまたはアプリケーション内の別のプロセスによってロックされています。 これは、マルチユーザー環境で発生する可能性が最も高くなります。|

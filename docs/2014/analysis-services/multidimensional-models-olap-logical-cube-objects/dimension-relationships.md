@@ -19,17 +19,15 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72797622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545294"
 ---
 # <a name="dimension-relationships"></a>ディメンション リレーションシップ
-  ディメンションを使用する場合は、キューブ内にある、キューブ ディメンションとメジャー グループ間のリレーションシップが定義されます。 キューブ ディメンションとは、特定のキューブで使用されるデータベース ディメンションのインスタンスです。 キューブにはキューブ ディメンションを含めることができ、実際、多くの場合は含んでいます。キューブ ディメンションはメジャー グループと直接には関連付けられていませんが、別のディメンションまたは別のメジャー グループを介して間接的にメジャー グループと関連付けられることがあります。 データベースディメンションまたはメジャーグループをキューブに追加すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、キューブのデータソースビューのディメンションテーブルとファクトテーブル間のリレーションシップを調べ、ディメンションの属性間のリレーションシップを調べることによって、ディメンションの使用状況を確認しようとします。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、検出できるリレーションシップのディメンションの使用法を自動設定します。  
+  ディメンションを使用する場合は、キューブ内にある、キューブ ディメンションとメジャー グループ間のリレーションシップが定義されます。 キューブ ディメンションとは、特定のキューブで使用されるデータベース ディメンションのインスタンスです。 キューブにはキューブ ディメンションを含めることができ、実際、多くの場合は含んでいます。キューブ ディメンションはメジャー グループと直接には関連付けられていませんが、別のディメンションまたは別のメジャー グループを介して間接的にメジャー グループと関連付けられることがあります。 データベースディメンションまたはメジャーグループをキューブに追加すると、は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブのデータソースビューのディメンションテーブルとファクトテーブル間のリレーションシップを調べ、ディメンションの属性間のリレーションシップを調べることによって、ディメンションの使用状況を確認しようとします。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、検出できるリレーションシップのディメンションの使用法を自動設定します。  
   
  ディメンションとメジャー グループ間のリレーション シップは、そのリレーション シップに参加しているディメンション テーブルとファクト テーブル、および特定のメジャー グループに含まれているディメンションの粒度を指定する粒度属性で構成されます。  
   
@@ -56,7 +54,7 @@ ms.locfileid: "72797622"
  参照リレーションシップの詳細については、「[参照リレーションシップと参照リレーションシップのプロパティの定義](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
   
 ## <a name="fact-dimension-relationships"></a>ファクト ディメンションのリレーションシップ  
- ファクト ディメンションは逆ディメンションとも呼ばれますが、ディメンション テーブルの属性列ではなくファクト テーブルの属性列で構築される標準ディメンションです。 重複部分を減らすために、有用な多次元データがファクト テーブルに格納されることがあります。 たとえば、次の図は、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプルデータベースの**FactResellerSales**ファクトテーブルを示しています。  
+ ファクト ディメンションは逆ディメンションとも呼ばれますが、ディメンション テーブルの属性列ではなくファクト テーブルの属性列で構築される標準ディメンションです。 重複部分を減らすために、有用な多次元データがファクト テーブルに格納されることがあります。 たとえば、次の図は、サンプルデータベースの**FactResellerSales**ファクトテーブルを示して [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] います。  
   
  ![ディメンションをサポートするファクト テーブル内の列](../../analysis-services/dev-guide/media/as-factdim.gif "ディメンションをサポートするファクト テーブル内の列")  
   
@@ -85,6 +83,6 @@ ms.locfileid: "72797622"
  多対多リレーションシップの詳細については、「多対多リレーションシップ[と多対多リレーションシップのプロパティの定義](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ディメンション &#40;Analysis Services-多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンション &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

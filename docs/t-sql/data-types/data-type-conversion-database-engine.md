@@ -21,15 +21,15 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68697493"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008108"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 データ型は、以下のシナリオで変換される場合があります。
 -   あるオブジェクトのデータを他のオブジェクトのデータに移動、比較、または結合する場合は、あるオブジェクトのデータ型から他のオブジェクトのデータ型への変換が必要な場合があります。  
@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`int` の `1` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
+`1` の `int` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
 
 次の例は、代わりに `int` 変数を使用した同様のスクリプトを示しています。
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]binary[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]、**varbinary**、**image** の各型の値を除いて、1 つの **値はすべて 1 つの** 値に変換されます。 これらの値は **の 1 次元**Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 から _length_ 1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   

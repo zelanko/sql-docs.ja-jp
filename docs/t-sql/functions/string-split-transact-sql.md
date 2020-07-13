@@ -1,6 +1,6 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: STRING_SPLIT 関数の Transact-SQL リファレンス。 このテーブル値関数では、文字区切り記号に基づき、文字列が部分文字列に分割されます。
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afbd05a22b40cfa24fd1eaef18d9aa63aa095be9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714806"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -48,7 +48,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引数
 
  *string*  
- 任意の文字型 ([nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar**、**char** など) の**式**です。  
+ 任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *separator*  
  任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
@@ -104,7 +104,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|Name|Tags|  
+|ProductId|名前|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -120,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|ProductId|名前|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|道路|  
@@ -189,10 +189,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## <a name="see-also"></a>参照
 
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325462"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872791"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -31,7 +31,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |要件|インストール方法|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 以外のすべてのエディションの [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外のすべてのエディションの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
 |Windows インストーラー 4.5|Server Core インストールに付属しています。|  
 |Windows PowerShell|Server Core インストールに付属しています。|  
 |Java ランタイム |PolyBase を使用するには、適切な Java ランタイムをインストールする必要があります。 詳細については、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください。|
@@ -287,13 +287,9 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
-1.  サーバーで、タスク マネージャーを起動します。  
+1.  PowerShell では次のとおりです。Import-Module SQLPS  
   
-2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
-  
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
-  
-4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
+2.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
@@ -326,7 +322,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
 3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[名前]** フィールドに「 **cmd** 」と入力して、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成ファイルを使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)   

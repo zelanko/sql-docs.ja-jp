@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108244"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>[ラベル] ([マップの緯線のプロパティ] ダイアログ ボックス)
@@ -27,11 +27,10 @@ ms.locfileid: "66108244"
   
 -   **地理的.** 現在の投影法での緯度。  
   
- 
-  **式** ([fx]) ボタンをクリックし、オプションの値を設定する式を編集します。**  
+ **式** ([fx]) ボタンをクリックし、オプションの値を設定する式を編集します。**  
   
 ## <a name="options"></a>オプション  
- **定期的**  
+ **間隔**  
  緯線間の間隔を指定する度数を整数値で入力します。 既定では、 **[自動]** が選択されます。 このオプションが **[自動]** に設定されている場合、値はマップ データセットからのデータによって決まります。  
   
  **[ラベルを表示]**  
@@ -40,18 +39,18 @@ ms.locfileid: "66108244"
  **配置**  
  ビューポートの上、中央部、および下を基準にラベルを表示する位置を選択します。 既定の位置は **[近く]** です。  
   
--   **Near**上部にラベルを表示します。  
+-   **[近く]** ラベルを上に表示します。  
   
--   **1 四半期**上部と中央の中間にラベルを表示します。  
+-   **[1/4]** 上部と中央部の間の中間地点にラベルを表示します。  
   
--   **中央**中央にラベルを表示します。  
+-   **[中央揃え]** 中央部にラベルを表示します。  
   
--   4**分の 3**中央と下の中間にラベルを表示します。  
+-   **[3/4]** 中央部と下部の間の中間地点にラベルを表示します。  
   
--   **Far**下部にラベルを表示します。  
+-   **[遠く]** ラベルを下部に表示します。  
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

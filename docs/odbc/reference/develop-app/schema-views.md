@@ -12,14 +12,14 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], schema views
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1a9e421c4835d35e3c4f3c644e69b8c7601e8e4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67943755"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304253"
 ---
 # <a name="schema-views"></a>スキーマ ビュー
 アプリケーションでは、ODBC カタログ関数を呼び出すか INFORMATION_SCHEMA ビューを使用することによって、DBMS からメタデータ情報を取得できます。 ビューは ANSI SQL-92 標準で定義されています。  

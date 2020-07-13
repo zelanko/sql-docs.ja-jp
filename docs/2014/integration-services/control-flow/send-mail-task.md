@@ -15,15 +15,14 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17fa74b587176a4d44199901a48ed2a1784fbf7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830396"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432759"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "62830396"
  タスクは、SMTP 接続マネージャーを使用してメール サーバーに接続します。 詳しくは、「 [SMTP 接続マネージャー](../connection-manager/smtp-connection-manager.md)」をご覧ください。  
   
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>メール送信タスクで使用できるカスタム ログ メッセージ  
- 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -67,12 +66,11 @@ ms.locfileid: "62830396"
 ## <a name="configuring-the-send-mail-task"></a>メール送信タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[メール送信タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[メール送信タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [メール送信タスクエディター &#40;メールページ&#41;](../send-mail-task-editor-mail-page.md)  
+-   [[メール送信タスク エディター] &#40;[メール] ページ&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -87,7 +85,7 @@ ms.locfileid: "62830396"
   
 -   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](https://go.microsoft.com/fwlink/?LinkId=237625)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

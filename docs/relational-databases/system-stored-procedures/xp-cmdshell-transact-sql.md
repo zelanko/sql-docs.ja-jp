@@ -1,7 +1,7 @@
 ---
-title: xp_cmdshell (トランザクション-SQL) |マイクロソフトドキュメント
+title: xp_cmdshell (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 12/01/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ce32fc31373077418e77d31ce064d60e23f1b24
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402689"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890775"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows のコマンド シェルを起動し、実行用の文字列に渡します。 出力は、テキストの行として返されます。  
   
@@ -40,10 +40,10 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引数  
  **'** *command_string* **'**  
- オペレーティング システムに渡されるコマンドを含む文字列です。 *command_string*は、デフォルト値を指定しない**varchar(8000)** または**nvarchar(4000) です**。 *command_stringは*、二重引用符のセットを複数含めることはできません。 *command_string*で参照されるファイル パスまたはプログラム名にスペースが含まれている場合は、単一引用符が必要です。 埋め込みスペースで問題が発生する場合は、回避策として FAT 8.3 ファイル名の使用を検討してください。  
+ オペレーティングシステムに渡すコマンドを含む文字列を指定します。 *command_string*は**varchar (8000)** または**nvarchar (4000)**,、既定値はありません。 *command_string*には、2つ以上の二重引用符を含めることはできません。 *Command_string*で参照されているファイルパスまたはプログラム名にスペースがある場合は、1組の引用符が必要です。 埋め込みスペースで問題が発生した場合は、回避策として FAT 8.3 ファイル名を使用することを検討してください。  
   
  **no_output**  
- クライアントに出力を返さないことを指定する省略可能なパラメーターです。  
+ は省略可能なパラメーターであり、クライアントに出力を返さないことを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -56,52 +56,52 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 行は**nvarchar(255)** 列に返されます。 **no_output**オプションを使用すると、次の項目だけが返されます。  
+ 行は、 **nvarchar (255)** 列で返されます。 **No_output**オプションを使用すると、次のものだけが返されます。  
   
 ```  
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>解説  
- **xp_cmdshell**によって生成された Windows プロセスは、サービス アカウントと同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]じセキュリティ権限を持ちます。  
+## <a name="remarks"></a>注釈  
+ **Xp_cmdshell**によって生成される Windows プロセスには、サービスアカウントと同じセキュリティ権限が与えられ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- **xp_cmdshell**は同期的に動作します。 コマンド シェル コマンドが完了するまで、制御は呼び出し元に返されません。  
+ **xp_cmdshell**は同期的に動作します。 コマンドシェルのコマンドが完了するまで、コントロールは呼び出し元に返されません。  
   
- **xp_cmdshell**は、 ポリシー ベースの管理を使用するか、**または sp_configure**を実行して有効または無効にできます。 詳細については、「[セキュリティ上の構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshellサーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
+ **xp_cmdshell**を有効または無効にするには、ポリシーベースの管理を使用するか、 **sp_configure**を実行します。 詳細については、「[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)」および「 [Xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
   
 > [!IMPORTANT]
->  **xp_cmdshell**がバッチ内で実行され、エラーが返された場合、バッチは失敗します。
+>  バッチ内で**xp_cmdshell**が実行され、エラーが返された場合、バッチは失敗します。 これは動作の変更です。 以前のバージョンのでは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、バッチは引き続き実行されます。  
   
-## <a name="xp_cmdshell-proxy-account"></a>プロキシ アカウントxp_cmdshell  
- **sysadmin**固定サーバー ロールのメンバではないユーザーによって呼び出された場合 **、xp_cmdshell**は **、##xp_cmdshell_proxy_account##** という名前の資格情報に格納されているアカウント名とパスワードを使用して Windows に接続します。 このプロキシ資格情報が存在しない場合 **、xp_cmdshell**は失敗します。  
+## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell プロキシアカウント  
+ **Sysadmin**固定サーバーロールのメンバーではないユーザーによって呼び出された場合、 **xp_cmdshell**は、" **# #xp_cmdshell_proxy_account # #**" という名前の資格情報に格納されているアカウント名とパスワードを使用して Windows に接続します。 このプロキシ資格情報が存在しない場合、 **xp_cmdshell**は失敗します。  
   
- プロキシ アカウントの資格情報は、 **sp_xp_cmdshell_proxy_account**を実行して作成できます。 このストアド プロシージャは、Windows のユーザー名とパスワードを引数にとります。 たとえば、次のコマンドは、Windows パスワード`SHIPPING\KobeR``sdfh%dkc93vcMt0`を持つ Windows ドメイン ユーザーのプロキシ資格情報を作成します。  
+ プロキシアカウントの資格情報を作成するには**sp_xp_cmdshell_proxy_account**を実行します。 このストアド プロシージャは、Windows のユーザー名とパスワードを引数にとります。 たとえば、次のコマンドは、windows パスワードを持つ Windows ドメインユーザー用のプロキシ資格情報を作成し `SHIPPING\KobeR` `sdfh%dkc93vcMt0` ます。  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 詳細については、「 [&#40;sql&#41;のsp_xp_cmdshell_proxy_account ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)」を参照してください。  
+ 詳細については、「 [sp_xp_cmdshell_proxy_account &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 悪意のあるユーザーは**xp_cmdshell**を使用して特権を昇格しようとする場合があるため **、既定ではxp_cmdshell**は無効になっています。 **sp_configure**または**ポリシーベースの管理**を使用して有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
+ 悪意のあるユーザーが**xp_cmdshell**を使用して特権を昇格しようとすることがあるため、 **xp_cmdshell**は既定で無効になっています。 **Sp_configure**または**ポリシーベースの管理**を使用して有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
   
- 最初に有効にした場合 **、xp_cmdshell**実行するには CONTROL SERVER アクセス許可が必要であり **、xp_cmdshell**によって作成された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows プロセスはサービス アカウントと同じセキュリティ コンテキストを持ちます。 多[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]くの場合、サービス アカウントには、 によって作成されたプロセスによって実行される作業に必要なアクセス許可よりも多くのアクセス許可**xp_cmdshell。** セキュリティを強化するには **、xp_cmdshell**へのアクセスを、高い特権を持つユーザーに制限する必要があります。  
+ 最初に有効にした場合、 **xp_cmdshell**は CONTROL SERVER 権限を実行する必要があり、 **xp_cmdshell**によって作成された Windows プロセスは、サービスアカウントと同じセキュリティコンテキストを持ち [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]多くの場合、サービスアカウントには、 **xp_cmdshell**によって作成されたプロセスによって実行される作業に必要な権限よりも多くのアクセス許可があります。 セキュリティを強化するには、 **xp_cmdshell**へのアクセスを高い特権を持つユーザーに制限する必要があります。  
   
- 管理者以外のユーザーが**xp_cmdshell**を使用できるようにし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、権限の低いアカウントのセキュリティ トークンを使用して子プロセスを作成できるようにするには、次の手順を実行します。  
+ 非管理者が**xp_cmdshell**を使用できるようにし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が低い特権のアカウントのセキュリティトークンを使用して子プロセスを作成できるようにするには、次の手順を実行します。  
   
-1.  プロセスで必要な権限が最も少ない Windows ローカル ユーザー アカウントまたはドメイン アカウントを作成およびカスタマイズします。  
+1.  プロセスに必要な最小限の特権で、Windows ローカルユーザーアカウントまたはドメインアカウントを作成およびカスタマイズします。  
   
-2.  **sp_xp_cmdshell_proxy_account**システム プロシージャを使用して、その最小特権アカウントを使用するように**xp_cmdshell**を構成します。  
+2.  **Sp_xp_cmdshell_proxy_account**システムプロシージャを使用して、その最小特権のアカウントを使用するように**xp_cmdshell**を構成します。  
   
     > [!NOTE]  
-    >  オブジェクト エクスプローラーでサーバー名の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**[プロパティ]** を右クリックし、[**セキュリティ**] タブの [サーバー プロキシ アカウント] セクションを確認して、この**プロキシ アカウント**を構成することもできます。  
+    >  また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクトエクスプローラーでサーバー名の**プロパティ**を右クリックし、[**サーバープロキシアカウント**] セクションの [**セキュリティ**] タブを使用して、このプロキシアカウントを構成することもできます。  
   
-3.  では[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 master データベースを使用して`GRANT exec ON xp_cmdshell TO N'<some_user>';`ステートメントを実行し、特定の非**sysadmin**ユーザーに**xp_cmdshell**を実行する機能を提供します。 指定したユーザーは、master データベースに存在している必要があります。  
+3.  では、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] master データベースを使用して、ステートメントを実行し、 `GRANT exec ON xp_cmdshell TO N'<some_user>';` 特定の非**sysadmin**ユーザーに**xp_cmdshell**を実行する権限を与えます。 指定されたユーザーは、master データベースに存在している必要があります。  
   
- 管理者以外のユーザーは **、xp_cmdshell**を使用してオペレーティング システム プロセスを起動でき、これらのプロセスは、構成したプロキシ アカウントのアクセス許可で実行されます。 CONTROL SERVER 権限を持つユーザー **(sysadmin**固定サーバー ロールのメンバ) は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**、xp_cmdshell**によって起動された子プロセスに対するサービス アカウントのアクセス許可を引き続き受け取ります。  
+ 管理者以外のユーザーは**xp_cmdshell**でオペレーティングシステムプロセスを起動できるようになりました。これらのプロセスは、構成したプロキシアカウントのアクセス許可で実行されます。 CONTROL SERVER 権限を持つユーザー ( **sysadmin**固定サーバーロールのメンバー) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xp_cmdshell**によって起動される子プロセスのサービスアカウントのアクセス許可を引き続き受け取ります。  
   
- オペレーティング システム プロセスを起動するときに**xp_cmdshell**によって使用される Windows アカウントを確認するには、次のステートメントを実行します。  
+ オペレーティングシステムプロセスを起動するときに**xp_cmdshell**によって使用されている Windows アカウントを特定するには、次のステートメントを実行します。  
   
 ```  
 xp_cmdshell 'whoami.exe'  
@@ -118,7 +118,7 @@ REVERT ;
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-a-list-of-executable-files"></a>A. 実行可能ファイルの一覧を返す  
  次の例では、ディレクトリ コマンドを実行する `xp_cmdshell` 拡張ストアド プロシージャを示します。  
@@ -127,8 +127,8 @@ REVERT ;
 EXEC master..xp_cmdshell 'dir *.exe'  
 ```  
   
-### <a name="b-returning-no-output"></a>B. 出力を返さない  
- 次の例では`xp_cmdshell`、出力をクライアントに返さずにコマンド文字列を実行します。  
+### <a name="b-returning-no-output"></a>B: 出力を返さない  
+ 次の例では、を使用して、 `xp_cmdshell` クライアントに出力を返さずにコマンド文字列を実行します。  
   
 ```  
 USE master;  
@@ -138,8 +138,8 @@ EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
 GO  
 ```  
   
-### <a name="c-using-return-status"></a>C. 返品ステータスの使用  
- 次の例では、`xp_cmdshell`拡張ストアド プロシージャは、戻りステータスも提案します。 戻りコード値は 変数`@result`に格納されます。  
+### <a name="c-using-return-status"></a>C: リターンステータスの使用  
+ 次の例では、 `xp_cmdshell` 拡張ストアドプロシージャによって戻り値の状態も提案されます。 リターンコード値は変数に格納され `@result` ます。  
   
 ```  
 DECLARE @result int;  
@@ -150,7 +150,7 @@ ELSE
    PRINT 'Failure';  
 ```  
   
-### <a name="d-writing-variable-contents-to-a-file"></a>D. 変数の内容をファイルに書き込む  
+### <a name="d-writing-variable-contents-to-a-file"></a>D: 変数の内容をファイルに書き込む  
  次の例では、`@var` 変数の内容を、現在のサーバー ディレクトリにある `var_out.txt` というファイルに書き込みます。  
   
 ```  
@@ -161,7 +161,7 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>E. コマンドの結果をファイルにキャプチャする  
- 次の例では、現在のディレクトリの内容を、現在の`dir_out.txt`サーバー ディレクトリ内のファイルに書き込みます。  
+ 次の例では、現在のディレクトリの内容を、現在のサーバーディレクトリ内のという名前のファイルに書き込み `dir_out.txt` ます。  
   
 ```  
 DECLARE @cmd sysname, @var sysname;  
@@ -171,9 +171,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [汎用拡張ストアド プロシージャ&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_cmdshellサーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [大域構成](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account&#40;のトランザクション SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
+ [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   
+ [sp_xp_cmdshell_proxy_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

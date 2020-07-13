@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, SELECT DISTINCT limitations
 - SELECT DISTINCT limitations [ODBC]
 ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69a69e43bd98e9421e3197439c9f0376884c23ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1623c950f7df6b7ee0854e270d58fee65e7a1f9e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987895"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303973"
 ---
 # <a name="select-distinct-limitations"></a>SELECT DISTINCT の制限事項
 DISTINCT キーワードはバイナリデータには適用されません。

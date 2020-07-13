@@ -10,21 +10,20 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 - development [SQL Server Database Engine]
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cecb95e2c2a044825422bab09363b3088e87fb44
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934459"
 ---
 # <a name="database-engine-features-and-tasks"></a>データベース エンジンの機能とタスク
-  だれでも、デザイナー、開発者、アナリスト、または管理者がデータベース[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を構築するために必要な情報を見つけることができます。  
+  だれでも、デザイナー、開発者、アナリスト、または管理者がデータベースを構築するために必要な情報を見つけることが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データベースエンジンインスタンス &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
+ [データベース エンジンのインスタンス &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
  [データベース機能](../relational-databases/database-features.md)  
   

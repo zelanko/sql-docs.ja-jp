@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 05bb9bc1ad4dfeed1cf2747a8d5bb854fec8d9af
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008201"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669701"
 ---
 # <a name="operators---comparison"></a>演算子 - 比較
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データマイニング拡張機能 (DMX) 式では、比較演算子をスカラーデータと共に使用できます。 比較演算子は、ブールデータ型に評価される。テストされた条件の結果に基づいて、TRUE または FALSE を返します。  
+  のデータマイニング拡張機能 (DMX) 式では、比較演算子をスカラーデータと共に使用でき [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 比較演算子は、ブールデータ型に評価される。テストされた条件の結果に基づいて、TRUE または FALSE を返します。  
   
  次の表は、DMX がサポートしている比較演算子について示しています。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[&#60; &#40;&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|NULL 以外の値として評価される引数では、左の引数の値が右の引数の値より小さい場合に TRUE を返します。そうでない場合は FALSE を返します。 いずれかの引数または両方の引数が null 値に評価される場合、演算子は null 値を返します。|  
 |[&#41; &#40;DMX&#41;より大きい&#62; &#40;](../dmx/greater-than-dmx.md)|Null 以外の値に評価される引数の場合、左の引数の値が右の引数の値より大きい場合は TRUE を返します。それ以外の場合は FALSE を返します。 いずれかの引数または両方の引数が null 値に評価される場合、演算子は null 値を返します。|  

@@ -69,7 +69,7 @@ ms.locfileid: "74056667"
  新しい接続動作はクライアントで実装されるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のバージョンに固有ではありません。  
   
 ## <a name="linked-servers-and-delegation"></a>リンク サーバーと委任  
- リンク サーバーを作成すると、**sp_addlinkedserver\@ の** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) パラメーターを使用して、サーバーおよびフェールオーバー パートナーの SPN を指定できるようになります。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
+ リンク サーバーを作成すると、[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) の **\@provstr** パラメーターを使用して、サーバーおよびフェールオーバー パートナーの SPN を指定できるようになります。 これを実行するメリットは、クライアント接続文字列で SPN を指定する場合と同じです。つまり、Kerberos 認証を使う接続を確立する方が、より簡単でより信頼性が高くなります。  
   
  リンク サーバーでの委任には、Kerberos 認証が必要です。  
   

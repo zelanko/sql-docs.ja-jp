@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926387"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761500"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
 次のヘッダー ( **icrsint .h**) では、クライアントが**レコードセット**からフィールドを取得して、 **CADORecordBinding**から派生したクラスで定義された変数に変換できるようにするインターフェイスについて詳しく説明しています。 アクセスするフィールドごとに ADO バインドマクロを指定する必要があります。  

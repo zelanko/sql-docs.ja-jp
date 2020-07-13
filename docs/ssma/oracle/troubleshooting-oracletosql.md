@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266463"
 ---
 # <a name="troubleshooting-oracletosql"></a>トラブルシューティング (OracleToSQL)
@@ -22,7 +22,7 @@ ms.locfileid: "68266463"
   
 修正可能なエラーは次のように関連している可能性があります。  
   
-1.  Function  
+1.  関数  
   
 2.  手順  
   

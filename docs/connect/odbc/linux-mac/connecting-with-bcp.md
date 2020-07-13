@@ -1,5 +1,6 @@
 ---
-title: bcp による接続 | Microsoft Docs
+title: bcp による接続
+description: Linux と macOS の Microsoft ODBC Driver for SQL Server で bcp ユーティリティを使用する方法について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924542"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632807"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にあります。 このページでは、`bcp` の Windows バージョンとの違いについて説明します。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux と macOS の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用できます。 このページでは、`bcp` の Windows バージョンとの違いについて説明します。
   
 - フィールド ターミネータはタブ ("\t") です。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80924542"
 > -   -r"\n"  
 > -   -r'\n'  
   
-次に、テーブルの行をテキスト ファイルにコピーする `bcp` コマンド呼び出しの例を示します。  
+次の例は、テーブルの行をテキスト ファイルにコピーする `bcp` コマンドの呼び出しを示しています。  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -61,7 +62,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 接続先のデータベースを指定します。  
   
 - -d  
-`bcp` -S オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、「[Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」 (sqlcmd による接続) の「DSN Support in sqlcmd and bcp」 (sqlcmd および bcp の DSN サポート) を参照してください。  
+`bcp` -S オプションに渡された値が、データ ソース名 (DSN) として解釈されるようにします。 詳細については、「[Connecting with sqlcmd](connecting-with-sqlcmd.md)」 (sqlcmd による接続) の「DSN Support in sqlcmd and bcp」 (sqlcmd および bcp の DSN サポート) を参照してください。  
   
 - -e *error_file*`bcp` ユーティリティがファイルからデータベースに転送できなかった行を格納するエラー ファイルの完全パスを指定します。  
   
@@ -84,7 +85,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。  
   
 - -m *max_errors*  
-`bcp` 操作を取り消す前に発生することのできる構文エラーの最大数を指定します。  
+`bcp` 操作が取り消される前に発生可能な構文エラーの最大数を指定します。  
   
 - -n  
 データのネイティブの (データベース) データ型を使用して一括コピー操作を実行します。  
@@ -147,4 +148,4 @@ Unicode 文字を使用して一括コピー操作を実行します。
   
 ## <a name="see-also"></a>参照
 
-[**sqlcmd** による接続](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[**sqlcmd** による接続](connecting-with-sqlcmd.md)  

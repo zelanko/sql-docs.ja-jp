@@ -12,39 +12,38 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63031936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058554"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>[オプション] ([SQL Server オブジェクトエクスプローラー] ページ)
   このページを使用すると、 **オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
   
 -   ユーザー テーブルおよびビューに対する **[編集]** コマンド。  
   
--   スクリプトオブジェクトは、ユーザーが作成したオブジェクトのコマンド** \<として>** ます。  
+-   ユーザーが作成したオブジェクトに対する **[\<object> をスクリプト化]** コマンド。  
   
 -   ユーザーが作成したオブジェクトに対する **[変更]** コマンド。  
   
 -   このページでは、 **SQL Server スクリプト生成ウィザード**で使用するスクリプト オプションの既定値も設定できます。  
   
 ## <a name="remarks"></a>解説  
- **Edit**コマンドと**Modify**コマンドを実行すると、同じオプション設定に対し**て [ \<スクリプトオブジェクト>** ] コマンドとは異なる結果が生成される可能性があります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **スクリプト\<オブジェクト> as**コマンドは、後でオブジェクトの作成に使用できるようにスクリプトを生成するように設計されています。  
+ **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[\<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[\<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
   
 ## <a name="options"></a>オプション  
  スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
   
 ### <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
  **[各ステートメントを区切る]**  
- バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [Transact &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)」を参照してください。  
+ バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [Transact &#40;transact-sql&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)」を参照してください。  
   
  **[説明用ヘッダーを含める]**  
  スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「[コメント &#40;transact-sql&#41;](/sql/t-sql/language-elements/comment-transact-sql)」を参照してください。  
   
- **Vardecimal オプションを含める**  
+ **[VarDecimal オプションを含める]**  
  vardecimal ストレージ オプションを含めます。 既定値は False です。 詳細については、「」および「 [transact-sql&#41;&#40;sp_db_vardecimal_storage_format ](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)」を参照してください。  
   
  **[変更の追跡のスクリプトを作成]**  
@@ -56,14 +55,14 @@ ms.locfileid: "63031936"
  **[フルテキスト カタログのスクリプトを作成]**  
  フルテキスト カタログのスクリプトを含めます。 既定値は False です。 詳細については、「 [transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)」を参照してください。  
   
- **データベース>\<を使用したスクリプトの作成**  
+ **スクリプトの使用\<database>**  
  スクリプトに USE &lt;データベース&gt; ステートメントを追加することにより、現在の **オブジェクト エクスプローラー** データベースのコンテキストでデータベース オブジェクトを作成します。 スクリプトが別のデータベースで使用される可能性がある場合は、False を選択して除外します。 既定値は True です。 詳細については、「[USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)」を参照してください。  
   
 ### <a name="object-scripting-options"></a>[オブジェクト スクリプト作成オプション]  
  **[依存オブジェクトのスクリプトを生成する]**  
  選択したオブジェクトのスクリプトを実行する際に必要な追加オブジェクトのスクリプトを生成します。 既定値は False です。  
   
- **If NOT EXISTS 句を含める**  
+ **[IF NOT EXISTS 句を含める]**  
  各オブジェクトを作成する前にデータベースにそのオブジェクトが存在しないことを確認するためのステートメントを含めます。 既定値は False です。 詳細について[は、それ以外](/sql/t-sql/language-elements/if-else-transact-sql)の場合は、transact-sql&#41;&#40;transact-sql [&#41;&#40;存在](/sql/t-sql/language-elements/exists-transact-sql)します。  
   
  **[オブジェクト名を修飾するスキーマ]**  
@@ -85,7 +84,7 @@ ms.locfileid: "63031936"
  ユーザー定義データ型を元の基本型に変換します。 スクリプトを実行するデータベースに、ソース データベースのユーザー定義データ型が存在しない場合は、True を使用します。 ユーザー定義データ型を保持する場合は、False を使用します。 既定値は False です。 詳細については、[CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)を参照してください。  
   
  **[SET ANSI PADDING コマンドを生成する]**  
- 各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」をご覧ください。  
+ 各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」を参照してください。  
   
  **[照合順序を含める]**  
  列定義に照合順序を含めます。 既定値は True です。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
@@ -135,7 +134,7 @@ ms.locfileid: "63031936"
  **[ビュー列のスクリプトを作成]**  
  ビュー ヘッダーにビュー列を宣言します。 既定値は False です。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
- **ScriptDriIncludeSystemNames**  
+ **[ScriptDriIncludeSystemNames]**  
  宣言参照整合性を適用するために、システムによって生成される制約名を含めます。 既定値は False です。 詳細については、「 [REFERENTIAL_CONSTRAINTS &#40;transact-sql&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

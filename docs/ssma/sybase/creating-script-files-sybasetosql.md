@@ -15,10 +15,10 @@ ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948476"
 ---
 # <a name="creating-script-files-sybasetosql"></a>スクリプト ファイルの作成 (SybaseToSQL)
@@ -49,7 +49,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   -メッセージの非表示: コンソールでメッセージを表示しません。 既定では ' false ' です。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -66,7 +66,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -92,7 +92,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   target-last-used = "true" (既定値) または target-server = "target_servername"  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -103,7 +103,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -127,7 +127,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     既定のモードは**error**です。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -136,7 +136,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -158,7 +158,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     既定のモードでは、**エラー**が発生します。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -169,7 +169,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </synchronize-target>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -206,7 +206,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   ask-ユーザー: 入力を求めるメッセージを表示します (' yes '/' no ')  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -215,7 +215,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -227,7 +227,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
 6.  **失敗した前提条件プロバイダー:** これにより、コマンドの処理に必要なすべての前提条件をユーザーが処理できるようになります。 既定では、strict モードは ' false ' です。 "True" に設定されている場合は、前提条件を満たすためにエラーが発生した場合に例外が生成されます。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -255,7 +255,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     -   -20% ごと  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -268,7 +268,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -301,7 +301,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
     > [!NOTE]  
     > 必須のメッセージは、任意のレベルでログに記録されます。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -310,7 +310,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     </output-providers>  
     ```  
-    *もしくは*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -328,7 +328,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル&gt;サーバー接続ファイルの&gt;プロンプトユーザーになります。  
   
-    **よう**  
+    **例:**  
   
     ```xml  
     <output-providers>  
@@ -352,7 +352,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
 スクリプトファイル内のすべてのコマンドが正常に実行されると、SSMA コンソールアプリケーションが終了し、コントロールがユーザーに返されます。 スクリプトファイルの内容は、変数の[値のファイル](creating-variable-value-files-sybasetosql.md)に含まれる変数情報、または変数の値をスクリプトファイル内の別のセクションに格納することにより、静的なものになります。  
   
-**よう**  
+**例:**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -396,7 +396,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ## <a name="script-file-validation"></a>スクリプトファイルの検証  
 ユーザーは、' schema ' フォルダーで使用可能なスキーマ定義ファイル**の 2ssconsolescriptschema**に対して自分のスクリプトファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、 [SybaseToSQL&#41;&#40;変数値ファイルを作成](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)します。  
   
 ## <a name="see-also"></a>参照  

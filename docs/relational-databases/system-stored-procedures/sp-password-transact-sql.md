@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f65a56aaca4e2ede491f41cb6c2aca84dc1c988e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68008922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899300"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの[!INCLUDE[msCoName](../../includes/msconame-md.md)]パスワードを追加または変更します。  
+  ログインのパスワードを追加または変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)を使用してください。  
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`新しいパスワードを入力します。 *new_password*は**sysname**であり、既定値はありません。 名前付きパラメーターを使用しない場合は、 *old_password*を指定する必要があります。  
   
 > [!IMPORTANT]  
->  NULL パスワードは使用しないでください。 強力なパスワードを使用してください。 詳細については、「 [強力なパスワード](../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  NULL パスワードは使用しないでください。 強力なパスワードを使用してください。 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
-`[ @loginame = ] 'login'`パスワード変更によって影響を受けるログインの名前を指定します。 *login*は**sysname**,、既定値は NULL です。 *ログイン*は既に存在している必要があり、 **sysadmin**または**securityadmin**固定サーバーロールのメンバーのみが指定できます。  
+`[ @loginame = ] 'login'`パスワード変更によって影響を受けるログインの名前を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*は既に存在している必要があり、 **sysadmin**または**securityadmin**固定サーバーロールのメンバーのみが指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -76,8 +76,8 @@ ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';
 GO  
 ```  
   
-### <a name="b-changing-a-password"></a>B. パスワードの変更  
- 次の例は、を使用`ALTER LOGIN`して、ログイン`Victoria`のパスワードをから`B3r1000d#2-36`に`V1cteAmanti55imE`変更する方法を示しています。 可能であればこの方法の使用をお勧めします。 ユーザー `Victoria` は、追加の権限を取得しなくてもこのコマンドを実行できます。 他のユーザーには ALTER ANY LOGIN 権限が必要です。  
+### <a name="b-changing-a-password"></a>B: パスワードの変更  
+ 次の例は、を使用して、 `ALTER LOGIN` ログインのパスワードをからに変更する方法を示して `Victoria` `B3r1000d#2-36` `V1cteAmanti55imE` います。 可能であればこの方法の使用をお勧めします。 ユーザー `Victoria` は、追加の権限を取得しなくてもこのコマンドを実行できます。 他のユーザーには ALTER ANY LOGIN 権限が必要です。  
   
 ```  
 ALTER LOGIN Victoria WITH   
@@ -86,14 +86,14 @@ ALTER LOGIN Victoria WITH
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Transact-sql&#41;&#40;ログインの作成](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

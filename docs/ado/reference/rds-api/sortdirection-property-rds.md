@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28f0e247c29673fe4dfec507794ad8977b51fcc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15c914344e526d24c737a7076929f0610aedb9e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750714"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection プロパティ (RDS)
 並べ替え順序が昇順と降順のどちらであるかを示します。  
@@ -37,7 +37,7 @@ DataControl.SortDirection = value
  *DataControl*  
  RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *Value*  
+ *値*  
  **ブール**値。 **True**に設定されている場合、並べ替えの方向が昇順であることを示します。 **False**は降順を示します。  
   
 ## <a name="remarks"></a>解説  

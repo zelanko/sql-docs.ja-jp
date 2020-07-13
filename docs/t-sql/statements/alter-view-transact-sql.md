@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 66cd1609132a6b112823f3233e5b1461222051b6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981946"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000652"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   以前に作成されたビューを変更します。 これにはインデックス付きビューが含まれます。 ALTER VIEW は、従属するストアド プロシージャやトリガーに影響を与えず、権限を変更することもありません。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73981946"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER VIEW [ schema_name . ] view_name [ ( column [ ,...n ] ) ]   
 [ WITH <view_attribute> [ ,...n ] ]   
 AS select_statement   
@@ -48,7 +48,16 @@ AS select_statement
     [ SCHEMABINDING ]  
     [ VIEW_METADATA ]       
 }   
-```  
+```
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
+  
+ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+
+``` 
   
 ## <a name="arguments"></a>引数  
  *schema_name*  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b0c076a4132298797313ecbf0874d9d2d4e453cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63023299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052810"
 ---
 # <a name="performance-event-category"></a>Performance イベント カテゴリ
   **Performance** イベント カテゴリを使用すると、 **Showplan** イベント クラス、および SQL DML (データ操作言語) の操作を実行したときに作成されるイベント クラスを監視できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Auto Stats イベント クラス](auto-stats-event-class.md)|インデックス統計および列統計の自動更新が実行されたことを示します。|  
 |[Degree of Parallelism &#40;7.0 Insert&#41; イベント クラス](degree-of-parallelism-7-0-insert-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、直列プランまたは並列プランのいずれかを使用して SELECT、INSERT、UPDATE、または DELETE ステートメントが実行されたことを示します。 操作の実行に使用された CPU の数もレポートされます。|  

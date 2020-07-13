@@ -14,14 +14,14 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4bc6c5d2da2f796a7c312971635fc36bc2fae8af
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68036411"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287866"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>長い形式のデータ、SQLSetPos および SQLBulkOperations
 SQL ステートメントのパラメーターの場合と同様に、 **sqlbulkoperations**または**SQLSetPos**を使用して行を更新するとき、または**sqlbulkoperations**を使用して行を挿入するときに、長いデータを送信できます。 データは、複数の**Sqlputdata**呼び出しを使用して部分的に送信されます。 実行時にデータが送信される列は、*実行時データ列*と呼ばれます。  

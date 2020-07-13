@@ -12,14 +12,14 @@ helpviewer_keywords:
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea354a7f882bd1a75c5f16fb19350d69ca11d375
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996175"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292492"
 ---
 # <a name="appendix-e-scalar-functions"></a>付録 E: スカラー関数
 ODBC では、次の種類のスカラー関数を指定します。これらの関数の各型については、この付録の対応するセクションで説明しています。 関数の説明には、関連する構文が含まれます。  

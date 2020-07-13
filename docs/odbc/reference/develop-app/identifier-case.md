@@ -12,14 +12,14 @@ helpviewer_keywords:
 - identifiers [ODBC], case
 - interoperability of SQL statements [ODBC], identifier case
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 940d96ece6b2c344fa02e0daadd6248270f4d19e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138971"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300152"
 ---
 # <a name="identifier-case"></a>識別子の大文字と小文字の区別
 SQL ステートメントとカタログ関数の引数では、識別子と引用符で囲まれた識別子は大文字と小文字を区別するかどうかを指定できます。この場合、アプリケーションは、SQL_IDENTIFIER_CASE オプションと SQL_QUOTED_IDENTIFIER_CASE オプションを指定して**SQLGetInfo**を呼び出すことによって判断できます。  

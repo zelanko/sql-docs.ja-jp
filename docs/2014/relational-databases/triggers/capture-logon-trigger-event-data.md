@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b11323702d7468d07783b4d1c763dba691479d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63130368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043059"
 ---
 # <a name="capture-logon-trigger-event-data"></a>ログオン トリガーのイベント データのキャプチャ
   ログオン トリガー内で使用するために LOGON イベントに関する XML データをキャプチャするには、 [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) 関数を使用します。 LOGON イベントは、次のイベントのデータ スキーマを返します。  

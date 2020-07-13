@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 784bd4649fb2169c78f38414c6c400e34582aa99
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62892644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436729"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
   [**テーブルのコピーまたはクエリの指定**] ページを使用すると、データのコピー方法を指定できます。 グラフィカル インターフェイスを使用して、コピーする既存データベースを選択したり、Transact-SQL を使用してさらに複雑なクエリを作成したりできます。  
@@ -30,7 +29,7 @@ ms.locfileid: "62892644"
  **1つ以上のテーブルまたはビューからデータをコピーする**  
  **[コピー元のテーブルおよびビューを選択**] ダイアログボックスを使用して、選択したコピー元のテーブルおよびビューから、指定した変換先にフィールドをコピーします。 レコードのフィルター選択や並べ替えを実行せず、コピー元のすべてのデータをコピーする場合に、このオプションを使用します。  
   
- データプロバイダーを使用[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]してデータソースに接続する場合、[ **1 つ以上のテーブルまたはビューからデータをコピー**する] オプションが使用できないことがあります。 このオプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。 既定では、ProviderDescriptors.xml ファイルには、次のプロバイダーの ProviderDescription セクションのみが含まれています。  
+ データプロバイダーを使用し [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] てデータソースに接続する場合、[ **1 つ以上のテーブルまたはビューからデータをコピー**する] オプションが使用できないことがあります。 このオプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。 既定では、ProviderDescriptors.xml ファイルには、次のプロバイダーの ProviderDescription セクションのみが含まれています。  
   
 -   System.Data.SqlClient  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62892644"
   
 -   System.Data.Odbc  
   
- 追加のプロバイダーに対して [ **1 つ以上のテーブルまたはビューからデータをコピー**する] オプションを使用できるようにするために、サードパーティは独自の providerdescriptor セクションを providerdescriptor .xml ファイルに追加できます。 既定では、このファイルは\<*ドライブ*> にあります。 (&)。 ProviderDescriptor セクションの要件については、ProviderDescriptors.xsd スキーマ ファイルを参照してください。既定では、このファイルは、ProviderDescriptors.xml ファイルと同じフォルダーに格納されています。  
+ 追加のプロバイダーに対して [ **1 つ以上のテーブルまたはビューからデータをコピー**する] オプションを使用できるようにするために、サードパーティは独自の providerdescriptor セクションを ProviderDescriptors.xml ファイルに追加できます。 既定では、このファイルは、次のファイルに \<*drive*> あります。 ProviderDescriptor セクションの要件については、ProviderDescriptors.xsd スキーマ ファイルを参照してください。既定では、このファイルは、ProviderDescriptors.xml ファイルと同じフォルダーに格納されています。  
   
  **転送するデータを指定するクエリを記述する**  
  [基になる**クエリの指定**] ダイアログボックスを使用して、行を取得する SQL ステートメントを作成します。 コピー操作中にコピー元データを変更したり、制限したりする場合に、このオプションを使用します。 選択条件に一致する行のみをコピーできます。  

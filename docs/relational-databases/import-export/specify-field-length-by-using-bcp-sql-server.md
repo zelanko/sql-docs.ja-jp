@@ -1,5 +1,6 @@
 ---
 title: bcp を使用したフィールド長の指定 (SQL Server) | Microsoft Docs
+description: SQL Server では、必要に応じて、bcp から、フィールド長、既定のフィールド長、char データを含むファイルのデータ ストレージに対するフィールド長の影響を確認するように促されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062529"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000384"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
@@ -68,7 +69,7 @@ ms.locfileid: "68062529"
 |**bit**|1|  
 |**[バイナリ]**|列に対して定義された長さの 2 倍 + 1|  
 |**varbinary**|列に対して定義された長さの 2 倍 + 1|  
-|**画像**|0|  
+|**image**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -102,7 +103,7 @@ ms.locfileid: "68062529"
 |**bit**|1|  
 |**[バイナリ]**|列に対して定義された長さ|  
 |**varbinary**|列に対して定義された長さ|  
-|**画像**|0|  
+|**image**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  

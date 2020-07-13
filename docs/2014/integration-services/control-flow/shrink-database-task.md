@@ -13,15 +13,14 @@ helpviewer_keywords:
 - database shrinking [Integration Services]
 - shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 617a0af103c5490faec2a5a8e5f6796cc8af0eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 587777928e362e87e4b691e3c46167c1239984cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62830095"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432749"
 ---
 # <a name="shrink-database-task"></a>データベースの圧縮タスク
   データベースの圧縮タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータおよびログ ファイルのサイズを縮小します。  

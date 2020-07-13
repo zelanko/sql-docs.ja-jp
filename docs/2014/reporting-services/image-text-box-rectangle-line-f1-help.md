@@ -11,17 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4ef2ab45fbace1fb94c7935fcd2e3d5ca4471a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108976"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>画像、テキスト ボックス、四角形、線の F1 ヘルプ
   このセクションのトピックでは、レポート デザイナーのダイアログ ボックスで画像、テキスト ボックス、四角形、および線に対して設定できるオプションについて説明します。  
   
- 
-  **[レポートのプロパティ]** ダイアログ ボックスからこれらのトピックにアクセスするには、 **[ヘルプ]** をクリックします。  
+ **[レポートのプロパティ]** ダイアログ ボックスからこれらのトピックにアクセスするには、 **[ヘルプ]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)  

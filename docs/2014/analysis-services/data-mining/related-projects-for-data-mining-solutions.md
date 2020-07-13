@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082986"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520608"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
@@ -30,19 +29,18 @@ ms.locfileid: "66082986"
   
  このトピックでは、データ準備とデータ マイニングのプロセスをサポートするため、または、分析と処理のためのツールを提供してユーザーをサポートするために、予測分析ソリューションに組み込まれることの多い [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のその他の機能について説明します。  
   
- [Integration Services](#bkmk_SSIS)  
+ [統合サービス](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
- [Data Quality Service](#bkmk_DQSetc)  
+ [Data Quality Services](#bkmk_DQSetc)  
   
  [フルテキスト検索](#bkmk_FTSetc)  
   
- [セマンティックインデックス作成](#bkmk_SemSearch)  
+ [セマンティック インデックスの作成](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニング プロジェクトのデータ準備とトレーニングのフェーズに必要なコンポーネントと機能が用意されています。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a>SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニング プロジェクトのデータ準備とトレーニングのフェーズに必要なコンポーネントと機能が用意されています。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
   
 -   繰り返し、自動化、分岐、および拡張が可能なワークフローの一部としてタスクを表現できます。  
   
@@ -56,7 +54,7 @@ ms.locfileid: "66082986"
   
  データ マイニングのサポートで最も幅広く使用されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントへのリンクを以下の一覧にまとめました。  
   
- **制御フローコンポーネント**  
+ **制御フロー コンポーネント**  
   
 -   [Analysis Services DDL 実行タスク](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
@@ -64,7 +62,7 @@ ms.locfileid: "66082986"
   
 -   [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
+-   [データクレンジング](../../data-quality-services/data-cleansing.md)  
   
 -   [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -90,59 +88,55 @@ ms.locfileid: "66082986"
   
 -   [用語参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ マイニング ソリューションに欠かせないコンポーネントとは考えられていませんが、データ マイニング ソリューションのプレゼンテーションの面で役立つ次のような機能を備えています。  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ マイニング ソリューションに欠かせないコンポーネントとは考えられていませんが、データ マイニング ソリューションのプレゼンテーションの面で役立つ次のような機能を備えています。  
   
 -   複雑なレポートにおける、複数のソースからのデータの統合。 アナリスト用のモデル コンテンツに対するクエリや、エンド ユーザー用の予測と傾向を示すレポートを作成できます。  
   
 -   ユーザーが既存のマイニング モデルに対して直接問い合わせできるレポートを作成する機能。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]との統合。これにより、OLAP モデルから作成されたデータ マイニング ディメンションとデータ マイニング キューブのドリルスルーと調査がサポートされます。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]との統合。これにより、OLAP モデルから作成されたデータ マイニング ディメンションとデータ マイニング キューブのドリルスルーと調査がサポートされます。  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に用意されているパラメーター化と書式設定の機能。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に用意されているパラメーター化と書式設定の機能。  
   
  DMX クエリで Reporting Services をデータ ソースとして使用する方法の詳細については、以下のリンクを参照してください。  
   
- [データマイニングモデル &#40;DMX&#41; &#40;SSRS&#41;からデータを取得します。](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [データ マイニング モデル &#40;DMX&#41; からデータを取得する &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX &#40;SSRS&#41;の Analysis Services 接続の種類](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
- ただし、DMX をデータ ソースとして使用する必要はありません。 データ マイニング用の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントでは、予測クエリの結果をリレーショナル データベースに保存することもできます。 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、モデルを更新するためのワークフローを確立している場合は、予測をはじめとするデータ マイニング クエリの結果を SQL Server で保持することで、レポート用の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] や、DMX とやり取りしないその他のツールを使用できます。  
+ ただし、DMX をデータ ソースとして使用する必要はありません。 データ マイニング用の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントでは、予測クエリの結果をリレーショナル データベースに保存することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、モデルを更新するためのワークフローを確立している場合は、予測をはじめとするデータ マイニング クエリの結果を SQL Server で保持することで、レポート用の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] や、DMX とやり取りしないその他のツールを使用できます。  
   
  Reporting Services をデータ ソースのプレゼンテーション層として使用する方法の詳細については、「 [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)」を参照してください。  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能です。 データに問題があるとデータ マイニングが不可能になる可能性があるため、繰り返し分析を行ったり、大規模な組織で複雑なデータ ソースを扱ったりするデータ マイニング担当者は、DQS を使用する計画的なデータ プロジェクトの方が、 [!INCLUDE[tsql](../../includes/tsql-md.md)] やその他のスクリプトを使用した場当たり的なデータ クレンジングよりも、データ マイニングをサポートするうえで信頼性の高いソリューションであることを認識する必要があります。  
   
  データ マイニング ソリューションでのデータ準備とデータ整合性のために、DQS の次の機能を考慮する必要があります。  
   
- **ソースデータを分析し、変更を提案するコンピューター支援型のデータクレンジングプロセス。**  
+ **ソース データを分析し変更を提案するコンピューター支援型データ クレンジング プロセス。**  
  DQS では、データ品質プロバイダーによって保守および保証されているクラウドベースの参照データとソース データを比較できます。  
   
  また、生のソース データを分析し、ユーザー データからナレッジ ベースを作成することもできます。 処理後のデータは分類されたうえでユーザーに表示され、さらに処理が行われます。 クレンジング プロセスは対話型です。つまり、データ スチュワードはコンピューター支援型データ クレンジング プロセスによって提案されたデータを承認、拒否、または変更できます。  
   
  プロセスの結果として、継続的に質を高めたり、複数のデータ強化フェーズで再利用したりできるナレッジ ベースを得ることができます。  
   
- 詳細については、「 [Data Cleansing](../../data-quality-services/data-cleansing.md)」をご覧ください。  
+ 詳しくは、「 [Data Cleansing](../../data-quality-services/data-cleansing.md)」をご覧ください。  
   
- **ソースデータを分析し、変更を提案するコンピューター支援型の照合プロセス。**  
+ **ソース データを分析し変更を提案する、コンピューター支援型の照合プロセス。**  
  データの重複を防ぐために、データ ソースの追加クレンジングを実行して、完全一致とあいまい一致を識別できます。 これらのコンポーネントでは、照合ルールに加えて、照合ルールを適用するしきい値を指定できます。  
   
  データの一致を検出することにより、データ マイニングの妨げとなり得る重複を削除できます。 データの重複除去は自動ではありません。データ スチュワードか IT プロフェッショナルが、ナレッジ ベース内のナレッジと、データに対する変更の両方を検証する必要があります。  
   
  初期 DQS プロジェクトを作成したら、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを使用してタスクの多くを自動化できます。  
   
- 詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」をご覧ください。  
+ 詳しくは、「 [Data Matching](../../data-quality-services/data-matching.md)」をご覧ください。  
   
  データ品質プロジェクトでクレンジングおよび照合アクティビティを実行しながら、DQS で処理中のデータに関する統計と情報をリアルタイムに入手できます。 データ クレンジングまたは照合によりデータ品質がどの程度向上したかを評価したり、加えられた変更を把握したりするのには、データ プロファイルが役立ちます。 データ プロファイルと通知の詳細については、「 [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md)」を参照してください。  
   
- **3種類のナレッジ (すぐに使えるナレッジ、DQS サーバーによって生成されるナレッジ、ユーザーが生成したナレッジ) を表すナレッジベース。**  
+ **3 種類のナレッジ (そのままの状態のナレッジ、DQS サーバーによって生成されるナレッジ、ユーザーが生成するナレッジ) があるナレッジ ベース。**  
  ナレッジ ベースを作成した後は、それを繰り返し使用して、他のデータのクレンジングと検証を行うことができます。  
   
  新しいデータを複数のソースからナレッジ ベース データにインポートできます。参照プロバイダーからの既知のクリーン データも、ナレッジ ベース内の既存のデータに一致する生のデータもインポート可能です。  
@@ -153,7 +147,7 @@ ms.locfileid: "66082986"
   
  詳細については、「 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
-##  <a name="bkmk_FTSetc"></a>フルテキスト検索  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>フルテキスト検索  
  SQL Server のフルテキスト検索により、アプリケーションとユーザーは、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行できます。 フルテキスト検索が有効であれば、語句のさまざまな形式に関する言語固有のルールに基づいて強化された検索を、テキスト データに対して実行できます。 また、複数の用語間の距離などの検索条件を構成することも、尤度の順に返される結果を制限する関数を使用することもできます。  
   
  フルテキスト クエリは SQL Server エンジンによって提供される機能なので、パラメーター化クエリを作成したり、テキスト データ ソースでフルテキスト検索機能を使用してカスタム データ セットや用語のベクトルを生成したりできるほか、これらのソースをデータ マイニングで使用することもできます。  
@@ -180,7 +174,7 @@ ms.locfileid: "66082986"
   
 -   フルテキスト インデックスを作成できるのは、データ型が char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary、varbinary(max) の列のみです。 列が varbinary、varbinary(max)、image、または xml の場合は、インデックスを作成できるドキュメントのファイル拡張子 (.doc、.pdf、.xls など) を別の型列で指定する必要があります。  
   
-##  <a name="bkmk_SemSearch"></a>セマンティックインデックス作成  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>セマンティックインデックス作成  
  セマンティック検索は SQL Server の既存のフルテキスト検索機能を基にして構築されていますが、追加の機能と統計を使用して、自動キーワード抽出や関連ドキュメントの検出などにも対応できます。 たとえば、セマンティック検索を使用すると、編成用の基本分類を構築することも、ドキュメントのコーパスを分類することもできます。 また、クラスタリングまたはデシジョン ツリー モデルで、抽出した用語を組み合わせたものや、ドキュメントの類似スコアを使用することも可能です。  
   
  セマンティック検索を正しく実装し、データ列にインデックスを設定したら、セマンティック インデックスの作成にネイティブに備わる関数を使用して、以下の処理が可能です。  
@@ -207,6 +201,6 @@ ms.locfileid: "66082986"
   
 ## <a name="see-also"></a>参照  
  [SSAS&#41;&#40;の多次元モデルソリューション](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [SSAS 表形式&#41;の表形式モデルソリューション &#40;](../tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

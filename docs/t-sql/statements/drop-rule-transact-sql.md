@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c11552b27e8709c28f3dc4fdf4cb3f45fc68cb2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68223600"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899933"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のユーザー定義のルールを現在のデータベースから削除します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68223600"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]  
 ```  
   

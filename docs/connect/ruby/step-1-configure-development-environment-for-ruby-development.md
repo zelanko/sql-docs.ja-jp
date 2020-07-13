@@ -1,5 +1,6 @@
 ---
-title: 'ステップ 1: Ruby 開発用に開発環境を構成する | Microsoft Docs'
+title: 手順 1:Ruby 用に開発環境を構成する
+description: Ruby 用に開発環境を構成する方法について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,35 +11,35 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce61e3fb360d4c8a4db8f717f10b7d107245300
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926736"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634591"
 ---
-# <a name="step-1-configure-development-environment-for-ruby-development"></a>ステップ 1: Ruby 開発用に開発環境を構成する
+# <a name="step-1-configure-development-environment-for-ruby-development"></a>手順 1:Ruby 開発用に開発環境を構成する
 SQL Server 用の Ruby ドライバーを使用してアプリケーションを開発するには、前提条件を使用して開発環境を構成する必要があります。    
   
-Ruby ドライバーでは TDS プロトコルが使用されていることに注意してください。これは SQL Server と Azure SQL Database で既定で有効になっています。  追加の構成は不要です。  
+Ruby ドライバーでは TDS プロトコルが使用されます。これは SQL Server と Azure SQL Database で既定で有効になっています。  追加の構成は不要です。  
   
   
 ## <a name="windows"></a>Windows  
   
 1.  **Ruby インストーラーをダウンロードします**。  
-コンピューターに Ruby がインストールされていない場合は、インストールしてください。 初めて Ruby を使用する場合は、Ruby 2.2. X インストーラーを使用することをお勧めします。 これにより、安定した言語と、互換性のある更新済みのパッケージ (gem) の広範囲な一覧が提供されます。 [Ruby ダウンロード ページ](https://rubyinstaller.org/downloads/)にアクセスし、適切な 2.1.x インストーラーをダウンロードします。 たとえば、64 ビットのコンピューターを使用している場合、Ruby 2.1.6 (x64) インストーラーをダウンロードします。   
+コンピューターに Ruby がインストールされていない場合は、インストールしてください。 初めて Ruby を使用する場合は、Ruby 2.2.X インストーラーを使用することをお勧めします。これにより、安定した言語と、互換性があり更新される幅広いパッケージ (gem) のリストが提供されます。 [Ruby ダウンロード ページ](https://rubyinstaller.org/downloads/)にアクセスし、適切な 2.1.x インストーラーをダウンロードします。 たとえば、64 ビットのコンピューターを使用している場合、Ruby 2.1.6 (x64) インストーラーをダウンロードします。   
   
 2.  **Ruby をインストールします**。  
-インストーラーをダウンロードしたら、次の手順に従います。  
+インストーラーをダウンロードしたら、次の操作を行います。  
 a. ファイルをダブルクリックしてインストーラーを起動します。  
 b. 言語を選択し、使用条件に同意します。  
-c.  インストールの設定画面で、[Add Ruby executables to your PATH]\(Ruby の実行可能ファイルを PATH に追加する\) と [Associate .rb and .rbw files with this Ruby installation]\(.rb ファイルと .rbw ファイルをこの Ruby インストールに関連付ける\) の横の両方のチェック ボックスをオンにします。  
+c.  インストールの設定画面で、[Add Ruby executables to your PATH]\(Ruby の実行ファイルを PATH に追加する\) と [Associate `.rb` and `.rbw` files with this Ruby installation]\(拡張子 .rb と .rbw を Ruby の実行ファイルに関連付ける\) の両方の横にあるチェック ボックスをオンにします。  
   
 3.  **Ruby DevKit をダウンロードします**。  
 RubyInstaller ページから DevKit をダウンロードします。  
   
 4.  **Ruby DevKit をインストールします**。  
-ダウンロードが完了したら、次の手順に従います。  
+ダウンロードが完了したら、次の操作を行います。  
 a. ファイルをダブルクリックします。 ファイルの抽出先を確認するメッセージが表示されます。  
 b. [...] ボタンをクリックし、[C:\DevKit] を選択します。 このフォルダーは、[新しいフォルダーの作成] をクリックして最初に作成する必要のある場合があります。  
 c. [OK] をクリックし、[抽出] をクリックしてファイルを抽出します。  
@@ -61,7 +62,7 @@ c. [OK] をクリックし、[抽出] をクリックしてファイルを抽出
   
 1. **ターミナルを開きます**  
   
-2. **Ruby バージョン マネージャー (rvm) と前提条件をインストールします**  
+2. **Ruby バージョン マネージャー (`rvm`) と前提条件をインストールします**  
 ```  
 > sudo apt-get --assume-yes update  
 > command curl -sSL https://rvm.io/mpapis.asc | gpg --import -  
@@ -69,7 +70,7 @@ c. [OK] をクリックし、[抽出] をクリックしてファイルを抽出
 > source ~/.rvm/scripts/rvm  
 ```  
    
-3. **rvm を使用して Ruby をインストールします**  
+3. **`rvm` を使用して Ruby をインストールします**  
 たとえば、Ruby バージョン 2.3.0 をインストールします。  
 ```  
 > rvm install 2.3.0  
@@ -88,9 +89,9 @@ c. [OK] をクリックし、[抽出] をクリックしてファイルを抽出
 > gem install tiny_tds  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-OS には依存関係があるため、Mac OS X には既に Ruby が事前インストールされていることに注意してください。    
+注: macOS には、OS に依存関係があるため、既に Ruby がプレインストールされています。
   
 1.  **ターミナルを開きます**  
   

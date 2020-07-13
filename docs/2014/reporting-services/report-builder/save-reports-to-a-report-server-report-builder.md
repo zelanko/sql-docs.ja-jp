@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107635"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
@@ -40,7 +40,7 @@ ms.locfileid: "66107635"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>レポートを別の名前で保存するには  
   
-1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 [_\<レポートアイテム\> _ **として保存**] ダイアログボックスが表示されます。  
+1.  レポート ビルダー のボタンの **[名前を付けて保存]** をクリックします。 [_\<レポートアイテム\> _ **として保存**] ダイアログボックスが表示されます。  
   
 2.  レポートを保存するレポート サーバーの場所またはファイル共有を参照します。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "66107635"
 4.  **[アイテムの種類]** で、保存するレポート アイテムの種類を選択します。 レポートの種類はレポート (*.rdl) です。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、および管理 &#40;レポートビルダーと SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [レポートの保存 (レポート ビルダー)](saving-reports-report-builder.md)   
+ [レポートの保存 &#40;レポートビルダー&#41;](saving-reports-report-builder.md)   
  [別の種類のファイルとしてレポートをエクスポートする &#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

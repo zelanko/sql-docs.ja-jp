@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a76c3aaef623365e419f40f3058308f6217d75d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62661686"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067159"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>削除クエリの作成 (Visual Database Tools)
   削除クエリを使用すると、テーブル内の行をすべて削除できます。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4793aa69a2d26d5375b10eb74026b3a53c96ca43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62999553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058571"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
-  **の**[表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
  オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  

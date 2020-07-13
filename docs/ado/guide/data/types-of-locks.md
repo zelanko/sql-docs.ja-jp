@@ -15,14 +15,14 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93436a5180f1a01269f1612f7e608b71b4c073e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f734b1eeaaba460169e3c8932d90fc31de6d23c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923806"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759038"
 ---
 # <a name="types-of-locks"></a>ロックの種類
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

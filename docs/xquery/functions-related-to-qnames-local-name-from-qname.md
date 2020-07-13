@@ -1,5 +1,6 @@
 ---
 title: ローカル名-QName (XQuery) |Microsoft Docs
+description: ローカル名から QName () 関数を使用して、QName のローカル名部分を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68004562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720011"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames に関係する関数 - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*によって指定された QName のローカル部分を表す XS: NCNAME を返します。 *$Arg*が空のシーケンスの場合、結果は空のシーケンスになります。  
   
@@ -37,8 +38,8 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  *$arg*  
  ローカル名部分を抽出する QName です。  
   
-## <a name="examples"></a>例  
- このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>使用例  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
  次の例では、**ローカル名-qname ()** 関数を使用して、qname 型の値からローカル名と名前空間 URI の部分を取得します。 この例では、次の処理を実行します。  
   
@@ -75,7 +76,7 @@ FROM T
 -- Result = https://someURI  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [QNames &#40;XQuery&#41;に関連する関数](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 05b8f71d6f4c885c7dc64887dd92b1f600005ca7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a6fa384292f02026b8390aa92525144dce6f549b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138923"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300112"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations による行の挿入
 **Sqlbulkoperations**を使用したデータの挿入は、バインドされたアプリケーションバッファーのデータを使用するため、 **sqlbulkoperations**でデータを更新することと似ています。  

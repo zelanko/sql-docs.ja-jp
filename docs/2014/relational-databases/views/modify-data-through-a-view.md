@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: df1eb4a33d1d10e63363e52760dad805b20c0a8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014229"
 ---
 # <a name="modify-data-through-a-view"></a>ビューを使用したデータ変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、基になるデータベース テーブルのデータを変更できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "68211676"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューを介してテーブル データを変更するには:**  
   
@@ -38,30 +37,28 @@ ms.locfileid: "68211676"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」の '更新可能なビュー' セクションを参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  実行する操作に応じて、対象のテーブルに対する UPDATE 権限、INSERT 権限、または DELETE 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-modify-table-data-through-a-view"></a>ビューを介してテーブル データを変更するには  
   
-1.  
-  **オブジェクト エクスプローラー**で、ビューを含むデータベースを展開し、 **[ビュー]** を展開します。  
+1.  **オブジェクト エクスプローラー**で、ビューを含むデータベースを展開し、 **[ビュー]** を展開します。  
   
 2.  ビューを右クリックし、 **[上位 200 行の編集]** を選択します。  
   
 3.  場合により、変更対象の行を取得するために **SQL** ペインの SELECT ステートメントを変更する必要があります。  
   
-4.  
-  **結果** ペインで、変更または削除する行を見つけます。 行を削除するには、行を右クリックし、 **[削除]** を選択します。 1 つ以上の列のデータを変更するには、目的の列のデータを変更します。  
+4.  **結果** ペインで、変更または削除する行を見つけます。 行を削除するには、行を右クリックし、 **[削除]** を選択します。 1 つ以上の列のデータを変更するには、目的の列のデータを変更します。  
   
     > [!IMPORTANT]  
     >  ビューが複数のベース テーブルを参照している場合は、行を削除できません。 1 つのベース テーブルに属している列のみを更新することができます。  
@@ -71,7 +68,7 @@ ms.locfileid: "68211676"
     > [!IMPORTANT]  
     >  ビューが複数のベース テーブルを参照している場合は、行を挿入できません。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-update-table-data-through-a-view"></a>ビューを介してテーブル データを更新するには  
   

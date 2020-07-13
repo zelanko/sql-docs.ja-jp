@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 のガイドラインと制限
+description: SQLXML 4.0 の使用に関するガイドラインと制限事項について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba2e7438a9084d7ad2d4f8edee9564236ecbadd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8031178d268af10169bc8b8ca441bd7d7668c82b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649964"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 のガイドラインと制限
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQLXML 4.0 を使用する場合は次の点に注意してください。  
   
 -   クエリ結果として返される XML は、XML を生成したマッピング スキーマに対して検証されません。  

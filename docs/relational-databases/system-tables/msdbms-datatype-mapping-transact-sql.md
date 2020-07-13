@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype_mapping system table
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a3004de66d8bf911056f62b0d4fbdfb55b969871
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67907542"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890035"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_datatype_mapping**テーブルには、ソースデータベース管理システム (DBMS) のデータ型から、マップ先 DBMS の1つ以上の特定のデータ型への許容データ型マッピングが含まれています。 このテーブルは**msdb**データベースに格納され、異種データベースレプリケーションに使用されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|個々のデータ型マッピングを一意に識別します。|  
 |**map_id**|**int**|変換元のデータ型を識別します。|  
@@ -40,10 +40,10 @@ ms.locfileid: "67907542"
 |**dest_nullable**|**bit**|マッピングの変換先列で NULL 値を許容するかどうかを示します。値が NULL の場合、この定義は必要ありません。|  
 |**dest_createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを記述するビットマップ。次のようなものが含まれます。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2** = スケール。<br /><br /> **0x4** = 長さ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

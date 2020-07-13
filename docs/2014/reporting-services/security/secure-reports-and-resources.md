@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101664"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
@@ -61,9 +61,7 @@ ms.locfileid: "66101664"
  レポート内のリンクによって悪意のあるスクリプトが誤って実行されるリスクを軽減するためには、信頼されたソースのデータにのみハイパーリンクをバインドします。 悪用されるおそれのあるリンクがクエリ結果のデータやデータをハイパーリンクにバインドする式によって生成されないことを確認してください。 たとえば、複数のデータセット フィールドのデータを連結する式に基づくハイパーリンクは使用しないことをお勧めします。 必要に応じてレポートを参照し、[ソースの表示] を使用して疑わしいスクリプトや URL がないかどうかを確認してください。  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>パラメーター化されたレポート内の SQL インジェクション攻撃の緩和  
- 
-  `String` 型のパラメーターが含まれるレポートでは、使用可能な値の一覧 (有効な値の一覧とも呼ばれています) を必ず使用してください。また、レポートを実行するすべてのユーザーに対して、レポート表示に必要な権限のみを与えてください。 
-  `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 クエリ パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しなければ、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるので、レポートとサーバーが SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
+ `String` 型のパラメーターが含まれるレポートでは、使用可能な値の一覧 (有効な値の一覧とも呼ばれています) を必ず使用してください。また、レポートを実行するすべてのユーザーに対して、レポート表示に必要な権限のみを与えてください。 `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 使用可能な値の一覧を使用すると、入力できる値が制限されます。 クエリ パラメーターにレポート パラメーターが関連付けられている場合に、使用可能な値の一覧を使用しなければ、レポート ユーザーはテキスト ボックスに SQL 構文を入力できるので、レポートとサーバーが SQL インジェクション攻撃を受ける危険性が生じます。 さらに、ユーザーが新しい SQL ステートメントを実行するための十分な権限を持っている場合は、サーバーで予想外の結果が生じる可能性もあります。  
   
  クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文または URL をパラメーター値に入力して、このレポートを Excel または HTML に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
   
@@ -79,7 +77,7 @@ ms.locfileid: "66101664"
  (create-and-manage-role-assignments.md)   
  [レポートビルダーアクセスの構成](../report-server/configure-report-builder-access.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
- [共有データ ソース アイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
- [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [共有データソースアイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

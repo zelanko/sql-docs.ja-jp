@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b01965313a02bf22126afa058247a80eb053b7e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63184246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040814"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>自己結合の手動作成 (Visual Database Tools)
   データベースでテーブルに再帰リレーションシップが設定されていなくても、テーブルをテーブル自身に結合できます。 たとえば、自己結合を使用して、同じ市に住む著者の組を検索できます。  

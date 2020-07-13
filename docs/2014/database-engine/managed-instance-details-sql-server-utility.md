@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930962"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  リスト ビュー  
  上部のペインには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の個々のインスタンス (ComputerName\InstanceName) とそのデータがリスト表示されます。  
   
@@ -38,11 +37,11 @@ ms.locfileid: "62774344"
   
  既定では、次の列に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各マネージド インスタンスに関する正常性状態の情報が表示されます。  
   
--   [インスタンスの CPU] - この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスに割り当てられたプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「 [CPU 使用ポリシーのノイズを減らす」 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
+-   [インスタンスの CPU] - この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスに割り当てられたプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
      この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
   
--   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「 [CPU 使用ポリシーのノイズを減らす」 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
+-   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
      この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "62774344"
   
 -   [大文字と小文字を区別]\([True] または [False])  
   
--   Language:  
+-   [言語]  
   
--   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+-   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -96,7 +95,7 @@ ms.locfileid: "62774344"
 -   [1 年] : 1 か月間隔で表示されます。  
   
  [ストレージの使用率] タブ  
- [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071)」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+ [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  表示内容は、データベースまたはボリュームごとにグループ化できます。 データベース ツリー ビューを使用するには、 **[ファイルのグループ化]** の選択項目で **[データベース]** オプション ボタンをクリックします。 個々のデータベース ファイルの記憶域使用率の状態を表示するには、ツリー ビューでデータベース名の横にあるプラス記号をクリックします。 一覧表示されるデータベース ファイルには、リスト ビューで選択した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスに属する、すべてのシステム データベースとユーザー データベースが含まれます。  
   
@@ -149,8 +148,7 @@ ms.locfileid: "62774344"
  ポリシー違反の許容範囲変更の詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
  [プロパティの詳細] タブ  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで一覧表示されるプロパティの詳細には、次のカテゴリがあります。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで一覧表示されるプロパティの詳細には、次のカテゴリがあります。  
   
 -   [プロセッサ名]  
   
@@ -174,7 +172,7 @@ ms.locfileid: "62774344"
   
 -   [大文字と小文字を区別]\([True] または [False])  
   
--   Language:  
+-   [言語]  
   
 ## <a name="see-also"></a>参照  
  [配置されたデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   

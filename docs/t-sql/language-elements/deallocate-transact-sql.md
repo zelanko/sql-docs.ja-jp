@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 049a3db0f57b4c2c0e8a3fba809241b352991a61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706514"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   カーソル参照を削除します。 最後のカーソル参照の割り当てが解除されると、カーソルを構成するデータ構造は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解放されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67894898"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   

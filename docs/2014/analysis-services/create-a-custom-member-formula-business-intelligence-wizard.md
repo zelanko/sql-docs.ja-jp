@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5df5d8e67ce19d3aa509f3eb111f74779a27c844
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66086994"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526769"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>[カスタム メンバー式の作成] (ビジネス インテリジェンス ウィザード)
   [**カスタムメンバー式の作成**] ページを使用すると、指定したディメンションの属性を、その属性のメンバー値を定義する多次元式 (MDX) ステートメントを含むカスタムメンバー式の列に関連付けることができます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66086994"
  **属性**  
  カスタム メンバー式に関連付ける属性を選択します。  
   
- **ソース列**  
+ **[変換元列]**  
  参照ボタン ([.**..**]) をクリックして [**列の選択**] ダイアログボックスを開き、属性に関連付けるカスタムメンバー式列を選択します。  
   
 ## <a name="see-also"></a>参照  

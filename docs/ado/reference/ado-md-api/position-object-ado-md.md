@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46d619f268816b356e115a60d07a48fbe7e1d758
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67949251"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765033"
 ---
 # <a name="position-object-ado-md"></a>Position オブジェクト (ADO MD)
 軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Position**オブジェクトのプロパティとコレクションを使用すると、次の操作を実行できます。  
   
 -   **序数**プロパティを使用して、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の位置を表す序数を返します。  

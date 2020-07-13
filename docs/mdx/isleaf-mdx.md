@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 400c55cdfcea35ae60859fb66489384870172744
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905942"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
@@ -31,7 +31,7 @@ IsLeaf(Member_Expression)
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **Isleaf**関数は、指定されたメンバーがリーフメンバーである場合に**true**を返します。 それ以外の場合、関数は**false**を返します。  
   
 ## <a name="example"></a>例  
@@ -48,6 +48,6 @@ IsLeaf(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

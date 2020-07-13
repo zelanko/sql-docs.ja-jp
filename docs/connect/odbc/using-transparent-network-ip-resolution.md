@@ -1,7 +1,8 @@
 ---
-title: 透過的なネットワーク IP の解決の使用 | Microsoft Docs
+title: 透過的なネットワーク IP の解決の使用
+description: ODBC Driver for SQL Server での透過的なネットワーク IP の解決についてと、MultiSubnetFailover 機能に与える影響について学習します。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68070543e8fee326f0b5a02c73f0c0e4aaef6fbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928285"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922291"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>透過的なネットワーク IP の解決の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -50,8 +51,8 @@ Keyword|値|Default
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` または `SQL_IS_UINTEGER`| `SQL_IS_ON`(1)、`SQL_IS_OFF`(0)|`SQL_IS_ON`|TNIR を有効または無効にします。
 
-<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>MultiSubnetFailover について詳しくは、「[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)」をご覧ください
+<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>MultiSubnetFailover について詳しくは、「[Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー](linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)」をご覧ください
 --------------------------------------------------
 ## <a name="see-also"></a>参照  
-* [Microsoft ODBC Driver for SQL Server on Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [SQL Server マルチサブネット クラスタリング (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Microsoft ODBC Driver for SQL Server on Windows](windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+* [SQL Server マルチサブネット クラスタリング (SQL Server)](../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)

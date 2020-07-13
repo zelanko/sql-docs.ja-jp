@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: daa2f455f4b1b1bbb4f809797857f62b82137915
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68769140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786222"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   マージパブリケーションにプルサブスクリプションを追加します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
@@ -49,7 +49,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。  
   
-`[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** で、 **global**、 **local** 、または**anonymous**を指定できます。 以降[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のバージョンでは、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
+`[ @subscriber_type = ] 'subscriber_type'`サブスクライバーの種類を示します。 *subscriber_type*は**nvarchar (15)** で、 **global**、 **local** 、または**anonymous**を指定できます。 以降のバージョンでは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、ローカルサブスクリプションはクライアントサブスクリプションと呼ばれ、グローバルサブスクリプションはサーバーサブスクリプションと呼ばれます。  
   
 `[ @subscription_priority = ] subscription_priority`サブスクリプションの優先度です。 *subscription_priority*は**real**で、既定値は NULL です。 ローカルサブスクリプションと匿名サブスクリプションの場合、優先度は**0.0**です。 既定の競合回避モジュールでは、競合が検出された場合に優先される優先順位を使用します。 グローバルサブスクライバーの場合、サブスクリプションの優先度は、パブリッシャーの優先度である100未満である必要があります。  
   
@@ -63,10 +63,10 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription**は、マージレプリケーションに使用されます。  
   
- エージェントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用してサブスクリプションを同期する場合は、サブスクライバーで[sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)ストアドプロシージャを実行して、パブリケーションと同期するエージェントとジョブを作成する必要があります。  
+ エージェントを使用してサブスクリプションを同期する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、サブスクライバーで[sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)ストアドプロシージャを実行して、パブリケーションと同期するエージェントとジョブを作成する必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  
@@ -77,12 +77,12 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  **Sp_addmergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [プルサブスクリプションを作成する](../../relational-databases/replication/create-a-pull-subscription.md)   
- [パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

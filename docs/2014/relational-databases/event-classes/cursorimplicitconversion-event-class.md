@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 410ce293d126190971f3c463d5611761033f6c3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62663528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030181"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion イベント クラス
   **CursorImplicitConversion** イベント クラスは、アプリケーション プログラミング インターフェイス (API) または [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルで発生する暗黙的なカーソル変換イベントを表します。 暗黙的なカーソル変換イベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、要求された種類のサーバー カーソルでサポートされていない Transact-SQL ステートメントを実行するときに発生します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はカーソルの種類が変更されたことを示すエラーを返します。  
@@ -30,7 +29,7 @@ ms.locfileid: "62663528"
   
 ## <a name="cursorimplicitconversion-event-class-data-columns"></a>CursorImplicitConversion イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BinaryData**|**画像**|結果のカーソルの種類です。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|2|はい|  

@@ -16,43 +16,43 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061921"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894695"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|サブスクリプションの ID。|  
+|**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、このサブスクリプションに関連する情報が格納されます。|  
 |**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションパラメーターに関する情報を格納する内部テーブルの ID。|  
-|**作成**|**DATETIME**|サブスクリプションが作成された日付と時刻。|  
-|**タイムアウト**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した場合、は、変更が行われた時点で発生していることを確認します。|  
-|**オンライン**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
+|**created**|**datetime**|サブスクリプションが作成された日付と時刻。|  
+|**timeout**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前に発生した場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更が行われた時点で発生していることを確認します。|  
+|**status**|**int**|サブスクリプションの状態を示します。 コードの一覧については、「解説」の表を参照してください。|  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|移行元|To|反対に、|種類|  
+|From|終了|オン|種類|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  状態コードが 0 の場合は、未定義の状態であることを示します。  
   
  次のステータスコードは、変更のためにサブスクリプションが発生したことを示しています。  
   
-|コード|マイナーステータス|情報|  
+|コード|マイナーステータス|Info|  
 |----------|------------------|----------|  
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってトリガーされたサブスクリプション|  
 |65799|データが変更されたため、サブスクリプションが起動しました|削除|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061921"
   
  次のステータスコードは、サブスクリプションを作成できなかったことを示しています。  
   
-|コード|マイナーステータス|情報|  
+|コード|マイナーステータス|Info|  
 |----------|------------------|----------|  
 |132609|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|クエリが複雑すぎます|  
 |132610|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|サブスクリプションの無効なステートメント|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061921"
   
  次の状態コードは内部で使用され、check kill モードおよび init モードとして分類されます。  
   
-|コード|マイナーステータス|情報|  
+|コード|マイナーステータス|Info|  
 |----------|------------------|----------|  
 |198656|内部使用: check kill モードおよび init モード|未定義の情報モード|  
 |198928|サブスクリプションが破棄されました|Db がアタッチされたため、サブスクリプションが起動しました|  
@@ -107,7 +107,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B. 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B: 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
  次の例では、ログイン `Ruth0` によってサブスクライブされたアクティブなクエリ通知サブスクリプションを返します。  
   
 ```  
@@ -117,7 +117,7 @@ WHERE sid = SUSER_SID('Ruth0');
 GO  
 ```  
   
-### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C. クエリ通知サブスクリプションの内部テーブルメタデータを返す  
+### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C: クエリ通知サブスクリプションの内部テーブルメタデータを返す  
  次の例では、クエリ通知サブスクリプションに関する内部テーブルのメタデータを返します。  
   
 ```  
@@ -130,9 +130,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [Transact-sql&#41;&#40;クエリ通知サブスクリプションの強制終了](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

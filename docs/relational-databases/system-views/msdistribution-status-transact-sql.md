@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: df060b429b48eb1e1a99c48dbb2789fce3e10833
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889167"
 ---
 # <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdistribution_status**ビューでは、ディストリビューションデータベースの状態コマンドに関する追加情報が公開されます。 このビューは、ディストリビューション データベースに格納されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|アーティクルを識別します。|  
 |**agent_id**|**int**|レプリケーション エージェントを識別します。|  
 |**UndelivCmdsInDistDB**|**int**|サブスクライバーへの配信が保留されているコマンドの数。|  
 |**Sinvcmdsindistdb**|**int**|サブスクライバーに配信されたコマンドの数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

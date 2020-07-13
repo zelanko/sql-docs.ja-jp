@@ -11,22 +11,21 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe1664e3b94dd0d13e9919439678eeea0c3c6add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 26f4127421d80c8652856c9cc887a374ef62a878
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246101"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009541"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC ドライバーで一括コピーを行う方法に関するトピック (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Microsoft® SQL Server™ 2005 で SQL Server ODBC ドライバーを使用する場合は、DB-Library API でサポートされている一括コピー関数を使用できます。  
   
- での[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]一括コピーの重大な変更の詳細については、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
+ での一括コピーの重大な変更の詳細については [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

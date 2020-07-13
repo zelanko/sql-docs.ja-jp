@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83319e8eb1fe692bc55b764445ac155d9e1ad38d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 95b73660ebb44f4daffe6eaefd873699cfbbd8ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62920995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956770"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>完全復旧モデルで障害発生時点までデータベースを復元する方法 (Transact-SQL)
   このトピックでは、障害が発生する直前の状態まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用しているデータベースのみを対象としています。  

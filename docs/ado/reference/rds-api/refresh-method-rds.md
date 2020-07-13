@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e9fa606aab5d42a7b56171ca3720742d4d119a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963509"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751060"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
 [接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティで指定されたデータソースを再クエリし、クエリ結果を更新します。  

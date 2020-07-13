@@ -1,5 +1,6 @@
 ---
 title: XML 一括読み込みのガイドラインと制限 (SQLXML)
+description: SQLXML 4.0 での XML 一括読み込みの使用に関するガイドラインと制限事項について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,15 +15,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec3b70c4a37382bb3fa8641e4224750a4337c28d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fd6795105bb2540c08f1f241444b6464f131601
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75246760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762829"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML 一括読み込みを使用する場合は、次のガイドラインと制限に留意してください。  
   
 -   インライン スキーマはサポートされません。  
@@ -37,9 +38,9 @@ ms.locfileid: "75246760"
   
 -   XML prolog 情報は無視されます。  
   
-     Xml 一括読み込みでは、XML ドキュメント内のルート\<> 要素の前後にあるすべての情報が無視されます。 たとえば、XML 宣言、内部 DTD 定義、外部 DTD 参照、コメントなどは無視されます。  
+     Xml 一括読み込みでは、XML ドキュメント内の要素の前後にあるすべての情報が無視さ \<root> れます。 たとえば、XML 宣言、内部 DTD 定義、外部 DTD 参照、コメントなどは無視されます。  
   
--   マッピング スキーマで、2 つのテーブル (たとえば Customer と CustOrder) 間の主キー/外部キーのリレーションシップを定義する場合は、主キーがあるテーブルを先に記述する必要があります。 外部キー列があるテーブルは、後に記述します。 その理由は、スキーマ内でテーブルが識別される順序が、データベースに読み込まれる順序と同じであるためです。たとえば、次の XDR スキーマでは、XML 一括読み込みで使用したときにエラーが発生します。これは、 ** \<Order>** 要素が** \<Customer>** 要素の前に記述されているためです。 CustOrder の CustomerID 列は、Cust テーブル内の CustomerID 主キー列を参照する外部キー列です。  
+-   マッピング スキーマで、2 つのテーブル (たとえば Customer と CustOrder) 間の主キー/外部キーのリレーションシップを定義する場合は、主キーがあるテーブルを先に記述する必要があります。 外部キー列があるテーブルは、後に記述します。 その理由は、スキーマ内でテーブルが識別される順序が、データベースに読み込まれる順序と同じであるためです。たとえば、次の XDR スキーマでは、要素が要素の前に記述されているため、XML 一括読み込みで使用されるとエラーが発生し **\<Order>** **\<Customer>** ます。 CustOrder の CustomerID 列は、Cust テーブル内の CustomerID 主キー列を参照する外部キー列です。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -79,7 +80,7 @@ ms.locfileid: "75246760"
   
 -   **Sql: overflow フィールド**注釈を使用してオーバーフロー列が指定されていない場合、Xml 一括読み込みでは、xml ドキュメント内に存在するデータは無視されますが、マッピングスキーマには記述されていません。  
   
-     XML 一括読み込みでは、XML データ ストリーム内に既知のタグが検出されると常に、指定のマッピング スキーマが適用されます。 XML ドキュメントに存在していてもスキーマに記述されていないデータは無視されます。 たとえば、 ** \<顧客>** 要素を記述するマッピングスキーマがあるとします。 XML データファイルには、すべての** \<顧客>** 要素を囲む** \<allcustomers>** ルートタグ (スキーマでは説明されていません) が含まれています。  
+     XML 一括読み込みでは、XML データ ストリーム内に既知のタグが検出されると常に、指定のマッピング スキーマが適用されます。 XML ドキュメントに存在していてもスキーマに記述されていないデータは無視されます。 たとえば、要素を記述するマッピングスキーマがあるとし **\<Customer>** ます。 XML データファイルには、 **\<AllCustomers>** すべての要素を囲むルートタグ (スキーマでは説明されていません) があり **\<Customer>** ます。  
   
     ```  
     <AllCustomers>  
@@ -89,9 +90,9 @@ ms.locfileid: "75246760"
     </AllCustomers>  
     ```  
   
-     この場合、XML 一括読み込みでは** \<allcustomers>** 要素が無視され、 ** \<Customer>** 要素でマッピングが開始されます。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
+     この場合、XML 一括読み込みでは要素が無視され、 **\<AllCustomers>** 要素でマッピングが開始さ **\<Customer>** れます。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
   
-     ** \<Order>** 要素を含む別の XML ソースデータファイルについて考えてみます。 この要素はマッピング スキーマには記述されていません。  
+     要素を含む別の XML ソースデータファイルについて考えてみ **\<Order>** ます。 この要素はマッピング スキーマには記述されていません。  
   
     ```  
     <AllCustomers>  
@@ -107,11 +108,11 @@ ms.locfileid: "75246760"
     </AllCustomers>  
     ```  
   
-     XML 一括読み込みでは、これらの** \<順序>** 要素は無視されます。 ただし、スキーマで**sql: overflow-field**注釈を使用して、列をオーバーフロー列として識別すると、XML 一括読み込みではこの列にすべての未使用データが格納されます。  
+     XML 一括読み込みでは、これらの要素は無視さ **\<Order>** れます。 ただし、スキーマで**sql: overflow-field**注釈を使用して、列をオーバーフロー列として識別すると、XML 一括読み込みではこの列にすべての未使用データが格納されます。  
   
 -   CDATA セクションとエンティティ参照は、データベースに保存される前に、同等の文字列に変換されます。  
   
-     この例では、CDATA セクションは** \<City>** 要素の値をラップします。 XML 一括読み込みでは、 ** \<City>** 要素がデータベースに挿入される前に、文字列値 ("NY") が抽出されます。  
+     この例では、CDATA セクションによって要素の値がラップさ **\<City>** れます。 XML 一括読み込みでは、データベースに要素を挿入する前に、文字列値 ("NY") が抽出され **\<City>** ます。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -144,7 +145,7 @@ ms.locfileid: "75246760"
     </Schema>  
     ```  
   
-     この XML データでは、2つ目** \<の Customers>** 要素に**HireDate**属性がありません。 XML 一括読み込みで2番目** \<の Customers>** 要素がデータベースに挿入されると、スキーマで指定されている既定値が使用されます。  
+     この XML データでは、2番目の要素に**HireDate**属性がありません **\<Customers>** 。 XML 一括読み込みで2番目の要素がデータベースに挿入されるときに、 **\<Customers>** スキーマで指定されている既定値が使用されます。  
   
     ```  
     <ROOT>  
@@ -161,7 +162,7 @@ ms.locfileid: "75246760"
   
 -   SchemaGen プロパティ (たとえば、SchemaGen = true) を指定した場合、マッピングスキーマで指定されているテーブルが作成されます。 ただし、SchemaGen では、次の1つの例外を除き、これらのテーブルに対する制約 (主キー/外部キーの制約など) は作成されません。リレーションシップの主キーを構成する XML ノードが XML 型の ID (つまり、XSD の**type = "xsd: ID"** ) を持つように定義されていて、SchemaGen に対して SGUseID プロパティが True に設定されている場合、id 型のノードから作成される主キーだけでなく、マッピングスキーマリレーションシップから主キー/外部キーのリレーションシップが  
   
--   SchemaGen は、リレーショナル[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]スキーマを生成するために XSD スキーマファセットと拡張機能を使用しません。  
+-   SchemaGen は、リレーショナルスキーマを生成するために XSD スキーマファセットと拡張機能を使用しません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 -   一括読み込みで SchemaGen プロパティ (SchemaGen = true など) を指定した場合、指定されている (共有名のビューではなく) テーブルだけが更新されます。  
   

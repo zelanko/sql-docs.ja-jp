@@ -36,7 +36,7 @@ ms.locfileid: "68051204"
 >  ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに機能を追加する場合、新しく追加した機能には既存の使用状況レポートの設定が適用されます。 これらの設定を変更するには、 **の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][構成ツール]** メニューにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[ エラーと使用状況レポート]** ツールを使用します。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに機能を追加する場合、新しく追加した機能には既存の使用状況レポートの設定が適用されます。 これらの設定を変更するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **[構成ツール]** メニューにある **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ エラーと使用状況レポート]** ツールを使用します。  
   
 ## <a name="procedures"></a>手順  
   

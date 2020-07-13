@@ -25,15 +25,15 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0453d96d1d80d0917f5cb79cb1713d681963363b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075266"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007413"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   行が存在するかどうかをテストするサブクエリを指定します。  
   
@@ -81,7 +81,7 @@ WHERE EXISTS
 (SELECT *   
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -96,7 +96,7 @@ WHERE a.LastName IN
 (SELECT a.LastName  
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -156,7 +156,7 @@ WHERE EXISTS
     JOIN HumanResources.EmployeeDepartmentHistory AS edh  
        ON d.DepartmentID = edh.DepartmentID  
     WHERE e.BusinessEntityID = edh.BusinessEntityID  
-    AND d.Name LIKE 'P%');  
+    AND d.Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -173,7 +173,7 @@ JOIN HumanResources.EmployeeDepartmentHistory AS edh
 WHERE edh.DepartmentID IN  
 (SELECT DepartmentID  
    FROM HumanResources.Department  
-   WHERE Name LIKE 'P%');  
+   WHERE Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -309,11 +309,11 @@ FROM DimCustomer AS a
 WHERE EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
- NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`DimCustomer` と `LastName` が `BirthDate` テーブルのどのエントリとも一致しない `ProspectiveBuyers` テーブルの行を検出します。  
+ NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`LastName` と `BirthDate` が `ProspectiveBuyers` テーブルのどのエントリとも一致しない `DimCustomer` テーブルの行を検出します。  
   
 ```  
 -- Uses AdventureWorks  
@@ -323,7 +323,7 @@ FROM DimCustomer AS a
 WHERE NOT EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ## <a name="see-also"></a>参照  

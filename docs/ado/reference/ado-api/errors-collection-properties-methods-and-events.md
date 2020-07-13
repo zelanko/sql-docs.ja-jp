@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Errors collection [ADO], members
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37f6f109a53ad576a3849b4d8977c457ee3cbef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a910f0c86603a257b37fe4a27b1d2d9e57fdcb07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918902"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765483"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Errors コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "67918902"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>events  
+## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

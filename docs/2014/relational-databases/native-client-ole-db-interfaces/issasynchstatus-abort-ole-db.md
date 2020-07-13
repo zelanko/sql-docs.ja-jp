@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fee9eb0b223959025c2ee8a3417662dead5fe33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62638724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056120"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   非同期に実行されている操作を取り消します。  
@@ -36,10 +35,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>引数  
- *Hchapter*[in]  
+ *hChapter*[in]  
  操作を中止するチャプターのハンドル。 呼び出されるオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合、呼び出し元は*Hchapter*を DB_NULL_HCHAPTER に設定する必要があります。  
   
- *Eoperation*[in]  
+ *eOperation*[in]  
  中止する操作。 この引数には、  
   
  DBASYNCHOP_OPEN。キャンセル要求が適用されるのは、行セットを非同期で開くか設定する場合、またはデータ ソース オブジェクトを非同期で初期化する場合です。  
@@ -67,13 +66,12 @@ HRESULT Abort(
   
  **Itransaction:: commit**または**Itransaction:: Abort**が以前に呼び出された行セットで**ISSAsynchStatus:: abort**が呼び出されましたが、行セットがコミットまたは中止になっておらず、ゾンビ状態になっています。  
   
- 初期化フェーズで非同期に取り消された行セットで**ISSAsynchStatus:: Abort**が呼び出されました。 行セットはゾンビ状態になります。  
+ 初期化フェーズで非同期に取り消された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合も、この値が返されます。 行セットはゾンビ状態になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  行セットまたはデータ ソース オブジェクトの初期化を中止すると、その行セットまたはデータ ソース オブジェクトはゾンビ状態になり、**IUnknown** メソッド以外のすべてのメソッドから E_UNEXPECTED が返されます。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
   
- 
-  **eOperation** に DBASYNCHOP_OPEN 以外の値を渡して *ISSAsynchStatus::Abort* を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  
+ *eOperation* に DBASYNCHOP_OPEN 以外の値を渡して **ISSAsynchStatus::Abort** を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  
   
 ## <a name="see-also"></a>参照  
  [非同期操作の実行](../native-client/features/performing-asynchronous-operations.md)  

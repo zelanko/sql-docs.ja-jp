@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9d3f1a5e021eb564e4570e9f115e40329edcdd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 4407143e3e045326011fdb4e8a1eb4a0ee61f95b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66094020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045115"
 ---
 # <a name="license-terms"></a>ライセンス条項
   [ライセンス条項] ページを使用して、このリリースのライセンス条項に同意します。  

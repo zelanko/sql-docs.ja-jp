@@ -1,5 +1,6 @@
 ---
 title: '段階的な部分復元: 単純復旧モデル'
+description: この例では、単純復旧モデルを使用して、SQL Server のデータベースを新しいコンピューターに段階的に復元する方法を示します。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb7b7b757225d708382635b7a4bc33580ef7a6fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a1f4a98b9d704f485849a9fd380eb0895977f08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737774"
 ---
-# <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>データベースの段階的な部分復元 (単純復旧モデル) の例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>例:データベースの部分復元 (単純復旧モデル)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   段階的な部分復元シーケンスでは、プライマリ ファイル グループからすべての読み取り/書き込みセカンダリ ファイル グループの順に、ファイル グループ レベルで段階的にデータベースが復元および復旧されます。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "75243659"
   
 ## <a name="additional-examples"></a>その他の例  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   

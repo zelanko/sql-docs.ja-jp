@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107361"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
@@ -28,7 +28,7 @@ ms.locfileid: "66107361"
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **Collation**  
  データの並べ替えに使用される照合順序を決めるロケールを選択します。 **[既定]** は、レポート サーバーが、レポートの実行時にデータ プロバイダーから値の取得を試みる必要があることを示します。 値を取得できない場合、既定値はコンピューターのロケール設定から取得されます。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "66107361"
 ## <a name="see-also"></a>参照  
  [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [集計関数 &#40;レポートビルダーと SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
- [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [[クエリ &#40;レポートビルダー] ([データセットのプロパティ] ダイアログボックス)&#41;](dataset-properties-dialog-box-query-report-builder.md)  
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [[クエリ] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)](dataset-properties-dialog-box-query-report-builder.md)  
   
   

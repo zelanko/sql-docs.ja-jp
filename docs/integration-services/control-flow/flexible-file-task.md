@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72807412"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607855"
 ---
 # <a name="flexible-file-task"></a>柔軟なファイル タスク
 
@@ -44,18 +44,19 @@ ms.locfileid: "72807412"
 - **SourceConnectionType:** ソース接続マネージャーの種類を指定します。
 - **SourceConnection:** ソース接続マネージャーを指定します。
 - **SourceFolderPath:** ソース フォルダーのパスを指定します。
-- **SourceFileName:** ソース ファイル名を指定します。 空白のままにすると、ソース フォルダーがコピーされます。
+- **SourceFileName:** ソース ファイル名を指定します。 空白のままにすると、ソース フォルダーがコピーされます。 ソース ファイル名にはワイルドカードとして `*` (ゼロか複数の文字に一致)、`?` (ゼロか 1 つの文字に一致)、`^` (エスケープ文字) が許可されます。
 - **SearchRecursively:** サブフォルダーを再帰的にコピーするかどうかを指定します。
 - **DestinationConnectionType:** 送信先接続マネージャーの種類を指定します。
 - **DestinationConnection:** 送信先接続マネージャーを指定します。
 - **DestinationFolderPath:** 送信先フォルダーのパスを指定します。
-- **DestinationFileName:** 送信先ファイル名を指定します。
+- **DestinationFileName:** 送信先ファイル名を指定します。 空白のままにすると、ソース ファイル名が使用されます。
 
 **削除**操作に対して使用できるプロパティは次のとおりです。
 - **ConnectionType:** 接続マネージャーの種類を指定します。
 - **Connection:** 接続マネージャーを指定します。
 - **FolderPath:** フォルダーのパスを指定します。
-- **FileName:** ファイル名を指定します。 空白のままにすると、フォルダーが削除されます。 Azure Blob Storage の場合、フォルダーの削除はサポートされていません。
+- **FileName:** ファイル名を指定します。 空白のままにすると、フォルダーが削除されます。 Azure Blob Storage の場合、フォルダーの削除はサポートされていません。 ファイル名にはワイルドカードとして `*` (ゼロか複数の文字に一致)、`?` (ゼロか 1 つの文字に一致)、`^` (エスケープ文字) が許可されます。
+- **DeleteRecursively:** ファイルを再帰的に削除するか指定します。
 
 ***サービス プリンシパルのアクセス許可の構成に関する注意事項***
 

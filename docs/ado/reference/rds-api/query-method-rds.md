@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3025f37b47cd545e7e7cde127e96740077ab961
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67963824"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751495"
 ---
 # <a name="query-method-rds"></a>Query メソッド (RDS)
 は、有効な SQL クエリ文字列を使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を返します。  

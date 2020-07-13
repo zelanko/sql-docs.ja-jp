@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ecaa07074ed21d6f0b93c7cc544f4487431a64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827564"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432189"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -26,7 +25,7 @@ ms.locfileid: "62827564"
   
  次の表に、CDC 状態変数値の各要素の概要を示します。  
   
-|コンポーネント|[説明]|  
+|コンポーネント|説明|  
 |---------------|-----------------|  
 |`<state-name>`|現在の CDC 状態の名前です。|  
 |`CS`|現在の処理範囲の始点 (Current Start) を示します。|  
@@ -37,7 +36,7 @@ ms.locfileid: "62827564"
 |`<ir-start>`|初期読み込みが開始した直前の変更の LSN です。|  
 |`<ir-end>`|初期読み込みが終了した直後の変更の LSN です。|  
 |`TS`|CDC 状態の最後の更新のタイムスタンプを示します。|  
-|**\<タイムスタンプ>**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
+|**\<timestamp>**|64 ビットの System.DateTime.UtcNow プロパティの 10 進数表記です。|  
 |`ER`|直前の操作が失敗した場合に表示され、エラーの原因の簡単な説明が含まれます。 この要素が存在する場合は、常に最後に表示されます。|  
 |`<short-error-text>`|エラーの簡単な説明です。|  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62827564"
   
  次の表に、使用可能な CDC 状態値を示します。  
   
-|State|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する `MarkInitialLoadStart` 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  
@@ -70,11 +69,9 @@ ms.locfileid: "62827564"
   
 ### <a name="to-define-a-cdc-state-variable"></a>CDC 状態変数を定義するには  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、変数を定義する必要がある CDC フローを含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、変数を定義する必要がある CDC フローを含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
-2.  
-  **[パッケージ エクスプ ローラー]** タブをクリックして、新しい変数を追加します。  
+2.  **[パッケージ エクスプ ローラー]** タブをクリックして、新しい変数を追加します。  
   
 3.  変数に、状態変数として識別できる名前を付けます。  
   
@@ -82,12 +79,11 @@ ms.locfileid: "62827564"
   
  定義するときに、変数に値を設定しないでください。 値は、CDC 制御タスクで設定する必要があります。  
   
- 
-  **[状態の自動保持]** を指定して CDC 制御タスクを使用する予定の場合、CDC 状態変数は指定するデータベース状態テーブルから読み取られ、値の変更時に同じテーブルの値が更新されます。 状態テーブルの詳細については、「 [CDC Control Task](../control-flow/cdc-control-task.md)」および「 [CDC Control Task Editor](../cdc-control-task-editor.md)」を参照してください。  
+ **[状態の自動保持]** を指定して CDC 制御タスクを使用する予定の場合、CDC 状態変数は指定するデータベース状態テーブルから読み取られ、値の変更時に同じテーブルの値が更新されます。 状態テーブルの詳細については、「 [CDC Control Task](../control-flow/cdc-control-task.md)」および「 [CDC Control Task Editor](../cdc-control-task-editor.md)」を参照してください。  
   
  [状態の自動保持] を指定して CDC 制御タスクを使用しない場合は、パッケージが最後に実行されたときに変数の値が保存された永続ストレージからその値を読み込み、現在の処理範囲の処理が終了したときに永続ストレージにその値を書き戻す必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC 制御タスク](../control-flow/cdc-control-task.md)   
  [CDC 制御タスク エディター](../cdc-control-task-editor.md)  
   

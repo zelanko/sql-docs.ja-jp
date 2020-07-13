@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDescRec function [ODBC]
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87d7b971b379f19f8451e924932a5e699e9b9983
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68103795"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285487"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLGetDescRec(
 ```  
   
 ## <a name="arguments"></a>引数  
- *記述子ハンドル*  
+ *DescriptorHandle*  
  代入記述子ハンドル。  
   
  *RecNumber*  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetDescRec(
 ## <a name="diagnostics"></a>診断  
  **Sqlgetdescrec**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返した場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_DESC であり、*記述子ハンドル*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlgetdescrec**によって通常返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データ、右側が切り捨てられました|バッファー \**名*が、記述子フィールド全体を返すのに十分な大きさではありませんでした。 このため、フィールドは切り捨てられました。 切り詰められていない記述子フィールドの長さは、**Stringlength ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -141,7 +141,7 @@ SQLRETURN SQLGetDescRec(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |列のバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |パラメーターのバインド|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  

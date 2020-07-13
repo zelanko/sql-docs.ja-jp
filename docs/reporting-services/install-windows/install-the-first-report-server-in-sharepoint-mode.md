@@ -262,7 +262,7 @@ ms.locfileid: "79286176"
 
 ##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> 手順 4: Power View のサイト コレクション機能のアクティブ化
 
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] SharePoint 製品用の SQL Server 2016 Reporting Services アドインの機能である [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、サイト コレクション機能です。 この機能は、ルート サイト コレクションと、Reporting Services アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 製品用の SQL Server 2016 Reporting Services アドインの機能である [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、サイト コレクション機能です。 この機能は、ルート サイト コレクションと、Reporting Services アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
   
  SharePoint Server のインストール後に SharePoint 製品用の Reporting Services アドインをインストールした場合、レポート サーバーの統合機能と Power View の統合機能はルート サイト コレクションでのみアクティブ化されます。 他のサイト コレクションについては、この機能を手動でアクティブ化します。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "79286176"
   
 -   サービス アプリケーションに合わせて **-DatabaseServer** パラメーターを更新します。 このパラメーターは、データベース エンジンのインスタンスを意味します  
   
--   **の機能を有効にするサイトの**-url[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] パラメーターを更新します。  
+-   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] の機能を有効にするサイトの **-url** パラメーターを更新します。  
   
  **スクリプトを使用するには**  
   

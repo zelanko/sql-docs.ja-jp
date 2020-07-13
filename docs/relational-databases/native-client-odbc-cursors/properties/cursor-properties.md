@@ -13,24 +13,23 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: c5115a9e943976e38c84e5df1663a32a7afbc482
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784235"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006510"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 形式のカーソルの種類または SQL-92/ISO 形式のカーソルの動作のいずれかを設定することで、カーソルの全体的な特性が決まります。 以下のトピックでは、カーソルの動作に影響を与える追加のステートメントと接続属性について説明しています。  
   
 -   [カーソルの行セット サイズ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
   
--   [カーソルの同時実行 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+-   [カーソルのコンカレンシー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
   
 -   [カーソルのトランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   

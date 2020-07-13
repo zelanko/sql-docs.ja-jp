@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62842537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927973"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>メモリ最適化されたハッシュ インデックスのパフォーマンスに関する一般的な問題のトラブルシューティング
   このトピックはハッシュ インデックスの一般的な問題のトラブルシューティングと回避方法に焦点を当てて説明します。  
@@ -25,7 +24,7 @@ ms.locfileid: "62842537"
   
  これに対し、ディスク ベースの非クラスター化インデックスおよびメモリ最適化非クラスター化インデックスのような並べ替えられたインデックスは、インデックス内の先頭列である限り、インデックス キー列のサブセットに対するインデックス シークをサポートします。  
   
- **症状:** この結果、インデックスシークではなく[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]フルテーブルスキャンを実行する必要があるため、パフォーマンスが低下します。これは通常、より高速な操作です。  
+ **症状:** この結果、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックスシークではなくフルテーブルスキャンを実行する必要があるため、パフォーマンスが低下します。これは通常、より高速な操作です。  
   
  **トラブルシューティングの方法:** パフォーマンスの低下に加えて、クエリプランの検査では、インデックスシークではなくスキャンが表示されます。 クエリが非常に単純である場合は、クエリ テキストおよびインデックス定義の検査も検索にインデックス キー列のサブセットが必要かどうかを示します。  
   

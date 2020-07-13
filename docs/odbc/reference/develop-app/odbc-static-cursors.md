@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b99566c473e88684e8b092a5ac9fc899e7dce177
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987837"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282448"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 静的カーソル
 静的カーソルとは、結果セットが静的であることを示します。 通常、カーソルを開いた後に、結果セットのメンバーシップ、順序、または値に対して行われた変更は検出されません。 たとえば、静的カーソルによって行がフェッチされ、別のアプリケーションによってその行が更新されるとします。 静的カーソルによって行が refetches された場合、他のアプリケーションによって行われた変更にかかわらず、表示される値は変更されません。  

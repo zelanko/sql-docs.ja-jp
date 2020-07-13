@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67905046"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053007"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sp_rda_reconcile_indexes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   リモートテーブルのインデックスを調整するために、スキーマタスクをキューに入れます。 このタスクが正常に完了した後、リモートテーブルには、Stretch が有効なローカルテーブルに存在するのと同じインデックスがあります。  
   
@@ -41,7 +40,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [@objname = ]*' objname '*  
+ [ @objname =] *' objname '*  
  インデックスを調整する Stretch が有効なテーブルの修飾名または修飾されていない名前を指定します。 引用符は、修飾されたオブジェクトを指定する場合にのみ必要です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

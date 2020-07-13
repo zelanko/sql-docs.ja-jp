@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbbf363c8d6ebb452f6628676de1b8918e6f245
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173937"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>サブジェクト代替名を使用するように Reporting Services を構成する
@@ -22,7 +22,7 @@ ms.locfileid: "78173937"
 
 ||
 |-|
-|**[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード|
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード|
 
  この手順は、レポート サービスの URL および Web サービス URL に適用されます。
 
@@ -30,8 +30,7 @@ ms.locfileid: "78173937"
 
  SSL 証明書を使用するように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL を構成できます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は、SSL サービスがリッスンでき、多数の URL 対して有効化され、SSL ポートを他のアプリケーションと共有できるようにするための証明書の追加フィールドです。 SAN は、www.s2.com のようになります。
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のSSL 設定の詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のSSL 設定の詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。
 
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>サブジェクト代替名を Web サービス URL に使用するように SSRS を構成します。
 

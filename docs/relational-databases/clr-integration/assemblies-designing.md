@@ -1,7 +1,8 @@
 ---
 title: アセンブリのデザイン |Microsoft Docs
+description: この記事では、アセンブリのパッケージ化、管理、制限など、SQL Server でホストするアセンブリを設計するときに考慮する必要がある要素について説明します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 76ca67598f2cb8c03c5d0e423ded66e2fe4dc700
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727667"
 ---
 # <a name="assemblies---designing"></a>アセンブリ - デザイン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
   
 -   アセンブリのパッケージ化  
@@ -57,8 +58,7 @@ ms.locfileid: "68028018"
  また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 UNSAFE アセンブリを作成できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止されているカスタム属性  
  アセンブリには次のカスタム属性で注釈を付けることができません。  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]許可されていない**hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
+ 許可されていない [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,22 +102,25 @@ eUI
  カスタム アセンブリで参照されているアセンブリは、CREATE ASSEMBLY を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込む必要があります。 次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリは既に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれているため、CREATE ASSEMBLY を使用しなくてもカスタム アセンブリで参照できます。  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

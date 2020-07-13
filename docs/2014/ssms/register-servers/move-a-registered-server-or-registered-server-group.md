@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bc928fbd76f074b5991506e8d8544c02e4b4bd96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048659"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの移動 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で登録済みサーバーまたは登録済みサーバー グループを移動して、登録済みサーバー内のサーバーを整理する方法について説明します。 サーバー グループには、登録済みサーバーまたは他のサーバー グループを含めることができます。 サーバー グループ間でサーバーおよびサーバー グループを移動できます。  
@@ -32,8 +31,7 @@ ms.locfileid: "75241330"
   
 1.  [登録済みサーバー] で、サーバーまたはサーバー グループを右クリックし、 **[移動]** をクリックします。  
   
-2.  
-  **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
+2.  **[サーバー登録の移動]** ダイアログ ボックスでサーバー グループの一覧を展開し、サーバーまたはサーバー グループを表示するノードをクリックし、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの登録](register-servers.md)   

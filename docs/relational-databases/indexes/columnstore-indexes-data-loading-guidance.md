@@ -11,16 +11,16 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007536"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 標準的な SQL 一括読み込みとトリクル挿入メソッドを使用して、列ストア インデックスにデータを読み込むためのオプションと推奨事項です。 列ストア インデックスへのデータの読み込みは、分析に備えてデータをインデックスに移動するため、すべてのデータ ウェアハウスのプロセスにおいて不可欠な要素です。
   
@@ -47,7 +47,7 @@ ms.locfileid: "79286676"
 
 -   **ログ記録の削減:** 圧縮された行グループにデータを直接読み込むと、ログのサイズの大幅な削減につながります。 たとえば、データが 10 倍に圧縮された場合、対応するトランザクション ログのサイズは約 10 倍小さくなり、TABLOCK や一括ログ/単純復旧モデルは必要ありません。 デルタ行グループに移動するデータは、完全に記録されます。 これには、102,400 行未満のバッチ サイズがすべて含まれます。  ベスト プラクティスは、batchsize >= 102400 を使用することです。 TABLOCK は必要ないため、データを並行して読み込むことができます。 
 
--   **最小ログ記録:** [最小ログ記録](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)の前提条件に従うと、ログ記録をさらに削減できます。 ただし、行ストアへのデータの読み込みとは異なり、TABLOCK は、BU (一括更新) ロックではなく、テーブルで X ロックされるため、並列データの読み込みは実行できません。 ロックの詳細については、[ロックおよび行のバージョン管理ガイド[(../sql-server-transaction-locking-and-row-versioning-guide.md) をご覧ください。
+-   **最小ログ記録:** [最小ログ記録](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)の前提条件に従うと、ログ記録をさらに削減できます。 ただし、行ストアへのデータの読み込みとは異なり、TABLOCK は、BU (一括更新) ロックではなく、テーブルで X ロックされるため、並列データの読み込みは実行できません。 ロックについて詳しくは、「[ロックおよび行のバージョン管理](../sql-server-transaction-locking-and-row-versioning-guide.md)」をご覧ください。
 
 -   **ロックの最適化:** 行グループの X ロックは、圧縮された行グループにデータを読み込むときに自動的に取得されます。 ただし、デルタ行グループへの一括読み込みの場合、X ロックは行グループで獲得されますが、X 行グループ ロックはロック階層の一部ではないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は引き続き PAGE/EXTENT をロックします。  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **ログの最適化:** 圧縮された行グループにデータが読み込まれる場合、ログ記録が削減されます。   
 -   **ロックの最適化:** 圧縮された行グループに読み込む場合は、行グループに対する X ロックが獲得されます。 ただし、デルタ行グループでは、X ロックは行グループで獲得されますが、X 行グループ ロックはロック階層の一部ではないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は引き続き PAGE/EXTENT のロックを行います。  
   
- 非クラスター化インデックスがある場合、インデックス自体のロックやログの最適化は行われませんが、前述のとおり、クラスター化列ストア インデックスの最適化は引き続き行われます。  
+ 非クラスター化インデックスが 1 つまたは複数ある場合、インデックス自体のロックやログの最適化は行われませんが、前述のとおり、クラスター化列ストア インデックスの最適化は引き続き行われます。  
   
 ## <a name="what-is-trickle-insert"></a>トリクル挿入とは
 

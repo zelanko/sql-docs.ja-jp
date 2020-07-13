@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cursors [ODBC], cursor library
 - block cursors [ODBC]
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a896a5bb41c5530c65573fa22c418199a043f8fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b243e8ae2dc931830a249d4392da308e68722cdf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114067"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300052"
 ---
 # <a name="the-odbc-cursor-library"></a>ODBC カーソル ライブラリ
 > [!IMPORTANT]  

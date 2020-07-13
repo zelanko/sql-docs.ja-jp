@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68032724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892993"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  エージェント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にジョブの実行を停止するよう指示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントにジョブの実行を停止するよう指示します。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -62,9 +62,9 @@ sp_stop_job
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_stop_job**は、データベースに停止シグナルを送信します。 一部のプロセスはすぐに停止することができ、一部のプロセスは安定したポイント (またはコードパスへのエントリポイント) に到着しないと停止できません。 バックアップ、復元、 [!INCLUDE[tsql](../../includes/tsql-md.md)]一部の DBCC コマンドなど、長時間実行されるステートメントの完了には時間がかかることがあります。 これらが実行されている場合、ジョブが取り消されるまでにしばらく時間がかかることがあります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
+ **sp_stop_job**は、データベースに停止シグナルを送信します。 一部のプロセスはすぐに停止することができ、一部のプロセスは安定したポイント (またはコードパスへのエントリポイント) に到着しないと停止できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、一部の DBCC コマンドなど、長時間実行されるステートメントの完了には時間がかかることがあります。 これらが実行されている場合、ジョブが取り消されるまでにしばらく時間がかかることがあります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
   
- ジョブが**CmdExec**または**PowerShell**タイプのステップを現在実行している場合は、実行中のプロセス (たとえば、myprogram .exe) が途中で強制的に終了します。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 そのため、ジョブに**CmdExec**または**PowerShell**型のステップが含まれている場合は、極端な状況でのみ**sp_stop_job**を使用する必要があります。  
+ ジョブが**CmdExec**または**PowerShell**タイプのステップを現在実行している場合は、実行中のプロセス (MyProgram.exe など) が途中で強制的に終了されます。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 そのため、ジョブに**CmdExec**または**PowerShell**型のステップが含まれている場合は、極端な状況でのみ**sp_stop_job**を使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -80,7 +80,7 @@ sp_stop_job
  **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを停止できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを停止できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを停止できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、と`Weekly Sales Data Backup`いう名前のジョブを停止します。  
+ 次の例では、という名前のジョブを停止 `Weekly Sales Data Backup` します。  
   
 ```  
 USE msdb ;  
@@ -91,11 +91,11 @@ EXEC dbo.sp_stop_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

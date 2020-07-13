@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4921a6162b6d711e657f223b5be5783dfa37bca8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68130048"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285162"
 ---
 # <a name="decimal-digits"></a>10 進数字
 Decimal および numeric データ型の*小数点*以下桁数は、小数点の右側の最大桁数、またはデータの小数点以下桁数として定義されます。 浮動小数点数の概数列またはパラメーターの場合、小数点の右側の桁数が固定されていないため、小数点以下桁数が定義されていません。 秒の部分を含む datetime または interval データの場合、小数点以下の桁数は、データの秒部分の小数点の右側の桁数として定義されます。  

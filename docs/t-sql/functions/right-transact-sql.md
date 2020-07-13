@@ -48,9 +48,9 @@ RIGHT ( character_expression , integer_expression )
  返される *character_expression* の文字数を指定する正の整数です。 *integer_expression* が負の場合、エラーが返されます。 *integer_expression* が **bigint** 型で、値が大きい場合、*character_expression* には **varchar(max)** などのラージ データ型を使用する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- **character_expression** が非 Unicode 文字データ型の場合は、*varchar* を返します。  
+ *character_expression* が非 Unicode 文字データ型の場合は、**varchar** を返します。  
   
- **character_expression** が Unicode 文字データ型の場合は、*nvarchar* を返します。  
+ *character_expression* が Unicode 文字データ型の場合は、**nvarchar** を返します。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、RIGHT 関数では、UTF-16 のサロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  

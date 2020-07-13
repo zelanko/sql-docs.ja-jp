@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2890a61850526f7506713b3f900d67b8d41d0bfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66093699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012136"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>データベース エンジンのアップグレードに関するその他の問題
   アップグレードに関する次の問題は、現在のバージョンのアップグレード アドバイザーでは検出されません。 一覧表示されている問題を確認し、使用するシステムへの影響を判断してください。  

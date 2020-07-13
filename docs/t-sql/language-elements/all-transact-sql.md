@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 326cce7eaa06eca6e981e72ea60d4f4144442942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85708322"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   スカラー値を単一列で構成される値のセットと比較します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67927383"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_delete_execution_log_tree
 - data collector [SQL Server], stored procedures
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9aa59c95b211591ce89b3207b2bac181bb413222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82886cf4be8714580159c35848788fd25e395ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68000834"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892928"
 ---
 # <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  単一のコレクションセットの実行に関するすべてのログエントリを削除します。 また、その実行の[!INCLUDE[ssIS](../../includes/ssis-md.md)]テーブルからログエントリが削除されます。  
+  単一のコレクションセットの実行に関するすべてのログエントリを削除します。 また、その実行のテーブルからログエントリが削除され [!INCLUDE[ssIS](../../includes/ssis-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、 **dc_operator** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

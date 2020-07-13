@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e264dd380c3dff40dacc4eb576d34af5195dec01
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62875627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957186"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>単純復旧モデルでのデータベース バックアップの復元 (Transact-SQL)
   このトピックでは、データベースの完全バックアップを復元する方法について説明します。  
@@ -67,7 +66,7 @@ ms.locfileid: "62875627"
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  この例では、テープから [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の完全データベース バックアップを復元します。  
   
 ### <a name="example"></a>例  

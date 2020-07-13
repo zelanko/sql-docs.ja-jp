@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bdf3b71d985a60fed5080ec97462a43e79c4ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65484652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054306"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>レッスン 3: データを照合して仕入先の一覧から重複を削除する
   照合アクティビティを実行するためにナレッジ ベースを準備するには、ナレッジ ベースで照合ポリシーを作成します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、 そのポリシーは 1 つ以上の照合ルールで構成されます。 ルールは、照合プロセスに関連するドメインを特定し、一致率を割り当てるときの各ドメイン値の重みを指定します。 このルールでは、完全に一致するドメイン値だけを一致と見なすか、類似性のレベルが指定した値を超えるドメイン値も一致と見なすかを指定します。 また、ドメインが照合プロセスで一致する必要があるかどうかも指定します。 各ルールを個別にテストし、サンプル データに対してポリシー全体をテストできます。 テストプロセスでは、クラスター (グループ) の DQS 構成で指定された**最小レコードスコア**のしきい値を超える照合スコアを持つレコードが表示されます。 プレビュー後も、満足できるまでポリシーのルールを調整できます。  
@@ -24,7 +23,7 @@ ms.locfileid: "65484652"
   
  このレッスンでは、照合アクティビティを実行して、仕入先の一覧から重複するものを削除します。 まず、1 つのルールを含む照合ポリシーを作成し、仕入先の一覧の重複部分を識別して、ポリシーをナレッジ ベースにパブリッシュします。 次に、照合するデータ品質プロジェクトを作成および実行します。 最後に、照合アクティビティから、後でマスター データ サービス (MDS) にデータをアップロードする場合に使用する Excel ファイルに結果をエクスポートします。  
   
-## <a name="next-step"></a>次のステップ  
+## <a name="next-step"></a>次の手順  
  [タスク 1: 照合ポリシーを定義する](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

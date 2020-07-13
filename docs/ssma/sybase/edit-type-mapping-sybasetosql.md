@@ -10,10 +10,10 @@ ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029172"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>型のマッピングの編集 (SybaseToSQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68029172"
   
 データ型が可変長の場合、[**ソースの種類**] の下に次のフィールドが表示されます。  
   
-**差出人**  
+**From**  
 このマッピングの最小の長さを指定します。 たとえば、 **nchar**データ型の場合は、「10」と入力して、このマッピングが**nchar (10)** から始まる範囲になるように指定できます。  
   
-**宛先**  
+**To**  
 このマッピングの最大長を指定します。 たとえば、 **nchar**データ型の場合は、「20」と入力すると、このマッピングが**nchar (20)** で終わる範囲に対して指定されます。  
   
-**ターゲットの種類**  
+**変換後の型**  
 変換元[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型がマップされるデータ型を選択します。 SSMA に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よってテーブルまたはストアドプロシージャが作成されると、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[**対象の型**] の下に次のフィールドが表示されます。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105600"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66105600"
   
  行と列を制御する方法は、テーブルとマトリックスのどちらを使用しているかによって異なります。 テーブルを使用している場合は、静的メンバー (行見出しと列見出し) を表示したままにするよう構成します。 マトリックスを使用している場合は、行と列のグループ ヘッダーを表示したままにするよう構成します。  
   
- レポートを Excel にエクスポートしても、ヘッダーは自動的には固定表示されません。 Excel でウィンドウ枠を固定できます。 詳細については、「**Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;**」の「[ページ ヘッダーとページ フッター](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
+ レポートを Excel にエクスポートしても、ヘッダーは自動的には固定表示されません。 Excel でウィンドウ枠を固定できます。 詳細については、「**Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;** 」の「[ページ ヘッダーとページ フッター](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  テーブルに行グループおよび列グループがある場合でも、スクロール中にこれらのグループ ヘッダーを表示したままにすることはできません。  
@@ -33,7 +33,7 @@ ms.locfileid: "66105600"
   
  次の図はマトリックスを示しています。  
   
- ![Matrix](../media/matrix.png "Matrix")  
+ ![マトリックス](../media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,8 +42,7 @@ ms.locfileid: "66105600"
   
 1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  
-  **[全般]** タブの **[行のヘッダー]** または **[列のヘッダー]** で、 **[スクロール中もヘッダーを表示したままにする]** チェック ボックスをオンにします。  
+2.  **[全般]** タブの **[行のヘッダー]** または **[列のヘッダー]** で、 **[スクロール中もヘッダーを表示したままにする]** チェック ボックスをオンにします。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -55,11 +54,11 @@ ms.locfileid: "66105600"
   
      行グループ ペインに、行グループ階層の静的メンバーおよび動的メンバーが階層的に表示され、列グループ ペインに、列グループ階層のメンバーが同様に表示されます。  
   
-2.  グループ化ペインの右側にある下矢印をクリックし、[**詳細設定モード**] をクリックします。  
+2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]** をクリックします。  
   
 3.  スクロール中も表示したままにする静的メンバー (行または列) をクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
-     ![Tablix メンバーのプロパティ](../media/grouppane-tablixmember-updated.png "Tablix メンバーのプロパティ")  
+     ![Tablix メンバー プロパティ](../media/grouppane-tablixmember-updated.png "Tablix メンバー プロパティ")  
   
 4.  [プロパティ] ペインで、[ **Fixeddata** ] をに`True`設定します。  
   
@@ -73,8 +72,8 @@ ms.locfileid: "66105600"
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [グループ &#40;レポートビルダーおよび SSRS でヘッダーとフッターを表示&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [&#40;レポートビルダーと SSRS&#41;の複数のページに行と列のヘッダーを表示する](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [グループ化ペイン &#40;レポート ビルダー&#41;](grouping-pane-report-builder.md)  
   
   

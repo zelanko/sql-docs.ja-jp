@@ -10,15 +10,14 @@ helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe1d4e6989984ef96d525adafc6518cb55b8576b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019129"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>プログラム変数からのデータの一括コピー (ODBC)
   このサンプルでは、一括コピー関数 `bcp_bind` と `bcp_sendrow` を使用して、プログラム変数から SQL Server にデータを一括コピーする方法を示します  (この例では、簡略化のためエラーチェック コードが削除されています)。  
@@ -53,21 +52,20 @@ ms.locfileid: "62753644"
   
 8.  すべての行が送信されたら、 [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出して操作を完了します。  
   
- 一括コピー操作中に、 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)と[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 、、および`image`データ`text`を`ntext`セグメント内のサーバーに送信するには、 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を使用します。  
+ 一括コピー操作中に、 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)と[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)を呼び出すことによって、プログラム変数の場所と長さを変更できます。 [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を使用して、さまざまな一括コピーオプションを設定します。 、 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 、 `text` `ntext` および `image` データをセグメント内のサーバーに送信するには、bcp_moretext を使用します。  
   
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
   
  AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
-  [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
+ 最初の ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) コードリストを実行して、サンプルで使用するテーブルを作成します。  
   
  odbc32.lib と odbcbcp.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 MSBuild.exe でビルドした場合は、まずプロジェクト ディレクトリの Bcpfmt.fmt と Bcpodbc.bcp を .exe があるディレクトリにコピーし、次に .exe を起動します。  
   
- 3番目の[!INCLUDE[tsql](../../../includes/tsql-md.md)]() コードリストを実行して、サンプルで使用したテーブルを削除します。  
+ 3番目の ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) コードリストを実行して、サンプルで使用したテーブルを削除します。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

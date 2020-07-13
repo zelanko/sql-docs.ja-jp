@@ -10,15 +10,14 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1dd81612526ca17c5100485d1d27d246b5a8abfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62637928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061260"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求
   次のクエリでは、ドキュメント構造を記述する XML-DATA スキーマが返されます。  

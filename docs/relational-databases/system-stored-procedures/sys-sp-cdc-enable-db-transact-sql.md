@@ -19,17 +19,17 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891133"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データキャプチャを有効にします。 データベース内のテーブルの変更データ キャプチャを有効にするには、まずそのデータベースに対してこの手順を実行する必要があります。 変更データキャプチャは、有効になっているテーブルに適用された挿入、更新、削除の各アクティビティを記録し、変更の詳細を使用しやすいリレーショナル形式で表示します。 追跡対象のソーステーブルの列構造を反映する列情報は、変更された行に対してキャプチャされ、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされます。  
   
@@ -59,7 +59,7 @@ sys.sp_cdc_enable_db
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、変更データキャプチャを有効にします。  
   
 ```  
@@ -69,7 +69,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

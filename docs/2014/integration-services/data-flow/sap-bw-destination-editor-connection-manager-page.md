@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c869d7b6a7f0c07d5869102311356e1a635367a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770849"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431339"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -59,7 +58,7 @@ ms.locfileid: "62770849"
  **Type**  
  インフォソースの種類を識別する 1 文字を入力します。 指定できる 1 文字の値の一覧を次の表に示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**D**|トランザクション データ|  
 |**M**|マスター データ|  
@@ -79,8 +78,7 @@ ms.locfileid: "62770849"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- 
-  `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
+ `sapgwNN` という形式でゲートウェイ サービスの名前を入力します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  

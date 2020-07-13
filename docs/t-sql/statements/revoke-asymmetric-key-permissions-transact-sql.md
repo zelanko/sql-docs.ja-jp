@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15bfb61f8da371daeedfdb877ba45ee3669a20cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765971"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (非対称キーの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非対称キーの権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68082364"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   

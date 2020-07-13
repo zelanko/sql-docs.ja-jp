@@ -41,7 +41,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## <a name="arguments"></a>引数  
  \<column_expression>  
- *GROUP BY* 句の [column_expression](../../t-sql/queries/select-group-by-transact-sql.md) です。  
+ [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句の *column_expression* です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
@@ -93,7 +93,7 @@ SELECT 0 FROM T GROUP BY A,B
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. GROUPING_ID を使用してグループ化レベルを識別する  
- 次の例では、`Name` データベースの `Title` と `Name,` ごとの従業員数、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Name` と `Title` ごとの従業員数、`Name,` ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
   
 ```  
 SELECT D.Name  
@@ -117,7 +117,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 ### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. GROUPING_ID を使用して結果セットをフィルター処理する  
   
 #### <a name="simple-example"></a>簡単な例  
- 役職ごとの従業員数が含まれた行のみを返すには、次のコードの `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] からコメント文字を削除します。 部門ごとの従業員数が含まれた行のみを返すには、`HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` からコメント文字を削除します。  
+ 役職ごとの従業員数が含まれた行のみを返すには、次のコードの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` からコメント文字を削除します。 部門ごとの従業員数が含まれた行のみを返すには、`HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` からコメント文字を削除します。  
   
 ```  
 SELECT D.Name  
@@ -238,7 +238,7 @@ ORDER BY
 ### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID () を ROLLUP および CUBE と共に使用してグループ化レベルを識別する  
  以下は、`GROUPING()` を使用して `Bit Vector(base-2)` 列を計算するコードの例です。 `GROUPING_ID()` は、対応する `Integer Equivalent` 列を計算するために使用されます。 `GROUPING_ID()` 関数の列順序は、`GROUPING()` 関数によって連結された列の列順序の逆になります。  
   
- これらの例では、グループ化レベルを示すための値を `GROUPING_ID()` 列の各行に対して作成するために、`Grouping Level` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0, 1, 2,...*n*) になるとは限りません。  
+ これらの例では、グループ化レベルを示すための値を `Grouping Level` 列の各行に対して作成するために、`GROUPING_ID()` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0, 1, 2,...*n*) になるとは限りません。  
   
 > [!NOTE]  
 >  GROUPING と GROUPING_ID は、結果セットをフィルター処理するために HAVING 句で使用できます。  

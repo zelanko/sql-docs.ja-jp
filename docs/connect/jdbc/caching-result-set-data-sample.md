@@ -21,10 +21,10 @@ ms.locfileid: "69028423"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、データベースから大きなデータ セットを取得し、[SQLServerResultSet](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/sqlserverresultset-class.md) メソッドを使用して、クライアント上でキャッシュされるデータの行数を制御する方法を示しています。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションは、データベースから大きなデータ セットを取得し、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを使用して、クライアント上でキャッシュされるデータの行数を制御する方法を示しています。
 
 > [!NOTE]  
-> クライアント上でキャッシュされる行数の制限は、結果セットが含むことのできる行の総数の制限とは異なります。 結果セットに含まれる行の総数を制御するには、[SQLServerStatement](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) オブジェクトの [setMaxRows](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドを使用します。これは、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトと [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトの両方に継承されます。
+> クライアント上でキャッシュされる行数の制限は、結果セットが含むことのできる行の総数の制限とは異なります。 結果セットに含まれる行の総数を制御するには、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) メソッドを使用します。これは、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトと [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトの両方に継承されます。
 
 クライアント上でキャッシュされる行数に制限を設定するには、Statement オブジェクトの作成に使用するカーソルの種類を指定することで、いずれかの Statement オブジェクトを作成するときに、最初にサーバー側のカーソルを使用する必要があります。 たとえば、JDBC ドライバーでは TYPE_SS_SERVER_CURSOR_FORWARD_ONLY というカーソルの種類が提供されます。これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで使用する高速順方向専用、読み取り専用のサーバー側カーソルです。
 

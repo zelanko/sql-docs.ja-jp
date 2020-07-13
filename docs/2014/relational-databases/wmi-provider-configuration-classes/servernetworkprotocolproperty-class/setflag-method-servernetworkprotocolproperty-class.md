@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: bca152482145b06aaa4aa89fd035812279bff4fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62642682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056800"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag メソッド (ServerNetworkProtocolProperty クラス)
   参照されたプロパティのフラグを設定します。  
@@ -39,21 +38,20 @@ BoolValue
   
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
- の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のネットワークプロトコルの属性を表す [Servernetworkprotocolproperty クラス] servernetworkprotocolproperty-class.md) オブジェクト。  
+## <a name="parts"></a>指定項目  
+ *object*  
+ のインスタンス上のネットワークプロトコルの属性を表す [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*ブール値*|フラグの新しい値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 
-  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

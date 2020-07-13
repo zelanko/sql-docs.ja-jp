@@ -9,17 +9,15 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931643"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次のトピックを確認してください。  
   
 -   [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -30,7 +28,7 @@ ms.locfileid: "62774576"
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **クラスター環境の場合: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **クラスターの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ノードのいずれかでエディションのアップグレードを実行するだけで十分です。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
+>  クラスター ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境で**は、クラスターのいずれかのノードでエディションのアップグレードを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで十分です。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
   
 ## <a name="prerequisites"></a>前提条件  
  ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
@@ -40,7 +38,7 @@ ms.locfileid: "62774576"
   
 ## <a name="procedure"></a>手順  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の別のエディションにアップグレードするには  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の別のエディションにアップグレードするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックするか、構成ツールから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   

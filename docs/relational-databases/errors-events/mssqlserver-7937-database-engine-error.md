@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6525c6c1cbcd6071eeb99e899b15bda107f4868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767893"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7937|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に対する FileStream ディレクトリが見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に対する FileStream ディレクトリが見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
 指定された列はパーティションに存在します。しかし、対応する FILESTREAM ディレクトリは FILESTREAM データ領域で見つかりませんでした。  

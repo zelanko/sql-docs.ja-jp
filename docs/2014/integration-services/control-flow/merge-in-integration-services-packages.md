@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 15e48efc3c54801c14a805e88db56735fbc11adf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62831882"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438239"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、SQL 実行タスクの SQL ステートメントに MERGE ステートメントを含めることができます。 この MERGE ステートメントを使用すると、1 つのステートメントで複数の INSERT、UPDATE、および DELETE 操作を実行できます。  
@@ -38,9 +37,7 @@ ms.locfileid: "62831882"
  MERGE ステートメントの使用をサポートする変換先コンポーネントのサンプルについては、CodePlex コミュニティのサンプル ( [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)) を参照してください。  
   
 ## <a name="using-merge"></a>MERGE を使用する  
- 通常、MERGE ステートメントは、挿入、更新、および削除を含む変更をあるテーブルから別のテーブルに適用する場合に使用します。 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]より前のバージョンでこの処理を行うには、参照変換と複数の OLE DB コマンド変換の両方が必要でした。 参照変換で、1 行ずつ参照を実行して各行が新しいか変更されたかを判断し、 次に、OLE DB コマンド変換で、必要な INSERT、UPDATE および DELETE の操作を実行しました。 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、1 つの MERGE ステートメントを、参照変換と対応する OLE DB コマンド変換に代わって使用できます。  
+ 通常、MERGE ステートメントは、挿入、更新、および削除を含む変更をあるテーブルから別のテーブルに適用する場合に使用します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]より前のバージョンでこの処理を行うには、参照変換と複数の OLE DB コマンド変換の両方が必要でした。 参照変換で、1 行ずつ参照を実行して各行が新しいか変更されたかを判断し、 次に、OLE DB コマンド変換で、必要な INSERT、UPDATE および DELETE の操作を実行しました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、1 つの MERGE ステートメントを、参照変換と対応する OLE DB コマンド変換に代わって使用できます。  
   
 ### <a name="merge-with-incremental-loads"></a>増分読み込みを伴う MERGE  
  Change Data Capture 機能は [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の新機能で、これを使用すると、データ ウェアハウスへの増分読み込みを簡単に実行できます。 パラメーター化された OLE DB コマンド変換を使用して挿入と更新を実行する代わりに、MERGE ステートメントを使用して両方の操作を組み合わせることができます。  

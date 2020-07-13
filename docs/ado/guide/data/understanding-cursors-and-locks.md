@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67923796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759018"
 ---
 # <a name="understanding-cursors-and-locks"></a>カーソルとロックを理解する
 アプリケーションのデータアクセス要件に最適で効率的なカーソルの種類を選択できるように、カーソルの動作を理解することが重要です。 カーソル構成が最適でない場合、データアクセス操作のつらいが遅くなる可能性があります。  

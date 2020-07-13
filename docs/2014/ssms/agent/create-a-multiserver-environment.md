@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63192961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995370"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
   マルチサーバー管理では、マスター サーバー (MSX) 1 台と、ターゲット サーバー (TSX) 1 台以上を設定する必要があります。 すべてのターゲット サーバーで処理されるジョブは、まずマスター サーバーで定義されてからターゲット サーバーにダウンロードされます。  
@@ -58,9 +57,9 @@ ms.locfileid: "63192961"
 ## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、マルチサーバー環境を作成するための一般的な作業について説明します。  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |-----------------|-----------|  
-|マスター サーバーを作成する方法について説明します。|[Make a Master Server](make-a-master-server.md)|  
+|マスター サーバーを作成する方法について説明します。|[マスター サーバーの作成](make-a-master-server.md)|  
 |ターゲット サーバーを作成する方法について説明します。|[ターゲット サーバーの作成](make-a-target-server.md)|  
 |マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへのターゲット サーバーの参加](enlist-a-target-server-to-a-master-server.md)|  
 |マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからのターゲット サーバーの参加の解除](defect-a-target-server-from-a-master-server.md)|  

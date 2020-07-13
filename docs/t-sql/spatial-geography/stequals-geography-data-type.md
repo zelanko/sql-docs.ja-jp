@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6aabb6a29b4d03d8fcec086e75bfd9788554f9cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703685"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスが別の **geography** インスタンスと同一地点を表している場合は 1 を返します。 そうでない場合は 0 を返します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68042268"
   
 ## <a name="arguments"></a>引数  
  *other_geography*  
- **を呼び出したインスタンスと比較される、別の**geography`STEquals()` インスタンスです。  
+ `STEquals()` を呼び出したインスタンスと比較される、別の **geography** インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
@@ -49,7 +49,7 @@ ms.locfileid: "68042268"
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>例  
- `geography` を含むほぼ同じ `STGeomFromText()` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。 `LINESTRING` の中に `POINT` および `POLYGON` が含まれているため、2 つのインスタンスは等しいと見なされます。  
+ `STGeomFromText()` を含むほぼ同じ `geography` インスタンスを 2 つ作成し、`STEquals()` を使用して 2 つのインスタンスが同一であるかどうかをテストする例を次に示します。 `POLYGON` の中に `LINESTRING` および `POINT` が含まれているため、2 つのインスタンスは等しいと見なされます。  
   
 ```  
 DECLARE @g geography;  

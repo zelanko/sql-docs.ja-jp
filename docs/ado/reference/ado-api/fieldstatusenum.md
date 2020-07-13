@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918666"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756817"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [フィールドオブジェクト](../../../ado/reference/ado-api/field-object.md)の[状態](../../../ado/reference/ado-api/status-property-ado-field.md)を指定します。  
   
- **Adfieldpending\* **値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
+ **Adfieldpending \* **値は、状態が設定される原因となった操作を示し、他のステータス値と組み合わせることができます。  
   
-|常時|値|[説明]|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**Adfieldexists が既に存在します**|26|指定したフィールドが既に存在することを示します。|  
 |**Adの Dbadstatus**|12|無効な状態値が ADO から OLE DB プロバイダーに送信されたことを示します。 原因としては、1.0 または1.1 プロバイダーの OLE DB、または[値](../../../ado/reference/ado-api/value-property-ado.md)と[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の不適切な組み合わせが考えられます。|  
@@ -42,7 +42,7 @@ ms.locfileid: "67918666"
 |**adFieldIntegrityViolation**|10|計算されたエンティティまたは派生エンティティであるため、フィールドを変更できないことを示します。|  
 |**adFieldInvalidURL**|17|データソース URL に無効な文字が含まれていることを示します。|  
 |**Adの Disnull**|3|プロバイダーが VT_NULL 型のバリアント値を返し、フィールドが空でないことを示します。|  
-|**adFieldOK**|0|既定。 フィールドが正常に追加または削除されたことを示します。|  
+|**adFieldOK**|0|既定値。 フィールドが正常に追加または削除されたことを示します。|  
 |**adFieldOutOfSpace**|22|移動またはコピー操作を完了するのに十分な記憶域スペースをプロバイダーが取得できないことを示します。|  
 |**adFieldPendingChange**|0x40000|フィールドが削除された後、別のデータ型で再追加されたか、以前に**adFieldOK**の状態だったフィールドの値が変更されたことを示します。 フィールドの最終形式では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドが呼び出された後に[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションが変更されます。|  
 |**adFieldPendingDelete**|0x20000|**削除**操作によって状態が設定されたことを示します。 フィールドは、 **Update**メソッドが呼び出された後に、**フィールド**コレクションから削除するようにマークされています。|  

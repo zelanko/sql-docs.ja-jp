@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ceda2ac8c7d5280515d28e489b0c568804a41242
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108350"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868402"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーを再起動するときと同様に、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラー ログ ファイルを閉じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラー ログの拡張番号を使い回します。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラー ログには、新しいログが作成されたことを示す行が含まれます。  
   
@@ -45,14 +45,14 @@ sp_cycle_agent_errorlog
  なし  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが起動されるたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在のエージェントエラーログの名前が SQLAgent に変更され**ます。 1**;**Sqlagent**は sqlagent になります。 **2**、 **sqlagent. 2**が**sqlagent. 3**になります。 **sp_cycle_agent_errorlog**を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが起動されるたびに、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントエラーログの名前が SQLAgent に変更され**ます。 1**;**Sqlagent**は sqlagent になります。 **2**、 **sqlagent. 2**が**sqlagent. 3**になります。 **sp_cycle_agent_errorlog**を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
   
  このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_cycle_agent_errorlog**の実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント エラー ログを使い回します。  
   
 ```  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cycle_errorlog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

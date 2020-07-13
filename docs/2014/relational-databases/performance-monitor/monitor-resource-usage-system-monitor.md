@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b2d0bbd52159caf117df1b463a8d913a9fe1c79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63032116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038851"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>リソースの利用状況の監視 (システム モニター)
   Microsoft Windows サーバー オペレーティング システムを使用している場合は、システム モニター GUI ツールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパフォーマンスを測定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオブジェクトやパフォーマンス カウンターだけでなく、プロセッサ、メモリ、キャッシュ、スレッド、プロセスなどその他のオブジェクトの動作も確認できます。 これらの各オブジェクトには、それに関連したデバイス使用率、キューの長さ、遅延を測定するカウンターと、スループットおよび内部輻輳を表示するインジケーターのセットがあります。  

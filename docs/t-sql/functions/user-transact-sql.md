@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [SQL Server], database users
 - database usernames [SQL Server]
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0e27b87af8d8a1409225c3c3b576012923a94c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844323"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004061"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   既定値が指定されていない場合に、現在のユーザーのデータベース ユーザー名に対するシステム定義の値を、テーブルに挿入します。  
   

@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDisconnect function [ODBC]
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 788ca2eb7cf37314eb7d5386a23f17123f9ccaff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a5ea73919fbe90719d881fb43108ab1934933708
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343009"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301152"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>診断  
  **Sqldisconnect**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値は、 *handletype*が SQL_HANDLE_DBC で、 *connectionhandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって取得できます。 次の表に、 **Sqldisconnect**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|エラー|[説明]|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01002|切断エラー|切断中にエラーが発生しました。 ただし、切断は成功しました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
@@ -86,7 +86,7 @@ SQLRETURN SQLDisconnect(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  

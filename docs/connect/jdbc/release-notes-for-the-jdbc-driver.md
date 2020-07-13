@@ -1,5 +1,6 @@
 ---
 title: JDBC ドライバーのリリース ノート
+description: この記事には、Microsoft JDBC Driver for SQL Server の各リリースが記載されています。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35073498dd654df3d03f6fc0d66d2cfca758ec3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902294"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634283"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server のリリース ノート
 
@@ -50,7 +51,7 @@ Microsoft JDBC Driver 8.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | Always Encrypted の変更 | 詳細 |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server では、セキュア エンクレーブを使用する Always Encrypted がサポートされるようになりました。 詳細については、以下を参照してください。セキュリティで保護されたエンクレーブが設定された Always Encrypted |
-| 詳細情報とサンプル コード。 | 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)」をご覧ください。 |
+| 詳細情報とサンプル コード。 | 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-with-secure-enclaves.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>SQL Server <sup>1</sup> からテンポラル データ型を取得するときのパフォーマンスの向上
@@ -110,7 +111,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | NTLM の変更 | 詳細 |
 | :--------- | :------ |
 | NTLM 認証モードのサポート。 | この認証モードでは、Windows クライアントと Windows 以外のクライアントの両方が Windows ドメイン ユーザーを使用して SQL Server に対して自身の認証を行うことができます。 |
-| この認証モードを使用するための詳細とサンプル アプリケーション。 | [NTLM 認証を使用した接続](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)に関するページを参照してください。 |
+| この認証モードを使用するための詳細とサンプル アプリケーション。 | [NTLM 認証を使用した接続](using-ntlm-authentication-to-connect-to-sql-server.md)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_useFmtOnly_ を使用した ParameterMetaData のクエリの導入
@@ -118,7 +119,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | useFmtOnly の変更 | 詳細 |
 | :---------- | :------ |
 | **useFmtOnly** 接続プロパティの追加。 | この機能を使用すると、ユーザーは `SET FMTONLY ON` レガシ API を使用して必要に応じて ParameterMetaData にクエリを実行できます。 これは、`sp_describe_undeclared_parameters` が想定どおりに実行されないシナリオに役立ちます。 |
-| 詳細と制限。 | 「[useFMTOnly の使用](../../connect/jdbc/using-usefmtonly.md)」をご覧ください |
+| 詳細と制限。 | 「[useFMTOnly の使用](using-usefmtonly.md)」をご覧ください |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>_Microsoft Azure Key Vault SDK for Java_ を更新 (バージョン 1.2.1)
@@ -127,7 +128,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | :------------------- | :------ |
 | _Microsoft Azure Key Vault SDK for Java_ の Maven の依存関係がバージョン 1.2.1 に更新されました。 | &nbsp; |
 | Maven の依存関係としての _Microsoft Azure SDK for Key Vault WebKey_ が削除されます。 | &nbsp; |
-| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
+| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
@@ -135,7 +136,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | 既知の問題 | 詳細 |
 | :----------- | :------ |
 | NTLM 認証を使用するとき。 | 現在、拡張保護と暗号化された接続を同時に有効化することはできません。 |
-| useFmtOnly を使用するとき。 | SQL の解析ロジックの欠陥に起因する、いくつかの機能のイシューがあります。 詳細と回避策の提案については、[useFmtOnly の使用](../../connect/jdbc/using-usefmtonly.md)に関するページを参照してください。 |
+| useFmtOnly を使用するとき。 | SQL の解析ロジックの欠陥に起因する、いくつかの機能のイシューがあります。 詳細と回避策の提案については、[useFmtOnly の使用](using-usefmtonly.md)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="a-id72-722"></a><a id="72"> 7.2.2
@@ -171,7 +172,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | MSI の変更 | 詳細 |
 | :--------- | :------ |
 | Azure Active Directory マネージド サービス ID (MSI) 認証モードのサポート。 | この認証モードは、"ID" 機能の有効化がサポートされている Azure リソースに適用できます。<br/><br/>ドライバーによって両方の種類のマネージド システム ID (MSI) がサポートされ、セキュリティで保護された接続を確立するための **accessToken** が取得されます。 |
-| この認証モードを使用するための詳細とサンプル アプリケーション。 | 「[Connecting using Azure Active Directory Authentication (Azure Active Directory 認証を利用した接続)](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)」をご覧ください。 |
+| この認証モードを使用するための詳細とサンプル アプリケーション。 | 「[Connecting using Azure Active Directory Authentication (Azure Active Directory 認証を利用した接続)](connecting-using-azure-active-directory-authentication.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>"_オープン サービス ゲートウェイ イニシアチブ_" (OSGi) のサポートを導入
@@ -187,7 +188,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | エラー API の変更 | 詳細 |
 | :--------------- | :------ |
 | SQLServerError API が導入されました。 | 生成されたエラーの追加の詳細をサーバーから取得する getter API。<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| 追加の詳細。 | 「[Handling Errors (エラーの処理)](../../connect/jdbc/handling-errors.md)」をご覧ください。 |
+| 追加の詳細。 | 「[Handling Errors (エラーの処理)](handling-errors.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>"_Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java_" の更新、バージョン 1.6.3
@@ -196,7 +197,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | :------------ | :------ |
 | ADAL4J の Maven の依存関係がバージョン 1.6.3 に更新されました。 | &nbsp; |
 | Maven の依存関係として、_Java Client Runtime for AutoRest_ が導入されています (バージョン 1.6.5)。 | &nbsp; |
-| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
+| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>_Microsoft Azure Key Vault SDK for Java_ を更新 (バージョン 1.2.0)
@@ -205,7 +206,7 @@ tar.gz ファイルのドライバーの場合:[簡体中国語](https://go.micr
 | :------------------- | :------ |
 | _Microsoft Azure Key Vault SDK for Java_ の Maven の依存関係がバージョン 1.2.0 に更新されました。 | &nbsp; |
 | Maven の依存関係として _Microsoft Azure SDK for Key Vault WebKey_、バージョン 1.2.0 が導入されます。 | &nbsp; |
-| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
+| 追加の詳細。 | 「[Feature dependencies of the Microsoft JDBC Driver for SQL Server (Microsoft JDBC Driver for SQL Server の機能の依存関係)](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
@@ -236,23 +237,23 @@ Microsoft JDBC Driver 7.0 for SQL Server は、JDK 1.8 に加え、Java Developm
 
 ### <a name="support-for-spatial-datatypes"></a>空間データ型のサポート
 
-Microsoft JDBC Driver 7.0 for SQL Server で、SQL Server の空間データ型である Geography と Geometry のサポートが提供されるようになりました。 空間データ型の API の詳細とそれらの使用方法については、「[空間データ型の使用](../../connect/jdbc/use-spatial-datatypes.md)」を参照してください。
+Microsoft JDBC Driver 7.0 for SQL Server で、SQL Server の空間データ型である Geography と Geometry のサポートが提供されるようになりました。 空間データ型の API の詳細とそれらの使用方法については、「[空間データ型の使用](use-spatial-datatypes.md)」を参照してください。
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>JDBC 4.3 の実装で、java.sql.Connection の API beginRequest() と endRequest() が導入されました。
 
-Microsoft JDBC Driver 7.0 for SQL Server で、`java.sql.Connection` クラスから `beginRequest()` API と `endRequest()` API が実装されるようになりました。 これらの API は、JDBC 4.3 仕様と JDK 9 で導入されました。 ドライバーでのこれらの API の実装の詳細については、「[JDBC Driver の JDBC 4.3 への準拠](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)」を参照してください。
+Microsoft JDBC Driver 7.0 for SQL Server で、`java.sql.Connection` クラスから `beginRequest()` API と `endRequest()` API が実装されるようになりました。 これらの API は、JDBC 4.3 仕様と JDK 9 で導入されました。 ドライバーでのこれらの API の実装の詳細については、「[JDBC Driver の JDBC 4.3 への準拠](jdbc-4-3-compliance-for-the-jdbc-driver.md)」を参照してください。
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>SQL データの検出と分類のサポート
 
 Microsoft JDBC Driver 7.0 for SQL Server には、SQL データの検出と分類に関するサポートが、この機能に対応している任意のターゲット データベースに向けて用意されています。 ドライバーで、フェッチされた `ResultSet` からこの情報を抽出するための `SQLServerResultSet.getSensitivityClassification()` API が公開されるようになりました。
 
-JDBC Driver でこの機能を使用する方法の詳細については、「[SQL データの検出と分類](../../connect/jdbc/data-discovery-classification-sample.md)」内の例を参照してください。
+JDBC Driver でこの機能を使用する方法の詳細については、「[SQL データの検出と分類](data-discovery-classification-sample.md)」内の例を参照してください。
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>接続プロパティ useBulkCopyForBatchInsert を追加
 
 Microsoft JDBC Driver 7.0 for SQL Server には、新しい接続プロパティである `useBulkCopyForBatchInsert` が導入されています。 このプロパティは、Azure SQL Data Warehouse に対してのみサポートされます。
 
-このプロパティは、既定では無効になっています。 Azure SQL Data Warehouse に大量のデータをプッシュするときに、それを有効にすることで、ユーザー アプリケーションのパフォーマンスを向上させることができます。 このプロパティを有効にすると、バッチ挿入操作の動作が変更され、ユーザー指定のデータを一括コピーする操作に切り替わります。 このプロパティとその制約については、「[Using Bulk Copy API for batch insert operation (一括挿入操作での Bulk Copy API の使用)](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)」を参照してください。
+このプロパティは、既定では無効になっています。 Azure SQL Data Warehouse に大量のデータをプッシュするときに、それを有効にすることで、ユーザー アプリケーションのパフォーマンスを向上させることができます。 このプロパティを有効にすると、バッチ挿入操作の動作が変更され、ユーザー指定のデータを一括コピーする操作に切り替わります。 このプロパティとその制約については、「[Using Bulk Copy API for batch insert operation (一括挿入操作での Bulk Copy API の使用)](use-bulk-copy-api-batch-insert-operation.md)」を参照してください。
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>接続プロパティ cancelQueryTimeout を追加
 
@@ -281,7 +282,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" の更新、バージョン:1.6.0
 
-Microsoft JDBC Driver 7.0 for SQL Server では、"Java 用 Microsoft Azure Active Directory 認証ライブラリ (ADAL4J)" に関する Maven の依存関係が 1.6.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
+Microsoft JDBC Driver 7.0 for SQL Server では、"Java 用 Microsoft Azure Active Directory 認証ライブラリ (ADAL4J)" に関する Maven の依存関係が 1.6.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
 
 ## <a name="64"></a>6.4
 
@@ -303,7 +304,7 @@ Microsoft JDBC Driver 6.4 for SQL Server は、JDBC 仕様 4.1 および 4.2 に
 
 ### <a name="jdbc-43-compliance"></a>JDBC 4.3 に準拠
 
-ドライバーでは、Java Database Connectivity API 4.1 および 4.2 に加えて、4.3 の仕様もサポートされます。 JDBC 4.3 API メソッドは追加されていますが、まだ実装されていません。 詳細については、「[JDBC Driver の JDBC 4.3 への準拠](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)」をご覧ください。
+ドライバーでは、Java Database Connectivity API 4.1 および 4.2 に加えて、4.3 の仕様もサポートされます。 JDBC 4.3 API メソッドは追加されていますが、まだ実装されていません。 詳細については、「[JDBC Driver の JDBC 4.3 への準拠](jdbc-4-3-compliance-for-the-jdbc-driver.md)」をご覧ください。
 
 ### <a name="added-connection-property-sslprotocol"></a>接続プロパティ sslProtocol を追加
 
@@ -339,15 +340,15 @@ JDBC ドライバーでは、SQL Server で使用する `sql_variant` データ�
 
 ### <a name="implemented-prepared-statement-metadata-caching"></a>準備されたステートメントのメタデータのキャッシュを実装
 
-JDBC Driver では、パフォーマンスを向上させるための準備されたステートメントのメタデータのキャッシュが実装されています。 ドライバーでは、準備されたステートメントのメタデータをドライバー内でキャッシュすることがサポートされるようになりました。これには、接続プロパティ `disableStatementPooling` と `statementPoolingCacheSize` が使用されます。 この機能は、既定では無効化されています。 詳細については、「[Prepared statement metadata caching for the JDBC Driver (JDBC Driver での準備されたステートメントのメタデータのキャッシュ)](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)」を参照してください。
+JDBC Driver では、パフォーマンスを向上させるための準備されたステートメントのメタデータのキャッシュが実装されています。 ドライバーでは、準備されたステートメントのメタデータをドライバー内でキャッシュすることがサポートされるようになりました。これには、接続プロパティ `disableStatementPooling` と `statementPoolingCacheSize` が使用されます。 この機能は、既定では無効化されています。 詳細については、「[Prepared statement metadata caching for the JDBC Driver (JDBC Driver での準備されたステートメントのメタデータのキャッシュ)](prepared-statement-metadata-caching-for-the-jdbc-driver.md)」を参照してください。
 
-### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Linux/Mac での Azure AD 統合認証のサポートを追加
+### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Linux/macOS での Azure AD 統合認証のサポートを追加
 
-JDBC ドライバーでは、サポート対象のすべてのオペレーティング システム (Windows、Linux、Mac) 上で Kerberos を使った Azure Active Directory (Azure AD) 統合認証がサポートされるようになりました。 別の方法として、Windows オペレーティング システムでは、ユーザーは mssql-jdbc_auth-\<バージョン>-\<arch>.dll を使用して認証できます。
+JDBC ドライバーでは、サポート対象のすべてのオペレーティング システム (Windows、Linux、macOS) 上で Kerberos を使った Azure Active Directory (Azure AD) 統合認証がサポートされるようになりました。 別の方法として、Windows オペレーティング システムでは、ユーザーは mssql-jdbc_auth-\<バージョン>-\<arch>.dll を使用して認証できます。
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" の更新、バージョン:1.4.0
 
-SQL Server 用 Microsoft JDBC Driver 7.0 では、"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" に関する Maven の依存関係が 1.4.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
+SQL Server 用 Microsoft JDBC Driver 7.0 では、"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" に関する Maven の依存関係が 1.4.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
 
 ## <a name="62"></a>6.2
 
@@ -423,11 +424,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-ドライバーでは、SQL Server 2016 の Always Encrypted 機能がサポートされます。 この機能により、SQL Server インスタンスで機密データがプレーン テキストで表示されることはないことが保証されます。 Always Encrypted はアプリケーション内のデータを透過的に暗号化することによって動作します。そのため、SQL Server では暗号化データのみが処理され、プレーンテキスト値は処理されません。 SQL Server のインスタンスまたはホスト コンピューターが侵害されたとしても、攻撃者が取得できるものは機密データの暗号化テキストだけになります。 詳細については、「[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)」をご覧ください。
+ドライバーでは、SQL Server 2016 の Always Encrypted 機能がサポートされます。 この機能により、SQL Server インスタンスで機密データがプレーン テキストで表示されることはないことが保証されます。 Always Encrypted はアプリケーション内のデータを透過的に暗号化することによって動作します。そのため、SQL Server では暗号化データのみが処理され、プレーンテキスト値は処理されません。 SQL Server のインスタンスまたはホスト コンピューターが侵害されたとしても、攻撃者が取得できるものは機密データの暗号化テキストだけになります。 詳細については、「[JDBC ドライバーでの Always Encrypted の使用](using-always-encrypted-with-the-jdbc-driver.md)」をご覧ください。
 
 ### <a name="internationalized-domain-names"></a>国際化ドメイン名
 
-ドライバーでは、サーバー名に関する国際化ドメイン名 (IDN) がサポートされます。 詳細については、記事「[International features of the JDBC Driver (JDBC Driver の国際化機能)](../../connect/jdbc/international-features-of-the-jdbc-driver.md)」の「Using International Domain Names (国際化ドメイン名の使用)」を参照してください。
+ドライバーでは、サーバー名に関する国際化ドメイン名 (IDN) がサポートされます。 詳細については、記事「[International features of the JDBC Driver (JDBC Driver の国際化機能)](international-features-of-the-jdbc-driver.md)」の「Using International Domain Names (国際化ドメイン名の使用)」を参照してください。
 
 ### <a name="parameterized-queries"></a>パラメーター化されたクエリ
 
@@ -437,11 +438,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 Azure AD 認証は、Azure AD の ID を使用して Azure SQL Database v12 に接続するメカニズムです。 Azure AD 認証は、データベース ユーザーの ID を一元管理するために、SQL Server 認証の代替として使用します。
 
-JDBC Driver 6.0 を使用して、Azure AD の資格情報を JDBC 接続文字列内に指定して Azure SQL Database に接続できます。 詳細については、「[Setting the connection properties (接続プロパティの設定)](../../connect/jdbc/setting-the-connection-properties.md)」の認証プロパティを参照してください。
+JDBC Driver 6.0 を使用して、Azure AD の資格情報を JDBC 接続文字列内に指定して Azure SQL Database に接続できます。 詳細については、「[Setting the connection properties (接続プロパティの設定)](setting-the-connection-properties.md)」の認証プロパティを参照してください。
 
 ### <a name="table-valued-parameters"></a>テーブル値パラメーター
 
-TVP は、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 TVP を使用すると、1 つのパラメーター化コマンドで、クライアント アプリケーションで複数行のデータをカプセル化し、そのデータをサーバーに送信できます。 受信データ行はテーブル変数に格納され、Transact-SQL を使用して操作できます。 詳細については、「[テーブル値パラメーターの使用](../../connect/jdbc/using-table-valued-parameters.md)」を参照してください。
+TVP は、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 TVP を使用すると、1 つのパラメーター化コマンドで、クライアント アプリケーションで複数行のデータをカプセル化し、そのデータをサーバーに送信できます。 受信データ行はテーブル変数に格納され、Transact-SQL を使用して操作できます。 詳細については、「[テーブル値パラメーターの使用](using-table-valued-parameters.md)」を参照してください。
 
 ### <a name="always-on-availability-groups"></a>Always On 可用性グループ
 
@@ -474,19 +475,19 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="jdbc-41-and-42-compliance"></a>JDBC 4.1 および 4.2 への準拠
 
-ドライバーで、Java Database Connectivity API 4.0 だけでなく、4.1 と 4.2 の仕様もサポートされるようになりました。 詳細については、「[JDBC Driver の JDBC 4.1 への準拠](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)」および「[JDBC Driver の JDBC 4.2 への準拠](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)」を参照してください。
+ドライバーで、Java Database Connectivity API 4.0 だけでなく、4.1 と 4.2 の仕様もサポートされるようになりました。 詳細については、「[JDBC Driver の JDBC 4.1 への準拠](jdbc-4-1-compliance-for-the-jdbc-driver.md)」および「[JDBC Driver の JDBC 4.2 への準拠](jdbc-4-2-compliance-for-the-jdbc-driver.md)」を参照してください。
 
 ### <a name="bulk-copy"></a>一括コピー
 
-一括コピー機能を使うと、SQL Server データベースのテーブルまたはビューに大量のデータを簡単にコピーできます。 詳細については、「[JDBC ドライバーでの一括コピーの使用](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)」をご覧ください。
+一括コピー機能を使うと、SQL Server データベースのテーブルまたはビューに大量のデータを簡単にコピーできます。 詳細については、「[JDBC ドライバーでの一括コピーの使用](using-bulk-copy-with-the-jdbc-driver.md)」をご覧ください。
 
 ### <a name="xa-transaction-rollback-option"></a>XA トランザクション ロールバック オプション
 
-既存の準備解除されたトランザクションの自動ロールバックに向けた、新しいタイムアウト オプションがドライバーに追加されました。 詳細については、「[Understanding XA transactions (XA トランザクションについて)](../../connect/jdbc/understanding-xa-transactions.md)」を参照してください。
+既存の準備解除されたトランザクションの自動ロールバックに向けた、新しいタイムアウト オプションがドライバーに追加されました。 詳細については、「[Understanding XA transactions (XA トランザクションについて)](understanding-xa-transactions.md)」を参照してください。
 
 ### <a name="new-kerberos-principal-connection-property"></a>新しい Kerberos プリンシパル接続プロパティ
 
-Kerberos 接続での柔軟性を強化するために、ドライバーで新しい接続プロパティが使用されます。 詳細については、「[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」をご覧ください。
+Kerberos 接続での柔軟性を強化するために、ドライバーで新しい接続プロパティが使用されます。 詳細については、「[Kerberos 統合認証による SQL Server への接続](using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」をご覧ください。
 
 ## <a name="41"></a>4.1
 
@@ -503,4 +504,4 @@ Microsoft JDBC Driver for SQL Server アプリケーションは、Itanium コ�
 
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC ドライバーの概要](overview-of-the-jdbc-driver.md)

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ab87d5d8aa08b7b2860fe52fd097f33af327a94
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62774886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931163"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>ログ配布の監視 (Transact-SQL)
   ログ配布を構成すると、すべてのログ配布サーバーの状態に関する情報を監視できます。 ログ配布操作の履歴と状態は、ログ配布ジョブにより、常にローカルに保存されます。 バックアップ操作の履歴と状態はプライマリ サーバーに格納され、コピー操作と復元操作の履歴と状態はセカンダリ サーバーに格納されます。 リモートの監視サーバーを実装している場合、この情報はリモートの監視サーバーにも格納されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62774886"
   
  これらのテーブルでクエリを実行して、ログ配布セッションの状態を監視できます。 たとえば、ログ配布の状態を参照するには、バックアップ ジョブ、コピー ジョブ、および復元ジョブの状態と履歴を確認します。 以下の監視テーブルをクエリすることにより、特定のログ配布の履歴とエラーの詳細を参照できます。  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|警告ジョブ ID を格納します。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|ログ配布ジョブのエラーの詳細を格納します。 このテーブルをクエリして、あるエージェント セッションのエラーを参照することができます。 必要に応じて、エラーが記録された日付と時刻でエラーを並べ替えることができます。 各エラーは一連の例外として記録されるので、1 つのエージェント セッションで複数のエラー (シーケンス) が記録されることがあります。|  
@@ -49,7 +48,7 @@ ms.locfileid: "62774886"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>ログ配布を監視するためのストアド プロシージャ  
  監視情報と履歴情報は、 **msdb**のテーブルに格納されます。このテーブルには、ログ配布ストアド プロシージャを使用してアクセスできます。 次の表に示すサーバーで、これらのストアド プロシージャを実行します。  
   
-|ストアド プロシージャ|[説明]|プロシージャを実行するサーバー|  
+|ストアド プロシージャ|説明|プロシージャを実行するサーバー|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)|**log_shipping_monitor_primary** テーブルから、指定したプライマリ データベースの監視レコードを返します。|監視サーバーまたはプライマリ サーバー|  
 |[sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)|**log_shipping_monitor_secondary** テーブルから、指定したセカンダリ データベースの監視レコードを返します。|監視サーバーまたはセカンダリ サーバー|  

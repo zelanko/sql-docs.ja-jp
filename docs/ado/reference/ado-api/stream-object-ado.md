@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9812344008bc066b18328036cf36fe106e8845a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67916720"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759658"
 ---
 # <a name="stream-object-ado"></a>Stream オブジェクト (ADO)
 バイナリデータまたはテキストのストリームを表します。  

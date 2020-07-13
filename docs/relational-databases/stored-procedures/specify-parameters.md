@@ -15,15 +15,15 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56a9e844499d8cee843b596380edb726f3efdabe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70110271"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998134"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   プロシージャのパラメーターを指定することで、呼び出し元のプログラムからプロシージャの本体に値を渡すことができます。 これらの値は、プロシージャの実行中にさまざまな目的で使用できます。 プロシージャ パラメーターも、パラメーターが OUTPUT パラメーターとしてマークされている場合は、呼び出し元のプログラムに値を返すことができます。  
   
  プロシージャには最大 2,100 個のパラメーターを指定できます。各パラメーターには、名前、データ型、および方向が割り当てられます。 パラメーターには、必要に応じて既定値を割り当てることもできます。  

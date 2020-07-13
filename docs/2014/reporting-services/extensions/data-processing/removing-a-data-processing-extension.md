@@ -15,17 +15,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63163972"
 ---
 # <a name="removing-a-data-processing-extension"></a>データ処理拡張機能の削除
   データ処理拡張機能を削除する場合は、データ処理拡張機能の **Extension** 要素を構成ファイルから削除するだけです。 レポート サーバーに加えてレポート デザイナーにもエントリを作成した場合は、RSReportServer.config ファイルと RSReportDesigner.config ファイルの両方から **Extension** 要素を削除します。 構成情報を削除すると、そのコンポーネントではデータ処理拡張機能を使用できなくなります。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の拡張機能](../reporting-services-extensions.md)   
+ [Reporting Services 拡張機能](../reporting-services-extensions.md)   
  [データ処理拡張機能の実装](implementing-a-data-processing-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../reporting-services-extension-library.md)  
   

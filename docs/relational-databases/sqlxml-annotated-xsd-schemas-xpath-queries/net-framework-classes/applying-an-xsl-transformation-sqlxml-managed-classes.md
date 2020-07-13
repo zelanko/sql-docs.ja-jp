@@ -1,5 +1,6 @@
 ---
 title: XSL 変換の適用 (SQLXML)
+description: SQLXML マネージクラスの SqlXmlCommand オブジェクトの XslPath プロパティを使用して、XSL 変換を適用する SQL クエリの例を表示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48a42ec1b450d5a093cc5af0719e26358ef5e8d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6ecdb718dec421703ffe97ec1b36617476b99ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649721"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、AdventureWorks データベースに対して SQL クエリを実行します。 クエリ結果には XSL 変換が適用され、従業員の名前と姓を示す 2 列のテーブルが生成されます。  
   
  SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとそのディレクトリパスを指定するために使用されます。  

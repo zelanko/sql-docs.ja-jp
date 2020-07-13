@@ -1,5 +1,6 @@
 ---
-title: XA トランザクションについて | Microsoft Docs
+title: XA トランザクションについて
+description: Microsoft JDBC Driver for SQL Server では、Java Platform Enterprise Edition/JDBC 2.0 のオプションの分散トランザクションがサポートされています。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916998"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528736"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて
 
@@ -48,7 +49,7 @@ ms.locfileid: "80916998"
   
 - MS DTC では、密に結合された XA ブランチもサポートされ、同じグローバル トランザクション ID (GTRID) を持つ複数の XA ブランチが 1 つの MS DTC トランザクション ID にマップされます。 このサポートにより、密に結合された複数の XA ブランチが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのリソース マネージャーで相互の変更を認識できるようになります。
   
-- アプリケーションは、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグによって、XA ブランチ トランザクション ID (BQUAL) が異なり、グローバル トランザクション ID (GTRID) および形式 ID (FormatID) が同じである、密に結合された XA トランザクションを使用できるようになります。 この機能を使用するには、XAResource.start メソッドの flags パラメーターで、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) を次のように設定する必要があります。
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) フラグにより、アプリケーションでは、XA ブランチ トランザクション ID (BQUAL) は異なるが、グローバル トランザクション ID (GTRID) と形式 ID (FormatID) は同じである、密に結合された XA トランザクションを使用できるようになります。 この機能を使用するには、XAResource.start メソッドの flags パラメーターで、[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) を次のように設定する必要があります。
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -140,19 +141,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 0`
   
-     既定のタイムアウトは使用されず、クライアントにタイムアウトの最大値は適用されないことを意味します。 この場合、クライアントが XAResource.setTransactionTimeout を使用してタイムアウトを設定する場合にのみ、トランザクションにタイムアウトが適用されます。  
+     既定のタイムアウトは使用されず、クライアントにタイムアウトの最大値は適用されないことを意味します。 この場合、クライアントで XAResource.setTransactionTimeout を使用してタイムアウトが設定されている場合にのみ、トランザクションにタイムアウトが適用されます。  
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 60 秒のタイムアウトが適用されることを意味します。 クライアントがタイムアウトを指定する場合、そのタイムアウト値が使用されます。 タイムアウトの最大値は適用されません。  
+     クライアントでタイムアウトが指定されていない場合は、すべてのトランザクションに 60 秒のタイムアウトが適用されることを意味します。 クライアントがタイムアウトを指定する場合、そのタイムアウト値が使用されます。 タイムアウトの最大値は適用されません。  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウトが適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、60 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
+     クライアントでタイムアウトが指定されていない場合は、すべてのトランザクションに 30 秒のタイムアウトが適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、60 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     クライアントがタイムアウトを指定しない場合、すべてのトランザクションに 30 秒のタイムアウト (最大値) が適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、30 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
+     クライアントでタイムアウトが指定されていない場合、すべてのトランザクションに 30 秒のタイムアウト (最大値) が適用されることを意味します。 クライアントが何らかのタイムアウトを指定する場合、30 秒 (最大値) 以内であれば、クライアントのタイムアウトが使用されます。  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>sqljdbc_xa.dll のアップグレード
 

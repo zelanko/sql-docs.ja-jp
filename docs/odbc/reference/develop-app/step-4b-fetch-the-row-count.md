@@ -12,16 +12,16 @@ helpviewer_keywords:
 - row count [ODBC]
 - application process [ODBC], fetching row count
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9455c6589ed93a51e404f3e50d1cb86a0c0c8476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31ccbd15ae435165ea007fa9f3c0505c1dcc5aa0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68114157"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302963"
 ---
-# <a name="step-4b-fetch-the-row-count"></a>ステップ 4b: 行数のフェッチ
+# <a name="step-4b-fetch-the-row-count"></a>手順 4b: 行数をフェッチする
 次の手順では、次の図に示すように行数を取得します。  
   
  ![行数のフェッチ](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  

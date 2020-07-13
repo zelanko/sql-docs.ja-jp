@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104933"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)
@@ -32,9 +32,9 @@ ms.locfileid: "66104933"
 2.  **[系列データ]** をクリックし、 **ToolTip** プロパティに文字列または式を入力します。 グラフ固有のキーワードを使用して、グラフ上の別の要素を表すことができます。 詳細については、「 [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
- [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフ上のデータポイントの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS &#40;凡例項目のテキストを変更&#41;](chart-legend-change-item-text-report-builder.md)   
+ [グラフの系列の色の書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [レポートへのドリルスルー アクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

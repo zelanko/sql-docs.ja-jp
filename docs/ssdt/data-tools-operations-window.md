@@ -32,7 +32,7 @@ ms.locfileid: "75241670"
   
 -   **SQL Server オブジェクト エクスプローラー**でのデータベースの展開。 この操作によってデータベース モデルのインポートが開始されます。  
   
--   データベースへの変更のコミット、または Transact**SQL エディターの** [データベースの更新]\- を使用したスクリプトの生成。 詳細については、「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」を参照してください。  
+-   データベースへの変更のコミット、または Transact\-SQL エディターの **[データベースの更新]** を使用したスクリプトの生成。 詳細については、「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」を参照してください。  
   
 -   **SQL Server オブジェクト エクスプローラー**からのオブジェクトの削除。 詳細については、「[オブジェクトを削除し、依存関係を解決する方法](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)」を参照してください。  
   

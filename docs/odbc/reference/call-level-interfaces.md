@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135673"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306543"
 ---
 # <a name="call-level-interfaces"></a>コールレベル インターフェイス
 SQL ステートメントを DBMS に送信するための最後の手法は、呼び出しレベルのインターフェイス (CLI) を使用することです。 呼び出しレベルのインターフェイスには、アプリケーションプログラムから呼び出すことができる DBMS 関数のライブラリが用意されています。 そのため、SQL を別のプログラミング言語と blend するのではなく、呼び出しレベルのインターフェイスは、C の文字列、i/o、または数値演算ライブラリなど、ほとんどのプログラマが使用することに慣れているルーチンライブラリに似ています。埋め込み SQL をサポートする Dbms には、呼び出しレベルのインターフェイスが既にあります。 ただし、これらの呼び出しは非公開であり、予告なしに変更される可能性があります。  

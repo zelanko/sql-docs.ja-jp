@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982186"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262150"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "73982186"
   
  同じ種類の複数のリソースがコンピューター上に存在する場合、オブジェクトによっては複数のインスタンスがある場合があります。 たとえば、システムに複数のプロセッサが搭載されている場合、オブジェクトの種類 **Processor** には複数のインスタンスがあります。 オブジェクトの種類 **Databases** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースごとに 1 つのインスタンスがあります。 **Memory Manager** オブジェクトなど一部のオブジェクトの種類には、1 しかインスタンスのないものもあります。 あるオブジェクトの種類に複数のインスタンスがある場合には、インスタンスごとに、または多くの場合は一度にすべてのインスタンスに、統計を追跡するためのカウンターを追加できます。 既定のインスタンスのカウンターは、**SQLServer:** _\<オブジェクト名>_ という形式で表示されます。 名前付きインスタンスのカウンターは、**MSSQL$** _\<インスタンス名>_ **:** _\<カウンター名>_ または **SQLAgent$** _\<インスタンス名>_ **:** _\<カウンター名>_ という形式で表示されます。  
   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス カウンター値は、Windows パフォーマンス カウンター (WPC) エンジンを使用して生成されます。 一部のカウンター値は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって直接計算されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が WPC エンジンに基準値を提供し、これによって、必要な計算 (パーセントなど) が実行されます。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動的管理ビューでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成されるすべてのカウンターと元の値が表示されます。 `cntr_type` 列は、カウンターの種類を示します。 WPC エンジンが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターをどのように処理するかは、この種類によって異なります。 パフォーマンス カウンターの種類の詳細については、[WMI のドキュメント](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)を参照してください。
+  
  グラフでカウンターを追加または削除し、グラフ設定を保存して、システム モニターを起動したときに監視する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトとカウンターを指定できます。  
   
  システム モニターは、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターの統計を表示するように構成することができます。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターにしきい値を設定して、カウンターがしきい値を超えたときに警告を生成することもできます。 警告を構成する方法の詳細については、「 [SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)」を参照してください。  
-  
-> [!TIP]  
->  動的管理ビュー [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) のクエリによって、パフォーマンス カウンターの値を返すこともできます。  
+    
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の統計情報は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされているときにのみ表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを停止して再起動すると、SQL Server の統計情報の表示も中断され、自動的に再開されます。 システム モニター スナップインでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていないときでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカウンターが表示されます。 クラスター化されたインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているノードでのみ、パフォーマンス カウンターが機能します。  

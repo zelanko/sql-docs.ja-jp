@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: rothja
+ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 57222c852ac2ba8c1aedf42075b69587a4b3843d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925465"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78896574"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server でのクエリ通知
 
@@ -35,7 +35,7 @@ ADO.NET を使用してクエリ通知を実装する方法には、次の 3 つ
   
 通知は、SELECT および EXECUTE ステートメントに対して設定できます。 EXECUTE ステートメントを使用している場合、SQL Server はその EXECUTE ステートメント自体ではなく、実行されるコマンドについて通知を登録します。 コマンドは、SELECT ステートメントの要件と制限を満たしている必要があります。 通知を登録するコマンドに複数のステートメントが含まれている場合、Database Engine によりバッチ内のステートメントごとに通知が作成されます。  
   
-データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「**通知の計画**」の「**効率的なクエリ通知方法の計画**」および「[クエリ通知に代わる方法](https://go.microsoft.com/fwlink/?LinkId=211984)」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
+データ変更時に、信頼できる即時の通知が必要なアプリケーションを開発している場合は、SQL Server オンライン ブックの「[通知の計画](https://go.microsoft.com/fwlink/?LinkId=211984)」の「**効率的なクエリ通知方法の計画**」および「**クエリ通知に代わる方法**」を参照してください。 クエリ通知と SQL Server Service Broker の詳細については、SQL Server オンライン ブックのトピックへの次のリンクを参照してください。  
   
 **SQL Server のドキュメント**  
   

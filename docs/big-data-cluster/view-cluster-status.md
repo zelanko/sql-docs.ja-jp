@@ -24,7 +24,7 @@ ms.locfileid: "73531588"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio を使用する
 
-**Azure Data Studio** の最新の [Insider ビルド](https://aka.ms/getazuredatastudio)をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
+[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新の **Insider ビルド**をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
 
 1. まず、Azure Data Studio でご利用のビッグ データ クラスターへの接続を作成します。 詳細については、「[Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a29fc2d02cb46dda44fa22b2344cbab475443f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b6397b5d675546bf41102f037b68c0022bec74df
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096526"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280772"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>カーソルの種類およびコンカレンシーの組み合わせ
 > [!IMPORTANT]  

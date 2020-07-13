@@ -18,15 +18,14 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: aac8d380c6ea4eec67a0b1f98dbfc22ae71ac1c6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73785282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007149"
 ---
 # <a name="using-data-files-and-format-files"></a>データ ファイルとフォーマット ファイルの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   最も単純な一括コピー プログラムでは次の操作を実行します。  
   
@@ -44,8 +43,7 @@ ms.locfileid: "73785282"
   
 3.  **Bcp_exec**を呼び出して、一括コピー操作を実行します。  
 
- 結果セットを生成するステートメントであればどのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントも使用できます。 作成されるデータ ファイルには [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットが格納されます。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで複数の結果セットが生成される場合、一括コピーでは、最初の結果セットよりも後にある結果セットは無視されます。  
+ 結果セットを生成するステートメントであればどのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントも使用できます。 作成されるデータ ファイルには [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットが格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで複数の結果セットが生成される場合、一括コピーでは、最初の結果セットよりも後にある結果セットは無視されます。  
   
  列のデータがテーブルとは異なる形式で格納されるデータファイルを作成するには、 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を呼び出して、変更する列の数を指定した後、形式を変更する各列に対して[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を呼び出します。 これは、 **bcp_init**を呼び出した後、 **bcp_exec**を呼び出す前に行います。 **bcp_colfmt**は、列のデータをデータファイルに格納する形式を指定します。 これは、一括コピー時に使用できます。**Bcp_colfmt**を使用して、行ターミネータと列ターミネータを設定することもできます。 たとえば、データにタブ文字が含まれていない場合は**bcp_colfmt**を使用してタブ区切りファイルを作成し、各列のターミネータとしてタブ文字を設定できます。  
   
@@ -53,7 +51,7 @@ ms.locfileid: "73785282"
   
  フォーマットファイルで記述されたデータファイルからを一括コピーする場合は、 **bcp_init**の後、 **bcp_exec**する前に[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を呼び出してフォーマットファイルを読み取ります。  
   
- **Bcp_control**関数は、データファイルからへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一括コピー時にいくつかのオプションを制御します。 **bcp_control**は、終了前のエラーの最大数、一括コピーを開始するファイル内の行、停止する行、バッチサイズなどのオプションを設定します。  
+ **Bcp_control**関数は、データファイルからへの一括コピー時にいくつかのオプションを制御し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **bcp_control**は、終了前のエラーの最大数、一括コピーを開始するファイル内の行、停止する行、バッチサイズなどのオプションを設定します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

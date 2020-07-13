@@ -2,22 +2,20 @@
 ms.date: 05/21/2019
 ms.topic: include
 ms.prod: sql
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: 991261683a84b3afc200308bd82d8fce8e95e96d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 394ca3a34dfabcf902a8551ee0dc930affe3c6b9
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68161811"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107047"
 ---
-## <a name="info_tip-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) SQL ツールのヘルプを参照する
+## <a name="get-help-for-sql-tools"></a>SQL ツールのヘルプを参照する
 
+- [さまざまなヘルプの利用方法](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [Azure Data Studio に関する Git イシューの提出](https://github.com/Microsoft/azuredatastudio/issues)
 - [Azure Data Studio への投稿](https://github.com/Microsoft/azuredatastudio)
-- [SQL クライアント ツールのフォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
+- [SQL クライアント ツールのフォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
-- [SSMS および SSDT に対するコメントや提案 - UserVoice](https://aka.ms/sqlfeedback)
 - [法人のお客様向けサポート オプション](https://support.microsoft.com/gp/support-options-for-business)
-- [Microsoft へのお問い合わせ](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [さまざまなヘルプの利用方法](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

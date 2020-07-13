@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6eb4b54df98cfbf297e6347dac336aa7405d1347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006290"
 ---
 # <a name="comment-mdx-double-slash"></a>コメント MDX の二重スラッシュ
@@ -31,14 +31,14 @@ ms.locfileid: "68006290"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  コメントは、別の行に挿入することも、多次元式 (MDX) スクリプト行の末尾で入れ子にすることも、MDX ステートメント内で入れ子にすることもできます。 サーバーはコメントを評価しません。  
   
  単一行のみのコメントには、// を使用します。 // を使用して挿入するコメントは、改行文字で区切ります。  
   
  コメントの長さには制限がありません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  この演算子の使用例を次に示します。  
   
 ```  

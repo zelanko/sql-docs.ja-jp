@@ -1,6 +1,6 @@
 ---
 title: IF...ELSE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Transact-SQL ステートメントで制御フローを指定する IF-ELSE ステートメントの Transact-SQL 言語参照。
 ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,15 +21,15 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 580339512f25c409030c7fdd18869a0269cddde8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71823610"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007360"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 IF キーワードおよびその条件に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、条件が満たされる (ブール式から TRUE が返される) 場合に実行されます。 オプションの ELSE キーワードは、IF 条件が満たされない (ブール式から FALSE が返される) 場合に実行される別の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71823610"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   

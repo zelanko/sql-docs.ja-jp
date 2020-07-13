@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLTransact function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLTransact
 ms.assetid: 1d7f0c4c-f092-4bbb-9643-f7c9d07ed1af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71361d479a1d4a98a49aaafed72577321c091a76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8a9c4478f82e7466f6c3b6a613852b679fd79219
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67948898"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299242"
 ---
 # <a name="sqltransact-paradox-driver"></a>SQLTransact (Paradox ドライバー)
 > [!NOTE]  

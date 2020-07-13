@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQLPostInstallerError function [ODBC]
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdceff5c4e175ba9f135c6e5e4405933b1a86b7c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68053672"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306893"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 関数
 **互換性**  
@@ -57,7 +57,7 @@ RETCODE SQLPostInstallerError(
   
 ## <a name="related-functions"></a>関連する関数  
   
-|対象|以下を参照してください。|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバーの追加、変更、または削除|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
 |データソースの追加、変更、または削除|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  

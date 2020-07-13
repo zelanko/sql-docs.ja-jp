@@ -12,22 +12,20 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80d82513b22d2a50aedb37955a210dd33746db86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014887"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0 での XPath クエリの使用
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では注釈付き XSD スキーマがサポートされており、データベースに格納されているリレーショナル データの XML ビューを作成できます。 XPath 言語のサブセットを使用すると、注釈付き XSD スキーマで作成された XML ビューに対してクエリを実行できます。  
   
 > [!NOTE]  
->  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 XPath の詳細については、「」の World Wide Web コンソーシアム (W3C) で定義さhttp://www.w3.org/TR/xpathれている xpath 標準を参照してください。  
+>  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 XPath の詳細については、「」の World Wide Web コンソーシアム (W3C) で定義されている XPath 標準を参照してください http://www.w3.org/TR/xpath 。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XPath クエリの使用の概要 &#40;SQLXML 4.0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  
@@ -40,8 +38,7 @@ ms.locfileid: "66014570"
  SQLXML 4.0 での XPath クエリの使用例を示します。  
   
  [&#40;SQLXML 4.0&#41;の XPath データ型](xpath-data-types-sqlxml-4-0.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および XSD のデータ型とは大きく異なる、XPath データ型について説明します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および XSD のデータ型とは大きく異なる、XPath データ型について説明します。  
   
 ## <a name="see-also"></a>参照  
  [クライアント側の XML 書式設定 &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  

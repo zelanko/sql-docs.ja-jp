@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f73ae3fa0600bad94493ab08c6248ee422cdb56
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67918501"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758738"
 ---
 # <a name="getstring-method-example-vb"></a>GetString メソッドの例 (VB)
 この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドを示します。  

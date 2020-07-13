@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 812cbf22d8013b0f52f889d1e34039d688e411aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63255388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047603"
 ---
 # <a name="updatable-subscriptions"></a>[更新可能なサブスクリプション]
-  トランザクションレプリケーションでは、レプリケートされたデータを読み取り専用として扱う必要があります。ただし、更新可能なサブスクリプションを使用し[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て、サブスクライバーでレプリケートされたデータを変更することができます。 サブスクライバーでデータを変更する必要がある場合は、要件に応じて次のいずれかのオプションを選択してください。  
+  トランザクション レプリケーションの場合、レプリケートされたデータは読み取り専用として扱う必要がありますが、更新可能なサブスクリプションを使用することにより、レプリケートされたデータを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーで変更できます。 サブスクライバーでデータを変更する必要がある場合は、要件に応じて次のいずれかのオプションを選択してください。  
   
 |更新可能なサブスクリプション タイプ|必要条件|  
 |---------------------------------|------------------|  
@@ -28,7 +27,7 @@ ms.locfileid: "63255388"
 |キュー更新|サブスクライバーのデータを更新するために、パブリッシャーとサブスクライバーを接続する必要はありません。 更新をオフラインで実行し、後からパブリッシャーとサブスクライバーの間で同期させることができます。|  
   
 ## <a name="options"></a>オプション  
- **サブスクライバーの変更のレプリケート**  
+ **[以下のサブスクライバーの変更内容をレプリケートします]**  
  更新可能にする必要のある各サブスクライバーの **[レプリケート]** 列のチェック ボックスをオンにします。 これらの更新可能なサブスクライバーに対して、 **[パブリッシャーでのコミット]** 列のドロップダウン リスト ボックスから適切なオプションを選択します。  
   
 -   即時更新サブスクリプションに対して **[変更を同時にコミットする]** を選択します。  
@@ -36,9 +35,9 @@ ms.locfileid: "63255388"
 -   キュー更新サブスクリプションに対して **[変更をキューに登録し、可能な場合はコミット]** を選択します。  
   
 ## <a name="see-also"></a>参照  
- [プルサブスクリプションを作成する](create-a-pull-subscription.md)   
- [プッシュサブスクリプションを作成する](create-a-push-subscription.md)   
- [パブリケーションをサブスクライブする](subscribe-to-publications.md)   
- [トランザクションレプリケーションの更新可能なサブスクリプション](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [ssSDSFull](create-a-push-subscription.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091597"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298972"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos による行セットの行の更新
 **SQLSetPos**の更新操作により、データソースは、バインドされた各列のアプリケーションバッファーのデータを使用して、テーブルの1つまたは複数の選択した行を更新します (長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE 場合を除きます)。 バインドされていない列は更新されません。  

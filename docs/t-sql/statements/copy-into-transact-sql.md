@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (プレビュー)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行います。
-ms.date: 12/13/2019
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,25 +18,35 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 455e75d13c8b083d37bbab1c6a15916871b1ffba
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903819"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987439"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。
+この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。 次の機能に COPY を使用します。
+
+- データ ウェアハウスに対する厳格な CONTROL アクセス許可を使用せずに、低い特権のユーザーを使用して読み込むことができます。
+- 追加のデータベース オブジェクトを作成することなく、1 つの T-SQL ステートメントを実行できます。
+- **区切り記号** (文字列、フィールド、行) **が** **文字列で区切られた列内でエスケープされている** CSV ファイルを適切に解析して読み込むことができます。
+- Shared Access Signature (SAS) を使用してストレージ アカウント キーを公開しなくても、より洗練されたアクセス許可モデルを指定できます。
+- ERRORFILE の場所 (REJECTED_ROW_LOCATION) として異なるストレージ アカウントを使用できます。
+- ターゲット列ごとに既定値をカスタマイズし、特定のターゲット列に読み込むソース データ フィールドを指定できます。
+- CSV ファイルのカスタム行ターミネータを指定できます。
+- CSV ファイルで SQL Server の日付形式を活用できます。
+- 保存場所のパスにワイルドカードや複数のファイルを指定できます。
 
 > [!NOTE]  
 > COPY ステートメントは、現在、パブリック プレビュー段階にあります。
 
 ## <a name="syntax"></a>構文  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -130,24 +140,32 @@ WITH
 
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
-- Shared Access Signatures (SAS) を使用した認証 *IDENTITY:* "Shared Access Signature" の値が含まれている定数 
-  *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
-  最低限必要な権限: READ および LIST
-
+- Shared Access Signatures (SAS) を使用した認証
+  
+  - *IDENTITY:* "Shared Access Signature" の値が含まれている定数
+  - *SECRET:*  [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  -  最低限必要な権限: READ および LIST
+  
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-   *SECRET:* AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET:* AAD サービス プリンシパル アプリケーション キー
+  -  最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
 
-  > [!NOTE]  
-  > OAuth 2.0 トークン エンドポイント **V1** を使用してください
-
-- ストレージ アカウント キーを使用した認証 *IDENTITY:* "ストレージ アカウント キー" の値が含まれている定数 
-  *SECRET:* ストレージ アカウント キー
+- ストレージ アカウント キーを使用した認証
   
-- [マネージド ID ](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証 *IDENTITY:* "マネージド ID" の値が含まれている定数。最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者 
+  - *IDENTITY:* "ストレージ アカウント キー" の値が含まれている定数
+  - *SECRET:* ストレージ アカウント キー
   
-- AAD ユーザーを使用した認証 *CREDENTIAL は必須ではありません*。最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+- [マネージド ID](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet サービス エンドポイント) を使用した認証
+  
+  - *IDENTITY:* "マネージド ID" の値が含まれている定数
+  - 最低限必要な RBAC ロール: AAD 登録済み SQL Database サーバーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
+  
+- AAD ユーザーを使用した認証
+  
+  - *CREDENTIAL は必須ではありません*
+  - 最低限必要な RBAC ロール: AAD ユーザーに対するストレージ BLOB データ共同作成者またはストレージ BLOB データ所有者
 
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* は CSV にのみ適用されます。 COPY ステートメント内でディレクトリを指定します。拒否された行と該当するエラー ファイルがそこに書き込まれます。 ストレージ アカウントからの完全なパスを指定することも、コンテナーを基準とした相対パスを指定することもできます。 指定したパスが存在しない場合は、自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 
@@ -208,21 +226,20 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
 - .deflate - **DefaultCodec** (Parquet および ORC のみ)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* は CSV に適用され、CSV ファイルで引用符文字 (文字列の区切り記号) として使用される 1 バイト文字を指定します。 指定されていない場合は、RFC 4180 標準の定義に従って引用符文字 (") が引用符文字として使用されます。 拡張 ASCII 文字は、FIELDQUOTE の UTF-8 ではサポートされていません。
+*FIELDQUOTE* は CSV に適用され、CSV ファイルで引用符文字 (文字列の区切り記号) として使用される 1 バイト文字を指定します。 指定されていない場合は、RFC 4180 標準の定義に従って引用符文字 (") が引用符文字として使用されます。 FIELDQUOTE の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 > [!NOTE]  
 > FIELDQUOTE 文字は、2 バイト FIELDQUOTE (区切り記号) が存在する文字列型の列ではエスケープされます。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータは、16 進数表記を使用して指定できます。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。
-詳細については、「[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)」を参照してください。
+*FIELDTERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用されるフィールド ターミネータを指定します。 フィールド ターミネータは、16 進数表記を使用して指定できます。 フィールド ターミネータにはマルチ文字を使用できます。 既定のフィールド ターミネータは (,) です。 FIELDTERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* は CSV にのみ適用されます。 CSV ファイルで使用される行ターミネータを指定します。 行ターミネータは、16 進数表記を使用して指定できます。 行ターミネータにはマルチ文字を使用できます。 既定では、行ターミネータは \r\n です。 
 
 COPY コマンドでは、\n (改行) を指定すると、その前に \r 文字が付けられ、\r\n になります。 \n 文字のみを指定するには、16 進数表記 (0x0A) を使用します。 マルチ文字の行ターミネータを 16 進数で指定する場合は、各文字の間で 0x を指定しないでください。
 
-行ターミネータの指定に関する追加のガイダンスについては、次の[ドキュメント](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)を参照してください。
+ROW TERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字はサポートされていません。
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* は CSV に適用され、COPY コマンドに対して、すべてのファイルで最初に読み取られる行番号を指定します。 値は 1 から始まり、これが既定値です。 2 に設定すると、データが読み込まれるときに、すべてのファイルの最初の行 (ヘッダー行) がスキップされます。 行は、行ターミネータの存在に基づいてスキップされます。
@@ -305,7 +322,7 @@ WITH (
     ENCODING = 'UTF8',
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
-    ERRORFILE = '/errorsfolder/',--path starting from the storage container
+    ERRORFILE = '/errorsfolder',--path starting from the storage container
     IDENTITY_INSERT = 'ON'
 )
 ```
@@ -358,13 +375,26 @@ WITH (
 )
 ```
 
+### <a name="f-load-using-msi-credentials"></a>F. MSI 資格情報を使用して読み込む
+
+```sql
+COPY INTO dbo.myCOPYDemoTable
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
+WITH (
+    FILE_TYPE = 'CSV',
+    CREDENTIAL = (IDENTITY = 'Managed Identity'),
+    FIELDQUOTE = '"',
+    FIELDTERMINATOR=','
+)
+```
+
 ## <a name="faq"></a>よく寄せられる質問
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase と比較した場合の COPY コマンドのパフォーマンスについて教えてください。
-COPY コマンドを使用すると、機能が一般公開される時点までにはパフォーマンスが向上します。 パブリック プレビュー中に最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 現在、INSERT SELECT を使用する場合のパフォーマンスは、PolyBase と同等です。 
+ワークロードによっては、COPY コマンドのパフォーマンスが向上します。 パブリック プレビュー中に最適な読み込みパフォーマンスを得るには、CSV の読み込み時に複数のファイルに入力を分割することを検討してください。 プレビュー期間中にパフォーマンスの結果をチームと共有してください。 [https://github.com/mysqljs/mysql/](sqldwcopypreview@service.microsoft.com)
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV ファイルを読み込む COPY コマンドに関するファイルの分割ガイダンスについて教えてください。
-ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 COPY コマンドが一般公開されている場合、圧縮されていないファイルを分割する必要はありません。 
+ファイル数に関するガイダンスを、次の表で説明します。 推奨されるファイル数に到達すると、大きいファイル程パフォーマンスが向上します。 単純なファイル分割エクスペリエンスについては、次の[ドキュメント](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)を参照してください。 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

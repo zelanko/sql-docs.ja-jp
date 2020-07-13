@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56bcbc1bc1ba5f46fb02ca7520f98320586d70e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67925256"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758158"
 ---
 # <a name="getting-data"></a>データの取得
 [Ado の基礎](../../../ado/guide/data/ado-fundamentals.md)、および特に[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)の例では、ado アプリケーションの作成に関連する4つの主要な操作 (データの取得、データの検査、データの編集、データの更新) が導入されました。 ここでは、データの取得について詳しく説明します。  

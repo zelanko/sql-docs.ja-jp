@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717786"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock イベント クラス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Deadlock イベント クラスは、ロックの取得を試行したときに、その試行がデッドロックの一部になり、デッドロックの対象として選択されたために取り消す場合に生成されます。  
   
  Lock:Deadlock イベント クラスを使用して、デッドロックがいつ発生し、どのオブジェクトが関係しているかを監視します。 この情報を使用すると、デッドロックがアプリケーションのパフォーマンスに重大な影響を及ぼしているかどうかを判断できます。 次に、アプリケーション コードを調べ、デッドロックが最小になるように変更できるかどうかを判断できます。  

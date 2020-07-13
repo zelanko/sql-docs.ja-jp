@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe33e513ebb5645952fcf1b57dc819e64af90315
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67932050"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762345"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale および Precision プロパティの例 (VB)
 この例では、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

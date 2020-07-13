@@ -88,12 +88,12 @@ SQL Server の 2 ノード共有ディスクによるフェールオーバー �
     sudo ip addr show
     ```
 
-1. 各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`/etc/hosts` で `vi` を編集できます。 
+1. 各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   次の例では、`/etc/hosts` および `sqlfcivm1` という名前の 2 つのノードが追加された `sqlfcivm2` を示します。
+   次の例では、`sqlfcivm1` および `sqlfcivm2` という名前の 2 つのノードが追加された `/etc/hosts` を示します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4

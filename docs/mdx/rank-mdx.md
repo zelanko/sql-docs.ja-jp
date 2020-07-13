@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1081cacd0676f4eb0512780e9ddc7641edb99ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037069"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
@@ -37,7 +37,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  数値式が指定されている場合、 **Rank**関数は、組に対して指定された数値式を評価することによって、指定された組の1から始まる順位を決定します。 数値式が指定されている場合、 **rank**関数は、セット内の重複する値を持つ組に同じランクを割り当てます。 このように重複する値に同じランクを割り当てる動作は、セット内の後続の組のランクに影響を与えます。 たとえば、セットは次の組で`{(a,b), (e,f), (c,d)}`構成されます。 タプル`(a,b)`は組`(c,d)`と同じ値を持ちます。 組`(a,b)`のランクが1の場合、と`(a,b)` `(c,d)`の両方にランクが1になります。 ただし、`(e,f)` のランクは 3 になります。 ランクが 2 の組はこのセットには存在できません。  
   
  数値式が指定されていない場合、 **Rank**関数は、指定された組の1から始まる序数位置を返します。  
@@ -82,6 +82,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [MDX&#41;&#40;順序](../mdx/order-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

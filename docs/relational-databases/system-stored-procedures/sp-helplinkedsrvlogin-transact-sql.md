@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68122464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891694"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   分散クエリおよびリモートストアドプロシージャに使用される特定のリンクサーバーに対して定義されたログインマッピングに関する情報を提供します。  
   
@@ -42,21 +42,21 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>引数  
 `[ @rmtsrvname = ] 'rmtsrvname'`ログインマッピングが適用されるリンクサーバーの名前を指定します。 *rmtsrvname*は**sysname**,、既定値は NULL です。 NULL の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル コンピューターで定義されているすべてのリンク サーバーに対して定義された、すべてのログインのマッピングが返されます。  
   
-`[ @locallogin = ] 'locallogin'`リンクサーバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname*に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 *locallogin*には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ユーザーを指定できます。 Windows ユーザーには、直接またはアクセス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンクサーバー *rmtsrvname*へのマッピングを持つローカルサーバー上のログインを指定します。 *locallogin*は**sysname**,、既定値は NULL です。 NULL を指定すると、 *rmtsrvname*に定義されているすべてのログインマッピングが返されます。 NULL でない場合は、 *locallogin*から*rmtsrvname*へのマッピングが既に存在している必要があります。 *locallogin*には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ユーザーを指定できます。 Windows ユーザーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接またはアクセス権が付与されている windows グループのメンバーシップを使用して、へのアクセスが許可されている必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**リンク サーバー**|**sysname**|リンク サーバー名。|  
 |**ローカルログイン**|**sysname**|マッピングが適用されるローカルログイン。|  
 |**Is Self Mapping**|**smallint**|0 =**ローカルログイン**は、**リンクサーバー**に接続するときに**リモートログイン**にマップされます。<br /><br /> 1 =**ローカルログイン**は、**リンクサーバー**に接続するときに同じログインとパスワードにマップされます。|  
 |**Remote Login**|**sysname**|**Isselfmapping**が0の場合、 **locallogin**にマップされている**LinkedServer**のログイン名。 **Isselfmapping**が1の場合、 **REMOTELOGIN**は NULL になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ログインマッピングを削除する前に、 **sp_helplinkedsrvlogin**を使用して、関連するリンクサーバーを特定します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -85,8 +85,8 @@ Marketing        NULL          1               NULL
 (4 row(s) affected)  
 ```  
   
-### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>B. リンクサーバーのすべてのログインマッピングを表示する  
- 次の例では、 `Sales`リンクサーバーに対してローカルに定義されているすべてのログインマッピングを表示します。  
+### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>B: リンクサーバーのすべてのログインマッピングを表示する  
+ 次の例では、リンクサーバーに対してローカルに定義されているすべてのログインマッピングを表示し `Sales` ます。  
   
 ```  
 EXEC sp_helplinkedsrvlogin 'Sales';  
@@ -104,8 +104,8 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-### <a name="c-displaying-all-login-mappings-for-a-local-login"></a>C. ローカルログインのすべてのログインマッピングを表示する  
- 次の例では、ログイン`Mary`に対してローカルに定義されているすべてのログインマッピングを表示します。  
+### <a name="c-displaying-all-login-mappings-for-a-local-login"></a>C: ローカルログインのすべてのログインマッピングを表示する  
+ 次の例では、ログインに対してローカルに定義されているすべてのログインマッピングを表示し `Mary` ます。  
   
 ```  
 EXEC sp_helplinkedsrvlogin NULL, 'Mary';  
@@ -123,10 +123,10 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

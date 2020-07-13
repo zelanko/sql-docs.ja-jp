@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077182"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303005"
 ---
 # <a name="allocating-the-environment-handle"></a>環境ハンドルの割り当て
 ODBC アプリケーションの最初のタスクは、ドライバーマネージャーを読み込むことです。これがどのように行われるかは、オペレーティングシステムに依存します。 たとえば、Microsoft® Windows NT® Server/Windows 2000 Server、Windows NT Workstation/Windows 2000 Professional、または Microsoft Windows®95/98 を実行しているコンピューターでは、アプリケーションは Driver Manager ライブラリにリンクするか、または**LoadLibrary**を呼び出して DRIVER manager DLL を読み込みます。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62775285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932391"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>構成ファイルを使用した SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。  
@@ -52,55 +51,52 @@ FEATURES=SQL,Tools
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition のセットアップでは、構成ファイルは自動的に作成されません。 次のコマンドを実行すると、セットアップが開始され、構成ファイルが作成されます。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition のセットアップでは、構成ファイルは自動的に作成されません。 次のコマンドを実行すると、セットアップが開始され、構成ファイルが作成されます。  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 のインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]方法の詳細については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
+2.  ウィザードに従って **[インストールの準備完了]** ページまで進みます。 構成ファイルのパスは、 **[インストールの準備完了]** ページの [構成ファイルのパス] セクションで指定します。 のインストール方法の詳細については [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
 3.  INI ファイルを生成するには、インストールを実際に完了しなくてもセットアップを取り消します。  
   
     > [!NOTE]  
     >  セットアップ インフラストラクチャは、パスワードなどの機密情報を除き、実行したアクションに対してすべての適切なパラメーターを書き出します。 /IAcceptSQLServerLicenseTerms パラメーターは構成ファイルに書き出されないので、構成ファイルに変更を加えるか、コマンド プロンプトで値を指定する必要があります。 詳細については、「[コマンド プロンプトからの SQL Server 2014 のインストール](install-sql-server-from-the-command-prompt.md)」を参照してください。 また、値が通常はコマンド プロンプトで指定されないブール型パラメーターの場合は、値が含まれます。  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>構成ファイルを使用した SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>構成ファイルを使用した SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  コマンド ライン インストールでのみ構成ファイルを使用できます。  
   
 > [!NOTE]  
 >  構成ファイルに変更を加える必要がある場合は、コピーを作成して、コピーを変更することをお勧めします。  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>構成ファイルを使用してスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールする方法  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>構成ファイルを使用してスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールする方法  
   
--   コマンドプロンプトを使用してインストールを実行*し、セットアップのパラメーターを*使用して、セットアップを指定します。  
+-   コマンドプロンプトを使用してインストールを実行*し、ConfigurationFile.ini*を指定します。  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>構成ファイルを使用してスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのイメージの準備と完了を行う方法 (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>構成ファイルを使用してスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのイメージの準備と完了を行う方法 (SysPrep)  
   
-1.  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスを準備し、同じコンピューター上で構成するには、次の操作を行います。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスを準備し、同じコンピューター上で構成するには、次の操作を行います。  
   
-    -   [インストール センター] の **[詳細設定][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、**[** のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。  
+    -   [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。  
   
     -   さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、同じイメージ準備用構成ファイルをテンプレートとして使用します。  
   
-    -   [インストール センター] の **[詳細設定][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、**[** の準備済みスタンドアロン インスタンスのイメージの完了]** を実行し、コンピューター上で準備済みのインスタンスを構成します。  
+    -   [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行し、コンピューター上で準備済みのインスタンスを構成します。  
   
 2.  Windows SysPrep ツールを使用して、未構成の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含むオペレーティング システムのイメージを準備するには、次の操作を行います。  
   
     -   [インストール センター] の [詳細設定] ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。  
   
-    -   [インストール センター] の **[詳細設定][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、**[** の準備済みスタンドアロン インスタンスのイメージの完了]** を実行します。ただし、完了用構成ファイルをキャプチャしたら、**[イメージの完了の準備]** ページで処理をキャンセルしてください。  
+    -   [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行します。ただし、完了用構成ファイルをキャプチャしたら、**[イメージの完了の準備]** ページで処理をキャンセルしてください。  
   
     -   イメージ完了用構成ファイルは、準備済みのインスタンスの構成を自動化するために、Windows イメージと共に保存できます。  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする方法  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする方法  
   
 1.  統合インストール方法は次のとおりです (ノードに単一ノードのフェールオーバー クラスターを作成し、追加ノードでは AddNode を実行します)。  
   
     -   [フェールオーバー クラスターをインストールする] オプションを実行して、すべてのインストール設定の一覧を示す構成ファイルをキャプチャします。  
   
-    -   
-  *ConfigurationFile* パラメーターを指定して、コマンド ライン フェールオーバー クラスターのインストールを実行します。  
+    -   *ConfigurationFile* パラメーターを指定して、コマンド ライン フェールオーバー クラスターのインストールを実行します。  
   
     -   追加するノードで、AddNode を実行して既存のフェールオーバー クラスターに適用できる ConfigurationFile.ini ファイルをキャプチャします。  
   
@@ -116,11 +112,11 @@ FEATURES=SQL,Tools
   
     -   この ConfigurationFile.ini ファイルを指定すると、フェールオーバー クラスターを完了できます。  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加または削除する方法  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加または削除する方法  
   
 -   フェールオーバー クラスターにノードを追加したり、フェールオーバー クラスターからノードを削除したりするために以前使用した構成ファイルがある場合は、同じファイルを再利用してノードの追加や削除を実行できます。  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードする方法  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードする方法  
   
 1.  パッシブ ノードでアップグレードを実行して、ConfigurationFile.ini ファイルをキャプチャします。 それには、実際のアップグレードを実行するか、または実際のアップグレードを実行しないで最後に終了します。  
   
@@ -143,7 +139,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
   
 ## <a name="see-also"></a>参照  
  [コマンドプロンプトから SQL Server 2014 をインストールする](install-sql-server-from-the-command-prompt.md)   
- [SQL Server フェールオーバークラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [SQL Server フェールオーバークラスターのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
+ [SQL Server フェールオーバー クラスターのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

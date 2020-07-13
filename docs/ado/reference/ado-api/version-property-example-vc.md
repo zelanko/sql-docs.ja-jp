@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67938696"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758598"
 ---
 # <a name="version-property-example-vc"></a>Version プロパティの例 (VC++)
 この例では、 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[version](../../../ado/reference/ado-api/version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  

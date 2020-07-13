@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68099137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871380"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   キュー リーダー エージェントのセキュリティのプロパティを変更します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベース、またはパブリッシャー側のパブリケーションデータベースに対して実行されます。  
   
@@ -39,7 +39,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_login = ] 'job_login'`エージェントを実行する[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログインを指定します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントのログインを指定します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。  
   
 `[ @job_password = ] 'job_password'`エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password*は**sysname**,、既定値は NULL です。  
   
@@ -48,7 +48,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_changeqreader_agent**は、トランザクションレプリケーションで使用します。  
   
  **sp_changeqreader_agent**は、キューリーダーエージェントを実行する Windows アカウントを変更するために使用されます。 既存の Windows ログインのパスワードを変更することも、新しい Windows ログインとパスワードを指定することもできます。  
@@ -58,8 +58,8 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changeqreader_agent**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addqreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
+ [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

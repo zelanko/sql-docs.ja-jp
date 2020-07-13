@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083510"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521234"
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
   マイニング モデルには、次の種類のプロパティがあります。  
@@ -39,7 +38,7 @@ ms.locfileid: "66083510"
 ## <a name="properties-of-models"></a>モデルのプロパティ  
  次の表で、マイニング モデルに固有のプロパティについて説明します。 また、マイニング モデルの個々の列に設定できるプロパティもあります。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
@@ -50,7 +49,7 @@ ms.locfileid: "66083510"
 ## <a name="properties-of-model-columns"></a>モデル列のプロパティ  
  マイニング モデルの各列に対して、次のデータ マイニング固有のプロパティを設定できます。 これらのプロパティには、マイニング構造内のマイニング モデルごとに異なる値を設定できます。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**説明**|マイニング列の目的について説明します。|  
 |**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  

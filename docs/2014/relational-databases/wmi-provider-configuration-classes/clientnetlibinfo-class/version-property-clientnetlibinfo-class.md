@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1cacaae123da110fdec189fed36f699a1303a624
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63191093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062687"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリ ファイルのバージョンを取得します。  
@@ -36,14 +35,14 @@ object
 .Version [= value]  
 ```  
   
-## <a name="parts"></a>要素  
- *素材*  
+## <a name="parts"></a>指定項目  
+ *object*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリ ファイルのバージョンを指定する文字列値。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

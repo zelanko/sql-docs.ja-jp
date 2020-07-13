@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription (Transact-sql) |Microsoft Docs
+description: パブリッシャーのアーティクル、パブリケーション、またはサブスクリプションに対するサブスクリプションを削除します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d324d5f26f847488af8cec480cce6c699a5f473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70212278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783028"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリッシャー上の特定のアーティクル、パブリケーション、またはサブスクリプションの集合へのサブスクリプションを削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -59,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  即時同期パブリケーションのアーティクルに対してサブスクリプションを削除した場合、パブリケーションのすべてのアーティクルに対してサブスクリプションを削除して一度に追加しない限り、サブスクリプションを追加し直すことはできません。  
@@ -70,7 +71,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロールのメンバー、またはサブスクリプションを作成したユーザーだけが**sp_dropsubscription**を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

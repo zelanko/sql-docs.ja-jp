@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDriverConnectInfo function [ODBC]
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915283"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298803"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 関数
 **互換性**  
@@ -52,7 +52,7 @@ SQLRETURN SQLSetDriverConnectInfo(
 ## <a name="diagnostics"></a>診断  
  入力検証エラーに関連する[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)と同じです。ただし、ドライバーマネージャーは、SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**を使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
  ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、SQL_SUCCESS_WITH_INFO を[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)および[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cfdd0babe84d309391b3e1ca546c4e05fdf1331
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22173b0ad3dd8abf2d168b41a16a03bc414022ce
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68049168"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302783"
 ---
 # <a name="why-was-odbc-created"></a>ODBC の作成の目的
 従来、企業は1つの DBMS を使用していました。 すべてのデータベースアクセスは、そのシステムのフロントエンドか、そのシステムでのみ動作するように記述されたアプリケーションによって行われました。 ただし、コンピューターの使用率が高くなり、コンピューターのハードウェアとソフトウェアが使用可能になったときに、企業はさまざまな Dbms の取得を開始しました。 理由は多数ありました。最もコストが安いもの、最速のもの、既に知っていたもの、市場で最新のものは何か、1つのアプリケーションにとって最も効果的なものは何かということです。 それ以外の理由として、以前に1つの DBMS を持つ部門では、複数の再編成と合併が必要でした。  

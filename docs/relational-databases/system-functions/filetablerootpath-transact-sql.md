@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72251231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734405"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定の FileTable または現在のデータベースのルートレベルの UNC パスを返します。  
   
@@ -41,16 +41,16 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  FileTable の名前。 *FileTable_name*の型は**nvarchar**です。 これは省略可能なパラメーターです。 既定値は、現在のデータベースです。 *Schema_name*の指定も省略可能です。 既定のパラメーター値を使用するには、 *FileTable_name*に NULL を渡すことができます。  
   
  *\@オプション*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 オプションには、次のいずれかの値を指定できます。 * \@*  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 * \@ オプション*には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|次のような、完全なサーバー パスを返します。<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>戻り値の型  
- **nvarchar(4000)**  
+ **nvarchar (4000)**  
   
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名ではなく仮想ネットワーク名 (vnn) を返します。  
   
@@ -89,7 +89,7 @@ WHERE Name = N'document.docx';
   
 -   現在のデータベースのルートパスを取得するための**db_datareader**以上のアクセス許可。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例は、 **FileTableRootPath**関数を呼び出す方法を示しています。  
   
 ```  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

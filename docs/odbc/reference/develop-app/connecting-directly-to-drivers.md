@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], connecting directly to drivers
 - connecting to driver [ODBC], drivers
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44b9de304069849e965fc335e130ae57d9ec8bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6aacb5d3df985949e04cdd47a9fe460cddbde6a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68083162"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299082"
 ---
 # <a name="connecting-directly-to-drivers"></a>ドライバーに直接接続する
 このセクションで前述した「[データソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」で説明したように、一部のアプリケーションでは、データソースをまったく使用したくありません。 代わりに、ドライバーに直接接続する必要があります。 **SQLDriverConnect**は、アプリケーションがデータソースを指定せずに直接ドライバーに接続する方法を提供します。 概念的には、一時データソースは実行時に作成されます。  

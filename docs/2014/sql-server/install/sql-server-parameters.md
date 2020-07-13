@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66091875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011831"
 ---
 # <a name="sql-server-parameters"></a>SQL Server パラメーター
   このページでは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の分析で使用するパラメーターを設定します。 1 つ、複数、またはすべてのデータベースの分析、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して作成されたトレース ファイルの分析、および SQL バッチ ファイルの分析を行うことができます。  
@@ -40,17 +39,16 @@ ms.locfileid: "66091875"
   
  [**トレースファイルの分析**] を有効にすると、パス名とファイル名を入力するまで [**次へ**] が無効になります。  
   
- **バッチ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルの分析**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチファイルの分析**  
  ファイル システムの [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ ファイルを分析するには、このチェック ボックスをオンにします。  
   
- **バッチファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパス**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチファイルのパス**  
  1 つ以上のバッチ ファイルを分析できます。 場所を参照して複数のファイルを選択したり、複数のファイル名を入力できます。 各ファイルへの完全パス名およびファイル名を使用し、パイプ文字 (|) でエントリを区切ります。  
   
  [ **SQL バッチファイルの分析**] を有効にすると、パス名とファイル名を入力するまで **[次へ**] ボタンが無効になります。  
   
  **[SQL バッチ区切り記号]**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は **[** 実行] です。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は **[** 実行] です。  
   
 ## <a name="see-also"></a>参照  
  [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

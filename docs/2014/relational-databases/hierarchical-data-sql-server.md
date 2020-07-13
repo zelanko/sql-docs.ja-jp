@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79289190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027101"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
-  組み込みの`hierarchyid`データ型を使用すると、階層データの格納とクエリが簡単になります。 `hierarchyid`は、階層データの最も一般的なタイプであるツリーを表す場合に最適化されています。  
+  組み込み `hierarchyid` データ型を使用すると、階層データの格納とクエリが容易になります。 `hierarchyid`は、最も一般的な階層データであるツリーを表すために最適化されています。  
   
  階層データは、階層リレーションシップで相互に関連付けられたデータ アイテムのセットとして定義されます。 あるデータ アイテムが別のアイテムの親となる場合は、そこに階層リレーションシップが存在します。 データベースに一般的に格納される階層データの例を次に示します。  
   
@@ -39,10 +38,10 @@ ms.locfileid: "79289190"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。 階層データのクエリや管理を実行するには、 [ の ](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)hierarchyid 関数[!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid の主要な特性  
- データ型の値`hierarchyid`は、ツリー階層内の位置を表します。 `hierarchyid` の値には、以下の特性があります。  
+ データ型の値は、 `hierarchyid` ツリー階層内の位置を表します。 `hierarchyid` の値には、以下の特性があります。  
   
 -   非常にコンパクト  
   
@@ -50,7 +49,7 @@ ms.locfileid: "79289190"
   
 -   深さ優先順で比較  
   
-     a`hierarchyid`と**a** **b**の 2 つの値を指定すると **、a<b**は、a がツリーの深さ優先走査で b の前に来るということを意味します。 `hierarchyid` データ型のインデックスは深さ優先順であり、深さ優先検査で近接するノードどうしは、相互に近接して格納されます。 たとえば、あるレコードの子は、そのレコードに隣接して格納されます。  
+     A と b の2つの値を指定した場合 `hierarchyid` 、 **<b**は、ツリーの深さ優先走査で b の前に来ることを意味します**a** 。 **b** `hierarchyid` データ型のインデックスは深さ優先順であり、深さ優先検査で近接するノードどうしは、相互に近接して格納されます。 たとえば、あるレコードの子は、そのレコードに隣接して格納されます。  
   
 -   任意の挿入および削除のサポート  
   
@@ -108,7 +107,7 @@ GO
   
 -   階層の複数セクションにわたるクエリをめったに実行しないとき。 つまり、通常のクエリが、階層内の単一ポイントのみを対象とするとき。 このようなケースでは、同じ場所への配置は重要でありません。 たとえば、個々の従業員の給与処理のみに組織テーブルを使用する場合、親/子の方が優れています。  
   
--   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 使用法の行の位置を`hierarchyid`変更すると n 行 *(n*は移動するサブツリー内のノード数) に影響します。 *n*  
+-   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 使用状況の行の場所を変更すると、 `hierarchyid` *n*行が影響を受けます。 *n*は移動されるサブツリー内のノード数です。  
   
      非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが重要だが、ほとんどの移動が正しく定義された階層レベルで行われるときは、上位レベルと下位レベルを 2 つの階層に分割することを検討してください。 こうすると、すべての移動が上位階層のリーフ レベルになります。 たとえば、サービスによってホストされている Web サイトの階層があるとします。 サイトには、階層状に配置された多くのページが含まれています。 ホストされているサイトは、サイト階層内の他の場所に移動される可能性がありますが、下位ページの配置が変更されることはまれです。 これは、次のように表すことができます。  
   
@@ -265,7 +264,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="related-tasks"></a><a name="tasks"></a> 関連タスク  
   
 ###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> 親/子から hierarchyid への移行  
- 現在、ほとんどのツリーは親/子を使用して表されます。 親/子構造からテーブルに移行する最も簡単な方法`hierarchyid`は、一時列または一時テーブルを使用して、階層の各レベルのノード数を追跡することです。 親/子テーブルの移行例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」のレッスン 1 を参照してください。  
+ 現在、ほとんどのツリーは親/子を使用して表されます。 を使用して親/子構造からテーブルに移行する最も簡単 `hierarchyid` な方法は、一時列または一時テーブルを使用して、階層の各レベルのノード数を追跡することです。 親/子テーブルの移行例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」のレッスン 1 を参照してください。  
   
   
 ###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> hierarchyid を使用したツリーの管理  
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>シリアル化可能なトランザクションの使用例  
- **Org_BreadthFirst** インデックスによって、**@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションがチェックする可能性がある他のエラーケースに加えて、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を**@last_child**追加しようとした場合を示しているため、再計算する必要があります。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
+ **Org_BreadthFirst** インデックスによって、**@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションで確認する必要がある他のエラーケースに加えて、挿入後の重複キー違反は、同じ id を持つ複数の従業員を追加しようとしたため、再計算する必要があることを示し **@last_child** ます。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> CLR を使用した先祖の検索  
- 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 型は両方で使用できるため[!INCLUDE[tsql](../includes/tsql-md.md)]、この`hierarchyid`型は CLR のいずれかで記述できます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
+ 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 この [!INCLUDE[tsql](../includes/tsql-md.md)] 型は両方で使用可能であるため、または CLR で書き込むことができ `hierarchyid` ます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
   
  次の CLR コードを使用すると、先祖を一覧表示し、最下位の共通の先祖を見つけることができます。  
   
@@ -426,7 +425,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 以下の **の例で**ListAncestor**メソッドおよび**CommonAncestor[!INCLUDE[tsql](../includes/tsql-md.md)] メソッドを使用するには、DLL をビルドし、次のようなコードを実行して **の**HierarchyId_Operations[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アセンブリを作成します。  
+ 以下の [!INCLUDE[tsql](../includes/tsql-md.md)] の例で **ListAncestor** メソッドおよび **CommonAncestor** メソッドを使用するには、DLL をビルドし、次のようなコードを実行して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **HierarchyId_Operations** アセンブリを作成します。  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> サブツリーの移動  
- もう 1 つの一般的な操作は、サブツリーの移動です。 以下の手順は、 の**@oldMgr**サブツリーを受け取**@oldMgr**り、 のサブ**@newMgr**ツリーにします ( を含む ) を使用します。  
+ もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、のサブツリーを取得 **@oldMgr** し、それをのサブツリー (を含む) にし **@oldMgr** **@newMgr** ます。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

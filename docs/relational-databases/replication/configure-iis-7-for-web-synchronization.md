@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903213"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529136"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903213"
   
 1.  IIS を実行しているコンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーをインストールして構成します。  
   
-2.  SSL (Secure Sockets Layer) を構成します。 IIS とすべてのサブスクライバー間の通信には SSL が必要です。  
+2.  トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を構成します。 IIS とすべてのサブスクライバー間の通信には TLS が必要です。  
   
 3.  IIS 認証を構成します。  
   
@@ -97,9 +97,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
 ## <a name="configuring-iis-authentication"></a>IIS 認証の構成  
  サブスクライバーのコンピューターが IIS に接続するには、サブスクライバーがリソースやプロセスにアクセスする前に、IIS がサブスクライバーを認証する必要があります。 認証は、Web サイト全体または作成した特定の仮想ディレクトリに適用することができます。  
   
- 基本認証と SSL を組み合わせて使用することをお勧めします。 使用する認証の種類にかかわらず、SSL は必須です。  
-  
- 基本認証と SSL を組み合わせて使用することをお勧めします。 使用する認証の種類にかかわらず、SSL は必須です。  
+ 基本認証と TLS を組み合わせて使用することをお勧めします。 (使用する認証の種類にかかわらず、TLS は必須です)。
   
 #### <a name="to-configure-iis-authentication"></a>IIS 認証を構成するには  
   
@@ -112,7 +110,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
 4.  [基本認証] を右クリックし、[有効にする] をクリックします。  
   
 ## <a name="configuring-secure-sockets-layer"></a>Secure Sockets Layer の構成  
- SSL を構成するには、IIS を実行しているコンピューターが使用する証明書を指定する必要があります。 マージ レプリケーション用の Web 同期では、サーバー証明書のみがサポートされており、クライアント証明書はサポートされていません。 配置用に IIS を構成するには、最初に証明機関 (CA) から証明書を取得する必要があります。 証明書の詳細については、IIS のマニュアルを参照してください。  
+ TLS を構成するには、IIS を実行しているコンピューターが使用する証明書を指定する必要があります。 マージ レプリケーション用の Web 同期では、サーバー証明書のみがサポートされており、クライアント証明書はサポートされていません。 配置用に IIS を構成するには、最初に証明機関 (CA) から証明書を取得する必要があります。 証明書の詳細については、IIS のマニュアルを参照してください。  
   
  証明書をインストールしたら、その証明書を Web 同期で使用する Web サイトと関連付ける必要があります。 開発やテストでは、自己署名証明書を指定できます。 この場合、IIS 7 で証明書を作成してコンピューターに登録できます。  
   
@@ -121,9 +119,9 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
 > [!IMPORTANT]  
 >  運用環境で自己署名証明書を使用することは推奨されません。 自己署名証明書は安全ではありません。 自己署名証明書を使用するのは、開発およびテストのときだけにしてください。  
   
- SSL を構成するには、次の手順を実行します。  
+ TLS を構成するには、次の手順のようにします。  
   
-1.  SSL を要求し、クライアント証明書を無視するように Web サイトを構成します。  
+1.  TLS を要求し、クライアント証明書を無視するように Web サイトを構成します。  
   
 2.  CA から証明書を取得するか、自己署名証明書を作成します。  
   
@@ -268,7 +266,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
     5.  もう一度 **[OK]** をクリックして [詳細設定] を閉じます。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
- 診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
+ 診断モードで Web 同期を実行し、IIS を実行しているコンピューターへの接続をテストして、TLS/SSL 証明書が正しくインストールされることを確認します。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>replisapi.dll への接続をテストするには  
   

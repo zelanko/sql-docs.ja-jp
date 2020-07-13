@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95a14506-db11-490f-b5c3-61dea7fd247c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 508c9b6aa56e55d64e8bf6723081d2e7638ecdf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f07c3a4ca54ce8f4c1cefd13067f7c7abba4a8c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66096217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037057"
 ---
 # <a name="complete"></a>完了
   [完了] ページで、インストールの状態を確認します。  

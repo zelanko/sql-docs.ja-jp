@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d0495ed563585a5b7427655428a257174673fc02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62725496"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545919"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
   次の各表に、さまざまなサーバー配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [多次元およびデータ マイニング (DeploymentMode=0)](#bkmk_OLAP)  
   
@@ -31,12 +30,12 @@ ms.locfileid: "62725496"
   
  [テーブル (DeploymentMode=2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>多次元およびデータマイニング (DeploymentMode = 0)  
+##  <a name="multidimensional-and-data-mining-deploymentmode0"></a><a name="bkmk_OLAP"></a>多次元およびデータマイニング (DeploymentMode = 0)  
  データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、「[ディメンションおよびパーティションの文字列ストレージの構成](../configure-string-storage-for-dimensions-and-partitions.md)」を参照してください。  
   
-|Object|最大サイズ/数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
-|インスタンスのデータベース|2^31-1 = 2,147,483,647|  
+|インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベースのディメンション|2^31-1 = 2,147,483,647|  
 |ディメンションの属性|2^31-1 = 2,147,483,647|  
 |ディメンション属性のメンバー|2^31-1 = 2,147,483,647|  
@@ -61,11 +60,11 @@ ms.locfileid: "62725496"
   
  オンライン分析処理 (OLAP) とデータマイニングのデータソースの制限事項の詳細については、「 [Ssas 多次元&#41;&#40;サポートされるデータソース](../supported-data-sources-ssas-multidimensional.md)」、「 [ssas 多次元&#41;&#40;サポートされるデータソース](../supported-data-sources-ssas-multidimensional.md)」、および「 [Assl オブジェクトとオブジェクトの特性](../scripting-language-assl/assl-objects-and-object-characteristics.md)」を参照してください。  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="sharepoint-deploymentmode1"></a><a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Object|最大サイズ/数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
-|インスタンスのデータベース|2^31-1 = 2,147,483,647|  
+|インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベース内のテーブル|2^31-1 = 2,147,483,647|  
 |テーブル内の列|2 ^ 31-1 = 2147483647**警告:** テーブル内の列の合計数は、同じテーブルに関連付けられているメジャーと計算列の合計数によって異なります。 テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
 |テーブル内の行|無制限の**警告:** 1 つの列に1999999997個を超える個別の値を含めることはできないという制限があります。|  
@@ -79,11 +78,11 @@ ms.locfileid: "62725496"
 |ソース クエリのレコード サイズ|64 K|  
 |オブジェクト名の長さ|100 文字|  
   
-##  <a name="bkmk_vertipaq"></a>表形式 (DeploymentMode = 2)  
+##  <a name="tabular-deploymentmode2"></a><a name="bkmk_vertipaq"></a>表形式 (DeploymentMode = 2)  
   
-|Object|最大サイズ/数|  
+|Object|最大サイズと最大数|  
 |------------|----------------------------|  
-|インスタンスのデータベース|2^31-1 = 2,147,483,647|  
+|インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベース内のテーブル|2^31-1 = 2,147,483,647|  
 |テーブル内の列|2 ^ 31-1 = 2147483647**警告:** テーブル内の列の合計数は、同じテーブルに関連付けられているメジャーと計算列の合計数によって異なります。 テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
 |テーブル内の行|無制限の**警告:** テーブル内の1つの列が1999999997を超える個別の値を持つことができないという制限があります。|  

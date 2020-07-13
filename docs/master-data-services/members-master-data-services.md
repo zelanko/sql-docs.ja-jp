@@ -1,5 +1,6 @@
 ---
 title: メンバー
+description: マスターデータサービスでは、メンバーは、Product エンティティ内の道路150自転車や、Customer エンティティの特定の顧客などの物理的なマスターデータです。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d19aaf52051b4f68b3272d1eef78806cdcc96942
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811928"
 ---
 # <a name="members-master-data-services"></a>メンバー (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーは物理マスター データです。 たとえば、Product エンティティの Road-150 バイクや、Customer エンティティの特定の顧客をメンバーにすることができます。  
   
 ## <a name="how-members-relate-to-other-model-objects"></a>メンバーと他のモデル オブジェクトの関連付け  
@@ -65,28 +65,28 @@ ms.locfileid: "73728007"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しいリーフ メンバーを作成する。|[リーフメンバー &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|新しい統合メンバーを作成する。|[統合メンバー &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|既存のメンバーまたはコレクションを削除する。|[マスターデータサービス &#40;のメンバーまたはコレクションを削除&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する &#40;マスターデータサービス&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|メンバーの属性値を更新する。|[属性の種類 &#40;Excel 用 MDS アドインに変更&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|新しいリーフ メンバーを作成する。|[リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|新しい統合メンバーを作成する。|[統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|既存のメンバーまたはコレクションを削除する。|[メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|メンバーの属性値を更新する。|[属性の型の変更 (Excel 用 MDS アドイン)](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [マスターデータサービス概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)  
+-   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
--   [階層 &#40;マスターデータサービス&#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [階層 (マスター データ サービス)](../master-data-services/hierarchies-master-data-services.md)  
   
--   [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)  
+-   [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
--   [リーフアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [リーフ権限 (マスター データ サービス)](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
--   [フィルター演算子 &#40;マスターデータサービス&#41;](../master-data-services/filter-operators-master-data-services.md)  
+-   [フィルター演算子 (マスター データ サービス)](../master-data-services/filter-operators-master-data-services.md)  
   
   

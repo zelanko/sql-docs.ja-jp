@@ -11,16 +11,14 @@ f1_keywords:
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 088006037fc9941021270287011f42d8d4bd4299
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66082140"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528818"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>[ディメンション インテリジェンスの定義] (ビジネス インテリジェンス ウィザード)
-  
   **[ディメンション インテリジェンスの定義]** ページを使用すると、指定した種類のディメンションの属性の型に、既存のディメンションの属性を割り当てることができます。  
   
 ## <a name="options"></a>オプション  
@@ -33,7 +31,7 @@ ms.locfileid: "66082140"
  **用意**  
  選択すると、対応する属性の型がディメンションに追加されます。  
   
- **属性の種類**  
+ **属性の型**  
  ディメンションに含まれているディメンションの属性に割り当てることができる属性の型が表示されます。  
   
  **[ディメンションの属性]**  

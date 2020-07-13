@@ -1,5 +1,6 @@
 ---
 title: SQL Server Migration Assistant |Microsoft Docs
+description: SQL Server Migration Assistant について説明します。これは、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE からの SQL Server に対するデータベースの移行を自動化するツールです。
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a8349922c991877c8cf9139cfedf3f458c2d68b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72252127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758434"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -44,6 +45,7 @@ SSMA では、次のターゲットバージョンがサポートされていま
 - Windows および Linux での SQL Server 2017
 - Windows および Linux での SQL Server 2019
 - Azure SQL データベース
+- Azure SQL Managed Instance
 - Azure SQL Data Warehouse * *
 
 * * このターゲットは、SSMA for Oracle でのみサポートされています。
@@ -68,7 +70,7 @@ SSMA では、次のターゲットバージョンがサポートされていま
   
   - [SQL Server Developer センターのコミュニティ](https://go.microsoft.com/fwlink/?LinkId=42456)-ニュースグループ、フォーラム、その他の開発者 SQL Server に役立つコミュニティリソース  
   
-- **サポート**-に[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)アクセスして、' SQL Server Migration Assistant ' を検索します。  バージョンを選択し、[要求の開始] を選択します。  サポートは SQL Server Migration Assistant ツールに含まれています。  
+- **サポート**-にアクセスし [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) て、' SQL Server Migration Assistant ' を検索します。  バージョンを選択し、[要求の開始] を選択します。  サポートは SQL Server Migration Assistant ツールに含まれています。  
   
 - **プレミアサポート**-プレミア契約をお持ちの場合は、プレミア[オンラインポータル](https://premier.microsoft.com/)でプレミアサポートを受けることができます。  
   

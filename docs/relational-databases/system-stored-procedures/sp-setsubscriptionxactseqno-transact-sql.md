@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68021084"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881537"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   トラブルシューティング中に、ログシーケンス番号 (LSN) を使用して最後に配信されたトランザクションを指定し、ディストリビューションエージェントが次のトランザクションで配信を開始できるようにするために使用します。 再起動すると、ディストリビューションエージェントによって、ディストリビューションデータベースキャッシュ (msrepl_commands) からこのウォーターマーク (LSN) を超えるトランザクションが返されます。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。 SQL Server 以外のサブスクライバーではサポートされていません。  
   
@@ -53,7 +53,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**ORIGINAL XACT_SEQNO**|**varbinary(16)**|サブスクライバーで適用される次のトランザクションの元の LSN。|  
 |**UPDATED XACT_SEQNO**|**varbinary(16)**|サブスクライバー側で適用される次のトランザクションの、更新された LSN。|  
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_setsubscriptionxactseqno**は、トランザクションレプリケーションで使用します。  
   
  **sp_setsubscriptionxactseqno**は、ピアツーピアトランザクションレプリケーショントポロジでは使用できません。  

@@ -12,15 +12,15 @@ ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 765d6c69831a485978f2ae55941d59de579f672b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83f5442ab8cd6858fa95c29c2e37acf63c0f89f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753317"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   XQuery Static Type イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で XQuery 式を実行する場合に発生します。 このイベント クラスでは静的な XQuery 式が提供されます。  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery Static Type イベント クラスのデータ列  

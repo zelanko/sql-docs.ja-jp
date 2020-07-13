@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a2da5fd5ce01bd97f13d7c8d805c615c1ac436a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68016747"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303963"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 関数
 **互換性**  
@@ -83,7 +83,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>診断  
  **Configdriver**が FALSE を返す場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|エラー|[説明]|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効でした。|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Frequest*引数は、次のいずれかではありませんでした:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> ドライバー固有のオプションは ODBC_CONFIG_DRIVER_MAX 以下です。|  

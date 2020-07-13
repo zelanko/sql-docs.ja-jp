@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 87401c8f90f0351f797aa3572c7717bb02360e00
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881521"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートインスタンスの実際のネットワークコンピューター名に、 **sys. サーバー**のネットワーク名を設定します。 このプロシージャを使用すると、無効な識別子が含ま[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れているネットワーク名を持つコンピューターに対して、リモートストアドプロシージャ呼び出しを実行できます。  
+  のリモートインスタンスの実際のネットワークコンピューター名に、 **sys. サーバー**のネットワーク名を設定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このプロシージャを使用すると、無効な識別子が含まれているネットワーク名を持つコンピューターに対して、リモートストアドプロシージャ呼び出しを実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引数  
- ** ** @server = '** サーバー **'**  
- ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 この*サーバー*を使用するには、既に1行の**サーバーが存在**している必要があります。 *サーバー*は**sysname**,、既定値はありません。  
+ ** @server = '** *サーバー* **'**  
+ ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 この*サーバー*を使用するには、既に1行の**サーバーが存在**している必要があります。 *server* のデータ型は **sysname**で、既定値はありません。  
   
- ** ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  リモートストアドプロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name*は**sysname**であり、既定値はありません。  
   
- この名前は[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コンピューター名と一致する必要があり、名前には識別子で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許可されていない文字を含めることができます。  
+ この名前は Windows コンピューター名と一致する必要があり、名前には [!INCLUDE[msCoName](../../includes/msconame-md.md)] 識別子で許可されていない文字を含めることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -76,8 +76,8 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールと**setupadmin**固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>例  
- 次の例は、リモートストアドプロシージャ呼び出しを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行するためにで使用される一般的な管理シーケンスを示しています。  
+## <a name="examples"></a>使用例  
+ 次の例は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リモートストアドプロシージャ呼び出しを実行するためにで使用される一般的な管理シーケンスを示しています。  
   
 ```  
 USE master;  
@@ -87,10 +87,10 @@ EXEC sp_setnetname 'Win_1','Win-1';
 EXEC Win_1.master.dbo.sp_who;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

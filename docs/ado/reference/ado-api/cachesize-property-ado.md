@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 502459b890c533ace8a96847bcf79eb09929e53f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67920330"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758918"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
 メモリ内にローカルにキャッシュされているレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのレコードの数を示します。  

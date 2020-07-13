@@ -1,5 +1,6 @@
 ---
 title: JDBC ドライバーのよくあるご質問 (FAQ)
+description: このページでは、Microsoft SQL Server 用 JDBC Driver についてよく寄せられる質問に対する回答をご紹介します。
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924664"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728315"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 
@@ -113,8 +114,8 @@ JDBC Driver 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライ�
 **ドライバーを使用して Linux コンピューターから Microsoft SQL Server にアクセスできますか。**  
 はい。 ドライバーを使用して、Linux、Unix、他の Windows 以外のプラットフォームから SQL Server にアクセスできます。 詳細については、「[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)」をご覧ください。
 
-**ドライバーは Secure Sockets Layer (SSL) 暗号化をサポートしていますか。**  
-バージョン 1.2 以降のドライバーは、Secure Sockets Layer (SSL) 暗号化をサポートしています。 詳細については、「[SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」をご覧ください。
+**ドライバーで TLS 暗号化をサポートしていますか。**  
+バージョン 1.2 以降、ドライバーで TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) での暗号化がサポートされるようになりました。 詳細については、「[暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」を参照してください。
 
 **Microsoft SQL Server 用 JDBC Driver ではどのような認証がサポートされていますか。**  
 次の表は、使用可能な認証オプションを示しています。 4\.0 リリース以降のドライバーでは、ピュア Java Kerberos 認証が使用可能です。

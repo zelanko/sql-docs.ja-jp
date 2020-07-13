@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cf2887fb779fbe66556c4b45098cba41b8128b44
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68070911"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669398"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>データマイニング拡張機能 (DMX) 演算子リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  のデータマイニング拡張機能 (DMX) 言語[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、算術演算子、代入演算子、比較演算子、論理演算子、および単項演算子がサポートされています。 次の表に、DMX でサポートされる演算子を示します。  
+  のデータマイニング拡張機能 (DMX) 言語では [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、算術演算子、代入演算子、比較演算子、論理演算子、および単項演算子がサポートされています。 次の表に、DMX でサポートされる演算子を示します。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[+ &#40;&#41; &#40;DMX&#41;を追加する](../dmx/add-dmx.md)|2つの数値を加算する算術演算子。|  
 |[-&#40;&#41; &#40;DMX&#41;を減算する](../dmx/subtract-dmx.md)|ある数値を別の数値から減算する算術演算子。|  
@@ -37,9 +37,9 @@ ms.locfileid: "68070911"
 |[または &#40;DMX&#41;](../dmx/or-dmx.md)|2つの数値式の和を実行する論理演算子。|  
 |[+ &#40;正の&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|数値式の正の値を返す単項演算子です。|  
 |[-&#40;負の&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|数値式の負の値を返す単項演算子。|  
-|[DMX&#41;&#41; &#40;スラッシュ &#40;コメント](../dmx/double-slash-comment-dmx.md)|実行しないテキスト文字列[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を示します。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
-|[--&#40;コメント&#41; &#40;DMX&#41; の概要](../dmx/comment-dmx-summary.md)|実行しないテキスト文字列[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を示します。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
-|[DMX&#41;&#41; &#40;スラッシュの星 &#40;コメント](../dmx/slash-star-comment-dmx.md)|実行しないテキスト文字列[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を示します。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
+|[DMX&#41;&#41; &#40;スラッシュ &#40;コメント](../dmx/double-slash-comment-dmx.md)|実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
+|[--&#40;コメント&#41; &#40;DMX&#41; の概要](../dmx/comment-dmx-summary.md)|実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
+|[DMX&#41;&#41; &#40;スラッシュの星 &#40;コメント](../dmx/slash-star-comment-dmx.md)|実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   

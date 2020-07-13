@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Text File Driver
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4deede2060821ed05a58a637adcf09493fd910dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76b9810236b4ec415f8abb8ecefca748c13b51c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68037826"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299312"
 ---
 # <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (テキスト ファイル ドライバー)
 > [!NOTE]  

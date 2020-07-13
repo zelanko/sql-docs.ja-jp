@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 089b99663753a9e9424e991ca5245c73ea577e49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: cad4c1f70743cafcc428835b3dcd11e2fa26ee79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78175761"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546774"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
-  キューブ パーティションを変更するには、 **でキューブ デザイナーの** [パーティション] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]タブを使用します。 
-  **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。
+  キューブ パーティションを変更するには、 **でキューブ デザイナーの** [パーティション] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。
 
  メジャーグループのパーティションを編集するには、[**パーティション**] タブでメジャーグループを展開します。メジャーグループのパーティションは、次の表に示す列を含むテーブル形式の序数で一覧表示されます。
 

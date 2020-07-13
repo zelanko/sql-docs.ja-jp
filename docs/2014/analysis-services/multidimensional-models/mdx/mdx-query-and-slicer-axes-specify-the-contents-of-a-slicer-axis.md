@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8620c54970ea14a2ac01c85262a372d2b3db0d68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66074058"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546264"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>スライサー軸の内容の指定 (MDX)
   スライサー軸は、多次元式 (MDX) の SELECT ステートメントから返されるデータを絞り込み、指定されているメンバーと重なり合うデータだけが返されるように、返されるデータを制限します。 クエリ内の見えない追加の軸であると考えることができます。 スライサー軸は、MDX の SELECT ステートメントの WHERE 句で定義します。  

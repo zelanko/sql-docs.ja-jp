@@ -12,14 +12,14 @@ helpviewer_keywords:
 - custom applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067473"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305283"
 ---
 # <a name="custom-applications"></a>カスタム アプリケーション
 カスタムアプリケーションは、通常、いくつかの Dbms に対して特定のタスクを実行します。 たとえば、アプリケーションが1つの DBMS からデータを取得してレポートを生成したり、複数の Dbms 間でデータを転送したりすることがあります。 これらのアプリケーションの共通点は、アプリケーションが記述される前にこれらの Dbms が知られており、アプリケーションの実行中に変更される可能性が低いことです。  

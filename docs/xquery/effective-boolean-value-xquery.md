@@ -1,5 +1,6 @@
 ---
 title: 有効なブール値 (XQuery) |Microsoft Docs
+description: XQuery での有効なブール値について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 748042147b2e776c096296a98ce27dbc645e2d49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67929958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753649"
 ---
 # <a name="effective-boolean-value-xquery"></a>有効なブール値 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   有効なブール値は次のとおりです。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67929958"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 次に、有効なブール値の例を示します。 **If**式が処理されると、条件の有効なブール値が決定されます。 は`/a[1]`空のシーケンスを返すので、有効なブール値は false です。 結果は、1つのテキストノード (false) を含む XML として返されます。  
+ 次に、有効なブール値の例を示します。 **If**式が処理されると、条件の有効なブール値が決定されます。 は `/a[1]` 空のシーケンスを返すので、有効なブール値は false です。 結果は、1つのテキストノード (false) を含む XML として返されます。  
   
 ```  
 value is false  
@@ -66,13 +67,13 @@ go
   
  型指定された**xml**列または変数に対してクエリを実行する場合は、ブール型のノードを持つことができます。 この場合の**データ ()** は、ブール値を返します。 クエリ式がブール値 true を返す場合、次の例で示すように、有効なブール値は true になります。 この例では、次のことも示しています。  
   
--   XML スキーマコレクションが作成されます。 コレクション内\<の要素 b> はブール型です。  
+-   XML スキーマコレクションが作成されます。 \<b>コレクション内の要素はブール型です。  
   
 -   型指定された**xml**変数が作成され、クエリが作成されます。  
   
--   式`data(/b[1])`はブール型の true 値を返します。 したがって、この場合の有効なブール値は true です。  
+-   式は `data(/b[1])` ブール型の true 値を返します。 したがって、この場合の有効なブール値は true です。  
   
--   式`data(/b[2])`は、ブール値の false 値を返します。 したがって、この場合の有効なブール値は false になります。  
+-   式は、 `data(/b[2])` ブール値の false 値を返します。 したがって、この場合の有効なブール値は false になります。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -88,7 +89,7 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [FLWOR ステートメントとイテレーション &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   

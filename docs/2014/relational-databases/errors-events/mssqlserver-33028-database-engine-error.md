@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8da0c0aabbda01ea73d28002d84a1769ae02cd1e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62868665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85033796"
 ---
 # <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
@@ -35,7 +34,7 @@ ms.locfileid: "62868665"
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、エラー メッセージに表示されている暗号化サービス プロバイダーを開くことができませんでした。 暗号化サービス プロバイダーは、表示されているエラー コードを返しました。 エラーの詳細については、暗号化サービス プロバイダーに問い合わせる必要があります。  
   
-|エラー コード|[説明]|  
+|エラー コード|説明|  
 |----------------|-----------------|  
 |0|正常終了しました。 エラーなし。|  
 |1|失敗しました。 未定義のエラーまたは予期しないエラーが発生しました。 追加情報は入手できません。|  

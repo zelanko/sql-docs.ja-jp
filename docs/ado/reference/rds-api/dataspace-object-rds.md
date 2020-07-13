@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbd27490e20e8c615ba934299e80f55eb06a5481
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67964354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752567"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace オブジェクト (RDS)
 > [!IMPORTANT]

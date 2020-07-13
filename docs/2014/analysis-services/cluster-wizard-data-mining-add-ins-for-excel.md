@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09aa5a282e02b778b759cbdfc83950d3a2559423
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66087807"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527478"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>クラスター ウィザード (Excel 用データ マイニング アドイン)
   ![[データ マイニング] リボンのクラスター ウィザード](media/dmc-cluster.gif "[データ マイニング] リボンのクラスター ウィザード")  
@@ -65,7 +64,7 @@ ms.locfileid: "66087807"
   
  また、CLUSTER_SEED パラメーターを使用して開始値を制御し、同じデータ セットを使用して繰り返されるモデルは常に同じ結果になるようにできます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  クラスター ウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。 詳細については、「 [Connect To Source data &#40;Excel 用データマイニングクライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

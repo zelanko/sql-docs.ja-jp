@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57b1f70c070cdf81dc0bc899ed365d048db26cc9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62770438"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430769"
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
   データ変換の変換は、入力列のデータを別のデータ型に変換し、新しい出力列にコピーします。 たとえば、パッケージで複数の変換元のデータを抽出し、この変換を使用して、列を変換先のデータ ストアで要求されるデータ型に変換できます。 1 つの入力列に複数の変換を適用できます。  
@@ -48,9 +47,9 @@ ms.locfileid: "62770438"
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 SSIS デザイナーでデータ変換の変換を使用する方法については、「 [データ変換の変換を使用してデータを別のデータ型に変換する](data-conversion-transformation.md) 」および「 [[データ変換変換エディター]](../../data-conversion-transformation-editor.md)」をご覧ください。 プログラムによるこの変換のプロパティの設定については、「 [共通プロパティ](../../common-properties.md) 」および「 [変換のカスタム プロパティ](transformation-custom-properties.md)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://go.microsoft.com/fwlink/?LinkId=220823)」  
+ blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [高速解析](../../fast-parse.md)   
  [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  

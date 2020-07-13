@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67926753"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758458"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet Publishing の概要
 Microsoft OLE DB Provider for Internet Publishing を使用すると、ADO は Microsoft FrontPage または Microsoft インターネットインフォメーションサーバーによって提供されるリソースにアクセスできます。 リソースには、HTML ファイルや Windows 2000 web フォルダーなどの web ソースファイルが含まれます。
@@ -40,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- または
+ \- または -
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -48,11 +48,11 @@ MSDAIPP.DSO
 
  文字列は、次のキーワードで構成されています。
 
-|Keyword|[説明]|
+|Keyword|説明|
 |-------------|-----------------|
 |**プロバイダー**|インターネット発行用の OLE DB プロバイダーを指定します。|
 |**データソース**または- **URL**|Web フォルダーに発行されたファイルまたはディレクトリの URL を指定します。|
-|**User ID**|ユーザー名を指定します。|
+|**[ユーザー ID]**|ユーザー名を指定します。|
 |**パスワード**|ユーザーのパスワードを指定します。|
 
 > [!NOTE]

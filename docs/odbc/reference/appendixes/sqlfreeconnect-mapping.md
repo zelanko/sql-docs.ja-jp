@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLFreeConnect
 - SQLFreeConnect function [ODBC], mapping
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 062894547aca57ca01ca105f4060f2dcd39e942f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20da205d53acbebca1fee12134c04f17fb8b2db3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086439"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302043"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect のマッピング
 アプリケーションが ODBC *3. x*ドライバーを介して**SQLFreeConnect**を呼び出すとき、  

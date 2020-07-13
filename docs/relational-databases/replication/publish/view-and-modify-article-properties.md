@@ -84,7 +84,7 @@ ms.locfileid: "76287522"
   
 #### <a name="to-view-and-modify-article-properties"></a>アーティクルのプロパティを表示および変更するには  
   
-1.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[アーティクル]** ページで、アーティクルを選択し、 **[アーティクルのプロパティ]** をクリックします。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、アーティクルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
 2.  プロパティの変更を適用するアーティクルを選択します。  
   
@@ -97,36 +97,36 @@ ms.locfileid: "76287522"
   
 3.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
-4.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスで、\<[OK]** をクリックします。  
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、**[OK]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  アーティクルのプロパティは、レプリケーションのストアド プロシージャを使用して、プログラムから変更および取得できます。 使用するストアド プロシージャは、アーティクルが属するパブリケーションの種類によって異なります。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  [ パラメーターにパブリケーションの名前、](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) パラメーターにアーティクルの名前を指定して、`@publication`sp_helparticle`@article` を実行します。 `@article` を指定しない場合は、パブリケーションのすべてのアーティクルに関する情報が返されます。  
+1.  `@publication` パラメーターにパブリケーションの名前、`@article` パラメーターにアーティクルの名前を指定して、[sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) を実行します。 `@article` を指定しない場合は、パブリケーションのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルについて [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  [ パラメーターに変更するアーティクルのプロパティを指定し、](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) パラメーターにこのプロパティの新しい値を指定して、`@property`sp_changearticle`@value` を実行します。  
+1.  `@property` パラメーターに変更するアーティクルのプロパティを指定し、`@value` パラメーターにこのプロパティの新しい値を指定して、[sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。  
   
     > [!NOTE]  
-    >  変更で新しいスナップショットを生成する必要がある場合は、`1` に対して値 `@force_invalidate_snapshot` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`1` に対して値 `@force_reinit_subscription` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  変更で新しいスナップショットを生成する必要がある場合は、`@force_invalidate_snapshot` に対して値 `1` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`@force_reinit_subscription` に対して値 `1` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  [ パラメーターにパブリケーションの名前、](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) パラメーターにアーティクルの名前を指定して、`@publication`sp_helpmergearticle`@article` を実行します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
+1.  `@publication` パラメーターにパブリケーションの名前、`@article` パラメーターにアーティクルの名前を指定して、[sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) を実行します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルに対して [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  [ パラメーターに変更するアーティクルのプロパティを指定し、](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) パラメーターにこのプロパティの新しい値を指定して、`@property`sp_changemergearticle`@value` を実行します。  
+1.  `@property` パラメーターに変更するアーティクルのプロパティを指定し、`@value` パラメーターにこのプロパティの新しい値を指定して、[sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
     > [!NOTE]  
-    >  変更で新しいスナップショットを生成する必要がある場合は、`1` に対して値 `@force_invalidate_snapshot` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`1` に対して値 `@force_reinit_subscription` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  変更で新しいスナップショットを生成する必要がある場合は、`@force_invalidate_snapshot` に対して値 `1` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`@force_reinit_subscription` に対して値 `1` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  パブリッシュされたアーティクルのプロパティを取得するトランザクション レプリケーションの例を、次に示します。  
@@ -162,7 +162,7 @@ ms.locfileid: "76287522"
   
 6.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.TransArticle> の設定可能なプロパティに新しい値を設定します。  
   
-7.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 **に値**false<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+7.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>マージ パブリケーションに属しているアーティクルのプロパティを表示または変更するには  
   
@@ -178,7 +178,7 @@ ms.locfileid: "76287522"
   
 6.  (省略可) プロパティを変更するには、 <xref:Microsoft.SqlServer.Replication.MergeArticle> の設定可能なプロパティに新しい値を設定します。  
   
-7.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 **に値**false<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
+7.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、マージ アーティクルに変更を加え、アーティクル用のビジネス ロジック ハンドラーを指定しています。  

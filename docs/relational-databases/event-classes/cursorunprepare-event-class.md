@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719850"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorUnprepare** イベント クラスは、アプリケーション プログラミング インターフェイス (API) カーソルで発生するカーソル準備解除イベントについての情報を提供します。 カーソル準備解除イベントは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって実行プランが破棄されたときに発生します。  
   
  **CursorUnprepare** イベント クラスは、カーソルのパフォーマンスを記録するトレースに含めます。 **CursorUnprepare** イベント クラスをトレースに含めると、発生するオーバーヘッドの量はトレース時にそのデータベースでカーソルが使用される頻度によって変化します。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  

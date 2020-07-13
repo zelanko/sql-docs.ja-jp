@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63184302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058139"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
   [クエリおよびビュー デザイナー](visual-database-tools.md) の既定では、テーブル間に内部結合が作成されます。 つまり、内部結合では、他方のテーブルの行と一致しない行は除外されます。 これに対し、外部結合からは、FROM 句で指定された少なくとも 1 つのテーブルまたはビューにあり、任意の WHERE 検索条件または HAVING 検索条件を満たしているすべての行が返されます。 結合テーブルに一致しないデータ行を結果セットに含める場合は、外部結合を作成します。  
@@ -29,7 +28,7 @@ ms.locfileid: "63184302"
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラムペインで結合線を選択し、[**クエリデザイナー** ] メニューの [ **Tablename>から\<すべての行を選択**] を選択し、追加の行を含めるテーブルを含むコマンドを選択します。  
+2.  ダイアグラム ペインで結合線を選択し、 **[クエリ デザイナー]** メニューの **[\<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   

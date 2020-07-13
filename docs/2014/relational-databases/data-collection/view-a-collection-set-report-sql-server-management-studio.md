@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2ef00a7d30443275f22c1169850679b16c72a350
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62873063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970402"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>コレクション セット レポートの表示 (SQL Server Management Studio)
   管理データ ウェアハウスを構成した後、コレクション セットのレポートを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で表示できます。 セットアップ中にインストールされるシステム データ コレクション セットについては、レポートが用意されています。 レポートには、次のものが含まれます。  

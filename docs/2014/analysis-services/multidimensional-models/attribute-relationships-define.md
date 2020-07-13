@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a46bfd482463de2377470cd11186bd3bfbd5db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d75bf3ec0aa6e7199b1e6f8d31e2602deb8efeff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66077058"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544674"
 ---
 # <a name="define-attribute-relationships"></a>属性リレーションシップの定義
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、属性はディメンションの基本的な構成要素です。 ディメンションには、属性リレーションシップに基づいて構成される一連の属性が含まれます。  
+  で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、属性はディメンションの基本的な構成要素です。 ディメンションには、属性リレーションシップに基づいて構成される一連の属性が含まれます。  
   
  ディメンションに含まれるテーブルごとに、テーブルのキー属性をそのテーブルの別の属性に関連付ける属性リレーションシップがあります。 このリレーションシップは、ディメンションの作成時に作成します。  
   

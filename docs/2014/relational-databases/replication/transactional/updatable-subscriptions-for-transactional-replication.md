@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 61cadcd3f8f8a7fa72a3eac69f3bdbd8546d3055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62655492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016436"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "62655492"
   
  **更新モードを切り替えるには**  
   
- 更新モードを切り替えるには、両方の更新モードに対してパブリケーションとサブスクリプションを有効にしてから、必要に応じてこれらを切り替える必要があります。 詳細については、このトピックの後半の「  
+ 更新モードを切り替えるには、両方の更新モードに対してパブリケーションとサブスクリプションを有効にしてから、必要に応じてこれらを切り替える必要があります。 詳細については、「  
 [更新可能なトランザクションサブスクリプションの更新モードを切り替え](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)ます。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>更新可能なサブスクリプションの使用に関する注意点  
@@ -76,13 +75,11 @@ ms.locfileid: "62655492"
   
 -   サブスクライバーでの更新は、サブスクリプションの有効期限が切れていたり、アクティブでない場合でも、パブリッシャーに反映されます。 そのようなサブスクリプションは、削除または再初期化してください。  
   
--   
-  `TIMESTAMP` または `IDENTITY` が使用され、これらの列が基本データ型としてレプリケートされる場合、列の値はサブスクライバーでは更新されません。  
+-   `TIMESTAMP` または `IDENTITY` が使用され、これらの列が基本データ型としてレプリケートされる場合、列の値はサブスクライバーでは更新されません。  
   
--   
-  `text`、`ntext` または `image` 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、`text` や `image` を使用すると、サブスクライバーは `WRITETEXT` 値や `UPDATETEXT` 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、`text` 列と `image` 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
+-   `text`、`ntext` または `image` 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、`WRITETEXT` や `UPDATETEXT` を使用すると、サブスクライバーは `text` 値や `image` 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、`text` 列と `image` 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
   
-     サブスクライバーで大きなオブジェクト更新するには、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` のデータ型の代わりに、`text`、`ntext`、`image` のデータ型をそれぞれに使用します。  
+     サブスクライバーで大きなオブジェクト更新するには、`text`、`ntext`、`image` のデータ型の代わりに、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` のデータ型をそれぞれに使用します。  
   
 -   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、サブスクライバーで行われた SET 更新が、レプリケーションによって、影響される各行に対する個々の `UPDATE` ステートメントとして反映されるからです。  
   
@@ -110,11 +107,9 @@ ms.locfileid: "62655492"
   
 -   データ型 `SQL_VARIANT` の列については、サブスクライバーでデータが挿入または更新されると、データをサブスクライバーからキューにコピーするときに、キュー リーダー エージェントによって次のようにマップされます。  
   
-    -   
-  `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY`、および `SMALLMONEY` は、`NUMERIC` にマップされます。  
+    -   `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY`、および `SMALLMONEY` は、`NUMERIC` にマップされます。  
   
-    -   
-  `BINARY` および `VARBINARY` は、`VARBINARY` データにマップされます。  
+    -   `BINARY` および `VARBINARY` は、`VARBINARY` データにマップされます。  
   
 ### <a name="conflict-detection-and-resolution"></a>競合の検出と解決  
   
@@ -130,6 +125,6 @@ ms.locfileid: "62655492"
  [ピアツーピアトランザクションレプリケーション](peer-to-peer-transactional-replication.md)   
  [トランザクションレプリケーション](transactional-replication.md)   
  [データとデータベースオブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
- [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

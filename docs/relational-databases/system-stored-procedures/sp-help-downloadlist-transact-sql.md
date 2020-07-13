@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68055194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901504"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたジョブの**sysdownloadlist**システムテーブル内のすべての行、またはジョブが指定されていない場合はすべての行を一覧表示します。  
   
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`指定されたジョブの有効な操作です。 *操作*は**varchar (64)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**不具合**|マスター **SQLServerAgent**サービスからの参加を解除する対象サーバーを要求するサーバー操作。|  
 |**DELETE**|ジョブ全体を削除するジョブ操作。|  
@@ -84,23 +84,23 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|命令の一意な整数識別番号。|  
-|**source_server**|**nvarchar (30)**|命令の送信元のサーバーのコンピューター名。 バージョン[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 では、これは常にマスター (MSX) サーバーのコンピューター名です。|  
-|**operation_code**|**nvarchar(4000)**|命令の操作コード。|  
+|**source_server**|**nvarchar(30)**|命令の送信元のサーバーのコンピューター名。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 では、これは常にマスター (MSX) サーバーのコンピューター名です。|  
+|**operation_code**|**nvarchar (4000)**|命令の操作コード。|  
 |**object_name**|**sysname**|命令によって影響を受けるオブジェクト。|  
-|**object_id**|**UNIQUEIDENTIFIER**|命令によって影響を受けるオブジェクトの識別番号 (ジョブオブジェクトの場合は**job_id** 、サーバーオブジェクトの場合は 0x00)、または**operation_code**に固有のデータ値。|  
-|**target_server**|**nvarchar (30)**|この命令をダウンロードする対象サーバー。|  
-|**error_message**|**nvarchar (1024)**|この命令の処理中に問題が発生した場合の、ターゲット サーバーからのエラー メッセージ (存在する場合)。<br /><br /> 注: すべてのエラーメッセージは、対象サーバーによるすべてのダウンロードをブロックします。|  
-|**date_posted**|**DATETIME**|命令がテーブルにポストされた日付。|  
-|**date_downloaded**|**DATETIME**|ターゲット サーバーが命令をダウンロードした日付。|  
-|**オンライン**|**tinyint**|ジョブの状態:<br /><br /> **0** = まだダウンロードされていません<br /><br /> **1** = ダウンロードが正常に完了しました。|  
+|**object_id**|**uniqueidentifier**|命令によって影響を受けるオブジェクトの識別番号 (ジョブオブジェクトの場合は**job_id** 、サーバーオブジェクトの場合は 0x00)、または**operation_code**に固有のデータ値。|  
+|**target_server**|**nvarchar(30)**|この命令をダウンロードする対象サーバー。|  
+|**error_message**|**nvarchar(1024)**|この命令の処理中に問題が発生した場合の、ターゲット サーバーからのエラー メッセージ (存在する場合)。<br /><br /> 注: すべてのエラーメッセージは、対象サーバーによるすべてのダウンロードをブロックします。|  
+|**date_posted**|**datetime**|命令がテーブルにポストされた日付。|  
+|**date_downloaded**|**datetime**|ターゲット サーバーが命令をダウンロードした日付。|  
+|**status**|**tinyint**|ジョブの状態:<br /><br /> **0** = まだダウンロードされていません<br /><br /> **1** = ダウンロードが正常に完了しました。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、`sysdownloadlist` 内の `NightlyBackups` ジョブに関する行を一覧表示します。  
   
 ```  
@@ -119,7 +119,7 @@ EXEC dbo.sp_help_downloadlist
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

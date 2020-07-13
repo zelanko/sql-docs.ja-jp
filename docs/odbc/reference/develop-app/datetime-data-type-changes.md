@@ -15,14 +15,14 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6bc7e07ab65b5894c3ac2b913e5d4afcbd4f98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4f186047dd31aa2c4b66ec1ce73c8cb9fae31c04
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68076962"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304645"
 ---
 # <a name="datetime-data-type-changes"></a>datetime データ型の変更
 *ODBC 3.x では、日付*、時刻、およびタイムスタンプの SQL データ型の識別子が、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP (ヘッダーファイル (9、10、および11の **#define**インスタンス) から SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (ヘッダーファイル91、92、93 **) に**それぞれ変更されました。 対応する C 型識別子が SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP から、それぞれ SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、および SQL_C_TYPE_TIMESTAMP に変更されました。  
@@ -33,13 +33,13 @@ ms.locfileid: "68076962"
   
  次の表は *、ODBC 3.X* Driver Manager が、 **SQLBindCol**および**SQLGetData**の*TargetType*引数に入力された日付、時刻、およびタイムスタンプの C データ型のマッピングを実行する方法、または**SQLBindParameter**の*ValueType*引数に含まれる方法を示しています。  
   
-|データ型<br /><br /> 入力されたコード|*2. x*アプリから<br /><br /> ** 2.x ドライバー|*2. x*アプリから<br /><br /> ** 3.x ドライバー|*3. x*アプリから<br /><br /> ** 2.x ドライバー|*3. x*アプリから<br /><br /> ** 3.x ドライバー|  
+|データの種類<br /><br /> 入力されたコード|*2. x*アプリから<br /><br /> *2.x* 2.x ドライバー|*2. x*アプリから<br /><br /> *3.x* 3.x ドライバー|*3. x*アプリから<br /><br /> *2.x* 2.x ドライバー|*3. x*アプリから<br /><br /> *3.x* 3.x ドライバー|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
-|SQL_C_DATE (9)|マッピングがありません|SQL_C_TYPE_DATE (91)|マッピング [1] はありません|SQL_C_TYPE_DATE (91)|  
+|SQL_C_DATE (9)|マッピングなし|SQL_C_TYPE_DATE (91)|マッピング [1] はありません|SQL_C_TYPE_DATE (91)|  
 |SQL_C_TYPE_DATE (91)|エラー (DM から)|エラー (DM から)|SQL_C_DATE (9)|マッピング [2] がありません|  
-|SQL_C_TIME (10)|マッピングがありません|SQL_C_TYPE_TIME (92)|マッピング [1] はありません|SQL_C_TYPE_TIME (92)|  
+|SQL_C_TIME (10)|マッピングなし|SQL_C_TYPE_TIME (92)|マッピング [1] はありません|SQL_C_TYPE_TIME (92)|  
 |SQL_C_TYPE_TIME (92)|エラー (DM から)|エラー (DM から)|SQL_C_TIME (10)|マッピング [2] がありません|  
-|SQL_C_TIMESTAMP (11)|マッピングがありません|SQL_C_TYPE_TIMESTAMP (93)|マッピング [1] はありません|SQL_C_TYPE_TIMESTAMP (93)|  
+|SQL_C_TIMESTAMP (11)|マッピングなし|SQL_C_TYPE_TIMESTAMP (93)|マッピング [1] はありません|SQL_C_TYPE_TIMESTAMP (93)|  
 |SQL_C_TYPE_TIMESTAMP (93)|エラー (DM から)|エラー (DM から)|SQL_C_TIMESTAMP (11)|マッピング [2] がありません|  
   
  [1] この結果として *、odbc 2.x アプリケーションで*odbc 2.x ドライバーを使用する場合は、カタログ関数によって返された結果セットで返された日付、時刻、またはタイムスタンプコードを使用*できます。*  
@@ -48,13 +48,13 @@ ms.locfileid: "68076962"
   
  次の表に、ODBC *3. x* Driver Manager が、 **SQLBindParameter**の*ParameterType*引数または**SQLGetTypeInfo**の*DataType*引数に入力された日付、時刻、およびタイムスタンプの SQL データ型のマッピングを実行する方法を示します。  
   
-|データ型<br /><br /> 入力されたコード|*2. x*アプリから<br /><br /> ** 2.x ドライバー|*2. x*アプリから<br /><br /> ** 3.x ドライバー|*3. x*アプリから<br /><br /> ** 2.x ドライバー|*3. x*アプリから<br /><br /> ** 3.x ドライバー|  
+|データの種類<br /><br /> 入力されたコード|*2. x*アプリから<br /><br /> *2.x* 2.x ドライバー|*2. x*アプリから<br /><br /> *3.x* 3.x ドライバー|*3. x*アプリから<br /><br /> *2.x* 2.x ドライバー|*3. x*アプリから<br /><br /> *3.x* 3.x ドライバー|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
-|SQL_DATE (9)|マッピングがありません|SQL_TYPE_DATE (91)|マッピング [1] はありません|SQL_TYPE_DATE (91)|  
+|SQL_DATE (9)|マッピングなし|SQL_TYPE_DATE (91)|マッピング [1] はありません|SQL_TYPE_DATE (91)|  
 |SQL_TYPE_DATE (91)|エラー (DM から)|エラー (DM から)|SQL_DATE (9)|マッピング [2] がありません|  
-|SQL_TIME (10)|マッピングがありません|SQL_TYPE_TIME (92)|マッピング [1] はありません|SQL_TYPE_TIME (92)|  
+|SQL_TIME (10)|マッピングなし|SQL_TYPE_TIME (92)|マッピング [1] はありません|SQL_TYPE_TIME (92)|  
 |SQL_TYPE_TIME (92)|エラー (DM から)|エラー (DM から)|SQL_TIME (10)|マッピング [2] がありません|  
-|SQL_TIMESTAMP (11)|マッピングがありません|SQL_TYPE_TIMESTAMP (93)|マッピング [1] はありません|SQL_TYPE_TIMESTAMP (93)|  
+|SQL_TIMESTAMP (11)|マッピングなし|SQL_TYPE_TIMESTAMP (93)|マッピング [1] はありません|SQL_TYPE_TIMESTAMP (93)|  
 |SQL_TYPE_TIMESTAMP (93)|エラー (DM から)|エラー (DM から)|SQL_TIMESTAMP (11)|マッピング [2] がありません|  
   
  [1] この結果として *、odbc 2.x アプリケーションで*odbc 2.x ドライバーを使用する場合は、カタログ関数によって返された結果セットで返された日付、時刻、またはタイムスタンプコードを使用*できます。*  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c376340af1674c05ac3a38c88cde202bd35f314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a47891599dbe735bd437f5239c73bfd34c422ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68211173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057918"
 ---
 # <a name="monitoring-the-error-logs"></a>エラー ログの監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、特定のシステム イベントとユーザー定義イベントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログと [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに記録します。 両方のログで、記録されるすべてのイベントのタイムスタンプが自動的に記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログの情報を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する問題のトラブルシューティングを行うことができます。  
@@ -41,7 +40,7 @@ ms.locfileid: "68211173"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server エラー ログの表示](../../../2014/tools/configuration-manager/viewing-the-sql-server-error-log.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとその表示方法について説明します。|  
 |[Windows アプリケーション ログの表示](viewing-the-windows-application-log.md)|Windows アプリケーション ログとその表示方法について説明します。|  

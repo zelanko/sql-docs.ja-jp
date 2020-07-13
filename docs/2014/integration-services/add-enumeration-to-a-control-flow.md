@@ -13,18 +13,16 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3eb7a34978221a87b0e288f37c4f728a3a470465
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66061909"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439649"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>制御フローに列挙を追加する
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、Foreach ループ コンテナーが含まれています。Foreach ループ コンテナーとは制御フローの要素で、これを使用すると、パッケージの制御フロー内のファイルおよびオブジェクトを列挙するループ構造を簡単に含めることができます。 詳細については、「 [Foreach ループ コンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
   
  Foreach ループ コンテナーに機能は用意されていません。繰り返し可能な制御フローの構築、列挙子の型の指定、および列挙子の構成を行う構造を提供するだけです。 コンテナーに機能を設定するには、Foreach ループ コンテナーに少なくとも 1 つのタスクを含める必要があります。 詳細については、「 [Integration Services のタスク](control-flow/integration-services-tasks.md)」を参照してください。  
@@ -43,7 +41,7 @@ ms.locfileid: "66061909"
   
 4.  Foreach ループ コンテナーを構成します。 詳細については、「 [Foreach ループ コンテナーを構成する](../../2014/integration-services/configure-a-foreach-loop-container.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [制御フロー内のタスクまたはコンテナーを追加または削除する](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [コンポーネントのグループ化またはグループ解除](group-or-ungroup-components.md)   
  [優先順位制約](control-flow/precedence-constraints.md)   

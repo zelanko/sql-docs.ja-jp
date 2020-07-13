@@ -20,15 +20,14 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046310"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091514"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   署名可能なすべてのオブジェクトの一覧を返し、オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。 オブジェクトが、指定した証明書または非対称キーによって署名されている場合は、オブジェクトの署名が有効かどうかも返されます。  
   
@@ -45,14 +44,14 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引数  
- {'\@*class*'}  
+ { '\@*クラス*'}  
  提供される拇印の種類を識別します。  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- \@*クラス*は**sysname**です。  
+ \@*class* は **sysname** です。  
   
  { \@ *thumbprint* }  
  キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*拇印*は**varbinary (20)** です。  
@@ -60,21 +59,21 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、 **fn_check_object_signatures**が返す列を示します。  
   
-|列|種類|[説明]|  
+|Column|種類|説明|  
 |------------|----------|-----------------|  
-|型|**nvarchar (120)**|型の説明またはアセンブリを返します。|  
+|type|**nvarchar(120)**|型の説明またはアセンブリを返します。|  
 |entity_id|**int**|評価対象のオブジェクトのオブジェクト ID を返します。|  
 |is_signed|**int**|指定された拇印によってオブジェクトが署名されていない場合は0を返します。 指定されたサムプリントによってオブジェクトが署名されている場合は1を返します。|  
 |is_signature_valid|**int**|is_signed の値が 1 の場合、署名が有効ではないときは 0 を返します。 署名が有効な場合は1を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **Fn_check_object_signatures**を使用して、悪意のあるユーザーがオブジェクトを改ざんしていないことを確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `master`データベースのスキーマ署名証明書を検索し`is_signed` 、スキーマ署名証明書`is_signature_valid`によって署名され、有効な署名を持つオブジェクトについて、値1と値1を返します。  
+ 次の例では、データベースのスキーマ署名証明書を検索 `master` し、 `is_signed` `is_signature_valid` スキーマ署名証明書によって署名され、有効な署名を持つオブジェクトについて、値1と値1を返します。  
   
 ```  
 USE master;  

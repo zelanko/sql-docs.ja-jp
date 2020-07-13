@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, SELECT statement limitations
 - SELECT statement limitations [ODBC]
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d91e93076a67287cbbd2b64b2ad0d6414a0aea6d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987852"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300922"
 ---
 # <a name="select-statement-limitations"></a>SELECT ステートメントの制限事項
 集計関数列を、SELECT ステートメントの非集計列と組み合わせて使用することはできません。  

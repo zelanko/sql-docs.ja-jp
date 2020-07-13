@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 666e18344a409ce66132108ef7de3afab82c2086
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67965352"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748546"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn プロパティ (ADOX)
 関連するテーブル内の関連する[列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)の名前を示します (キー列のみ)。  
@@ -32,7 +32,7 @@ ms.locfileid: "67965352"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  関連するテーブル内の関連する列の名前を表す**文字列**値を設定して返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  既定値は空の文字列 ("") です。  
   
  このプロパティは、既にコレクションに追加されている[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトに対しては読み取り専用です。  

@@ -1,5 +1,6 @@
 ---
 title: バックアップの暗号化 | Microsoft Docs
+description: この記事では、バックアップ時の暗号化の使用方法、利点、推奨されるプラクティスなど、SQL Server バックアップの暗号化オプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71688291"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220524"
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "71688291"
   
  バックアップ時に暗号化を行うには、暗号化アルゴリズムを指定し、暗号化キーを保護するための暗号化機能を指定する必要があります。 サポートされている暗号化オプションは次のとおりです。  
   
-- **暗号化アルゴリズム:** サポートされている暗号化アルゴリズムは、AES 128、AES 192、AES 256、および Triple DES です。  
+- **暗号化アルゴリズム:** サポートされている暗号化アルゴリズムは、AES 128、AES 192、AES 256、および Triple DES です  
   
-- **暗号化機能:** 証明書または非対称キー。  
+- **暗号化機能:** 証明書キーまたは非対称キー  
   
 > [!CAUTION]  
 > 証明書または非対称キーをバックアップすることが非常に重要であり、これらを使用して暗号化したバックアップ ファイルとは別の場所に保存することをお勧めします。 証明書または非対称キーがないと、バックアップ ファイルが使用不可能になり、バックアップを復元することができません。  
@@ -52,7 +53,7 @@ ms.locfileid: "71688291"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  バックアップを暗号化するための前提条件は次のとおりです。  
   
-1. **master データベースのデータベース マスター キーの作成:** データベース マスター キーは対称キーであり、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 詳細については、「[SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)」を参照してください。  
+1. **master データベースのデータベース マスター キーの作成:** データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内にある非対称キーを保護するときに使用されます。 詳細については、「[SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)」を参照してください。  
   
 1. バックアップの暗号化に使用する証明書または非対称キーを作成します。 証明書の作成の詳細については、「[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)」を参照してください。 証明書の作成の詳細については、「[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)」を参照してください。  
   

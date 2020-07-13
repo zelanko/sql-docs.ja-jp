@@ -13,18 +13,15 @@ helpviewer_keywords:
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d0de75c02c39b0690184f35f2b0b6a07d7ed9a4f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062944"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528231"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>[キューブ ディメンションの追加] ダイアログ ボックス (Analysis Services - 多次元データ)
-  
-  **の** [キューブ ディメンションの追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブにデータベース ディメンションへの参照を追加できます。 
-  **[キューブ ディメンションの追加]** ダイアログ ボックスは、次のいずれかの操作で表示できます。  
+  **の** [キューブ ディメンションの追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブにデータベース ディメンションへの参照を追加できます。 **[キューブ ディメンションの追加]** ダイアログ ボックスは、次のいずれかの操作で表示できます。  
   
 -   キューブ デザイナーの **[キューブ構造]** または **[ディメンションの使用法]** タブにある **[ツール バー]** ペインで、 **[キューブ ディメンションの追加]** をクリックします。  
   

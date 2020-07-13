@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62704558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048484"
 ---
 # <a name="creating-a-table-tutorial"></a>テーブルの作成 (チュートリアル)
   テーブルを作成するには、テーブルの名前と、テーブル内の各列の名前とデータ型を入力する必要があります。 また、各列でヌル値を許可するかどうかを指定することも推奨されます。  
@@ -71,9 +70,9 @@ ms.locfileid: "62704558"
     ```  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [テーブル内のデータの挿入と更新 &#40;チュートリアル&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [テーブルのデータの挿入と更新 (チュートリアル)](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## <a name="see-also"></a>参照  
- [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)  
+ [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
   

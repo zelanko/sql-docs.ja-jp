@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 754c254a208adbb40a2efc44934bbcc40608ec85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68026842"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830799"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>dm_db_xtp_hash_index_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68026842"
   
 詳細については、「[メモリ最適化テーブルのハッシュインデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」を参照してください。  
   
-|列名|種類|[説明]|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|親テーブルのオブジェクト ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID。|  
@@ -112,7 +112,7 @@ ms.locfileid: "68026842"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-内部テーブルのインデックスの BUCKET_COUNT を変更することはできないため、このクエリの出力は有益であると見なされる必要があります。 操作は必要ありません。  
+内部テーブルのインデックスの BUCKET_COUNT を変更することはできないため、このクエリの出力は有益であると見なされる必要があります。 必要な操作はありません。  
 
 内部テーブルでハッシュインデックスを利用する機能を使用している場合を除き、このクエリは行を返すとは限りません。 次のメモリ最適化テーブルには、列ストアインデックスが含まれています。 このテーブルを作成すると、内部テーブルにハッシュインデックスが表示されます。
 
@@ -125,6 +125,6 @@ ms.locfileid: "68026842"
 ```
 
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

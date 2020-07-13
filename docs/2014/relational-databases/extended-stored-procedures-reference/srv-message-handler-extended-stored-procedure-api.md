@@ -19,21 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63127406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050740"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
- インストールされている拡張ストアド プロシージャ API メッセージ ハンドラーを呼び出します。 この関数は、通常、拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアドプロシージャからを呼び出して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーログファイルまたは[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションログにエラー (拡張ストアドプロシージャで定義) を記録するために使用されます。  
+ インストールされている拡張ストアド プロシージャ API メッセージ ハンドラーを呼び出します。 この関数は、通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアドプロシージャからを呼び出して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーログファイルまたは Windows アプリケーションログにエラー (拡張ストアドプロシージャで定義) を記録するために使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,13 +70,12 @@ oserrtextlen
   
 ## <a name="arguments"></a>引数  
  *srvproc*  
- 特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 
-  *srvproc* パラメーターには、アプリケーションとクライアント間の通信やデータを管理するために使用する情報が格納されます。  
+ 特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 *srvproc* パラメーターには、アプリケーションとクライアント間の通信やデータを管理するために使用する情報が格納されます。  
   
  *errornum*  
  拡張ストアド プロシージャが定義するエラー番号です。 この値の有効値は 50,001 から 2,147,483,647 です。  
   
- *順*  
+ *severity*  
  エラーに関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の重大度を示す標準の値です。 この値の有効値は 0 ～ 24 です。  
   
  *状態*  
@@ -102,9 +99,8 @@ oserrtextlen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
- 
-  **srv_message_handler** 関数を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の集中型エラー ログ機能とレポート機能に拡張ストアド プロシージャを統合できるようになります。 拡張ストアド プロシージャからのイベントに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の警告を設定し、警告条件を SQL Server エージェントで監視できます。  
+## <a name="remarks"></a>Remarks  
+ **srv_message_handler** 関数を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の集中型エラー ログ機能とレポート機能に拡張ストアド プロシージャを統合できるようになります。 拡張ストアド プロシージャからのイベントに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の警告を設定し、警告条件を SQL Server エージェントで監視できます。  
   
  エラー メッセージが長い場合は、412 バイトに切り捨てられます。  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset dynamic properties in XML [ADO]
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9d19ded093cd10a7670b31cd2d5c78a475950d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67924443"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760968"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML でのレコードセットの動的プロパティ
 次のレコードセットプロバイダー固有のプロパティ (クライアントカーソルエンジンから) は現在、XML 形式で保存されています。  

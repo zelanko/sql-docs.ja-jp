@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9bcfdde8b3536bbbf8b2429d51a9ee9aecf0d437
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66071629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547504"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>ファイルまたはアセンブリ &#39;読み込むことができませんでした。サービス、バージョン = 3.5.0.0、Culture = ニュートラル、PublicKeyToken = b77a5c561934e089&#39;、またはその依存関係の1つです。 指定されたファイルが見つかりません。
   PowerPivot for SharePoint がある SharePoint 2010 環境では、データ フィードのエクスポートを実行しようとした場合に必要なバージョンの Microsoft ADO.NET Data Services がないと、このエラーが発生します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>詳細情報  
   
 |||  
 |-|-|  
@@ -36,7 +35,7 @@ ms.locfileid: "66071629"
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  SharePoint 2010 のハードウェアとソフトウェアの要件に関するドキュメントにアクセスし、[ハードウェアとソフトウェアの要件を決定します (sharepoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734)「」を参照してください。  
+1.  SharePoint 2010 のハードウェアとソフトウェアの要件に関するドキュメントにアクセスし、[ハードウェアとソフトウェアの要件を決定します (sharepoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (「」を参照して https://go.microsoft.com/fwlink/?LinkId=169734) ください。  
   
 2.  「**必要なソフトウェアのインストール**」で、使用しているオペレーティングシステムに対応する ADO.NET Data Services 3.5 のリンクを見つけます。  
   

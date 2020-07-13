@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 565610826f704274724ea05d821205a5b3391060
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63150960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066015"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>パラメーター化クエリのプラン ガイドの作成
   TEMPLATE プラン ガイドでは、指定した形式にパラメーター化されたスタンドアロン クエリが照合されます。  

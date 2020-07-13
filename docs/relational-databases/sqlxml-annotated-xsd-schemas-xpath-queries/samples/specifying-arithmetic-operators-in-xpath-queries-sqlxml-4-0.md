@@ -1,5 +1,6 @@
 ---
 title: XPath クエリで算術演算子を使用する (SQLXML)
+description: SQLXML 4.0 の XPath クエリで算術演算子を指定する方法について説明します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +17,27 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d2115d00f8b51fa16452eba3a41483c499bf9fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649369"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での算術演算子の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下の例では、XPath クエリに算術演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. * 算術演算子を指定する  
- この XPath クエリは、指定された述語を満たす** \<orderdetail>** 要素を返します。  
+ この XPath クエリ **\<OrderDetail>** は、指定された述語を満たす要素を返します。  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- このクエリでは`child` 、は軸で`OrderDetail` 、はノードテストです ( **orderdetail**が>の** \<要素ノード**である場合は TRUE になります。これは、 ** \<要素>** ノードが**子**軸のプライマリノードであるためです)。 すべての** \<orderdetail>** 要素ノードでは、述語内のテストが適用され、条件を満たすノードだけが返されます。  
+ このクエリでは、は軸で、は `child` `OrderDetail` ノードテストです。これ**OrderDetail**は、 **\<element node>** **\<element>** ノードが**子**軸のプライマリノードであるため、orderdetail がの場合は TRUE です。 すべての要素ノードについて、 **\<OrderDetail>** 述語内のテストが適用され、条件を満たすノードだけが返されます。  
   
 > [!NOTE]  
 >  XPath の数値は倍精度浮動小数点数であり、例のように浮動小数点数を比較する場合は丸めが実行されます。  

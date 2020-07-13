@@ -13,15 +13,14 @@ helpviewer_keywords:
 - ExecuteToStream method
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16dc1f6136956bb16c68806b35ac5a21d86cf179
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66014939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062898"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL クエリの実行 (SQLXML マネージド クラス)
   この例では、次のことを行います。  

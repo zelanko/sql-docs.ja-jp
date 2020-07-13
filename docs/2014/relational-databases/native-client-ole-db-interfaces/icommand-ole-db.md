@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) |Microsoft Docs
+title: ICommand (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ICommand [SQL Server Native Client]
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 03bdccc83a04078210f2283d0b330f237ed02979
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62987316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056183"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に固有の OLE DB の動作について説明します。  

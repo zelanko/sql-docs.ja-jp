@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705868"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529422"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,16 +165,16 @@ replmerg [-?]
  パブリケーションでパラメーター化された行フィルターを使用する場合のフィルター選択されたデータ スナップショット ファイルの位置です。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 接続時にマージ エージェントで使用される SSL (Secure Sockets Layer) 暗号化のレベルです。  
+ 接続確立時にマージ エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|SSL は使用されません。|  
-|**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
-|**2**|SSL が使用され、証明書の確認が行われます。|  
+|**0**|TLS は使用されません。|  
+|**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
+|**2**|TLS が使用され、証明書の確認が行われます。|  
 
  > [!NOTE]  
- >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
 
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   

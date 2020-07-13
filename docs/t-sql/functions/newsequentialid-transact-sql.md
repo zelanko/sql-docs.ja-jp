@@ -16,17 +16,17 @@ helpviewer_keywords:
 - NEWSEQUENTIALID function
 - GUIDs [SQL Server]
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784385"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Windows が起動されてから、指定されたコンピューターで、この関数によりこれまでに生成されたどの GUID よりも大きい GUID を生成します。 Windows の再起動後、GUID は範囲の下限からもう一度開始できますが、まだグローバルに一意です。 GUID 列が行識別子として使用される場合、NEWSEQUENTIALID を使用すると、NEWID 関数を使用するよりも高速化できます。 これは、NEWID 関数では、ランダムなアクティビティが発生し、使用されるキャッシュ データ ページが少なくなるためです。 NEWSEQUENTIALID を使用すると、データおよびインデックス ページを完全に入力するためにも役立ちます。  
   

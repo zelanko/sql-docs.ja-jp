@@ -12,14 +12,14 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f09e4f4758b6276836b08f02b24fb31dd1fadc7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069833"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305640"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>ファイル ベースのドライバー診断の例
 ファイルベースのドライバーは、ODBC ドライバーとデータソースの両方として機能します。 このため、エラーと警告は、ODBC 接続のコンポーネントとしても、データソースとしても生成されます。 これは、ドライバーマネージャーとのインターフェイスを持つコンポーネントでもあるため、 **SQLGetDiagRec**の引数を書式設定して返します。  

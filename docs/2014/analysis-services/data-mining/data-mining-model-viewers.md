@@ -17,19 +17,17 @@ helpviewer_keywords:
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 686d9ee54de7fb71857093ef10c44ddbd15d3f86
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085046"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523200"
 ---
 # <a name="data-mining-model-viewers"></a>データ マイニング モデル ビューアー
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データマイニングモデルをトレーニングした後、モデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
+  でデータマイニングモデルをトレーニングした後、モデルを調査して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
   
- モデルの作成に使用する各アルゴリズムからは、異なる種類の結果が返されます。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にはアルゴリズムごとに個別のビューアーが用意されています。 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを参照すると、モデルに適したビューアーを使用して、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。  
+ モデルの作成に使用する各アルゴリズムからは、異なる種類の結果が返されます。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にはアルゴリズムごとに個別のビューアーが用意されています。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを参照すると、モデルに適したビューアーを使用して、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。  
   
 ## <a name="how-to-use-the-model-viewers"></a>モデル ビューアーの使用方法  
  最初にマイニング モデルを選択してから、ビューアーを選択します。 各モデルでは、常に、複数のタブを表示できるカスタム ビューアーと汎用ビューアーの 2 種類のビューアーを使用できます。  
@@ -59,32 +57,25 @@ ms.locfileid: "66085046"
  次の各トピックでは、各ビューアーの詳細と、各ビューアーで情報がどのように解釈されるかを説明します。  
   
  [Microsoft ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-tree-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [「Microsoft クラスター ビューアーを使用したモデルの参照」](browse-a-model-using-the-microsoft-cluster-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-time-series-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft Naive Bayes ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-association-rules-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-neural-network-viewer.md)  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムを使用するモデルなど、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーについて説明します。 このビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムを使用するモデルなど、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用して作成されたマイニング モデルが表示されます。  
   
  [Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  すべてのデータ マイニング モデルの汎用ビューアーで確認できる詳細情報について説明します。また、各アルゴリズムの情報を解釈する方法の例を示します。  

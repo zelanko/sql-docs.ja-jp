@@ -9,33 +9,31 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f046eab684ece1d6a6a8b5f38db8965d277db897
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66064636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930863"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>サービスの管理方法に関するトピック (SQL Server 構成マネージャー)
-  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows オペレーティング システムのサービスとして実行されます。 サービスの詳細については、「 [データベース エンジン サービスの管理](configure-windows/manage-the-database-engine-services.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [別のコンピューターへの接続 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   
--   [SQL Server のインスタンスを、SQL Server 構成マネージャー &#40;自動的に開始するように設定する&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
+-   [SQL Server のインスタンスが自動的に開始されるようにする設定 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
--   [SQL Server &#40;SQL Server 構成マネージャーのインスタンスが自動的に起動しないようにする&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
+-   [SQL Server のインスタンスの自動開始の回避 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [SQL Server &#40;SQL Server 構成マネージャーのサービス開始アカウントを変更する&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
--   [SQL Server 構成マネージャー&#41;&#40;サーバーのスタートアップオプションを構成する](configure-windows/scm-services-configure-server-startup-options.md)  
+-   [サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [SQL Server &#40;SQL Server 構成マネージャーによって使用されるアカウントのパスワードを変更する&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [SQL Server で使用されるアカウントのパスワードの変更 &#40;SQL Server 構成マネージャー&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [SQL Server エラー ログの構成](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

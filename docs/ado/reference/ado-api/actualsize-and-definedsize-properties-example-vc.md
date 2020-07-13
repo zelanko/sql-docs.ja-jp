@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 092c67ec3fef6705d103e87cd5e47adc37397475
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67921472"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760698"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize とのサイズプロパティの例 (VC + +)
 この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティと defined [size](../../../ado/reference/ado-api/definedsize-property.md)プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。  

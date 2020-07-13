@@ -10,15 +10,14 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba982d62816ae984c741a7023d3166c7a1a2d5f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62768828"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437189"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 式)
   要求されたデータ型の NULL 値を返します。  

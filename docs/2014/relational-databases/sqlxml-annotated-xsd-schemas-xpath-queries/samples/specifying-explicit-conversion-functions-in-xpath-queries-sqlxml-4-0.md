@@ -12,15 +12,14 @@ helpviewer_keywords:
 - number function
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66010699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002869"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
   次の例では、XPath クエリに明示変換関数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
@@ -28,16 +27,15 @@ ms.locfileid: "66010699"
 ## <a name="examples"></a>例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
- 
-  `number()` 関数は、引数を数値に変換します。  
+ `number()` 関数は、引数を数値に変換します。  
   
- **ContactID**の値が数値以外の場合、次のクエリは**ContactID**を数値に変換し、値4と比較します。 次に、クエリは、コンテキストノードのすべて** \<の Employee>** 子要素を返します。この属性には、数値4を持つ**ContactID**属性があります。  
+ **ContactID**の値が数値以外の場合、次のクエリは**ContactID**を数値に変換し、値4と比較します。 次に、クエリは **\<Employee>** コンテキストノードのすべての子要素を返します。 **ContactID**属性の数値は4です。  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
 ```  
   
- `attribute`軸 (@) へのショートカットを指定できます。 `child`軸が既定値であるため、クエリから省略できます。  
+ 軸 (@) へのショートカットを `attribute` 指定できます `child` 。軸が既定値であるため、クエリから省略できます。  
   
 ```  
 /Contact[number(@ContactID) = 4]  
@@ -78,16 +76,15 @@ ms.locfileid: "66010699"
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
- 
-  `string()` 関数は、引数を文字列に変換します。  
+ `string()` 関数は、引数を文字列に変換します。  
   
- 次のクエリでは、 **ContactID**を文字列に変換し、文字列値 "4" と比較します。 このクエリでは、コンテキストノードのすべて** \<の Employee>** 要素の子が、文字列値 "4" の**ContactID**が返されます。  
+ 次のクエリでは、 **ContactID**を文字列に変換し、文字列値 "4" と比較します。 このクエリは、 **\<Employee>** コンテキストノードのすべての子要素を返します。文字列値が "4" の**ContactID**が返されます。  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
 ```  
   
- `attribute`軸 (@) へのショートカットを指定できます。 `child`軸が既定値であるため、クエリから省略できます。  
+ 軸 (@) へのショートカットを `attribute` 指定できます `child` 。軸が既定値であるため、クエリから省略できます。  
   
 ```  
 /Contact[string(@ContactID)="4"]  

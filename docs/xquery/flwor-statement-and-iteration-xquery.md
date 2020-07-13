@@ -1,5 +1,6 @@
 ---
 title: FLWOR ステートメントと繰り返し (XQuery) |Microsoft Docs
+description: XQuery で FLOWR イテレーション構文を構成する for、let、where、order by、および return 句について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f47068324f13fe3cd03f0fc798090378a5f5ad6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68038905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753623"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR ステートメントと繰り返し (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery では、FLWOR 反復構文が定義されています。 FLWOR とは、`for`、`let`、`where`、`order by`、および `return` の頭文字です。  
   
@@ -39,20 +40,19 @@ ms.locfileid: "68038905"
   
 -   1つ以上の反復子変数を入力シーケンスにバインドする1つ以上の FOR 句。  
   
-     入力シーケンスは、XPath 式などの他の XQuery 式にすることができます。 これらは、ノードのシーケンスまたはアトミック値のシーケンスです。 アトミック値のシーケンスは、リテラルまたはコンストラクター関数を使用して作成できます。 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]構築された XML ノードを入力シーケンスとして使用することはできません。  
+     入力シーケンスは、XPath 式などの他の XQuery 式にすることができます。 これらは、ノードのシーケンスまたはアトミック値のシーケンスです。 アトミック値のシーケンスは、リテラルまたはコンストラクター関数を使用して作成できます。 では、構築された XML ノードを入力シーケンスとして使用することはできません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
--   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てられた式は、XPath 式などの XQuery 式にすることができ、ノードのシーケンスまたはアトミック値のシーケンスのいずれかを返すことができます。 アトミック値のシーケンスは、リテラルまたはコンストラクター関数を使用して作成できます。 では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]構築された XML ノードを入力シーケンスとして使用することはできません。  
+-   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てられた式は、XPath 式などの XQuery 式にすることができ、ノードのシーケンスまたはアトミック値のシーケンスのいずれかを返すことができます。 アトミック値のシーケンスは、リテラルまたはコンストラクター関数を使用して作成できます。 では、構築された XML ノードを入力シーケンスとして使用することはできません [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
--   反復子変数。 この変数は、 `as`キーワードを使用してオプションの型アサーションを持つことができます。  
+-   反復子変数。 この変数は、キーワードを使用してオプションの型アサーションを持つことができ `as` ます。  
   
 -   省略可能な `where` 句。 繰り返しにフィルター述語を適用します。  
   
 -   省略可能な `order by` 句。  
   
--   
-  `return` 式。 `return`句内の式は、FLWOR ステートメントの結果を構築します。  
+-   `return` 式。 句内の式は、 `return` FLWOR ステートメントの結果を構築します。  
   
- たとえば、次のクエリでは、最初の`Step`製造場所の <> 要素を反復処理し、<`Step`> ノードの文字列値を返します。  
+ たとえば、次のクエリでは、 `Step` 最初の製造場所の <> 要素を反復処理し、<> ノードの文字列値を返し `Step` ます。  
   
 ```sql
 declare @x xml  
@@ -80,7 +80,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 次のクエリは前のクエリと似ていますが、ProductModel テーブルの型指定された xml 列である命令列に対して指定されている点が異なります。 このクエリは、特定の製品の最初の`step`ワークセンターの場所で、> 要素を <すべての製造手順を反復処理します。  
+ 次のクエリは前のクエリと似ていますが、ProductModel テーブルの型指定された xml 列である命令列に対して指定されている点が異なります。 このクエリは、 `step` 特定の製品の最初のワークセンターの場所で、> 要素を <すべての製造手順を反復処理します。  
   
 ```sql
 SELECT Instructions.query('  
@@ -95,16 +95,15 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   
-  `$Step` は反復子変数です。  
+-   `$Step` は反復子変数です。  
   
--   [パス式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`では、入力シーケンスが生成されます。 このシーケンスは、最初の <`step` `Location`> 要素ノードの子 <> 要素ノードのシーケンスです。  
+-   [パス式](../xquery/path-expressions-xquery.md)では、 `//AWMI:root/AWMI:Location[1]/AWMI:step` 入力シーケンスが生成されます。 このシーケンスは、 `step` 最初の <> 要素ノードの子 <> 要素ノードのシーケンスです `Location` 。  
   
 -   省略可能な述語句 `where` は使用しません。  
   
--   式`return`は、<`step`> 要素から文字列値を返します。  
+-   式は、 `return` <> 要素から文字列値を返し `step` ます。  
   
- [文字列関数 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)は、<`step`> ノードの文字列値を取得するために使用されます。  
+ [文字列関数 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)は、<> ノードの文字列値を取得するために使用され `step` ます。  
   
  結果の一部を次に示します。  
   
@@ -141,8 +140,7 @@ SELECT @x.query('
 -- result test 12 111  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では異種シーケンスが許可されていません。 具体的には、アトミック値とノードが混在しているシーケンスは許可されません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では異種シーケンスが許可されていません。 具体的には、アトミック値とノードが混在しているシーケンスは許可されません。  
   
  反復は、次のクエリで示すように XML 形式の変換で[Xml 構築](../xquery/xml-construction-xquery.md)構文と一緒に使用されることがよくあります。  
   
@@ -158,7 +156,7 @@ SELECT @x.query('
 ...  
 ```  
   
- 次のクエリでは、子要素とし`Location`て返されるワークセンターの場所の属性を持つ <> 要素を持つ新しい XML が構築されます。  
+ 次のクエリでは、 `Location` 子要素として返されるワークセンターの場所の属性を持つ <> 要素を持つ新しい XML が構築されます。  
   
 ```xml
 <Location>  
@@ -190,7 +188,7 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   FLWOR ステートメントは、特定の製品の`Location` <> 要素のシーケンスを取得します。  
+-   FLWOR ステートメントは、特定の製品の <> 要素のシーケンスを取得し `Location` ます。  
   
 -   [Data 関数 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)は、各属性の値を抽出するために使用されます。これにより、属性としてではなく、結果の XML にテキストノードとして追加されます。  
   
@@ -212,10 +210,9 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-let-clause"></a>Let 句の使用  
- `let`句を使用すると、変数を参照して参照できる反復式に名前を指定できます。 
-  `let` 変数に割り当てられた式は、変数がクエリ内で参照されるたびにクエリに挿入されます。 これは、ステートメントが、式が参照される回数だけ実行されることを意味します。  
+ 句を使用すると、 `let` 変数を参照して参照できる反復式に名前を指定できます。 `let` 変数に割り当てられた式は、変数がクエリ内で参照されるたびにクエリに挿入されます。 これは、ステートメントが、式が参照される回数だけ実行されることを意味します。  
   
- [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースでは、製造手順には、必要なツールとツールが使用されている場所に関する情報が含まれています。 次のクエリは、`let` 句を使用して、製品モデルの作成に必要なツールと、それぞれのツールが必要となる場所を一覧表示します。  
+ データベースでは、製造手順には、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 必要なツールとツールが使用されている場所に関する情報が含まれています。 次のクエリは、`let` 句を使用して、製品モデルの作成に必要なツールと、それぞれのツールが必要となる場所を一覧表示します。  
   
 ```sql
 SELECT Instructions.query('  
@@ -230,9 +227,9 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>where 句の使用  
- 句を使用し`where`て、イテレーションの結果をフィルター処理できます。 このことを次の例で説明します。  
+ 句を使用して、 `where` イテレーションの結果をフィルター処理できます。 このことを次の例で説明します。  
   
- 自転車の製造では、製造プロセスは一連のワークセンターの場所を通過します。 各ワークセンターの場所では、製造手順の順序を定義します。 次のクエリでは、自転車モデルを製造し、製造手順が3つ未満のワークセンターの場所のみを取得します。 つまり、3つの <`step`> 要素を持つことになります。  
+ 自転車の製造では、製造プロセスは一連のワークセンターの場所を通過します。 各ワークセンターの場所では、製造手順の順序を定義します。 次のクエリでは、自転車モデルを製造し、製造手順が3つ未満のワークセンターの場所のみを取得します。 つまり、3つの <> 要素を持つことになり `step` ます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -250,9 +247,9 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   キーワード`where`は**count ()** 関数を使用して、各ワークセンター `step`の場所の <> 子要素の数をカウントします。  
+-   `where`キーワードは**count ()** 関数を使用して、 `step` 各ワークセンターの場所の <> 子要素の数をカウントします。  
   
--   式`return`は、イテレーションの結果から必要な XML を構築します。  
+-   式は、 `return` イテレーションの結果から必要な XML を構築します。  
   
  結果を次に示します。  
   
@@ -260,20 +257,18 @@ where ProductModelID=7
 <Location LocationID="30"/>   
 ```  
   
- 
-  `where` 句内の式の結果は、次の規則を順に適用してブール値に変換されます。 これらは、パス式の述語の規則と同じですが、整数は使用できません。  
+ `where` 句内の式の結果は、次の規則を順に適用してブール値に変換されます。 これらは、パス式の述語の規則と同じですが、整数は使用できません。  
   
-1.  式が`where`空のシーケンスを返す場合、その有効なブール値は False になります。  
+1.  式が `where` 空のシーケンスを返す場合、その有効なブール値は False になります。  
   
-2.  
-  `where` 式が単純な Boolean 型の値を 1 つ返す場合、その値が有効なブール値になります。  
+2.  `where` 式が単純な Boolean 型の値を 1 つ返す場合、その値が有効なブール値になります。  
   
-3.  式が`where` 、少なくとも1つのノードを含むシーケンスを返す場合、有効なブール値は True になります。  
+3.  式が、 `where` 少なくとも1つのノードを含むシーケンスを返す場合、有効なブール値は True になります。  
   
 4.  それ以外の場合は、静的エラーが発生します。  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR での複数の変数のバインド  
- 1 つの FLWOR 式で入力シーケンスに複数の変数をバインドできます。 次の例では、型指定されていない xml 変数に対してクエリを指定しています。 FLOWR 式は、各 <`Step` `Location`> 要素の最初の <> 要素の子を返します。  
+ 1 つの FLWOR 式で入力シーケンスに複数の変数をバインドできます。 次の例では、型指定されていない xml 変数に対してクエリを指定しています。 FLOWR 式は、 `Step` 各 <> 要素の最初の <> 要素の子を返し `Location` ます。  
   
 ```sql
 declare @x xml  
@@ -299,13 +294,13 @@ SELECT @x.query('
   
  上のクエリに関して、次の点に注意してください。  
   
--   式`for`では`$Loc` 、$`FirstStep` variables が定義されています。  
+-   式では `for` 、$ variables が定義されて `$Loc` `FirstStep` います。  
   
--   `two`式、 `/ManuInstructions/Location`およびは`$FirstStep in $Loc/Step[1]`、の`$FirstStep`値がの`$Loc`値に依存するということに関連付けられています。  
+-   `two`式、およびは、 `/ManuInstructions/Location` `$FirstStep in $Loc/Step[1]` の値がの値に依存するということに関連付けられてい `$FirstStep` `$Loc` ます。  
   
--   に`$Loc`関連付けられた式は、 `Location`一連の <> 要素を生成します。 各 <`Location`> 要素につい`$FirstStep`て、は1つの`Step` <> 要素 (シングルトン) のシーケンスを生成します。  
+-   に関連付けられた式は、 `$Loc` 一連の <> 要素を生成し `Location` ます。 各 <> 要素について `Location` 、は `$FirstStep` 1 つの <`Step`> 要素 (シングルトン) のシーケンスを生成します。  
   
--   `$Loc`は、 `$FirstStep`変数に関連付けられた式で指定されます。  
+-   `$Loc`は、変数に関連付けられた式で指定され `$FirstStep` ます。  
   
  結果を次に示します。  
   
@@ -332,12 +327,9 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   
-  `for` 句で 2 つの変数 `$WC` および `$S` を定義します。 
-  `$WC` に関連付けられた式により、ある製造モデルの自転車の製造で使用されるワーク センター拠点のシーケンスが生成されます。 
-  `$S` 変数に代入されたパス式は、`$WC` で示すワーク センター拠点のシーケンスごとに製造手順のシーケンスを生成します。  
+-   `for` 句で 2 つの変数 `$WC` および `$S` を定義します。 `$WC` に関連付けられた式により、ある製造モデルの自転車の製造で使用されるワーク センター拠点のシーケンスが生成されます。 `$S` 変数に代入されたパス式は、`$WC` で示すワーク センター拠点のシーケンスごとに製造手順のシーケンスを生成します。  
   
--   Return ステートメントは、製造手順と`Step` **locationid**を属性として含む <> 要素を持つ XML を構築します。  
+-   Return ステートメントは、 `Step` 製造手順と**locationid**を属性として含む <> 要素を持つ XML を構築します。  
   
 -   **既定の declare 要素の名前空間**は、結果の XML 内のすべての名前空間宣言が最上位の要素に表示されるように、XQuery プロローグで使用されます。 これにより、結果が読みやすくなります。 既定の名前空間の詳細については、「 [XQuery での名前空間の処理](../xquery/handling-namespaces-in-xquery.md)」を参照してください。  
   
@@ -361,11 +353,10 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Order by 句の使用  
- XQuery での並べ替えは、FLWOR 式`order by`の句を使用して実行されます。 `order by`句に渡される並べ替え式は、 **gt**演算子に対して有効な型を持つ値を返す必要があります。 各並べ替え式は、1つの項目を持つ単一のシーケンスになる必要があります。 既定では、並べ替えは昇順で実行されます。 必要に応じて、並べ替え式ごとに昇順または降順を指定することもできます。  
+ XQuery での並べ替えは、FLWOR 式の句を使用して実行され `order by` ます。 句に渡される並べ替え式は、 `order by` **gt**演算子に対して有効な型を持つ値を返す必要があります。 各並べ替え式は、1つの項目を持つ単一のシーケンスになる必要があります。 既定では、並べ替えは昇順で実行されます。 必要に応じて、並べ替え式ごとに昇順または降順を指定することもできます。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に実装された XQuery で行う、文字列値を並べ替えるための比較には、常にバイナリの Unicode コード ポイントの照合順序が使用されます。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に実装された XQuery で行う、文字列値を並べ替えるための比較には、常にバイナリの Unicode コード ポイントの照合順序が使用されます。  
   
  次のクエリでは、AdditionalContactInfo 列から特定の顧客のすべての電話番号を取得します。 結果は電話番号順に並べ替えます。  
   
@@ -383,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- [アトミック化 (XQuery)](../xquery/atomization-xquery.md)プロセスは、に`number` `order by`渡す前に <> 要素のアトミック値を取得することに注意してください。 式は**data ()** 関数を使用して記述できますが、必須ではありません。  
+ [アトミック化 (XQuery)](../xquery/atomization-xquery.md)プロセスは、 `number` に渡す前に <> 要素のアトミック値を取得することに注意して `order by` ください。 式は**data ()** 関数を使用して記述できますが、必須ではありません。  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -416,7 +407,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 属性値で並べ替えることもできます。 たとえば、次のクエリは、新しく作成され`Location`た <> 要素を取得します。この要素には、locationid 属性と LaborHours 属性が LaborHours 属性によって降順で並べ替えられています。 その結果、最大労働時間があるワークセンターの場所が最初に返されます。  
+ 属性値で並べ替えることもできます。 たとえば、次のクエリは、新しく作成された <> 要素を取得し `Location` ます。この要素には、LocationID 属性と LaborHours 属性が LaborHours 属性によって降順で並べ替えられています。 その結果、最大労働時間があるワークセンターの場所が最初に返されます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -444,7 +435,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- 次のクエリは、結果を要素名順に並べ替えます。 このクエリは、製品カタログから特定の製品の仕様を取得します。 仕様は、<`Specifications`> 要素の子です。  
+ 次のクエリは、結果を要素名順に並べ替えます。 このクエリは、製品カタログから特定の製品の仕様を取得します。 仕様は、<> 要素の子です `Specifications` 。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -460,9 +451,9 @@ where ProductModelID=19;
   
  上のクエリに関して、次の点に注意してください。  
   
--   式`/p1:ProductDescription/p1:Specifications/*`は <`Specifications`> の子要素を返します。  
+-   `/p1:ProductDescription/p1:Specifications/*`式は <> の子要素を返し `Specifications` ます。  
   
--   式`order by (local-name($a))`は、要素名のローカル部分でシーケンスを並べ替えます。  
+-   式は、 `order by (local-name($a))` 要素名のローカル部分でシーケンスを並べ替えます。  
   
  結果を次に示します。  
   
@@ -499,7 +490,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 次の例に示すように、複数の並べ替え条件を指定できます。 この例のクエリでは、 `Employee`最初にタイトル、次に管理者属性値によって <> 要素を並べ替えます。  
+ 次の例に示すように、複数の並べ替え条件を指定できます。 この例のクエリでは、 `Employee` 最初にタイトル、次に管理者属性値によって <> 要素を並べ替えます。  
   
 ```sql
 declare @x xml  
@@ -540,10 +531,9 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   空のシーケンスの並べ替えは制御できません。  
   
--   
-  `order by` ではキーワード empty least、empty greatest、および collation を使用できません。  
+-   `order by` ではキーワード empty least、empty greatest、および collation を使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

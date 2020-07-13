@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62728518"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545208"
 ---
 # <a name="attribute-relationships"></a>のディメンション デザイナーでは、[ディメンション構造] ビューの
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ディメンション内の属性は常に、直接または間接的にキー属性に関連付けられます。 同一のリレーショナル テーブルからすべてのディメンション属性が派生するスター スキーマに基づいてディメンションを定義すると、ディメンションのキー属性と各非キー属性の間に自動的に属性リレーションシップが定義されます。 関連を持った複数のテーブルからディメンション属性が派生するスノーフレーク スキーマを基にディメンションを定義すると、属性リレーションシップが自動的に次のように定義されます。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、ディメンション内の属性は常に、直接または間接的にキー属性に関連付けられます。 同一のリレーショナル テーブルからすべてのディメンション属性が派生するスター スキーマに基づいてディメンションを定義すると、ディメンションのキー属性と各非キー属性の間に自動的に属性リレーションシップが定義されます。 関連を持った複数のテーブルからディメンション属性が派生するスノーフレーク スキーマを基にディメンションを定義すると、属性リレーションシップが自動的に次のように定義されます。  
   
 -   キー属性と、メイン ディメンション テーブルの列にバインドされた各非キー属性の間  
   
@@ -70,9 +69,7 @@ ms.locfileid: "62728518"
   
 -   Age、Gender、Email、City、Region、Country  
   
- 自然階層を表すリレーションシップを適用するには、あるレベルの属性とその下のレベルの属性との間に属性リレーションシップを作成します。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、このしくみによって、自然なリレーションシップと潜在的な集計が指定されます。 Customer ディメンションには、Country 属性、Region 属性、City 属性、および Customer 属性に対する自然階層が存在します。 
-  `{Country, Region, City, Customer}` の自然階層は、次の属性リレーションシップを追加して記述します。  
+ 自然階層を表すリレーションシップを適用するには、あるレベルの属性とその下のレベルの属性との間に属性リレーションシップを作成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、このしくみによって、自然なリレーションシップと潜在的な集計が指定されます。 Customer ディメンションには、Country 属性、Region 属性、City 属性、および Customer 属性に対する自然階層が存在します。 `{Country, Region, City, Customer}` の自然階層は、次の属性リレーションシップを追加して記述します。  
   
 -   Region 属性に対する属性リレーションシップとしての Country 属性  
   
@@ -84,7 +81,7 @@ ms.locfileid: "62728518"
   
  あるレベルの `SourceAttribute` プロパティには、そのレベルの記述に使用する属性を指定します。 属性の `KeyColumns` プロパティには、メンバーの取り込み元のデータ ソース ビューの列を指定します。 属性の `NameColumn` プロパティには、別の名前列をメンバーに対して指定できます。  
   
- を使用して[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ユーザー定義階層内のレベルを定義するには、ディメンション**デザイナー**でディメンション属性、ディメンションテーブルの列、またはキューブのデータソースビューに含まれる関連テーブルの列を選択します。 ユーザー定義階層の作成の詳細については、「[ユーザー定義階層の作成](../multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  
+ を使用してユーザー定義階層内のレベルを定義するには [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 、ディメンション**デザイナー**でディメンション属性、ディメンションテーブルの列、またはキューブのデータソースビューに含まれる関連テーブルの列を選択します。 ユーザー定義階層の作成の詳細については、「[ユーザー定義階層の作成](../multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  
   
  Analysis Services では通常、メンバーの内容が想定されています。 リーフ メンバーには子孫がなく、元のデータ ソースから派生したデータが含まれています。 非リーフ メンバーには子孫があり、子メンバーで実行した集計から派生したデータが含まれています。 集計レベルのメンバーは、下位レベルの集計が基になっています。 したがって、あるレベルのソース属性の `IsAggregatable` プロパティを `False` に設定するときは、集計可能な属性をこれより上位のレベルとして追加しないでください。  
   

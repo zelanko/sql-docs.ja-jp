@@ -16,28 +16,28 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73844500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717477"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Geo レプリケーションの連続コピーリレーションシップに現在関与しているユーザーデータベース (V11) ごとに1行のデータを返します。 特定のプライマリデータベースに対して複数の連続コピーリレーションシップが開始された場合、このテーブルにはアクティブなセカンダリデータベースごとに1行のデータが格納されます。  
   
 SQL Database V12 を使用している場合は、 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)を使用する必要があります ( *Sys は dm_continuous_copy_status* V11 にのみ適用されるため)。
 
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**copy_guid**|**UNIQUEIDENTIFIER**|レプリカデータベースの一意の ID。|  
+|**copy_guid**|**uniqueidentifier**|レプリカデータベースの一意の ID。|  
 |**partner_server**|**sysname**|リンクされた SQL データベース サーバーの名前。|  
 |**partner_database**|**sysname**|リンクされた SQL データベース サーバー上にあるリンクされたデータベースの名前。|  
 |**last_replication**|**datetimeoffset**|最後に適用されたレプリケートされたトランザクションのタイムスタンプ。|  
@@ -51,14 +51,14 @@ SQL Database V12 を使用している場合は、 [dm_geo_replication_link_stat
 ## <a name="permissions"></a>アクセス許可  
  データを取得するには、 **db_owner**データベースロールのメンバーシップが必要です。 Dbo ユーザー、 **dbmanager**データベースロールのメンバー、および sa ログインでも、このビューに対してクエリを実行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Dm_continuous_copy_status ビューは**リソース**データベースに作成され、論理マスターを含むすべてのデータベースで表示**でき**ます。 ただし、論理 master データベースでこのビューにクエリを実行しても、空のセットが返されます。  
   
  連続コピーリレーションシップがデータベースで終了した場合、そのデータベースの行は**dm_continuous_copy_status**ビューに表示されなくなります。  
   
  **Dm_database_copies**ビューと同様に、 **dm_continuous_copy_status**には、データベースがプライマリまたはアクティブセカンダリデータベースである連続コピーリレーションシップの状態が反映されます。 **Dm_database_copies**とは異なり、 **sys. dm_continuous_copy_status**には、操作とパフォーマンスに関する詳細情報を提供するいくつかの列が含まれています。 これらの列には、 **last_replication**、および**replication_lag_sec**が含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
  [Transact-sql&#41;&#40;アクティブ Geo レプリケーションのストアドプロシージャ](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62874486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970772"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
-  ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
+  ユーザー定義関数は、パラメーターを受け取り、計算やその他の動作を実行し、結果を返すルーチンです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
   
  関数には、1 つの値を返すスカラー関数と行セットを返すテーブル値関数の 2 種類があります。  
   

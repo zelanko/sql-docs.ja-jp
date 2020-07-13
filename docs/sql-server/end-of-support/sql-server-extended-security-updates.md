@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256731"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488358"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server 用の延長セキュリティ更新プログラムとは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -206,6 +206,25 @@ ESU をダウンロードするには、次の手順に従います。
    ![[セキュリティ更新プログラム] ペインで利用可能な更新プログラムを確認する](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. セキュリティ更新プログラムが利用可能な場合、利用可能になった時点で、こちらからダウンロードしてください。 
+
+## <a name="configure-regional-redundancy"></a>リージョン冗長を構成する 
+
+**SQL Server レジストリ**に対するリージョン冗長を必要とするお客様は、2 つの異なるリージョンに登録データを作成できます。 その後、お客様は、**SQL Server レジストリ** サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできます。 
+
+リージョン冗長を使用するには、**SQL Server レジストリ** サービスを 2 つの異なるリージョンに作成する必要があり、SQL Server のインベントリをこれら 2 つのサービス間で分割する必要があります。 これにより、SQL Server の半分は一方のリージョンのレジストリ サービスに登録され、SQL Server の残りの半分はもう一方のリージョンのレジストリ サービスに登録されます。 
+
+リージョン冗長を構成するには、次の手順のようにします。
+
+1. SQL Server 2008 または 2008 R2 のインベントリを、2 つのファイル (upload1.csv と upload2.csv など) に分割します。 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="アップロード ファイルの例":::
+
+1. 1 つのリージョンに最初の **SQL Server レジストリ** サービスを作成し、csv ファイルの 1 つをそれに一括登録します。 たとえば、最初の **SQL Server レジストリ** サービスを**米国西部**リージョンに作成し、upload1.csv ファイルを使用して SQL Server を一括登録します。 
+1. 2 番目の **SQL Server レジストリ** サービスを第 2 のリージョンに作成し、他の csv ファイルをそこに一括登録します。 たとえば、2 番目の **SQL Server レジストリ** サービスを**米国東部**リージョンに作成し、upload2.csv ファイルを使用して SQL Server を一括登録します。 
+
+
+データが 2 つの異なる **SQL Server レジストリ** リソースに登録されると、サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできるようになります。 
+
 
 ## <a name="faq"></a>よく寄せられる質問
 

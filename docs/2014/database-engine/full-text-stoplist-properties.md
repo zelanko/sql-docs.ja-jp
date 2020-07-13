@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4ff27a1258d5164e3e93d34b6ff757993d6f6363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62779409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932943"
 ---
 # <a name="full-text-stoplist-properties"></a>[フルテキスト ストップリストのプロパティ]
   このダイアログ ボックスを使用すると、個々のストップワードの追加や削除、特定の言語のすべてのストップワードの削除、および現在のストップリストのクリアを実行できます。 ストップワードは、ストップリストで一般的に使用される単語です。 ストップリスト内のストップワードは、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  
@@ -28,7 +27,7 @@ ms.locfileid: "62779409"
 -   [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>オプション  
- **アクション**  
+ **動作**  
  実行するアクションを指定します。  
   
  **[ストップワードの追加]**  
@@ -44,12 +43,10 @@ ms.locfileid: "62779409"
  すべての言語のストップワードをすべて削除することによって、ストップリストをクリアします。  
   
  **ストップワード**  
- 
-  **[ストップワードの追加]** または **[ストップワードの削除]** を選択した場合は、 **[ストップワード]** フィールドにストップワードを入力します。 新しいストップワードは一意である、つまり、選択した言語のこのストップリストにまだ含まれていない必要があります。  
+ **[ストップワードの追加]** または **[ストップワードの削除]** を選択した場合は、 **[ストップワード]** フィールドにストップワードを入力します。 新しいストップワードは一意である、つまり、選択した言語のこのストップリストにまだ含まれていない必要があります。  
   
  **[フルテキスト言語]**  
- 
-  **[ストップワードの追加]**、 **[ストップワードの削除]**、または **[すべてのストップワードの削除]** を選択した場合は、このリスト ボックスから、操作対象のストップワードの言語を選択します。 このリスト ボックスには、サーバー インスタンスでサポートされているすべてのフルテキスト言語が表示されます。  
+ **[ストップワードの追加]**、 **[ストップワードの削除]**、または **[すべてのストップワードの削除]** を選択した場合は、このリスト ボックスから、操作対象のストップワードの言語を選択します。 このリスト ボックスには、サーバー インスタンスでサポートされているすべてのフルテキスト言語が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [fulltext_stopwords &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
@@ -57,6 +54,6 @@ ms.locfileid: "62779409"
  [フルテキスト検索のためのストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)   
  [Transact-sql&#41;&#40;フルテキストストップリストの変更](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [Transact-sql&#41;&#40;のフルテキストストップリストの削除](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   

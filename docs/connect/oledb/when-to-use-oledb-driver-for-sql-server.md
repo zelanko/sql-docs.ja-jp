@@ -1,6 +1,6 @@
 ---
-title: OLE DB Driver for SQL Server をいつ使用するか | Microsoft Docs
-description: OLE DB Driver for SQL Server をいつ使用するか
+title: OLE DB Driver をいつ使用するか
+description: OLE DB Driver for SQL Server をいつ使用するかと、それを他のドライバーから区別するデータ アクセスの概念の概要について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015192"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727956"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server をいつ使用するか
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015192"
  OLE DB Driver for SQL Server と MDAC の違いについては、「[MDAC から OLE DB Driver for SQL Server へのアプリケーションの更新](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB の使用法に関するトピック](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+ [OLE DB の使用法に関するトピック](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

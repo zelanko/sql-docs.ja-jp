@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を拒否する  
- 次の例では、エンドポイント `VIEW DEFINITION` での `Mirror7` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  
+ 次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  
   
 ```  
 USE master;  

@@ -3,24 +3,29 @@ title: クイック スタート:Python のデータ構造
 description: このクイックスタートでは、Python と SQL Server Machine Learning Services でデータ構造とデータ オブジェクトを使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116335"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606695"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services で Python を使用するデータ構造とオブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、SQL Server Machine Learning Services で Python を使用する場合のデータ構造の使用方法について説明します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で Python を使用するときに、データ構造体とデータ型を使用する方法について説明します。 Python と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+このクイックスタートでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python を使用するときに、データ構造体とデータ型を使用する方法について説明します。 Python と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
+::: moniker-end
 
 SQL Server は Python **pandas** パッケージに依存しており、それは表形式データの操作に最適です。 ただし、Python から SQL Server にスカラーを渡して、「ただ動作する」ことを期待することはできません。 このクイックスタートでは、いくつかの基本的なデータ構造の定義を確認し、Python と SQL Server の間で表形式のデータを渡すときに発生する可能性がある他の問題に備えます。
 
@@ -37,9 +42,15 @@ data.frame に表形式構造が必要な場合、計算の単一の結果をデ
 
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
+このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+::: moniker-end
+- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用します。
 
 ## <a name="scalar-value-as-a-series"></a>シリーズとしてのスカラー値
 
@@ -214,4 +225,4 @@ SQL Server で高度な Python 関数を記述する方法については、次�
 SQL Server Machine Learning Services での Python の使用に関する詳細については、次の記事を参照してください。
 
 - [Python での予測モデルの作成とスコア付け](quickstart-python-train-score-model.md)
-- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../sql-server-machine-learning-services.md)

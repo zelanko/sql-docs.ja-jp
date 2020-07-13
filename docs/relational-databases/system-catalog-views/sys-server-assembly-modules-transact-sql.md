@@ -17,33 +17,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_assembly_modules catalog view
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 714d0ca36bc48206ee7431454a61b51d2c31afb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68060562"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887878"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>server_assembly_modules (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TA 型のサーバーレベルのトリガーのアセンブリモジュールごとに1行の値を格納します。 このビューは、アセンブリ トリガーを、基になる CLR 実装にマップします。 この関係を**server_triggers**に結合できます。 アセンブリを**master**データベースに読み込む必要があります。 組 (object_id) は、リレーションシップのキーです。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|これは、このアセンブリモジュールが定義されているオブジェクトへの外部キー参照です。|  
 |**assembly_id**|**int**|このモジュールが作成されたアセンブリの ID。 アセンブリは master データベースに読み込む必要があります。|  
 |**assembly_class**|**sysname**|モジュールを定義しているアセンブリ内のクラスの名前。|  
 |**assembly_method**|**sysname**|このモジュールを定義するクラス内のメソッドの名前。 集計関数 (AF) の場合は NULL です。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS サーバー プリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [自己実行\<として実行する場合は、指定したプリンシパルの ID> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS サーバー プリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> [自己実行として実行する場合は、指定されたプリンシパルの ID \<principal> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

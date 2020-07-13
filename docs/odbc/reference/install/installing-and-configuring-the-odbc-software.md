@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ODBC [ODBC], configuring
 - installing ODBC [ODBC]
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9bc3770140d6ff5befbafefc26cb8936e14b494a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68094032"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301927"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>ODBC ソフトウェアをインストールおよび構成する
 > [!NOTE]  

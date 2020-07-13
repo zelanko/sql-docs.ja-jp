@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: eb5940de6968707bac66cbaa8d3c91ce930868e3
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112307"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81488553"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ SQL Server または Azure SQL Database のエディションに対応するサ�
 
 サンプルデータベースを再作成するソースコードは、次の場所から入手できます。 データの作成は OLTP データベースの ETL (WideWorldImporters) に基づいていることに注意してください。
 
-[ワイド-インポーター-ソース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[ワイド-インポーター-ソース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>インストール
 

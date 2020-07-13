@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731022"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML に対して XQuery を実行し、SQL 型の値を返します。 このメソッドは、スカラー値を返します。  
   
@@ -73,7 +73,7 @@ SELECT @ProdID
  この場合、XML インスタンスに `ProductID` 属性は 1 つしかありませんが、静的な型指定の規則により、パス式がシングルトンを返すことを明示的に指定する必要があります。 このため、パス式の末尾に `[1]` が追加されています。 静的な型指定の詳細については、「[XQuery と静的な型指定](../../xquery/xquery-and-static-typing.md)」を参照してください。  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. value() メソッドを使用した xml 型列の値の取得  
- 次のクエリは、**データベースの**xml`CatalogDescription` 型の列 (`AdventureWorks`) に対して指定されています。 このクエリは、この列に格納されている各 XML インスタンスから `ProductModelID` 属性の値を取得します。  
+ 次のクエリは、`AdventureWorks` データベースの **xml** 型の列 (`CatalogDescription`) に対して指定されています。 このクエリは、この列に格納されている各 XML インスタンスから `ProductModelID` 属性の値を取得します。  
   
 ```  
 SELECT CatalogDescription.value('             
@@ -100,7 +100,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. value() メソッドと exist() メソッドを使用した xml 型列の値の取得  
- 次の例では、`value()`xml[ データ型の ](../../t-sql/xml/exist-method-xml-data-type.md) メソッドと **exist() メソッド**の使い方を示しています。 `value()` メソッドは、XML から `ProductModelID` 属性値を取得するために使用されます。 `exist()` 句の `WHERE` メソッドは、テーブルの行をフィルターで選択するために使用されています。  
+ 次の例では、**xml** データ型の `value()` メソッドと [exist() メソッド](../../t-sql/xml/exist-method-xml-data-type.md)の使い方を示しています。 `value()` メソッドは、XML から `ProductModelID` 属性値を取得するために使用されます。 `WHERE` 句の `exist()` メソッドは、テーブルの行をフィルターで選択するために使用されています。  
   
  このクエリは、要素の 1 つとして保証内容 (<`Warranty`> 要素) を含む XML インスタンスから製品モデル ID を取得します。 `WHERE` 句の条件では、`exist()` メソッドを使用して、この条件を満たす行のみを取得しています。  
   

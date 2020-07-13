@@ -1,5 +1,6 @@
 ---
 title: tablediff ユーティリティ
+description: tablediff ユーティリティを使用して、2 つのテーブル内のデータを比較して非収束の発生を調べ、レプリケーション トポロジ内の非収束をトラブルシューティングします。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304804"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150514"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,10 +188,10 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**画像**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**画像**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  これらのマッピングを行わず、厳密な検証を行う場合は、 **-strict** オプションを使用します。  
   
@@ -212,7 +213,7 @@ tablediff
   
 -   **ntext**  
   
--   **画像**  
+-   **image**  
   
 ## <a name="permissions"></a>アクセス許可  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  

@@ -38,7 +38,7 @@ Windows ファイル システムの API を使用して、FILESTREAM 列にア�
 ## <a name="querying-for-filestream-columns"></a>FILESTREAM 列のクエリ  
 OLE DB のスキーマ行セットでは、列が FILESTREAM 列かどうかは報告されません。 また、OLE DB の ITableDefinition を使用して FILESTREAM 列を作成することはできません。    
   
-FILESTREAM 列を作成する場合や、既存の FILESTREAM 列を検出する場合は、**sys.columns** カタログ ビューの [is_filestream](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 列を使用できます。  
+FILESTREAM 列を作成する場合や、既存の FILESTREAM 列を検出する場合は、[sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) カタログ ビューの **is_filestream** 列を使用できます。  
   
 以下に例を示します。  
   
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
-クライアントが OLE DB Driver for SQL Server を使用してコンパイルされていて、アプリケーションが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]) に接続している場合、**varbinary (max)** の動作は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client によって導入された動作と互換性を持つようになります。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。 
+クライアントが OLE DB Driver for SQL Server を使用してコンパイルされていて、アプリケーションが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]) に接続している場合、**varbinary (max)** の動作は [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によって導入された動作と互換性を持つようになります。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。 
   
 データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   
@@ -63,7 +63,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ## <a name="comments"></a>説明
 - アプリケーションで 2 GB より大きい **varbinary(max)** 値を送受信するには、パラメーターと結果のバインドで **DBTYPE_IUNKNOWN** を使用します。 パラメーターの場合、プロバイダーは ISequentialStream および ISequentialStream を返す結果に対して IUnknown::QueryInterface を呼び出す必要があります。  
 
--  OLE DB の場合は、ISequentialStream 値に関連するチェックが緩和されます。 *wType* が **DBBINDING** 構造体内で **DBTYPE_IUNKNOWN** である場合、**dwPart** から *DBPART_LENGTH* を省略するか、データの長さ (データ バッファー内のオフセット *obLength*) を ~0 に設定することにより、長さのチェックを無効にすることができます。 この場合、プロバイダーは値の長さをチェックせず、ストリームで利用可能なすべてのデータを要求し、返します。 この変更は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (以降の) サーバーに接続する場合に限り、すべてのラージ オブジェクト (LOB) 型と XML に適用されます。 これにより、既存のアプリケーションや下位レベルのサーバーとの一貫性や下位互換性を維持しつつ、より柔軟な開発が可能になります。  この変更は、データを転送するすべてのインターフェイス (主に IRowset:: GetData、ICommand:: Execute、および IRowsetFastLoad::InsertRow) に影響します。
+-  OLE DB の場合は、ISequentialStream 値に関連するチェックが緩和されます。 *wType* が **DBBINDING** 構造体内で **DBTYPE_IUNKNOWN** である場合、*dwPart* から **DBPART_LENGTH** を省略するか、データの長さ (データ バッファー内のオフセット *obLength*) を ~0 に設定することにより、長さのチェックを無効にすることができます。 この場合、プロバイダーは値の長さをチェックせず、ストリームで利用可能なすべてのデータを要求し、返します。 この変更は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (以降の) サーバーに接続する場合に限り、すべてのラージ オブジェクト (LOB) 型と XML に適用されます。 これにより、既存のアプリケーションや下位レベルのサーバーとの一貫性や下位互換性を維持しつつ、より柔軟な開発が可能になります。  この変更は、データを転送するすべてのインターフェイス (主に IRowset:: GetData、ICommand:: Execute、および IRowsetFastLoad::InsertRow) に影響します。
  
 
 ## <a name="see-also"></a>参照  

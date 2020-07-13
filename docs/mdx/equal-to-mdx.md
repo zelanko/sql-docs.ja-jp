@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139324"
 ---
 # <a name="-equal-to-mdx"></a>= (等しい) (MDX)
@@ -43,7 +43,7 @@ MDX_Expression = MDX_Expression
   
 -   両方のパラメーターが null の場合、または1つのパラメーターが null で、もう一方のパラメーターが0の場合は**true** 。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のクエリは、これらの条件の例を示しています。  
   
  `With`  

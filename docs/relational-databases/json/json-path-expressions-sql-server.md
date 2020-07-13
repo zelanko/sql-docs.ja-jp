@@ -1,8 +1,7 @@
 ---
 title: JSON パス式
-ms.date: 01/23/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715367"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  JSON オブジェクトのプロパティを参照するには、JSON パス式を使用します。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "74095731"
 次のクエリでは、パス式で `lax` モードが明示的に指定されています。
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{ ... }'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{ ... }';
 
-SELECT * FROM OPENJSON(@json, N'lax $.info')
+SELECT * FROM OPENJSON(@json, N'lax $.info');
 ```  
   
 ##  <a name="path"></a><a name="PATH"></a> Path  
@@ -100,11 +100,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
  たとえば、同じ名前の 2 つのキーが同じレベルにある場合など、JSON テキストに重複するプロパティが含まれる場合、**JSON_VALUE** および **JSON_QUERY** 関数はパスに一致する最初の値のみを返します。 重複するキーが含まれる JSON オブジェクトを解析してすべての値を取得するには、次の例に示すように **OPENJSON** を使用します。  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}';
 
 SELECT value
-FROM OPENJSON(@json,'$.person.info') 
+  FROM OPENJSON(@json,'$.person.info');
 ```  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  

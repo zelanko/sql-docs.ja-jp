@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e44093c3ea18bc995264a8974726f5af0abe3b3a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063645"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300822"
 ---
 # <a name="set-path-command"></a>SET PATH コマンド
 ファイル検索のパスを指定します。 ドライバー固有の情報については、「解説」を参照してください。  
@@ -33,7 +33,7 @@ SET PATH TO [Path]
  [*パス*]  
  Visual FoxPro で検索するディレクトリを指定します。 ディレクトリを区切るには、コンマまたはセミコロンを使用します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  SET PATH を使用すると、ストアドプロシージャ内で呼び出すことができる他の Visual FoxPro プログラムの検索パスを指定できます。 SET PATH は、接続に指定したデータソースのパスを変更しません。  
   
  既定のディレクトリまたはフォルダーへのパスを復元するには *、パスを指定せ*ずにパスを設定します。  

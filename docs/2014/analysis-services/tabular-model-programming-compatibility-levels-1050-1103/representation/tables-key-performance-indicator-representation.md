@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cc9ec7e6ccae664a6f608c350483ae9744fb49d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62795442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940023"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
   KPI は、対象の値に対してベースメジャーによって定義される値のパフォーマンスを測定するために使用されます。  

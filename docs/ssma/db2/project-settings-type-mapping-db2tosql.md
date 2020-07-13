@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060159"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>プロジェクトの設定 (型のマッピング) (DB2ToSQL)
@@ -61,8 +61,8 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|INT|  
-|BLOB|varbinary(max)|  
+|binary_integer|int|  
+|blob (blob)|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -74,8 +74,8 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |decimal|float [53]|  
 |double precision|float [53]|  
 |float|float [53]|  
-|INT|INT|  
-|整数 (integer)|INT|  
+|int|INT|  
+|整数|INT|  
 |long|varchar(max)|  
 |長生|varbinary(max)|  
 |long raw [\*..8000]<sup>\*</sup>|varbinary [\*]|  
@@ -90,7 +90,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
@@ -117,7 +117,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|BLOB|varbinary(max)|  
+|blob (blob)|varbinary(max)|  
 |char|char|  
 |char varying [\*..\*]|varchar [\*]|  
 |char [\*..\*]|char [\*]|  
@@ -136,8 +136,8 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |float|float [53]|  
 |float [\*..53]|float [\*]|  
 |float [54..\*]|float [53]|  
-|INT|INT|  
-|整数 (integer)|INT|  
+|int|INT|  
+|整数|INT|  
 |long|varchar(max)|  
 |長生|varbinary(max)|  
 |long raw [\*..8000]|varbinary [\*]|  
@@ -185,15 +185,15 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|INT|  
+|binary_interger|int|  
 |BLOB|varbinary(max)|  
-|Boolean|bit|  
+|ブール型|bit|  
 |Char|char|  
 |char varying [\*..8000]|varchar [\*]|  
 |文字の変化 [8001.\*.]|varchar(max)|  
 |char [\*..8000]|char [\*]|  
 |char [8001..\*]|varchar(max)|  
-|Character|char|  
+|文字|char|  
 |文字の変化\*(..8000]|varchar [\*]|  
 |文字の変化 [8001.\*.]|varchar(max)|  
 |文字 [\*..8000]|char [\*]|  
@@ -210,8 +210,8 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |Float|float [53]|  
 |float [\*..53]|float [\*]|  
 |float [54..\*]|float [53]|  
-|int|INT|  
-|整数|INT|  
+|int|int|  
+|Integer|int|  
 |整数 [\*..\*]|数値 [\*] [0]|  
 |Long|varchar(max)|  
 |長生|varbinary(max)|  
@@ -233,7 +233,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |nchar の変化\*[..4000]|nvarchar [\*]|  
 |nchar の変化 [4001.\*.]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|番号|float [53]|  
+|数値|float [53]|  
 |数値 [\*..\*]|数値 [\*]|  
 |数値 [\*..\*][\*..\*]|数値 [\*] [\*]|  
 |数値|数値 [38] [0]|  
@@ -241,7 +241,7 @@ SSMA for DB2 では、引数、列、ローカル変数、戻り値に対して�
 |数値 [\*..\*][\*..\*]|数値 [\*] [\*]|  
 |nvarchar2 [\*..4000]|nvarchar [\*]|  
 |nvarchar2 [4001..\*]|nvarchar(max)|  
-|pls_integer|INT|  
+|pls_integer|int|  
 |未加工 [\*..8000]|varbinary [\*]|  
 |未加工 [8001..\*]|varbinary(max)|  
 |Real|float [53]|  

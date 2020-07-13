@@ -1,5 +1,6 @@
 ---
 title: アセンブリを削除する |Microsoft Docs
+description: SQL Server のアセンブリが不要になった場合は、削除または削除できます。 アセンブリとそれに関連付けられているファイルを削除するには、DROP ASSEMBLY を使用します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f28f51f73faca8a72bdea3b8af70e14046d73f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3ba96bfa4f5f8f0dc5bfc95296a75499d1ec34f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68074345"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887801"
 ---
 # <a name="dropping-an-assembly"></a>アセンブリの削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   CREATE ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録された各アセンブリは、そのアセンブリで提供される機能が不要になれば削除できます。 アセンブリを削除すると、アセンブリと、デバッグ ファイルなどこれに関連するファイルがすべて、データベースから削除されます。 アセンブリを削除するには、DROP ASSEMBLY ステートメントを次の構文で使用します。  
   
 ```  
@@ -43,7 +44,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   WITH SCHEMABINDING 句を使用してデータベースに作成した UDT の変数またはパラメーターを使用する関数、ストアド プロシージャ、またはトリガー。  
   
 ### <a name="finding-udt-dependencies"></a>UDT 依存関係の検出  
- 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。 次[!INCLUDE[tsql](../../../includes/tsql-md.md)]のクエリでは、 **ADVENTUREWORKS**データベースで UDT を使用するすべての列とパラメーターを検索します。  
+ 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。 次のクエリでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **AdventureWorks**データベースで UDT を使用するすべての列とパラメーターを検索します。  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +64,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリを変更する](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [Transact-sql&#41;の集計 &#40;削除](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-sql&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
- [DROP TRIGGER &#40;Transact-sql&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
+ [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

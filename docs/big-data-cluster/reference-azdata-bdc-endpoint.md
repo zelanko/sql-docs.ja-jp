@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80ba3c4d3eb177b3e547e9d235fa796e2b9818cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71f52b8312518cf669751d50dcc857c3d892bd98
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820931"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588078"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`bdc endpoint` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`azdata` ツールの `bdc endpoint` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -28,24 +28,39 @@ ms.locfileid: "74820931"
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | ビッグ データ クラスターのエンドポイントを一覧表示します。
 ## <a name="azdata-bdc-endpoint-list"></a>azdata bdc endpoint list
 ビッグ データ クラスターのエンドポイントを一覧表示します。
+
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-       ```
-### Optional Parameters
+```
+
+### <a name="optional-parameters"></a>省略可能なパラメーター
+
 #### `--endpoint-name -e`
-Big data cluster endpoint name.
-### Global Arguments
+
+ビッグ データ クラスターのエンドポイント名。
+
+### <a name="global-arguments"></a>グローバル引数
+
 #### `--debug`
-Increase logging verbosity to show all debug logs.
+
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
+
 #### `--help -h`
-Show this help message and exit.
+
+このヘルプ メッセージを表示して終了します。
+
 #### `--output -o`
-Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
+
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+
 #### `--verbose`
-Increase logging verbosity. Use --debug for full debug logs.
 
-## Next steps
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+## <a name="next-steps"></a>次のステップ
+
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

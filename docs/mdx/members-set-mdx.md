@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138261"
 ---
 # <a name="members-set-mdx"></a>Members (Set) (MDX)
@@ -38,7 +38,7 @@ Level_Expression.Members
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  階層式が指定されている場合、 **members (セット)** 関数は、計算されるメンバーを含まない、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバーのセットを取得するには、階層で、all メンバー [&#40;MDX&#41;](../mdx/allmembers-mdx.md)関数を使用します。  
   
  レベル式が指定されている場合、 **members (セット)** 関数は、指定されたレベル内のすべてのメンバーのセットを返します。  
@@ -46,7 +46,7 @@ Level_Expression.Members
 > [!IMPORTANT]  
 >  ディメンションに表示される階層が1つだけの場合、このシナリオのディメンション名は、表示されている唯一の階層に解決されるので、階層はディメンション名または階層名で参照できます。 たとえば、Measures。 Members は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次の例では、Adventure Works キューブの Calendar Year 階層のすべてのメンバーのセットを返しています。  
   
 ```  
@@ -71,6 +71,6 @@ WHERE
   
 ## <a name="see-also"></a>参照  
  [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

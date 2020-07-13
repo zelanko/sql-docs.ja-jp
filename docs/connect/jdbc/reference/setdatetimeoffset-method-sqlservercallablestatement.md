@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 01aeafba0d6bc614a4c7bffa5e236ec46100e848
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920032"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67974645"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>解説  
- [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) を使用して [DateTimeOffset クラス](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)値を取得できます。  
+ [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) を使用して [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値を取得できます。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) は列の序数を受け取ります。  
   

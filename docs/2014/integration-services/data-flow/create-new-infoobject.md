@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6c58e86baddb164fd0247b4eaba704b17de9190
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827907"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432249"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -129,7 +128,7 @@ ms.locfileid: "62827907"
  **インフォオブジェクトの種類**  
  インフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|主要データ|  

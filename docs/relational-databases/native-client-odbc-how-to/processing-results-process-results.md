@@ -10,18 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: a0afae97770982f4ecd6b08d53f8df04e6e2e7ac
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780910"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006561"
 ---
 # <a name="processing-results---process-results"></a>結果の処理 - 処理結果
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ODBC アプリケーションでの結果の処理では、最初に結果セットの特性を判断し、次に[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)のいずれかを使用してプログラム変数にデータを取得します。  
   
@@ -33,19 +32,15 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
   
 3.  結果セット内の各行に対して次の操作を行います。  
   
-    -   
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) を呼び出して次の行を取得します。  
+    -   [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) を呼び出して次の行を取得します。  
   
     -   バインドされた列が使用されている場合は、バインドされた列のバッファー内で現在使用可能なデータを使用します。  
   
-    -   バインドされていない列が使用されている場合は、[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 
-  **SQLGetData** の呼び出しは、列番号の昇順にする必要があります。  
+    -   バインドされていない列が使用されている場合は、[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 **SQLGetData** の呼び出しは、列番号の昇順にする必要があります。  
   
-    -   
-  **SQLGetData** を複数回呼び出して、text または image 列からデータを取得します。  
+    -   **SQLGetData** を複数回呼び出して、text または image 列からデータを取得します。  
   
-4.  
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) が SQL_NO_DATA を返すことによって結果セットの終了を示したら、[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、使用可能な結果セットが他にあるかどうかを確認します。  
+4.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) が SQL_NO_DATA を返すことによって結果セットの終了を示したら、[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、使用可能な結果セットが他にあるかどうかを確認します。  
   
     -   SQL_SUCCESS が返された場合は、別の結果セットを使用できます。  
   
@@ -53,7 +48,7 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
   
     -   SQL_SUCCESS_WITH_INFO または SQL_ERROR が返された場合は、[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) を呼び出して、PRINT ステートメントまたは RAISERROR ステートメントからの出力が使用可能かどうかを確認します。  
   
-         バインドされたステートメントのパラメーターが出力パラメーターまたはストアド プロシージャの戻り値に使用されている場合は、バインドされたパラメーターのバッファーでデータを使用できるようになります。 バインドされたパラメーターが使用される場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) または [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) への各呼び出しで、SQL ステートメントが *S* 回実行されます。*S* は、バインドされたパラメーターの配列内にある要素の数です。 つまり、処理する結果のセットが*S 個*あることを意味します。各結果セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの1回の実行で返されるリターンコードがすべて含まれます。  
+         バインドされたステートメントのパラメーターが出力パラメーターまたはストアド プロシージャの戻り値に使用されている場合は、バインドされたパラメーターのバッファーでデータを使用できるようになります。 バインドされたパラメーターが使用される場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) または [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) への各呼び出しで、SQL ステートメントが *S* 回実行されます。*S* は、バインドされたパラメーターの配列内にある要素の数です。 つまり、処理する結果のセットが *S* 個あることを意味します。これらの結果の各セットには、結果セット、出力パラメーター、および通常 SQL ステートメントの 1 回の実行で返されるリターン コードがすべて含まれます。  
   
     > [!NOTE]  
     >  結果セットに計算行が含まれている場合、各計算行は個々の結果セットとして使用できるようになります。 これらの計算結果セットは標準行内に点在し、標準行は複数の結果セットに分割されます。  
@@ -63,8 +58,7 @@ ODBC アプリケーションでの結果の処理では、最初に結果セッ
 6.  別の結果セットが使用できる場合は、手順 1 に戻ります。  
 
 > [!NOTE]  
->  
-  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
+>  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
   
 ## <a name="see-also"></a>参照  
 [ODBC&#41;&#40;結果セットの情報を取得します。](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   

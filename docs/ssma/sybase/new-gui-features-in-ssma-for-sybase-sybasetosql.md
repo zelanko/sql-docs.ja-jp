@@ -10,10 +10,10 @@ ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d6176934e5a31cc245354db70c5295afc70d2d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909985"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase の新しい GUI 機能 (SybaseToSQL)
@@ -47,7 +47,7 @@ ms.locfileid: "76909985"
 ## <a name="bookmarks"></a>ブックマーク  
 この機能を使用すると、ソースコードまたはターゲットコードで1つ以上のブックマークを設定し、ショートカットを使用してブックマークをすばやく検出し、わかりやすいダイアログでブックマークを管理できます。  
   
-### <a name="toggle-bookmark"></a>ブックマークの切り替え  
+### <a name="toggle-bookmark"></a>[ブックマークの設定解除]  
 ブックマークの設定/削除は、次の方法で行うことができます。  
   
 -   ソースまたはターゲットの SQL ウィンドウの上にボタンのトグルブックマークを使用する  

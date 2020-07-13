@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62661759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062055"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
   **[プロパティ]** ウィンドウを使用すると、選択した要素のプロパティを表示できます。 また、 **[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 **[プロパティ]** ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  

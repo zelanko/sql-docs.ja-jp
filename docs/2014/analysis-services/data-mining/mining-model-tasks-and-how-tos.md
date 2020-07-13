@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ee288cccb64535454a3ccfbbc271c4919c220c65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66083491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521221"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
   マイニング構造のマイニング モデルを管理および処理するには、 **のデータ マイニング デザイナーにある** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用します。  
@@ -35,7 +34,7 @@ ms.locfileid: "66083491"
   
 -   [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [データマイニング&#41;&#40;モデリングフラグを表示または変更する](modeling-flags-data-mining.md)  
+-   [モデリング フラグの表示または変更 &#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
   
 -   [モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -58,6 +57,6 @@ ms.locfileid: "66083491"
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)   
  [マイニングモデル &#40;Analysis Services-データマイニング&#41;](mining-models-analysis-services-data-mining.md)   
- [データ マイニングの概念](data-mining-concepts.md)  
+ [データマイニングの概念](data-mining-concepts.md)  
   
   

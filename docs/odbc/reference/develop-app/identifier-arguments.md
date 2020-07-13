@@ -12,14 +12,14 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138997"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300162"
 ---
 # <a name="identifier-arguments"></a>識別子の引数
 識別子引数内の文字列が引用符で囲まれている場合、ドライバーは先頭および末尾の空白を削除し、文字どおり文字列を引用符で囲みます。 文字列が引用符で囲まれていない場合、ドライバーは末尾の空白を削除し、文字列を大文字にします。 Null ポインターに識別子引数を設定すると SQL_ERROR と SQLSTATE HY009 (null ポインターの使用は無効) が返されます。ただし、引数がカタログ名であり、カタログがサポートされていない場合は除きます。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], architecture
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d123bdf1ea3357a4846a223c41950c952c1af2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 712de6a7a3f80ce1cd3ca854a88765dbfa531356
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915535"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294560"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC ドライバーのアーキテクチャ
 ドライバーの作成者は、アプリケーションで DBMS 固有の SQL を使用できるかどうかについて、ドライバーのアーキテクチャが影響を受ける可能性があることに注意する必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "67915535"
   
  ドライバーの問題の詳細については、次の表に記載されている場所を参照してください。  
   
-|問題|トピック|Location|  
+|問題|トピック|インストール先|  
 |-----------|-----------|--------------|  
 |アプリケーションとドライバーの互換性の問題|[アプリケーション/ドライバーの互換性](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[プログラミングに関する考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)(ODBC プログラマーリファレンス)|  
 |ODBC ドライバーの記述|[ODBC 3.x ドライバーの作成](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[プログラミングに関する考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)(ODBC プログラマーリファレンス)|  

@@ -9,19 +9,17 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118015"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606907"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに、新しい Python パッケージをインストールする方法について説明します。 複数のアプローチから選択できます。 R に慣れていないサーバー管理者については、T-SQL を使用することをお勧めします。
-
-**適用対象:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ステートメントを使用すると、R または Python コードを直接実行せずに、パッケージまたはパッケージ セットを、インスタンスまたは特定のデータベースに追加できます。 ただし、この方法を使用するには、パッケージの準備と追加のデータベース権限が必要です。
 
@@ -35,7 +33,7 @@ ms.locfileid: "81118015"
 
 1 つのパッケージをインストールする場合は、そのパッケージを zip 形式でダウンロードします。
 
-パッケージの依存関係により、複数のパッケージをインストールする方が一般的です。 パッケージに他のパッケージが必要な場合は、インストール中にすべてのパッケージが相互にアクセスできることを確認する必要があります。 [miniCRAN](create-a-local-package-repository-using-minicran.md) を使用して[ローカル リポジトリを作成](https://andrie.github.io/miniCRAN/)し、パッケージの完全なコレクションをアセンブルすること、また [igraph](https://igraph.org/r/) を使用して、パッケージの依存関係を分析することをお勧めします。 間違ったバージョンのパッケージをインストールしたり、パッケージの依存関係を省略したりすると、CREATE EXTERNAL LIBRARY ステートメントが失敗することがあります。 
+パッケージの依存関係により、複数のパッケージをインストールする方が一般的です。 パッケージに他のパッケージが必要な場合は、インストール中にすべてのパッケージが相互にアクセスできることを確認する必要があります。 [miniCRAN](https://andrie.github.io/miniCRAN/) を使用して[ローカル リポジトリを作成](create-a-local-package-repository-using-minicran.md)し、パッケージの完全なコレクションをアセンブルすること、また [igraph](https://igraph.org/r/) を使用して、パッケージの依存関係を分析することをお勧めします。 間違ったバージョンのパッケージをインストールしたり、パッケージの依存関係を省略したりすると、CREATE EXTERNAL LIBRARY ステートメントが失敗することがあります。 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>ファイルをローカル フォルダーにコピーする
 
@@ -67,7 +65,7 @@ EXEC sp_execute_external_script
 @script=N'library(randomForest)'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [R パッケージ情報の取得](r-package-information.md)
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)

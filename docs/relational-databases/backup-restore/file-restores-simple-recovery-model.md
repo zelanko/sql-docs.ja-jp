@@ -1,5 +1,6 @@
 ---
 title: ファイルの復元 (単純復旧モデル) | Microsoft Docs
+description: SQL Server では、ファイル復元はデータベース全体を復元することなく 1 つ以上の破損したファイルに適用されます。
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718072"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、1 つ以上の読み取り専用セカンダリ ファイル グループが含まれている単純復旧モデルのデータベースのみに関連しています。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68138740"
      オンライン ページおよびファイルの復元の詳細については、「[データベース エンジンの機能とタスク](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
     > [!TIP]  
-    >  ファイル復元のためにデータベースをオフラインにする場合は、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
+    >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
   
  **このトピックの内容**  
   

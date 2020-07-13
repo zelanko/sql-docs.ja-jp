@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3df0c1cd06427deb051a9c4214d03084b44c6f9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024685"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でメンテナンス プランを作成する方法には、メンテナンス プラン ウィザードを使用する方法とデザイン画面を使用する方法の 2 とおりがあります。 基本的なメンテナンス プランを作成する場合は、ウィザードが最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
@@ -28,25 +27,25 @@ ms.locfileid: "68206045"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
--   **メンテナンスプランを作成するために使用するもの:**  
+-   **メンテナンス プランを作成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランはターゲット サーバー上でも表示できますが、ターゲット サーバーでは管理できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  メンテナンスプランを作成または管理するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードを使用してメンテナンス プランを作成するには  
   
@@ -54,8 +53,7 @@ ms.locfileid: "68206045"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  
-  **[メンテナンス プラン]** フォルダーを右クリックし、 **[メンテナンス プラン ウィザード]** をクリックします。  
+3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[メンテナンス プラン ウィザード]** をクリックします。  
   
 4.  ウィザードの手順に従って、メンテナンス プランを作成します。 詳細については、「 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)」をご覧ください。  
   
@@ -65,12 +63,11 @@ ms.locfileid: "68206045"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  
-  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
+3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
   
 4.  「[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)」の手順に従って、メンテナンス プランを作成します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-maintenance-plan"></a>メンテナンス プランを作成するには  
   
@@ -139,12 +136,12 @@ ms.locfileid: "68206045"
   
  詳細については、次を参照してください。  
   
--   [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

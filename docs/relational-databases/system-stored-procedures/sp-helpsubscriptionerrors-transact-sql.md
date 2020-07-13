@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b974356db48a7621103d24894a39e9f0a3037e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68771521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736949"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   指定されたサブスクリプションのすべてのトランザクションレプリケーションエラーを返します。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -53,14 +53,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**番号**|**int**|エラーの ID。|  
-|**time**|**DATETIME**|エラーが発生した時刻。|  
+|**id**|**int**|エラーの ID。|  
+|**time**|**datetime**|エラーが発生した時刻。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id **|**int**|エラーソースの種類 ID。|  
 |**source_name**|**nvarchar (100)**|エラーソースの名前。|  
-|**error_code**|**sysname**|エラー コード|  
+|**error_code**|**sysname**|エラー コード。|  
 |**error_text **|**ntext**|エラー メッセージ。|  
 |**xact_seqno**|**varbinary(16)**|失敗した実行バッチの先頭のトランザクション ログ シーケンス番号。 ディストリビューションエージェントでのみ使用されます。これは、失敗した実行バッチ内の最初のトランザクションのトランザクションログシーケンス番号です。|  
 |**command_id**|**int**|失敗した実行バッチのコマンド ID。 ディストリビューションエージェントでのみ使用されます。これは、失敗した実行バッチ内の最初のコマンドのコマンド ID です。|  
@@ -69,14 +69,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscriptionerrors**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpsubscriptionerrors**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

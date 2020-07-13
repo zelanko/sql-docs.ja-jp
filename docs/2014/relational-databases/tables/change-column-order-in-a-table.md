@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 63ac48034879edc245a429778de8347bed2de13e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62736319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047206"
 ---
 # <a name="change-column-order-in-a-table"></a>テーブル内の列の順序の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、テーブル デザイナーで列の順序を変更できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62736319"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-change-the-column-order"></a>列の順序を変更するには  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62736319"
   
 3.  その列をテーブル内の別の場所にドラッグします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **列の順序を変更するには**  
   
  Transact-SQL ステートメントを使用して、このタスクを実行することはできません。  

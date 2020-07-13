@@ -12,20 +12,20 @@ helpviewer_keywords:
 - header files [ODBC]
 - application files [ODBC]
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e3a4b550660b0f669b0b7dd790ab2fbb5fbdd33
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093973"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288932"
 ---
 # <a name="odbc-header-files"></a>ODBC ヘッダー ファイル
 > [!NOTE]  
 >  ODBC ヘッダーファイルの再配布は必要ありません。 "Core" とは見なされません。  
   
- **ヘッダー ファイル**  
+ **ヘッダーファイル**  
   
  Odbcinst. h  
   

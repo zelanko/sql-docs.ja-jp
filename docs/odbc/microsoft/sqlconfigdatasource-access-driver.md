@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 48668525b578845fc330881d7c7de503d69d0928
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67985235"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284052"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access ドライバー)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "67985235"
   
  データソースを動的に追加、変更、または削除するために使用される**Sqlconfigdatasource**関数は、次のキーワードを動的に使用します。  
   
-|Keyword|[説明]|  
+|キーワード|説明|  
 |-------------|-----------------|  
 |組み合わせの順序|フィールドの並べ替え順序。<br /><br /> これにより、[セットアップ] ダイアログボックスの**照合順序**と同じオプションが設定されます。|  
 |COMPACT_DB|データベースファイルに対してデータ圧縮を実行します。 の形式は次のとおりです。 COMPACT_DB =<path_name \<><optionaL_sort_order>オプションの ENCRYPT キーワード>。<br /><br /> DSN キーワードと同じステートメントで COMPACT_DB キーワードを使用すると、このドライバーは DSN キーワードを無視します。 そのため、データベースを圧縮し、DSN を指定するには、2段階のプロセスを実行します。|  
@@ -35,7 +35,7 @@ ms.locfileid: "67985235"
 |CREATE_V2DB|Microsoft Access 2.0 と互換性のあるデータベースファイルを作成します。 の形式は次のとおりです\<。 CREATE_V2DB = パス\<名>オプションの並べ替え順序>。ここで、パス名は Microsoft access データベースへの完全なパスです。 パス名に既存のデータベースが指定されている場合は、エラーが返されます。 並べ替え順序は、[Microsoft Access のセットアップ] ダイアログボックスで [作成] ボタンをクリックしたときに表示される [新しいデータベース] ダイアログボックスで設定したものになります。 並べ替え順序が指定されていない場合は、General が使用されます。<br /><br /> DSN キーワードと同じステートメントで CREATE_V2DB キーワードを使用すると、このドライバーは DSN キーワードを無視します。 そのため、データベースを作成し、DSN を指定するには、2段階のプロセスを実行します。<br /><br /> CREATE_V2DB キーワードを使用する場合、作成する Microsoft Access データベースのパス名に1つ以上のスペースが含まれている場合は、次の例に示すように、パス名全体を二重引用符で囲む必要があります。<br /><br /> "C:\PROGRAM FILES\COMMON FILES \ MyAccess .mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB = C:\TEMP\test.mdb (引用符は不要)|  
 |DBQ|データベースファイルの名前です。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**データベース**] と同じオプションが設定されます。|  
 |DEFAULTDIR|データベースファイルへのパスの指定。|  
-|説明|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
+|Description|データソース内のデータの説明。<br /><br /> これにより、[セットアップ] ダイアログボックスの [**説明**] と同じオプションが設定されます。|  
 |DRIVER|ドライバー DLL へのパス指定。|  
 |DRIVERID|ドライバーの整数 ID。  25 (Microsoft Access)|  
 |FIL|Microsoft Access 用のファイルの種類 MS Access|  

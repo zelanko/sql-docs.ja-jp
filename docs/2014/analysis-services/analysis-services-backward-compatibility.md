@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16c8a1d9023e0bcbb852974f11ebe4b89d36d93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 44a5296bfbd2bae746eb9936d416fd696de16cb7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66062639"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528110"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services の旧バージョンとの互換性
-  このセクションのトピックでは、のバージョン間の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]動作の変更について説明します。  
+  このセクションのトピックでは、のバージョン間の動作の変更について説明し [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |------------|-----------------|  
 |[SQL Server 2014 に含まれている非推奨の Analysis Services 機能](deprecated-analysis-services-features-in-sql-server-2014.md)|現在のバージョンでは旧バージョンとの互換性を維持するために引き続き使用できるものの、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定になっている機能について説明します。|  
 |[SQL Server 2014 で提供が中止された Analysis Services の機能](discontinued-analysis-services-functionality-in-sql-server-2014.md)|以前のバージョンの  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には存在したものの、以降のバージョンからは削除されている機能について説明します。|  

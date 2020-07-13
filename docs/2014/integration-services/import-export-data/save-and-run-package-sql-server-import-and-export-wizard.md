@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2bb7f32cc36b14682de4629b238883acde4a015a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62894766"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436819"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行] (SQL Server インポートおよびエクスポート ウィザード)
   [**パッケージの保存と実行**] ダイアログボックスを使用すると、すぐにパッケージを実行したり、後で実行するように保存したり、その両方を実行したりできます。  
@@ -33,19 +32,19 @@ ms.locfileid: "62894766"
  **直ちに実行**  
  このオプションを選択すると、すぐにパッケージを実行します。  
   
- **SSIS パッケージの保存**  
+ **[SSIS パッケージの保存]**  
  パッケージをすぐに実行するためのオプションを使用して、パッケージを後で実行するために保存します。  
   
 > [!NOTE]  
->  で[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]は、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
+>  では、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
   
  **SQL Server**  
- パッケージを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`データベースに保存するには、このオプションを選択します。  
+ パッケージをデータベースに保存するには、このオプションを選択し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` ます。  
   
 > [!NOTE]  
 >  このオプションは、[ **SSIS パッケージの保存**] オプションを選択した場合にのみ使用できます。  
   
- **ファイルシステム**  
+ **ファイル システム**  
  このオプションを選択して、.dtsx 拡張子を持つファイルとしてパッケージを保存します。  
   
 > [!NOTE]  
@@ -65,13 +64,13 @@ ms.locfileid: "62894766"
 > [!NOTE]  
 >  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
- **パスワードの再入力**  
+ **[パスワードの再入力]**  
  パスワードを再度入力します。  
   
 > [!NOTE]  
 >  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)   
  [パッケージを保存する](../save-packages.md)  
   

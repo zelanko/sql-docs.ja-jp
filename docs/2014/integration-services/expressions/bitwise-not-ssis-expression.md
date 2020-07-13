@@ -10,15 +10,14 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd0226e3f96e2a2d77b80fc36e5ee41b949094da
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62769498"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429109"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (ビット演算 Not) (SSIS 式)
   整数の否定のビット演算を実行します。 この演算子は、符号付きおよび符号なし整数データ型に適用できます。  

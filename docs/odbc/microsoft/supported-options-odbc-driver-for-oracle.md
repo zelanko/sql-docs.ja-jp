@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5dabb7130bb8eb1936d8cbaa946b31eb98210a3e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67939899"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307073"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>サポートされているオプション (ODBC Driver for Oracle)
 > [!IMPORTANT]  

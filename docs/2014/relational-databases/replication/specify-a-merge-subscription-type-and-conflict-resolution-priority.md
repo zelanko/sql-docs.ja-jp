@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a19ae6246fe59308283fbaf2f35e2c49f96b140c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63156355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055563"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>マージ サブスクリプションの種類と競合解決の優先度の指定 (SQL Server Management Studio)
-  サブスクリプションの新規作成ウィザードの [**サブスクリプションの種類**] ページで、マージサブスクリプションの種類と競合解決の優先度を指定します。 このウィザードの使用方法の詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md) 」および「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
+  サブスクリプションの新規作成ウィザードの **[サブスクリプションの種類]** ページで、マージ サブスクリプションの種類と競合解決の優先度を指定します。 このウィザードの使用方法の詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md) 」および「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
   
- サブスクリプションの種類はサブスクリプションの作成後には変更できませんが、サーバー サブスクリプションの優先度は、**[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスで変更できます。 このダイアログ ボックスへのアクセスの詳細については、「 [プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md) 」および「 [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
+ サブスクリプションの種類はサブスクリプションの作成後には変更できませんが、[**サブスクリプションのプロパティ- \<Publisher> \<PublicationDatabase> :** ] ダイアログボックスでサーバーサブスクリプションの種類に対して優先度を変更できます。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>マージ サブスクリプションの種類と競合解決の優先度を指定するには  
   
@@ -33,12 +32,12 @@ ms.locfileid: "63156355"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>競合解決の優先度を変更するには  
   
-1.  パブリッシャーの **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** で、**[優先度]** オプションの値 (0.00 ～ 99.99) を入力します。  
+1.  [**サブスクリプションのプロパティ- \<Publisher> : \<PublicationDatabase> **パブリッシャー] で、[**優先度**] オプションに値 (0.00 ~ 99.99) を入力します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [マージレプリケーションの競合検出と解決の詳細](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

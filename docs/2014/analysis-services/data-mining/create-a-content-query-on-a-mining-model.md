@@ -11,17 +11,15 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085579"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524018"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>マイニング モデルのコンテンツ クエリの作成
-  AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
+  AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
   
  次の手順では、DMX を使用してマイニング モデルに対するクエリを作成する方法と、データ マイニング スキーマ行セットに対するクエリを実行する方法について説明します。  
   
@@ -31,40 +29,35 @@ ms.locfileid: "66085579"
   
 #### <a name="to-create-a-dmx-model-content-query"></a>DMX モデル コンテンツ クエリを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
-2.  
-  **[テンプレート エクスプローラー]** ペインで、キューブ アイコンをクリックして一覧を変更し、Analysis Services テンプレートを表示します。  
+2.  **[テンプレート エクスプローラー]** ペインで、キューブ アイコンをクリックして一覧を変更し、Analysis Services テンプレートを表示します。  
   
 3.  テンプレート カテゴリの一覧で、 **[DMX]**、 **[モデル コンテンツ]** の順に展開し、 **[コンテンツ クエリ]** をダブルクリックします。  
   
-4.  
-  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するマイニング モデルを含むインスタンスを選択し、 **[接続]** をクリックします。  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するマイニング モデルを含むインスタンスを選択し、 **[接続]** をクリックします。  
   
      コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なモデルが一覧表示されます。 データベースを変更するには、 **[使用できるデータベース]** の一覧から別のデータベースを選択します。  
   
-5.  `FROM` *[\<マイニングモデル、名前、mymodel>*]`.CONTENT`行に、マイニングモデルの名前を入力します。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
+5.  [] 行に、マイニングモデルの名前を入力 `FROM` し *\<mining model, name, MyModel>* `.CONTENT` ます。 マイニング モデル名にスペースが含まれる場合は、名前を角かっこで囲む必要があります。  
   
      名前を入力せずに、 **オブジェクト エクスプローラー** でマイニング モデルを選択してテンプレートにドラッグすることもできます。  
   
-6.  行`SELECT`の* \<[リスト]、[expr list] \*の一覧*で、マイニングモデルコンテンツスキーマ行セットの列の名前を入力します。  
+6.  行に、 `SELECT` *\<select list, expr list, \*>* マイニングモデルコンテンツスキーマ行セットの列の名前を入力します。  
   
      マイニング モデル コンテンツ クエリで返すことができる列の一覧については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
   
 7.  必要に応じて、テンプレートの WHERE 句に条件を入力し、特定のノードや値に対して返される行を制限します。  
   
-8.  [**実行**] をクリックします。  
+8.  **[実行]** をクリックします。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>データ マイニング スキーマ行セットのクエリ  
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>データ マイニング スキーマ行セットに対するクエリを作成するには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の **[新しいクエリ]** ツール バーで、 **[Analysis Services DMX クエリ]** または **[Analysis Services MDX クエリ]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の **[新しいクエリ]** ツール バーで、 **[Analysis Services DMX クエリ]** または **[Analysis Services MDX クエリ]** をクリックします。  
   
-2.  
-  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するオブジェクトを含むインスタンスを選択し、 **[接続]** をクリックします。  
+2.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリを実行するオブジェクトを含むインスタンスを選択し、 **[接続]** をクリックします。  
   
      コード エディターに **[コンテンツ クエリ]** テンプレートが表示されます。 メタデータ ペインに、現在のデータベースで使用可能なオブジェクトが一覧表示されます。 データベースを変更するには、 **[使用できるデータベース]** の一覧から別のデータベースを選択します。  
   
@@ -76,7 +69,7 @@ ms.locfileid: "66085579"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  [**実行**] をクリックします。  
+4.  **[実行]** をクリックします。  
   
      結果ペインにモデルのコンテンツが表示されます。  
   

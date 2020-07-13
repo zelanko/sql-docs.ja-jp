@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720048"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>データ型およびコンテンツの種類の指定 (基本的なデータ マイニング チュートリアル)
@@ -30,27 +30,27 @@ ms.locfileid: "62720048"
   
     |列|コンテンツの種類|データ型|  
     |------------|------------------|---------------|  
-    |**アドレス Line1**|**Discrete**|**Text**|  
-    |**アドレス Line2**|**Discrete**|**Text**|  
-    |**変更**|**継続的**|**Long**|  
-    |**Bike Buyer**|**Discrete**|**Long**|  
-    |**Commute 距離**|**Discrete**|**Text**|  
-    |**CustomerKey**|**[キー]**|**Long**|  
-    |**DateLastPurchase**|**継続的**|**予定**|  
-    |**電子メールアドレス**|**Discrete**|**Text**|  
-    |**English Education**|**Discrete**|**Text**|  
-    |**English Occupation**|**Discrete**|**Text**|  
-    |**FirstName**|**Discrete**|**Text**|  
-    |**性別**|**Discrete**|**Text**|  
-    |**Geography Key**|**Discrete**|**Text**|  
-    |**ハウス所有者フラグ**|**Discrete**|**Text**|  
-    |**姓**|**Discrete**|**Text**|  
-    |**Marital Status**|**Discrete**|**Text**|  
-    |**車両所有数**|**Discrete**|**Long**|  
-    |**子供の子供の数**|**Discrete**|**Long**|  
-    |**リージョン**|**Discrete**|**Text**|  
-    |**Total Children**|**Discrete**|**Long**|  
-    |**Yearly Income**|**継続的**|**小数**|  
+    |**アドレス Line1**|**Discrete**|**[テキスト]**|  
+    |**アドレス Line2**|**Discrete**|**[テキスト]**|  
+    |**変更**|**継続的**|**長い**|  
+    |**Bike Buyer**|**Discrete**|**長い**|  
+    |**Commute Distance**|**Discrete**|**[テキスト]**|  
+    |**CustomerKey**|**キー**|**長い**|  
+    |**DateLastPurchase**|**継続的**|**Date**|  
+    |**電子メールアドレス**|**Discrete**|**[テキスト]**|  
+    |**English Education**|**Discrete**|**[テキスト]**|  
+    |**English Occupation**|**Discrete**|**[テキスト]**|  
+    |**FirstName**|**Discrete**|**[テキスト]**|  
+    |**性別**|**Discrete**|**[テキスト]**|  
+    |**Geography Key**|**Discrete**|**[テキスト]**|  
+    |**House Owner Flag**|**Discrete**|**[テキスト]**|  
+    |**姓**|**Discrete**|**[テキスト]**|  
+    |**Marital Status**|**Discrete**|**[テキスト]**|  
+    |**Number Cars Owned**|**Discrete**|**長い**|  
+    |**子供の子供の数**|**Discrete**|**長い**|  
+    |**リージョン**|**Discrete**|**[テキスト]**|  
+    |**Total Children**|**Discrete**|**長い**|  
+    |**Yearly Income**|**継続的**|**Double**|  
   
 3.  **[次へ]** をクリックします。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62720048"
   
 ## <a name="see-also"></a>参照  
  [コンテンツの種類 &#40;データマイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [データマイニング&#41;&#40;データ型](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [データ型 (データ マイニング)](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

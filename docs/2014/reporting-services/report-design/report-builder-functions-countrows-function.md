@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105279"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 関数 (レポート ビルダーおよび SSRS)
@@ -35,16 +35,13 @@ CountRows(scope, recursive)
  (`String`) カウントするレポート アイテムを含むデータセット、データ領域、またはグループの名前です。  
   
  *再帰*  
- (**列挙型**) 省略可。 
-  `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
- 
-  `Integer` 値を返します。  
+ `Integer` 値を返します。  
   
 ## <a name="remarks"></a>解説  
- 
-  `CountRows` は、指定されたスコープ内のすべての行 (NULL 値を持つ行を含む) をカウントします。  
+ `CountRows` は、指定されたスコープ内のすべての行 (NULL 値を持つ行を含む) をカウントします。  
   
  *scope* の値には、式を指定することができません。また、この値では、現在のスコープまたはコンテナー スコープを参照する必要があります。  
   

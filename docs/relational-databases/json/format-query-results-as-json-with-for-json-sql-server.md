@@ -1,8 +1,7 @@
 ---
 title: FOR JSON を使用してクエリ結果を JSON として書式設定する
-ms.date: 06/06/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +11,19 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722269"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 クエリ結果を JSON として書式設定するか、SQL Server のデータを JSON としてエクスポートするには、**FOR JSON** 句を **SELECT** ステートメントに追加します。 **FOR JSON** 句を使用して、JSON 出力の書式設定をアプリから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に委任することによって、クライアント アプリケーションを簡素化します。
   
@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 以下の `SELECT...FOR JSON AUTO` の例には、`JOIN` されたテーブルからのデータ間に 1 対多の関係がある場合に JSON の結果がどのように表示されるかが含まれています。
 
-返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`INCLUDE_NULL_VALUES` 句で `FOR` キーワードを使用することでオーバーライドできます。
+返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`FOR` 句で `INCLUDE_NULL_VALUES` キーワードを使用することでオーバーライドできます。
 
 ```sql
 go
@@ -199,15 +199,14 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
 **FOR JSON** 句による JSON 出力の書式設定の例を次に示します。  
   
 **クエリの結果**  
-  
-|||||  
-|-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+
+|A|B|C|D|
+|-|-|-|-|
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **JSON 出力**  
   
 ```json  

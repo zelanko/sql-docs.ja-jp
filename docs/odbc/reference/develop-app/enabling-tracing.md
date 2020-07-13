@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], enabling
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24f80e0e81e4be8895d59256492b868c53aab7b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80bd4023a0260b67d11d7b4ded1bb810b81e0ab2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046794"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287352"
 ---
 # <a name="enabling-tracing"></a>トレースの有効化
 トレースは、次の3つの方法で有効にすることができます。  

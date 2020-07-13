@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: DavidTrigano
+ms.author: datrigan
+ms.openlocfilehash: 43e294d7252afc3297012dbb60b5bcbfb86ba586
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76315592"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872780"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +77,14 @@ ms.locfileid: "76315592"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
 |BACKUP_RESTORE_GROUP|このイベントは、バックアップまたは復元のコマンドが実行されるたびに発生します。 [Audit Backup/Restore イベント クラス](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)と同じです。|  
+|BATCH_COMPLETED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が完了するたびに発生します。 これは、バッチが完了した後に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体 (結果を含む) を監査します。|  
+|BATCH_STARTED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が開始されるたびに発生します。 これは、実行前に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体を監査します。|  
 |BROKER_LOGIN_GROUP|このイベントは、Service Broker トランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)と同じです。|  
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|このイベントは、データベース ミラーリングのトランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)と同じです。|  
-|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 注意: 大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  
-|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 注意: 非常に大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)と同じです。|  
+|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 注:大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  
+|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 注:非常に大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)と同じです。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、データベース スコープ内のオブジェクトの所有者が変更されたときに発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト所有権の変更に対して発生します。 [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md)と同じです。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、アセンブリやスキーマなどのデータベース オブジェクトに対して GRANT、REVOKE、または DENY が実行された場合に発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト権限の変更に対して発生します。 [Audit Database Object GDR Event Class](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md)と同じです。|  
 |DATABASE_OPERATION_GROUP|このイベントは、チェックポイントやクエリ通知のサブスクライブなど、データベースの操作が行われたときに発生します。 このイベントは、任意のデータベースの任意のデータベース操作に対して発生します。 [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md)と同じです。|  
@@ -135,6 +137,8 @@ ms.locfileid: "76315592"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
 |BACKUP_RESTORE_GROUP|このイベントは、バックアップまたは復元のコマンドが実行されるたびに発生します。 [Audit Backup/Restore イベント クラス](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)と同じです。|  
+|BATCH_COMPLETED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が完了するたびに発生します。 これは、バッチが完了した後に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体 (結果を含む) を監査します。|  
+|BATCH_STARTED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が開始されるたびに発生します。 これは、実行前に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体を監査します。|  
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。 [Audit Backup/Restore イベント クラス](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)と同じです。|  
 |DATABASE_OBJECT_ACCESS_GROUP|このイベントは、証明書や非対称キーなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  

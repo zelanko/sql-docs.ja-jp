@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1adbde1b3df38d2b602f1ec42a2c96f36e8bd67b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd714ce7774265a2afd00d42894d644a516bc402
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67996378"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299472"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

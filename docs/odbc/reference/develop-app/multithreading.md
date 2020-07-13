@@ -12,14 +12,14 @@ helpviewer_keywords:
 - thread-safe drivers [ODBC]
 - multithreaded applications [ODBC]
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086352"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302419"
 ---
 # <a name="multithreading"></a>マルチスレッド
 マルチスレッドオペレーティングシステムでは、ドライバーはスレッドセーフである必要があります。 つまり、アプリケーションが複数のスレッドで同じハンドルを使用できるようにする必要があります。 これがどのように実現されるかはドライバーによって異なり、ドライバーは、2つの異なるスレッドで同じハンドルを同時に使用するようにシリアル化します。  

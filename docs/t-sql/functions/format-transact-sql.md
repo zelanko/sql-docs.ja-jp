@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: FORMAT 関数の Transact-SQL リファレンス。
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10136ba5d2b0d241de0960acb9df657dadfe9cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752402"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "70155799"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   
@@ -74,7 +74,7 @@ FORMAT ( value, format [, culture ] )
   
  *value* 引数の許容データ型の一覧を、.NET Framework にマッピングした同等の型と共に、次の表に示します。  
   
-|カテゴリ|種類|.NET の種類|  
+|カテゴリ|Type|.NET の種類|  
 |--------------|----------|---------------|  
 |数値|bigint|Int64|  
 |数値|INT|Int32|  
@@ -150,7 +150,7 @@ DateTime Result  Custom Number Result
   
 ### <a name="c-format-with-numeric-types"></a>C. 数値型を使用する FORMAT
 
- 次の例では、**データベースの**Sales.CurrencyRate[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの **Sales.CurrencyRate** テーブルから 5 行を返します。 列 **EndOfDateRate** は、**money** 型としてテーブルに格納されます。 この例では、書式設定されずに返された列を、.NET の数値書式、一般書式、および通貨の書式の種類を指定して書式設定します。 これらの数値書式およびその他の数値書式の詳細については、「[標準数値書式設定文字列](https://msdn.microsoft.com/library/dwhawy9k.aspx)」を参照してください。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -190,11 +190,11 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
  (5 row(s) affected)  
 ```  
@@ -244,6 +244,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## <a name="see-also"></a>参照
 
- [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

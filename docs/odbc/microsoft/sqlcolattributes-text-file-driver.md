@@ -11,20 +11,20 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], Text File Driver
 ms.assetid: 132fd1c0-1921-4a7d-910e-aedf1bff5453
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16718587358d03fb9e47ad17448436a317bbdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3eafe02ba76dcaa6078abee862d743deb4765bdd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68132634"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307923"
 ---
 # <a name="sqlcolattributes-text-file-driver"></a>SQLColAttributes (テキスト ファイル ドライバー)
 > [!NOTE]  
 >  このトピックでは、テキストファイルドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|LONGVARBINARY データの場合、SQL_COLUMN_DISPLAY_SIZE は列の最大長であり、列の最大長では2ではありません。|  
 |SQL_OWNER_NAME|この列には、所有者名がサポートされていないため、空の文字列 ("") が返されます。|  

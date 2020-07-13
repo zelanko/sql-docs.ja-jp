@@ -11,27 +11,25 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetTypeInfo function
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebeffb57ccfb6b651dc126f814615322250cd47e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: c00f8e33ee36dadb7506af2433e2ed4aeca769b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786316"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000334"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 **SQLGetTypeInfo**の結果セットの列 USERTYPE を報告します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、 **SQLGetTypeInfo**の結果セットの列 USERTYPE を報告します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ID が属性として処理されますが、ODBC ではデータ型として処理されます。 この不一致を解決するために、 **SQLGetTypeInfo**は、 **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**、および**numericidentity**というデータ型を返します。 **SQLGetTypeInfo**結果セットの列 AUTO_UNIQUE_VALUE は、これらのデータ型の値 TRUE を報告します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ID が属性として処理されますが、ODBC ではデータ型として処理されます。 この不一致を解決するために、 **SQLGetTypeInfo**は、 **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**、および**numericidentity**というデータ型を返します。 **SQLGetTypeInfo**結果セットの列 AUTO_UNIQUE_VALUE は、これらのデータ型の値 TRUE を報告します。  
   
- **Varchar**、 **nvarchar** 、および**Varbinary**の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client ODBC ドライバーは、実際には無制限であるにもかかわらず、COLUMN_SIZE の値に対してそれぞれ8000、4000、および8000を報告し続けます。 これにより、旧バージョンとの互換性が確保されます。  
+ **Varchar**、 **nvarchar** 、および**Varbinary**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、実際には無制限であるにもかかわらず、COLUMN_SIZE の値に対してそれぞれ8000、4000、および8000を報告し続けます。 これにより、旧バージョンとの互換性が確保されます。  
   
- **Xml**データ型の場合、NATIVE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、サイズを無制限に示す COLUMN_SIZE の SQL_SS_LENGTH_UNLIMITED を報告します。  
+ **Xml**データ型の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サイズを無制限に示す COLUMN_SIZE の SQL_SS_LENGTH_UNLIMITED を報告します。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo とテーブル値パラメーター  
  テーブル値パラメーターのテーブル型は、実質的には、他の型を定義するために使用される型であるメタ型です。 そのため、SQLGetTypeInfo を介して公開する必要はありません。 アプリケーションでは、テーブル値パラメーターで使用されるテーブル型のメタデータを取得するために、SQLGetTypeInfo ではなく SQLTables を使用する必要があります。  

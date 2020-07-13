@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 487c347679fc26e28f02aa8bd11306ac3086567c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75243074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063343"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL デバッガー情報
   デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、さまざまなデバッガー ウィンドウを使用して現在の実行状態を表示できます。  

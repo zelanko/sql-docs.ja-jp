@@ -17,10 +17,10 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051498"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換オプションと移行オプションの設定 (アップグレード)
@@ -59,8 +59,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムモードを指定するには、[**モード**] ボックスで [**カスタム**] を選択し、左ペインでオプションを選択します。次に、右ペインで設定または値をクリックし、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
 また、現在のプロジェクトの設定をカスタマイズすることもできます。 これらの設定は、現在のプロジェクトファイルに保存されます。  
   
@@ -74,10 +73,9 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
     -   カスタムモードを指定するには、[**モード**] ボックスで [**カスタム**] を選択し、左ペインでオプションを選択します。次に、右ペインで設定または値をクリックし、新しい設定または値を選択または入力します。  
   
-3.  
-  **[OK]** をクリックして設定を保存します。  
+3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「[ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)」を参照してください。  

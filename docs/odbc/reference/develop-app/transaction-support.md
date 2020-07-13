@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], degree of support
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a5b9d731d12329a4ef663b1ea66cdc59a0b153fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68086064"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81297980"
 ---
 # <a name="transaction-support"></a>トランザクションのサポート
 トランザクションのサポートの次数はドライバーで定義されています。 ODBC は、データの複数の更新を管理する必要がないシングルユーザーまたはデスクトップデータベースに実装するように設計されています。 さらに、トランザクションをサポートする一部のデータベースは、SQL のデータ操作言語 (DML) ステートメントでのみ使用できます。トランザクションがアクティブな場合のデータ定義言語 (DDL) の使用に関する制限や特別なトランザクションセマンティクスがあります。 つまり、テーブルに対する複数の同時更新のトランザクションがサポートされている場合がありますが、トランザクション中にテーブルの数と定義を変更することはできません。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66085546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523968"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
   AMO、DMX、または XML/A を使用すると、データ マイニング オブジェクトに対するさまざまなクエリを作成できます。  
@@ -30,27 +29,23 @@ ms.locfileid: "66085546"
   
 #### <a name="to-open-an-xmla-template"></a>XML/A テンプレートを開くには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
 2.  キューブ アイコンをクリックして、Analysis Services テンプレートの一覧を開きます。  
   
 3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]** の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
   
-4.  
-  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
   
 #### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットから列名を検出するには  
   
-1.  
-  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]** をクリックします。  
+1.  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]** をクリックします。  
   
-     
-  **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
+     **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **クエリ**ペインで、 ** \<制限リスト**の後にカーソルを>、enter キーを押して新しい行を追加します。  
+2.  **クエリ**ペインで、の後にカーソルを置き、enter **\<Restriction List>** キーを押して新しい行を追加します。  
   
-3.  空白行にカーソルを置き、「 ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName」と入力し>**  
+3.  空白行にカーソルを置き、「」と入力し** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      制限のセクション全体は次のようになります。  
   
@@ -64,15 +59,13 @@ ms.locfileid: "66085546"
   
      `</Restrictions>`  
   
-4.  [**実行**] をクリックします。  
+4.  **[実行]** をクリックします。  
   
-     
-  **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
+     **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
   
 #### <a name="to-create-a-content-query-using-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットを使用してコンテンツ クエリを作成するには  
   
-1.  
-  **[スキーマ行セットの発見]** テンプレートで、"要求の種類" タグの内側のテキストを置き換えて、要求の種類を変更します。  
+1.  **[スキーマ行セットの発見]** テンプレートで、"要求の種類" タグの内側のテキストを置き換えて、要求の種類を変更します。  
   
      次の行を置き換えます。  
   
@@ -80,7 +73,7 @@ ms.locfileid: "66085546"
   
      置き換えると、次のようになります。  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</requesttype>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  制限リストに新しい条件を追加することで、名前でマイニング モデルを指定するように制限リストを変更します。  
   
@@ -100,7 +93,7 @@ ms.locfileid: "66085546"
   
      `</Restrictions>`  
   
-5.  [**実行**] をクリックします。  
+5.  **[実行]** をクリックします。  
   
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   

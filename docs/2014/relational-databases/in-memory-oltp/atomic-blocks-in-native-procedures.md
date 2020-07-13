@@ -9,18 +9,15 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62467282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050371"
 ---
 # <a name="atomic-blocks"></a>ATOMIC ブロック
-  
-  `BEGIN ATOMIC` は、ANSI SQL 標準の一部です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャの最上位でのみ ATOMIC ブロックがサポートされます。  
+  `BEGIN ATOMIC` は、ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャの最上位でのみ ATOMIC ブロックがサポートされます。  
   
 -   各ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが正確に 1 ブロックずつ含まれています。 これが ATOMIC ブロックです。  
   
@@ -33,7 +30,7 @@ ms.locfileid: "62467282"
   
  セッションにアクティブなトランザクションがない場合、`BEGIN ATOMIC` は新しいトランザクションを開始します。 ブロックのスコープ外でスローされる例外が存在しない場合、トランザクションはブロックの末尾でコミットされます。 ブロックで例外がスローされた場合 (つまり、ブロック内で例外をキャッチして処理できなかった場合)、トランザクションはロールバックされます。 1 つの ATOMIC ブロック (1 つのネイティブ コンパイル ストアド プロシージャ) 全体に及ぶトランザクションの場合、明示的に `BEGIN TRANSACTION` ステートメントと、`COMMIT` または `ROLLBACK` ステートメントを作成する必要はありません。  
   
- ネイティブ コンパイル ストアド プロシージャは、エラー処理のために `TRY`、`CATCH`、および `THROW` の各構造をサポートします。 `RAISERROR`はサポートされていません。  
+ ネイティブ コンパイル ストアド プロシージャは、エラー処理のために `TRY`、`CATCH`、および `THROW` の各構造をサポートします。 `RAISERROR` はサポートされません。  
   
  次の例は、ATOMIC ブロックおよびネイティブ コンパイル ストアド プロシージャでのエラー処理動作を示しています。  
   
@@ -130,23 +127,20 @@ GO
 ## <a name="session-settings"></a>セッションの設定  
  ATOMIC ブロックのセッション設定は、ストアド プロシージャのコンパイル時に固定されます。 一部の設定は `BEGIN ATOMIC` で指定できますが、その他の設定は常に同じ値に固定されます。  
   
- 
-  `BEGIN ATOMIC` では以下のオプションは必須です。  
+ `BEGIN ATOMIC` では以下のオプションは必須です。  
   
-|必須の設定|[説明]|  
+|必須の設定|説明|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|サポートされている値は、`SNAPSHOT`、`REPEATABLEREAD`、および `SERIALIZABLE` です。|  
-|`LANGUAGE`|日付と時刻の形式とシステム メッセージが決まります。 
-  [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) のすべての言語とエイリアスがサポートされます。|  
+|`LANGUAGE`|日付と時刻の形式とシステム メッセージが決まります。 [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) のすべての言語とエイリアスがサポートされます。|  
   
  次の設定は省略可能です。  
   
-|省略可能な設定|[説明]|  
+|省略可能な設定|説明|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、`DATEFORMAT` は `LANGUAGE` に関連付けられた既定の日付形式をオーバーライドします。|  
+|`DATEFORMAT`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、`DATEFORMAT` は `LANGUAGE` に関連付けられた既定の日付形式をオーバーライドします。|  
 |`DATEFIRST`|指定した場合、`DATEFIRST` は `LANGUAGE` に関連付けられた既定値をオーバーライドします。|  
-|`DELAYED_DURABILITY`|サポートされる値は、`OFF` と `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションのコミットは、完全持続性、既定値、または遅延持続性のいずれかになります。詳細については、「[トランザクションの持続性の制御](../logs/control-transaction-durability.md)」を参照してください。|  
+|`DELAYED_DURABILITY`|サポートされる値は、`OFF` と `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
   
  次の SET オプションには、すべてのネイティブ コンパイル ストアド プロシージャのすべての ATOMIC ブロックについて同じシステム既定値が設定されます。  
   
@@ -167,6 +161,6 @@ GO
 |XACT_ABORT|OFF<br /><br /> 処理できない例外により ATOMIC ブロックはロールバックされますが、そのエラーが致命的でない限りトランザクションは中止されません。|  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

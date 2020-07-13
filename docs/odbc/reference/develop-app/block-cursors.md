@@ -12,14 +12,14 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68118818"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306353"
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、ネットワーク経由でデータを取り込むために膨大な時間を費やしています。 この時間の一部は、実際にネットワーク経由でデータを取り込むために費やされています。また、データの行を要求するためにドライバーによって行われる呼び出しなど、ネットワークのオーバーヘッドにも費やされます。 アプリケーションで1つ以上の行を返すことができる*ブロック*または*fat* *カーソルを*効率的に使用する場合は、後者の時間を短縮できます。  

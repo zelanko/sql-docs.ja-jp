@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 216721a187d86e56154d5d25c5e3174d231f7f36
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72797627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547544"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot の正常性ルール - 構成
   PowerPivot for SharePoint には、サーバーの可用性と構成に関する問題を監視および解決するのに役立つ SharePoint 正常性ルールが含まれています。 PowerPivot for SharePoint に適用される正常性ルールは、[ルール定義の確認] ページに表示されます。  
@@ -28,7 +27,7 @@ ms.locfileid: "72797627"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; sharepoint 2010|  
   
- **注:** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービスアプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 「[正常性ルールのリファレンス &#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)」の「バージョン」列を参照してください。または、次の Windows PowerShell コマンドを実行して、インストールされているルールを確認することもできます。  
+ **注 :** 正常性ルールの設定は、SQL Server Analysis Services インスタンスと PowerPivot サービス アプリケーションに対して別々に構成されます。 各サービスの正常性ルールを構成するには、このトピックで示されている手順に従ってください。 SharePoint 2013 配置の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] はサービス アプリケーションを使用するだけです。 そのため、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] によってインストールされる正常性ルール セットは、SharePoint のバージョンに応じて異なります。 「[正常性ルールのリファレンス &#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)」の「バージョン」列を参照してください。または、次の Windows PowerShell コマンドを実行して、インストールされているルールを確認することもできます。  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -38,14 +37,14 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [PowerPivot の正常性ルールの表示](#bkmk_view)  
   
- [サーバーの安定性を評価するために使用する正常性ルールの構成 (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
+ [サーバーの安定性を評価する正常性ルールの構成 (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
  [アプリケーションの安定性を評価する正常性ルールの構成 (PowerPivot サービス アプリケーション)](#bkmk_evaluate_application_stability)  
   
 ## <a name="prerequisites"></a>前提条件  
  Analysis Services インスタンスおよび PowerPivot サービス アプリケーションの構成プロパティを変更するには、サービス アプリケーションの管理者である必要があります。  
   
-##  <a name="bkmk_view"></a>PowerPivot の正常性ルールの表示  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>PowerPivot の正常性ルールの表示  
   
 1.  SharePoint サーバーの全体管理で、 **[監視]** をクリックし、 **[正常性アナライザー]** セクションの **[ルール定義の確認]** をクリックします。  
   
@@ -55,20 +54,18 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  直ちに調査する必要がある未確認の問題がある場合は、ルール チェックを手動で実行して、問題があるかどうかを調べることができます。  
   
- そうするには、ルールをクリックしてルールの定義を開き、リボンの **[今すぐ実行]** をクリックします。 
-  **[閉じる]** をクリックして **[問題とソリューションの確認]** ページに戻り、レポートを確認します。 ルールによって問題が検出された場合は、警告またはエラーがこのページに報告されます。 場合によっては、エラーまたは警告が表示されるまでに数分かかる場合があります。  
+ そうするには、ルールをクリックしてルールの定義を開き、リボンの **[今すぐ実行]** をクリックします。 **[閉じる]** をクリックして **[問題とソリューションの確認]** ページに戻り、レポートを確認します。 ルールによって問題が検出された場合は、警告またはエラーがこのページに報告されます。 場合によっては、エラーまたは警告が表示されるまでに数分かかる場合があります。  
   
-##  <a name="bkmk_HR_SSAS"></a>サーバーの安定性を評価するために使用する正常性ルールの構成 (SQL Server Analysis Services)  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a>サーバーの安定性を評価するために使用する正常性ルールの構成 (SQL Server Analysis Services)  
  Analysis Services インスタンスには、システム レベル (CPU、メモリ、およびキャッシュの目的で使用されるディスク領域) での問題を検出する正常性ルールが含まれています。 特定の正常性ルールをトリガーするしきい値を変更するには、次の手順に従います。  
   
 1.  SharePoint サーバーの全体管理で、 **[システム設定]** セクションの **[サーバーのサービスの管理]** をクリックします。  
   
-2.  ページの上部で、Analysis Services のインスタンスを持つ SharePoint ファーム内のサーバーを選択します (次の図では、サーバー名は AW-SRV033 です)。 サービスの一覧に**SQL Server Analysis Services**が表示されます。  
+2.  ページの上部で、Analysis Services のインスタンスを持つ SharePoint ファーム内のサーバーを選択します (次の図では、サーバー名は AW-SRV033 です)。 サービスの一覧に **[SQL Server Analysis Services]** が表示されます。  
   
      ![[サーバーのサービスの管理] ページのスクリーンショット](../media/ssas-centraladmin-servicesonserver.gif "[サーバーのサービスの管理] ページのスクリーンショット")  
   
-3.  
-  **[SQL Server Analysis Services]** をクリックします。  
+3.  **[SQL Server Analysis Services]** をクリックします。  
   
 4.  サービスのプロパティのページにある [正常性ルールの設定] で、次の設定を変更します。  
   
@@ -100,16 +97,15 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      データ収集間隔 (時間)  
      正常性ルールのトリガーに使用される数値の計算に使用される、データ収集期間を指定できます。 システムは常に監視されていますが、正常性ルールの警告のトリガーに使用されるしきい値は、事前に定義された間隔に基づいて生成されるデータを使用して計算されます。 既定の間隔は 4 時間です。 サーバーは、ユーザー接続数、ディスク領域の使用状況、CPU およびメモリの使用率などを評価するために、4 時間前から収集されているシステム データと利用状況データを取得します。  
   
-##  <a name="bkmk_evaluate_application_stability"></a>アプリケーションの安定性を評価するために使用する正常性ルールの構成 (PowerPivot サービスアプリケーション)  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>アプリケーションの安定性を評価するために使用する正常性ルールの構成 (PowerPivot サービスアプリケーション)  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  [サービス アプリケーション] ページで、 **[既定の PowerPivot サービス アプリケーション]** をクリックします。  
   
      ![[サービス アプリケーション管理] ページのスクリーンショット](../media/ssas-centraladmin-app.gif "[サービス アプリケーション管理] ページのスクリーンショット")  
   
-3.  PowerPivot 管理ダッシュボードが表示されます。 
-  **[アクション]** ボックスの一覧の **[サービス アプリケーションの設定の構成]** をクリックして、サービス アプリケーションの設定ページを開きます。  
+3.  PowerPivot 管理ダッシュボードが表示されます。 **[アクション]** ボックスの一覧の **[サービス アプリケーションの設定の構成]** をクリックして、サービス アプリケーションの設定ページを開きます。  
   
      ![ダッシュボードのスクリーンショット ([アクション] ボックスの一覧に注目)](../media/ssas-centraladmin-actionslist.gif "ダッシュボードのスクリーンショット ([アクション] ボックスの一覧に注目)")  
   

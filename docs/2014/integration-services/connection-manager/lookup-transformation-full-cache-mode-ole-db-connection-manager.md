@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a40ae949eecdaa71053b0e7f4253817643bc669f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833708"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438349"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  

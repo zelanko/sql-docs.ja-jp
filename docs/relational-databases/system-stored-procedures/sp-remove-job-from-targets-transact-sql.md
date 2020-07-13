@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68006969"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891488"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した対象サーバーまたは対象サーバーグループから、指定したジョブを削除します。  
   
@@ -56,8 +56,8 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>例  
- 次の例では、以前`Weekly Sales Backups`に作成し`Servers Processing Customer Orders`たジョブを対象サーバーグループ、 `SEATTLE1`および`SEATTLE2`サーバーから削除します。  
+## <a name="examples"></a>使用例  
+ 次の例では、以前に作成した `Weekly Sales Backups` ジョブを `Servers Processing Customer Orders` 対象サーバーグループ、 `SEATTLE1` およびサーバーから削除し `SEATTLE2` ます。  
   
 ```  
 USE msdb ;  
@@ -70,9 +70,9 @@ EXEC dbo.sp_remove_job_from_targets
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_apply_job_to_targets &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

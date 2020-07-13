@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67931851"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762085"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
 [フィールド](../../../ado/reference/ado-api/field-object.md)にインデックスを作成するかどうかを指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "67931851"
   
  **[最適化**] は、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
   
-## <a name="usage"></a>使用法  
+## <a name="usage"></a>使用  
   
 ```  
 Dim rs As New Recordset  
