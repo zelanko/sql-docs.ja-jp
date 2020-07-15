@@ -1,5 +1,6 @@
 ---
 title: NULL 値が含まれる列の既定動作 | Microsoft Docs
+description: SQL で ELEMENTS XSINIL キーワード句を使用し、既定で null 値が含まれる列を操作する方法について説明します。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f7672d59b2355c0733a5e26da6217fbabf729c6a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d6962f6117a857ed5875d503c259b4d54e8dd84d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775599"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>NULL 値が含まれる列の既定動作
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 既定で、列内の NULL 値は、属性、ノード、または要素がない状態にマップされます。 この既定の動作は、ELEMENTS XSINIL キーワード句を使用してオーバーライドできます。 この句では、要素中心の XML が要求されます。 これは、返される結果で null 値が明示的に示されることを意味します。 これらの要素には、値はありません。
 

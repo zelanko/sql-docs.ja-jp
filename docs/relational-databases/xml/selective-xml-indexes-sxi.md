@@ -1,5 +1,6 @@
 ---
 title: 選択的 XML インデックス (SXI) | Microsoft Docs
+description: クエリのパフォーマンスを向上させ、インデックス作成の高速化をサポートし、XML インデックスのストレージ コストを削減するために、選択的 XML インデックス (SXI) を使用する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 548bb347bb71c9819f8a36213ce896aec92e3b50
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757494"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選択的 XML インデックス (SXI)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   選択的 XML インデックスは、通常の XML インデックスに加えて使用できる、別の種類の XML インデックスです。 選択的 XML インデックス機能の目標を次に示します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納された XML データに対するクエリのパフォーマンスを向上させる。  
@@ -120,7 +121,7 @@ FOR
   
 -   バイナリ XS 型 (base64Binary や hexBinary など) のノードに対するインデックス設定。  
   
--   末尾にワイルドカード文字 `*` を含む XPath 式を使用した、インデックスを設定するノードの指定。例:  `/a/b/c/*`、 `/a//b/*`、 `/a/b/*:c`。  
+-   末尾にワイルドカード文字 `*` を含む XPath 式を使用した、インデックスを設定するノードの指定。例: `/a/b/c/*`、`/a//b/*`、`/a/b/*:c`。  
   
 -   子、属性、または子孫以外の軸に対するインデックスの設定。 `//<step>` は特殊なケースとして使用できます。  
   

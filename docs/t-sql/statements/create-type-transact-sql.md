@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74901873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766924"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で別名データ型またはユーザー定義型を現在のデータベースで作成します。 別名データ型の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ システム型に基づきます。 ユーザー定義型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) のアセンブリのクラスを使用して実装します。 ユーザー定義型を実装にバインドするには、先に [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して、その実装を含む CLR アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で登録しておく必要があります。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74901873"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -121,7 +121,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```  
+```syntaxsql
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  
@@ -179,7 +179,7 @@ column_name <data_type>
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**画像**|**int**|  
+|**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
@@ -268,7 +268,7 @@ column_name <data_type>
   
  **sp_addtype** を使用して作成したユーザー定義型と異なり、CREATE TYPE を使用して作成した型に対しては、データベース ロール **public** に REFERENCES 権限が自動的に付与されるわけではありません。 この権限は個別に付与する必要があります。  
   
- ユーザー定義テーブル型の場合、*column_name*\<data type> で使用される構造化ユーザー定義型は、テーブル型が定義されているデータベース スキーマ スコープの一部になります。 データベース内の別のスコープに含まれている構造化ユーザー定義型にアクセスするには、2 つの部分から構成される名前を使用します。  
+ ユーザー定義テーブル型の場合、*column_name* \<data type> で使用される構造化ユーザー定義型は、テーブル型が定義されているデータベース スキーマ スコープの一部になります。 データベース内の別のスコープに含まれている構造化ユーザー定義型にアクセスするには、2 つの部分から構成される名前を使用します。  
   
  ユーザー定義テーブル型では、計算列の主キーを PERSISTED および NOT NULL にする必要があります。  
   

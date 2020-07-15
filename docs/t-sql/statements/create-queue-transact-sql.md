@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892509"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 データベースに新しいキューを作成します。 キューにはメッセージが格納されます。 サービス用のメッセージを受信すると、そのメッセージは [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、サービスに関連付けられているキューに格納されます。
 
@@ -42,7 +42,7 @@ ms.locfileid: "71326095"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -86,7 +86,7 @@ ACTIVATION は、このキュー内のメッセージを処理するために開
 
 STATUS (アクティブ化) は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってストアド プロシージャを開始するかどうかを指定します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャが開始されません。 この句を指定しない場合、既定値は ON になります。
 
-PROCEDURE_NAME = \<プロシージャ> は、このキュー内のメッセージを処理するために開始するストアド プロシージャの名前を指定します。 この値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子にする必要があります。
+PROCEDURE_NAME = \<procedure> このキュー内のメッセージを処理するために開始するストアド プロシージャの名前を指定します。 この値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子にする必要があります。
 
 *database_name* (プロシージャ) は、ストアド プロシージャを含むデータベースの名前です。
 

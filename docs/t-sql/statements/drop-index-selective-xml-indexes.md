@@ -14,15 +14,15 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766313"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選択的 XML インデックス)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で既存の選択的 XML インデックスまたは選択的セカンダリ XML インデックスを削除します。 詳細については、「[選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
@@ -48,7 +48,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  削除する既存のインデックスの名前です。  
   
- *\< object>* インデックスが作成されている XML 列が含まれるテーブルを指定します。 次のいずれかの形式を使用します。  
+ *\< object>* インデックスが作成されている XML 列が含まれるテーブルです。 次のいずれかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -60,7 +60,7 @@ DROP INDEX index_name ON <object>
   
  *\<drop_index_option>* DROP INDEX のオプションについては、「[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  DROP INDEX を実行するには、テーブルまたはビューに対する ALTER 権限が必要です。 この権限は、固定サーバー ロール sysadmin と、固定データベース ロール db_ddladmin および db_owner に既定で許可されています。  

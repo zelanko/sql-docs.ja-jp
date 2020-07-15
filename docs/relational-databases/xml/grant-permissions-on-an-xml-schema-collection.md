@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクションに対する権限の許可 | Microsoft Docs
+description: XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可する方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6210235ba7f5537732745434878c778733e98370
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772104"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>XML スキーマ コレクションを作成する権限の許可  

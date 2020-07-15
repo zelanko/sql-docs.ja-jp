@@ -1,5 +1,6 @@
 ---
 title: 計算列を使用した高頻度の XML 値の昇格 | Microsoft Docs
+description: クエリの効率性を上げるため、計算列を作成することで、頻繁に使用される XML 値を昇格する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772092"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   クエリが主に少数の要素や属性の値に対して行われる場合、対象になる値をリレーショナル列に昇格できます。 XML インスタンス全体を取得する一方で、XML データの一部に対してクエリを実行する場合に昇格が役立ちます。 XML 列に XML インデックスを作成する必要はありません。 代わりに、昇格した列にインデックスを設定できます。 クエリは昇格した列を使用するように記述する必要があります。 クエリ オプティマイザーは、クエリの対象を XML 列から、昇格した列に振り替えないためです。  
   
  昇格した列は、同一のテーブルで計算列にすることができます。また、任意のテーブルでユーザーが管理する独立した列にすることもできます。 これは、各 XML インスタンスから単一の値を昇格するときには十分です。 しかし、複数の値から構成されるプロパティの場合、個々のプロパティ用に個別のテーブルを作成する必要があります。詳細については、次のセクションを参照してください。  
@@ -29,7 +30,7 @@ ms.locfileid: "80664880"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml データ型を基にした計算列  
  **xml** データ型のメソッドを呼び出すユーザー定義関数を使用して、計算列を作成できます。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例 : xml データ型のメソッドを基にした計算列  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例: xml データ型のメソッドを基にした計算列  
  書籍の ISBN 番号を取得するユーザー定義関数を作成します。  
   
 ```  
@@ -51,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  計算列は、通常の方法でインデックスを設定できます。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例 : xml データ型のメソッドを基にした計算列へのクエリ  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例: xml データ型のメソッドを基にした計算列へのクエリ  
  ISBN が 0-7356-1588-2 の <`book`> を取得します。  
   
 ```  
@@ -85,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   主キーを使用してテーブルどうしを結合し、プロパティ テーブルに SQL アクセスを行うクエリ、およびベース テーブルの XML 列に XML アクセスを行うクエリを記述します。  
   
-### <a name="example-create-a-property-table"></a>例 : プロパティ テーブルの作成  
+### <a name="example-create-a-property-table"></a>例: プロパティ テーブルの作成  
  たとえば、著者の名 (ファースト ネーム) を昇格させるとします。 共著の場合もあるので、名は複数の値から構成されるプロパティです。 それぞれの名は、プロパティ テーブルの個別の行に保存されます。 逆結合のため、ベース テーブルの主キーをプロパティ テーブルで複製します。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例 : XML インスタンスから行セットを生成するユーザー定義関数の作成  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例: XML インスタンスから行セットを生成するユーザー定義関数の作成  
  次のテーブル値関数 udf_XML2Table は、主キーの値と XML インスタンスを受け取ります。 <`book`> 要素のすべての著者の名を取得し、主キーと名の組み合わせから構成される行セットを返します。  
   
 ```  
@@ -108,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>例 : プロパティ テーブルにデータを格納するトリガーの作成  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>例: プロパティ テーブルにデータを格納するトリガーの作成  
  次の挿入トリガーを使用して、プロパティ テーブルに行を挿入します。  
   
 ```  
@@ -155,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例 : 著者の名が同一の XML インスタンスの検索  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例: 著者の名が同一の XML インスタンスの検索  
  XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 次に例を示します。  
   
 ```  
@@ -164,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例 : CLR ストリーミング テーブル値関数を使用したソリューション  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例: CLR ストリーミング テーブル値関数を使用したソリューション  
  このソリューションは、次の手順で実行します。  
   
 1.  CLR クラス SqlReaderBase を定義します。このクラスは ISqlReader を実装し、XML インスタンスにパス式を適用することでストリーミング テーブル値出力を生成します。  

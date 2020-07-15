@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896012"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメントRESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。  
   
@@ -120,11 +120,11 @@ FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } 通常、バッ
   
  FROM 句を省略した場合、バックアップの復元は行われず、 代わりにデータベースが復旧されます。 この機能により、NORECOVERY オプションで復元されているデータベースを復旧したり、スタンバイ サーバーに切り替えたりすることができます。 FROM 句を省略する場合は、WITH 句の中で NORECOVERY、RECOVERY、または STANDBY を指定する必要があります。  
   
- \<backup_device> [ **,** ...*n* ] 復元操作に使用する論理または物理バックアップ デバイスを指定します。  
+ \<backup_device> [ **,** ...*n* ] 復元操作に使用する、論理バックアップ デバイスまたは物理バックアップ デバイスを指定します。  
   
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
- \<backup_device>::= バックアップ操作に使用する論理または物理バックアップ デバイスを、次のように指定します。  
+ \<backup_device>::= 次のように、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  データベースの復元元である、**sp_addumpdevice** で作成されたバックアップ デバイスの論理名を指定します。この名前は識別子の規則に従っている必要があります。 変数 ( **@** _logical\_backup\_device\_name\_var_) として指定する場合、バックアップ デバイス名は、文字列定数 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
@@ -469,7 +469,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  データベース ミラーリングでの変更データ キャプチャの使用については、「[変更データ キャプチャとその他の SQL Server 機能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)」を参照してください。  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信を有効または無効にするか、新しい [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を設定します。 このオプションは、バックアップ作成時にデータベースに対して [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効 (アクティブ) になっていた場合にのみ使用します。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
  NEW_BROKER  
  データベースに新しい Service Broker 識別子を割り当てることを指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い Service Broker 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **サポートしているステートメント:** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) および完全または一括ログ復旧モデルの場合のみ。  
   
  STOPAT、STOPATMARK、または STOPBEFOREMARK 句で目的の復旧ポイントを指定することで、特定の時点またはトランザクションにデータベースを復元できます。 指定された時間またはトランザクションへの復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT、STOPATMARK、STOPBEFOREMARK のいずれかの句で目的の時間またはトランザクションを指定する必要があります。  

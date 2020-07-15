@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894557"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (サーバー権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー レベルの GRANT および DENY の権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67914272"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
@@ -58,9 +58,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  サーバーで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- { TO | FROM } \<grantee_principal> 権限の取り消し元であるプリンシパルを指定します。  
+ { TO | FROM } \<grantee_principal> 権限を取り消すプリンシパルを指定します。  
   
- AS \<grantor_principal> このクエリを実行するプリンシパルの、権限を取り消す権利の取得元であるプリンシパルを指定します。  
+ AS \<grantor_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  GRANT OPTION FOR  
  指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  

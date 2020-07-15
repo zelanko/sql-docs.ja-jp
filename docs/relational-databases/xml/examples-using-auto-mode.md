@@ -1,5 +1,6 @@
 ---
 title: '例 : AUTO モードの使用 | Microsoft Docs'
+description: FOR XML AUTO モードを使用するクエリの例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775570"
 ---
-# <a name="examples-using-auto-mode"></a>例 : AUTO モードの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="examples-using-auto-mode"></a>例 :AUTO モードの使用
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次の例では、AUTO モードの使用方法を示します。 クエリの多くは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例 : 顧客情報、注文情報、および注文明細情報の取得  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例: 顧客情報、注文情報、および注文明細情報の取得  
  このクエリでは、特定の顧客の顧客情報、注文情報、および注文明細情報を取得しています。  
   
 ```  
@@ -94,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>例 : GROUP BY と集計関数の指定  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>例: GROUP BY と集計関数の指定  
  次のクエリにより、各顧客の ID と顧客が要求した注文数が返されます。  
   
 ```  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>例 : AUTO モードでの計算列の指定  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>例: AUTO モードでの計算列の指定  
  このクエリでは、各顧客の連結された名前と注文情報が返されます。 計算列はその時点で見つかった最も内側のレベルに割り当てられるので、この例では <`SOH`> 要素に割り当てられます。 連結された顧客名は、<`SOH`> 要素の属性として結果に追加されます。  
   
 ```  
@@ -167,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>例 : バイナリ データを返す  
+## <a name="example-returning-binary-data"></a>例: バイナリ データを返す  
  次のクエリでは、 `ProductPhoto` テーブルから製品の写真が返されます。 `ThumbNailPhoto` は、 **テーブルの** varbinary(max) `ProductPhoto` 列です。 既定では、 `AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、 `ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、 `SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
   
 ```  
@@ -223,7 +224,7 @@ FOR XML AUTO;
   
  このことは、特に、大文字と小文字が区別されるデータベースに対して dbobject クエリが実行されるときに問題になる可能性があります。 この問題を回避するには、クエリで指定するテーブル名や列名での大文字と小文字の区別の方法が、データベース内のテーブル名や列名での大文字と小文字の区別の方法と一致している必要があります。  
   
-## <a name="example-understanding-the-encoding"></a>例 : エンコードについて  
+## <a name="example-understanding-the-encoding"></a>例: エンコードについて  
  この例では、結果に表示されるさまざまなエンコードを示します。  
   
  次のテーブルを作成します。  
@@ -266,7 +267,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   クエリ結果で、返された要素名と属性名に特殊な XML 文字や URL 文字が含まれている場合、それらの文字は対応する Unicode 文字の 16 進数値を使用してエンコードされます。 上記の結果では、要素名 <`Special Chars`> が <`Special_x0020_Chars`> として返されています。 属性名 <`Col#&2`> は <`Col_x0023__x0026_2`> として返されています。 XML と URL の両方の特殊文字がエンコードされます。  
   
--   要素や属性の値に 5 つの標準 XML 文字エンティティ ('、""、\<、>、および &) のいずれかが含まれている場合、これらの特殊な XML 文字は必ず XML 文字エンコードを使用してエンコードされます。 上記の結果では、属性 <`Col1`> の値の `&` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
+-   要素や属性の値に 5 つの標準 XML 文字エンティティ ('、""、\<, >、および &) のいずれかが含まれている場合、これらの特殊な XML 文字は必ず XML 文字エンコードを使用してエンコードされます。 上記の結果では、属性 <`Col1`> の値の `&` という値は `&` とエンコードされています。 ただし、# 文字は特殊な XML 文字ではなく有効な XML 文字なので、# のままです。  
   
 -   要素や属性の値に URL で特別な意味を持つ任意の特殊な URL 文字が含まれている場合、それらの文字は、DBOBJECT URL 値であるとき、および特殊文字がテーブル名や列名の一部であるときにのみエンコードされます。 この結果、テーブル名 `#` の一部である文字 `Col#&2` は、 `_x0023_ in the DBOJBECT URL`としてエンコードされます。  
   

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68071363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761870"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   既存の選択的 XML インデックスを変更します。 ALTER INDEX ステートメントは次のアイテムの 1 つ以上を変更します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68071363"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -142,7 +142,7 @@ identifier
 > [!IMPORTANT]  
 >  ALTER INDEX ステートメントを実行すると、選択的 XML インデックスが常に再構築されます。 サーバーのリソースに対するこの処理の影響を考慮してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  ALTER INDEX を実行するには、少なくともテーブルまたはビューに対する ALTER 権限が必要です。  
