@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121587"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197409"
 ---
 # <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   トランザクションは、完全にコミットされた、または完全にロールバックされた 1 つ以上のデータベース ステートメントのグループです。 各トランザクションには、原子性、一貫性、分離性、持続性 (ACID) があります。 トランザクションが成功すると、その中のすべてのステートメントがコミットされます。 トランザクションが失敗した場合、つまりグループ内の少なくとも 1 つのステートメントが失敗した場合は、グループ全体がロールバックされます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121587"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  ステートメントの実行時エラー以外のエラーによりトランザクションを正常に完了できない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によってトランザクションが自動的にロールバックされ、そのトランザクションで保持されていたすべてのリソースが解放されます。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
   
- バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
+ バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**に設定された** **XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッションで実行できるトランザクション数は一度に 1 つのみです。セーブ ポイントと入れ子になったトランザクションはサポートされません。  

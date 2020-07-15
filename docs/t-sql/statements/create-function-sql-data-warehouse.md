@@ -13,15 +13,15 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3a549c8a56c14e7c372d0b882d9fd2209298346
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ae8c2994e43ff6a90105dd39c203a455da2c9468
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633385"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196772"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、パラメーターを受け取り、複雑な計算などの操作を実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンであり、そのアクションの結果を値として返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
@@ -150,10 +150,10 @@ RETURNS return_data_type
   
  ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。   
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  このセクションでは、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 次に例を示します。  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 次に例を示します。  
   
 ```sql  
 SELECT definition, type   
@@ -165,7 +165,7 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): ユーザー定義関数で定義されているパラメーターの情報を表示します。  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : ユーザー定義関数で定義されているパラメーターの情報を表示します。  
   
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : 関数が参照する基になるオブジェクトを表示します。  
   
