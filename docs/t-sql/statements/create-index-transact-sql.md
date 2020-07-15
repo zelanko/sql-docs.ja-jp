@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632502"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010790"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 テーブルまたはビューにリレーショナル インデックスを作成します。 クラスター化または非クラスター化 B ツリー インデックスであるため、行ストア インデックスとも呼ばれます。 行ストア インデックスは、テーブルにデータが設定される前に作成することができます。 クエリが特定の列から選択するか、特定の順序での値の並べ替えを要求する場合は特に、クエリのパフォーマンスを向上させるために行ストア インデックスを使用します。
 
@@ -590,7 +590,7 @@ DATA_COMPRESSION 設定を適用するパーティションを指定します。
 - コンマで区切った複数の個別のパーティションのパーティション番号を指定します。たとえば次のとおりです。ON PARTITIONS (1, 5)。
 - 範囲と個別のパーティションの両方を指定します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)。
 
-\<範囲> はパーティション番号として、TO で区切って指定できます (例: `ON PARTITIONS (6 TO 8)`)。
+\<range> はパーティション番号として、TO で区切って指定できます。たとえば、`ON PARTITIONS (6 TO 8)` のようになります。
 
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、DATA_COMPRESSION オプションを複数回指定します。例:
 
@@ -721,11 +721,11 @@ INSERT INTO t1 VALUES (1, 0);
 付加列と呼ばれる非キー列は、非クラスター化インデックスのリーフ レベルに追加でき、クエリに対応することによりクエリ パフォーマンスを向上できます。 この場合、クエリで参照されるすべての列は、キー列または非キー列としてインデックスに含まれます。 これにより、クエリ オプティマイザーではテーブルまたはクラスター化インデックス データにアクセスすることなく、インデックス スキャンによって必要な情報をすべて特定できます。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」と「[SQL Server のインデックスのアーキテクチャとデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
 
 ## <a name="specifying-index-options"></a>インデックス オプションの指定
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では新しいインデックス オプションが導入され、オプションの指定方法も変更になりました。 旧バージョンとの互換性のある構文では、WITH *option_name* は WITH **(** \<option_name> **= ON )** と同じです。 インデックス オプションを設定する場合は、次の規則が適用されます。
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では新しいインデックス オプションが導入され、オプションの指定方法も変更になりました。 旧バージョンと互換性のある構文では、WITH *option_name* は WITH **(** \<option_name> **= ON )** と同じです。 インデックス オプションを設定する場合は、次の規則が適用されます。
 
-- 新しいインデックス オプションは、WITH ( **_option\_name_ = ON | OFF**) を使用してのみ指定できる。
+- 新しいインデックス オプションは、WITH (**_option\_name_ = ON | OFF**) を使用してのみ指定できる。
 - 同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH (**DROP_EXISTING, ONLINE = ON**) を指定すると、ステートメントは失敗します。
-- XML インデックスを作成するとき、オプションは WITH ( **_option_name_= ON | OFF**) を使用して指定する必要がある。
+- XML インデックスを作成するとき、オプションは WITH (**_option_name_= ON | OFF**) を使用して指定する必要がある。
 
 ## <a name="drop_existing-clause"></a>DROP_EXISTING 句
 DROP_EXISTING 句を使用して、インデックスの再構築、列の追加または削除、オプションの変更、列の並べ替え順の変更、パーティション構成またはファイル グループの変更を行うことができます。

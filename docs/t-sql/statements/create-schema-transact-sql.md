@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe651c706bcbe41ea688d0f9e661ff483a70d72
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68117298"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001498"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースにスキーマを作成します。 CREATE SCHEMA トランザクションでは、新しいスキーマにテーブルとビューを作成し、それらのオブジェクトに GRANT、DENY、または REVOKE 権限を設定することもできます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117298"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
@@ -59,7 +59,7 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  この動作が必要なのは、ユーザーが Windows グループに基づいてオブジェクトを作成および所有できるようにするためです。 ただし、スキーマおよびユーザーが誤って作成される可能性があります。 ユーザーおよびスキーマが暗黙的に作成されないように、可能な限り、明示的にデータベース プリンシパルを作成して既定のスキーマを割り当てます。 または、データベース内にオブジェクトを作成するときに、2 部または 3 部構成のオブジェクト名を使用して既存のスキーマを明示的に指定します。  
 
 > [!NOTE]
->  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーからの Azure AD ユーザーの作成では AAD でユーザーの状態を確認する必要があるので、ユーザーの作成はエラー 2760 "**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がありません**"、 およびその後のエラー 2759 "**直前のエラーにより CREATE SCHEMA に失敗しました**" で失敗します。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
+>  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーから Azure AD ユーザーを作成する場合、ユーザーの状態を AAD で確認する必要があるので、ユーザーの作成はエラー 2760:**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がないため失敗します。** 次いで、エラー 2759:**直前のエラーにより CREATE SCHEMA に失敗しました。** が表示されます。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
  
   
 ## <a name="deprecation-notice"></a>今後のバージョンでの使用  
@@ -161,7 +161,7 @@ GO
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

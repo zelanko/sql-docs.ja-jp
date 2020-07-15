@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3aded8f578733ac3c6274406dccef235e71c357
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629982"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978320"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セキュリティ保護可能なエンティティの所有権を変更します。    
     
@@ -122,7 +122,7 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>引数    
-\<class_type> は、所有者を変更するエンティティのセキュリティ保護可能なクラスを指定します。 既定値は OBJECT です。    
+\<class_type> 所有者を変更するエンティティのセキュリティ保護可能なクラスを指定します。 既定値は OBJECT です。    
     
 |||    
 |-|-|    

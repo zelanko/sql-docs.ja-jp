@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb0b9c6b9d6fe47b69678211122e5c8be7023c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6799fefe08e3c57d6bac0924f2192094c1b9e428
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78937663"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091836"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ間でセキュリティ保護可能なリソースを移動します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "78937663"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -83,6 +83,8 @@ ALTER SCHEMA schema_name
  テーブルやシノニムなどのオブジェクトを移動しても、そのオブジェクトに対する参照は自動的には更新されません。 移動したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルを移動するとき、そのテーブルがトリガーで参照されている場合は、新しいスキーマ名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトを移動する前には、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
 
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルのスキーマを変更するには、オブジェクト エクスプローラーでテーブルを右クリックし、 **[デザイン]** をクリックします。 **F4** キーを押して [プロパティ] ウィンドウを開きます。 **[スキーマ]** ボックスで新しいスキーマを選択します。  
+ 
+ ALTER SCHEMA では、スキーマ レベル ロックが使用されます。
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

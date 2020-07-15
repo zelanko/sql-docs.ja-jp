@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896579"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   NOREWIND オプションで実行された BACKUP または RESTORE ステートメントにより、開かれたままとなっていた特定のテープ デバイスを巻き戻して閉じます。 このコマンドはテープ デバイスに対してのみサポートされています。  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  データベースの復元元である、**sp_addumpdevice** で作成されたバックアップ デバイスの論理名を指定します。この名前は識別子の規則に従っている必要があります。 変数 ( **@** _logical\_backup\_device\_name\_var_) として指定する場合、バックアップ デバイス名は、文字列定数 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 ディスクまたはテープを表すデバイスの種類を、完全なパスとファイル名を含む実際のデバイス名と共に指定してください。たとえば、DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' または TAPE = '\\\\.\TAPE0' のように指定します。 変数 ( **@** _physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ 指定したディスク デバイスまたはテープ デバイスから、バックアップを復元することを許可します。 デバイスの実際の名前 (たとえば、完全なパスとファイル名) でディスクとテープのデバイスの種類を指定する必要があります:ディスク = "C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak"、テープ = "\\\\.\TAPE0"。 変数 ( **@** _physical\_backup\_device\_name\_var_) として指定する場合、デバイス名は、文字列定数 ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  UNC 名 (マシン名を含む必要があります) を持つネットワークサーバーを使用している場合は、ディスクのデバイスの種類を指定します。 UNC 名の使用の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>全般的な解説  
  RESTORE REWINDONLY は、RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND の代わりに使用できます。 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューを使用すると、開いているテープ ドライブの一覧を確認できます。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  すべてのユーザーが RESTORE REWINDONLY を使用できます。  

@@ -32,15 +32,15 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e93f24bcd2b136cdc055faf3a100a76fa5bb4db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 03c9b8dae913f7fb8dd770effcfd56a32e368c96
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634252"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999784"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 クエリ結果を行のグループに分割する SELECT ステートメント句。これは通常、グループごとに 1 つまたは複数の集計を実行する目的で使用されます。 SELECT ステートメントでは、グループごとに 1 つの行が返されます。  
   
@@ -351,7 +351,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 ### <a name="comparison-of-supported-group-by-features"></a>サポートされる GROUP BY 機能の比較  
  次の表に、SQL のバージョンに基づいてサポートされる GROUP BY 機能と、データベースの互換性レベルを示します。  
   
-|機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
+|特徴量|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
 |GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(** _arg1_ **,** _...argN_ **)** または **dbo.rollup(** _arg1_ **,** ..._argN_ **)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** ...argN **)** または **dbo.rollup(** arg1 **,** _...argN_ **)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます。"キーワード 'cube'&#124;'rollup' 付近に不適切な構文があります。"<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** _...argN_) または **dbo.rollup(** _arg1_ **,** _...argN_ **)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  

@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d99f732d76bda9f44c20701818e61a2b2af98e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010748"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY (データベースの権限の拒否) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースに対する権限を拒否します。
 
@@ -64,7 +64,7 @@ PRIVILEGES: ISO 準拠のために用意されています。 ALL の動作は�
 
 CASCADE: 指定したプリンシパルが権限を許可したプリンシパルに対しても、権限を拒否することを示します。
 
-AS \<database_principal>: このクエリを実行するプリンシパルが権限を拒否する権利の派生元のプリンシパルを指定します。
+AS \<database_principal> このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。
 
 *Database_user*: データベース ユーザーを指定します。
 

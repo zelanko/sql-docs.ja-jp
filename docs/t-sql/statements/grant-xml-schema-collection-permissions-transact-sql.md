@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2ad1a4191a1ea3bbba6bcb34ee33dcdc89c94ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897633"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (XML スキーマ コレクションの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   XML スキーマ コレクションに対する権限を許可します。   
   
@@ -35,7 +35,7 @@ ms.locfileid: "75243347"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
@@ -62,12 +62,12 @@ GRANT permission  [ ,...n ] ON
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
  権限を許可する XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
- \<database_principal> 、権限を許可するプリンシパルを指定します。  
+ \<database_principal> 権限を許可するプリンシパルを指定します。  
   
  WITH GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  

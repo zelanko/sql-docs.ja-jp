@@ -25,17 +25,17 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c8f956bc846c645fb8efe9ecb9ade7e2366d73
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4618de753675ef1b3d7ccd2f7a187f22aab9c683
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634147"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010738"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な考え方としては、GRANT \<権限> ON \<オブジェクト> TO \<ユーザー、ログイン、またはグループ> という形になります。 権限の概要については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
+  セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な概念は、\<some object> に対する \<some permission> を \<some user, login, or group> に付与することです。 権限の概要については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

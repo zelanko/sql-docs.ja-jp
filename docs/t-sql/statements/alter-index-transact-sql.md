@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588235"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000712"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   インデックスの無効化、再構築、再構成によって、またはインデックスに関するオプションの設定によって、既存のテーブルやビュー インデックス (行ストア、列ストア、または XML) を変更します。  
   
@@ -399,7 +399,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 -   内部テーブルに対して作成された統計  
 -   空間インデックスまたは XML インデックスを使用して作成された統計  
   
- ONLINE **=** { ON | **OFF** } \<rebuild_index_option に適用する場合>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
   
  XML インデックスまたは空間インデックスの場合、`ONLINE = OFF` だけがサポートされます。ONLINE を ON に設定すると、エラーが発生します。  
@@ -553,7 +553,7 @@ COMPRESSION_DELAY **=** { **0** |*期間 [分]* }
 -   コンマで区切った複数の個別のパーティションのパーティション番号を指定します (例: `ON PARTITIONS (1, 5)`)。  
 -   次のように範囲と個別のパーティションの両方を指定します: `ON PARTITIONS (2, 4, 6 TO 8)`。  
   
- \<範囲> はパーティション番号として、TO で区切って指定できます (例: `ON PARTITIONS (6 TO 8)`)。  
+ \<range> はパーティション番号として、TO で区切って指定できます。たとえば、`ON PARTITIONS (6 TO 8)` のようになります。  
   
  さまざまなパーティションにさまざまな種類のデータ圧縮を設定するには、DATA_COMPRESSION オプションを複数回指定します。例:  
   
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON | **OFF** } \<single_partition_rebuild_index_option に適用する場合>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  インデックスまたは基になるテーブルのインデックス パーティションをオンラインまたはオフラインで再構築できるかどうかを指定します。 **REBUILD** がオンライン (**ON**) で行われる場合、このテーブルのデータは、インデックス操作中にクエリやデータ変更で使用できます。  既定値は **OFF** です。  
   
  ON  

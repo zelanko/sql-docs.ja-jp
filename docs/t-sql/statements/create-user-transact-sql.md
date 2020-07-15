@@ -29,15 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635994"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004734"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースにユーザーを追加します。 12 種類のユーザーの一覧を、最も基本的な構文のサンプルと共に、次に示します。  
   
@@ -328,7 +328,7 @@ SQL Database マネージド インスタンス データベースでユーザ�
 -   `CREATE USER KEYUSER FOR ASYMMETRIC KEY SecureKey`  
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ユーザーを作成するとデータベースへのアクセス許可が与えられますが、データベース内のオブジェクトに対するアクセス許可は自動的には与えられません。 ユーザーを作成した後の一般的な操作として、データベース オブジェクトに対する権限を持つデータベース ロールにユーザーを追加するか、またはオブジェクト権限をユーザーに付与します。 権限システムの設計の詳細については、「 [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
 ### <a name="special-considerations-for-contained-databases"></a>包含データベースに関する注意事項  
