@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
 ms.custom: ''
-ms.date: 03/16/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91d278d564ab6647ad1a585c0641dcc17a8dd8f8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 095e8f93377d75c411c63150203699908dee2d26
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987448"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664727"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -176,7 +176,7 @@ CONTAINMENT = { NONE | PARTIAL }
 
 データベースの包含状態を指定します。 NONE = 非包含データベース。 PARTIAL = 部分的包含データベース。
 
-ON: データベースのデータ部分の格納に使用するディスク ファイル (データ ファイル) を明示的に定義するように指定します。 プライマリ ファイル グループのデータ ファイルを定義する \<filespec> 項目のコンマ区切りリストが続く場合は、ON にします。 プライマリ ファイル グループ内のファイルのリストに続き、ユーザー ファイル グループおよびユーザー ファイル グループに属するファイルを定義する省略可能な \<filegroup> 項目のコンマ区切りリストを記述できます。
+ON: データベースのデータ部分の格納に使用するディスク ファイル (データ ファイル) を明示的に定義するように指定します。 プライマリ ファイル グループのデータ ファイルを定義する \<filespec> 項目のコンマ区切りリストが続く場合は、ON にします。 プライマリ ファイル グループ内のファイルのリストに続き、ユーザー ファイル グループおよびそれらのファイルを定義する省略可能な \<filegroup> 項目のコンマ区切りリストを記述できます。
 
 PRIMARY: 関連付けられた \<filespec> リストによってプライマリ ファイルを定義するように指定します。 プライマリ ファイル グループ内の \<filespec> エントリに最初に指定されたファイルが、プライマリ ファイルとなります。 データベースはプライマリ ファイルを 1 つだけ保有することができます。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。
 
@@ -195,7 +195,8 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 > [!NOTE]
 > 包含データベースは、非包含データベースとは異なる方法で照合されます。 詳細については、「[包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)」を参照してください。
 
-WITH \<option> **\<filestream_options>**
+WITH \<option>
+ **\<filestream_options>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
@@ -207,7 +208,8 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLU
 |READONLY|このデータベース内の FILESTREAM データは、非トランザクション プロセスによって読み取ることができます。|
 |FULL|FILESTREAM FileTable に対する完全な非トランザクション アクセスは有効です。|
 
-DIRECTORY_NAME = \<directory_name> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
+DIRECTORY_NAME = \<directory_name>
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
 
 Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべての Database_Directory 名の中で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の設定とは関係なく、大文字と小文字は区別されません。 このオプションは、このデータベース内に FileTable を作成する前に設定する必要があります。
 
@@ -266,7 +268,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 
   このオプションを指定すると、ストレージ クラス メモリ (NVDIMM-N 不揮発性ストレージ、永続的ログ バッファーとも呼ばれます) によってバックアップされるディスク デバイス上のボリュームに、トランザクション ログ バッファーが作成されます。 詳しくは、「[Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)」(ストレージ クラス メモリを使用したトランザクション コミット待機時間の短縮) をご覧ください。 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。
 
-FOR ATTACH [ WITH \< attach_database_option > ] 既存のオペレーティング システム ファイルのセットを[アタッチ](../../relational-databases/databases/database-detach-and-attach-sql-server.md)することによりデータベースを作成するように指定します。 プライマリ ファイルを指定する \<filespec> エントリが必要です。 他に必要な \<filespec> エントリは、データベースが最初に作成されたとき、または最後にアタッチされたときからパスが変わったファイルのエントリだけです。 これらのファイルの \<filespec> エントリを指定する必要があります。
+FOR ATTACH [ WITH \< attach_database_option > ]: 既存のオペレーティング システム ファイルのセットを[アタッチ](../../relational-databases/databases/database-detach-and-attach-sql-server.md)することによりデータベースを作成するように指定します。 プライマリ ファイルを指定する \<filespec> エントリが必要です。 他に必要な \<filespec> エントリは、データベースが最初に作成されたとき、または最後にアタッチされたときからパスが変わったファイルのエントリだけです。 これらのファイルの \<filespec> エントリを指定する必要があります。
 
 FOR ATTACH では、以下のことが必要です。
 
@@ -280,15 +282,15 @@ FOR ATTACH では、以下のことが必要です。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アタッチされるデータベースに含まれているフルテキスト ファイルも、すべてデータベースと共にアタッチされます。 フルテキスト カタログの新しいパスを指定するには、フルテキストのオペレーティング システム ファイル名を含めずに新しい場所を指定します。 詳細については、「例」のセクションを参照してください。
 
-"ディレクトリ名" の FILESTREAM オプションを含むデータベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにアタッチすると、Database_Directory 名が一意であることを確認する要求が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して行われます。 Database_Directory 名が一意でない場合は、アタッチ操作は失敗し、"FILESTREAM Database_Directory 名 \<名前> は、この SQL Server インスタンスで一意ではありません" というエラーが出力されます。 このエラーを回避するには、省略可能なパラメーターの *directory_name* をこの操作に渡す必要があります。
+"ディレクトリ名" の FILESTREAM オプションを含むデータベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにアタッチすると、Database_Directory 名が一意であることを確認する要求が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して行われます。 そうではない場合、アタッチ操作は失敗し、"FILESTREAM Database_Directory 名 \<name> は、この SQL Server インスタンスで一意ではありません" というエラーが出力されます。 このエラーを回避するには、省略可能なパラメーターの *directory_name* をこの操作に渡す必要があります。
 
 FOR ATTACH はデータベース スナップショットでは指定できません。
 
 FOR ATTACH は RESTRICTED_USER オプションを指定できます。 RESTRICTED_USER モードでは、db_owner 固定データベース ロールと、dbcreator 固定サーバー ロールおよび sysadmin 固定サーバー ロールのメンバーのみが、データベースに接続できます。ただし、接続ユーザー数に制限はありません。 修飾されていないユーザーによる試行が拒否されます。
 
-データベースで [!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する場合は、FOR ATTACH 句で WITH \<service_broker_option> を使用します。
+データベースで [!INCLUDE[ssSB](../../includes/sssb-md.md)] が使用される場合は、FOR ATTACH 句で WITH \<service_broker_option> を使用します。
 
-\<service_broker_option> [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージの配信と、データベースの [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を制御します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] オプションは、FOR ATTACH 句が使用されている場合にのみ指定できます。
+\<service_broker_option>: [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージの配信と、データベースの [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を制御します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] オプションは、FOR ATTACH 句が使用されている場合にのみ指定できます。
 
 ENABLE_BROKER: 指定したデータベースに対して [!INCLUDE[ssSB](../../includes/sssb-md.md)] を有効にします。 つまり、メッセージ配信が開始され、sys.databases カタログ ビューで is_broker_enabled が TRUE に設定されます。 データベースは、既存の [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を保持します。
 
@@ -887,6 +889,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -913,6 +916,7 @@ CREATE DATABASE database_name
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -1020,15 +1024,21 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | ------: |-------: |-------: |-------: |
 |最大仮想コア数|10|12|14|16|
 
+**General Purpose - サーバーレス コンピューティング - Gen5 (パート 3)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|最大仮想コア数|18|20|24|32|40|
+
 **Business Critical - プロビジョニング済みコンピューティング - Gen4 (パート 1)**
 
-|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|コンピューティング サイズ (サービス目標)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
 **Business Critical - プロビジョニング済みコンピューティング - Gen4 (パート 2)**
 
-|パフォーマンス レベル|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|コンピューティング サイズ (サービス目標)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
@@ -1061,15 +1071,15 @@ SERVICE_OBJECTIVE
 
 - **単一のデータベースおよびプールされたデータベースの場合**
 
-  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_128` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_128` です。
 
 - **サーバーレス データベースの場合**
 
-  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16`、`GP_S_Gen5_18`、`GP_S_Gen5_20`、`GP_S_Gen5_24`、`GP_S_Gen5_32`、`GP_S_Gen5_40` です。
 
 - **ハイパースケール サービス層の単一データベースの場合**
 
-  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
 
 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL データベースのサービス階層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)」をご覧ください。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていない場合は、エラーが返されます。 SERVICE_OBJECTIVE の値をある階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
@@ -1180,7 +1190,7 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>別のサーバー上でのデータベースのコピーの作成
 
-次の例では、単一データベースの P2 パフォーマンス レベルで db_original database のコピーである named db_copy を作成します。 これは、db_original がエラスティック プール内にあるかどうかや、1 つのデータベースのパフォーマンス レベルに関係なく当てはまります。
+次の例では、単一データベースの P2 コンピューティング サイズ (サービス目標) で db_original database のコピーである named db_copy を作成します。 これは、db_original がエラスティック プール内にあるかどうかや、単一データベースのコンピューティング サイズ (サービス目標) に関係なく当てはまります。
 
 **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
 
@@ -1189,7 +1199,7 @@ CREATE DATABASE db_copy
   AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' );
 ```
 
-次の例では、ep1 という名前のエラスティック プールに db_original database のコピーである named db_copy を作成します。 これは、db_original がエラスティック プール内にあるかどうかや、1 つのデータベースのパフォーマンス レベルに関係なく当てはまります。 db_original が異なる名前のエラスティック プールにある場合、db_copy は引き続き ep1 に作成されます。
+次の例では、ep1 という名前のエラスティック プールに db_original database のコピーである named db_copy を作成します。 これは、db_original がエラスティック プール内にあるかどうかや、単一データベースのコンピューティング サイズ (サービス目標) に関係なく当てはまります。 db_original が異なる名前のエラスティック プールにある場合、db_copy は引き続き ep1 に作成されます。
 
 **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
 
@@ -1341,7 +1351,7 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
 
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックス上の非クラスター化インデックスに格納されたデータは、MAXSIZE を超えて大きくなることはできません。列ストア形式に圧縮されたデータは、サイズ制限がなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: パフォーマンス レベルを指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
+SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="general-remarks"></a>全般的な解説
 

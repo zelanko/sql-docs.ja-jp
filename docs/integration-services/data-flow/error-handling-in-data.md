@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292761"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469327"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
 
@@ -144,7 +144,7 @@ ms.locfileid: "71292761"
   
     -   追加列にエラーの説明を含めるには、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出す 1 行のスクリプトを使用します。  
   
-    -   追加列に列名を含めるには、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出す 1 行のスクリプトを使用します。  
+    -   追加列に列名を含めるには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) メソッドを呼び出す 1 行のスクリプトを使用します。  
   
      スクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できます。 通常、このスクリプト コンポーネントは、エラー行が出力先に書き込まれる直前に配置します。 これにより、スクリプトは、書き込まれたエラー行についてのみ説明を参照します。 データ フロー内のエラー セグメントによってエラーの一部が修正されることがあり、こうした行は、エラーの出力先には書き込まれません。  
 

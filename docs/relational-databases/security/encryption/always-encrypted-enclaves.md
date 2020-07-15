@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999430"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858874"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server Engine は、アプリケーションのクエリを解析すると�
 
 - **インプレース暗号化**: 最初のデータ暗号化や列暗号化キーの交換など、機密データに対する暗号化操作はセキュリティで保護されたエンクレーブ内で実行され、データをデータベースの外部に移動する必要はありません。 ALTER TABLE Transact-SQL ステートメントを使用してインプレース暗号化を発行することができます。SSMS の Always Encrypted ウィザードや Set-SqlColumnEncryption PowerShell コマンドレットなどのツールを使用する必要はありません。
 
-- **高度な計算 (プレビュー)** : パターン マッチング (LIKE 述語) と範囲比較など、暗号化された列に対する操作は、セキュリティで保護されたエンクレーブ内でサポートされます。そのため、データベース システム内でこのような計算を実行する必要がある幅広いアプリケーションやシナリオに Always Encrypted を使用できます。
+- **高度な計算**: パターン マッチング (LIKE 述語) と範囲比較など、暗号化された列に対する操作は、セキュリティで保護されたエンクレーブ内でサポートされます。そのため、データベース システム内でこのような計算を実行する必要がある幅広いアプリケーションやシナリオに Always Encrypted を使用できます。
 
 ## <a name="secure-enclave-attestation"></a>セキュリティで保護されたエンクレーブの構成証明
 

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c90abe5e99b95288a0bab9d9a9d88b7307285aae
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297127"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469387"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
+  [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
 ## <a name="configuring-the-task"></a>タスクの構成  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71297127"
  検証機能は、カスタム コード内で **Validate** メソッドを使用することによって実装できます。 ランタイム エンジンは、タスク上の **Validate** メソッドを呼び出すことにより、タスクを検証します。 タスクの開発者は、タスクの検証が成功または失敗する条件を定義し、評価の結果をランタイム エンジンに通知する必要があります。  
   
 #### <a name="task-abstract-base-class"></a>タスクの抽象基本クラス  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> 抽象基本クラスには **Validate** メソッドが用意されており、各タスクはこれをオーバーライドして検証条件を定義します。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、パッケージのデザイン中、**Validate** メソッドを自動的に複数回呼び出します。さらに、警告またはエラーが発生した場合はユーザーに画面上で通知し、タスクの構成に関する問題を識別できるようにします。 タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙から値を返し、警告およびエラー イベントを発生させることにより、検証結果を返します。 これらのイベントには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでユーザーに表示される情報が含まれています。  
+ [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) 抽象基本クラスには **Validate** メソッドが用意されており、各タスクによってこれがオーバーライドされて検証条件が定義されます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、パッケージのデザイン中、**Validate** メソッドを自動的に複数回呼び出します。さらに、警告またはエラーが発生した場合はユーザーに画面上で通知し、タスクの構成に関する問題を識別できるようにします。 タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙から値を返し、警告およびエラー イベントを発生させることにより、検証結果を返します。 これらのイベントには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでユーザーに表示される情報が含まれています。  
   
  次に、いくつかの検証の例を挙げます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "71297127"
 -   **Validate** メソッド内のコードは、タスクの実行前に <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> によっても呼び出され、検証が失敗した場合は <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> の実行が取り消されます。  
   
 #### <a name="user-interface-considerations-during-validation"></a>検証時のユーザー インターフェイスについての検討事項  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> には、**Validate** メソッドのパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスが含まれています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスには、イベントをランタイム エンジンに送るためにタスクが呼び出すメソッドが含まれています。 検証中に警告またはエラー条件が発生すると、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドが呼び出されます。 どちらの警告メソッドにも、エラー コード、ソース コンポーネント、説明、ヘルプ ファイル、ヘルプ コンテキスト情報などの同じパラメーターが必要です。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはこの情報に基づいて、エラーの発生をデザイン画面上で視覚的に通知します。 デザイナーによって提供される視覚的な通知には、デザイン画面上のタスクの横に表示される感嘆符のアイコンがあります。 この視覚的通知は、実行を続けるにはタスクの構成を追加する必要があることを示します。  
+ [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) には、**Validate** メソッドのパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスが含まれています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスには、イベントをランタイム エンジンに送るためにタスクが呼び出すメソッドが含まれています。 検証中に警告またはエラー条件が発生すると、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドが呼び出されます。 どちらの警告メソッドにも、エラー コード、ソース コンポーネント、説明、ヘルプ ファイル、ヘルプ コンテキスト情報などの同じパラメーターが必要です。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはこの情報に基づいて、エラーの発生をデザイン画面上で視覚的に通知します。 デザイナーによって提供される視覚的な通知には、デザイン画面上のタスクの横に表示される感嘆符のアイコンがあります。 この視覚的通知は、実行を続けるにはタスクの構成を追加する必要があることを示します。  
   
  感嘆符のアイコンによって、エラー メッセージを含むツールヒントも表示されます。 エラー メッセージは、タスクによってイベントの説明パラメーターに提供されます。 エラー メッセージは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[タスク一覧]** ペインにも表示されます。このペインは、すべての検証エラーを表示するための集中管理場所となります。  
   
@@ -163,7 +163,7 @@ End Class
 ### <a name="execute-method"></a>Execute メソッド  
  パッケージに含まれるタスクは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のランタイムが **Execute** メソッドを呼び出すと実行されます。 タスクは、中心となるビジネス ロジックや機能をこのメソッドに実装し、メッセージを送信したり、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙から値を返したり、**ExecutionValue** プロパティの **get** プロパティをオーバーライドしたりする方法で、実行結果を返します。  
   
- 基本クラス <xref:Microsoft.SqlServer.Dts.Runtime.Task> には、既定で <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッドが実装されています。 カスタム タスクは、実行時の機能を定義するために、このメソッドをオーバーライドします。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトはタスクをラップし、ランタイム エンジンやパッケージ内の他のオブジェクトと分離します。 そのため、タスクはパッケージ内での実行順序に関する位置を認識しているわけではなく、ランタイムによって呼び出されたときにのみ実行されます。 このアーキテクチャにより、実行中にタスクがパッケージを変更したときに発生する問題が回避されます。 タスクがパッケージ内の他のオブジェクトにアクセスするには、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッド内のパラメーターとして用意されているオブジェクトを使用する必要があります。 これらのパラメーターを使用すると、パッケージの安定度と信頼性を保証するために必要な分離性を保ちながら、イベントの発生、イベント ログへのエントリの記録、変数コレクションへのアクセス、およびトランザクション内のデータ ソースへの接続の登録を、タスクに実行させることができます。  
+ [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) 基本クラスには、既定で <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッドが実装されています。 カスタム タスクは、実行時の機能を定義するために、このメソッドをオーバーライドします。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトはタスクをラップし、ランタイム エンジンやパッケージ内の他のオブジェクトと分離します。 そのため、タスクはパッケージ内での実行順序に関する位置を認識しているわけではなく、ランタイムによって呼び出されたときにのみ実行されます。 このアーキテクチャにより、実行中にタスクがパッケージを変更したときに発生する問題が回避されます。 タスクがパッケージ内の他のオブジェクトにアクセスするには、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッド内のパラメーターとして用意されているオブジェクトを使用する必要があります。 これらのパラメーターを使用すると、パッケージの安定度と信頼性を保証するために必要な分離性を保ちながら、イベントの発生、イベント ログへのエントリの記録、変数コレクションへのアクセス、およびトランザクション内のデータ ソースへの接続の登録を、タスクに実行させることができます。  
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッド内のタスクに対して提供されるパラメーターの一覧です。  
   

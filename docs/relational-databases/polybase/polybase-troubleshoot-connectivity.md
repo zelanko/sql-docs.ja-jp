@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215857"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203559"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -89,6 +89,8 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> `polybase.kerberos.realm` プロパティの値は、すべて大文字にする必要があります。
 
 プッシュダウン操作を希望する場合は、その他の XML も後で更新する必要があります。しかし、このファイルを構成しただけでも、少なくとも HDFS ファイル システムにアクセスできるようになります。
 

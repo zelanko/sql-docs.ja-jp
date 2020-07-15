@@ -1,5 +1,6 @@
 ---
 title: PowerShell を使用して Always Encrypted キーをプロビジョニングする | Microsoft Docs
+description: SqlServer PowerShell モジュールを使用して Always Encrypted キーをプロビジョニングし、暗号化キーとデータベースに対するアクセス制御を提供する方法について説明します。
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc9baa4cb8d27c458b92eb952a7121906dcfb1ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627109"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーをプロビジョニングする
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
     
 この記事では、 [SqlServer PowerShell モジュール](../../../relational-databases/scripting/sql-server-powershell-provider.md)を使用し、Always Encrypted のキーを与える手順について説明します。 PowerShell を使用し、Always Encrypted キーを与えることができますが、そのとき、 [役割の分離を指定することも、指定しないこともできます](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)。キー ストアの実際の暗号鍵にアクセスするユーザーとデータベースにアクセスするユーザーを制御できます。 

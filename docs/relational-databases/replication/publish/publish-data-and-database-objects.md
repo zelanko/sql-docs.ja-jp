@@ -1,5 +1,6 @@
 ---
 title: データとデータベース オブジェクトのパブリッシュ | Microsoft Docs
+description: この記事では、SQL Server でレプリケーション用にパブリッシュできるテーブルおよびその他のデータベース オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,12 +43,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287609"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807308"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,10 +59,10 @@ ms.locfileid: "76287609"
 |テーブル|X|X|  
 |パーティション テーブル|X|X|  
 |ストアド プロシージャ - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|X|  
-|ストアド プロシージャ - 実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|いいえ|  
+|ストアド プロシージャ - 実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|no|  
 |ビュー|X|X|  
 |インデックス付きビュー|X|X|  
-|テーブルとしてのインデックス付きビュー|X|いいえ|  
+|テーブルとしてのインデックス付きビュー|X|no|  
 |ユーザー定義型 (CLR)|X|X|  
 |ユーザー定義関数 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] および CLR)|X|X|  
 |別名データ型|X|X|  

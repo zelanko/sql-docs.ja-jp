@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922235"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215834"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -204,7 +204,7 @@ LOG
 > [!NOTE]
 > データベース ミラーリング パートナーシップ内のミラー データベースは、バックアップできません。
 
-\<file_or_filegroup> [ **,** ...*n* ]: BACKUP DATABASE のみで使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。
+\<file_or_filegroup> [ **,** ...*n* ]: BACKUP DATABASE でのみ使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ }: バックアップに含めるファイルの論理名、またはその論理名と同じ値を保持する変数です。
 
@@ -224,13 +224,13 @@ READ_WRITE_FILEGROUPS: 部分バックアップにおいて、すべての読み
 > [!IMPORTANT]
 > READ_WRITE_FILEGROUPS の代わりに FILEGROUP を使用して、読み取り/書き込みファイル グループのリストを明示的に指定すると、ファイル バックアップが作成されます。
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ }: 部分バックアップに含める読み取り専用ファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 詳細については、このトピックの前述の "\<file_or_filegroup>" を参照してください。
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ }: 部分バックアップに含める読み取り専用ファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 詳細については、このトピックで前述した「\<file_or_filegroup>」を参照してください。
 
 *n*: 複数の読み取り専用ファイル グループを、コンマ区切りのリストで指定できることを示すプレースホルダーです。
 
 部分バックアップについて詳しくは、「[部分バックアップ](../../relational-databases/backup-restore/partial-backups-sql-server.md)」をご覧ください。
 
-TO \<backup_device> [ **,** ...*n* ] 関連する[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)のセットが、ミラー化されていないメディア セット、またはミラー化されたメディア セット内にあるミラーの 1 つ目 (1 つ以上の MIRROR TO 句が宣言されている場合) であることを示します。
+TO \<backup_device> [ **,** ...*n* ]: 関連する[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)のセットが、ミラー化されていないメディア セット、またはミラー化されたメディア セット内にあるミラーの 1 つ目 (1 つ以上の MIRROR TO 句が宣言されている場合) であることを示します。
 
 \<backup_device>
 
@@ -260,14 +260,14 @@ TO \<backup_device> [ **,** ...*n* ] 関連する[バックアップ デバイ�
 
 *n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
 
-MIRROR TO \<backup_device> [ **,** ...*n* ] TO 句で指定したバックアップ デバイスをミラー化する、最大 3 つまでのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句には、TO 句で指定した同じ種類と数のバックアップ デバイスを指定する必要があります。 MIRROR TO 句の最大数は 3 です。
+MIRROR TO \<backup_device> [ **,** ...*n* ]: TO 句で指定したバックアップ デバイスをミラー化する、最大 3 つまでのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句には、TO 句で指定した同じ種類と数のバックアップ デバイスを指定する必要があります。 MIRROR TO 句の最大数は 3 です。
 
 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition でのみ使用できます。
 
 > [!NOTE]
 > MIRROR TO = DISK の場合、BACKUP では、ディスクのセクター サイズに基づいてデバイス デバイスの適切なブロック サイズが自動的に決まります。 プライマリ バックアップ デバイスとして指定されたディスクとは異なるセクター サイズを使用して MIRROR TO ディスクがフォーマットされた場合、Backup コマンドは失敗します。 セクター サイズが異なるデバイスに対してバックアップをミラー化するには、BLOCKSIZE パラメーターを指定する必要があります。このパラメーターをすべてのターゲット デバイスの中で最も大きなセクター サイズに設定する必要があります。 ブロック サイズの詳細については、このトピックで後述する "BLOCKSIZE" の説明を参照してください。
 
-\<backup_device> このセクションの前述の "\<backup_device>" を参照してください。
+\<backup_device>: このセクションで前述した「\<backup_device>」を参照してください。
 
 *n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。 MIRROR TO 句内のデバイス数は、TO 句内のデバイス数と同じにする必要があります。
 
@@ -436,7 +436,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ }: バック�
 > [!NOTE]
 > `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
 
 > [!NOTE]
 > SQL ライター サービスを使用してバックアップを作成する際に、データベースに [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) が構成されているか、[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)が含まれている場合、復元時の `MAXTRANSFERSIZE` はバックアップの作成時に使用された `MAXTRANSFERSIZE` 以上である必要があります。
@@ -690,8 +690,9 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 
 オペレーティング システムがデータベースの照合順序をサポートしている限り、プロセッサの種類が違っていても、プラットフォーム間にわたるバックアップ操作を実行できます。
 
-単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースでバックアップの圧縮を使用する場合は、**65536 (64 KB) より大きい**`MAXTRANSFERSIZE` 設定を使用することをお勧めします。
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、これにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、TDE で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE = 65536` (64 KB) を使用する場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、`MAXTRANSFERSIZE` を **65536 (64 KB)** より大きく設定することにより、最初にページを暗号化解除し、圧縮してから再度暗号化する、[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) で暗号化されたデータベースの最適化された圧縮アルゴリズムが有効になります。 `MAXTRANSFERSIZE` が指定されていない場合、または `MAXTRANSFERSIZE = 65536` (64 KB) が使用される場合、TDE で暗号化されたデータベースでのバックアップの圧縮では暗号化されたページが直接圧縮され、適切な圧縮比率が得られない可能性があります。 詳細については、「[Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)」 (TDE が有効になっているデータベースのバックアップの圧縮) を参照してください。
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 以降では、この最適化された圧縮アルゴリズムを TDE で有効にするために `MAXTRANSFERSIZE` を設定する必要がなくなりました。 バックアップ コマンドに `WITH COMPRESSION` が指定されている場合、または *backup compression default* サーバー構成が 1 に設定されている場合、最適化されたアルゴリズムを有効にするために、`MAXTRANSFERSIZE` は自動的に 128 K に増加されます。 バックアップ コマンドに `MAXTRANSFERSIZE` が 64 K より大きい値で指定されている場合は、指定された値が使用されます。 言い換えると、SQL Server によって値は増加されるのみであり、自動的に減少されることはありません。 `MAXTRANSFERSIZE = 65536` で TDE で暗号化されたデータベースをバックアップする必要がある場合は、`WITH NO_COMPRESSION` を指定するか、*backup compression default* サーバー構成が 0 に設定されていることを確認する必要があります。
 
 > [!NOTE]
 > 次のように、既定の `MAXTRANSFERSIZE` が 64 K より大きくなる場合もあります。
@@ -699,7 +700,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 > - データベースに複数のデータ ファイルが作成されている場合、64 K より大きい `MAXTRANSFERSIZE` が使用されます。
 > - URL へのバックアップを実行する場合、既定値は `MAXTRANSFERSIZE = 1048576` (1 MB) になります。
 >
-> これらの条件のいずれかが当てはまる場合は、バックアップ コマンドで明示的に 64 K より大きい `MAXTRANSFERSIZE` を設定して、新しいバックアップ圧縮アルゴリズムを取得する必要があります。
+> これらの条件のいずれかが当てはまる場合であっても、バックアップ コマンドで `MAXTRANSFERSIZE` に 64 K より大きい値を明示的に設定して、最適化されたバックアップ圧縮アルゴリズムを取得する必要があります ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 以降を使用している場合を除く)。
 
 既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳しくは、「[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」をご覧ください。
 
@@ -727,7 +728,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 
 復元を実行するときに、バックアップ セットが **msdb** データベースにまだ記録されていないと、バックアップ履歴テーブルが変更される可能性があります。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、バックアップの作成での `PASSWORD` と `MEDIAPASSWORD` オプションが廃止されました。 パスワード付きで作成されたバックアップを復元することは、引き続き可能です。
 
@@ -1044,7 +1045,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ }: バック�
 > [!NOTE]
 > `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
 
 > [!NOTE]
 > 単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースの場合、既定の `MAXTRANSFERSIZE` は 65536 (64 KB) です。 TDE で暗号化されていないデータベースでは、ディスクへのバックアップを使用する場合は既定の `MAXTRANSFERSIZE` が 1048576 (1 MB) となり、VDI または TAPE を使用する場合は 65536 (64 KB) となります。
@@ -1087,7 +1088,7 @@ STATS オプションでは、次のパーセンテージ間隔を報告する�
 
 バックアップの最大ストライプ サイズは 195 GB (最大 BLOB サイズ) です。 バックアップ コマンドでストライプ サイズを増やして、個々のストライプ サイズを減らし、この制限内に収まるようにします。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 ### <a name="permissions"></a>アクセス許可
 

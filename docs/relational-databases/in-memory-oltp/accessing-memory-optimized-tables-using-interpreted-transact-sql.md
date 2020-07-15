@@ -1,5 +1,6 @@
 ---
 title: 解釈された T-SQL を使用したメモリ最適化テーブル
+description: 解釈された Transact-SQL (SQL Server での Transact-SQL バッチまたはストアド プロシージャ) を使用したメモリ最適化テーブルへのアクセスについて説明します。
 ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412808"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377803"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

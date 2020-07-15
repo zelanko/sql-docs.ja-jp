@@ -2,7 +2,7 @@
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
 description: SQL Server と Azure SQL Database で自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します。
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138282"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215212"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 変更するデータベースの名前。
 
 CURRENT     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
 
@@ -328,7 +328,7 @@ AUTO_CLOSE オプションを使用すると、データベース ファイル�
 >
 > データベースをミラー化するには、AUTO_CLOSE を OFF に設定する必要があります。
 
-データベースを AUTOCLOSE = ON に設定すると、データベースの自動シャットダウンを開始する操作によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降では、プラン キャッシュ内のキャッシュストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations` という通知メッセージが記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+データベースを AUTOCLOSE = ON に設定すると、データベースの自動シャットダウンを開始する操作によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降では、プラン キャッシュ内のキャッシュ ストアが消去されるたびに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations` という通知メッセージが記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
@@ -344,7 +344,7 @@ OFF
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
 INCREMENTAL = ON | **OFF**     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 これにより、増分統計がサポートされている場合は常に、自動的に作成された統計情報が増分として設定されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
@@ -446,7 +446,7 @@ OFF
 データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
 
 **\<containment_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 データベースの包含オプションを制御します。
 
@@ -489,7 +489,7 @@ GLOBAL
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_local_cursor_default` 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsLocalCursorsDefault` プロパティを調べることで状態を判断することもできます。
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 引数の説明については、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」をご覧ください。
@@ -572,7 +572,7 @@ READ_WRITE
 この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。
 
 > [!NOTE]
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のフェデレーション データベースでは、SET {READ_ONLY | READ_WRITE} は無効です。
+> [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] フェデレーション データベースでは、`SET { READ_ONLY | READ_WRITE }` は無効になっています。
 
 **\<db_user_access_option> ::=**      
 データベースへのユーザー アクセスを制御します。
@@ -580,7 +580,7 @@ READ_WRITE
 SINGLE_USER     
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER を指定し、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作をオーバーライドする場合は、WITH \<termination&gt; 句を確認します。
+一度に 1 人のユーザーだけがデータベースにアクセスできます。 SINGLE_USER を指定し、他のユーザーがデータベースに接続している場合には、指定したデータベースからすべてのユーザーが接続解除するまで、ALTER DATABASE ステートメントはブロックされます。 この動作をオーバーライドするには、WITH \<termination> 句をご覧ください。
 
 このオプションを設定したユーザーがサインアウトしても、データベースは SINGLE_USER モードのままです。そのユーザーがログオフした時点で、他のユーザーが 1 人だけデータベースに接続できます。
 
@@ -601,18 +601,18 @@ MULTI_USER
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `user_access` 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `UserAccess` プロパティを調べることで状態を判断することもできます。
 
 **\<delayed_durability_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
 DISABLED     
-SET DISABLED 以後のトランザクションはすべて完全持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET DISABLED` 以後のトランザクションはすべて完全持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 ALLOWED     
-SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
+`SET ALLOWED` 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
 
 FORCED     
-SET FORCED 以後のトランザクションはすべて遅延持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET FORCED` 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 **\<external_access_option> ::=**      
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_trustworthy_on` 列を調べることでこのオプションの状態を判断できます。
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 フルテキスト インデックス列に、既定の言語の値を指定します。
 
@@ -659,27 +659,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 DEFAULT_LANGUAGE     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 新しく作成するすべてのログインの既定の言語を指定します。 ローカル ID (LCID)、言語の名前、または言語のエイリアスを提供することで言語を指定することができます。 使用可能な言語名およびエイリアスの一覧については、「[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」をご覧ください。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 NESTED_TRIGGERS     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 AFTER トリガーを連鎖できるかどうかを指定します。つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 TRANSFORM_NOISE_WORDS     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 ノイズ ワード (ストップワード) が原因でフルテキスト クエリのブール演算が失敗する場合に、エラー メッセージを非表示にします。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 TWO_DIGIT_YEAR_CUTOFF     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 2 桁の数字を 4 桁の西暦として解釈する場合に、世紀の解釈の区切りとする年を 1753 ～ 9999 範囲の整数で指定します。 このオプションは、CONTAINMENT が PARTIAL に設定されている場合にのみ使用できます。 CONTAINMENT が NONE に設定されている場合、エラーが発生します。
 
 **\<FILESTREAM_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 FileTable の設定を制御します。
 
@@ -702,7 +702,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」をご覧ください。
 
 **\<mixed_page_allocation_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 データベースが、テーブルまたはインデックスの最初の 8 ページに対して混合エクステントを使用して、最初のページを作成できるかどうかを制御します。
 
@@ -728,16 +728,19 @@ FORCED
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_parameterization_forced column` 列を調べることで、このオプションの現在の設定を判断できます。
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
 
 ON     
 クエリのストアを有効にします。
 
-OFF     
-クエリのストアを無効にします。 既定値は OFF です。
+OFF [ FORCED ]     
+クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアをできるだけ早くシャットダウンします。 実質的にクエリ ストアを直ちにオフにします。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 には FORCED が導入されています。
+
+> [!NOTE]  
+> Azure SQL Database 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 ALTER DATABASE [database] SET QUERY_STORE = OFF を実行すると、"'QUERY_STORE=OFF' は、このバージョンの SQL Server ではサポートされていません" という警告が返されます。 
 
 CLEAR     
 クエリ ストアの内容を削除します。
@@ -752,21 +755,25 @@ READ_ONLY
 クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリ ストアの最大発行領域がすべて使用された場合は、クエリ ストアの操作モードは READ_ONLY に変わります。
 
 CLEANUP_POLICY     
-クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
+クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。 既定値は 30 です。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。 既定値は **900** (15 分) です。
 
 MAX_STORAGE_SIZE_MB     
-クエリ ストアに発行される領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
+クエリ ストアに発行される領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の場合は **100 MB** です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、既定値は **1 GB** です。
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB 制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は DATA_FLUSH_INTERVAL_SECONDS オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
-> クエリ ストアでストレージ サイズの確認の合間に MAX_STORAGE_SIZE_MB の制限を超えた場合は、読み取り専用モードに移行します。 SIZE_BASED_CLEANUP_MODE が有効になっている場合、MAX_STORAGE_SIZE_MB 制限を適用するクリーンアップ メカニズムもトリガーされます。
+> `MAX_STORAGE_SIZE_MB` の制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は `DATA_FLUSH_INTERVAL_SECONDS` オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
+> クエリ ストアでストレージ サイズの確認の合間に `MAX_STORAGE_SIZE_MB` の制限を超えた場合は、読み取り専用モードに移行します。 `SIZE_BASED_CLEANUP_MODE` が有効になっている場合は、`MAX_STORAGE_SIZE_MB` の制限を適用するクリーンアップ メカニズムもトリガーされます。
 > 十分な領域が消去されると、クエリ ストア モードが自動的に読み取り/書き込みに戻ります。
 
+> [!IMPORTANT]
+> ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
+
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 データの総量が最大サイズに近づいたときにクリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -779,7 +786,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 現在アクティブなクエリのキャプチャ モードを指定します。 各モードでは、特定のクエリ キャプチャ ポリシーを定義します。
 
 > [!NOTE]
@@ -795,17 +802,28 @@ NONE
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 CUSTOM     
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 QUERY_CAPTURE_POLICY オプションを制御できます。
 
-QUERY_CAPTURE_MODE は **nvarchar** 型です。
+QUERY_CAPTURE_MODE は **nvarchar** 型です。 
 
 max_plans_per_query     
-各クエリに対して保持するプランの最大数を定義します。 既定では 200 です。 MAX_PLANS_PER_QUERY は **int** 型です。
+各クエリに対して保持するプランの最大数を定義します。 MAX_PLANS_PER_QUERY は **int** 型です。既定値は **200** です。
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
+
+待機統計をクエリごとにキャプチャするかどうかを制御します。
+
+ON    
+クエリごとの待機統計情報がキャプチャされます。 この値は既定の構成値です。
+
+OFF    
+クエリごとの待機統計情報はキャプチャされません。
 
 **\<query_capture_policy_option_list> :: =**      
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 クエリ ストアのキャプチャ ポリシー オプションを制御します。 STALE_CAPTURE_POLICY_THRESHOLD を除き、これらのオプションでは、定義された古いキャプチャ ポリシーのしきい値でクエリがキャプチャされるために必要な OR 条件が定義されます。
 
@@ -872,7 +890,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
 - ユーザー データベースまたはシステム データベースを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンにアップグレードしても、PAGE_VERIFY 値 (NONE または TORN_PAGE_DETECTION) は変更されません。 CHECKSUM に変更することをお勧めします。
 
     > [!NOTE]
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、PAGE_VERIFY データベース オプションは TempDB データベースに対して NONE に設定されており、変更できません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規インストールに対する TempDB データベースの既定値は CHECKSUM です。 インストール済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードした場合、既定値は NONE のままです。 このオプションは変更できます。 tempdb データベースでは CHECKSUM を使用することをお勧めします。
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、PAGE_VERIFY データベース オプションは TempDB データベースに対して NONE に設定されており、変更できません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規インストールに対する TempDB データベースの既定値は CHECKSUM です。 インストール済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードした場合、既定値は NONE のままです。 このオプションは変更できます。 tempdb データベースでは CHECKSUM を使用することをお勧めします。
 
 - TORN_PAGE_DETECTION は、使用するリソースが比較的少なくて済みますが、CHECKSUM による保護の最小限のサブセットしか利用できません。
 - PAGE_VERIFY は、データベースをオフラインにしたり、データベースをロックしたりなど、そのデータベース上でのコンカレンシーを妨げるような措置を取らずに設定できます。
@@ -891,7 +909,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `page_verify_option` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsTornPageDetectionEnabled` プロパティを調べることでこのオプションの現在の状態を判断できます。
 
 **\<remote_data_archive_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 そのデータベースについて Stretch Database を有効または無効にします。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
@@ -996,7 +1014,7 @@ master、tempdb、または msdb システム データベースでは、READ_CO
 > **DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 ON     
 トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
@@ -1150,7 +1168,7 @@ OFF
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_recursive_triggers_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsRecursiveTriggersEnabled` プロパティを調べることでこのオプションの状態を判断できます。
 
 **\<target_recovery_time_option> ::=**      
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は **1 分**であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
@@ -1187,7 +1205,7 @@ NO_WAIT
 
 データベース オプションの中には、WITH \<termination> 句を使用しないものや、他のオプションと組み合わせて指定できないものもあります。 次の表に、このようなオプションと、それらのオプションと終了状態を示します。
 
-|オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|
+|オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句を使用可能|
 |----------------------|-----------------------------------------|---------------------------------------------|
 |\<db_state_option>|はい|はい|
 |\<db_user_access_option>|はい|はい|
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. クエリのストアを有効にする
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1749,7 +1777,7 @@ READ_WRITE
 この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。
 
 > [!NOTE]
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のフェデレーション データベースでは、SET {READ_ONLY | READ_WRITE} は無効です。
+> [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] フェデレーション データベースでは、`SET { READ_ONLY | READ_WRITE }` は無効になっています。
 
 **\<db_user_access_option> ::=**      
 データベースへのユーザー アクセスを制御します。
@@ -1766,13 +1794,13 @@ MULTI_USER
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
 DISABLED     
-SET DISABLED 以後のトランザクションはすべて完全持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET DISABLED` 以後のトランザクションはすべて完全持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 ALLOWED     
-SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
+`SET ALLOWED` 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
 
 FORCED     
-SET FORCED 以後のトランザクションはすべて遅延持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET FORCED` 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 **\<PARAMETERIZATION_option> ::=**      
 パラメーター化オプションを制御します。
@@ -1786,7 +1814,7 @@ FORCED
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_parameterization_forced` 列を調べることでこのオプションの現在の設定を判断できます。
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
 CLEANUP_POLICY     
-クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
+クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。 既定値は 30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。 既定値は **900** (15 分) です。
 
 MAX_STORAGE_SIZE_MB     
-クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
+クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB 制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は DATA_FLUSH_INTERVAL_SECONDS オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
-> クエリ ストアでストレージ サイズの確認の合間に MAX_STORAGE_SIZE_MB の制限を超えた場合は、読み取り専用モードに移行します。 SIZE_BASED_CLEANUP_MODE が有効になっている場合、MAX_STORAGE_SIZE_MB 制限を適用するクリーンアップ メカニズムもトリガーされます。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`MAX_STORAGE_SIZE_MB` 設定の上限は 10,240 MB です。 
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` の制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は `DATA_FLUSH_INTERVAL_SECONDS` オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
+> クエリ ストアでストレージ サイズの確認の合間に `MAX_STORAGE_SIZE_MB` の制限を超えた場合は、読み取り専用モードに移行します。 `SIZE_BASED_CLEANUP_MODE` が有効になっている場合は、`MAX_STORAGE_SIZE_MB` の制限を適用するクリーンアップ メカニズムもトリガーされます。
 > 十分な領域が消去されると、クエリ ストア モードが自動的に読み取り/書き込みに戻ります。
 
+> [!IMPORTANT]
+> ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
+
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
 
 SIZE_BASED_CLEANUP_MODE     
 データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -1831,11 +1866,14 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE     
-現在アクティブなクエリのキャプチャ モードを指定します。
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+現在アクティブなクエリのキャプチャ モードを指定します。 各モードでは、特定のクエリ キャプチャ ポリシーを定義します。   
+
+> [!NOTE]
+> クエリ キャプチャ モードが ALL、AUTO、または CUSTOM に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、およびネイティブ コンパイル済みのクエリは常にキャプチャされます。
 
 ALL     
-すべてのクエリがキャプチャされます。
+すべてのクエリをキャプチャします。
 
 AUTO     
 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。 これは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の既定の構成値です。
@@ -1843,10 +1881,37 @@ AUTO
 NONE     
 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
+CUSTOM     
+QUERY_CAPTURE_POLICY オプションを制御できます。
+
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
 
 max_plans_per_query     
-各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
+各クエリに対して保持するプランの最大数を定義します。 MAX_PLANS_PER_QUERY は **int** 型です。既定値は **200** です。
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+待機統計をクエリごとにキャプチャするかどうかを制御します。
+
+ON    
+クエリごとの待機統計情報がキャプチャされます。 この値は既定の構成値です。
+
+OFF    
+クエリごとの待機統計情報はキャプチャされません。
+
+**\<query_capture_policy_option_list> :: =**      
+クエリ ストアのキャプチャ ポリシー オプションを制御します。 STALE_CAPTURE_POLICY_THRESHOLD を除き、これらのオプションでは、定義された古いキャプチャ ポリシーのしきい値でクエリがキャプチャされるために必要な OR 条件が定義されます。
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+クエリをキャプチャすべきかどうかを決定する評価の間隔を定義します。 既定値は 1 日で、1 時間から 7 日に設定できます。 *number* は **int** 型です。
+
+EXECUTION_COUNT     
+評価期間中、クエリを実行する回数を定義します。 既定値は 30 です。これは、既定の古いキャプチャ ポリシーのしきい値に対して、クエリがクエリ ストアに保存されるためには、1 日で 30 回以上実行される必要があることを意味します。 EXECUTION_COUNT は **int** 型です。
+
+TOTAL_COMPILE_CPU_TIME_MS     
+評価期間中、クエリで使用されるコンパイル CPU 時間の合計経過時間を定義します。 既定値は 1,000 です。これは、既定の古いキャプチャ ポリシーのしきい値の場合、クエリがクエリ ストアに保存されるためには、1 日でクエリのコンパイル時に費やされる CPU 時間の合計が 1 秒以上である必要があることを意味します。 TOTAL_COMPILE_CPU_TIME_MS は **int** 型です。
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+評価期間中、クエリによって使用される実行 CPU の合計経過時間を定義します。 既定値は 100 です。これは、既定の古いキャプチャ ポリシーのしきい値に対して、クエリがクエリ ストアに保存されるためには、1 日で実行に費やされる CPU 時間の合計が 100 ミリ秒以上である必要があることを意味します。 TOTAL_EXECUTION_CPU_TIME_MS は **int** 型です。
 
 **\<snapshot_option> ::=**      
 トランザクション分離レベルを示します。
@@ -2077,7 +2142,7 @@ NO_WAIT
 
 データベース オプションの中には、WITH \<termination> 句を使用しないものや、他のオプションと組み合わせて指定できないものもあります。 次の表に、このようなオプションと、それらのオプションと終了状態を示します。
 
-|オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句の使用の可否|
+|オプションのカテゴリ|他のオプションとの組み合わせの可否|WITH \<termination> 句を使用可能|
 |----------------------|-----------------------------------------|---------------------------------------------|
 |\<auto_option>|はい|いいえ|
 |\<change_tracking_option>|はい|はい|
@@ -2097,7 +2162,6 @@ NO_WAIT
 ## <a name="examples"></a>例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. データベースを READ_ONLY に設定する
-
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. データベースの SNAPSHOT 分離を有効にする
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対する SNAPSHOT 分離フレームワーク オプションを有効にします。
 
 ```sql
@@ -2142,7 +2205,6 @@ GO
 |[database_name] |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 変更の追跡を有効化、変更、および無効化する
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更の追跡を有効にし、保有期間を `2` 日に設定します。
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. クエリのストアを有効にする
-
 次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 待機統計を使用してクエリ ストアを有効にする
+次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. カスタム キャプチャ ポリシー オプションを使用してクエリ ストアを有効にする
+次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2497,13 +2612,13 @@ MULTI_USER
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
 DISABLED     
-SET DISABLED 以後のトランザクションはすべて完全持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET DISABLED` 以後のトランザクションはすべて完全持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 ALLOWED     
-SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
+`SET ALLOWED` 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
 
 FORCED     
-SET FORCED 以後のトランザクションはすべて遅延持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+`SET FORCED` 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
 **\<PARAMETERIZATION_option> ::=**      
 パラメーター化オプションを制御します。
@@ -2517,7 +2632,7 @@ FORCED
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_parameterization_forced` 列を調べることでこのオプションの現在の設定を判断できます。
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
 CLEANUP_POLICY     
-クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
+クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。 既定値は 30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
 
 DATA_FLUSH_INTERVAL_SECONDS     
-クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。 既定値は **900** (15 分) です。
 
 MAX_STORAGE_SIZE_MB     
-クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
+クエリ ストアに割り当てる領域を指定します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。 既定値は **100 MB** です。
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` の制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は `DATA_FLUSH_INTERVAL_SECONDS` オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。
+> クエリ ストアでストレージ サイズの確認の合間に `MAX_STORAGE_SIZE_MB` の制限を超えた場合は、読み取り専用モードに移行します。 `SIZE_BASED_CLEANUP_MODE` が有効になっている場合は、`MAX_STORAGE_SIZE_MB` の制限を適用するクリーンアップ メカニズムもトリガーされます。
+> 十分な領域が消去されると、クエリ ストア モードが自動的に読み取り/書き込みに戻ります。
+
+> [!IMPORTANT]
+> ワークロードのキャプチャに 10 GB を超えるディスク領域が必要と思われる場合、クエリ プランを再利用するには、ワークロードを再検討して最適化することをお勧めします (たとえば、[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)を使用したり、クエリ ストア構成を調整したりします)。    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`QUERY_CAPTURE_MODE` を CUSTOM に設定して、クエリ キャプチャ ポリシーをさらに制御することができます。
 
 INTERVAL_LENGTH_MINUTES     
-クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。 既定値は **60**です。
 
 SIZE_BASED_CLEANUP_MODE     
 データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
@@ -2557,7 +2681,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 現在アクティブなクエリのキャプチャ モードを指定します。
 
 ALL     
@@ -2572,7 +2696,31 @@ NONE
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
 
 max_plans_per_query     
-各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
+各クエリに対して保持の計画の最大数を表す整数。 MAX_PLANS_PER_QUERY は **int** 型です。既定値は **200** です。
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+待機統計をクエリごとにキャプチャするかどうかを制御します。
+
+ON    
+クエリごとの待機統計情報がキャプチャされます。 この値は既定の構成値です。
+
+OFF    
+クエリごとの待機統計情報はキャプチャされません。
+
+**\<query_capture_policy_option_list> :: =**      
+クエリ ストアのキャプチャ ポリシー オプションを制御します。 STALE_CAPTURE_POLICY_THRESHOLD を除き、これらのオプションでは、定義された古いキャプチャ ポリシーのしきい値でクエリがキャプチャされるために必要な OR 条件が定義されます。
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+クエリをキャプチャすべきかどうかを決定する評価の間隔を定義します。 既定値は 1 日で、1 時間から 7 日に設定できます。 *number* は **int** 型です。
+
+EXECUTION_COUNT     
+評価期間中、クエリを実行する回数を定義します。 既定値は 30 です。これは、既定の古いキャプチャ ポリシーのしきい値に対して、クエリがクエリ ストアに保存されるためには、1 日で 30 回以上実行される必要があることを意味します。 EXECUTION_COUNT は **int** 型です。
+
+TOTAL_COMPILE_CPU_TIME_MS     
+評価期間中、クエリで使用されるコンパイル CPU 時間の合計経過時間を定義します。 既定値は 1,000 です。これは、既定の古いキャプチャ ポリシーのしきい値の場合、クエリがクエリ ストアに保存されるためには、1 日でクエリのコンパイル時に費やされる CPU 時間の合計が 1 秒以上である必要があることを意味します。 TOTAL_COMPILE_CPU_TIME_MS は **int** 型です。
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+評価期間中、クエリによって使用される実行 CPU の合計経過時間を定義します。 既定値は 100 です。これは、既定の古いキャプチャ ポリシーのしきい値に対して、クエリがクエリ ストアに保存されるためには、1 日で実行に費やされる CPU 時間の合計が 100 ミリ秒以上である必要があることを意味します。 TOTAL_EXECUTION_CPU_TIME_MS は **int** 型です。
 
 **\<snapshot_option> ::=**
 
@@ -2798,7 +2946,6 @@ NO_WAIT
 ## <a name="examples"></a>例
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. データベースを READ_ONLY に設定する
-
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. データベースの SNAPSHOT 分離を有効にする
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対する SNAPSHOT 分離フレームワーク オプションを有効にします。
 
 ```sql
@@ -2842,7 +2988,6 @@ GO
 |[database_name] |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 変更の追跡を有効化、変更、および無効化する
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更の追跡を有効にし、保有期間を `2` 日に設定します。
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. クエリのストアを有効にする
-
 次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. 待機統計を使用してクエリ ストアを有効にする
+次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. カスタム キャプチャ ポリシー オプションを使用してクエリ ストアを有効にする
+次の例では、クエリ ストアを有効にし、そのパラメーターを構成します。
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 

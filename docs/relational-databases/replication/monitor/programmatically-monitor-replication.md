@@ -1,5 +1,6 @@
 ---
 title: プログラムによるレプリケーションの監視 | Microsoft Docs
+description: レプリケーション モニターは、グラフィカル ツールです。 レプリケーション モニターを使用して、SQL Server のレプリケーション トポロジを監視します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,12 +30,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbbf44a1efbb38bf81b027d2e3299d1e0a670db2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287861"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807956"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +103,7 @@ ms.locfileid: "76287861"
   
     -   監視しきい値メトリックの新しい値を **\@value** に指定します。  
   
-    -   このしきい値に到達したときに警告をログに記録するには、**\@shouldalert** に **1** を指定します。警告が不要な場合には、**0** を指定します。  
+    -   このしきい値に到達したときに警告をログに記録するには、 **\@shouldalert** に **1** を指定します。警告が不要な場合には、**0** を指定します。  
   
     -   監視しきい値メトリックを有効にするには **\@mode** に **1** を指定し、無効にするには **2** を指定します。  
   

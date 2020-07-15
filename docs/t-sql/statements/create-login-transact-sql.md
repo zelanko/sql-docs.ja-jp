@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526797"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255425"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -87,7 +87,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引数
 
-*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
+*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
 
 PASSWORD **=** '*password*' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 
@@ -457,6 +457,12 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - 別の Azure AD ディレクトリからインポートされた外部 (ゲスト) ユーザーを、マネージド インスタンスの Azure AD 管理者として直接構成することはできません。 代わりに、外部ユーザーを Azure AD のセキュリティが有効なグループに参加させ、そのグループをインスタンス管理者として構成します。
+- ログインは、フェールオーバー グループのセカンダリ インスタンスにはレプリケートされません。 ログインは、システム データベースである master データベースに保存されるため、geo レプリケートされません。 これを解決するには、ユーザーはセカンダリ インスタンスに同じ SID を使用したログインを作成する必要があります。
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
 
 ## <a name="examples"></a>例
 
@@ -690,7 +696,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引数
 
-*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
+*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
 
 PASSWORD **='** _password_' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 

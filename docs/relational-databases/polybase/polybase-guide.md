@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217135"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818200"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 
@@ -93,7 +93,7 @@ PolyBase を使用すると、SQL Server で次のシナリオに対応できま
 
 ## <a name="performance"></a>パフォーマンス
 
-- **Hadoop に計算をプッシュする。** クエリ オプティマイザーはコスト ベースの決定を行い、クエリのパフォーマンスが向上する場合は Hadoop に計算をプッシュします。  コスト ベースの決定には、外部テーブルの統計が使用されます。 計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。
+- **Hadoop に計算をプッシュする。** クエリ オプティマイザーでは、クエリのパフォーマンスが向上する場合は Hadoop への計算のプッシュを行うためのコスト ベースの決定が行われます。  クエリ オプティマイザーでは、コスト ベースの決定に外部テーブルの統計が使用されます。 計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。
 
 - **コンピューティング リソースをスケーリングする。** クエリのパフォーマンスを向上させるために、SQL Server [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)を使用できます。 これにより、SQL Server インスタンスと Hadoop ノードの間の並列データ転送が可能になります。また、外部データに対する操作のためのコンピューティング リソースが追加されます。
 

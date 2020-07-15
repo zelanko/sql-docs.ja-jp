@@ -2,7 +2,7 @@
 title: チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
 description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された基本的な Always Encrypted を作成する方法、インプレースでデータを暗号化する方法、SQL Server Management Studio (SSMS) を利用し、暗号化された列に対して高度なクエリを実行する方法について説明します。
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288696"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807726"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -115,14 +115,14 @@ ms.locfileid: "79288696"
 
 3. Hyper-V のインストールを完了するように求められたら、SQL Server コンピューターを再起動します。
 
-4. 使用している SQL Server コンピューターが仮想マシンの場合、または UEFI セキュア ブートをサポートしていないか IOMMU が搭載されていない従来の物理マシンの場合は、プラットフォームのセキュリティ機能に関する VBS 要件を削除する必要があります。
-    1. Windows レジストリの要件を削除します。
+4. 使用している SQL Server コンピューターが仮想マシンの場合、UEFI セキュア ブートをサポートしていない物理マシンの場合、または IOMMU が搭載されていない物理マシンの場合は、プラットフォームのセキュリティ機能に関する VBS 要件を削除する必要があります。
+    1. SQL Server コンピューター上で、管理者特権の PowerShell コンソールで次のコマンドを実行して、セキュアブートと IOMMU の要件を削除します。
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. コンピューターを再起動し、要件を低くして VBS をオンラインにします。
+    1. SQL Server コンピューターを再起動し、要件を低くして VBS をオンラインにします。
 
         ```powershell
        Restart-Computer

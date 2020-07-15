@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b327832b5ad5cae52791efdbf1df756aade3a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 74ab018b017b675e08abb53036f88c3eaf2e5618
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636317"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748593"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,9 +49,77 @@ ms.locfileid: "81636317"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
-  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+次のコード ブロックは、SQL Server 2019 の構文を示しています。 または、[SQL Server 2017 以前の構文](execute-transact-sql.md?view=sql-server-2017)を参照してください。 
+
 ```syntaxsql
--- Syntax for SQL Server  
+-- Syntax for SQL Server 2019
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+    [ AT DATA_SOURCE data_source_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+
+次のコード ブロックは、SQL Server 2017 以前の構文を示しています。 または、[SQL Server 2019 の構文](execute-transact-sql.md?view=sql-server-ver15)を参照してください。
+
+
+```syntaxsql
+-- Syntax for SQL Server 2017 and earleir  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -107,6 +175,8 @@ Execute a pass-through command against a linked server
     | AS FOR XML   
 }  
 ```  
+::: moniker-end
+
   
 ```syntaxsql
 -- In-Memory OLTP   
@@ -179,7 +249,8 @@ Execute a character string
     | AS TYPE [ schema_name.]table_type_name  
     | AS FOR XML  
   
-```  
+```
+
   
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -195,6 +266,8 @@ Execute a character string
     ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
 [;]  
 ```  
+
+
   
 ## <a name="arguments"></a>引数  
  @*return_status*  
@@ -297,15 +370,23 @@ Execute a character string
   
  WITH \<execute_option>  
  実行オプションは次のとおりです。 RESULT SETS オプションは INSERT...EXEC ステートメントで指定できません。  
+ 
+AT DATA_SOURCE data_source_name **適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+  
+ *command_string* を *data_source_name* に対して実行し、結果が返された場合はそれをクライアントに返します。 *data_source_name* は、データベース内の既存の EXTERNAL DATA SOURCE 定義を参照する必要があります。 SQL Server をポイントするデータ ソースのみがサポートされます。 さらに、コンピューティング プールをポイントする SQL Server ビッグ データ クラスター データ ソースの場合、データ プールまたは記憶域プールがサポートされます。 データ ソースは [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) を使用して定義されます。  
+  
+ WITH \<execute_option>  
+ 実行オプションは次のとおりです。 RESULT SETS オプションは INSERT...EXEC ステートメントで指定できません。  
   
 |期間|定義|  
 |----------|----------------|  
 |RECOMPILE|モジュール実行後に、新しいプランを強制的にコンパイル、使用、および破棄します。 モジュールに既存のクエリ プランがある場合、このプランはキャッシュに残ります。<br /><br /> 指定するパラメーターが一定しない場合であったり、データが大きく変更されたときにこのオプションを使用してください。 このオプションは、拡張ストアド プロシージャには使用しません。 このオプションは負荷を伴うので、あまり使用しないことをお勧めします。<br /><br /> **注:** OPENDATASOURCE 構文を使用するストアド プロシージャを呼び出す場合、WITH RECOMPILE は使用できません。 4 部構成のオブジェクト名が指定されている場合、WITH RECOMPILE オプションは無視されます。<br /><br /> **注:** RECOMPILE は、ネイティブにコンパイルされるスカラー ユーザー定義関数ではサポートされていません。 再コンパイルする必要がある場合は、[sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) を使用してください。|  
 |**RESULT SETS UNDEFINED**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> このオプションを使用した場合、返される結果の種類は保証されず、定義は指定されません。 ステートメントは、何かの結果が返される場合でも、結果が返されない場合でも、問題なく実行されます。 result_sets_option を指定しない場合は、RESULT SETS UNDEFINED が既定の動作となります。<br /><br /> 解釈されたスカラー ユーザー定義関数、およびネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションは機能しません。|  
 |RESULT SETS NONE|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 実行ステートメントによって結果が一切返されなくなります。 結果が返された場合、バッチは中断されます。<br /><br /> 解釈されたスカラー ユーザー定義関数、およびネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションは機能しません。|  
-|*\<result_sets_definition>*|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントの場合は、複数の *result_sets_definition* セクションを指定してください。 その際には、各 *result_sets_definition* をかっこで囲み、コンマで区切ります。 詳細については、このトピックの「\<result_sets_definition>」を参照してください。<br /><br /> ネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションの結果は常にエラーになります。|
+|*\<result_sets_definition>*|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> result_sets_definition で指定されたとおりに結果が返されるようになります。 複数の結果セットを返すステートメントの場合は、複数の *result_sets_definition* セクションを指定してください。 その際には、各 *result_sets_definition* をかっこで囲み、コンマで区切ります。 詳細については、後述する「\<result_sets_definition>」を参照してください。<br /><br /> ネイティブ コンパイルのスカラー ユーザー定義関数の場合、関数が結果セットを返すことがないため、このオプションの結果は常にエラーになります。|
   
-\<result_sets_definition> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition>
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  実行されたステートメントによって返される結果セットの定義です。 result_sets_definition の句には、次の意味があります。  
   
@@ -389,26 +470,26 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="context-switching-permissions"></a>コンテキスト切り替え権限  
  ログインに EXECUTE AS を指定するには、呼び出し元に、指定のログイン名に対する IMPERSONATE 権限が与えられている必要があります。 データベース ユーザーに EXECUTE AS を指定するには、呼び出し元に、指定のユーザー名に対する IMPERSONATE 権限が与えられている必要があります。 実行コンテキストを指定しない場合、または EXECUTE AS CALLER を指定する場合、IMPERSONATE 権限は必要ありません。  
   
-## <a name="examples"></a>例  
+## <a name="examples-sql-server"></a>例 :SQL Server
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. EXECUTE を使用して 1 つのパラメーターを渡す  
  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `uspGetEmployeeManagers` ストアド プロシージャでは、1 つのパラメーター (`@EmployeeID`) を設定する必要があります。 次の例では、`Employee ID 6` をパラメーター値として使用し、`uspGetEmployeeManagers` ストアド プロシージャを実行します。  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  
 ```  
   
  実行の中で明示的に変数を指定することもできます。  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;  
 GO  
 ```  
   
  次のコードがバッチまたは **osql** または **sqlcmd** スクリプト内の最初のステートメントの場合、EXEC は必要ありません。  
   
-```  
+```sql    
 dbo.uspGetEmployeeManagers 6;  
 GO  
 --Or  
@@ -419,7 +500,7 @@ GO
 ### <a name="b-using-multiple-parameters"></a>B. 複数のパラメーターを使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースで `spGetWhereUsedProductID` ストアド プロシージャを実行します。 ここでは、製品 ID (`819`) と、`@CheckDate,` 型の値をとる `datetime` の、2 つのパラメーターを引き渡します。  
   
-```  
+```sql    
 DECLARE @CheckDate datetime;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
@@ -429,7 +510,7 @@ GO
 ### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. EXECUTE 'tsql_string' を変数と共に使用する  
  次の例では、変数を含み、動的に構築される文字列が `EXECUTE` でどのように処理されるかを示します。 この例では、`tables_cursor` カーソルを作成します。このカーソルは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内にあるすべてのユーザー定義テーブルの一覧を保持しています。次にその一覧を使用して、テーブルに対してすべてのインデックスを再構築します。  
   
-```  
+```sql    
 DECLARE tables_cursor CURSOR  
    FOR  
    SELECT s.name, t.name   
@@ -457,7 +538,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql    
 DECLARE @retstat int;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
@@ -475,7 +556,7 @@ EXEC @proc_name;
 ### <a name="f-using-execute-with-default"></a>F. EXECUTE を DEFAULT と共に使用する  
  次の例では、第 1 および第 3 パラメーターに既定値を指定して、ストアド プロシージャを作成します。 プロシージャを実行するとき、値を指定しなかったり、既定値が指定されていた場合は、これらの既定値が第 1 および第 3 パラメーターに挿入されます。 `DEFAULT` キーワードはさまざまな方法で使用できます。  
   
-```  
+```sql    
 IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL  
    DROP PROCEDURE dbo.ProcTestDefaults;  
 GO  
@@ -494,7 +575,7 @@ GO
   
  `Proc_Test_Defaults` ストアド プロシージャは、多くの組み合わせで実行できます。  
   
-```  
+```sql    
 -- Specifying a value only for one parameter (@p2).  
 EXECUTE dbo.ProcTestDefaults @p2 = 'A';  
 -- Specifying a value for the first two parameters.  
@@ -516,7 +597,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
 EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
@@ -527,7 +608,7 @@ GO
 ### <a name="h-using-execute-with-recompile"></a>H. EXECUTE WITH RECOMPILE を使用する  
  次の例では、`Proc_Test_Defaults` ストアド プロシージャを実行し、モジュール実行後に新しいクエリ プランを強制的にコンパイル、使用、および破棄します。  
   
-```  
+```sql    
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
 GO  
 ```  
@@ -535,7 +616,7 @@ GO
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. EXECUTE をユーザー定義関数と共に使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースでユーザー定義のスカラー関数 `ufnGetSalesOrderStatusText` を実行します。 ここでは、変数 `@returnstatus` を使用して、関数によって返される値を格納します。 この関数には 1 つの入力パラメーター `@Status` が必要です。 これは **tinyint** データ型として定義されます。  
   
-```  
+```sql    
 DECLARE @returnstatus nvarchar(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
@@ -548,7 +629,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver    
         @server='ORACLE',  
@@ -580,7 +661,7 @@ GO
 ### <a name="k-using-execute-as-user-to-switch-context-to-another-user"></a>K. EXECUTE AS USER を使用して、コンテキストを別のユーザーに切り替える  
  次の例では、テーブルを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列を実行し、`AS USER` 句を指定して、ステートメントの実行コンテキストを呼び出し元から `User1` に切り替えます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントの実行時に `User1` の権限がチェックされます。 `User1` はデータベース内のユーザーとして存在し、`Sales` スキーマにテーブルを作成する権限が与えられている必要があります。そうでない場合、ステートメントは失敗します。  
   
-```  
+```sql    
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
 AS USER = 'User1';  
 GO  
@@ -591,7 +672,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
@@ -607,7 +688,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
@@ -627,7 +708,7 @@ WITH RESULT SETS
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 --Create the procedure  
 CREATE PROC Production.ProductList @ProdName nvarchar(50)  
 AS  
@@ -657,53 +738,103 @@ WITH RESULT SETS
 );  
   
 ```  
+  ### <a name="o-using-execute-with-at-data_source-data_source_name-to-query-a-remote-sql-server"></a>O. EXECUTE と AT DATA_SOURCE data_source_name を使用してリモート SQL Server に対してクエリを実行する 
   
-## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、SQL Server インスタンスをポイントする外部データ ソースにコマンド文字列を渡します。 
   
-### <a name="example-o-basic-procedure-execution"></a>例 O:基本プロシージャの実行  
+**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+  
+```sql    
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### <a name="p-using-execute-with-at-data_source-data_source_name-to-query-compute-pool-in-sql-server-big-data-cluster"></a>P. EXECUTE と AT DATA_SOURCE data_source_name を使用して SQL Server ビッグ データ クラスターのコンピューティング プールに対してクエリを実行する 
+
+ 次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのコンピューティング プールに対してデータ ソース `SqlComputePool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
+  
+**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. EXECUTE と AT DATA_SOURCE data_source_name を使用して SQL Server ビッグ データ クラスターのデータ プールに対してクエリを実行する 
+ 次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのデータ プールに対してデータ ソース `SqlDataPool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
+  
+**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### <a name="r-using-execute-with-at-data_source-data_source_name-to-query-storage-pool-in-sql-server-big-data-cluster"></a>R. EXECUTE と AT DATA_SOURCE data_source_name を使用して SQL Server ビッグ データ クラスターの記憶域プールに対してクエリを実行する 
+
+ 次の例では、SQL Server ビッグ データ クラスターのコンピューティング プールをポイントする外部データ ソースにコマンド文字列を渡します。 この例では SQL Server ビッグ データ クラスターのデータ プールに対してデータ ソース `SqlStoragePool` を作成し、そのデータ ソースに対して `SELECT` ステートメントを実行します。 
+  
+**適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 以降
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
+  
+## <a name="examples-azure-synapse-analytics"></a>例 :Azure Synapse Analytics 
+  
+### <a name="a-basic-procedure-execution"></a>A:基本プロシージャの実行  
  ストアド プロシージャの実行:  
   
-```  
+```sql  
 EXEC proc1;  
 ```  
   
  実行時に決定した名前を持つストアド プロシージャの呼び出し:  
   
-```  
+```sql    
 EXEC ('EXEC ' + @var);  
 ```  
   
  ストアド プロシージャ内からストアド プロシージャの呼び出し:  
   
-```  
+```sql   
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>例 P:文字列の実行  
+### <a name="b-executing-strings"></a>B:文字列の実行  
  SQL 文字列の実行:  
   
-```  
+```sql   
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
  入れ子になった文字列の実行:  
   
-```  
+```sql  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
  文字列変数の実行:  
   
-```  
+```sql  
 DECLARE @stringVar nvarchar(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>例 Q:パラメーターを持つプロシージャ  
+### <a name="c-procedures-with-parameters"></a>C: パラメーターを持つプロシージャ  
+
  次の例では、パラメーターを持つプロシージャを作成し、プロシージャを実行する 3 通りの方法を示しています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  

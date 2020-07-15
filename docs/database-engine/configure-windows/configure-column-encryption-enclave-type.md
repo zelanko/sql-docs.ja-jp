@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する | Microsoft Docs
+description: Always Encrypted でセキュリティで保護されたエンクレーブを有効または無効にする方法について説明します。 エンクレーブが正しく初期化されているかどうかを確認する方法について説明します。
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593827"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818356"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

@@ -1,5 +1,6 @@
 ---
 title: 監視 (レプリケーション) | Microsoft Docs
+description: SQL Server レプリケーション トポロジでレプリケーションの利用状況と状態を追跡するために使用される監視ツールについて説明します。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c463b8e1a0726fcde961b418fb12a902d7ce9b4e
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288052"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807946"
 ---
 # <a name="monitoring-replication"></a>監視 (レプリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "76288052"
 レプリケーションの監視には以下のツールを使用できます。  
   
 -   **SQL Server レプリケーション モニター** - すべてのレプリケーション動作をパブリッシャーに重点をおいて表示する、レプリケーションを監視するための最も重要なツールです。 詳しくは、「 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」をご覧ください。 
--   **SQL Server Management Studio** - レプリケーション モニターへのアクセスを可能にします。 また、ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの各エージェントを開始および停止したり、現在の状態や各エージェントによってログに記録された最後のメッセージを表示することができます。 詳細については、「 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)」を参照してください。  
+-   **SQL Server Management Studio** - レプリケーション モニターへのアクセスを可能にします。 また、次に示すエージェントによってログに記録された現在の状態や最後のメッセージを表示したり、各エージェントを開始および停止したりすることができます。ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、ディストリビューション エージェント。 詳細については、「 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)」を参照してください。  
   
 -   **Transact-SQL (T-SQL) およびレプリケーション管理オブジェクト (RMO)** - どちらのインターフェイスも、ディストリビューターからのあらゆる種類のレプリケーションを監視できるようにします。 マージ レプリケーションでは、サブスクライバーからレプリケーションを監視することもできます。  
   
