@@ -1,5 +1,6 @@
 ---
 title: XML データのインスタンスの作成 | Microsoft Docs
+description: 一括読み込み、定数の代入、SELECT ステートメントと FOR XML 句を使用するか、または文字列インスタンスの型をキャストすることで、XML データのインスタンスを作成する方法について学習します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752574"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、XML インスタンスを生成する方法について説明します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の方法で XML インスタンスを生成できます。  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  *style* パラメーターが使用されていないか、この値が 0 に設定されていると、xml DT インスタンスの変換では重要でない空白文字は保持されません。 文字列データを xml DT インスタンスに変換するときの、CONVERT 演算子と *style* パラメーターの使用方法の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例 : 型指定された xml に文字列値をキャストし、列に割り当てる  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例: 型指定された xml に文字列値をキャストし、列に割り当てる  
  次の例では、XML フラグメントを格納した文字列変数を **xml** データ型にキャストし、 **xml** 型の列に格納します。  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例 : 型指定された xml に文字列を変換し、変数に割り当てる  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例: 型指定された xml に文字列を変換し、変数に割り当てる  
  次の例では、文字列を **xml** 型に変換し、 **xml** データ型の変数に割り当てます。  
   
 ```  

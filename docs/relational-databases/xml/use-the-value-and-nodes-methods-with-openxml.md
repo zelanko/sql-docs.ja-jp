@@ -1,5 +1,6 @@
 ---
 title: OPENXML での value() メソッドと nodes() メソッドの使用 | Microsoft Docs
+description: value() と nodes() メソッド、または OpenXML() メソッドを使用して、SQL クエリで XML 値の行セットを抽出する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 685ce50021a9bd06dc075198f008336b2c150a6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a719b990c78af4429958fffb6027daf5d578a682
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738369"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **SELECT** 句で **xml** データ型に **value()** メソッドを複数回使用すると、抽出した値の行セットを生成できます。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
   
  **nodes()** メソッドによって特別な **xml** データ型のインスタンスが生成され、それぞれのインスタンスのコンテキストは選択された個別のノードに設定されます。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  
   
-## <a name="example-using-nodes"></a>例 : nodes() の使用  
+## <a name="example-using-nodes"></a>例:nodes() の使用  
  名が "David" ではない著者の姓と名を抽出するとします。 2 つの列 FirstName および LastName から構成される行セットとしてこの情報を抽出します。 そのためには次に示すように、 **nodes()** メソッドと **value()** メソッドを使用します。  
   
 ```  
@@ -41,7 +42,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 には、 **OpenXml()** を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>例 : xml データ型での OpenXml() の使用  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>例:xml データ型での OpenXml() の使用  
  上記の例のクエリは、 **OpenXml()** を使用して次のように書き換えることができます。 そのためには、各 XML インスタンスを読み取って XML 変数に代入し、OpenXML に渡すカーソルを作成します。  
   
 ```  

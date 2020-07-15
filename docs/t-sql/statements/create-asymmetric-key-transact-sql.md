@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c57f0fde92d22d0fa70c88addc37e13e9e0954b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73064689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735865"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベースに非対称キーを作成します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73064689"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  

@@ -1,5 +1,6 @@
 ---
 title: FOR XML を使用した行セットからの XML の生成 | Microsoft Docs
+description: FOR XML 句で TYPE ディレクティブを使用することにより、xml データ型のインスタンスを行セットから生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93534392fd8d79ca71064bb0df61be7533dd6e06
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0a3db0a22d7bcba85d77979383c004f0834fe422
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691246"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>FOR XML を使用した行セットからの XML の生成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   新しい **TYPE** ディレクティブを指定した FOR XML を使用することで、 **xml** データ型のインスタンスを行セットから生成できます。  
   
  結果は **xml** データ型の列、変数、またはパラメーターに代入できます。 また、FOR XML を入れ子にして階層構造を作成することもできます。 入れ子にした FOR XML は FOR XML EXPLICIT よりも記述が容易ですが、階層が深いとパフォーマンスが低下する場合があります。 FOR XML には新しい PATH モードも導入されています。 この新しいモードで、列の値が現れる XML ツリーのパスを指定します。  
   
  新しい **FOR XML TYPE** ディレクティブを使用すると、リレーショナル データの読み取り専用の XML ビューを SQL 構文で定義できます。 このビューには、次の例で示すように SQL ステートメントおよびそれに埋め込まれた XQuery を使用してクエリを実行できます。 この SQL ビューをストアド プロシージャで参照することもできます。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>例 : 生成された xml データ型を返す SQL ビュー  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>例: 生成された xml データ型を返す SQL ビュー  
  次の SQL ビュー定義により、リレーショナル列 pk および XML 列から取得した著者氏名の XML ビューが作成されます。  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: 選択的 XML インデックスのパスと最適化ヒント | Microsoft Docs
+description: 選択的 XML インデックスを作成または変更するときに、ノード パスと最適化ヒントを指定する方法について学習します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729850"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
   
  ノード パスと最適化ヒントは、次のいずれかのステートメントで同時に指定します。  
@@ -215,7 +216,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
  次の 2 つの単純な原則を使用して、選択的 XML インデックスに追加する適切なノードのサブセットを識別できます。  
   
-1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定する。  
+1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定します。  
   
     -   その存在または値が XQuery 式で使用されるすべてのノードにインデックスを設定します。  
   
@@ -373,7 +374,7 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|はい|いいえ|  
   
 ### <a name="node-optimization-hint"></a>node() 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  node() 最適化ヒントを使用して、一般的なクエリではその値を評価する必要がないノードを指定できます。 このヒントは、通常のクエリがノードの存在のみを評価する必要があるときに必要なメモリ量が減少します (既定では、選択的 XML インデックスは、complex ノード型以外の昇格されたすべてのノードの値を格納します)。  
   
@@ -391,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  node() ヒントでインデックス設定されているノードの値がクエリで必要な場合、選択的 XML インデックスは使用できません。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最適化ヒント  
- 適用先: XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
+ 適用対象:XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
   
  SINGLETON 最適化ヒントは、ノードのカーディナリティを指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
   
@@ -402,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  SINGLETON ヒントは指定されているが、ノードがその親または先祖の中で複数回出現した場合は、インデックスの作成時 (既存のデータの場合) またはクエリの実行時 (新規データの場合) にエラーが発生します。  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  DATA TYPE 最適化ヒントを使用して、インデックス付きノードに対して XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定できます。 このデータ型は、選択的 XML インデックスのデータ テーブル内のインデックス付きノードに対応する列で使用されます。  
   
  既存の値の指定されたデータ型へのキャストが失敗した場合でも、インデックスへの挿入操作は失敗しません。ただし、インデックスのデータ テーブルには NULL 値が挿入されます。  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  MAXLENGTH 最適化ヒントを使用して、xs:string データの長さを制限できます。 VARCHAR データ型または NVARCHAR データ型を指定するときに長さを指定するため、MAXLENGTH は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型には関連しません。  
   

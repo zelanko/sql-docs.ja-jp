@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731327"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブル ヒントでは、ロック手法、1 つ以上のインデックス、クエリ処理操作 (テーブル スキャンやインデックスのシークなど)、またはその他のオプションを指定することによって、データ操作言語 (DML) ステートメントが存続する間だけ、クエリ オプティマイザーの既定の動作をオーバーライドします。 テーブル ヒントは、DML ステートメントの FROM 句で指定され、その句で参照されるテーブルまたはビューのみに影響します。  
   

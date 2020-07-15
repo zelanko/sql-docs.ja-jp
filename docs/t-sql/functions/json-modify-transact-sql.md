@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752283"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635114"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -53,7 +52,7 @@ JSON_MODIFY ( expression , path , newValue )
     *\<json path>* によって参照されるプロパティは存在する必要がないことを指定します。 プロパティが存在しない場合、JSON_MODIFY は指定されたパスに新しい値を挿入しようとします。 パスにプロパティを挿入できない場合、挿入は失敗する可能性があります。 *lax* または *strict* の指定がない場合の既定のモードは *lax* です。  
   
 - *strict*  
-    *\<json path>* によって参照されるパスが JSON 式内に存在する必要があることを指定します。 プロパティが存在しない場合、JSON_MODIFY はエラーを返します。  
+    *\<json path>* によって参照されるプロパティが JSON 式内に存在する必要があることを指定します。 プロパティが存在しない場合、JSON_MODIFY はエラーを返します。  
   
 - *\<json path>*  
     更新するプロパティのパスを指定します。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
@@ -97,7 +96,7 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
   
  **クエリ**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **クエリ**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **クエリ**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **クエリ**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>参照
 
- [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

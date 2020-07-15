@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39a7bb9baed65d136b5c0f1c6bc64159473ca72d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735960"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   既存のシーケンス オブジェクトの引数を変更します。 **CACHE** オプションを使用してシーケンスが作成されている場合、シーケンスを変更するとキャッシュが再作成されます。  
   
@@ -60,7 +60,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  INCREMENT BY \<constant>  
  NEXT VALUE FOR 関数を呼び出すたびに必要なシーケンス オブジェクトの基準値を増分 (負の場合は減少) させるのに使用される値です。 増分値が負の値の場合はシーケンス オブジェクトは降順で、それ以外の場合は昇順です。 0 は増分として使用できません。  
   
- [ MINVALUE \<constant> | NO MINVALUE ]  
+ [MINVALUE \<constant> |NO MINVALUE]  
  シーケンスのオブジェクトの境界を指定します。 NO MINVALUE を指定すると、シーケンスのデータ型の最小値が使用されます。  
   
  [ MAXVALUE \<constant> | NO MAXVALUE  
@@ -82,10 +82,10 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  昇順のシーケンスの MINVALUE と降順のシーケンスの MAXVALUE は、シーケンスの START WITH 値を許可しない値に変更することはできません。 昇順のシーケンスの MINVALUE を START WITH 値より大きい数に変更する、または降順のシーケンスの MAXVALUE を START WITH 値より小さい数に変更するには、RESTART WITH 引数を含めて、最小値と最大値の範囲内にある目的の位置からシーケンスを再開します。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  シーケンスの詳細については、「 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  シーケンスに対する **ALTER** 権限、またはスキーマに対する **ALTER** 権限が必要です。 シーケンスに対する **ALTER** 権限を許可するには、次の形式で **ALTER ON OBJECT** を使います。  

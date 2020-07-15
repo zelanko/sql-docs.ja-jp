@@ -1,5 +1,6 @@
 ---
-title: '例 : XML 型の列のクエリ | Microsoft Docs'
+title: '例: XML 型の列のクエリ | Microsoft Docs'
+description: xml データ型の列のクエリを実行する方法の例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633114"
 ---
-# <a name="example-querying-xmltype-columns"></a>例 : XML 型の列のクエリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次のクエリには、 **xml** 型の列が含まれています。 クエリでは、 `Instructions` xml **型の** 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
 ## <a name="example"></a>例  

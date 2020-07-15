@@ -1,5 +1,6 @@
 ---
 title: XML データの取得および XML データに対するクエリの実行 | Microsoft Docs
+description: XML データのクエリを実行するときに指定する必要があるクエリ オプション、およびデータベースに格納されている場合に保持されない XML インスタンスの部分について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e754bc5e3fb738f36b309e7ff8a60c9f85bc258c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738396"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
   
 ##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 保持されない XML インスタンスの機能  

@@ -1,5 +1,6 @@
 ---
 title: XML データの読み込む | Microsoft Docs
+description: XML データを SQL Server データベースに転送するためのいくつかの方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738408"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 次に例を示します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの [n]text 型または image 型の列にデータが含まれている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用してテーブルをインポートできます。 ALTER TABLE ステートメントを使用して列の型を XML に変更します。  

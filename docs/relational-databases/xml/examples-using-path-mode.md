@@ -1,5 +1,6 @@
 ---
 title: '例 : PATH モードの使用 | Microsoft Docs'
+description: SELECT クエリから XML を生成するために、PATH モードを使用する例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729948"
 ---
-# <a name="examples-using-path-mode"></a>例 : PATH モードの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="examples-using-path-mode"></a>例 :PATH モードの使用
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>PATH モードの単純なクエリの指定  

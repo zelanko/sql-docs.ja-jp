@@ -1,5 +1,6 @@
 ---
 title: インライン XDR スキーマの生成 | Microsoft Docs
+description: インライン XDR スキーマの生成と、FOR XML 句での XMLDATA ディレクティブの非推奨についての情報を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2e1a1aa6919e50769660a16c5988b626aeae3b7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e61aeda134c63c8e9827c521b34be5fa839a259f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729878"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>インライン XDR スキーマの生成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML の **XMLDATA** ディレクティブは、クエリの結果と合わせてインライン XDR スキーマを返します。 ただし、XDR スキーマは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンで導入された新しいデータ型や拡張のすべてをサポートしているわけではありません。 代わりに、 [XMLSCHEMA ディレクティブ](../../relational-databases/xml/generate-an-inline-xsd-schema.md)を使用してインライン XSD スキーマを要求できます。  
   
 > [!IMPORTANT]  

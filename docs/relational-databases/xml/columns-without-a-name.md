@@ -1,5 +1,6 @@
 ---
 title: 名前のない列 | Microsoft Docs
+description: XML を生成するときに、SQL Server で名前のない列を処理する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 685be1c7e6c43e28500dd1ee96ea6fe696ad8e20
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 42c900b7039d058243256296fafb6d56106fd91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752587"
 ---
 # <a name="columns-without-a-name"></a>名前のない列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   名前のない列はインラインになります。 たとえば、計算列または入れ子になったスカラー クエリで列の別名を指定しないと、名前のない列が生成されます。 列が **xml** 型の場合、そのデータ型のインスタンスの内容が挿入されます。 それ以外の型の場合は、列の内容がテキスト ノードとして挿入されます。  
   
 ```  

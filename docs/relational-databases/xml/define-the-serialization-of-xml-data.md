@@ -1,5 +1,6 @@
 ---
 title: XML データのシリアル化の定義 | Microsoft Docs
+description: SQL Server で xml データをシリアル化するときに使用される規則について学習します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738441"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML データ型を SQL 文字列型やバイナリ型に明示的または暗黙にキャストすると、XML データ型のコンテンツはこのトピックで説明する規則に従ってシリアル化されます。  
   
 ## <a name="serialization-encoding"></a>シリアル化のエンコード  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>シリアル化中の XML 文字のエンティティ変換  
  シリアル化されたすべての XML 構造は再解析が可能である必要があります。 したがって、XML パーサーの正規化フェーズ中に引き続き文字を互いにやり取りできるようにするには、一部の文字をエンティティに変換する方法でシリアル化する必要があります。 ただし、一部の文字をエンティティに変換する場合は、ドキュメントが整形式になり、解析可能になるようにする必要があります。 次に、シリアル化中に適用されるエンティティ変換の規則を示します。  
   
--   &、\<、> の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
+-   &、\<, and > の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
   
 -   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot;にエンティティ変換されます。  
   

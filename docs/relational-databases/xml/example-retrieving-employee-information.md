@@ -1,5 +1,6 @@
 ---
-title: '例 : 従業員情報の取得 | Microsoft Docs'
+title: '例: 従業員情報の取得 | Microsoft Docs'
+description: FOR XML EXPLICIT でクエリを使用して、データベースから従業員情報を XML として取得する方法の例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632779"
 ---
-# <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-retrieving-employee-information"></a>例:従業員情報の取得
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  
   
  FOR XML EXPLICIT 変換で、次に示す XML を生成するとします。  

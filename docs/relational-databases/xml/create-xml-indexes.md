@@ -1,5 +1,6 @@
 ---
 title: XML インデックスの作成 | Microsoft Docs
+description: SQL Server でプライマリとセカンダリの XML インデックスを作成する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3c83cf778439ed8508c3c0128d90b085ae358c60
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2113062f446100fc119f7eab590a610c27800075
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691411"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
   
 ## <a name="creating-a-primary-xml-index"></a>プライマリ XML インデックスの作成  
@@ -56,7 +57,7 @@ ms.locfileid: "80664593"
   
  **以降のバージョンでは、プライマリ XML インデックスを作成または再作成する XML データ型の列に、XML スキーマ型** xs:date **または** xs:dateTime [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはこれらのサブタイプ) で 1 未満の年の値が含まれていると、インデックスの作成が失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではこれらの値が許可されていたため、この問題は、生成されたデータベースでインデックスを作成する際に発生する可能性があります。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-### <a name="example-creating-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成  
+### <a name="example-creating-a-primary-xml-index"></a>例:プライマリ XML インデックスの作成  
  ここからはほとんどの例で、型指定されていない XML 列を含んだテーブル T (pk INT PRIMARY KEY, xCol XML) を使用します。 XML 列は、型指定された XML に簡単に拡張できます。 説明を簡単にするため、次に示す XML データ インスタンスに対するクエリについて説明します。  
   
 ```  

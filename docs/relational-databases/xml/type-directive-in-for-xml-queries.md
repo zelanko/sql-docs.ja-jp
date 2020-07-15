@@ -1,5 +1,6 @@
 ---
 title: FOR XML クエリの TYPE ディレクティブ | Microsoft Docs
+description: FOR XML 句で TYPE ディレクティブを使用して、クエリの結果を XML データとして返すように要求する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729842"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) がサポートされるため、必要に応じて TYPE ディレクティブを指定することにより、FOR XML クエリの結果を **xml** データ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、その結果に対して XQuery を指定したり、結果を **xml** 型の変数に割り当てたり、 [入れ子になった FOR XML クエリ](../../relational-databases/xml/use-nested-for-xml-queries.md)を記述したりできます。  
   
 > [!NOTE]  

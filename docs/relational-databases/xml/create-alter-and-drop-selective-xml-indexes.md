@@ -1,5 +1,6 @@
 ---
 title: 選択的 XML インデックスの作成、変更、および削除 | Microsoft Docs
+description: 新しい選択的 XML インデックスの作成や、既存の選択的 XML インデックスの変更または削除を行う方法について学習します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dbfeb117d22e468bdae8b9e2ebe598b099588bfc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a06f8c8a57fe68ed50f4c49f8d9028b86fc7a34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691693"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>選択的 XML インデックスの作成、変更、および削除
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   新しい選択的 XML インデックスの作成や、既存の選択的 XML インデックスの変更または削除を行う方法について説明します。  
   
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
 ##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> 選択的 XML インデックスの作成  
   
-### <a name="how-to-create-a-selective-xml-index"></a>方法: 選択的 XML インデックスを作成する  
+### <a name="how-to-create-a-selective-xml-index"></a>方法: 選択的 XML インデックスの作成  
  **Transact-SQL を使用して選択的 XML インデックスを作成する**  
  CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的 XML インデックスを作成します。 詳細については、「[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)」を参照してください。  
   
@@ -48,7 +49,7 @@ FOR(
   
 ##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> 選択的 XML インデックスの変更  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>方法: 選択的 XML インデックスを変更する  
+### <a name="how-to-alter-a-selective-xml-index"></a>方法: 選択的 XML インデックスの変更  
  **Transact-SQL を使用して選択的 XML インデックスを変更する**  
  ALTER INDEX ステートメントを呼び出して既存の選択的 XML インデックスを変更します。 詳細については、「[ALTER INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md)」を参照してください。  
   
@@ -69,7 +70,7 @@ FOR
   
 ##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> 選択的 XML インデックスの削除  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>方法: 選択的 XML インデックスを削除する  
+### <a name="how-to-drop-a-selective-xml-index"></a>方法: 選択的 XML インデックスのドロップ  
  **Transact-SQL を使用して選択的 XML インデックスを削除する**  
  DROP INDEX ステートメントを呼び出して選択的 XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md)」を参照してください。  
   

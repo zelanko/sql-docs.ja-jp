@@ -1,5 +1,6 @@
 ---
 title: XML インデックスの変更 | Microsoft Docs
+description: ALTER INDEX (Transact-SQL) DDL ステートメントを使用して、既存の XML と XML 以外のインデックスを変更する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729873"
 ---
 # <a name="modify-xml-indexes"></a>XML インデックスの変更
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用すると、既存の XML インデックスや XML 以外のインデックスを変更できます。 ただし、一部の ALTER INDEX オプションは XML インデックスに使用できません。 次のオプションは、XML インデックスの変更時には無効です。  
   
 -   再構築と設定オプションの IGNORE_DUP_KEY は XML インデックスでは無効です。 再構築オプション ONLINE は、セカンダリ XML インデックスでは OFF に設定されている必要があります。 オプション DROP_EXISTING は、ALTER INDEX ステートメントでは使用できません。  
@@ -30,7 +31,7 @@ ms.locfileid: "80665085"
   
 -   ALTER INDEX ALL を指定すると、このオプションは XML 以外のインデックスと XML インデックスの両方に適用されます。 一方の種類のインデックスでは無効なインデックス オプションが指定される場合があります。 その場合、ステートメント全体が失敗します。  
   
-## <a name="example-modifying-an-xml-index"></a>例 : XML インデックスの変更  
+## <a name="example-modifying-an-xml-index"></a>例: XML インデックスの変更  
  次の例では、XML インデックスを作成後、 `ALLOW_ROW_LOCKS` オプションを `OFF`に設定してインデックスを変更します。 `ALLOW_ROW_LOCKS` が `OFF`の場合、行はロックされないので、ページレベルおよびテーブルレベルのロックを使用して、指定したインデックスにアクセスできます。  
   
 ```  
@@ -51,7 +52,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>例 : XML インデックスの無効化と有効化  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>例: XML インデックスの無効化と有効化  
  既定では、XML インデックスは有効です。 XML インデックスが無効になっている場合、その XML 列に実行されるクエリでは XML インデックスが使用されません。 XML インデックスを有効にするには、 `ALTER INDEX` オプションを指定した `REBUILD` を使用します。  
   
 ```  

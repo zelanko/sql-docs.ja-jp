@@ -1,5 +1,6 @@
 ---
 title: OPENXML 内でのメタプロパティの指定 | Microsoft Docs
+description: OPENXML ステートメントでメタプロパティ属性を指定して、XML ノードから情報を抽出する方法について学習します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728119"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
   
  これらのメタプロパティは、 *ColPattern* パラメーターを使用して OPENXML ステートメント内の行セットの列にマップできます。 これらの列には、その列がマップされたメタプロパティの値が含まれます。 OPENXML の構文の詳細については、 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)を参照してください。  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92713b06958dbfd8e2aef995779a25ed76d9d09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735398"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベース ユーザー、データベース ロール、アプリケーション ロールに対して許可または拒否された権限を取り消します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75243339"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
@@ -86,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  

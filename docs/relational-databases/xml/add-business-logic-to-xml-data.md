@@ -1,5 +1,6 @@
 ---
 title: XML データへのビジネス ロジックの追加 | Microsoft Docs
+description: XSL 変換を適用するか、データに対してドメイン固有の制約を使用するか、検証規則をトリガーすることによって、XML データにビジネス ロジックを追加する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729158"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
   
 -   XML データの挿入や変更のときに領域固有の制約を強制する行制約または列制約を記述できます。  
@@ -31,7 +32,7 @@ ms.locfileid: "80664812"
   
 -   ビジネス ニーズに合わせて XML 列の処理を開始する Transact-SQL ストアド プロシージャや関数を記述できます。  
   
-## <a name="example-applying-xsl-transformation"></a>例 : XSL 変換の適用  
+## <a name="example-applying-xsl-transformation"></a>例: XSL 変換の適用  
  **xml** データ型のインスタンスおよびファイルに保存されている XSL 変換を受け取り、XML データに変換を適用し、変換後の XML を結果として返す CLR 関数 **TransformXml()** を考えてみます。 次に示すのは、C# で記述した関数の骨組みです。  
   
 ```  

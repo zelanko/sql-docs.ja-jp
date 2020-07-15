@@ -1,5 +1,6 @@
 ---
 title: 一意のパーティクル属性の制約 | Microsoft Docs
+description: あいまいなコンテンツ モデルになる可能性のある型が含まれている場合に、一意のパーティクル属性 (UPA) 制約の規則によって XSD スキーマを拒否する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729827"
 ---
 # <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD では、UPA (一意のパーティクル属性) 制約の規則によって、複雑なコンテンツ モデルが制約を受けます。 この規則では、あいまいさを排除し、インスタンス ドキュメント内の各要素が、その親のコンテンツ モデル内の `<xsd:element>` パーティクルまたは `<xsd:any>` パーティクルの 1 つに正確に対応することが必要です。 あいまいなコンテンツ モデルになる可能性のある型を含むスキーマは拒否されます。  
   
  あいまいさの最も一般的な原因は、`<xsd:any>` のワイルドカード文字や、minOccurs < maxOccurs のような可変の出現範囲を持つパーティクルです。 たとえば、次のコンテンツ モデルでは、<`e1`> 要素は `<xsd:element>` 要素または `<xsd:any>` 要素のどちらにも一致するので、あいまいになります。  
@@ -81,11 +82,11 @@ ms.locfileid: "80665211"
 ## <a name="finding-more-information"></a>詳細情報  
  次のドキュメントは W3C (World Wide Web Consortium) が発行したもので、一意のパーティクル属性の制約に関する技術的な説明が含まれています。  
   
- 『XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation』  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   「Section 3.8.6: Constraints on Model Group Schema Components」  
+-   Section 3.8.6: Constraints on Model Group Schema Components  
   
--   「Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)」  
+-   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  ドキュメントを表示するには、[http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881) を参照してください。  
   

@@ -1,5 +1,6 @@
 ---
-title: '例 : ELEMENTXSINIL ディレクティブの指定 | Microsoft Docs'
+title: 例:ELEMENTXSINIL ディレクティブの指定 | Microsoft Docs
+description: SQL で ELEMENTXSINIL ディレクティブを指定して、xsi:nil 属性が true に設定されている NULL 値の XML 要素を生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f717b4e5830fd9ab6089da3b7e97cb028a14ff13
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 64e44b8f84f2ff4b908556b31b6088a6a2c77c55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632509"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>例 : ELEMENTXSINIL ディレクティブの指定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-elementxsinil-directive"></a>例:ELEMENTXSINIL ディレクティブの指定
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   ELEMENT ディレクティブを指定して要素中心の XML を生成する際、列に NULL 値が格納されていると、EXPLICIT モードでは対応する要素が生成されません。 必要に応じて ELEMENTXSINIL ディレクティブを指定し、NULL 値の列に対して要素を生成するように要求することができます。このとき、 **xsi:nil** 属性に値 TRUE が設定されます。  
   
  次のクエリは、従業員の住所を含む XML を生成します。 `AddressLine2` 列と `City` 列には、列名に `ELEMENTXSINIL` ディレクティブが指定されています。 この設定により、NULL 値が格納されている `AddressLine2` 列と `City` 列に対して行セットに要素が生成されます。  

@@ -1,5 +1,6 @@
 ---
 title: FOR XML で使用するルート要素を指定する | Microsoft Docs
+description: FOR XML 句の ROOT オプションを指定して、結果の XML で 1 つのトップ レベル要素を要求するクエリの例を示します。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b4d82dd0518db3a6b126c725d61f8d94e2f80d5b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cf32be608e844036893b7c7dbf42ba76db0c203f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632649"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例 : FOR XML で生成される XML のルート要素の指定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例:FOR XML で生成される XML のルート要素の指定
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次のクエリに示すように、 `ROOT` クエリで `FOR XML` オプションを指定することにより、結果の XML に 1 つのトップレベル要素を要求できます。 `ROOT` ディレクティブに指定した引数で、ルート要素名を指定します。  
   
 ## <a name="example"></a>例  

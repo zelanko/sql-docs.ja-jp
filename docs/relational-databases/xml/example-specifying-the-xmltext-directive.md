@@ -1,5 +1,6 @@
 ---
-title: '例 : XMLTEXT ディレクティブの指定 | Microsoft Docs'
+title: '例: XMLTEXT ディレクティブの指定 | Microsoft Docs'
+description: EXPLICIT モードを使用して SELECT ステートメントで XMLTEXT ディレクティブを指定することにより、XML ドキュメントの未使用部分を指定する方法について学習します。
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632319"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-xmltext-directive"></a>例:XMLTEXT ディレクティブの指定
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   この例では、EXPLICIT モードを使用した **ステートメントで、** XMLTEXT `SELECT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
   
  `Person` テーブルについて考えます。 このテーブルには、XML ドキュメントの未使用部分を格納している `Overflow` 列があります。  

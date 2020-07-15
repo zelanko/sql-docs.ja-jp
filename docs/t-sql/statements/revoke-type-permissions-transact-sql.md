@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735337"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (型の権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   型に対する権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73982901"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  

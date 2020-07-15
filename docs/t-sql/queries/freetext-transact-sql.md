@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736306"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 FREETEXT を使用すると、フルテキスト クエリ エンジンによって、*freetext_string* を基に次の内部操作が実行され、各語に重みが割り当てられた後、一致するものが検索されます。  
   
@@ -115,7 +115,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## <a name="general-remarks"></a>全般的な解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
-FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索エンジンでは、重要な単語と語句が識別されます。 予約済みキーワードやワイルドカード文字は、CONTAINS 述語の \<contains_search_condition> パラメーターに指定した場合は特別な意味が与えられますが、FREETEXT の場合は特別な意味はありません。
+FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索エンジンでは、重要な単語と語句が識別されます。 予約済みキーワードやワイルドカード文字に特別な意味はありません。通常、CONTAINS 述語の \<contains_search_condition> パラメーターに指定した場合に意味が与えられます。
   
  データベースの互換性レベルが 100 に設定されている場合、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md) でフルテキスト述語を使用することはできません。  
   

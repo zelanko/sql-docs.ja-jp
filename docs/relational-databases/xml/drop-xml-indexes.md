@@ -1,5 +1,6 @@
 ---
 title: XML インデックスの削除 | Microsoft Docs
+description: DROP INDEX Transact-SQL ステートメントを使用して、XML と XML 以外の両方を含め、既存のプライマリまたはセカンダリのインデックスを削除する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 045e71896836a2ccb39e8605d14e49360a9cc7a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633202"
 ---
 # <a name="drop-xml-indexes"></a>XML インデックスの削除
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用すると、XML インデックスと XML 以外のインデックスの両方を含め、既存のプライマリ インデックスまたはセカンダリ インデックスを削除できます。 ただし、DROP INDEX のオプションは XML インデックスに適用されません。 プライマリ XML インデックスを削除すると、存在するセカンダリ XML インデックスもすべて削除されます。  
   
  *TableName.IndexName* を指定する DROP 構文は廃止されるので、XML インデックスではサポートされません。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例 : プライマリ XML インデックスの作成と削除  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成とドロップ  
  次の例では、 **xml** 型の列に XML インデックスを作成します。  
   
 ```  
@@ -69,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>例 : DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>例: DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
  次の例では、列 (`XmlColx`) に XML インデックスを作成しています。 次に、同じ名前を使用して異なる列 (`XmlColy`) に別の XML インデックスを作成します。 `DROP_EXISTING` を指定しているので、列 (`XmlColx)` の既存の XML インデックスが削除されて、列 (`XmlColy`) に新しい XML インデックスが作成されます。  
   
 ```  

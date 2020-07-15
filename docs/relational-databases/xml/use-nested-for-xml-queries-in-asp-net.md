@@ -1,5 +1,6 @@
 ---
 title: ASP.NET における入れ子になった FOR XML クエリの使用 | Microsoft Docs
+description: ASP.NET アプリケーションで入れ子になった FOR XML クエリを使用して、要素中心の XML を生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cc0fa2ffe432d3edef8aa8f51e4f230c1e40d2e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: def3cb5a9e77324a0d062ec26c0d042afcc0bc3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738374"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET における入れ子になった FOR XML クエリの使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   この例では、ASP.NET アプリケーションで SQL Server のストアド プロシージャを実行してブラウザーに XML を返します。 このストアド プロシージャは、入れ子になったクエリを使用して XML を生成します。 同様の SELECT ステートメントは、「 [入れ子構造で AUTO モードのクエリを使用した兄弟の生成](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)」でも見ることができます。 この例は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で入れ子になった FOR XML クエリを使用して要素中心の XML を生成する方法の一例を示しています。  
   
 ## <a name="example"></a>例  

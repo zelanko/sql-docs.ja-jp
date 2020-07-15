@@ -1,5 +1,6 @@
 ---
 title: FOR XML での PATH モードの使用 | Microsoft Docs
+description: 入れ子になった FOR XML クエリで PATH モードと、xml 型のインスタンスを返すより簡潔なクエリを記述する TYPE ディレクティブを使用する方法について学習します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5073f921a7d80df9e59e93915dedaec11fddcf76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff6beee153a5f923178436710d1b38b1151d6c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724536"
 ---
 # <a name="use-path-mode-with-for-xml"></a>FOR XML での PATH モードの使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   「 [FOR XML を使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)」で説明したように、PATH モードを使用すると、要素と属性の組み合わせが容易になります。 入れ子構造を使用することで、複雑なプロパティも容易に表現できるようになります。 FOR XML EXPLICIT モードのクエリを使用してこのような XML を行セットから作成することもできますが、煩雑になりかねない EXPLICIT モードのクエリに比べて PATH モードでは同じことを簡潔に行うことができます。 PATH モードに、入れ子の FOR XML クエリと、 **xml** 型のインスタンスを返す TYPE ディレクティブを組み合わせることで、簡潔なクエリを記述できます。  
   
  PATH モードでは、列名または列の別名が XPath 式として処理されます。 XPath 式は XML に値がどのようにマップされているかを示します。 各 XPath 式は、行要素に対して相対的に生成されるノードの種類 (属性、要素、スカラー値など) および名前と階層を提供する相対 XPath です。  

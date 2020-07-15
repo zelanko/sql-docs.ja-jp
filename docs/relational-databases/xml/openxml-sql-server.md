@@ -1,5 +1,6 @@
 ---
 title: OPENXML (SQLServer) | Microsoft Docs
+description: XML ドキュメントの内部表現の行セット ビューを提供する、SQL Server での OPENXML ステートメントについて学習します。
 ms.custom: ''
 ms.date: 05/11/2020
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753700"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。  
   
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。  

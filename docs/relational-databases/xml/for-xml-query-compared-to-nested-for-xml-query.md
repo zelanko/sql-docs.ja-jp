@@ -1,5 +1,6 @@
 ---
 title: FOR XML クエリと入れ子になった FOR XML クエリの比較 | Microsoft Docs
+description: 単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較する例を示すことで、入れ子になった FOR XML クエリの利点について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 94e88af049ca5db3bb975c787cda18176d655346
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bae8d986b497e1d641dcc972ece88e2b579847fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729958"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   ここでは、単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較します。 入れ子になった FOR XML クエリを使用すると、たとえば、属性中心の XML と要素中心の XML の組み合わせをクエリの結果に指定できるなどの利点があります。 次の例はこのことを示しています。  
   
 ## <a name="example"></a>例  

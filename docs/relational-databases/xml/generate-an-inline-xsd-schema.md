@@ -1,5 +1,6 @@
 ---
 title: インライン XSD スキーマの生成 | Microsoft Docs
+description: SQL クエリの FOR XML 句で XMLSCHEMA オプションを使用することにより、インライン XSD スキーマを生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3792243af5a25f2ef1b9c7acd023f78acbb3eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727035"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
   
  このトピックでは、XMLSCHEMA キーワードとこのキーワードで生成されるインライン XSD スキーマについて説明します。 次に、インライン スキーマを要求するときの制限事項を示します。  
@@ -222,7 +223,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>要素名の競合  
  FOR XML では、同じ名前で 2 つのサブ要素を示すことができます。 たとえば、次のクエリでは製品の ListPrice と DealerPrice の値が取得されますが、これら 2 つの列に Price という同じ別名が指定されます。 したがって、返される行セットには同じ名前の列が 2 つ含まれます。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1 : 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1: 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
  次のクエリの 2 つのサブ要素は同じ型の非キー列で、どちらも NULL 値が許容されます。  
   
 ```  
@@ -314,7 +315,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2 : 同じ型でも一方がキー列で他方が非キー列の場合  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2: 同じ型でも一方がキー列で他方が非キー列の場合  
  次のクエリでは、型が同じ型でも一方がキー列で他方が非キー列の場合について説明します。  
   
 ```  
@@ -392,7 +393,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  インライン XSD スキーマで、Col2 に対応する <`Col`> 要素の minOccurs が 0 に設定されていることに注意してください。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3 : 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3: 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
  ケース 2 で示したサンプル テーブルに対して、次のクエリを指定します。  
   
 ```  

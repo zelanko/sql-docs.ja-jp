@@ -1,5 +1,6 @@
 ---
 title: XML 列でのフルテキスト検索の使用 | Microsoft Docs
+description: XML 列のフルテキスト インデックスを作成し、SQL を使用して XML 値のフルテキスト検索を実行する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752549"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML 列にフルテキスト インデックスを作成して XML 値のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 要素タグはトークンの境界として使用されます。 インデックスは次の項目に設定されます。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80665010"
   
 2.  次に、XML 列の XML インデックスを使用する XML 値にクエリを実行します。  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>例 : フルテキスト検索と XML クエリの組み合わせ  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>例: フルテキスト検索と XML クエリの組み合わせ  
  XML 列でフルテキスト インデックスを作成した後、XML 値が書名に語 "custom" を含んでいることを次のクエリで確認します。  
   
 ```sql
@@ -52,7 +53,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  さらに、フルテキスト検索ではステマーが使用されますが、XQuery の **contains()** はリテラルの照合です。 両者の違いを次の例で示します。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例 : ステミングを使用した XML 値のフルテキスト検索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例: ステミングを使用した XML 値のフルテキスト検索  
  上記の例で行った XQuery **contains()** による確認は、通常は省略できません。 次のクエリについて考えてみます。  
   
 ```sql

@@ -1,5 +1,6 @@
 ---
 title: 格納されている XML スキーマ コレクションの表示 | Microsoft Docs
+description: XQuery 関数 xml_schema_namespace() を使用して、格納されている XML スキーマ コレクションを表示する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef32368031876bc14619cd14aa215402c67618b6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 76671186663e4d4173389d9aec19b0c0da2fbf88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729803"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>格納されている XML スキーマ コレクションの表示
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)を使用して XML スキーマ コレクションをインポートすると、メタデータにスキーマ コンポーネントが格納されます。 固有の関数 [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)を使用して、XML スキーマ コレクションを再構築できます。 この関数は、 **xml** データ型のインスタンスを返します。  
   
  たとえば、次のクエリでは、`ProductDescriptionSchemaCollection`データベースの実稼働リレーショナル スキーマから XML スキーマ コレクション ( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ) が取得されます。  

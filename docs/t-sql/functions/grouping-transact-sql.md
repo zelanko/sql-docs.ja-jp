@@ -20,19 +20,19 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23b05c6355151aa556ad7531de60e3ccf65ea0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631556"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  GROUP BY リスト内の指定した列の式が集計されるかどうかを示します。 GROUPING は結果セットで、集計される場合は 1 を、集計されない場合は 0 を返します。 GROUPING は、GROUP BY が指定されている場合に、\<SELECT <select> リスト、HAVING 句、および ORDER BY 句でのみ使用できます。  
+  GROUP BY リスト内の指定した列の式が集計されるかどうかを示します。 GROUPING は結果セットで、集計される場合は 1 を、集計されない場合は 0 を返します。 GROUPING は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING、ORDER BY 句でのみ使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

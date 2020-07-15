@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0910901fbe248714b5cbd11d14e5036c52cf8e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735426"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>可用性グループの権限の取り消し (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Always On 可用性グループに対する権限を取り消します。 
   
@@ -35,7 +35,7 @@ ms.locfileid: "75242611"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
@@ -57,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  ON AVAILABILITY GROUP **::** _availability_group_name_  
  権限を取り消す可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
- { FROM | TO } \<server_principal> 取り消される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
+ { FROM | TO } \<server_principal> 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  

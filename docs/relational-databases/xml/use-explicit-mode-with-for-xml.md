@@ -1,5 +1,6 @@
 ---
 title: FOR XML での EXPLICIT モードの使用 | Microsoft Docs
+description: FOR XML EXPLICIT モードを使用して、クエリ結果から生成される XML に最大の柔軟性を提供する方法について学習します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736553"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   トピック「 [FOR XML を使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
   
  ただし、必要な XML に関する追加情報 (XML 内の入れ子構造など) をクエリの一部として明示的に指定するために、EXPLICIT モードのクエリを記述する際には特殊な記述方法が必要になります。 このため、要求する XML によっては、EXPLICIT モードのクエリを記述する作業が複雑になることがあります。 EXPLICIT モードのクエリを記述するよりも、 [PATH モード](../../relational-databases/xml/use-path-mode-with-for-xml.md) で入れ子を使用する方が作業が容易になる場合もあります。  
@@ -150,21 +151,21 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [例: 従業員情報の取得](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [例 : ELEMENT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [例: ELEMENT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [例 : ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [例: ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [例: EXPLICIT モードを使用した兄弟の構築](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [例 : ID ディレクティブと IDREF ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [例: ID ディレクティブと IDREF ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [例 : ID ディレクティブと IDREFS ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [例: ID ディレクティブと IDREFS ディレクティブの指定](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [例 : HIDE ディレクティブの指定](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [例: HIDE ディレクティブの指定](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [例 : ELEMENT ディレクティブとエンティティのエンコードを指定する](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [例: ELEMENT ディレクティブとエンティティのエンコードの指定](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [例 : CDATA ディレクティブの指定](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [例: CDATA ディレクティブの指定](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
 -   [例: XMLTEXT ディレクティブの指定](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8910f8cd38d1336a5da5c91e386d7458164b3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5909e4812ca554ffdd7b7586af652382358170fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752393"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Sys.messages 内で、既存のメッセージから、または指定された文字列からのメッセージを構築します。 FORMATMESSAGE の機能は RAISERROR ステートメントの機能に似ています。 ただし、RAISERROR がメッセージを即時出力するのに対して、FORMATMESSAGE が返す書式設定済みのメッセージには、さらに処理を加えることができます。  
   
@@ -59,7 +59,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>解説  
  RAISERROR ステートメントと同様、FORMATMESSAGE は、指定されたパラメーター値を、メッセージ内のプレースホルダー変数に置き換えることによって、メッセージを編集します。 エラー メッセージに指定できるプレースホルダーと編集処理の詳細については、「[RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。  
   
- FORMATMESSAGE は、ユーザーが現在使用している言語のメッセージを検索します。 日本語版のメッセージがない場合は、英語版のメッセージが使用されます。  
+ FORMATMESSAGE は、ユーザーが現在使用している言語のメッセージを検索します。 システム メッセージ (*msg_number* <=50000) の場合、メッセージのローカライズ版が存在しない場合は、OS の言語バージョンが使用されます。 ユーザー メッセージ (*msg_number* >50000) の場合、メッセージのローカライズ版が存在しない場合は、英語版が使用されます。
   
  日本語版のメッセージの場合、英語版のパラメーター プレースホルダーに対応するようにパラメーター値を指定する英語版。 つまり、日本語版のパラメーター 1 は、英語版のパラメーター 1 に対応する必要があります。日本語版のパラメーター 2 は、英語版のパラメーター 2 に対応する必要があります。以降についても同様です。  
   
@@ -68,7 +68,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ### <a name="a-example-with-a-message-number"></a>A. メッセージ番号を含む例  
  次の例では、sys.messages に格納されているレプリケーション メッセージ `20009` を "アーティクル '%s' をパブリケーション '%s' に追加できませんでした。" として使用します。FORMATMESSAGE は、パラメーター プレースホルダーの代わりに `First Variable` 値と `Second Variable` 値を使用します。 置換後の文字列 "アーティクル 'First Variable' をパブリケーション 'Second Variable' に追加できませんでした。" は、ローカル変数 `@var1` に格納されます。  
   
-```  
+```sql
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
 DECLARE @var1 VARCHAR(200);   
 SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');   
@@ -81,7 +81,7 @@ SELECT @var1;
   
  次の例では、入力として文字列を受け取ります。  
   
-```  
+```sql
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
@@ -90,7 +90,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 ### <a name="c-additional-message-string-formatting-examples"></a>C. 追加のメッセージ文字列の例を書式設定  
  次の例では、さまざまな書式設定オプションを示しています。  
   
-```  
+```sql
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
 SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
 SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  
