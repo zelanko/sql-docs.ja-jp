@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73660790"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279518"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能の 1 つです。 SELECT ステートメントの出力に基づいて新しいテーブルを作成する完全に並列化された操作です。 CTAS は、テーブルのコピーを作成する最も簡単で速い方法です。   
  
@@ -39,7 +39,7 @@ CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能�
 
 ## <a name="syntax"></a>構文   
 
-```  
+```syntaxsql
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
@@ -136,7 +136,6 @@ CTAS には、*select_criteria* で参照されるすべてのオブジェクト
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-Azure SQL Data Warehouse では、統計の自動作成や自動更新はまだサポートされていません。  クエリから最高のパフォーマンスを得るには、CTAS を実行した後と、データで大幅な変更が発生した後に、すべてのテーブルのすべての列の統計を作成することが重要です。 詳細については、「 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
 順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
 
@@ -167,7 +166,7 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS を使用したテーブルのコピー 
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 `CTAS` の最も一般的な使用方法の 1 つとして、DDL を変更できるようにテーブルのコピーを作成することが考えられます。 たとえば、最初に `ROUND_ROBIN` としてテーブルを作成し、それを列で分散されるテーブルに変更する必要がある場合、`CTAS` を使用して分散列を変更します。 また、`CTAS` を使用して、パーティション、インデックス、列の型を変更することができます。
 
@@ -239,7 +238,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. CTAS を使用して列属性を変更する 
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この例では CTAS を使用して、DimCustomer2 テーブルのデータ型、NULL 値の許容、いくつかの列の照合順序を変更します。  
   
@@ -300,7 +299,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. CTAS を使用してテーブルの分散方法を変更する
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この簡単な例では、テーブルの分散方法を変更する方法を示します。 これを行う方法のしくみを表示するには、ハッシュ分散テーブルをラウンドロビンに変更してから、ラウンドロビン テーブルをハッシュ分散に戻します。 最終的なテーブルは元のテーブルと一致します。 
 
@@ -351,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. CTAS を使用してテーブルをレプリケートされたテーブルに変換する  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 この例は、ラウンドロビン テーブルまたはハッシュ分散テーブルをレプリケートされたテーブルに変換する場合に適用されます。 この特定の例では、分散の種類を変更する前の方法を 1 歩進めた方法を使用します。  DimSalesTerritory はディメンションであり、より小さいテーブルである可能性があるため、テーブル間の結合時にデータが移動されないようにテーブルをレプリケート済みとして再作成することを選択できます。 
 
@@ -375,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. CTAS を使用して列が少ないテーブルを作成する
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 次の例では、`myTable (c, ln)` という名前のラウンドロビン分散テーブル テーブルを作成します。 新しいテーブルには 2 つの列のみがあります。 列名には、SELECT ステートメントの列の別名を使用します。  
   
@@ -398,7 +397,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. CREATE TABLE AS SELECT (CTAS) でクエリ ヒントを使用する  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
   
 このクエリは、CTAS ステートメントでクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
@@ -421,7 +420,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. CTAS を使用して Azure BLOB ストレージからデータをインポートする  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
@@ -503,7 +502,7 @@ CTAS を使用して、サポートされていない一部の機能に対処し
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. SELECT..INTO の代わりに CTAS を使用する  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 SQL Server コードでは通常、SELECT..INTO を使用して、テーブルに SELECT ステートメントの結果を設定します。 これは、SQL Server の SELECT..INTO ステートメントの例です。
 
@@ -530,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`UPDATE` ステートメントの `FROM` 句で ANSI 結合を置き換える  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。
 
@@ -613,7 +612,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. CTAS を使用して、DELETE ステートメントの FROM 句で ANSI 結合を使用する代わりに保持するデータを指定する  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 データを削除するときに `CTAS` を使用するのが最良の方法である場合があります。 データを削除するのではなく、保持する必要があるデータを選択するだけです。 SQL Data Warehouse では `DELETE` ステートメントの `FROM` 句での ANSI 結合がサポートされていないため、これは特に、ansi 結合構文を使用する `DELETE` ステートメントの場合に当てはまります。
 
@@ -641,7 +640,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. CTAS を使用して MERGE ステートメントを簡略化する  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 MERGE ステートメントの少なくとも一部は、`CTAS` を使用して置き換えることができます。 `INSERT` と `UPDATE` を単一のステートメントにまとめることができます。 削除されたレコードは、2 番目のステートメントで閉じる必要があります。
 
@@ -680,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明示的にデータ型および出力の null 値の許容を示す  
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 SQL Server コードを SQL Data Warehouse に移行したときに、次のようなコーディング パターンが発生する場合があります。
 

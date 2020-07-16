@@ -1,5 +1,5 @@
 ---
-title: XML データ内部のリレーショナル データのバインド | Microsoft Docs
+title: XML データ内部のリレーショナル データのバインド
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751444"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392840"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85751444"
   
  また、このバインドは読み取り専用です。 つまり、これらの関数を使用する列には、データを書き込めません。 たとえば、sql:variable("\@x")="*some expression*" は使用できません。  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>例 : sql:variable() を使用した複数の領域にまたがるクエリ  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>例:sql:variable() を使用した複数の領域にまたがるクエリ  
  次の例では、**sql:variable()** を使用してアプリケーションでクエリをパラメーター化できるようにする方法を示します。 ISBN は、SQL 変数 @isbn を使用して渡されます。 定数を **sql:variable()** に置き換えたことにより、ISBN が 0-7356-1588-2 の書籍だけでなく、どの ISBN でも検索できます。  
   
 ```  
