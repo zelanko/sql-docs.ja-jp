@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f47844d1eab39240c29041b930afe862e0c03728
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1443f941f4399e0df24cd69ccc62040b06564ca
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767064"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391685"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ;  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *new_list_name*  
  新しい検索プロパティ リストの名前を指定します。 *new_list_name* は最大 128 文字の識別子です。 *new_list_name* は、現在のデータベース内のすべてのプロパティ リストの中で一意であり、識別子の規則に準拠している必要があります。 *new_list_name* は、フルテキスト インデックスが作成されるときに使用されます。  
   

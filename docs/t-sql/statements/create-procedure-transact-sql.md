@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010783"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392890"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -401,13 +403,16 @@ SET ステートメントは、SET SHOWPLAN_TEXT および SET SHOWPLAN_ALL を�
 
 次のステートメントは、ストアド プロシージャの本体では使用できません。
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|[SET SHOWPLAN_TEXT]|
-|CREATE DEFAULT|CREATE TRIGGER または ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE FUNCTION または ALTER FUNCTION|CREATE VIEW または ALTER VIEW|USE *database_name*|
-|CREATE PROCEDURE または ALTER PROCEDURE|[SET PARSEONLY]||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | [SET SHOWPLAN_TEXT] | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | [SET PARSEONLY] |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE TRIGGER または ALTER TRIGGER |
+| CREATE FUNCTION または ALTER FUNCTION |
+| CREATE PROCEDURE または ALTER PROCEDURE |
+| CREATE VIEW または ALTER VIEW |
 
  プロシージャはまだ存在していないテーブルを参照できます。 作成時には、構文チェックのみが行われます。 プロシージャは、最初の実行時までコンパイルされません。 プロシージャ内で参照されているすべてのオブジェクトが解決されるのは、コンパイル時のみです。 したがって、存在しないテーブルを参照するプロシージャは、構文が正しければ正常に作成できます。ただし、実行時に参照されるテーブルが存在しない場合、プロシージャは失敗します。
 
@@ -449,7 +454,7 @@ GO
 
 \* アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)]、準備された [!INCLUDE[tsql](../../includes/tsql-md.md)]、プロシージャ、トリガーなど、キャッシュ オブジェクトの種類別にオブジェクトの数を調べることができます。 詳しくは、「[SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)」をご覧ください。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 ### <a name="permissions"></a>アクセス許可
 

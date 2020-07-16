@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731039"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393050"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *Expression1*  
 値を更新するノードを特定します。 ノードを 1 つだけ指定する必要があります。 つまり、*Expression1* は静的なシングルトンである必要があります。 XML が型指定されている場合、ノードの型は単純型でなければなりません。 複数のノードを選択すると、エラーが発生します。 *Expression1* が空のシーケンスを返す場合は、値の置換は行われず、エラーは返されません。 *Expression1* からは、単純型に型指定された内容 (リストまたはアトミック型)、テキスト ノード、または属性ノードを持つ 1 つの要素が返される必要があります。 *Expression1* に共用体型、複合型、処理命令、ドキュメント ノード、またはコメント ノードを指定することはできません。指定すると、エラーが返されます。  
   

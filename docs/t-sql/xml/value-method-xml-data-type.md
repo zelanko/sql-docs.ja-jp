@@ -1,5 +1,5 @@
 ---
-title: value() メソッド (xml データ型) | Microsoft Docs
+title: value() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731022"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393010"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85731022"
 value (XQuery, SQLType)  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *XQuery*  
  XML インスタンス内のデータを取得する *XQuery* 式 (文字列リテラル) です。 XQuery により、返される値は最大 1 つである必要があります。 それ以外の場合は、エラーが返されます。  
   

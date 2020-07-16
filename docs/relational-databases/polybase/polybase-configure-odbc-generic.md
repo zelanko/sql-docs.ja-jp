@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 97cc801d15371255e56a0e6fd5904edf0d74e4ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab118c18b2656701470a22b6987a659b45f2fdc7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741054"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406115"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
@@ -71,7 +71,7 @@ ODBC データ ソースのデータに対してクエリを実行するには�
 
     ```sql
     CREATE EXTERNAL DATA SOURCE <external_data_source_name>
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    WITH ( LOCATION = 'odbc://<ODBC server address>[:<port>]',
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = [ON] | OFF,
@@ -88,7 +88,7 @@ ODBC データ ソースのデータに対してクエリを実行するには�
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://SERVERNAME:4444,
+    WITH ( LOCATION = 'odbc://SERVERNAME:4444',
     CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
     ServerNode = sap_server_node:5555',
     PUSHDOWN = ON,

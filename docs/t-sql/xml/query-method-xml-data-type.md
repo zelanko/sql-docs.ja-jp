@@ -1,5 +1,5 @@
 ---
-title: query() メソッド (xml データ型) | Microsoft Docs
+title: query() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 04/16/2020
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e864e6c6b9b0d604d853fdcf11d07a18799c3d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893897"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393040"
 ---
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85893897"
 query ('XQuery')  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 XQuery  
 XML インスタンス内の XML ノード (要素や属性など) をクエリする XQuery 式の文字列です。  
   
@@ -41,9 +43,9 @@ XML インスタンス内の XML ノード (要素や属性など) をクエリ�
 このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
-次の例では、**xml\@ 型の変数** **myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
+次の例では、**xml** 型の変数 **\@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
-次のクエリは、<`Features`> 要素の <`ProductDescription`> 子要素を取得します。  
+次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   
 ```sql
 declare @myDoc xml  

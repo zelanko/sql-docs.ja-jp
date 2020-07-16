@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731068"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393070"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *Expression1*  
  挿入する 1 つ以上のノードを識別します。 この引数に指定できるのは、XML の定数インスタンス、modify メソッドが適用されている同じ XML スキーマ コレクションの型指定された XML データ型インスタンスへの参照、スタンドアロンの **sql:column()** /**sql:variable()** 関数を使用する型指定されていない XML データ型インスタンス、または XQuery 式です。 式の結果は、ノード、テキスト ノード、または順序付けられたノードのシーケンスになります。 式をルート (/) ノードに解決することはできません。 式の結果が 1 つの値または値のシーケンスになる場合、シーケンス内の各値がスペースで区切られた 1 つのテキスト ノードとして値が挿入されます。 複数のノードを定数として指定した場合、ノードはかっこ内に含まれ、コンマで区切られます。 一連の要素、属性、値などの異種シーケンスは挿入できません。 *Expression1* が空のシーケンスに解決される場合は、挿入が行われず、エラーも返されません。  
   

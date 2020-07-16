@@ -1,5 +1,5 @@
 ---
-title: nodes() メソッド (xml データ型) | Microsoft Docs
+title: nodes() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731055"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393060"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85731055"
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *XQuery*  
 XQuery 式の文字列リテラルです。 このクエリ式でノードが構築されると、構築されるノードが結果の行セットで公開されます。 クエリ式の結果が空のシーケンスの場合、行セットも空になります。 クエリ式で、ノードではなくアトミック値が含まれたシーケンスが静的に返される場合は、静的エラーが発生します。  
   
@@ -106,7 +108,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()**、**value()**、**exist()**、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
+返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()** 、**value()** 、**exist()** 、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
   
 また、行セットのコンテキスト ノードは具体化できません。 つまり、このコンテキスト ノードは SELECT ステートメントでは使用できません。 ただし、IS NULL と COUNT(*) では使用できます。  
   
