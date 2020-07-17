@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925172"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279409"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925172"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> フォルダー、プロジェクト、環境  
  フォルダー、プロジェクト、または環境の名前を変更するときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 から 31、引用符 (")、小なり (\<), greater than (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925172"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 環境変数  
  環境変数に名前を付けるときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 から 31、引用符 (")、小なり (\<), greater than (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -661,6 +661,18 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 4.  「[ステップ 2:SSISDB を Always On 可用性グループに追加する](#Step2)」の手順に従って、SSISDB を可用性グループに追加します。  
   
 5.  「[ステップ 3:Always On の SSIS サポートを有効にする](#Step3)」の手順に従います。  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>ダブルホップ シナリオでの SSISDB カタログと委任
+
+既定では、SSISDB カタログに格納されている SSIS パッケージのリモート呼び出しは、資格情報の委任 (ダブルホップと呼ばれることもあります) をサポートしません。 
+
+ユーザーがクライアント コンピューター A にログインし、SQL Server Management Studio (SSMS) を起動するシナリオについて考えてみましょう。 SSMS 内から、ユーザーは SSISDB カタログを持つコンピューター B でホストされている SQL server に接続します。 SSIS パッケージはこの SSISDB カタログに格納され、このパッケージはコンピューター C で実行されている SQL Server サービスに接続します (パッケージは他のサービスにもアクセスしている可能性があります)。 ユーザーがコンピューター A から SSIS パッケージの実行を呼び出すと、まず SSMS で、コンピューター A からコンピューター B (SSIS ランタイム プロセスによってパッケージが実行されている場所) にユーザーの資格情報が正常に渡されます。 ここで、正常に実行が完了するように、SSIS 実行ランタイム プロセス (ISServerExec.exe) によるコンピューター B からコンピューター C へのユーザー資格情報の委任が必要となります。 ただし、資格情報の委任は、既定では有効になっていません。
+
+ユーザーは、 *[任意のサービスへの委任でこのユーザーを信頼する (Kerberos のみ)]* の権限を (コンピューター B で) SQL Server のサービス アカウントに対して許可することで、資格情報の委任を有効にすることができます。これにより、ISServerExec.exe が子プロセスとして起動します。 このプロセスは、SQL Server サービス アカウントに対する無制限の委任または自由な委任の設定と呼ばれます。 この権限を付与する前に、組織のセキュリティ要件を満たしているかどうかを検討してください。
+
+SSISDB は、制約付き委任をサポートしません。 ダブルホップ環境では、SSISDB カタログをホストする SQL server のサービス アカウント (この例ではコンピューター B) が制約付き委任に対して設定されている場合、ISServerExec.exe でこの資格情報を 3 番目のコンピューター (コンピューター C) に委任することはできません。 これは、Windows Credential Guard が有効になっているシナリオに適用されます。このシナリオでは、制約付き委任の設定が必要となります。
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
