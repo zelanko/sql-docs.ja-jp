@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633262"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392830"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 サーバー レベルの資格情報を作成します。 資格情報は、SQL Server 外部のリソースへの接続に必要な認証情報を含むレコードです。 通常、資格情報には Windows ユーザーとパスワードが含まれます。 たとえば、どこかにデータベースのバックアップを保存するには、その場所にアクセスするための特別な資格情報を SQL Server で提供することが必要な場合があります。 詳しくは、「[資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)」をご覧ください。
 
@@ -51,6 +51,8 @@ WITH IDENTITY = 'identity_name'
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 *credential_name* 作成する資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。 
@@ -65,7 +67,7 @@ IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続すると�
 
 SECRET **='** _secret_ **'** 送信の認証に必要なシークレットを指定します。
 
-Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後述の C の例を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 後述の D の例を参照してください。 Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)」をご覧ください。
+Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の *\<Client ID>* (ハイフンなし) と *\<Secret>* を間のスペースなしで渡す必要があります。 後述の C の例を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 後述の D の例を参照してください。 Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)」をご覧ください。
 
 FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* *拡張キー管理プロバイダー (EKM)* の名前を指定します。 キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。
 
@@ -117,7 +119,7 @@ ADD CREDENTIAL CredentialForEKM;
 次の例では、**SQL Server コネクタ for Microsoft Azure Key Vault** を使って Azure Key Vault にアクセスするときに使う、[!INCLUDE[ssDE](../../includes/ssde-md.md)]用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コネクタの完全な使用例については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **CREATE CREDENTIAL** の **IDENTITY** 引数には、資格情報コンテナー名が必要です。 **CREATE CREDENTIAL** の **SECRET** 引数には、\<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を、間にスペースを入れずに一緒に渡す必要があります。
+> **CREATE CREDENTIAL** の **IDENTITY** 引数には、資格情報コンテナー名が必要です。 **CREATE CREDENTIAL** の **SECRET** 引数には、 *\<Client ID>* (ハイフンなし) と *\<Secret>* を、間にスペースを入れずに一緒に渡す必要があります。
 
  次の例で、 **クライアント ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) はハイフンを削除した文字列 `EF5C8E094D2A4A769998D93440D8115D` として入力し、 **シークレット** は文字列 *SECRET_DBEngine*として入力しています。
 

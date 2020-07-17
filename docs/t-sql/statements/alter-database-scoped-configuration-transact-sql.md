@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629169"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279498"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81629169"
 
 このコマンドを使うと、複数のデータベース構成設定を**個別のデータベース** レベルで設定できます。 
 
-次の設定は、[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされています。 
+[引数](#arguments)セクションの各設定の**適用対象**行で示されているように、次の設定は [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされています。 
 
 - プロシージャ キャッシュをクリアします。
 - プライマリ データベースに対して、MAXDOP パラメーターを特定のデータベースに最適な内容に基づいて任意の値 (1、2、...) に設定し、(クエリ レポートなどに) 使用されるすべてのセカンダリ データベースに対して別の値 (0 など) を設定します。
@@ -56,6 +56,7 @@ ms.locfileid: "81629169"
 - 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
 - 再開可能なインデックス操作を一時停止してから、SQL Server エンジンによって自動的に中止されるまでの一時停止される時間を分単位で指定します。
+- 統計の非同期更新で優先度が低いロックの待機を有効または無効にします
 
 この設定は、Azure Synapse Analytics (旧称 SQL DW) でのみ使用できます。
 - ユーザー データベースの互換性レベルを設定する
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を `BATCH_MODE_MEMORY_GRANT_FEEDBACK` に変更しました
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を `BATCH_MODE_ADAPTIVE_JOINS` に変更しました
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -189,6 +191,8 @@ PRIMARY
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 データベースの互換性レベルに関係なく、クエリ最適化修正プログラムを有効または無効にします。 既定値は **OFF** です。特定のバージョンで利用できる最高の互換性レベルが導入された後に公開されたクエリ最適化修正プログラムが無効になります (RTM 後)。 これを **ON** に設定することは、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。
+
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > これをクエリ レベルで行うには、**QUERYTRACEON** [クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を追加してください。
@@ -397,7 +401,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 [行レベル セキュリティ](../../relational-databases/security/row-level-security.md) (RLS) 述語がユーザー クエリ全体の実行プランのカーディナリティに影響するかどうかを制御できます。 ISOLATE_SECURITY_POLICY_CARDINALITY が ON の場合、RLS 述語は、実行プランのカーディナリティに影響しません。 たとえば、100 万行を含むテーブルがあり、RLS 述語で、クエリを発行する特定のユーザーに対して結果を 10 行に制限する場合について考えてみましょう。 このデータベース スコープ構成が OFF に設定されている場合、この述語の推定カーディナリティは 10 になります。 このデータベース スコープ構成が ON の場合、クエリ最適化により 100 万行と推定されます。 ほとんどのワークロードでは、既定値を使用することをお勧めします。
 
-DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **適用対象**:Azure Synapse Analytics (旧称 SQL DW) のみ
 
@@ -405,13 +409,19 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 |互換性レベル    |   説明|  
 |-----------------------|--------------|
-|**AUTO**| 既定値。  この値は、サポートされている最新の互換性レベルと同じです。|
+|**AUTO**| 既定値。  この値は、Synapse Analytics エンジンによって自動的に更新されます。  現在の値は 20 です。|
 |"**10**"| 互換性レベルのサポートを導入する前に、Transact-SQL とクエリ処理の動作を実行します。|
 |**20**| 1 番目の互換性レベル。ゲート Transact-SQL とクエリ処理の動作が含まれます。 |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**適用対象**:Azure SQL Database のみ (機能はパブリック プレビュー段階です)
+
+統計の非同期更新が有効になっている場合、この構成を有効にすると、高同時実行のシナリオで他のセッションのブロックを防ぐために、統計を更新するバックグラウンド要求が優先度の低いキューの Sch-M ロックを待機するようになります。 詳細については、「[AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async)」を参照してください。
+
 ## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-データベースに対する `ALTER ANY DATABASE SCOPE CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
+データベースに対する `ALTER ANY DATABASE SCOPED CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
 
 ## <a name="general-remarks"></a>全般的な解説
 
@@ -419,7 +429,7 @@ DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 このステートメントを実行すると、現在のデータベースのプロシージャ キャッシュが消去されます。つまり、すべてのクエリを再コンパイルする必要があります。
 
-3 部構成の名前のクエリの場合、現在のデータベース コンテキストでコンパイルされる SQL モジュール (プロシージャ、関数、トリガーなど) ではなく、クエリに対する現在のデータベース接続の設定が適用されます。そのため、そのような設定が置かれているデータベースのオプションが使用されます。
+3 部構成の名前のクエリの場合、現在のデータベース コンテキストでコンパイルされる SQL モジュール (プロシージャ、関数、トリガーなど) ではなく、クエリに対する別のデータベース接続の設定が適用されます。そのため、そのような設定が置かれているデータベースのオプションが使用されます。 同様に、統計を非同期的に更新する場合は、統計が存在するデータベースの ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY の設定が使用されます。
 
 `ALTER_DATABASE_SCOPED_CONFIGURATION` イベントは、DDL トリガーの始動に使用できる DDL イベントとして追加されます。`ALTER_DATABASE_EVENTS` トリガー グループの子です。
 

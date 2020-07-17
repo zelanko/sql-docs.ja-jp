@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: b885504d8431be2df9ab0c841b47fe0eb7019932
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728639"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279628"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |
+| :-------- | :---- |
 |製品名|SQL Server|  
 |イベント ID|17207|  
 |イベント ソース|MSSQLSERVER|  
@@ -47,7 +47,7 @@ FileMgr::StartSecondaryDataFiles: Operating system error 2(The system cannot fin
 
 ユーザー データベースでこのようなエラーが発生した場合、そのデータベースは RECOVERY_PENDING 状態のままになり、アプリケーションはこのデータベースにアクセスできなくなります。 システム データベースでこのようなエラーが発生した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは起動せず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのインスタンスに接続することはできません。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースがオフラインになることもあります。
 
-問題が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FileStream ファイル グループに関連している場合は、ファイル名の代わりに完全なディレクトリ パスのみが表示されていることがわかります。 例を次に示します。 
+問題が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FileStream ファイル グループに関連している場合は、ファイル名の代わりに完全なディレクトリ パスのみが表示されていることがわかります。 次に例を示します。 
 ```
 Error: 17207, Severity: 16, State: 1.
 STREAMFCB::Startup: Operating system error 2(The system cannot find the file specified.) occurred while creating or opening file 'C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\DATA\bpa_files_test_fs_1\bpa_files_test_fs_1'. Diagnose and correct the operating system error, and retry the operation.
@@ -68,24 +68,26 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
    - FCB::RemoveAlternateStreams
   
       
-1. 状態情報によって、このエラー メッセージを生成する可能性がある関数内の複数の場所が識別されます
-1. ファイルの完全な物理パス
-1. ファイルに対応するファイル ID
+1. 状態情報によって、このエラー メッセージを生成する可能性がある関数内の複数の場所が識別されます。
+1. ファイルの完全な物理パス。
+1. ファイルに対応するファイル ID。
 1. オペレーティング システムのエラー コードとエラーの説明。 場合によっては、エラー コードのみが表示されます。
  
 これらのエラー メッセージに表示されるオペレーティング システムのエラー情報は、エラー 17204 につながる根本原因です。 これらのエラー メッセージのよくある原因は、アクセス許可の問題か、ファイルへの正しくないパスです。
 
 
-## <a name="user-action"></a>ユーザーの操作  
-1. エラー 17207 を解決するには、関連付けられているオペレーティング システムのエラー コードを理解し、そのエラーを診断する必要があります。 オペレーティング システムのエラー状態が解決されたら、(ALTER DATABASE SET ONLINE などを使用して) データベースを再起動するか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動して、影響を受けたデータベースをオンラインにすることができます。 場合によっては、オペレーティング システムのエラーを解決できないことがあります。 その場合、特定の是正措置を講じる必要があります。 このセクションでは、それらの操作について説明します。
+## <a name="user-action"></a>ユーザー アクション  
+1. エラー 17207 を解決するには、関連付けられているオペレーティング システムのエラー コードを理解し、そのエラーを診断する必要があります。 オペレーティング システムのエラー状態が解決されたら、(ALTER DATABASE SET ONLINE などを使用して) データベースを再起動するか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動して、影響を受けたデータベースをオンラインにすることができます。 場合によっては、このオペレーティング システム エラーを解決できないことがあります。その場合は、特定の是正措置を講じる必要があります。 このセクションでは、それらの操作について説明します。
 1. 17207 エラー メッセージにエラー コードのみが含まれていて、エラーの説明が含まれていない場合は、オペレーティング システムのシェルから次のコマンドを使用して、エラー コードの解決を試みることができます: net helpmsg <error code> 。 エラー コードとして 8 桁の状態コードを取得している場合は、「[HRESULT を Win32 エラー コードに変換する方法](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133)」などの情報源を参照して、これらの状態コードを OS エラーにデコードできます。
 1. ```Access is Denied``` オペレーティング システム エラー = 5 を取得している場合は、次の方法を検討してください。
-   -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ [SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前] に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
+   -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ (SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前) に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
    -  現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行に使用されているユーザー アカウントを確認します。 Windows タスク マネージャーを使用して、この情報を取得できます。 実行可能ファイル "sqlservr.exe" の "ユーザー名" の値を探します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを最近変更した場合は、SQL Server 構成マネージャー ユーティリティを使用してこの操作を実行する方法がサポートされています。 これについて詳しくは、「[SQL Server 構成マネージャー](../sql-server-configuration-manager.md)」をご覧ください。 
-   -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) などのツールを使用して、SQL Server インスタンスのサービス開始アカウント [またはサービス SID]、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
+   -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) などのツールを使用して、SQL Server インスタンスのサービス開始アカウント (またはサービス SID)、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
 
       SQL Server によって、ALTER DATABASE または CREATE DATABASE 操作を実行するログインのユーザー資格情報が偽装されている場合は、Process Monitor ツールに次の情報が表示されます (一例)。
-        ```Date & Time:      3/27/2010 8:26:08 PM
+
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -98,19 +100,21 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
-1. If you are getting ```The system cannot find the file specified``` OS error = 3:
-   - Review the complete path from the error message
-   - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer
-   - Review the Windows Event log to find out if any problems exist with this disk drive
-   - If the path is incorrect and if this database already exists in the system, you can change the database file paths using the methods explained in the topic [Move Database Files](../databases/move-database-files.md). You may have to use this procedure, especially for system database files which encounter 17204 or 17207 and you are working through a disaster recovery scenario where the specified disk drives are unavailable. This topic also explains how you can identify the current location of the various system databases [master, model, tempdb, msdb and mssqlsystemresource].
-   - If you see this error because the database files are missing, you have to restore the database from a valid backup.
-     - If the database file associated with the error belongs to a secondary filegroup, then you can optionally mark that filegroup offline, bring the database online and then perform a restore of that filegroup alone. For more information, refer to the OFFLINE section of the topic [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
-     - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
-   - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
-1. If you're getting the ```The process cannot access the file because it is being used by another process``` operating system error = 32:
-   - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
-   - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) )
-   - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally, this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.
+1. `The system cannot find the file specified` オペレーティング システム エラー = 3 が表示された場合:
+   - エラー メッセージで完全なパスを確認します。
+   - エクスプローラーでディスク ドライブとフォルダー パスが表示され、アクセス可能であることを確認します。
+   - Windows イベントログを確認して、このディスク ドライブに問題があるかどうかを調べます。
+   - パスが正しくない場合、またこのデータベースがシステムに既に存在する場合は、「[データベース ファイルの移動](../databases/move-database-files.md)」の記事で説明されている方法を使用してデータベース ファイルのパスを変更できます。 特に 17204 または 17207 が発生しているシステム データベース ファイルで、指定されたディスク ドライブが使用できないディザスター リカバリー シナリオに取り組んでいる場合に、この手順を使用する必要があります。 このトピックでは、さまざまなシステム データベース (master、model、tempdb、msdb、および mssqlsystemresource.mdf) の現在の場所を特定する方法についても説明します。
+   - データベース ファイルが見つからないためにこのエラーが表示される場合は、有効なバックアップからデータベースを復元する必要があります。
+     - エラーに関連付けられているデータベース ファイルがセカンダリ ファイル グループに属している場合は、必要に応じて、ファイル グループをオフラインにし、データベースをオンラインにしてから、そのファイル グループの復元を単独で実行します。 詳細については、「[ALTER DATABASE (Transact-SQL) の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」のオフラインに関するセクションを参照してください。
+     - エラーを生成したファイルがトランザクション ログ ファイルである場合は、[CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) に関するトピックの "FOR ATTACH" と "FOR ATTACH_REBUILD_LOG" に関するセクションの情報を参照して、欠落しているトランザクション ログ ファイルを再作成する方法を確認してください。
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらの場所にあるデータベース ファイルへのアクセスを試行する前に、ディスクまたはネットワークの場所 (iSCSI ドライブなど) が使用可能であることを確認してください。 必要に応じて、クラスター アドミニストレーターまたはサービス コントロール マネージャーで必要な依存関係を作成します。
+
+1. `The process cannot access the file because it is being used by another process` オペレーティング システム エラー = 32 が表示された場合:
+   - Windows Sysinternals の[プロセス エクスプローラー](https://docs.microsoft.com/sysinternals/downloads/process-explorer)や[ハンドル](https://docs.microsoft.com/sysinternals/downloads/handle)を使用して、別のプロセスまたはサービスがこのデータベース ファイルに対して排他的ロックを取得しているかどうかを確認します。
+   - プロセスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルにアクセスしていれば、それを停止します。 一般的な例としては、ウイルス対策プログラムがあります (次の[サポート技術情報の記事](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)を参照してください)。
+   - クラスター環境で、以前に所有していたノードの sqlservr.exe プロセスによって、データベース ファイルへのハンドルが実際に解放されていることを確認します。 通常、このような状況は起こりませんが、クラスターまたは I/O パスが正しく構成されていない場合に、このような問題が発生する可能性があります。
   

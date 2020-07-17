@@ -1,21 +1,20 @@
 ---
 title: Azure Data Studio とは
-titleSuffix: Azure Data Studio
 description: Azure Data Studio は、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse を管理するために、Windows、macOS、Linux で実行される無償の軽量ツールです。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75956495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771927"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
@@ -25,17 +24,17 @@ Azure Data Studio では、IntelliSense、コード スニペット、ソース�
 
 Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.md)」(Azure Data Studio の FAQ) を参照してください。
 
-**[ダウンロードしてインストールする[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[Azure Data Studio のダウンロードとインストール](download.md)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>IntelliSense を使用した SQL コード エディター
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、組み込み機能によって日々の作業を容易にする、キーボードに重点を置いた最新の SQL コーディング エクスペリエンスが提供されます。その組み込み機能には、複数のタブ ウィンドウ、充実した SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、ソース管理の統合 (Git) などがあります。 オンデマンドの SQL クエリを実行し、結果をテキスト、JSON、または Excel として表示し、保存します。 使い慣れたオブジェクト ブラウズ エクスペリエンスで、データの編集、お気に入りのデータベース接続の整理、データベース オブジェクトの参照を行います。 SQL エディターの使用方法については、「[SQL エディターを使用してデータベース オブジェクトを作成する](tutorial-sql-editor.md)」を参照してください。
+Azure Data Studio では、組み込み機能によって日々の作業を容易にする、キーボードに重点を置いた最新の SQL コーディング エクスペリエンスが提供されます。その組み込み機能には、複数のタブ ウィンドウ、充実した SQL エディター、IntelliSense、キーワード補完、コード スニペット、コード ナビゲーション、ソース管理の統合 (Git) などがあります。 オンデマンドの SQL クエリを実行し、結果をテキスト、JSON、または Excel として表示し、保存します。 使い慣れたオブジェクト ブラウズ エクスペリエンスで、データの編集、お気に入りのデータベース接続の整理、データベース オブジェクトの参照を行います。 SQL エディターの使用方法については、「[SQL エディターを使用してデータベース オブジェクトを作成する](tutorial-sql-editor.md)」を参照してください。
 
 ## <a name="smart-sql-code-snippets"></a>スマート SQL コード スニペット
 
 SQL コード スニペットにより、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールを作成するため、および既存のデータベース オブジェクトを更新するための適切な SQL 構文が生成されます。 スマート スニペットを使用して、開発またはテストを目的としたデータベースのコピーをすばやく作成したり、CREATE および INSERT スクリプトを生成して実行したりできます。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、カスタム SQL コード スニペットを作成する機能も用意されています。 詳細については、「[コード スニペットの作成と使用](code-snippets.md)」を参照してください。
+Azure Data Studio には、カスタム SQL コード スニペットを作成する機能も用意されています。 詳細については、「[コード スニペットの作成と使用](code-snippets.md)」を参照してください。
 
 ## <a name="customizable-server-and-database-dashboards"></a>カスタマイズ可能なサーバーとデータベースのダッシュボード
 
@@ -47,13 +46,13 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ## <a name="integrated-terminal"></a>統合ターミナル
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ユーザー インターフェイス内の [統合ターミナル] ウィンドウにあるお気に入りのコマンドライン ツール (Bash、PowerShell、sqlcmd、bcp、ssh など) を使用できます。 統合ターミナルの詳細については、「[統合ターミナル](integrated-terminal.md)」を参照してください。
+Azure Data Studio ユーザー インターフェイス内の [統合ターミナル] ウィンドウにあるお気に入りのコマンドライン ツール (Bash、PowerShell、sqlcmd、bcp、ssh など) を使用できます。 統合ターミナルの詳細については、「[統合ターミナル](integrated-terminal.md)」を参照してください。
 
 ## <a name="extensibility-and-extension-authoring"></a>拡張性と拡張機能の作成
 
-基本インストールの機能を拡張することで、[!INCLUDE[name-sos](../includes/name-sos-short.md)] のエクスペリエンスを向上させることができます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、データ管理アクティビティの機能拡張ポイントと、拡張機能の作成のサポートが提供されます。
+基本インストールの機能を拡張することで、Azure Data Studio のエクスペリエンスを向上させることができます。 Azure Data Studio では、データ管理アクティビティの機能拡張ポイントと、拡張機能の作成のサポートが提供されます。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] における機能拡張の詳細については、[機能拡張](extensibility.md)に関するページを参照してください。
+Azure Data Studio 機能拡張の詳細については、[拡張機能](extensibility.md)に関するページを参照してください。
 拡張機能の作成の詳細については、[拡張機能の作成](extension-authoring.md)に関するページを参照してください。
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) との機能の比較
@@ -80,7 +79,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ### <a name="shell"></a>Shell
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure サインイン|はい|はい|
 |ダッシュボード|はい||
@@ -102,7 +101,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ### <a name="query-editor"></a>クエリ エディター
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |グラフ ビューアー|はい||
 |結果を CSV、JSON、XLSX にエクスポート|はい||
@@ -121,7 +120,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Linux|はい||
 |macOS|はい||
@@ -129,7 +128,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ### <a name="data-engineering"></a>Data Engineering
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |外部テーブルの作成ウィザード|はい||
 |HDFS 統合|はい||
@@ -137,7 +136,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ### <a name="database-administration"></a>データベースの管理
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |バックアップ/復元|はい|はい|
 |ビッグ データ クラスターのサポート|はい||
@@ -166,7 +165,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ## <a name="next-steps"></a>次のステップ
 
-- [ダウンロードしてインストールする[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Azure Data Studio のダウンロードとインストール](download.md)
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
 

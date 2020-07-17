@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5228 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: ff8fb262b643390f2914a4a5e6c42dcc887206f8
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728619"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279103"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|5120|  
 |イベント ソース|MSSQLSERVER|  
@@ -33,20 +33,22 @@ ms.locfileid: "81728619"
 |メッセージ テキスト|テーブル エラー:物理ファイル "%.*ls" を開けません。 オペレーティング システム エラー %d: "%ls"。|  
   
 ## <a name="explanation"></a>説明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ファイルを開けませんでした。  メッセージに示されたオペレーティング システム エラーにより、エラーのより具体的な根本原因が示されます。 このエラーは、[17204](mssqlserver-17204-database-engine-error.md) や [17207](mssqlserver-17207-database-engine-error.md) などの他のエラーと共に表示されることがよくあります
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ファイルを開けませんでした。  メッセージに示されたオペレーティング システム エラーにより、エラーのより具体的な根本原因が示されます。 このエラーは、[17204](mssqlserver-17204-database-engine-error.md) や [17207](mssqlserver-17207-database-engine-error.md) などの他のエラーと共に表示されることがよくあります。
   
-## <a name="user-action"></a>ユーザーの操作  
+## <a name="user-action"></a>ユーザー アクション  
   
   オペレーティング システム エラーを診断して修正してから、操作を再試行してください。 Microsoft で領域の発生している製品の領域を絞り込むのに役立つ、複数の状態があります。 
   
 ### <a name="access-is-denied"></a>アクセスが拒否されました 
-```Access is Denied``` オペレーティング システム エラー = 5 を取得している場合は、次の方法を検討してください。
+`Access is Denied` オペレーティング システム エラー = 5 を取得している場合は、次の方法を検討してください。
    -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ [SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前] に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
    -  現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行に使用されているユーザー アカウントを確認します。 Windows タスク マネージャーを使用して、この情報を取得できます。 実行可能ファイル "sqlservr.exe" の "ユーザー名" の値を探します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを最近変更した場合は、[SQL Server 構成マネージャー](../sql-server-configuration-manager.md) ユーティリティを使用してこの操作を実行する方法がサポートされています。 
    -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) などのツールを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのサービス開始アカウント [またはサービス SID]、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
 
       [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ALTER DATABASE または CREATE DATABASE 操作を実行するログインのユーザー資格情報が偽装されている場合は、Process Monitor ツールに次の情報が表示されます (一例)。
-        ```Date & Time:      3/27/2010 8:26:08 PM
+      
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -59,28 +61,29 @@ ms.locfileid: "81728619"
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
   
-### Attaching Files that Reside on a Network-attached storage  
-If you cannot re-attach a database that resides on network-attached storage, a message like this may be logged in the Application log:
+### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>ネットワークに接続された記憶域に存在するファイルをアタッチする  
+ネットワークに接続された記憶域に存在するデータベースを再アタッチできない場合は、このようなメッセージがアプリケーション ログに記録される可能性があります。
 
-```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
+`Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).`
 
-This problem occurs because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resets the file permissions when the database is detached. When you try to reattach the database, a failure occurs because of limited share permissions.
+この問題が発生するのは、データベースがデタッチされたときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってファイルのアクセス許可がリセットされるためです。 データベースを再アタッチしようとすると、共有のアクセス許可が制限されているためにエラーが発生します。
 
-To resolve, follow these steps:
-1. Use the -T startup option to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this startup option to turn on trace flag 1802 in [SQL Server Configuration Manager](../sql-server-configuration-manager.md) (see [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) for information on 1802). For more information about how to change the startup parameters, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+解決するには、次の手順に従ってください。
+1. -T スタートアップ オプションを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始します。 このスタートアップ オプションを使用して、[SQL Server 構成マネージャー](../sql-server-configuration-manager.md) でトレース フラグ 1802 を有効にします (1802 の詳細については、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)を参照してください)。 スタートアップ パラメーターの変更方法の詳細については、「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
 
-2. Use the following command to detach the database.
-```tsql
- exec sp_detach_db DatabaseName
- go 
-```
+2. 次のコマンドを使用して、データベースをデタッチします。
+   ```sql
+    exec sp_detach_db DatabaseName
+    go 
+   ```
 
 3. 次のコマンドを使用して、データベースを再アタッチします。
-```tsql
-exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
-go
-```
+   ```sql
+   exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
+   go
+   ```
  
