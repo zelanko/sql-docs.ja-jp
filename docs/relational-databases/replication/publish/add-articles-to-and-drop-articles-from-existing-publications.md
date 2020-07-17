@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286535"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159920"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>既存のパブリケーションでのアーティクルの追加および削除
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   パブリケーションを作成したら、アーティクルを追加および削除できます。 アーティクルはいつでも追加できますが、アーティクルを削除するために必要な操作は、レプリケーションの種類と、アーティクルを削除するタイミングによって異なります。  
   
 ## <a name="adding-articles"></a>アーティクルの追加  
@@ -59,7 +59,7 @@ ms.locfileid: "76286535"
 ## <a name="dropping-articles"></a>アーティクルのドロップ  
  アーティクルはパブリケーションからいつでも削除できます。ただし、次の動作について考慮する必要があります。  
   
--   パブリケーションからアーティクルを削除しても、パブリケーション データベースからオブジェクトが削除されたり、サブスクリプション データベースから対応するオブジェクトが削除されるわけではありません。 必要に応じて、DROP \<Object> を使用し、これらのオブジェクトを削除します。 パブリッシュされた他のアーティクルに外部キー制約を通じて関連付けられているアーティクルを削除するときは、手動またはオンデマンド スクリプトの実行により、サブスクライバーでテーブルを削除することをお勧めします。適切な DROP \<Object> ステートメントを含むスクリプトを指定してください。 詳細については、「[同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)」を参照してください。  
+-   パブリケーションからアーティクルを削除しても、パブリケーション データベースからオブジェクトが削除されたり、サブスクリプション データベースから対応するオブジェクトが削除されるわけではありません。 必要に応じて、DROP \<Object> を使用し、これらのオブジェクトを削除します。 パブリッシュされた他のアーティクルに外部キー制約を通じて関連付けられているアーティクルを削除する場合は、手動で、またはオンデマンド スクリプトの実行により、サブスクライバーでテーブルを削除することをお勧めします。適切な DROP \<Object> ステートメントを含むスクリプトを指定してください。 詳細については、「[同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)」を参照してください。  
   
 -   互換性レベル 90RTM 以上のマージ パブリケーションの場合、アーティクルはいつでも削除できますが、新しいスナップショットが必要です。 追加として:  
   

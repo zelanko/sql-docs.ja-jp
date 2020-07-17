@@ -16,15 +16,15 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c3ee49fac628bc733ac5394d47e5a9187081a1a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288239"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159970"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
   
  **このトピックの内容**  
@@ -95,7 +95,7 @@ ms.locfileid: "76288239"
   
 2.  プロファイルの横にあるプロパティ ボタン **[...]** をクリックします。  
   
-3.  **[\<ProfileName> プロファイル プロパティ]** ダイアログ ボックスにパラメーターと値が表示されます。  
+3.  **[\<ProfileName> プロファイルのプロパティ]** ダイアログ ボックスにパラメーターと値が表示されます。  
   
     -   ユーザー定義プロファイルのパラメーターは編集できます。事前に定義されているシステム プロファイルのパラメーターは編集できません。  
   

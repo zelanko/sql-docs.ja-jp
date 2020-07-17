@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003434"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197439"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果のカーディナリティや行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
@@ -53,8 +54,8 @@ DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデー�
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>構文  
-  
+## <a name="syntax"></a>構文
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>引数  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
  *table_or_indexed_view_name*  
  統計情報を表示するテーブルまたはインデックス付きビューの名前。  
   
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- これらのオプションを 1 つ以上指定すると、ステートメントによって返される結果セットが、指定のオプションに合わせて制限されます。 オプションを指定しないと、すべての統計情報が返されます。  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] これらのオプションを 1 つ以上指定すると、ステートメントによって返される結果セットが、指定のオプションに合わせて制限されます。 オプションを指定しないと、すべての統計情報が返されます。  
+
  STATS_STREAM は[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>結果セット  
+## <a name="result-sets"></a>結果セット
+
 次の表は、STAT_HEADER を指定した場合に結果セットに返される列を示しています。
   
 |列名|説明|  
@@ -130,14 +134,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 
 統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](#histogram)および[密度ベクトル](#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できず、*updated* 列は NULL になります。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
   
-## <a name="histogram"></a><a name="histogram"></a> ヒストグラム  
+## <a name="histogram"></a><a name="histogram"></a> ヒストグラム
+
 ヒストグラムでは、データセットの個別の値ごとに出現頻度を測定します。 クエリ オプティマイザーでは、統計オブジェクトの最初のキー列の列値に基づいてヒストグラムを計算し、行を統計的にサンプリングするかテーブルまたはビュー内のすべての行でフル スキャンを実行することによって列値を選択します。 サンプリングされた行のセットからヒストグラムを作成する場合、格納される行の総数および個別の値の数は推定値であり、必ずしも整数にはなりません。
   
 ヒストグラムを作成するには、クエリ オプティマイザーで列値を並べ替え、個別の列値ごとに一致する値の数を計算し、列値を最大 200 の連続したヒストグラム区間に集計します。 各区間には、上限の列値までの列値の範囲が含まれます。 この範囲には、境界値の間 (境界値自体は除く) のすべての有効な列値が含まれます。 格納される最小の列値は、最初のヒストグラム区間の上限境界値になります。
   
 次の図は、6 つの区間があるヒストグラムを示しています。 最初の上限境界値の左側にある領域が最初の区間です。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![ヒストグラム](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 ヒストグラムの各区間は、以下のように表されます。
 -   太線は、上限境界値 (RANGE_HI_KEY) およびその出現回数 (EQ_ROWS) を表します。  

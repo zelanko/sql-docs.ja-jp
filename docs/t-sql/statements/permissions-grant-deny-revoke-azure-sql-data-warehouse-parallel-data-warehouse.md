@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626056"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197429"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   セキュリティ保護可能なリソース (データベース、テーブル、ビューなど) からセキュリティ プリンシパル (ログイン、データベース ユーザー、またはデータベース ロール) にアクセス許可 (**UPDATE** など) を付与または拒否するには、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** および **DENY** ステートメントを使用します。 アクセス許可を許可または拒否するには、**REVOKE** を使用します。  
   
@@ -81,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  1 つまたは複数のアクセス許可を付与、拒否、または取り消します。  
   
- ON [ \<class_type> :: ] *securable***ON** 句は、アクセス許可を許可、拒否、または削除するセキュリティ保護可能なパラメーターを記述します。  
+ ON [ \<class_type> :: ] *securable* **ON** 句は、アクセス許可を許可、拒否、または削除するセキュリティ保護可能なパラメーターを記述します。  
   
  \<class_type> セキュリティ保護可能なクラス型。 これは、**LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE**、または **USER** です。 **SERVER**_class\_type_ にアクエス許可を付与することもできますが、**SERVER** は、これらのアクセス許可に対して指定されません。 **DATABASE** は、アクセス許可に **DATABASE** という単語が含まれる場合 (たとえば **ALTER ANY DATABASE**) 指定されません。 *class_type* が指定されておらず、アクセス許可のタイプがサーバーまたはデータベースのクラスに制限されていない場合、クラスは **OBJECT** と見なされます。  
   

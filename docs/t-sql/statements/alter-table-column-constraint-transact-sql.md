@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a54784e777f85fea73036df3f0c6ec0b23be878e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760984"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381236"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "85760984"
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  CONSTRAINT  
  PRIMARY KEY、UNIQUE、FOREIGN KEY、または CHECK 制約の定義の開始を指定します。  
   
@@ -109,7 +111,7 @@ ms.locfileid: "85760984"
  *ref_column*  
  新しい FOREIGN KEY 制約によって参照される、かっこで囲んだ列です。  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行に参照関係があり、参照先の行が親テーブルから削除された場合に、変更対象のテーブル内の行に対して実行する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
@@ -132,9 +134,9 @@ ms.locfileid: "85760984"
   
  **Vendor** テーブルの行に対して DELETE ステートメントを実行し、**ProductVendor.VendorID** に対して ON DELETE CASCADE アクションが指定されている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は **ProductVendor** テーブルの 1 つ以上の従属行を調べます。 従属行がある場合、**ProductVendor** テーブルの従属行が、**Vendor** テーブルで参照される行と共に削除されます。  
   
- これに対し、NO ACTION を指定した場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor **テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、** ではエラーが発生し、**Vendor** テーブルの行に対する削除操作はロールバックされます。  
+ これに対し、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する削除操作はロールバックされます。  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、変更対象のテーブル内の行に対して発生する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
@@ -157,7 +159,7 @@ ms.locfileid: "85760984"
   
  UPDATE ステートメントを **Vendor** テーブルの行で実行した場合、ON UPDATE CASCADE 操作が **ProductVendor.VendorID** に指定されていると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では **ProductVendor** テーブルに 1 つ以上の従属行があるかどうかが確認されます。 従属行がある場合、**ProductVendor** テーブルの従属行が、**Vendor** テーブルで参照される行と共に更新されます。  
   
- これに対して、NO ACTION を指定した場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ProductVendor **テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、** ではエラーが発生し、**Vendor** テーブルの行に対する更新操作はロールバックされます。  
+ これに対して、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する更新操作はロールバックされます。  
   
  NOT FOR REPLICATION  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  

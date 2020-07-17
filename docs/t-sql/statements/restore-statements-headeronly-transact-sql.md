@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262102"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279510"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|バックアップ セットの失効日。|  
 |**Compressed**|**BIT(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか:<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**Position**|**smallint**|ボリューム内でのバックアップ セットの位置 (FILE = のオプションで使用)。|  
-|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> 論理デバイス名とデバイス番号は **sys.backup_devices** です。詳細については、「[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)」を参照してください。|  
+|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> URL<br /><br /> **9** = 論理<br /><br /> **109** = 物理<br /><br />  論理デバイス名とデバイス番号は **sys.backup_devices** です。詳細については、「[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)」を参照してください。|  
 |**UserName**|**nvarchar(128)**|バックアップ操作を実行したユーザーの名前。|  
 |**ServerName**|**nvarchar(128)**|バックアップ セットを作成したサーバーの名前。|  
 |**DatabaseName**|**nvarchar(128)**|バックアップの作成元であるデータベースの名前。|  
@@ -151,12 +151,12 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> 使用される暗号化の種類:証明書キーまたは非対称キー。 バックアップが暗号化されていない場合、この値は NULL となります。|  
   
 > [!NOTE]  
->  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が ' **_Password Protected_** ' に設定され、他の列は NULL になります。  
+>  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が '**_Password Protected_**' に設定され、他の列は NULL になります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クライアントは RESTORE HEADERONLY を使用して、特定のバックアップ デバイス上のすべてのバックアップについて、バックアップ ヘッダーに関するすべての情報を取得できます。 バックアップ デバイス上にあるバックアップごとに、ヘッダー情報が 1 行のデータとしてサーバーから送信されます。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883084"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279338"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85883084"
 
 ### <a name="service-master-key"></a>サービス マスター キー
   
- サービス マスター キーは、SQL Server 暗号化階層のルートになります。 SMK は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。
+ サービス マスター キーは、SQL Server 暗号化階層のルートになります。 SMK は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。
 
 サービス マスター キーを作成した Windows サービス アカウント、またはサービス アカウント名とサービス アカウントのパスワードの両方にアクセスできるプリンシパルだけが、サービス マスター キーを開くことができます。
 

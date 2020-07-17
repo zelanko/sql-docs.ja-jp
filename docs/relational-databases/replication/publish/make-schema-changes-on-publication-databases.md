@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807627"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160130"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで行った場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
@@ -104,7 +104,7 @@ ms.locfileid: "83807627"
   
 -   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルから削除するには、ALTER TABLE \<Table> DROP \<Column> を実行します。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルからは削除しない場合は、[sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルで保持しておくには、[sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
   

@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689660"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196896"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
@@ -224,9 +224,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
-  
-  
+- [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+- [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+- [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
+- 既定以外のポートを使用している場合は、「[Walkthrough Publisher, Distributor, Subscriber in AlwaysOn Availability Groups](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups)」 (AlwaysOn 可用性グループのパブリッシャー、ディストリビューター、サブスクライバーに関するチュートリアル) を参照してください。

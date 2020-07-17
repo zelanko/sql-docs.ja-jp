@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287629"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159890"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ID 列を管理する方法について説明します。 サブスクライバー挿入がパブリッシャーにレプリケートされる場合、サブスクライバーとパブリッシャーに同じ ID 値が割り当てられないように、ID 列を管理する必要があります。 レプリケーションでは ID の範囲を自動的に管理することも、ID の範囲を手動で管理することもできます。  レプリケーションで使用できる ID 範囲管理オプションについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
  **このトピックの内容**  
@@ -55,7 +55,7 @@ ms.locfileid: "76287629"
   
 -   他のパブリケーションの種類を選択した場合は、ID 範囲の管理を手動に設定する必要があります。  
   
- **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、ID 範囲としきい値を変更します。このダイアログ ボックスは、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+ **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、ID 範囲としきい値を変更します。このダイアログ ボックスは、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 列の管理オプションを指定するには  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76287629"
   
 3.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-4.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[ID 範囲を自動的に管理します]** プロパティを **[自動]** または **[手動]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行している場合)、あるいは **[True]** または **[False]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合) に設定します。  
+4.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、 **[ID 範囲を自動的に管理します]** プロパティを **[自動]** または **[手動]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行している場合)、あるいは **[True]** または **[False]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合) に設定します。  
   
 5.  手順 4. で **[自動]** または **[True]** を選択した場合は、次の表のオプションの値を入力します。 これらの設定の使用方法の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
   
@@ -86,18 +86,18 @@ ms.locfileid: "76287629"
   
 2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[パブリッシャーの範囲サイズ]**、**[サブスクライバーの範囲サイズ]**、および **[範囲しきい値の割合]** プロパティの 1 つ以上の値を入力します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、 **[パブリッシャーの範囲サイズ]** 、 **[サブスクライバーの範囲サイズ]** 、および **[範囲しきい値の割合]** プロパティの 1 つ以上に値を入力します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、**[OK]** をクリックします。  
+5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、アーティクルを作成するときの ID 範囲管理オプションを指定できます。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>トランザクション パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を有効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、**\@identityrangemanagementoption** に **auto** を指定し、パブリッシャーに割り当てる ID 値の範囲を **\@pub_identity_range** に、各サブスクライバーに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **\@identityrangemanagementoption** に **auto** を指定し、パブリッシャーに割り当てる ID 値の範囲を **\@pub_identity_range** に、各サブスクライバーに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
     > [!NOTE]  
     >  ID 列のデータ型のサイズが、すべてのサブスクライバーに割り当てられる ID 範囲の総計をサポートできるだけの大きさであることを確認してください。  
@@ -110,7 +110,7 @@ ms.locfileid: "76287629"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義する際の自動 ID 範囲管理を有効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、**\@identityrangemanagementoption** に **auto** を指定し、サーバー サブスクリプションに割り当てる ID 値の範囲を **\@pub_identity_range** に、パブリッシャーおよび各クライアント サブスクリプションに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **\@identityrangemanagementoption** に **auto** を指定し、サーバー サブスクリプションに割り当てる ID 値の範囲を **\@pub_identity_range** に、パブリッシャーおよび各クライアント サブスクリプションに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
     > [!NOTE]  
     >  特にサーバー サブスクリプションを使用するサブスクライバーの場合、ID 列のデータ型のサイズが、すべてのサブスクライバーに割り当てられる ID 範囲の総計をサポートできるだけの大きさであることを確認してください。  

@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286389"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159630"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>レプリケーション モニターを使用して情報を表示し、タスクを実行する
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 レプリケーション モニターには、さまざまな情報を表示したり、さまざまなタスクを実行したりするためのタブやオプションが多数あります。 この記事では、レプリケーション モニターを使用して、表示したり実行したりすることができる、さまざまな事項について説明します。 
 
 
@@ -97,7 +97,7 @@ ms.locfileid: "76286389"
   
 1.  左ペインでパブリッシャー グループを展開してから、パブリッシャーをクリックします。    
 2.  サブスクリプションの情報を表示するには、 **[サブスクリプション ウォッチ リスト]** タブをクリックします。    
-3.  **[\<SubscriptionType> サブスクリプションの表示]** ボックスから表示するサブスクリプションの種類を選択します。 同期中など、特定の状態のサブスクリプションのみを表示するには、 **[表示]** ボックスからオプションを選択します。    
+3.  **[\<SubscriptionType> サブスクリプションの表示]** ドロップダウン リストから表示するサブスクリプションの種類を選択します。 同期中など、特定の状態のサブスクリプションのみを表示するには、 **[表示]** ボックスからオプションを選択します。    
 4.  サブスクリプションのプロパティを表示および変更するには、サブスクリプションを右クリックしてから、 **[プロパティ]** をクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
   
   

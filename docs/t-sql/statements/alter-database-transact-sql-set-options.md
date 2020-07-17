@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215212"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159740"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -730,17 +730,17 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** | CLEAR [ ALL ]     
 このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。 詳細については、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md)」を参照してください。
 
 ON     
 クエリのストアを有効にします。
 
-OFF [ FORCED ]     
-クエリのストアを無効にします。 既定値は OFF です。 FORCED は省略可能です。 FORCED は、実行中のすべてのクエリ ストア バックグラウンド タスクを中止し、クエリ ストアがオフになっている場合は同期フラッシュをスキップします。 クエリ ストアをできるだけ早くシャットダウンします。 実質的にクエリ ストアを直ちにオフにします。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 には FORCED が導入されています。
+OFF      
+クエリのストアを無効にします。 既定値は OFF です。 
 
 > [!NOTE]  
-> Azure SQL Database 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 ALTER DATABASE [database] SET QUERY_STORE = OFF を実行すると、"'QUERY_STORE=OFF' は、このバージョンの SQL Server ではサポートされていません" という警告が返されます。 
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
 
 CLEAR     
 クエリ ストアの内容を削除します。

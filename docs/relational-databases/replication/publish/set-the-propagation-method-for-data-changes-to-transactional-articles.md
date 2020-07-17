@@ -15,15 +15,15 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 00ab2a45675b237e3e15e340cc3789b1b79cdafc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95c083aeb156915bb9819479619332b3abaa954f
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287553"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159880"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、トランザクション アーティクルへのデータの変更の反映方法を設定する方法について説明します。  
   
  既定では、トランザクション レプリケーションは、各アーティクルのストアド プロシージャ セットを使用して変更内容をサブスクライバーに反映します。 これらのプロシージャはカスタム プロシージャに置換することができます。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "76287553"
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、**[INSERT 配信形式]**、**[UPDATE 配信形式]**、**[DELETE 配信形式]** の各メニューを使用して各操作の反映方法を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、 **[INSERT 配信形式]** 、 **[UPDATE 配信形式]** 、 **[DELETE 配信形式]** の各メニューを使用して各操作の反映方法を指定します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76287553"
   
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-     **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、該当する配信形式メニュー (**[INSERT 配信形式]**、**[UPDATE 配信形式]**、または **[DELETE 配信形式]**) から CALL 構文を選択し、**[INSERT ストアド プロシージャ]**、**[DELETE ストアド プロシージャ]**、または **[UPDATE ストアド プロシージャ]** で使用するプロシージャ名を入力します。 CALL 構文の詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」の「ストアド プロシージャの呼び出し構文」を参照してください。  
+     **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、該当する配信形式メニュー ( **[INSERT 配信形式]** 、 **[UPDATE 配信形式]** 、または **[DELETE 配信形式]** ) から CALL 構文を選択し、 **[INSERT ストアド プロシージャ]** 、 **[DELETE ストアド プロシージャ]** 、または **[UPDATE ストアド プロシージャ]** で使用するプロシージャ名を入力します。 CALL 構文の詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」の「ストアド プロシージャの呼び出し構文」を参照してください。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

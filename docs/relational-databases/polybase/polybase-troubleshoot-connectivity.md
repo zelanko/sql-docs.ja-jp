@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203559"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196184"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -52,7 +52,7 @@ PolyBase では、Kerberos によるセキュリティで保護されたリソ�
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、KDC に戻って TGT を渡し、セキュリティで保護されたその特定のリソースにアクセスするための ST を要求します。 ST は、セキュリティで保護されたサービスの秘密キーを使用して暗号化されます。
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ST を Hadoop に転送し、そのサービスに対してセッションが作成されるように認証を取得します。
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 認証の問題は、上記の 4 つのステップのうちの 1 つ以上に分類されます。 迅速なデバッグを支援するため、PolyBase には、障害発生時点の特定に役立つ統合された診断ツールが導入されています。
 

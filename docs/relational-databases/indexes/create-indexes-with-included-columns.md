@@ -21,12 +21,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9aa3bdca463f48f35b5114d4aa905f05d50dc30f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760819"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279204"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85760819"
   
 ###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 設計上の推奨事項  
   
--   検索や参照に使用される列のみがキー列になるように、大きなサイズのインデックス キーを使用して、非クラスター化インデックスを設計し直します。 クエリをカバーする他のすべての列を非キー列にします。 その結果、クエリをカバーするために必要なすべての列を含むことができますが、インデックス キー自体は小さく、効率的です。  
+-   検索や参照に使用される列のみがキー列になるように、大きなサイズのインデックス キーが含まれる非クラスター化インデックスを設計し直します。 クエリをカバーする他のすべての列を非キー列にします。 その結果、クエリをカバーするために必要なすべての列を含むことができますが、インデックス キー自体は小さく、効率的です。  
   
 -   非クラスター化インデックスに非キー列を含め、現在のインデックス サイズの制限で (最大 32 個のキー列と、最大 1,700 バイトのインデックス キー サイズ) を超えないようにします ([!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] より前は、最大 16 個のキー列と最大 900 バイトのインデックス キーのサイズでした)。 インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では非キー列が考慮されません。  
   

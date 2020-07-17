@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719553"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279638"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 > [!NOTE]
 > 軽量プロファイリングを利用する拡張イベントでは、標準プロファイリング インフラストラクチャが既に有効になっている場合は、標準プロファイルの情報を使用します。 たとえば、`query_post_execution_showplan` を使用する拡張イベント セッションが実行されており、`query_post_execution_plan_profile` を使用する別のセッションが開始されたとします。 2 番目のセッションは、標準プロファイルからの情報を使用し続けます。
+
+> [!NOTE]
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] では、軽量プロファイルが既定でオフになっていますが、`query_post_execution_plan_profile` に依存する XEvent トレースが開始されるときにアクティブ化され、トレースが停止されると再び非アクティブになります。 その結果、`query_post_execution_plan_profile` に基づく Xevent トレースが [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] インスタンスで頻繁に開始および停止される場合は、アクティブ化/非アクティブ化オーバーヘッドの繰り返しを回避するために、トレースフラグ 7412 を使用して、グローバル レベルで軽量プロファイリングをアクティブ化することを強くお勧めします。 
 
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

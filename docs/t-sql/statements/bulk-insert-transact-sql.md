@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767251"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380865"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 *database_name* 指定のテーブルまたはビューが含まれているデータベース名を指定します。 指定しない場合、現在のデータベースが使用されます。
@@ -120,7 +122,7 @@ CHECK_CONSTRAINTS 一括インポート操作中、対象テーブルまたは�
 > [!NOTE]
 > MAXERRORS オプションは制約チェックには適用されません。
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** } データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が **127** より大きいか、**32** 未満) が含まれている場合にのみ当てはまります。 例については、「[コード ページの指定](#d-specifying-a-code-page)」を参照してください。
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } データファイル内のデータのコードページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が **127** より大きいか、**32** 未満) が含まれている場合にのみ当てはまります。 例については、「[コード ページの指定](#d-specifying-a-code-page)」を参照してください。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] の場合、CODEPAGE オプションは Linux 上ではサポートされていません。 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] の場合、CODEPAGE に対して使えるのは **'RAW'** オプションのみです。
@@ -136,7 +138,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** } BULK INSERT で、指定したデータ ファイルの型の値に基づいてインポート操作を実行します。
+DATAFILETYPE **=** { **' char '** \| **' native '** \| **' widechar '** \| **' widenative '** } 指定したデータ ファイルの型の値に基づくインポート操作を BULK INSERT で実行することを指定します。
 
 &nbsp;
 
@@ -322,7 +324,7 @@ BULK INSERT でフォーマット ファイルを使用する場合、指定で�
 
 Azure SQL Database では、大量のデータをインポートする場合、インポートの前にデータベースまたはインスタンスのパフォーマンス レベルを一時的に上げることを検討してください。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 ### <a name="security-account-delegation-impersonation"></a>セキュリティ アカウントの委任 (権限借用)
 

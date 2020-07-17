@@ -15,16 +15,16 @@ ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b26656d1610b2e813aaf82ece3564af6fc544b11
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f2080ec477f25289db266918b90a40ff2041f98
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287599"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160120"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>トランザクション パブリケーションでのストアド プロシージャの実行
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  ストアド プロシージャの単なる定義ではなく、その実行をパブリッシュするように、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで指定できます。 このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、ストアド プロシージャの単なる定義ではなく、その実行をパブリッシュすることを指定します。 このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
  プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76287599"
   
 2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたストアド プロシージャのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、 **[レプリケート]** オプションの次のいずれかの値を指定します。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、 **[レプリケート]** オプションに対して次のいずれかの値を指定します。  
   
     -   **[ストアド プロシージャの実行]**  
   

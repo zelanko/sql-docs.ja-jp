@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774057"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159830"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ AG のディストリビューション データベースを下記の手順に�
    >[!NOTE]
    >任意のレプリケーション ストアド プロシージャ (たとえば、`sp_dropdistpublisher`、`sp_dropdistributiondb`、`sp_dropdistributor`、 `sp_adddistributiondb`、`sp_adddistpublisher`) をセカンダリ レプリカ上で実行するには、レプリカが完全に同期されていることを事前に確認しておきます。
 
-- ディストリビューション データベース AG 内のセカンダリ レプリカはすべて読み取り可能である必要があります。
+- ディストリビューション データベース AG 内のセカンダリ レプリカは、すべて読み取り可能である必要があります。 セカンダリ レプリカが読み取り可能でない場合は、その特定のセカンダリ レプリカの SQL Server Management Studio の [ディストリビューターのプロパティ] にはアクセスできません。ただし、レプリケーションは引き続き正常に行われます。 
 - ディストリビューション データベース AG 内のノードはすべて同じドメイン アカウントを使用して SQL Server エージェントを実行する必要があります。このドメイン アカウントの権限は各ノードで同じである必要があります。
 - 任意のレプリケーション エージェントをプロキシ アカウントで実行する場合、このプロキシ アカウントがディストリビューション データベース AG 内のすべてのノードに割り当てられており、その権限は各ノードで同じである必要があります。
 - ディストリビューション データベース AG に参加しているすべてのレプリカで、ディストリビューターまたはディストリビューション データベースのプロパティを変更します。
@@ -117,12 +117,18 @@ AG のディストリビューション データベースを下記の手順に�
 
    `@working_directory` の値は、DIST1、DIST2、および DIST3 とは無関係のネットワーク パスとする必要があります。
 
-1. DIST2 および DIST3 上で次を実行します。  
+1. DIST2 と DIST3 でレプリカがセカンダリとして読み取り可能である場合は、次を実行します。  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   レプリカがセカンダリとして読み取り可能でない場合は、レプリカがプライマリになるようにフェールオーバーを実行し、次を実行します。 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` の値は、前の手順と同じにする必要があります。
 
 ### <a name="publisher-workflow"></a>パブリッシャーのワークフロー
@@ -196,12 +202,18 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
    sp_adddistributiondb 'distribution'
    ```
 
-4. DIST3 上で次を実行します。 
+4. DIST3 でレプリカがセカンダリとして読み取り可能である場合は、次を実行します。 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   レプリカがセカンダリとして読み取り可能でない場合は、レプリカがプライマリになるようにフェールオーバーを実行して、次を実行します。
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` の値は、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
 
 4. DIST3 では、サブスクライバ―に対してリンク サーバーを再作成する必要があります。

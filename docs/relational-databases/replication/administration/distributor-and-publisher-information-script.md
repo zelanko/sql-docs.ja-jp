@@ -15,15 +15,15 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807978"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159340"
 ---
 # <a name="distributor-and-publisher-information-script"></a>ディストリビューターおよびパブリッシャーの情報スクリプト
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このスクリプトは、システム テーブルとレプリケーションのストアド プロシージャを使用して、ディストリビューターおよびパブリッシャーのオブジェクトについての一般的な質問に回答します。 このスクリプトはそのまま使用することもできますし、スクリプトをカスタマイズする雛形として使用することもできます。 ユーザーの環境でこのスクリプトを実行するためには、以下の 2 つの修正を行う必要があります。  
   
 -   `use AdventureWorks2012` の行を、使用するパブリケーション データベース名に変更します。  

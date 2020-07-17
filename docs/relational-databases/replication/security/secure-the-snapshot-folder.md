@@ -13,21 +13,21 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: acfa04e4763eafd522cfa741fe835573b510cc4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1418b5c24a132885d500416d6c038a3ac9c04b7e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287246"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159480"
 ---
 # <a name="secure-the-snapshot-folder"></a>スナップショット フォルダーのセキュリティ保護
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   スナップショット フォルダーは、スナップショット ファイルが格納されるディレクトリです。このディレクトリは、スナップショットの格納専用に使用することをお勧めします。 スナップショット エージェントにこのフォルダーへの書き込み権限を許可し、マージ エージェントまたはディストリビューション エージェントがこのフォルダーへのアクセスに使用する Windows アカウントにのみ読み取り権限を許可します。 リモート コンピューターのスナップショット フォルダーにアクセスするには、エージェントに関連付けられている Windows アカウントがドメイン アカウントである必要があります。  
   
 > [!NOTE]  
 >  管理者はユーザー アカウント制御 (UAC) を使用して、自身の昇格したユーザーの権利 ( *権限*とも呼ばれる) を管理できます。 UAC が有効になっているオペレーティング システムで実行する場合は、管理者は管理者自身の管理権限を使用しません。 代わりに、標準ユーザー (管理者以外のユーザー) としてほとんどの操作を実行し、必要な場合にのみ一時的に管理権限を使用します。 UAC により、スナップショット共有への管理アクセスが妨げられる場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。  
   
- ディストリビューションの構成ウィザードまたはパブリケーションの新規作成ウィザードを使用してディストリビューターを構成すると、スナップショット フォルダーの既定の場所は、X:\Program Files\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData というローカル パスになります。 リモート ディストリビューターやプル サブスクリプションを使用する場合は、ローカル パスではなく UNC ネットワーク共有 (\\\\<*computername>* \snapshot など) を指定する必要があります。  
+ ディストリビューションの構成ウィザードまたはパブリケーションの新規作成ウィザードを使用してディストリビューターを構成すると、スナップショット フォルダーの既定の場所は、X:\Program Files\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData. リモート ディストリビューターやプル サブスクリプションを使用する場合は、ローカル パスではなく UNC ネットワーク共有 (\\\\<*computername>* \snapshot など) を指定する必要があります。  
   
  スナップショット フォルダーへのアクセス許可を付与する方法は、フォルダーへのアクセス方法によって異なります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Server 2003 では、次のダイアログ ボックス タブを使用します。  
   

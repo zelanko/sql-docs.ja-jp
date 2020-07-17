@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760939"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381106"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85760939"
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  CONSTRAINT  
  PRIMARY KEY 制約、UNIQUE 制約、FOREIGN KEY 制約、CHECK 制約、または DEFAULT の定義の開始を指定します。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "85760939"
  *ref_column*  
  新しい FOREIGN KEY 制約によって参照される列または列のリストを指定します。リストの場合はかっこで囲みます。  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行に参照関係があり、参照先の行が親テーブルから削除された場合に、変更対象のテーブル内の行に対して実行する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
@@ -132,7 +134,7 @@ ms.locfileid: "85760939"
   
  これに対し、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する削除操作はロールバックされます。  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、変更対象のテーブル内の行に対して発生する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  

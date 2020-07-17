@@ -15,15 +15,15 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f578311d9daa9e54830ad5aa8330fc8bc2c7ac71
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a73fcd84d31a5cde4cfed1e58a611ccac76ed42
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288089"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159360"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーと **[レプリケーション]** フォルダーから、およびレプリケーション モニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
   
 -   すべてのパブリケーションで使用されるスナップショット エージェント  
@@ -58,7 +58,7 @@ ms.locfileid: "76288089"
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、 **[\<ディストリビューター>].\<整数>** という形式になっています。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、 **[\<Distributor>].\<integer>** という形式になっています。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   

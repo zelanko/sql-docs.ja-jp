@@ -18,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420a68755ca7a8adbcc9cfa1dbbf40afaa5f76f7
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808046"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159470"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーションのセキュリティ設定を表示および変更する方法について説明します。 たとえば、ログ リーダー エージェントからパブリッシャーへの接続を SQL Server 認証から Windows 統合認証に変更したい場合や、Windows アカウントのパスワードを変更したときにエージェント ジョブの実行に使用する資格情報を変更したい場合があります。 各エージェントで必要な権限の詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
  **このトピックの内容**  
@@ -187,7 +187,7 @@ ms.locfileid: "83808046"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>キュー リーダー エージェントを実行するアカウントを変更するには  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、ディストリビューション データベースの横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、ディストリビューション データベースの横にあるプロパティ ボタン ( **...** ) をクリックします。  
   
 2.  **[ディストリビューション データベースのプロパティ - \<Database>]** ダイアログ ボックスで、 **[エージェント プロセス アカウント]** テキスト ボックスの横にある **[セキュリティ設定]** ボタンをクリックします。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "83808046"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>即時更新プル サブスクリプションのセキュリティ設定を変更するには  
   
-1.  サブスクライバーの **[サブスクリプションのプロパティ - \<サブスクリプション>]** ダイアログ ボックスで、 **[パブリッシャー接続]** 行をクリックしてから、その行のプロパティ ボタン ( **[&#x2026;]** ) をクリックします。  
+1.  サブスクライバーの **[サブスクリプションのプロパティ - \<Subscription>]** ダイアログ ボックスで、 **[パブリッシャー接続]** 行をクリックしてから、その行のプロパティ ボタン ( **&#x2026;** ) をクリックします。  
   
 2.  **[接続情報の入力]** ダイアログ ボックスで、次のオプションのいずれかを選択します。  
   

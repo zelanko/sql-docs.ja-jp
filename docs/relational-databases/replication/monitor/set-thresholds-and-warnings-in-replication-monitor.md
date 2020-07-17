@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287826"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159760"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。 既定で表示される警告は、初期化されていないサブスクリプションに対する警告だけですが、その他の条件に対する警告を有効にすることもできます。 トポロジに対する警告を有効にすることをお勧めします。この警告を有効にすると、状態やパフォーマンスに関する情報をタイムリーに受け取ることができます。  
   
  警告を有効にする際には、しきい値を指定します。 指定したしきい値に達したり、それを超えると、警告が表示されます (それより優先度の高い問題がない場合)。 しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 以下のような条件について、警告を有効にすることができます。  
@@ -78,7 +78,7 @@ ms.locfileid: "76287826"
   
      このダイアログ ボックスには、監視しきい値に関連していない警告を含め、すべての種類のパブリケーションに対する警告が表示されます。 詳細については、「[レプリケーション エージェント イベントに対する警告の使用](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)」を参照してください。  
   
-3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスのオプションを設定します。  
+3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスでオプションを設定します。  
   
     -   **[全般]** ページで **[有効化]** をクリックし、警告を適用するデータベースを指定します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76287826"
   
      このダイアログ ボックスには、監視しきい値に関連していない警告を含め、すべての種類のパブリケーションに対する警告が表示されます。  
   
-3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスのオプションを設定します。  
+3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスでオプションを設定します。  
   
     -   **[全般]** ページで **[有効化]** をクリックし、警告を適用するデータベースを指定します。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "76287826"
   
      このダイアログ ボックスには、監視しきい値に関連していない警告を含め、すべての種類のパブリケーションに対する警告が表示されます。 詳細については、「[レプリケーション エージェント イベントに対する警告の使用](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)」を参照してください。  
   
-3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスのオプションを設定します。  
+3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスでオプションを設定します。  
   
     -   **[全般]** ページで **[有効化]** をクリックし、警告を適用するデータベースを指定します。  
   

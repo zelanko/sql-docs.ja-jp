@@ -43,15 +43,15 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 89f88671ec51fedbfd075d82685892378fb5e840
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7c1b58a9396daba1a4b10b4a52fd02eaa30fc642
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807308"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159540"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   パブリケーションの作成時には、パブリッシュするテーブルやその他のデータベース オブジェクトを選択します。 レプリケーションを使用すると、以下のデータベース オブジェクトをパブリッシュできます。  
   
 |データベース オブジェクト|スナップショット レプリケーションおよびトランザクション レプリケーション|マージ レプリケーション|  
@@ -183,7 +183,7 @@ ms.locfileid: "83807308"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、 **[アーティクルのプロパティ - \<** _Article_ **>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、 **[アーティクルのプロパティ - \<**_Article_**>]** ダイアログ ボックスと、ストアド プロシージャ **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>以前のバージョンの SQL Server を実行するサブスクライバーへのデータのパブリッシュ  
   

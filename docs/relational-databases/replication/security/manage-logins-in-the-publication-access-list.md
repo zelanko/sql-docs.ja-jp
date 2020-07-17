@@ -17,15 +17,15 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c5abd21bd631647bb7605289b5c8e8179c96a66
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287311"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160090"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>パブリケーション アクセス リストのログインの管理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パブリケーション アクセス リストのログインを管理する方法について説明します。 パブリケーションへのアクセスは、パブリケーション アクセス リスト (PAL) によって制御されます。 ログインおよびグループの PAL への追加および PAL からの削除を実行できます。  
   
  **このトピックの内容**  
@@ -47,11 +47,11 @@ ms.locfileid: "76287311"
 -   PAL にログインを追加する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインをパブリケーション データベースのデータベース ユーザーに関連付ける必要があります。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでパブリケーション アクセス リスト (PAL) を使用します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+ **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページで、パブリケーション アクセス リスト (PAL) を使用してログインを管理します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>PAL のログインを管理するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでは、**[追加]**、**[削除]**、および **[すべて削除]** の各ボタンを使用して、PAL のログインやグループを追加および削除します。 PAL から **distributor_admin** を削除しないでください。 このアカウントはレプリケーションで使用されます。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページで、 **[追加]** 、 **[削除]** 、および **[すべて削除]** の各ボタンを使用して、PAL のログインやグループを追加および削除します。 PAL から **distributor_admin** を削除しないでください。 このアカウントはレプリケーションで使用されます。  
   
     > [!NOTE]  
     >  リモート ディストリビューターを使用する場合、PAL 内のアカウントは、パブリッシャーとディストリビューターの両方で使用できる必要があります。 このアカウントは、どちらのサーバーでも定義されているドメイン アカウントまたはローカル アカウントにする必要があります。 両方のログインに関連付けられているパスワードは、同じにする必要があります。  

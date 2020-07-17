@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286973"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159400"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>トランザクション アーティクル - 変更の反映方法の指定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
   
 -   トランザクション レプリケーションのスクリプトを作成し、その後、ストアド プロシージャを呼び出して変更をサブスクライバーに反映するように指定します (既定値)。  
@@ -46,7 +46,7 @@ ms.locfileid: "76286973"
   
 -   **sp_MSdel_\<** *tablename* **>** 。削除処理を行います。  
   
- このプロシージャで使用される **\<** _tablename_ **>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なる同じ名前のテーブルが含まれているかどうかに応じて異なります。  
+ このプロシージャで使用される **\<**_tablename_**>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なるものの同じ名前のテーブルが含まれているかどうかに応じて異なります。  
   
  これらのすべてのプロシージャは、パブリケーションにアーティクルを追加するときに指定したカスタム プロシージャと置き換えることができます。 カスタム プロシージャは、サブスクライバーでの行の更新時にデータを監査テーブルに挿入するなど、アプリケーションにカスタム ロジックが必要な場合に使用されます。 カスタム ストアド プロシージャの指定の詳細については、上記のトピックを参照してください。  
   

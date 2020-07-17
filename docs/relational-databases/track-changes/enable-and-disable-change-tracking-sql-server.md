@@ -18,12 +18,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3820ea3e450e00f2cdf812e52170ada80495c74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638899"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279082"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>変更の追跡の有効化と無効化 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。  
+ 変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。 データベースにメモリ最適化テーブルが含まれる場合は、SQL Server Management Studio で変更の追跡を有効にすることができません。 有効にするには、T-SQL を使用します。
   
  変更の追跡を有効にするときに、CHANGE_RETENTION および AUTO_CLEANUP オプションを指定できます。これらの値は、変更の追跡を有効にした後いつでも変更できます。  
   

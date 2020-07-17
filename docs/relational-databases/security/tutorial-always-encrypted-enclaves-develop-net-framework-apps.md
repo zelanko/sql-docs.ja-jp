@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595487"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279358"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 このチュートリアルでは、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](encryption/always-encrypted-enclaves.md) に対してサーバー側のセキュリティで保護されたエンクレーブを使用するデータベース クエリを発行する、簡単なアプリケーションを開発する方法について説明します。 
 
@@ -54,7 +54,7 @@ ms.locfileid: "73595487"
 
 7. プロジェクトの App.config ファイルを開きます。
 
-8. \<configuration\> セクションを見つけて、\<configsections\> セクションを追加または更新します。
+8. \<configuration\> セクションを見つけて、\<configSections\> セクションを追加または更新します。
 
    a. \<configuration\> セクションに \<configSections\> セクションが含まれて**いない**場合は、\<configuration\> のすぐ下に次の内容を追加します。
    
@@ -63,13 +63,13 @@ ms.locfileid: "73595487"
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. \<configruation\> セクションに既に \<configSections\> セクションが含まれている場合、\<configSections\> 内に次の行を追加します。
+   b. \<configruation\> セクションに \<configSections\> セクションが既に含まれている場合は、\<configSections\> のすぐ下に次の内容を追加します。
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. configuration セクション内の \<configSections\> の下に次のセクションを追加します。これは構成証明と VBS エンクレーブとの対話に使用されるエンクレーブ プロバイダーに固有のものです。
+9. configuration セクション内の \<configSections\> の下に次のセクションを追加します。これは、構成証明、および VBS エンクレーブとの対話に使用されるエンクレーブ プロバイダーに固有のものです。
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>

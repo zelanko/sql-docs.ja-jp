@@ -17,15 +17,15 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af5e23db429ddd7dcb41b6bf84c1c513e0332609
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: acc5a14210137a8926635d1576803e5db151220c
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807900"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160140"
 ---
 # <a name="create-a-publication"></a>パブリケーションの作成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -48,7 +48,7 @@ ms.locfileid: "83807900"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , < , >. データベースのオブジェクトにこれらの文字が含まれ、これらをレプリケートする場合は、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、オブジェクト名と異なるアーティクル名を指定する必要があります。このダイアログ ボックスは、ウィザードの **[アーティクル]** ページより利用可能です。  
+-   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , < , >. データベースのオブジェクトにこれらの文字が含まれており、これらをレプリケートする場合は、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、オブジェクト名とは異なるアーティクル名を指定する必要があります。このダイアログ ボックスは、ウィザードの **[アーティクル]** ページから開くことができます。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
