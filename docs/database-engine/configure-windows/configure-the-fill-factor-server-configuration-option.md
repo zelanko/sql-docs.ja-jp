@@ -1,5 +1,6 @@
 ---
 title: fill factor サーバー構成オプションの構成 | Microsoft Docs
+description: fill factor オプションについて説明します。 これを構成して、SQL Server によってデータが格納される各リーフ レベルのページの領域の割合を指定する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 02ce284714526a57672d496dbc06242d3df44dff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc99d890e179bd19a9797471f5b940d6ffb7a44f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697234"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>fill factor サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fill factor [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 FILL FACTOR は、インデックス データ ストレージとパフォーマンスの微調整を行うために用意されています。 インデックスの作成または再構築を行うとき、各リーフ レベルのページのデータを格納する領域の割合が FILL FACTOR 値によって決まり、今後インデックスのサイズが大きくなる場合に備えて指定した残りの空き領域が予約されます。 詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   

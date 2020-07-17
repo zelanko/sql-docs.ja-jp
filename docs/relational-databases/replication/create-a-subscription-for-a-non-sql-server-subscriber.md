@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773907"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -127,11 +127,11 @@ ms.locfileid: "75322019"
   
     -   このウィザードが完了した後に、ディストリビューション エージェントからサブスクライバーへスナップショット ファイルを転送するには、 **[次の場合に初期化]** 列のドロップダウン リスト ボックスから **[今すぐ]** を選択します。 エージェントの次回の実行時にファイルが転送されるようにするには、 **[初回同期時]** を選択します。  
   
-12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+12. **[ウィザードのアクション]** ページで、必要に応じてサブスクリプションのスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>サブスクライバー側のテーブルを保持するには  
   
--   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 [https://login.microsoftonline.com/consumers/](`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`)  
+-   既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効にすると、 **pre_creation_cmd** アーティクル プロパティが 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>パブリケーションのスナップショットを生成するには  
   

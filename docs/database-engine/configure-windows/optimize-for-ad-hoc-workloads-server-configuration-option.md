@@ -1,5 +1,6 @@
 ---
 title: optimize for ad hoc workloads サーバー構成オプション | Microsoft Docs
+description: "\"optimize for ad hoc workloads\" オプションについて説明します。 1 回のみ使用するアドホック バッチがワークロードに多数含まれている場合、これを使用すると、SQL Server のプラン キャッシュの効率を高めることができます。"
 ms.custom: ''
 ms.date: 11/17/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - optimize for ad hoc workloads option
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c66a4d3826493d10974ab4ce8363e3adde1bd0fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d93df848459f003fa4e2c2be0b88ddd9973422c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781852"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **optimize for ad hoc workloads** オプションを使用すると、1 回のみ使用するアドホック バッチが多数含まれているワークロードのプラン キャッシュの効率を高めることができます。 このオプションを 1 に設定すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、バッチが初めてコンパイルされるときに、完全なコンパイル済みプランではなく、コンパイル済みプランの小さいスタブをプラン キャッシュに格納します。 これにより、再利用されないコンパイル済みプランでプラン キャッシュがいっぱいにならないようにして、メモリの負荷を下げることができます。 
   
@@ -33,7 +34,7 @@ ms.locfileid: "67998417"
 > [!WARNING]  
 >  トレース フラグ 8032 を使用した場合、キャッシュが大きいために他のメモリ コンシューマー (バッファー プールなど) で利用できるメモリが少なくなると、パフォーマンスが低下することがあります。  
 
-## <a name="recommendations"></a>Recommendations
+## <a name="recommendations"></a>推奨事項
 プラン キャッシュに 1 回のみ使われるプランを多数格納することは避けてください。 この問題の一般的な原因は、クエリ パラメーターのデータ型が一貫して定義されていないことです。 これは文字列の長さに特に適用されますが、最大長、有効桁数、小数点以下桁数が含まれるすべてのデータ型に適用できます。 たとえば、@Greeting という名前のパラメーターが 1 回の呼び出しで nvarchar(10) として渡され、次の呼び出しで nvarchar(20) として渡される場合、パラメーター サイズごとに別のプランが作成されます。 クエリに複数のパラメーターが含まれ、これらが呼び出し時に一貫して定義されていないと、クエリごとに大量のクエリ プランが存在している場合があります。 プランは使用されているクエリ パラメーターのデータ型と長さの組み合わせごとに存在する可能性があります。
 
 多数の 1 回のみ使われるプランにより、OLTP サーバーの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のメモリの多くの部分が占有されていて、これらのプランがアドホック プランである場合は、このサーバー オプションを使って、これらのオブジェクトのメモリ使用量を削減します。

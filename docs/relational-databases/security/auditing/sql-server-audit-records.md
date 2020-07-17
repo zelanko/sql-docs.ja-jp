@@ -1,5 +1,6 @@
 ---
 title: SQL Server 監査レコード | Microsoft Docs
+description: SQL Server 監査は、監査ターゲットに記録される監査アクション項目で構成されます。 ターゲットに送信できるレコードについてこの概要で確認します。
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922192"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885313"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  監査は、監査 *対象*に記録される 0 個以上の監査アクション項目で構成されます。 監査ターゲットには、バイナリ ファイル、Windows アプリケーション イベント ログ、または Windows セキュリティ イベント ログを使用できます。 ターゲットに送信されるレコードに含まれる可能性がある要素を次の表に示します。  
   
-|列名|説明|種類|常に使用可能かどうか|  
+|列名|説明|Type|常に使用可能かどうか|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
-|**action_id**|アクションの ID<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)」を参照してください。|**varchar (4)**|はい|  
+|**action_id**|アクションの ID<br /><br /> ヒント:**action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)」を参照してください。|**varchar (4)**|はい|  
 |**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> - 1 = 成功 <br />0 = 失敗|はい|  
 |**permission_bitmask**|該当する場合、許可、拒否、または取り消されたアクセス許可を表示します。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />- 1 = True <br />0 = False|いいえ|  

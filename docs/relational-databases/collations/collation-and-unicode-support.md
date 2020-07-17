@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831812"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091923"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 **char** や **varchar** などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで使用可能な照合順序の一覧については、「[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)」を参照してください。    
@@ -65,7 +65,7 @@ ms.locfileid: "75831812"
     
 照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別、バリエーションの選択の区別です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[UTF-8](https://www.wikipedia.org/wiki/UTF-8) エンコードのための追加のオプションが導入されています。 
 
-これらのオプションは、照合順序の名前に付加することによって指定できます。 たとえば、**Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** という照合順序では、大文字と小文字、アクセント、かな、文字幅、UTF-8 エンコードが区別されます。 また、**Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。  
+これらのオプションは、照合順序の名前に付加することによって指定できます。 たとえば、**Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** という照合順序では、大文字と小文字、アクセント、かな、文字幅、UTF-8 エンコードが区別されます。 また、**Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** という照合順序では、大文字小文字とアクセントが区別されず、かな、文字幅、異体字セレクターが区別され、非 Unicode エンコードが使用されます。 
 
 次の表では、これらのさまざまなオプションに関連付けられている動作を説明します。    
     
@@ -178,8 +178,8 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |アラビア語 (イエメン)|0x2401|0x0401|Arabic_CI_AS|
 |アルメニア語 (アルメニア)|0x042b|0x0419|Latin1_General_CI_AS|
 |アッサム語 (インド)|0x044d|0x044d|サーバー レベルでは利用できません|
-|アゼルバイジャン語 (アゼルバイジャン、キリル文字)|0x082c|0x082c|非推奨。サーバー レベルでは利用できません|
-|アゼルバイジャン語 (アゼルバイジャン、ラテン文字)|0x042c|0x042c|非推奨。サーバー レベルでは利用できません|
+|アゼルバイジャン語 (アゼルバイジャン、キリル)|0x082c|0x082c|非推奨。サーバー レベルでは利用できません|
+|アゼルバイジャン語 (アゼルバイジャン、ラテン)|0x042c|0x042c|非推奨。サーバー レベルでは利用できません|
 |バシキール語 (ロシア)|0x046d|0x046d|Latin1_General_CI_AI|
 |バスク語 (バスク)|0x042d|0x0409|Latin1_General_CI_AS|
 |ベラルーシ語 (ベラルーシ)|0x0423|0x0419|Cyrillic_General_CI_AS|
@@ -221,7 +221,7 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |英語 (シンガポール)|0x4809|0x0409|Latin1_General_CI_AS|
 |英語 (南アフリカ)|0x1c09|0x0409|Latin1_General_CI_AS|
 |英語 (トリニダード・トバゴ)|0x2c09|0x0409|Latin1_General_CI_AS|
-|ウェールズ語 (イギリス)|0x0809|0x0409|Latin1_General_CI_AS|
+|英語 (イギリス)|0x0809|0x0409|Latin1_General_CI_AS|
 |英語 (米国)|0x0409|0x0409|SQL_Latin1_General_CP1_CI_AS|
 |英語 (ジンバブエ)|0x3009|0x0409|Latin1_General_CI_AS|
 |エストニア語 (エストニア)|0x0425|0x0425|Estonian_CI_AS|
@@ -235,7 +235,7 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |フランス語 (モナコ)|0x180c|0x040c|French_CI_AS|
 |フランス語 (スイス)|0x100c|0x040c|French_CI_AS|
 |フリジア語 (オランダ)|0x0462|0x0462|Latin1_General_CI_AI|
-|ガリシア語 (スペイン)|0x0456|0x0409|Latin1_General_CI_AS|
+|ガリシア語|0x0456|0x0409|Latin1_General_CI_AS|
 |グルジア語 (グルジア)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |グルジア語 (グルジア)|0x0437|0x0419|Latin1_General_CI_AS|
 |ドイツ語 - 電話帳ソート (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |リトアニア語 (リトアニア)|0x0427|0x0427|Lithuanian_CI_AS|
 |下ソルブ語 (ドイツ)|0x082e|0x0409|Latin1_General_CI_AS|
 |ルクセンブルク語 (ルクセンブルク)|0x046e|0x0409|Latin1_General_CI_AS|
-|マケドニア語 (マケドニア、FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|マケドニア語 (北マケドニア、FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |マレー語 (ブルネイ・ダルサラーム国)|0x083e|0x0409|Latin1_General_CI_AS|
 |マレー語 (マレーシア)|0x043e|0x0409|Latin1_General_CI_AS|
 |マラヤーラム語 (インド)|0x044c|0x0439|サーバー レベルでは利用できません|
@@ -290,7 +290,7 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |ノルウェー語 (ブークモール、ノルウェー)|0x0414|0x0414|Latin1_General_CI_AI|
 |ノルウェー語 (ニーノシュク、ノルウェー)|0x0814|0x0414|Latin1_General_CI_AI|
 |オクシタン語 (フランス)|0x0482|0x040c|French_CI_AS|
-|オリヤー語 (インド)|0x0448|0x0439|サーバー レベルでは利用できません|
+|オディア語 (インド)|0x0448|0x0439|サーバー レベルでは利用できません|
 |パシュトゥー語 (アフガニスタン)|0x0463|0x0463|サーバー レベルでは利用できません|
 |ペルシア語 (イラン)|0x0429|0x0429|Latin1_General_CI_AI|
 |ポーランド語 (ポーランド)|0x0415|0x0415|Polish_CI_AS|
@@ -303,6 +303,7 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |ルーマニア語 (ルーマニア)|0x0418|0x0418|Romanian_CI_AS|
 |ロマンシュ語 (スイス)|0x0417|0x0417|Latin1_General_CI_AI|
 |ロシア語 (ロシア)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|サハ語 (ロシア)|0x0485|0x0485|Latin1_General_CI_AI|
 |サーミ語 (イナリ、フィンランド)|0x243b|0x083b|Latin1_General_CI_AI|
 |サーミ語 (ルレ、ノルウェー)|0x103b|0x043b|Latin1_General_CI_AI|
 |サーミ語 (ルレ、スウェーデン)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |ウェールズ語 (イギリス)|0x0452|0x0452|Latin1_General_CI_AI|
 |ウォロフ語 (セネガル)|0x0488|0x040c|French_CI_AS|
 |コサ語 (南アフリカ)|0x0434|0x0409|Latin1_General_CI_AS|
-|ヤクート語 (ロシア)|0x0485|0x0485|Latin1_General_CI_AI|
 |イ語 (PRC)|0x0478|0x0409|Latin1_General_CI_AS|
 |ヨルバ語 (ナイジェリア)|0x046a|0x0409|Latin1_General_CI_AS|
 |ズールー語 (南アフリカ)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -528,7 +528,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
     -   バージョン 90 照合順序    
     -   バージョン 100 照合順序    
     
--   SC フラグは、以下に適用できません。    
+-   SC フラグは、以下に適用できます。    
     -   バージョン 80 バージョンなしの Windows 照合順序    
     -   BIN または BIN2 バイナリ照合順序    
     -   SQL\* 照合順序    
@@ -656,4 +656,3 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 [フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

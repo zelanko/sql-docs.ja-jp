@@ -1,5 +1,6 @@
 ---
 title: 警告しきい値の設定 | Microsoft Docs
+description: '[警告しきい値の設定] ダイアログ ボックスを使用して、SQL Server で選択したミラー化されたデータベースの警告しきい値を有効にして構成する方法について説明します。'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789640"
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスでは、 **[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
   
  このダイアログ ボックスは、両方のサーバー インスタンスに接続を試みます。 これらの接続は非同期的に確立されます。 ダイアログには、互いのパートナーの接続状態が表示されます。 パートナーが接続されていない場合は、 **[接続]** をクリックして接続できます。  
@@ -29,20 +30,20 @@ ms.locfileid: "68025212"
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  *サーバー インスタンスと接続状態*  
  パートナー サーバー インスタンスの名前が *SYSTEM***\\***INSTANCE_NAME* という形式で表示されます。 既定のサーバー インスタンスの場合、システム名だけが表示されます。  
   
  このフィールドには、該当のサーバー インスタンスに対して現在モニターが接続されているかどうかも示されます。 次の接続ステータスがあります。  
   
--   **server_instance_name** *に接続していません*  
+-   *server_instance_name* **に接続していません**  
   
--   **server_instance_name** *に接続しようとしています*  
+-   *server_instance_name* **に接続しようとしています**  
   
--   **server_instance_name** *に接続*  
+-   *server_instance_name* **に接続**  
   
     > [!NOTE]  
-    >  **sysadmin** 固定サーバー ロールのメンバーでない場合、このステータスは "**server_instance_name** *に接続* **(制限された権限)** " になります。  
+    >  **sysadmin** 固定サーバー ロールのメンバーでない場合、このステータスは "*server_instance_name* **に接続** **(制限された権限)** " になります。  
   
  パートナー サーバーの各インスタンスについて、その名前が *サーバー インスタンスと接続状態* を示すフィールドに表示されます。 一番上のフィールドには、モニターを開始した時点におけるプリンシパル サーバーが表示されます。  
   

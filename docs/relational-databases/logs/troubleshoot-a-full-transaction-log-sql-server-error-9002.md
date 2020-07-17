@@ -1,6 +1,6 @@
 ---
 title: 満杯になったトランザクション ログのトラブルシューティング (エラー 9002)
-ms.custom: seo-lt-2019
+description: SQL Server のトランザクション ログが満杯になった場合の対処法と、今後この問題を回避する方法について説明します。
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056075"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006547"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 
   
   トランザクション ログが満杯になると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] から **9002 エラー**が発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインのときにログ ファイルがいっぱいになった場合、データベースはオンラインのままです。ただし、更新はできず、読み取りだけが可能です。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
@@ -110,8 +111,8 @@ ms.locfileid: "74056075"
 ### <a name="kill-a-transaction"></a>トランザクションの強制終了
 状況によっては、単にプロセスを終了する必要があります。このような場合、 [KILL](../../t-sql/language-elements/kill-transact-sql.md) ステートメントを使用することがあります。 ただし、強制終了したくない重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、「 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)」を参照してください。
 
-## <a name="see-also"></a>参照  
-[サポート技術情報の記事 - SQL Server を実行しているコンピューターでトランザクション ログのサイズが予期せず増大する、または、ログがいっぱいになる](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

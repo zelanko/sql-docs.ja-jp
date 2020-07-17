@@ -1,20 +1,20 @@
 ---
 title: SQL Server または SQL Database に JSON ドキュメントを保存する
-ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.date: 01/04/2018
+description: この記事では、SQL Server または SQL Database での JSON ドキュメントの格納およびインデックス付けの理由とその方法、および JSON ドキュメントに対するクエリを最適化する方法について説明します。
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760764"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
 SQL Server と Azure SQL Database には、ネイティブ JSON 機能があります。標準 SQL 言語を利用し、JSON ドキュメントを解析できます。 SQL Server または SQL Database に JSON ドキュメントを保存したり、NoSQL データベースの場合のように JSON データを問い合わせたりできます。 この記事では、SQL Server または SQL Database に JSON ドキュメントを保存するためのオプションについて説明します。

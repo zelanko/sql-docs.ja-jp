@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321637"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893794"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>レプリケーション エージェント コマンド プロンプト パラメーターの表示および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   レプリケーション エージェントは、コマンド ライン パラメーターを使用できる実行可能ファイルです。 既定では、エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブ ステップで実行されるため、これらのパラメーターは、 **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスを使用して表示および変更できます。 このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニター内の **[エージェント]** タブからアクセスできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 > [!NOTE]  
@@ -33,17 +33,17 @@ ms.locfileid: "75321637"
   
 |エージェント|ジョブ名|パラメーターの一覧の参照先|  
 |-----------|--------------|------------------------------------|  
-|スナップショット エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<整数>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|ログ リーダー エージェント (Log Reader Agent)|**\<パブリッシャー>-\<PublicationDatabase>-\<整数>**|[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|キュー リーダー エージェント (Queue Reader Agent)|**[\<ディストリビューター>].\<整数>**|[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|スナップショット エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|ログ リーダー エージェント (Log Reader Agent)|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
+|プル サブスクリプションに対するマージ エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|プッシュ サブスクリプションに対するマージ エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|プル サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|キュー リーダー エージェント (Queue Reader Agent)|**[\<Distributor>].\<integer>**|[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、**\<Publisher>-\<PublicationDatabase>** ではなく、**\<Publisher>-\<Publisher**> になります  
+ \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、 **\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<Publisher**> になります  
   
  \*\*Oracle パブリケーションに対するプル サブスクリプションの場合は、 **\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<DistributionDatabase**> になります  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75321637"
   
 3.  ジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 5.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75321637"
   
 4.  **[サブスクリプション <SubscriptionName>]** ウィンドウで、 **[アクション]** をクリックし、 **[\<AgentName> ジョブのプロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+5.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 6.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321637"
   
 3.  グリッド内のエージェントを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 5.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   

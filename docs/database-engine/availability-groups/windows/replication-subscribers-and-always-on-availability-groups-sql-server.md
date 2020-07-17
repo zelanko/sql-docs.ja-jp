@@ -1,6 +1,6 @@
 ---
 title: レプリケーション サブスクライバーと可用性グループ (SQL Server)
-description: SQL Server Always On 可用性グループを使用してレプリケーション サブスクライバーを構成する方法について説明します。
+description: SQL Server で、レプリケーション サブスクライバーであるデータベースを含む Always On 可用性グループがフェールオーバーするとどうなるかを説明します。
 ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3c6fdff473202222a83006a6d1a0ff217aed8a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893134"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション レプリケーションのプッシュ サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されていれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 トランザクション レプリケーションのプル サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されており、元のサブスクライバー サーバーが稼働中であれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 これは、ディストリビューション エージェントのジョブは元のサブスクライバー (AG のプライマリ レプリカ) 上でのみ作成されるためです。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   

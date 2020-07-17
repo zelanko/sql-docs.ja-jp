@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925289"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896121"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   フェールオーバー クラスター リソースとして SQL Server 内で監視できない外部的な対話があります。それは SQL Server、Windows Server フェールオーバー クラスター サービス (WSFC) クラスター、および SQL Server リソース DLL (hadrres.dll) の間で行われるものです。 WSFC ログ (CLUSTER.LOG) を使用すると、WSFC クラスターでの問題、または SQL Server リソース DLL での問題を診断することができます。 
   
 ## <a name="generate-cluster-log"></a>クラスター ログを生成する  
@@ -57,11 +57,11 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>可用性グループのリソース イベント  
  次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  
   
-|[Identifier]|source|CLUSTER.LOG の例|  
+|識別子|source|CLUSTER.LOG の例|  
 |----------------|------------|------------------------------|  
-|`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>: `[hadrag]` SQL Server からの切断|  
+|`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` SQL Server からの切断|  
 |`[RHS]` が先頭に付けられたメッセージ|RHS.EXE (リソース ホスティング サブシステム、hadrres.dll のホスト プロセス)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] リソース ag がオフラインになりました。 RHS はリソースのステータスを RCM にレポートしようとしています。|  
-|`[RCM]` が先頭に付けられたメッセージ|リソース コントロール モニター (クラスター サービス)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: グループ 'ag' をまずオフラインに...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|`[RCM]` が先頭に付けられたメッセージ|リソース コントロール モニター (クラスター サービス)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move:グループ 'ag' をまずオフラインに...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|API 呼び出し。ほとんどの場合は、SQL Server がアクションを要求しています|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Always On リソース DLL を分離してデバッグする  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  可用性グループを他のクラスター リソース DLL (他の可用性グループを含む) から分離するには、次の手順に従って個別の rhs.exe プロセス内で hadrres.dll を実行します。  
   
-1.  **レジストリ エディター**を開いて、キー HKEY_LOCAL_MACHINE\Cluster\Resources に移動します。 このキーには、それぞれ異なる GUID を持つすべてのリソースのキーが含まれています。  
+1.  **レジストリ エディター**で、次のキーに移動します。HKEY_LOCAL_MACHINE\Cluster\Resources このキーには、それぞれ異なる GUID を持つすべてのリソースのキーが含まれています。  
   
 2.  目的の可用性グループ名と一致する**名前**の値が含まれているリソース キーを探します。  
   

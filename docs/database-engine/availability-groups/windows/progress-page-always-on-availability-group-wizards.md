@@ -15,23 +15,23 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c11f154d37543488cebbc0bf6bafb1f002253f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014481"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888088"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>[進行状況] ページ (AlwaysOn 可用性グループ ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で実行中の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ウィザードの進行状況を表示できます。 進行状況バーには、ウィザードが実行している手順の相対的な進行状況が示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[詳細]**  
  下矢印をクリックすると、完了した手順を順に示す一覧と現在進行中の操作が進行状況グリッドに表示されます。 このグリッドには次の列が含まれています。  
   
- **Name**  
+ **名前**  
  各手順についての説明が表示されます。  
   
  **状態**  

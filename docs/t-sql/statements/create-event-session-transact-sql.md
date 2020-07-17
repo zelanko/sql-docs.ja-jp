@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767128"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 イベントのソース、イベント セッション ターゲット、およびイベント セッション オプションを識別する拡張イベント セッションを作成します。
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 アクションは、object_type 'action' として sys.dm_xe_objects ビューに表示されます。
 
-WHERE \<predicate_expression> イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 \<predicate_expression> が true の場合、イベントは、セッションのアクションおよびターゲットによって処理されます。 \<predicate_expression> が false の場合、イベントは、セッションのアクションおよびターゲットによって処理される前にセッションによって削除されます。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。
+WHERE \<predicate_expression> では、イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 \<predicate_expression> が true の場合、イベントは、セッションのアクションおよびターゲットによって処理されます。 \<predicate_expression> が false の場合、イベントは、セッションのアクションおよびターゲットによって処理される前にセッションによって削除されます。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。
 
 *event_field_name* は、述語ソースを識別するイベント フィールドの名前です。
 
@@ -158,7 +158,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } によって、ターゲッ
 > [!IMPORTANT]
 > リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。
 
-WITH ( \<event_session_options> [ ,...*n*] ) イベント セッションで使用するオプションを指定します。
+WITH ( \<event_session_options> [ ,...*n*] ) では、イベント セッションで使用するオプションを指定します。
 
 MAX_MEMORY =*size* [ KB | **MB** ] によって、イベントのバッファーリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は 4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB 域のメモリの値を使用することはお勧めしません。
 

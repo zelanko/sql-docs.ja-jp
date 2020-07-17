@@ -1,5 +1,6 @@
 ---
 title: '[メンテナンス クリーンアップ タスク] (メンテナンス プラン) | Microsoft Docs'
+description: '[メンテナンス クリーンアップ タスク] を使用して、メンテナンス プランのテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除する方法について説明します。'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7e01cbee4a518b7b2f6b9ef9dea783f1a6ce24d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666963"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] (メンテナンス プラン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[メンテナンス クリーンアップ タスク]** を使用すると、メンテナンス プランで作成されたテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除できます。  
   
 > [!NOTE]  
 >  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]** を選択する必要があります。  
   
-## <a name="options"></a>オプション  
- **Connection**  
+## <a name="options"></a>Options  
+ **接続**  
  現在の接続を表示します。  
   
  **[新規作成]**  
@@ -72,7 +73,7 @@ ms.locfileid: "68115750"
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  

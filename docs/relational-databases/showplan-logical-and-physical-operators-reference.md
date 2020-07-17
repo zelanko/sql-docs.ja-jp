@@ -137,15 +137,15 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ff043c2b88fd18666dad1bac3e2430e67ad2bce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3fd29114074ea0e83e04b7c434264d1666efb59
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037041"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091558"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   操作は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリやデータ操作言語 (DML) ステートメントを実行する方法を示します。 クエリ オプティマイザーでは、操作を使用して、クエリで指定された結果を作成するクエリ プラン、または DML ステートメントで指定された操作を実行するクエリ プランが構築されます。 クエリ プランは、物理操作をツリー構成で表現したものです。 クエリ プランを表示するには、SET SHOWPLAN ステートメント、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のグラフィカル実行プラン オプション、または SQL Server Profiler Showplan イベント クラスを使用します。  
   
  操作は、論理操作と物理操作に分類されます。  
@@ -158,15 +158,15 @@ ms.locfileid: "76037041"
   
  物理操作では、初期化、データの収集が行われた後に終了されます。 具体的には、物理操作は次の 3 つのメソッド呼び出しに応答できます。  
   
--   **Init()** : **Init()** メソッドは、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
+-   **Init()** :**Init()** メソッドは、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
   
--   **GetNext()** : **GetNext()** メソッドにより、物理操作がデータの最初の行または後続の行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
+-   **GetNext()** :**GetNext()** メソッドにより、物理操作がデータの最初の行または後続の行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
   
--   **Close()** : **Close()** メソッドにより、物理操作はクリーンアップ操作を実行し、物理操作自体がシャットダウンされます。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
+-   **Close()** :**Close()** メソッドにより、物理操作はクリーンアップ操作を実行し、物理操作自体がシャットダウンされます。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
   
-**GetNext()** メソッドは、データ行を 1 行返します。このメソッドが呼び出された回数は、SET STATISTICS PROFILE ON または SET STATISTICS XML ON を使用して生成されるプラン表示出力で **ActualRows** として表示されます。 これらの SET オプションの詳細については、「[SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md)」および「[SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)」を参照してください。  
+**GetNext()** メソッドは、データ行を 1 行返します。このメソッドが呼び出された回数は、`SET STATISTICS PROFILE ON` または `SET STATISTICS XML ON` を使用して生成されるプラン表示出力で **ActualRows** として表示されます。 これらの SET オプションの詳細については、「[SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md)」および「[SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)」を参照してください。  
   
-プラン表示出力に表示される **ActualRebinds** および **ActualRewinds** の数は、**Init()** メソッドが呼び出された回数を示します。 ループ結合内部での操作でなければ、 **ActualRebinds** は 1、 **ActualRewinds** は 0 になります。 ループ結合内部での操作の場合、再バインドと巻き戻しの合計数は、結合外部で処理された行数に等しくなる必要があります。 再バインドとは、結合の変更された相関パラメーターと、内側部分の相関パラメーターの 1 つ以上を再評価する必要があることを意味します。 巻き戻しとは、変更された相関パラメーターを使用せず、前の内部の結果セットを再利用することを意味します。  
+プラン表示出力に表示される **ActualRebinds** および **ActualRewinds** の数は、**Init()** メソッドが呼び出された回数を示します。 ネステッド ループ結合内部での操作でなければ、**ActualRebinds** は 1、**ActualRewinds** は 0 になります。 ループ結合内部での操作の場合、再バインドと巻き戻しの合計数は、結合外部で処理された行数に等しくなる必要があります。 再バインドとは、結合の変更された相関パラメーターと、内側部分の相関パラメーターの 1 つ以上を再評価する必要があることを意味します。 巻き戻しとは、変更された相関パラメーターを使用せず、前の内部の結果セットを再利用することを意味します。  
   
 **ActualRebinds** および **ActualRewinds** は、SET STATISTICS XML ON を使用して生成された XML プラン表示出力に存在します。 これらは、 **Nonclustered Index Spool**、 **Remote Query**、 **Row Count Spool**、 **Sort**、 **Table Spool**、および **Table-valued Function** の各操作に対してのみ作成されます。 また、**ActualRebinds** および **ActualRewinds** は、 **Assert** および **Assert** 操作と **Filter** 操作に対しても作成される場合があります。  
   
@@ -181,6 +181,9 @@ ms.locfileid: "76037041"
   
 ## <a name="operator-descriptions"></a>操作の説明  
  このセクションには、論理演算子と物理演算子の説明が含まれています。  
+
+ > [!TIP]
+ > 特定のグラフィカルな実行プランのアイコンに、右から左への矢印が 2 つある黄色い円が表示される場合は、演算子が並列で実行されます。 並列処理の詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)」を参照してください。
   
 |グラフィカルな実行プランのアイコン|プラン表示操作|説明|  
 |-----------------------------------|-----------------------|-----------------|  

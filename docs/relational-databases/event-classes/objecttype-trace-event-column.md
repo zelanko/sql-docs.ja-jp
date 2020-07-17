@@ -1,5 +1,6 @@
 ---
 title: ObjectType トレース イベント列 | Microsoft Docs
+description: SQL Server のさまざまなトレース イベントで使用される Object Type トレース イベント列で使用される可能性がある値を参照してください。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755978"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType トレース イベント列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object Type トレース イベント列は、さまざまなトレース イベントで使用されます。 このトピックでは、この列の値と、その値に関連付けられている定義について説明します。  
   
 ## <a name="object-type-column-values"></a>ObjectType 列の値  
@@ -100,7 +101,7 @@ ms.locfileid: "68115887"
 |22601|インデックス|  
 |22604|証明書ログイン|  
 |22611|XMLSchema|  
-|22868|種類|  
+|22868|Type|  
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

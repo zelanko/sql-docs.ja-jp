@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure 内の SQL Server データ ファイル | Microsoft Docs
+description: SQL Server データ ファイルを Microsoft Azure Storage サービスに格納する場合の重要な概念と考慮事項、および Azure Storage を使用する利点について説明します。
 ms.custom: ''
 ms.date: 12/04/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74833578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715488"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ![Azure 上のデータ ファイル](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上のデータ ファイル")  
   
 Microsoft Azure 内の SQL Server データ ファイルにより、BLOB として格納された SQL Server データベース ファイルに対するネイティブ サポートが有効になります。 この機能を使用すると、オンプレミスの環境または Microsoft Azure 仮想マシンで実行されている SQL Server でデータベースを作成し、Microsoft Azure BLOB ストレージに専用のデータ保存場所を用意できます。 また、コンピューター間でデータベースを移動するプロセスが簡略化されます。 1 台のコンピューターからデータベースをデタッチして、別のコンピューターにアタッチすることができます。 また、Microsoft Azure ストレージを復元元または復元先として使用することで、データベースのバックアップ ファイルに代替の格納場所が提供されます。 このため、データの仮想化、移動、セキュリティ、および可用性の面での利点と、低コストと容易なメンテナンスで実現できる高可用性と柔軟なスケーリングにより、いくつかのハイブリッド ソリューションが有効になります。
@@ -92,7 +93,7 @@ ON
 
 詳細については、「 [Azure のストレージ リソースへのアクセスの管理](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)」をご覧ください。  
 
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  Azure Storage に SQL Server データ ファイルを格納する場合のセキュリティに関する考慮事項と要件は次のとおりです。
 
 - Azure BLOB ストレージ サービスのコンテナーを作成する際は、アクセス権を private に設定することをお勧めします。 アクセス権を private に設定すると、コンテナーと BLOB データを読み取ることができるのは Azure アカウントの所有者だけになります。
@@ -144,7 +145,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio のサポート  
  SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、`https://teststorageaccnt.blob.core.windows.net/testcontainer/` は、ストレージ コンテナーの URL パスを表します。
  
- **[新しいデータベース]** 、 **[データベースのアタッチ]** 、 **[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
+ **[新しいデータベース]** 、 **[データベースのアタッチ]** 、 **[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、[Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理オブジェクト (SMO) のサポート  
  Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 ( `https://teststorageaccnt.blob.core.windows.net/testcontainer/`など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  

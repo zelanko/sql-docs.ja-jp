@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786477"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>ヒープ (クラスター化インデックスなしのテーブル)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ヒープとはクラスター化インデックスを使用しないテーブルのことです。 1 つまたは複数の非クラスター化インデックスを、ヒープとして格納されているテーブルに作成することができます。 ヒープには、順序を指定せずにデータが格納されます。 通常、最初にデータが格納される順序はテーブルに行が挿入された順序と同じですが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では行を効率的に格納できるようにヒープ内でデータが移動される場合があるため、データの順序は予測できません。 ヒープから返される行の順序を保証するには、`ORDER BY` 句を使用する必要があります。 行を格納するための永久的な論理的順序を指定するには、テーブルにクラスター化インデックスを作成し、テーブルがヒープにならないようにします。  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220707"
 > クラスター化インデックスを作成する代わりにテーブルをヒープのままにしておくとよい場合もありますが、ヒープを効果的に使用するには高度なスキルが必要です。 テーブルをヒープのままにしておく妥当な理由がない限り、ほとんどのテーブルには、慎重に選択されたクラスター化インデックスが必要です。  
   
 ## <a name="when-to-use-a-heap"></a>ヒープを使用する場合  
-テーブルをヒープとして格納する場合、個々の行は、ファイル番号、データ ページ番号、ページのスロット (FileID:PageID:SlotID) で構成される 8 バイトの行識別子 (RID) への参照で識別されます。 行 ID は、小さい効率的な構造です。 データが常に非クラスター化インデックスを介してアクセスされ、RID がクラスター化インデックス キーより小さい場合、データ担当者はヒープを使用することがあります。 ヒープは次の場合にも使用されます。   
- 
+テーブルをヒープとして格納する場合、個々の行は、ファイル番号、データ ページ番号、ページのスロット (FileID:PageID:SlotID) で構成される 8 バイトの行識別子 (RID) への参照で識別されます。 行 ID は、小さい効率的な構造です。 
+
+ヒープは、順序指定されていな大規模な挿入操作のステージング テーブルとして使用できます。 厳密な順序を適用せずにデータが挿入されるため、通常この挿入操作は、クラスター化インデックスへの同等の挿入より高速です。 ヒープのデータが読み取られて最終的な宛先へ処理される場合は、読み取りクエリで使用される検索述語を対象とする、狭い非クラスター化インデックスを作成すると便利な場合があります。 
+
+> [!NOTE]  
+> データはデータページの順にヒープから取得されますが、必ずしもデータが挿入された順序ではありません。 
+
+データが常に非クラスター化インデックスを介してアクセスされ、RID がクラスター化インデックス キーより小さい場合も、データ担当者はヒープを使用することがあります。 
+
 テーブルがヒープで、非クラスター化インデックスがない場合、行を検索するには、テーブル全体を読み取る (テーブル スキャンする) 必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ヒープで直接 RID をシークできません。 テーブルが小さい場合は、この方法で対応できます。  
   
 ## <a name="when-not-to-use-a-heap"></a>ヒープを使用しない場合  

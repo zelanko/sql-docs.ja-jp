@@ -1,5 +1,6 @@
 ---
 title: インメモリ OLTP ガベージ コレクション | Microsoft Docs
+description: SQL Server におけるインメモリ OLTP のガベージ コレクションについて説明します。 アクティブでなくなったトランザクションが行を削除すると、ガベージ コレクションの対象となります。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723138"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>インメモリ OLTP ガベージ コレクション
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   アクティブでなくなったトランザクションで削除されたデータ行は古いと見なされます。 古い行は、ガベージ コレクションに適しています。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]のガベージ コレクションには、次のような特性があります。  
   
 -   非ブロッキング。 ガベージ コレクションは、ワークロードへの影響を最小限に抑えながら、時間的に分散されます。  

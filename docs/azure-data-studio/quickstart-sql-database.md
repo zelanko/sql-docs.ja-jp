@@ -1,31 +1,30 @@
 ---
 title: Azure SQL データベースに対する接続およびクエリ
-titleSuffix: Azure Data Studio
 description: このクイック スタートでは、Azure Data Studio を使用して SQL データベースに接続し、クエリを実行する方法を示します
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771961"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>クイック スタート:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用した Azure SQL データベースに対する接続およびクエリ
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Database に接続してクエリを実行する
 
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL Database サーバーに接続します。 次に、Transact-SQL (T-SQL) ステートメントを実行して、他の [!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用されている TutorialDB データベースを作成し、クエリを実行します。
+このクイック スタートでは、Azure Data Studio を使用して Azure SQL Database サーバーに接続します。 次に、Transact-SQL (T-SQL) ステートメントを実行して、他の Azure Data Studio チュートリアルで使用されている TutorialDB データベースを作成し、クエリを実行します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] と Azure SQL Database サーバーが必要です。
+このクイック スタートを完了するには、Azure Data Studio と Azure SQL Database サーバーが必要です。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] をインストールする](download.md)
+- [Azure Data Studio をインストールする](download.md)
 
 Azure SQL サーバーがない場合は、次のいずれかの Azure SQL Database クイック スタートを完了します。 後の手順のために、完全修飾サーバー名とサインイン資格情報を覚えておいてください。
 
@@ -36,9 +35,9 @@ Azure SQL サーバーがない場合は、次のいずれかの Azure SQL Datab
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database サーバーへの接続
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL Database サーバーへの接続を確立します。
+Azure Data Studio を使用して、Azure SQL Database サーバーへの接続を確立します。
 
-1. 最初に [!INCLUDE[name-sos](../includes/name-sos-short.md)] を実行すると、**ウェルカム** ページが開きます。 **ウェルカム** ページが表示されない場合は、 **[ヘルプ]**  >  **[ようこそ]** を選択します。 **[新しい接続]** を選択して、 **[接続]** ウィンドウを開きます。
+1. 最初に Azure Data Studio を実行すると、 **[ようこそ]** ページが開きます。 **ウェルカム** ページが表示されない場合は、 **[ヘルプ]**  >  **[ようこそ]** を選択します。 **[新しい接続]** を選択して、 **[接続]** ウィンドウを開きます。
    
    ![新しい接続アイコン](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -66,7 +65,7 @@ Azure SQL サーバーがない場合は、次のいずれかの Azure SQL Datab
 
 ## <a name="create-the-tutorial-database"></a>チュートリアル データベースの作成
 
-次のセクションでは、他の [!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用されている TutorialDB データベースを作成します。
+次のセクションでは、他の Azure Data Studio チュートリアルで使用されている TutorialDB データベースを作成します。
 
 1. **[サーバー]** サイドバーで Azure SQL サーバーを右クリックし、 **[新しいクエリ]** を選択します。
 

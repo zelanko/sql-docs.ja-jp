@@ -19,15 +19,15 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287176"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053748"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 どのようなデータベースであっても、トランザクションを正しく管理しないと、ユーザー数が多いシステムでは競合やパフォーマンスの問題を招くことがあります。 データにアクセスするユーザー数が多いほど、トランザクションが効率的に行われるアプリケーションを用意することが重要になります。 このガイドでは、各トランザクションの物理的な整合性の確保を目的として [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]で使用されるロックおよび行のバージョン管理のメカニズムと、アプリケーションで効率的にトランザクションを制御する方法について説明します。  
   
@@ -1257,9 +1257,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)** 。 すべてのバージョン ストアのサイズを KB 単位で監視します。 この情報は、tempdb データベースに必要なバージョン ストア用の領域のサイズを判定する際に役立ちます。 このカウンターを長期間監視すると、tempdb に必要な領域を追加する際に役立つ推定値が得られます。  
   
- `Version Generation rate (KB/s)` すべてのバージョン ストアについてバージョンの生成率 (KB/秒) を監視します。  
+ `Version Generation rate (KB/s)`. すべてのバージョン ストアについてバージョンの生成率 (KB/秒) を監視します。  
   
- `Version Cleanup rate (KB/s)` すべてのバージョン ストアについてバージョンのクリーンアップ率 (KB/秒) を監視します。  
+ `Version Cleanup rate (KB/s)`. すべてのバージョン ストアについてバージョンのクリーンアップ率 (KB/秒) を監視します。  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) と Version Cleanup rate (KB/s) から得た情報を、tempdb に必要な領域の予測に利用できます。  
@@ -1276,11 +1276,11 @@ BEGIN TRANSACTION
   
  **Transactions**。 アクティブなトランザクションの総数を監視します。 システム トランザクションは含まれません。  
   
- `Snapshot Transactions` アクティブなスナップショット トランザクションの総数を監視します。  
+ `Snapshot Transactions`. アクティブなスナップショット トランザクションの総数を監視します。  
   
- `Update Snapshot Transactions` 更新操作を実行するアクティブなスナップショット トランザクションの総数を監視します。  
+ `Update Snapshot Transactions`. 更新操作を実行するアクティブなスナップショット トランザクションの総数を監視します。  
   
- `NonSnapshot Version Transactions` バージョン レコードを生成する、スナップショット以外のアクティブなトランザクションの総数を監視します。  
+ `NonSnapshot Version Transactions`. バージョン レコードを生成する、スナップショット以外のアクティブなトランザクションの総数を監視します。  
   
 > [!NOTE]  
 > Update Snapshot Transactions と NonSnapshot Version Transactions の合計は、バージョンの生成に関係するトランザクションの総数を表します。 Snapshot Transactions と Update Snapshot Transactions の差分は、読み取り専用のトランザクション数を表します。  

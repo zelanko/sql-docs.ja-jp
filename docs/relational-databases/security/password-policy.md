@@ -1,5 +1,6 @@
 ---
 title: パスワード ポリシー | Microsoft Docs
+description: Windows パスワード ポリシーのメカニズムは、SQL Server 認証を使用するログインと、パスワードを持つ包含データベース ユーザーに適用されます。
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -32,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3bd3bf3de9e70095ed217a160d7f29234a65cea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68010825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725934"
 ---
 # <a name="password-policy"></a>パスワード ポリシー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のパスワード ポリシー メカニズムに対応しています。 パスワード ポリシーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインに適用され、パスワードを持つ包含データベース ユーザーに適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用されるパスワードに、Windows で使用されているものと同じ複雑性ポリシーおよび有効期限ポリシーを適用できます。 この機能は `NetValidatePasswordPolicy` API に依存します。  

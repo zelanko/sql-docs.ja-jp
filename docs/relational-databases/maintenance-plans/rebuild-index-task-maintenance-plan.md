@@ -1,5 +1,6 @@
 ---
 title: '[インデックスの再構築タスク] (メンテナンス プラン) | Microsoft Docs'
+description: '[インデックスの再構築タスク] を使用して、SQL Server データベースのテーブルに新しい FILL FACTOR でインデックスを再作成する方法について説明します。'
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1199b30249c5948381e40fe3c248b44a1f9c5930
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755723"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク] (メンテナンス プラン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
   
  **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。 このページで説明するオプションの詳細については、「 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
- **Connection**  
+## <a name="options"></a>Options  
+ **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -107,7 +108,7 @@ ms.locfileid: "68115579"
 
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  

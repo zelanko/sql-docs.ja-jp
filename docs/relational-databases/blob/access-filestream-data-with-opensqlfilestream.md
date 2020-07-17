@@ -1,5 +1,6 @@
 ---
 title: OpenSqlFilestream による FILESTREAM データへのアクセス | Microsoft Docs
+description: OpenSqlFilestream を使用して FILESTREAM データにアクセスする方法を説明します。 この API を使用して Win32 ハンドルを取得する方法を示す例を紹介します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 826e0a047e119b186905f9d3f2d56170aa7b9249
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f2f87e037f16d2d0dc46d9f677403076148868b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85745174"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream による FILESTREAM データへのアクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、Win32 API のうち [ReadFil](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)に渡すことができます。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  OpenSqlFilestream API は、ファイル システムに格納されている FILESTREAM バイナリ ラージ オブジェクト (BLOB) の Win32 互換ファイル ハンドルを取得します。 このハンドルは、次のいずれかの Win32 API に渡すことができます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  
   
  FILESTREAM データ コンテナー アクセスはすべて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションの中で実行する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じトランザクションで実行することもできます。 これにより、SQL データと FILESTREAM BLOB データの一貫性が維持されます。  
   
@@ -55,7 +56,7 @@ HANDLE OpenSqlFilestream (
  *DesiredAccess*  
  [in] FILESTREAM BLOB データへのアクセスに使用するモードを設定します。 この値は [DeviceIoControl 関数](https://go.microsoft.com/fwlink/?LinkId=105527)に渡されます。  
   
-|Name|値|意味|  
+|名前|値|意味|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|ファイルからデータを読み取ることができます。|  
 |SQL_FILESTREAM_WRITE|1|ファイルにデータを書き込むことができます。|  

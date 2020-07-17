@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558582"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902356"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの構成 - SMB - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の SMB ストレージを構成する方法について説明します。 
  

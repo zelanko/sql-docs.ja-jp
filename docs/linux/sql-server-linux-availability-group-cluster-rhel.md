@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706291"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896951"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server 用に 3 ノードの可用性グループ クラスターを作成する方法について説明します。 高可用性を実現するため、Linux 上の可用性グループには 3 つのノードが必要です。[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)に関するページを参照してください。 クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 
 
@@ -167,7 +167,7 @@ Pacemaker クラスターのプロパティの詳細については、「[Pacema
 
 ## <a name="create-availability-group-resource"></a>可用性グループのリソースを作成する
 
-可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドは、`ag1` という名前の可用性グループの `ocf:mssql:ag` マスター/スレーブ タイプのリソースを作成します。
+可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドを実行すると、`ag1` という名前の可用性グループに対して、`ocf:mssql:ag` というマスター/下位タイプのリソースが作成されます。
 
 **RHEL 7**
 

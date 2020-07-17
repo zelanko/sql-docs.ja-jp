@@ -1,5 +1,6 @@
 ---
 title: IF-WHILE EXISTS のシミュレーション - ネイティブ コンパイル モジュール
+description: SQL Server のネイティブ コンパイル ストアド プロシージャでサポートされていない条件付きステートメントで EXISTS 句をシミュレートする方法について説明します。
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e860bbab32549b72048d30caa93f18daa422cc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f62b799a124eb7ed47ffad9e63d0433172984c18
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735017"
 ---
 # <a name="simulating-an-if-while-exists-statement-in-a-natively-compiled-module"></a>ネイティブ コンパイル モジュールでの IF-WHILE EXISTS ステートメントのシミュレーション
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ネイティブ コンパイル ストアド プロシージャは、条件ステートメント (IF や WHILE など) の **EXISTS** 句をサポートしていません。  
   

@@ -16,15 +16,15 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980377"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998995"
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 *のテーブルにデータを一括インポートする目的で使用する* XML フォーマット ファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を記述するための構文を定義した XML スキーマが用意されています。 このスキーマは XML Schema Definition Language (XSDL) で定義されています。XML フォーマット ファイルはこのスキーマに準拠している必要があります。 XML フォーマット ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールされている場合のみサポートされます。  
   
  XML フォーマット ファイルは、**bcp** コマンド、BULK INSERT ステートメント、または INSERT ...SELECT \* FROM OPENROWSET(BULK...) ステートメントのいずれかを使用して実行します。 **bcp** コマンドを使用して、あるテーブルに対する XML フォーマット ファイルを自動的に生成できます。詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
@@ -146,9 +146,9 @@ ms.locfileid: "80980377"
   
 -   [Schema 要素](#SchemaElements)  
   
--   [\<FIELD> 要素の属性](#AttrOfFieldElement) (と[\<FIELD> 要素の Xsi:type 値](#XsiTypeValuesOfFIELD))  
+-   [\<FIELD> 要素の属性](#AttrOfFieldElement) (および [\<FIELD> 要素の Xsi:type 値](#XsiTypeValuesOfFIELD))  
   
--   [\<COLUMN> 要素の属性](#AttrOfColumnElement) (と[\<COLUMN> 要素のXsi:type 値](#XsiTypeValuesOfCOLUMN))  
+-   [\<COLUMN> 要素の属性](#AttrOfColumnElement) (および [\<COLUMN> 要素の Xsi:type 値](#XsiTypeValuesOfCOLUMN))  
   
 ####  <a name="schema-elements"></a><a name="SchemaElements"></a> Schema 要素  
  ここでは、XML スキーマで XML フォーマット ファイル用に定義している各要素の目的を説明します。 各要素の属性については、このトピックの後半で説明します。  
@@ -170,14 +170,14 @@ ms.locfileid: "80980377"
  詳細については、このトピックの「[一括インポートで \<ROW> 要素を使用する方法](#HowUsesROW)」を参照してください。  
   
  \<COLUMN>  
- 列を要素 (\<COLUMN>) として定義します。 各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (FIELD> 要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  
+ 列を要素 (\<COLUMN>) として定義します。 各 \<COLUMN> 要素は、\<FIELD> 要素に対応しています (この要素の ID は、\<COLUMN> 要素の SOURCE 属性で指定されます)。  
   
  この要素の属性については、このトピックの「[\<COLUMN> 要素の属性](#AttrOfColumnElement)」で説明します。 また、このトピックの「[一括インポートで \<COLUMN> 要素を使用する方法](#HowUsesColumn)」を参照してください。  
   
  \</BCPFORMAT>  
  フォーマット ファイルを終了するために必要なフォーマット ファイル要素です。  
   
-####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<FIELD> 要素の属性  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a> \<FIELD> 要素の属性  
  ここでは、次のスキーマ構文に示す \<FIELD> 要素の属性について説明します。  
   
  <FIELD  
@@ -202,7 +202,7 @@ ms.locfileid: "80980377"
   
 |FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> は \<COLUMN SOURCE **="** _fieldID_ **"** /> にマップします|必須|  
+|ID **="** _fieldID_ **"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="**_fieldID_**"**/> は \<COLUMN SOURCE**="**_fieldID_**"**/> にマップされます。|必須|  
 |xsi:type **="** _fieldType_ **"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |PREFIX_LENGTH **="** _p_ **"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p* は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
@@ -210,12 +210,12 @@ ms.locfileid: "80980377"
 |COLLATION **="** _collationName_ **"**|COLLATION は、文字列型のフィールドでのみ使用できる属性です。 SQL 照合順序名の一覧については、「[SQL Server の照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。|省略可能|  
 |TERMINATOR **= "** _terminator_ **"**|データ フィールドのターミネータを指定します。 ターミネータには、任意の文字を使用できます。 ただし、ターミネータには、データに含まれていない一意な文字を使用する必要があります。<br /><br /> 既定では、フィールド ターミネータはタブ文字 (\t) です。 段落記号を表すには、\r\n を使用します。|この属性が必要な文字型データの xsi:type でのみ使用されます。|  
   
-#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 要素の Xsi:type 値  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a> \<FIELD> 要素の Xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
   
  \<FIELD> 要素の xsi:type 値では、次のデータ型がサポートされています。  
   
-|\<FIELD> xsi:type 値|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
+|\<FIELD> の xsi:type 値|必要な XML<br /><br /> 属性|データ型に関する省略可能な XML<br /><br /> 属性|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |**NativeFixed**|**LENGTH**|[なし] :|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
@@ -228,7 +228,7 @@ ms.locfileid: "80980377"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型について詳しくは、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」をご覧ください。  
   
-####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<COLUMN> 要素の属性  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a> \<COLUMN> 要素の属性  
  ここでは、次のスキーマ構文に示す \<COLUMN> 要素の属性について説明します。  
   
  <COLUMN  
@@ -255,7 +255,7 @@ ms.locfileid: "80980377"
   
 |COLUMN 要素の属性|説明|省略可能 /<br /><br /> 必須|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> maps to \<FIELD ID **="** _fieldID_ **"** />|必須|  
+|SOURCE **="** _fieldID_ **"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/> は \<FIELD ID**="**_fieldID_**"**/> にマップされます。|必須|  
 |NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
 |xsi **:** type **="** _ColumnType_ **"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注:*ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可能|  
 |LENGTH **="** _n_ **"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
@@ -263,7 +263,7 @@ ms.locfileid: "80980377"
 |SCALE **="** _int_ **"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|列で NULL 値を使用できるかどうかを示します。 この属性は、FIELDS 要素から完全に独立しています。 ただし、列が NULLABLE ではない場合に、フィールドで NULL が指定された (何も値が指定されない) 場合、実行時エラーが発生します。<br /><br /> NULLABLE 属性は、単純な SELECT FROM OPENROWSET(BULK...) ステートメントを実行する場合にのみ使用されます。|省略可能 (任意のデータ型で使用可能)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 要素の xsi:type 値  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 要素の Xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
   
  次の表に示すように、\<COLUMN> 要素ではネイティブな SQL データ型がサポートされています。  
@@ -282,7 +282,7 @@ ms.locfileid: "80980377"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型の詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
-###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a>一括インポートで \<ROW> 要素を使用する方法  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> 一括インポートで \<ROW> 要素を使用する方法  
  \<ROW> 要素は、一部のコンテキストでは無視されます。 \<ROW> 要素が、一括インポート操作に影響を与えるかどうかは、一括インポート操作がどのように実行されるかによって異なります。  
   
 -   **bcp** コマンド  
@@ -298,7 +298,7 @@ ms.locfileid: "80980377"
     > [!NOTE]  
     >  OPENROWSET BULK 句では、フォーマット ファイルが必要です (フィールドのデータ型から列のデータ型に変換する処理には、XML フォーマット ファイルが必要であることに注意してください)。  
   
-###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a>一括インポートで \<COLUMN> 要素を使用する方法  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> 一括インポートで \<COLUMN> 要素を使用する方法  
  データをテーブルに一括インポートする際、フォーマット ファイル内の \<COLUMN> 要素により、次のことが指定され、データ ファイルのフィールドがテーブルの列にマップされます。  
   
 -   データ ファイルの行内における各フィールドの位置。  
@@ -461,7 +461,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を使用した同様の例については、「[フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)」を参照してください。  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. \<FIELD> xsi:type を \<COLUMN> xsi:type にマッピングする場合  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. \<FIELD> xsi: type を \<COLUMN> xsi: type にマッピングする場合  
  次の例では、さまざまな型のフィールド、および列への各フィールドのマッピングを示します。  
   
 ```xml

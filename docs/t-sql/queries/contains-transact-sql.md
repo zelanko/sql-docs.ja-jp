@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736322"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  *column_name* で検索するテキストと、その一致条件を指定します。  
   
-*\<contains_search_condition>* is **nvarchar**. 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`CONTAINS` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。
+*\<contains_search_condition>* は **nvarchar** です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`CONTAINS` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -234,7 +234,7 @@ WHERE CONTAINS(Description, @SearchWord);
  検索対象のドキュメントに含まれている必要がある単語または語句の照合を指定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]\<custom_proximity_term>を使用することをお勧めします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]\<custom_proximity_term> を使用することをお勧めします。  
   
  NEAR | ~  
  一致が返されるには、NEAR (~) 演算子の両側の単語または語句がドキュメントに含まれている必要があります。 検索語句は 2 つ指定する必要があります。 検索語句には、二重引用符で区切られた 1 つの単語または語句を指定できます ("*語句*")。  

@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する | Microsoft Docs
+description: クライアント コンピューターから Windows ファイアウォール経由で SQL Server データベース エンジンのインスタンスにアクセスできるよう、ファイアウォールを構成する方法を説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 815ecb54acf22b1ac28adae534847fa842b2e87a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784139"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、データベース エンジン アクセスのための Windows ファイアウォールを構成する方法について説明します。 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールを経由して [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターで、アクセスを許可するようにファイアウォールを構成する必要があります。  
@@ -47,7 +48,7 @@ ms.locfileid: "68012889"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データベース エンジン アクセスを有効にするように Windows ファイアウォールを構成するには、次のものを使用します。**  
   
@@ -96,6 +97,6 @@ ms.locfileid: "68012889"
 7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [方法: ファイアウォール設定を構成する (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

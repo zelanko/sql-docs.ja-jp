@@ -1,5 +1,6 @@
 ---
 title: メモリ管理アーキテクチャ ガイド | Microsoft Docs
+description: 以前のバージョンでのメモリ管理の変更など、SQL Server のメモリ管理アーキテクチャについて説明します。
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287946"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012139"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Windows 仮想メモリ マネージャー  
 Windows 仮想メモリ マネージャー (VMM) は、使用可能な物理メモリにコミット済みのアドレス空間をマップします。  
@@ -96,7 +97,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |スレッド スタック メモリ|いいえ|いいえ|
 |Windows からの直接割り当て|いいえ|いいえ|
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、 **_Total Server Memory (KB)_** の値が (max server memory によって指定される) **_Target Server Memory (KB)_** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、**_Total Server Memory (KB)_** の値が (max server memory によって指定される) **_Target Server Memory (KB)_** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
 
 この割り当ての実行直後、バックグラウンド タスクの*リソース モニター*がすべてのメモリ コンシューマーに信号を送り、割り当てられているメモリの解放を求め、*Total Server Memory (KB)* が *Target Server Memory (KB)* 仕様を下回るようにします。 そのため、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ使用量が短い時間だけ max server memory 設定を超えることがあります。 このような状況では、*Total Server Memory (KB)* パフォーマンス カウンター読み取り値が max server memory 設定と *Target Server Memory (KB)* 設定を超えます。
 

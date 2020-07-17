@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287576"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006008"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 この記事では、ワークロードで SQL Server クエリ ストアを使用するためのベスト プラクティスについて説明します。
 
@@ -34,9 +34,9 @@ ms.locfileid: "79287576"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する
 
-Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](../../azure-data-studio/what-is.md) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。
 
-このセクションでは、クエリ ストアおよび依存機能を確実に操作できるように設計された最適な構成の既定値について説明します。 既定の構成は、データ収集が継続的に実施される (OFF/READ_ONLY 状態の時間が最小限になる) ように最適化されています。
+このセクションでは、クエリ ストアおよび依存機能を確実に操作できるように設計された最適な構成の既定値について説明します。 既定の構成は、データ収集が継続的に実施される (OFF/READ_ONLY 状態の時間が最小限になる) ように最適化されています。 使用可能なすべてのクエリ ストア オプションの詳細については、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)」を参照してください。
 
 | 構成 | 説明 | Default | 解説 |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でクエリ ストアを実
 | | | | |
 
 > [!IMPORTANT]
-> 上記の既定値は、すべての Azure SQL データベースでのクエリ ストアのアクティブ化の最終段階で自動的に適用されます (上記の重要な注意事項を参照してください)。 アクティブ化された後、ユーザーによって設定された構成値は、主要なワークロードまたはクエリ ストアの信頼できる動作に悪影響を与えない限り、Azure SQL Database によって変更されることはありません。
+> 上記の既定値は、すべての [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]のアクティブ化の最終段階で自動的に適用されます。 有効にされた後、ユーザーによって設定される構成値は、主要なワークロードまたはクエリ ストアの信頼できる動作に悪影響を与えない限り、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] によって変更されることはありません。
 
-カスタム設定を維持する場合は、 [ALTER DATABASE とクエリ ストア オプション](https://msdn.microsoft.com/library/bb522682.aspx) を使用して、構成を前の状態に戻します。 「 [クエリ ストアを使用する際の推奨事項](https://msdn.microsoft.com/library/mt604821.aspx) 」で、よく選ばれている最適構成のパラメーターを確認してください。
+> [!NOTE]  
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースとエラスティック プールでは、クエリ ストアを無効にすることはできません。 `ALTER DATABASE [database] SET QUERY_STORE = OFF` を実行すると、警告 `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` が返されます。 
+
+カスタム設定を維持する場合は、 [ALTER DATABASE とクエリ ストア オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) を使用して、構成を前の状態に戻します。 「[クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)」で、最適構成のパラメーターを選ぶ方法確認してください。
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>エラスティック プール データベースでクエリ ストアを使用する
 
@@ -132,7 +135,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 
 - **[すべて]** : すべてのクエリをキャプチャします。 これは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定のオプションです。
 - **Auto**:頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、これは既定のオプションです。
-- **なし**: クエリ ストアで新しいクエリのキャプチャが停止されます。
+- **None**:クエリ ストアで新しいクエリのキャプチャが停止されます。
 - **Custom**:追加の制御と機能を使用して、データ収集ポリシーを微調整できます。 新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値内で何が行われるかが定義されます。 これは、構成可能な条件が評価される時刻の境界であり、いずれかが true の場合、クエリがクエリ ストアによるキャプチャの対象となります。
 
 > [!IMPORTANT]
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: データベースのターゲットの復旧時間の変更
-ms.custom: seo-lt-2019
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server で SQL Server データベースのターゲットの復旧時間を設定または変更する方法について説明します。
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: cbc9d56a0c084fe912ad9af0136166cdcf804ebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734970"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>データベースのターゲットの復旧時間の変更 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースのターゲットの復旧時間を変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで *間接チェックポイント*が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのターゲットの復旧時間を設定または変更する方法について説明します。 既定では、ターゲットの復旧時間は 60 秒です。データベースで *間接チェックポイント*が使用されます。 ターゲットの復旧時間により、このデータベースの復旧時間に上限が設定されます。  
   
 > [!NOTE]  
 >  ターゲットの復旧時間の設定によって特定のデータベースに対して指定された上限は、実行時間の長いトランザクションによって UNDO が過度に繰り返される場合には超過することがあります。  

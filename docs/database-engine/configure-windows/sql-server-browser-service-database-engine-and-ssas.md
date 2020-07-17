@@ -1,5 +1,6 @@
 ---
 title: SQL Server Browser サービス (データベース エンジンと SSAS) | Microsoft Docs
+description: SQL Server Browser について説明します。 このサービスにより、SQL Server リソースの要求がリッスンされ、インストールされている SQL Server インスタンスに関する情報が提供されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57d41e12084ca4a9873abeaeb3275ee671ae45d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79375559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789750"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser サービス (データベース エンジンと SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
   
 -   使用可能なサーバーの一覧の参照  
@@ -96,7 +97,7 @@ ms.locfileid: "79375559"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="account-privileges"></a>アカウントの権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートで受信待ちし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser を権限が制限されているユーザーのセキュリティ コンテキストで実行することにより、悪意のある攻撃にさらされる危険性を最小限に抑える必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  
@@ -126,7 +127,7 @@ ms.locfileid: "79375559"
  非表示インスタンスは、共有メモリ接続のみをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、 `HideInstance` Browser がこのサーバー インスタンスに関する情報を返さないことを示すために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フラグを設定します。  
   
 ### <a name="using-a-firewall"></a>ファイアウォールの使用  
- ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスのためのファイアウォールの設定」を参照してください。  
+ ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用方法については、次をご覧ください。「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス用にファイアウォールを構成する」([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック)  
   
 ## <a name="see-also"></a>参照  
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)  

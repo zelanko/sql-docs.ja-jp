@@ -12,15 +12,15 @@ ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85996d94387fb1a20c7ae21b94307428e21819d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ffc040643cf6906089c026eb216b4d9b084c0e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717796"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Hash Warning イベント クラスを使用して、ハッシュ演算中にハッシュの再帰、またはハッシュの中断 (ハッシュの保留) が発生する時点を監視できます。  
   
  使用できるメモリ内にビルド入力が収まらないときに、ハッシュの再帰が発生します。その結果、入力が複数のパーティションに分割され、個別に処理されます。 複数のパーティションに分割されても使用できるメモリ内に収まらない場合は、さらにサブパーティションに分割され、個別に処理されます。 この分割プロセスは、使用できるメモリ内に各パーティションが収まるようになるまで、または (IntegerData データ列に表示された) 最大再帰レベルに到達するまで続けられます。  
@@ -60,8 +60,8 @@ ms.locfileid: "68089499"
 |HostName|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IntegerData|**int**|再帰レベル (ハッシュの再帰のみ)。|25|はい|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|LoginName|**nvarchar**|ユーザーのログイン名 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは *\<DOMAIN>\\<username\>* という形式の Windows ログイン資格情報)。|11|はい|  
-|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginName|**nvarchar**|ユーザーのログイン名 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *\<DOMAIN>\\<username\>* という形式の Windows ログイン資格情報)。|11|はい|  
+|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|Windows のユーザー名。|6|はい|  
 |ObjectID|**int**|パーティション再分割に関係するハッシュ チームのルートのノード ID。 Showplan のノード ID と一致します。|22|はい|  

@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンの有効なアクセス許可の決定 | Microsoft Docs
+description: SQL Server データベース エンジンのさまざまなオブジェクトに対するアクセス許可を持つユーザーを決定する方法について説明します。これには、現在および以前のアクセス許可システムが含まれます。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488031"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005621"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。この記事では、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (この記事の情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
 

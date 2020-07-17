@@ -1,5 +1,6 @@
 ---
 title: 行レベルのセキュリティ | Microsoft Docs
+description: 行レベルのセキュリティで、グループ メンバーシップや実行コンテキストを使用して、SQL Server のデータベース テーブル内の行へのアクセスを制御する方法について説明します。
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288977"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000536"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![行レベル セキュリティの図](../../relational-databases/security/media/row-level-security-graphic.png "行レベル セキュリティの図")  
   
@@ -41,7 +42,7 @@ Row-Level Security (RLS) は、アプリケーションでセキュリティの�
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([入手](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
-> Azure SQL Data Warehouse では、フィルター述語のみがサポートされています。 ブロック述語は現在、Azure SQL Data Warehouse でサポートされていません。
+> Azure Synapse では、フィルター述語のみがサポートされています。 ブロック述語は現在、Azure Synapse でサポートされていません。
 
 ## <a name="description"></a><a name="Description"></a> 説明
 
@@ -159,7 +160,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - **Filestream:** RLS は Filestream と互換性がありません。  
   
-- **PolyBase:** RLS は Azure SQL Data Warehouse 用の Polybase 外部テーブルでのみサポートされます。
+- **PolyBase:** RLS は Azure Synapse 用の Polybase 外部テーブルでのみサポートされます。
 
 - **メモリ最適化テーブル:** メモリ最適化テーブルでセキュリティ述語として使用されるインライン テーブル値関数は、`WITH NATIVE_COMPILATION` オプションを使用して定義する必要があります。 このオプションを使用すると、メモリ最適化テーブルでサポートされていない言語機能が禁止され、作成時に該当するエラーが発行されます。 詳細については、「 **メモリ最適化テーブルの概要** 」の「 [メモリ最適化テーブルの行レベルのセキュリティ](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」をご覧ください。  
   
@@ -185,8 +186,6 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  別のアクセス機能を示す 3 つのユーザー アカウントを作成します。  
 
-> [!NOTE]
-> Azure SQL Data Warehouse では EXECUTE AS USER がサポートされていないので、事前にユーザーごとに CREATE LOGIN を実行する必要があります。 後で、この動作をテストするために、適切なユーザーとしてログインします。
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse では EXECUTE AS USER がサポートされていないので、適切なユーザーとしてログインして上記の動作をテストします。
-
 マネージャーには、6 つの行すべてが表示されるはずです。 Sales1 と Sales2 のユーザーには、それぞれの売上のみ表示されます。
 
 セキュリティ ポリシーを変更してポリシーを無効にします。
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Azure SQL Data Warehouse 外部テーブルに対して行レベルのセキュリティを使用する場合のシナリオ
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Azure Synapse 外部テーブルに対して行レベルのセキュリティを使用する場合のシナリオ
 
 この簡単な例では、3 人のユーザーと 6 行の外部テーブルを作成します。 その後、インライン テーブル値関数と外部テーブルのセキュリティ ポリシーが作成されます。 この例では、select ステートメントがさまざまなユーザーに対してどのようにフィルター処理されるかが示されます。
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-作成した Sales テーブルから Azure SQL Data Warehouse 外部テーブルを作成します。
+作成した Sales テーブルから Azure Synapse 外部テーブルを作成します。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 これで、Sales1 と Sales2 のユーザーに 6 つの行すべてが表示されます。
 
-SQL Data Warehouse データベースに接続してリソースをクリーンアップします
+リソースをクリーンアップする Azure Synapse データベースに接続します
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 中間層アプリケーションからデータベースに接続するユーザーのシナリオ
 
 > [!NOTE]
-> この例の場合、Azure SQL Data Warehouse では、ブロック述語機能が現在サポートされていないため、正しくないユーザー ID の行の挿入がブロックされません。
+> この例の場合、Azure Synapse では、ブロック述語機能が現在サポートされていないため、正しくないユーザー ID の行の挿入がブロックされません。
 
 この例では、アプリケーション ユーザー (またはテナント) が同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー (アプリケーション) を共有している場合、中間層のアプリケーションが接続フィルタリングを実装する方法を示します。 アプリケーションは、データベースに接続した後、 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) で現在のアプリケーション ユーザー ID を設定します。その後、セキュリティ ポリシーによって、この ID に対して表示しない行が透過的にフィルター処理されます。また、ユーザーが間違ったユーザー ID の行を挿入できないようにします。 その他のアプリケーションの変更は必要ありません。  
   

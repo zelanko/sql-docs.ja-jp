@@ -1,5 +1,6 @@
 ---
 title: remote access サーバー構成オプションの構成 | Microsoft Docs
+description: 非推奨の remote access オプションの代替手段について説明します。 SQL Server 接続に関する問題のトラブルシューティングについては、他のソースをご覧ください。
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fba193e5f6493e722bd1171c333b4aa2e700ff50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785800"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、"リモート アクセス"機能に関するものです。 この構成オプションは、わかりにくい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への通信機能であり、非推奨であるため、使用すべきではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続で問題があるため、それを解決するためにこのページに至った場合は、代わりに次のいずれかのページを参照してください。  
   

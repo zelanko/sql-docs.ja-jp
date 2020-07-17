@@ -1,5 +1,6 @@
 ---
 title: PowerShell を使用した Always Encrypted の構成 | Microsoft Docs
+description: Azure SQL Database および SQL Server の両方で Always Encrypted を構成するコマンドレットを提供する SqlServer PowerShell モジュールをインポートして使用する方法を説明します。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765118"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 SqlServer PowerShell モジュールによって、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方で、[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するためのコマンドレットが提供されます。
 

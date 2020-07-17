@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495469"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007638"
 ---
 # <a name="set-operators---union-transact-sql"></a>セット演算子 - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 2 つのクエリの結果を、単一の結果セットに連結します。 結果セットに重複する行が含まれるかどうかを制御します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68495469"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { UNION [ ALL ]   
   { <query_specification> | ( <query_expression> ) } 
@@ -59,7 +59,7 @@ ms.locfileid: "68495469"
 ```  
   
 ## <a name="arguments"></a>引数  
-\<query_specification> | ( \<query_expression> ) クエリの仕様または別のクエリ定義またはクエリ式からのデータと比較するデータを返すクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 データ型が異なるとき、最終的なデータ型は[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)ルールに基づいて決定されます。 型は同じだが、有効桁数、小数点以下桁数、または長さが異なる場合、結果は式の結合と同じルールに基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
+\<query_specification> | ( \<query_expression> ) 別のクエリ仕様またはクエリ式からのデータと結合するデータを返すクエリ仕様またはクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 データ型が異なるとき、最終的なデータ型は[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)ルールに基づいて決定されます。 型は同じだが、有効桁数、小数点以下桁数、または長さが異なる場合、結果は式の結合と同じルールに基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
 **xml** データ型の列は同じである必要があります。 すべての列が XML スキーマに型指定されているか、型指定されていない必要があります。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  
   

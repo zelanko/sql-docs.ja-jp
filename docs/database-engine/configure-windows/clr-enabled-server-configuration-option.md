@@ -1,5 +1,6 @@
 ---
 title: clr enabled サーバー構成オプション | Microsoft Docs
+description: clr enabled オプションを使用して、SQL Server でユーザー アセンブリを実行できるかどうかを指定する方法について説明します。 共通言語ランタイムの実行がサポートされない場合について説明します。
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56ddc21a660ba8316a9c311546e4ced48067f270
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759165"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でユーザー アセンブリを実行できるかどうかを指定するには、clr enabled オプションを使用します。 clr enabled オプションでは、次の値を指定します。 
   

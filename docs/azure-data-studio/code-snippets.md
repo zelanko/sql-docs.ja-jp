@@ -1,27 +1,26 @@
 ---
 title: 再利用可能なコード スニペットの作成
-titleSuffix: Azure Data Studio
 description: Azure Data Studio で SQL コード スニペットを作成して使用する方法について学習します
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774693"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] のコード スニペットは、データベースおよびデータベース オブジェクトを簡単に作成できるようにするテンプレートです。 
+Azure Data Studio のコード スニペットは、データベースおよびデータベース オブジェクトを簡単に作成できるようにするテンプレートです。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、適切な構文を迅速に生成するのに役立つ、複数の T-SQL スニペットが用意されています。 
+Azure Data Studio には、適切な構文を迅速に生成するのに役立つ、複数の T-SQL スニペットが用意されています。 
 
 ユーザー定義のコード スニペットを作成することもできます。
 
@@ -58,7 +57,7 @@ ms.locfileid: "67959707"
 1. **[SQL]** を選択します。
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] では Visual Studio Code からそのコード スニペット機能を継承するため、この記事では SQL スニペットの使用について具体的に説明します。 詳細については、Visual Studio Code ドキュメントの「[独自のスニペットを作成する](https://code.visualstudio.com/docs/editor/userdefinedsnippets)」を参照してください。 
+   > Azure Data Studio では Visual Studio Code からそのコード スニペット機能を継承するため、この記事では SQL スニペットの使用について具体的に説明します。 詳細については、Visual Studio Code ドキュメントの「[独自のスニペットを作成する](https://code.visualstudio.com/docs/editor/userdefinedsnippets)」を参照してください。 
 
    ![テンプレート フィールドの置換](media/code-snippets/select-sql.png)
 

@@ -1,5 +1,6 @@
 ---
 title: データベース スキーマの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server でスキーマ作成する方法、および制限事項と制約事項について説明します。
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903751"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005704"
 ---
 # <a name="create-a-database-schema"></a>データベース スキーマの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマを作成する方法について説明します。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
@@ -65,7 +66,7 @@ ms.locfileid: "72903751"
 > **Azure SQL Database** または **Azure SQL Data Warehouse** に対する SSMS を使用してスキーマを作成している場合、ダイアログ ボックスは表示されません。 生成されたスキーマ テンプレート作成 T-SQL ステートメントを実行する必要があります。
   
 ### <a name="additional-options"></a>追加オプション  
- **[スキーマ - 新規作成]** ダイアログ ボックスには、 **[権限]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
+ **[スキーマ - 新規作成]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています: **[権限]** 、 **[拡張プロパティ]** 。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

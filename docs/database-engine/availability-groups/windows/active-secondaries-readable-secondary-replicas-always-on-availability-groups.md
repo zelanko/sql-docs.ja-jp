@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883003"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、同期コミット可用性モードまたは非同期コミット可用性モードのいずれにも指定できます。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784648"
      データベース管理者は、セカンダリ ロールで実行しているときに、すべての接続 (読み取り専用アクセスのみ) または読み取りを目的とした接続のみを許可するように 1 つ以上のレプリカを構成する必要があります。  
   
     > [!NOTE]  
-    >  必要に応じて、プライマリ ロールで実行しているときに、読み取り専用接続を除外するように可用性レプリカを構成することもできます。  
+    >  必要に応じて、プライマリ ロールで実行しているときに、読み取り専用接続を除外するように可用性レプリカを構成することもできます。
   
      詳細については、「[可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)」を参照してください。  
+  
+    >[!WARNING]
+    >  SQL Server の同じメジャー ビルド上のレプリカのみが読み取り可能になります。 詳細については、[ローリング アップグレードの基本](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags)に関するページを参照してください。
+  
   
 -   **可用性グループ リスナー**  
   

@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([プロセッサ] ページ) | Microsoft Docs
+description: SQL Server のプロセッサの設定について説明します。 ワーカー スレッドの数、プロセッサの割り当て、その他のプロパティを制御するためのオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3652ee3b01383d8d029bb0eb7aeefaa4f8cc045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726601"
 ---
 # <a name="server-properties---processors-page"></a>[サーバーのプロパティ] - [プロセッサ] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、プロセッサ オプションを表示または変更できます。 プロセッサの関係の設定は、複数のプロセッサが実装されている場合のみ有効です。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[プロセッサの関係]**  
  プロセッサの再読み込みを防ぎ、プロセッサ間のスレッドの移行を少なくするために、プロセッサを特定のスレッドに割り当てます。 詳細については、「 [affinity mask サーバー構成オプション](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)」を参照してください。  
   

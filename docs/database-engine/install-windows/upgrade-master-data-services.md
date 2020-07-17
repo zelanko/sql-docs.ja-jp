@@ -1,5 +1,6 @@
 ---
 title: マスター データ サービスのアップグレード | Microsoft Docs
+description: Microsoft SQL Server マスター データ サービスのアップグレードについて 4 つのシナリオを確認します。 ファイルの場所とアップグレードのトラブルシューティングについて説明します。
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900274"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] マスター データ サービスのアップグレードには、次のシナリオがあります。  
   

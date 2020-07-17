@@ -1,5 +1,6 @@
 ---
 title: データベース チェックポイント (SQL Server) | Microsoft Docs
+description: 復旧時にログに含まれていた変更の適用を開始できる既知の最適なポイントであるチェックポイントについて説明します。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,15 +28,15 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754553"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  *チェックポイント* によって、予期しないシャットダウンやクラッシュの後の復旧中に、ログに格納されている変更を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が適用するための最適なポイントが作成されます。
 
 ##  <a name="overview"></a><a name="Overview"></a> 概要   

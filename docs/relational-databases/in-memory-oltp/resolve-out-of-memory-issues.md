@@ -1,5 +1,6 @@
 ---
 title: メモリ不足の問題の解決 | Microsoft Docs
+description: SQL Server インメモリ OLTP のメモリ不足状況、影響を復元および解決する方法、ページ割り当ての失敗を解決する方法、およびベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722387"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] では、さまざまな形で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より多くのメモリが使用されます。 インストールして [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用に割り当てたメモリ量が、ニーズの拡大に合わなくなる場合があります。 その場合は、メモリが不足する可能性があります。 このトピックでは、OOM 状態から回復する方法について説明します。 多数の OOM 状態を回避するのに役立つガイドについては、「 [メモリ使用量の監視とトラブルシューティング](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 」を参照してください。  
   
@@ -26,9 +27,9 @@ ms.locfileid: "72908452"
   
 |トピック|概要|  
 |-----------|--------------|  
-|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
+|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました。" というエラー メッセージが表示された場合の対処方法。|  
 |[低メモリまたは OOM 状態によるワークロードへの影響を解決する](#bkmk_recoverFromOOM)|低メモリの問題によるパフォーマンス低下が見つかった場合の対処方法。|  
-|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
+|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|操作に十分なメモリがあるにもかかわらず、"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています。 ..." というエラー メッセージが発生した場合の対処方法。|
 |[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs)|仮想化環境でインメモリ OLTP を使用するときの留意事項。|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> OOM によるデータベース復元の障害を解決する  

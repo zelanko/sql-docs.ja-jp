@@ -1,5 +1,6 @@
 ---
 title: スナップショット レプリケーション | Microsoft Docs
+description: スナップショット レプリケーションでは、ある時点に表示されたデータが配信されます。 更新についての監視は行われません。 スナップショットが生成され、サブスクライバーに送信されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b3e66bbfa13af7c6f06e39346c68273c9f7a58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783124"
 ---
 # <a name="snapshot-replication"></a>スナップショット レプリケーション
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   スナップショット レプリケーションでは、特定の時間に表示されていた状態のデータを配信します。データに対する更新は監視されません。 同期が発生するとデータ全体のスナップショットが作成され、サブスクライバーに送信されます。  
   
 > [!NOTE]  

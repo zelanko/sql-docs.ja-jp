@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ca4b241b3f1224eeee37ca11b34b1345151c6d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321567"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898034"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>マージ アーティクル間の結合フィルターの定義および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、マージ アーティクル間の結合フィルターを定義および変更する方法について説明します。 マージ レプリケーションでは結合フィルターがサポートされています。結合フィルターは、通常、テーブル分割を他の関連するテーブル アーティクルに拡張するために、パラメーター化されたフィルターと組み合わせて使用されます。  
   
  **このトピックの内容**  
@@ -58,7 +58,7 @@ ms.locfileid: "75321567"
   
 #### <a name="to-define-a-join-filter"></a>結合フィルターを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の既存の行フィルターまたは結合フィルターを選択します。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の既存の行フィルターまたは結合フィルターを選択します。  
   
 2.  **[追加]** をクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321567"
   
     -   ビルダーの使用を選択した場合、グリッド内の列 ( **[結合]** 、 **[フィルター選択されたテーブルの列]** 、 **[演算子]** 、 **[結合テーブルの列]** ) を使用して JOIN ステートメントを作成します。  
   
-         グリッド内の各列には、ドロップダウン コンボ ボックスが含まれており、2 つの列と 1 つの演算子 ( **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、 **[like]** ) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列のペアを複数個含める場合は、 **[結合]** 列から結合 (AND または OR) を選択し、さらに 2 つの列と 1 つの演算子を入力します。  
+         グリッド内の各列には、ドロップダウン コンボ ボックスが含まれており、2 つの列と 1 つの演算子 ( **=** 、 **<>** 、 **<=** 、 **\<**, **>=** 、 **>** 、 **[like]** ) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列のペアを複数個含める場合は、 **[結合]** 列から結合 (AND または OR) を選択し、さらに 2 つの列と 1 つの演算子を入力します。  
   
     -   ステートメントを手動で作成する場合、 **[JOIN ステートメント]** テキスト領域に JOIN ステートメントを入力します。 **[フィルター選択されたテーブルの列]** ボックスと **[結合テーブルの列]** ボックスを使用して、 **[JOIN ステートメント]** テキスト領域に列をドラッグ アンド ドロップします。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75321567"
 
 #### <a name="to-modify-a-join-filter"></a>結合フィルターを変更するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[編集]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[編集]** をクリックします。  
   
 2.  **[結合の編集]** ダイアログ ボックスで、フィルターを変更します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321567"
   
 #### <a name="to-delete-a-join-filter"></a>結合フィルターを削除するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  この手順では、親アーティクルのパラメーター化されたフィルターと、親アーティクルと子アーティクルの結合フィルターを組み合わせて使用する方法について説明します。 結合フィルターは、レプリケーションのストアド プロシージャを使用してプログラムから定義したり変更したりできます。  
@@ -141,7 +141,7 @@ ms.locfileid: "75321567"
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [マージ アーティクル間の結合フィルターを定義および変更する方法 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [方法: マージ アーティクル間の結合フィルターを定義および変更する (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  

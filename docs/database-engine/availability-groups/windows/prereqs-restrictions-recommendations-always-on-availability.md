@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2cbdf8467ac119b4fa5831a73a03cf1a54f956c
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 8688a67d4fecaba0857f0fc1ac0e763ebbb18267
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925306"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892410"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   この記事では、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の展開に関して、各種コンポーネント (ホスト コンピューター、Windows Server フェールオーバー クラスタリング (WSFC)、サーバー インスタンス、可用性グループ) の前提条件、制限、推奨事項などの考慮事項について説明します。 各コンポーネントのセキュリティに関する考慮事項のほか、要求される権限 (該当する場合) にも触れています。  
   

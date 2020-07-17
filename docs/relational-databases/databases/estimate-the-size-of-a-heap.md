@@ -1,5 +1,6 @@
 ---
 title: ヒープ サイズの見積もり | Microsoft Docs
+description: SQL Server でヒープにデータを格納するために必要な領域を見積もるには、次の手順を実行します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909043"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002968"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   ヒープにデータを格納するために必要な領域は、次の手順で見積もることができます。  
   
 1.  次のように、テーブル内の行数を指定します。  
@@ -46,7 +47,7 @@ ms.locfileid: "72909043"
   
 3.  NULL ビットマップと呼ばれる行の部分は、列の NULL 値の許容を管理するために予約されています。 このサイズは次のように計算します。  
   
-     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      この式の計算結果は、整数部分だけを使用します。 小数部分は無視してください。  
   
@@ -54,30 +55,30 @@ ms.locfileid: "72909043"
   
      テーブル内に可変長列が存在する場合、次の式を使用して、行内でそれらの列を格納するために使用する領域を計算します。  
   
-     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      **_Max_Var_Size_** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて **_Max_Var_Size_** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
     >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、 **nvarchar**、 **varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、**varchar**、**nvarchar、varbinary**、または **sql_variant** 列では、8,000 バイトの制限内に各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
-     可変長列が存在しない場合は、 **_Variable_Data_Size_** に 0 を設定します。  
+     可変長列が存在しない場合は、**_Variable_Data_Size_** に 0 を設定します。  
   
 5.  次の式で行サイズの合計を計算します。  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      上記の式の 4 という値は、データ行の行ヘッダー オーバーヘッドです。  
   
 6.  次の式で、1 ページあたりの行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   
-     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      行は複数のページにまたがらないので、計算結果の端数は切り捨ててください。 上記の式の 2 という値は、ページのスロット配列内の行のエントリのためのものです。  
   
 7.  次の式で、すべての行を格納するために必要なページ数を計算します。  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      算出したページ数の端数は切り上げてください。  
   
@@ -87,7 +88,7 @@ ms.locfileid: "72909043"
   
  この計算では、次のことは考慮されていません。  
   
--   [パーティション分割]  
+-   パーティション分割  
   
      パーティション分割による領域のオーバーヘッドはわずかですが、計算が複雑になります。 これは、計算に含めるほど重要なことではありません。  
   

@@ -1,5 +1,6 @@
 ---
 title: データベース マスター キーの復元 | Microsoft Docs
+description: SQL Server Management Studio と Transact-SQL を使用して SQL Server でデータベース マスター キーを復元する方法について説明します。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9860b952751937b18ca5e95e92ac959bb86abd23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892242"
 ---
 # <a name="restore-a-database-master-key"></a>データベース マスター キーの復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でデータベース マスター キーを復元する方法について説明します。  
   
 ## <a name="before-you-begin"></a>はじめに  
@@ -34,7 +35,7 @@ ms.locfileid: "74957372"
   
 - 現在のデータベースにマスター キーが存在しない場合は、RESTORE MASTER KEY を実行するとマスター キーが作成されます。 この新しいマスター キーは、サービス マスター キーで自動的に暗号化されません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可
 データベースに対する CONTROL 権限が必要です。  

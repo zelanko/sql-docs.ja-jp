@@ -1,5 +1,6 @@
 ---
 title: 認証モードの選択 | Microsoft Docs
+description: セットアップ時に SQL Server データベース エンジンについて、Windows 認証モードと混合モード認証のどちらかを選択します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75721357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627587"
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 選択できるモードは、Windows 認証モードと混合モードの 2 つです。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
   
 ## <a name="configuring-the-authentication-mode"></a>認証モードの構成  
  セットアップ中に混合モード認証を選択した場合は、sa という組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力して確認する必要があります。 sa アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。  

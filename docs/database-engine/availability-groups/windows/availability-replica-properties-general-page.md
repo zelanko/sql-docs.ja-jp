@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a94f6331b19a0b3c5f4cc523f5933f8c451c476
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896213"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性グループの可用性レプリカのプロパティ ([全般] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスには、可用性レプリカのプロパティが表示されます。  
   
 ## <a name="task-list"></a>タスク一覧  
@@ -30,7 +30,7 @@ ms.locfileid: "75241740"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[可用性グループ名]**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75241740"
  **はい**  
  読み取りアクセスに限り、このレプリカのセカンダリ データベースに対するすべての接続が許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
- 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+ 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  **[セッションのタイムアウト (秒)]**  
  タイムアウト時間 (秒単位)。 タイムアウト時間は、レプリカが別のレプリカからのメッセージの受信を待機する最大時間です。この時間を過ぎると、プライマリ レプリカとセカンダリ レプリカの間の接続は障害があるものと見なされます。 セッション タイムアウトは、セカンダリ レプリカがプライマリ レプリカに接続されているかどうかを検出します。 セカンダリ レプリカとの接続が確立されていないことを検出すると、プライマリ レプリカはセカンダリ レプリカが NOT_SYNCHRONIZED であるものと判断します。 プライマリ レプリカとの接続が確立されていないことを検出すると、セカンダリ レプリカは単に再接続を試みます。  

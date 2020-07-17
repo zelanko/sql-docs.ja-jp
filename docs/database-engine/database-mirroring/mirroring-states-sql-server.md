@@ -1,5 +1,6 @@
 ---
 title: ミラーリング状態 (SQL Server) | Microsoft Docs
+description: SQL Server のデータベース ミラーリング セッションでのデータベースの状態について説明します。 この状態は、通信状態、データ フロー、データの違いを反映します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715554"
 ---
 # <a name="mirroring-states-sql-server"></a>ミラーリング状態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッション中、ミラー化されたデータベースは常に特定の状態 ( *ミラーリング状態*) にあります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  
   
  各サーバー インスタンスは、データベース ミラーリング セッション全体を通して相互に監視します。 各パートナーは、ミラーリング状態を使用してデータベースを監視します。 プリンシパル データベースとミラー データベースは、フェールオーバー保留中状態の場合を除いて常に同じ状態になります。 ミラーリング監視サーバーがセッションに対して設定されている場合、各パートナーは、それぞれの接続状態 (接続または切断) を使用してミラーリング監視サーバーを監視します。  

@@ -1,5 +1,6 @@
 ---
 title: ロールの追加 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 ロールを使用して権限を管理します。
 ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cea30d4694ae9c89d69ca6d36330ecc623a015a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005640"
 ---
 # <a name="join-a-role"></a>ロールの追加
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で権限を効率的に管理するには、ロールを使用します。 ロールに権限を割り当て、そのロールに対してユーザーとログインの追加および削除を行います。 ロールを使用すると、権限をユーザーごとに個別に管理する必要がありません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、4 種類のロールをサポートしています。  
@@ -45,7 +46,7 @@ ms.locfileid: "67990487"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ログインおよびデータベース ユーザーにロールを割り当てるために使用するもの:**  
   
@@ -78,7 +79,7 @@ ms.locfileid: "67990487"
   
 4.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[サーバー ロールのプロパティ - _server\_role\_name_]** ダイアログ ボックスの **[メンバー]** ページで、**[追加]** をクリックします。  
+5.  **[サーバー ロールのプロパティ - _server\_role\_name_]** ダイアログ ボックスの **[メンバー]** ページで、 **[追加]** をクリックします。  
   
 6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[サーバー ロールのプロパティ - _server\_role\_name_]** ダイアログ ボックスに戻ります。  
   
@@ -100,7 +101,7 @@ ms.locfileid: "67990487"
   
 7.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-8.  **[データベースロールのプロパティ - _database\_role\_name_]** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
+8.  **[データベースロールのプロパティ - _database\_role\_name_]** ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
   
 9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 **[OK]** をクリックして **[データベースロールのプロパティ - _database\_role\_name_]** ダイアログ ボックスに戻ります。  
   

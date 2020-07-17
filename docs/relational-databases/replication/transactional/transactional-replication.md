@@ -1,5 +1,6 @@
 ---
 title: トランザクション レプリケーション | Microsoft Docs
+description: トランザクション レプリケーションでは、データベースのスナップショットを使用して、パブリッシャーで発生した変更をサブスクライバーに適用し、一貫性を確保します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716651"
 ---
 # <a name="transactional-replication"></a>トランザクション レプリケーション
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   一般にトランザクション レプリケーションは、パブリケーションのデータベース オブジェクトとデータのスナップショットで開始されます。 最初のスナップショットが取得されるとすぐ、それ以後パブリッシャーでデータやスキーマが変更されると、通常はその都度 (ほぼリアルタイムで) サブスクライバーに配信されるようになります。 データの変更は、パブリッシャーで発生したのと同じ順序で、同じトランザクションの中で、サブスクライバーに適用されます。したがって、パブリケーション内では、トランザクションの一貫性が保証されます。  
   
  トランザクション レプリケーションは一般にサーバー間の環境で使用され、次のような場合に適しています。  

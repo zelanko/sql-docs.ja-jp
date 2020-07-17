@@ -1,5 +1,6 @@
 ---
 title: アプリケーション ロール | Microsoft Docs
+description: アプリケーション ロールを使用して、SQL Server で特定のアプリケーションを介して接続するユーザーに対してのみ、データへのアクセスを有効にします。
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 8232644c8d44b4df541d8301dffa75771fbba44f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81305253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628432"
 ---
 # <a name="application-roles"></a>アプリケーション ロール
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   アプリケーション ロールは、ユーザーのような独自の権限でアプリケーションを実行できるようにするデータベース プリンシパルです。 アプリケーション ロールを使用すると、特定のアプリケーションから接続しているユーザーに対してのみ、特定のデータへのアクセスを有効にできます。 アプリケーション ロールは、データベース ロールとは異なり、既定ではメンバーが含まれておらず、アクティブではありません。 アプリケーション ロールは **sp_setapprole**を使用して有効化され、これにはパスワードが必要です。 アプリケーション ロールはデータベース レベルのプリンシパルであるため、他のデータベースへのアクセスは、そのデータベースの **guest**に許可された権限を介してのみ可能になります。 したがって、 **guest** が無効になったデータベースには、他のデータベースのアプリケーション ロールからアクセスできなくなります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、アプリケーション ロールは、サーバー レベルのプリンシパルと関連付けられていないため、サーバー レベルのメタデータにはアクセスできません。 この制限を無効にして、アプリケーション ロールがサーバー レベルのメタデータにアクセスできるようにするには、グローバル フラグ 4616 を設定します。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」および「[DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)」を参照してください。  

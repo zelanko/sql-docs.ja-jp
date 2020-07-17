@@ -1,7 +1,7 @@
 ---
 title: パッケージに対する SQL Server エージェント ジョブ | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00dff38a2c1e3309d6b8984475791f885f174e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643282"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
 
@@ -32,7 +32,7 @@ ms.locfileid: "71295805"
 > [!NOTE]
 > この記事では、SSIS パッケージのスケジュールを設定する方法 (全般) と、オンプレミスでパッケージのスケジュールを設定する方法について説明します。 次のプラットフォームで SSIS パッケージを実行し、スケジュールを設定することもできます。
 > - **Microsoft Azure クラウド**。 詳細については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」と [Azure で SSIS パッケージの実行スケジュールを設定する](../lift-shift/ssis-azure-schedule-packages.md)方法に関するページを参照してください。
-> - **Linux**。 詳細については、[SSIS を利用し、Linux でデータを抽出し、変換し、読み込む](../../linux/sql-server-linux-migrate-ssis.md)方法に関するページと、[cron を利用し、Linux で SQL Server Integration Services パッケージの実行スケジュールを設定する](../../linux/sql-server-linux-schedule-ssis-packages.md)方法に関するページを参照してください。
+> - **Linux** 詳細については、[SSIS を利用し、Linux でデータを抽出し、変換し、読み込む](../../linux/sql-server-linux-migrate-ssis.md)方法に関するページと、[cron を利用し、Linux で SQL Server Integration Services パッケージの実行スケジュールを設定する](../../linux/sql-server-linux-schedule-ssis-packages.md)方法に関するページを参照してください。
 
 ## <a name="sections-in-this-topic"></a>このトピックのセクション  
  このトピックには、次のセクションが含まれます。  
@@ -122,47 +122,50 @@ ms.locfileid: "71295805"
 6.  ジョブ ステップの種類として **[Integration Services パッケージ]** をクリックします。  
   
 7.  **[実行するアカウント名]** ボックスの一覧で、 **[SQL Server エージェント サービスのアカウント]** をクリックするか、ジョブ ステップで使用する資格情報を備えたプロキシ アカウントをクリックします。 プロキシ アカウントの作成方法の詳細については、「 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
-  
-     **[SQL Server エージェント サービスのアカウント]** の代わりにプロキシ アカウントを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する場合に発生する一般的な問題を解決できる場合があります。 それらの問題の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェント ジョブ ステップから SSIS パッケージを呼び出したときに、SSIS パッケージが実行されない](https://support.microsoft.com/kb/918760)」を参照してください。 
-     
-  7.1 プロキシを使用してジョブを実行する場合、ジョブを正常に実行するには、次のセキュリティ項目が配置されている必要があります。
 
-      プロキシによって使用される資格情報でのログインでは、SQL Server エージェントを実行するアカウントと SQL Server サービスを実行するアカウントに、次のアクセス許可が必要です。ローカル セキュリティ ポリシー属性:%SYSTEMROOT%\Temp に対するプロセス レベルのトークンのフル コントロールを置き換えます。 
-
-セキュリティ項目が配置されていない場合、ジョブは失敗し、次のようなエラー メッセージが表示されます。ジョブは失敗しました。  クライアントには必要な特権がありません。
+    **[SQL Server エージェント サービスのアカウント]** の代わりにプロキシ アカウントを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する場合に発生する一般的な問題を解決できる場合があります。 それらの問題の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェント ジョブ ステップから SSIS パッケージを呼び出したときに、SSIS パッケージが実行されない](https://support.microsoft.com/kb/918760)」を参照してください。 
      
-  
-    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
-  
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
-  
+    - プロキシを使用してジョブを実行する場合、正常に実行するには、ジョブに対して次のセキュリティ項目が設定されている必要があります。
+
+        プロキシによって使用される資格情報でのログインでは、SQL Server エージェントを実行するアカウントと SQL Server サービスを実行するアカウントに、次のアクセス許可が必要です。
+
+        - ローカル セキュリティ ポリシー属性:プロセス レベル トークンの置き換え
+        - %SYSTEMROOT%\Temp のフル コントロール 
+
+        セキュリティ項目が配置されていない場合、ジョブは失敗し、次のようなエラー メッセージが表示されます。ジョブは失敗しました。 クライアントには必要な特権がありません。
+
+        > **注:** プロキシ アカウントが使用する資格情報のパスワードが変更された場合は、資格情報のパスワードを更新する必要があります。 そうしない場合、ジョブ ステップは失敗します。  
+
+        SQL Server エージェントのサービス アカウントを構成する方法については、「[SQL Server エージェントのサービス開始アカウントの設定 (SQL Server 構成マネージャー)](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)」を参照してください。  
+
 8.  **[パッケージ ソース]** ボックスの一覧でパッケージのソースをクリックし、ジョブ ステップのオプションを構成します。  
   
-     **次の表は、使用できるパッケージ ソースを示しています。**  
+    **次の表は、使用できるパッケージ ソースを示しています。**  
   
     |[パッケージ ソース]|説明|  
     |--------------------|-----------------|  
     |**SSIS カタログ**|SSISDB データベースに格納されるパッケージ。 パッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置される [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトに含まれています。|  
     |**SQL Server**|MSDB データベースに格納されるパッケージ。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを使用します。|  
-    |**[SSIS パッケージ ストア]**|コンピューターの既定のフォルダーに格納されるパッケージ。 既定のフォルダーは、 *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Packages です。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを使用します。<br /><br /> 注:[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の構成ファイルを変更することで、別のフォルダーを指定したり、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって管理されるファイル システムの追加のフォルダーを指定したりすることができます。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。|  
+    |**[SSIS パッケージ ストア]**|コンピューターの既定のフォルダーに格納されるパッケージ。 既定のフォルダーは、 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Packages です。 これらのパッケージを管理するには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを使用します。<br /><br /> 注:[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の構成ファイルを変更することで、別のフォルダーを指定したり、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスによって管理されるファイル システムの追加のフォルダーを指定したりすることができます。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。|  
     |**ファイル システム**|ローカル コンピューターの任意のフォルダーに格納されるパッケージ。|  
+    |||
   
-     **次の表では、選択したパッケージ ソースに応じてジョブ ステップで使用できる構成オプションについて説明しています。**  
+    **次の表では、選択したパッケージ ソースに応じてジョブ ステップで使用できる構成オプションについて説明しています。**  
   
     > **重要:** パッケージがパスワードで保護されている場合、 **[新しいジョブ ステップ]** ダイアログ ボックスの **[全般]** ページのいずれかのタブ ( **[パッケージ]** タブを除く) をクリックすると、 **[パッケージ パスワード]** ダイアログ ボックスが表示されるので、パスワードを入力する必要があります。 入力しないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブはパッケージの実行に失敗します。  
   
-     **パッケージ ソース:** SSIS カタログ  
+    **パッケージ ソース:** SSIS カタログ  
   
     |タブ|Options|  
     |---------|-------------|  
-    |**Package**|**[サーバー]**<br /><br /> SSISDB カタログをホストしているデータベース サーバー インスタンスの名前を入力または選択します。<br /><br /> **[SSIS カタログ]** がパッケージ ソースである場合、サーバーへのログオンに使用できるのは Microsoft Windows ユーザー アカウントだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は使用できません。|  
+    |**Package**|**サーバー**<br /><br /> SSISDB カタログをホストしているデータベース サーバー インスタンスの名前を入力または選択します。<br /><br /> **[SSIS カタログ]** がパッケージ ソースである場合、サーバーへのログオンに使用できるのは Microsoft Windows ユーザー アカウントだけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は使用できません。|  
     ||**Package**<br /><br /> 参照ボタンをクリックして、パッケージを選択します。<br /><br /> **オブジェクト エクスプローラー** の **[Integration Services カタログ]** ノードの下にあるフォルダー内のパッケージを選択します。|  
     |**パラメーター**<br /><br /> **[構成]** タブにあります。|**Integration Services プロジェクト変換ウィザード** を使用すると、パッケージ構成をパラメーターに置き換えることができます。<br /><br /> **[パラメーター]** タブには、たとえば [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してパッケージをデザインしたときに追加したパラメーターが表示されます。 タブには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをパッケージ配置モデルからプロジェクト配置モデルに変換したときにパッケージに追加されたパラメーターも表示されます。 パッケージに含まれているパラメーターの新しい値を入力します。 リテラル値を入力するか、既にパラメーターにマップしてあるサーバー環境変数に含まれている値を使用することができます。<br /><br /> リテラル値を入力するには、パラメーターの横にある参照ボタンをクリックします。 **[実行用のリテラル値を編集]** ダイアログ ボックスが表示されます。<br /><br /> 環境変数を使用するには、 **[環境]** をクリックし、使用する変数を含む環境を選択します。<br /><br /> **\*\* 重要 \*\*** 複数のパラメーターや接続マネージャー プロパティを複数の環境に含まれている変数にマップしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってエラー メッセージが表示されます。 特定の実行で、パッケージは単一のサーバー環境に含まれている値だけで実行できます。<br /><br /> サーバー環境を作成し、変数をパラメーターにマップする方法については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。|  
     |**接続マネージャー**<br /><br /> **[構成]** タブにあります。|接続マネージャー プロパティの値を変更します。 たとえば、サーバー名を変更できます。 パラメーターは、SSIS サーバー上で接続マネージャー プロパティ用に自動的に生成されます。 プロパティの値を変更するには、リテラル値を入力するか、既に接続マネージャー プロパティにマップしてあるサーバー環境変数に含まれている値を使用することができます。<br /><br /> リテラル値を入力するには、パラメーターの横にある参照ボタンをクリックします。 **[実行用のリテラル値を編集]** ダイアログ ボックスが表示されます。<br /><br /> 環境変数を使用するには、 **[環境]** をクリックし、使用する変数を含む環境を選択します。<br /><br /> **\*\* 重要 \*\*** 複数のパラメーターや接続マネージャー プロパティを複数の環境に含まれている変数にマップしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってエラー メッセージが表示されます。 特定の実行で、パッケージは単一のサーバー環境に含まれている値だけで実行できます。<br /><br /> サーバー環境を作成し、変数を接続マネージャーのプロパティにマップする方法については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。|  
     |**詳細**<br /><br /> **[構成]** タブにあります。|パッケージ実行用の次の追加の設定を構成します。|  
     ||**プロパティのオーバーライド**:<br /><br /> **[追加]** をクリックして、パッケージ プロパティの新しい値の入力、プロパティ パスの指定、およびプロパティ値が機微なデータであるかどうかの指定を行います。 機微なデータは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーによって暗号化されます。 プロパティの設定を編集または削除するには、 **[プロパティのオーバーライド]** ボックスの行をクリックし、 **[編集]** または **[削除]** をクリックします。 プロパティ パスを見つけるには、次のいずれかの操作を行います。<br /><br /> \- XML 構成ファイル (\*.dtsconfig) からプロパティ パスをコピーします。 パスは、ファイルの Configuration セクションに PATH 属性の値として記述されています。 MaximumErrorCount プロパティのパスの例: \Package.Properties[MaximumErrorCount]<br /><br /> \- **パッケージ構成ウィザード** を実行し、最後の **[ウィザードの完了]** ページからプロパティ パスをコピーします。 その後、ウィザードの実行を取り消すことができます。<br /><br /> <br /><br /> 注: **[プロパティのオーバーライド]** オプションは、以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] からアップグレードされた構成を持つパッケージに対して適用されます。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] を使用して作成し、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置するパッケージは、構成の代わりにパラメーターを使用します。|  
-    ||**ログ記録レベル**<br /><br /> パッケージ実行のために、次のいずれかのログ記録レベルを選択します。 **[パフォーマンス]** または **[詳細]** ログ記録レベルを選択すると、パッケージ実行のパフォーマンスに影響を及ぼす可能性があります。<br /><br /> **なし**:<br />                          ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。<br /><br /> **Basic**:<br />                          カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これがログ記録レベルの既定値です。<br /><br /> **パフォーマンス**:<br />                          パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。<br /><br /> **[詳細]** :<br />                          カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。<br /><br /> 選択したログ記録レベルによって、SSISDB ビューや [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーのレポートに表示される情報が決まります。 詳細については、「 [Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。|  
-    ||**エラー時にダンプする**<br /><br /> パッケージの実行中にエラーが発生した場合に、デバッグ ダンプ ファイルを生成するかどうかを指定します。 ファイルには、問題のトラブルシューティングに役立つ、パッケージの実行に関する情報が含まれます。 このオプションを選択した場合、実行中にエラーが発生すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって .mdmp ファイル (バイナリ ファイル) および .tmp ファイル (テキスト ファイル) が作成されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、これらのファイルは *\<ドライブ>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。|  
+    ||**ログ記録レベル**<br /><br /> パッケージ実行のために、次のいずれかのログ記録レベルを選択します。 **[パフォーマンス]** または **[詳細]** ログ記録レベルを選択すると、パッケージ実行のパフォーマンスに影響を及ぼす可能性があります。<br /><br /> **None**:<br />                          ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。<br /><br /> **Basic**:<br />                          カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これがログ記録レベルの既定値です。<br /><br /> **パフォーマンス**:<br />                          パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。<br /><br /> **[詳細]** :<br />                          カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。<br /><br /> 選択したログ記録レベルによって、SSISDB ビューや [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーのレポートに表示される情報が決まります。 詳細については、「 [Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。|  
+    ||**エラー時にダンプする**<br /><br /> パッケージの実行中にエラーが発生した場合に、デバッグ ダンプ ファイルを生成するかどうかを指定します。 ファイルには、問題のトラブルシューティングに役立つ、パッケージの実行に関する情報が含まれます。 このオプションを選択した場合、実行中にエラーが発生すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって .mdmp ファイル (バイナリ ファイル) および .tmp ファイル (テキスト ファイル) が作成されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、これらのファイルは *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。|  
     ||**32 ビット ランタイム**<br /><br /> 64 ビット バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがインストールされている 64 ビット コンピューター上で、32 ビット バージョンの dtexec ユーティリティを使用してパッケージを実行するかどうかを示します。<br /><br /> たとえば、パッケージが 64 ビット バージョンでは使用できないネイティブ OLE DB プロバイダーを使用している場合に、32 ビット バージョンの dtexec を使用してパッケージを実行する必要がある場合があります。 詳細については、「 [64 ビット コンピューター上の Integration Services に関する注意点](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)」を参照してください。<br /><br /> 既定では、ジョブ ステップの種類として **[SQL Server Integration Services パッケージ]** を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはシステムによって自動的に呼び出されるバージョンの dtexec ユーティリティを使用してパッケージを実行します。 システムは、コンピューター プロセッサと、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのバージョンに応じて、32 ビットまたは 64 ビット バージョンのユーティリティを呼び出します。|  
   
      **パッケージ ソース:** SQL Server、SSIS パッケージ ストア、またはファイル システム  
@@ -171,7 +174,7 @@ ms.locfileid: "71295805"
   
     |タブ|Options|  
     |---------|-------------|  
-    |**Package**<br /><br /> これらは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されるパッケージのタブ オプションです。|**[サーバー]**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのデータベース サーバー インスタンスの名前を入力または選択します。|  
+    |**Package**<br /><br /> これらは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されるパッケージのタブ オプションです。|**サーバー**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのデータベース サーバー インスタンスの名前を入力または選択します。|  
     ||**[Windows 認証を使用する]**<br /><br /> Microsoft Windows ユーザー アカウントを使用してサーバーにログオンする場合に、このオプションを選択します。|  
     ||**[SQL Server 認証を使用する]**<br /><br /> 指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン アカウントが見つからない場合、認証は失敗し、エラー メッセージが返されます。|  
     ||**ユーザー名**|  
@@ -189,7 +192,8 @@ ms.locfileid: "71295805"
   
 9. **[OK]** をクリックして設定を保存し、 **[新しいジョブ ステップ]** ダイアログ ボックスを閉じます。  
   
-    > **注:** **SSIS カタログ**に格納されるパッケージの場合、未解決のパラメーターまたは接続マネージャーのプロパティ設定があると、 **[OK]** ボタンが無効になります。 設定が未解決になるのは、パラメーターまたはプロパティを設定するためにサーバー環境変数に含まれている値を使用し、次のいずれかの条件が満たされる場合です。  
+    > [!NOTE]
+    > **SSIS カタログ**に格納されるパッケージの場合、未解決のパラメーターまたは接続マネージャーのプロパティ設定があると、 **[OK]** ボタンが無効になります。 設定が未解決になるのは、パラメーターまたはプロパティを設定するためにサーバー環境変数に含まれている値を使用し、次のいずれかの条件が満たされる場合です。  
     >   
     >  **[構成]** タブの **[環境]** チェック ボックスがオフになっている。  
     >   

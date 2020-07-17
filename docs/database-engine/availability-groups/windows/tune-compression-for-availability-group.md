@@ -1,5 +1,6 @@
 ---
 title: 可用性グループの圧縮の調整 | Microsoft Docs
+description: SQL Server で可用性グループのデータ ストリームが圧縮されるしくみと、その結果、ネットワーク トラフィックの削減、CPU 負荷の増加、待機時間が生じる可能性について説明します。
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888013"
 ---
 # <a name="tune-compression-for-availability-group"></a>可用性グループの圧縮の調整
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 既定では、SQL Server は、可用性グループにとって適切な場合にデータ ストリームを圧縮します。 圧縮によって、ネットワーク トラフィックが削減され、CPU の負荷が増加し、遅延が引き起こされる可能性があります。 圧縮を有効にするには、sysadmin 固定サーバー ロールのメンバーである必要があります。 次の表は、SQL Server が可用性グループのログ ストリームに対して圧縮を使用するタイミングを示します。
 
 | シナリオ | 圧縮の設定
@@ -24,6 +25,7 @@ ms.locfileid: "68013667"
 | 同期コミット レプリカ | 非圧縮
 | 非同期コミット レプリカ | Compressed
 | 自動シードの処理中 | 非圧縮
+| データベースでの TDE の有効化  | 非圧縮
 
 ## <a name="trace-flags-for-availability-group-compression"></a>可用性グループ圧縮のトレース フラグ 
 

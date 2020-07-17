@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b196cfca92a9a6cda8170b413a2b3701f09d22f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321979"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883282"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>更新可能トランザクション サブスクリプションの更新モードの切り替え
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、更新可能トランザクション サブスクリプションの更新モードを切り替える方法について説明します。 サブスクリプションの新規作成ウィザードを使用して、更新可能サブスクリプションのモードを指定します。 このウィザードを使用する場合のモードの設定については、「[プル サブスクリプションのプロパティの表示または変更](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
  **このトピックの内容**  

@@ -1,5 +1,6 @@
 ---
 title: priority boost サーバー構成オプションの構成 | Microsoft Docs
+description: priority boost オプションについて説明します。 これを使用して、Windows 2008 または Windows Server 2008 R2 のスケジューラで SQL Server の優先度ベースを設定する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7c18eabf73f964e03ec65981e610aae8ad061b6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d2793ad9a8b92efd65cba0be745fc3ad77f715e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785886"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>priority boost サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]構成オプションを構成する方法について説明します。 **priority boost** オプションは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 または Windows 2008 R2 のスケジューリングでの優先度を同じコンピューター上の他のプロセスよりも高くして、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行する必要があるかどうかを指定するために使用します。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Windows 2008 または Windows Server 2008 R2 のスケジューラで優先度ベース 13 で実行されます。 既定値は 0 (優先度ベース 7) です。  
   

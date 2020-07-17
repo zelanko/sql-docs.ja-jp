@@ -1,28 +1,26 @@
 ---
 title: 拡張機能の追加
-titleSuffix: Azure Data Studio
 description: 拡張機能マーケットプレースから Azure Data Studio に拡張機能を追加する
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e74d0dd7b904cba5b332eb20163c96237ac6d6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72166705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774618"
 ---
-# <a name="extend-the-functionality-of-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を拡張する
+# <a name="extend-the-functionality-of-azure-data-studio"></a>Azure Data Studio の機能の拡張
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 内の拡張機能では、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の基本インストールにさらに機能を追加する簡単な方法を提供します。 
+Azure Data Studio の拡張機能により、Azure Data Studio の基本インストールにさらに機能を追加する簡単な方法が提供されます。
 
 拡張機能は、Azure Data Studio チーム (Microsoft) と、サード パーティのコミュニティ (お客様) によって提供されます。 拡張機能の作成の詳細については、[拡張機能の作成](extension-authoring.md)に関するページを参照してください。
-
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を追加する
 

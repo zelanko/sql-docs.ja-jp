@@ -1,5 +1,6 @@
 ---
 title: PH timeout サーバー構成オプション | Microsoft Docs
+description: "\"PH timeout\" オプションについて説明します。 これを使用して、SQL Server データベースに接続するためにフルテキスト プロトコル ハンドラーによって割り当てられる時間を制限する方法について説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - protocols [SQL Server], timing out
 - ph timeout option
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3d918c816bc4a4053435fcd5d71f94c09f9c4ace
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0173d6e5c5b10ac05b757f483518999fc526992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730956"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   PH timeout オプションは、フルテキスト プロトコル ハンドラーが、データベースへの接続をタイムアウトするまで待機する時間を秒単位で指定します。既定値は 60 秒です。 一時的なネットワークの問題により接続試行がタイムアウトする場合は、ph timeout 値を大きくします。  
   

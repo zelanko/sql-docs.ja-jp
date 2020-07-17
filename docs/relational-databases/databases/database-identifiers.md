@@ -1,5 +1,6 @@
 ---
 title: データベース識別子 | Microsoft Docs
+description: データベース識別子について理解します。 これらの照合順序、さまざまなクラス、区切り要件、名前付けルールについて説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,16 +22,16 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: f0a42282f0f6f0c4cf645c64d1df94e95eae79b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550148"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85980543"
 ---
 # <a name="database-identifiers"></a>データベース識別子
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   データベース オブジェクトの名前は識別子と呼ばれます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべてのオブジェクトに識別子を設定できます。 サーバーやデータベース、またはテーブル、ビュー、列、インデックス、トリガー、プロシージャ、制約、規則などのデータベース オブジェクトに対して識別子を割り当てることができます。 ほとんどのオブジェクトには識別子が必要です。ただし、制約などの一部のオブジェクトについては、識別子は省略可能です。
 
  オブジェクトの識別子は、オブジェクトを定義するときに作成されます。 作成された識別子を使用して、そのオブジェクトを参照できます。 たとえば、次のステートメントは識別子が `TableX`であるテーブル 1 つと、識別子がそれぞれ `KeyCol` 、 `Description`である 2 つの列を作成します。

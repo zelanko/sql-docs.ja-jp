@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted ウィザードを使用して列暗号化を構成する | Microsoft Docs
+description: SQL Server の Always Encrypted ウィザードを使用して、データベース列の Always Encrypted 構成を設定する方法について説明します。
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627447"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted ウィザードを使用して列暗号化を構成する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Always Encrypted ウィザードは、選択したデータベースの列に対して目的の [Always Encrypted](always-encrypted-database-engine.md) の構成を設定することができる強力なツールです。 現在の構成と目的の構成に応じて、ウィザードでは、列を暗号化したり、列の暗号化を解除したり (解読)、列を再暗号化 (たとえば、新しい列暗号化キーの使用や、列に構成された現在のものとは種類が異なる暗号化の使用) したりできます。 ウィザードの 1 回の実行で、複数の列を構成することができます。
 

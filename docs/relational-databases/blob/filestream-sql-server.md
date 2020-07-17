@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
+description: ファイル システムにデータを格納する SQL Server の機能である FILESTREAM について説明します。 データの格納、セキュリティ保護、およびアクセス方法について説明します。
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 180e13a7a8e5d85aa43ae47d7e9ae955d421991b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893804"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 FILESTREAM を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ベースのアプリケーションで非構造化データ (ドキュメントやイメージなど) をファイル システムに格納できます。 これにより、ファイル システムの豊富なストリーミング API と高いパフォーマンスをアプリケーションで活用できるほか、非構造化データとそれに対応する構造化データの間でトランザクションの一貫性も維持されます。  
   

@@ -1,6 +1,6 @@
 ---
 title: 可用性グループ リスナーのプロパティの表示
-description: 'SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell を使用して Always On 可用性グループ リスナーのプロパティを表示する方法を説明します。 '
+description: SQL Server Management Studio、Transact-SQL、または PowerShell を SQL Server で使用して、Always On 可用性グループ リスナーのプロパティを表示する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893818"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>可用性グループ リスナーのプロパティの表示 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 *で* または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のプロパティを表示する方法について説明します。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

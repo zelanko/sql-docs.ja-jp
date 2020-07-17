@@ -1,5 +1,6 @@
 ---
 title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ) | Microsoft Docs
+description: SQL Server ユーティリティ コントロール ポイント (UCP) を作成することによって、リソース使用のボトルネックおよび統合の可能性を特定するのに役立つ情報を得ることができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776022"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
   
  UCP では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  

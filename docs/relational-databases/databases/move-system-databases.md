@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763221"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム データベースを移動する方法について説明します。 システム データベースの移動は、次の状況で便利な場合があります。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68100460"
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Resource データベースの移動  
  Resource データベースの既定の場所は、\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\ です。 データベースを移動することはできません。  
   
-##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 補足情報: すべてのシステム データベースを移動した後  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 補足情報:すべてのシステム データベースを移動した後  
  すべてのシステム データベースを、新しいドライブやボリューム、または別のドライブ文字を使用した別のサーバーに移動した場合は、次の更新を行います。  
   
 -   SQL Server エージェントのログ パスを変更します。 このパスを更新しないと、SQL Server エージェントは起動しません。  
@@ -204,7 +204,7 @@ ms.locfileid: "68100460"
   
 2.  **[エラー ログ]** を右クリックし、 **[構成]** をクリックします。  
   
-3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は、C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\ です。  
+3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<インスタンス名>\MSSQL\Log\\ です。  
   
 #### <a name="change-the-database-default-location"></a>データベースの既定の場所の変更  
   

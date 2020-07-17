@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882095"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
   
  マージ レプリケーションでは、さまざまなテーブルの関連する行の間にリレーションシップを定義できます。 これらの行は、同期の際にトランザクション単位として処理できます。 論理レコードは、2 つのアーティクルの間に定義できます。結合フィルター リレーションシップの有無は関係ありません。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
@@ -58,7 +58,7 @@ ms.locfileid: "75321233"
   
 #### <a name="to-define-a-logical-record-relationship"></a>論理レコード リレーションシップを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の行フィルターを選択します。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の行フィルターを選択します。  
   
      論理レコード リレーションシップは、行フィルターを拡張する結合フィルターに関連付けられます。 したがって、先に行フィルターが定義されていないと、行フィルターを結合で拡張して論理レコード リレーションシップを適用することはできません。 1 つの結合フィルターが定義されると、この結合フィルターを別の結合フィルターを使用して拡張できます。 結合フィルターの定義の詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321233"
   
      論理レコード リレーションシップのみを削除するには  
   
-    1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、**[編集]** をクリックします。  
+    1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、 **[編集]** をクリックします。  
   
     2.  **[結合の編集]** ダイアログ ボックスで、 **[論理レコード]** チェック ボックスをオフにします。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "75321233"
   
 2.  論理レコードを構成するアーティクルが存在しない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 論理レコードの競合の検出と解決に関するオプションを次の中から 1 つ指定します。  
   
-    -   論理レコードの関連する行で発生する競合を検出し、解決するには、**\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **true** を指定します。  
+    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **true** を指定します。  
   
-    -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、**\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **false** を指定します。これは既定の設定です。  
+    -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、 **\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **false** を指定します。これは既定の設定です。  
   
 3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [論理レコードの競合の検出および解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   

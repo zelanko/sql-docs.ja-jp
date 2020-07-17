@@ -1,5 +1,6 @@
 ---
 title: affinity Input-Output mask サーバー構成オプション | Microsoft Docs
+description: affinity I/O mask オプションについて説明します。 これを使用すると、指定した CPU にディスク I/O がバインドされ、I/O を発行する SQL Server スレッドのパフォーマンスを向上させることができます。
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa19cdc7db8b5966eb5ab89a5df8103e7f417244
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789852"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マルチタスクを実行するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、プロセス スレッドが別のプロセッサに移動される場合があります。 オペレーティング システムにとっては効率的であっても、このアクティビティで各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避してパフォーマンスを向上できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
   

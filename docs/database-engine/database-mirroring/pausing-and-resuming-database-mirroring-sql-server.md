@@ -1,6 +1,6 @@
 ---
 title: データベース ミラーリングの一時停止と再開
-description: SQL Server データベース ミラーリング セッションを任意の時点で一時停止して、後で再開する方法について説明します。
+description: ミラーリングの中断中にセッションの状態を保つために、SQL Server データベース ミラーリング セッションを一時停止し、後で再開する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735252"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>データベース ミラーリングの一時停止と再開 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベースの所有者は、データベース ミラーリング セッションを任意の時点で一時停止し、後から再開できます。 一時停止では、ミラーリングは中断しますが、セッションの状態は保たれます。 一時停止は、ボトルネックの発生中にプリンシパル サーバーのパフォーマンスを向上させる場合に役立ちます。  
   
  セッションが一時停止されても、プリンシパル データベースは引き続き使用できます。 一時停止によりミラーリング セッションの状態が一時中断に設定されるので、ミラー データベースがプリンシパル データベースの最新状態を反映しなくなり、プリンシパル データベースが危険に曝されることになります。  

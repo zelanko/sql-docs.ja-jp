@@ -12,15 +12,15 @@ ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e469adf2c33327894a36e559ef69c49c989eefad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ea21dfc124671aeb20eb11c0d80be808f655428
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756099"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Audit Server Principal Impersonation** イベント クラスは、サーバー スコープ内に EXECUTE AS \<*login*> などの権限の借用がある場合に発生します。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation イベント クラスのデータ列  
@@ -36,7 +36,7 @@ ms.locfileid: "67913371"
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または DOMAIN\username の形式で表された [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**ObjectName**|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  

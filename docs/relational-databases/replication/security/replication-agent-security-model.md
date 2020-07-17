@@ -1,5 +1,6 @@
 ---
 title: レプリケーション エージェントのセキュリティ モデル | Microsoft Docs
+description: SQL Server では、レプリケーション エージェントのセキュリティ モデルを使用すると、レプリケーション エージェントの実行や接続に使用されるアカウントをきめ細かく制御できます。
 ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768473"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882071"
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  レプリケーション エージェントのセキュリティ モデルを使用すると、レプリケーション エージェントを実行して接続するアカウントをきめ細かく制御できます。エージェントごとに異なるアカウントを指定できます。 アカウントを指定する方法の詳細については、「[ID およびアクセス制御 (レプリケーション)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)」を参照してください。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  レプリケーション エージェントのセキュリティ モデルでは、レプリケーション エージェントの実行や接続に使用されるアカウントをきめ細かく制御できます。異なるアカウントをエージェントごとに指定できます。 アカウントを指定する方法の詳細については、「[ID およびアクセス制御 (レプリケーション)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)」を参照してください。  
 
 エージェントを実行する Windows アカウントがないため、Azure SQL Database マネージド インスタンスのレプリケーション エージェントのセキュリティ モデルは少し異なります。 代わりに、SQL Server 認証を使用してすべての操作を行う必要があります。 
   
@@ -38,11 +39,11 @@ ms.locfileid: "68768473"
   
  レプリケーション エージェントは、他の実行可能プログラムと同様に、Windows アカウントのコンテキストで実行されます。 このアカウントを使用して、Windows 統合セキュリティ接続が作成されます。 エージェントを実行するアカウントは、エージェントの開始方法で決まります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブからエージェントを開始する (既定) : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを使用してレプリケーション エージェントを開始すると、エージェントはレプリケーションを構成するときに指定したアカウントのコンテキストで実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」 (SQL Server エージェントの構成) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブからエージェントを開始する (既定): [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを使用してレプリケーション エージェントを開始すると、エージェントはレプリケーションを構成するときに指定したアカウントのコンテキストで実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」 (SQL Server エージェントの構成) を参照してください。  
   
--   MS-DOS コマンド ラインから直接、またはスクリプトによってエージェントを開始する : エージェントは、コマンド ラインでエージェントを実行しているユーザーのアカウントのコンテキストで実行されます。  
+-   MS-DOS コマンド ラインから直接、またはスクリプトによってエージェントを開始する: エージェントは、コマンド ラインでエージェントを実行しているユーザーのアカウントのコンテキストで実行されます。  
   
--   レプリケーション管理オブジェクト (RMO) を使用するアプリケーションまたは ActiveX コントロールからエージェントを開始する : エージェントは、RMO を呼び出しているアプリケーションまたは ActiveX コントロールのコンテキストで実行されます。  
+-   レプリケーション管理オブジェクト (RMO) を使用するアプリケーションまたは ActiveX コントロールからエージェントを開始する: エージェントは、RMO を呼び出しているアプリケーションまたは ActiveX コントロールのコンテキストで実行されます。  
   
     > [!NOTE]  
     >  ActiveX コントロールは非推奨とされます。  
@@ -70,19 +71,19 @@ ms.locfileid: "68768473"
   
 |エージェント|ジョブ名|  
 |-----------|--------------|  
-|スナップショット エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<整数>**|  
-|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<GUID>**|  
-|ログ リーダー エージェント (Log Reader Agent)|**\<パブリッシャー>-\<PublicationDatabase>-\<整数>**|  
-|プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|  
-|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
-|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
-|プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<GUID>**|  
-|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
-|キュー リーダー エージェント (Queue Reader Agent)|**[\<ディストリビューター>].\<整数>**|  
+|スナップショット エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|  
+|マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|  
+|ログ リーダー エージェント (Log Reader Agent)|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
+|プル サブスクリプションに対するマージ エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|プッシュ サブスクリプションに対するマージ エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|プッシュ サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|プル サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
+|SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|キュー リーダー エージェント (Queue Reader Agent)|**[\<Distributor>].\<integer>**|  
   
- \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、ジョブ名が **\<>-\<PublicationDatabase>** ではなく **\<>-\<**> になります。  
+ \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合、ジョブ名は **\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<Publisher**> になります。  
   
- \*\*Oracle パブリケーションに対するプル サブスクリプションの場合は、ジョブ名が **\<パブリッシャー>-\<PublicationDatabase>** ではなく **\<パブリッシャー>-\<DistributionDatabase**> になります。  
+ \*\*Oracle パブリケーションに対するプル サブスクリプションの場合、ジョブ名は **\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<DistributionDatabase**> になります。  
   
  レプリケーションの構成時には、エージェントを実行するアカウントを指定します。 しかし、すべてのジョブ ステップは *プロキシ*のセキュリティ コンテキストで実行されます。そのためレプリケーションでは、指定したエージェント アカウントに対して、以下のマッピングが内部的に実行されます。  
   

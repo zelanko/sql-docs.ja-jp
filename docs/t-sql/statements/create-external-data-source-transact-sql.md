@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902254"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -83,13 +83,15 @@ WITH
 | 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所 |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降                       |
-| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降                       |
+| Azure Storage アカウント (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降         階層型名前空間はサポート**されていません** |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | MongoDB または CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | ODBC                    | `odbc`          | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降 - Windows のみ        |
 | 一括操作         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降                        |
+| Edge ハブ         | `edgehub`         | 適用外 | EdgeHub は [Azure SQL Edge](/azure/azure-sql-edge/overview/) のインスタンスに対して常にローカルです。 そのため、パスまたはポート値を指定する必要はありません。 Azure SQL Edge でのみ使用できます。                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Azure SQL Edge でのみ使用できます。                      |
 
 場所のパス:
 
@@ -106,7 +108,9 @@ WITH
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `sqlserver` 場所プレフィックスを使用して、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] を別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、または Azure Synapse Analytics に接続することができます。
 - `Driver={<Name of Driver>}` 経由で接続する際に `ODBC` を指定します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS/SSL 接続を使用してデータが送信されるため、推奨されます。
+- `wasbs` は省略可能ですが、セキュリティで保護された TLS/SSL 接続を使用してデータが送信されるため、Azure Storage アカウントにアクセスする場合には推奨されています。
+- Azure Storage アカウントにアクセスする場合、`abfs` または `abfss` API はサポートされていません。
+- Azure Storage アカウント (V2) の階層型名前空間オプションはサポートされていません。 このオプションが**無効になっている**ことを確認してください。
 - Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -131,13 +135,13 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- `CREDENTIAL` は、BLOB がセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
+- `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 - `TYPE` = `BLOB_STORAGE` の場合、`SHARED ACCESS SIGNATURE` を ID として使用して、資格情報を作成する必要があります。 さらに、SAS トークンを次のように構成する必要があります。
   - シークレットとして構成されている場合、先頭の `?` を除外する
   - 読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可がある
   - 有効な有効期限を使用する (すべての日付が UTC 時間)。
 
-`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
+`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Storage から SQL Database にデータを取得するための外部データ ソースの作成](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)に関するセクションを参照してください。
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
@@ -145,13 +149,13 @@ WITH
 
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
-- 外部データ ソースが Cloudera、Hortonworks、Azure Blob Storage の場合は、HADOOP を使用します。
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、一括操作を実行する場合は、BLOB_STORAGE を使用します。
+- 外部データ ソースが Cloudera、Hortonworks、Azure Storage アカウントの場合は、HADOOP を使用します。
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、Azure Storage アカウントから一括操作を実行する場合は、BLOB_STORAGE を使用します。
 
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
 
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#e-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
+`TYPE` = `HADOOP` を使用して Azure Storage アカウントからデータを読み込む例については、「[wasb:// インターフェイスを使用して Azure Storage のデータにアクセスするための外部データソースを作成する](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface)」を参照してください。 <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -188,7 +192,7 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 
 `EXTERNAL DATA SOURCE` オブジェクトを共有ロックします。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 PolyBase では、ほとんどの外部データ ソースにプロキシ ベースの認証をサポートします。 データベース スコープ資格情報を作成して、プロキシ アカウントを作成します。
 
@@ -276,11 +280,10 @@ WITH
   );
 ```
 
-### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. Azure Blob Storage を参照する外部データ ソースを作成する
+### <a name="e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>E. wasb:// インターフェイスを使用して Azure Storage のデータにアクセスするための外部データソースを作成する
+この例では、外部データ ソースは、`logs` という名前の Azure V2 Storage アカウントです。 コンテナーは `daily`と呼ばれます。 Azure Storage の外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。 `wasb://` インターフェイスを使用してデータにアクセスする場合、階層型名前空間はサポートされません。
 
-この例では、外部データ ソースは、`logs` という Azure ストレージ アカウントの下の `daily` という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。
-
-この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証時に使用されないため、データベース スコープ資格情報 ID には任意の文字列を指定できます。
+この例では、Azure V2 Storage アカウントへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure Storage アカウント キーを指定します。 Azure Storage への認証時に使用されないため、データベース スコープ資格情報 ID には任意の文字列を指定できます。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -297,11 +300,11 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Polybase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. PolyBase 接続を使用して SQL Server 名前付きインスタンスを参照する外部データソースを作成する ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスを参照する外部データソースを作成する場合は、CONNECTION_OPTIONS を使用してインスタンス名を指定できます。 以下の例では、`WINSQL2019` がホスト名で、`SQL2019` がインスタンス名になります。
 
@@ -324,12 +327,36 @@ WITH (
 ) ;
 ```
 
+### <a name="g-create-external-data-source-to-reference-kafka"></a>G. Kafka を参照する外部データ ソースを作成する
+
+この例では、外部データ ソースは、IP アドレス xxx.xxx.xxx.xxx を持つ Kafak サーバーであり、ポート 1900 でリッスンします。 Kafka 外部データ ソースはデータ ストリーミング専用であり、述語のプッシュ ダウンはサポートされていません。
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+go
+```
+
+### <a name="h-create-external-data-source-to-reference-edgehub"></a>H. EdgeHub を参照する外部データ ソースを作成する
+
+この例では、外部データ ソースは、Azure SQL Edge と同じエッジ デバイスで実行されている EdgeHub になります。 EdgeHub 外部データ ソースはデータ ストリーミング専用であり、述語のプッシュ ダウンはサポートされていません。
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
+
 ## <a name="examples-bulk-operations"></a>例 :一括操作
 
 > [!IMPORTANT]
 > 一括操作用の外部データ ソースの構成時に、`LOCATION` URL の末尾に、 **/** 、ファイル名、Shared Access Signature パラメーターを追加しないでください。
 
-### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
+### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Azure Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
 **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
@@ -363,7 +390,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -447,14 +474,14 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- Azure Blob Storage から [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にデータを読み込むには、Azure Storage キーを使用します。
-- `CREDENTIAL` は、BLOB がセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
+- Azure Storage から [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にデータを読み込むには、Azure Storage キーを使用します。
+- `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 - `TYPE` = `BLOB_STORAGE` の場合、`SHARED ACCESS SIGNATURE` を ID として使用して、資格情報を作成する必要があります。 さらに、SAS トークンを次のように構成する必要があります。
   - シークレットとして構成されている場合、先頭の `?` を除外する
   - 読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可がある
   - 有効な有効期限を使用する (すべての日付が UTC 時間)。
 
-`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
+`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Storage から SQL Database にデータを取得するための外部データ ソースの作成](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage)に関するセクションを参照してください。
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
@@ -548,7 +575,7 @@ RDBMS のチュートリアルについては、[クロスデータベース ク
 > [!IMPORTANT]
 > 一括操作用の外部データ ソースの構成時に、`LOCATION` URL の末尾に、 **/** 、ファイル名、Shared Access Signature パラメーターを追加しないでください。
 
-### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
+### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>C. Azure Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
@@ -580,7 +607,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
@@ -643,9 +670,9 @@ WITH
 
 | 外部データ ソース        | 場所プレフィックス | ロケーション パス                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
 | Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure V2 ストレージ アカウント    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 場所のパス:
 
@@ -657,7 +684,8 @@ WITH
 - 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された TLS/SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない TLS 接続にも使用できます。
 - Azure Synapse では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
+- `wasbs` は、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
+- wasb:// インターフェイスを使用して PolyBase 経由でデータにアクセスする場合、Azure V2 Storage アカウントでは階層型名前空間はサポートされません。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -665,8 +693,8 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- Azure Blob Storage または Azure Data Lake Store (ADLS) Gen 2 から SQL DW にデータを読み込むには、Azure Storage キーを使用します。
-- `CREDENTIAL` は、BLOB がセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
+- Azure Storage または Azure Data Lake Store (ADLS) Gen 2 から SQL DW にデータを読み込むには、Azure Storage キーを使用します。
+- `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
@@ -674,12 +702,9 @@ WITH
 
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
-- 外部データ ソースが Azure Blob Storage、ADLS Gen 1、または ADLS Gen 2 の場合、HADOOP を使用します。
+- 外部データ ソースが Azure Storage、ADLS Gen 1、または ADLS Gen 2 の場合、HADOOP を使用します。
 
-> [!IMPORTANT]
-> 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
-
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#a-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
+`TYPE` = `HADOOP` を使用して、Azure Storage からデータを読み込む例については、「[サービス プリンシパルを使用して Azure Data Lake Store Gen 1 または 2 を参照する外部データ ソースを作成する](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -689,7 +714,7 @@ WITH
 
 `EXTERNAL DATA SOURCE` オブジェクトを共有ロックします。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 PolyBase では、ほとんどの外部データ ソースにプロキシ ベースの認証をサポートします。 データベース スコープ資格情報を作成して、プロキシ アカウントを作成します。
 
@@ -701,11 +726,10 @@ SQL Server ビッグ データ クラスターでストレージまたはデー�
 
 ## <a name="examples"></a>例 :
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. Azure Blob Storage を参照する外部データ ソースを作成する
+### <a name="a-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>A. wasb:// インターフェイスを使用して Azure Storage のデータにアクセスするための外部データソースを作成する
+この例では、外部データ ソースは、`logs` という名前の Azure V2 Storage アカウントです。 コンテナーは `daily`と呼ばれます。 Azure Storage の外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。 `wasb://` インターフェイスを使用してデータにアクセスする場合、階層型名前空間はサポートされません。
 
-この例では、外部データ ソースは、`logs` という Azure ストレージ アカウントの下の `daily` という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。
-
-この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証時に使用されないため、データベース スコープ資格情報 ID には任意の文字列を指定できます。
+この例では、Azure Storage への認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure Storage アカウント キーを指定します。 Azure ストレージへの認証時に使用されないため、データベース スコープ資格情報 ID には任意の文字列を指定できます。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -722,13 +746,13 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
 ### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. サービス プリンシパルを使用して、Azure Data Lake Store Gen 1 または 2 を参照する外部データ ソースを作成する
 
-Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Active Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成に関するドキュメントは、[Active Directory を使用したデータ レイク ストアの認証][azure_ad[] で見つかります。
+Azure Data Lake Store の接続は、お使いの ADLS URI と Azure Active Directory アプリケーションのサービス プリンシパルに基づいています。 このアプリケーションの作成方法については、[Active Directory を使用した Data Lake Store 認証][azure_ad]に関するページを参照してください。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -790,7 +814,7 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Azure Data Lake Store Gen 2 への Polybase 接続を参照する外部データ ソースを作成する
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2-using-abfs"></a>D. abfs:// を使用して Azure Data Lake Store Gen 2 への Polybase 接続を参照する外部データ ソースを作成する
 
 [マネージド ID](/azure/active-directory/managed-identities-azure-resources/overview
 ) メカニズムで Azure Data Lake Store Gen2 アカウントに接続するとき、SECRET を指定する必要はありません。
@@ -827,7 +851,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -895,7 +919,7 @@ WITH
 | 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
 | Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
-| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Azure Storage アカウント   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 場所のパス:
 
@@ -908,7 +932,8 @@ WITH
 
 - PDW エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
+- `wasbs` は、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
+- 階層型名前空間は、wasb:// 経由で Azure Storage アカウントと一緒に使用する場合はサポートされません。
 - Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
@@ -917,19 +942,16 @@ WITH
 
 資格情報の作成時の追加の注意事項とガイダンス:
 
-- Azure Blob Storage または Azure Data Lake Store (ADLS) Gen 2 から、SQL DW または PDW にデータを読み込むには、Azure Storage キーを使用します。
-- `CREDENTIAL` は、BLOB がセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
+- Azure Storage から Azure Synapse または PDW にデータを読み込むには、Azure Storage キーを使用します。
+- `CREDENTIAL` は、データがセキュリティ保護されている場合にのみ必須です。 匿名アクセスを許可するデータ セットには、`CREDENTIAL` は必要ありません。
 
 ### <a name="type---hadoop-"></a>TYPE = *[ HADOOP ]*
 
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
-- 外部データ ソースが Cloudera、Hortonworks、Azure Blob Storage の場合は、HADOOP を使用します。
+- 外部データ ソースが Cloudera、Hortonworks、Azure Storage の場合は、HADOOP を使用します。
 
-> [!IMPORTANT]
-> 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
-
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#d-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
+`TYPE` = `HADOOP` を使用して、Azure Storage からデータを読み込む例については、「[Hadoop を参照する外部データ ソースを作成する](#a-create-external-data-source-to-reference-hadoop)」を参照してください。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -969,7 +991,7 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 
 `EXTERNAL DATA SOURCE` オブジェクトを共有ロックします。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 PolyBase では、ほとんどの外部データ ソースにプロキシ ベースの認証をサポートします。 データベース スコープ資格情報を作成して、プロキシ アカウントを作成します。
 
@@ -1028,9 +1050,9 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Azure Blob Storage を参照する外部データ ソースを作成する
+### <a name="d-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>D. wasb:// インターフェイスを使用して Azure Storage のデータにアクセスするための外部データソースを作成する
 
-この例では、外部データ ソースは、`logs` という Azure ストレージ アカウントの下の `daily` という名前の Azure Blob Storage コンテナーです。 Azure ストレージの外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。
+この例では、外部データ ソースは、`logs` という名前の Azure V2 Storage アカウントです。 コンテナーは `daily`と呼ばれます。 Azure Storage の外部データ ソースはデータ転送専用です。 述語のプッシュ ダウンはサポートされません。 `wasb://` インターフェイスを使用してデータにアクセスする場合、階層型名前空間はサポートされません。
 
 この例では、Azure ストレージへの認証用にデータベース スコープ資格情報を作成する方法を示します。 データベースの資格情報シークレットで、Azure ストレージ アカウント キーを指定します。 Azure ストレージへの認証時に使用されないため、データベース スコープ資格情報 ID には任意の文字列を指定できます。
 
@@ -1049,9 +1071,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
+
 
 ## <a name="see-also"></a>参照
 
@@ -1064,7 +1087,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql

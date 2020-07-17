@@ -13,15 +13,15 @@ ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 664ceea195e327b9c301ed1206eba014c8adf2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d03c0c68750b2d2f5febbd024f7f1d5d32ec4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653307"
 ---
 # <a name="distributor"></a>ディストリビューター
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[ディストリビューター]** ページは、ディストリビューションの構成ウィザードとパブリケーションの新規作成ウィザードで表示されます。 ディストリビューターは、ディストリビューション データベースを備え、あらゆる種類のレプリケーションのメタデータおよび履歴データを格納するサーバーです。 ディストリビューターは、トランザクション レプリケーションのトランザクションも格納します。 ディストリビューターは、パブリッシャーと同じサーバーであっても、別のサーバーであってもかまいません。前者の場合はローカル ディストリビューターで、後者の場合はリモート ディストリビューターになります。 ディストリビューターの役割は、実装するレプリケーションの種類によって異なります。 一般に、マージ レプリケーションやスナップショット レプリケーションに比べて、トランザクション レプリケーションに対するディストリビューターの役割は大きくなります。 マージ レプリケーションおよびスナップショット レプリケーションではローカル ディストリビューターを使用するのが一般的です。ただし、非常に稼働率が高いシステムでのトランザクション レプリケーションの場合は、リモート ディストリビューターを利用すると効果的です。  
   
  サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  
@@ -34,8 +34,8 @@ ms.locfileid: "76287881"
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。  
   
-## <a name="options"></a>オプション  
- **['\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]**  
+## <a name="options"></a>Options  
+ **'\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)**  
  このオプションを選択すると、ディストリビューターとして接続するサーバーを構成できます。  
   
  **[以下のサーバーをディストリビューターとして使用する (選択するサーバーはディストリビューターとして構成されている必要があります)]**  

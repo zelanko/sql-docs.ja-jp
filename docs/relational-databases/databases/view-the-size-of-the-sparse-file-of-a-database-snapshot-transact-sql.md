@@ -1,10 +1,10 @@
 ---
 title: データベース スナップショット (T-SQL) のスパース ファイルのサイズを表示する方法
+description: Transact-SQL を使用して、SQL Server データベース ファイルがスパース ファイルであることを確認し、実際の、および最大のサイズを確かめます。 データベース スナップショットではスパース ファイルが使用されます。
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727527"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルがスパース ファイルであることを確認する方法と、その実サイズおよび最大サイズを調べる方法について説明します。 NTFS ファイル システムの機能であるスパース ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットによって使用されます。  
   
 > [!NOTE]  

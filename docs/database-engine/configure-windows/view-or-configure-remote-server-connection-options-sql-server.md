@@ -1,5 +1,6 @@
 ---
 title: リモート サーバー接続オプションの表示または構成 (SQL Server) | Microsoft Docs
+description: サーバー レベルでリモート サーバー接続オプションを表示または構成する方法について説明します。 SQL Server Management Studio または Transact-SQL をこの目的で使用できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11ca900d4a6f0f820379b0446bcca85e97462177
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec50e6ae39798add5a564dbeb8a971e879c18c27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680712"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>リモート サーバー接続オプションの表示または構成 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でサーバー レベルのリモート サーバー接続オプションを表示または構成する方法について説明します。  
   
  **このトピックの内容**  
@@ -52,7 +53,7 @@ ms.locfileid: "67945680"
   
 1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[サーバーのプロパティ - \<** _server_name_ **>]** ダイアログ ボックスで、 **[接続]** をクリックします。  
+2.  **[SQL Server Properties - \<**_server_name_**>]** ダイアログ ボックスで、 **[接続]** をクリックします。  
   
 3.  **[接続]** ページで、 **[リモート サーバー接続]** の設定を確認し、必要に応じて変更します。  
   

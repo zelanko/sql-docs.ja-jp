@@ -1,5 +1,6 @@
 ---
 title: SysPrep を使用して SQL Server をインストールする
+description: SQL Server の Sysprep を使用すると、コンピューター上で SQL Server のスタンドアロン インスタンスを準備し、後で構成を実行できます。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67c6dd12c7c4829c2dc615ce8e440f8518d5fd09
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883238"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep を使用すると、コンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスを準備し、後で構成を完了できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sysprep では、2 段階のプロセスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスを構成します。 手順は次のとおりです。  
   

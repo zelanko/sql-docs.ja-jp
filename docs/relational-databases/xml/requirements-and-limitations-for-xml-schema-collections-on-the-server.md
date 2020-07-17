@@ -1,5 +1,6 @@
 ---
 title: 要件と制限 (XML スキーマ コレクション) | Microsoft Docs
+description: SQL Server で XML スキーマ コレクションを変更するための要件と制限事項について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,18 +25,18 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0d0e90f30e05cabed7082f87a6b7474c756a145
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752562"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD (XML Schema Definition Language) の検証には、 **xml** データ型を使用する SQL 列に関して制限事項がいくつかあります。 次の表は、このような制限事項に関する詳細と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機能するように XSD スキーマを変更するためのガイドラインを示しています。 このセクションのトピックでは、具体的な制限事項の詳細とその対処方法について説明します。  
   
-|アイテム|制限事項|  
+|Item|制限事項|  
 |----------|----------------|  
 |**minOccurs** と **maxOccurs**|**minOccurs** 属性と **maxOccurs** 属性の値は、4 バイトの整数に収める必要があります。 これに違反するスキーマはサーバーで拒否されます。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**minOccurs** 属性値に 0 を指定してパーティクルを定義していない限り、子のない **\<xsd:choice>** パーティクルを持つスキーマは拒否します。|  

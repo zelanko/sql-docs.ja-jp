@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812647"
 ---
 # <a name="how-online-index-operations-work"></a>オンライン インデックス操作の動作原理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、オンライン インデックスの操作中に存在する構造を定義し、これらの構造に関連した利用方法について説明します。  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909755"
 |Build<br /><br /> メイン フェーズ|一括読み込み操作で、データのスキャン、並べ替え、マージが行われ、ターゲットに挿入されます。<br /><br /> 同時実行ユーザーの選択、挿入、更新、削除の各操作は、既存のインデックスと新しく構築されるインデックスの両方に適用されます。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |最終工程<br /><br /> 短いフェーズ|コミットされていないすべての更新トランザクションは、このフェーズが始まる前に完了している必要があります。 取得したロックによっては、このフェーズが完了するまでの短期間、新しいユーザーによる読み取りトランザクションや書き込みトランザクションはすべてブロックされます。<br /><br /> ソースをターゲットに置き換えるために、システム メタデータが更新されます。<br /><br /> 必要に応じて、ソースが削除されます。 たとえば、クラスター化インデックスを再構築したり、削除した後などにはソースが削除されます。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 非クラスター化インデックスを作成する場合、テーブルで S。\*<br /><br /> ソース構造 (インデックスやテーブル) が削除される場合、SCH-M (スキーマ変更)。\*|  
   
- \* インデックス操作は、テーブルに S ロックまたは SCH-M ロックを取得する前に、コミットされていない更新トランザクションが完了するまで待機します。  
+ \* インデックス操作は、テーブルに S ロックまたは SCH-M ロックを取得する前に、コミットされていない更新トランザクションが完了するまで待機します。 実行時間の長いクエリが発生すると、オンライン インデックス操作は、クエリが完了するまで待機します。
   
  ** リソース ロック INDEX_BUILD_INTERNAL_RESOURCE により、インデックス操作の実行中に、ソースと既存の各構造で同時実行 DDL (データ定義言語) 操作を実行できなくなります。 たとえばこのロックにより、同じテーブルで 2 つのインデックスの再構築を同時実行できなくなります。 このリソース ロックは Sch-M ロックと関連付けられていますが、データ操作ステートメントを実行できなくすることはできません。  
   
  上記の表は、1 つのインデックスに関係するオンライン インデックス操作の構築フェーズ中に 1 つの共有 (S) ロックが取得されることを示しています。 クラスター化インデックスや非クラスター化インデックスが構築されるときは、構築フェーズ中に 1 つのオンライン インデックス操作 (たとえば、1 つ以上の非クラスター化インデックスを含むテーブルでの最初のクラスター化インデックスの作成中など) で、短期間 2 つの共有 (S) ロックが取得された後、長期間インテント共有 (IS) ロックが取得されます。 最初に、クラスター化インデックスの作成のために 1 つの S ロックが取得され、クラスター化インデックスの作成完了時に、非クラスター化インデックスの作成のために 2 番目の S ロックが短期間取得されます。 非クラスター化インデックスが作成された後、オンライン インデックス操作の最終フェーズまで、S ロックが IS ロックにダウングレードされます。  
-  
+
+ロックの使用方法とそれらを管理する方法の詳細については、「[引数](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)」を参照してください。
+
 ### <a name="target-structure-activities"></a>ターゲット構造での処理  
  次の表に、インデックス操作と対応するロック操作の各フェーズ中に、ターゲット構造に関係する処理を一覧します。  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909755"
   
  [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>次のステップ
+
+[ALTER TABLE インデックス オプション](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

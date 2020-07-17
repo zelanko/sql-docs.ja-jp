@@ -1,7 +1,8 @@
 ---
 title: ネイティブ コンパイル T-SQL モジュール用の機能
+description: T-SQL 領域とネイティブ コンパイル T-SQL モジュールの本体でサポートされる機能 (ストアド プロシージャやスカラー ユーザー定義関数など) について説明します。
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834723"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   このトピックには、T-SQL 領域とネイティブ コンパイル T-SQL モジュールの本体でサポートされる機能が含まれています。ストアド プロシージャ ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md))、スカラー ユーザー定義機能、インライン テーブル値関数、トリガーなどです。  
 
  ネイティブ モジュールの定義でサポートされる機能については、「 [ネイティブ コンパイル T-SQL モジュールでサポートされる DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)」をご覧ください。  
-
--   [ネイティブ モジュールのクエリ領域](#qsancsp)  
-
--   [データの変更](#dml)  
-
--   [フロー制御言語](#cof)  
-
--   [サポートされている演算子](#so)  
-
--   [ネイティブ コンパイル モジュールの組み込み関数](#bfncsp)  
-
--   [監査](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [テーブル ヒントとクエリ ヒント](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [並べ替えに関する制限事項](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  サポートされない構造に関する詳細と、ネイティブ コンパイル モジュールのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
 
@@ -66,7 +51,7 @@ SELECT 句:
     - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT 集計はサポートされていません。  
 
 -   UNION および UNION ALL
     - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
@@ -76,9 +61,9 @@ SELECT 句:
 
 FROM 句:  
 
--   FROM \<メモリ最適化テーブルまたはテーブル変数>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<ネイティブ コンパイル インライン TVF>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
     - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
@@ -169,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - パフォーマンスを最適化するには、ネイティブ コンパイル T-SQL モジュール全体に対して 1 つの TRY/CATCH ブロックを使用します。  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,13 +163,13 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="supported-operators"></a><a name="so"></a> サポートされている演算子  
  サポートされている演算子は次のとおりです。  
 
--   [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例: >、\<、>=、<=)  
+-   [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例: >、\<, >=、<=)  
 
 -   単項演算子 (+、-)。  
 
 -   二項演算子 (*、/、+、-、% (剰余))。  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - プラス演算子 (+) は、数値と文字列の両方でサポートされています。  
 
 -   論理演算子 (AND、OR、NOT)。  
 
@@ -244,7 +229,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用しない場合、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
 
- クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: "**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました**"。  
+ クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: **メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました。**  
 
  TOP 句がない場合は、ORDER BY で任意の数の行を並べ替えることができます。  
 

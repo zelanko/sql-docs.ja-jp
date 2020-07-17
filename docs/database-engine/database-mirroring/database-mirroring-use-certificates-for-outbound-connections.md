@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング - 発信接続に証明書を使用する | Microsoft Docs
+description: 発信接続を設定した後に、証明書を使用してデータベース ミラーリングの着信接続を認証するようにサーバー インスタンスを構成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2837bcba7069f3259b23446137aa6162b2443189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754681"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>データベース ミラーリング - 発信接続に証明書を使用する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、データベース ミラーリングの発信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、発信接続を構成する必要があります。  
   
 > [!NOTE]  
@@ -64,7 +65,7 @@ ms.locfileid: "70846664"
      たとえば、HOST_A システム用の証明書を作成するには、次のステートメントを使用します。  
   
     > [!IMPORTANT]  
-    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、**[証明書]** ファセットの **[\@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
+    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、 **[証明書]** ファセットの **[\@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
   
     ```  
     USE master;  
@@ -169,7 +170,7 @@ GO
   
  Transact-SQL の例を含む、ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   
- 高パフォーマンス モード セッションを確立する Transact-SQL 例については、「 [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
+ 高パフォーマンス モードのセッションを確立する Transact-SQL の例については、「[証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
@@ -180,7 +181,7 @@ GO
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [例:証明書を使用したデータベース ミラーリングの設定 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  

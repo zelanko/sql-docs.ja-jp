@@ -1,7 +1,7 @@
 ---
 title: システム バージョン管理されたテンポラル テーブルのデータのクエリ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402682"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002335"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列を非表示として指定した場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "80402682"
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-**FOR SYSTEM_TIME** は、クエリで各テーブルに対して個別に指定できます。 共通テーブル式、テーブル値関数、ストアド プロシージャの中で使用できます。 テンポラル テーブルでテーブルの別名を使用する場合は、テンポラル テーブル名と別名の間に **FOR SYSTEM_TIME** 句が含まれている必要があります。「[AS OF サブ句を使用した特定時点のクエリ](#query-for-a-specific-time-using-the-as-of-sub-clause)」の 2 つ目の例を参照してください。
+**FOR SYSTEM_TIME** は、クエリで各テーブルに対して個別に指定できます。 共通テーブル式、テーブル値関数、ストアド プロシージャの中で使用できます。 テンポラル テーブルでテーブルの別名を使用する場合は、テンポラル テーブル名と別名の間に **FOR SYSTEM_TIME** 句が含まれている必要があります (下記の「AS OF サブ句を使用した特定時点のクエリ」の 2 つ目の例を参照してください)。
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>AS OF サブ句を使用した特定時点のクエリ
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8708518270e3d7d6597471e855505c06f3853f1b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eeedc973254e9f7428f37eb8c1914d1ba03fbc23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897389"
 ---
 # <a name="define-an-article"></a>アーティクルの定義
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルを定義する方法について説明します。  
   
  **このトピックの内容**  
@@ -35,7 +35,7 @@ ms.locfileid: "72908564"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **アーティクルを定義するために使用するもの:**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72908564"
   
          詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
   
-    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
     -   パブリケーションの名前を指定します。  
   

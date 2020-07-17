@@ -21,15 +21,15 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99323a0124e5e5507a22fdf36c6622738aea3ce2
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 11fadfd71bfc78128e83eb2157d32c5684d6ea35
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517665"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998999"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   変数は、バッチやプロシージャの中で DECLARE ステートメントを使用して宣言し、SET ステートメントまたは SELECT ステートメントを使用して値を割り当てます。 このステートメントでは、他のカーソル関連のステートメントで使用できるカーソル変数を宣言できます。 宣言の一部として値を指定しない場合、宣言の後、すべての変数は NULL として初期化されます。  
   
@@ -106,7 +106,7 @@ CURSOR
 <table_type_definition>  
 **table** データ型を定義します。 テーブルの定義には、列の定義、名前、データ型、制約が含まれます。 指定できる制約の種類は、PRIMARY KEY、UNIQUE、NULL、CHECK のみです。 別名データ型にルールや既定の定義がバインドされている場合、別名データ型を列のスカラー データ型として使用することはできません。
   
-\<table_type_definition> は、CREATE TABLE でテーブルを定義するときに使用する情報のサブセットです。 これには要素と必須の定義が含まれます。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
+\<table_type_definiton> CREATE TABLE でテーブルを定義するために使用する情報のサブセットです。 これには要素と必須の定義が含まれます。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。  
   
  *n*  
  複数の変数を指定し、値を割り当てることができることを示すプレースホルダーです。 **table** 変数を宣言する場合、1 つの DECLARE ステートメント内に **table** 変数以外の変数を定義することはできません。  

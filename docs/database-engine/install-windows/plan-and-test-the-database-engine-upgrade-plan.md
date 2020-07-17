@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンのアップグレード計画の策定およびテスト | Microsoft Docs
+description: この記事では、SQL Server のアップグレードを開始する前に立てる必要のある計画について説明します。これには、計画チェックリスト、アップグレード計画の作成とテストが含まれます。
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8deba047941509d294f6eb331fa610a453a71e82
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529456"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900341"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアップグレードを成功させるには、どんな手法であろうと、適切な計画を立てる必要があります。  
   

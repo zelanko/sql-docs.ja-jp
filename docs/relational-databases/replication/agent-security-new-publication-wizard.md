@@ -13,15 +13,15 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 192beff1882ddb743cd7840067c9b1ce21c32e77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4ce62808a8613cb39200231badcf2e853dcc7af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85739131"
 ---
 # <a name="agent-security-new-publication-wizard"></a>[エージェント セキュリティ] (パブリケーションの新規作成ウィザード)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[エージェント セキュリティ]** ページを使用すると、次のエージェントを実行したり、レプリケーション トポロジ内のコンピューターに接続したりする際のアカウントを指定できます。  
   
 -   すべてのパブリケーションに対応する、スナップショット エージェント。  
@@ -47,7 +47,7 @@ ms.locfileid: "76288315"
 >  トランザクション レプリケーションを使用してパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントが存在します。 データベースにトランザクション パブリケーションが既に存在している場合、セキュリティ設定は読み取り専用になります。 セキュリティ設定は **[パブリケーションのプロパティ]** ダイアログ ボックスを使用して変更できますが、この変更はデータベース内のすべてのトランザクション パブリケーションに反映されます。  
   
  **キュー リーダー エージェント**  
- 更新可能なサブスクリプションを許容するトランザクション パブリケーションで表示されます。 **[セキュリティ設定]** をクリックすると、 **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスでセキュリティ設定を指定できます。 このウィザードが完了すると、キュー更新サブスクリプションを作成するかどうかには関係なく、キュー リーダー エージェント ジョブが作成されます。 キュー更新サブスクリプションを作成しない場合には、このジョブを無効にできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[ジョブ]** フォルダーで、ジョブ (*[\<Publisher>].\<integer>* という名前になります) を右クリックし、**[無効化]** をクリックします。  
+ 更新可能なサブスクリプションを許容するトランザクション パブリケーションで表示されます。 **[セキュリティ設定]** をクリックすると、 **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスでセキュリティ設定を指定できます。 このウィザードが完了すると、キュー更新サブスクリプションを作成するかどうかには関係なく、キュー リーダー エージェント ジョブが作成されます。 キュー更新サブスクリプションを作成しない場合には、このジョブを無効にできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの **[ジョブ]** フォルダーで、ジョブ ( *[\<Publisher>].\<integer>* . という名前になります) を右クリックし、 **[無効化]** をクリックします。  
   
  キュー リーダー エージェントで使用されるアカウントに必要な権限の詳細については、 **[キュー リーダー エージェントのセキュリティ]** ダイアログ ボックスの **[ヘルプ]** をクリックしてください。  
   

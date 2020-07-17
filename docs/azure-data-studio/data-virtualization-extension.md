@@ -1,21 +1,20 @@
 ---
 title: データ仮想化の拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用のデータ仮想化の拡張機能
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, sstein, maghan
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29e4e9b942902d598908dc96888fb5917a7d2f50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73801128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774672"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Azure Data Studio 用のデータ仮想化の拡張機能
 
@@ -26,16 +25,19 @@ Azure Data Studio 用のデータ仮想化の拡張機能では、PolyBase [[Cre
 データ仮想化の拡張機能をインストールするには、Azure Data Studio を開き、[拡張機能] タブからダウンロードします。[こちら](extensions.md)の指示に従います。
 
 ## <a name="changes-in-release-10"></a>リリース 1.0 での変更点
+
 * 拡張機能名がデータ仮想化に変更されました。
 * [Create External Table]\(外部テーブルの作成\) ウィザード:
-    * 仮想化 MongoDB および Teradata ソース用のガイド付きノートブックが含まれています。
-    * MongoDB および Teradata 仮想化ノートブックに変数を入力するためのダイアログが追加されました。 
+  * 仮想化 MongoDB および Teradata ソース用のガイド付きノートブックが含まれています。
+  * MongoDB および Teradata 仮想化ノートブックに変数を入力するためのダイアログが追加されました。 
 
 ## <a name="changes-in-release-016"></a>リリース 0.16 での変更点
+
 * [Create External Table]\(外部テーブルの作成\) ウィザード:
   * オブジェクト マッピング ページでテーブルとビューを読み込むときのエラー処理が改善されました。
 
 ## <a name="changes-in-release-015"></a>リリース 0.15 での変更点
+
 * [Create External Table]\(外部テーブルの作成\) ウィザード:
   * オブジェクト マッピング ページ上でテーブルと列の情報の読み込みにかかる時間が短縮されました。
   * 接続の詳細ページ上で、既存のデータベース スコープの資格情報の読み込みに関するバグを修正しました。
@@ -43,6 +45,7 @@ Azure Data Studio 用のデータ仮想化の拡張機能では、PolyBase [[Cre
   * PROSE の解析に使用される既定のサンプル サイズが増加しました。
 
 ## <a name="changes-in-release-0141"></a>リリース 0.14.1 での変更点
+
 * CTP 3.1 データ ソース サポートのサポート
 
 ## <a name="changes-in-release-0121"></a>リリース 0.12.1 での変更点
@@ -67,15 +70,18 @@ Azure Data Studio 用のデータ仮想化の拡張機能では、PolyBase [[Cre
   * テーブル マッピング コントロールに入力された新しいスキーマが失われるという問題が修正されました。
   * テーブル マッピング内のデータベース ノードをチェックしてもすべてのテーブルとビューがチェックされるわけではないという問題が修正されました。
 
-
 ## <a name="release-notes-v0102"></a>リリース ノート (v0.10.2)
+
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 のサポート
+
 SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ データ クラスター インスタンスに接続すると、新しい _Data Services_ フォルダーがエクスプローラー ツリーに表示されます。 このフォルダーには、接続に対して新しいノートブックを開く、Spark ジョブを送信する、HDFS を操作するといったアクション用の起動ポイントが用意されています。 HDFS ファイル/フォルダーに対する_外部データの作成_などの一部の操作については、_SQL Server 2019_ の拡張機能をインストールする必要があります。
 
 ### <a name="notebook-support"></a>Notebook のサポート
+
 このリリースでは、Notebook ユーザー インターフェイスを大幅に更新しました。 Microsoft は、お客様と共有している Notebooks を読みやすくすることに重点を置きました。 つまり、選択されていない場合またはマウス ポインターが置かれていない場合にセルの周囲のすべてのアウトライン ボックスが削除されます。また、ホバー サポートの追加により、セルを選択することなく、セル レベルのアクションが簡単に行えます。さらに、実行カウントやアニメーション化された_実行停止ボタン_の追加などにより、実行状態が明確に示されます。 _新しいノートブック_ (`Ctrl+Shift+N`)、_セルの実行_ (`F5`)、_新しいコード セル_ (`Ctrl+Shift+C`)、_新しいテキスト セル_ (`Ctrl+Shift+T`) として、キーボード ショートカットを追加しました。 今後、Microsoft はすべての主要なアクションをショートカットで起動できるようにすることを目指していますので、不足しているものをお知らせください。
 
 その他の機能強化と修正には次のようなものがあります。
+
 * _SQL Server 2019_ の拡張機能では、Python 依存関係用のインストール ディレクトリを選択するように求めるメッセージが表示されるようになりました。 また、`.vsix file` に Python が含まれなくなり、拡張機能の全体的なサイズが小さくなりました。 Python の依存関係では、Spark カーネルと Python3 カーネルがサポートされます。
 * コマンドラインから新しいノートブックを起動するためのサポートが追加されました。 引数 `--command=notebook.command.new --server=myservername` を指定して起動すると、新しいノートブックが開き、このサーバーに接続します。
 * ノートブックにおいてセル内のコードが長い場合のパフォーマンスの修正。 コード セルが 250 行を超えると、スクロールバーが追加されます。
@@ -87,20 +93,23 @@ SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ 
 * `application/vnd.dataresource+json` 出力の MIME の種類に対してグリッド ビューを使用するようにサポートが追加されました。 つまり、これを使用する多くの Notebook では (たとえば、Python ノートブック内で `pd.options.display.html.table_schema` を設定することで)、表形式の出力がさらに良くなります。ノートブックを閉じたら、Azure Data Studio によってノートブック サーバーのシャットダウンが 2 度試行されるという #3959 が修正されました
 
 #### <a name="known-issues"></a>既知の問題
+
 * Notebook を開くと、Python のインストール用のダイアログが表示されます。 このインストールをキャンセルすると、[カーネル] および [アタッチ先] ドロップダウンに期待する値が表示されません。 この回避策は、Python のインストールを完了することです。
 * サポートされていないカーネルでノートブックを開くと、[カーネル] と _[アタッチ先]_ ドロップダウンによって Azure Data Studio が応答を停止します。 Azure Data Studio を閉じて、サポートされているカーネル (Python3、Spark | R、Spark | Scala、PySpark、PySpark3) を使用していることを確認する必要があります
 * PySpark3 またはその他の Spark カーネルを SQL Server エンドポイントに対して使用すると、Spark UI リンクが失敗します。 回避策としては、ダッシュボードから Spark UI をクリックします。または、SQL Server ビッグ データ クラスターの接続の種類には正しい Spark UI ハイパーリンクが含まれているので、これを使用して接続します。
 
 ### <a name="extensibility-improvements"></a>拡張性の向上
+
 このリリースには、エクステンダーを支援する多くの改良点が追加されています
 * 新しい `ObjectExplorerNodeProvider` API を使用すると、SQL Server またはその他の接続ノードの下にフォルダーを投稿できます。 これは SQL Server 2019 インスタンスの下に `Data Services` ノードを追加する方法ですが、この方法を使用して、監視フォルダーやその他のフォルダーを UI に簡単に追加することも可能です。
 * 2 つの新しいコンテキスト キー値を使用すれば、ダッシュボードへのコントリビューションを容易に表示/非表示にすることができます。
   * `mssql:iscluster` は、これが SQL Server 2019 ビッグ データ クラスターであるかどうかを示します
   * `mssql:servermajorversion` にはサーバー バージョンがあります (SQL Server 2019 の場合は 15、SQL Server 2017 の場合は 14 といった具合に)。 これは、たとえば、SQL Server 2017 以上用の機能を表示する必要がある場合に役立ちます。
 
-
 ## <a name="release-notes-v080"></a>リリース ノート (v0.8.0)
+
 *Notebooks*:
+
 * [その他のアクション] セル ボタンをクリックすることで、既存のセルの前後へのセルの追加がサポートされるようになりました
 * **[新しい接続の追加]** オプションが [アタッチ先] ドロップダウン内の接続に追加されました
 * Python パッケージの更新を支援するため、およびアプリケーションを終了するとインストールが途中で停止するというケースを解決するために、 **[Reinstall Notebook Dependencies]\(Notebook の依存関係の再インストール\)** コマンドが追加されました。 これは、コマンド パレットから実行できます (`Ctrl/Cmd+Shift+P` キーを使用し、`Reinstall Notebook Dependencies` と入力する)
@@ -121,6 +130,7 @@ SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ 
   * 無効な列マッピングを含むテーブルは無効として表示され、警告によってそのエラーが説明されます
 
 ## <a name="release-notes-v072"></a>リリース ノート (v0.7.2)
+
 * Azure Resource Explorer は Azure Data Studio に組み込まれ、この拡張機能からは削除されています。 これに関するフィードバックをお送りいただきありがとうございました。
 * Markdown セルを多く含むノートブックのパフォーマンスが改善されました。
 * Notebook 内の自動サイズ調整のコード セル。 これによって、セル ツールバーに基づく最小サイズが引き続き保持されます。

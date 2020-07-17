@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン エラーについて | Microsoft Docs
+description: SQL Server データベース エンジンで発生するエラーの属性と、すべてのシステムおよびユーザー定義エラー メッセージを sys.messages からアクセスする方法について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +17,18 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49e62b7fc66a462701ea65a537edee84c9735b86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903752"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009216"
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   次の表で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって発生したエラーの属性について説明します。  
   
-|Attribute|説明|  
+|属性|説明|  
 |---------------|-----------------|  
 |エラー番号|エラー メッセージには、それぞれ一意なエラー番号が付いています。|  
 |エラー メッセージ文字列|エラー メッセージには、エラーの原因についての診断情報が含まれています。 多くのエラー メッセージには、エラーが発生したオブジェクト名などの情報を挿入するための置換変数が用意されています。|  

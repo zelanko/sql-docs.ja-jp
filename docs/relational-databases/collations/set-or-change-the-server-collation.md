@@ -1,7 +1,7 @@
 ---
 title: サーバーの照合順序の設定または変更 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733950"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   サーバー照合順序は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと一緒にインストールされているすべてのシステム データベースだけではなく、新しく作成したユーザー データベースの既定の照合順序になります。 サーバーレベルの照合順序は慎重に選択してください。以下に影響を与えます。
  - `=`、`JOIN`、`ORDER BY`、ならびにテキスト データを比較するその他の演算子の並べ替えルールと比較ルール。
  - システム ビュー、システム関数、TempDB のオブジェクト (一時テーブルなど) の `CHAR`、`VARCHAR`、`NCHAR`、`NVARCHAR` 列の照合順序。
@@ -29,8 +29,11 @@ ms.locfileid: "82762913"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>SQL Server でサーバー照合順序を設定する
 
-  サーバー照合順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に指定します。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序はサーバーレベルの照合順序として指定できません。 詳細については、「 [Collation and Unicode Support](collation-and-unicode-support.md)」を参照してください。
-  
+  サーバー照合順序は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に指定します。 既定のサーバーレベルの照合順序は、オペレーティング システムのロケールに基づいています。 たとえば、英語 (米国) (en-us) を使用するシステムの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序はサーバーレベルの照合順序として指定できません。 既定の照合順序マッピングに対する OS ロケールの一覧などの詳細については、「[照合順序と Unicode のサポート](collation-and-unicode-support.md#Server-level-collations)」の「サーバーレベルの照合順序」を参照してください。
+
+> [!NOTE]  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB のサーバーレベルの照合順序は **SQL_Latin1_General_CP1_CI_AS** であり、インストール中またはインストール後に変更することはできません。  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>SQL Server でサーバー照合順序を変更する
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序を変更する操作は複雑で、次の手順が含まれます。  
@@ -56,7 +59,7 @@ ms.locfileid: "82762913"
 - すべてのデータをインポートします。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの既定の照合順序を変更する代わりに、新しく作成するデータベースごとに既定の照合順序を指定することができます。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序を変更する代わりに、`CREATE DATABASE` ステートメントと `ALTER DATABASE` ステートメントの `COLLATE` 句を通じて、新しく作成するデータベースごとに既定の照合順序を指定することができます。 詳細については、「 [Set or Change the Database Collation](set-or-change-the-database-collation.md)」を参照してください。  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance でサーバー照合順序を設定する
 Azure SQL Managed Instance のサーバーレベルの照合順序は、インスタンスの作成時に指定できますが、後で変更することはできません。 インスタンスを作成しているときに、[Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) または [PowerShell と Resource Manager テンプレート](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)を使用してサーバーレベルの照合順序を設定できます。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序と新しい UTF-8 の照合順序はサーバーレベルの照合順序として指定できません。

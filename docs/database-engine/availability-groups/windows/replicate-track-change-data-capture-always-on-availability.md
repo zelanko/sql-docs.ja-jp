@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433759"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888049"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
@@ -196,9 +196,9 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 -   単一の可用性グループ内でマージ レプリケーションとパブリッシング データベースを使用する場合は、次のことが適用されます。  
   
-    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。  
+    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] を実行する必要があります。  
   
-    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]である必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
+    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上にある必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
   
 -   パブリッシャーのインスタンスは、Always On 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
@@ -208,7 +208,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 |||||  
 |-|-|-|-|  
 ||**発行元**|**ディストリビューター**|**サブスクライバー**|  
-|**トランザクション**|はい<br /><br /> 注: 双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
+|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
 |**P2P**|いいえ|いいえ|いいえ|  
 |**[マージ]**|はい|いいえ|いいえ|  
 |**スナップショット**|はい|いいえ|はい|
@@ -217,11 +217,15 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
 ### <a name="considerations"></a>考慮事項  
   
--   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューション データベースを使用することはできません。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 ディストリビューターの高可用性を実現するには、SQL Server のフェールオーバー クラスターを使用します。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
+-   データベース ミラーリングでディストリビューション データベースを使用することはできませんが、一定の制限を条件として [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]では使用できます。[ディストリビューション可用性グループの設定に関するページ](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions)を参照してください。 レプリケーション構成は、ディストリビューターが構成された SQL Server インスタンスと結び付けられます。そのため、ディストリビューション データベースはミラー化またはレプリケートできません。 SQL Server のフェールオーバー クラスターを使用してディストリビューターの高可用性を実現することもできます。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
 -   セカンダリ データベースへのサブスクライバーのフェールオーバーはサポートされていますが、マージ レプリケーション サブスクライバーの手動手順となります。 手順は、ミラー化されたサブスクライバー データベースをフェールオーバーするために使用される方法と本質的には同じです。 トランザクション レプリケーション サブスクライバーの場合、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に参加している間、特別な処理は必要ありません。 可用性グループに参加するには、サブスクライバーは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降を実行している必要があります。  詳細については、「 [レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)」を参照してください。
   
 -   ログイン、ジョブ、リンク サーバーなど、データベースの外部に存在するメタデータやオブジェクトはセカンダリ レプリカに反映されません。 フェールオーバー後に新しいプライマリ データベースでこれらのメタデータやオブジェクトが必要な場合は、手動でコピーする必要があります。 詳細については、「 [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)と呼ばれるプロセスで交換されることがあります。  
+
+### <a name="distributed-availability-groups"></a>分散型可用性グループ
+
+可用性グループ内のパブリッシャーまたはディストリビューション データベースは、分散型可用性グループの一部として構成することはできません。 可用性グループ内のパブリッシャー データベースと可用性グループ内のディストリビューション データベースはいずれも、適切に構成および使用するためにはリスナー エンドポイントが必要です。 ただし、分散型可用性グループに対してリスナー エンドポイントを構成することはできません。
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **レプリケーション**  
@@ -252,7 +256,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
  [レプリケーション サブスクライバーと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性グループ: 相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [変更の追跡について &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

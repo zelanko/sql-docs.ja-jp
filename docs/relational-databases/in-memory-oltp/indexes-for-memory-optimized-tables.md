@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルのインデックス | Microsoft Docs
+description: メモリ最適化テーブルのインデックスが SQL Server および Azure SQL Database のディスク ベース テーブルの従来のインデックスとどのように異なるかについて説明します。
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70929695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723112"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化テーブルは、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
 
@@ -88,7 +89,7 @@ ms.locfileid: "70929695"
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  

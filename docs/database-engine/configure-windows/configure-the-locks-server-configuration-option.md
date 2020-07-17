@@ -1,5 +1,6 @@
 ---
 title: locks サーバー構成オプションの構成 | Microsoft Docs
+description: locks オプションについて説明します。 これを使用して、SQL Server データベース エンジンでロックに使用されるメモリの量を制限する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697131"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **locks** オプションは、使用できるロックの最大数を設定することによって、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がそのために使用するメモリの量を制限します。 既定値は 0 です。0 の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はシステム要件の変更に基づいてロック構造を動的に割り当てたり、割り当てを解除したりできます。  
   

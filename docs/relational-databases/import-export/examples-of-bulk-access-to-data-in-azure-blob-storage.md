@@ -1,7 +1,6 @@
 ---
 title: Azure BLOB ストレージのデータに一括アクセスする
-description: これらの Transact-SQL の例では、BULK INSERT ステートメントと OPENROWSET ステートメントを使用して、Azure Blob ストレージ アカウント内のファイルに直接アクセスする方法を示します。
-ms.description: Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account.
+description: BULK INSERT と OPENROWSET を使用して Azure BLOB ストレージ アカウントのデータにアクセスする Transact-SQL の例。
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4ed55e856a6a23da04b6f3a2812699c2b457a220
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650846"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure BLOB ストレージのデータに一括アクセスする例
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 `BULK INSERT` ステートメントと `OPENROWSET` ステートメントは、Azure BLOB ストレージのファイルに直接アクセスできます。 次の例では、`inv-2017-01-19.csv` という名前の CSV (コンマ区切り値) ファイルのデータを使用します。このファイルは `newinvoices` という名前のストレージ アカウントで `Week3` という名前のコンテナーに格納されています。 ファイルの書式を設定するパスを使用できますが、以下の例には含まれていません。
 

@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([ファイル グループ] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [ファイル グループ] タブを使用して、データベースのファイル グループを表示したり、新しいファイル グループを追加したりする方法について説明します。'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f44fd1c87cb1ed27e0d2d52fe658e97ec2edda7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756221"
 ---
 # <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] ([ファイル グループ] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、ファイル グループを表示したり、選択したデータベースに新しいファイル グループを追加したりできます。 ファイル グループの種類は、 *Row* ファイル グループ、FILESTREAM データ、およびメモリ最適化ファイル グループに分けられます。  
   
  ROW ファイル グループには、通常のデータおよびログ ファイルが含まれます。 FILESTREAM データ ファイル グループには、FILESTREAM データ ファイルが含まれます。 これらのデータ ファイルには、FILESTREAM ストレージを使用する場合に、バイナリ ラージ オブジェクト (BLOB) データをファイル システムに対してどのように格納するかという情報が格納されます。 どちらのファイル グループもオプションは同じです。  
@@ -32,7 +33,7 @@ ms.locfileid: "68099617"
  データベースに 1 つ以上のメモリ最適化テーブルを含めるには、メモリ最適化ファイル グループが必要です。  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>ROW および FILESTREAM データ ファイル グループのオプション  
- **Name**  
+ **名前**  
  ファイル グループの名前を入力します。  
   
  **[ファイル]**  
@@ -51,7 +52,7 @@ ms.locfileid: "68099617"
  選択されたファイル グループ行をグリッドから削除します。  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>メモリ最適化データ ファイル グループのオプション  
- **Name**  
+ **名前**  
  メモリ最適化ファイル グループの名前を入力します。  
   
  **[FILESTREAM ファイル]**  

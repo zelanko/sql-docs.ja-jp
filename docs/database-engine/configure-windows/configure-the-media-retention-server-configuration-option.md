@@ -1,5 +1,6 @@
 ---
 title: media retention サーバー構成オプションの構成 | Microsoft Docs
+description: media retention オプションについて説明します。 これを使用して、SQL Server でトランザクション ログとデータベース バックアップが保持される期間を指定する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696967"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **media retention** オプションは、各バックアップ セットを保持する期間を指定します。 このオプションを利用して、指定した日数が経過するまでバックアップが上書きされないように保護できます。 **media retention** オプションを構成すると、バックアップするたびにシステム バックアップを保持する期間を指定する必要はありません。 既定値は 0 日であり、最大値は 365 日です。  
   

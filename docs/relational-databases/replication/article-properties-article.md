@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722198"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[アーティクルのプロパティ]** ダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスでは、すべての種類のアーティクルのプロパティを表示し、設定できます。 パブリケーションを作成するときにのみ設定できるプロパティや、パブリケーションにアクティブなサブスクリプションがない場合にのみ設定できるプロパティがあります。 設定できないプロパティは読み取り専用として表示されます。  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288274"
  サブスクライバーにオブジェクトを作成する際に、ユーザー定義のデータ型を基本データ型に変換するかどうかを指定します。 ユーザー定義のデータ型には、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたユーザー定義 CLR 型が含まれます。 このようなデータ型を古いバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  
   
  **[サブスクライバーでスキーマを作成]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたスキーマは、CREATE SCHEMA ステートメントを使用して定義します。 スキーマとは、オブジェクトの所有者です。スキーマは、\<Database>.\<Schema>.\<Object> など、マルチパート名で使用されます。 DBO 以外のスキーマで所有されるデータベースにオブジェクトがある場合、パブリッシュされるオブジェクトが作成されるように、このようなスキーマをサブスクライバーに作成することができます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたスキーマは、CREATE SCHEMA ステートメントを使用して定義します。 スキーマは、オブジェクトの所有者です。これは、\<Database>.\<Schema>.\<Object> などのマルチパート名で使用されます。DBO 以外のスキーマで所有されるデータベースにオブジェクトがある場合、パブリッシュされるオブジェクトが作成されるように、このようなスキーマをサブスクライバーに作成することができます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合、次の手順に従います。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288274"
  このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
 ## <a name="options-for-merge-publications"></a>マージ パブリケーションのオプション  
- マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[競合回避モジュール]** という 2 つのタブがあります。  
+ マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[競合回避モジュール]** です。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[同期の方向]**  
@@ -137,7 +137,7 @@ ms.locfileid: "76288274"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の提供する COM ベース競合回避モジュールはすべて署名済みです。 このオプションを選択すると、同期の際に競合回避モジュールが有効かどうか確認されます。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle パブリケーションのオプション  
- Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[データのマッピング]** という 2 つのタブがあります。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
+ Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[データのマッピング ]** です。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  

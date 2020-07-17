@@ -1,5 +1,6 @@
 ---
 title: クライアント ネットワーク構成 | Microsoft Docs
+description: クライアント コンピューターをネットワーク上の SQL Server のインスタンスに接続する方法について説明します。 クライアントの管理に使用できるツールについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759169"
 ---
 # <a name="client-network-configuration"></a>クライアント ネットワーク構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   クライアント ソフトウェアを使用すると、クライアント コンピューターからネットワーク上の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 "クライアント" は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、サーバーが提供するサービスを使用するフロント エンドのアプリケーションです。 こうしたアプリケーションを実行するコンピューターは、 *クライアント コンピューター*と呼ばれます。  
   
  最も単純な構成では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと同じコンピューター上に常駐できます。 ただし、通常は、クライアントはネットワーク経由で 1 つ以上のリモート サーバーに接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクライアント/サーバー アーキテクチャにより、同じネットワーク上の複数のクライアントとサーバーのシームレスな管理が実現されます。 既定のクライアント構成は、ほとんどの状況に使用できます。  

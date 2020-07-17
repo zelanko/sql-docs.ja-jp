@@ -5,21 +5,21 @@ description: このクイックスタートでは、Red Hat Enterprise Linux (RH
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 55bdeab8f54b8aca9aea83cc0e4b1cb2c780da56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901573"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -39,7 +39,19 @@ ms.locfileid: "82760648"
 
 ## <a name="prerequisites"></a>前提条件
 
-RHEL 7.3、7.4、7.5、7.6、または 8 のコンピューターには**少なくとも 2 GB** のメモリが必要です。
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+RHEL 7.3 から 7.8、または 8.0 から 8.2 のマシンには**少なくとも 2 GB** のメモリが必要です。
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+RHEL 7.3、7.4、7.5、7.6、または 8.0 のマシンには**少なくとも 2 GB** のメモリが必要です。
+
+::: moniker-end
 
 自分のコンピューターに Red Hat Enterprise Linux をインストールする方法については、[https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) にお進みください。 Azure で RHEL 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照し、`az vm create` の呼び出しで `--image RHEL` を使用します。
 

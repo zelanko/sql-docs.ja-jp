@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557937"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882056"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタに関する補足情報を取り上げます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタの詳細については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」、「[Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「[SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75557937"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3. (セクション 3) を参照してください。  
+-   **[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] または sqlcmd.exe を使用する場合:** 以下のステートメントを使用します。手順 3 (セクション 3) を参照してください。  
   
      新しい非対称キーをインポートします。  
   
@@ -147,13 +147,13 @@ Key Vault は定期的にバックアップする必要があります。 資格
 
 手順の概要を以下に示します。  
   
-* コンテナー キーをバックアップします (Backup-AzureKeyVaultKey Powershell コマンドレットを使用)。  
+* コンテナー キーをバックアップします (Backup-AzureKeyVaultKey PowerShell コマンドレットを使用)。  
 * 資格情報コンテナーの障害の場合は、同じ地理的領域*に新しい資格情報コンテナーを作成します。 この資格情報コンテナーを作成するユーザーは、SQL Server のサービス プリンシパルの設定と同じ既定のディレクトリに存在している必要があります。  
-* 新しい資格情報コンテナーにキーを復元します (Restore-AzureKeyVaultKey Powershell コマンドレットを使用すると、以前と同じ名前を使用してキーが復元されます)。 既に同じ名前のキーが存在する場合、復元は失敗します。  
+* 新しい資格情報コンテナーにキーを復元します (Restore-AzureKeyVaultKey PowerShell コマンドレットを使用すると、以前と同じ名前を使用してキーが復元されます)。 既に同じ名前のキーが存在する場合、復元は失敗します。  
 * 新しい資格情報コンテナーを使用するための権限を SQL Server サービス プリンシパルに付与します。  
 * 必要に応じて、新しい資格情報コンテナー名を反映するように、データベース エンジンが使用する SQL Server 資格情報を変更します。  
   
-キーのバックアップは、クラウドの地理的領域または国 (米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ) が一致していれば、異なる Azure リージョン間で復元することができます。  
+キーのバックアップは、クラウドの地理的領域または国が一致していれば、異なる Azure リージョン間で復元することができます:米国、カナダ、日本、オーストラリア、インド、APAC、ヨーロッパ、ブラジル、中国、米国政府、ドイツ。  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. よく寄せられる質問  
@@ -167,7 +167,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
   
 ### <a name="on-configuring-ssnoversion"></a>構成について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** コネクタは 2 つのエンドポイントと通信し、これらをホワイトリストに登録する必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
+**SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** コネクタは 2 つのエンドポイントと通信します。これらは許可されている必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 
@@ -256,7 +256,7 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
   
 -   "ライブラリを読み込めません" というエラーが表示された場合は、実行中の SQL Server のバージョンに基づいて、適切なバージョンの Visual Studio C++ 再頒布可能パッケージがインストールされていることを確認してください。 次の表に、Microsoft ダウンロード センターからインストールするバージョンを示します。   
 
-Windows イベント ログでは、SQL Server コネクタに関連付けられているエラーもログに記録されます。エラーが実際に発生している理由に関する他の文脈で役立つことがあります。 Windows アプリケーション イベント ログのソースは、"SQL Server コネクタ for Microsoft Azure Key Vault" になります。
+Windows イベント ログでは、SQL Server コネクタに関連付けられているエラーもログに記録されます。これは、他の文脈で、エラーが実際に発生している理由を特定するのに役立つことがあります。 Windows アプリケーション イベント ログのソースは、"SQL Server コネクタ for Microsoft Azure Key Vault" になります。
   
 SQL Server のバージョン  |再頒布可能パッケージのインストール リンク    
 ---------|--------- 

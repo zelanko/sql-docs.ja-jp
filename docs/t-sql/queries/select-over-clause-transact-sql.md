@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999766"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 関数で OVER 句を使用すると、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

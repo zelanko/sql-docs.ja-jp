@@ -1,6 +1,6 @@
 ---
 title: ミラーリング監視サーバーを追加または置き換える (SSMS)
-description: SQL Server Management Studio (SSMS) を使用してデータベース ミラーリング監視サーバーを追加または置き換える方法について説明します。
+description: データベース ミラーリング エンドポイントで Windows 認証が使用されている場合に、SQL Server Management Studio を使用してデータベース ミラーリング監視サーバーを追加または置換する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763926"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング エンドポイントで Windows 認証を使用している場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "75247504"
   
 9. **[ミラーリング監視サーバー インスタンス]** ページで、 **[接続]** をクリックします。  
   
-10. **[サーバーへの接続]** ページの **[サーバー名]** フィールドでミラーリング監視サーバー インスタンスを指定し、既定の Windows 認証を使用します。 **[接続]** をクリックします。  
+10. **[サーバーへの接続]** ページの **[サーバー名]** フィールドでミラーリング監視サーバー インスタンスを指定し、既定の Windows 認証を使用します。 **[Connect]** をクリックします。  
   
 11. 接続が確立されると、ミラーリング監視サーバー インスタンスのリスナー ポートとデータベース ミラーリング エンドポイントが **[ミラーリング監視サーバー インスタンス]** ページに表示されます。 **[次へ]** をクリックします。  
   

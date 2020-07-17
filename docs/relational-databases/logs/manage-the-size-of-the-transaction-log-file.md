@@ -1,5 +1,6 @@
 ---
 title: トランザクション ログ ファイルのサイズの管理 | Microsoft Docs
+description: SQL Server トランザクション ログ サイズの監視、ログの圧縮、ログの拡大、tempdb ログの増加率の最適化、トランザクション ログの増加の管理を行う方法について説明します。
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668011"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、**tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>ログ領域の使用量の監視  
@@ -112,7 +113,7 @@ ms.locfileid: "68084019"
     -   ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 
     -   **auto_shrink** プロパティの設定変更については、「[データベースのプロパティの表示または変更](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
 [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
 [SQL Server トランザクション ログのアーキテクチャと管理ガイドのトランザクション ログ バックアップ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    

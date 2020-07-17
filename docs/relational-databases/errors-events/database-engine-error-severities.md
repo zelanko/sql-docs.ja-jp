@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン エラーの重大度 | Microsoft Docs
+description: この重大度レベルの一覧を使用して、SQL Server データベース エンジンでエラーが発生したときに発生した SQL Server の問題の種類を把握します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727523"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってエラーが発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した問題の種類がエラーの重大度によって示されます。  
   
 ## <a name="levels-of-severity"></a>重大度レベル  

@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
+description: 個別のリソース プールを作成して、メモリ最適化テーブルを含む SQL Server データベースのメモリ消費を管理する方法について説明します。
 ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e976cd81fb6d52e320ec18ea1c661a25f71baa07
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723377"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リソース プールは、管理できる物理リソースのサブセットを表します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースは既定のリソース プールにバインドされてリソースを使用します。 1 つ以上のメモリ最適化テーブルによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースが消費されたり、メモリ最適化テーブルに必要なメモリが他のメモリ ユーザーによって消費されたりするのを防ぐために、別のリソース プールを作成して、メモリ最適化テーブルを持つデータベースのメモリ消費量を管理することをお勧めします。  
   
@@ -86,7 +87,7 @@ GO
 ###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> リソース プールの作成とメモリの構成  
  メモリ最適化テーブルのメモリを構成するときは、MAX_MEMORY_PERCENT ではなく MIN_MEMORY_PERCENT に基づいてキャパシティ プランニングを実施する必要があります。  MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT については、「[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)」を参照してください。 この結果、メモリ最適化テーブルが使用できるメモリをより適切に予測することができます。MIN_MEMORY_PERCENT を指定すると、他のリソース プールにメモリの制約を加えて、この値に応じたメモリが確保されるためです。 メモリを確実に使用できるようにし、さらにメモリ不足が発生しないようにするには、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT を同じ値にします。 コミットされたメモリの量に対してメモリ最適化テーブルで使用できるメモリの割合については、後の「 [メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 」をご覧ください。  
   
- VM 環境での操作の詳細については、「 [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 」をご覧ください。  
+ VM 環境での操作の詳細については、「[ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)」を参照してください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、使用可能なメモリを 50% に指定して、Pool_IMOLTP という名前のリソース プールを作成します。  プールが作成された後、Pool_IMOLTP が含まれるようにリソース ガバナーが再構成されます。  
   
@@ -142,7 +143,7 @@ GO
  これで、データベースがリソース プールにバインドされました。  
   
 ##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更  
- サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  詳細については、「 [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 」をご覧ください。  
+ サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  詳細については、「[ベストプラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)」のトピックを参照してください。  
   
 1.  `ALTER RESOURCE POOL` を使用して MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の両方の値を変更します。  
   

@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181101"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009264"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行をテーブルやビューに追加します。 例については、「[例](#InsertExamples)」を参照してください。  
@@ -257,7 +257,7 @@ OUTPUT 句
  影響を受ける行を OUTPUT 句で返す有効な INSERT、UPDATE、DELETE、または MERGE ステートメントです。 このステートメントには WITH 句を指定できず、リモート テーブルまたはパーティション ビューを対象にすることもできません。 UPDATE または DELETE を指定する場合、カーソルベースの UPDATE または DELETE は指定できません。 ソース行を、入れ子になった DML ステートメントとして参照することはできません。  
   
  WHERE \<search_condition>  
- \<dml_statement_with_output_clause> で返された行をフィルター処理する有効な \<search_condition> を含んだ WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
+ \<dml_statement_with_output_clause> から返される行をフィルター処理する有効な \<search_condition> を含む WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
   
  DEFAULT VALUES  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
@@ -405,7 +405,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ## <a name="logging-behavior"></a>ログ記録の動作  
  INSERT ステートメントは、常に完全にログに記録されます。ただし、BULK キーワードを指定して OPENROWSET 関数を使用している場合、または `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用している場合は除きます。 これらの操作のログへの記録は最小限にできます。 詳細については、前の「データの一括読み込みの推奨事項」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  リンク サーバーに接続する場合、送信側サーバーは受信側サーバーに接続するためにログイン名とパスワードをリンク サーバーに代わって提供します。 この接続を機能させるには、[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) を使用して、リンク サーバー間でログイン マッピングを作成する必要があります。  
   
  OPENROWSET(BULK...) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」の「セキュリティに関する考慮事項」をご覧ください。  
@@ -889,7 +889,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 ###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、INSERT ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
-#### <a name="t-using-output-with-an-insert-statement"></a>T.  OUTPUT を INSERT ステートメントで使用する  
+#### <a name="t-using-output-with-an-insert-statement"></a>T. OUTPUT を INSERT ステートメントで使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar` テーブル変数に返します。 `ScrapReasonID` 列が `IDENTITY` プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってこの列用に生成された値が、`OUTPUT` 句で `INSERTED.ScrapReasonID` 列に返されます。  
   
 ```sql
@@ -908,7 +908,7 @@ SELECT ScrapReasonID, Name, ModifiedDate
 FROM Production.ScrapReason;  
 ```  
   
-#### <a name="u-using-output-with-identity-and-computed-columns"></a>U.  ID 列と計算列で OUTPUT を使用する  
+#### <a name="u-using-output-with-identity-and-computed-columns"></a>U. ID 列と計算列で OUTPUT を使用する  
  次の例では、`EmployeeSales` テーブルを作成し、INSERT ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するため、SELECT ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。 これらの値は[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって挿入操作中に生成されるため、いずれの列も `@MyTableVar` で定義できません。  
   
 ```sql

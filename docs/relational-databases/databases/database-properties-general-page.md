@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([全般] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [全般] タブを使用して、データベースのプロパティを表示または変更する方法について説明します。'
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
@@ -12,31 +13,31 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756198"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[最終データベース バックアップ]**  
  データベースが最後にバックアップされた日付を表示します。  
   
  **[最終データベース ログ バックアップ]**  
  データベース トランザクション ログが最後にバックアップされた日付を表示します。  
   
- **Name**  
+ **名前**  
  データベースの名前が表示されます。  
   
  **状態**  
  データベースの状態を表示します。 詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。  
   
- **[所有者]**  
+ **所有者**  
  データベースの所有者の名前を表示します。 所有者は、 **[ファイル]** ページで変更できます。  
   
  **[作成日]**  

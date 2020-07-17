@@ -1,5 +1,6 @@
 ---
 title: SQL Server の暗号化 | Microsoft Docs
+description: これらのリソースを使用して、SQL Server が暗号化を使用してデータベースのセキュリティを強化する方法について説明します。
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3fea2c9fdd532385378e2c66af08eefd4804442
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720433"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
   
 
@@ -79,7 +80,7 @@ ms.locfileid: "74957316"
  証明書を使用してデータを暗号化する方法について説明します。  
   
 ## <a name="external-resources"></a>外部リソース  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 - セキュリティと保護](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet:SQL Server TechCenter:SQL Server 2012 - セキュリティと保護](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティに関する最新情報が掲載されています。  
   
 ## <a name="see-also"></a>参照  

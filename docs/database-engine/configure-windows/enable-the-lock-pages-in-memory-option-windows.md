@@ -1,5 +1,6 @@
 ---
 title: Lock Pages in Memory オプションの有効化 (Windows) | Microsoft Docs
+description: "\"Lock Pages in Memory\" オプションをオンにする方法について説明します。 これによって、データをディスクにページングせず、物理メモリに保持して、パフォーマンスを向上できるしくみについて説明します。"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8041f5f057962af79d75f121423233d3d6a3a806
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6390c4a4bb4d8ea2ed9b5e5be1712eb7e782a29b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772472"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory オプションの有効化 (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: プッシュ サブスクリプションの削除 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server のプッシュ サブスクリプションを削除する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8dd5c9c741cd94eaf05a2181c821bb63bd6ed84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653919"
 ---
 # <a name="delete-a-push-subscription"></a>プッシュ サブスクリプションの削除
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを削除する方法について説明します。  
   
  **このトピックの内容**  
@@ -67,13 +68,13 @@ ms.locfileid: "72908268"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **\@publication** と **\@subscriber** を指定します。 **\@article** に **all** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、**\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **\@publication** と **\@subscriber** を指定します。 **\@article** に **all** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 2.  サブスクライバーのサブスクリプション データベースで [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) を実行して、サブスクリプション データベース内のレプリケーション メタデータを削除します。  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを削除するには  
   
-1.  パブリッシャーで、**\@publication**、**\@subscriber**、**\@subscriber_db** を指定して、[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 (省略可能) ディストリビューターにアクセスできない場合、**\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+1.  パブリッシャーで、 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定して、[sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 2.  サブスクライバー側のサブスクリプション データベースに対して、[sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 これにより、サブスクリプション データベースのマージ メタデータが削除されます。  
   

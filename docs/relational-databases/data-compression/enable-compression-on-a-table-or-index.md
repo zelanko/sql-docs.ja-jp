@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488011"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003913"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を有効にする方法について説明します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81488011"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次を使用してテーブルまたはインデックスの圧縮を有効にするには:**  
   
@@ -146,7 +146,7 @@ ms.locfileid: "81488011"
   
                 -   **[日]** を選択した場合は、ジョブ スケジュールを実行する日付と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の 15 日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、1 番目のボックスに「15」と入力し、2 番目のボックスに「2」と入力します。 2 番目のボックスで使用できる最大の値は "99" であることに注意してください。  
   
-                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** を選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
+                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** も、特定の平日 (たとえば、日曜日や水曜日) に加えて、最初の 2 つのリストから選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
   
         2.  **[一日のうちの頻度]** で、頻度、ジョブ スケジュールを実行する当日にジョブ スケジュールを繰り返す頻度を指定します。  
   
@@ -202,7 +202,11 @@ ms.locfileid: "81488011"
      完了したら、 **[閉じる]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
-  
+
+### <a name="sql-server"></a>SQL Server
+
+SQL Server で、`sp_estimate_data_compression_savings` を実行してから、テーブルまたはインデックスの圧縮を有効にします。 以下のセクションをご覧ください。 
+
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
@@ -245,7 +249,47 @@ ms.locfileid: "81488011"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>Azure SQL Database 上
+
+Azure SQL Database では、`sp_estimate_data_compression` はサポートされません。 次のスクリプトでは、圧縮率を推定せずに圧縮を行うことができます。 
+
+#### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
+  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、指定したテーブルのすべてのパーティションで行の圧縮を有効にします。  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>インデックスで圧縮を有効にするには  
+  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初に `sys.indexes` カタログ ビューを問い合わせて、 `index_id` テーブルの各インデックスの名前と `Production.TransactionHistory` を返します。 最後に、インデックス ID 2 (`IX_TransactionHistory_ProductID`) を再構築し、ページの圧縮を指定します。  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」および「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   

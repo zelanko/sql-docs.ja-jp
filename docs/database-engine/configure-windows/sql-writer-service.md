@@ -1,5 +1,6 @@
 ---
 title: SQL ライター サービス | Microsoft Docs
+description: SQL ライター サービスについて説明します。 これにより、ボリューム シャドウ コピー サービス フレームワークを通じて、SQL Server のバックアップと復元の追加機能がどのように提供されているかを確認します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764020"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL ライター サービスは、ボリューム シャドウ コピー サービス フレームワークを通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元に関する追加機能を提供します。  
   
  SQL ライター サービスは、自動的にインストールされます。 SQL ライター サービスは、ボリューム シャドウ コピー サービス (VSS) アプリケーションがバックアップまたは復元を要求したときに動作している必要があります。 SQL ライター サービスを構成するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows サービス アプレットを使用します。 SQL ライター サービスは、すべてのオペレーティング システムにインストールできます。  
@@ -53,7 +54,7 @@ ms.locfileid: "71816672"
 ## <a name="permissions"></a>アクセス許可  
  SQL ライター サービスは、 **ローカル システム** アカウントで実行する必要があります。 SQL ライター サービスは、 **に接続するために** NT Service\SQLWriter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを使用します。 **NT Service\SQLWriter** ログインを使用すると、SQL ライター プロセスは **ログインなし**と指定されたアカウントを通じた低い特権レベルで実行され、その結果、脆弱性を制限することになります。 SQL ライター サービスが無効になっている場合は、System Center Data Protection Manager や他のいくつかのサード パーティ製品のように VSS スナップショットに依存する任意のユーティリティは動作に失敗するか、より悪い場合は、一貫性のないデータベースのバックアップを取得するリスクが生じます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するシステムと、ホスト システム (仮想マシンの場合) のどちらも、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によるバックアップのみを必要とし、それ以外のバックアップを何も必要としない場合は、SQL ライター サービスを無効にしてログインを削除しても安全です。  バックアップが直接的なスナップショット ベースであるかどうかにかかわりなく、SQL ライター サービスはシステム レベルとボリューム レベルどちらのバックアップからも開始できることに注意してください。 いくつかのシステム バックアップ製品は、開いているファイルやロックされているファイルがブロックされることを防止するために VSS を使用します。 SQL ライター サービスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのすべての I/O を短時間にわたって停止するため、自らが動作する目的で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内で昇格された権限を必要とします。  
   
-## <a name="features"></a>[機能]  
+## <a name="features"></a>特徴  
  SQL ライターは次の機能をサポートしています。  
   
 -   フルテキスト カタログなど、データベースの完全バックアップおよび復元  

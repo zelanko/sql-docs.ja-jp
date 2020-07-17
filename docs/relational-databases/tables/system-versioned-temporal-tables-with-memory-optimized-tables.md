@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165459"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984586"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](https://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。
 
@@ -52,9 +52,9 @@ ms.locfileid: "74165459"
 
 内部メモリ最適化ステージング テーブルは、DML の操作を最適化するためにシステムによって作成される内部オブジェクトです。
 
-- テーブル名は、**Memory_Optimized_History_Table_<object_id>** という形式で生成されます。 *<object_id>* は、現在のテンポラル テーブルの識別子です。
+- テーブル名は次の形式で生成されます。**Memory_Optimized_History_Table_<object_id>** 。この *<object_id>* は現在のテンポラル テーブルの識別子です。
 - テーブルは、現在のテンポラル テーブルのスキーマに加えて、1 つの BIGINT 列をレプリケートします。 この追加される列により、内部履歴バッファーに移動される行の一意性が保証されます。
-- 追加列の名前は、**Change_ID[_< suffix>]** という形式です。 *_\<suffix>* はオプションであり、*Change_ID* 列がテーブルに既にある場合に追加されます。
+- 追加列の名前は次の形式です。**Change_ID[_< suffix>]** 。この *_\<suffix>* は省略可能であり、*Change_ID* 列がテーブルに既にある場合に追加されます。
 - システム バージョン管理されたメモリ最適化テーブルの最大行サイズは、ステージング テーブルに追加される BIGINT 列のため、8 バイトだけ小さくなります。 新しい最大値は、8052 バイトです。
 - 内部メモリ最適化ステージング テーブルは、SQL Server Management Studio のオブジェクト エクスプローラーには表されません。
 - このテーブルに関するメタデータおよび現在のテンポラル テーブルとの接続については、「[sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)」を参照してください。

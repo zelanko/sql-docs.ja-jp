@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725946"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に関して、Azure Key Vault の保護下にある非対称キーを使用した一般的な作業は、次の 3 つの領域に分けられます。  
   
 -   Azure Key Vault からの非対称キーを使用した透過的データ暗号化  
@@ -53,12 +53,14 @@ ms.locfileid: "75558514"
         - **グローバル Azure** を使用している場合は、`IDENTITY` 引数をパート II で使用した実際の Azure Key Vault の名前に置き換えます。
         - **プライベート Azure クラウド** ( Azure Government、Azure China 21Vianet、Azure Germany など) を使用している場合は、`IDENTITY` 引数をパート II の手順 3 で返された Vault URI に置き換えます。 Vault URI に "https://" は含めないでください。   
   
-    -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。  
+    -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。
   
         > [!IMPORTANT]  
         >  **クライアント ID**のハイフンは削除してください。  
   
-    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート 1 で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。  
+    -   `SECRET` 引数の 2 番目の部分を、パート I の**クライアント シークレット**を使って完了します。この例で、パート 1 の**クライアント シークレット**は `ReplaceWithAADClientSecret` です。 
+  
+    -   完成した SECRET 引数の文字列は、ハイフンを含まない文字と数字の長いシーケンスになります。
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ ms.locfileid: "75558514"
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

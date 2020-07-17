@@ -1,5 +1,6 @@
 ---
 title: SQL Server サービスの開始、停止、一時停止、再開、再起動
+description: さまざまな SQL Server サービスを開始、停止、一時停止、再開、または再起動する方法を確認します。 これらのアクションに対して Transact-SQL、PowerShell、その他のツールを使用する方法をご覧ください。
 ms.custom: ''
 ms.date: 03/05/2020
 ms.prod: sql
@@ -37,19 +38,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81287902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763989"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、SQL Server 構成マネージャー、SQL Server Management Studio (SSMS)、コマンド プロンプトからの net コマンド、Transact-SQL、または PowerShell を使用して、SQL Server データベース エンジン、SQL Server エージェント、または SQL Server Browser サービスを、開始、停止、一時停止、再開、または再起動する方法について説明します。
 
@@ -97,7 +98,7 @@ SQL Server の各種リソースに関する着信要求を受信し、コンピ
 
 - クラスターで実行中の SQL Server データベース エンジン サービスを管理するには、クラスター アドミニストレーターを使用するのが最適です。  
 
-### <a name="security"></a>Security
+### <a name="security"></a>セキュリティ
 
 #### <a name="permissions"></a>アクセス許可
 

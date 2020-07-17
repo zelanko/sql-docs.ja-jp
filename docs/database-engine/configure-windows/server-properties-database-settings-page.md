@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([データベースの設定] ページ) | Microsoft Docs
+description: SQL Server でのデータベース設定について理解します。 バックアップ動作、FILL FACTOR、ファイルの場所、その他のプロパティを制御するためのオプションについて説明します。
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,23 +9,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784130"
 ---
 # <a name="server-properties---database-settings-page"></a>サーバーのプロパティ - [データベースの設定] ページ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、データベースの設定を表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
 ### <a name="default-index-fill-factor"></a>[既定のインデックス FILL FACTOR]
 

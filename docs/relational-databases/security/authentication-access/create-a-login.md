@@ -1,5 +1,6 @@
 ---
 title: ログインの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server または Azure SQL Database でログインを作成する方法について説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776389"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005687"
 ---
 # <a name="create-a-login"></a>ログインの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]にログインを作成する方法について説明します ログインとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しようとしている人またはプロセスの ID を指します。  
   
@@ -134,7 +135,7 @@ ms.locfileid: "75776389"
  **[ユーザー マッピング]** ページには、すべての可能なデータベースと、ログインに適用できるデータベースに対するデータベース ロール メンバーシップが一覧表示されます。 選択したデータベースによって、ログインに使用できるロールのメンバーシップが決まります。 このページで使用できるオプションを次に示します。  
   
  **[このログインにマップされたユーザー]**  
- このログインでアクセスできるデータベースを選択します。 データベースを選択すると、**[_database_name_ のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
+ このログインでアクセスできるデータベースを選択します。 データベースを選択すると、 **[_database_name_ のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
   
  **Map**  
  下の一覧にあるデータベースへのアクセスを、ログインに許可します。  

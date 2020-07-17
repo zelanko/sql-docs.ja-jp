@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56f5262fe130d391bf152d0924df814e15ffc316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669834"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
   
  ログ シーケンス番号 (LSN) を使用して、復元操作の復旧ポイントを定義できます。 ただし、この機能はツール ベンダーを対象としたものであり、一般的には、あまり有益ではない場合があります。  
@@ -60,11 +60,11 @@ ms.locfileid: "82180897"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH STOPATMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   

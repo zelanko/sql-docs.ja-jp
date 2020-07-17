@@ -1,6 +1,6 @@
 ---
 title: SQL Server でデータベースの一覧を表示する
-ms.custom: seo-lt-2019
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server のインスタンス上のデータベースの一覧を表示する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,22 +20,23 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6333815c8d741c69bd4d0ea651f6b31489881f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 5c22331de5c4848c28125d8c46d8eced7acc8cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758995"
 ---
-# <a name="view-list-of-databases-on-sql-server"></a>SQL Server でデータベースの一覧を表示する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="view-list-of-databases-on-sql-server"></a>SQL Server でデータベースの一覧を表示する     
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]インスタンス上のデータベースの一覧を表示する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して SQL Server インスタンス上のデータベースの一覧を表示するには:**  
   

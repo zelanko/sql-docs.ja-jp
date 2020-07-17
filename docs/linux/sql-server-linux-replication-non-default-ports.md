@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: Linux 上の SQL Server レプリケーションに対して、既定以外のポートでスナップショット フォルダーの共有を構成する方法について説明します。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558597"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882683"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>既定以外のポートを使用してレプリケーションを構成する (SQL Server Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux インスタンス上で、network.tcpport mssql-conf 設定を使用して構成された任意のポートをリッスンする SQL Server とのレプリケーションを構成できます。 次の条件に該当する場合は、構成時にポートをサーバー名に追加する必要があります。
 
 1. レプリケーションのセットアップに、SQL Server on Linux のインスタンスが含まれる
 2. すべてのインスタンス (Windows または Linux) が既定以外のポートをリッスンしている。 
 
-インスタンスのサーバー名は、インスタンス上で @@servername を実行することで見つけることができます。
+インスタンスのサーバー名は、インスタンス上で @@servername を実行することで見つけることができます。 サーバー名の代わりに IP アドレスを使用しないでください。 パブリッシャー、ディストリビューター、またはサブスクライバーの IP アドレスを使用すると、エラーが発生する可能性があります。
+
+> [!NOTE]
+> Linux 上で既定以外のポートを使用して SQL Server レプリケーションを作成することは、SQL Server 2019 以降でのみ機能します。
 
 ## <a name="examples"></a>例
 

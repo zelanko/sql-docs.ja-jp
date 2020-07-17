@@ -1,5 +1,6 @@
 ---
 title: データベースのプロパティの表示または変更 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でデータベースのプロパティを表示または変更する方法について説明します。
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65eed15f9270c2a64ee5588f71b1fed37650905b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642613"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>データベースのプロパティの表示または変更
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースのプロパティを表示または変更する方法について説明します。 データベースのプロパティを変更すると、変更は直ちに有効になります。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68127055"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータベースのプロパティを表示または変更するには:**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68127055"
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、任意のページを選択して、対応する情報を表示します。 たとえば、データおよびログ ファイルの情報を表示するには、 **[ファイル]** ページをクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
- Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE (Azure SQL データベース ) ](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
+ Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE (Azure SQL データベース)](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>DATABASEPROPERTYEX 関数を使用してデータベースのプロパティを表示するには  
   

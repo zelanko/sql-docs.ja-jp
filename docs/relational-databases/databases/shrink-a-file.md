@@ -1,5 +1,6 @@
 ---
 title: ファイルの圧縮 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でデータまたはログ ファイルを圧縮する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71961930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715502"
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータ ファイルまたはログ ファイルを圧縮する方法について説明します。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
@@ -40,7 +41,7 @@ ms.locfileid: "71961930"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルを圧縮するには:**  
   
@@ -85,7 +86,7 @@ ms.locfileid: "71961930"
      **[ファイル名]**  
      選択したファイル グループおよびファイルの種類で利用可能なファイルの一覧からファイルを選択します。  
   
-     **Location**  
+     **場所**  
      現在選択されているファイルへの完全なパスを表示します。 このパスは編集できませんが、クリップボードにコピーできます。  
   
      **[現在割り当てられている領域]**  

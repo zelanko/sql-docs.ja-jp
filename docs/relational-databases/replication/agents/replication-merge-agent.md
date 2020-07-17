@@ -1,5 +1,6 @@
 ---
 title: レプリケーション マージ エージェント | Microsoft Docs
+description: レプリケーション マージ エージェントは、データベース テーブルに保持されている初期スナップショットをサブスクライバーに適用し、データの増分変更をマージして、競合を調整します。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897889"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
   
 > [!NOTE]  
@@ -169,9 +170,9 @@ replmerg [-?]
   
 |EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|TLS は使用されません。|  
+|**0**|TLS を使用しないことを指定します。|  
 |**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
-|**2**|TLS が使用され、証明書の確認が行われます。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
 
  > [!NOTE]  
  >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。

@@ -1,5 +1,6 @@
 ---
 title: 暗号化階層 | Microsoft Docs
+description: SQL Server の階層的な暗号化とキー管理インフラストラクチャについて説明します。 拡張キー管理モジュールにキーを保管します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764998"
 ---
 # <a name="encryption-hierarchy"></a>暗号化階層
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化とキーの階層的な管理インフラストラクチャを使用してデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
   
  次の図は、暗号化階層のそれぞれの層がその下位にある層を暗号化することを示しており、最も一般的な暗号化構成を示しています。 階層の先頭へのアクセスは、通常、パスワードで保護されます。  

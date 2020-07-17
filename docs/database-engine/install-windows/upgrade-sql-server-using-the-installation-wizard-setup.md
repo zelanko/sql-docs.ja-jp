@@ -1,5 +1,6 @@
 ---
 title: アップグレード:インストール ウィザード (セットアップ)
+description: SQL Server インストール ウィザードでは、1 つの機能ツリーを使用して、SQL Server コンポーネントを最新バージョンの SQL Server にインプレース アップグレードできます。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258806"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900204"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインプレース アップグレードできます。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "75258806"
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
     > [!NOTE]  
-    >  **[インスタンスの選択]** ページで **[\<共有機能のみをアップグレード>]** を選択して、共有機能のアップグレードを選択した場合は、[機能の選択] ページのすべての共有機能があらかじめ選択されています。 すべての共有機能は同時にアップグレードされます。  
+    >  **[インスタンスの選択]** ページで **\<Upgrade shared features only>** を選択して、共有機能のアップグレードを選択した場合、[機能の選択] ページで、すべての共有機能があらかじめ選択されています。 すべての共有機能は同時にアップグレードされます。  
   
 12. [インスタンスの構成] ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのインスタンス ID を指定します。  
   

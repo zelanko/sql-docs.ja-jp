@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892327"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、Ubuntu で 3 ノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 高可用性を実現するため、Linux 上の可用性グループには 3 つのノードが必要です。[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)に関するページを参照してください。
 
@@ -187,7 +187,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>可用性グループのリソースを作成する
 
-可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドでは、`ag1` という名前の可用性グループに対して、`ocf:mssql:ag` というマスター/スレーブ タイプのリソースが作成されます。 
+可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドを実行すると、`ag1` という名前の可用性グループに対して、`ocf:mssql:ag` というマスター/下位タイプのリソースが作成されます。 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true

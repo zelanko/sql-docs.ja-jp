@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75efe2deeb76083ffcb8fdc2cfedb3951dfd6e3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717952"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "82180785"
     |------------|-----------|  
     |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
-    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または \<[空白>] (トランザクション ログ用)。|  
+    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または \<blank> (トランザクション ログ用)。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  
@@ -111,7 +111,7 @@ ms.locfileid: "82180785"
     |**最後の LSN**|バックアップ セット内の最後のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
     |**チェックポイントの LSN**|バックアップが作成された時点における最新チェックポイントのログ シーケンス番号。|  
     |**全 LSN**|データベース全体の最新バックアップのログ シーケンス番号。|  
-    |**[サーバー]**|バックアップ操作を実行したデータベース エンジン インスタンスの名前。|  
+    |**サーバー**|バックアップ操作を実行したデータベース エンジン インスタンスの名前。|  
     |**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
     |**[サイズ]**|バックアップ セットのサイズ (バイト単位)。|  
     |**Position**|ボリューム内でのバックアップ セットの位置。|  
@@ -133,7 +133,7 @@ ms.locfileid: "82180785"
   
         |ヘッダー|値|  
         |------------|-----------|  
-        |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
+        |\<blank>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
         |**Date**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
         |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  

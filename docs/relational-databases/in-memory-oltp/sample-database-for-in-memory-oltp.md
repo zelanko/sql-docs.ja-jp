@@ -1,5 +1,6 @@
 ---
 title: インメモリ OLTP のサンプル データベース | Microsoft Docs
+description: インメモリ OLTP 機能とそのパフォーマンス上の利点について説明します。 このサンプルでは、メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャを示します。
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735038"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 ## <a name="overview"></a>概要  
  このサンプルでは、インメモリ OLTP 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、インメモリ OLTP のパフォーマンス上の利点も示します。  

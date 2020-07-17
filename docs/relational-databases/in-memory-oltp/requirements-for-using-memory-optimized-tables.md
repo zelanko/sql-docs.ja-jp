@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルを使用するための要件 | Microsoft Docs
+description: インメモリ OLTP を使用するための要件について説明します。これには SQL Database のバージョン、メモリとストレージに関する考慮事項、インストールが含まれます。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722367"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Azure DB でのインメモリ OLTP の使用については、「 [SQL Database でのインメモリ (プレビュー) の使用](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)」を参照してください。  
   

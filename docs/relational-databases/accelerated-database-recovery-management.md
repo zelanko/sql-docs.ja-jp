@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727917"
 ---
 # <a name="manage-accelerated-database-recovery"></a>高速データベース復旧を管理する
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>ADR の有効化と制御
 
@@ -103,6 +103,9 @@ PVS の場所の変更は、3 つの手順からなるプロセスです。
    ```
 
 ## <a name="troubleshooting"></a>トラブルシューティング
+
+> [!NOTE]
+> このセクションは Azure SQL Database にも適用されます。
 
 `sys.dm_tran_persistent_version_store_stats` を問い合わせ、PVS のサイズを確認します。
 

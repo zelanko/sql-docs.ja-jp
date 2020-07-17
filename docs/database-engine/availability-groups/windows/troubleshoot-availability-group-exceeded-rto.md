@@ -1,5 +1,6 @@
 ---
-title: 'トラブルシューティング: 可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs'
+title: トラブルシューティング:可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs
+description: Always On 可用性グループでのフェールオーバーが SQL Server の回復時刻の目標よりも長くかかる場合に、そのフェールオーバーのトラブルシューティングを行う方法について説明します。
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013752"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888024"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング: 可用性グループ接続の超過 RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング:可用性グループ接続の超過 RTO
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   可用性グループのデータ損失のない自動フェールオーバーまたは計画された手動フェールオーバーの後に、フェールオーバー時間が回復時刻の目標 (RTO) を超えていることに気づく場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。  
   
  自動フェールオーバーが完了していない場合、「[Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707)」(SQL Server 2012 AlwaysOn の環境での自動フェールオーバーに関する問題のトラブルシューティング) を参照してください。  

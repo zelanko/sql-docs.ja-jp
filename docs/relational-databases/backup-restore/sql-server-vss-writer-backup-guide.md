@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659474"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server バックアップ アプリケーション - ボリューム シャドウ コピー サービス (VSS) と SQL ライター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server では、ボリューム シャドウ コピー サービス (VSS) をサポートするため、サードパーティのバックアップ アプリケーションが VSS フレームワークを使用してデータベース ファイルをバックアップできるように、ライター (SQL ライター) が用意されています。 この記事では、SQL Server データベースの VSS スナップショットの作成および復元プロセスにおける、SQL ライター コンポーネントとその役割について説明します。 また、VSS フレームワークでバックアップ アプリケーションを操作するために SQL ライターを構成して使用する方法についても詳しく説明します。
 

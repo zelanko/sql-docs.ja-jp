@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74564800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736506"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 後で処理できるように結果セットを格納するための特別なデータ型です。 **table** は主に、テーブル値関数の結果セットとして返される行のセットの一時的な保存に使用します。 型には、関数および変数を宣言することができます **テーブル**です。 **テーブル** 変数は、関数、ストアド プロシージャ、およびバッチで使用できます。 **table** 型の変数を宣言するには、[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)を使用します。
   
@@ -34,7 +34,7 @@ ms.locfileid: "74564800"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table** 変数では、クエリ プランが変化せず、再コンパイルの影響が大きい場合がある小規模のクエリに対して、次の利点を提供します。
--   A **テーブル** 変数は、ローカル変数のように動作します。 この変数には適切に定義されたスコープがあります。 この変数は、それが宣言されている関数、ストアド プロシージャ、またはバッチです。  
+-   A **テーブル** 変数は、ローカル変数のように動作します。 この変数には適切に定義されたスコープがあります。 この変数は、それが宣言されている関数、ストアド プロシージャ、またはバッチで使用できます。  
      そのスコープの中、 **テーブル** 変数は、通常のテーブルのように使用できます。 また、SELECT、INSERT、UPDATE、および DELETE の各ステートメントで、テーブルまたはテーブル式が使用されている任意の場所で適用できます。 ただし、**table** は次のステートメントで使用できません。  
   
 ```sql
@@ -178,7 +178,7 @@ GO
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)  

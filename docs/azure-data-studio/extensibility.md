@@ -1,25 +1,24 @@
 ---
 title: 拡張性によるさらなる機能の追加
-titleSuffix: Azure Data Studio
 description: Azure Data Studio の機能を拡張するための拡張性モデルと主要な拡張性の領域について説明します
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774651"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張性の概要
+# <a name="azure-data-studio-extensibility"></a>Azure Data Studio の拡張性
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] には、ユーザー エクスペリエンスをカスタマイズし、それらのカスタマイズ結果をユーザー コミュニティ全体で利用できるようにするいくつかの拡張性メカニズムがあります。 [!INCLUDE[name-sos](../includes/name-sos.md)] のコア プラットフォームは Visual Studio Code 上に構築されているため、Visual Studio Code の拡張 API のほとんどが利用できます。 さらに、データ管理に固有のアクティビティに対して追加の拡張性ポイントを提供しました。
+Azure Data Studio には、ユーザー エクスペリエンスをカスタマイズし、それらのカスタマイズ結果をユーザー コミュニティ全体で利用できるようにするいくつかの拡張性メカニズムがあります。 Azure Data Studio のコア プラットフォームは Visual Studio Code 上に構築されているため、Visual Studio Code の拡張 API のほとんどが利用できます。 さらに、データ管理に固有のアクティビティに対して追加の拡張性ポイントを提供しました。
 
 主要な拡張性のポイントを次に示します。
 
@@ -32,7 +31,7 @@ ms.locfileid: "82107893"
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code の拡張 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] のコア プラットフォームは Visual Studio Code に基づいて構築されているため、Visual Studio Code 拡張 API の詳細については、Visual Studio Code の Web サイトにある[拡張機能の作成](https://code.visualstudio.com/docs/extensions/overview)と[拡張 API](https://code.visualstudio.com/docs/extensionAPI/overview) に関するドキュメントを参照してください。
+Azure Data Studio のコア プラットフォームは Visual Studio Code に基づいて構築されているため、Visual Studio Code 拡張 API の詳細については、Visual Studio Code の Web サイトにある[拡張機能の作成](https://code.visualstudio.com/docs/extensions/overview)と[拡張 API](https://code.visualstudio.com/docs/extensionAPI/overview) に関するドキュメントを参照してください。
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>[ダッシュボード] タブ パネルのコントリビューションを管理する
 
@@ -273,8 +272,8 @@ Azure Data Studio には、拡張機能で使用できるデータベース接�
 
 |コンテキスト変数| description|
 |:---|:---|
-|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'`|
-|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'`|
-|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'`|
+|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'`.|
+|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'`.|
+|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'`.|
 |`connection` | 現在の接続の完全な接続プロファイル オブジェクト (IConnectionProfile)|
 |`dashboardContext` | 現在オンになっているダッシュボードのページのコンテキストの文字列。 'database' または 'server' のいずれかです。 例: `dashboardContext == 'database'`|

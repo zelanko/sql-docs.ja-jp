@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789770"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
   
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  接続文字列に名前付きインスタンス名を指定し、ポート名を指定しない場合は、SQL Server Browser クエリの実行が必要です。  
   
- **Server** 属性では、`Server=` *<ip_address>* `,`\<*port*> という形式で IP アドレスとポートを指定します。次に例を示します。  
+ **Server** 属性では、`Server=` *<ip_address>* `,` *\<port>* > という形式で IP アドレスとポートを指定します。次に例を示します。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  この文字列では、認証情報が省略されています。  
   
 > [!IMPORTANT]  
->  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:`\<*servername>* )、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=`\<*servername>* `"` という形式を使用します。  
+>  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:` *\<servername>* )、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=` *\<servername>* `"` という形式を使用します。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  クライアントは、イニシャル パートナー名以外に、現在のミラー サーバー インスタンスを特定するフェールオーバー パートナー名も指定できます。 フェールオーバー パートナーは、Failover Partner 属性を表すいずれかのキーワードで指定します。 この属性を表すキーワードは、使用する API によって異なります。 次の表は、これらのキーワードを示しています。  

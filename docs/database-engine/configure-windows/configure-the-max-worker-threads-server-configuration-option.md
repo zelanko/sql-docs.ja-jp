@@ -1,6 +1,7 @@
 ---
 title: max worker threads サーバー構成オプションの構成 | Microsoft Docs
-ms.custom: ''
+description: max worker threads オプションを使用して特定の要求を処理するために、SQL Server で使用できるワーカー スレッドの数を構成する方法について説明します。
+ms.custom: contperfq4
 ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -11,51 +12,62 @@ helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04a0a9401b765b86e83a6641bf8742d6b326cc13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696979"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **max worker threads** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで利用できるワーカー スレッド数を構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オペレーティング システムのネイティブ スレッド サービスを使用しているため、1 つ以上のスレッドが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で同時にサポートされている各ネットワークをサポートし、他のスレッドがデータベース チェックポイントを処理し、スレッド プールがすべてのユーザーを処理します。 **max worker threads** の既定値は 0 です。 この場合、ワーカー スレッドの数が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動時に自動で構成されます。 既定の設定は、ほとんどのシステムで最適な設定です。 ただし、システム構成によっては、 **max worker threads** を特定の値に設定するとパフォーマンスが向上することがあります。  
-  
- **このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [Recommendations (推奨事項)](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **以下を使用して max worker threads オプションを構成するには:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **補足情報:** [max worker threads オプションを構成した後](#FollowUp)  
+このトピックでは、 **または** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **max worker threads** オプションは、クエリ要求、ログイン、ログアウト、および同様のアプリケーション要求を処理するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全体で使用できるワーカー スレッドの数を構成します。
+
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティング システムのネイティブ スレッド サービスを使用して、次の条件を確認します。
+
+- 1 つ以上のスレッドが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートする各ネットワークを同時にサポートします。
+
+- 1 つのスレッドがデータベース チェックポイントを処理します。
+
+- スレッドのプールがすべてのユーザーを処理します。
+
+**max worker threads** の既定値は 0 です。 この場合、ワーカー スレッドの数が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって起動時に自動で構成されます。 既定の設定は、ほとんどのシステムで最適な設定です。 ただし、システム構成によっては、 **max worker threads** を特定の値に設定するとパフォーマンスが向上することがあります。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   実際のクエリ要求数が **max worker threads**に設定した値を下回る場合、1 つのスレッドで 1 つのクエリ要求が処理されます。 一方、実際のクエリ要求数が **max worker threads** に設定されている値を超えた場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッドがプールされ、次に使用可能なワーカー スレッドで要求を処理できるようになります。  
+-   実際のクエリ要求数が **max worker threads** に設定されている値を超える場合があります。その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッドがプールされ、次に使用可能なワーカー スレッドで要求を処理できるようになります。 ワーカー スレッドはアクティブな要求にのみ割り当てられ、要求が処理されると解放されます。 これは、要求が行われたユーザー セッション/接続が開いたままになっている場合でも発生します。 
+
+-   **max worker threads** サーバー構成オプションでは、エンジン内部で生成できる全スレッドに制限はありません。 レイジーライター、チェックポイント、ログ ライター、Service Broker、ロック マネージャーなどのタスクに必要なシステム スレッドは、この制限の外部で生成されます。 可用性グループは、**ワーカー スレッドの制限**内で一部のワーカー スレッドを使用しますが、システム スレッドも使用します (「[可用性グループによるスレッドの使用](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)」を参照してください)。構成されているスレッドの数を超えた場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報を確認できます。  
+  
+ ```sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
+    ON s.session_id = r.session_id  
+ INNER JOIN sys.dm_os_tasks AS t  
+    ON r.task_address = t.task_address  
+ INNER JOIN sys.dm_os_workers AS w  
+    ON t.worker_address = w.worker_address  
+ WHERE s.is_user_process = 0;  
+ ```  
+  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。 パフォーマンスの問題が疑われる場合、それはおそらくワーカー スレッドの問題ではありません。 I/O などがワーカー スレッドを待機させている可能性が高いです。 ワーカー スレッドの最大数設定を変更する前に、パフォーマンス問題の根本原因を見つけることが推奨されます。  
+-   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。 パフォーマンスの問題が疑われる場合、それはおそらくワーカー スレッドの問題ではありません。 この原因は、ワーカー スレッドを占有するアクティビティに関連している可能性が高いので、ワーカー スレッドを解放しないでください。 たとえば、長時間実行しているクエリやシステム上のボトルネック (I/O、ブロッキング、ラッチ待機、ネットワーク待機) などがあります。 ワーカー スレッドの最大数設定を変更する前に、パフォーマンス問題の根本原因を見つけることが推奨されます。 パフォーマンス評価の詳細については、「[パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)」を参照してください。
   
--   スレッド プールは、多数のクライアントがサーバーに接続されている場合のパフォーマンスの最適化に役立ちます。 通常、クエリ要求ごとに個別のオペレーティング システム スレッドが作成されます。 ただし、サーバーへの接続が数百にもなる場合、クエリ要求ごとに 1 つのスレッドを使用すると大量のシステム リソースが消費されることがあります。 **max worker threads** オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッド プールが作成され多数のクエリ要求を処理できるようになります。その結果、パフォーマンスが向上します。  
+-   スレッド プールは、多数のクライアントがサーバーに接続する場合のパフォーマンスの最適化に役立ちます。 通常、クエリ要求ごとに個別のオペレーティング システム スレッドが作成されます。 ただし、サーバーへの接続が数百にもなる場合、クエリ要求ごとに 1 つのスレッドを使用すると大量のシステム リソースが消費されることがあります。 **max worker threads** オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってワーカー スレッド プールが作成され多数のクエリ要求を処理できるようになります。その結果、パフォーマンスが向上します。  
   
--   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数を示します。"* **既定の最大ワーカー数* + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
+-   次の表では、CPU、コンピューターのアーキテクチャ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのさまざまな組み合わせに対して、自動的に構成されるワーカー スレッドの最大数 (値を 0 に設定した場合) を示します。"***既定の最大ワーカー数* + ((* 論理 CPU 数* - 4) **CPU あたりのワーカー数*)**" という式が使用されています。  
   
     |CPU の数|32 ビット コンピューター ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以前)|64 ビット コンピューター ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)|   
     |------------|------------|------------|------------|  
@@ -90,23 +102,6 @@ ms.locfileid: "81488331"
     > 64 個を超える CPU を使用する場合の推奨事項については、「 [64 個を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)」を参照してください。  
   
 -   クエリの実行が長時間にわたり、すべてのスレッドがアクティブになっている場合、いずれかのワーカー スレッドが処理を完了し使用できるようになるまで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が応答していないように見えることがあります。 これは欠陥ではありませんが、望ましくない場合があります。 プロセスが応答せず新しいクエリを処理できない場合は、専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、プロセスを終了します。 このような状態を回避するには、ワーカー スレッド数を増やします。  
-  
- **max worker threads** サーバー構成オプションでは、システム内に生成できる全スレッドに制限はありません。 可用性グループ、Service Broker、ロック マネージャーなどのタスクに必要なスレッドは、この制限の外部で生成されます。 構成されたスレッドの数を超えている場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報が取得されます。  
-  
- ```sql  
- SELECT  s.session_id, r.command, r.status,  
-    r.wait_type, r.scheduler_id, w.worker_address,  
-    w.is_preemptive, w.state, t.task_state,  
-    t.session_id, t.exec_context_id, t.request_id  
- FROM sys.dm_exec_sessions AS s  
- INNER JOIN sys.dm_exec_requests AS r  
-    ON s.session_id = r.session_id  
- INNER JOIN sys.dm_os_tasks AS t  
-    ON r.task_address = t.task_address  
- INNER JOIN sys.dm_os_workers AS w  
-    ON t.worker_address = w.worker_address  
- WHERE s.is_user_process = 0;  
- ```  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
@@ -157,6 +152,4 @@ GO
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
-  
-  
+ [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)

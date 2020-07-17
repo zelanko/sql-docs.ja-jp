@@ -1,23 +1,22 @@
 ---
 title: テーブル領域使用のサンプル分析情報ウィジェットを有効にする
-titleSuffix: Azure Data Studio
 description: このチュートリアルでは、Azure Data Studio データベース ダッシュボードでテーブル領域使用のサンプル分析情報ウィジェットを有効にする方法について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726698"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>チュートリアル:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を利用し、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>チュートリアル:Azure Data Studio を使用して、テーブル領域使用のサンプル分析情報ウィジェットを有効にする
 
 このチュートリアルでは、データベース ダッシュボードで分析情報ウィジェットを有効にする方法について説明します。データベース内のすべてのテーブルを対象に領域の使用状況がひとめでわかります。 このチュートリアルでは、次の方法を学習します。
 
@@ -33,9 +32,9 @@ ms.locfileid: "74957016"
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 * [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のデータベース ダッシュボードで管理分析情報をオンにする
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Azure Data Studio のデータベース ダッシュボードで管理分析情報をオンにする
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、データベース内のテーブルによって使用される領域を監視するためのサンプル ウィジェットが組み込まれています。
+Azure Data Studio には、データベース内のテーブルによって使用される領域を監視するためのサンプル ウィジェットが組み込まれています。
 
 1. **Ctrl + Shift + P** を押して *[ユーザー設定]* を開き、 *[コマンド パレット]* を開きます。
 
@@ -78,11 +77,11 @@ ms.locfileid: "74957016"
 
 ## <a name="working-with-the-insight-chart"></a>分析情報ウィジェットを使用する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] の分析情報グラフでは、フィルターを適用したり、マウス カーソルを合わせることで詳細を表示したりできます。 次の手順でお試しいただけます。
+Azure Data Studio の分析情報グラフでは、フィルターを適用したり、マウス カーソルを合わせることで詳細を表示したりできます。 次の手順でお試しいただけます。
 
-1. グラフの *row_count* 凡例をクリックし、切り替えます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、凡例のオン/オフを切り替えると、データ系列の表示/非表示が切り替わります。
+1. グラフの *row_count* 凡例をクリックし、切り替えます。 Azure Data Studio では、凡例のオン/オフを切り替えると、データ系列の表示/非表示が切り替わります。
 
-2. グラフの上にマウス ポインターを置きます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、次のスクリーンショットのように、データ系列ラベルとその値に関する詳細が表示されます。
+2. グラフの上にマウス ポインターを置きます。 Azure Data Studio には、次のスクリーンショットのように、データ系列ラベルとその値に関する詳細が表示されます。
 
    ![グラフの切り替えと凡例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

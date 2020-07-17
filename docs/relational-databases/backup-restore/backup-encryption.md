@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728491"
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの暗号化オプションについて概説します。 バックアップ時の暗号化の使用、利点、および推奨される操作の詳細が含まれています。  
 
 ## <a name="overview"></a><a name="Overview"></a> 概要  
@@ -73,8 +73,20 @@ ms.locfileid: "82220524"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
 
-バックアップの暗号化または暗号化されたバックアップからの復元を行うには、データベース バックアップの暗号化に使用する証明書または非対称キーに対する**VIEW DEFINITION** 権限を使用します。  
-  
+暗号化されたデータベースでバックアップ操作を行うアカウントには、特定の権限が必要です。 
+
+- バックアップするデータベースの **db_backupoperator** データベース レベル ロール。 これは、暗号化に関係なく必要です。 
+- `master` データベースの証明書に対する **VIEW DEFINITION** 権限。
+
+   次の例では、証明書に対する適切な権限を付与します。 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > TDE で保護されたデータベースをバックアップまたは復元する場合、TDE 証明書へのアクセスは必要ありません。  
   

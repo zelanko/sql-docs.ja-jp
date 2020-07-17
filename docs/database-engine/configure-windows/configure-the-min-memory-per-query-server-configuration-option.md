@@ -1,5 +1,6 @@
 ---
 title: min memory per query サーバー構成オプションの構成 | Microsoft Docs
+description: min memory per query オプションを使用して、最小のメモリ許可を指定する方法や、SQL Server によってクエリに割り当てられる最小キロバイト数を指定する方法について説明します。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - min memory per query option
 - min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784dc57403cdb5c8dad6ba3e8f910ecd6d4dee26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696850"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **min memory per query** オプションは、クエリの実行用に割り当てる最小メモリ容量 (KB 単位) を指定します。 これは、最小メモリ許可とも呼ばれます。 たとえば、 **min memory per query** を 2,048 KB に設定すると、クエリには少なくともその値分のメモリが必ず割り当てられます。 既定値は 1,024 KB です。 最小値は 512 KB、最大値は 2,147,483,647 KB (2 GB) です。  
   

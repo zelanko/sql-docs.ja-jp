@@ -1,5 +1,6 @@
 ---
 title: TRUSTWORTHY データベース プロパティ | Microsoft Docs
+description: TRUSTWORTHY データベース プロパティについて説明します。これは、SQL Server のインスタンスがデータベースとその内容を信頼するかどうかを示します。 既定値は OFF です。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db2515c51085e79d67e6ace4cbbe1abedc91023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736960"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY データベース プロパティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   TRUSTWORTHY データベース プロパティを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがデータベースとその内容を信頼するかどうかを示します。 この設定は既定では OFF ですが、ALTER DATABASE ステートメントを使用して ON に設定できます。 たとえば、「 `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;` 」のように入力します。  
   
 > [!NOTE]  

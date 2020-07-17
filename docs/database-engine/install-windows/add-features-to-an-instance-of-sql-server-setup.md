@@ -1,5 +1,6 @@
 ---
 title: SQL Server のインスタンスへの機能の追加 (セットアップ) | Microsoft Docs
+description: この記事では、インスタンス対応機能を SQL Server 2019 のインスタンスに追加する手順について詳しく説明します。
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3ddd9eba40cc7df81b0e86df7733d840bccace2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899693"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  この記事では、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに追加する手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに追加できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   

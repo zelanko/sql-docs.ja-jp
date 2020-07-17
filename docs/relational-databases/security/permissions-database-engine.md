@@ -1,5 +1,6 @@
 ---
 title: 権限 (データベース エンジン) | Microsoft Docs
+description: この SQL Server 権限の完全な一覧を参照して、使用するプラットフォームに適用される権限を確認します。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995854"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009390"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
@@ -102,8 +103,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |権限|適用対象|  
 |----------------|----------------|  
 |ALTER|オブジェクトのすべてのクラス (TYPE を除く)。|  
-|CONTROL|オブジェクトのすべてのクラス: <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
-|DELETE|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
+|CONTROL|オブジェクトのすべてのクラス: <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br /> USER,<br />VIEW、および<br />XML SCHEMA COLLECTION|  
+|DELETE|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION、SERVER、および TYPE を除く)。|  
 |EXECUTE|CLR 型、外部スクリプト、プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、およびシノニム|  
 |IMPERSONATE|ログインとユーザー|  
 |INSERT|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  

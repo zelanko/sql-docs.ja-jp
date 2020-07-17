@@ -1,5 +1,6 @@
 ---
 title: nested triggers サーバー構成オプションの構成 | Microsoft Docs
+description: nested triggers オプションについて説明します。 これを使用して、SQL Server でカスケードできる AFTER トリガーのレベル数を設定する方法を説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9b236dc0cb810a6ba8d63ef7c68367eab2252b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758257"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **nested triggers** オプションは、AFTER トリガーを連鎖できるかどうかを制御します。 つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 **nested triggers** を 0 に設定すると、AFTER トリガーは連鎖できません。 **nested triggers** を 1 (既定値) に設定すると、AFTER トリガーは 32 レベルまで連鎖できます。 INSTEAD OF トリガーは、このオプションの設定に関係なく入れ子にできます。  
   

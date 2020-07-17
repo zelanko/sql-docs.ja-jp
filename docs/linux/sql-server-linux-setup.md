@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: SQL Server on Linux のインストール、更新、およびアンインストールを行います。 この記事では、オンライン、オフライン、および自動実行の各シナリオについて説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897313"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>SQL Server on Linux のインストール ガイド
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上に SQL Server 2017 および SQL Server 2019 のインストール、更新、およびアンインストールを行うためのガイダンスを提供します。
 
@@ -47,7 +47,7 @@ SQL Server は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server 
 
 | プラットフォーム | サポートされているバージョン | 取得
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6 | [RHEL 7.6 を取得する](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8  | [RHEL 7.6 を取得する](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を取得する](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 を取得する](http://releases.ubuntu.com/xenial/)
 | **Docker Engine** | 1.8 以降 | [Docker を取得する](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| プラットフォーム | サポートされているバージョン | 取得
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3、7.4、7.5、7.6、8.0 | [RHEL 8.0 を取得する](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2、SP3、SP4、SP5 | [SLES v12 を取得する](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04、18.04 | [Ubuntu 18.04 を入手する](http://releases.ubuntu.com/bionic/)
-| **Docker Engine** | 1.8 以降 | [Docker を取得する](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 

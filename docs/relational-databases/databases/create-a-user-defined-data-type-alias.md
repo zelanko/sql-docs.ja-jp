@@ -1,5 +1,6 @@
 ---
 title: ユーザー定義データ型の別名の作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server 2019 でユーザー定義データ型の別名を作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bea30f3fac2eaacf612839903ab65f668f412ed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756293"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -33,7 +34,7 @@ ms.locfileid: "72909120"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してユーザー定義データ型の別名を作成するには:**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "72909120"
   
      長さは、 **nvarchar (max)** 、 **varchar (max)** 、 **varbinary (max)** の各データ型に対しては表示されません。  
   
-     **Name**  
+     **名前**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 文字の最大数は、システム **sysname** データ型に一致する必要があります。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  

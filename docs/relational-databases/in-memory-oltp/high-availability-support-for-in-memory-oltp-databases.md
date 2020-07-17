@@ -1,5 +1,6 @@
 ---
 title: 高可用性 - インメモリ OLTP データベース
+description: メモリ最適化テーブルを含んだ SQL Server データベースは、ネイティブ コンパイル ストアド プロシージャの有無に関係なく、AlwaysOn 可用性グループで完全にサポートされます。
 ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723212"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>インメモリ OLTP データベースにおける高可用性のサポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   メモリ最適化テーブルを含んだデータベースは、ネイティブ コンパイル ストアド プロシージャの有無に関係なく、AlwaysOn 可用性グループで完全にサポートされます。  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] オブジェクトを含んでいる場合とそうでない場合とでデータベースの構成とサポートに違いはありません。  
   
  インメモリ OLTP データベースが AlwaysOn 可用性グループ構成で配置されていると、再実行が行われたときに、プライマリ レプリカ上のメモリ最適化テーブルへの変更がメモリ内でセカンダリ レプリカ上のテーブルに適用されます。 つまり、データが既にメモリ内にあるため、セカンダリ レプリカへのフェールオーバーをすばやく実施できます。 これらのテーブルは、読み取りアクセス用に構成されたセカンダリ レプリカでのクエリにも利用できます。  
@@ -50,7 +51,7 @@ ms.locfileid: "74412668"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

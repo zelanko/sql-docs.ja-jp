@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プランの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server で単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667477"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でメンテナンス プランを作成する方法には、メンテナンス プラン ウィザードを使用する方法とデザイン画面を使用する方法の 2 とおりがあります。 基本的なメンテナンス プランを作成する場合は、ウィザードが最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
   
  **このトピックの内容**  
@@ -31,7 +32,7 @@ ms.locfileid: "70874745"
      
      [前提条件](#Prerequisite)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **メンテナンス プランを作成するために使用するもの:**  
   

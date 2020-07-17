@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715396"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用して SQL Server にデータをインポートする
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、[!INCLUDE[tsql](../../includes/tsql-md.md)] の BULK INSERT ステートメントと INSERT...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用して、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database のテーブルにデータを一括インポートする方法の概要を説明します。 また、BULK INSERT および OPENROWSET(BULK...) を使用する場合のセキュリティの注意点や、リモート データ ソースから一括インポートする方法についても説明します。
 
@@ -109,6 +108,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ## <a name="bulk-importing-from-azure-blob-storage"></a>Azure Blob Storage からの一括インポート
 
 Azure Blob Storage からパブリック (匿名アクセス) ではないデータをインポートするときは、[MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) で暗号化された SAS キーに基づいて [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) を作成した後、BULK INSERT コマンドで使用する[外部データベース ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)を作成します。
+
+> [!NOTE]
+> 明示的なトランザクションを使用しないでください。そうしないと、4861 エラーが発生します。
 
 ### <a name="using-bulk-insert"></a>BULK INSERT の使用
 

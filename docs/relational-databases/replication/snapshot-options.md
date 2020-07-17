@@ -15,24 +15,24 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767608"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL レプリケーションのスナップショットの初期化オプションを変更する 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [ スナップショットを使用してサブスクリプションを初期化する](initialize-a-subscription-with-a-snapshot.md)際には、いくつかのオプションを指定できます。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>スナップショットの形式の指定 (SQL Server Management Studio)
-  スナップショットの形式は、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+  スナップショットの形式は、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 ### <a name="to-specify-snapshot-format"></a>スナップショットの形式を指定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで、**[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** または **[文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須]** を選択します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで、 **[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** または **[文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須]** を選択します。  
   
     > [!NOTE]  
     >  このパブリケーションで SQL Server Compact データベースまたは SQL Server 以外のデータベースへのサブスクリプションをサポートする必要がある場合を除き、ネイティブ形式を選択することをお勧めします。  
@@ -48,7 +48,7 @@ ms.locfileid: "79288826"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>既定のスナップショットの場所を変更するには  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン (**[...]**) をクリックします。    
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。    
 2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、 **[既定のスナップショット フォルダー]** プロパティの値を入力します。  
   
     > [!NOTE]  

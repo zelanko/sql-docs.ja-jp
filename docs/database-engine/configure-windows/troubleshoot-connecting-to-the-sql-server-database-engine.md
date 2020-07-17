@@ -1,5 +1,6 @@
 ---
 title: SQL Server データベース エンジンへの接続のトラブルシューティング | Microsoft Docs
+description: 接続に関する問題のトラブルシューティング方法を確認します。 TCP/IP を使用してシングル サーバー上の SQL Server データベース エンジンに接続できない場合に実行する手順を表示します。
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763960"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、シングル サーバーで SQL Server データベース エンジンのインスタンスに接続できないときに使用するトラブルシューティング技法を紹介しています。
 

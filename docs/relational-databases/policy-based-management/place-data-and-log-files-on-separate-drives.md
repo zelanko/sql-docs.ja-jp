@@ -1,5 +1,6 @@
 ---
 title: 別々のドライブへのデータ ファイルとログ ファイルの配置 | Microsoft Docs
+description: データ ファイルとログ ファイルを別々の論理ドライブに配置します。 別々の場所を使用すると、それぞれのアクティビティを同時に実行できるため、SQL のパフォーマンスが向上します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54f469f8ab9f0daaf6f37c8f6bad1878bc716dbd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c0ed515a8fe166d4b53fec5750fa3b09a48a06a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716860"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>別々のドライブへのデータ ファイルとログ ファイルの配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールでは、データ ファイルとログ ファイルが別々の論理ドライブに配置されているかどうかを確認します。 データ ファイルとログ ファイルの両方を同じデバイスに配置すると、そのデバイスで競合が発生し、パフォーマンスが低下する可能性があります。 ファイルを別々のドライブに配置すると、I/O 動作をデータ ファイルとログ ファイルの両方で同時に行うことができます。  
   
-## <a name="recommendations"></a>Recommendations  
+## <a name="recommendations"></a>推奨事項  
  新しいデータベースを作成するときに、データ用とログ用に別々のドライブを指定します。 データベースの作成後にファイルを移動するには、データベースをオフラインにする必要があります。 次のいずれかの方法を使用してファイルを移動します。  
   
 > [!NOTE]  

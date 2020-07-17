@@ -15,15 +15,15 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74094493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737596"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   データベース メール メッセージと添付ファイルのコピーは、データベース メール イベント ログに記録されると同時に、 **msdb** のテーブルに保持されます。 このテーブルのサイズを縮小するためには、不要になったメッセージやイベントを定期的にアーカイブする必要があります。 次の手順では、この処理を自動化する SQL Server エージェント ジョブを作成します。  
   
 -   **作業を開始する準備:**  、 [前提条件](#Prerequisites)、 [推奨事項](#Recommendations)、 [権限](#Permissions)  
@@ -208,7 +208,7 @@ ms.locfileid: "74094493"
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、 **[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
+6.  **[一日のうちの頻度]** 領域で、 **[1 回: \<time>]** を選択します。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   

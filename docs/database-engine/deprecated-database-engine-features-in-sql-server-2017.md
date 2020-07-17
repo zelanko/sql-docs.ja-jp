@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759136"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
@@ -231,7 +231,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |--------------------|-------------|--------------|
 | DB-Library<br /><br />Embedded SQL for C|データベース エンジンでは、DB-Library および Embedded SQL API を使用する既存のアプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 SQL Server データベース エンジンの今後のバージョンでは、DB-Library または Embedded SQL アプリケーションからの接続はサポートされません。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または ODBC などの API を使用します。 SQL Server 2019 (15.x) には、これらのアプリケーションの実行に必要な DB-Library DLL が含まれていません。 DB-Library または Embedded SQL アプリケーションを実行するには、SQL Server バージョン 6.5、SQL Server 7.0、または SQL Server 2000 (8.x) から DB-Library DLL を入手する必要があります。 | なし |
 
-### <a name="security"></a>Security
+### <a name="security"></a>セキュリティ
 
 | 非推奨の機能 | 代替 | 機能名 |
 |--------------------|-------------|--------------|

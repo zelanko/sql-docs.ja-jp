@@ -1,5 +1,6 @@
 ---
 title: 移行を評価するための PowerShell コマンドレット | Microsoft Docs
+description: SQL Server データベース内にあるオブジェクトのインメモリ OLTP 用の移行適合性を評価する Save-SqlMigrationReport について説明します。
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68698305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722382"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>移行を評価するための PowerShell コマンドレット
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `Save-SqlMigrationReport` コマンドレットは、SQL Server データベース内にある複数のオブジェクトの移行適合性を評価するツールです。
 

@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルのテーブルと行のサイズ | Microsoft Docs
+description: メモリ最適化テーブルのテーブルと行のサイズについて説明します。 複数の大きな LOB 列を含むテーブルを作成できます。
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68063139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651007"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>メモリ最適化テーブルのテーブルと行のサイズ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンでは、メモリ最適化テーブルの行内データのサイズは、[8,060 バイト](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)より長くすることができませんでした。 しかし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および Azure SQL Database では、複数の大きな列 (複数の varbinary(8000) 列など) および LOB 列 (varbinary(max)、varchar(max)、nvarchar(max)) を含むメモリ最適化テーブルを作成し、ネイティブにコンパイルされた T-SQL モジュールとテーブル型を使ってこれらの列に対する操作を実行できるようになっています。 
   
@@ -91,7 +92,7 @@ ms.locfileid: "68063139"
   
 都市のインデックスのチェーンは次のようになります。  
   
--   最初のバケット: (John, Beijing); (John, Paris)  
+-   最初のバケット: (John, Beijing), (Susan, Bogota)  
   
 -   2 番目のバケット: (John, Paris), (Jane, Prague)  
   
@@ -99,14 +100,14 @@ ms.locfileid: "68063139"
   
 時間が 200 より大きくなると、テーブルには次の行が含まれます。  
   
-|Name|City|  
+|名前|City|  
 |----------|----------|  
 |John|北京|  
 |Jane|Prague|  
   
 ただし、開始時刻が 100 のアクティブなトランザクションでは、以下のバージョンのテーブルが表示されます。  
   
-|Name|City|  
+|名前|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -124,14 +125,14 @@ ms.locfileid: "68063139"
   
 *実際の行本文サイズ* = SUM(*シャロー型のサイズ*) + 2 + 2 * *ディープ型の列の数*として指定した場合、行本文サイズの計算について、次の表で説明します。  
   
-|Section|Size|説明|  
+|Section|サイズ|説明|  
 |-------------|----------|--------------|  
-|シャロー型の列|SUM([シャロー型のサイズ])。 個々の型のサイズは次のとおりです (バイト単位)。<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (精度 <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(精度>18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|シャロー型の列|SUM([シャロー型のサイズ])。 個々の型のサイズは次のとおりです (バイト単位)。<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (有効桁数 <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(有効桁数 > 18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |シャロー列の余白|次のいずれかの値になります。<br /><br /> ディープ型の列が存在し、シャロー列の合計データ サイズが奇数になる場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |ディープ型の列のオフセット配列|次のいずれかの値になります。<br /><br /> ディープ型の列がない場合は 0<br /><br /> それ以外の場合は 2 + 2 * [ディープ型の列の数] (number of deep type columns)|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |NULL 配列|[NULL 値を許容する列の数] / 8 (完全なバイト数になるように切り上げ)。|配列は、NULL 値を許容する列ごとに 1 ビットを保持します。 これは、完全なバイト数になるように切り上げられます。|  
 |NULL 配列の余白|次のいずれかの値になります。<br /><br /> ディープ型の列が存在し、NULL 配列のサイズのバイト数が奇数である場合は 1。<br /><br /> それ以外の場合は、0。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
-|パディング|ディープ型の列がない場合は 0<br /><br /> ディープ型の列がある場合、シャロー列に必要な最大の配置に基づいて、余白の 0 ～ 7 バイトが追加されます。 前に説明したように、各シャロー列の配置は、列のサイズと等しい値にする必要があります。ただし、例外として、GUID 列の配置は 1 バイト (16 ではない) とし、数値列の配置は常に 8 バイト (16 ではない) とする必要があります。 すべてのシャロー列間で必要となる配置の値の中で、最も大きな値が使用されます。それまでの合計サイズ (ディープ型の列を含まない) が必要な配置の倍数になるように、余白として 0 ～ 7 バイトが追加されます。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
+|パディング|ディープ型の列がない場合は: 0<br /><br /> ディープ型の列がある場合、シャロー列に必要な最大の配置に基づいて、余白の 0 ～ 7 バイトが追加されます。 前に説明したように、各シャロー列の配置は、列のサイズと等しい値にする必要があります。ただし、例外として、GUID 列の配置は 1 バイト (16 ではない) とし、数値列の配置は常に 8 バイト (16 ではない) とする必要があります。 すべてのシャロー列間で必要となる配置の値の中で、最も大きな値が使用されます。それまでの合計サイズ (ディープ型の列を含まない) が必要な配置の倍数になるように、余白として 0 ～ 7 バイトが追加されます。|ディープ型は、(var)binary 型と (n)(var)char 型です。|  
 |固定長のディープ型の列|SUM(*固定長のディープ型の列のサイズ*)<br /><br /> 個々の列のサイズは次のとおりです。<br /><br /> char(i) および binary(i) の場合は i。<br /><br /> nchar(i) の場合は 2 * i。|固定長のディープ型の列では、列の型が char(i)、nchar(i)、または binary(i) です。|  
 |可変長のディープ型の列の*計算されたサイズ*|SUM(*可変長のディープ型の列の計算されたサイズ*)<br /><br /> 個々の列の計算されたサイズは次のとおりです。<br /><br /> varchar(i) および varbinary(i) の場合は i。<br /><br /> nvarchar(i) の場合は 2 * i。|この行が適用されるのは *計算された行本体サイズ* のみです。<br /><br /> 可変長のディープ型の列では、列の型が varchar(i)、nvarchar(i)、または varbinary(i) です。 計算されたサイズは、列の最大長 (i) で決まります。|  
 |可変長のディープ型の列の*実際のサイズ*|SUM(*可変長のディープ型の列の実際のサイズ*)<br /><br /> 個々の列の実際のサイズは次のとおりです。<br /><br /> varchar(i) の場合は n (ここで n は列に格納されている文字数)。<br /><br /> nvarchar(i) の場合は 2 * n (ここで n は列に格納されている文字数)。<br /><br /> varbinary(i) の場合は n (ここで n は列に格納されているバイト数)。|この行が適用されるのは *実際の行本体サイズ* のみです。<br /><br /> 実際のサイズは、行の列内に格納されているデータで決まります。|   
@@ -155,7 +156,7 @@ GO
   
 このテーブルには 1 つのハッシュ インデックスと 1 つの非クラスター化インデックス (主キー) が含まれていることを注意してください。 さらに、3 個の固定長列および 1 個の可変長列があり、そのうちの 1 個の列は NULL 値を許容します (`OrderDescription`)。 `Orders` テーブルに 8,379 行が含まれ、`OrderDescription` 列の値の平均の長さが 78 文字であるとします。  
   
-このテーブルのサイズを判断するには、最初にインデックスのサイズを調べます。 両方のインデックスの bucket_count は 10,000 と指定されています。 これは、最も近い 2 のべき乗 (16,384) に切り上げられます。 したがって、Orders テーブルのインデックスの合計サイズは次のとおりです。  
+このテーブルのサイズを判断するには、最初にインデックスのサイズを調べます。 両方のインデックスの bucket_count は 10,000 と指定されています。 これは、最も近い 2 のべき乗に切り上げられて次のようになります: 16384 したがって、Orders テーブルのインデックスの合計サイズは次のとおりです。  
   
 ```  
 8 * 16384 = 131072 bytes  

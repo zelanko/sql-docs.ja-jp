@@ -1,38 +1,38 @@
 ---
 title: クイック スタート:PostgreSQL に対する接続およびクエリ
-titleSuffix: Azure Data Studio
 description: このクイック スタートでは、Azure Data Studio を使用して PostgreSQL に接続し、クエリを実行する方法を示します
 ms.custom: seodec18
 ms.date: 09/18/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71127251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717154"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>クイック スタート:[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して PostgreSQL に接続し、クエリを実行する
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Postgres に接続し、SQL ステートメントを使用して、データベース *tutorialdb* を作成し、クエリを実行する方法を示します。
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>クイック スタート:Azure Data Studio を使用して、PostgreSQL に接続してクエリを実行する
+
+このクイック スタートでは、Azure Data Studio を使用して Postgres に接続し、SQL ステートメントを使用して、データベース *tutorialdb* を作成し、クエリを実行する方法を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md)] 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
+このクイック スタートを完了するには、Azure Data Studio、Azure Data Studio 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] をインストールする](download.md)。
+- [Azure Data Studio をインストールする](download.md)。
 - [Azure Data Studio 用の PostgreSQL 拡張機能をインストールする](postgres-extension.md)。
 - [PostgreSQL をインストールする](https://www.postgresql.org/download/)。 (または、[az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli) を使用して、クラウドに Postgres データベースを作成することもできます)。 
 
 ## <a name="connect-to-postgresql"></a>PostgreSQL への接続
 
-1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** を起動します。
+1. **Azure Data Studio** を起動します。
 
-2. 初めて [!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動すると、 **[接続]** ダイアログが開きます。 **[接続]** ダイアログが開いていない場合は、 **[サーバー]** ページの **[新しい接続]** アイコンをクリックします。
+2. 初めて Azure Data Studio を起動すると、 **[接続]** ダイアログが開きます。 **[接続]** ダイアログが開いていない場合は、 **[サーバー]** ページの **[新しい接続]** アイコンをクリックします。
 
    ![新しい接続アイコン](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -49,8 +49,8 @@ ms.locfileid: "71127251"
    | **ユーザー名** | postgres | ログインに使用するユーザー名。 |
    | **パスワード (SQL ログイン)** | *password* | ログインに使用するアカウントのパスワード。 |
    | **パスワード** | *確認事項* | 接続するたびにパスワードを入力したくない場合は、このボックスをオンにします。 |
-   | **データベース名** | \<[Default]\> | 接続でデータベースを指定する必要がある場合は、これを入力します。 |
-   | **[サーバー グループ]** | \<[Default]\> | このオプションを使用すると、作成した特定のサーバー グループにこの接続を割り当てることができます。 | 
+   | **データベース名** | \<Default\> | 接続でデータベースを指定する必要がある場合は、これを入力します。 |
+   | **[サーバー グループ]** | \<Default\> | このオプションを使用すると、作成した特定のサーバー グループにこの接続を割り当てることができます。 | 
    | **名前 (省略可能)** | *空白のままにする* | このオプションを使用すると、サーバーのフレンドリ名を指定できます。 | 
 
 5. **[接続]** を選択します。 

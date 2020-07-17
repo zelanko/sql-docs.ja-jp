@@ -1,6 +1,6 @@
 ---
 title: データベース ミラーリングとフェールオーバー クラスター インスタンス
-description: データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンスとを組み合わせることについて説明します。
+description: データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンスを組み合わせることができます。 フェールオーバーを伴う場合と伴わない場合の、高パフォーマンス モードと高い安全性モードについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00434abb76721e5aecf75bdce589964c69e6903e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789677"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   フェールオーバー クラスターは、リソース グループと呼ばれる [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) クラスター グループに含まれる、クラスターのノードに参加している物理ディスクのうち、1 つ以上を組み合わせたものです。 リソース グループは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスはネットワーク上では 1 台のコンピューターのように認識されますが、あるノードが利用できなくなった場合に、別のノードへフェールオーバーする機能を備えています。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
  フェールオーバー クラスターにより、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の高可用性が確保されます。一方、データベース ミラーリングは、単一データベースの高可用性を確保します。 データベース ミラーリングは、フェールオーバー クラスター間のほか、フェールオーバー クラスターと非クラスター化ホスト間でも機能します。  
@@ -45,7 +45,7 @@ ms.locfileid: "75254170"
   
  ![クラスターでのフェールオーバー](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "クラスターでのフェールオーバー")  
   
- ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なるクラスター **Cluster_A**、 **Cluster_B**、および **Cluster_C**に配置されています。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
+ ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なる次のクラスターに配置されています: **Cluster_A**、**Cluster_B**、**Cluster_C**。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
   
  クラスターがフェールオーバーを行う前に、ミラーリング監視サーバーを併用することにより、プリンシパル サーバーが使用できなくなったことがミラー サーバーによって検出されます。 ミラー サーバーは、可能な限り短時間でこのサーバーにあるデータベースをロールフォワードし、プリンシパル データベースとしてこれをオンラインにします。 **Cluster_A** のフェールオーバーが完了すると、これまでのプリンシパル サーバーは現在はミラー サーバーになり、このサーバーのデータベースが **Cluster_B**の現在のプリンシパル データベースと同期されます。  
   

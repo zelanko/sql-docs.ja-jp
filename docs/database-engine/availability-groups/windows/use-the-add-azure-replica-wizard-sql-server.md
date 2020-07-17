@@ -1,6 +1,6 @@
 ---
 title: 可用性グループでセカンダリ レプリカとして Azure VM を構成する
-description: Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT 環境に新しい Azure VM を作成し、新規または既存の Always On 可用性グループのセカンダリ レプリカとしてこれを構成することができます。
+description: Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT 環境に Azure VM を作成し、新規または既存の Always On 可用性グループのセカンダリ レプリカとしてこれを構成します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894180"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>可用性グループでセカンダリ レプリカとして Azure VM を構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Azure のレプリカ追加ウィザードを使用して、ハイブリッド IT 環境に新しい Azure VM を作成し、新規または既存の Always On 可用性グループのセカンダリ レプリカとしてこれを構成することができます。  
   
 

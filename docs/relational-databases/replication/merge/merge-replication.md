@@ -1,5 +1,6 @@
 ---
 title: マージ レプリケーション | Microsoft Docs
+description: マージ レプリケーションでは、パブリケーション データベース オブジェクトとデータのスナップショットを使用し、さらにパブリッシャーおよびサブスクライバーでの変更をトリガーを使用して追跡します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56858009571329d545a75f12d6a6364d3967bd59
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033212"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882307"
 ---
 # <a name="merge-replication"></a>マージ レプリケーション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   一般にマージ レプリケーションは、トランザクション レプリケーションと同様に、パブリケーションのデータベース オブジェクトとデータのスナップショットで開始されます。 その後にパブリッシャーとサブスクライバーで行われたデータおよびスキーマの変更は、トリガーを使って追跡されます。 サブスクライバーは、ネットワークに接続されたときにパブリッシャーと同期して、前回の同期以降にパブリッシャーとサブスクライバーの間で変更されたすべての行を交換します。  
   
  マージ レプリケーションは、一般にサーバー対クライアント環境で使用されます。 マージ レプリケーションは、以下の状況に適しています。  

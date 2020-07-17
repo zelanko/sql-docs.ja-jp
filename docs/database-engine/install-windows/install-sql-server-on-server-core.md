@@ -1,7 +1,8 @@
 ---
 title: Server Core への SQL Server のインストール | Microsoft Docs
+description: Server Core インストールに SQL Server をインストールできます。 Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872791"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883562"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。   
   
@@ -39,7 +40,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> サポートされている機能  
  Server Core インストールの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされている機能については、次の表を参照してください。  
   
-|機能|サポートされています|追加情報|  
+|特徴量|サポートされています|追加情報|  
 |-------------|---------------|----------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|はい||  
@@ -65,7 +66,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ## <a name="supported-scenarios"></a>サポートされるシナリオ  
  次の表では、Server Core に [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をインストールする場合のサポートされるシナリオのマトリックスを示します。  
   
-|||  
+| インストール | 有効なターゲット |  
 |-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション|すべての [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64 ビット エディション |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語|すべての言語|  
@@ -118,7 +119,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
      コマンド プロンプトのインストール オプションを使用して特定の機能をインストールするには、/FEATURES パラメーターを使用して、親機能の値または機能の値を指定します。 コマンド ラインからパラメーターを使用する方法の例を次に示します。  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -129,44 +130,44 @@ Server Core インストール オプションでは、特定のサーバー ロ
     - [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインストール。 
     
     次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]を含む新しいスタンドアロン インスタンスをインストールする方法を示します。  
-  
-        ```  
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   接続コンポーネントのインストール。 次の例では、接続コンポーネントをインストールする方法を示します。  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -188,7 +189,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
         次の例では、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のサポートされる全機能を Server Core にインストールする方法を示します。  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -242,13 +243,13 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
          コマンド プロンプトで構成ファイルを指定するには  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          構成ファイルの代わりにコマンド プロンプトでパスワードを指定するには  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -265,12 +266,12 @@ Server Core インストール オプションでは、特定のサーバー ロ
 
 リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
 ### <a name="enable-and-start-the-ssnoversion-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser サービスは、既定では無効になっています。  Server Core で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで無効になっている場合、このサービスを有効にするには、コマンド プロンプトから次のコマンドを実行します。  
@@ -308,7 +309,7 @@ $Tcp
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既存のインスタンスをアンインストールするには、次のコマンドを実行します。  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   

@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d6c9585f536c92e1f2776831434614c59919ddf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901280"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) からインストールすることができます。 
    
@@ -179,9 +179,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 SQL Server PolyBase のセットアップでは、コンピューターに次のファイアウォール規則が作成されます。  
    
-- SQL Server PolyBase - Database Engine - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - データベース エンジン - \<SQLServerInstanceName> (TCP-In)  
    
-- SQL Server PolyBase - PolyBase Services - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - PolyBase サービス - \<SQLServerInstanceName> (TCP-In)  
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    

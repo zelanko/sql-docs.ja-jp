@@ -1,6 +1,6 @@
 ---
 title: プライマリ レプリカへの読み取り/書き込み接続のリダイレクト
-description: 接続文字列で指定されている対象サーバーに関係なく、読み取り/書き込み接続を Always On 可用性グループのプライマリ レプリカに常にリダイレクトする方法について説明します。
+description: 接続文字列で指定されているサーバーに関係なく、読み取り/書き込み接続を Always On 可用性グループのプライマリ レプリカにリダイレクトする方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637817"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 では、"*Always On 可用性グループに対するセカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト*" が導入されています。 すべてのオペレーティング システム プラットフォームで、読み取り/書き込み接続のリダイレクトを利用できます。 接続文字列に指定されたターゲット サーバーに関係なく、クライアント アプリケーションの接続先をプライマリ レプリカにすることができます。 
 

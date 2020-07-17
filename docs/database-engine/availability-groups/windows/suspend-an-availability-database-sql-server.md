@@ -1,6 +1,6 @@
 ---
 title: 可用性データベースの中断
-description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または PowerShell を使用して、Always On 可用性グループ内のデータベースのデータ移動を中断する方法について説明します。
+description: SQL Server Management Studio、Transact-SQL、または PowerShell を使用して、Always On 可用性グループ内のデータベースのデータ移動を中断する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900715"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
   
  中断コマンドの効果は、次のように、中断するのがセカンダリ データベースかプライマリ データベースかによって異なります。  
   
 |中断されたデータベース|中断コマンドの影響|  
 |------------------------|-------------------------------|  
-|[セカンダリ データベース]|ローカルのセカンダリ データベースのみが中断され、同期の状態は NOT SYNCHRONIZING になります。 他のセカンダリ データベースは影響を受けません。 中断されたデータベースはデータ (ログ レコード) を受信および適用しなくなり、プライマリ データベースと同期されなくなります。 読み取り可能なセカンダリ上の既存の接続は、引き続き使用できます。 読み取り可能なセカンダリ上で中断されたデータベースに対する新しい接続は、データ移動が再開されるまでは許可されません。<br /><br /> プライマリ データベースは使用可能です。 対応する各セカンダリ データベースを中断した場合、プライマリ データベースは公開された状態で実行されます。<br /><br /> **\*\* 重要 \*\*** セカンダリ データベースが中断されている間、対応するプライマリ データベースの送信キューが未送信トランザクション ログ レコードに蓄積されます。 セカンダリ レプリカへの接続では、データ移動が中断されたときに使用可能であったデータが返されます。|  
+|[セカンダリ データベース]|ローカルのセカンダリ データベースのみが中断され、同期の状態は NOT SYNCHRONIZING になります。 他のセカンダリ データベースは影響を受けません。 中断されたデータベースはデータ (ログ レコード) を受信および適用しなくなり、プライマリ データベースと同期されなくなります。 読み取り可能なセカンダリ上の既存の接続は、引き続き使用できます。 読み取り可能なセカンダリ上で中断されたデータベースに対する新しい接続は、データ移動が再開されるまでは許可されません。 この動作は、リスナーおよび読み取り専用ルーティングを使用して接続が開かれている場合にのみ適用されます。<br /><br /> プライマリ データベースは使用可能です。 対応する各セカンダリ データベースを中断した場合、プライマリ データベースは公開された状態で実行されます。<br /><br /> **\*\* 重要 \*\*** セカンダリ データベースが中断されている間、対応するプライマリ データベースの送信キューが未送信トランザクション ログ レコードに蓄積されます。 セカンダリ レプリカへの接続では、データ移動が中断されたときに使用可能であったデータが返されます。|  
 |プライマリ データベース|プライマリ データベースは、接続されているすべてのセカンダリ データベースへのデータ移動を停止します。 プライマリ データベースは、公開モードで実行を継続します。 クライアントはプライマリ データベースを使用でき、読み取り可能なセカンダリ上の既存の接続は引き続き使用でき、新しい接続も確立できます。|  
   
 > [!NOTE]  

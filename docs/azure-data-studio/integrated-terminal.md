@@ -1,36 +1,35 @@
 ---
 title: 統合ターミナル
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 内の統合ターミナルについて説明します。
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774593"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、統合ターミナルを開くことができ、最初はご利用のワークスペースのルートから開始します。 簡単なコマンドライン タスクを実行するのにウィンドウを切り替えたり、既存のターミナルの状態を変更したりする必要がないので、これは便利な場合があります。
+Azure Data Studio では、統合ターミナルを開くことができ、最初はご利用のワークスペースのルートから開始します。 簡単なコマンドライン タスクを実行するのにウィンドウを切り替えたり、既存のターミナルの状態を変更したりする必要がないので、これは便利な場合があります。
 
 ターミナルを開くには:
 
 * **Ctrl + '** キーボード ショートカットとバッククォート文字を使用します。
-* **[表示** | **Integrated Terminal]\(統合ターミナル\)** メニュー コマンドを使用します。
+* **[表示** | **Integrated Terminal]\(統合端末\)** メニュー コマンドを使用します。
 * **コマンド パレット** (**Ctrl + Shift + P**) から、 **[View:Toggle Integrated Terminal]\(表示:統合ターミナルの切り替え\)** コマンドを使用します。
 
 ![ターミナル](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)] の外部で作業したい場合は、引き続き、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Mac または Linux の場合は **[Open in Terminal]\(ターミナルで開く\)** ) を使用して外部シェルを開くことができます。
+> Azure Data Studio の外部で作業したい場合は、引き続き、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Mac または Linux の場合は **[Open in Terminal]\(ターミナルで開く\)** ) を使用して外部シェルを開くことができます。
 
 ## <a name="managing-multiple-terminals"></a>複数のターミナルを管理する
 
@@ -66,7 +65,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 > 統合ターミナルとして使用するには、`stdin/stdout/stderr` をリダイレクトできるように、シェル実行可能ファイルをコンソール アプリケーションにする必要があります。
 
 > [!TIP]
-> 統合ターミナル シェルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] のアクセス許可を使用して実行されています。 昇格された (管理者) 権限または異なる権限を使用してシェル コマンドを実行する必要がある場合は、プラットフォーム ユーティリティ (ターミナル内の `runas.exe` など) を使用することができます。
+> 統合ターミナル シェルは、Azure Data Studio のアクセス許可を使用して実行されています。 昇格された (管理者) 権限または異なる権限を使用してシェル コマンドを実行する必要がある場合は、プラットフォーム ユーティリティ (ターミナル内の `runas.exe` など) を使用することができます。
 
 ### <a name="shell-arguments"></a>シェルの引数
 
@@ -93,7 +92,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 
 統合ターミナル内をすばやく移動するためのキーボード ショートカットを次に示します。
 
-|Key|command|  
+|Key|コマンド|  
 |---|---|  
 |**Ctrl + \`**|統合ターミナルを表示します|  
 |**Ctrl + Shift + \`**|新しいターミナルを作成します|  
@@ -149,5 +148,5 @@ Linux および Windows 上で [検索] ウィジェットを起動するので�
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>キー バインドを強制的にターミナルをパススルーさせる
 
-統合ターミナルにフォーカスがある間、キー ストロークはターミナル自体に渡され、そこで使われるため、キー バインドの多くは機能しません。 `terminal.integrated.commandsToSkipShell` 設定を使用すれば、これを回避することができます。 これにはコマンド名の配列が含められ、それらのコマンドのキー バインドはシェルによる処理をスキップし、代わりに [!INCLUDE[name-sos](../includes/name-sos-short.md)] キー バインド システムによって処理されます。 既定では、これには、いくつかの一般的に使用されるキー割り当てに加えて、すべてのターミナル キー バインドが含まれます。
+統合ターミナルにフォーカスがある間、キー ストロークはターミナル自体に渡され、そこで使われるため、キー バインドの多くは機能しません。 `terminal.integrated.commandsToSkipShell` 設定を使用すれば、これを回避することができます。 これにはコマンド名の配列が含められ、それらのコマンドのキー バインドはシェルによる処理をスキップし、代わりに Azure Data Studio キー バインド システムによって処理されます。 既定では、これには、いくつかの一般的に使用されるキー割り当てに加えて、すべてのターミナル キー バインドが含まれます。
 

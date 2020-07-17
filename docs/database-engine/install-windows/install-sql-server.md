@@ -1,6 +1,6 @@
 ---
 title: SQL Server のインストール ガイド
-ms.description: 'An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. '
+description: SQL Server と関連コンポーネントを、インストール ウィザード、コマンド プロンプト、または Sysprep などのオプションを使用してインストールするのに役立つコンテンツのインデックスです。
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e11f2aa1a553933882e844dbf7c9452183c63c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900353"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server のインストール ガイド
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 この記事では、Windows に SQL Server をインストールするためのガイダンスを提供するコンテンツのインデックスです。
 
@@ -39,9 +39,9 @@ ms.locfileid: "79434179"
 ## <a name="getting-started"></a>作業の開始
   
 * **エディションと機能**:SQL Server のさまざまなエディションとバージョンでサポートされている機能を確認し、ビジネス ニーズに最適な製品を決定してください。 
-    - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md)」を参照してください。  
-    - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
-    - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+    - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
+    - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+    - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
 *  **要件**: [SQL Server 2016、2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) または [SQL Server on Linux](../../linux/sql-server-linux-setup.md) に対するハードウェアとソフトウェアのインストール要件と、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」に記載されているシステム構成チェック、セキュリティ上の考慮事項を確認してください。 

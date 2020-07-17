@@ -1,5 +1,6 @@
 ---
 title: シングル ユーザー モードでの SQL Server の起動 | Microsoft Docs
+description: SQL Server でのシングル ユーザー モードについて説明します。 これが便利なケースと、起動オプション "-m" を使用してこのモードで SQL Server のインスタンスを開始する方法を確認します。
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68037165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764005"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   特定の状況では、 **startup option -m** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する必要が生じる場合があります。 たとえば、サーバーの構成オプションを変更したり、破損した master データベースや他のシステム データベースを復旧したりすることがあります。 いずれの場合も、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、コンピューターのローカル Administrators グループのメンバーはすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。 詳細については、「 [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。  
@@ -61,7 +62,7 @@ ms.locfileid: "68037165"
   
 4.  クラスター アドミニストレーターまたはフェールオーバー クラスター管理コンソールから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがまだオフライン状態にあるかどうかを確認します。  
   
-5.  ここで、次のコマンドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、必要な操作を行います: SQLCMD -E -S\<servername>  
+5.  ここで、次のコマンドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、必要な操作を行います: SQLCMD -E -S\<servername>。  
   
 6.  操作が完了したら、コマンド プロンプトを閉じ、クラスター アドミニストレーターから SQL および他のリソースをオンラインに戻します。  
   

@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンのアップグレード方法の選択 | Microsoft Docs
+description: この記事では、インプレース アップグレード、新規インストールへの移行、ローリング アップグレードなど、SQL Server 内のデータベース エンジンのアップグレード パスについて説明します。
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287046"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901585"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアップグレードを計画している場合、ダウンタイムとリスクを最小限に抑えるために、考慮すべきいくつかのアプローチがあります。 インプレース アップグレードの実行、新規インストールへの移行、またはローリング アップグレードの実行が可能です。 次の図は、これらのアプローチから選択する場合に役立ちます。 図の各アプローチについては、下でも説明しています。 図の意思決定ポイントに役立てるため、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」も参照してください。  
   

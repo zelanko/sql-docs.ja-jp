@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751788"
 ---
 # <a name="execution-plans"></a>実行プラン
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 クエリを実行するには、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はステートメントを分析し、必要なデータにアクセスする最も効率的な方法を判断する必要があります。 この分析は、クエリ オプティマイザーと呼ばれているコンポーネントによって処理されます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや実行プランと呼ばれることもあります。   
 

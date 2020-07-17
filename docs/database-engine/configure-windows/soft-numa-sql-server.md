@@ -1,5 +1,6 @@
 ---
 title: ソフト NUMA (SQL Server) | Microsoft Docs
+description: SQL Server 2014 SP2 以降のバージョンのソフト NUMA について説明します。 自動ソフト NUMA の使用方法とソフト NUMA を使用するように SQL Server を手動で構成する方法を確認します。
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789762"
 ---
 # <a name="soft-numa-sql-server"></a>ソフト NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 最新のプロセッサには、1 つのソケットに対して複数のコアがあります。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。  1 つのソケットに対してコアを 10 個以上含むプロセッサの場合、ソフトウェア NUMA を使用してハードウェア NUMA ノードを分割すると、一般的に、拡張性と性能が向上します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 より前の場合、ソフトウェア ベースの NUMA (ソフト NUMA) ではレジストリを編集し、ノード構成関係マスクを追加する必要がありました。また、ソフト NUMA は、インスタンス単位ではなく、ホスト レベルで構成されていました。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、ソフト NUMA は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの起動時にデータベース/インスタンス レベルで自動的に構成されます。  
   

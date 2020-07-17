@@ -1,5 +1,6 @@
 ---
 title: セキュリティ ログへの SQL サーバー監査イベントの書き込み | Microsoft Docs
+description: SQL Server 監査イベントを Windows セキュリティ ログに書き込む方法について説明します。 このログを使用する場合の制限事項と制約事項について説明します。
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884829"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 高度なセキュリティ環境では、オブジェクト アクセスを記録するイベントを書き込むのに適切な場所は Windows セキュリティ ログです。 他の監査場所は、サポートされていますが、改ざんされる可能性が高くなります。  
   

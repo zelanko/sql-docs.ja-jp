@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プラン | Microsoft Docs
+description: SQL Server データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なワークフローを作成するメンテナンス プランについて説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789458"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
   
 ## <a name="benefits-of-maintenance-plans"></a>メンテナンス プランの利点  

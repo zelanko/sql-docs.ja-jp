@@ -1,5 +1,6 @@
 ---
 title: データベース スナップショット (SQL Server) | Microsoft Docs
+description: データベース スナップショットを使用して、SQL Server でデータベースの読み取り専用の静的ビューを作成する方法について説明します。 その利点、前提条件、および制限事項について紹介します。
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630814"
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 データベース スナップショットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ( *ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 データベース スナップショットは、スナップショットが作成されたときと同じ状態でデータの読み取り専用ビューを提供しますが、ソース データベースに変更が加えられると、スナップショット ファイルのサイズは大きくなります。 詳細については、後述の「[機能の概要](#FeatureOverview)」セクションを参照してください。
   

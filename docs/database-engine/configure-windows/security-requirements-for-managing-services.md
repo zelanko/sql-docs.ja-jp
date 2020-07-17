@@ -1,5 +1,6 @@
 ---
 title: サービスの管理に関するセキュリティ要件 | Microsoft Docs
+description: SQL Server サービスの管理に適用されるセキュリティ対策について説明します。 構成アクセスに必要なロール、グループ メンバーシップ、アクセス許可について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - security [SQL Server], services
 - services [SQL Server], WMI
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ede737abf7d158e4d8dee66885ced018f03a375e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 28d6cf88a2a647d5d0ee49ffd111d853efa73e34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651107"
 ---
 # <a name="security-requirements-for-managing-services"></a>サービスの管理に関するセキュリティ要件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを管理するには、SQL Server 構成マネージャーまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。 クラスター化されたサーバー上のサービスを管理するには、クラスター アドミニストレーターを使用します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを管理し、サーバー構成オプションを設定するには、 **serveradmin** 固定サーバー ロールまたは **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 Windows の **Administrators** グループのメンバーは、サービスを開始および停止したり、Windows で提供されているサーバー オプションを構成したりできます。  
@@ -41,7 +42,7 @@ ms.locfileid: "68025629"
   
 -   起動時のパラメーター  
   
--   Security  
+-   セキュリティ  
   
 -   その他のサーバーの設定  
   

@@ -1,6 +1,6 @@
 ---
 title: データベース ミラーの役割の交代
-description: データベース ミラーリングの役割の交代について説明します。
+description: データベース ミラーリングの役割の交代について説明します。これは、SQL Server でのエラー発生に対応して、または管理上の目的から、ミラー サーバーがプリンシパルになるというものです。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735162"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッションでは、 *役割の交代*という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。 役割の交代では、ミラー サーバーはプリンシパル サーバーに対する *フェールオーバー パートナー* として機能します。プリンシパルの役割を引き継ぎ、サーバー内のデータベースのコピーを復旧し、それを新しいプリンシパル データベースとしてオンラインにします。 以前のプリンシパル サーバーは利用可能であればミラーの役割を担い、サーバー内のデータベースを新しいミラー データベースにします。 場合によっては、複数のエラーに対する対応として、または管理目的のために、役割を何度も交代できます。  
   
 > [!NOTE]  
@@ -159,7 +159,7 @@ ms.locfileid: "75252791"
 -   プリンシパル サーバーとその他のデータベース ミラーリング構成との通信が切断され、ミラー サーバーとミラーリング監視サーバーはクォーラムを保持している。 ただし、すべてのサーバー インスタンスで通信が切断された場合、ミラーリング監視サーバーとミラー サーバーの通信が回復しても、自動フェールオーバーは行われません。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 -   プリンシパル サーバーの障害がミラー サーバーによって検出される。  
   

@@ -1,7 +1,7 @@
 ---
 title: クイック スタート:データベースのバックアップと復元
 titleSuffix: SQL Server
-description: このクイックスタートでは、オンプレミスの SQL Server データベースをバックアップおよび復元する方法について説明します。
+description: この記事では、SQL Server で新しいデータベースの作成、データベースのバックアップの作成、およびバックアップの復元を行う方法について説明します。
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669960"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>クイック スタート:SQL Server データベースのオンプレミスでのバックアップと復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このクイック スタートでは、新しいデータベースを作成し、その単純なバックアップを取得して復元します。 
 

@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([オプション] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [オプション] タブを使用して、データベースの照合順序、復旧モデル、その他の設定を表示または変更する方法について説明します。'
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630944"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] ([オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」と「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286746"
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
- データベースの復旧に対して、 **[完全]** 、 **[一括ログ]** 、または **[単純]** のいずれかのモデルを指定します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
+ データベースを復旧するための、次のいずれかのモデルを指定します。 **[完全]** 、 **[一括ログ]** 、 **[単純]** 。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
  データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 使用可能な値については、「[ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」 (ALTER DATABASE (TRANSACT-SQL) 互換性レベル) を参照してください。 SQL Server データベースがアップグレードされると、そのデータベースの互換性レベルが保持される (可能な場合) か、新しいサポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最小レベルに変更されます。 
@@ -121,17 +122,17 @@ Azure SQL Database に接続している場合、このセクションにはサ�
  セカンダリ (存在する場合) のパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/kb/980653)を指定した場合と同じです。  
   
  **クエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。 詳細については「[QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)」をご覧ください。  
   
  **セカンダリのクエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。 詳細については「[QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)」をご覧ください。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **[FILESTREAM ディレクトリ名]**  
  選択したデータベースと関連付けられている FILESTREAM データのディレクトリ名を指定します。  
   
  **[FILESTREAM 非トランザクション アクセス]**  
- FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、 **OFF**、 **READ_ONLY**、または **FULL**を指定します。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
+ FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、次のいずれかを指定します。**OFF**、**READ_ONLY**、**FULL**。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
 ## <a name="miscellaneous"></a>その他  
 **[スナップショット分離を許可]**  

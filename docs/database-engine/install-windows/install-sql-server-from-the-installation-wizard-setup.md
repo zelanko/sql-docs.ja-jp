@@ -1,5 +1,6 @@
 ---
 title: グラフィカル ユーザー インターフェイスを使用したインストール
+description: この記事では、SQL Server セットアップ インストール ウィザードを使って SQL Server の新しいインスタンスをインストールする手順について詳しく説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76934189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899702"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。
 
@@ -191,7 +192,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[Distributed Replay Client Configuration]\(分散再生クライアントの構成\)** ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。 管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
   
-     * **[コントローラー名]** は省略可能です。 既定値は \<*空白*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。  
+     * **[コントローラー名]** は省略可能です。 既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。  
   
        * コントローラーを既にセットアップしてある場合は、各クライアントを構成するときにコントローラーの名前を入力します。  
   
@@ -369,7 +370,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
 1. **[Distributed Replay Client Configuration]\(分散再生クライアントの構成\)** ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。 管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
   
-     * **[コントローラー名]** は省略可能です。 既定値は \<*空白*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。  
+     * **[コントローラー名]** は省略可能です。 既定値は \<*blank*> です。 分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。  
   
        * コントローラーを既にセットアップしてある場合は、各クライアントを構成するときにコントローラーの名前を入力します。  
   

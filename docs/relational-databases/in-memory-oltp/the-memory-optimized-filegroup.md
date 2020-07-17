@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化ファイルグループ | Microsoft Docs
+description: SQL Server でメモリ最適化テーブルを作成する前に、データ ファイルとデルタ ファイル用のコンテナーを含むメモリ最適化ファイル グループを作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715352"
 ---
 # <a name="the-memory-optimized-filegroup"></a>メモリ最適化ファイルグループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   メモリ最適化テーブルを作成するには、まずメモリ最適化ファイルグループを作成する必要があります。 メモリ最適化ファイル グループには 1 つ以上のコンテナーが含まれています。 各コンテナーには、データ ファイルかデルタ ファイル、あるいはその両方が含まれています。  
   
  `SCHEMA_ONLY` テーブルからのデータ行は持続的ではなく、メモリ最適化テーブルに対応するメタデータおよびネイティブ コンパイル ストアド プロシージャは従来型のカタログに格納されますが、メモリ最適化テーブルを含むデータベースを一貫した環境で提供できるように、[!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンでは引き続き、`SCHEMA_ONLY` メモリ最適化テーブルに対応するメモリ最適化ファイルグループが必要です。  

@@ -1,5 +1,6 @@
 ---
 title: 初期スナップショットの作成および適用 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server で初期スナップショットを作成および適用する方法について説明します。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654339"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   スナップショットは、パブリケーションの作成後に、スナップショット エージェントによって生成されます。 スナップショットは、以下の方法で生成できます。  
   

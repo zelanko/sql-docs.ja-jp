@@ -1,5 +1,6 @@
 ---
 title: ad hoc distributed queries サーバー構成オプション | Microsoft Docs
+description: SQL Server でアドホック分散クエリを有効にする方法について説明します。 その後、OPENROWSET および OPENDATASOURCE を使用して、リモートの OLE DB データ ソースに接続できます。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - OPENDATASOURCE function, ad hoc distributed queries option
 - ad hoc access
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8c8387f833fbfb877393fc0180008557509ed8ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d05a89446b42feb09d46f1b407991226a7d234db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85698265"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>ad hoc distributed queries サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、OPENROWSET および OPENDATASOURCE を使用したアドホックな分散クエリは実行できません。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアドホック アクセスを実行できます。 このオプションを設定しなかった場合または 0 に設定した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアドホック アクセスを実行できません。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68013268"
 >  アドホック名を使用できるようにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への認証済みログインであればプロバイダーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の管理者は、ローカル ログインからアクセスされても安全なプロバイダーに対してのみ、この機能を有効にしてください。  
   
 ## <a name="remarks"></a>解説  
- **アドホック分散クエリ** を有効にせずにアドホック接続を試みると、次のエラーが発生します (メッセージ 7415、レベル 16、状態 1、行 1)。  
+ **アドホック分散クエリ**を有効にせずにアドホック接続を試みると、次のエラーが発生します: メッセージ 7415、レベル 16、状態 1、行 1  
   
  OLE DB プロバイダー 'Microsoft.ACE.OLEDB.12.0' へのアドホック アクセスが拒否されました。 リンク サーバー経由でこのプロバイダーにアクセスしてください。  
   

@@ -1,24 +1,24 @@
 ---
 title: 可用性グループのフェールオーバーを管理する - SQL Server on Linux
 description: この記事では、フェールオーバーの種類、すなわち、自動フェールオーバー、計画的な手動フェールオーバー、強制手動フェールオーバーについて説明します。 自動と計画的な手動では、すべてのデータが保持されます。
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892300"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可用性グループ (AG) のコンテキストでは、可用性レプリカのプライマリ ロールとセカンダリ ロールは、通常、フェールオーバーと呼ばれるプロセスで入れ替えることができます。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 AG は、可用性レプリカのレベルでフェールオーバーされます。 つまり、AG はセカンダリ レプリカのいずれか (現在のフェールオーバー ターゲット) にフェールオーバーされます。 
 
@@ -81,14 +81,29 @@ ms.locfileid: "80216851"
 手動フェールオーバーによって作成される制約の例。 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Red Hat Enterprise Linux 8. x および Ubuntu 18.04 上の Pacemaker クラスターの AG リソース名は、リソースに関する用語体系が*昇格可能な複製*を使用するように進化しているため、*ag_cluster-clone* に似ています。 
+
 - **RHEL/Ubuntu の例**
 
    次のコマンドで、`cli-prefer-ag_cluster-master` は削除が必要な制約の ID です。 `sudo pcs constraint list --full` によってこの ID が返されます。 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   または
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   また、次のように、自動生成された制約の移動と消去の両方を 1 行で実行することもできます。 次の例では、Red Hat Enterprise Linux 8.x に準拠した*複製*の用語を使用します。 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES の例**
 
    次のコマンドで、`cli-prefer-ms-ag_cluster` は制約の ID です。 `crm config show` によってこの ID が返されます。 
@@ -102,7 +117,7 @@ ms.locfileid: "80216851"
 >[!NOTE]
 >自動フェールオーバーでは場所の制約が追加されないため、削除は不要です。 
 
-詳細:
+詳細情報:
 - [Red Hat - クラスター リソースの管理](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Pacemaker - リソースを手動で移動する](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理ガイド - リソース](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

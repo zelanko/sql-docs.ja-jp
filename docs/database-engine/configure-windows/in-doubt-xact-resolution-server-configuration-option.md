@@ -1,5 +1,6 @@
 ---
 title: in-doubt xact resolution サーバー構成オプション | Microsoft Docs
+description: "\"in-doubt xact resolution\" オプションについて説明します。 SQL Server の未確定トランザクションの既定の結果がこれによってどのように決定されるかについて説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 946f36bb379e5fde01f4232b01699405dd63aa8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772415"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **in-doubt xact resolution** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) で解決できないトランザクションの既定の結果を制御する場合に使用します。 トランザクションを解決できない原因は、復旧時の MS DTC のダウン タイムまたは状態が不明なトランザクション結果に関連している場合があります。  
   

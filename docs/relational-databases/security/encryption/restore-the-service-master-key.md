@@ -1,5 +1,6 @@
 ---
 title: サービス マスター キーの復元 | Microsoft Docs
+description: Transact-SQL を使用して SQL Server でサービス マスター キーを復元する方法について説明します。 サービス マスター キーは、SQL Server 暗号化階層のルートになります。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957388"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898023"
 ---
 # <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサービス マスター キーを復元する方法について説明します。  
   
 > [!WARNING]  
@@ -39,7 +40,7 @@ ms.locfileid: "74957388"
 > [!CAUTION]  
 > サービス マスター キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化階層のルートになります。 サービス マスター キーでは、直接または間接的に、そのツリー内の他のすべてのキーが保護されます。 強制復元で、依存関係のあるキーの暗号化を解除できなかった場合、そのキーで保護されているデータは失われます。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
 サーバーに対する CONTROL SERVER 権限が必要です。  

@@ -1,5 +1,6 @@
 ---
 title: プリンシパルに対する権限の許可 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server のプリンシパルに権限を許可する方法、およびベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e7dc2bff70e98420161d823207222c6c9205940
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9522bf78d3c3d0a36047283d8b0ab9e3073b6d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043264"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005633"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でプリンシパルに権限を与える方法について説明します。  
   
  **このトピックの内容**  
@@ -30,7 +31,7 @@ ms.locfileid: "68043264"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **プリンシパルに権限を与える方法:**  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68043264"
   
 4.  ストアド プロシージャを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ストアド プロシージャのプロパティ - _stored\_procedure\_name_]** ダイアログ ボックスの [ページの選択] で、**[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
+5.  **[ストアド プロシージャのプロパティ - _stored\_procedure\_name_]** ダイアログ ボックスの [ページの選択] で、 **[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

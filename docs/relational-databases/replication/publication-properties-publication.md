@@ -22,15 +22,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720871"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server レプリケーションの 'パブリケーションのプロパティ' ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 このページでは、[パブリケーションのプロパティ] ダイアログ ボックス内にあるページについて説明します。 
 
@@ -108,7 +108,7 @@ ms.locfileid: "81529236"
  **[テーブルの検索]**  
  マージ パブリケーションのみです。 **[テーブルの検索]** をクリックすると、複雑なフィルター ツリー内でテーブルを検索できます。 複雑なリレーションシップを持つデータベースでは、1 つのテーブルを複数のテーブルに結合できます。その場合、テーブルはフィルター ツリー内で複数の場所に表示されます。  
   
- 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索]** をクリックします。] というテキストが表示されます。  
+ 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索] をクリックします]** というテキストが表示されます。  
   
  ペイン内でショートカット ノードを選択し、 **[テーブルの検索]** をクリックすると、ペインが展開され、テーブルが強調表示されます。 ショートカット ノードを選択せずに **[テーブルの検索]** をクリックすると、 **[テーブルの検索]** ダイアログ ボックスが表示されます。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "81529236"
 
 ## <a name="data-partitions"></a>データ パーティション
 データ パーティション  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 ### <a name="options"></a>Options  
@@ -190,7 +190,7 @@ ms.locfileid: "81529236"
 
 ## <a name="snapshot"></a>スナップショット
 スナップショット  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページを使用すると、スナップショット形式、スナップショット フォルダーの場所、およびスナップショットのアプリケーションの前後に実行するスクリプトを設定できます。 スナップショット フォルダーは、共有として指定する必要があり、エージェントがフォルダーでファイルを読み書きするための十分な権限を持っている必要があります。 フォルダーの適切なセキュリティ保護の詳細については、「[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
 > [!NOTE]  

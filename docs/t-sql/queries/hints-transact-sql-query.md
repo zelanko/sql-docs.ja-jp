@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731301"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 クエリ ヒントは、指定されたヒントをクエリ全体で使用する必要があることを指定します。 クエリ ヒントは、ステートメント内のすべての演算子に影響を与えます。 メイン クエリで UNION を使用する場合、UNION 操作を含む最後のクエリだけに OPTION 句を指定できます。 クエリ ヒントは、[OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)の一部として指定します。 複数のクエリ ヒントが原因でクエリ オプティマイザーが有効なプランを生成できない場合は、エラー 8622 が発生します。  
   
@@ -238,7 +238,7 @@ OPTIMIZE FOR クエリ ヒントで使用する _\@variable\_name_ に割り当�
 OPTIMIZE FOR は、オプティマイザーの既定のパラメーター検出動作を無効にする場合に使用できます。 また、プラン ガイドを作成するときにも OPTIMIZE FOR を使用します。 詳細については、「[ストアド プロシージャの再コンパイル](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)」を参照してください。  
   
 OPTIMIZE FOR UNKNOWN  
-クエリ オプティマイザーでクエリをコンパイルおよび最適化するときに、すべてのローカル変数に対して初期値の代わりに統計データを使用することを指定します。 この最適化には、強制パラメーター化によって作成されたパラメーターも含まれます。  
+クエリをコンパイルおよび最適化するときにランタイム パラメーターの値を使用するのではなく、すべての列の値にわたる述語の平均選択度を使用するようにクエリ オプティマイザーに指示します。  
   
 同一のクエリ ヒント内で OPTIMIZE FOR @variable_name = _literal\_constant_ と OPTIMIZE FOR UNKNOWN が使用されている場合、クエリ オプティマイザーでは、特定の値に対しては指定された _literal\_constant_ が使用されます。 クエリ オプティマイザーでは、残りの変数値には UNKNOWN が使用されます。 これらの値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
 
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. OPTIMIZE FOR を使用する  
- 次の例では、クエリ オプティマイザーでのクエリの最適化時に、ローカル変数 `'Seattle'` に値 `@city_name` を使用し、統計データを使用してローカル変数 `@postal_code` の値を決定するように指定しています。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
+ 次の例では、クエリ オプティマイザーでのクエリの最適化時に、`@city_name` には値 `'Seattle'` を使用し、`@postal_code` にはすべての列の値にわたる述語の平均選択度を使用するように指定しています。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. MAXRECURSION を使用する  

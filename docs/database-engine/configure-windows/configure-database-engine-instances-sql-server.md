@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンのインスタンスの構成 (SQL Server) | Microsoft Docs
+description: パフォーマンスと可用性の要件を満たすようにデータベース エンジン インスタンスを構成するのに必要となる、SQL Server の構成タスクについて説明します。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4eee1bc0ed571516463541fe1fcc38e27dcafd98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b2b3900c41067e7f46f392ceab913f1d8d096816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751929"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>データベース エンジンのインスタンスの構成 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の各インスタンスは、インスタンスによってホストされているデータベース用に定義されているパフォーマンスと可用性の要件を満たすように構成する必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、リソースの使用などの動作や、監査またはトリガー再帰などの機能の可用性を制御する構成オプションがあります。  
   
 ## <a name="instance-configuration"></a>[インスタンスの構成]  

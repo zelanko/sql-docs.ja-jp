@@ -1,5 +1,6 @@
 ---
 title: SCM サービス - インスタンスを自動的に起動するように設定する | Microsoft Docs
+description: SQL Server のインスタンスを自動的に起動するように設定する方法について説明します。 既定の構成について説明するとともに、開始モードを [自動] に設定する方法を説明します。
 ms.custom: ''
 ms.date: 01/06/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - SQL Server, automatic startup
 - starting SQL Server, automatically
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf9ce68d802bdfc3178b6712adb7335a63c79ae6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651483"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM サービス - インスタンスを自動的に起動するように設定する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスを自動的に開始するように設定する方法について説明します。 セットアップのとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は通常、自動的に開始するように構成されます。 手動で開始するように構成した場合、この設定をいつでも変更できます。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
@@ -37,13 +38,13 @@ ms.locfileid: "70212419"
     >  -   **Windows 10**:  
     >          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **スタート画面**で、「SQLServerManager13.msc」( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の場合) と入力します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、13 をより小さい数値に置き換えます。 SQLServerManager13.msc をクリックすると、構成マネージャーが開きます。 スタート画面やタスク バーに構成マネージャーをピン留めするには、SQLServerManager13.msc を右クリックして、 **[ファイルの場所を開く]** をクリックします。 エクスプローラーでは、SQLServerManager13.msc を右クリックし、 **[スタート画面にピン留め]** または **[タスクバーにピン留め]** をクリックします。  
     > -   **Windows 8**:  
-    >          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、**検索**チャームの **[アプリ]** で、「**SQLServerManager\<バージョン>.msc**」(「**SQLServerManager13.msc**」など) と入力し、**Enter** キーを押します。  
+    >          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、**検索**チャームの **[アプリ]** で、「**SQLServerManager\<version>.msc**」(「**SQLServerManager13.msc**」など) と入力し、**Enter** キーを押します。  
   
 2.  **[SQL Server 構成マネージャー]** で **[サービス]** を展開し、 **[SQL Server]** をクリックします。  
   
 3.  詳細ペインで、自動的に開始するインスタンスの名前を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[SQL Server \<** _インスタンス名_ **> のプロパティ]** ダイアログ ボックスで、 **[開始モード]** を **[自動]** に設定します。  
+4.  **[SQL Server \<**_instancename_**> のプロパティ]** ダイアログ ボックスで、 **[開始モード]** を **[自動]** に設定します。  
   
 5.  **[OK]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
   

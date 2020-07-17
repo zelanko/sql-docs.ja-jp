@@ -1,5 +1,6 @@
 ---
 title: アプリケーションのパターン - メモリ最適化テーブルのパーティション分割
+description: メモリ最適化テーブルに現在のアクティブなデータを格納し、パーティション テーブルに古いデータを格納するインメモリ OLTP アプリケーション デザイン パターンについて説明します。
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730425"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] では、比較的新しいデータでパフォーマンス リソースをふんだんに利用するアプリケーション設計パターンがサポートされます。 このパターンは、現在のデータが、以前のデータよりもはるかに頻繁に読み取られるか更新される場合に適用できます。 ここでは、現在のデータが "*アクティブ*" または "*ホット*" で、古いデータが "*コールド*" であるとします。
 

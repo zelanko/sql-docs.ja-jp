@@ -15,15 +15,15 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43e3c343bc3947e6cfd0be4886e9d369b55758b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719511"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
   
 1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "76287029"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

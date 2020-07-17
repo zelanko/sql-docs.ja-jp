@@ -1,5 +1,6 @@
 ---
 title: SQL Server のインスタンスの登録 (SQL Server ユーティリティ) | Microsoft Docs
+description: SQL Server のインスタンスのパフォーマンスと構成の監視を開始するには、既存の SQL Server ユーティリティに登録します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776007"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
   
  このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
@@ -170,7 +171,7 @@ ms.locfileid: "68115415"
 >   
 >  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  追加情報:Windows NT グループまたはユーザー '\<ドメイン名\アカウント名>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
+>  追加情報:Windows NT グループまたはユーザー '\<DomainName\AccountName>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
 >   
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。  
   

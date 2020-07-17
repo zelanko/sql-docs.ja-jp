@@ -1,5 +1,6 @@
 ---
 title: SSMS によるインメモリ OLTP のサポート
+description: SQL Server Management Studio を使用して、メモリ最適化テーブル、テーブルのインデックス、ネイティブ コンパイル ストアド プロシージャ、およびユーザー定義テーブル型を管理します。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b909ab9d5290ae0c34c9c65a1bd47010a20952e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734981"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのツールが備わっています。 詳細については、「 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)」を参照してください。  
   
  このトピックのタスクでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してメモリ最適化テーブル、メモリ最適化テーブルのインデックス、ネイティブ コンパイル ストアド プロシージャ、およびユーザー定義のメモリ最適化テーブル型を管理する方法について説明します。  
@@ -99,7 +100,7 @@ ms.locfileid: "74412530"
   
     -   スクリプト化  
   
-    -   処理手順  
+    -   タスク  
   
     -   Reports  
   

@@ -1,6 +1,6 @@
 ---
 title: サーバー ネットワーク アドレスの指定 (データベース ミラーリング)
-description: データベース ミラーリング エンドポイントのサーバー ネットワーク アドレスを指定します。
+description: データベース ミラーリング エンドポイントのサーバー ネットワーク アドレスを指定する方法について説明します。 データベース ミラーリング セッションには、サーバー インスタンスごとにアドレスが必要です。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789612"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>サーバー ネットワーク アドレスの指定 (データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッションを設定するには、サーバー インスタンスごとにサーバー ネットワーク アドレスが必要です。 サーバー インスタンスのサーバー ネットワーク アドレスは、システム アドレス、およびインスタンスがリッスンしているポート番号を指定することにより、明確にインスタンスを識別する必要があります。  
   
  サーバー ネットワーク アドレスでポートを指定するには、サーバー インスタンスにデータベース ミラーリング エンドポイントが存在する必要があります。 詳細については、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "75252761"
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
- パラメーターの説明  
+ where  
   
 -   *\<system-address>* は、ミラーリング先のコンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252761"
         > [!NOTE]  
         >  完全修飾ドメイン名の検索方法の詳細については、このトピックの「完全修飾ドメイン名の検索」を参照してください。  
   
--   *\<port>* は、パートナー サーバー インスタンスのデータベース ミラーリング エンドポイントによって使用されるポート番号です。 エンドポイントの指定の詳細については、「 [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
+-   *\<port>* は、パートナー サーバー インスタンスのミラーリング エンドポイントによって使用されるポート番号です。 エンドポイントの指定の詳細については、「 [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
   
      データベース ミラーリング エンドポイントは、コンピューター システム上の使用可能な任意のポートを使用できます。 コンピューター システム上の各ポート番号は 1 つのエンドポイントだけに関連付けられている必要があります。また、各エンドポイントは 1 つのサーバー インスタンスに関連付けられています。そのため、1 台のサーバー上に複数のサーバー インスタンスがある場合、各サーバー インスタンスは、ポートが異なる別のエンドポイントでリッスンします。 したがって、データベース ミラーリング セッションを設定するときにサーバー ネットワーク アドレスで指定するポートにより、必ず、エンドポイントがそのポートに関連付けられているサーバー インスタンスにセッションがリダイレクトされます。  
   

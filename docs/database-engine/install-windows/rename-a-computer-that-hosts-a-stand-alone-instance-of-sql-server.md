@@ -1,5 +1,6 @@
 ---
 title: インスタンスをホストするコンピューターの名前変更
+description: SQL Server のインスタンスをホストするコンピューターの名前を変更する場合は、sys.servers に格納されているシステム メタデータを更新します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -19,16 +20,16 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 297452f0367bbd1a757c3ea29124d7ccf91c4409
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900324"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
   
@@ -112,7 +113,7 @@ ms.locfileid: "75258583"
   
  **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](https://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)  
   
   

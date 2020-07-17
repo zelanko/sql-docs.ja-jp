@@ -1,5 +1,6 @@
 ---
 title: 暗号化されたミラー データベースの設定 | Microsoft Docs
+description: sp_control_dbmasterkey_password を使用して資格情報を作成し、ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法について説明します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4711df54f96487447ed543945bd863a4bc7b598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735143"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>暗号化されたミラー データベースの設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ミラー データベースのデータベース マスター キーの暗号化を自動的に解除できるようにするには、マスター キーの暗号化に使用したパスワードをミラー サーバー インスタンスに指定する必要があります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンには、パスワードを転送するメカニズムがあります。 データベース ミラーリングを開始する前にデータベース マスター キーに対する資格情報を作成するには、 **sp_control_dbmasterkey_password** を使用します。 この処理は、ミラー化するすべてのデータベースに対して行う必要があります。 詳細については、「 [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)」を参照してください。  
   
 > [!CAUTION]  

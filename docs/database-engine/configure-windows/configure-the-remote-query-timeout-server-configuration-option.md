@@ -1,5 +1,6 @@
 ---
 title: remote query timeout サーバー構成オプションの構成 | Microsoft Docs
+description: "\"remote query timeout\" オプションについて説明します。 リモート操作を実行してから SQL Server がタイムアウトになるまでの時間 (秒単位) をこれで指定する方法について説明します。"
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - time limit for remote queries [SQL Server]
 - remote query timeout option
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1559e997270712dd701a1295de4a896a2425642
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ab8099b514027c69b32427c27c22ed06614150e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715580"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]を利用して[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **remote query timeout** サーバー構成オプションを構成する方法について説明します。 **remote query timeout** オプションは、リモート操作を実行してから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がタイムアウトになるまでの時間 (秒単位) を指定します。このオプションの既定値は 600 で、10 分間の待機時間が見込まれています。 この値は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってリモート クエリとして開始された発信接続に適用されます。 この値は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が受信したクエリには影響を与えません。 タイムアウトを無効にするには、値を 0 に設定します。 クエリは完了するまで待機します。  
   

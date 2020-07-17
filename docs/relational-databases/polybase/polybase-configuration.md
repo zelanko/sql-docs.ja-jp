@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d4c229d7e0dcb2111a6e9685eed5b7d07dbd0bbd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 489a53c9dba5cb645652fe9cf04f96563d1529fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81295745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882102"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、Hadoop への PolyBase 接続に影響するさまざまな構成設定のリファレンスを示します。 PolyBase と Hadoop の連携方法に関するチュートリアルについては、「[Hadoop 内の外部データにアクセスするように PolyBase を構成する](polybase-configure-hadoop.md)」を参照してください。
 
@@ -161,7 +161,7 @@ MIT KDC を使用して、Kerberos でセキュリティ保護された Hadoop �
    |**#**|**構成ファイル**|**構成キー**|**操作**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 次に例を示します。YOUR-REALM.COM|  
+   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 次に例を示します。YOUR-REALM.COM <br><br>**構成に関する注意**: 領域名は大文字で記述する必要があります。|  
    |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 次に例を示します。KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: mapred/_HOST@YOUR-REALM.COM|  

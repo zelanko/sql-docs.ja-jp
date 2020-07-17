@@ -1,5 +1,6 @@
 ---
 title: ハイブリッド バッファー プール | Microsoft Docs
+description: ハイブリッド バッファー プールによりメモリ バスを介して永続メモリ デバイスにアクセスできるようにする方法について確認します。 この SQL Server 2019 機能を有効または無効にして、ベスト プラクティスを確認します。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772427"
 ---
 # <a name="hybrid-buffer-pool"></a>ハイブリッド バッファー プール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ハイブリッド バッファー プールを使用すると、バッファー プール オブジェクトで、揮発性 DRAM にキャッシュされたデータのコピーではなく、永続メモリ (PMEM) 上にあるデータベース ファイル内のデータ ページを参照できます。 この機能は [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] で導入されています。
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>ハイブリッド バッファー プールのベスト プラクティス
 
-Windows 上でご利用の PMEM デバイスをフォーマットする場合、NTFS に利用できる最大のアロケーション ユニット サイズ (Windows Server 2019 では 2 MB) を使用して、デバイスが DAX (Direct Access) 用に確実にフォーマットされているようにします。
+ - Windows 上でご利用の PMEM デバイスをフォーマットする場合、NTFS に利用できる最大のアロケーション ユニット サイズ (Windows Server 2019 では 2 MB) を使用して、デバイスが DAX (Direct Access) 用に確実にフォーマットされているようにします。
 
-Windows で [[メモリ内のページのロック]](./enable-the-lock-pages-in-memory-option-windows.md) を使用します。
+ - Windows で [[メモリ内のページのロック]](./enable-the-lock-pages-in-memory-option-windows.md) を使用します。
 
-ファイル サイズは 2 MB の倍数である必要があります (剰余 2 MB はゼロと等しい)。
+ - ファイル サイズは 2 MB の倍数である必要があります (剰余 2 MB はゼロと等しい)。
 
-ハイブリッド バッファー プールのサーバー スコープ設定が無効に設定されている場合、この機能はどのユーザー データベースでも使用されません。
+ - ハイブリッド バッファー プールのサーバー スコープ設定が無効に設定されている場合、この機能はどのユーザー データベースでも使用されません。
 
-ハイブリッド バッファー プールのサーバー スコープ設定が有効に設定されている場合、データベース スコープ設定を使用して、個々のユーザー データベースに対してこの機能を無効にすることができます。
+ - ハイブリッド バッファー プールのサーバー スコープ設定が有効に設定されている場合、データベース スコープ設定を使用して、個々のユーザー データベースに対してこの機能を無効にすることができます。

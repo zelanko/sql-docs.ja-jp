@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787556"
 ---
 # <a name="manage-partition-wizard"></a>パーティションの管理ウィザード 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **パーティションの管理ウィザード** を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>パーティションの管理ウィザードを起動するには  
@@ -76,7 +76,7 @@ ms.locfileid: "82220427"
 ### <a name="sliding-window-scenario"></a>スライディング ウィンドウ シナリオ  
  スライディング ウィンドウ シナリオでパーティションを管理するには、 **[スライディング ウィンドウ シナリオでパーティション分割されたデータを管理する]** を選択します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[パーティション切り替え用のステージング テーブルを作成する]**  
  既存のパーティション テーブルのデータの切り替え先または切り替え元になるステージング テーブルを作成します。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "82220427"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> [パーティションの切り替え先オプションの選択] ページ  
  **[パーティションの切り替え先オプションの選択]** ページを使用すると、パーティション テーブルに切り替えるステージング テーブルを選択できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[すべてのパーティションを表示]**  
  現在パーティション テーブル内にあるパーティションを含む、すべてのパーティションを表示します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "82220427"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> [パーティションの切り替え元オプションの選択] ページ  
  **[パーティションの切り替え元オプションの選択]** ページを使用すると、切り替え元のパーティション テーブルのパーティション分割されたデータを保持するパーティションとステージング テーブルを選択できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[パーティション グリッド]**  
  選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82220427"
   
  また、基になるパーティションと同じインデックスを、ステージング テーブルに作成することもできます。 ステージング テーブルには、基になるパーティションの要素に基づく制約が自動的に格納されます。 この制約は、通常、基になるパーティションの境界値から生成されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[ステージング テーブル名]**  
  ステージング テーブルの名前を作成するか、エディット ボックスに表示された既定の名前を受け入れます。  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220427"
 ##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  **[概要]** ページを使用すると、前の各ページで選択したオプションを確認できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[選択内容の確認]**  
  ウィザードの各ページで行った選択の内容が表示されます。 ノードをクリックして展開すると、以前に選択したオプションが表示されます。  
   

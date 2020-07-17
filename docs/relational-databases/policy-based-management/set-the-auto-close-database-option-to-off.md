@@ -1,5 +1,6 @@
 ---
 title: AUTO_CLOSE データベース オプションを OFF に設定 | Microsoft Docs
+description: AUTO_ CLOSE オプションが OFF になっているかどうかを確認します。 AUTO_ CLOSE オプションは、SQL Server のパフォーマンスに影響します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dbcc137a97af6d447dafd44c71bdb8181c69577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774199"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>AUTO_CLOSE データベース オプションを OFF に設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールは、AUTO_CLOSE オプションが OFF に設定されているかどうかをチェックします。 AUTO_CLOSE が ON に設定されると、頻繁にアクセスされるデータベースでパフォーマンスが低下する場合があります。これは、接続するたびにデータベースを開いたり閉じたりするオーバーヘッドが増加するためです。 また、AUTO_CLOSE は、接続が終了するたびにプロシージャ キャッシュをフラッシュします。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  

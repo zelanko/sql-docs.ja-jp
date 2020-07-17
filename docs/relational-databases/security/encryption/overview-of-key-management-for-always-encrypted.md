@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted のキー管理の概要 | Microsoft Docs
+description: SQL Server のデータを保護するために Always Encrypted で使用される 2 種類の暗号化キー (列暗号化キーと列マスター キー) を管理する方法について説明します。
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784013"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) は、2 種類の暗号化キーを使用します。1 つはデータを暗号化するキーと、もう 1 つはデータを暗号化するキーを暗号化するキーです。 列暗号化キーはデータを暗号化し、列マスター キーは列暗号化キーを暗号化します。 この記事では、これらの暗号化キーを管理するための詳細な概要を提供します。  

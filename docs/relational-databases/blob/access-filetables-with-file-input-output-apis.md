@@ -1,5 +1,6 @@
 ---
 title: ファイル I/O API を使用した FileTable へのアクセス | Microsoft Docs
+description: FileTable でファイル I/O API を使用する方法を確認し、FileTable と互換性のあるファイル システム操作について説明します。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744697"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable でファイル システム I/O が動作するしくみについて説明します。  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable でのファイル I/O API の使用  
@@ -123,7 +124,7 @@ ms.locfileid: "72908773"
 |**バイト範囲ロック**|はい|バイト範囲ロックの要求は、NTFS ファイル システムに渡されます。|  
 |**メモリ マップ ファイル**|いいえ||  
 |**キャンセル I/O**|はい||  
-|**セキュリティ**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
+|**Security**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
 |**USN ジャーナル**|いいえ|FileTable 内のファイルおよびディレクトリに対するメタデータの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの DML 操作です。 したがって、これらの操作は対応するデータベース ログ ファイルに記録されます。 ただし、(サイズの変更を除き) NTFS USN ジャーナルには記録されません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更の追跡機能を使用して、同様の情報をキャプチャします。|  
   
 ## <a name="see-also"></a>参照  

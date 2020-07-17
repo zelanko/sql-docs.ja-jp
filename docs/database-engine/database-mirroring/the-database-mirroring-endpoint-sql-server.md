@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング エンドポイント (SQL Server) | Microsoft Docs
+description: 各サーバーが Always On 可用性グループまたはデータベース ミラーリングに参加するために必要な専用データベース ミラーリング エンドポイントについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68047991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896993"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>データベース ミラーリング エンドポイント (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   サーバー インスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリングに参加するには、専用の *データベース ミラーリング エンドポイント*が必要です。 このエンドポイントの用途は特殊で、他のサーバー インスタンスからの接続を受信するためにのみ使用されます。 特定のサーバー インスタンスでは、他のサーバー インスタンスに対するすべての [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリング接続では、単一のデータベース ミラーリング エンドポイントが使用されます。  
   

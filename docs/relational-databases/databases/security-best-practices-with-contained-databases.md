@@ -1,5 +1,6 @@
 ---
 title: 包含データベースでのセキュリティのベスト プラクティス | Microsoft Docs
+description: SQL Server での USER WITH PASSWORD 認証プロセスに関連する脅威など、包含データベースに対する固有の脅威を理解し、軽減します。
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759008"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>包含データベースでのセキュリティのベスト プラクティス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   包含データベースには固有の脅威があるので、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の管理者はそれを理解し、危険性を軽減する必要があります。 脅威の多くは **USER WITH PASSWORD** 認証プロセスと関連しており、このプロセスでは認証の境界を [!INCLUDE[ssDE](../../includes/ssde-md.md)] のレベルからデータベースのレベルへと移します。  
   
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>ログインが重複するユーザーの作成  
  パスワードを持つ包含データベース ユーザーが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと同じ名前を使用して作成された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが包含データベースを初期カタログとして指定して接続しようとすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは接続できません。 その接続は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくユーザーとしてではなく、包含データベース上のパスワード プリンシパル付きの包含データベース ユーザーとして評価されます。 このことは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに対する意図的または偶発的なサービス拒否を引き起こす可能性があります。  
   
--   ベスト プラクティスとして、 **sysadmin** 固定サーバー ロールのメンバーは常に、初期カタログ オプションを使用せずに接続することを検討してください。 このようにすると、ログインが master データベースに接続されるので、データベースの所有者によるログイン試行の悪用を回避できます。 その後、管理者は **USE** _\<database>_ ステートメントを使用して、包含データベースに切り替えることができます。 また、ログインの既定のデータベースを包含データベースに設定することもできます。この場合、まず **master**へのログインが行われ、その後、ログインが包含データベースに転送されます。  
+-   ベスト プラクティスとして、 **sysadmin** 固定サーバー ロールのメンバーは常に、初期カタログ オプションを使用せずに接続することを検討してください。 このようにすると、ログインが master データベースに接続されるので、データベースの所有者によるログイン試行の悪用を回避できます。 その後、管理者は **USE** _\<database>_ ステートメントを使用して、包含データベースに切り替えられます。 また、ログインの既定のデータベースを包含データベースに設定することもできます。この場合、まず **master**へのログインが行われ、その後、ログインが包含データベースに転送されます。  
   
 -   ベスト プラクティスとして、パスワードを持つ包含データベース ユーザーを作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと同じ名前にしないようにしてください。  
   

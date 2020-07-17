@@ -1,5 +1,6 @@
 ---
 title: max full-text crawl range サーバー構成オプション | Microsoft Docs
+description: "\"max full-text crawl range\" オプションについて説明します。 これを使用して SQL Server CPU の使用率を最適化し、フル クロール中のクロールのパフォーマンスを向上させる方法を説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - crawls [full-text search]
 - max full-text crawl range option
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 740d952640cef0400c379e9dfb25157331c9bfab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73a6223467b2da09d26e351c2cf2eb1a12576d80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680839"
 ---
 # <a name="max-full-text-crawl-range-server-configuration-option"></a>max full-text crawl range サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **max full-text crawl range** オプションは、CPU の使用率を最適化して、フル クロール中のクロールのパフォーマンスを向上させる場合に使用します。 このオプションを使用して、フル インデックス クロール中に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されるパーティションの数を指定できます。 たとえば、CPU が多数あり、CPU の使用率が最適でない場合は、このオプションの最大値を大きくすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このオプションだけでなく、テーブルの行数や CPU 数などの他の多くの要素によって、使用する実際のパーティション数を決定します。  
   

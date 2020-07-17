@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリングの履歴 | Microsoft Docs
+description: SQL Server Management Studio で、指定したサーバー インスタンスのミラー化されたデータベースについて、ミラーリング状態の履歴を表示する方法について説明します。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751892"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **サーバー インスタンス**  
  履歴レポートの対象となるサーバー インスタンスの名前です。  
   

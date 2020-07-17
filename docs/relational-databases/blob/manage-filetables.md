@@ -1,5 +1,6 @@
 ---
 title: FileTable の管理 | Microsoft Docs
+description: FileTable の管理に使用できる一般的な管理タスクと、FileTable のセキュリティ、バックアップ、監査について説明します。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ebab9c25ea864c20c6fbf0d4c601f9f01cd7e20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631268"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
-##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 方法: FileTable と関連オブジェクトの一覧を取得する  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 方法:FileTable と関連オブジェクトの一覧を取得する  
  FileTable の一覧を取得するには、次のいずれかのカタログ ビューに対してクエリを実行します。  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -79,7 +80,7 @@ GO
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
-###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> 方法: データベース レベルで非トランザクション アクセスを無効化および再有効化する  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> 方法:データベース レベルで非トランザクション アクセスを無効化および再有効化する  
  詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
@@ -106,7 +107,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 方法: データベースの FileTable が必ず表示されるようにする  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 方法:データベースの FileTable が必ず表示されるようにする  
  以下のすべての条件が満たされる場合、データベース レベルのディレクトリとその下の FileTable ディレクトリは表示状態になります。  
   
 1.  インスタンス レベルで FILESTREAM が有効になっている。  
@@ -138,7 +139,7 @@ GO
   
 -   FileTable ディレクトリと、それに含まれているファイルおよびディレクトリは、ファイル システムに表示され、ファイル I/O アクセスに使用できるようになります。  
   
-###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> 方法: テーブル レベルで FileTable 名前空間を無効化および再有効化する  
+###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> 方法:テーブル レベルで FileTable 名前空間を無効化および再有効化する  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
@@ -161,7 +162,7 @@ GO
 > [!WARNING]  
 >  開いているファイル ハンドルを終了すると、保存されていないデータをユーザーが失う可能性があります。 この動作は、ファイル システム自体の動作と一致しています。  
   
-###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
  カタログ ビュー [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) に対してクエリを実行します。  
   
 ```sql  
@@ -169,7 +170,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルを終了する  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルを終了する  
  データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) ストアド プロシージャを呼び出します。  
   
 ```sql  
@@ -188,7 +189,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> 方法: FileTable によって保持されているロックを識別する  
+###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> 方法:FileTable によって保持されているロックを識別する  
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  

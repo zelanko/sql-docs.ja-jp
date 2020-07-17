@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768077"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   このトピックでは、バックアップ先として Microsoft Azure BLOB ストレージ サービスを使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 ここでは、これらの相違点とコード例も示します。  
   
@@ -50,7 +50,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
  **コンテナー:** コンテナーは一連の BLOB をグループ化します。コンテナーには BLOB を無制限に格納できます。 Microsoft Azure BLOB ストレージ サービスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルート コンテナーを作成しておく必要があります。 コンテナーで Shared Access Signature トークンを生成し、特定のコンテナーでのみオブジェクトへのアクセス権を付与できます。  
   
- **BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、 https://\<ストレージ アカウント>.blob.core.windows.net/\<コンテナー>/\<BLOB> という URL 形式を使用してアドレス指定できます。 Microsoft Azure BLOB ストレージ サービスの詳細については、「 [.NET を使用して Azure Blob Storage を使用する](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
+ **BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、次の URL 形式を使用してアドレス指定できます: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 Microsoft Azure BLOB ストレージ サービスの詳細については、「 [.NET を使用して Azure Blob Storage を使用する](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
   
  ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -59,7 +59,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント  
  **URL:** 一意なバックアップ ファイルの Uniform Resource Identifier (URI) を示します。 URL は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ ファイルの場所と名前を指定するために使用されます。 URL は、コンテナーだけでなく、実際の BLOB を参照している必要があります。 BLOB が存在しない場合は作成されます。 既存の BLOB を指定した場合、BLOB 内の既存のバックアップ ファイルを上書きする "WITH FORMAT" オプションを指定しない限り、BACKUP は失敗します。  
   
- サンプル URL 値は、http[s]://ACCOUNTNAME.blob.core.windows.net/\<コンテナー>/\<ファイル名.bak> です。 HTTPS は必須ではありませんが、推奨されています。  
+ サンプル URL 値を次に示します: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS は必須ではありませんが、推奨されています。  
   
  **資格情報:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Microsoft Azure BLOB ストレージ サービスと、コンテナーおよび BLOB オブジェクトに対する認証を行います。 資格情報には、ストレージ アカウントの名前と **アクセス キー** の値またはコンテナーの URL と Shared Access Signature トークンが保存されます。 資格情報が作成されたら、BACKUP/RESTORE ステートメントの構文で BLOB の種類と必要な資格情報を指定します。  
   
@@ -196,7 +196,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
  RESTORE の引数の詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」をご覧ください。  
   
-##  <a name="back-up-up-with-ssms"></a><a name="BackupTaskSSMS"></a> SSMS を使用してバックアップする  
+##  <a name="back-up-with-ssms"></a><a name="BackupTaskSSMS"></a> SSMS を使用してバックアップする  
 SQL Server 資格情報を使用して SQL Server Management Studio のバックアップ タスクで URL にデータベースをバックアップできます。  
   
 > [!NOTE]  

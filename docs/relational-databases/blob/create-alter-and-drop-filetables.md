@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768017"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> FileTable の作成  
@@ -176,11 +176,11 @@ GO
 |CHECK 制約|システム定義の CHECK 制約によって、次の要件が適用されます。<br /><br /> 有効なファイル名。<br /><br /> 有効なファイル属性。<br /><br /> 親オブジェクトをディレクトリにする。<br /><br /> 名前空間の階層は、ファイル操作中にロックされる。|  
   
  **システム定義の制約の名前付け規則**  
- 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
+ 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。ここで、  
   
 -   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   
--   *\<uniquifier>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
+-   *\<uniquifier>* は、名前を一意にするためにシステムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
   
 ## <a name="see-also"></a>参照  
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  

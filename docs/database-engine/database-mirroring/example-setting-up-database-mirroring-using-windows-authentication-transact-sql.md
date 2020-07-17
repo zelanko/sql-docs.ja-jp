@@ -1,6 +1,6 @@
 ---
 title: Windows 認証でのデータベース ミラーリングの構成 (T-SQL)
-description: Transact-SQL (T-SQL) で Windows 認証を使用して、ミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階を示す例
+description: この記事には、SQL Server で Transact-SQL による Windows 認証を使用して、ミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する例が含まれています。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 343b04fe9f548c8f3c1274384c731cf6b74c1f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754656"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>例:Windows 認証を使用したデータベース ミラーリングの構成 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   この例では、Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階を示しています。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する代わりに、データベース ミラーリング セキュリティ構成ウィザードを使用してデータベース ミラーリングを設定することもできます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  

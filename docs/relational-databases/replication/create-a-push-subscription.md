@@ -1,5 +1,6 @@
 ---
 title: プッシュ サブスクリプションの作成 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server のプッシュ サブスクリプションを作成する方法について説明します。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773949"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを作成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの詳細については、「[SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "70059294"
   
 3. **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** を選択します。  
   
-4. サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、**[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
+4. サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ドロップダウン リストから **[\<Find SQL Server Publisher>]** または **[\<Find Oracle Publisher>]** を選択します。  
   
 5. **[サーバーへの接続]** ダイアログ ボックスでパブリッシャーに接続します。  
   
@@ -141,9 +142,9 @@ ms.locfileid: "70059294"
      > [!NOTE]
      > Windows 統合認証を使用して行われる接続では、常に **\@job_login** および **\@job_password** で指定された Windows 資格情報が使用されます。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-   - (省略可) **\@subscriber_security_mode** に **0** を指定し、**\@subscriber_login** および **\@subscriber_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定します。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
+   - (省略可) **\@subscriber_security_mode** に **0** を指定し、 **\@subscriber_login** および **\@subscriber_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定します。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
-   - (省略可) **\@publisher_security_mode** に **0** を指定し、**\@publisher_login** および **\@publisher_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定します。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
+   - (省略可) **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** および **\@publisher_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定します。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
   
    - このサブスクリプションでのマージ エージェント ジョブのスケジュール。 詳細については、「[同期スケジュールの指定](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
@@ -173,7 +174,7 @@ ms.locfileid: "70059294"
   
 3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5. サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
@@ -213,7 +214,7 @@ ms.locfileid: "70059294"
   
 3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5. サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   

@@ -1,5 +1,6 @@
 ---
 title: サーバーの認証モードの変更 | Microsoft Docs
+description: SQL Server でサーバーの認証モードを変更する方法について説明します。 このタスクには、SQL Server Management Studio か Transact-SQL のどちらかを使用できます。
 ms.custom: ''
 ms.date: 02/18/2020
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a8ffafae40991d6134925481409b5898b06c20c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759224"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サーバーの認証モードを変更する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はインストール中に、 **[Windows 認証モード]** または **[SQL Server 認証モードと Windows 認証モード]** のいずれかに設定されます。 インストール後は、認証モードをいつでも変更できます。
 
 インストール中に **[Windows 認証モード]** を選択した場合、sa ログインは無効となり、パスワードはセットアップによって割り当てられます。 後で認証モードを **[SQL Server 認証モードと Windows 認証モード]** に変更しても、sa ログインは無効のままです。 sa ログインを使用するには、ALTER LOGIN ステートメントを使用して、sa ログインを有効にし、新しいパスワードを割り当ててください。 sa ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しないとサーバーに接続できません。
@@ -82,7 +83,7 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [強力なパスワード](../../relational-databases/security/strong-passwords.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

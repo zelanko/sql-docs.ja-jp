@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892337"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の SLES クラスターを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このガイドでは、SUSE Linux Enterprise Server (SLES) 12 SP2 の SQL Server 用に 3 ノード クラスターを作成する手順について説明します。 高可用性を実現するため、Linux 上の可用性グループには 3 つのノードが必要です。[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)に関するページを参照してください。 クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) に基づいています。 
 
@@ -28,6 +28,7 @@ ms.locfileid: "75558447"
 >[!NOTE]
 >現時点では、Linux 上の SQL Server と Pacemaker の統合では、Windows 上の WSFC のような連携は行われていません。 Linux の SQL Server サービスはクラスターに対応していません。 Pacemaker は、可用性グループ リソースを含む、クラスター リソースのすべてのオーケストレーションを制御します。 Linux では、sys.dm_hadr_cluster などのクラスター情報を提供する Always On 可用性グループの動的管理ビュー (DMV) に依存しないようにする必要があります。 さらに、仮想ネットワーク名は WSFC に固有のものであり、Pacemaker にはそれに該当するものはありません。 フェールオーバー後に透過的な再接続に使用するリスナーを引き続き作成できますが、仮想 IP リソースの作成に使用する IP で、DNS サーバーにリスナー名を手動で登録する必要があります (以下のセクションで説明します)。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>ロードマップ
 
@@ -313,8 +314,8 @@ commit
 1. ユーザーが、ノード 1 からノード 2 の可用性グループ マスターに resource migrate を発行します。
 2. 仮想 IP リソースがノード 1 で停止します。
 3. 仮想 IP リソースがノード 2 で開始します。 この時点で、IP アドレスは一時的にノード 2 を指しますが、ノード 2 はフェールオーバー前のセカンダリのままです。 
-4. ノード 1 の可用性グループ マスターは、スレーブに降格されます。
-5. ノード 2 の可用性グループ スレーブは、マスターに昇格されます。 
+4. ノード 1 の可用性グループ マスターは降格されます。
+5. ノード 2 の可用性グループは、マスターに昇格されます。 
 
 IP アドレスが事前フェールオーバー セカンダリのノードを一時的に指さないようにするには、順序制約を追加します。 順序制約を追加するには、1 つのノードで次のコマンドを実行します。 
 

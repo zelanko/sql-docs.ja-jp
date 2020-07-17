@@ -1,5 +1,6 @@
 ---
 title: ネイティブ コンパイル アドバイザー | Microsoft Docs
+description: ネイティブ コンパイル アドバイザーを使用して、インメモリ OLTP への移行の一部として、解釈されたストアド プロシージャをネイティブ コンパイルに移行する方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722452"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トランザクション パフォーマンス分析レポートでは、データベース内にある解釈されたストアド プロシージャをネイティブ コンパイルを使用するように移植した場合に、どのストアド プロシージャで効果が得られるかを知ることができます。 詳細については、「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」を参照してください。  
   

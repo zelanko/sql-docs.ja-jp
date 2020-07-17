@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン サービスのスタートアップ オプション | Microsoft Docs
+description: SQL Server データベース エンジンのスタートアップ オプションについて説明します。 これらを使用するためのヒントと、各オプションの目的について説明します。
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772622"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  
   

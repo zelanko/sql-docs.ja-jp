@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73032997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725207"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
 
@@ -76,11 +76,11 @@ ms.locfileid: "73032997"
 
 ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
-3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は _\<computer_name\>_ **\\** _\<instance_name\>_ となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
+3.  **[サーバー名]** ボックスに、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、**ACCTG_SRVR\SQLEXPRESS** のように、 _\<computer_name\>_ **\\** _\<instance_name\>_ の形式でサーバー名を指定します。 次のスクリーン ショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  **[接続]** をクリックします。
+4.  **[Connect]** をクリックします。
 
 > [!NOTE]
 > このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用し、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。 
@@ -109,5 +109,5 @@ ms.locfileid: "73032997"
 > 上記は開始するための基本的な情報です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では優れたセキュリティ環境が提供されます。セキュリティはデータベース操作において明らかに重要な要素です。  
 
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: 別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[レッスン 2:別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

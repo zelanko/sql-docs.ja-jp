@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759102"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure に格納されたバックアップからの復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、Azure Blob Storage サービスに格納されたバックアップを使用してデータベースを復元するときの注意事項について説明します。 このトピックは、SQL Server Backup to URL または [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用して作成されたバックアップが対象です。  
   
  Azure Blob Storage サービスに格納されたバックアップを復元する計画がある場合は、このトピックを確認した後、データベースの復元方法 (オンプレミス バックアップでも Azure バックアップでも同じ) の手順が説明されているトピックを確認することをお勧めします。  
@@ -42,7 +42,7 @@ ms.locfileid: "82922263"
   
  復元時間を短縮するには、圧縮されたバックアップを使用することをお勧めします。  バックアップ サイズが 25 GB を超える場合は、 [AzCopy ユーティリティ](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) を使用してローカル ドライブにダウンロードしてから復元を実行します。 バックアップに関するその他のベスト プラクティスと推奨事項については、「 [SQL Server Backup to URL のベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)」を参照してください。  
   
- 復元を実行するときに詳細ログを生成するために、トレース フラグ 3051 を有効にすることもできます。 このログ ファイルはログ ディレクトリに配置され、次の形式を使用して名前が付けられます: BackupToUrl-\<インスタンス名>-\<DB 名>-action-\<PID>.log。 このログ ファイルには、問題の診断に役に立つタイミングも含め、Azure Storage への各ラウンド トリップが記録されます。  
+ 復元を実行するときに詳細ログを生成するために、トレース フラグ 3051 を有効にすることもできます。 このログ ファイルはログ ディレクトリに配置され、次の形式を使用して名前が付けられます: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 このログ ファイルには、問題の診断に役に立つタイミングも含め、Azure Storage への各ラウンド トリップが記録されます。  
   
 ### <a name="topics-on-performing-restore-operations"></a>復元操作の実行に関するトピック  
   

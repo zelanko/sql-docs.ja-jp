@@ -12,15 +12,15 @@ ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12c4552ac8a78c5347f700144afa316d64774602
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 234c70cb0724bd313f7e98b92f8d043ff1e2bf5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642330"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Exchange Spill** イベント クラスは、並列クエリ プランの通信バッファーが一時的に **tempdb** データベースに書き込まれたことを示します。 これは、クエリ プランに複数の範囲スキャンがある場合に限り、まれに発生します。  
   
  通常、そのような範囲スキャンを生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリには、多くの BETWEEN 操作が含まれています。各 BETWEEN 操作では、テーブルまたはインデックスから行の範囲を選択します。 または、(T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120) などの式を使用して、複数の範囲を取得できます。 さらに、クエリ プランでは、このような範囲を順番にスキャンする必要があります。これは T.a に ORDER BY 句があり、プラン内の反復子で並べ替え順に組を使用することが必要なためです。  
@@ -60,8 +60,8 @@ ms.locfileid: "68089359"
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|**LoginName**|**nvarchar**|ユーザーのログイン名 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは *\<DOMAIN>\\<username\>* という形式の Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **master** データベースの **syslogins** テーブルにあります。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginName**|**nvarchar**|ユーザーのログイン名 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または *\<DOMAIN>\\<username\>* という形式の Windows ログイン資格情報)。|11|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **master** データベースの **syslogins** テーブルにあります。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**Exchange Spill**|**int**|システムによって割り当てられたオブジェクト ID。 Showplan のノード ID と一致します。|22|はい|  

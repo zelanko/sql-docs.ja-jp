@@ -1,5 +1,6 @@
 ---
 title: RPC:Completed イベント クラス | Microsoft Docs
+description: RPC:Completed イベント クラスは、SQL Server でリモート プロシージャ コールが完了したことを示します。
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92083a5869e41e325c1c395ef23ab6cfac628f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727393"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed イベント クラスのデータ列  
@@ -28,7 +29,7 @@ ms.locfileid: "67908321"
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|BinaryData|**画像**|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
+|BinaryData|**image**|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
 |CPU|**int**|イベントによって使用された CPU 時間。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]からは、マイクロ秒単位。 それより前のバージョンではミリ秒単位。|18|はい|  
 |DatabaseID|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
@@ -42,7 +43,7 @@ ms.locfileid: "67908321"
 |HostName|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|Windows のユーザー名。|6|はい|  
 |ObjectName|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  

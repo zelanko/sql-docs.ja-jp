@@ -1,6 +1,6 @@
 ---
 title: データベースの可用性にミラーリング監視サーバーが与える影響
-description: データベース ミラーリングがクォーラムとデータベースの可用性に与える影響について説明します。
+description: データベース ミラーリングがクォーラムとデータベースの可用性に与える影響について説明します。 クォーラムにより、データベースが一度に 1 つのパートナーだけによって所有されます。
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c28e70d2f66dffc00ff2ac9138f97dc8d0e08991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789664"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、 *クォーラム* が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  
   
  特定のサーバー インスタンスがミラーリング セッションから切断されると、そのインスタンスはクォーラムを失います。 接続されているサーバー インスタンスがない場合、セッションはクォーラムを失い、データベースは使用できなくなります。 次の 3 種類のクォーラムが考えられます。  

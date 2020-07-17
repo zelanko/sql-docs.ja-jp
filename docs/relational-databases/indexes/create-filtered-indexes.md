@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753110"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、フィルター選択されたインデックスを作成する方法について説明します。 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上するだけでなく、テーブル全体のインデックスと比較してインデックスのメンテナンス コストおよびストレージ コストを削減できます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72908105"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してフィルター選択されたインデックスを作成するには:**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72908105"
   
     -   一意ではないインデックス。 フィルター選択されたインデックスは一意ではないインデックスにすることができますが、インデックス付きビューは一意である必要があります。  
   
--   フィルター選択されたインデックスは 1 つのテーブルで定義され、単純な比較演算子のみをサポートします。 複数のテーブルを参照するフィルター式や複雑なロジックを含むフィルター式が必要な場合は、ビューを作成する必要があります。  
+-   フィルター選択されたインデックスは 1 つのテーブルで定義され、単純な[比較演算子](../../t-sql/language-elements/comparison-operators-transact-sql.md)のみをサポートします。 複数のテーブルを参照するフィルター式や複雑なロジックを含むフィルター式が必要な場合は、ビューを作成する必要があります。 フィルター選択されたインデックスでは `LIKE` 演算子はサポートされません。 
   
 -   フィルター選択されたインデックスの式がクエリ述語と同じであり、フィルター選択されたインデックスの式の列がクエリ結果と共に返されない場合、その式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要はありません。  
   

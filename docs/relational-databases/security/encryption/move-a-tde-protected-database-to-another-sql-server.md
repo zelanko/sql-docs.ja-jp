@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ea15d89efb653bff92817ffc97300ec03958482
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899053"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、Transparent Data Encryption (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移動する方法について説明します。 TDE は、データとログ ファイルの I/O 暗号化と複合化をリアルタイムで実行します。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、サーバーの **master** データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。   
    
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
@@ -165,14 +165,14 @@ ms.locfileid: "75558513"
      既定では、デタッチ操作を行っても、データベースに関連付けられたフルテキスト カタログが保持されます。 これらのカタログを削除するには、 **[フルテキスト カタログの保持]** チェック ボックスをオフにします。 このオプションは、データベースを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]からアップグレードする場合にのみ表示されます。  
   
      **状態**  
-     **[準備完了]** または **[準備ができていません]** のどちらかの状態を表示します。  
+     次のどちらかの状態が表示されます: **[準備完了]** または **[準備ができていません]** 。  
   
      **メッセージ**  
      **[メッセージ]** 列に、次のようにデータベースに関する情報が表示される場合があります。  
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースにアクティブな接続が 1 つ以上ある場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に _[\<number\_of\_active\_connections\>_ **のアクティブな接続]** (例: **[1 のアクティブな接続]** ) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースに 1 つ以上のアクティブな接続がある場合、 **[状態]** は **[準備ができていません]** となり、 **[メッセージ]** 列には [ _\<number\_of\_active\_connections\>_ **アクティブな接続**] が表示されます。例: **[1 のアクティブな接続]** 。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "75558513"
      **[アタッチするデータベース]**  
      選択されたデータベースに関する情報を表示します。  
   
-     \<空白の列ヘッダー>  
+     \<no column header>  
      アタッチ操作の状態を示すアイコンが表示されます。 表示されるアイコンの種類は、下の **[状態]** の説明に示します。  
   
      **[MDF ファイルの場所]**  
@@ -209,7 +209,7 @@ ms.locfileid: "75558513"
      **[次の名前でアタッチ]**  
      データベースを別の名前でアタッチする場合に、その名前を指定します。  
   
-     **[所有者]**  
+     **所有者**  
      データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
   
      **状態**  

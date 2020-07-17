@@ -1,5 +1,6 @@
 ---
 title: '[履歴クリーンアップ タスク] (メンテナンス プラン) | Microsoft Docs'
+description: 履歴クリーンアップ タスクを使用して、msdb データベースからバックアップ/復元の履歴、SQL Server エージェントのジョブ履歴、およびメンテナンス プランの履歴を破棄する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667052"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] (メンテナンス プラン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[履歴クリーンアップ タスク]** ダイアログ ボックスを使用すると、msdb データベースのテーブルに含まれる古い履歴情報を破棄できます。 このタスクでは、バックアップと復元の履歴、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴、メンテナンス プランの履歴の削除がサポートされます。  
   
  このステートメントでは、 **sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
- **Connection**  
+## <a name="ui-element-list"></a>UI 要素の一覧  
+ **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -52,7 +53,7 @@ ms.locfileid: "68115791"
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  

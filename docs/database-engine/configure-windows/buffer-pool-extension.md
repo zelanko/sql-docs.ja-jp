@@ -1,5 +1,6 @@
 ---
 title: バッファー プール拡張 | Microsoft Docs
+description: バッファー プール拡張機能や、それに伴う I/O スループットの向上などの利点を説明します。 この機能を有効にするときに従うべきベストプラクティスについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76918350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759188"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>バッファー プール拡張の利点  
@@ -26,7 +27,7 @@ ms.locfileid: "76918350"
   
  データ ページとインデックス ページがディスクからバッファー プールに読み込まれ、変更されたページ (ダーティ ページとも呼ばれます) がディスクに書き戻されます。 サーバー チェックポイントおよびデータベース チェックポイントでメモリ不足が発生すると、バッファー キャッシュ内のホットな (アクティブな) ダーティ ページがキャッシュから削除され、機械式ディスクに書き込まれた後、再度キャッシュに読み込まれます。 通常、これらの I/O 操作は、4 ～ 16 KB という小規模なデータのランダム読み取り/書き込みです。 小規模なランダム I/O パターンの場合、頻繁なシークが発生して機械式ディスクのアームが動き続けるため、I/O 待機時間が長くなり、システムの総 I/O スループットが低下します。  
   
- このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重要な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の拡大に伴い運用コストが増加します。  
+ このような I/O ボトルネックを解決するための一般的な方法は、DRAM を増設するか、または高パフォーマンス SAS スピンドルを追加する方法です。 これらのオプションは効果的ですが、重大な欠点があります。DRAM は、データ ストレージ ドライブよりも高価です。スピンドル数を追加すると、ハードウェアの購入経費が増えるだけでなく、電力消費量の増加およびコンポーネントの故障の可能性の増加に伴い運用コストが増加します。  
   
  バッファー プール拡張機能は、不揮発性ストレージ (通常は SSD) でバッファー プール キャッシュを拡張します。 この拡張により、より大きなデータベースのワーキング セットをバッファー プールに格納でき、その結果、RAM と SSD の間の I/O のページングが強制的に実行されます。 これによって、小規模なランダム I/O の処理が実質的に機械式ディスクから SSD に移行されます。 SSD は待機時間が短くランダム I/O のパフォーマンスに優れているため、バッファー プール拡張によって I/O スループットが大幅に向上します。  
   

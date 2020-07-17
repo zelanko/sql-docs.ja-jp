@@ -18,16 +18,17 @@ helpviewer_keywords:
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d6045c17028c16dfb2b90de15042dd18e3a91a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e6e721948c2e875a5f9d6e100cdb29f928b4042
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655263"
 ---
 # <a name="view-the-windows-application-log-windows-10"></a>Windows アプリケーション ログの表示 (Windows 10)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Windows アプリケーション ログを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が構成されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションで新しいイベントがそのログに書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+  Windows アプリケーション ログを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が構成されている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各セッションで新しいイベントがそのログに書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを開始するたびに新しいアプリケーション ログが作成されることはありません。  
   
 ## <a name="view-the-windows-application-log"></a>Windows アプリケーション ログを表示する  
   
@@ -35,7 +36,7 @@ ms.locfileid: "67986618"
   
 2. **イベント ビューアー**で、 **[アプリケーションとサービス ログ]** を開きます。
 
-3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントは、**[ソース]** 列に **MSSQLSERVER** (名前付きインスタンスの場合は **MSSQL$**_<instance_name>_) と表示されます。 また、SQL Server エージェントのイベントは SQLSERVERAGENT と表示されます ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのイベントは **SQLAgent$** \<*instance_name*> と表示されます)。 Microsoft Search サービスのイベントは " **Microsoft Search**" と表示されます。  
+3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントは、 **[ソース]** 列に **MSSQLSERVER** (名前付きインスタンスの場合は **MSSQL$** _<instance_name>_ ) と表示されます。 SQL Server エージェントのイベントは SQLSERVERAGENT エントリで識別されます ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのイベントは **SQLAgent$** \<*instance_name*> で識別されます)。 Microsoft Search サービスのイベントは " **Microsoft Search**" と表示されます。  
   
 4. 別のコンピューターのログを表示するには、 **[イベント ビューアー (ローカル)]** を右クリックします。 **[別のコンピューターへ接続]** を選択し、フィールドに入力して **[コンピューターの選択]** ダイアログ ボックスの設定を完了します。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "67986618"
   
 6. イベントについての詳細情報を表示するには、イベントをダブルクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
   

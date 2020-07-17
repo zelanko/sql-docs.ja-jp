@@ -1,5 +1,6 @@
 ---
 title: ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理 | Microsoft Docs
+description: ユーティリティ エクスプローラーを使用して SQL Server インスタンスを管理するさまざまな方法について説明します。たとえば、ポリシー定義の調整、CPU や記憶域ボリュームの使用率の表示などです。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c34b8239b93d1b8fb9c814ab5b5ac17482f968f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785628"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ユーティリティ エクスプローラーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のコンポーネントで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のすべてのオブジェクトのツリー ビューを表示します。 ユーティリティ エクスプローラーのコンテンツ ウィンドウには、SQL Server のマネージド インスタンスの正常性状態について、いくつかの方法で概要データと詳細データを表示できます。 ユーティリティ エクスプローラーには、ポリシー定義の表示と管理を行うためのユーザー インターフェイスも用意されています。 ユーティリティ エクスプローラーの機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ内のオブジェクトによって多少異なりますが、一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティによって管理されるオブジェクト、データ、およびポリシーが含まれます。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
 ## <a name="create-utility-control-point"></a>ユーティリティ コントロール ポイントの作成  
@@ -38,7 +39,7 @@ ms.locfileid: "68115319"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server ユーティリティのナビゲーション ウィンドウ  
  ユーティリティ エクスプローラーのナビゲーション ウィンドウでは、ユーティリティ コントロール ポイント (UCP) でグループ化された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ オブジェクトのツリー ビューが表示されます。 フォルダーを展開するには、プラス記号 (+) をクリックするか、ユーティリティ エクスプローラーのナビゲーション ウィンドウ内の UCP 名をダブルクリックします。 フォルダーまたはオブジェクトを右クリックすると、一般的なタスクを実行するためのメニューが表示されます。 ツリー ビューのノードは次のとおりです。  
   
--   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name" (ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
+-   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name"(ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
   
      UCP ノードを右クリックして、ダッシュボードのデータを更新します。  
   
@@ -61,9 +62,9 @@ ms.locfileid: "68115319"
  1 つのノードに多数のオブジェクトが含まれていると、対象のオブジェクトを見つけるのが難しくなります。 そのような場合は、ユーティリティ エクスプローラーのフィルター機能を使用して、一覧のサイズを小さく絞り込みます。 たとえば、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスや、ファイル領域の使用率の低いコンピューターだけを見つけるとします。 フィルター処理を行うフォルダーを右クリックし、[フィルター] ボタンをクリックして、 **[フィルターの設定]** をクリックして [ユーティリティ エクスプローラーのフィルターの設定] ダイアログ ボックスを開きます。 名前、コンピューターの CPU、インスタンスの CPU、ファイル領域、ボリューム領域、ポリシーのオーバーライド設定、または最終報告日時で、一覧をフィルター処理できます。 **[演算子]** 列および **[値]** 列のボックスの一覧には、追加のフィルター演算子が表示されます。  
   
 ### <a name="starting-powershell"></a>PowerShell の開始  
- PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[Powershell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell サポートが有効になった Powershell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の Powershell 環境で Powershell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
+ PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
   
- PowerShell には F1 ヘルプがありませんが、 **Get-Help** コマンドレットで PowerShell の使用に関する情報を参照することができます。 詳細については、「 [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+PowerShell には F1 ヘルプがありませんが、 **Get-Help** コマンドレットで PowerShell の使用に関する情報を参照することができます。 詳細については、「 [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

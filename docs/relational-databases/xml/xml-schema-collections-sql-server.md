@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクション (SQL Server) | Microsoft Docs
+description: XML スキーマ コレクションにインポートされた XML スキーマを格納して、XML インスタンスを検証し、SQL Server データベースに格納されているとおりに XML データを入力する方法について説明します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729772"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   「[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)」で説明したように、SQL Server には、**xml** データ型を使った XML データのネイティブ ストレージが用意されています。 必要に応じて、XML スキーマ コレクションを使って **xml** 型の変数や列と XSD スキーマを関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
   
 -   XML インスタンスの検証  
@@ -38,7 +39,7 @@ ms.locfileid: "80664905"
   
  XML スキーマ コレクションは、データベース内のテーブルに似たメタデータ エンティティです。 XML スキーマ コレクションは作成、変更、削除できます。 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) ステートメントで指定されたスキーマが、新しく作成される XML スキーマ コレクション オブジェクトに自動的にインポートされます。 [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) ステートメントを使用して、追加のスキーマやスキーマ コンポーネントをデータベース内の既存のコレクション オブジェクトにインポートできます。  
   
- 「 [型指定された XML と型指定されていない XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」で説明したように、スキーマが関連付けられる列や変数に格納されている XML を、 **型指定された** XML と呼びます。これは、インスタンス データに必要なデータ型情報をスキーマが提供しているためです。 SQL Server ではこの型情報を使用して、データ ストレージを最適化します。  
+ 「[型指定された XML と型指定されていない XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」で説明したように、スキーマが関連付けられる列や変数に格納されている XML を、**型指定された** XML と呼びます。これは、インスタンス データに必要なデータ型情報をスキーマが提供しているためです。 SQL Server ではこの型情報を使用して、データ ストレージを最適化します。  
   
  クエリ処理エンジンでも、型の確認、クエリの最適化、およびデータの変更にスキーマが使用されます。  
   
@@ -173,7 +174,7 @@ ms.locfileid: "80664905"
   
  このことを次の例で説明します。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例 : XML スキーマ コレクションでの XML 名前空間の列挙  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例:XML スキーマ コレクションでの XML 名前空間の列挙  
  XML スキーマ コレクション "myCollection" に次のクエリを実行します。  
   
 ```sql
@@ -183,7 +184,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例 : XML スキーマ コレクションのコンテンツの列挙  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例:XML スキーマ コレクションのコンテンツの列挙  
  次のステートメントは、リレーショナル スキーマ dbo 内の XML スキーマ コレクション "myCollection" のコンテンツを列挙します。  
   
 ```sql
@@ -192,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  **XML_SCHEMA_NAMESPACE()** の 3 番目の引数として対象になる名前空間を指定することで、コレクション内の個別の XML スキーマを **xml**データ型のインスタンスとして取得できます。 次の例を参照してください。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例 : XML スキーマ コレクションからの指定したスキーマの出力  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例:XML スキーマ コレクションからの指定したスキーマの出力  
  次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、"_架空の_" ターゲット名前空間 https/\/www.microsoft.com/was-books で XML スキーマが出力されます。  
   
 ```sql

@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルのストレージの構成 | Microsoft Docs
+description: SQL Server で、メモリ最適化テーブルのストレージ容量と 1 秒あたりの入出力操作 (IOPS) を構成する方法について説明します。
 ms.custom: ''
 ms.date: 1/15/2020
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bff120f8fc20b9f37b441dbb1b9f34833822dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76125008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723328"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
   
 ## <a name="storage-capacity"></a>ストレージの容量  

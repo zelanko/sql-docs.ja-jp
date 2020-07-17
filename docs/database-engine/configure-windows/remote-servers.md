@@ -1,5 +1,6 @@
 ---
 title: リモート サーバー | Microsoft Docs
+description: SQL Server でリンク サーバーに置き換えられたリモート サーバーについて説明します。 機能、構成、セキュリティに関する情報を表示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651577"
 ---
 # <a name="remote-servers"></a>リモート サーバー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
  リモート サーバーを構成することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているクライアントは、新たに接続を確立することなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスでストアド プロシージャを実行できます。 クライアントが接続するサーバーは、クライアントからの要求を受け、この要求をクライアントの代わりにリモート サーバーに送信します。 リモート サーバーが、要求を処理し、要求を行ったサーバーに結果を返します。 結果を受け取ったサーバーは、結果をクライアントに渡します。 リモート サーバーを構成する場合は、セキュリティをどのように確立するかを検討する必要もあります。  

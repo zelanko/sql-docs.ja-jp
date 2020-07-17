@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759126"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) データベースの **suspect_pages** テーブルで特定できます。  
   
@@ -136,9 +136,9 @@ ms.locfileid: "82823679"
     |ヘッダー|値|  
     |------------|------------|  
     |**名前**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または **[\<空白>]** (トランザクション ログ用)。|  
+    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または **\<blank>** (トランザクション ログ用)。|  
     |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
-    |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
+    |**サーバー**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**Position**|ボリューム内でのバックアップ セットの位置。|  
     |**最初の LSN**|バックアップ セット内の最初のトランザクションのログ シーケンス番号 (LSN)。 ファイル バックアップの場合は空白。|  

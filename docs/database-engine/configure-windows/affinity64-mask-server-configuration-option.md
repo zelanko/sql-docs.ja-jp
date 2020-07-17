@@ -1,5 +1,6 @@
 ---
 title: affinity64 mask サーバー構成オプション | Microsoft Docs
+description: affinity64 mask オプションについて説明します。 どのような場合に、プロセッサを特定のスレッドにバインドするために SQL Server でこれを使用すべきかについて説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - affinity64 mask option
 - binding processors [SQL Server]
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2888394a73e7ce56e55c867adb21a54d6be81cc3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 452075955c30d7e49eb317f40bf377a6e894af29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631403"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   affinity64 mask を使用すると、affinity mask オプションと同様に、プロセッサが特定のスレッドにバインドされます。 affinity mask を使用して最初の 32 プロセッサをバインドし、affinity64 mask を使用してコンピューター上の残りのプロセッサをバインドします。 このオプションは 64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのみ表示されます。  
   

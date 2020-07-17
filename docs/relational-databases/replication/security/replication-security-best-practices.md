@@ -1,5 +1,6 @@
 ---
 title: レプリケーション セキュリティの推奨事項 | Microsoft Docs
+description: さまざまな状況で SQL Server でのレプリケーション接続をセキュリティで保護するための最適な方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c5e66e7ff2b36cd63acb4d05b6503f0bbc33a4a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f2b45cde8e2ab16e97e17a72a51cd147203c2e51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893783"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   レプリケーションでは、単一ドメインのイントラネットから、信頼できないドメイン間およびインターネット経由でデータにアクセスするアプリケーションに及ぶ分散環境でデータを移動します。 これらのさまざまな状況下でレプリケーション接続のセキュリティを確保するためには、推奨事項を理解することが重要です。  
   
  次の情報は、すべての環境のレプリケーションに関連します。  

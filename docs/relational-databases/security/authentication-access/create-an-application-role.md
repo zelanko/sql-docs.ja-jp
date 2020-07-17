@@ -1,5 +1,6 @@
 ---
 title: アプリケーション ロールの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server でアプリケーション ロールを作成し、アプリケーションを使用した場合を除いてデータベースへのアクセスを制限します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628119"
 ---
 # <a name="create-an-application-role"></a>アプリケーション ロールの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でアプリケーション ロールを作成する方法について説明します。 アプリケーション ロールは、特定のアプリケーションを使用する場合を除き、データベースへのユーザー アクセスを制限します。 アプリケーション ロールにはユーザーが含まれないため、 **[アプリケーション ロール]** が選択されている場合には、 **[ロール メンバー]** の一覧は表示されません。  
   
 > [!IMPORTANT]  
@@ -33,7 +34,7 @@ ms.locfileid: "72903150"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **アプリケーション ロールを作成する方法:**  
   
@@ -71,7 +72,7 @@ ms.locfileid: "72903150"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>追加オプション  
- **[アプリケーション ロール - 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
+ **[アプリケーション ロール - 新規 ]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています: **[セキュリティ保護可能なリソース]** 、 **[拡張プロパティ]** 。  
   
 -   **[セキュリティ保護可能なリソース]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

@@ -1,5 +1,6 @@
 ---
 title: セキュリティ構成 | Microsoft Docs
+description: SQL Server インストールの機能の既定値を変更し、SQL Server の実行中のインスタンスの機能を選択的に有効または無効にする方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736990"
 ---
 # <a name="surface-area-configuration"></a>セキュリティ構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストール時の既定の構成では、多くの機能が有効化されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 悪意あるユーザーの攻撃を受ける可能性がある機能を最小限にするために、主要なサービスおよび機能のみが選択的にインストールされ、起動されます。 システム管理者はインストール時のこれらの既定を変更することができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス実行機能の有効化と無効化を選択的に行うこともできます。 また、別のコンピューターから接続する場合、一部のコンポーネントはプロトコルが構成されるまで使用できないことがあります。  
   
 > [!NOTE]  

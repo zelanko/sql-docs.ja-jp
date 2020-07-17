@@ -1,6 +1,6 @@
 ---
 title: Reporting Services と可用性グループ
-description: SQL Server Reporting Services (SSRS) と Always On 可用性グループ (SQL Server) の構成について説明します。
+description: SQL Server で Reporting Services を構成して、Always On 可用性グループと組み合わせて利用する方法について説明します。 サポートされる機能は、シナリオによって異なります。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243620"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893099"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を組み合わせて利用する方法について説明します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用するデータベースのシナリオとしては、レポート データ ソース、レポート サーバー データベース、レポート デザインの 3 つが考えられます。 3 つのシナリオでは、それぞれサポートされる機能と必要な構成が異なります。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75243620"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover**がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   
-> **エラー メッセージ:** "キーワードはサポートされていません: 'applicationintent'"  
+> **エラー メッセージ:** "キーワードはサポートされていません:'applicationintent'"  
   
  このメッセージは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続文字列に [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のプロパティが含まれているとき、そのプロパティをサーバー側が認識できなかった場合に生成されます。 レポート サーバー側でリモート エラーが有効にされている場合、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のユーザー インターフェイスで [接続テスト] ボタンをクリックしたときや、レポートをプレビューしたときにこのエラー メッセージが表示されます。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75243620"
   
  接続文字列の編集方法は、レポートの作成方法とパブリッシュ方法によって異なります。  
   
--   **ネイティブ モード:** 既にネイティブ モードのレポート サーバーにパブリッシュされたレポートと共有データ ソースには、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] を使用します。  
+-   **ネイティブ モード:** 既にネイティブ モードのレポート サーバーにパブリッシュされたレポートと共有データ ソースには、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] を使用します。  
   
 -   **SharePoint モード:** 既に SharePoint サーバーにパブリッシュされたレポートには、ドキュメント ライブラリ内の SharePoint 構成ページを使用します。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "75243620"
   
 -   **ローカル プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] と [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] では、.Net framework 4.0 が使用され、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Always On 可用性グループの接続文字列プロパティがサポートされます。  
   
--   **リモートまたはサーバー モード プレビュー:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]でレポートをプレビューするか、レポート サーバーに対してレポートをパブリッシュした後、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに .Net Framework 3.5 SP1 Hotfix for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] がインストールされていません。  
+-   **リモートまたはサーバー モード プレビュー:** レポート サーバーにレポートをパブリッシュするか [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] でレポートをプレビューしたときに、次のようなエラーが表示された場合、プレビュー対象となるレポートのレポート サーバーに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用の .Net Framework 3.5 SP1 修正プログラムがインストールされていません。  
   
-> **エラー メッセージ:** "キーワードはサポートされていません: 'applicationintent'"  
+> **エラー メッセージ:** "キーワードはサポートされていません:'applicationintent'"  
   
 ##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> レポート サーバー データベースと可用性グループ  
  Reporting Services と Power BI Report Server は、レポート サーバー データベースへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の使用をサポートしていますが、これには制限があります。 レポート サーバー データベースをレプリカの一部として AG 内に構成することはできますが、フェールオーバーが発生しても、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポート サーバー データベースに対して別のレプリカを自動的には使用しません。 MultiSubnetFailover とレポート サーバー データベースの使用はサポートされていません。  
@@ -139,11 +139,11 @@ ms.locfileid: "75243620"
   
 -   可用性グループを作成し、 *リスナーの DNS 名*を構成します。  
   
--   **プライマリ レプリカ:** レポート サーバー データベースを 1 つの可用性グループにまとめ、そのすべてのレポート サーバー データベースを含んだプライマリ レプリカを作成します。  
+-   **プライマリ レプリカ:** レポート サーバー データベースが 1 つの可用性グループの一部になるように構成し、すべてのレポート サーバー データベースを含んだプライマリ レプリカを作成します。  
   
 -   **セカンダリ レプリカ:** 1 つまたは複数のセカンダリ レプリカを作成します。 プライマリ レプリカからセカンダリ レプリカへとデータベースをコピーする際は、'RESTORE WITH NORECOVERY' を使って、セカンダリ レプリカごとにデータベースを復元するのが一般的です。 セカンダリ レプリカの作成およびデータの同期動作の検証の詳細については、「[Always On セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
--   **レポート サーバーの資格情報:** プライマリ レプリカに対して作成したレポート サーバーの適切な資格情報をセカンダリ レプリカに対して作成する必要があります。 実際の手順は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境で使用する認証の種類 (Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アカウント、Windows ユーザー アカウント、SQL Server 認証) によって異なります。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+-   **レポート サーバーの資格情報:** プライマリに対して作成したセカンダリ レプリカ上に、レポート サーバーの適切な資格情報を作成する必要があります。 実際の手順は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境で使用する認証の種類 (Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アカウント、Windows ユーザー アカウント、SQL Server 認証) によって異なります。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 -   リスナーの DNS 名を使用するようにデータベース接続を更新します。 ネイティブ モードのレポート サーバーの場合、 **構成マネージャーで** [レポート サーバー データベース名] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。 SharePoint モードの場合、 **サービス アプリケーションの** データベース サーバー名 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を変更します。  
   

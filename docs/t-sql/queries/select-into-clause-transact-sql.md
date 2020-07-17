@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007591"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を確認するには、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
@@ -99,7 +99,9 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、`SELECT...INTO` が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- `SELECT...INTO` のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 最小ログ記録を使用する場合は、テーブルを作成してから INSERT ステートメントでそのテーブルにデータを設定するより、`SELECT...INTO` ステートメントを使用する方が効率的である可能性があります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ `SELECT...INTO` のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 最小ログ記録を使用する場合は、テーブルを作成してから INSERT ステートメントでそのテーブルにデータを設定するより、`SELECT...INTO` ステートメントを使用する方が効率的である可能性があります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。
+ 
+`SELECT...INTO` ユーザー定義関数 (UDF) を含むステートメントは、完全なログが記録される操作です。 `SELECT...INTO` ステートメントで使用されているユーザー定義関数でデータ アクセス操作が実行されない場合は、そのユーザー定義関数に SCHEMABINDING 句を指定できます。これにより、ユーザー定義関数の派生 UserDataAccess プロパティが 0 に設定されます。 この変更後は、`SELECT...INTO` ステートメントで最小限のログが記録されます。 `SELECT...INTO` ステートメントで引き続き、このプロパティが 1 に設定されているユーザー定義関数が少なくとも 1 つ参照されている場合は、操作の完全なログが記録されます。
   
 ## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  

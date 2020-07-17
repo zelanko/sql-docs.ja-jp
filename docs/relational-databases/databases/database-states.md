@@ -1,5 +1,6 @@
 ---
 title: データベースの状態 | Microsoft Docs
+description: オンライン、オフライン、または問題ありなど、データベースのさまざまな状態について確認します。 データベースの現在の状態を確認する方法について説明します。
 ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql
@@ -27,15 +28,15 @@ ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1aa8519092b90f34089cd2c31441b51b2b0da014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c75323d843fd260c1e6228d7ae73d382e4f9462
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109687"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002974"
 ---
 # <a name="database-states"></a>データベースの状態
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   データベースは、常に、ある特定の状態にあります。 たとえば、ONLINE、OFFLINE、SUSPECT などです。 データベースの現在の状態を確認するには、 **sys.databases** カタログ ビューで [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列を選択するか、 **DATABASEPROPERTYEX** 関数で [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) プロパティを選択します。  
   
 ## <a name="database-state-definitions"></a>データベースの状態の定義  

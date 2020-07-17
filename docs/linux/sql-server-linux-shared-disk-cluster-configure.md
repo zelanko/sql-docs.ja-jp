@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897274"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server の 2 ノード共有ディスクによるフェールオーバー クラスター インスタンスによって、高可用性のためのサーバーレベルの冗長性が提供されます。 このチュートリアルでは、SQL Server on Linux の 2 ノード フェールオーバー クラスター インスタンスを作成する方法について説明します。 実行する具体的な手順は次のとおりです。
 

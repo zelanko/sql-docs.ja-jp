@@ -1,25 +1,24 @@
 ---
 title: 拡張性 API
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の拡張 API について学習します
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774644"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 拡張 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] では、拡張機能を使用して、オブジェクト エクスプローラーなどの Azure Data Studio の他の部分とやりとりできる API を提供します。 これらの API は、[`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) ファイルから入手できます。以下で説明します。
+Azure Data Studio には、オブジェクト エクスプローラーなど、Azure Data Studio の他の部分とやりとりするために拡張機能で使用できる API が用意されています。 これらの API は、[`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) ファイルから入手できます。以下で説明します。
 
 ## <a name="connection-management"></a>接続の管理
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>提案された API
 
-ダイアログ、ウィザード、ドキュメント タブなどの機能の中で、拡張機能でダイアログにカスタム UI を表示できるように、提案された API を追加しました。 その他のドキュメントについては、[提案された API 型ファイル](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)を参照してください。しかし、これらの API はいつでも変更される可能性があることに注意してください。 これらの API の一部を使用する方法の例は、["sqlservices" のサンプル拡張機能](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)で見つけることができます。
+ダイアログ、ウィザード、ドキュメント タブなどの機能の中で、拡張機能でダイアログにカスタム UI を表示できるように、提案された API を追加しました。 その他のドキュメントについては、[提案された API 型ファイル](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts)を参照してください。しかし、これらの API はいつでも変更される可能性があることに注意してください。 これらの API の一部を使用する方法の例は、["sqlservices" のサンプル拡張機能](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices)で見つけることができます。
 
 

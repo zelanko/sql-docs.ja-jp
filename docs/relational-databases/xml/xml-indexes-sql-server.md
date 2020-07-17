@@ -1,5 +1,6 @@
 ---
 title: XML インデックス (SQL Server) | Microsoft Docs
+description: XML データ型の列に XML インデックスを作成して、クエリのパフォーマンスを向上させる方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68096914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729783"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** データ型の列には xml インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
   
 -   ワークロードで XML 列へのクエリが頻繁に行われる場合。 データ変更時の XML インデックスのメンテナンス コストを考慮する必要があります。  

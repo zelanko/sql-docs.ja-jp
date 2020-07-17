@@ -1,5 +1,6 @@
 ---
 title: Common Criteria Compliance Enabled 構成 | Microsoft Docs
+description: SQL Server の [情報セキュリティ国際評価基準 (Common Criteria) への準拠] オプションで有効になる評価基準について説明します。また、情報セキュリティ国際評価基準の評価保証レベル 4+ に準拠する方法について説明します。
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47c7e7dc3b557085bb1f5a06e86de747579df007
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2a33ce838ce32c6a7d2b883c5b256f668c213745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659816"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria Compliance Enabled サーバー構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [情報セキュリティ国際評価基準 (Common Criteria) への準拠] オプションを使用すると、[情報技術セキュリティ評価のためのコモンクライテリア](https://www.commoncriteriaportal.org/)で必要とされる次の要素を有効にできます。  
   

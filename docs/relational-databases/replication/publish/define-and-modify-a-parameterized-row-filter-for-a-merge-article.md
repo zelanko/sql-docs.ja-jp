@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64e7dc7e271b50b5dc23b97be81b420df2176fdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882076"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>マージ アーティクルのパラメーター化された行フィルターの定義および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パラメーター化された行フィルターを定義および変更する方法について説明します。  
   
  テーブル アーティクルを作成する際には、パラメーター化された行フィルターを使用できます。 このフィルターでは [WHERE](../../../t-sql/queries/where-transact-sql.md) 句を使用して、パブリッシュする適切なデータを選択します。 静的行フィルターのようにこの句でリテラル値を指定するのではなく、システム関数[SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) および [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) のいずれかまたは両方を指定します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
@@ -59,7 +59,7 @@ ms.locfileid: "75321219"
   
 #### <a name="to-define-a-parameterized-row-filter"></a>パラメーター化された行フィルターを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[追加]** をクリックし、次に **[フィルターの追加]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[追加]** をクリックし、次に **[フィルターの追加]** をクリックします。  
   
 2.  **[フィルターの追加]** ダイアログ ボックスで、ドロップダウン リスト ボックスからフィルター選択するテーブルを選択します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75321219"
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>パラメーター化された行フィルターを変更するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[編集]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[編集]** をクリックします。  
   
 2.  **[フィルターの編集]** ダイアログ ボックスで、フィルターを変更します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321219"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>パラメーター化された行フィルターを削除するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パラメーター化された行フィルターは、レプリケーション ストアド プロシージャを使用してプログラムから作成し、変更できます。  

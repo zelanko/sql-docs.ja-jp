@@ -1,5 +1,6 @@
 ---
 title: SysPrep を使用して SQL Server をインストールする | Microsoft Docs
+description: この記事では、SQL Server インストールで Sysprep を使用して、イメージを準備し、完了する方法を説明します。
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2984f165c686226337af7edfb94e4c4216eb5eab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990952"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899660"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep を使用して SQL Server をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep に関連するセットアップ操作には、インストール センターからアクセスできます。 **[インストール センター]** の **[詳細設定]** ページには、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** と **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の準備済みスタンドアロン インスタンスのイメージの完了]** の 2 つのオプションがあります。 [準備](#prepare)のセクションと[完了](#complete)のセクションで、インストール プロセスについて詳しく説明します。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。 
   
 コマンド プロンプトまたは構成ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの準備および完了を行うこともできます。 詳細については、次を参照してください。  
   
@@ -83,7 +84,7 @@ ms.locfileid: "67990952"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。 
   
-2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
+2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、 **[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
   
 3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
@@ -225,7 +226,7 @@ ms.locfileid: "67990952"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。 
   
-2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスに機能を追加するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
+2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスに機能を追加するには、 **[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
   
 3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   

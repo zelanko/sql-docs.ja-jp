@@ -1,6 +1,6 @@
 ---
 title: '可用性グループ ウィザード: 可用性グループ オプションの指定'
-ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+description: SQL Server Management Studio の可用性グループ ウィザードの [可用性グループ名の指定] ページにあるオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822578"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883087"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性グループの [可用性グループ オプションの指定] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **[可用性グループ名の指定]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の両方です。  
   
 ##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> 可用性グループ オプションの指定  

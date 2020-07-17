@@ -1,23 +1,22 @@
 ---
 title: Transact-SQL エディターを使用し、データベース オブジェクトを作成する
-titleSuffix: Azure Data Studio
 description: このチュートリアルでは、T-SQL の操作を簡単にする Azure Data Studio の主な機能について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726745"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>チュートリアル:Transact-SQL エディターを使用してデータベース オブジェクトを作成する - Azure Data Studio
 
 クエリ、ストアド プロシージャ、スクリプトなどの作成と実行は、データベース プロフェッショナルの中心的な仕事です。 このチュートリアルでは、データベース オブジェクトを作成するための T-SQL の主な機能について説明します。
 
@@ -60,7 +59,7 @@ ms.locfileid: "74957036"
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL スニペットを使用し、ストアド プロシージャを作成する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、ステートメントを簡単に作成するための T-SQL スニペットがたくさん組み込まれています。
+Azure Data Studio には、ステートメントを簡単に作成するための組み込みの T-SQL スニペットが多数用意されています。
 
 
 1. **Ctrl + N** を押し、新しいクエリ エディターを開きます。
@@ -114,7 +113,7 @@ ms.locfileid: "74957036"
 
 ## <a name="use-peek-definition"></a>[定義をここに表示] を使用する 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、[定義をここに表示] 機能を使用し、オブジェクトの定義を表示できます。 このセクションでは、2 つ目のストアド プロシージャを作成します。[定義をここに表示] を使用してテーブルに入っている列を表示し、ストアド プロシージャの本文を簡単に作成します。
+Azure Data Studio では、[定義をここに表示] 機能を使用して、オブジェクトの定義を表示できます。 このセクションでは、2 つ目のストアド プロシージャを作成します。[定義をここに表示] を使用してテーブルに入っている列を表示し、ストアド プロシージャの本文を簡単に作成します。
 
 1. **Ctrl + N** を押し、新しいエディターを開きます。 
 

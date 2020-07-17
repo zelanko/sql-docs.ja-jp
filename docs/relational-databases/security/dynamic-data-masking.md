@@ -1,5 +1,6 @@
 ---
 title: 動的なデータ マスキング | Microsoft Docs
+description: 特権のないユーザーに対して機密データをマスクすることでその公開を制限する動的データ マスキングについて説明します。 これにより、SQL Server におけるセキュリティが大幅に簡素化できます。
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997713"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005598"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![動的データ マスク](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -40,12 +41,12 @@ ms.locfileid: "67997713"
 ## <a name="defining-a-dynamic-data-mask"></a>動的データ マスクを定義する
  マスク ルールは、列のデータを難読化するために、テーブル内の列で定義することがあります。 4 種類のマスクを利用できます。  
   
-|Function|説明|例|  
+|機能|説明|例|  
 |--------------|-----------------|--------------|  
 |Default|指定のフィールドのデータ型に応じたフル マスク。<br /><br /> 文字列データ型 (**char**、 **nchar**、  **varchar**、 **nvarchar**、 **text**、 **ntext**) のフィールドのサイズが 4 文字未満の場合は、XXXX またはそれ未満の数の X を使用します。  <br /><br /> 数値データ型 (**bigint**、 **bit**、 **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**) の場合は値 0 を使用します。<br /><br /> 日付/時刻のデータ型 (**date**、 **datetime2**、 **datetime**、 **datetimeoffset**、 **smalldatetime**、 **time**) の場合は、01.01.1900 00:00:00.0000000 を使用します。<br /><br />バイナリ データ型 (**binary**、 **varbinary**、 **image**) の場合は、ASCII 値 0 のシングル バイトを使用します。|列定義の構文例: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|メール アドレスの最初の 1 文字と定数サフィックスの ".com" をメール アドレスのフォームで公開するマスク方法。 [https://login.microsoftonline.com/consumers/](`aXXX@XXXX.com`)|定義の構文例: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|Email|メール アドレスの最初の 1 文字と定数サフィックスの ".com" をメール アドレスのフォームで公開するマスク方法。 `aXXX@XXXX.com`.|定義の構文例: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |ランダム|ランダム マスク関数は任意の数字型に使用でき、指定した範囲内で生成したランダムな値でオリジナルの値をマスクします。|定義の構文例: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 構文例: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|カスタム文字列|間にカスタム埋め込み文字列を追加し、最初と最後の文字を公開するマスク方法。 `prefix,[padding],suffix`<br /><br /> 注: 元の文字列が全体をマスクするには短すぎる場合、プレフィックスまたはサフィックスの一部は公開されません。|定義の構文例: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> その他の例:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|カスタム文字列|間にカスタム埋め込み文字列を追加し、最初と最後の文字を公開するマスク方法。 `prefix,[padding],suffix`<br /><br /> 注:元の文字列が全体をマスクするには短すぎる場合、プレフィックスまたはサフィックスの一部は公開されません。|定義の構文例: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> その他の例:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
 ## <a name="permissions"></a>アクセス許可  
  動的データ マスクでテーブルを作成するのに特別なアクセス許可は要りません。スキーマ アクセス許可に対する **CREATE TABLE** と **ALTER** のみ必要です。  
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  動的データ マスクの追加は基になっているテーブルでのスキーマ変更として実装されるため、依存関係を持つ列では実行できません。 この制限を回避するには、最初に依存関係を削除してから、動的データ マスクを追加した後、依存関係を再作成します。 たとえば、依存関係がその列に依存するインデックスによるものである場合は、インデックスを削除し、マスクを追加してから、依存するインデックスを再作成します。
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>セキュリティに関する注意: 推論またはブルートフォース手法を使用してマスクをバイパスする
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>セキュリティに関する注意:推論またはブルートフォース手法を使用してマスクをバイパスする
 
 動的データ マスクは、アプリケーションに使用される事前定義されたクエリ セットのデータ公開を制限することで、アプリケーション開発を単純化するために設計されています。 動的データ マスクは、実稼働データベースに直接アクセスするときに機密データが誤って公開されることを防ぐためにも有効ですが、アドホック クエリ アクセス許可を持つ特権のないユーザーが、実際のデータに対するアクセス権を得る手法を適用する可能性にも注意する必要があります。 このようなアドホック アクセス権を付与する必要がある場合、すべてのデータベース操作を監視し、このシナリオを軽減するために監査を使用することをお勧めします。
  
@@ -105,7 +106,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | Name| Salary |   
+>    |  Id | 名前| Salary |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  

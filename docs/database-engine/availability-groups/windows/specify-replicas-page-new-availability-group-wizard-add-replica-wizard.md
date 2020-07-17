@@ -1,6 +1,6 @@
 ---
 title: '可用性グループ ウィザード: [レプリカの指定] ページ'
-description: SQL Server Management Studio (SSMS) での [新しい可用性グループ] ウィザードの [レプリカの指定] ページのオプションについて説明します。
+description: SQL Server Management Studio (SSMS) の新しい可用性グループ ウィザードに含まれる [レプリカの指定] ページのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898089"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
 |タブ|簡単な説明|  

@@ -1,5 +1,6 @@
 ---
 title: トランザクション ログ (SQL Server) | Microsoft Docs
+description: トランザクション ログについて説明します。 すべての SQL Server データベースには、システム障害が発生した場合に必要なトランザクションおよびデータベースの変更がすべて記録されます。
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287806"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834763"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。
   
 トランザクション ログは、データベースの重要なコンポーネントです。 システム障害がある場合、データベースを一貫性のある状態に戻すには、そのログが必要になります。 
@@ -133,7 +134,7 @@ ms.locfileid: "79287806"
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
--   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+-   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、[INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
 トランザクション レプリケーションが有効な場合、`BULK INSERT` 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
@@ -157,8 +158,11 @@ ms.locfileid: "79287806"
         > [!WARNING]
         > `DBCC DBREINDEX` ステートメントは**非推奨となりました**。新しいアプリケーションでは使用しないようにしてください。  
   
+        > [!NOTE]
+        > インデックス構築操作では、最小ログ記録が使用されますが、同時にバックアップが実行されると遅延する可能性があります。 このような遅延は、単純復旧モデルまたは一括ログ復旧モデルを使用するときに、最小限のログが記録されるバッファー プール ページの同期要件が原因で発生します。 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) による新しいヒープの再構築 (適用可能な場合)。 `DROP INDEX` 操作中のインデックス ページの割り当て解除は、**常に**完全にログ記録されます。
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 **トランザクション ログの管理**  
   
@@ -176,7 +180,7 @@ ms.locfileid: "79287806"
   
 -   [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)   
 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   

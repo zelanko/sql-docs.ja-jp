@@ -15,16 +15,16 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733687"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79433969"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<your install path>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->

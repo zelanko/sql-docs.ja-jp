@@ -1,5 +1,6 @@
 ---
 title: データベース | Microsoft Docs
+description: データベース スキーマ、テーブル、ファイル グループ、ログイン、ロールについて説明します。 SQL Server Management Studio ツールを使用してデータベースを操作する方法をご紹介します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630767"
 ---
 # <a name="databases"></a>データベース
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
   
 ## <a name="basic-information-about-databases"></a>データベースに関する基本情報  

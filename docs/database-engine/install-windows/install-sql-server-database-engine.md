@@ -1,5 +1,6 @@
 ---
 title: SQL Server データベース エンジンのインストール | Microsoft Docs
+description: SQL Server インストール ウィザードの [インストールするコンポーネント] で [SQL Server データベース エンジン] を選択するときにインストールできる機能について説明します。
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91a8515417d25c2ef9f23d1698811a5f872227db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664267"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883246"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server データベース エンジンのインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>概要
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、データの保存、処理、セキュリティ保護のためのコア サービスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、企業において最もデータ処理量の多いアプリケーションの要求を満たすアクセス制御と高速トランザクション処理を提供します。  
@@ -31,7 +32,7 @@ ms.locfileid: "80664267"
 >[!IMPORTANT]
 >ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。  
 
-## <a name="features"></a>[機能]
+## <a name="features"></a>特徴
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インストールするコンポーネント] ページで** データベース エンジン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択すると、次の機能がインストールされます。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -75,7 +76,7 @@ ms.locfileid: "80664267"
 >  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプルをインストールする場合は、「[Microsoft SQL Server のサンプル](../../sample/microsoft-sql-server-samples.md)」を参照してください。 [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843) で古いサンプルを参照してください。  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エディションと SQL Server 2017 のサポートされる機能](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
  [高可用性ソリューション &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   

@@ -1,8 +1,8 @@
 ---
-title: データベースのデタッチとアタッチ (SQL Server) | Microsoft Docs
+title: データベースのデタッチとアタッチ (SQL Server)
 description: SQL Server データベースのデータとトランザクション ログ ファイルをデタッチしてから再アタッチすることで、データベースを別のインスタンスに変更したり、データベースを移動したりすることができます。
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756283"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
   
   
@@ -63,7 +63,13 @@ ms.locfileid: "82138172"
   
     > [!NOTE]  
     > データベース スナップショットのデタッチおよびアタッチは行うことができません。  
+
+-   データベースは、Always On 可用性グループの一部です。  
   
+    可用性グループから削除されるまで、データベースをデタッチすることはできません。 詳細については、「[Always On 可用性グループからプライマリ データベースを削除する](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)」をご覧ください。
+  
+
+
 -   データベースがデータベース ミラーリング セッションでミラー化される。  
   
     セッションが終了するまでは、データベースはデタッチできません。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  

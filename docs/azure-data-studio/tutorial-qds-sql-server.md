@@ -1,25 +1,24 @@
 ---
 title: 5 つの最低速クエリのサンプル ウィジェットを有効にする
-titleSuffix: Azure Data Studio
 description: このチュートリアルでは、データベース ダッシュボードで 5 つの最低速クエリ サンプル ウィジェットを有効にする方法について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774543"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル:データベース ダッシュボードに *5 つの最低速クエリ* サンプル ウィジェットを追加する
 
-このチュートリアルでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] に組み込まれているサンプル ウィジェットの 1 つを*データベース ダッシュボード*に追加することでデータベースの 5 つの最低速クエリを表示するプロセスについて説明します。 低速クエリの詳細を表示する方法と [!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を利用してプランにクエリを実行する方法についても説明します。 このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、組み込みの Azure Data Studio サンプル ウィジェットの 1 つを "*データベース ダッシュボード*" に追加してデータベースの 5 つの最低速クエリをすばやく表示するプロセスについて説明します。 Azure Data Studio の機能を使用して低速クエリおよびクエリ プランの詳細を表示する方法についても説明します。 このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にする
@@ -27,7 +26,7 @@ ms.locfileid: "74957046"
 > * データベースの最低速クエリに関する詳細を表示する
 > * 低速クエリのクエリ実行プランを表示する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、面倒な設定なしですぐに使える分析情報ウィジェットがいくつか含まれています。 このチュートリアルでは、*query-data-store-db-insight* ウィジェットを追加する方法を紹介しますが、手順は基本的にどのウィジェットを追加する場合でも同じです。
+Azure Data Studio には、設定なしですぐに使える分析情報ウィジェットがいくつか含まれています。 このチュートリアルでは、*query-data-store-db-insight* ウィジェットを追加する方法を紹介しますが、手順は基本的にどのウィジェットを追加する場合でも同じです。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -117,9 +116,7 @@ ms.locfileid: "74957046"
 
    ![分析情報詳細ダイアログ](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. **[項目の詳細]** で **query_sql_txt** の右にあるセルを右クリックし、 **[セルのコピー]** をクリックします。
-
-4. **[分析情報]** ウィンドウを閉じます。
+3. **[分析情報]** ウィンドウを閉じます。
 
 ## <a name="view-the-query-plan"></a>クエリ プランを表示する
 

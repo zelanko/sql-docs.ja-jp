@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルの統計 | Microsoft Docs
+description: クエリ オプティマイザーでメモリ最適化テーブルの列に関する統計を使用して、インメモリ OLTP のクエリのパフォーマンスを向上させるクエリ プランを作成する方法について説明します。
 ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734959"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために列に関する統計を使用します。 統計はデータベースのテーブルから収集され、データベース メタデータに格納されます。  
   

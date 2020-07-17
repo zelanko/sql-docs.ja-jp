@@ -1,5 +1,6 @@
 ---
 title: Server Core インストールの構成
+description: この記事では、Server Core インストールで SQL Server を構成する方法を、トラブルシューティング ツールも含め、詳しく説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251597"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883262"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 この記事では、Server Core インストールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成する方法について詳しく説明します。  
 
@@ -109,7 +110,7 @@ AlwaysOn 可用性グループが有効になっていることは、サーバ�
   
 5. **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー]** をダブルクリックします。  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)] を右クリックして、[プロパティ] をクリックします。この場合、\<instance name> は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]** (\<instance name>) を右クリックして、[プロパティ] をクリックします。\<instance name> は、Always On 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 7. **[AlwaysOn 高可用性]** タブを選択します。  
   

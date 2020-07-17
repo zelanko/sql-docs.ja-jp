@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 349df4ebe6e7787e6415d60d0ed4988b280deac0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886032"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>マージ アーティクル間の結合フィルターを自動的に生成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、一連の結合フィルターが自動的に生成されます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.locfileid: "75321285"
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>マージ アーティクル間の一連の結合フィルターを自動的に生成するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[追加]** をクリックし、次に **[フィルターを自動的に生成]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[追加]** をクリックし、次に **[フィルターを自動的に生成]** をクリックします。  
   
     > [!NOTE]  
     >  フィルターを自動的に生成すると、現在パブリケーション内にある行フィルターまたは結合フィルターがすべて削除されます。 一連のフィルターを自動的に生成した後でフィルターを追加できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "75321285"
   
     3.  フィルター オプションを指定します。  
   
-         複数のサブスクライバー間でデータを共有する方法を、 **[このテーブルの 1 行を複数のサブスクリプションに移動する]** または **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** から選択します。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+         複数のサブスクライバー間でのデータの共有方法に一致するオプションを選択します。 **[このテーブルの 1 行を複数のサブスクリプションに移動する]** または **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** 。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75321285"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>自動的に生成されたフィルターを変更するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[編集]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[編集]** をクリックします。  
   
 2.  **[フィルターの編集]** または **[結合の編集]** ダイアログ ボックスでフィルターを変更します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75321285"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>自動的に生成されたフィルターを削除するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   

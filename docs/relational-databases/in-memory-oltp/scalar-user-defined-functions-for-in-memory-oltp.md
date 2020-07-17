@@ -1,5 +1,6 @@
 ---
 title: インメモリ OLTP でのユーザー定義のスカラー関数 | Microsoft Docs
+description: SQL Server で、インメモリ OLTP 用のネイティブ コンパイル済みのスカラー ユーザー定義関数を作成および削除する方法について説明します。 ネイティブ コンパイルにより、パフォーマンスが向上します。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8914f495767e6942b12f5c4dd7b61fd4a6a5bebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735030"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>インメモリ OLTP でのユーザー定義のスカラー関数
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]で、ネイティブ コンパイル済みのスカラー ユーザー定義関数を作成および削除できます。 これらのユーザー定義関数を変更することもできます。 ネイティブ コンパイルでは、Transact-SQL でのユーザー定義関数の評価のパフォーマンスが向上します。  
   

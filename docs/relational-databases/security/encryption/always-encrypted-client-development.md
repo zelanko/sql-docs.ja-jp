@@ -1,5 +1,6 @@
 ---
 title: Always Encrypted を使用したアプリケーションの開発 | Microsoft Docs
+description: 機密データが SQL Server や Azure SQL Database に決して開示されないようにするクライアント側の Always Encrypted テクノロジについて説明します。
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f348cf050941a06b2e0be6c37993a7f7458cb6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74492012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627563"
 ---
 # <a name="develop-applications-using-always-encrypted"></a>Always Encrypted を使用したアプリケーションの開発
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 クライアント側の暗号化テクノロジ [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) により、機微なデータ (および関連する暗号化キー) が SQL Server や Azure SQL Database に開示されることはありません。 Always Encrypted では、クライアント ドライバーが、データベース エンジンにデータを渡す前に機微なデータを透過的に暗号化します。同様に、クライアント ドライバーは、暗号化されたデータベース列から取得したデータを透過的に暗号化解除します。
 

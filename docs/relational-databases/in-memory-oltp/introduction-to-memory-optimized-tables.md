@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルの概要 | Microsoft Docs
+description: メモリ最適化テーブルについて説明します。メモリ最適化テーブルは持続性があり、アトミック、一貫性、分離性、持続性を備えたトランザクションをサポートします。
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723119"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   メモリ最適化テーブルは、[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) を使用して作成されます。  
   
@@ -57,7 +58,7 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
  次の表に、さまざまなオブジェクトへのネイティブ アクセスおよび解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスを示します。  
   
-|機能|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス|CLR アクセス|  
+|特徴量|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス|CLR アクセス|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |メモリ最適化テーブル|はい|はい|いいえ*|  
 |メモリ最適化テーブル型|はい|はい|いいえ|  
@@ -82,7 +83,7 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
 *インデックス操作:* インデックス操作はログに記録されず、メモリ内にのみ存在します。  
   
-*コンカレンシー:* ラッチの競合やブロックなど、エンジンレベルのコンカレンシーがパフォーマンスに影響するアプリケーションの場合、アプリケーションをインメモリ OLTP に移行するとパフォーマンスが大幅に向上します。  
+*同時実行:* ラッチの競合やブロックなど、エンジンレベルのコンカレンシーがパフォーマンスに影響するアプリケーションの場合、アプリケーションをインメモリ OLTP に移行するとパフォーマンスが大幅に向上します。  
   
 次の表は、リレーショナル データベースで一般的に生じるパフォーマンスとスケーラビリティの問題、およびインメモリ OLTP によってどのようにパフォーマンスが向上するかを示しています。  
   

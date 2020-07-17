@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリングとレプリケーション (SQL Server) | Microsoft Docs
+description: データベース ミラーリングとレプリケーションを組み合わせて使用して、SQL Server でパブリケーション データベースの可用性を高める方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789694"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  
   
  ミラーに対するレプリケーション フェールオーバーはパブリケーション データベースでのみ完全にサポートされ、サブスクリプション データベースでは制限付きでサポートされます。 データベース ミラーリングは、ディストリビューション データベースではサポートされていません。 レプリケーションを再構成することなく、ディストリビューション データベースおよびサブスクリプション データベースを復旧する場合の詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。   

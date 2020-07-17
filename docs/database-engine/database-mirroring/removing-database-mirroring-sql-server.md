@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリングの削除 (SQL Server) | Microsoft Docs
+description: データベース ミラーリング セッションを停止した場合の影響について説明します。データベース所有者は、SQL Server のどちらのパートナーでも、この操作をいつでも実行できます。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735172"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース所有者は、いずれのパートナーでもデータベース ミラーリング セッションをいつでも手動で停止できます。  
   
 ## <a name="impact-of-removing-mirroring"></a>ミラーリングの削除による影響  

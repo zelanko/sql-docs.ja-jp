@@ -1,5 +1,6 @@
 ---
 title: ログ配布の構成 (SQL Server) | Microsoft Docs
+description: SQL Server で SQL Server Management Studio または Transact-SQL を使用して、ログ配布を構成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68057893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696265"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ログ配布を構成する方法を説明します。  
   
 > [!NOTE]  
@@ -32,7 +33,7 @@ ms.locfileid: "68057893"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してログ配布を構成するには:**  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68057893"
   
 8.  **[バックアップ ジョブ]** の **[スケジュール]** ボックスに、バックアップ スケジュールの一覧が表示されます。 スケジュールをカスタマイズする場合は、 **[スケジュール]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成する際には、 **[既定のサーバー設定を使用する]** 、 **[バックアップを圧縮する]** 、または **[バックアップを圧縮しない]** のいずれかのオプションを選択することで、ログ バックアップのバックアップ圧縮動作を制御できます。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成する際には、次のオプションのいずれかを選択して、ログ バックアップのバックアップ圧縮動作を制御することができます: **既定のサーバー設定を使用する**、**バックアップを圧縮する**、**バックアップを圧縮しない**。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
   
 10. **[OK]** をクリックします。  
   

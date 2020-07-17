@@ -1,5 +1,6 @@
 ---
 title: network packet size サーバー構成オプションの構成 | Microsoft Docs
+description: network packet size オプションを使用して、クライアントとサーバー間で要求や結果を転送するときに SQL Server で使用されるパケット サイズを設定する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785896"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **network packet size** オプションは、ネットワーク全体で使用するパケット サイズ (バイト単位) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
   

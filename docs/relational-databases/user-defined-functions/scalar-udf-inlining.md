@@ -2,7 +2,7 @@
 title: Microsoft SQL Server でのスカラー UDF のインライン化 | Microsoft Docs
 description: SQL Server (SQL Server 2019 以降) 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727090"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
 
@@ -155,12 +155,24 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 - UDF にシグネチャが追加されていない。
 - UDF がパーティション関数ではない。
 - UDF には共通テーブル式 (CTE) への参照が含まれていません。
+- UDF に、インライン化されると結果が変わる可能性がある組み込み関数 (@@ROWCOUNT など) への参照が含まれていない (Microsoft SQL Server 2019 CU2 で追加された制限)。
+- UDF に、パラメーターとしてスカラー UDF に渡される集計関数が含まれていない (Microsoft SQL Server 2019 CU2 で追加された制限)。
+- UDF で組み込みビューを参照していない (OBJECT_ID など、Microsoft SQL Server 2019 CU2 で追加された制限)。
+-   UDF で XML メソッドを参照していない (Microsoft SQL Server 2019 CU4 で追加された制限)。
+-   UDF に、"TOP 1" のない ORDER BY を含む SELECT が含まれていない (Microsoft SQL Server 2019 CU4 で追加された制限)。
+-   ORDER BY 句と組み合わせて割り当てを実行する SELECT クエリが UDF に含まれていない (例: SELECT @x = @x + 1 FROM table ORDER BY column_name、Microsoft SQL Server 2019 CU4 で追加された制限)。
+- UDF に、複数の RETURN ステートメントが含まれていない (SQL Server 2019 CU5 で追加された制限)。
+- UDF が RETURN ステートメントから呼び出されていない (SQL Server 2019 CU5 で追加された制限)。
+- UDF で STRING_AGG 関数を参照していない (SQL Server 2019 CU5 で追加された制限)。 
 
 <sup>1</sup> 変数の累積/集計を含む `SELECT` (例: `SELECT @val += col1 FROM table1`) は、インライン化ではサポートされていません。
 
 <sup>2</sup> 再帰的な UDF は、特定の深さまでのみインライン化されます。
 
 <sup>3</sup> 結果が現在のシステム時刻によって異なる組み込み関数は、時間に依存します。 内部のグローバル状態を更新する場合がある組み込み関数は、副作用のある関数の例です。 このような関数は、内部の状態に基づいて、呼び出されるたびに異なる結果を返します。
+
+> [!NOTE]
+> 最新の T-SQL スカラー UDF のインライン化の修正とインライン化の資格シナリオの変更については、サポート技術情報の記事を参照してください。[修正: SQL Server 2019 のスカラー UDF のインライン化の問題](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)。
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>UDF をインライン化できるかどうかの確認
 すべての T-SQL スカラー UDF について、[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューに `is_inlineable` という名前のプロパティが含まれており、これは UDF がインライン化可能かどうかを示します。 
@@ -259,11 +271,13 @@ END
 1. インライン化によって新しい結合が導入される場合があるため、クエリ レベルの結合ヒントが有効ではなくなる可能性があります。 代わりに、ローカル結合ヒントを使用する必要があります。
 1. インライン スカラー UDF を参照するビューに、インデックスを付けることはできません。 そのようなビューにインデックスを付ける必要がある場合は、参照されている UDF のインライン化を無効にします。
 1. UDF をインライン化すると、[動的データ マスク](../security/dynamic-data-masking.md)の動作が変化する可能性があります。 特定の状況では (UDF のロジックに応じて)、出力列のマスキングに関してインライン化がより控え目になる場合があります。 UDF で参照されている列が出力列ではない場合、それらはマスクされません。 
-1. UDF で `SCOPE_IDENTITY()`、`@@ROWCOUNT`、`@@ERROR` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。
+1. UDF で `SCOPE_IDENTITY()`、`@@ROWCOUNT`、`@@ERROR` などの組み込み関数が参照されている場合、組み込み関数によって返される値はインライン化によって変化します。 このような動作の変化は、UDF 内のステートメントのスコープがインライン化によって変化するためです。 Microsoft SQL Server 2019 CU2 以降では、UDF が特定の組み込み関数 (@@ROWCOUNT など) を参照する場合にインライン化をブロックします。
 
 ## <a name="see-also"></a>参照
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)     
 [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [結合](../../relational-databases/performance/joins.md)     
-[インテリジェントなクエリ処理のデモ](https://aka.ms/IQPDemos)      
+[インテリジェントなクエリ処理のデモ](https://aka.ms/IQPDemos)     
+[修正: SQL Server 2019 のスカラー UDF のインライン化の問題](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+

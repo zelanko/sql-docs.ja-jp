@@ -3,21 +3,21 @@ title: Linux 上の SQL Server 2017 のリリース ノート
 description: この記事には、Linux で実行されている SQL Server 2017 のリリース ノートとサポートされている機能が含まれています。 リリース ノートは、最新のリリースと以前のいくつかのリリースに含まれています。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298262"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882696"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 次のリリース ノートは、Linux で実行されている [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] に適用されます。 この記事は、リリースごとのセクションに分けられています。 GA リリースには、詳細なサポートと既知の問題が記載されています。 更新累積プログラム (CU) または一般配布リリース (GDR) のそれぞれには、Linux パッケージのダウンロードへのリンクに加えて、CU の変更について説明するサポート記事へのリンクが含まれています。
 
@@ -46,6 +46,7 @@ ms.locfileid: "81298262"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
@@ -81,6 +82,27 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 - [フルテキスト検索パッケージのインストール](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (2020 年 7 月)
+
+これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 21 (CU21) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3335.7 です。 このリリースでの修正プログラムと機能強化の詳細については、<https://support.microsoft.com/help/4557397> を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+> [!NOTE]
+> **Ubuntu 18.04** と **RHEL 8** は、CU20 以降の SQL Server 2017 でサポートされるようになりました。
+>
+> Ubuntu 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (Ubuntu 18.04 では使用できません)、Ubuntu 18.04 のパッケージが参照されています。 Ubuntu 16.04 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/> を参照してください。
+>
+> Red Hat 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (RHEL 8 では使用できません)、RHEL 8 のパッケージが参照されています。 RHEL 7 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/rhel/7/mssql-server-2017/> を参照してください。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3335.7-17 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3335.7-17 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Ubuntu 18.04 Debian パッケージ | 14.0.3335.7-17 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20 (2020 年 4 月)
 

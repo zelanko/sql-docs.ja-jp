@@ -1,25 +1,24 @@
 ---
 title: データベースをバックアップし、復元する
-titleSuffix: Azure Data Studio
 description: Azure Data Studio を使用してデータベースをバックアップし、復元する方法について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758298"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用してデータベースをバックアップし、復元する
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Azure Data Studio を使用したデータベースのバックアップと復元
 
-このチュートリアルでは、次の目的で [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用する方法について学習します。
+このチュートリアルでは、次の目的で Azure Data Studio を使用する方法について説明します。
 > [!div class="checklist"]
 > * データベースをバックアップする 
 > * バックアップ状態を表示する

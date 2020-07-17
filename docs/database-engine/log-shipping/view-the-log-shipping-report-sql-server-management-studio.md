@@ -1,6 +1,6 @@
 ---
 title: ログ配布レポートの表示 (SSMS)
-description: SQL Server Management Studio (SSMS) GUI を使用してログ配布レポートを表示する方法について説明します。
+description: SQL Server Management Studio のトランザクション ログの配布の状態レポートを表示します。 監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで状態レポートを実行します。
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748546"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
   
  このレポートには、接続先のサーバー インスタンスから使用できるログ配布の利用状況の状態が表示されます。 接続先のサーバー インスタンスが複数の構成に関与しており、それぞれ異なる役割が与えられている場合 (あるデータベースでは監視サーバーとして機能し、別のデータベースではセカンダリ サーバーとして機能する場合など) は、それぞれの役割から見た各構成の情報が表示されます。 ストアド プロシージャから特定のログ配布構成の監視サーバー インスタンスに接続できる場合、レポートにはその構成の状態がさらに多く表示されます。  

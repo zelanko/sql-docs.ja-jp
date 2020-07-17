@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff824174a3c9f806267e5b2a6a58e056fb57d513
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643422"
 ---
 # <a name="configure-database-mirroring"></a>データベース ミラーリングの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
@@ -57,7 +57,7 @@ ms.locfileid: "74822293"
     ```  
   
     > [!IMPORTANT]  
-    >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 データベース ミラーリング エンドポイントが存在し、既に使用されている場合、サーバー インスタンスのすべてのセッションでそのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、そのエンドポイントが再起動され、既存のセッションの接続が切断される場合があります。この場合、他のサーバー インスタンスからはエラーが発生したように見える可能性があります。 これは、自動フェールオーバーを伴う高い安全性モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーの原因になることがあります。 また、セッションにミラーリング監視サーバーが設定されている場合、データベース ミラーリング エンドポイントを削除すると、そのセッションのプリンシパル サーバーがクォーラムを失う可能性があります。プリンシパル サーバーがクォーラムを失うと、データベースがオフラインになりユーザー接続が切断されます。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 データベース ミラーリング エンドポイントが存在し、既に使用されている場合、サーバー インスタンスのすべてのセッションでそのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、そのエンドポイントが再起動され、既存のセッションの接続が切断される場合があります。この場合、他のサーバー インスタンスからはエラーが発生したように見える可能性があります。 これは、自動フェールオーバーを伴う高い安全性モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーの原因になることがあります。 また、セッションにミラーリング監視サーバーが設定されている場合、データベース ミラーリング エンドポイントを削除すると、そのセッションのプリンシパル サーバーがクォーラムを失う可能性があります。プリンシパル サーバーがクォーラムを失うと、データベースがオフラインになりユーザー接続が切断されます。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
      いずれかのパートナーにエンドポイントがない場合は、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
   
@@ -67,13 +67,13 @@ ms.locfileid: "74822293"
   
      ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
-     _\<database\_name\>_ はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、 _\<server\_network\_address\>_ はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
+     ここで、 _\<database\_name\>_ はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、 _\<server\_network\_address\>_ はプリンシパル サーバーのサーバー ネットワーク アドレスです。  
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
      TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     _\<system-address_> は目的のコンピューター システムを明確に指定する文字列です。また、 _\<port>_ はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
+     ここで、 _\<system-address>_ は目的のコンピューター システムを明確に指定する文字列です。また、 _\<port>_ はパートナー サーバー インスタンスのミラーリング エンドポイントで使用されるポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
      たとえば、ミラーリング サーバー インスタンスで、次の ALTER DATABASE ステートメントは元のプリンシパル サーバー インスタンスとしてパートナーを設定します。 データベース名は **AdventureWorks**、システムのアドレスは DBSERVER1 (パートナーのシステム名)、パートナーのデータベース ミラーリング エンドポイントが使用するポートは 7022 です。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "74822293"
          自動フェールオーバーを行わず、高可用性よりパフォーマンスを重視する場合は、トランザクションの安全性を無効にします。 詳細については、｢[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
         > [!NOTE]  
-        >  高パフォーマンス モードでは、WITNESS を OFF に設定してください。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+        >  高パフォーマンス モードでは、WITNESS を OFF に設定してください。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   

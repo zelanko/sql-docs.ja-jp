@@ -1,5 +1,6 @@
 ---
 title: SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する | Microsoft Docs
+description: SQL Server Management Studio を使用して Always Encrypted の列のクエリを実行する方法について説明します。 暗号化された列に格納された暗号化テキストまたはテキストの値を取得します。
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627406"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、[SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) を使用して [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) によって暗号化された列にクエリを実行する方法について説明します。 SSMS を使って、次のことができます。
 - 暗号化された列に格納された暗号化テキスト値を取得する。 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 試行されたパラメーター化が正常に行われるようにするには   
 - パラメーター化する変数の初期化で使用されるリテラルの型は、変数宣言の型と一致する必要があります。   
-- 変数の宣言された型が date 型または time 型である場合、以下の ISO 8601 に準拠した形式のいずれかを使用する文字列で変数を初期化する必要があります。   
+- 変数の宣言された型が日付型または時刻型である場合、次の [ISO 8601 に準拠した形式](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles)のいずれかを使用する文字列で変数を初期化する必要があります。    
 
 パラメーター化エラーの原因となる Transact-SQL 変数宣言の例を以下に示します。   
 ```sql

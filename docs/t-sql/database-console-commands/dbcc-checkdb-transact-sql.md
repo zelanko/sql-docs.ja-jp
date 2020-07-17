@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748949"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 次の操作を実行し、指定したデータベース内のすべてのオブジェクトの論理的および物理的な整合性をチェックします。    
     
@@ -221,7 +221,13 @@ DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion
 |3|このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |4|アサートまたはアクセス違反が検出されました。|    
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、エラーが発生していない (または整合性チェックが "クリーン" である) データベースに対して整合性チェックが実行された日時が記録されます。 これは、`last known clean check` と呼ばれます。 データベースが最初に起動されると、この日付が次の形式で EventLog (EventID-17573) とエラー ログに書き込まれます。 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>[エラー報告]    
 DBCC CHECKDB により破損エラーが検出されるたびに、ダンプ ファイル (`SQLDUMP*nnnn*.txt`) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 *機能の使用状況*データ収集と*エラー報告*機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
 このダンプ ファイルには、DBCC CHECKDB コマンドの結果と追加の診断出力が含まれます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと sysadmin ロールのメンバーに制限されます。 既定では、sysadmin ロールには、Windows の `BUILTIN\Administrators` グループとローカルの管理者のグループのすべてのメンバーが含まれています。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。

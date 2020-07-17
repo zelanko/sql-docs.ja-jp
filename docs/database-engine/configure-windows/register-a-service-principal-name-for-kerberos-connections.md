@@ -1,5 +1,6 @@
 ---
 title: Kerberos 接続用のサービス プリンシパル名の登録 | Microsoft Docs
+description: サービス プリンシパル名 (SPN) を Active Directory に登録する方法について説明します。 この登録は、SQL Server で Kerberos 認証を使用する場合に必要です。
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651750"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Kerberos 認証を併用するには、次の両方の条件が満たされる必要があります。  
   
 -   クライアント コンピューターとサーバー コンピューターが、同じ Windows ドメインまたは信頼関係のあるドメインの一部であることが必要です。  
@@ -97,7 +98,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/\<FQDN>:<port>|TCP が使用される場合にプロバイダーが生成する既定の SPN。 \<port> は、TCP ポート番号です。|  
 |MSSQLSvc/\<FQDN>|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。 \<FQDN> は、完全修飾ドメイン名です。|  
-|MSSQLSvc/\<FQDN>:\<instancename>|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。 \<InstanceName> は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。|  
+|MSSQLSvc/\<FQDN>:\<instancename>|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。 \<instancename> は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。|  
 
 > [!NOTE]  
 > TCP ポートが SPN に含まれている TCP/IP 接続の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Kerberos 認証を使用して接続するユーザー用に TCP プロトコルを有効にする必要があります。 

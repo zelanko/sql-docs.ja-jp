@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([メモリ] ページ) | Microsoft Docs
+description: SQL Server のサーバー メモリ オプションについて説明します。 最小および最大サーバー メモリ、インデックス作成メモリなどの設定について説明します。
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726621"
 ---
 # <a name="server-properties---memory-page"></a>[サーバーのプロパティ] - [メモリ] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[最小サーバー メモリ (MB)]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最小割り当てメモリ以上で起動されること、およびこの値を下回ってメモリを解放しないことを指定します。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのサイズおよび動作に基づいて設定します。 オペレーティング システムが要求する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリが多くなりすぎて Windows パフォーマンスが低下することのないように、このオプションは常に妥当な値に設定しておきます。  
   

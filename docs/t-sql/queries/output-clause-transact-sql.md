@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706028"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   INSERT、UPDATE、DELETE、または MERGE の各ステートメントの影響を受ける行の情報や、それらに基づく式を返します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。 また、結果をテーブルまたはテーブル変数に挿入することもできます。 さらに、入れ子になった INSERT、UPDATE、DELETE、または MERGE ステートメント内の OUTPUT 句の結果を取得して対象のテーブルまたはビューに挿入することもできます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75952436"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -133,10 +133,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえば INSERTED **.** _column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
+ 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえばINSERTED **.** _column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
   
  $action  
- MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返します。  
+ MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って、次のいずれかの値をそれぞれの行について返します。'INSERT'、'UPDATE'、または 'DELETE'。  
   
 ## <a name="remarks"></a>解説  
  OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  

@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216661"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883916"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows で SQL Server Management Studio を使用して SQL Server on Linux を管理する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) の概要と、いくつかの一般的なタスクについて説明します。 SSMS は Windows アプリケーションです。Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合は SSMS を使用してください。
 
 > [!TIP]
-> SSMS を実行する Windows コンピューターがない場合は、新しい [Azure Data Studio](../azure-data-studio/index.md) の使用を検討してください。 これは SQL Server を管理するためのグラフィカル ツールで、Linux と Windows の両方で実行できます。
+> SSMS を実行する Windows コンピューターがない場合は、新しい [Azure Data Studio](../azure-data-studio/index.yml) の使用を検討してください。 これは SQL Server を管理するためのグラフィカル ツールで、Linux と Windows の両方で実行できます。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) は、開発や管理上のニーズに向けて Microsoft が無料で提供している一連の SQL ツールの一部です。 SSMS は、SQL Server のすべてのコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。 オンプレミス、Docker コンテナー、クラウドのいずれのプラットフォームで実行されている SQL Server にも接続できます。 また、Azure SQL Database と Azure SQL Data Warehouse にも接続できます。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されています。これにより、あらゆるスキル レベルの開発者や管理者が SQL Server にアクセスできるようになっています。
 
@@ -58,7 +58,7 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
    | 設定 | 説明 |
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
-   | **サーバー名** | ターゲットの Linux SQL Server マシンの名前か、その IP アドレスを入力します。 |
+   | **サーバー名** | ターゲットの Linux SQL Server マシンの名前、またはその IP アドレスとポートを `IP,port` の形式で入力します。 |
    | **認証** | SQL Server on Linux の場合は、 **[SQL Server 認証]** を使用します。 |
    | **Login** | サーバー上のデータベースへのアクセス権を持つユーザーの名前 (たとえば、セットアップ中に作成された既定の **SA** アカウント) を入力します。 |
    | **パスワード** | 指定したユーザーのパスワードを入力します (**SA** アカウントの場合は、セットアップ時に作成したものを入力します)。 |

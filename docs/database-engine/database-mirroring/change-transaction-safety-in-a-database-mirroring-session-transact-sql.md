@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b7c60138db717f287af5416c7a310debc7e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763853"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションでのトランザクションの安全性の変更 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   トランザクションの安全性は、セッションの動作モードを制御する属性です。 ただし、データベース所有者は、いつでもトランザクションの安全性を変更できます。 既定では、トランザクションの安全性レベルは FULL (同期動作モード) に設定されています。  
   
  トランザクションの安全性を無効にすると、セッションの動作モードが、パフォーマンスを最適にする非同期動作モードに切り替わります。 プリンシパル サーバーを使用できなくなるとミラー サーバーは停止しますが、ミラー サーバーをウォーム スタンバイ サーバーとして使用することができます (フェールオーバーにはサービスの強制が必要ですが、データを損失する可能性があります)。  
@@ -36,7 +36,7 @@ ms.locfileid: "75247492"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     *\<database>* はミラー化されたデータベースの名前です。  
+     ここで、 *\<database>* はミラー化されたデータベースの名前です。  
   
 ### <a name="to-turn-off-transaction-safety"></a>トランザクションの安全性を無効にするには  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75247492"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     *\<database>* はミラー化されたデータベースです。  
+     ここで、 *\<database>* はミラー化されたデータベースです。  
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

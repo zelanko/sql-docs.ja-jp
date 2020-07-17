@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プラン ウィザードの使用 | Microsoft Docs
+description: SQL Server でメンテナンス プラン ウィザードを使用して、単一またはマルチサーバーのメンテナンス プランを作成する方法について説明します。
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758981"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
     
  

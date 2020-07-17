@@ -1,5 +1,6 @@
 ---
 title: '[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 | Microsoft Docs'
+description: SQL Server Management Studio を使用して、既存の Always On 可用性グループ、可用性レプリカ、可用性データベースを監視および管理する方法について説明します。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894162"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
   
 > [!NOTE]  
@@ -57,7 +58,7 @@ ms.locfileid: "68013629"
 ##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> 可用性グループの詳細  
  **[可用性グループ]** の詳細画面には、次の列が表示されます。  
   
- **Name**  
+ **名前**  
  選択した可用性グループの **[可用性レプリカ]** 、 **[可用性データベース]** 、および **[可用性グループ]** リスナー フォルダーが表示されます。  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
@@ -95,7 +96,7 @@ ms.locfileid: "68013629"
 |値|説明|  
 |-----------|-----------------|  
 |**[同期未実行]**|データベースが同期されていないか、可用性グループにまだ参加していません。|  
-|**同期済み**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注: パフォーマンス モードでは、データベースは同期済みの状態にはなりません。|  
+|**同期済み**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注:パフォーマンス モードでは、データベースは同期済みの状態にはなりません。|  
 |**NULL**|不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。|  
   
 > [!NOTE]  
@@ -104,7 +105,7 @@ ms.locfileid: "68013629"
 ##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> 可用性データベースの詳細  
  **[可用性データベース]** の詳細画面には、可用性グループ内の可用性データベースの次のプロパティが表示されます。  
   
- **Name**  
+ **名前**  
  可用性データベースの名前です。  
   
  **[同期状態]**  
@@ -114,7 +115,7 @@ ms.locfileid: "68013629"
   
 |値|説明|  
 |-----------|-----------------|  
-|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注: 非同期コミット モードでは、同期の状態は常に **[同期中]** です。|  
+|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注:非同期コミット モードでは、同期の状態は常に **[同期中]** です。|  
 |||  
   
  **中断済み**  

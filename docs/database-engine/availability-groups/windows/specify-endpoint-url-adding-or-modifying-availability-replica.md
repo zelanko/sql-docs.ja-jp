@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b96c091413e5ded9f3cff862f2c5650ce38fe5d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902373"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>エンドポイント URL の指定 - 可用性レプリカの追加と変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   可用性グループの可用性レプリカをホストするには、サーバー インスタンスにデータベース ミラーリング エンドポイントが存在する必要があります。 サーバー インスタンスでは、このエンドポイントを使用して、他のサーバー インスタンスによってホストされる可用性レプリカから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のメッセージをリッスンします。 可用性グループの可用性レプリカを定義するには、そのレプリカをホストするサーバー インスタンスのエンドポイント URL を指定する必要があります。 *エンドポイント URL* は、データベース ミラーリング エンドポイントのトランスポート プロトコル (TCP)、サーバー インスタンスのシステム アドレス、およびエンドポイントに関連付けられているポート番号を識別します。  
   
 > [!NOTE]  
@@ -35,9 +35,9 @@ ms.locfileid: "75251286"
   
  TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
- パラメーターの説明  
+ where  
   
--   *\<system-address&gt;* は、ターゲット コンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
+-   *\<system-address>* は、ターゲット コンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
     -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターのノードが同じドメイン内にある場合、コンピューター システムの名前 ( `SYSTEM46`など) を使用できます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75251286"
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
--   *\<port>* は、パートナー サーバー インスタンスのデータベース ミラーリング エンドポイントによって使用されるポート番号です。  
+-   *\<port>* は、パートナー サーバー インスタンスのミラーリング エンドポイントによって使用されるポート番号です。  
   
      データベース ミラーリング エンドポイントは、コンピューター システム上の使用可能な任意のポートを使用できます。 各ポート番号は 1 つのエンドポイントだけに関連付けられている必要があります。また、各エンドポイントは 1 つのサーバー インスタンスに関連付けられています。そのため、1 台のサーバー上に複数のサーバー インスタンスがある場合、各サーバー インスタンスは、ポートが異なる別のエンドポイントでリッスンします。 したがって、可用性レプリカを指定するときにエンドポイント URL で指定するポートにより、必ず、エンドポイントがそのポートに関連付けられているサーバー インスタンスに受信メッセージがリダイレクトされます。  
   

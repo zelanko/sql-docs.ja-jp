@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751109"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   空間インデックスは、 **geometry** データ型や **geography** データ型の列 ( *空間列*) に対する一部の操作をより効率的に実行できます。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
   
  空間インデックスの作成にはいくつかの制限があります。 詳細については、このトピックの「 [空間インデックスに関する制限](#restrictions) 」を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "68048707"
   
 7.  インデックスを作成する空間列を指定するには、 **[追加]** をクリックします。  
   
-8.  [ *\<テーブル名>* **から列を選択**] ダイアログ ボックスで、対応するチェック ボックスをオンにすることで、**geometry** 型または **geography** 型の列を選択します。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
+8.  [ *\<table name>* **から列を選択**] ダイアログ ボックスで、対応するチェック ボックスをオンにして、**geometry** または **geography** 型の列を選択します。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
   
 9. **[インデックス キー列]** グリッドで、選択した列を確認します。  
   

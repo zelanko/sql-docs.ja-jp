@@ -1,5 +1,6 @@
 ---
 title: パブリッシングおよびディストリビューションの構成 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server でパブリッシングとディストリビューションを構成する方法について説明します。
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774002"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを構成する方法について説明します。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに 
@@ -32,7 +33,7 @@ ms.locfileid: "76285089"
 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用 
-パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 `db_owner` 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。
+パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスでプロパティを表示および変更します。 `db_owner` 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。
 
 #### <a name="to-configure-distribution"></a>ディストリビューションを構成するには 
 
@@ -52,7 +53,7 @@ ms.locfileid: "76285089"
 
   - 必要に応じて、その他のパブリッシャーでディストリビューターを使用できるようにします。 その他のパブリッシャーがディストリビューターを使用できるようになっている場合は、これらのパブリッシャーからディストリビューターへの接続に対して、 **[ディストリビューター パスワード]** ページでパスワードを入力する必要があります。
 
-  - 必要に応じて、構成の設定のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。
+  - 必要に応じて、構成の設定のスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../../relational-databases/replication/scripting-replication.md)」を参照してください。
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用 
 レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。
@@ -77,7 +78,7 @@ ms.locfileid: "76285089"
 
    - 結果セットの `distribution db installed` の値が `0` の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) を実行します。 このとき、`@database` にディストリビューション データベースの名前を指定します。 必要に応じて、トランザクションの最大保有期間 (`@max_distretention`) および履歴保有期間 (`@history_retention`) を指定することができます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。
 
-2. ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) を実行します。このとき、`@working_directory` には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。 ディストリビューターがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、さらに、`0` には `@security_mode` の値を、[!INCLUDE[msCoName](../../includes/msconame-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には `@login` `@password` ログイン情報を指定する必要があります。
+2. ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) を実行します。このとき、`@working_directory` には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。 ディストリビューターがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、さらに、`@security_mode` には `0` の値を、`@login` と `@password` には [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。
 
    SQL Database Managed Instance 上のディストリビューターの場合は、`@working_directory` に Azure ストレージ アカウントを、`@storage_connection_string` にストレージ アクセス キーを使用します。 
 

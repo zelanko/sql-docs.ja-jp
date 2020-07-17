@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8bfaa8ffee65be6c0c5693420c89032c9b83763
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759110"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master データベースの復元 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、データベースの完全バックアップから **master** データベースを復元する方法について説明します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82180730"
  次の例では、既定のサーバー インスタンスで `master` データベースを復元します。 この例では、サーバー インスタンスが既にシングル ユーザー モードで実行されていることを前提としています。 この例は、 `sqlcmd` を起動し、ディスク デバイス `RESTORE DATABASE` から `master` データベースの完全バックアップを復元する `Z:\SQLServerBackups\master.bak`ステートメントを実行します。  
   
 > [!NOTE]  
->  名前付きインスタンスの場合、**sqlcmd** コマンドでは、 **-S** _\<ComputerName>_ \\ *\<InstanceName>* オプションを指定する必要があります。  
+>  名前付きインスタンスの場合は、**sqlcmd** コマンドで、 **-S** _\<ComputerName>_ \\ *\<InstanceName>* オプションを指定する必要があります。  
   
 ```  
   

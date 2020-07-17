@@ -1,5 +1,6 @@
 ---
 title: 特定の TCP ポートで受信待ちするようにサーバーを構成する | Microsoft Docs
+description: SQL Server 構成マネージャーを使用して、既定のポート 1433 以外の特定の固定ポートでリッスンするようにデータベース エンジンを構成する方法について説明します。
 ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15d1d1ab04adb47772706f8b1495b8ddef8b4fa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789837"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが特定の固定ポートで受信待ちするように構成する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、有効であれば TCP ポート 1433 で受信待ちします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、 [動的ポート](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md)を使用するように構成されています。 つまり、これらのインスタンスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に、使用可能なポートが選択されます。 名前付きインスタンスにファイアウォール経由で接続する場合は、特定のポートで受信待ちするように [!INCLUDE[ssDE](../../includes/ssde-md.md)] を構成します。これにより、ファイアウォールで適切なポートを開くことができます。  
 
@@ -44,7 +45,7 @@ ms.locfileid: "68012917"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンに TCP/IP ポート番号を割り当てるには  
   
-1.  SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** 、 **[\<インスタンス名> のプロトコル]** の順に展開し、 **[TCP/IP]** をダブルクリックします。  
+1.  SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** 、 **[\<instance name> のプロトコル]** の順に展開し、 **[TCP/IP]** をダブルクリックします。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開く際に問題がある場合は、「 [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。  
@@ -63,7 +64,7 @@ ms.locfileid: "68012917"
   
 5.  コンソール ペインで、 **[再起動]** をクリックします。  
   
-6.  詳細ペインで **[SQL Server (** \<インスタンス名> **)]** を右クリックします。次に、 **[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
+6.  詳細ペインで、 **[SQL Server (** \<instance name> **)]** を右クリックします。 **[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   
 ## <a name="connecting"></a>接続  
 特定のポートで受信待ちするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成した後、次の 3 つの方法でクライアント アプリケーションを使用して特定のポートに接続できます。  

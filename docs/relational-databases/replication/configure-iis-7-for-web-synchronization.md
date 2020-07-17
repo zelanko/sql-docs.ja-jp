@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774014"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、マージ レプリケーションの Web 同期で使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) バージョン 7 以降を手動で構成する手順について説明します。 
   
@@ -218,7 +218,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     2.  **[セキュリティ]** タブで、 **[編集]** をクリックします。  
   
-    3.  **[\<フォルダー名> のアクセス許可]** ダイアログ ボックスで **[追加]** をクリックして、手順 1 で作成したアカウントを追加します。  
+    3.  **[\<foldername> のアクセス許可]** ダイアログ ボックスで **[追加]** をクリックして、手順 1 で作成したアカウントを追加します。  
   
     4.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   

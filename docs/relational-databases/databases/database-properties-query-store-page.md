@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([クエリ ストア] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [クエリ ストア] タブを使用して、クエリ ストアのモード、間隔、しきい値、その他のプロパティを構成する方法について説明します。'
 ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql
@@ -12,22 +13,22 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57e3494bbb60128d24d047f904acb6990cde477c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631014"
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページにはプリンシパル データベースからアクセスし、これを使用してデータベースのクエリのストアのプロパティを構成および変更します。 これらのオプションは、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用して構成することもできます。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
   
 ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  操作モード  
  有効な値は OFF、READ_ONLY、および READ_WRITE です。 OFF にすると、クエリのストアが無効になります。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアの割り当て済み最大領域が不足すると、クエリのストアは操作モードを READ_ONLY にします。  
   

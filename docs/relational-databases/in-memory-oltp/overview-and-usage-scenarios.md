@@ -1,5 +1,6 @@
 ---
 title: 概要と使用シナリオ | Microsoft Docs
+description: 最適化されたトランザクション処理のための SQL Server および Azure SQL Database のテクノロジであるインメモリ OLTP について説明します。 例と追加リソースをご確認ください。
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722418"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インメモリ OLTP は、トランザクション処理のパフォーマンスの最適化、データの取り込み、データの読み込み、および一時的なデータのシナリオに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で使用できる高度な技術です。 この記事では、インメモリ OLTP のテクノロジと使用シナリオの概要について説明します。 この情報を参照して、インメモリ OLTP が用途に合っているかどうかを判断してください。 この記事の最後には、インメモリ OLTP オブジェクトを表示する例、パフォーマンス デモの参照、次のステップに使用できるリソースの参照を掲載しています。
 

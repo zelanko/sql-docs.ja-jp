@@ -1,5 +1,6 @@
 ---
 title: SQL Server の証明書と非対称キー | Microsoft Docs
+description: 外部で生成された、または SQL Server 生成された証明書、ツール、関連タスクなど、SQL Server の証明書と非対称キーについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153124"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001026"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  公開キー暗号化は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが "*公開*" キーと "*秘密*" キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーを使用して、対応する秘密キーでのみ復号化できるデータ暗号化を行うことができます。 これは、秘密キーの所有者へのメッセージの暗号化に使用できます。 同様に、秘密キーの所有者は、公開キーでのみ復号化できるデータ暗号化を行うことができます。 このような使い方により、証明書に含まれる情報が秘密キーの所有者によって暗号化される、コンテンツの作成者を保証するデジタル証明書の基礎が形成されます。 暗号化キーと復号化キーは異なるので、これらは "*非対称*" キーと呼ばれます。
   

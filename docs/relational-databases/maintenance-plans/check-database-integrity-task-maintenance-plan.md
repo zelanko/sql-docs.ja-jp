@@ -1,5 +1,6 @@
 ---
 title: データベースの整合性確認タスク (メンテナンス プラン) | Microsoft Docs
+description: '[データベースの整合性確認タスク] を使用して、ユーザーおよびシステム テーブルの割り当てと構造の整合性、および SQL Server データベース内のインデックスを確認します。'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a833b67471ad05e45f54776d49ec529c7fbb6fb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667863"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>データベースの整合性確認タスク (メンテナンス プラン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **[データベースの整合性確認タスク]** ダイアログを使用すると、 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することにより、ユーザーおよびシステム テーブルの割り当ておよび構造の整合性、データベース内のインデックスを確認できます。 `DBCC` を実行することにより、データベース整合性に問題があった場合にレポートし、システム管理者またはデータベースの所有者によって対処できます。  
   
-## <a name="options"></a>オプション  
- **Connection**  
+## <a name="options"></a>Options  
+ **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -72,7 +73,7 @@ ms.locfileid: "68083924"
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  
@@ -88,7 +89,7 @@ ms.locfileid: "68083924"
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  

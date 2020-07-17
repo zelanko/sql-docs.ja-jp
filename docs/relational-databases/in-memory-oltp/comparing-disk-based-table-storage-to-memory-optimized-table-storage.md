@@ -1,5 +1,6 @@
 ---
 title: ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較
+description: ディスクベースとメモリ最適化テーブルのストレージを、DDL、構造体、インデックス、DML 操作、データの断片化のカテゴリで比較します。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b13b42df862756f5b88c04ca44fa1a1cbfd158e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3f5eb817cb2d29c91d77ef499e386207bff9994
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723345"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
   
 |Categories|ディスク ベース テーブル|持続性のあるメモリ最適化テーブル|  

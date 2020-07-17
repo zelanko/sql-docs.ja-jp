@@ -1,5 +1,6 @@
 ---
 title: 管理データ ウェアハウスの構成 (SSMS)
+description: データ コレクターを使用する SQL Server の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733874"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)」を参照してください。  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ ms.locfileid: "74056476"
   
  ログインの **[マップ]** チェック ボックスをオンにしてログインを指定します。  
   
- *\<data warehouse name>* の**データベース ロール メンバーシップ**  
+ ***\<data warehouse name>* のデータベース ロール メンバーシップ**  
  次のオプションの 1 つ以上についてチェック ボックスをオンにし、ログインがマップされる管理データ ウェアハウス ロールを選択します。  
   
 -   **mdw_admin**  

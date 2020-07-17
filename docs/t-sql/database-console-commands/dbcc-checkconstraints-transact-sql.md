@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786560"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 現在のデータベースで、指定した制約や指定したテーブルのすべての制約に関する整合性をチェックします。
   
@@ -90,7 +90,7 @@ DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性は
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
   
-*table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<一時的なテーブルのレコードに関する問題> です。
+*table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は、([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record> になります。
   
 |○|チェックが失敗した場合の出力の追加情報|  
 |-----------|-----------------------------------------------|  

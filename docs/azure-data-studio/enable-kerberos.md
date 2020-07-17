@@ -1,27 +1,26 @@
 ---
-title: Active Directory 認証 (Kerberos) の使用
-titleSuffix: Azure Data Studio
+title: Windows 認証 (Kerberos) を使用して SQL Server に接続する
 description: Kerberos で Azure Data Studio に対して Active Directory 認証を使用できるようにする方法について学習します
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774663"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 認証 (Kerberos) を使用して [!INCLUDE[name-sos](../includes/name-sos-short.md)] を SQL Server に接続する 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 認証 (Kerberos) を使用して Azure Data Studio を SQL Server に接続する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、Kerberos を使用した SQL Server への接続をサポートします。
+Azure Data Studio では、Kerberos を使用した SQL Server への接続がサポートされています。
 
-macOS または Linux で統合認証 (Windows 認証) を使用するには、現在のユーザーを Windows ドメイン アカウントにリンクする **Kerberos チケット**を設定する必要があります。 
+macOS または Linux で統合認証 (Windows 認証) を使用するには、現在のユーザーを Windows ドメイン アカウントにリンクする **Kerberos チケット**を設定する必要があります。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -167,7 +166,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して接続する
+## <a name="connect-using-azure-data-studio"></a>Azure Data Studio を使用した接続
 
 * 新しい接続プロファイルを作成する
 

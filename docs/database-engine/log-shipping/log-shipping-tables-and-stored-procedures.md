@@ -1,5 +1,6 @@
 ---
 title: ログ配布テーブルとストアド プロシージャ | Microsoft Docs
+description: ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについてご確認ください。 ログ配布テーブルは各サーバーの msdb に格納されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695975"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについて説明します。 すべてのログ配布テーブルは、各サーバーの **msdb** に保存されます。 次の表は、ログ配布構成にあるどのサーバーで、どのテーブルおよびストアド プロシージャが使用されるかを示しています。  
   
 ## <a name="primary-server-tables"></a>プライマリ サーバーのテーブル  

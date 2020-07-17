@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90d6fdb147e6f7b40a9e8072a5c2836bd4e40bcd
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 43bb11503e312ca9a92251c1e77524e68077ccd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728520"
 ---
 # <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[バックアップ デバイス]** ダイアログ ボックスを使用すると、バックアップの情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  
@@ -60,9 +60,9 @@ ms.locfileid: "82220507"
 |ヘッダー|値|  
 |------------|------------|  
 |**名前**|バックアップ セットの名前です。|  
-|**Type**|バックアップされるオブジェクト: [データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
+|**Type**|バックアップされるオブジェクト: [データベース]、[ファイル]、または *\<blank>* (トランザクション ログ用)。|  
 |**コンポーネント**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
-|**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
+|**サーバー**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**Position**|ボリューム内でのバックアップ セットの位置。|  
 |**Date**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  

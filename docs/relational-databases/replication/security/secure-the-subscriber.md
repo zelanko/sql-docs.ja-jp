@@ -15,15 +15,15 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3a9a890f5532e2ed2d37d3630cabd4466d48be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730206"
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   マージ エージェントとディストリビューション エージェントはサブスクライバーに接続します。 これらの接続は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインまたは Windows ログインのコンテキスト下で行われます。 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することが重要です。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "70212299"
     > [!IMPORTANT]  
     >  サブスクライバーへの接続には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、各サブスクライバーへの接続にはそれぞれ異なるアカウントを指定してください。 プル サブスクリプションを使用する場合は、レプリケーションによって、常に Windows 認証を使用するように接続が設定されます (プル サブスクリプションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が必要なサブスクライバーのメタデータにレプリケーションからアクセスすることはできません)。 その場合、サブスクリプションを構成した後に、接続で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するように変更してください。  
   
-     詳細については、「トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する方法 (SQL Server Management Studio)」および「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
+     詳細については、トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する方法 (SQL Server Management Studio) および「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

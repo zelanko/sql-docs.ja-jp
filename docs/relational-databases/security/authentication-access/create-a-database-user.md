@@ -1,5 +1,6 @@
 ---
 title: データベース ユーザーの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,15 +25,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981937"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005692"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには種類が 7 つあります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73981937"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[データベース ユーザー - 新規]** ダイアログ ボックスでは、 **[所有されているスキーマ]** 、 **[メンバーシップ]** 、 **[セキュリティ保護可能なリソース]** 、 **[拡張プロパティ]** という 4 つの追加ページにもオプションが提供されます。  
+ **[データベース ユーザー - 新規]** ダイアログ ボックスには、次の 4 つの追加ページで使用できるオプションも用意されています。 **[所有されているスキーマ]** 、 **[メンバーシップ]** 、 **[セキュリティ保護可能なリソース]** 、 **[拡張プロパティ]** です。  
   
 -   **[所有されているスキーマ]** ページには、新しいデータベース ユーザーが所有できるすべてのスキーマが一覧表示されます。 データベース ユーザーのスキーマを追加または削除するには、 **[このユーザーが所有するスキーマ]** で、スキーマの横のチェック ボックスをオンまたはオフにします。  
   

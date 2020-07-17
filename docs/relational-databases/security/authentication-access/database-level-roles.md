@@ -1,9 +1,10 @@
 ---
 title: データベース レベルのロール | Microsoft Docs
+description: SQL Server にはいくつかのロールが用意されています。ロールは、データベースでアクセス許可を管理するために他のプリンシパルをグループ化するセキュリティ プリンシパルです。
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,20 +39,20 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664463"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005673"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データベースでの権限を簡単に管理できるように、いくつかの *ロール* が用意されています。ロールは、セキュリティ プリンシパルとして他のプリンシパルをグループ化します。 ロールは、 ***Windows オペレーティング システムの*** グループ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に似ています。 データベース レベルのロールは、その権限のスコープがデータベース全体に及びます。  
 
-データベース ロールに対するユーザーの追加および削除を行うには、 `ADD MEMBER` ALTER ROLE `DROP MEMBER` ステートメントの [と](../../../t-sql/statements/alter-role-transact-sql.md) のオプションを使用します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] では、 `ALTER ROLE`のこのような使用はサポートされません。 代わりに、以前の [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) と [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) プロシージャを使用してください。
+データベース ロールに対するユーザーの追加および削除を行うには、 `ADD MEMBER` ALTER ROLE `DROP MEMBER` ステートメントの [と](../../../t-sql/statements/alter-role-transact-sql.md) のオプションを使用します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] と Azure Synapse では、`ALTER ROLE` のこのような使用はサポートされません。 代わりに、以前の [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) と [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) プロシージャを使用してください。
   
  データベース レベルのロールは 2 種類あります。1 つはデータベースに事前に定義されている *固定データベース ロール* 、もう 1 つはユーザーが作成できる *ユーザー定義データベース ロール* です。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "80664463"
 
 ユーザー定義データベース ロールの権限は、GRANT、DENY、および REVOKE ステートメントを使用してカスタマイズできます。 詳細については、「 [権限 (データベース エンジン)](../../../relational-databases/security/permissions-database-engine.md)」を参照してください。
 
-すべての権限の一覧については、 [データベース エンジンの権限](https://aka.ms/sql-permissions-poster) ポスターを参照してください。 (サーバー レベルの権限をデータベース ロールに付与することはできません。 ログインおよびその他のサーバー レベル プリンシパル (サーバー ロールなど) は、データベース ロールに追加できません。 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でのサーバー レベル セキュリティでは、代わりに [サーバー ロール](../../../relational-databases/security/authentication-access/server-level-roles.md) を使用します。 サーバー レベルの権限を [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]のロールを介して付与することはできません。)
+すべての権限の一覧については、 [データベース エンジンの権限](https://aka.ms/sql-permissions-poster) ポスターを参照してください。 サーバー レベルの権限をデータベース ロールに付与することはできません。 ログインおよびその他のサーバー レベル プリンシパル (サーバー ロールなど) は、データベース ロールに追加できません。 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でのサーバー レベル セキュリティでは、代わりに [サーバー ロール](../../../relational-databases/security/authentication-access/server-level-roles.md) を使用します。 サーバー レベルの権限を [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse のロールを介して付与することはできません。
 
 ## <a name="fixed-database-roles"></a>固定データベース ロール
   
@@ -72,7 +73,7 @@ ms.locfileid: "80664463"
   
 |固定データベース ロールの名前|説明|  
 |-------------------------------|-----------------|  
-|**db_owner**|**db_owner** 固定データベース ロールのメンバーは、データベースでのすべての構成作業とメンテナンス作業を実行でき、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でデータベースを削除することもできます。 ( [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]では、一部のメンテナンス作業にサーバー レベルの権限が必要であり、 **db_owners**では実行できません。)|  
+|**db_owner**|**db_owner** 固定データベース ロールのメンバーは、データベースでのすべての構成作業とメンテナンス作業を実行でき、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でデータベースを削除することもできます。 ([!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse では、一部のメンテナンス作業にサーバー レベルの権限が必要であり、**db_owners** では実行できません。)|  
 |**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、カスタム ロールのロール メンバーシップのみの変更、および権限の管理を実行できます。 このロールのメンバーは、特権を昇格させる可能性があり、そのアクションを監視する必要があります。|  
 |**db_accessadmin**|**db_accessadmin** 固定データベース ロールのメンバーは、Windows ログイン、Windows グループ、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのデータベースに対するアクセスを追加または削除できます。|  
 |**db_backupoperator**|**db_backupoperator** 固定データベース ロールのメンバーは、データベースをバックアップできます。|  
@@ -86,7 +87,7 @@ ms.locfileid: "80664463"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse
 
 以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。 ただし、master の **dbmanager** ロールに追加された包含データベース ユーザーを使用して新しいデータベースを作成することはできません。
 
@@ -96,7 +97,7 @@ ms.locfileid: "80664463"
 |**loginmanager** | 仮想 master データベースのログインを作成および削除できます。|
 
 > [!NOTE]
-> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
+> サーバー レベル プリンシパルと Azure Active Directory 管理者 (構成されている場合) には [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と Azure Synapse でのすべての権限があり、すべてのロールのメンバーである必要はありません。 詳細については、「[SQL Database の認証と承認:アクセス権の付与](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)」を参照してください。 
   
 ## <a name="msdb-roles"></a>msdb ロール  
  msdb データベースには、次の表に示す特別な用途のロールが含まれています。  
@@ -115,7 +116,7 @@ ms.locfileid: "80664463"
 ## <a name="working-with-database-level-roles"></a>データベース レベルのロールの操作  
  次の表では、データベース レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|Type|説明|  
+|特徴量|Type|説明|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadata|固定データベース ロールの一覧を返します。|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadata|固定データベース ロールの権限を表示します。|  
@@ -123,13 +124,13 @@ ms.locfileid: "80664463"
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadata|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadata|データベース ロールのメンバーごとに 1 行のデータを返します。|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadata|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|command|現在のデータベースに新しいデータベース ロールを作成します。|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|command|データベース ロールの名前またはメンバーシップを変更します。|  
-|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|command|データベースからロールを削除します。|  
-|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|command|現在のデータベースに新しいデータベース ロールを作成します。|  
-|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|command|現在のデータベースからデータベース ロールを削除します。|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|command|データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|command|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|
+|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|コマンド|データベース ロールの名前またはメンバーシップを変更します。|  
+|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|コマンド|データベースからロールを削除します。|  
+|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
+|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|コマンド|現在のデータベースからデータベース ロールを削除します。|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|コマンド|データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] と Azure Synapse 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|コマンド|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] と Azure Synapse 以外のすべてのプラットフォームでは代わりに `ALTER ROLE` を使用する必要があります。|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| アクセス許可 | ロールに権限を追加します。
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| アクセス許可 | ロールに対する権限を拒否します。
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| アクセス許可 | 以前に許可または拒否した権限を取り消します。

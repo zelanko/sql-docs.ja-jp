@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルへの IDENTITY の実装 | Microsoft Docs
+description: SQL Server のメモリ最適化テーブルでの IDENTITY について説明します。 メモリ最適化テーブルでは、シードに対する IDENTITY と増分値 1 がサポートされています。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ed40c83ca2be0c73af65120cbdeafb5771aef1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 591f3fbf92d7d56c531c05e82d4eea0c5ff49abf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723182"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの IDENTITY の実装
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 シードと増分値がいずれも 1 (既定である) 限り、メモリ最適化テーブルでは IDENTITY がサポートされています。 IDENTITY(x, y) という定義を持つ ID 列で、x != 1 または y != 1 の場合は、メモリ最適化テーブルでサポートされません。   
     

@@ -1,5 +1,6 @@
 ---
 title: ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
+description: ネイティブ コンパイル ストアド プロシージャとその他のネイティブ コンパイル T-SQL モジュールのパフォーマンスを監視する方法を説明します。
 ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1970c5953373c500f85e82281a69be1d46f1be0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78180067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722465"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   この記事では、ネイティブ コンパイル ストアド プロシージャとその他のネイティブ コンパイル T-SQL モジュールのパフォーマンスを監視する方法を説明します。  
   
 ## <a name="using-extended-events"></a>拡張イベントの使用  
@@ -42,12 +43,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>プロシージャ レベルの実行統計
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** :[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_PROCEDURE_EXECUTION_STATISTICS` を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** :[database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_PROCEDURE_EXECUTION_STATISTICS` を使用して、プロシージャ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、プロシージャ レベルの実行統計のコレクションを有効にします。
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -56,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>クエリレベルの実行の統計
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) を使用して、クエリ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** :[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) を使用して、クエリ レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。  次のステートメントは、現在のインスタンス上のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_QUERY_EXECUTION_STATISTICS` を使用して、ステートメント レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** :[database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) オプション `XTP_QUERY_EXECUTION_STATISTICS` を使用して、ステートメント レベルでネイティブ コンパイル ストアド プロシージャの統計コレクションを有効または無効にします。 次のステートメントは、現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、クエリ レベルの実行統計のコレクションを有効にします。
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

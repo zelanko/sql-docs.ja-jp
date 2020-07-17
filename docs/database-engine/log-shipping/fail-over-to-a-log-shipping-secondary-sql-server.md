@@ -1,6 +1,6 @@
 ---
 title: ログ配布のセカンダリへのフェールオーバー
-description: SQL Server ログ配布のセカンダリにフェールオーバーする方法の手順。
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server ログ配布のセカンダリにフェールオーバーする方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696188"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>ログ配布のセカンダリへのフェールオーバー (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ログ配布のセカンダリへのフェールオーバーは、プライマリ サーバー インスタンスが失敗した場合、またはプライマリ サーバー インスタンスにメンテナンスが必要な場合に役立ちます。  
   
 ## <a name="preparing-for-a-controlled-failover"></a>制御されたフェールオーバーの準備  

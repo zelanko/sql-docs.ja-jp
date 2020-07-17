@@ -1,5 +1,6 @@
 ---
 title: SQL Server ユーティリティからの SQL Server のインスタンスの削除 | Microsoft Docs
+description: SQL Server ユーティリティから SQL Server のインスタンスを削除する方法について説明します。 このタスクでは、PowerShell スクリプトを実行するかまたは SQL Server Management Studio を使用することができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b0f36dd95146ec93819177b91d8abed1f0cc8c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773507"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server ユーティリティからの SQL Server のインスタンスの削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスを削除するには、次の手順を実行します。 この手順では、UCP リスト ビューから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが削除されるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのデータ収集が停止します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはアンインストールされません。  
   
 > [!IMPORTANT]  
@@ -30,7 +31,7 @@ ms.locfileid: "72908656"
   
 2.  リスト ビューの **[SQL Server インスタンス名]** 列で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。 削除するインスタンスを右クリックし、 **[マネージ インスタンスの削除...]** をクリックします。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、管理者特権のある資格情報を指定します。これには、 **[接続...]** をクリックし、 **[サーバーへの接続]** ダイアログ ボックスで情報を確認して、 **[接続]** をクリックします。 **[マネージド インスタンスの削除]** ダイアログ ボックスにログイン情報が表示されます。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの管理者特権を持つ資格情報を指定します。 **[Connect...]\(接続...\)** をクリックし、 **[サーバーに接続]** ダイアログ ボックスの情報を確認してから、 **[接続]** をクリックします。 **[マネージド インスタンスの削除]** ダイアログ ボックスにログイン情報が表示されます。  
   
 4.  操作を実行する場合は **[OK]** をクリックします。 操作を終了する場合は **[キャンセル]** をクリックします。  
 

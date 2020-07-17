@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882241"
 ---
 # <a name="specify-merge-replication-properties"></a>マージ レプリケーションのプロパティの指定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 このトピックでは、マージ レプリケーションのさまざまなプロパティを指定する方法について説明します。 
 
 ## <a name="merge-article-is-download-only"></a>マージ アーティクルはダウンロード専用です
@@ -41,7 +41,7 @@ ms.locfileid: "72908157"
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、 **[アーティクルのプロパティ]** をクリックします。    
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。  
   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、**[同期の方向]** に対して以下のいずれかの値を指定します。    
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、 **[同期の方向]** に対して以下のいずれかの値を指定します。    
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]**    
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]**    
 4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
@@ -93,7 +93,7 @@ ms.locfileid: "72908157"
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>サブスクリプションでのインタラクティブな競合解決の使用の指定  
   
-1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、**[競合を対話的に解決]** オプションに対して **[True]** の値を指定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。   
+1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、 **[競合を対話的に解決]** オプションに対して **[True]** の値を指定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>Transact-SQL の使用  
@@ -133,7 +133,7 @@ ms.locfileid: "72908157"
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。  
 2.  **[アーティクルのプロパティ]** をクリックし、次に **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、**[追跡レベル]** プロパティの値として **[行レベルの追跡]** または **[列レベルの追跡]** のどちらかを選択します。   
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、 **[追跡レベル]** プロパティの値として **[行レベルの追跡]** または **[列レベルの追跡]** のいずれかを選択します。   
 4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 ### <a name="use-transact-sql"></a>Transact-SQL の使用  

@@ -1,5 +1,6 @@
 ---
 title: データベース スナップショットの作成 (Transact-SQL) | Microsoft Docs
+description: Transact-SQL を使用して SQL Server データベース スナップショットを作成する方法について説明します。 スナップショットを作成するための前提条件とベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763545"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
   
   
@@ -45,13 +46,13 @@ ms.locfileid: "71708288"
 ##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  このセクションでは、次のベスト プラクティスについて説明します。  
   
--   [ベスト プラクティス: データベース スナップショットの名前付け](#Naming)  
+-   [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   [ベスト プラクティス: データベース スナップショット数の制限](#Limiting_Number)  
+-   [ベスト プラクティス:データベース スナップショット数の制限](#Limiting_Number)  
   
--   [ベスト プラクティス: データベース スナップショットへのクライアント接続](#Client_Connections)  
+-   [ベスト プラクティス:データベース スナップショットへのクライアント接続](#Client_Connections)  
   
-####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> ベスト プラクティス: データベース スナップショットの名前付け  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> ベスト プラクティス:データベース スナップショットの名前付け  
  スナップショットを作成する前に、名前付けの方法を検討することが重要です。 各データベース スナップショットでは、一意のデータベース名が必要になります。 管理を容易にするために、次のようなデータベースを識別する情報を、スナップショット名に含めることができます。  
   
 -   ソース データベースの名前。  
@@ -76,13 +77,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> ベスト プラクティス: データベース スナップショット数の制限  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショット数の制限  
  一連のスナップショットを長期にわたって作成することで、ソース データベースのシーケンシャルなスナップショットがキャプチャされます。 各スナップショットは、明示的に削除されるまで保持されます。 元のページが更新されるにつれて、各スナップショットが継続的に拡張されるので、新しいスナップショットの作成後に古いスナップショットを削除するとディスク領域を節約できます。  
   
 
 **メモ** データベース スナップショットに戻すには、そのデータベースから他のすべてのスナップショットを削除する必要があります。  
   
-####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> ベスト プラクティス: データベース スナップショットへのクライアント接続  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> ベスト プラクティス:データベース スナップショットへのクライアント接続  
  データベース スナップショットを使用するには、クライアントはそのスナップショットを見つける場所を認識している必要があります。 ユーザーは、あるデータベース スナップショットが作成または削除されている間でも、他のデータベース スナップショットから読み取ることができます。 ただし、既存のスナップショットを新しいスナップショットに置き換えるときに、クライアントを新しいスナップショットにリダイレクトする必要があります。 ユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、データベース スナップショットに手動で接続できます。 ただし、実稼働環境をサポートするには、ユーザーが意識しないうちにレポート作成クライアントをデータベースの最新のデータベース スナップショットにリダイレクトするような、プログラム ソリューションを作成する必要があります。  
   
 

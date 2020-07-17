@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631570"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   グループ化のレベルを計算する関数です。 GROUPING_ID は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING 句、または ORDER BY 句でのみ使用できます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67910653"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>解説  
- GROUPING_ID \<column_expression> は、GROUP BY リストの式と正確に一致させる必要があります。 たとえば、DATEPART (yyyy, \<*列名*>) でグループ化する場合は GROUPING_ID (DATEPART (yyyy, \<*列名*>)) を使用し、\<*列名* でグループ化する場合は GROUPING_ID (\<*列名*>) を使用します。  
+ GROUPING_ID \<column_expression> は、GROUP BY リストの式と正確に一致させる必要があります。 たとえば、DATEPART (yyyy, \<*column name*>) でグループ化する場合は GROUPING_ID (DATEPART (yyyy, \<*column name*>)) を使用し、\<*column name*> でグループ化する場合は GROUPING_ID (\<*column name*>) を使用します。  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>GROUPING_ID () と GROUPING () の比較  
- GROUPING_ID (\<列式> [ **,** ...*n* ]) は、列リストの各列に関して返される GROUPING (\<列式>) に相当する値を、0 と 1 の文字列として各出力行に入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) は各列の GROUPING (\<column_expression>) 戻り値と同等の値を各出力行のその列リストに 1 と 0 の文字列として入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
   
 |集計列|GROUPING_ID (a, b, c) の入力 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () の出力|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -66,7 +66,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  各 GROUPING_ID 引数は、GROUP BY リストの要素でなければなりません。 GROUPING_ID () は、最下位 N ビットが点灯する場合がある **integer** ビットマップを返します。 点灯した **bit** は、対応する引数が特定の出力行に対するグループ列でないことを示します。 最も順位が低い **bit** は引数 N に対応し、N-1<sup></sup>番目に順位が低い **bit** は引数 1 に対応します。  
   
 ## <a name="grouping_id--equivalents"></a>GROUPING_ID () の対応  
- 単一グループ クエリの場合、GROUPING (\<列式>) は GROUPING_ID (\<列式>) に対応し、いずれも 0 を返します。  
+ 単一グループ クエリの場合、GROUPING (\<column_expression>) は GROUPING_ID (\<column_expression>) に対応し、いずれも 0 を返します。  
   
  たとえば、次のステートメントは互いに対応しています。  
   
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  フィルター処理していない結果セットは、次のようになります。  
   
-|Name|タイトル|グループ化のレベル|従業員数|Name|  
+|名前|タイトル|グループ化のレベル|従業員数|名前|  
 |----------|-----------|--------------------|--------------------|----------|  
 |文書コントロール|コントロール スペシャリスト|0|2|文書コントロール|  
 |文書コントロール|文書コントロール アシスタント|0|2|文書コントロール|  

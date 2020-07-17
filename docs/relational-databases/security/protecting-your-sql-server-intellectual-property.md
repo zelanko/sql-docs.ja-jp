@@ -1,5 +1,6 @@
 ---
 title: SQL Server の知的所有権の保護 | Microsoft Docs
+description: 顧客に配布される SQL Server データ アプリケーションで知的所有権を保護するためのオプションについて説明します。
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773885"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server の知的所有権の保護
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ソフトウェア開発者から、どのようにすれば、顧客が [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] データ アプリケーションを分析したり、分解できないように、アプリケーションを配布できるかよく質問されます。 ここでの基本原則は、知的財産の保護は法的な問題であり、保護に関する記載は使用許諾契約にあるということです。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が他のユーザーが管理するコンピューターにインストールされている場合、ユーザーは元からそれを完全に管理することはできません。 
 

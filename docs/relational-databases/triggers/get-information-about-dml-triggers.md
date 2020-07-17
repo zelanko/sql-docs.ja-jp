@@ -17,22 +17,22 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786881"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して DML トリガーに関する情報を取得する方法について説明します。 この情報には、テーブルに設定されたトリガーの種類、名前、所有者、および作成日または変更日を確認できます。 トリガーが作成時に暗号化されていない場合は、トリガーの定義を取得します。 定義は、トリガーを定義しているテーブルに対してそのトリガーがどのように作用するかを理解するのに役立ちます。 また、特定のトリガーが使用しているオブジェクトを見つけることもできます。 この情報を使用すると、データベースで変更または削除された場合にトリガーに影響を及ぼすオブジェクトを確認できます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **DML トリガーに関する情報を取得するために使用するもの:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72909286"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
  OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
- ロール **public** のメンバーシップが必要です。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ ロール **public** のメンバーシップが必要です。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
  **sys.sql_expression_dependencies**  
  データベースに対する VIEW DEFINITION 権限およびデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 既定では、SELECT 権限は **db_owner** 固定データベース ロールのメンバーだけに与えられます。 SELECT 権限と VIEW DEFINITION 権限が別のユーザーに与えられている場合、権限が許可されているユーザーはデータベース内のすべての依存関係を表示できます。  
@@ -72,9 +72,9 @@ ms.locfileid: "72909286"
   
 3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、 **[\<DML トリガー名 に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
+4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、 **[\<DML trigger name> に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
   
-     DML が依存するオブジェクトを表示するには、 **[\<DML トリガー名 が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
+     DML が依存するオブジェクトを表示するには、 **[\<DML trigger name> が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
   
 5.  **[依存関係]** 領域に表示されたオブジェクトに関する情報を取得するには、そのオブジェクトをクリックします。 **[選択したオブジェクト]** フィールドの **[名前]** 、 **[種類]** 、および **[依存関係の種類]** の各ボックスに情報が表示されます。  
   

@@ -1,5 +1,6 @@
 ---
 title: lightweight pooling サーバー構成オプション | Microsoft Docs
+description: "\"lightweight pooling\" オプションについて説明します。 これを使用することにより、過度のコンテキスト切り替えが発生する対称型マルチプロセッシング環境でスループットが向上するしくみについて説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13efd00252dac50756a243475816a5a2e4119110
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772441"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>lightweight pooling サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **lightweight pooling** オプションは、SMP (symmetric multiprocessing) 環境で発生するコンテキストの過度の切り替えによるシステムのオーバーヘッドを削減する手段を提供する場合に使用します。 コンテキストの過度の切り替えが発生した場合、簡易プーリングを使用してコンテキストの切り替えをインラインで行い、ユーザーまたはカーネルのリング遷移を削減することによって、スループットを向上できます。  
   

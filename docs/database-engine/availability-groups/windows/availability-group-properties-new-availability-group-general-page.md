@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df0484ee5fdbd6dc5890c661cf1d0cf914fe3289
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254078"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900391"
 ---
-# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ: [新しい可用性グループ] ([全般] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックは、 **[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
   
  **可用性グループのプロパティを表示するには**  
@@ -30,7 +30,7 @@ ms.locfileid: "75254078"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[可用性グループ名]**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   

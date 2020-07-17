@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -16,17 +16,16 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4c70e47b166e218bf6f08735360cd85755bb345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74191073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736010"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 既存の外部パッケージ ライブラリのコンテンツを変更します。
 
@@ -35,9 +34,9 @@ ms.locfileid: "74191073"
 > SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、外部言語は SQL Server 2019 以降でサポートされています。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current"
+::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> Azure SQL Database では、ライブラリを削除し、**sqlmlutils** を使用して変更されたバージョンをインストールすることで、ライブラリを変更することができます。 **sqlmlutils** の詳細については、「[sqlmlutils を使用してパッケージを追加する](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)」を参照してください。
+> Azure SQL Managed Instance では、ライブラリを削除し、**sqlmlutils** を使用して変更されたバージョンをインストールすることで、ライブラリを変更することができます。 **sqlmlutils** の詳細については、「[sqlmlutils を使用した Python パッケージのインストール](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current)」および「[sqlmlutils で新しい R パッケージをインストールする](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current)」を参照してください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -83,7 +82,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 の構文
 
 ```text
@@ -114,14 +113,14 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database の構文
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL Managed Instance の構文
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH ( LANGUAGE = 'R' )  
+WITH ( LANGUAGE = <language> )
 [ ; ]  
 
 <file_spec> ::=  
@@ -130,9 +129,15 @@ WITH ( LANGUAGE = 'R' )
 }  
 
 <library_bits> :: =  
-{ 
-      varbinary_literal 
-    | varbinary_expression 
+{
+      varbinary_literal
+    | varbinary_expression
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
 }
 ```
 ::: moniker-end
@@ -157,7 +162,6 @@ WITH ( LANGUAGE = 'R' )
 ファイルは、ローカル パスまたはネットワーク パスの形式で指定することができます。 データ ソース オプションが指定されている場合、ファイル名は `EXTERNAL DATA SOURCE` で参照されているコンテナーに対する相対パスにすることができます。
 
 必要に応じて、ファイルの OS プラットフォームを指定できます。 特定の言語またはランタイムの OS プラットフォームごとに 1 つのファイル成果物またはコンテンツのみが許可されます。
-
 ::: moniker-end
 
 **library_bits**
@@ -188,10 +192,10 @@ SQL Server 2019 でサポートされているプラットフォームは、Wind
 パッケージの言語を指定します。 R は SQL Server 2017 でサポートされています。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-**LANGUAGE = 'R'**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+**language**
 
-パッケージの言語を指定します。 R は Azure SQL Database でサポートされています。
+パッケージの言語を指定します。 Azure SQL Managed Instance では、この値を **R** または **Python** に指定できます。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -245,7 +249,7 @@ EXEC sp_execute_external_script
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
 ::: moniker-end
 
 ### <a name="alter-an-existing-library-using-a-byte-stream"></a>バイト ストリームを使用して既存のライブラリを変更する
@@ -257,14 +261,14 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-SQL Server 2019 の Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+Python 言語の場合、`'R'` を `'Python'` に替えてもこの例は機能します。
 ::: moniker-end
 
 > [!NOTE]
 > このコード サンプルは構文のみを示しています。`CONTENT =` のバイナリ値は読みやすさのため切り捨てられており、作業ライブラリを作成しません。 バイナリ変数の実際の内容はこれよりも長くなります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  

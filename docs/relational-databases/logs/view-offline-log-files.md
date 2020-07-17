@@ -1,5 +1,6 @@
 ---
 title: オフライン ログ ファイルの表示 | Microsoft Docs
+description: 対象となるインスタンスがオフラインの場合または開始できない場合に、SQL Server のログ ファイルを SQL Server のローカルまたはリモート インスタンスから表示する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667855"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
   
  登録済みサーバーから、またはプログラムにより WMI および WQL (WMI Query Language) クエリを通じて、オフラインのログ ファイルにアクセスできます。  
@@ -32,7 +33,7 @@ ms.locfileid: "72908554"
 ## <a name="before-you-begin"></a>開始する前に  
  オフライン ログ ファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、オフライン ログ ファイルの表示に使用するコンピューターと、表示するログ ファイルが置かれているコンピューターにインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが両方のコンピューターにインストールされている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、およびどちらかのコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを実行しているインスタンスのオフライン ファイルを表示できます。  
   
- 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。 (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
+ 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。 (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
   
 -   [サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -51,7 +52,7 @@ ms.locfileid: "72908554"
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  
   
--   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは、次のパスにあります (\<*Drive>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
+-   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは次のパスにあります (\<*Drive>* は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   

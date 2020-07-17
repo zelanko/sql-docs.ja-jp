@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881225"
 ---
 # <a name="temporal-table-usage-scenarios"></a>テンポラル テーブルの使用シナリオ
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 テンポラル テーブルは、データの変更履歴を追跡する必要のあるシナリオに一般的に便利です。 生産性が高まるので、次の用途にテンポラル テーブルを使用することをお勧めします。
 
@@ -141,8 +141,8 @@ AT TIME ZONE は、システム バージョン管理されたテーブルを使
 
 > [!TIP]
 > FOR SYSTEM_TIME のテンポラル句で指定されたフィルタリング条件は SARG-able です (つまり、 SQL Server は基礎となっているクラスター化インデックスを使用して、スキャン操作ではなくシークを実行します)。
-> 履歴テーブルを直接クエリする場合、フィルター条件も、\<期間列> {< | > | =, ...} date_condition AT TIME ZONE 'UTC' の書式を使用して同様に SARGable にする必要があります。
-> AT TIME ZONE を期間列に適用すると、SQL Server は非常に負荷のかかるテーブルおよびインデックス スキャンを実行します。 \<期間列> AT TIME ZONE '\<タイム ゾーン>' > {< | > | =, ...} date_condition のような条件は、クエリでは避けてください。
+> 履歴テーブルに直接クエリを実行する場合、フィルター条件も、\<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC' の書式を使用して同様に SARGable にする必要があります。
+> AT TIME ZONE を期間列に適用すると、SQL Server は非常に負荷のかかるテーブルおよびインデックス スキャンを実行します。 また、\<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition のような条件は、クエリでは避けてください。
 
 関連項目:[システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 

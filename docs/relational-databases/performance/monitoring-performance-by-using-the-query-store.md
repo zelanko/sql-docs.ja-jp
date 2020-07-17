@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816482"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006217"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリのストア機能により、クエリ プランの選択やパフォーマンスを把握できます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 クエリのストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) オプションを使用してクエリ ストアを構成できます。
 
@@ -153,29 +153,11 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## <a name="configuration-options"></a><a name="Options"></a> 構成オプション
 
-次のオプションは、クエリ ストア パラメーターの構成に使用できます。
-
-*OPERATION_MODE*: **READ_WRITE** (既定値) または READ_ONLY とすることができます。
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* : 引数 `STALE_QUERY_THRESHOLD_DAYS` を構成して、クエリ ストア内にデータを保持する日数を指定します。 既定値は 30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
-
-*DATA_FLUSH_INTERVAL_SECONDS*: クエリ ストアに書き込まれるデータがディスクに永続化される頻度を示します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は `DATA_FLUSH_INTERVAL_SECONDS` で構成されています。 既定値は **900** (15 分) です。
-
-*MAX_STORAGE_SIZE_MB*: クエリ ストアの最大サイズを構成します。 クエリのストア内のデータが `MAX_STORAGE_SIZE_MB` の上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の場合は **100 MB** です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、既定値は **1 GB** です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition の既定値は **1 GB**、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの既定値は **10 MB** です。
-
-*INTERVAL_LENGTH_MINUTES*: クエリ ストアにランタイムの実行の統計データを集計する時間間隔を示します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、`INTERVAL_LENGTH_MINUTES` 引数を介して構成されます。 既定値は **60**です。
-
-*SIZE_BASED_CLEANUP_MODE*: データの総量が最大サイズに近づいたときにクリーンアップ プロセスを自動的にアクティブにするかどうかを制御します。 **AUTO** (既定値) または OFF。
-
-*QUERY_CAPTURE_MODE*: クエリ ストアによって、すべてのクエリをキャプチャするか、実行数とリソース消費量に基づいて関連するクエリをキャプチャするか、または新しいクエリの追加を停止して現在のクエリのみを追跡するかを指定します。 **ALL** (すべてのクエリをキャプチャする)、AUTO (不定期で、不必要なコンパイルと実行期間を持つクエリを無視する)、CUSTOM (ユーザー定義のキャプチャ ポリシー)、または NONE (新しいクエリのキャプチャを停止する) を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] まで) の場合、既定値は **[ALL]** です。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、既定値は **AUTO** です。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の場合、既定値は **AUTO** です。
-
-*MAX_PLANS_PER_QUERY*: 各クエリに対して保持の計画の最大数を表す整数。 既定値は **200** です。
-
-*WAIT_STATS_CAPTURE_MODE*: クエリ ストアで待機統計情報をキャプチャするかどうかを制御します。 OFF または **ON** (既定値) にすることができます。
+クエリ ストア パラメーターを構成するために使用できるオプションについては、「[ALTER DATABASE SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)」を参照してください。
 
 **sys.database_query_store_options** ビューにクエリを実行し、クエリ ストアの現在のオプションを確認します。 値に関する詳細については、「[sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)」を参照してください。
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して構成オプションを設定する方法の例については、「[オプション管理](#OptionMgmt)」をご覧ください。
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 関連するビュー、関数、プロシージャ
 

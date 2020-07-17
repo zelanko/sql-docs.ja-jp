@@ -1,5 +1,6 @@
 ---
 title: SQL Server Express LocalDB | Microsoft Docs
+description: SQL Server Express LocalDB について理解します。 開発者は、Transact-SQL コードの記述およびテストにこの軽量のデータベース エンジンを使用できます。
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771788"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB は、開発者を対象とした [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) の機能です。 SQL Server Express with Advanced Services で利用できます。
 
@@ -118,12 +119,12 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |名前|`LocalDBApp1`|
-|Version|\<現在のバージョン>|
+|Version|\<Current Version>|
 |共有名|""|
-|所有者|"\<Windows ユーザー>"|
+|所有者|"\<Your Windows User>"|
 |自動作成|いいえ|
 |State|実行中|
-|前回の開始時刻|\<日付と時刻>|
+|前回の開始時刻|\<Date and Time>|
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]

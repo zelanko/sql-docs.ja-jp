@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727069"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、ビューにインデックスを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。
 
@@ -92,7 +92,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 - インデックスを作成する場合は、`IGNORE_DUP_KEY` オプションを OFF に設定する必要があります (既定の設定)。
 - ビュー定義では、 _schema_ **.** _tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。
 - ビューで参照されるユーザー定義関数は、`WITH SCHEMABINDING` オプションを使用して作成する必要があります。
-- ビューで参照されるユーザー定義関数は、\<_スキーマ_\>**.**\<_関数_\> という 2 つの部分から構成される名前で参照される必要があります。
+- ビューで参照されるユーザー定義関数は、2 つの部分で構成されている名前 ( _\<schema\>_ **.** _\<function\>_ ) で参照される必要があります。
 - ユーザー定義関数のデータ アクセス プロパティが `NO SQL` で、外部アクセス プロパティが `NO` である必要があります。
 - 共通言語ランタイム (CLR) 関数をビューの選択リストに使用することはできますが、クラスター化インデックス キーの定義に含めることはできません。 CLR 関数は、ビューの WHERE 句や、ビューの JOIN 操作の ON 句では使用できません。
 - ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。

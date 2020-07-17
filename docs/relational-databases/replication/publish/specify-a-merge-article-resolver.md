@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c1267e08bfdb1361223f3a93ec465b3da83d8ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf9ee7fc22e29e7e757b2c615b398a9233d0ad7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70846571"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880247"
 ---
 # <a name="specify-a-merge-article-resolver"></a>マージ アーティクル競合回避モジュールの指定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。  
 
   
-##  <a name="recommendations"></a>Recommendations  
+##  <a name="recommendations"></a>推奨事項  
   
 -   マージ レプリケーションでは、以下の競合回避モジュールが使用できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70846571"
     -   Web 同期を使用するプル サブスクリプションの場合は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) サーバー  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- 競合回避モジュールを登録した後、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[競合回避モジュール]** タブでアーティクルが競合回避モジュールを使用するように指定します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+ 競合回避モジュールを登録した後、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[競合回避モジュール]** タブでアーティクルが競合回避モジュールを使用するように指定します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスから使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 #### <a name="to-specify-a-resolver"></a>競合回避モジュールを指定するには  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70846571"
   
 2.  目的の競合回避モジュールが既に登録されているかを判断するには、パブリッシャーの任意のデータベースに対して [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行します。 これにより、カスタム競合回避モジュールの説明、およびディストリビューターに登録された各 COM ベースの競合回避モジュールのクラス識別子 (LSID)、またはディストリビューターに登録された各ビジネス ロジック ハンドラーのマネージド アセンブリの情報が表示されます。  
   
-3.  目的のカスタム競合回避モジュールがまだ登録されていない場合は、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **\@article_resolver** に競合回避モジュールの名前を指定します。ビジネス ロジックの場合はアセンブリの表示名です。 COM ベースの競合回避モジュールの場合は、**\@resolver_clsid** に DLL の CLSID を指定し、ビジネス ロジック ハンドラーの場合は、**\@is_dotnet_assembly** に **true**、**\@dotnet_assembly_name** にアセンブリの名前、**\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
+3.  目的のカスタム競合回避モジュールがまだ登録されていない場合は、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **\@article_resolver** に競合回避モジュールの名前を指定します。ビジネス ロジックの場合はアセンブリの表示名です。 COM ベースの競合回避モジュールの場合は、 **\@resolver_clsid** に DLL の CLSID を指定し、ビジネス ロジック ハンドラーの場合は、 **\@is_dotnet_assembly** に **true**、 **\@dotnet_assembly_name** にアセンブリの名前、 **\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
   
     > [!NOTE]  
     >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **\@dotnet_assembly_name** にアセンブリ名を含む完全なパスを指定する必要があります。  

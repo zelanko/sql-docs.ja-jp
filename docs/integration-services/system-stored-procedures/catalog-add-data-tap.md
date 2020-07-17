@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749769"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パッケージ データ フロー内のコンポーネントの出力で、実行のインスタンスのデータ タップを追加します。  
   
@@ -42,21 +42,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  パッケージを含む実行の実行 ID。 *execution_id* は **bigint** です。  
   
  [ @task_package_path = ] *task_package_path*  
- データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[PackagePath]** プロパティが表示されます。  
+ データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[PackagePath]** プロパティが表示されます。  
   
  *task_package_path* は **nvarchar (max)** です。  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[IdentificationString]** プロパティが表示されます。  
   
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
  [ @data_filename = ] *data_filename*  
  タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。  
   
- 既定では、ファイルが格納されている、\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps フォルダーです。  
+ 既定では、ファイルは \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps フォルダーに格納されます。  
   
  *data_filename* は **nvarchar (4000)** です。  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  データ タップの ID を返します。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
+ 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
   
 ```sql
 Declare @execution_id bigint  

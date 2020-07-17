@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ba6ba2d1238c75c29990a8ab2bd98ea419cc606
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728385"
 ---
 # <a name="resource-database"></a>Resource データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Resource データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に搭載されているすべてのシステム オブジェクトを格納する読み取り専用のデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム オブジェクト (sys.objects など) は、物理的には Resource データベースに保存されていますが、すべてのデータベースの sys スキーマに論理的に表示されます。 Resource データベースには、ユーザーのデータやユーザーのメタデータは保持されません。  
   
  Resource データベースが実装されたことで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいバージョンへのアップグレードを簡単かつ迅速に実行できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンでは、アップグレードを行う場合、システム オブジェクトを削除してから再度作成する必要がありました。 現在は、すべてのシステム オブジェクトが Resource データベース ファイルに格納されるため、Resource データベース ファイルをローカル サーバーにコピーするだけで、アップグレードを完了できます。  

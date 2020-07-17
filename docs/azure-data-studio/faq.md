@@ -1,30 +1,28 @@
 ---
-title: よく寄せられる質問
-titleSuffix: Azure Data Studio
+title: Azure Data Studio に関する FAQ
 description: Azure Data Studio に関してよく寄せられる質問 (FAQ) について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774615"
 ---
-# <a name="azure-data-studio-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
+# <a name="azure-data-studio-faq"></a>Azure Data Studio に関する FAQ
 
 ## <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
-Azure Data Studio とは、Windows、MacOS、Linux 上でオンプレミス プラットフォームおよびクラウド データ プラットフォームの Azure Data ファミリを使用するデータ プロフェッショナルを対象にした、新しいオープン ソースのクロスプラットフォーム デスクトップ環境です。 SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、非常に高速な IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
+Azure Data Studio とは、Windows、macOS、Linux 上でオンプレミスおよびクラウド データ プラットフォームの Azure Data ファミリを使用するデータ プロフェッショナルを対象にした、新しいオープン ソースのクロスプラットフォーム デスクトップ環境です。 SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、非常に高速な IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
 
 調査によると、ユーザーはクエリの編集作業に、SQL Server Management Studio でのその他の作業よりもはるかに多くの時間を費やしています。 そのため、Azure Data Studio は、最も使用されている機能に重点を置いて設計されていて、オプションの拡張機能として利用できるようにしたエクスペリエンスが製品に追加されています。 これにより、すべてのユーザーは最も頻繁に使用しているワークフローに合わせて自分の環境をカスタマイズできます。
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio にはどれくらいのコストがかかりますか?
 
@@ -60,7 +58,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 - ほとんどの時間をクエリの編集や実行に使用している。
 - 結果セットをすばやくグラフ化して視覚化する機能が必要である。
-- sqlcmd または Powershell を使用して統合ターミナル経由でほとんどの管理タスクを実行することができる。
+- sqlcmd または PowerShell を使用して統合ターミナル経由でほとんどの管理タスクを実行することができる。
 - ウィザードのエクスペリエンスが最小限必要である。
 - 詳細な管理またはプラットフォームに関連する構成を行う必要はない。
 - macOS または Linux 上で実行する必要がある。
@@ -80,7 +78,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ### <a name="shell-features"></a>シェルの機能
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure サインイン|はい|はい|
 |ダッシュボード|はい| |
@@ -102,7 +100,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ### <a name="query-editor"></a>クエリ エディター
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |グラフ ビューアー|はい||
 |結果を CSV、JSON、XLSX にエクスポート|はい||
@@ -120,7 +118,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|はい|はい|
 |macOS|はい||
@@ -128,7 +126,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ### <a name="data-engineering"></a>Data Engineering
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |外部データウィザード|プレビュー||
 |HDFS 統合|プレビュー||
@@ -136,7 +134,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 ### <a name="database-administration"></a>データベースの管理
 
-|機能|Azure Data Studio|SSMS|
+|特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |バックアップ/復元|はい|はい|
 |フラット ファイルのインポート|プレビュー|はい|

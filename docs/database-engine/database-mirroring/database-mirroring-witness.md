@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング監視サーバー | Microsoft Docs
+description: SQL Server データベース ミラーリングの自動フェールオーバーでの、ミラーリング監視サーバーの役割について説明します。 パートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e462bc2367d7f5a3112580848b6a32126c604f46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754690"
 ---
 # <a name="database-mirroring-witness"></a>データベース ミラーリング監視サーバー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   自動フェールオーバーをサポートするには、データベース ミラーリング セッションが高い安全性モードで構成されている必要があります。また、このセッションに *監視サーバー*と呼ばれる 3 番目のサーバー インスタンスを配置する必要もあります。 ミラーリング監視サーバーは、必要に応じて配置できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。ミラーリング監視サーバーを使用することにより、高い安全性モードのセッションのミラー サーバーが、自動フェールオーバーを開始するかどうかを決定できるようになります。 2 つのパートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーの唯一の役割は、自動フェールオーバーをサポートすることです。  
   
 > [!NOTE]  
@@ -63,7 +64,7 @@ ms.locfileid: "68043887"
   
 -   ミラー サーバーからミラーリング監視サーバーおよびプリンシパル サーバーへの接続がどちらも失われた場合、プリンシパル サーバーがどのような状態であっても、自動フェールオーバーは行えません。  
   
- この少なくとも 2 つのサーバー インスタンスが接続されていなければならない要件を、 *クォーラム*と呼びます。 クォーラムでは、複数のパートナーが同時にデータベースとして機能することはないことが保証されます。 クォーラムの動作およびセッションに対するクォーラムの影響については、「 [クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)と呼ばれる 3 番目のサーバー インスタンスを配置する必要もあります。  
+ この少なくとも 2 つのサーバー インスタンスが接続されていなければならない要件を、 *クォーラム*と呼びます。 クォーラムでは、複数のパートナーが同時にデータベースとして機能することはないことが保証されます。 クォーラムのしくみとセッションへの影響については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 ##  <a name="to-add-or-remove-a-witness"></a><a name="AddRemoveWitness"></a> ミラーリング監視サーバーを追加または削除するには  
  **ミラーリング監視サーバーを追加するには**  

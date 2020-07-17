@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ea3041fbd2389a64d3cb8933fd11eaa6786144
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000172"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894473"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 可用性グループ機能を有効または無効にする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   サーバー インスタンスで可用性グループを使用するには、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にする必要があります。 可用性グループを作成したり構成したりするためには、少なくとも 1 つの可用性グループの可用性レプリカがホストされる [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の各インスタンスで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能が有効になっている必要があります。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68000172"
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**で、 **[SQL Server のサービス]** をクリックし、SQL Server ( **\<** _instance name_ **>)** を右クリックして、 **[プロパティ]** をクリックします。 **\<** _instance name_ **>** は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+3.  **SQL Server 構成マネージャー**で、 **[SQL Server のサービス]** をクリックし、[SQL Server ( **\<**_instance name_**>)** ] を右クリックして、 **[プロパティ]** をクリックします。 **\<**_instance name_**>** は、Always On 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 4.  **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -181,7 +181,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**で、 **[SQL Server のサービス]** をクリックし、SQL Server ( **\<** _instance name_ **>)** を右クリックして、 **[プロパティ]** をクリックします。 **\<** _instance name_ **>** は、AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前です。  
+3.  **SQL Server 構成マネージャー**で、 **[SQL Server のサービス]** をクリックし、[SQL Server ( **\<**_instance name_**>)** ] を右クリックして、 **[プロパティ]** をクリックします。 **\<**_instance name_**>** は、Always On 可用性グループを無効にするローカル サーバー インスタンスの名前です。  
   
 4.  **[Always On 高可用性]** タブで、 **[Always On 可用性グループを有効にする]** チェック ボックスをオフにし、 **[OK]** をクリックします。  
   

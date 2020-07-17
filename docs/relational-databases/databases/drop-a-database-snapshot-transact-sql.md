@@ -1,5 +1,6 @@
 ---
 title: データベース スナップショットの削除 (Transact-SQL) | Microsoft Docs
+description: Transact-SQL を使用してデータベース スナップショットを削除する方法について説明します。これにより、SQL Server のスナップショットとスナップショットで使用されるスパース ファイルが削除されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ae40c8d9b4a93ff1f035953207caae5addb56b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756163"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>データベース スナップショットの削除 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース スナップショットを削除すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータベース スナップショットが削除され、そのスナップショットで使用されていたスパース ファイルが削除されます。 データベース スナップショットを削除すると、そのデータベース スナップショットに対するすべてのユーザー接続が終了します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DROP DATABASE 権限を持つすべてのユーザーが、データベース スナップショットを削除できます。  

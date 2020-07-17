@@ -1,5 +1,6 @@
 ---
 title: index create memory サーバー構成オプションの構成 | Microsoft Docs
+description: index create memory オプションを使用して、インデックス作成時の並べ替え操作のために SQL Server によって最初に割り当てられる最大メモリ容量を設定する方法について説明します。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697201"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **index create memory** オプションは、インデックス作成時の並べ替え操作用として最初に割り当てられる最大メモリ容量を制御します。 このオプションの既定値は 0 (自己構成) です。 その後、インデックスを作成するためにより多くのメモリが必要になった場合、メモリ容量を確保できるのであれば、サーバーはそのメモリを使用します。したがって、使用メモリ容量がこのオプションの設定値を超えることになります。 追加メモリを確保できない場合は、既に割り当てられているメモリを使用してインデックス作成が続行されます。  
   
