@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e399dfc44534a384d1babd8125aa10fb7be44e8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: bec894ea9d28601c962d2f3d93885344d101b293
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032044"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553302"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7937|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に対する FileStream ディレクトリが見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に対する FileStream ディレクトリが見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
  指定された列はパーティションに存在します。しかし、対応する FILESTREAM ディレクトリは FILESTREAM データ領域で見つかりませんでした。  

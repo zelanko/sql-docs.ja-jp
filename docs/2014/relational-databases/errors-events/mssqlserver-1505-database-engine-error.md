@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1b23850ffcaf7ae4e4d63775cd6a7c112ef44e00
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969526"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553787"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|1505|  

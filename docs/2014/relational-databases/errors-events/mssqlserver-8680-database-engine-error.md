@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33245b9c3d3bda6c9baf88b2c6e6018e2802cd94
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: ec3b671b397b296e00e0f3da6aaeafa6b754cc45
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031759"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553137"
 ---
 # <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8680|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|REMOTE_ERR|  
-|メッセージ テキスト|内部クエリ プロセッサ エラー: リモート クエリ フェーズを処理中に、クエリ プロセッサで予期しないエラーが発生しました。|  
+|メッセージ テキスト|内部クエリ プロセッサ エラー:リモート クエリ フェーズを処理中に、クエリ プロセッサで予期しないエラーが発生しました。|  
   
 ## <a name="explanation"></a>説明  
  クエリ処理中に内部エラーが発生しました。  

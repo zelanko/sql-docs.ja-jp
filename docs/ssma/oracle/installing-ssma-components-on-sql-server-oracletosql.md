@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411667"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554827"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server での SSMA コンポーネントのインストール (OracleToSQL)
 
@@ -60,9 +60,7 @@ SSMA for Oracle サーバーコンポーネントをにインストールする�
 6. [**インストールの準備完了**] ページで、[**インストール**] を選択します。
 7. [**インストールの最初の手順を完了しまし**た] ページで、[**次へ**] を選択します。
   
-   新しいダイアログボックスが表示されます。このダイアログボックスで、拡張機能パックのインストールの種類を選択します。
-
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張パックをインストールするためののインスタンス。
+   新しいダイアログボックスが表示されます。 拡張パックの種類を選択します。
   
 8. 目的のインストールの種類を選択し、[**次へ**] をクリックします。
 
@@ -106,7 +104,7 @@ SSMA for Oracle サーバーコンポーネントをにインストールする�
 
 にデータを移行するたびに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ssma によってエージェントジョブが作成さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。 これらのジョブには**ssma_oracle データ移行パッケージ {GUID}** という名前が付けられ、[ジョブ] フォルダーのの [エージェント] ノードに表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [SSMA for Oracle クライアントのインストール](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [SQL Server への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

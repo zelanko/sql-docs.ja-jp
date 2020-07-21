@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8c2bc421fb969e4f24e49871ff97047be9040ae0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b4c364e30b12a0d3e2dfc3a7bcb56d8b5a9f78b2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967912"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553710"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|17066|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SQLASSERT_ONLY|  
-|メッセージ テキスト|SQL Server アサーション: ファイル: \<%s> 、行 =% d 失敗したアサーション = '% s '。 このエラーはタイミングに関係している可能性があります。 ステートメントの再実行後もエラーが解決しない場合は、DBCC CHECKDB を使用してデータベースの構造上の整合性を確認するか、またはサーバーを再起動してインメモリ データ構造体が壊れていないことを確認してください。|  
+|メッセージ テキスト|SQL Server アサーション:ファイル: \<%s>、行 = %d 失敗したアサーション = '%s'。 このエラーはタイミングに関係している可能性があります。 ステートメントの再実行後もエラーが解決しない場合は、DBCC CHECKDB を使用してデータベースの構造上の整合性を確認するか、またはサーバーを再起動してインメモリ データ構造体が壊れていないことを確認してください。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、一時的なタイミングに関係する問題や、メモリ内またはディスク上のデータの破損によって発生する可能性があります。  

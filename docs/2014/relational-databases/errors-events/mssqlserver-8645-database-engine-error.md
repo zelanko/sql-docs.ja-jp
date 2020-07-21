@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 277d660051608405a6d6e484bbf84c184d4d320f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fb7fcdaf626ac2956d14d22864e72834dd9d3e58
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053569"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553219"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8645|  
@@ -41,7 +41,7 @@ ms.locfileid: "85053569"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  **SQL Server: Buffer Manager** および **SQL Server: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
   
 3.  次に示す SQL Server メモリ構成パラメーターを確認します。  
   

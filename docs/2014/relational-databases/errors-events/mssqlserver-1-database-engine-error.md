@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bf33ef7895ebeae9af158e0b7d8c3c4447805893
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: ed9c25be4a4e3cfa6b0c00c9dc790214415d3593
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969900"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554237"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|-1|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名||  
-|メッセージ テキスト|サーバーへの接続を確立中にエラーが発生しました。  接続先が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] である場合、既定の設定では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可していないために、このエラーが発生した可能性があります (プロバイダー: SQL ネットワーク インターフェイス、エラー: 28 - サーバーは要求されたプロトコルをサポートしていません) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、エラー: -1)。|  
+|メッセージ テキスト|サーバーへの接続を確立中にエラーが発生しました。  接続先が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] である場合、既定の設定では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可していないために、このエラーが発生した可能性があります (プロバイダー:SQL Network Interfaces、エラー:28 - サーバーは要求されたプロトコルをサポートしていません) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、エラー: -1)。|  
   
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントがサーバーに接続できません。 このエラーは、次のいずれかの原因により起こる可能性があります。  
@@ -59,7 +59,7 @@ ms.locfileid: "84969900"
  [データベースエンジンアクセスできるように Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [クライアントプロトコルの構成](../../database-engine/configure-windows/configure-client-protocols.md)   
  [ネットワークプロトコルとネットワークライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [クライアントネットワークの構成](../../database-engine/configure-windows/client-network-configuration.md)   
+ [クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)   
  [クライアントプロトコルの構成](../../database-engine/configure-windows/configure-client-protocols.md)   
  [サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

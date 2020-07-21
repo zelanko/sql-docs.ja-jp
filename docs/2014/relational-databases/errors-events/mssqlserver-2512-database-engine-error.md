@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d41d6973ecd7cd047a0fe071ba4c6361a2b929a8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 63775efe4322b2554248b94cee0f71d1fb33b797
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034579"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552160"
 ---
 # <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|2512|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_DUPLICATE_KEYS|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
   
 ## <a name="explanation"></a>説明  
  `uniqueifiers` を含めて、示されている 2 つのスロットのキーが同じです。  

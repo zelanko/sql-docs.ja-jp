@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23e91b0d64140329639cf57f3a336cd2eab8e4e8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: be51c47f9fa8ec4188d13ecfa66441ed262f7e32
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034506"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552118"
 ---
 # <a name="mssqlserver_2511"></a>MSSQLSERVER_2511
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|2511|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_KEYS_OUT_OF_ORDER|  
-|メッセージ テキスト|テーブル エラー: オブジェクト ID %d、インデックス ID %d、パーティション ID %I64d、アロケーション ユニット ID %I64d (型 %.*ls)。 ページ %S_PGID、スロット %d および %d のキーの順序が不正です。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID %d、インデックス ID %d、パーティション ID %I64d、アロケーション ユニット ID %I64d (型 %.*ls)。 ページ %S_PGID、スロット %d および %d のキーの順序が不正です。|  
   
 ## <a name="explanation"></a>説明  
  指定したインデックスで順序が不正なキーが検出されました。 キーを含むページが壊れている可能性があります。  

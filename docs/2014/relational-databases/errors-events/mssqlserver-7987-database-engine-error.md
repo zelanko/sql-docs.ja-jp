@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98e5ebb3a9dd798e5181c56e67c8ee770f0d6a10
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: adc730a651f1b2fce16cc0d907a6f2f2003fe1f8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031951"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553254"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7987|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|メッセージ テキスト|システム テーブルの事前チェック : オブジェクト ID O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステム テーブルのデータ ページに対する初期チェックです。 この時点でエラーが検出されても修正できないので、DBCC CHECKDB は直ちに終了します。  

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05577850e65e7bb180aebf2d535d7d59e3fb1986
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 87a6fc35b72b608e57fe3f3eb4b9273a13eab40c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032016"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553307"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7986|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|メッセージ テキスト|システム テーブルの事前チェック : オブジェクト ID O_ID にはオブジェクト間のチェーン リンケージがあります。 ページ P_ID1 は、アロケーション ユニット ID A_ID1 の P_ID2 を指しています (A_ID2 の必要があります)。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト ID O_ID には、オブジェクト間のチェーン リンケージがあります。 ページ P_ID1 は、アロケーション ユニット ID A_ID1 の P_ID2 を指しています (A_ID2 の必要があります)。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステム テーブルのデータ ページに対する初期チェックです。 この時点でエラーが検出されても修正できないので、DBCC CHECKDB は直ちに終了します。 指定のオブジェクトのデータ レベルで、ページ *P_ID1* の次ページ ポインターは、別のオブジェクトのページ *P_ID2* を指しています。  
