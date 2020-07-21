@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee17df699cb73513a23ef7d899e2289c065ad7c9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3004bbb67e8bb3e89bec4acfe9674f0b99f27169
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032527"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551047"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7905|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|メッセージ テキスト|データベース エラー : ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
+|メッセージ テキスト|データベース エラー:ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
  'ghost' などの特殊な行セット ディレクトリ名を除いて、行セット ディレクトリの名前はパーティションのパーティション ID です。 行セット ディレクトリ名をパーティション ID に変換できない場合、このディレクトリは有効な行セット ディレクトリではありません。  

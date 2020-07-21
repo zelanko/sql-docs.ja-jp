@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3cc805042bff7259a311ca3f2acf4c26db59381b
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9ea7a03ebe05bffee2c3e664bd233b23ea05c764
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031128"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550747"
 ---
 # <a name="mssqlserver_50000"></a>MSSQLSERVER_50000
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |製品バージョン|11.0|  

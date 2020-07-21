@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f26231b6740db533e36afcd239115b606e7175f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 0777e25a68193527a6d4265a436ddb96752ef6cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032066"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550969"
 ---
 # <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7936|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー : FileStream ディレクトリは、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に存在しますが、その列は FileStream 列ではありません。|  
+|メッセージ テキスト|テーブル エラー:FileStream ディレクトリは、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に存在しますが、その列は FileStream 列ではありません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、指定された列に対応する FILESTREAM ディレクトリが検出されましたが、この列は `FILESTREAM` 列ではありません。  

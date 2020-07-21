@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 42c807944d7506a6a118de97ccd8c2c488942c8e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b19e643a77a2cdd3d74d05f87480fe66e3b0cf60
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032850"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551257"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|5235|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間: HOURS 時間 MINUTES 分 SECONDS 秒。|  
+|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間:HOURS 時間 MINUTES 分 SECONDS 秒。|  
   
 ## <a name="explanation"></a>説明  
  これは、コマンドの実行中に予期しない異常終了が発生した場合に DBCC によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに出力される概要メッセージです。 予期しない異常終了の種類は、メッセージで報告されるエラー状態で示されます。  

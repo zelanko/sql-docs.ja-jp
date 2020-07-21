@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1183b787e38821592e9fb3da81e07ba3c6ecd551
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032196"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551000"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7935|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN|  
-|メッセージ テキスト|テーブル エラー: FILESTREAM ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列に存在しますが、その列はパーティションに存在しません。|  
+|メッセージ テキスト|テーブル エラー:FILESTREAM ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列に存在しますが、その列はパーティションに存在しません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、指定されたオブジェクト内の列に対応する FILESTREAM ディレクトリが検出されましたが、この列はパーティションの対応するメタデータでは検出されませんでした。  

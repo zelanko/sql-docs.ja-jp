@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd78df21c50951991b048d767faacb01d8677b3a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032524"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551077"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7903|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_FILE|  
-|メッセージ テキスト|テーブル エラー : 孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の FileStream ディレクトリに見つかりました。|  
+|メッセージ テキスト|テーブル エラー:孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の Filestream ディレクトリに見つかりました。|  
   
 ## <a name="explanation"></a>説明  
  FILESTREAM 列ディレクトリ内で FILESTREAM ファイルが検出されましたが、パーティション内の対応する列値がありません。  

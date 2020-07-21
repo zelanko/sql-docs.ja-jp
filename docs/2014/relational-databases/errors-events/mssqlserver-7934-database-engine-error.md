@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4879d1e8a459994704849cead8ea873e479f5869
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 35b375cb93c11dea1284446dbce22ea5ee22f5a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032310"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550995"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7934|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー: オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の FILESTREAM ディレクトリ ID F_ID が見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の FILESTREAM ディレクトリ ID F_ID が見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中にパーティションが検出されましたが、対応する FILESTREAM 行セット ディレクトリは FILESTREAM データ領域で見つかりませんでした。  

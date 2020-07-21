@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45a9d084-b5ad-435b-ac19-5f4352515817
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd9b54cfc84a574be8a3935f5c17b62ca37dea2e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4fedd73c52ff5945c2487b840595028a77121bf5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053536"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550838"
 ---
 # <a name="mssqlserver_8630"></a>MSSQLSERVER_8630
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8630|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|EXECUTION_ERR|  
-|メッセージ テキスト|内部クエリ プロセッサ エラー: クエリ プロセッサ実行中に予期しないエラーが発生しました。|  
+|メッセージ テキスト|内部クエリ プロセッサ エラー:クエリ プロセッサ実行中に予期しないエラーが発生しました。|  
   
 ## <a name="explanation"></a>説明  
  クエリ処理中に内部エラーが発生しました。  

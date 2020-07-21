@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 917b3703cdffc966b961a9ad8bfa6741dc674f2e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 7e0188ce856ae2fc219f6e9a5d7463daa8295209
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053791"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551117"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|701|  
@@ -45,7 +45,7 @@ ms.locfileid: "85053791"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** および **SQL Server: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、**SQL Server:Memory Manager**。  
   
 3.  次に示す SQL Server メモリ構成パラメーターを確認します。  
   

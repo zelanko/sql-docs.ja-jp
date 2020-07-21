@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c34414754ea9d25ad89f6aba767197eb1dfc10d0
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b427188ddf7b65511971c44ea0bf718f546484a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033920"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551798"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|3151|  
@@ -35,6 +35,6 @@ ms.locfileid: "85033920"
  これは一般エラー メッセージであり、**master** データベースに関するさまざまな問題を示しています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 詳細については、エラー ログを確認してください。 使用可能な **master** データベースを作成するには、REBUILDDATABASE オプションを使用して Setup.exe を実行します。 詳細については、SQL Server オンライン ブックの「コマンド プロンプトから SQL Server をインストールする方法」を参照してください。  
+ 詳細については、エラー ログを確認してください。 使用可能な **master** データベースを作成するには、REBUILDDATABASE オプションを使用して Setup.exe を実行します。 詳細については、SQL Server オンライン ブックの「方法:コマンド プロンプトからの SQL Server のインストール」を参照してください。  
   
   

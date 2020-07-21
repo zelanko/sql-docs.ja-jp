@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f1540fd8cd5f483b6c841f209a6f37dea536c91
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c2c04b1d4e29489406465c9dfd11c49305ccbbe2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053706"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551006"
 ---
 # <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7932|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|メッセージ テキスト|テーブル エラー: オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の FILESTREAM ディレクトリ ID F_ID はファイル グループ FG_ID1 に存在しますが、ファイル グループ FG_ID2 に存在する必要があります。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の FileStream ディレクトリ ID F_ID はファイル グループ FG_ID1 に存在しますが、ファイル グループ FG_ID2 に存在する必要があります。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、指定されたオブジェクトの FILESTREAM ストレージが、間違ったファイル グループ内で検出されました。 オブジェクトのメタデータが破損している可能性があります。  

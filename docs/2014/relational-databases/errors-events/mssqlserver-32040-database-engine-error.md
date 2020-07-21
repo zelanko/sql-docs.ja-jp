@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81d0334c3256a705f2ac7a645387b898eb156769
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d2b92d959afa9dc38e9aad4a15ecd5eb3c44e87e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053981"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551757"
 ---
 # <a name="mssqlserver_32040"></a>MSSQLSERVER_32040
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|32040|  
@@ -40,7 +40,7 @@ ms.locfileid: "85053981"
  プリンシパル サーバー インスタンス、ミラー サーバー インスタンス、および両者のネットワーク接続の負荷が原因になっているかどうかを調査します。  
   
 ## <a name="see-also"></a>参照  
- [データベースミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [ミラーリング パフォーマンス基準の警告しきい値および警告の使用 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   

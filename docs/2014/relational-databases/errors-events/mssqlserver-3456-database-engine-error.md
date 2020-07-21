@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f13316bdd3147bb0ad63c8d4a2fb18f1fce74006
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 129e1d8aa2725594871eaa48c2c983767eb46d73
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033414"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551557"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|3456|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|REC_REDOLSNMISMATCH|  
-|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ: LSN = %S_LSN、型 = %ld。 ログ: OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
+|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ:LSN = %S_LSN、型 = %ld。 Log:OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
   
 ## <a name="explanation"></a>説明  
  復元操作で、トランザクション ログを再実行できませんでした。 このエラーによって、データベースは SUSPECT 状態になっています。 プライマリ ファイル グループ、また場合によってはその他のファイル グループには、問題があり、損傷している可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動中はデータベースを復旧できないため、データベースを使用できません。 問題を解決するには、ユーザーによる操作が必要です。  

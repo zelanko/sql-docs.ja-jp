@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6808103ef8da1d04d16e4cabc66c0e7af8666c65
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 77e3d8c99c0e2a72723b37f079831e15cdbe85b6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032029"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550947"
 ---
 # <a name="mssqlserver_7984"></a>MSSQLSERVER_7984
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7984|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|メッセージ テキスト|システム テーブルの事前チェック: オブジェクト ID O_ID。 ページ P_ID に予期しないページ型 PAGETYPE が含まれています。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト ID O_ID。 ページ P_ID に予期しないページ型 PAGETYPE が含まれています。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
  示されているオブジェクトのデータ レベルで、DATA_PAGE 以外の型のページが見つかりました。 このエラーは、DBCC CHECKDB コマンドによるチェックの第 1 フェーズで生成されます。 DBCC CHECKDB のこのフェーズで行われるのは、重要なシステム ベース テーブルのデータ ページに対する初期チェックです。  

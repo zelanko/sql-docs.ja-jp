@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f164c8ce321272f7d92a8d3b1ff02400c881a108
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 88e3d0edb06c88fbdd443add2e2ceac0b987b362
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054079"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551977"
 ---
 # <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|2574|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のページ P_ID が空です。 これは、B-Tree のレベル LEVEL では許可されません。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のページ P_ID が空です。 これは、B-Tree のレベル LEVEL では許可されません。|  
   
 ## <a name="explanation"></a>説明  
  指定されたインデックスのリーフ レベルより上位の B-Tree ページが空であり、行がありません。 この動作は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] のリーフ レベル ページでは可能ですが、各ツリー レベルでは一切許可されていません。  

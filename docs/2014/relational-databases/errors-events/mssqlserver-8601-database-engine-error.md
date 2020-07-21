@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17458e92beb38b6597e056aa2d566896dc743324
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 30879123ce2a0d52669ddf83e18d40fa1be7231e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053577"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550867"
 ---
 # <a name="mssqlserver_8601"></a>MSSQLSERVER_8601
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8601|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|INVALID_INTERFACE_ERR|  
-|メッセージ テキスト|クエリ プロセッサの内部エラー: クエリ プロセッサは、必要なインターフェイスにアクセスできませんでした。|  
+|メッセージ テキスト|内部クエリ プロセッサ エラー:クエリ プロセッサは要求されたインターフェイスにアクセスできませんでした。|  
   
 ## <a name="explanation"></a>説明  
  内部処理エラー。必要なインターフェイスにアクセスできませんでした。  

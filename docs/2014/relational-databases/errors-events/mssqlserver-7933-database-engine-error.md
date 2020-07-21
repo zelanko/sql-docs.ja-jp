@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 52ed02b755d18191eba31fe771168932e8f2ab0c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f4fac1af45571023b718ec474cb69a78a272d0ad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032191"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551035"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7933|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー: パーティションの FileStream ディレクトリ ID F_ID は存在しますが、対応するパーティションがデータベース内に存在しません。|  
+|メッセージ テキスト|テーブル エラー:パーティションの FileStream ディレクトリ ID F_ID は存在しますが、対応するパーティションがデータベース内に存在しません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、FILESTREAM データ領域で行セット ディレクトリが見つかりましたが、対応するパーティションがデータベース内にありません。  
